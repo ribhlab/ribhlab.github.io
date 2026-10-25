@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '17 */3 * * *'
 
 permissions:
   contents: read
@@ -24,6 +26,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Refresh news headlines from attributed RSS sources
+        run: node src/update-news.mjs
       - name: Build pages (Arabic, English, French)
         env:
           SITE_URL: https://univcours.github.io/ribhlab-site
