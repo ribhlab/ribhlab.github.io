@@ -28,7 +28,7 @@ for(const p of pages){const h=fs.readFileSync(p,'utf8');const pathName='/'+path.
 }
 for(const lang of ['ar','en','fr']){
  const index=JSON.parse(fs.readFileSync(path.join(dist,'assets',`search-${lang}.json`),'utf8'));
- if(index.length!==9) errors.push(`Search index ${lang}: expected 9 articles; found ${index.length}`);
+ if(index.length!==fs.readdirSync(path.join(root,'content/articles')).filter(x=>x.endsWith('.json')).length) errors.push(`Search index ${lang}: inconsistent article count ${index.length}`);
  for(const a of index) if(!fs.existsSync(path.join(dist,stripBase(a.url).replace(/^\//,''),'index.html'))) errors.push(`Search entry broken: ${a.url}`);
 }
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
