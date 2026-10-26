@@ -26,6 +26,26 @@ collections:
       - {label: Publication date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false}
       - {label: Updated date, name: updated, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false}
       - {label: Featured, name: featured, widget: boolean, default: false}
+      - label: Primary reference sources
+        name: sources
+        widget: list
+        required: false
+        fields:
+          - {label: Source name, name: label, widget: string}
+          - {label: Official source URL (https), name: url, widget: string}
+      - label: Commercial referral link (always disclosed to readers)
+        name: partner
+        widget: object
+        required: false
+        fields:
+          - {label: Partner name, name: name, widget: string, required: false}
+          - {label: Referral URL (https), name: url, widget: string, required: false}
+      - label: Related article slugs
+        name: related
+        widget: list
+        required: false
+        field: {label: Article slug, name: slug, widget: string}
+
       - label: Translations
         name: translations
         widget: object
