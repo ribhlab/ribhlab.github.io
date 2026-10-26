@@ -32,5 +32,25 @@ for(const lang of ['ar','en','fr']){
  if(index.length!==fs.readdirSync(path.join(root,'content/articles')).filter(x=>x.endsWith('.json')).length) errors.push(`Search index ${lang}: inconsistent article count ${index.length}`);
  for(const a of index) if(!fs.existsSync(path.join(dist,stripBase(a.url).replace(/^\//,''),'index.html'))) errors.push(`Search entry broken: ${a.url}`);
 }
+// Keep the Search Console ownership token intact across all releases.
+const tokenName='googlee227daed117c5deb.html';
+const tokenSource=path.join(root,'public',tokenName);
+const tokenBuilt=path.join(dist,tokenName);
+const expectedToken='google-site-verification: '+tokenName;
+if(!fs.existsSync(tokenSource)||fs.readFileSync(tokenSource,'utf8').trim()!==expectedToken) errors.push('Search Console: missing or modified ownership token in public/');
+if(!fs.existsSync(tokenBuilt)||fs.readFileSync(tokenBuilt,'utf8').trim()!==expectedToken) errors.push('Search Console: ownership token missing from generated website');
+if(configuredUrl){
+ const url=configuredUrl.replace(/\\/$/,'');
+ const sitemapPath=path.join(dist,'sitemap.xml');
+ if(!fs.existsSync(sitemapPath)) errors.push('Search Console: sitemap.xml missing');
+ else {
+  const sitemap=fs.readFileSync(sitemapPath,'utf8');
+  const urls=[...sitemap.matchAll(/<loc>([^<]*)<\\/loc>/g)].map(m=>m[1]);
+  if(urls.length<30)errors.push('Search Console: sitemap unexpectedly short ('+urls.length+' URLs)');
+  if(new Set(urls).size!==urls.length)errors.push('Search Console: duplicate canonical URLs in sitemap');
+  if(urls.some(x=>!x.startsWith(url+'/')))errors.push('Search Console: off-domain or wrong-path URLs in sitemap');
+  for(const lang of ['ar','en','fr'])if(!urls.includes(url+'/'+lang+'/'))errors.push('Search Console: missing '+lang+' homepage in sitemap');
+ }
+}
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
-console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, 27 translated article pages, search indexes and static pages.`);
+console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
