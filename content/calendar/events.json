@@ -1,6 +1,6 @@
 {
-  "reviewedAt": "2026-10-25",
-  "notice": "Official dates may change. China NBS times must be confirmed from agency, not inferred.",
+  "reviewedAt": "2026-10-26",
+  "notice": "Verified official agency dates; release times use the agency's local time zone. US ET switches from EDT to EST on 1 November 2026. Do not infer unannounced BoJ or Eurostat release times.",
   "events": [
     {
       "date": "2026-10-28",
@@ -23,6 +23,28 @@
         "fr": "Décision BCE"
       },
       "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"
+    },
+    {
+      "date": "2026-10-29",
+      "country": "USA",
+      "time": "08:30 ET",
+      "title": {
+        "ar": "التقدير الأولي للناتج المحلي الأمريكي للربع الثالث",
+        "en": "US Q3 GDP advance estimate",
+        "fr": "Première estimation du PIB US T3"
+      },
+      "url": "https://www.bea.gov/news/schedule/"
+    },
+    {
+      "date": "2026-10-29",
+      "country": "USA",
+      "time": "08:30 ET",
+      "title": {
+        "ar": "الدخل والإنفاق الشخصي الأمريكي لشهر سبتمبر",
+        "en": "US personal income and outlays (September)",
+        "fr": "Revenus et dépenses personnels US (septembre)"
+      },
+      "url": "https://www.bea.gov/news/schedule/"
     },
     {
       "date": "2026-10-30",
@@ -58,6 +80,17 @@
       "url": "https://www.bls.gov/schedule/2026/"
     },
     {
+      "date": "2026-11-04",
+      "country": "Europe",
+      "time": "Time not confirmed (CET)",
+      "title": {
+        "ar": "التقدير السريع لتضخم منطقة اليورو لشهر أكتوبر",
+        "en": "Euro-area October inflation flash estimate",
+        "fr": "Estimation rapide de l'inflation d'octobre en zone euro"
+      },
+      "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-16102026-ap"
+    },
+    {
       "date": "2026-11-06",
       "country": "USA",
       "time": "08:30 ET",
@@ -67,6 +100,17 @@
         "fr": "Rapport emploi US"
       },
       "url": "https://www.bls.gov/schedule/2026/"
+    },
+    {
+      "date": "2026-11-10",
+      "country": "Japan",
+      "time": "08:50 JST",
+      "title": {
+        "ar": "ملخص آراء اجتماع بنك اليابان لشهر أكتوبر",
+        "en": "BoJ October meeting Summary of Opinions",
+        "fr": "Synthèse des opinions de la réunion BoJ d'octobre"
+      },
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/"
     },
     {
       "date": "2026-11-10",
