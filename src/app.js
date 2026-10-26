@@ -27,6 +27,26 @@
  const computeFee=()=>{const target=byId('fee-result');if(!target)return;const h=n('fee-hours'),r=n('fee-hourly'),exp=n('fee-expenses'),fee=n('fee-platform');target.textContent=h>=0&&r>=0&&exp>=0&&fee>=0&&fee<100?nice((h*r+exp)/(1-fee/100)):'—';};
  if(byId('risk-result')){['risk-capital','risk-percent','risk-currency'].forEach(id=>byId(id)?.addEventListener('input',computeRisk));computeRisk();}
  if(byId('fee-result')){['fee-hours','fee-hourly','fee-expenses','fee-platform'].forEach(id=>byId(id)?.addEventListener('input',computeFee));computeFee();}
+
+ // Scenario calculators use visitor-entered assumptions, never scraped or invented payout data.
+ const validate=(ids)=>ids.every(id=>byId(id)&&Number.isFinite(n(id))&&n(id)>=0);
+ const putCalc=(id,num)=>{const e=byId(id);if(e)e.textContent=Number.isFinite(num)?nice(num):'—';};
+ const calculateMonetization=()=>{
+  if(validate(['calc-page-visits','calc-page-depth','calc-page-rpm'])){
+   putCalc('calc-page-result',n('calc-page-visits')*n('calc-page-depth')*n('calc-page-rpm')/1000);
+  }
+  const affiliateIds=['calc-aff-visits','calc-aff-ctr','calc-aff-conv','calc-aff-value','calc-aff-rate'];
+  if(validate(affiliateIds)&&n('calc-aff-ctr')<=100&&n('calc-aff-conv')<=100&&n('calc-aff-rate')<=100){
+   putCalc('calc-aff-result',n('calc-aff-visits')*n('calc-aff-ctr')/100*n('calc-aff-conv')/100*n('calc-aff-value')*n('calc-aff-rate')/100);
+  }else putCalc('calc-aff-result',NaN);
+  if(validate(['calc-game-dau','calc-game-ads','calc-game-ecpm','calc-game-costs'])){
+   putCalc('calc-game-result',n('calc-game-dau')*n('calc-game-ads')*30*n('calc-game-ecpm')/1000-n('calc-game-costs'));
+  }
+ };
+ if(byId('calc-page-result')){
+  ['calc-page-visits','calc-page-depth','calc-page-rpm','calc-aff-visits','calc-aff-ctr','calc-aff-conv','calc-aff-value','calc-aff-rate','calc-game-dau','calc-game-ads','calc-game-ecpm','calc-game-costs'].forEach(id=>byId(id)?.addEventListener('input',calculateMonetization));
+  calculateMonetization();
+ }
  const prompt=byId('prompt-output');byId('create-prompt')?.addEventListener('click',()=>{
   const goal=byId('prompt-goal').value.trim(),context=byId('prompt-context').value.trim(),limits=byId('prompt-constraints').value.trim(),format=byId('prompt-format').value.trim();
   const lang=meta.lang;
