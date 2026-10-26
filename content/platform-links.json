@@ -1,0 +1,361 @@
+{
+  "updated": "2026-10-26",
+  "note": "Curated editorial directory of official provider domains. Listings are educational references, not a ranking or an endorsement. Commercial links remain separately disclosed.",
+  "platforms": {
+    "fiverr": {
+      "name": "Fiverr",
+      "url": "https://www.fiverr.com/"
+    },
+    "fiverrHelp": {
+      "name": "Fiverr Help Center",
+      "url": "https://help.fiverr.com/hc/en-us"
+    },
+    "upwork": {
+      "name": "Upwork",
+      "url": "https://www.upwork.com/"
+    },
+    "freelancer": {
+      "name": "Freelancer",
+      "url": "https://www.freelancer.com/"
+    },
+    "peopleperhour": {
+      "name": "PeoplePerHour",
+      "url": "https://www.peopleperhour.com/"
+    },
+    "powerbi": {
+      "name": "Microsoft Power BI",
+      "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+    },
+    "powerquery": {
+      "name": "Microsoft Power Query Docs",
+      "url": "https://learn.microsoft.com/en-us/power-query/"
+    },
+    "shopify": {
+      "name": "Shopify",
+      "url": "https://www.shopify.com/"
+    },
+    "gumroad": {
+      "name": "Gumroad",
+      "url": "https://gumroad.com/"
+    },
+    "googleSearch": {
+      "name": "Google Search Central",
+      "url": "https://developers.google.com/search/docs"
+    },
+    "googleAdsense": {
+      "name": "Google AdSense",
+      "url": "https://adsense.google.com/"
+    },
+    "canva": {
+      "name": "Canva",
+      "url": "https://www.canva.com/"
+    },
+    "chatgpt": {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/"
+    },
+    "claude": {
+      "name": "Claude",
+      "url": "https://claude.com/"
+    },
+    "gemini": {
+      "name": "Google Gemini",
+      "url": "https://gemini.google.com/"
+    },
+    "perplexity": {
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai/"
+    },
+    "copilot": {
+      "name": "Microsoft Copilot",
+      "url": "https://copilot.microsoft.com/"
+    },
+    "huggingface": {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/"
+    },
+    "github": {
+      "name": "GitHub",
+      "url": "https://github.com/"
+    },
+    "n8n": {
+      "name": "n8n",
+      "url": "https://n8n.io/"
+    },
+    "runway": {
+      "name": "Runway",
+      "url": "https://runwayml.com/"
+    },
+    "elevenlabs": {
+      "name": "ElevenLabs",
+      "url": "https://elevenlabs.io/"
+    },
+    "googlePlay": {
+      "name": "Google Play",
+      "url": "https://play.google.com/store"
+    },
+    "appleAppStore": {
+      "name": "Apple App Store",
+      "url": "https://www.apple.com/app-store/"
+    },
+    "androidDevelopers": {
+      "name": "Android Developers",
+      "url": "https://developer.android.com/"
+    },
+    "googleAdmob": {
+      "name": "Google AdMob",
+      "url": "https://admob.google.com/"
+    },
+    "unity": {
+      "name": "Unity",
+      "url": "https://unity.com/"
+    },
+    "godot": {
+      "name": "Godot Engine",
+      "url": "https://godotengine.org/"
+    },
+    "unreal": {
+      "name": "Unreal Engine",
+      "url": "https://www.unrealengine.com/"
+    },
+    "gdevelop": {
+      "name": "GDevelop",
+      "url": "https://gdevelop.io/"
+    },
+    "ghidra": {
+      "name": "Ghidra (official repository)",
+      "url": "https://github.com/NationalSecurityAgency/ghidra"
+    },
+    "wireshark": {
+      "name": "Wireshark",
+      "url": "https://www.wireshark.org/"
+    },
+    "owasp": {
+      "name": "OWASP",
+      "url": "https://owasp.org/"
+    },
+    "tradingview": {
+      "name": "TradingView",
+      "url": "https://www.tradingview.com/"
+    },
+    "cme": {
+      "name": "CME Group Education",
+      "url": "https://www.cmegroup.com/education.html"
+    },
+    "cftc": {
+      "name": "CFTC",
+      "url": "https://www.cftc.gov/"
+    },
+    "investor": {
+      "name": "Investor.gov (SEC)",
+      "url": "https://www.investor.gov/"
+    },
+    "coingecko": {
+      "name": "CoinGecko",
+      "url": "https://www.coingecko.com/"
+    },
+    "coinmarketcap": {
+      "name": "CoinMarketCap",
+      "url": "https://coinmarketcap.com/"
+    },
+    "bitcoin": {
+      "name": "Bitcoin.org",
+      "url": "https://bitcoin.org/"
+    },
+    "ethereum": {
+      "name": "Ethereum.org",
+      "url": "https://ethereum.org/"
+    },
+    "fed": {
+      "name": "Federal Reserve",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    "bls": {
+      "name": "U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/"
+    },
+    "ecb": {
+      "name": "European Central Bank",
+      "url": "https://www.ecb.europa.eu/"
+    },
+    "eurostat": {
+      "name": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat"
+    },
+    "boj": {
+      "name": "Bank of Japan",
+      "url": "https://www.boj.or.jp/en/"
+    },
+    "chinaStats": {
+      "name": "National Bureau of Statistics of China",
+      "url": "https://www.stats.gov.cn/english/"
+    },
+    "goldcouncil": {
+      "name": "World Gold Council / Goldhub",
+      "url": "https://www.gold.org/goldhub"
+    },
+    "imf": {
+      "name": "International Monetary Fund",
+      "url": "https://www.imf.org/"
+    }
+  },
+  "articleLinks": {
+    "fiverr-complete-guide-2026": [
+      "fiverr",
+      "fiverrHelp",
+      "upwork"
+    ],
+    "fiverr-vs-upwork-freelancer-peopleperhour": [
+      "fiverr",
+      "upwork",
+      "freelancer",
+      "peopleperhour"
+    ],
+    "excel-powerbi-freelance-client-project-guide-2026": [
+      "powerbi",
+      "powerquery",
+      "upwork",
+      "fiverr"
+    ],
+    "start-freelancing": [
+      "fiverr",
+      "upwork",
+      "freelancer",
+      "peopleperhour"
+    ],
+    "affiliate-marketing-ethically": [
+      "googleSearch",
+      "shopify",
+      "gumroad"
+    ],
+    "sell-digital-products": [
+      "gumroad",
+      "shopify",
+      "canva"
+    ],
+    "online-income-real-business-models": [
+      "shopify",
+      "gumroad",
+      "googleAdsense"
+    ],
+    "twelve-online-income-models-startup-costs-risks": [
+      "googleAdsense",
+      "fiverr",
+      "shopify"
+    ],
+    "ai-platforms-comparison-practical-2026": [
+      "chatgpt",
+      "claude",
+      "gemini",
+      "perplexity",
+      "copilot"
+    ],
+    "ai-prompts-at-work": [
+      "chatgpt",
+      "claude",
+      "gemini"
+    ],
+    "ai-finance-automation-with-human-controls": [
+      "powerbi",
+      "powerquery",
+      "n8n",
+      "chatgpt"
+    ],
+    "automate-excel-ai": [
+      "powerquery",
+      "powerbi",
+      "chatgpt"
+    ],
+    "ai-video-workflow": [
+      "runway",
+      "elevenlabs",
+      "canva"
+    ],
+    "best-android-iphone-apps-productivity-2026": [
+      "googlePlay",
+      "appleAppStore",
+      "androidDevelopers"
+    ],
+    "android-app-monetization-ads-purchases-subscriptions-guide-2026": [
+      "androidDevelopers",
+      "googlePlay",
+      "googleAdmob"
+    ],
+    "make-mobile-games-unity-godot-unreal-gdevelop": [
+      "unity",
+      "godot",
+      "unreal",
+      "gdevelop"
+    ],
+    "reverse-engineering-legally-tools-ghidra": [
+      "ghidra",
+      "wireshark",
+      "owasp"
+    ],
+    "ai-video-filmmaking-automation-unity-2026": [
+      "runway",
+      "elevenlabs",
+      "unity",
+      "canva"
+    ],
+    "backtest-trading-bots": [
+      "tradingview",
+      "cme",
+      "cftc"
+    ],
+    "trading-risk-management": [
+      "cftc",
+      "investor",
+      "cme"
+    ],
+    "understand-price-charts": [
+      "tradingview",
+      "cme",
+      "cftc"
+    ],
+    "crypto-new-token-due-diligence": [
+      "coingecko",
+      "coinmarketcap",
+      "ethereum",
+      "investor"
+    ],
+    "crypto-perpetual-futures-funding-and-liquidation": [
+      "cftc",
+      "coinmarketcap",
+      "coingecko"
+    ],
+    "redotpay-card-referrals-morocco-eligibility-2026": [
+      "coingecko",
+      "investor"
+    ],
+    "gold-october-2026-market-drivers": [
+      "goldcouncil",
+      "fed",
+      "bls"
+    ],
+    "macro-calendar-us-europe-japan-china": [
+      "fed",
+      "bls",
+      "ecb",
+      "boj",
+      "chinaStats"
+    ],
+    "geopolitics-energy-gold-risk-framework": [
+      "goldcouncil",
+      "imf",
+      "fed"
+    ],
+    "market-pulse-fed-gold-bitcoin-scenarios-oct-2026": [
+      "fed",
+      "bls",
+      "goldcouncil",
+      "coingecko"
+    ],
+    "energy-inflation-us-euro-area-october-2026": [
+      "eurostat",
+      "ecb",
+      "bls",
+      "imf"
+    ]
+  }
+}
