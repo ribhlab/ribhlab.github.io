@@ -87,5 +87,27 @@ for(const pagePath of pages){
   if(!/\bwidth=/.test(imageTag)||!/\bheight=/.test(imageTag))errors.push(pagePath+': image missing dimensions');
  }
 }
+// Editorial taxonomy: every real article has exactly one section and each section has forty slots.
+const taxonomy=JSON.parse(fs.readFileSync(path.join(root,'content','sections.json'),'utf8'));
+const publishingPlan=JSON.parse(fs.readFileSync(path.join(root,'content','editorial-plan.json'),'utf8'));
+if(taxonomy.sections.length!==8||publishingPlan.sections.length!==8)errors.push('Editorial taxonomy: expected eight sections');
+const assignedSlugs=new Set(),knownSlugs=new Set(fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')).map(f=>f.slice(0,-5)));
+for(const s of taxonomy.sections){
+ const plan=publishingPlan.sections.find(x=>x.id===s.id);
+ if(!plan)errors.push('Editorial plan missing '+s.id);
+ if(s.targetArticles!==40||!plan||plan.publishedSlugs.length+plan.ideas.length!==40)errors.push('Section target count must equal 40: '+s.id);
+ if(plan&&JSON.stringify(plan.publishedSlugs)!==JSON.stringify(s.publishedSlugs))errors.push('Plan mapping out of sync: '+s.id);
+ for(const slug of s.publishedSlugs){
+  if(!knownSlugs.has(slug)||assignedSlugs.has(slug))errors.push('Missing or duplicate article classification: '+slug);
+  assignedSlugs.add(slug);
+ }
+ for(const lang of ['ar','en','fr']){
+  const directory=path.join(dist,lang,'sections',s.id,'index.html');
+  if(!fs.existsSync(directory))errors.push('Missing section page '+lang+'/'+s.id);
+  else if(!fs.readFileSync(directory,'utf8').includes('rel="canonical"'))errors.push('Missing canonical for section '+lang+'/'+s.id);
+ }
+}
+if(assignedSlugs.size!==knownSlugs.size)errors.push('Not all published articles are classified');
+for(const lang of ['ar','en','fr'])if(!fs.existsSync(path.join(dist,lang,'sections','index.html')))errors.push('Missing section directory '+lang);
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
