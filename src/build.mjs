@@ -93,7 +93,7 @@ const icon=(name)=>({earning:'<svg viewBox="0 0 48 48" fill="none" aria-hidden="
 function relLinks(current,pathMap){return domain ? `<link rel="canonical" href="${esc(domain+pathMap[current])}">${locales.map(l=>`<link rel="alternate" hreflang="${l}" href="${esc(domain+pathMap[l])}">`).join('')}<link rel="alternate" hreflang="x-default" href="${esc(domain+pathMap.ar)}">` : '';}
 function jsonScript(v){return JSON.stringify(v).replace(/</g,'\\u003c');}
 function schemaFor(l,type,title,desc,route,article){let obj={'@context':'https://schema.org','@type':type==='article'?'Article':'WebPage',name:title,description:desc,inLanguage:l};if(domain)obj.url=domain+route;
-if(type==='article'){obj.headline=title;obj.datePublished=article.date;obj.dateModified=article.updated;obj.author={'@type':'Organization',name:cfg.publisherName||'RibhLab Editorial Team'};obj.publisher={'@type':'Organization',name:'RibhLab'};obj.mainEntityOfPage=domain?domain+route:undefined;}
+if(type==='article'){obj.headline=title;obj.datePublished=article.date;obj.dateModified=article.updated;obj.author={'@type':'Organization',name:cfg.publisherName||'RibhLab Editorial Team'};obj.publisher={'@type':'Organization',name:'RibhLab'};obj.mainEntityOfPage=domain?domain+route:undefined;obj.image=domain?domain+'/covers/'+article.slug+'.svg':undefined;}
 return `<script type="application/ld+json">${jsonScript(obj)}</script>`;}
 function page(l,{title,desc,route,altroutes,content,type='page',article,active=''}){
  const t=i18n[l],rtl=l==='ar',pathMap=altroutes||Object.fromEntries(locales.map(n=>[n,route.replace(/^\/[a-z]{2}\//,`/${n}/`)]));
