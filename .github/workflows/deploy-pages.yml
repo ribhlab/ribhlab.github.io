@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: '17 */3 * * *'
+  # Scheduled market-feed publishing is paused during Blogger migration.
+  # Keep manual dispatch and pushes to preserve the old site as an image/URL archive.
 
 permissions:
   contents: read
