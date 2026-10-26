@@ -58,3 +58,21 @@
 #speed-status{min-height:2em;margin-top:1rem}
 @media(max-width:600px){.speed-results{gap:.45rem}.speed-results>div{padding:.65rem}.speed-results span{font-size:.75rem}.partner-box{padding:1rem}.article-illustration{margin:1rem 0 1.5rem}}
 @media(prefers-reduced-motion:reduce){.card-cover-image{transition:none}.article-card:hover .card-cover-image{transform:none}}
+
+/* Editorial section directory — clear, accessible discovery on mobile and desktop. */
+.editorial-section-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.editorial-section-card{display:flex;flex-direction:column;gap:14px;min-width:0;padding:26px 23px;border:1px solid var(--line,#dce2e7);border-radius:18px;background:var(--white,#fff);color:inherit;text-decoration:none;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.editorial-section-card:hover,.editorial-section-card:focus-visible{transform:translateY(-2px);border-color:#9baab9;box-shadow:0 12px 30px rgba(21,36,60,.08)}
+.editorial-section-card:focus-visible{outline:3px solid #2c709b;outline-offset:3px}
+.editorial-section-number{font-size:.81rem;font-weight:800;letter-spacing:.12em;color:#697588}
+.editorial-section-card h3{margin:0;font-size:1.24rem;line-height:1.35}
+.editorial-section-card p{margin:0;color:var(--muted,#536174);font-size:.95rem;line-height:1.7;flex:1}
+.editorial-section-card-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid #e7ebf1;font-size:.84rem}
+.editorial-section-card-foot span{font-weight:750}
+.editorial-section-count{font-weight:750}
+.editorial-sibling-links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}
+.editorial-sibling-links a{padding:9px 13px;background:#eef3f8;border-radius:9px;text-decoration:none;color:#18304f;font-weight:650}
+.editorial-sibling-links a:hover,.editorial-sibling-links a:focus-visible{text-decoration:underline}
+@media (max-width:1100px){.editorial-section-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.editorial-section-grid{grid-template-columns:1fr}.editorial-section-card{padding:20px}}
+@media (prefers-reduced-motion:reduce){.editorial-section-card{transition:none}.editorial-section-card:hover{transform:none}}
