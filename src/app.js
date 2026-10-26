@@ -1,6 +1,17 @@
 (()=>{
  'use strict';
  const byId=id=>document.getElementById(id);
+ // Editorial photography fallback: a failed external image never leaves a broken article or homepage card.
+ const restoreImage=img=>{
+  if(!img?.matches?.('img.editorial-photo[data-fallback-src]'))return;
+  const fallback=img.getAttribute('data-fallback-src');
+  if(fallback&&img.getAttribute('src')!==fallback){img.setAttribute('src',fallback);img.classList.add('photo-fallback-active');}
+ };
+ document.addEventListener('error',e=>restoreImage(e.target),true);
+ document.querySelectorAll('img.editorial-photo[data-fallback-src]').forEach(img=>{
+  if(img.complete&&img.naturalWidth===0)restoreImage(img);
+ });
+
  const menu=document.querySelector('.mobile-menu'),nav=byId('site-nav');
  if(menu&&nav){menu.addEventListener('click',()=>{let open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}});}
  const modal=byId('search-modal'),openSearch=document.querySelector('[data-search-open]'),closeSearch=document.querySelector('[data-search-close]'),input=byId('site-search'),results=document.querySelector('[data-search-results]');
