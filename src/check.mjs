@@ -11,6 +11,7 @@ function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.
 const pages=walk(dist).filter(p=>p.endsWith('.html'));
 let checked=0;const errors=[];
 for(const p of pages){const h=fs.readFileSync(p,'utf8');const pathName='/'+path.relative(dist,p).replace(/\\/g,'/');
+ if(/^\/(?:admin\/)?google[a-z0-9]+\.html$/i.test(pathName)) continue; // Google ownership token is not an editorial page
  if(!h.includes('lang=') && !pathName.includes('/admin/') && pathName!=='/index.html')errors.push(`${pathName}: missing language`);
  if(!h.includes('<title>'))errors.push(`${pathName}: missing title`);
  if(!pathName.includes('/admin/') && !['/index.html','/404.html'].includes(pathName)){
