@@ -136,3 +136,12 @@
 })();
 
 document.querySelectorAll('.pulse-filter').forEach(btn=>btn.addEventListener('click',()=>{const wanted=btn.dataset.pulseFilter;document.querySelectorAll('.pulse-filter').forEach(b=>b.classList.toggle('current',b===btn));document.querySelectorAll('[data-pulse-topic]').forEach(card=>{card.hidden=wanted!=='all'&&card.dataset.pulseTopic!==wanted;});}));
+
+// Privacy-friendly utilities: inputs never leave the browser.
+(()=>{
+ const wordInput=document.getElementById('words-input');
+ if(wordInput){const update=()=>{const value=wordInput.value;const words=value.trim()?value.trim().split(/\\s+/u).length:0;document.getElementById('words-count').textContent=String(words);document.getElementById('characters-count').textContent=String(Array.from(value).length);document.getElementById('lines-count').textContent=String(value?value.split(/\\r\\n|\\n|\\r/).length:0);};wordInput.addEventListener('input',update);update();}
+ const format=document.getElementById('json-format'),input=document.getElementById('json-input'),output=document.getElementById('json-output'),status=document.getElementById('json-status');
+ format?.addEventListener('click',()=>{try{const parsed=JSON.parse(input.value);output.value=JSON.stringify(parsed,null,2);status.textContent='✓ Valid JSON';}catch(error){output.value='';status.textContent='Invalid JSON: '+error.message;}});
+ document.getElementById('json-copy')?.addEventListener('click',async()=>{if(!output.value)return;try{await navigator.clipboard.writeText(output.value);status.textContent='✓ Copied';}catch{output.focus();output.select();status.textContent='Select and copy the result';}});
+})();
