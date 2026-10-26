@@ -1477,7 +1477,8 @@
         "macro-calendar-us-europe-japan-china",
         "geopolitics-energy-gold-risk-framework",
         "market-pulse-fed-gold-bitcoin-scenarios-oct-2026",
-        "energy-inflation-us-euro-area-october-2026"
+        "energy-inflation-us-euro-area-october-2026",
+        "how-to-read-fomc-decision-2026"
       ],
       "ideas": [
         {
@@ -1493,11 +1494,6 @@
         {
           "sequence": 8,
           "titleAr": "كيف تؤثر توقعات الفائدة على الذهب",
-          "status": "planned"
-        },
-        {
-          "sequence": 9,
-          "titleAr": "تفسير قرار FOMC دون مبالغة",
           "status": "planned"
         },
         {
