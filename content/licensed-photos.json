@@ -60,5 +60,17 @@
       "alt": "Stacked gold bullion bars",
       "license": "Unsplash License"
     }
+  },
+  "articlePhotos": {
+    "how-to-read-fomc-decision-2026": {
+      "photoId": "photo-1618044733300-9472054094ee",
+      "source": "https://unsplash.com/photos/financial-newspaper-with-stock-chart-XrIfY_4cK1w",
+      "photographer": "Markus Spiske",
+      "alt": "Financial newspaper with stock-market chart, illustrative editorial photograph",
+      "altAr": "صحيفة مالية ورسم بياني للأسواق، صورة توضيحية لا تعرض بيانات الاجتماع",
+      "altFr": "Journal financier et graphique boursier, photographie illustrative sans données de réunion",
+      "license": "Unsplash License",
+      "note": "Original per-article editorial photograph, not a representation of an FOMC decision or market performance."
+    }
   }
 }
