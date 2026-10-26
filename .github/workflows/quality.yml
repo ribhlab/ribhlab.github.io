@@ -19,6 +19,7 @@ jobs:
           node-version: '22'
       - name: Syntax checks
         run: |
+          node --check src/cover-art.mjs
           node --check src/build.mjs
           node --check src/app.js
           node --check src/check.mjs

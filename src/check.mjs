@@ -109,5 +109,42 @@ for(const s of taxonomy.sections){
 }
 if(assignedSlugs.size!==knownSlugs.size)errors.push('Not all published articles are classified');
 for(const lang of ['ar','en','fr'])if(!fs.existsSync(path.join(dist,lang,'sections','index.html')))errors.push('Missing section directory '+lang);
+// Original-cover and resource-directory checks; each article must get its own SVG and official links.
+const resourceConfig=JSON.parse(fs.readFileSync(path.join(root,'content','platform-links.json'),'utf8'));
+for(const [id,item] of Object.entries(resourceConfig.platforms)){
+ try{if(new URL(item.url).protocol!=='https:')errors.push('Resource '+id+': insecure URL');}
+ catch{errors.push('Resource '+id+': invalid URL');}
+ if(!item.name)errors.push('Resource '+id+': missing label');
+}
+for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
+ const slug=filename.slice(0,-5);
+ const coverFile=path.join(dist,'covers',slug+'.svg');
+ if(!fs.existsSync(coverFile))errors.push('Missing original cover '+slug);
+ else{
+  const svg=fs.readFileSync(coverFile,'utf8');
+  if(!svg.includes('<svg')||!svg.includes('</svg>')||!svg.includes('viewBox="0 0 1200 675"'))errors.push('Invalid original cover '+slug);
+  if(/https?:\/\/.+\.(?:png|jpeg|jpg|webp)/.test(svg))errors.push('Remote image dependency in cover '+slug);
+ }
+ const refs=resourceConfig.articleLinks[slug];
+ if(!Array.isArray(refs)||refs.length<2)errors.push('Insufficient official platform links for '+slug);
+ for(const id of refs||[])if(!resourceConfig.platforms[id])errors.push('Unknown platform ID '+id+' for '+slug);
+ const article=JSON.parse(fs.readFileSync(path.join(articleDir,filename),'utf8'));
+ for(const lang of ['ar','en','fr']){
+  const rendered=path.join(dist,lang,article.category,slug,'index.html');
+  if(!fs.existsSync(rendered))continue;
+  const html=fs.readFileSync(rendered,'utf8');
+  if(!html.includes('/covers/'+slug+'.svg'))errors.push('Wrong cover in '+lang+'/'+slug);
+  if(!html.includes('class="article-resource-box"'))errors.push('Official link box absent '+lang+'/'+slug);
+  const image=html.match(/<figure class="article-illustration"><img[^>]+>/);
+  if(!image||!image[0].includes('alt='))errors.push('Article cover missing alt '+lang+'/'+slug);
+ }
+}
+for(const lang of ['ar','en','fr']){
+ const page=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ const top=page.indexOf('id="latest"'),sections=page.indexOf('id="editorial-sections"');
+ if(top<0||sections<0||top>sections)errors.push('Newest stories not before section navigation in '+lang);
+ const newest=page.slice(top,sections);
+ if((newest.match(/class="article-card /g)||[]).length<6)errors.push('Too few homepage latest cards in '+lang);
+}
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);

@@ -76,3 +76,19 @@
 @media (max-width:1100px){.editorial-section-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.editorial-section-grid{grid-template-columns:1fr}.editorial-section-card{padding:20px}}
 @media (prefers-reduced-motion:reduce){.editorial-section-card{transition:none}.editorial-section-card:hover{transform:none}}
+
+/* Cover illustrations are original per-article SVGs rendered at build time. */
+.card-cover-image{opacity:1}
+.card-art:before,.card-art:after{display:none}
+.card-art-icon{width:52px;height:52px;background:rgba(7,22,41,.56)}
+.card-art-icon svg{width:33px;height:33px}
+.card-art-label{position:absolute;bottom:16px;inset-inline-end:16px;background:rgba(5,20,37,.72);border:1px solid rgba(255,255,255,.22)}
+.latest-first{padding-block-start:50px}
+.latest-first .article-card:first-child{box-shadow:0 18px 50px rgba(9,33,58,.06)}
+.article-resource-box{margin:2rem 0;padding:25px 26px;background:#eff8f8;border:1px solid #cee6e4;border-radius:18px}
+.article-resource-box h2{font-size:1.2rem!important;margin:0 0 9px;color:#15354c}
+.article-resource-box p{font-size:.92rem;color:#43616b;line-height:1.7}
+.article-resource-box ul{padding:0;margin:19px 0 0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.article-resource-box a{display:block;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid #d9e7e9;color:#17495e;text-decoration:none;line-height:1.45}
+.article-resource-box a:hover,.article-resource-box a:focus-visible{border-color:#268a83;text-decoration:underline}
+@media(max-width:580px){.article-resource-box{padding:18px}.article-resource-box ul{grid-template-columns:1fr}.latest-first{padding-block-start:34px}}
