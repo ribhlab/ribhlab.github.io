@@ -1,0 +1,64 @@
+{
+  "updated": "2026-10-26",
+  "license": "Unsplash License — free commercial use and modification, no resale of unmodified images or competing image collections; third-party rights must also be respected",
+  "licenseUrl": "https://unsplash.com/license",
+  "purpose": "Editorial illustration, not evidence of actual app screens, trading results, price movements or endorsement",
+  "photos": {
+    "freelance": {
+      "photoId": "photo-1519720842496-c64a0d0627f9",
+      "source": "https://unsplash.com/photos/person-using-laptop-computer-TUiJe6bh2EA",
+      "photographer": "Sincerely Media",
+      "alt": "Remote work desk and laptop",
+      "license": "Unsplash License"
+    },
+    "online-business": {
+      "photoId": "photo-1651094856217-6f30970b1521",
+      "source": "https://unsplash.com/photos/a-person-working-on-a-laptop-8m9m7TqtBe4",
+      "photographer": "The Connected Narrative",
+      "alt": "Digital business planning desk",
+      "license": "Unsplash License"
+    },
+    "ai-automation": {
+      "photoId": "photo-1763568258143-497992aa73da",
+      "source": "https://unsplash.com/photos/laptop-screen-displaying-code-with-coffee-mug-nwfWXz-JSWA",
+      "photographer": "Daniil Komov",
+      "alt": "Laptop showing programming code",
+      "license": "Unsplash License"
+    },
+    "mobile-apps": {
+      "photoId": "photo-1597320691074-e930812569cb",
+      "source": "https://unsplash.com/es/fotos/alguien-esta-viendo-un-video-en-su-telefono-UPRDLZXVD1s",
+      "photographer": "Szabo Viktor",
+      "alt": "Mobile phone with photo application",
+      "license": "Unsplash License"
+    },
+    "games-security": {
+      "photoId": "photo-1665041974623-d398d035023e",
+      "source": "https://unsplash.com/photos/a-video-game-controller-d69kT8Xu4L4",
+      "photographer": "Branden Skeli",
+      "alt": "Video game controller and gaming equipment",
+      "license": "Unsplash License"
+    },
+    "trading-risk": {
+      "photoId": "photo-1591696205602-2f950c417cb9",
+      "source": "https://unsplash.com/photos/stock-market-chart-displayed-on-laptop-screen-IrRbSND5EUc",
+      "photographer": "Markus Winkler",
+      "alt": "Price chart on a laptop screen",
+      "license": "Unsplash License"
+    },
+    "crypto-web3": {
+      "photoId": "photo-1707075891510-960cc9ecfcd3",
+      "source": "https://unsplash.com/photos/a-pile-of-bitcoins-sitting-on-top-of-a-table-1lpKElkrN-Y",
+      "photographer": "Erling Løken Andersen",
+      "alt": "Bitcoin coins on violet background",
+      "license": "Unsplash License"
+    },
+    "gold-macro": {
+      "photoId": "photo-1610375461246-83df859d849d",
+      "source": "https://unsplash.com/photos/stacked-gold-bullion-bars-iYsrkq5qq0Q",
+      "photographer": "Jingming Pan",
+      "alt": "Stacked gold bullion bars",
+      "license": "Unsplash License"
+    }
+  }
+}

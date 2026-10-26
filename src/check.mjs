@@ -109,6 +109,32 @@ for(const s of taxonomy.sections){
 }
 if(assignedSlugs.size!==knownSlugs.size)errors.push('Not all published articles are classified');
 for(const lang of ['ar','en','fr'])if(!fs.existsSync(path.join(dist,lang,'sections','index.html')))errors.push('Missing section directory '+lang);
+// Licensed photography: valid provenance, source credit and offline SVG fallback across 87 article views.
+const photos=JSON.parse(fs.readFileSync(path.join(root,'content','licensed-photos.json'),'utf8'));
+if(photos.licenseUrl!=='https://unsplash.com/license')errors.push('Licensed-photo record must identify the license');
+for(const section of taxonomy.sections){
+ const p=photos.photos?.[section.id];
+ if(!p||!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!/^https:\/\/unsplash\.com\//.test(p.source)||!p.photographer||!p.alt)errors.push('Missing validated photo attribution for section '+section.id);
+}
+for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
+ const a=JSON.parse(fs.readFileSync(path.join(articleDir,filename),'utf8'));
+ for(const lang of ['ar','en','fr']){
+  const f=path.join(dist,lang,a.category,a.slug,'index.html');
+  if(!fs.existsSync(f))continue;
+  const h=fs.readFileSync(f,'utf8');
+  if(!h.includes('class="article-illustration licensed-editorial-photo"'))errors.push('Missing licensed photo block '+lang+'/'+a.slug);
+  if(!h.includes('class="article-illustration original-cover-figure"'))errors.push('Missing article-specific original illustration '+lang+'/'+a.slug);
+  if(!h.includes('data-fallback-src=')||!h.includes('images.unsplash.com/photo-'))errors.push('Missing remote photo and fallback '+lang+'/'+a.slug);
+  if(!h.includes('/covers/'+a.slug+'.svg'))errors.push('Missing original art reference '+lang+'/'+a.slug);
+  if(!h.includes('Unsplash</a>'))errors.push('Missing photographer credit '+lang+'/'+a.slug);
+ }
+}
+for(const lang of ['ar','en','fr']){
+ const h=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ if(!h.includes('class="card-cover-image editorial-photo"'))errors.push('Latest articles not showing photography '+lang);
+}
+if(!fs.readFileSync(path.join(dist,'assets','app.js'),'utf8').includes('photo-fallback-active'))errors.push('Missing accessible fallback script');
+
 // Original-cover and resource-directory checks; each article must get its own SVG and official links.
 const resourceConfig=JSON.parse(fs.readFileSync(path.join(root,'content','platform-links.json'),'utf8'));
 for(const [id,item] of Object.entries(resourceConfig.platforms)){
@@ -135,7 +161,7 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   const html=fs.readFileSync(rendered,'utf8');
   if(!html.includes('/covers/'+slug+'.svg'))errors.push('Wrong cover in '+lang+'/'+slug);
   if(!html.includes('class="article-resource-box"'))errors.push('Official link box absent '+lang+'/'+slug);
-  const image=html.match(/<figure class="article-illustration"><img[^>]+>/);
+  const image=html.match(/<figure class="article-illustration original-cover-figure"><img[^>]+>/);
   if(!image||!image[0].includes('alt='))errors.push('Article cover missing alt '+lang+'/'+slug);
  }
 }
