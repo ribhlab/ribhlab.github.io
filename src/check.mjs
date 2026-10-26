@@ -70,7 +70,7 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   const t=article.translations?.[lang];
   if(!t?.title||!t?.excerpt||!t?.lead||!Array.isArray(t.sections)||t.sections.length<3){errors.push(filename+': missing full '+lang+' translation');continue;}
   for(const sec of t.sections)if(!sec.heading||!Array.isArray(sec.paragraphs)||!sec.paragraphs.length)errors.push(filename+': empty section in '+lang);
-  const htmlPath=path.join(dist,lang,'article',article.slug,'index.html');
+  const htmlPath=path.join(dist,lang,article.category,article.slug,'index.html');
   if(!fs.existsSync(htmlPath)){errors.push(filename+': missing generated '+lang+' page');continue;}
   const html=fs.readFileSync(htmlPath,'utf8');
   if(configuredUrl&&!html.includes('<link rel="canonical"'))errors.push(filename+': missing canonical in '+lang);
