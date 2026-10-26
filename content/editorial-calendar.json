@@ -422,12 +422,15 @@
       "section": "gold-macro",
       "sequence": 9,
       "titleAr": "تفسير قرار FOMC دون مبالغة",
-      "status": "planned",
+      "status": "published",
       "languages": [
         "ar",
         "en",
         "fr"
-      ]
+      ],
+      "publishedDate": "2026-10-26",
+      "articleSlug": "how-to-read-fomc-decision-2026",
+      "note": "Published early with primary Federal Reserve sources; no prediction of October meeting outcome."
     },
     {
       "week": 6,
