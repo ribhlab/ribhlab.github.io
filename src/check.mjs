@@ -112,6 +112,10 @@ for(const lang of ['ar','en','fr'])if(!fs.existsSync(path.join(dist,lang,'sectio
 // Licensed photography: valid provenance, source credit and offline SVG fallback across 87 article views.
 const photos=JSON.parse(fs.readFileSync(path.join(root,'content','licensed-photos.json'),'utf8'));
 if(photos.licenseUrl!=='https://unsplash.com/license')errors.push('Licensed-photo record must identify the license');
+for(const [slug,p] of Object.entries(photos.articlePhotos||{})){
+ if(!knownSlugs.has(slug))errors.push('Orphan article-specific licensed photo '+slug);
+ if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!/^https:\/\/unsplash\.com\//.test(p.source)||!p.photographer||!p.alt||!p.altAr||!p.altFr||p.license!=='Unsplash License')errors.push('Incomplete original photo credit for '+slug);
+}
 for(const section of taxonomy.sections){
  const p=photos.photos?.[section.id];
  if(!p||!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!/^https:\/\/unsplash\.com\//.test(p.source)||!p.photographer||!p.alt)errors.push('Missing validated photo attribution for section '+section.id);

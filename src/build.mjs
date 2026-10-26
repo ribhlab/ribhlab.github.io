@@ -43,10 +43,12 @@ const linkedResources=platformDirectory.articleLinks;
 const coverPath=a=>'/covers/'+a.slug+'.svg';
 // Licensed editorial photography, independently credited; the 29 generated SVGs remain on-site.
 const photoLibrary=JSON.parse(fs.readFileSync(path.join(root,'content/licensed-photos.json'),'utf8'));
-const photoFor=a=>photoLibrary.photos[articleSection.get(a.slug)];
+const photoFor=a=>photoLibrary.articlePhotos?.[a.slug]||photoLibrary.photos[articleSection.get(a.slug)];
 const photoUrl=a=>{const p=photoFor(a);return 'https://images.unsplash.com/'+p.photoId+'?auto=format&fit=crop&w=1200&h=675&q=77';};
 const photoAlt=(l,a)=>{
  const section=articleSection.get(a.slug);
+ const unique=photoLibrary.articlePhotos?.[a.slug];
+ if(unique)return (l==='ar'?unique.altAr:l==='fr'?unique.altFr:unique.alt)||unique.alt;
  const dict={
  ar:{freelance:'مكتب العمل الحر وحاسوب محمول','online-business':'مكتب لتخطيط مشروع رقمي','ai-automation':'حاسوب يعرض شفرة برمجية','mobile-apps':'هاتف ذكي وتطبيقات الهاتف','games-security':'جهاز تحكم خاص بألعاب الفيديو','trading-risk':'منحنى أسعار معروض على حاسوب','crypto-web3':'عملات بيتكوين رمزية توضيحية','gold-macro':'سبائك ذهبية توضيحية'},
  fr:{freelance:'Poste de travail freelance avec ordinateur','online-business':'Espace de planification d’un projet numérique','ai-automation':'Ordinateur affichant du code informatique','mobile-apps':'Téléphone et applications mobiles','games-security':'Manette de jeu vidéo','trading-risk':'Graphique financier sur ordinateur','crypto-web3':'Pièces Bitcoin, illustration','gold-macro':'Lingots d’or illustratifs'}
