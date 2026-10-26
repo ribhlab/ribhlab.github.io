@@ -161,7 +161,7 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   const html=fs.readFileSync(rendered,'utf8');
   if(!html.includes('/covers/'+slug+'.svg'))errors.push('Wrong cover in '+lang+'/'+slug);
   if(!html.includes('class="article-resource-box"'))errors.push('Official link box absent '+lang+'/'+slug);
-  const image=html.match(/<figure class="article-illustration"><img[^>]+>/);
+  const image=html.match(/<figure class="article-illustration original-cover-figure"><img[^>]+>/);
   if(!image||!image[0].includes('alt='))errors.push('Article cover missing alt '+lang+'/'+slug);
  }
 }
