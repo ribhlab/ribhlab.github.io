@@ -40,12 +40,12 @@ const expectedToken='google-site-verification: '+tokenName;
 if(!fs.existsSync(tokenSource)||fs.readFileSync(tokenSource,'utf8').trim()!==expectedToken) errors.push('Search Console: missing or modified ownership token in public/');
 if(!fs.existsSync(tokenBuilt)||fs.readFileSync(tokenBuilt,'utf8').trim()!==expectedToken) errors.push('Search Console: ownership token missing from generated website');
 if(configuredUrl){
- const url=configuredUrl.replace(/\\/$/,'');
+ const url=configuredUrl.endsWith('/')?configuredUrl.slice(0,-1):configuredUrl;
  const sitemapPath=path.join(dist,'sitemap.xml');
  if(!fs.existsSync(sitemapPath)) errors.push('Search Console: sitemap.xml missing');
  else {
   const sitemap=fs.readFileSync(sitemapPath,'utf8');
-  const urls=[...sitemap.matchAll(/<loc>([^<]*)<\\/loc>/g)].map(m=>m[1]);
+  const urls=[...sitemap.matchAll(new RegExp('<loc>([^<]*)</loc>','g'))].map(m=>m[1]);
   if(urls.length<30)errors.push('Search Console: sitemap unexpectedly short ('+urls.length+' URLs)');
   if(new Set(urls).size!==urls.length)errors.push('Search Console: duplicate canonical URLs in sitemap');
   if(urls.some(x=>!x.startsWith(url+'/')))errors.push('Search Console: off-domain or wrong-path URLs in sitemap');
