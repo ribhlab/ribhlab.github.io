@@ -44,7 +44,7 @@ const coverPath=a=>'/covers/'+a.slug+'.svg';
 // Licensed editorial photography, independently credited; the 29 generated SVGs remain on-site.
 const photoLibrary=JSON.parse(fs.readFileSync(path.join(root,'content/licensed-photos.json'),'utf8'));
 const photoFor=a=>photoLibrary.articlePhotos?.[a.slug]||photoLibrary.photos[articleSection.get(a.slug)];
-const photoUrl=a=>{const p=photoFor(a);return 'https://images.unsplash.com/'+p.photoId+'?auto=format&fit=crop&w=1200&h=675&q=77';};
+const photoUrl=a=>{const p=photoLibrary.articlePhotos?.[a.slug];return p ? 'https://images.unsplash.com/'+p.photoId+'?auto=format&fit=crop&w=1200&h=675&q=77' : coverPath(a);};
 const photoAlt=(l,a)=>{
  const section=articleSection.get(a.slug);
  const unique=photoLibrary.articlePhotos?.[a.slug];
