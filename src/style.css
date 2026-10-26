@@ -92,3 +92,20 @@
 .article-resource-box a{display:block;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid #d9e7e9;color:#17495e;text-decoration:none;line-height:1.45}
 .article-resource-box a:hover,.article-resource-box a:focus-visible{border-color:#268a83;text-decoration:underline}
 @media(max-width:580px){.article-resource-box{padding:18px}.article-resource-box ul{grid-template-columns:1fr}.latest-first{padding-block-start:34px}}
+
+/* Licensed editorial photos — RibhLab’s editorial overlay preserves the original brand language.
+   The source photograph can fail gracefully without breaking the article layout. */
+.card-art{background:#132c42}
+.card-cover-image.editorial-photo{opacity:1;filter:saturate(.9) contrast(1.08);object-position:center}
+.card-art:after{display:block;content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 24%,rgba(5,21,38,.65) 100%);border:0;width:auto;height:auto;border-radius:0;z-index:1;pointer-events:none}
+.card-art-icon,.card-art-label,.card-art-corner{z-index:2}
+.article-photo-frame{position:relative;overflow:hidden;border-radius:17px;background:#132c42;isolation:isolate}
+.article-photo-frame img{width:100%;aspect-ratio:16/9;height:auto;display:block;object-fit:cover;filter:saturate(.88) contrast(1.06)}
+.article-photo-frame:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(12,38,55,.02) 40%,rgba(6,28,48,.65) 100%)}
+.editorial-image-label{position:absolute;bottom:17px;inset-inline-start:19px;color:#fff;font-weight:800;letter-spacing:.015em;font-size:13px;z-index:1;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.licensed-editorial-photo figcaption a{color:#176d71;text-decoration:underline;text-underline-offset:2px}
+.licensed-editorial-photo figcaption a:hover{color:#114950}
+.original-cover-figure{max-width:100%;margin-block:2.5rem;opacity:.98}
+.original-cover-figure img{border-radius:17px;display:block;width:100%;height:auto}
+.photo-fallback-active{filter:none!important}
+@media(prefers-reduced-motion:reduce){.card-art img{transition:none}}
