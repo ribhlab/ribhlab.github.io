@@ -52,5 +52,40 @@ if(configuredUrl){
   for(const lang of ['ar','en','fr'])if(!urls.includes(url+'/'+lang+'/'))errors.push('Search Console: missing '+lang+' homepage in sitemap');
  }
 }
+// Editorial and SEO regression checks: validate every translated article before publishing.
+const articleDir=path.join(root,'content','articles');
+for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
+ let article;
+ try{article=JSON.parse(fs.readFileSync(path.join(articleDir,filename),'utf8'));}catch(e){errors.push('Invalid article JSON: '+filename);continue;}
+ if(filename!==article.slug+'.json')errors.push(filename+': file/slug mismatch');
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(article.date||'')||!/^\d{4}-\d{2}-\d{2}$/.test(article.updated||''))errors.push(filename+': publication/update dates missing');
+ if(article.updated<article.date)errors.push(filename+': update date predates publication');
+ const refs=(article.sources||[]);
+ if(!Array.isArray(refs))errors.push(filename+': sources must be an array');
+ else for(const ref of refs){
+  try{if(new URL(ref.url).protocol!=='https:')errors.push(filename+': source must use HTTPS');}catch{errors.push(filename+': invalid source URL');}
+  if(!ref.label)errors.push(filename+': missing source label');
+ }
+ for(const lang of ['ar','en','fr']){
+  const t=article.translations?.[lang];
+  if(!t?.title||!t?.excerpt||!t?.lead||!Array.isArray(t.sections)||t.sections.length<3){errors.push(filename+': missing full '+lang+' translation');continue;}
+  for(const sec of t.sections)if(!sec.heading||!Array.isArray(sec.paragraphs)||!sec.paragraphs.length)errors.push(filename+': empty section in '+lang);
+  const htmlPath=path.join(dist,lang,'article',article.slug,'index.html');
+  if(!fs.existsSync(htmlPath)){errors.push(filename+': missing generated '+lang+' page');continue;}
+  const html=fs.readFileSync(htmlPath,'utf8');
+  if(configuredUrl&&!html.includes('<link rel="canonical"'))errors.push(filename+': missing canonical in '+lang);
+  if(!html.includes('application/ld+json'))errors.push(filename+': missing structured data in '+lang);
+  if(!html.includes('name="description"'))errors.push(filename+': missing SEO description in '+lang);
+  if(refs.length&&!html.includes('class="article-sources"'))errors.push(filename+': missing reference section in '+lang);
+  if(article.partner?.url&&(!html.includes('class="partner-box"')||!html.includes('rel="sponsored nofollow')))errors.push(filename+': missing disclosed partner link in '+lang);
+ }
+}
+for(const pagePath of pages){
+ const content=fs.readFileSync(pagePath,'utf8');
+ for(const imageTag of content.match(/<img\b[^>]*>/g)||[]){
+  if(!/\balt=/.test(imageTag))errors.push(pagePath+': image missing alt attribute');
+  if(!/\bwidth=/.test(imageTag)||!/\bheight=/.test(imageTag))errors.push(pagePath+': image missing dimensions');
+ }
+}
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
