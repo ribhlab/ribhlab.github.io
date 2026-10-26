@@ -1,0 +1,40 @@
+name: Validate RibhLab source and built site
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        run: |
+          node --check src/build.mjs
+          node --check src/app.js
+          node --check src/check.mjs
+          node --check src/update-news.mjs
+      - name: Build multilingual pages
+        env:
+          SITE_URL: https://univcours.github.io/ribhlab-site
+        run: |
+          npm run build
+          npm run check
+      - name: Check generated sitemap, images and monetization disclaimers
+        run: |
+          test -s dist/sitemap.xml
+          test -f dist/illustrations/earning.svg
+          test -f dist/illustrations/trading.svg
+          test -f dist/illustrations/ai.svg
+          grep -q 'market-analysis' dist/ar/markets/index.html
+          grep -q 'speed-start' dist/ar/tools/index.html
+          grep -q 'rel="sponsored nofollow' dist/ar/article/fiverr-complete-guide-2026/index.html || grep -rlq 'rel="sponsored nofollow' dist/ar/ || exit 1
