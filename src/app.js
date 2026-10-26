@@ -61,6 +61,47 @@
   try{await navigator.clipboard.writeText(canonical);button.textContent={ar:'تم النسخ ✓',en:'Copied ✓',fr:'Copié ✓'}[meta.lang];setTimeout(()=>button.textContent=previous,2000);}
   catch{const tmp=document.createElement('textarea');tmp.value=canonical;document.body.appendChild(tmp);tmp.select();document.execCommand('copy');tmp.remove();button.textContent=previous;}
  }));
+
+ // Real measurement: only executed after the visitor clicks Start. We do not infer speed from browser hints.
+ const speedStart=byId('speed-start'),speedStop=byId('speed-stop'),speedStatus=byId('speed-status');
+ let speedController=null;
+ const speedMessages={
+  ar:{running:'الاختبار جارٍ: نقل بيانات حقيقية...',done:'اكتمل القياس. النتيجة لحظة الاختبار وقد تختلف عند التكرار.',failed:'تعذر قياس الاتصال: قد تمنع الشبكة أو المتصفح خدمة الاختبار. لم نعرض أرقاماً افتراضية.',stopped:'توقف الاختبار بطلبك.'},
+  en:{running:'Measuring using real network traffic...',done:'Measurement completed. Repeat to compare connection variability.',failed:'Measurement unavailable: browser or network may block the endpoint. No estimated speed is displayed.',stopped:'Test stopped.'},
+  fr:{running:'Mesure du trafic réseau réel...',done:'Test terminé. Les résultats varient selon le moment et la connexion.',failed:'Mesure indisponible : accès aux serveurs bloqué ou problème réseau. Aucun débit fictif affiché.',stopped:'Test arrêté.'}
+ }[meta.lang]||{running:'Testing...',done:'Done',failed:'Connection test unavailable',stopped:'Stopped'};
+ const putSpeed=(key,value)=>{const el=byId('speed-'+key);if(el)el.textContent=value;};
+ const calcMbps=(bytes,ms)=>ms>0?(bytes*8/(ms/1000)/1000000):NaN;
+ const request=async(url,options,controller)=>{
+  const start=performance.now();
+  const response=await fetch(url,{...options,cache:'no-store',signal:controller.signal});
+  if(!response.ok)throw new Error('network test HTTP '+response.status);
+  const body=await response.arrayBuffer();
+  return {ms:performance.now()-start,bytes:body.byteLength};
+ };
+ speedStop?.addEventListener('click',()=>speedController?.abort());
+ speedStart?.addEventListener('click',async()=>{
+  if(speedController)return;
+  speedController=new AbortController();
+  speedStart.disabled=true;speedStop.disabled=false;speedStatus.textContent=speedMessages.running;
+  for(const k of ['latency','download','upload'])putSpeed(k,'—');
+  const controller=speedController;
+  const base='https://speed.cloudflare.com';
+  try{
+   const latency=[];
+   for(let n=0;n<3;n++){const p=await request(base+'/__down?bytes=0&r='+Date.now()+'-'+n,{},controller);latency.push(p.ms);}
+   latency.sort((a,b)=>a-b);putSpeed('latency',nice(latency[1]));
+   let downloaded=0,downloadTime=0;
+   for(let n=0;n<2;n++){const p=await request(base+'/__down?bytes=1000000&r='+Date.now()+'-'+n,{},controller);if(p.bytes<1000000)throw new Error('incomplete measurement');downloaded+=p.bytes;downloadTime+=p.ms;}
+   putSpeed('download',nice(calcMbps(downloaded,downloadTime)));
+   const data=new Uint8Array(500000); // fixed-size neutral payload; consent is required before sending.
+   let uploadBytes=0,uploadTime=0;
+   for(let n=0;n<2;n++){const start=performance.now();const response=await fetch(base+'/__up?r='+Date.now()+'-'+n,{method:'POST',body:data,cache:'no-store',signal:controller.signal});if(!response.ok)throw new Error('upload HTTP '+response.status);await response.arrayBuffer();uploadTime+=performance.now()-start;uploadBytes+=data.byteLength;}
+   putSpeed('upload',nice(calcMbps(uploadBytes,uploadTime)));
+   speedStatus.textContent=speedMessages.done;
+  }catch(e){speedStatus.textContent=e.name==='AbortError'?speedMessages.stopped:speedMessages.failed; if(e.name!=='AbortError')console.warn('Speed test unavailable',e);}
+  finally{if(speedController===controller)speedController=null;speedStart.disabled=false;speedStop.disabled=true;}
+ });
 })();
 
 document.querySelectorAll('.pulse-filter').forEach(btn=>btn.addEventListener('click',()=>{const wanted=btn.dataset.pulseFilter;document.querySelectorAll('.pulse-filter').forEach(b=>b.classList.toggle('current',b===btn));document.querySelectorAll('[data-pulse-topic]').forEach(card=>{card.hidden=wanted!=='all'&&card.dataset.pulseTopic!==wanted;});}));
