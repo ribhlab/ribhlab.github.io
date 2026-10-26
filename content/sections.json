@@ -167,6 +167,38 @@
         "how-to-read-fomc-decision-2026"
       ],
       "targetArticles": 40
+    },
+    {
+      "id": "body-care",
+      "parent": "lifestyle",
+      "title": {
+        "ar": "العناية بالجسم والبشرة",
+        "en": "Body & skin care",
+        "fr": "Soins du corps et de la peau"
+      },
+      "description": {
+        "ar": "العناية اليومية بالبشرة والشعر والنظافة الشخصية بمعلومات موثوقة ودون ادعاءات علاجية.",
+        "en": "Evidence-aware skin, hair and personal care without unsupported medical claims.",
+        "fr": "Soins de la peau, des cheveux et hygiène avec des conseils prudents."
+      },
+      "publishedSlugs": [],
+      "targetArticles": 40
+    },
+    {
+      "id": "world-recipes",
+      "parent": "lifestyle",
+      "title": {
+        "ar": "أشهر الأطباق العالمية والحلويات",
+        "en": "Famous world dishes & desserts",
+        "fr": "Plats célèbres du monde et desserts"
+      },
+      "description": {
+        "ar": "وصفات لأشهر الأطباق والحلويات العالمية بمقادير واضحة وخطوات قابلة للتطبيق.",
+        "en": "Recognizable global classics and desserts with practical ingredients and steps.",
+        "fr": "Grands classiques et desserts du monde avec ingrédients et étapes clairs."
+      },
+      "publishedSlugs": [],
+      "targetArticles": 40
     }
   ]
 }
