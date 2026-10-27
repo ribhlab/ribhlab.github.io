@@ -392,6 +392,40 @@ for(const lang of ['ar','en','fr']){
  if(!home.includes('/'+lang+'/archive/'))errors.push('Archive not linked from homepage: '+lang);
 }
 
+
+// VIVA design checks: live category filtering, original image preservation,
+// instant archive discovery, readable multilingual typography and article progress.
+const vividPath=path.join(dist,'assets','vivid-theme.css');
+if(!fs.existsSync(vividPath))errors.push('VIVA theme stylesheet missing');
+else{
+ const css=fs.readFileSync(vividPath,'utf8');
+ for(const rule of ['--v-purple:#6543ff','--v-coral:#ff6475','--v-cyan:#00b7d9','--v-lime:#d8fa64',
+  '.hero-editorial-cover','.smart-filter-chip','.archive-smart-search','.reading-progress-track',
+  '.topic-earning','.topic-trading','.topic-ai','.topic-lifestyle',
+  'html[lang=ar]','@media(max-width:560px)','@media(prefers-reduced-motion:reduce)','@media print']){
+  if(!css.includes(rule))errors.push('VIVA brand/accessibility design feature missing: '+rule);
+ }
+ if((css.match(/\{/g)||[]).length!==(css.match(/\}/g)||[]).length)errors.push('VIVA stylesheet rules are unbalanced');
+}
+const appCode=fs.readFileSync(path.join(dist,'assets','app.js'),'utf8');
+for(const feature of ['data-story-filters','data-story-grid','data-archive-search','data-reading-progress',
+  "archiveInput.addEventListener('input'","progress.style.transform=","card.hidden=category!=='all'"]){
+ if(!appCode.includes(feature))errors.push('Functional smart design behavior missing: '+feature);
+}
+for(const lang of ['ar','en','fr']){
+ const home=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ const archive=fs.readFileSync(path.join(dist,lang,'archive','index.html'),'utf8');
+ if(!home.includes('href="/ribhlab-site/assets/vivid-theme.css"'))errors.push('VIVA theme absent from '+lang+' homepage');
+ if(!home.includes('data-story-filters')||!home.includes('data-story-grid'))errors.push('Smart home topic filter not built '+lang);
+ if((home.match(/data-story-filter="/g)||[]).length!==5)errors.push('Expected five usable category filter controls '+lang);
+ if((home.match(/data-story-topic="/g)||[]).length<9)errors.push('Smart topic identifiers missing on story cards '+lang);
+ if(!archive.includes('id="archive-search"')||!archive.includes('data-archive-count')||!archive.includes('data-archive-empty'))errors.push('Instant full-text archive UI missing '+lang);
+ const guide=path.join(dist,lang,'lifestyle','homemade-pizza-margherita-authentic-style-recipe','index.html');
+ if(!fs.existsSync(guide)||!fs.readFileSync(guide,'utf8').includes('data-reading-progress'))errors.push('Article reading progress UI missing '+lang);
+ const uniquePhotos=[...home.matchAll(/class="card-cover-image editorial-photo"[^>]*\bsrc="([^"]+)"/g)].map(x=>x[1]);
+ if(uniquePhotos.length<9||new Set(uniquePhotos).size!==uniquePhotos.length)errors.push('Homepage repeated article photo '+lang);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
