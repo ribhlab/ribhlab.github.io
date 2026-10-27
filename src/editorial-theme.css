@@ -389,3 +389,22 @@ html[lang=ar] .article-content p{line-height:2}
  /* Document Studio printable templates must not inherit brand typography. */
  .studio-pro .studio-document{font-family:Arial,Helvetica,sans-serif!important}
 }
+
+
+/* Permanent editorial archive — older stories retain their image and original URL. */
+.archive-page{padding-block:25px 100px}
+.archive-count{display:inline-flex;align-items:center;margin-top:23px;padding:9px 16px;border:1px solid #c8d0c2;background:#f6f6eb;color:#294d3a;font-size:13px;line-height:1.5;border-radius:4px}
+.archive-category-nav{display:flex;flex-wrap:wrap;gap:10px;border-bottom:1px solid #d1d9ce;padding:0 0 26px;margin-bottom:30px}
+.archive-category-nav a{display:inline-flex;min-height:42px;align-items:center;gap:8px;padding:8px 16px;border:1px solid #d1d6cd;border-radius:4px;background:#fffdf6;font-size:13px;font-weight:750;color:#355c45;transition:background .2s,border-color .2s}
+.archive-category-nav a:hover,.archive-category-nav a:focus-visible{border-color:#b56a4b;background:#f7ece3}
+.archive-group{padding-block:35px 43px;scroll-margin-top:125px}
+.archive-group + .archive-group{border-top:1px solid #d3d8cb}
+.archive-group .section-head{margin-bottom:23px}
+.archive-group .section-head p{margin-top:8px}
+.archive-article-grid .article-card{min-width:0}
+.archive-article-grid .card-art{height:214px}
+.archive-article-grid .card-body{min-height:200px}
+.archive-article-grid .card-body h3{font-size:26px}
+html[lang=ar] .archive-article-grid .card-body h3{font-size:22px;line-height:1.55}
+@media(max-width:760px){.archive-page{padding-block:25px 70px}.archive-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.archive-article-grid .card-art{height:185px}.archive-article-grid .card-body h3{font-size:22px}}
+@media(max-width:560px){.archive-article-grid{grid-template-columns:1fr}.archive-article-grid .card-art{height:232px}.archive-group{padding-block:26px 32px}.archive-category-nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}.archive-category-nav a{white-space:nowrap}}

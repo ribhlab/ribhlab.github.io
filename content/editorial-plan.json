@@ -446,17 +446,13 @@
         "ai-prompts-at-work",
         "ai-finance-automation-with-human-controls",
         "automate-excel-ai",
-        "ai-video-workflow"
+        "ai-video-workflow",
+        "ai-assistant-vs-ai-agent-workflows-practical-guide"
       ],
       "ideas": [
         {
           "sequence": 6,
           "titleAr": "اختيار نموذج ذكاء اصطناعي حسب المهمة",
-          "status": "planned"
-        },
-        {
-          "sequence": 7,
-          "titleAr": "الفرق بين مساعد AI ووكيل AI",
           "status": "planned"
         },
         {
@@ -1474,14 +1470,10 @@
         "geopolitics-energy-gold-risk-framework",
         "market-pulse-fed-gold-bitcoin-scenarios-oct-2026",
         "energy-inflation-us-euro-area-october-2026",
-        "how-to-read-fomc-decision-2026"
+        "how-to-read-fomc-decision-2026",
+        "why-gold-moves-with-us-dollar-real-yields-explained"
       ],
       "ideas": [
-        {
-          "sequence": 6,
-          "titleAr": "لماذا يتحرك الذهب مع الدولار",
-          "status": "planned"
-        },
         {
           "sequence": 7,
           "titleAr": "الذهب والعوائد الحقيقية الأمريكية",
@@ -1664,15 +1656,11 @@
       },
       "publishedSlugs": [
         "daily-sunscreen-spf30-body-care-guide",
-        "dry-skin-moisturizing-body-routine"
+        "dry-skin-moisturizing-body-routine",
+        "gentle-face-cleanser-choosing-washing-routine"
       ],
       "targetArticles": 40,
       "ideas": [
-        {
-          "sequence": 3,
-          "titleAr": "اختيار غسول وجه لطيف حسب نوع البشرة",
-          "status": "planned"
-        },
         {
           "sequence": 4,
           "titleAr": "متى تستعمل مرطب الشفاه",
@@ -1875,15 +1863,11 @@
       },
       "publishedSlugs": [
         "classic-roman-spaghetti-carbonara-recipe",
-        "classic-italian-tiramisu-without-raw-eggs"
+        "classic-italian-tiramisu-without-raw-eggs",
+        "homemade-pizza-margherita-authentic-style-recipe"
       ],
       "targetArticles": 40,
       "ideas": [
-        {
-          "sequence": 3,
-          "titleAr": "بيتزا مارغريتا الإيطالية الأصلية",
-          "status": "planned"
-        },
         {
           "sequence": 4,
           "titleAr": "سوشي ماكي ياباني منزلي بطرق آمنة",
