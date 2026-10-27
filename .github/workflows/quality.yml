@@ -22,8 +22,13 @@ jobs:
           node --check src/cover-art.mjs
           node --check src/build.mjs
           node --check src/app.js
+          node --check src/document-studio.js
+          node --check src/document-studio-core.mjs
+          node --check src/document-studio-core.test.mjs
           node --check src/check.mjs
           node --check src/update-news.mjs
+      - name: Test offline Document Studio Pro calculations and import safety
+        run: npm run test:studio
       - name: Build multilingual pages
         env:
           SITE_URL: https://univcours.github.io/ribhlab-site
