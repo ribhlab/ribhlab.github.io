@@ -4,6 +4,9 @@ import { fileURLToPath } from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
 const cfg=JSON.parse(fs.readFileSync(path.join(root,'site.config.json'),'utf8'));
+const studioPlan=JSON.parse(fs.readFileSync(path.join(root,'content/tool-pricing.json'),'utf8')).products.documentStudioPro;
+if(studioPlan.priceUsd!==0||studioPlan.checkoutEnabled!==false||studioPlan.requiresPaymentMethod!==false)throw Error('Document Studio Pro must be free: USD 0, no checkout/payment method');
+
 const locales=['ar','en','fr'];
 const domain=(process.env.SITE_URL||cfg.domain||'').trim().replace(/\/$/,'');
 const contact=(process.env.CONTACT_EMAIL||cfg.contactEmail||'').trim();
@@ -222,19 +225,88 @@ function positionSizerTool(l){
 }
 function documentStudioTool(l){
  const d={
- ar:['Document Studio — نسخة تجريبية محلية','إنشاء نموذج فاتورة أو سيرة ذاتية أو تقرير، مع معاينة وطباعة PDF من المتصفح. لا توجد خدمة ذكاء اصطناعي أو اشتراك مدفوع مفعّل. كل المعلومات تبقى في متصفحك.','نوع الوثيقة','فاتورة','سيرة ذاتية','تقرير','الاسم / الجهة المُصدرة','العميل / المنصب / عنوان التقرير','الموضوع أو الوصف / المهارات','الكمية (الفاتورة)','ثمن الوحدة (الفاتورة)','ضريبة % (الفاتورة)','عملة الفاتورة','حدّث المعاينة','طباعة أو حفظ PDF','تحميل CSV للفاتورة','معاينة الوثيقة'],
- en:['Document Studio — local preview','Create an invoice, CV or report, preview and print to PDF in your browser. AI generation and paid subscriptions are NOT activated. Content stays on your device.','Document type','Invoice','CV','Report','Your name / issuer','Customer / role / report title','Description / skills / report text','Quantity (invoice)','Unit price (invoice)','Tax % (invoice)','Invoice currency','Update preview','Print / Save PDF','Download invoice CSV','Document preview'],
- fr:['Document Studio — aperçu local','Créez une facture, un CV ou un rapport. Prévisualisez et imprimez en PDF. Aucune IA ni vente payante n’est activée. Données locales au navigateur.','Type de document','Facture','CV','Rapport','Votre nom / émetteur','Client / poste / titre du rapport','Description / compétences / texte','Quantité (facture)','Prix unitaire (facture)','Taxe % (facture)','Devise de facture','Actualiser','Imprimer / Enregistrer en PDF','Exporter la facture CSV','Aperçu du document']
+ ar:{
+ title:'Document Studio Pro',intro:'أنشئ الفواتير وعروض الأثمان والسير الذاتية والتقارير والرسائل. جرّب كل الأدوات الاحترافية مجاناً الآن؛ لا حساب ولا بطاقة بنكية. العمل محلي في المتصفح، بدون إرسال الوثائق للخادم.',
+ price:'مجاني حالياً',noBilling:'0 دولار · بدون أداء أو اشتراك',notice:'النسخة Pro متاحة مجاناً حالياً. المساعد الذكي المدمج غير مفعل: يمكن نسخ برومبت لاستخدامه في أداة ذكاء اصطناعي خارجية باختيارك. الوثائق المالية نماذج مسودة؛ تحقق من المتطلبات القانونية والضريبية قبل اعتمادها.',
+ type:'نوع الوثيقة',invoice:'فاتورة',quote:'عرض ثمن',cv:'سيرة ذاتية',report:'تقرير',letter:'رسالة مهنية',
+ theme:'المظهر',modern:'عصري',classic:'كلاسيكي',minimal:'بسيط',
+ issuer:'اسمك أو الجهة المصدرة',recipient:'اسم العميل / جهة التوظيف / المرسل إليه',
+ details:'وصف الخدمات / الخبرات / محتوى التقرير أو الرسالة',reference:'رقم الفاتورة أو مرجع الوثيقة',
+ issueDate:'تاريخ التحرير',dueDate:'تاريخ الاستحقاق أو نهاية صلاحية العرض',
+ email:'البريد الإلكتروني',phone:'الهاتف',address:'العنوان / المعلومات القانونية الاختيارية',
+ currency:'العملة',tax:'نسبة الضريبة %',discount:'الخصم %',items:'السلع أو الخدمات',itemDescription:'وصف البند',quantity:'الكمية',unitPrice:'سعر الوحدة',addItem:'إضافة بند',
+ preview:'معاينة الوثيقة A4',refresh:'تحديث المعاينة',print:'طباعة / حفظ PDF',html:'تحميل HTML',csv:'تحميل CSV (فاتورة/عرض)',json:'تصدير المسودة JSON',save:'حفظ في هذا المتصفح',load:'استرجاع المسودة',clear:'مسح الحفظ المحلي',import:'استيراد مسودة JSON',remove:'حذف',
+ aiTitle:'مساعد كتابة — برومبت قابل للنسخ',aiNote:'هذه وظيفة لإنشاء نص توجيهي فقط، ولا تستخدم AI ولا ترسل معلوماتك لأي خدمة.',aiGenerate:'إنشاء البرومبت',aiCopy:'نسخ البرومبت',
+ note:'الحفظ المحلي اختياري؛ تجنب تخزين المعلومات الحساسة على الأجهزة المشتركة. الطباعة PDF تتم من نافذة طباعة المتصفح.'
+ },
+ en:{
+ title:'Document Studio Pro',intro:'Create invoices, quotes, CVs, reports and professional letters. All current Pro features are free today—no account or credit card. Your information stays in this browser.',
+ price:'Free for now',noBilling:'USD $0 · No checkout or subscription',notice:'Pro is currently offered for $0. There is NO integrated AI service: you can create a prompt and copy it into an external AI tool of your choice. Financial documents are drafts; verify legal and tax requirements before using them.',
+ type:'Document type',invoice:'Invoice',quote:'Quotation',cv:'Resume / CV',report:'Professional report',letter:'Business letter',
+ theme:'Document style',modern:'Modern',classic:'Classic',minimal:'Minimal',
+ issuer:'Your name / issuing company',recipient:'Client / employer / recipient',
+ details:'Services / skills / report details / letter body',reference:'Document or invoice reference',
+ issueDate:'Issue date',dueDate:'Due date / quote expiry',
+ email:'Email',phone:'Phone',address:'Address / optional legal details',
+ currency:'Currency',tax:'Tax rate %',discount:'Discount %',items:'Line items',itemDescription:'Item / service description',quantity:'Quantity',unitPrice:'Unit price',addItem:'Add line',
+ preview:'A4 document preview',refresh:'Update preview',print:'Print / Save as PDF',html:'Download HTML',csv:'Download CSV (invoice/quote)',json:'Export draft JSON',save:'Save in this browser',load:'Restore saved draft',clear:'Clear browser save',import:'Import JSON draft',remove:'Remove',
+ aiTitle:'Writing assistant — copyable prompt',aiNote:'This creates an editing prompt only. It does not run AI and does not upload your content.',aiGenerate:'Build prompt',aiCopy:'Copy prompt',
+ note:'Local saving is optional. Do not save sensitive data on shared devices. PDF output uses your browser’s print dialog.'
+ },
+ fr:{
+ title:'Document Studio Pro',intro:'Créez des factures, devis, CV, rapports et courriers professionnels. Toutes les fonctions Pro disponibles sont actuellement gratuites : ni compte ni carte bancaire. Les données restent dans votre navigateur.',
+ price:'Gratuit actuellement',noBilling:'0 USD · Sans paiement ni abonnement',notice:'Pro est gratuit pour le moment. Aucun service IA intégré : vous pouvez créer un prompt à copier dans un outil externe de votre choix. Les documents comptables sont des brouillons ; vérifiez les obligations légales et fiscales avant utilisation.',
+ type:'Type de document',invoice:'Facture',quote:'Devis',cv:'CV professionnel',report:'Rapport',letter:'Lettre professionnelle',
+ theme:'Style',modern:'Moderne',classic:'Classique',minimal:'Minimaliste',
+ issuer:'Votre nom / entreprise émettrice',recipient:'Client / recruteur / destinataire',
+ details:'Prestations / compétences / rapport / texte de la lettre',reference:'Référence du document',
+ issueDate:'Date de création',dueDate:'Échéance / validité du devis',
+ email:'E-mail',phone:'Téléphone',address:'Adresse / mentions facultatives',
+ currency:'Devise',tax:'Taux de TVA / taxe %',discount:'Remise %',items:'Lignes de prestation',itemDescription:'Désignation',quantity:'Quantité',unitPrice:'Prix unitaire',addItem:'Ajouter une ligne',
+ preview:'Aperçu du document A4',refresh:'Actualiser',print:'Imprimer / Enregistrer PDF',html:'Télécharger HTML',csv:'Exporter CSV (facture/devis)',json:'Exporter le brouillon JSON',save:'Sauver dans ce navigateur',load:'Restaurer le brouillon',clear:'Effacer la sauvegarde locale',import:'Importer un brouillon JSON',remove:'Supprimer',
+ aiTitle:'Assistant de rédaction — prompt copiable',aiNote:'Génère uniquement un prompt. Aucune IA exécutée et aucune donnée transférée.',aiGenerate:'Créer le prompt',aiCopy:'Copier le prompt',
+ note:'Sauvegarde locale facultative : évitez les données sensibles sur un appareil partagé. Le PDF s’enregistre via la boîte de dialogue d’impression.'
+ }
  }[l];
- const field=(idx,id,value,kind='text')=>'<label>'+esc(d[idx])+'<input type="'+kind+'" id="'+id+'" value="'+esc(value)+'" '+(kind==='number'?'min="0" step="any"':'')+'></label>';
- return '<section class="tool-card tool-wide" id="document-studio"><div class="tool-tag">DOCUMENTS / NO UPLOADS</div><h2>'+esc(d[0])+'</h2><p class="tool-hint">'+esc(d[1])+'</p><div class="tool-form"><label>'+esc(d[2])+'<select id="studio-type"><option value="invoice">'+esc(d[3])+'</option><option value="cv">'+esc(d[4])+'</option><option value="report">'+esc(d[5])+'</option></select></label>'+field(6,'studio-name','')+field(7,'studio-client','')+'<label>'+esc(d[8])+'<textarea id="studio-text" rows="4"></textarea></label>'+field(9,'studio-qty','1','number')+field(10,'studio-price','100','number')+field(11,'studio-tax','0','number')+'<label>'+esc(d[12])+'<select id="studio-currency"><option>MAD</option><option>USD</option><option>EUR</option></select></label></div><div class="prompt-controls"><button type="button" id="studio-render" class="btn btn-primary">'+esc(d[13])+'</button><button type="button" id="studio-print" class="btn btn-neutral">'+esc(d[14])+'</button><button type="button" id="studio-csv" class="btn btn-neutral">'+esc(d[15])+'</button></div><h3>'+esc(d[16])+'</h3><div id="studio-preview" class="studio-document" aria-live="polite"></div><p id="studio-status" role="status" aria-live="polite"></p></section>';
+ const txt=(id,key,multiline=false)=>'<label for="'+id+'">'+esc(d[key])+(multiline?'<textarea id="'+id+'" maxlength="12000" rows="5"></textarea>':'<input id="'+id+'" type="text" maxlength="500">')+'</label>';
+ const date=(id,key)=>'<label for="'+id+'">'+esc(d[key])+'<input type="date" id="'+id+'"></label>';
+ const num=(id,key,value)=>'<label for="'+id+'">'+esc(d[key])+'<input id="'+id+'" type="number" value="'+value+'" min="0" max="100" step="0.01"></label>';
+ return '<section class="tool-card tool-wide studio-pro" id="document-studio" data-price-usd="'+studioPlan.priceUsd+'" data-checkout-enabled="false">'+
+ '<div class="studio-pro-head"><div><span class="studio-brand">RIBHLAB / CREATIVE WORKSPACE</span><h2>'+esc(d.title)+'</h2><p class="tool-hint">'+esc(d.intro)+'</p></div><div class="studio-price"><span>'+esc(d.price)+'</span><strong>$'+studioPlan.priceUsd+' USD</strong><small>'+esc(d.noBilling)+'</small></div></div>'+
+ '<p class="studio-disclosure">'+esc(d.notice)+'</p>'+
+ '<div class="studio-editor">'+
+ '<div class="studio-controls"><h3>'+esc(d.title)+'</h3><div class="studio-form-grid">'+
+ '<label for="studio-type">'+esc(d.type)+'<select id="studio-type">'+[['invoice','invoice'],['quote','quote'],['cv','cv'],['report','report'],['letter','letter']].map(([v,key])=>'<option value="'+v+'">'+esc(d[key])+'</option>').join('')+'</select></label>'+
+ '<label for="studio-theme">'+esc(d.theme)+'<select id="studio-theme">'+[['modern','modern'],['classic','classic'],['minimal','minimal']].map(([v,key])=>'<option value="'+v+'">'+esc(d[key])+'</option>').join('')+'</select></label>'+
+ txt('studio-name','issuer')+txt('studio-client','recipient')+txt('studio-ref','reference')+date('studio-issue-date','issueDate')+
+ '<div class="studio-financial-field">'+date('studio-due-date','dueDate')+'</div>'+
+ txt('studio-email','email')+txt('studio-phone','phone')+txt('studio-address','address')+
+ '<div class="studio-text-field">'+txt('studio-text','details',true)+'</div>'+
+ '</div>'+
+ '<div id="studio-financial-fields" class="studio-financial-fields">'+
+ '<div class="studio-form-grid">'+
+ '<label for="studio-currency">'+esc(d.currency)+'<select id="studio-currency">'+['MAD','USD','EUR','GBP','CAD'].map(v=>'<option>'+v+'</option>').join('')+'</select></label>'+
+ num('studio-tax','tax',0)+num('studio-discount','discount',0)+'</div>'+
+ '<h4>'+esc(d.items)+'</h4><div id="studio-items" data-label-description="'+esc(d.itemDescription)+'" data-label-quantity="'+esc(d.quantity)+'" data-label-price="'+esc(d.unitPrice)+'" data-label-remove="'+esc(d.remove)+'"></div>'+
+ '<button type="button" class="btn btn-neutral" id="studio-add-item">'+esc(d.addItem)+'</button></div>'+
+ '<div class="studio-action-buttons"><button type="button" class="btn btn-primary" id="studio-render">'+esc(d.refresh)+'</button>'+
+ '<button type="button" class="btn btn-neutral" id="studio-print">'+esc(d.print)+'</button>'+
+ '<button type="button" class="btn btn-neutral" id="studio-html">'+esc(d.html)+'</button>'+
+ '<button type="button" class="btn btn-neutral" id="studio-csv">'+esc(d.csv)+'</button>'+
+ '<button type="button" class="btn btn-neutral" id="studio-json-download">'+esc(d.json)+'</button></div>'+
+ '<div class="studio-storage-buttons"><button type="button" class="btn btn-neutral" id="studio-save">'+esc(d.save)+'</button><button type="button" class="btn btn-neutral" id="studio-load">'+esc(d.load)+'</button><button type="button" class="btn btn-neutral" id="studio-clear">'+esc(d.clear)+'</button><label class="btn btn-neutral studio-import-btn" for="studio-import">'+esc(d.import)+'</label><input type="file" id="studio-import" accept=".json,application/json" hidden></div>'+
+ '<p class="studio-privacy-note">'+esc(d.note)+'</p></div>'+
+ '<div class="studio-preview-panel"><h3>'+esc(d.preview)+'</h3><div id="studio-preview" class="studio-document theme-modern" aria-live="polite" aria-label="'+esc(d.preview)+'"></div><p id="studio-status" role="status" aria-live="polite"></p></div>'+
+ '</div>'+
+ '<div class="studio-ai-box"><h3>'+esc(d.aiTitle)+'</h3><p>'+esc(d.aiNote)+'</p><div class="prompt-controls"><button type="button" class="btn btn-neutral" id="studio-prompt">'+esc(d.aiGenerate)+'</button><button type="button" class="btn btn-neutral" id="studio-copy-prompt">'+esc(d.aiCopy)+'</button></div><label for="studio-ai-prompt-output" class="visually-hidden">'+esc(d.aiTitle)+'</label><textarea id="studio-ai-prompt-output" rows="5" readonly></textarea></div>'+
+ '<script type="module" src="/assets/document-studio.js"></script></section>';
 }
 function separateTools(l,fullContent){
  const t=i18n[l];
  const names={
- ar:['حاسبة المخاطر','تسعير العمل الحر','مولّد البرومبتات','قياس سرعة الإنترنت','حاسبة إعلانات الموقع','حاسبة العمولة','عائد إعلانات الألعاب','عداد الكلمات','مدقق JSON','حجم الصفقة ووقف الخسارة','Document Studio — المستندات'],
- en:['Risk budget','Freelance quote','AI prompt builder','Internet speed test','Site ad revenue','Affiliate commission','Game ads simulator','Word counter','JSON validator','Position sizing','Document Studio'],
- fr:['Budget de risque','Tarif freelance','Créateur de prompts IA','Test de débit','Publicité du site','Commission affiliation','Publicités des jeux','Compteur de mots','Validateur JSON','Taille de position','Document Studio']
+ ar:['حاسبة المخاطر','تسعير العمل الحر','مولّد البرومبتات','قياس سرعة الإنترنت','حاسبة إعلانات الموقع','حاسبة العمولة','عائد إعلانات الألعاب','عداد الكلمات','مدقق JSON','حجم الصفقة ووقف الخسارة','Document Studio Pro — $0'],
+ en:['Risk budget','Freelance quote','AI prompt builder','Internet speed test','Site ad revenue','Affiliate commission','Game ads simulator','Word counter','JSON validator','Position sizing','Document Studio Pro — $0'],
+ fr:['Budget de risque','Tarif freelance','Créateur de prompts IA','Test de débit','Publicité du site','Commission affiliation','Publicités des jeux','Compteur de mots','Validateur JSON','Taille de position','Document Studio Pro — $0']
  }[l];
  const defs=[
  ['risk-calculator','risk-tool','01','TRADING'],
@@ -266,7 +338,7 @@ function toolPage(l){const t=i18n[l],content=`<section class="page-hero"><div cl
  separateTools(l,content);
 }
 fs.rmSync(dist,{recursive:true,force:true});fs.mkdirSync(path.join(dist,'assets'),{recursive:true});
-for(const f of ['style.css','app.js','favicon.svg','og-cover.svg','og-cover.png'])fs.copyFileSync(path.join(root,'src',f),path.join(dist,'assets',f));
+for(const f of ['style.css','app.js','document-studio.js','document-studio-core.mjs','favicon.svg','og-cover.svg','og-cover.png'])fs.copyFileSync(path.join(root,'src',f),path.join(dist,'assets',f));
 fs.cpSync(path.join(root,'admin'),path.join(dist,'admin'),{recursive:true});
 fs.cpSync(path.join(root,'public'),dist,{recursive:true,force:true});
 // Generate a distinct original artwork for each published article on every build.
