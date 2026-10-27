@@ -1,0 +1,467 @@
+{
+  "checkedAt": "2026-10-27",
+  "editorialNote": {
+    "ar": "البيانات لقطة موثقة بتاريخ 27 أكتوبر 2026. تحقق من آخر أجل والشروط في المصدر قبل الإيداع؛ حالة مواعيد الفيزا لا تُستنتج من وجود زر الحجز.",
+    "en": "Verified editorial snapshot on 27 October 2026. Check deadlines and eligibility at source; a booking page does not prove appointment slots exist.",
+    "fr": "Sélection vérifiée au 27 octobre 2026. Vérifiez délais et critères à la source ; l'existence d'un lien de réservation ne prouve pas la disponibilité de créneaux."
+  },
+  "items": [
+    {
+      "id": "sett-administrator",
+      "section": "competitions",
+      "title": "Administrateur 2ème grade — Province de Settat",
+      "org": "Ministère de l’Intérieur · Province de Settat",
+      "place": "Settat, Maroc",
+      "count": 4,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "kind": "official_notice"
+    },
+    {
+      "id": "sett-engineer",
+      "section": "competitions",
+      "title": "Ingénieur d’État 1er grade — Province de Settat",
+      "org": "Ministère de l’Intérieur · Province de Settat",
+      "place": "Settat, Maroc",
+      "count": 2,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "kind": "official_notice"
+    },
+    {
+      "id": "civil-protection",
+      "section": "competitions",
+      "title": "Élèves officiers — Protection civile",
+      "org": "Direction Générale de la Protection Civile",
+      "place": "Maroc",
+      "count": 50,
+      "deadline": "2026-10-31",
+      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "kind": "official_notice"
+    },
+    {
+      "id": "agriculture-admin",
+      "section": "competitions",
+      "title": "Administrateur 2ème grade — Agriculture",
+      "org": "Ministère de l’Agriculture",
+      "place": "Maroc",
+      "count": 38,
+      "deadline": "2026-10-30",
+      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "kind": "official_notice"
+    },
+    {
+      "id": "oncf-bac5",
+      "section": "competitions",
+      "title": "Cadres ingénieurs et gestionnaires Bac+5",
+      "org": "ONCF",
+      "place": "Maroc",
+      "count": 100,
+      "deadline": "2026-11-06",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "amdie-finance",
+      "section": "competitions",
+      "title": "Cadre Analyste Comptabilité et Finances",
+      "org": "AMDIE",
+      "place": "Maroc",
+      "count": 2,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "srm-technicians",
+      "section": "competitions",
+      "title": "Techniciens — SRM Laâyoune-Sakia El Hamra",
+      "org": "SRM Laâyoune-Sakia El Hamra",
+      "place": "Laâyoune, Maroc",
+      "count": 84,
+      "deadline": "2026-11-10",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "bam-cyber",
+      "section": "competitions",
+      "title": "Architecte Cybersécurité",
+      "org": "Bank Al-Maghrib",
+      "place": "Maroc",
+      "count": 1,
+      "deadline": "2026-11-10",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "ram-call",
+      "section": "morocco",
+      "title": "Téléconseillers — Atlas On Line / Groupe RAM",
+      "org": "Atlas On Line · Groupe Royal Air Maroc",
+      "place": "Maroc",
+      "count": 30,
+      "deadline": "2026-11-17",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "sett-network",
+      "section": "morocco",
+      "title": "Technicien systèmes et réseaux",
+      "org": "Agence urbaine de Settat",
+      "place": "Settat, Maroc",
+      "count": 1,
+      "deadline": "2026-11-16",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "sidi-finance",
+      "section": "morocco",
+      "title": "Cadre administratif et chargé de la comptabilité et finances",
+      "org": "Société d’aménagement Sidi Bennour",
+      "place": "Sidi Bennour, Maroc",
+      "count": 1,
+      "deadline": "2026-11-20",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "eures",
+      "section": "international",
+      "title": "EURES — offres d’emploi dans l’Union européenne",
+      "org": "Commission européenne · EURES",
+      "place": "Europe",
+      "url": "https://eures.europa.eu/index_en",
+      "kind": "official_directory",
+      "note": "Vérifier les conditions de recrutement et de permis de travail des candidats hors UE."
+    },
+    {
+      "id": "germany-jobs",
+      "section": "international",
+      "title": "Make it in Germany — offres d’emploi et formations",
+      "org": "Gouvernement fédéral allemand",
+      "place": "Allemagne",
+      "url": "https://www.make-it-in-germany.com/en/working-in-germany/job-listings",
+      "kind": "official_directory"
+    },
+    {
+      "id": "canada-foreign",
+      "section": "international",
+      "title": "Job Bank — offres ouvertes aux candidats étrangers",
+      "org": "Gouvernement du Canada",
+      "place": "Canada",
+      "url": "https://www.jobbank.gc.ca/trouverunemploi/candidats-etrangers",
+      "kind": "official_directory"
+    },
+    {
+      "id": "france-travail",
+      "section": "international",
+      "title": "France Travail — offres d’emploi",
+      "org": "France Travail",
+      "place": "France",
+      "url": "https://www.francetravail.fr/",
+      "kind": "official_directory",
+      "note": "Une offre publiée ne signifie pas automatiquement un parrainage de visa."
+    },
+    {
+      "id": "un-careers",
+      "section": "international",
+      "title": "Nations Unies — postes, stages et contrats",
+      "org": "Organisation des Nations unies",
+      "place": "International",
+      "url": "https://careers.un.org/jobopening?language=en",
+      "kind": "official_directory"
+    },
+    {
+      "id": "ocp-career",
+      "section": "companies",
+      "title": "OCP — carrière et candidature spontanée",
+      "org": "Groupe OCP",
+      "place": "Maroc",
+      "url": "https://careers.ocpgroup.ma/fr/carrieres/nous-rejoindre/nos-offres",
+      "kind": "official_directory",
+      "note": "Le portail indique actuellement aucune offre sur cette page; candidature spontanée possible via le site officiel."
+    },
+    {
+      "id": "ocp-spontaneous",
+      "section": "companies",
+      "title": "OCP — candidature spontanée",
+      "org": "Groupe OCP",
+      "place": "Maroc",
+      "url": "https://careers.ocpgroup.ma/fr/carrieres/nous-rejoindre/candidature-spontanee",
+      "kind": "official_directory"
+    },
+    {
+      "id": "ram-company",
+      "section": "companies",
+      "title": "Atlas On Line / Groupe RAM — téléconseillers",
+      "org": "Groupe Royal Air Maroc",
+      "place": "Maroc",
+      "count": 30,
+      "deadline": "2026-11-17",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "srm-company",
+      "section": "companies",
+      "title": "SRM Laâyoune — ingénieurs et techniciens",
+      "org": "Société régionale multiservices",
+      "place": "Laâyoune",
+      "count": 26,
+      "deadline": "2026-11-10",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics",
+      "kind": "official_notice"
+    },
+    {
+      "id": "express-entry",
+      "section": "immigration",
+      "title": "Canada — Entrée express (Express Entry)",
+      "org": "IRCC",
+      "place": "Canada",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html",
+      "kind": "program",
+      "note": "Dernier tirage visible lors de la vérification: catégorie français, 16 octobre 2026, score CRS minimum 435, 5 000 invitations."
+    },
+    {
+      "id": "canada-program",
+      "section": "immigration",
+      "title": "Canada — programmes d’immigration et permis de travail",
+      "org": "IRCC",
+      "place": "Canada",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html",
+      "kind": "program"
+    },
+    {
+      "id": "german-opportunity",
+      "section": "immigration",
+      "title": "Allemagne — carte des opportunités (Chancenkarte)",
+      "org": "Portail fédéral Make it in Germany",
+      "place": "Allemagne",
+      "url": "https://www.make-it-in-germany.com/en/visa-residence/types/job-search-opportunity-card",
+      "kind": "program"
+    },
+    {
+      "id": "uk-visa",
+      "section": "immigration",
+      "title": "Royaume-Uni — Skilled Worker visa",
+      "org": "GOV.UK",
+      "place": "Royaume-Uni",
+      "url": "https://www.gov.uk/skilled-worker-visa",
+      "kind": "program"
+    },
+    {
+      "id": "france-talent",
+      "section": "immigration",
+      "title": "France — Passeport talent et titres de séjour",
+      "org": "France-Visas",
+      "place": "France",
+      "url": "https://france-visas.gouv.fr/",
+      "kind": "program"
+    },
+    {
+      "id": "eures-mobility",
+      "section": "immigration",
+      "title": "Europe — emploi et conditions de mobilité",
+      "org": "EURES · Commission européenne",
+      "place": "Europe",
+      "url": "https://eures.europa.eu/index_en",
+      "kind": "program"
+    }
+  ],
+  "visa": [
+    {
+      "id": "fr",
+      "country": {
+        "ar": "فرنسا",
+        "fr": "France",
+        "en": "France"
+      },
+      "service": "France-Visas / TLScontact",
+      "url": "https://www.france-visas.gouv.fr/ar/web/france-visas/maroc",
+      "note": {
+        "ar": "أكمل الطلب على France-Visas واختر المركز؛ توفر المواعيد يختلف حسب المدينة.",
+        "en": "Complete the France-Visas process and select your centre; slot availability varies.",
+        "fr": "Déposez la demande via France-Visas puis choisissez le centre ; disponibilités variables."
+      }
+    },
+    {
+      "id": "es",
+      "country": {
+        "ar": "إسبانيا",
+        "fr": "Espagne",
+        "en": "Spain"
+      },
+      "service": "BLS Spain Morocco",
+      "url": "https://blsspainmorocco.com/",
+      "note": {
+        "ar": "القنصليات تفتح المواعيد حسب الدائرة؛ راجع تنبيه قنصليتك ولا تعتمد موعداً عاماً لجميع المدن.",
+        "en": "Release times differ by consulate; follow your consulate's official notice.",
+        "fr": "Les ouvertures diffèrent selon le consulat ; consultez l’avis local."
+      }
+    },
+    {
+      "id": "pt",
+      "country": {
+        "ar": "البرتغال",
+        "fr": "Portugal",
+        "en": "Portugal"
+      },
+      "service": "BLS Portugal Morocco",
+      "url": "https://www.blsinternational.com/portugal/morocco/english/",
+      "note": {
+        "ar": "المواعيد حسب منصة BLS؛ إعلان يوم الأبواب المفتوحة 27 أكتوبر 2026 كان مؤقتاً ولا يعني فتحاً دائماً.",
+        "en": "BLS bookings; the 27 October open-house notice was one-day only.",
+        "fr": "Réservation BLS ; la journée portes ouvertes du 27 octobre était ponctuelle."
+      }
+    },
+    {
+      "id": "de",
+      "country": {
+        "ar": "ألمانيا",
+        "fr": "Allemagne",
+        "en": "Germany"
+      },
+      "service": "Auswärtiges Amt — Rabat",
+      "url": "https://rabat.diplo.de/ma-fr/service/visa",
+      "note": {
+        "ar": "تختلف الآلية بين شنغن وتأشيرة وطنية؛ فئات معينة تُسجّل في لائحة انتظار حكومية.",
+        "en": "Schengen and national routes differ; some categories use an official waiting list.",
+        "fr": "Procédures Schengen/nationales distinctes ; certaines catégories passent par liste d’attente."
+      }
+    },
+    {
+      "id": "it",
+      "country": {
+        "ar": "إيطاليا",
+        "fr": "Italie",
+        "en": "Italy"
+      },
+      "service": "VFS Global Italia Maroc",
+      "url": "https://visa.vfsglobal.com/mar/fr/ita/",
+      "note": {
+        "ar": "مواعيد VFS حسب القنصلية والمركز، ولا يمكن تأكيد توفر الخانات دون حساب مقدم الطلب.",
+        "en": "VFS appointments vary by centre and applicant account.",
+        "fr": "Les créneaux VFS varient selon le centre et le compte demandeur."
+      }
+    },
+    {
+      "id": "nl",
+      "country": {
+        "ar": "هولندا",
+        "fr": "Pays-Bas",
+        "en": "Netherlands"
+      },
+      "service": "VFS Global Netherlands",
+      "url": "https://visa.vfsglobal.com/mar/fr/nld/",
+      "note": {
+        "ar": "المنصة تشير إلى إمكانية التسجيل في لائحة الانتظار؛ هذا ليس تأكيداً على وجود موعد متاح.",
+        "en": "The official portal documents wait-list registration, not confirmed free slots.",
+        "fr": "L’inscription sur liste d’attente ne garantit pas un créneau disponible."
+      }
+    },
+    {
+      "id": "ch",
+      "country": {
+        "ar": "سويسرا",
+        "fr": "Suisse",
+        "en": "Switzerland"
+      },
+      "service": "Ambassade de Suisse / VFS",
+      "url": "https://www.eda.admin.ch/countries/morocco/fr/home/visa/entree-ch/jusq-a-90-jours/ou-deposer-schengen.html/1000",
+      "note": {
+        "ar": "شنغن عبر VFS؛ التأشيرة الوطنية بموعد من السفارة، غالباً بالبريد الرسمي.",
+        "en": "Schengen via VFS; national visa appointments via embassy instructions.",
+        "fr": "Schengen via VFS ; visa national selon les consignes de l’ambassade."
+      }
+    },
+    {
+      "id": "at",
+      "country": {
+        "ar": "النمسا",
+        "fr": "Autriche",
+        "en": "Austria"
+      },
+      "service": "VFS Global Austria",
+      "url": "https://visa.vfsglobal.com/mar/fr/aut/apply-visa",
+      "note": {
+        "ar": "اختيار نوع الفيزا وإكمال الطلب ثم حجز الموعد عبر المركز.",
+        "en": "Choose visa type, complete application, then book through VFS.",
+        "fr": "Choisissez le type de visa et réservez auprès de VFS."
+      }
+    },
+    {
+      "id": "gb",
+      "country": {
+        "ar": "المملكة المتحدة",
+        "fr": "Royaume-Uni",
+        "en": "United Kingdom"
+      },
+      "service": "GOV.UK — Visa Application Centres",
+      "url": "https://www.gov.uk/find-a-visa-application-centre",
+      "note": {
+        "ar": "ابدأ طلب التأشيرة عبر GOV.UK ثم اتبع رابط مركز التقديم المعتمد في المغرب.",
+        "en": "Apply through GOV.UK before booking at the authorised centre.",
+        "fr": "Déposez la demande sur GOV.UK avant le rendez-vous au centre agréé."
+      }
+    },
+    {
+      "id": "ca",
+      "country": {
+        "ar": "كندا",
+        "fr": "Canada",
+        "en": "Canada"
+      },
+      "service": "IRCC / VFS Rabat",
+      "url": "https://visa.vfsglobal.com/mar/fr/can",
+      "note": {
+        "ar": "مركز القياسات الحيوية بالرباط؛ غالباً تحتاج رسالة تعليمات القياسات من IRCC أولاً.",
+        "en": "Rabat biometrics VAC; most applicants need IRCC's biometric instruction letter first.",
+        "fr": "CRDV Rabat ; lettre d’instructions biométriques généralement requise avant le rendez-vous."
+      }
+    },
+    {
+      "id": "us",
+      "country": {
+        "ar": "الولايات المتحدة",
+        "fr": "États-Unis",
+        "en": "United States"
+      },
+      "service": "USTravelDocs Maroc / DS-160",
+      "url": "https://www.ustraveldocs.com/ma/en/nonimmigrant-visa",
+      "note": {
+        "ar": "اتبع البوابة الرسمية ونموذج DS-160 ثم بوابة المواعيد؛ لا توجد أوقات محددة مؤكدة لدينا.",
+        "en": "Follow DS-160 and the official Morocco scheduling portal; no slots verified.",
+        "fr": "Formulaire DS-160 puis plateforme officielle ; aucun créneau vérifié."
+      }
+    },
+    {
+      "id": "tr",
+      "country": {
+        "ar": "تركيا",
+        "fr": "Turquie",
+        "en": "Turkey"
+      },
+      "service": "Turkish MFA — visa rules",
+      "url": "https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa",
+      "note": {
+        "ar": "حامل الجواز المغربي العادي معفى غالباً للسياحة حتى 90 يوماً؛ العمل والدراسة لهما قواعد أخرى.",
+        "en": "Moroccan ordinary passport holders are generally visa-exempt up to 90 days; work/study rules differ.",
+        "fr": "Passeport marocain ordinaire généralement exempté jusqu’à 90 jours ; travail/études distincts."
+      }
+    }
+  ],
+  "dv": {
+    "status": "date_unannounced",
+    "url": "https://dvprogram.state.gov/",
+    "officialInfo": "https://travel.state.gov/en/newsroom/visas/2025/changes-to-2027-dv-program-entry-period.html",
+    "importantNotice": "https://travel.state.gov/en/newsroom/visas/2025/diversity-visa-issuance-updated-guidance.html",
+    "notes": {
+      "ar": "لا يوجد إعلان رسمي مؤكد هنا عن فتح تسجيل DV-2027. وزارة الخارجية قالت إنها ستعلن المواعيد لاحقاً. إشعار 31 غشت 2026 يقول إن إصدار تأشيرات DV موقوف مؤقتاً؛ يمكن أن تستمر المقابلات دون إصدار التأشيرة. لا تدفع للوسطاء: التسجيل الرسمي مجاني.",
+      "en": "No verified DV-2027 entry start date. The US State Department says it will announce dates. An August 2026 notice reports a pause on DV visa issuance, though appointments may continue. Official registration is free.",
+      "fr": "Aucune date officielle confirmée d’inscription DV-2027. Le Département d’État annoncera les dates. Un avis d’août 2026 suspend la délivrance des visas DV, même si les entretiens peuvent continuer. L’inscription officielle est gratuite."
+    }
+  }
+}
