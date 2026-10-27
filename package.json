@@ -8,7 +8,8 @@
     "dev": "node src/build.mjs && node src/server.mjs",
     "serve": "node src/server.mjs",
     "check": "node src/check.mjs",
-    "test:studio": "node --test src/document-studio-core.test.mjs"
+    "test:studio": "node --test src/document-studio-core.test.mjs",
+    "test:responsive": "node src/responsive-smoke.mjs"
   },
   "engines": {
     "node": ">=20"

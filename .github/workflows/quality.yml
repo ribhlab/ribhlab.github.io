@@ -28,6 +28,7 @@ jobs:
           node --check src/check.mjs
           node --check src/update-news.mjs
           node --check src/market-comments.js
+          node --check src/responsive-smoke.mjs
       - name: Test offline Document Studio Pro calculations and import safety
         run: npm run test:studio
       - name: Build multilingual pages
@@ -36,6 +37,15 @@ jobs:
         run: |
           npm run build
           npm run check
+      - name: Check real browser layout and interactions at 320–1440px
+        run: npm run test:responsive
+      - name: Upload responsive screenshots for design review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-previews
+          path: dist/responsive-previews/
+          if-no-files-found: ignore
       - name: Check generated sitemap, images and monetization disclaimers
         run: |
           test -s dist/sitemap.xml
