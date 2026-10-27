@@ -1,0 +1,154 @@
+/* RibhLab Market Pulse — editorial image sizing and card layout correction.
+   Real photographs remain; image-license records remain in the source catalog.
+   Links to the original NEWS sources stay visible; photographer links do not clutter cards.
+*/
+#market-digests .market-digest-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  align-items:stretch;
+  gap:20px!important;
+}
+#market-digests .market-digest-card,
+#market-digests .market-digest-card:first-child{
+  display:flex!important;
+  flex-direction:column!important;
+  grid-column:auto!important;
+  grid-row:auto!important;
+  grid-template-columns:none!important;
+  min-width:0;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid #e3e7f4;
+  box-shadow:0 8px 24px rgba(36,37,92,.07);
+  background:#fff;
+  transform:none;
+}
+#market-digests .market-digest-cover,
+#market-digests .market-digest-card:first-child .market-digest-cover{
+  display:block!important;
+  flex:none!important;
+  width:100%!important;
+  height:184px!important;
+  min-height:0!important;
+  max-height:184px!important;
+  aspect-ratio:auto!important;
+  overflow:hidden;
+  background:#ecf0f9;
+}
+#market-digests .market-digest-cover img,
+#market-digests .market-digest-card:first-child .market-digest-cover img{
+  display:block!important;
+  width:100%!important;
+  height:184px!important;
+  min-height:0!important;
+  max-height:184px!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  transform:none;
+  max-width:100%;
+}
+#market-digests .market-digest-card:hover .market-digest-cover img{transform:scale(1.02)}
+#market-digests .market-digest-body,
+#market-digests .market-digest-card:first-child .market-digest-body{
+  display:flex;
+  flex-direction:column;
+  gap:12px!important;
+  min-width:0;
+  padding:19px 19px 20px!important;
+  flex:1;
+  height:auto;
+}
+#market-digests .market-digest-card h3,
+#market-digests .market-digest-card:first-child h3{
+  font-size:clamp(17px,1.35vw,21px)!important;
+  font-weight:800;
+  line-height:1.55;
+  margin:0!important;
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+html[lang="ar"] #market-digests .market-digest-card h3,
+html[lang="ar"] #market-digests .market-digest-card:first-child h3{
+  font-size:clamp(17px,1.32vw,21px)!important;line-height:1.65;
+}
+#market-digests .market-digest-body>p:not(.market-digest-photo-credit){
+  font-size:13px!important;
+  line-height:1.8!important;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4;
+  line-clamp:4;
+  overflow:hidden;
+  margin:0;
+  flex:0 1 auto;
+}
+#market-digests .market-digest-meta{min-width:0;gap:8px;flex-wrap:wrap}
+#market-digests .market-digest-links{margin-top:auto;padding-top:13px;min-width:0}
+/* Photo attribution is stored in content JSON, but not displayed under images.
+   The editorial source/article link in the card remains, as it should. */
+.market-digest-photo-credit,
+.pulse-photo-figure figcaption,
+.market-story-figure figcaption{display:none!important}
+.pulse-grid:has(.pulse-photo-card){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.pulse-photo-card{min-width:0;border-radius:16px;overflow:hidden}
+.pulse-photo-figure{height:177px;max-height:177px;min-height:0;margin:0;overflow:hidden;background:#edf1fa}
+.pulse-photo-figure .pulse-photo-img{
+  display:block;width:100%!important;height:177px!important;max-height:177px;
+  aspect-ratio:auto!important;object-fit:cover!important;object-position:center
+}
+.pulse-card-inner{padding:17px 19px 20px}
+.pulse-photo-card h3{font-size:clamp(16px,1.28vw,20px);line-height:1.6}
+.market-article-layout{max-width:920px}
+.market-story-figure{
+  margin:0 auto 25px!important;
+  max-width:780px!important;
+  max-height:340px!important;
+  border-radius:15px;
+  overflow:hidden;
+}
+.market-story-figure img{
+  display:block!important;
+  width:100%!important;
+  height:clamp(190px,28vw,340px)!important;
+  max-height:340px!important;
+  min-height:0;
+  object-fit:cover!important;
+  aspect-ratio:auto!important;
+}
+.market-home-button{
+  display:inline-flex;align-items:center;gap:9px;
+  margin-block:0 22px; padding:9px 15px;
+  background:white;border:1px solid #dcd8fc;border-radius:11px;
+  color:#5037bd;font-size:13px;font-weight:800;
+  text-decoration:none;box-shadow:0 5px 15px rgba(48,35,110,.06)
+}
+.market-home-button:hover,.market-home-button:focus-visible{
+  color:#fff;background:#5f43de;border-color:#5f43de
+}
+@media(max-width:1020px){
+  #market-digests .market-digest-grid,.pulse-grid:has(.pulse-photo-card){
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:620px){
+  #market-digests .market-digest-grid,.pulse-grid:has(.pulse-photo-card){
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:15px!important
+  }
+  #market-digests .market-digest-cover,
+  #market-digests .market-digest-card:first-child .market-digest-cover,
+  #market-digests .market-digest-cover img,
+  #market-digests .market-digest-card:first-child .market-digest-cover img{
+    height:165px!important;max-height:165px!important
+  }
+  #market-digests .market-digest-body,
+  #market-digests .market-digest-card:first-child .market-digest-body{padding:17px!important}
+  .pulse-photo-figure,.pulse-photo-figure .pulse-photo-img{
+    height:165px!important;max-height:165px!important
+  }
+  .market-story-figure,.market-story-figure img{max-height:225px!important}
+  .market-story-figure img{height:190px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #market-digests .market-digest-cover img,.pulse-photo-figure .pulse-photo-img{transition:none}
+}
