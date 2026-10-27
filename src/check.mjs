@@ -233,6 +233,25 @@ for(const lang of ['ar','en','fr']){
  }
 }
 
+// Each document mode needs its own tailored editor fields instead of generic invoice form.
+for(const lang of ['ar','en','fr']){
+ const f=path.join(dist,lang,'tools','document-studio','index.html');
+ if(!fs.existsSync(f)){errors.push('Document Studio Pro route missing '+lang);continue;}
+ const html=fs.readFileSync(f,'utf8');
+ for(const [mode,ids] of [
+  ['cv',['studio-cv-experience','studio-cv-education','studio-cv-skills','studio-cv-languages','studio-cv-certifications','studio-cv-link','studio-demo']],
+  ['report',['studio-report-context','studio-report-method','studio-report-findings','studio-report-recommendations','studio-report-conclusion']],
+  ['letter',['studio-letter-subject','studio-letter-greeting','studio-letter-closing']]
+ ]){
+  if(!html.includes('data-studio-mode="'+mode+'" hidden'))errors.push('Missing hidden mode panel '+mode+' '+lang);
+  for(const id of ids)if(!html.includes('id="'+id+'"'))errors.push('Missing tailored '+mode+' input '+id+' '+lang);
+ }
+}
+const studioModule=fs.readFileSync(path.join(dist,'assets','document-studio.js'),'utf8');
+for(const fragment of ["modeSwitch(kind)","draft.cvExperience","draft.cvEducation","draft.reportRecommendations","draft.letterSubject","studio-document-section","studio-empty-hint","studio-demo"]){
+ if(!studioModule.includes(fragment))errors.push('Missing document-specific live preview support: '+fragment);
+}
+
 // The free Pro tool must also be discoverable from the home page (below newest stories).
 for(const lang of ['ar','en','fr']){
  const page=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
