@@ -304,6 +304,56 @@
       "altFr": "Journal financier et graphique boursier, photographie illustrative sans données de réunion",
       "license": "Unsplash License",
       "note": "Original per-article editorial photograph, not a representation of an FOMC decision or market performance."
+    },
+    "daily-sunscreen-spf30-body-care-guide": {
+      "photoId": "photo-1623676714504-edd78728155e",
+      "source": "https://unsplash.com/photos/a-person-holding-a-bottle-of-sunscreen-in-their-hand-3Uj7ttuo5kk",
+      "photographer": "Onela Ymeri",
+      "alt": "Person holding a sunscreen bottle outdoors",
+      "altAr": "شخص يحمل عبوة واقي من الشمس في الخارج",
+      "altFr": "Personne tenant un flacon de crème solaire dehors",
+      "license": "Unsplash License",
+      "note": "Unique real editorial illustration; not a literal depiction of all steps, specific brand endorsement, or medical/trading results."
+    },
+    "dry-skin-moisturizing-body-routine": {
+      "photoId": "photo-1739950839930-ef45c078f316",
+      "source": "https://unsplash.com/photos/a-white-table-topped-with-bottles-of-makeup-uyhrXEUdL8s",
+      "photographer": "Aleksandrs Karevs",
+      "alt": "Bottles of moisturizer and gentle skin care on a light marble table",
+      "altAr": "عبوات كريمات ترطيب والعناية بالبشرة فوق طاولة رخام فاتحة",
+      "altFr": "Flacons de soins hydratants posés sur une table en marbre clair",
+      "license": "Unsplash License",
+      "note": "Unique real editorial illustration; not a literal depiction of all steps, specific brand endorsement, or medical/trading results."
+    },
+    "classic-roman-spaghetti-carbonara-recipe": {
+      "photoId": "photo-1683827449087-ccf5a9e6283c",
+      "source": "https://unsplash.com/photos/a-plate-of-pasta-with-bacon-on-it-bYSvpF8NBmE",
+      "photographer": "Helen Van",
+      "alt": "Actual plate of spaghetti carbonara with pork bacon and black pepper",
+      "altAr": "طبق سباغيتي كاربونارا مع شرائح لحم خنزير وفلفل أسود",
+      "altFr": "Assiette de spaghetti carbonara au porc et au poivre noir",
+      "license": "Unsplash License",
+      "note": "Unique real editorial illustration; not a literal depiction of all steps, specific brand endorsement, or medical/trading results."
+    },
+    "classic-italian-tiramisu-without-raw-eggs": {
+      "photoId": "photo-1766232333746-b0a2697d6d0d",
+      "source": "https://unsplash.com/photos/a-delicious-tiramisu-dessert-in-a-glass-dish-v5m_Dm7BQ_c",
+      "photographer": "mediha ekici",
+      "alt": "Real layered tiramisu dessert topped with cocoa in a glass dish",
+      "altAr": "حلوى تيراميسو بطبقات من الكريمة والكاكاو داخل طبق زجاجي",
+      "altFr": "Tiramisu en couches et cacao dans un plat en verre",
+      "license": "Unsplash License",
+      "note": "Unique real editorial illustration; not a literal depiction of all steps, specific brand endorsement, or medical/trading results."
+    },
+    "elliott-wave-technical-analysis-course": {
+      "photoId": "photo-1634542984003-e0fb8e200e91",
+      "source": "https://unsplash.com/photos/a-computer-screen-with-a-chart-on-it-w9coDxtsfts",
+      "photographer": "rc.xyz NFT gallery",
+      "alt": "Computer monitor showing a financial candlestick price chart, not a specific Elliott forecast",
+      "altAr": "شاشة تعرض رسماً بيانياً للأسعار وليست توقعاً فعلياً بموجات إليوت",
+      "altFr": "Écran montrant un graphique de cours sans prévision réelle des vagues d’Elliott",
+      "license": "Unsplash License",
+      "note": "Unique real editorial illustration; not a literal depiction of all steps, specific brand endorsement, or medical/trading results."
     }
   }
 }
