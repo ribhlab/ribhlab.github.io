@@ -60,6 +60,22 @@ if(configuredUrl){
   for(const lang of ['ar','en','fr'])if(!urls.includes(url+'/'+lang+'/'))errors.push('Search Console: missing '+lang+' homepage in sitemap');
  }
 }
+// Employment, immigration, visas and public visitor statistics must be indexable in all locales.
+for(const lang of ['ar','en','fr']){
+ for(const slug of ['','morocco','international','competitions','companies','dv-lottery','immigration','visa-appointments']){
+  const file=path.join(dist,lang,'opportunities',...(slug?[slug]:[]),'index.html');
+  if(!fs.existsSync(file)){errors.push('Opportunities: missing '+lang+'/'+slug);continue;}
+  const html=fs.readFileSync(file,'utf8');
+  if(!html.includes('<link rel="canonical"'))errors.push('Opportunities: missing canonical '+lang+'/'+slug);
+ }
+ const f=path.join(dist,lang,'audience','index.html');
+ if(!fs.existsSync(f)) errors.push('Public analytics: missing '+lang+' dashboard page');
+ else if(!fs.readFileSync(f,'utf8').includes('RIBHLAB / TRANSPARENT AUDIENCE'))errors.push('Public analytics: incorrect '+lang+' page');
+}
+const trackingId=(process.env.UMAMI_WEBSITE_ID||'').trim();
+const outputRoot=fs.readFileSync(path.join(dist,'ar','index.html'),'utf8');
+if(trackingId&&!outputRoot.includes('data-website-id="'+trackingId+'"'))errors.push('Public analytics: expected verified tracker missing');
+if(!trackingId&&outputRoot.includes('cloud.umami.is/script.js'))errors.push('Public analytics: tracking script activated without configured website ID');
 // Editorial and SEO regression checks: validate every translated article before publishing.
 const articleDir=path.join(root,'content','articles');
 for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
