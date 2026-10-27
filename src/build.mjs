@@ -57,7 +57,7 @@ const marketLabels={
 const slugs=new Set();
 for(const a of articles){
  if(slugs.has(a.slug)) throw Error('Duplicate slug: '+a.slug);slugs.add(a.slug);
- if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(a.slug)||!['earning','trading','ai'].includes(a.category))throw Error('Invalid article '+a.slug);
+ if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(a.slug)||!['earning','trading','ai','lifestyle'].includes(a.category))throw Error('Invalid article '+a.slug);
  for(const l of locales){const t=a.translations?.[l]; if(!t?.title||!t?.excerpt||!t?.lead||!Array.isArray(t?.sections)||t.sections.length<3) throw Error(`${a.slug} missing complete ${l} translation`);}
 }
 const i18n={
