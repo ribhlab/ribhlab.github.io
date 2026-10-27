@@ -17,13 +17,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Temporary one-off RDAP check (not a domain purchase)
-        run: |
-          for domain in ribhlab.com ribhlabhub.com ribhlabstudio.com ribhlab.net; do
-            tld="${domain##*.}"
-            code=$(curl -L -m 12 -sS -o /dev/null -w '%{http_code}' "https://rdap.verisign.com/$tld/v1/domain/$domain" || true)
-            printf 'DOMAIN_RDAP %s status=%s (200=registered; 404=unregistered in registry; other=inconclusive)\n' "$domain" "$code"
-          done
       - name: Syntax checks
         run: |
           node --check src/cover-art.mjs
