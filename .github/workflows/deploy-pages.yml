@@ -30,7 +30,9 @@ jobs:
         run: node src/update-news.mjs
       - name: Build pages (Arabic, English, French)
         env:
-          SITE_URL: https://univcours.github.io/ribhlab-site
+          SITE_URL: ${{ vars.RIBHLAB_SITE_URL || 'https://univcours.github.io/ribhlab-site' }}
+          ADSENSE_PUBLISHER_ID: ${{ vars.RIBHLAB_ADSENSE_PUBLISHER_ID || '' }}
+          ENABLE_ADSENSE: ${{ vars.RIBHLAB_ENABLE_ADSENSE || 'false' }}
         run: |
           npm run build
           npm run check
