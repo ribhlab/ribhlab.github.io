@@ -145,3 +145,74 @@
 .editorial-section-card[href*="body-care"]:hover,.editorial-section-card[href*="world-recipes"]:hover{border-color:#ab8b5c}
 @media(max-width:1100px){.category-grid:has(.topic-lifestyle){grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.category-grid:has(.topic-lifestyle){grid-template-columns:1fr}}
+
+
+/* Document Studio Pro — professional A4-focused editing workspace. Pricing: $0. */
+.isolated-tool-layout:has(.studio-pro){max-width:1220px}
+.studio-pro{overflow:visible}
+.studio-pro .studio-pro-head{display:flex;align-items:center;justify-content:space-between;gap:22px;background:linear-gradient(118deg,#132b48,#1d545d 63%,#0d736b);color:#fff;border-radius:20px;padding:clamp(20px,4vw,35px);margin-bottom:14px}
+.studio-pro .studio-brand{display:block;font-size:.75rem;letter-spacing:.13em;color:#c9e6e4;font-weight:800;margin-bottom:12px}
+.studio-pro .studio-pro-head h2{font-size:clamp(1.55rem,3vw,2.4rem);color:#fff;margin:0 0 .8rem;line-height:1.17}
+.studio-pro .studio-pro-head .tool-hint{color:#e0ecee;max-width:650px;line-height:1.75;margin:0}
+.studio-pro .studio-price{display:flex;flex-direction:column;align-items:center;gap:5px;justify-content:center;background:rgba(255,255,255,.95);color:#17404a;border:1px solid rgba(255,255,255,.6);border-radius:17px;padding:17px 22px;text-align:center;min-width:178px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.studio-pro .studio-price span{font-size:.83rem;font-weight:750}
+.studio-pro .studio-price strong{font-size:2rem;font-weight:900;color:#087866;letter-spacing:-.025em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.studio-pro .studio-price small{font-size:.72rem;line-height:1.6;color:#506777}
+.studio-pro .studio-disclosure{background:#f4faf8;border:1px solid #cfe9e0;border-radius:13px;padding:13px 16px;margin:0 0 24px;color:#365b57;line-height:1.7;font-size:.89rem}
+.studio-pro .studio-editor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:22px;align-items:start}
+.studio-pro .studio-controls,.studio-pro .studio-preview-panel{border:1px solid #dae4ea;border-radius:17px;padding:clamp(15px,2.4vw,24px);background:#fbfcfe;min-width:0}
+.studio-pro .studio-controls h3,.studio-pro .studio-preview-panel h3,.studio-pro .studio-ai-box h3{font-size:1.15rem;color:#1b3446;margin:0 0 1rem}
+.studio-pro .studio-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 15px}
+.studio-pro .studio-form-grid>label,.studio-pro .studio-financial-field>label{display:flex;flex-direction:column;gap:6px;line-height:1.5;min-width:0;font-size:.86rem;color:#385366;font-weight:700}
+.studio-pro .studio-form-grid input,.studio-pro .studio-form-grid select,.studio-pro .studio-form-grid textarea,.studio-pro .studio-line input{font:inherit;font-weight:500;min-width:0;width:100%;border:1px solid #cfdae3;background:#fff;border-radius:9px;padding:10px 11px;color:#213247}
+.studio-pro .studio-form-grid input:focus-visible,.studio-pro .studio-form-grid select:focus-visible,.studio-pro .studio-form-grid textarea:focus-visible,.studio-pro .studio-line input:focus-visible{outline:3px solid rgba(17,143,132,.19);border-color:#068e85}
+.studio-pro .studio-text-field{grid-column:1/-1}
+.studio-pro .studio-form-grid textarea{min-height:110px;resize:vertical}
+.studio-pro .studio-financial-fields{margin:20px 0;border-top:1px solid #dce7ec;padding-top:18px}
+.studio-pro .studio-financial-fields h4{font-size:.94rem;margin:16px 0 12px}
+.studio-pro .studio-line{display:grid;grid-template-columns:minmax(0,2fr) minmax(70px,.7fr) minmax(90px,.85fr) auto;gap:8px;align-items:end;margin-bottom:10px}
+.studio-pro .studio-line-label{display:flex;flex-direction:column;gap:5px;font-size:.73rem;font-weight:700;color:#486071;min-width:0}
+.studio-pro .studio-remove-row{min-height:41px;font-size:.76rem;padding:7px 10px}
+.studio-pro button:disabled{opacity:.42;cursor:not-allowed}
+.studio-pro .studio-action-buttons,.studio-pro .studio-storage-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.studio-pro .studio-action-buttons .btn,.studio-pro .studio-storage-buttons .btn{font-size:.82rem;min-height:39px;padding:9px 13px}
+.studio-pro .studio-storage-buttons{border-top:1px dashed #cfdae3;padding-top:14px;margin-top:20px}
+.studio-pro .studio-import-btn{cursor:pointer;display:inline-flex;align-items:center}
+.studio-pro .studio-privacy-note{font-size:.77rem;color:#677988;margin:12px 0 0;line-height:1.75}
+.studio-pro .studio-preview-panel{background:#f2f5f8}
+.studio-pro .studio-document{padding:clamp(17px,2.6vw,27px);min-height:480px;box-shadow:0 11px 30px rgba(32,50,70,.10);border:1px solid #dee4e9;background:#fff;border-radius:4px;color:#1a3447;line-height:1.58;font-size:.9rem;overflow-wrap:anywhere}
+.studio-pro .studio-doc-overline{font-size:.65rem;letter-spacing:.14em;color:#147d7b;font-weight:800}
+.studio-pro .studio-doc-header{padding-bottom:16px;margin-bottom:18px;border-bottom:2px solid #1c948b}
+.studio-pro .studio-doc-header h2{font-size:clamp(1.45rem,2.3vw,2rem);margin:10px 0;color:#183549}
+.studio-pro .studio-doc-header p{font-size:.82rem;margin:3px 0;color:#506677}
+.studio-pro .studio-doc-contact{margin:15px 0 21px}
+.studio-pro .studio-label-value{margin:5px 0;color:#355061;font-size:.9rem}
+.studio-pro .studio-label-value strong{color:#213d4e}
+.studio-pro .studio-doc-table{border-collapse:collapse;width:100%;table-layout:fixed;margin:17px 0;font-size:.78rem}
+.studio-pro .studio-doc-table th,.studio-pro .studio-doc-table td{border-bottom:1px solid #dfe6e9;text-align:start;padding:9px 5px;overflow-wrap:anywhere}
+.studio-pro .studio-doc-table th{background:#edf7f4;color:#234d50;font-size:.74rem}
+.studio-pro .studio-doc-table th:first-child{width:39%}
+.studio-pro .studio-doc-summary{margin:20px 0 0 auto;max-width:300px}
+.studio-pro .studio-doc-summary p:last-child{border-top:2px solid #1c948b;padding-top:12px;font-size:1.06rem;font-weight:800}
+.studio-pro .studio-document-body{white-space:pre-wrap;overflow-wrap:anywhere}
+.studio-pro .studio-letter-signature{margin-top:25px;font-weight:750}
+.studio-pro .theme-classic{font-family:Georgia,'Times New Roman',serif}
+.studio-pro .theme-classic .studio-doc-header{border-color:#223344}
+.studio-pro .theme-minimal{font-family:Arial,Helvetica,sans-serif}
+.studio-pro .theme-minimal .studio-doc-header{border-color:#a6b0b9}
+.studio-pro #studio-status[data-error=true]{color:#a42f2f}
+.studio-pro .studio-ai-box{margin-top:23px;padding:20px 23px;background:#f7fafc;border:1px solid #dbe5e8;border-radius:17px}
+.studio-pro .studio-ai-box p{color:#5c6f78;line-height:1.7;font-size:.89rem}
+.studio-pro .studio-ai-box textarea{display:block;margin-top:12px;width:100%;resize:vertical;min-height:126px;background:#fff;border:1px solid #d5e0e6;border-radius:9px;padding:12px;white-space:pre-wrap}
+.studio-pro .studio-controls [hidden],.studio-pro [hidden]{display:none!important}
+@media(max-width:1050px){.studio-pro .studio-editor{grid-template-columns:1fr}.studio-pro .studio-document{min-height:320px}}
+@media(max-width:660px){.studio-pro .studio-pro-head{flex-direction:column;align-items:stretch}.studio-pro .studio-price{width:100%}.studio-pro .studio-form-grid{grid-template-columns:1fr}.studio-pro .studio-text-field{grid-column:1}.studio-pro .studio-line{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.studio-pro .studio-line-label:first-child{grid-column:1/-1}.studio-pro .studio-remove-row{width:100%}}
+@page{size:A4;margin:14mm}
+@media print{
+ body:has(.studio-pro) *{visibility:hidden!important}
+ body:has(.studio-pro) #studio-preview,body:has(.studio-pro) #studio-preview *{visibility:visible!important}
+ body:has(.studio-pro) #studio-preview{position:absolute;top:0;left:0;right:0;width:100%;max-width:100%;background:#fff;box-shadow:none;border:0;padding:0;color:#111!important;font-size:10.5pt;line-height:1.45}
+ body:has(.studio-pro) #studio-preview table{break-inside:auto}
+ body:has(.studio-pro) #studio-preview tr{break-inside:avoid}
+ body:has(.studio-pro) #studio-preview h2,body:has(.studio-pro) #studio-preview h3{break-after:avoid}
+}
