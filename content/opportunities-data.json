@@ -550,5 +550,7 @@
       "role": "official_primary"
     }
   ],
-  "sortRule": "deadline_ascending_then_verified_current_official_portals_then_missing_deadline; never automatically mark an item open without a currently verified deadline"
+  "sortRule": "deadline_ascending_then_verified_current_official_portals_then_missing_deadline; never automatically mark an item open without a currently verified deadline",
+  "visaAlerts": [],
+  "alertGuidance": "Only display a verified, dated official visa-slot opening announcement, with source URL, country, category and end date; a functioning booking URL never proves slots exist."
 }
