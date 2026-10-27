@@ -1,0 +1,186 @@
+/*
+ * RibhLab — site-wide editorial interface corrections.
+ * Accessible color-coded sections, readable navigation and consistently sized photography.
+ * Loaded last to override older editorial "featured" layout rules safely.
+ */
+
+/* Header: show navigation as legible, clearly separated colored links on desktop. */
+@media (min-width:951px){
+ .header .nav-inner{
+   display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+   grid-template-rows:auto auto;align-items:center;
+   height:auto!important;min-height:0!important;
+   gap:7px 16px!important;padding-block:11px 12px;
+ }
+ .header .brand{grid-row:1;grid-column:1;justify-self:start;min-width:0}
+ .header .nav-actions{grid-row:1;grid-column:2;justify-self:end;display:flex;align-items:center;gap:8px!important}
+ .header .nav-links{
+   position:static!important;grid-row:2;grid-column:1/-1;
+   display:flex!important;align-items:center;justify-content:center;
+   flex-wrap:wrap;gap:8px!important;width:100%;max-width:100%;
+   min-width:0;flex:initial;overflow:visible
+ }
+ .header .nav-links>a{
+   --nav-ink:#503bc5;--nav-tint:#f0ebff;--nav-line:#dfd8ff;
+   display:inline-flex;align-items:center;justify-content:center;
+   font-size:clamp(11px,.84vw,13px)!important;
+   font-weight:780;line-height:1.5;min-height:37px;
+   padding:8px 13px!important;border-radius:10px!important;
+   border:1px solid var(--nav-line);background:var(--nav-tint);
+   color:var(--nav-ink)!important;text-align:center;box-shadow:none!important;
+   text-decoration:none;white-space:normal;transition:background .17s,transform .17s
+ }
+ .header .nav-links>a[href$="/markets/"]{--nav-ink:#5a34aa;--nav-tint:#eee7ff;--nav-line:#d9cafa}
+ .header .nav-links>a[href$="/sections/"]{--nav-ink:#075caa;--nav-tint:#e9f3ff;--nav-line:#c7e0fa}
+ .header .nav-links>a[href$="/earning/"]{--nav-ink:#a73b60;--nav-tint:#fff0f5;--nav-line:#f7cbd8}
+ .header .nav-links>a[href$="/trading/"]{--nav-ink:#097a9a;--nav-tint:#e7f8fc;--nav-line:#bde8f0}
+ .header .nav-links>a[href$="/ai/"]{--nav-ink:#6340b8;--nav-tint:#f1eaff;--nav-line:#d9cdfa}
+ .header .nav-links>a[href$="/lifestyle/"]{--nav-ink:#9f6218;--nav-tint:#fff6e3;--nav-line:#f1ddb9}
+ .header .nav-links>a[href$="/tools/"]{--nav-ink:#0e7164;--nav-tint:#e8f8f4;--nav-line:#c0e8dc}
+ .header .nav-links>a[href$="/opportunities/"]{--nav-ink:#076f55;--nav-tint:#e1f8eb;--nav-line:#b5e8cd}
+ .header .nav-links>a:hover,.header .nav-links>a.nav-current{
+   transform:translateY(-1px);background:var(--nav-ink)!important;
+   border-color:var(--nav-ink)!important;color:#fff!important;
+   box-shadow:0 4px 11px #25235721!important
+ }
+}
+@media (max-width:950px){
+ .header .nav-links>a{font-size:14px!important;line-height:1.5;padding:12px 15px!important;border-bottom:1px solid #e9ebf7;min-height:43px}
+ .header .nav-links>a[href$="/opportunities/"]{width:100%;display:flex}
+}
+
+/* Market digests: no oversized side-by-side featured image.
+   All articles use equal-width, vertically stacked magazine cards. */
+.market-digest-grid{
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;gap:19px;margin-block:23px 33px
+}
+.market-digest-grid>.market-digest-card,
+.market-digest-grid>.market-digest-card:first-child{
+  display:flex!important;flex-direction:column!important;grid-column:auto!important;
+  grid-row:auto!important;grid-template-columns:none!important;
+  width:auto;max-width:100%;min-width:0;overflow:hidden;border-radius:17px
+}
+.market-digest-card .market-digest-cover,
+.market-digest-card:first-child .market-digest-cover{
+  display:block;width:100%;height:auto!important;min-height:0!important;
+  aspect-ratio:16/9!important;flex:0 0 auto;overflow:hidden;
+  background:#edeef5;border-radius:0
+}
+.market-digest-card .market-digest-cover img,
+.market-digest-card:first-child .market-digest-cover img{
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+  max-width:100%;aspect-ratio:16/9
+}
+.market-digest-card .market-digest-body,
+.market-digest-card:first-child .market-digest-body{
+  display:flex;flex-direction:column;gap:12px;
+  min-width:0;flex:1;padding:19px 21px 21px!important;background:white
+}
+.market-digest-card h3,.market-digest-card:first-child h3{
+  font-size:clamp(17px,1.4vw,21px)!important;line-height:1.55!important;
+  font-weight:800;overflow-wrap:anywhere;margin:0
+}
+.market-digest-card .market-digest-body>p:not(.market-digest-photo-credit){
+  font-size:13.3px;line-height:1.9;color:#596480;
+  margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;
+  overflow:hidden;flex:initial
+}
+.market-digest-card .market-digest-links{margin-top:auto;gap:10px;justify-content:space-between}
+.market-digest-card .market-digest-links a{display:inline-flex;min-height:35px;align-items:center;line-height:1.45}
+.market-digest-card .market-digest-photo-credit{display:none!important}
+.market-digest-meta{flex-wrap:wrap;font-size:11px}
+.market-digest-meta span{letter-spacing:.05em;font-weight:800}
+.market-digest-card[data-pulse-topic="gold"] .market-digest-meta span{background:#fff0c6;color:#865306}
+.market-digest-card[data-pulse-topic="us_macro"] .market-digest-meta span{background:#e7edff;color:#3655a7}
+.market-digest-card[data-pulse-topic="europe"] .market-digest-meta span{background:#e5f4ff;color:#12628e}
+.market-digest-card[data-pulse-topic="japan"] .market-digest-meta span{background:#fce8ee;color:#ac4266}
+.market-digest-card[data-pulse-topic="china"] .market-digest-meta span{background:#fff0eb;color:#a64c30}
+
+/* Color-coded and clickable market topic buttons instead of washed out tiny pills. */
+.pulse-filters{
+  display:flex;gap:9px 10px;flex-wrap:wrap;align-items:center;
+  padding:6px 0 13px;margin:22px 0;overflow:visible
+}
+.pulse-filter{
+  --pill-ink:#5141a1;--pill-bg:#eeeaff;--pill-line:#cfc4f9;
+  display:inline-flex;align-items:center;justify-content:center;
+  white-space:normal;min-height:40px;line-height:1.4;
+  border-radius:11px;border:1px solid var(--pill-line);
+  background:var(--pill-bg);color:var(--pill-ink);
+  padding:9px 14px;font-size:12px;font-weight:800;
+  box-shadow:0 3px 11px #27235409;
+  transition:background .16s,transform .16s
+}
+.pulse-filter[data-pulse-filter="all"]{--pill-ink:#5335af;--pill-bg:#efeaff;--pill-line:#d3c7ff}
+.pulse-filter[data-pulse-filter="crypto"]{--pill-ink:#7a408e;--pill-bg:#f9eafb;--pill-line:#ebc9ef}
+.pulse-filter[data-pulse-filter="new_tokens"]{--pill-ink:#a34759;--pill-bg:#fff0f2;--pill-line:#f4ccd3}
+.pulse-filter[data-pulse-filter="gold"]{--pill-ink:#82520d;--pill-bg:#fff3d6;--pill-line:#f0dbac}
+.pulse-filter[data-pulse-filter="us_macro"]{--pill-ink:#3255a8;--pill-bg:#eaf0ff;--pill-line:#cad7f8}
+.pulse-filter[data-pulse-filter="europe"]{--pill-ink:#11618f;--pill-bg:#e8f5ff;--pill-line:#c4e1f5}
+.pulse-filter[data-pulse-filter="japan"]{--pill-ink:#b0476c;--pill-bg:#ffecf2;--pill-line:#f1c9d8}
+.pulse-filter[data-pulse-filter="china"]{--pill-ink:#aa423c;--pill-bg:#fff0ed;--pill-line:#f4cfc9}
+.pulse-filter[data-pulse-filter="geopolitics"]{--pill-ink:#466459;--pill-bg:#e9f5ed;--pill-line:#c9e3d1}
+.pulse-filter[data-pulse-filter="ai_future"]{--pill-ink:#5743b7;--pill-bg:#eeecff;--pill-line:#d4cdfb}
+.pulse-filter[data-pulse-filter="digital_income"]{--pill-ink:#0b7976;--pill-bg:#e2f7f5;--pill-line:#b8e6e1}
+.pulse-filter:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--pill-bg),white 20%);border-color:var(--pill-ink)}
+.pulse-filter.current,.pulse-filter[aria-pressed="true"]{
+  background:var(--pill-ink)!important;color:#fff!important;border-color:var(--pill-ink)!important;
+  box-shadow:0 6px 16px #1f246d1e
+}
+.pulse-filter:focus-visible{outline:3px solid #7860df;outline-offset:2px}
+
+/* Keep photos, but make all embedded editorial photos consistently sized.
+   Attribution remains in source metadata, not visible as clickable UI clutter. */
+.pulse-photo-figure figcaption{display:none!important}
+.pulse-photo-figure{position:relative;overflow:hidden}
+.pulse-photo-figure .pulse-photo-img{width:100%;height:190px;max-height:190px;object-fit:cover}
+.pulse-card{min-width:0;overflow:hidden}
+.pulse-photo-card .pulse-card-inner{min-width:0;height:auto;flex:1}
+.pulse-photo-card h3{line-height:1.55;overflow-wrap:anywhere}
+.market-story-figure{margin:0 0 25px;max-width:100%}
+.market-story-figure img{display:block;width:100%;height:clamp(215px,28vw,395px);max-height:395px;object-fit:cover;border-radius:16px}
+.market-story-figure figcaption{display:none!important}
+.article-illustration img,.article-content figure img{height:auto;max-height:460px;max-width:100%;object-fit:cover}
+
+/* Category rail, archives and article filters: distinct, readable buttons. */
+.magazine-rail-links>a,.archive-category-nav>a{
+  border-radius:10px;font-size:12px;font-weight:800;min-height:39px;
+  padding:9px 13px;border:1px solid #cbc7f6;color:#4b3da1;background:#f1efff;
+  text-decoration:none
+}
+.magazine-rail-links>a:nth-child(3n+1),
+.archive-category-nav>a:nth-child(3n+1){color:#0b786e;background:#e7f8f3;border-color:#b9e9dc}
+.magazine-rail-links>a:nth-child(3n+2),
+.archive-category-nav>a:nth-child(3n+2){color:#915125;background:#fff3e8;border-color:#f3d5b8}
+.magazine-rail-links>a:hover,.archive-category-nav>a:hover{filter:brightness(.94);border-color:currentColor}
+.smart-filter-chip{font-size:12px;font-weight:800;min-height:40px;border-radius:12px;padding:9px 14px}
+.smart-filter-chip[data-story-filter="earning"]{background:#fff0f5;border-color:#f4cdd8;color:#9c3560}
+.smart-filter-chip[data-story-filter="trading"]{background:#e8f9fc;border-color:#bae7f0;color:#127993}
+.smart-filter-chip[data-story-filter="ai"]{background:#f0ecff;border-color:#d6cbfa;color:#5a42b3}
+.smart-filter-chip[data-story-filter="lifestyle"]{background:#f5f9e8;border-color:#d8e8b8;color:#53741d}
+.smart-filter-chip[aria-pressed="true"]{background:#5a40d2;color:#fff;border-color:#5a40d2}
+
+/* Ensure cards never render external image credits as huge linked labels. */
+.article-card .card-art{overflow:hidden}
+.article-card .card-art .card-cover-image{display:block;width:100%;height:100%;object-fit:cover}
+.article-card .card-body{min-width:0}
+.article-card h3{overflow-wrap:anywhere}
+
+@media(max-width:1100px){
+ .market-digest-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .pulse-grid:has(.pulse-photo-card){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:690px){
+ .market-digest-grid,.pulse-grid:has(.pulse-photo-card){grid-template-columns:minmax(0,1fr)}
+ .market-digest-card .market-digest-body,.market-digest-card:first-child .market-digest-body{padding:18px!important}
+ .market-digest-cover{aspect-ratio:16/9}
+ .pulse-filters{gap:8px}
+ .pulse-filter{padding:9px 12px}
+ .pulse-photo-figure .pulse-photo-img{height:200px;max-height:200px}
+ .market-story-figure img{height:235px;max-height:235px}
+}
+@media(prefers-reduced-motion:reduce){
+ .pulse-filter,.header .nav-links>a{transition:none}
+ .pulse-filter:hover,.header .nav-links>a:hover{transform:none}
+}
