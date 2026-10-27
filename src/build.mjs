@@ -175,6 +175,43 @@ function makeArticle(l,a){const t=i18n[l],tr=a.translations[l];let toc=tr.sectio
  const route=urlFor(l,a);page(l,{title:`${tr.title} | RibhLab`,desc:tr.excerpt,route,altroutes:Object.fromEntries(locales.map(n=>[n,urlFor(n,a)])),content,type:'article',article:a,active:a.category});
 }
 
+
+const marketDigestLabels={
+ ar:{section:"تقارير نبض الأسواق — قرينا المصادر ولخصناها",intro:"ملخصات أصلية بالعربية والفرنسية والإنجليزية، مبنية على مصادر رسمية. كل صورة خاصة بالخبر، وما كايناش أسعار لحظية أو توصيات تداول.",read:"قرا الملخص والتفسير",source:"المصدر الأصلي",impact:"علاش هاد الخبر مهم؟",watch:"شنو خاصنا نراقبو؟",comments:"تعليقات القراء المسجّلين",signIn:"سجّل الدخول إلى GitHub باش تعلّق",loginNote:"إنشاء حساب GitHub مجاني. كيمكنك تشوف التعليقات هنا، ولكن الكتابة كتتم بعد تسجيل الدخول على GitHub. ما تنشرش بيانات شخصية أو مالية حساسة.",load:"عرض تعليقات القراء",loading:"جاري تحميل التعليقات…",empty:"ما كاين حتى تعليق حتى الآن.",failed:"تعذر تحميل التعليقات؛ افتح النقاش فـ GitHub.",all:"شوف المناقشة كاملة",credit:"الصورة الفوتوغرافية: ",disclaimer:"هاد التلخيص تحرير RibhLab بناءً على المصدر، ماشي نص الخبر الأصلي ولا توصية استثمارية. الصور توضيحية ولا تمثل أسعاراً أو نتائج حقيقية.",back:"الرجوع لنبض الأسواق",externals:"عناوين خارجية — متابعة منفصلة",externalNote:"العناوين الخارجية أدناه روابط للمصادر فقط، وماشي ملخصات راجعنا محتواها.",date:"تاريخ المصدر",reviewed:"تاريخ مراجعة الملخص"},
+ en:{section:"Source-read market digests, written by RibhLab",intro:"Original takeaways based on primary sources, with distinct licensed real photographs. Historical reports, not live prices or trading signals.",read:"Read our digest",source:"Original source",impact:"Why this matters",watch:"What to watch",comments:"Registered reader comments",signIn:"Sign in with GitHub to comment",loginNote:"Creating a GitHub account is free. Public comments can be read here; publishing a comment requires signing in on GitHub. Do not post sensitive information.",load:"Load public comments",loading:"Loading comments…",empty:"There are no comments yet.",failed:"Unable to load comments; use the GitHub discussion link.",all:"View full discussion",credit:"Editorial photograph: ",disclaimer:"Independent RibhLab summary of the source, not copied reporting or investment advice. Images are illustrative, not live data.",back:"Back to Market Pulse",externals:"External headlines — separate watchlist",externalNote:"The external headlines below link to original publishers; their articles have not all been summarized by our editors.",date:"Source date",reviewed:"Digest reviewed"},
+ fr:{section:"Décryptages de marché sourcés et rédigés par RibhLab",intro:"Synthèses originales à partir de publications primaires, illustrées par des photos réelles différentes. Ni cours en direct ni recommandations de trading.",read:"Lire notre synthèse",source:"Source originale",impact:"Pourquoi c’est important",watch:"À surveiller",comments:"Commentaires des lecteurs inscrits",signIn:"Se connecter avec GitHub pour commenter",loginNote:"Le compte GitHub est gratuit. Les commentaires publics sont visibles ici ; il faut se connecter sur GitHub pour en publier un. Ne partagez aucune donnée sensible.",load:"Charger les commentaires publics",loading:"Chargement des commentaires…",empty:"Aucun commentaire pour le moment.",failed:"Chargement impossible ; utilisez le lien vers la discussion GitHub.",all:"Voir toute la discussion",credit:"Photographie éditoriale : ",disclaimer:"Synthèse indépendante de RibhLab à partir de la source, sans reproduction de l’article ni conseil d’investissement. Les images ne représentent pas les cours en direct.",back:"Retour au Fil des marchés",externals:"Titres externes — veille distincte",externalNote:"Les titres externes ci-dessous renvoient à leur éditeur ; leur contenu n’a pas systématiquement fait l’objet d’une synthèse.",date:"Date de la source",reviewed:"Synthèse révisée"}
+};
+const marketDigestUrl=(l,d)=>'/'+l+'/markets/read/'+d.id+'/';
+const marketDigestPhoto=d=>'https://images.unsplash.com/'+d.photo.photoId+'?auto=format&fit=crop&w=1200&h=675&q=82';
+function marketDigestCard(l,d){
+ const t=d.translations[l],labels=marketDigestLabels[l];
+ return '<article class="market-digest-card" data-pulse-topic="'+esc(d.topic)+'"><a class="market-digest-cover" href="'+marketDigestUrl(l,d)+'" aria-label="'+esc(t.title)+'"><img src="'+esc(marketDigestPhoto(d))+'" loading="lazy" decoding="async" width="1200" height="675" alt="'+esc(d.photo.alt[l])+'"></a>'+
+ '<div class="market-digest-body"><div class="market-digest-meta"><span>'+esc(d.topic.replaceAll('_',' ').toUpperCase())+'</span><time datetime="'+esc(d.publishedAt)+'">'+esc(d.publishedAt.slice(0,10))+'</time></div><h3><a href="'+marketDigestUrl(l,d)+'">'+esc(t.title)+'</a></h3><p>'+esc(t.summary)+'</p><div class="market-digest-links"><a href="'+marketDigestUrl(l,d)+'">'+esc(labels.read)+' ↗</a><a href="'+esc(d.sourceUrl)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(labels.source)+' ↗</a></div></div></article>';
+}
+function marketComments(l,d){
+ const words=marketDigestLabels[l],thread='https://github.com/univcours/ribhlab-site/issues/'+d.discussionIssue;
+ return '<section class="market-discussion" data-market-comment-thread="'+d.discussionIssue+'" data-market-comment-lang="'+l+'">'+
+ '<div class="market-discussion-heading"><div><h2>'+esc(words.comments)+'</h2><p>'+esc(words.loginNote)+'</p></div><a class="btn btn-primary" href="'+thread+'" target="_blank" rel="noopener noreferrer">'+esc(words.signIn)+' ↗</a></div>'+
+ '<div class="market-comment-actions"><button class="btn btn-neutral" type="button" data-comments-load>'+esc(words.load)+'</button><a href="'+thread+'" rel="noopener noreferrer" target="_blank">'+esc(words.all)+' ↗</a></div>'+
+ '<div class="market-comments-list" data-comments-list aria-live="polite" data-label-loading="'+esc(words.loading)+'" data-label-empty="'+esc(words.empty)+'" data-label-failed="'+esc(words.failed)+'"></div>'+
+ '</section><script defer src="/assets/market-comments.js"></script>';
+}
+function marketDigestPage(l,d){
+ const words=marketDigestLabels[l],tr=d.translations[l],route=marketDigestUrl(l,d);
+ const crumbs='<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/'+l+'/">'+esc(i18n[l].navHome)+'</a><span>/</span><a href="/'+l+'/markets/">'+esc(marketLabels[l].title)+'</a></nav>';
+ const hero='<section class="page-hero market-article-hero"><div class="shell">'+crumbs+'<span class="section-kicker">RIBHLAB / MARKET PULSE / '+esc(d.topic.toUpperCase())+'</span><h1>'+esc(tr.title)+'</h1><div class="market-article-dates"><span>'+esc(words.date)+': <time datetime="'+esc(d.publishedAt)+'">'+esc(d.publishedAt.slice(0,10))+'</time></span><span>'+esc(words.reviewed)+': 2026-10-27</span></div></div></section>';
+ const figure='<figure class="market-story-figure"><img loading="eager" decoding="async" fetchpriority="high" src="'+esc(marketDigestPhoto(d))+'" width="1200" height="675" alt="'+esc(d.photo.alt[l])+'"><figcaption>'+esc(words.credit)+'<a href="'+esc(d.photo.source)+'" rel="noopener noreferrer" target="_blank">'+esc(d.photo.photographer)+' / Unsplash</a> · '+esc(d.photo.license)+'</figcaption></figure>';
+ const body='<div class="shell market-article-layout"><article class="market-article-body">'+figure+
+ '<div class="market-summary-main"><h2>'+esc(tr.title)+'</h2><p>'+esc(tr.summary)+'</p></div>'+
+ '<section class="market-analysis-block"><h2>'+esc(words.impact)+'</h2><p>'+esc(tr.impact)+'</p></section>'+
+ '<section class="market-analysis-block"><h2>'+esc(words.watch)+'</h2><p>'+esc(tr.watch)+'</p></section>'+
+ '<div class="market-original-link"><span>'+esc(words.source)+': <strong>'+esc(d.source)+'</strong></span><a href="'+esc(d.sourceUrl)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(words.source)+' ↗</a></div>'+
+ '<p class="market-digest-disclaimer">'+esc(words.disclaimer)+'</p>'+
+ marketComments(l,d)+
+ '<div class="market-story-sharing">'+sharingBar(l)+'</div><a class="text-link" href="/'+l+'/markets/">'+esc(words.back)+' ↗</a></article></div>';
+ page(l,{title:tr.title+' | RibhLab',desc:tr.summary.slice(0,210),route,content:hero+body,type:'market',publishedAt:'2026-10-27T12:00:00Z',socialImage:marketDigestPhoto(d),socialAlt:d.photo.alt[l],active:'markets'});
+}
+
 function marketPulse(l){
  const words=marketLabels[l],future=(marketCalendar.events||[]).filter(x=>x.date>=new Date().toISOString().slice(0,10));
  const sourceLinks=[['Federal Reserve','https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm'],['BLS','https://www.bls.gov/schedule/2026/'],['European Central Bank','https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html'],['Bank of Japan','https://www.boj.or.jp/en/about/calendar/index.htm'],['China NBS','https://www.stats.gov.cn/english/PressRelease/index.html'],['World Gold Council','https://www.gold.org/goldhub/research']];
@@ -187,8 +224,11 @@ function marketPulse(l){
  const analysisSection='<section class="section shell" id="market-analysis"><div class="section-head"><div><span class="section-kicker">RIBHLAB / ANALYSIS</span><h2>'+esc(aLabels[0])+'</h2><p>'+esc(aLabels[1])+'</p></div></div><div class="article-grid">'+analysis.map(a=>articleCard(l,a)).join('')+'</div></section>';
  const schedule=future.map(x=>'<article class="pulse-event"><time datetime="'+esc(x.date)+'">'+esc(x.date)+'</time><div><strong>'+esc(x.title[l]||x.title.en)+'</strong><p>'+esc(x.country)+' · '+esc(x.time)+'</p></div><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(words.visit)+' ↗</a></article>').join('');
  const links=sourceLinks.map(([name,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(name)+' ↗</a>').join('');
+ const digestLabels=marketDigestLabels[l];
+ const digestOrder=[...marketDigests].sort((a,b)=>(a.topic==='gold'?-1:b.topic==='gold'?1:0)||b.publishedAt.localeCompare(a.publishedAt));
+ const digestSection='<section class="section shell" id="market-digests"><div class="section-head"><div><span class="section-kicker">RIBHLAB / ORIGINAL DIGESTS</span><h2>'+esc(digestLabels.section)+'</h2><p>'+esc(digestLabels.intro)+'</p></div></div><div class="market-digest-grid">'+digestOrder.map(d=>marketDigestCard(l,d)).join('')+'</div></section>';
  const body='<section class="page-hero"><div class="shell"><span class="section-kicker">SOURCE-ATTRIBUTED / MARKETS</span><h1>'+esc(words.head)+'</h1><p>'+esc(words.desc)+'</p><a class="btn btn-primary" href="#economic-calendar">'+esc(words.calendar)+' ↗</a></div></section>'+
- analysisSection+'<section class="section shell"><div class="section-head"><div><h2>'+esc(aLabels[2])+'</h2><p>'+esc(words.note)+'</p><small>'+esc(words.last)+': '+esc(marketFeed.fetchedAt)+' UTC</small></div></div>'+filterBar+'<div class="pulse-grid">'+cards+'</div><p class="pulse-risk">⚠ '+esc(words.warning)+'</p></section>'+
+ digestSection+analysisSection+'<section class="section shell"><div class="section-head"><div><h2>'+esc(digestLabels.externals)+'</h2><p>'+esc(words.note)+'</p><small>'+esc(words.last)+': '+esc(marketFeed.fetchedAt)+' UTC</small></div></div>'+filterBar+'<div class="pulse-grid">'+cards+'</div><p class="pulse-risk">⚠ '+esc(words.warning)+'</p></section>'+
  '<section class="section section-sand" id="economic-calendar"><div class="shell"><div class="section-head"><div><h2>'+esc(words.calendar)+'</h2><p>'+esc(words.note)+'</p></div></div><div class="pulse-events">'+(schedule||'<p>'+esc(words.note)+'</p>')+'</div><div class="pulse-sources">'+links+'</div></div></section><div class="shell">'+sharingBar(l)+'</div>';
  page(l,{title:words.head+' | RibhLab',desc:words.desc,route:'/'+l+'/markets/',content:body,active:'markets'});
 }
@@ -379,11 +419,11 @@ function toolPage(l){const t=i18n[l],content=`<section class="page-hero"><div cl
  separateTools(l,content);
 }
 fs.rmSync(dist,{recursive:true,force:true});fs.mkdirSync(path.join(dist,'assets'),{recursive:true});
-for(const f of ['style.css','app.js','document-studio.js','document-studio-core.mjs','favicon.svg','og-cover.svg','og-cover.png'])fs.copyFileSync(path.join(root,'src',f),path.join(dist,'assets',f));
+for(const f of ['style.css','app.js','market-comments.js','document-studio.js','document-studio-core.mjs','favicon.svg','og-cover.svg','og-cover.png'])fs.copyFileSync(path.join(root,'src',f),path.join(dist,'assets',f));
 fs.cpSync(path.join(root,'admin'),path.join(dist,'admin'),{recursive:true});
 fs.cpSync(path.join(root,'public'),dist,{recursive:true,force:true});
 // Generate a distinct original artwork for each published article on every build.
-for(const l of locales){home(l);marketPulse(l);sectionDirectoryPage(l);for(const section of editorialSections)sectionPage(l,section);for(const cat of ['earning','trading','ai','lifestyle'])catPage(l,cat);for(const a of articles)makeArticle(l,a);for(const key of ['about','editorial','contact','privacy','terms','disclaimer'])staticPage(l,key);toolPage(l);
+for(const l of locales){home(l);marketPulse(l);for(const d of marketDigests)marketDigestPage(l,d);sectionDirectoryPage(l);for(const section of editorialSections)sectionPage(l,section);for(const cat of ['earning','trading','ai','lifestyle'])catPage(l,cat);for(const a of articles)makeArticle(l,a);for(const key of ['about','editorial','contact','privacy','terms','disclaimer'])staticPage(l,key);toolPage(l);
  fs.writeFileSync(path.join(dist,'assets',`search-${l}.json`),JSON.stringify(articles.map(a=>({title:a.translations[l].title,excerpt:a.translations[l].excerpt,url:basePath+urlFor(l,a),category:i18n[l][a.category],search:[a.translations[l].title,a.translations[l].excerpt,a.translations[l].lead].join(' ')}))));
 }
 fs.writeFileSync(path.join(dist,'index.html'),'<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/ar/"><title>RibhLab</title></head><body><a href="/ar/">RibhLab العربية</a> · <a href="/en/">English</a> · <a href="/fr/">Français</a></body></html>');
