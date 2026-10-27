@@ -346,8 +346,10 @@ for(const [sectionId,slugs] of Object.entries(protectedInventory.sections)){
  for(const slug of slugs){
   if(!live.publishedSlugs.includes(slug)||!planned.publishedSlugs.includes(slug)||!knownSlugs.has(slug))errors.push('Legacy article deleted or unpublished: '+slug);
   if(!photos.articlePhotos[slug])errors.push('Legacy photo lost: '+slug);
+  if(!knownSlugs.has(slug))continue;
+  const originalArticle=JSON.parse(fs.readFileSync(path.join(articleDir,slug+'.json'),'utf8'));
   for(const lang of ['ar','en','fr']){
-   const file=path.join(dist,lang,live.parent,slug,'index.html');
+   const file=path.join(dist,lang,originalArticle.category,slug,'index.html');
    if(!fs.existsSync(file))errors.push('Legacy article URL missing after redesign: '+lang+'/'+slug);
   }
  }
