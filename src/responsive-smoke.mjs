@@ -87,7 +87,7 @@ try{
    if(nav.errorText)throw Error(nav.errorText);
    let ready=false;
    for(let count=0;count<50;count++){
-    if(await evalJS('document.readyState!=="loading" && !!document.querySelector("#main") && !!document.querySelector("link[href*=responsive]")')){ready=true;break;}
+    if(await evalJS('document.readyState!=="loading" && window.location.pathname==="/ribhlab-site/'+test.lang+test.route+'" && !!document.querySelector("#main") && !!document.querySelector("link[href*=responsive]")')){ready=true;break;}
     await pause(80);
    }
    if(!ready)throw Error('responsive HTML failed to load');
