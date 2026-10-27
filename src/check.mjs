@@ -135,6 +135,9 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   if(!h.includes('class="article-illustration licensed-editorial-photo"'))errors.push('Missing real photographic article figure '+lang+'/'+a.slug);
   if(!h.includes('images.unsplash.com/'+p.photoId))errors.push('Article image not matched to unique photo '+lang+'/'+a.slug);
   if(!h.includes('property="og:image" content="https://images.unsplash.com/'+p.photoId))errors.push('Article social preview lacks unique real photo '+lang+'/'+a.slug);
+  if(!h.includes('name="twitter:image" content="https://images.unsplash.com/'+p.photoId))errors.push('Twitter social preview lacks unique real photo '+lang+'/'+a.slug);
+  const photoTag=h.match(/<figure class="article-illustration licensed-editorial-photo">[\s\S]*?<img[^>]+>/);
+  if(!photoTag||!photoTag[0].includes('src="https://images.unsplash.com/'+p.photoId))errors.push('Article photographic figure has wrong source '+lang+'/'+a.slug);
   if(!h.includes(p.photographer+' / Unsplash'))errors.push('Photographer credit missing '+lang+'/'+a.slug);
   if(h.includes('/covers/'+a.slug+'.svg')||h.includes('original-cover-figure'))errors.push('Generated SVG illustration still shown '+lang+'/'+a.slug);
  }
