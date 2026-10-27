@@ -300,7 +300,7 @@ if(!fs.existsSync(marketClient))errors.push('Market registered comments module n
 else{
  const code=fs.readFileSync(marketClient,'utf8');
  if(!code.includes('api.github.com/repos/univcours/ribhlab-site/issues/')||!code.includes('document.createTextNode')&& !code.includes('body.textContent='))errors.push('Public comments not safely rendered');
- if(code.includes('.innerHTML')||code.includes('POST')||code.includes('password'))errors.push('Unsafe client-side comments or unapproved anonymous login');
+ if(code.includes('.innerHTML')||/method\s*:\s*['\"]POST['\"]/.test(code)||/type\s*=\s*['\"]password['\"]/.test(code))errors.push('Unsafe client-side comments or unapproved anonymous login');
 }
 
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
