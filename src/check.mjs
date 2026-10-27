@@ -128,9 +128,9 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   const h=fs.readFileSync(f,'utf8');
   if(!h.includes('class="article-illustration licensed-editorial-photo"'))errors.push('Missing licensed photo block '+lang+'/'+a.slug);
   if(!h.includes('class="article-illustration original-cover-figure"'))errors.push('Missing article-specific original illustration '+lang+'/'+a.slug);
-  if(!h.includes('data-fallback-src=')||!h.includes('images.unsplash.com/photo-'))errors.push('Missing remote photo and fallback '+lang+'/'+a.slug);
+  if(!h.includes('data-fallback-src=')||!h.includes('/covers/'+a.slug+'.svg'))errors.push('Missing unique article illustration '+lang+'/'+a.slug);
   if(!h.includes('/covers/'+a.slug+'.svg'))errors.push('Missing original art reference '+lang+'/'+a.slug);
-  if(!h.includes('Unsplash</a>'))errors.push('Missing photographer credit '+lang+'/'+a.slug);
+  if(!h.includes('RibhLab original illustration'))errors.push('Missing original illustration credit '+lang+'/'+a.slug);
  }
 }
 for(const lang of ['ar','en','fr']){
@@ -178,3 +178,10 @@ for(const lang of ['ar','en','fr']){
 }
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
+
+// Prevent accidentally reintroducing the same licensed image in multiple articles.
+const ids=new Map();
+for(const [slug,p] of Object.entries(photos.articlePhotos||{})){
+ if(ids.has(p.photoId))errors.push('Duplicate licensed photo shared by '+ids.get(p.photoId)+' and '+slug);
+ ids.set(p.photoId,slug);
+}
