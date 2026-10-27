@@ -274,8 +274,17 @@ function documentStudioTool(l){
  note:'Sauvegarde locale facultative : évitez les données sensibles sur un appareil partagé. Le PDF s’enregistre via la boîte de dialogue d’impression.'
  }
  }[l];
- const txt=(id,key,multiline=false)=>'<label for="'+id+'">'+esc(d[key])+(multiline?'<textarea id="'+id+'" maxlength="12000" rows="5"></textarea>':'<input id="'+id+'" type="text" maxlength="500">')+'</label>';
- const date=(id,key)=>'<label for="'+id+'">'+esc(d[key])+'<input type="date" id="'+id+'"></label>';
+ 
+ const extras={
+ ar:{cvHead:'الملف المهني ومحتوى السيرة الذاتية',cvExperience:'الخبرات المهنية (الوظيفة، المؤسسة، التاريخ، الإنجازات)',cvEducation:'التعليم والشهادات',cvSkills:'المهارات (افصل بينها بفواصل)',cvLanguages:'اللغات ومستواها',cvCertifications:'الدورات والشهادات المهنية',cvLink:'رابط LinkedIn أو معرض الأعمال',reportHead:'أقسام التقرير الاحترافي',reportContext:'السياق والهدف',reportMethod:'المنهجية ومصادر المعلومات',reportFindings:'النتائج والمؤشرات',reportRecommendations:'التوصيات والإجراءات المقترحة',reportConclusion:'الخلاصة',letterHead:'صياغة الرسالة',letterSubject:'موضوع الرسالة',letterGreeting:'التحية',letterClosing:'صيغة الاختتام',fullName:'الاسم الكامل',position:'المسمى المهني المستهدف',cvSummary:'النبذة المهنية',reportTitle:'عنوان التقرير',reportSummary:'الملخص التنفيذي',letterRecipient:'اسم المرسل إليه',letterBody:'نص الرسالة',documentRef:'مرجع الوثيقة',demo:'تعبئة نموذج CV تجريبي',demoNote:'النموذج تجريبي وببيانات افتراضية، استبدلها قبل استعمال المستند.'},
+ en:{cvHead:'Career profile and resume sections',cvExperience:'Work experience (role, company, dates, achievements)',cvEducation:'Education and degrees',cvSkills:'Skills (comma-separated)',cvLanguages:'Languages and proficiency',cvCertifications:'Certifications and courses',cvLink:'LinkedIn or portfolio link',reportHead:'Professional report sections',reportContext:'Background and objectives',reportMethod:'Method and data sources',reportFindings:'Findings and indicators',reportRecommendations:'Recommendations and next steps',reportConclusion:'Conclusion',letterHead:'Business letter details',letterSubject:'Subject',letterGreeting:'Salutation',letterClosing:'Sign-off',fullName:'Full name',position:'Professional headline / target role',cvSummary:'Professional summary',reportTitle:'Report title',reportSummary:'Executive summary',letterRecipient:'Recipient name',letterBody:'Letter body',documentRef:'Document reference',demo:'Load fictional CV example',demoNote:'This is clearly fictional sample data. Replace it before using the document.'},
+ fr:{cvHead:'Profil professionnel et rubriques du CV',cvExperience:'Expériences (poste, entreprise, dates, réalisations)',cvEducation:'Formation et diplômes',cvSkills:'Compétences (séparées par des virgules)',cvLanguages:'Langues et niveaux',cvCertifications:'Certifications et formations',cvLink:'Lien LinkedIn ou portfolio',reportHead:'Rubriques du rapport professionnel',reportContext:'Contexte et objectifs',reportMethod:'Méthodologie et sources',reportFindings:'Constats et indicateurs',reportRecommendations:'Recommandations et plan d’action',reportConclusion:'Conclusion',letterHead:'Détails du courrier',letterSubject:'Objet',letterGreeting:'Formule d’appel',letterClosing:'Formule de politesse',fullName:'Nom complet',position:'Intitulé professionnel / poste visé',cvSummary:'Résumé professionnel',reportTitle:'Titre du rapport',reportSummary:'Synthèse exécutive',letterRecipient:'Nom du destinataire',letterBody:'Texte de la lettre',documentRef:'Référence du document',demo:'Charger un CV fictif',demoNote:'Exemple fictif : remplacez toutes les données avant utilisation.'}
+ }[l];
+ const extra=(id,key,kinds,rows=3)=>'<label class="studio-extra-field" data-studio-kinds="'+kinds+'" for="'+id+'">'+esc(extras[key])+(rows===0?'<input type="text" maxlength="500" id="'+id+'">':'<textarea id="'+id+'" rows="'+rows+'" maxlength="12000"></textarea>')+'</label>';
+ const named=(id,key,kinds)=>extra(id,key,kinds,0);
+
+ const txt=(id,key,multiline=false)=>'<label for="'+id+'" data-studio-field="'+id+'"><span class="studio-field-caption">'+esc(d[key])+'</span>'+(multiline?'<textarea id="'+id+'" maxlength="12000" rows="5"></textarea>':'<input id="'+id+'" type="text" maxlength="500">')+'</label>';
+ const date=(id,key)=>'<label for="'+id+'" data-studio-field="'+id+'"><span class="studio-field-caption">'+esc(d[key])+'</span><input type="date" id="'+id+'"></label>';
  const num=(id,key,value)=>'<label for="'+id+'">'+esc(d[key])+'<input id="'+id+'" type="number" value="'+value+'" min="0" max="100" step="0.01"></label>';
  return '<section class="tool-card tool-wide studio-pro" id="document-studio" data-price-usd="'+studioPlan.priceUsd+'" data-checkout-enabled="false">'+
  '<div class="studio-pro-head"><div><span class="studio-brand">RIBHLAB / CREATIVE WORKSPACE</span><h2>'+esc(d.title)+'</h2><p class="tool-hint">'+esc(d.intro)+'</p></div><div class="studio-price"><span>'+esc(d.price)+'</span><strong>$'+studioPlan.priceUsd+' USD</strong><small>'+esc(d.noBilling)+'</small></div></div>'+
@@ -289,6 +298,19 @@ function documentStudioTool(l){
  txt('studio-email','email')+txt('studio-phone','phone')+txt('studio-address','address')+
  '<div class="studio-text-field">'+txt('studio-text','details',true)+'</div>'+
  '</div>'+
+ '<section id="studio-custom-sections" class="studio-custom-sections" aria-live="off">'+
+ '<div class="studio-mode-panel" data-studio-mode="cv" hidden><h3>'+esc(extras.cvHead)+'</h3><div class="studio-form-grid">'+
+ extra('studio-cv-experience','cvExperience','cv',5)+extra('studio-cv-education','cvEducation','cv',4)+
+ extra('studio-cv-skills','cvSkills','cv',2)+extra('studio-cv-languages','cvLanguages','cv',2)+
+ extra('studio-cv-certifications','cvCertifications','cv',3)+named('studio-cv-link','cvLink','cv')+
+ '</div><button type="button" id="studio-demo" class="btn btn-neutral">'+esc(extras.demo)+'</button><p class="studio-demo-note">'+esc(extras.demoNote)+'</p></div>'+
+ '<div class="studio-mode-panel" data-studio-mode="report" hidden><h3>'+esc(extras.reportHead)+'</h3><div class="studio-form-grid">'+
+ extra('studio-report-context','reportContext','report',3)+extra('studio-report-method','reportMethod','report',3)+
+ extra('studio-report-findings','reportFindings','report',5)+extra('studio-report-recommendations','reportRecommendations','report',5)+
+ extra('studio-report-conclusion','reportConclusion','report',3)+'</div></div>'+
+ '<div class="studio-mode-panel" data-studio-mode="letter" hidden><h3>'+esc(extras.letterHead)+'</h3><div class="studio-form-grid">'+
+ named('studio-letter-subject','letterSubject','letter')+named('studio-letter-greeting','letterGreeting','letter')+named('studio-letter-closing','letterClosing','letter')+'</div></div>'+
+ '</section>'+
  '<div id="studio-financial-fields" class="studio-financial-fields">'+
  '<div class="studio-form-grid">'+
  '<label for="studio-currency">'+esc(d.currency)+'<select id="studio-currency">'+['MAD','USD','EUR','GBP','CAD'].map(v=>'<option>'+v+'</option>').join('')+'</select></label>'+
@@ -327,7 +349,19 @@ function separateTools(l,fullContent){
  ['position-size','position-sizer','10','TRADING'],
  ['document-studio','document-studio','11','DOCUMENTS']
  ];
- const found=Array.from(fullContent.matchAll(/<section class="tool-card[^"]*" id="([^"]+)"[^>]*>[\s\S]*?<\/section>/g),m=>[m[1],m[0]]);
+ const found=[];
+ const toolOpen=/<section class="tool-card[^"]*" id="([^"]+)"[^>]*>/g;
+ for(const match of fullContent.matchAll(toolOpen)){
+  const nested=/<\/?section\b[^>]*>/g;
+  nested.lastIndex=match.index;
+  let depth=0,end=-1;
+  for(let tag;(tag=nested.exec(fullContent));){
+   if(tag[0].startsWith('</'))depth--;else depth++;
+   if(depth===0){end=nested.lastIndex;break;}
+  }
+  if(end<0)throw Error('Unbalanced nested <section> inside tool '+match[1]);
+  found.push([match[1],fullContent.slice(match.index,end)]);
+ }
  const sections=new Map(found);
  for(let k=0;k<defs.length;k++){
   const [slug,id,num,tag]=defs[k],section=sections.get(id);
