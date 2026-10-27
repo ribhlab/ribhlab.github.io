@@ -299,16 +299,16 @@ function documentStudioTool(l){
  '<div class="studio-text-field">'+txt('studio-text','details',true)+'</div>'+
  '</div>'+
  '<section id="studio-custom-sections" class="studio-custom-sections" aria-live="off">'+
- '<div class="studio-mode-panel" data-studio-mode="cv"><h3>'+esc(extras.cvHead)+'</h3><div class="studio-form-grid">'+
+ '<div class="studio-mode-panel" data-studio-mode="cv" hidden><h3>'+esc(extras.cvHead)+'</h3><div class="studio-form-grid">'+
  extra('studio-cv-experience','cvExperience','cv',5)+extra('studio-cv-education','cvEducation','cv',4)+
  extra('studio-cv-skills','cvSkills','cv',2)+extra('studio-cv-languages','cvLanguages','cv',2)+
  extra('studio-cv-certifications','cvCertifications','cv',3)+named('studio-cv-link','cvLink','cv')+
  '</div><button type="button" id="studio-demo" class="btn btn-neutral">'+esc(extras.demo)+'</button><p class="studio-demo-note">'+esc(extras.demoNote)+'</p></div>'+
- '<div class="studio-mode-panel" data-studio-mode="report"><h3>'+esc(extras.reportHead)+'</h3><div class="studio-form-grid">'+
+ '<div class="studio-mode-panel" data-studio-mode="report" hidden><h3>'+esc(extras.reportHead)+'</h3><div class="studio-form-grid">'+
  extra('studio-report-context','reportContext','report',3)+extra('studio-report-method','reportMethod','report',3)+
  extra('studio-report-findings','reportFindings','report',5)+extra('studio-report-recommendations','reportRecommendations','report',5)+
  extra('studio-report-conclusion','reportConclusion','report',3)+'</div></div>'+
- '<div class="studio-mode-panel" data-studio-mode="letter"><h3>'+esc(extras.letterHead)+'</h3><div class="studio-form-grid">'+
+ '<div class="studio-mode-panel" data-studio-mode="letter" hidden><h3>'+esc(extras.letterHead)+'</h3><div class="studio-form-grid">'+
  named('studio-letter-subject','letterSubject','letter')+named('studio-letter-greeting','letterGreeting','letter')+named('studio-letter-closing','letterClosing','letter')+'</div></div>'+
  '</section>'+
  '<div id="studio-financial-fields" class="studio-financial-fields">'+
