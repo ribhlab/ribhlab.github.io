@@ -15,7 +15,8 @@
       "count": 4,
       "deadline": "2026-11-09",
       "url": "https://www.emploi-public.ma/fr/concours-liste",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "sett-engineer",
@@ -26,7 +27,8 @@
       "count": 2,
       "deadline": "2026-11-09",
       "url": "https://www.emploi-public.ma/fr/concours-liste",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "civil-protection",
@@ -37,7 +39,8 @@
       "count": 50,
       "deadline": "2026-10-31",
       "url": "https://www.emploi-public.ma/fr/concours-liste",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "agriculture-admin",
@@ -48,7 +51,8 @@
       "count": 38,
       "deadline": "2026-10-30",
       "url": "https://www.emploi-public.ma/fr/concours-liste",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "oncf-bac5",
@@ -59,7 +63,8 @@
       "count": 100,
       "deadline": "2026-11-06",
       "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "amdie-finance",
@@ -69,8 +74,9 @@
       "place": "Maroc",
       "count": 2,
       "deadline": "2026-11-09",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
-      "kind": "official_notice"
+      "url": "https://www.emploi-public.ma/fr/concours/details/26fa5f83-f86b-446e-b293-0104f8494b9d",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "srm-technicians",
@@ -81,7 +87,8 @@
       "count": 84,
       "deadline": "2026-11-10",
       "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "bam-cyber",
@@ -92,7 +99,8 @@
       "count": 1,
       "deadline": "2026-11-10",
       "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "ram-call",
@@ -101,9 +109,10 @@
       "org": "Atlas On Line · Groupe Royal Air Maroc",
       "place": "Maroc",
       "count": 30,
-      "deadline": "2026-11-17",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
-      "kind": "official_notice"
+      "deadline": "2026-11-06",
+      "url": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "sett-network",
@@ -114,7 +123,8 @@
       "count": 1,
       "deadline": "2026-11-16",
       "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "sidi-finance",
@@ -125,7 +135,8 @@
       "count": 1,
       "deadline": "2026-11-20",
       "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "eures",
@@ -200,9 +211,10 @@
       "org": "Groupe Royal Air Maroc",
       "place": "Maroc",
       "count": 30,
-      "deadline": "2026-11-17",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
-      "kind": "official_notice"
+      "deadline": "2026-11-06",
+      "url": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "srm-company",
@@ -213,7 +225,8 @@
       "count": 26,
       "deadline": "2026-11-10",
       "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics",
-      "kind": "official_notice"
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
     },
     {
       "id": "express-entry",
@@ -269,6 +282,57 @@
       "place": "Europe",
       "url": "https://eures.europa.eu/index_en",
       "kind": "program"
+    },
+    {
+      "id": "srm-fes-meknes-271",
+      "section": "competitions",
+      "title": "271 postes — 25 cadres, 119 agents de maîtrise, 127 agents d'exécution",
+      "org": "SRM Fès-Meknès",
+      "place": "Fès-Meknès, Maroc",
+      "count": 271,
+      "deadline": "2026-10-31",
+      "url": "https://www.emploi-public.ma/fr/concours/details/e25c50f3-f5dc-4570-b991-981517e9a17b",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "discoveredVia": "https://alwadifa-maroc.com/offre/public"
+    },
+    {
+      "id": "lpee-12",
+      "section": "competitions",
+      "title": "12 postes — génie civil, HSE, gestion et commerce",
+      "org": "Laboratoire Public des Essais et des Etudes (LPEE)",
+      "place": "Casablanca / Rabat / Marrakech",
+      "count": 12,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/f2ac90c1-7561-482a-a517-17eeb1f65ac5",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "discoveredVia": "https://alwadifa-maroc.com/offre/public"
+    },
+    {
+      "id": "sntl-accounting",
+      "section": "companies",
+      "title": "Technicien Comptable — 4 postes",
+      "org": "SNTL — Société nationale des transports et de la logistique",
+      "place": "Maroc",
+      "count": 4,
+      "deadline": "2026-11-03",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&datePicker=&date_from=&date_to=&key_word=&page=12&procedure=0&region=0&stat=etab_publics",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma"
+    },
+    {
+      "id": "marrakech-cash",
+      "section": "companies",
+      "title": "Comptable — contrôle des recettes et encaissements",
+      "org": "SDL Marrakech Moussafir",
+      "place": "Marrakech",
+      "count": 1,
+      "deadline": "2026-11-07",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "discoveredVia": "https://alwadifa-maroc.com/offre/public"
     }
   ],
   "visa": [
@@ -463,5 +527,28 @@
       "en": "No verified DV-2027 entry start date. The US State Department says it will announce dates. An August 2026 notice reports a pause on DV visa issuance, though appointments may continue. Official registration is free.",
       "fr": "Aucune date officielle confirmée d’inscription DV-2027. Le Département d’État annoncera les dates. Un avis d’août 2026 suspend la délivrance des visas DV, même si les entretiens peuvent continuer. L’inscription officielle est gratuite."
     }
-  }
+  },
+  "discoverySources": [
+    {
+      "name": "Alwadifa Maroc",
+      "url": "https://alwadifa-maroc.com/offre/public",
+      "role": "discovery_only"
+    },
+    {
+      "name": "Alwadifa",
+      "url": "https://alwadifa.ma/",
+      "role": "discovery_only"
+    },
+    {
+      "name": "Alwadifa",
+      "url": "https://alwadifa.org/",
+      "role": "discovery_only"
+    },
+    {
+      "name": "Portail de l'emploi public",
+      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "role": "official_primary"
+    }
+  ],
+  "sortRule": "deadline_ascending_then_verified_current_official_portals_then_missing_deadline; never automatically mark an item open without a currently verified deadline"
 }
