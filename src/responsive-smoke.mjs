@@ -11,6 +11,9 @@ import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
+const siteUrl=process.env.SITE_URL||'https://ribhlab.github.io';
+const basePath=new URL(siteUrl).pathname.replace(/\/$/,'');
+const fullRoute=(lang,route)=>basePath+'/'+lang+route;
 if(!fs.existsSync(dist))throw Error('Run npm run build first');
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 const executable=[process.env.CHROME_BIN,'google-chrome','google-chrome-stable','chromium','chromium-browser'].filter(Boolean)
@@ -20,7 +23,7 @@ const mimetypes={'.html':'text/html','.css':'text/css','.js':'text/javascript','
 const server=http.createServer((req,res)=>{
  try{
   let name=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);
-  name=name.replace(/^\/ribhlab-site(?=\/|$)/,'');
+  if(basePath && (name===basePath||name.startsWith(basePath+'/')))name=name.slice(basePath.length)||'/';
   let file=path.resolve(dist,'.'+name);
   if(file!==dist&&!file.startsWith(dist+path.sep)){res.writeHead(403);res.end();return;}
   if(!fs.existsSync(file)){res.writeHead(404);res.end();return;}
@@ -83,11 +86,11 @@ try{
   const label=test.lang+test.route+' @ '+test.width+'px';
   try{
    await cdp('Emulation.setDeviceMetricsOverride',{width:test.width,height:900,deviceScaleFactor:1,mobile:test.width<=768});
-   const nav=await cdp('Page.navigate',{url:'http://127.0.0.1:'+sitePort+'/ribhlab-site/'+test.lang+test.route});
+   const nav=await cdp('Page.navigate',{url:'http://127.0.0.1:'+sitePort+fullRoute(test.lang,test.route)});
    if(nav.errorText)throw Error(nav.errorText);
    let ready=false;
    for(let count=0;count<50;count++){
-    if(await evalJS('document.readyState!=="loading" && window.location.pathname==="/ribhlab-site/'+test.lang+test.route+'" && !!document.querySelector("#main") && !!document.querySelector("link[href*=responsive]")')){ready=true;break;}
+    if(await evalJS('document.readyState!=="loading" && window.location.pathname==='+JSON.stringify(fullRoute(test.lang,test.route))+' && !!document.querySelector("#main") && !!document.querySelector("link[href*=responsive]")')){ready=true;break;}
     await pause(80);
    }
    if(!ready)throw Error('responsive HTML failed to load');
