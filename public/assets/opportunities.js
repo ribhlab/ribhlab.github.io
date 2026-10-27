@@ -33,9 +33,10 @@ for (const widget of document.querySelectorAll('[data-opportunity-list]')) {
   function filter(){
     const q=normalize(search.value);
     let visible=0;
-    for(const card of cards){const hit=normalize(card.textContent).includes(q);card.hidden=!hit; if(hit)visible++;}
+    for(const card of cards){const deadline=card.dataset.deadline;const stillOpen=!deadline||deadline>=today;const hit=stillOpen&&normalize(card.textContent).includes(q);card.hidden=!hit;if(hit)visible++;}
     if(empty)empty.hidden=visible!==0;
   }
+  filter();
   search.addEventListener('input',filter);
   if(clear)clear.addEventListener('click',()=>{search.value='';filter();search.focus();});
 }
