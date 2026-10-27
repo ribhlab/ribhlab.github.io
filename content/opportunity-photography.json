@@ -1,0 +1,70 @@
+{
+  "license": "https://unsplash.com/license",
+  "provider": "Unsplash",
+  "items": {
+    "hub": {
+      "photoId": "photo-1497366811353-6870744d04b2",
+      "alt": {
+        "ar": "فضاء عمل عصري بمكاتب وإضاءة طبيعية",
+        "en": "Modern office workspace with natural light",
+        "fr": "Espace de travail moderne et lumineux"
+      }
+    },
+    "morocco": {
+      "photoId": "photo-1522071820081-009f0129c71c",
+      "alt": {
+        "ar": "فريق عمل يتعاون حول طاولة في مكتب",
+        "en": "Professionals working together around a table",
+        "fr": "Équipe de professionnels collaborant au bureau"
+      }
+    },
+    "international": {
+      "photoId": "photo-1436491865332-7a61a109cc05",
+      "alt": {
+        "ar": "طائرة في السماء ترمز لفرص العمل عبر الحدود",
+        "en": "Airplane in the sky representing international careers",
+        "fr": "Avion dans le ciel évoquant les carrières internationales"
+      }
+    },
+    "competitions": {
+      "photoId": "photo-1541339907198-e08756dedf3f",
+      "alt": {
+        "ar": "مبنى جامعي ومحيط أكاديمي",
+        "en": "University campus architecture",
+        "fr": "Bâtiment universitaire et environnement académique"
+      }
+    },
+    "companies": {
+      "photoId": "photo-1556761175-5973dc0f32e7",
+      "alt": {
+        "ar": "اجتماع فريق مهني في شركة",
+        "en": "Colleagues in a corporate meeting",
+        "fr": "Réunion d'une équipe en entreprise"
+      }
+    },
+    "dv-lottery": {
+      "photoId": "photo-1485738422979-f5c462d49f74",
+      "alt": {
+        "ar": "منظر لمدينة نيويورك الأمريكية",
+        "en": "New York City skyline in the United States",
+        "fr": "Vue de New York aux États-Unis"
+      }
+    },
+    "immigration": {
+      "photoId": "photo-1452421822248-d4c2b47f0c81",
+      "alt": {
+        "ar": "رحلة جوية توحي بالتنقل الدولي",
+        "en": "Air travel imagery for international mobility",
+        "fr": "Voyage aérien illustrant la mobilité internationale"
+      }
+    },
+    "visa-appointments": {
+      "photoId": "photo-1506784983877-45594efa4cbe",
+      "alt": {
+        "ar": "وثائق وأوراق عمل توضيحية للإجراءات",
+        "en": "Documents and paperwork illustrating application procedures",
+        "fr": "Documents et papiers illustrant les démarches administratives"
+      }
+    }
+  }
+}
