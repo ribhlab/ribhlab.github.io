@@ -37,5 +37,10 @@ jobs:
           test -f dist/illustrations/trading.svg
           test -f dist/illustrations/ai.svg
           grep -q 'market-analysis' dist/ar/markets/index.html
-          grep -q 'speed-start' dist/ar/tools/index.html
+          grep -q 'href="/ribhlab-site/ar/tools/speed-test/"' dist/ar/tools/index.html
+          grep -q 'speed-start' dist/ar/tools/speed-test/index.html
+          grep -q 'words-input' dist/ar/tools/word-counter/index.html
+          grep -q 'json-format' dist/ar/tools/json-validator/index.html
+          grep -q 'position-units' dist/ar/tools/position-size/index.html
+          grep -q 'studio-preview' dist/ar/tools/document-studio/index.html
           grep -q 'rel="sponsored nofollow' dist/ar/article/fiverr-complete-guide-2026/index.html || grep -rlq 'rel="sponsored nofollow' dist/ar/ || exit 1
