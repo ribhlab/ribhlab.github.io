@@ -12,12 +12,21 @@ const langCopy={
 };
 const safeHref=u=>/^https:\/\/[a-z0-9.-]+(?:\/|$)/i.test(u)?u:'#';
 const fullDate=s=>s?new Date(s+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'}):'';
+
+const deadlineOrder=(a,b)=>{
+ const day=new Date().toISOString().slice(0,10);
+ const group=x=>x.deadline ? (x.deadline>=day?0:2):1;
+ const g=group(a)-group(b);
+ if(g)return g;
+ if(a.deadline&&b.deadline)return group(a)===2?b.deadline.localeCompare(a.deadline):a.deadline.localeCompare(b.deadline);
+ return a.org.localeCompare(b.org);
+};
 function makeCard(item,c,esc){
  const ended=Boolean(item.deadline&&item.deadline<new Date().toISOString().slice(0,10));
  const name=esc(item.title),org=esc(item.org);
  const badge=item.kind==='official_directory'||item.kind==='program'?c.platform:c.specific;
  const notes=item.note?'<p class="opp-note">'+esc(item.note)+'</p>':'';
- return '<article class="opp-card" data-opp-item><div class="opp-topline"><span class="opp-type">'+esc(badge)+'</span>'+(ended?'<span class="opp-muted">'+esc(c.expired)+'</span>':'')+'</div><h3>'+name+'</h3><p class="opp-employer">'+org+' · '+esc(item.place)+'</p>'+notes+'<div class="opp-meta">'+(item.count?'<span>'+item.count+' '+esc(c.posts)+'</span>':'')+(item.deadline?'<span>'+esc(c.deadline)+': <strong>'+esc(fullDate(item.deadline))+'</strong></span>':'')+'</div><a class="opp-action" rel="noopener noreferrer external" target="_blank" href="'+esc(safeHref(item.url))+'">'+esc(item.deadline?c.check:c.open)+' ↗</a></article>';
+ return '<article class="opp-card" data-opp-item data-deadline="'+esc(item.deadline||'')+'"><div class="opp-topline"><span class="opp-type">'+esc(badge)+'</span>'+(ended?'<span class="opp-muted">'+esc(c.expired)+'</span>':'')+'</div><h3>'+name+'</h3><p class="opp-employer">'+org+' · '+esc(item.place)+'</p>'+notes+'<div class="opp-meta">'+(item.count?'<span>'+item.count+' '+esc(c.posts)+'</span>':'')+(item.deadline?'<span>'+esc(c.deadline)+': <strong>'+esc(fullDate(item.deadline))+'</strong></span>':'')+'</div><a class="opp-action" rel="noopener noreferrer external" target="_blank" href="'+esc(safeHref(item.url))+'">'+esc(item.deadline?c.check:c.open)+' ↗</a></article>';
 }
 function sectionIntro(lang,c,title,subtitle,other,esc){
  return '<section class="page-hero compact-hero opp-hero"><div class="shell"><nav class="breadcrumbs"><a href="/'+lang+'/">'+esc(({ar:'الرئيسية',en:'Home',fr:'Accueil'})[lang])+'</a><span>/</span><a href="/'+lang+'/opportunities/">'+esc(c.hub)+'</a></nav><span class="section-kicker">RIBHLAB / OFFICIAL SOURCES</span><h1>'+esc(title)+'</h1><p>'+esc(subtitle)+'</p></div></section>';
@@ -33,7 +42,8 @@ export function renderOpportunityPages(lang,page,esc){
  const script='<script src="/assets/opportunities.js" defer></script>';
  const cats=categories.map(category=>({category,total:category==='visa-appointments'?db.visa.length:category==='dv-lottery'?1:db.items.filter(x=>x.section===category).length}));
  const hub='<section class="page-hero opp-hero"><div class="shell"><span class="section-kicker">RIBHLAB / JOBS & MOBILITY</span><h1>'+esc(c.hub)+'</h1><p>'+esc(c.intro)+'</p>'+stamp+'</div></section><section class="section shell">'+advisory+'<div class="opp-cats">'+cats.map(q=>'<a class="opp-cat" href="'+base+q.category+'/"><span>'+esc(c[q.category])+'</span><b>'+q.total+' ↗</b></a>').join('')+'</div></section><section class="section shell"><h2>'+esc(c.dvNotice)+'</h2><div class="opp-advisory"><strong>'+esc(c.dvUnknown)+'</strong><p>'+esc(db.dv.notes[lang])+'</p><a class="opp-action" href="'+esc(db.dv.officialInfo)+'" target="_blank" rel="noopener noreferrer external">'+esc(c.open)+' ↗</a></div></section><section class="section shell"><h2>'+esc(c.visaInfo)+'</h2><p>'+esc(c.visaWarn)+'</p><a class="opp-action" href="'+base+'visa-appointments/">'+esc(c['visa-appointments'])+' ↗</a></section>';
- page(lang,{title:c.hub+' | RibhLab',desc:c.intro,route:base,content:hub,active:'opportunities'});
+ const provenance='<section class="section shell"><h2>'+esc(({ar:'مصادر البحث والتحقق',en:'Discovery & verification sources',fr:'Sources de veille et de vérification'})[lang])+'</h2><p>'+esc(({ar:'نستعمل مواقع «الوظيفة» لاكتشاف الإعلانات، ولكن نراجع الشروط والمواعيد وروابط الترشح عبر بوابة التشغيل العمومي أو الموقع الرسمي للمشغّل.',en:'We use Alwadifa sites to discover leads; deadlines and applications are verified using government or employer sources.',fr:'Nous utilisons les sites Alwadifa pour la veille, mais vérifions les dates et candidatures sur les sites publics ou employeurs.'})[lang])+'</p><div class="opp-link-row">'+db.discoverySources.map(v=>'<a class="opp-action" target="_blank" rel="noopener noreferrer external" href="'+esc(safeHref(v.url))+'">'+esc(v.name)+' ↗</a>').join('')+'</div></section>';
+ page(lang,{title:c.hub+' | RibhLab',desc:c.intro,route:base,content:hub+provenance,active:'opportunities'});
  for(const category of categories){
   const title=c[category],intro=sectionIntro(lang,c,title,c.intro,category,esc);
   let body='';
@@ -43,7 +53,7 @@ export function renderOpportunityPages(lang,page,esc){
    const rows=db.visa.map(v=>'<article class="opp-card" data-opp-item><div class="opp-topline"><span class="opp-type">'+esc(v.service)+'</span><span class="opp-muted">'+esc(c.visaInfo)+'</span></div><h3>'+esc(v.country[lang])+'</h3><p>'+esc(v.note[lang])+'</p><a class="opp-action" href="'+esc(safeHref(v.url))+'" rel="noopener noreferrer external" target="_blank">'+esc(c.open)+' ↗</a></article>').join('');
    body='<section class="section shell">'+advisory+'<div class="opp-advisory" role="alert"><strong>'+esc(c.visaInfo)+'</strong><p>'+esc(c.visaWarn)+'</p><p>'+esc(c.vDate)+'</p></div>'+headings+'<div class="opp-grid" data-opportunity-list>'+rows+'</div></section>';
   }else{
-   const list=db.items.filter(i=>i.section===category);
+   const list=db.items.filter(i=>i.section===category).sort(deadlineOrder);
    body='<section class="section shell">'+advisory+'<p class="opp-guideline">'+esc(c.eligible)+'</p>'+headings+'<div class="opp-grid" data-opportunity-list>'+list.map(i=>makeCard(i,c,esc)).join('')+'</div></section>';
   }
   body+='<section class="section shell"><h2>'+esc(c.more)+'</h2>'+navGrid(lang,c,esc,category)+'</section>'+script;
