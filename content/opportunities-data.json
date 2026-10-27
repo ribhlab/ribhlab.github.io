@@ -333,6 +333,20 @@
       "kind": "official_notice",
       "verifiedBy": "emploi-public.ma",
       "discoveredVia": "https://alwadifa-maroc.com/offre/public"
+    },
+    {
+      "id": "adha-civil-engineers-2026",
+      "section": "competitions",
+      "title": "5 Ingénieurs d’État — Génie civil",
+      "org": "Agence de Développement du Haut Atlas",
+      "place": "Maroc",
+      "count": 5,
+      "publishedAt": "2026-10-21",
+      "deadline": "2026-11-04",
+      "url": "https://adha.gov.ma/recrutement.php?lang=fr",
+      "kind": "official_notice",
+      "verifiedBy": "adha.gov.ma",
+      "note": "Expérience minimale de 3 ans; candidature via emploi-public.ma."
     }
   ],
   "visa": [
