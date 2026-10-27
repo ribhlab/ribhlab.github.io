@@ -426,6 +426,30 @@ for(const lang of ['ar','en','fr']){
  if(uniquePhotos.length<9||new Set(uniquePhotos).size!==uniquePhotos.length)errors.push('Homepage repeated article photo '+lang);
 }
 
+
+// Responsiveness source gate: CSS is loaded LAST so it can override previous
+// desktop magazine rules without modifying article content or card photo maps.
+const responsiveCssFile=path.join(dist,'assets','responsive.css');
+if(!fs.existsSync(responsiveCssFile))errors.push('Missing mobile/tablet responsive stylesheet');
+else{
+ const css=fs.readFileSync(responsiveCssFile,'utf8');
+ for(const required of [
+  '@media(max-width:1220px)','@media(max-width:1060px)','@media(max-width:800px)',
+  '@media(max-width:600px)','@media(max-width:420px)','@media(max-width:340px)',
+  '.nav-links.open{display:flex}','.mobile-menu{display:grid}','aspect-ratio:16/10',
+  '.studio-pro .studio-editor','.market-digest-grid','html[dir=rtl]',
+  '.studio-pro .studio-document{max-width:100%'
+ ])if(!css.includes(required))errors.push('Responsive design feature missing: '+required);
+ if((css.match(/\{/g)||[]).length!==(css.match(/\}/g)||[]).length)errors.push('Unbalanced CSS braces in responsive file');
+}
+const navCode=fs.readFileSync(path.join(dist,'assets','app.js'),'utf8');
+if(!navCode.includes("mobileLimit=window.matchMedia('(max-width:1220px)')")||!navCode.includes("event.key==='Escape'"))errors.push('Responsive accessible mobile menu interactions missing');
+for(const lang of ['ar','en','fr']){
+ const homepage=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ if(!homepage.includes('href="/ribhlab-site/assets/responsive.css"'))errors.push('Responsive CSS missing from '+lang);
+ if(!homepage.includes('class="lang-short"')||!homepage.includes('aria-controls="site-nav"')||!homepage.includes('aria-expanded="false"'))errors.push('Accessible compact language or mobile navigation missing in '+lang);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
