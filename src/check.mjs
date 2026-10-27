@@ -331,6 +331,48 @@ for(const lang of ['ar','en','fr']){
  if(!home.includes('/'+lang+'/markets/')||!home.includes('/'+lang+'/lifestyle/')||!home.includes('/'+lang+'/tools/'))errors.push('Journal topic rail missing useful routes '+lang);
 }
 
+
+// Immutable content-preservation gate: no redesign or new publication may
+// silently unpublish legacy RibhLab articles or Market Pulse editorial stories.
+const protectedInventory=JSON.parse(fs.readFileSync(path.join(root,'content','preserved-article-baseline.json'),'utf8'));
+if(protectedInventory.legacyArticleCount!==35||protectedInventory.legacyMarketDigestCount!==6)errors.push('Preservation baseline inventory must contain 35 articles and six digests');
+const legacySlugs=Object.values(protectedInventory.sections).flat();
+if(legacySlugs.length!==35||new Set(legacySlugs).size!==35)errors.push('Legacy article baseline is corrupt');
+if(knownSlugs.size<legacySlugs.length+4)errors.push('New articles replaced old articles instead of being appended');
+for(const [sectionId,slugs] of Object.entries(protectedInventory.sections)){
+ const live=taxonomy.sections.find(s=>s.id===sectionId);
+ const planned=publishingPlan.sections.find(s=>s.id===sectionId);
+ if(!live||!planned){errors.push('Legacy editorial section was deleted: '+sectionId);continue;}
+ for(const slug of slugs){
+  if(!live.publishedSlugs.includes(slug)||!planned.publishedSlugs.includes(slug)||!knownSlugs.has(slug))errors.push('Legacy article deleted or unpublished: '+slug);
+  if(!photos.articlePhotos[slug])errors.push('Legacy photo lost: '+slug);
+  for(const lang of ['ar','en','fr']){
+   const file=path.join(dist,lang,live.parent,slug,'index.html');
+   if(!fs.existsSync(file))errors.push('Legacy article URL missing after redesign: '+lang+'/'+slug);
+  }
+ }
+}
+const activeDigestIds=new Set((digests.items||[]).map(d=>d.id));
+for(const id of protectedInventory.marketDigestIds){
+ if(!activeDigestIds.has(id))errors.push('Legacy Market Pulse digest deleted: '+id);
+ for(const lang of ['ar','en','fr']){
+  if(!fs.existsSync(path.join(dist,lang,'markets','read',id,'index.html')))errors.push('Market Pulse digest URL lost: '+lang+'/'+id);
+ }
+}
+const newlyPublished=[
+ 'homemade-pizza-margherita-authentic-style-recipe',
+ 'gentle-face-cleanser-choosing-washing-routine',
+ 'ai-assistant-vs-ai-agent-workflows-practical-guide',
+ 'why-gold-moves-with-us-dollar-real-yields-explained'
+];
+for(const slug of newlyPublished){
+ if(!knownSlugs.has(slug)||!photos.articlePhotos[slug]||!resourceConfig.articleLinks[slug])errors.push('Added guide incompletely published: '+slug);
+ const a=JSON.parse(fs.readFileSync(path.join(articleDir,slug+'.json'),'utf8'));
+ for(const lang of ['ar','en','fr']){
+  if((a.translations?.[lang]?.sections||[]).length<5)errors.push('New guide insufficient detail '+lang+'/'+slug);
+ }
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
