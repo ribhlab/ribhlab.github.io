@@ -7,6 +7,10 @@ const configuredUrl=(process.env.SITE_URL||JSON.parse(fs.readFileSync(path.join(
 const basePath=configuredUrl ? new URL(configuredUrl).pathname.replace(/\/$/,'') : '';
 const stripBase=u=>basePath&&u.startsWith(basePath+'/')?u.slice(basePath.length):u;
 if(!fs.existsSync(dist))throw Error('Run npm run build first');
+
+const siteVerification=(process.env.GOOGLE_SITE_VERIFICATION||'').trim();
+const adsenseVerification=(process.env.ADSENSE_PUBLISHER_ID||'').trim();
+
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(path.join(dir,x.name)):[path.join(dir,x.name)]);}
 const pages=walk(dist).filter(p=>p.endsWith('.html'));
 let checked=0;const errors=[];
@@ -500,6 +504,16 @@ for(const lang of ['ar','en','fr']){
  const homepage=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
  if(!homepage.includes('href="'+basePath+'/assets/responsive.css"'))errors.push('Responsive CSS missing from '+lang);
  if(!homepage.includes('class="lang-short"')||!homepage.includes('aria-controls="site-nav"')||!homepage.includes('aria-expanded="false"'))errors.push('Accessible compact language or mobile navigation missing in '+lang);
+}
+
+
+// Optional Google ownership verification only: never implies AdSense approval.
+if(siteVerification||adsenseVerification){
+ for(const lang of ['ar','en','fr']){
+  const h=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+  if(siteVerification&&!h.includes('name="google-site-verification" content="'+siteVerification+'"'))errors.push('Search Console verification token missing '+lang);
+  if(adsenseVerification&&!h.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+adsenseVerification))errors.push('AdSense publisher verification tag missing '+lang);
+ }
 }
 
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
