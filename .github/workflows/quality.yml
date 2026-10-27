@@ -79,5 +79,7 @@ jobs:
           grep -q 'https://ribhlab-preflight.example/sitemap.xml' dist/robots.txt
           grep -q 'href="/assets/style.css"' dist/ar/index.html
           grep -q 'name="google-site-verification" content="test-verification-token_1234567890"' dist/ar/index.html
+          grep -q 'name="google-adsense-account" content="ca-pub-1234567890123456"' dist/ar/index.html
           grep -q 'google.com, pub-1234567890123456, DIRECT' dist/ads.txt
+          ! grep -q 'pagead2.googlesyndication.com/pagead/js' dist/ar/index.html
           test ! -f dist/CNAME
