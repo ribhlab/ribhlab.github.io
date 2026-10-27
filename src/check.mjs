@@ -233,6 +233,15 @@ for(const lang of ['ar','en','fr']){
  }
 }
 
+// The free Pro tool must also be discoverable from the home page (below newest stories).
+for(const lang of ['ar','en','fr']){
+ const page=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ if(!page.includes('id="studio-free"')||!page.includes('href="/ribhlab-site/'+lang+'/tools/document-studio/"'))errors.push('Document Studio Pro home CTA missing '+lang);
+ if(!page.includes('$0 USD'))errors.push('Free USD 0 homepage offer missing '+lang);
+ const newest=page.indexOf('id="latest"'),free=page.indexOf('id="studio-free"');
+ if(newest<0||free<newest)errors.push('Newest articles must appear before Pro spotlight in '+lang);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
