@@ -30,7 +30,12 @@ jobs:
         run: node src/update-news.mjs
       - name: Build pages (Arabic, English, French)
         env:
-          SITE_URL: https://univcours.github.io/ribhlab-site
+          # Set RIBHLAB_SITE_URL only AFTER domain registration, DNS and GitHub Pages verification.
+          # The default keeps the current published GitHub archive fully functional.
+          SITE_URL: ${{ vars.RIBHLAB_SITE_URL || 'https://univcours.github.io/ribhlab-site' }}
+          # Publisher verification only: this does NOT enable advertising placements or payments.
+          ADSENSE_PUBLISHER_ID: ${{ vars.ADSENSE_PUBLISHER_ID || '' }}
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION || '' }}
         run: |
           npm run build
           npm run check
