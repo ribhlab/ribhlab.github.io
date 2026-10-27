@@ -349,7 +349,19 @@ function separateTools(l,fullContent){
  ['position-size','position-sizer','10','TRADING'],
  ['document-studio','document-studio','11','DOCUMENTS']
  ];
- const found=Array.from(fullContent.matchAll(/<section class="tool-card[^"]*" id="([^"]+)"[^>]*>[\s\S]*?<\/section>/g),m=>[m[1],m[0]]);
+ const found=[];
+ const toolOpen=/<section class="tool-card[^"]*" id="([^"]+)"[^>]*>/g;
+ for(const match of fullContent.matchAll(toolOpen)){
+  const nested=/<\/?section\b[^>]*>/g;
+  nested.lastIndex=match.index;
+  let depth=0,end=-1;
+  for(let tag;(tag=nested.exec(fullContent));){
+   if(tag[0].startsWith('</'))depth--;else depth++;
+   if(depth===0){end=nested.lastIndex;break;}
+  }
+  if(end<0)throw Error('Unbalanced nested <section> inside tool '+match[1]);
+  found.push([match[1],fullContent.slice(match.index,end)]);
+ }
  const sections=new Map(found);
  for(let k=0;k<defs.length;k++){
   const [slug,id,num,tag]=defs[k],section=sections.get(id);
