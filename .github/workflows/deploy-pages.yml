@@ -29,10 +29,11 @@ jobs:
       - name: Refresh news headlines from attributed RSS sources
         run: node src/update-news.mjs
       - name: Build pages (Arabic, English, French)
-        # These variables are set only AFTER domain ownership, DNS and GitHub Pages
-        # custom-domain verification. Until then we keep the working project URL.
+        # Original repository uses the existing /ribhlab-site path.
+        # If imported into univcours/univcours.github.io, publish at the account root.
+        # A real custom domain may still override with RIBHLAB_SITE_URL only after verification.
         env:
-          SITE_URL: ${{ vars.RIBHLAB_SITE_URL || 'https://univcours.github.io/ribhlab-site' }}
+          SITE_URL: ${{ vars.RIBHLAB_SITE_URL || (github.repository == 'univcours/univcours.github.io' && 'https://univcours.github.io' || 'https://univcours.github.io/ribhlab-site') }}
           CONTACT_EMAIL: ${{ vars.RIBHLAB_CONTACT_EMAIL || '' }}
           ADSENSE_PUBLISHER_ID: ${{ vars.RIBHLAB_ADSENSE_PUBLISHER_ID || '' }}
           ENABLE_ADSENSE: ${{ vars.RIBHLAB_ENABLE_ADSENSE || 'false' }}
