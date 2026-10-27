@@ -295,6 +295,58 @@ for(const lang of ['ar','en','fr']){
  if(!h.includes('id="market-digests"')||!h.includes('market-digest-grid'))errors.push('Market Pulse lacks original photo-rich digests '+lang);
  for(const d of digests.items||[])if(!h.includes('/'+lang+'/markets/read/'+d.id+'/'))errors.push('Market digest absent from list '+lang+'/'+d.id);
 }
+
+// Photo policy for externally attributed RSS headlines:
+// exactly one unique *real* Unsplash picture per topic card, never shared with
+// any site article or original Market Pulse digest, with visible image credits.
+const headlinePhotoConfig=JSON.parse(fs.readFileSync(path.join(root,'content','market-feed-photos.json'),'utf8'));
+const headlinePics=headlinePhotoConfig.topics||{};
+const canonicalTopics=['crypto','new_tokens','gold','us_macro','europe','japan','china','geopolitics','ai_future','digital_income'];
+const headlineIds=new Set(),headlineSourceUrls=new Set();
+if(headlinePhotoConfig.licenseUrl!=='https://unsplash.com/license')errors.push('Missing official image license for market headline photos');
+for(const topic of canonicalTopics){
+ const p=headlinePics[topic];
+ if(!p){errors.push('No licensed editorial photo for external news topic '+topic);continue;}
+ if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId||'')||!/^https:\/\/unsplash\.com\/photos\//.test(p.source||'')||p.license!=='Unsplash License'||p.illustrativeOnly!==true||!p.photographer)errors.push('Invalid real photo or source attribution for '+topic);
+ if(headlineIds.has(p.photoId)||marketImages.has(p.photoId)||photoIds.has(p.photoId))errors.push('Photo repeated across market news, digests, or articles: '+topic);
+ if(headlineSourceUrls.has(p.source)||marketSources.has(p.source)||photoSources.has(p.source))errors.push('Photo source repeated across market news or site: '+topic);
+ headlineIds.add(p.photoId);headlineSourceUrls.add(p.source);
+ for(const lang of ['ar','en','fr'])if(!p.alt?.[lang])errors.push('Missing market topic photographic alt in '+lang+': '+topic);
+}
+if(Object.keys(headlinePics).length!==canonicalTopics.length)errors.push('Market photo registry must cover exactly ten topics');
+const latestFeed=JSON.parse(fs.readFileSync(path.join(root,'content','feeds','latest.json'),'utf8'));
+const displayedTopics=[...new Set((latestFeed.items||[]).filter(h=>h.title&&/^https:\/\//.test(h.url)&&canonicalTopics.includes(h.topic)).slice(0,80).map(h=>h.topic))];
+for(const lang of ['ar','en','fr']){
+ const h=fs.readFileSync(path.join(dist,lang,'markets','index.html'),'utf8');
+ const start=h.indexOf('<div class="pulse-grid">');
+ const end=h.indexOf('<p class="pulse-risk">',start);
+ if(start<0||end<0){errors.push('Market Pulse publisher-feed photo section missing '+lang);continue;}
+ const feedMarkup=h.slice(start,end);
+ const count=(feedMarkup.match(/class="pulse-card pulse-photo-card"/g)||[]).length;
+ if(count!==displayedTopics.length)errors.push('External market cards without their own real unique image: '+lang+' '+count+'/'+displayedTopics.length);
+ if(feedMarkup.includes('<article class="pulse-card"'))errors.push('Unpictured legacy external news card '+lang);
+ const seen=new Set();
+ for(const topic of displayedTopics){
+  const p=headlinePics[topic];if(!p)continue;
+  const marker='data-pulse-topic="'+topic+'" data-photo-id="'+p.photoId+'"';
+  if(!feedMarkup.includes(marker))errors.push('Market photo missing or wrongly assigned in '+lang+': '+topic);
+  if(!feedMarkup.includes('images.unsplash.com/'+p.photoId))errors.push('Real image URL missing from external card '+lang+': '+topic);
+  if(!feedMarkup.includes(p.photographer+' / Unsplash'))errors.push('Visible Unsplash credit missing for market topic '+lang+': '+topic);
+  if(!feedMarkup.includes(p.alt[lang]))errors.push('Translated real-photo alt missing '+lang+': '+topic);
+  if(seen.has(p.photoId))errors.push('Duplicate rendered market photo '+lang+': '+topic);
+  seen.add(p.photoId);
+ }
+ // Preserve each original publisher headline as a readable direct link, even when grouped.
+ for(const item of (latestFeed.items||[]).filter(x=>x.title&&/^https:\/\//.test(x.url)&&canonicalTopics.includes(x.topic)).slice(0,80)){
+  const safeTitle=item.title.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+  if(!feedMarkup.includes(safeTitle))errors.push('Missing sourced external market headline in '+lang+': '+item.id);
+ }
+ const orig=h.slice(h.indexOf('id="market-digests"'),h.indexOf('id="market-analysis"'));
+ for(const d of digests.items){
+  if(!orig.includes(d.photo.photographer+' / Unsplash'))errors.push('Missing visible source credit on original digest card '+lang+': '+d.id);
+ }
+}
+
 const marketClient=path.join(dist,'assets','market-comments.js');
 if(!fs.existsSync(marketClient))errors.push('Market registered comments module not deployed');
 else{

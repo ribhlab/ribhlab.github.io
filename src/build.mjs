@@ -51,6 +51,7 @@ const photoAlt=(l,a)=>{const p=photoFor(a);return l==='ar'?p.altAr:l==='fr'?p.al
 const latestArticles=[...articles].sort((a,b)=>b.updated.localeCompare(a.updated)||b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
 const marketFeed=JSON.parse(fs.readFileSync(path.join(root,'content/feeds/latest.json'),'utf8'));
 const marketDigests=JSON.parse(fs.readFileSync(path.join(root,'content/market-digests.json'),'utf8')).items;
+const marketHeadlinePhotos=JSON.parse(fs.readFileSync(path.join(root,'content/market-feed-photos.json'),'utf8')).topics;
 const marketCalendar=JSON.parse(fs.readFileSync(path.join(root,'content/calendar/events.json'),'utf8'));
 const marketLabels={
  ar:{title:'نبض الأسواق',head:'أخبار الكريبتو والذهب والاقتصاد',desc:'تحليلات أصلية مفصلة داخل الموقع، مع متابعة منفصلة لأحدث العناوين ومصادرها. لا توجد إشارات تداول أو أسعار لحظية.',calendar:'التقويم الاقتصادي الرسمي',visit:'اقرأ المصدر',note:'المعلومات ومواعيد النشر قابلة للتغيير. راجع المؤسسات الرسمية، خصوصاً قبل اتخاذ أي قرار مالي.',last:'آخر جلب ناجح',warning:'الإشارة إلى عملة جديدة لا تعني تأكيد إدراجها أو ضمان الربح.'},
@@ -218,7 +219,7 @@ const marketDigestPhoto=d=>'https://images.unsplash.com/'+d.photo.photoId+'?auto
 function marketDigestCard(l,d){
  const t=d.translations[l],labels=marketDigestLabels[l];
  return '<article class="market-digest-card" data-pulse-topic="'+esc(d.topic)+'"><a class="market-digest-cover" href="'+marketDigestUrl(l,d)+'" aria-label="'+esc(t.title)+'"><img src="'+esc(marketDigestPhoto(d))+'" loading="lazy" decoding="async" width="1200" height="675" alt="'+esc(d.photo.alt[l])+'"></a>'+
- '<div class="market-digest-body"><div class="market-digest-meta"><span>'+esc(d.topic.replaceAll('_',' ').toUpperCase())+'</span><time datetime="'+esc(d.publishedAt)+'">'+esc(d.publishedAt.slice(0,10))+'</time></div><h3><a href="'+marketDigestUrl(l,d)+'">'+esc(t.title)+'</a></h3><p>'+esc(t.summary)+'</p><div class="market-digest-links"><a href="'+marketDigestUrl(l,d)+'">'+esc(labels.read)+' ↗</a><a href="'+esc(d.sourceUrl)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(labels.source)+' ↗</a></div></div></article>';
+ '<div class="market-digest-body"><p class="market-digest-photo-credit">'+esc(labels.credit)+'<a href="'+esc(d.photo.source)+'" target="_blank" rel="noopener noreferrer">'+esc(d.photo.photographer)+' / Unsplash</a></p><div class="market-digest-meta"><span>'+esc(d.topic.replaceAll('_',' ').toUpperCase())+'</span><time datetime="'+esc(d.publishedAt)+'">'+esc(d.publishedAt.slice(0,10))+'</time></div><h3><a href="'+marketDigestUrl(l,d)+'">'+esc(t.title)+'</a></h3><p>'+esc(t.summary)+'</p><div class="market-digest-links"><a href="'+marketDigestUrl(l,d)+'">'+esc(labels.read)+' ↗</a><a href="'+esc(d.sourceUrl)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(labels.source)+' ↗</a></div></div></article>';
 }
 function marketComments(l,d){
  const words=marketDigestLabels[l],thread='https://github.com/univcours/ribhlab-site/issues/'+d.discussionIssue;
@@ -244,13 +245,44 @@ function marketDigestPage(l,d){
  page(l,{title:tr.title+' | RibhLab',desc:tr.summary.slice(0,210),route,content:hero+body,type:'market',publishedAt:'2026-10-27T12:00:00Z',socialImage:marketDigestPhoto(d),socialAlt:d.photo.alt[l],active:'markets'});
 }
 
+
+// Group external RSS headlines by topic so every visible news CARD has its own
+// genuinely different, credited real photograph; secondary headlines stay links.
+function externalHeadlinesPhotoCard(l,topic,items,topicNames){
+ const p=marketHeadlinePhotos[topic];
+ if(!p)throw Error('No unique real editorial photo for external market topic: '+topic);
+ const headline=items[0];
+ const labels={
+  ar:{credit:'صورة توضيحية للموضوع',further:'عناوين أخرى من مصادرها',source:'اقرأ الخبر من الناشر',warning:'الصورة لا توثق الحدث أو الأسعار'},
+  en:{credit:'Editorial topic photograph',further:'More publisher headlines',source:'Read at publisher',warning:'Image does not depict this specific event or live price'},
+  fr:{credit:'Photo illustrative du sujet',further:'Autres titres des éditeurs',source:'Lire chez l’éditeur',warning:'L’image ne représente pas cet événement ni un cours en direct'}
+ }[l];
+ const url='https://images.unsplash.com/'+p.photoId+'?auto=format&fit=crop&w=900&h=540&q=78';
+ const other=items.slice(1).map(x=>'<li><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(x.title)+'</a><small>'+esc(x.source)+' · '+esc(x.publishedAt.slice(0,10))+'</small></li>').join('');
+ return '<article class="pulse-card pulse-photo-card" data-pulse-topic="'+esc(topic)+'" data-photo-id="'+esc(p.photoId)+'">'+
+ '<figure class="pulse-photo-figure"><img class="pulse-photo-img" loading="lazy" decoding="async" src="'+esc(url)+'" width="900" height="540" alt="'+esc(p.alt[l])+'">'+
+ '<figcaption><span>'+esc(labels.credit)+'</span> · <a href="'+esc(p.source)+'" target="_blank" rel="noopener noreferrer">'+esc(p.photographer)+' / Unsplash</a></figcaption></figure>'+
+ '<div class="pulse-card-inner"><div class="pulse-photo-meta"><span>'+esc(topicNames[topic]||topic.replaceAll('_',' '))+'</span><time datetime="'+esc(headline.publishedAt)+'">'+esc(headline.publishedAt.slice(0,10))+'</time></div>'+
+ '<h3><a href="'+esc(headline.url)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(headline.title)+'</a></h3>'+
+ '<p class="pulse-photo-publisher">'+esc(headline.source)+'</p>'+
+ '<a class="pulse-photo-source-link" href="'+esc(headline.url)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(labels.source)+' ↗</a>'+
+ (other?'<div class="pulse-related-headlines"><h4>'+esc(labels.further)+'</h4><ul>'+other+'</ul></div>':'')+
+ '<p class="pulse-photo-disclaimer">'+esc(labels.warning)+'</p></div></article>';
+}
+
 function marketPulse(l){
  const words=marketLabels[l],future=(marketCalendar.events||[]).filter(x=>x.date>=new Date().toISOString().slice(0,10));
  const sourceLinks=[['Federal Reserve','https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm'],['BLS','https://www.bls.gov/schedule/2026/'],['European Central Bank','https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html'],['Bank of Japan','https://www.boj.or.jp/en/about/calendar/index.htm'],['China NBS','https://www.stats.gov.cn/english/PressRelease/index.html'],['World Gold Council','https://www.gold.org/goldhub/research']];
  const topics={crypto:'Crypto',new_tokens:'New tokens',gold:'Gold',us_macro:'US macro',europe:'Europe',japan:'Japan',china:'China',geopolitics:'Geopolitics',ai_future:'AI and future',digital_income:'Digital income'};
  const headlines=(marketFeed.items||[]).filter(x=>x.title&&/^https:\/\//.test(x.url)).slice(0,80);
  const filterBar='<div class="pulse-filters"><button class="pulse-filter current" type="button" data-pulse-filter="all">All</button>'+Object.entries(topics).map(([key,name])=>'<button class="pulse-filter" type="button" data-pulse-filter="'+key+'">'+esc(name)+'</button>').join('')+'</div>';
- const cards=headlines.map(x=>'<article class="pulse-card" data-pulse-topic="'+esc(x.topic)+'"><small>'+esc(topics[x.topic]||x.topic)+' · '+esc(x.publishedAt.slice(0,10))+'</small><h3>'+esc(x.title)+'</h3><p>'+esc(x.source)+'</p><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(words.visit)+' ↗</a></article>').join('');
+ const groupedHeadlines=new Map();
+ for(const headline of headlines){
+  if(!marketHeadlinePhotos[headline.topic])continue;
+  if(!groupedHeadlines.has(headline.topic))groupedHeadlines.set(headline.topic,[]);
+  groupedHeadlines.get(headline.topic).push(headline);
+ }
+ const cards=[...groupedHeadlines].map(([topic,items])=>externalHeadlinesPhotoCard(l,topic,items,topics)).join('');
  const aLabels={ar:['تحليلات أصلية','اقرأ تفسيراً كاملاً للأحداث مع الخلفية والأثر والسيناريوهات والمخاطر والمصادر.','متابعة الأخبار الخارجية'],en:['Original market analysis','Full articles explain evidence, market drivers, scenarios, risks and original sources.','External headlines'],fr:['Analyses originales','Des articles approfondis sur les faits, mécanismes, scénarios et risques, avec sources originales.','Titres des sources externes']}[l];
  const analysis=articles.filter(a=>a.category==='trading').sort((a,b)=>b.date.localeCompare(a.date)).slice(0,9);
  const analysisSection='<section class="section shell" id="market-analysis"><div class="section-head"><div><span class="section-kicker">RIBHLAB / ANALYSIS</span><h2>'+esc(aLabels[0])+'</h2><p>'+esc(aLabels[1])+'</p></div></div><div class="article-grid">'+analysis.map(a=>articleCard(l,a)).join('')+'</div></section>';
