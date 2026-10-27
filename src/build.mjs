@@ -102,6 +102,11 @@ const staticCopy={
  disclaimer:['Avertissements financiers et techniques','Les marchés financiers, en particulier les CFD et instruments à effet de levier, présentent un risque important de perte en capital. Nos ressources n’offrent aucun signal ni conseil en investissement personnalisé.','Les méthodes de freelance, d’affiliation et de produits numériques ne garantissent ni chiffre d’affaires ni acquisition de clients. Frais, fiscalité et limitations locales peuvent s’appliquer.','Les outils d’IA peuvent se tromper ou générer du code dangereux. Vérifiez chaque résultat et les règles de confidentialité avant usage.','Pour des décisions importantes, consultez un professionnel qualifié selon le domaine.'],
  contact:['Contacter la rédaction','Nous accueillons les suggestions, corrections, questions éditoriales et demandes relatives aux droits d’auteur. Pour une correction, indiquez le lien et le passage concerné.','Nous ne proposons ni signaux de trading ni conseils sur portefeuille individuel. Ne transmettez aucun mot de passe ou document confidentiel.']}
 };
+if(umamiWebsiteId){
+ staticCopy.ar.privacy[1]='نستعمل Umami لقياس إجمالي الزيارات وتوزيعها حسب الدولة وصفحات الموقع بصورة مجمّعة، من دون ملف تعريف شخصي أو كوكيز تتبع من طرف RibhLab. قد يعالج مزود الإحصاء معلومات تقنية لتقدير الدولة وعدد الزيارات؛ يُحترم إعداد عدم التتبع Do Not Track عندما يرسله المتصفح.';
+ staticCopy.en.privacy[1]='We use Umami to measure aggregate website visits, pages and country distribution without RibhLab tracking cookies or personal visitor profiles. The analytics provider processes limited technical signals to estimate visits and countries; the tracker respects browser Do Not Track preferences.';
+ staticCopy.fr.privacy[1]='Nous utilisons Umami pour mesurer de façon agrégée les visites, pages et pays, sans cookies de suivi ni profils individuels sur RibhLab. Le fournisseur traite certains signaux techniques pour estimer les visites et pays ; le signal Do Not Track du navigateur est respecté.';
+}
 const esc=s=>String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const urlFor=(l,a)=>`/${l}/${a.category}/${a.slug}/`;
 const catUrl=(l,cat)=>`/${l}/${cat}/`;
