@@ -33,11 +33,19 @@ jobs:
         run: npm run test:studio
       - name: Build multilingual pages
         env:
-          SITE_URL: https://univcours.github.io/ribhlab-site
+          SITE_URL: https://ribhlab.github.io
         run: |
           npm run build
           npm run check
+      - name: Install stable Chrome for browser layout testing
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v2
+        with:
+          chrome-version: stable
       - name: Check real browser layout and interactions at 320–1440px
+        env:
+          SITE_URL: https://ribhlab.github.io
+          CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: npm run test:responsive
       - name: Upload responsive screenshots for design review
         if: always()
@@ -56,7 +64,7 @@ jobs:
           grep -q 'market-digest-grid' dist/ar/markets/index.html
           grep -q 'market-comments.js' dist/ar/markets/read/gold-september-2026-etf-flows/index.html
           grep -q 'images.unsplash.com' dist/fr/markets/read/china-q3-2026-growth/index.html
-          grep -q 'href="/ribhlab-site/ar/tools/speed-test/"' dist/ar/tools/index.html
+          grep -q 'href="/ar/tools/speed-test/"' dist/ar/tools/index.html
           grep -q 'speed-start' dist/ar/tools/speed-test/index.html
           grep -q 'words-input' dist/ar/tools/word-counter/index.html
           grep -q 'json-format' dist/ar/tools/json-validator/index.html
