@@ -4,3 +4,5 @@
 @media (min-width:1221px){.nav-inner{gap:10px!important}.nav-links{min-width:0;gap:clamp(5px,.55vw,9px)!important;flex:1;justify-content:flex-end}.nav-links a{font-size:clamp(10px,.73vw,12px)!important;white-space:nowrap;padding-inline:0}.brand{flex-shrink:0}.brand-copy small{font-size:9px}.nav-actions{flex-shrink:0;gap:4px!important}.lang-menu a{padding-inline:4px}}
 /* Hide filtered cards even when card display:flex is declared. */
 .opp-card[hidden],.opp-no-results[hidden]{display:none!important}
+
+.audience-frame-wrap{width:100%;min-height:780px;border:1px solid #e5e4f2;border-radius:18px;overflow:hidden;background:#fff}.audience-frame-wrap iframe{border:0;display:block;width:100%;min-height:780px}.opp-card[data-opp-item][hidden]{display:none!important}
