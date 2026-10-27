@@ -303,6 +303,34 @@ else{
  if(code.includes('.innerHTML')||/method\s*:\s*['\"]POST['\"]/.test(code)||/type\s*=\s*['\"]password['\"]/.test(code))errors.push('Unsafe client-side comments or unapproved anonymous login');
 }
 
+
+// Journal design quality gate: multilingual premium editorial interface,
+// visually distinct images (no same photo on cover, latest and editor picks),
+// and the existing feature-rich site routes continue to work.
+const journalThemePath=path.join(dist,'assets','editorial-theme.css');
+if(!fs.existsSync(journalThemePath))errors.push('Missing dedicated editorial magazine stylesheet');
+else{
+ const theme=fs.readFileSync(journalThemePath,'utf8');
+ for(const feature of ['.hero-editorial-cover','.magazine-topic-rail','.latest-first .article-grid','.article-content .lead','.market-digest-card','html[lang=ar]','@media(max-width:560px)','@media(prefers-reduced-motion:reduce)']){
+  if(!theme.includes(feature))errors.push('Missing editorial design or accessibility style: '+feature);
+ }
+ const blocks=(theme.match(/\{/g)||[]).length,ends=(theme.match(/\}/g)||[]).length;
+ if(blocks!==ends)errors.push('Editorial stylesheet has unbalanced rule braces');
+}
+for(const lang of ['ar','en','fr']){
+ const home=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ for(const marker of ['class="magazine-masthead"','class="hero-editorial-cover"','class="magazine-topic-rail"','class="article-grid"','id="studio-free"','id="latest"']){
+  if(!home.includes(marker))errors.push('Premium journal homepage missing '+lang+' '+marker);
+ }
+ if(!home.includes('/assets/editorial-theme.css')||!home.includes('fonts.googleapis.com'))errors.push('Editorial typography stylesheet absent '+lang);
+ if(home.includes('class="hero-visual"')||home.includes('class="mini-chart"'))errors.push('Generic technology placeholder still present in editorial cover '+lang);
+ const cover=(home.match(/class="hero-editorial-cover"[\s\S]*?<img[^>]*\bsrc="([^"]+)"/)||[])[1];
+ const cards=[...home.matchAll(/class="card-cover-image editorial-photo"[^>]*\bsrc="([^"]+)"/g)].map(m=>m[1]);
+ if(!cover||cards.length<9)errors.push('Homepage editorial photography incomplete '+lang);
+ if(new Set([cover,...cards]).size!==cards.length+1)errors.push('Same article photograph repeated in journal homepage '+lang);
+ if(!home.includes('/'+lang+'/markets/')||!home.includes('/'+lang+'/lifestyle/')||!home.includes('/'+lang+'/tools/'))errors.push('Journal topic rail missing useful routes '+lang);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
