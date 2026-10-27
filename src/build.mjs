@@ -13,6 +13,7 @@ const contact=(process.env.CONTACT_EMAIL||cfg.contactEmail||'').trim();
 const publisher=(process.env.ADSENSE_PUBLISHER_ID||cfg.adsensePublisherId||'').trim();
 const adsEnabled=String(process.env.ENABLE_ADSENSE||cfg.enableAdsense||'false')==='true';
 const googleSiteVerification=(process.env.GOOGLE_SITE_VERIFICATION||'').trim();
+const repoForIssues=/^[a-z0-9_.-]+\/[a-z0-9_.-]+$/i.test(process.env.GITHUB_REPOSITORY||'') ? process.env.GITHUB_REPOSITORY : 'ribhlab/ribhlab.github.io';
 if(googleSiteVerification && !/^[a-zA-Z0-9_\-=]{10,128}$/.test(googleSiteVerification))throw new Error('Invalid Google Search Console site verification token');
 if(domain && !/^https:\/\/[a-z0-9.-]+(?::\d+)?(?:\/[a-z0-9._~-]+)*$/i.test(domain)) throw new Error('SITE_URL must be a full https:// URL, optionally with a project path');
 const basePath=domain ? new URL(domain).pathname.replace(/\/$/,'') : '';
@@ -300,7 +301,7 @@ function marketPulse(l){
  page(l,{title:words.head+' | RibhLab',desc:words.desc,route:'/'+l+'/markets/',content:body,active:'markets'});
 }
 
-function staticPage(l,key){const t=i18n[l],c=staticCopy[l][key];let sections=c.slice(1).map(p=>`<p>${esc(p)}</p>`).join('');if(key==='contact')sections+=`<div class="contact-box"><span class="contact-illustration">✉</span><h2>${esc(t.contactInfo)}</h2><p>${esc(t.emailText)}</p>${contact?`<a class="contact-email" href="mailto:${esc(contact)}">${esc(contact)}</a>`:`<p class="notice-setup">${esc(t.contactPending)}</p><p><a href="https://github.com/univcours/ribhlab-site/issues/new" target="_blank" rel="noopener noreferrer">GitHub — public editorial issue / تصحيح معلومة / correction ↗</a></p><p>Public issue: do not post private data / رجاءً لا تنشر معلومات شخصية / ne partagez pas de données privées.</p>`}</div>`;
+function staticPage(l,key){const t=i18n[l],c=staticCopy[l][key];let sections=c.slice(1).map(p=>`<p>${esc(p)}</p>`).join('');if(key==='contact')sections+=`<div class="contact-box"><span class="contact-illustration">✉</span><h2>${esc(t.contactInfo)}</h2><p>${esc(t.emailText)}</p>${contact?`<a class="contact-email" href="mailto:${esc(contact)}">${esc(contact)}</a>`:`<p class="notice-setup">${esc(t.contactPending)}</p><p><a href="https://github.com/${esc(repoForIssues)}/issues/new" target="_blank" rel="noopener noreferrer">GitHub — public editorial issue / تصحيح معلومة / correction ↗</a></p><p>Public issue: do not post private data / رجاءً لا تنشر معلومات شخصية / ne partagez pas de données privées.</p>`}</div>`;
 if(key==='privacy')sections+=`<p><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google — Advertising Technologies ↗</a></p>`;
  const content=`<section class="page-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/${l}/">${esc(t.navHome)}</a><span>/</span><span>${esc(c[0])}</span></nav><span class="section-kicker">RIBHLAB / INFORMATION</span><h1>${esc(c[0])}</h1></div></section><div class="shell prose-layout"><div class="prose-page">${sections}<div class="policy-updated">${esc(t.updated)}: ${idDate('2026-10-25')}</div></div></div>`;
  page(l,{title:`${c[0]} | RibhLab`,desc:c[1],route:`/${l}/${key}/`,content});
