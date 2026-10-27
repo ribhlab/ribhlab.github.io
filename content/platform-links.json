@@ -225,6 +225,42 @@
     "hkfoodSafetyTiramisu": {
       "name": "Hong Kong Centre for Food Safety — Tiramisu",
       "url": "https://www.cfs.gov.hk/english/multimedia/multimedia_pub/multimedia_pub_fsf_228_03.html"
+    },
+    "avpnMargherita": {
+      "name": "Associazione Verace Pizza Napoletana — Margherita history and authentic ingredients",
+      "url": "https://www.pizzanapoletana.org/en/archivio_news/372-stories_of_pizza"
+    },
+    "avpnStandards2024": {
+      "name": "Associazione Verace Pizza Napoletana — Official preparation rules",
+      "url": "https://www.pizzanapoletana.org/public/pdf/Disciplinare-2024-ENG.pdf"
+    },
+    "aadFaceWashing": {
+      "name": "American Academy of Dermatology — Dermatologists' face washing tips",
+      "url": "https://www.aad.org/public/everyday-care/skin-care-basics/care/face-washing-101"
+    },
+    "openaiAgentsGuide": {
+      "name": "OpenAI — Practical guide to building agents",
+      "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/"
+    },
+    "anthropicAgentDesign": {
+      "name": "Anthropic — Building effective agents and workflows",
+      "url": "https://www.anthropic.com/research/building-effective-agents"
+    },
+    "openaiAgentGuardrails": {
+      "name": "OpenAI Developers — Guardrails and human review",
+      "url": "https://developers.openai.com/api/docs/guides/agents/guardrails-approvals"
+    },
+    "wgcGoldDrivers2026": {
+      "name": "World Gold Council — Gold Mid-Year Outlook 2026",
+      "url": "https://www.gold.org/goldhub/research/gold-mid-year-outlook-2026"
+    },
+    "wgcGoldDollarRates": {
+      "name": "World Gold Council — Gold, the dollar and interest rates",
+      "url": "https://www.gold.org/goldhub/research/investment-update-gold-tracks-dollar-rates-take-back-seat"
+    },
+    "wgcGoldLimits": {
+      "name": "World Gold Council — The limits of gold/dollar/real-rate models",
+      "url": "https://www.gold.org/goldhub/research/qaurum-vs-us-real-rates-and-dollar-model"
     }
   },
   "articleLinks": {
@@ -416,6 +452,25 @@
       "cme",
       "cftc",
       "goldcouncil"
+    ],
+    "homemade-pizza-margherita-authentic-style-recipe": [
+      "avpnMargherita",
+      "avpnStandards2024"
+    ],
+    "gentle-face-cleanser-choosing-washing-routine": [
+      "aadFaceWashing",
+      "aadDrySkin"
+    ],
+    "ai-assistant-vs-ai-agent-workflows-practical-guide": [
+      "openaiAgentsGuide",
+      "anthropicAgentDesign",
+      "openaiAgentGuardrails"
+    ],
+    "why-gold-moves-with-us-dollar-real-yields-explained": [
+      "wgcGoldDrivers2026",
+      "wgcGoldDollarRates",
+      "wgcGoldLimits",
+      "fed"
     ]
   }
 }
