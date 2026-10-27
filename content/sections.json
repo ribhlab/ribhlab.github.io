@@ -121,7 +121,8 @@
       "publishedSlugs": [
         "backtest-trading-bots",
         "trading-risk-management",
-        "understand-price-charts"
+        "understand-price-charts",
+        "elliott-wave-technical-analysis-course"
       ],
       "targetArticles": 40
     },
@@ -165,6 +166,44 @@
         "market-pulse-fed-gold-bitcoin-scenarios-oct-2026",
         "energy-inflation-us-euro-area-october-2026",
         "how-to-read-fomc-decision-2026"
+      ],
+      "targetArticles": 40
+    },
+    {
+      "id": "body-care",
+      "parent": "lifestyle",
+      "title": {
+        "ar": "العناية بالبشرة والجسم",
+        "en": "Body & skin care",
+        "fr": "Soins du corps et de la peau"
+      },
+      "description": {
+        "ar": "روتين العناية الواقعي بالجلد والشمس والترطيب والنظافة الشخصية، بمصادر طبية موثوقة بعيداً عن وعود العلاج.",
+        "en": "Everyday sun protection, moisturizing and personal care with cautious dermatologist-informed advice.",
+        "fr": "Protection solaire, hydratation et soins quotidiens fondés sur des recommandations dermatologiques."
+      },
+      "publishedSlugs": [
+        "daily-sunscreen-spf30-body-care-guide",
+        "dry-skin-moisturizing-body-routine"
+      ],
+      "targetArticles": 40
+    },
+    {
+      "id": "world-recipes",
+      "parent": "lifestyle",
+      "title": {
+        "ar": "أشهر أطباق العالم والحلويات",
+        "en": "Famous world dishes & desserts",
+        "fr": "Plats du monde célèbres et desserts"
+      },
+      "description": {
+        "ar": "وصفات أصلية عملية لأشهر أطباق المطابخ العالمية والحلويات، بمقادير دقيقة وخطوات وسلامة غذائية وحساسيات واضحة.",
+        "en": "Recognizable international main dishes and desserts with precise ingredients, steps and food-safety notes.",
+        "fr": "Grands plats internationaux et desserts célèbres : ingrédients précis, étapes et sécurité alimentaire."
+      },
+      "publishedSlugs": [
+        "classic-roman-spaghetti-carbonara-recipe",
+        "classic-italian-tiramisu-without-raw-eggs"
       ],
       "targetArticles": 40
     }
