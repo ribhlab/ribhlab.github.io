@@ -32,6 +32,14 @@ for(const lang of ['ar','en','fr']){
  if(index.length!==fs.readdirSync(path.join(root,'content/articles')).filter(x=>x.endsWith('.json')).length) errors.push(`Search index ${lang}: inconsistent article count ${index.length}`);
  for(const a of index) if(!fs.existsSync(path.join(dist,stripBase(a.url).replace(/^\//,''),'index.html'))) errors.push(`Search entry broken: ${a.url}`);
 }
+// Check that the bare domain homepage can verify ownership (not just /ar/).
+const bareHome=fs.readFileSync(path.join(dist,'index.html'),'utf8');
+if(!bareHome.includes('href="/ar/"')&&!bareHome.includes('url=/ar/'))errors.push('Bare homepage: Arabic entry missing');
+const gscToken=(process.env.GOOGLE_SITE_VERIFICATION||'').trim();
+if(gscToken&&!bareHome.includes('name="google-site-verification" content="'+gscToken+'"'))errors.push('Search Console: bare homepage lacks verification meta');
+const pubId=(process.env.ADSENSE_PUBLISHER_ID||'').trim();
+if(pubId&&!bareHome.includes('name="google-adsense-account" content="'+pubId+'"'))errors.push('AdSense: bare homepage lacks ownership meta');
+if(configuredUrl&&!bareHome.includes('rel="canonical" href="'+configuredUrl.replace(/\/$/,'')+'/ar/"'))errors.push('Bare homepage: incorrect canonical');
 // Keep the Search Console ownership token intact across all releases.
 const tokenName='googlee227daed117c5deb.html';
 const tokenSource=path.join(root,'public',tokenName);
