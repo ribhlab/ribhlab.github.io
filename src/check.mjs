@@ -373,6 +373,23 @@ for(const slug of newlyPublished){
  }
 }
 
+
+// Archive visibility contract: articles remain browsable after leaving the latest feed.
+for(const lang of ['ar','en','fr']){
+ const archive=path.join(dist,lang,'archive','index.html');
+ if(!fs.existsSync(archive)){errors.push('Entire historical archive missing: '+lang);continue;}
+ const html=fs.readFileSync(archive,'utf8');
+ if(!html.includes('class="archive-category-nav"')||!html.includes('class="article-grid archive-article-grid"'))errors.push('Archive missing its navigable article list: '+lang);
+ for(const a of knownSlugs){
+  const article=JSON.parse(fs.readFileSync(path.join(articleDir,a+'.json'),'utf8'));
+  if(!html.includes('/'+lang+'/'+article.category+'/'+a+'/'))errors.push('Old/new article not linked in permanent '+lang+' archive: '+a);
+ }
+ const imgUrls=[...html.matchAll(/class="card-cover-image editorial-photo"[^>]*\bsrc="([^"]+)"/g)].map(m=>m[1]);
+ if(imgUrls.length!==knownSlugs.size||new Set(imgUrls).size!==knownSlugs.size)errors.push('Archive images duplicated or stories missing: '+lang);
+ const home=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ if(!home.includes('/'+lang+'/archive/'))errors.push('Archive not linked from homepage: '+lang);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
