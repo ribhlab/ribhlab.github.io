@@ -64,14 +64,22 @@ jobs:
           grep -q 'studio-preview' dist/ar/tools/document-studio/index.html
           grep -q 'rel="sponsored nofollow' dist/ar/article/fiverr-complete-guide-2026/index.html || grep -rlq 'rel="sponsored nofollow' dist/ar/ || exit 1
 
-      - name: Preflight future root domain without changing the published website
+      - name: Preflight future root custom domain and AdSense ownership without publishing
         env:
-          SITE_URL: https://ribhlab.pp.ua
+          # Deliberately nonexistent testing domain; never assume a domain is purchased.
+          SITE_URL: https://ribhlab-preflight.example
+          GOOGLE_SITE_VERIFICATION: test-verification-token_1234567890
+          ADSENSE_PUBLISHER_ID: ca-pub-1234567890123456
+          ENABLE_ADSENSE: 'false'
         run: |
           npm run build
           npm run check
           grep -q 'href="/ar/tools/"' dist/ar/index.html
-          grep -q 'https://ribhlab.pp.ua/ar/' dist/sitemap.xml
-          grep -q 'https://ribhlab.pp.ua/sitemap.xml' dist/robots.txt
+          grep -q 'https://ribhlab-preflight.example/ar/' dist/sitemap.xml
+          grep -q 'https://ribhlab-preflight.example/sitemap.xml' dist/robots.txt
           grep -q 'href="/assets/style.css"' dist/ar/index.html
+          grep -q 'name="google-site-verification" content="test-verification-token_1234567890"' dist/ar/index.html
+          grep -q 'name="google-adsense-account" content="ca-pub-1234567890123456"' dist/ar/index.html
+          grep -q 'google.com, pub-1234567890123456, DIRECT' dist/ads.txt
+          ! grep -q 'pagead2.googlesyndication.com/pagead/js' dist/ar/index.html
           test ! -f dist/CNAME

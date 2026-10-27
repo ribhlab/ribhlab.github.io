@@ -29,8 +29,14 @@ jobs:
       - name: Refresh news headlines from attributed RSS sources
         run: node src/update-news.mjs
       - name: Build pages (Arabic, English, French)
+        # These variables are set only AFTER domain ownership, DNS and GitHub Pages
+        # custom-domain verification. Until then we keep the working project URL.
         env:
-          SITE_URL: https://univcours.github.io/ribhlab-site
+          SITE_URL: ${{ vars.RIBHLAB_SITE_URL || 'https://univcours.github.io/ribhlab-site' }}
+          CONTACT_EMAIL: ${{ vars.RIBHLAB_CONTACT_EMAIL || '' }}
+          ADSENSE_PUBLISHER_ID: ${{ vars.RIBHLAB_ADSENSE_PUBLISHER_ID || '' }}
+          ENABLE_ADSENSE: ${{ vars.RIBHLAB_ENABLE_ADSENSE || 'false' }}
+          GOOGLE_SITE_VERIFICATION: ${{ vars.RIBHLAB_GOOGLE_SITE_VERIFICATION || '' }}
         run: |
           npm run build
           npm run check
