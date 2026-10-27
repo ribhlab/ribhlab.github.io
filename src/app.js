@@ -18,6 +18,80 @@
  const meta=window.RIBHLAB_I18N||{lang:'ar',noResults:'No results'};
  let library=null;
  const norm=text=>String(text||'').toLocaleLowerCase().normalize('NFKD').replace(/[\u064b-\u065f\u0670]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').trim();
+
+ // Smart discovery: filter current stories without duplicating any card or fetching data.
+ const storyToolbar=document.querySelector('[data-story-filters]');
+ const storyGrid=document.querySelector('[data-story-grid]');
+ if(storyToolbar&&storyGrid){
+  const chips=[...storyToolbar.querySelectorAll('[data-story-filter]')];
+  const storyCards=[...storyGrid.querySelectorAll('.article-card[data-story-topic]')];
+  const selectTopic=category=>{
+   if(!['all','earning','trading','ai','lifestyle'].includes(category))return;
+   for(const card of storyCards){
+    card.hidden=category!=='all'&&card.dataset.storyTopic!==category;
+    card.classList.remove('is-filter-lead');
+   }
+   storyGrid.dataset.filtered=category==='all'?'false':'true';
+   if(category!=='all')storyCards.find(card=>!card.hidden)?.classList.add('is-filter-lead');
+   for(const chip of chips)chip.setAttribute('aria-pressed',String(chip.dataset.storyFilter===category));
+  };
+  for(const chip of chips)chip.addEventListener('click',()=>selectTopic(chip.dataset.storyFilter));
+ }
+ // Local archive search: all old and new stories stay in the original HTML.
+ const archiveRoot=document.querySelector('[data-archive-search]');
+ const archiveInput=archiveRoot?.querySelector('input[type=search]');
+ if(archiveInput){
+  const groups=[...document.querySelectorAll('.archive-group')];
+  const cards=groups.flatMap(group=>[...group.querySelectorAll('.article-card')]);
+  const count=archiveRoot.querySelector('[data-archive-count]');
+  const empty=archiveRoot.querySelector('[data-archive-empty]');
+  const label=(count?.textContent||'').replace(/^\s*\d+\s*/, '');
+  const applySearch=()=>{
+   const query=norm(archiveInput.value);
+   let visible=0;
+   for(const card of cards){
+    const match=!query||norm(card.textContent).includes(query);
+    card.hidden=!match;
+    if(match)visible++;
+   }
+   for(const group of groups)group.hidden=![...group.querySelectorAll('.article-card')].some(c=>!c.hidden);
+   if(count)count.textContent=String(visible)+' '+label;
+   if(empty)empty.hidden=visible!==0;
+  };
+  archiveInput.addEventListener('input',applySearch);
+  archiveInput.addEventListener('search',applySearch);
+  applySearch();
+ }
+ // A slim reading-progress line only on full editorial articles.
+ const progress=document.querySelector('[data-reading-progress] span');
+ if(progress){
+  let scheduled=false;
+  const update=()=>{
+   const max=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
+   const completed=Math.max(0,Math.min(1,window.scrollY/max));
+   progress.style.transform='scaleX('+completed.toFixed(4)+')';
+   scheduled=false;
+  };
+  const schedule=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update);}};
+  window.addEventListener('scroll',schedule,{passive:true});
+  window.addEventListener('resize',schedule,{passive:true});
+  update();
+  // Table of contents follows the reader; never changes the actual article.
+  if('IntersectionObserver' in window){
+   const toc=[...document.querySelectorAll('.toc-card a[href^="#part-"]')];
+   const targets=toc.map(link=>document.getElementById(link.hash.slice(1))).filter(Boolean);
+   const observer=new IntersectionObserver(entries=>{
+    const current=entries.filter(x=>x.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];
+    if(!current)return;
+    for(const link of toc){
+     if(link.hash==='#'+current.target.id)link.setAttribute('aria-current','location');
+     else link.removeAttribute('aria-current');
+    }
+   },{rootMargin:'-14% 0px -72% 0px',threshold:0});
+   targets.forEach(target=>observer.observe(target));
+  }
+ }
+
  const renderResults=()=>{
   if(!results||!library)return;
   const q=norm(input.value),found=library.filter(x=>!q||norm(x.search).includes(q)).slice(0,14);
