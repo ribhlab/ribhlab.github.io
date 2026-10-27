@@ -91,3 +91,17 @@ All new photographs are unique IDs, manually matched to the topic and independen
 | `elliott-wave-technical-analysis-course` | rc.xyz NFT gallery | https://unsplash.com/photos/a-computer-screen-with-a-chart-on-it-w9coDxtsfts |
 
 **Current inventory after publication: 35 articles / 35 unique photo IDs / no shared section photos.**
+
+
+## 27 October 2026 — Historical articles retained; four extra real photographs
+
+The existing 35 published articles and all six Market Pulse digests remain in place. These **four additional articles** bring the total to **39 trilingual articles with 39 distinct article-specific photo IDs**. Images are unique across these stories and the six market news digests.
+
+| New article slug | Photographer | Verified Unsplash photograph |
+|---|---|---|
+| `homemade-pizza-margherita-authentic-style-recipe` | Max Griss | https://unsplash.com/photos/a-slice-of-margherita-pizza-on-a-white-plate-CiMKCrIpM68 |
+| `gentle-face-cleanser-choosing-washing-routine` | Christian Agbede | https://unsplash.com/photos/woman-washing-her-face-at-a-sink-6ZtkbsMK0Uo |
+| `ai-assistant-vs-ai-agent-workflows-practical-guide` | Compagnons | https://unsplash.com/photos/woman-working-on-a-laptop-with-code-on-screen-Zi0GmYPm88M |
+| `why-gold-moves-with-us-dollar-real-yields-explained` | Mathieu Turle | https://unsplash.com/photos/photo-of-dollar-coins-and-banknotes-uJm-hfuCHm4 |
+
+Preservation inventory: `content/preserved-article-baseline.json`. Dedicated archival links: `/ar/archive/`, `/en/archive/`, `/fr/archive/`. The build quality gate rejects a deleted older article, missing archive link, reused photo or removed market digest.
