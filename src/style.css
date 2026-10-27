@@ -135,3 +135,13 @@
  body:has(#studio-preview) #studio-preview,body:has(#studio-preview) #studio-preview *{visibility:visible!important}
  body:has(#studio-preview) #studio-preview{position:absolute;inset:0 auto auto 0;width:100%;box-shadow:none;border:0;padding:15mm;color:#000!important}
 }
+
+/* Body-care and global-cuisine editorial navigation */
+.topic-lifestyle{background:linear-gradient(145deg,#fff5ea 0%,#ecf8f2 100%);border:1px solid #e7e0cd}
+.topic-lifestyle .topic-symbol{color:#956341}
+.topic-lifestyle .topic-cta{color:#755439}
+.article-card:has(a[href*="/lifestyle/"]) .card-art{background:linear-gradient(145deg,#ffecd8,#e8f5ef)}
+.editorial-section-card[href*="body-care"],.editorial-section-card[href*="world-recipes"]{border-color:#e4e0d5}
+.editorial-section-card[href*="body-care"]:hover,.editorial-section-card[href*="world-recipes"]:hover{border-color:#ab8b5c}
+@media(max-width:1100px){.category-grid:has(.topic-lifestyle){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.category-grid:has(.topic-lifestyle){grid-template-columns:1fr}}

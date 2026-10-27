@@ -90,7 +90,7 @@ for(const pagePath of pages){
 // Editorial taxonomy: every real article has exactly one section and each section has forty slots.
 const taxonomy=JSON.parse(fs.readFileSync(path.join(root,'content','sections.json'),'utf8'));
 const publishingPlan=JSON.parse(fs.readFileSync(path.join(root,'content','editorial-plan.json'),'utf8'));
-if(taxonomy.sections.length!==8||publishingPlan.sections.length!==8)errors.push('Editorial taxonomy: expected eight sections');
+if(taxonomy.sections.length!==10||publishingPlan.sections.length!==10)errors.push('Editorial taxonomy: expected ten sections');
 const assignedSlugs=new Set(),knownSlugs=new Set(fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')).map(f=>f.slice(0,-5)));
 for(const s of taxonomy.sections){
  const plan=publishingPlan.sections.find(x=>x.id===s.id);

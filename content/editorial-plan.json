@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastReviewed": "2026-10-26",
+  "lastReviewed": "2026-10-27",
   "languages": [
     "ar",
     "en",
@@ -1061,7 +1061,8 @@
       "publishedSlugs": [
         "backtest-trading-bots",
         "trading-risk-management",
-        "understand-price-charts"
+        "understand-price-charts",
+        "elliott-wave-technical-analysis-course"
       ],
       "ideas": [
         {
@@ -1242,11 +1243,6 @@
         {
           "sequence": 39,
           "titleAr": "الفرق بين احتمالية وإشارة تداول",
-          "status": "planned"
-        },
-        {
-          "sequence": 40,
-          "titleAr": "إنشاء لوحة قياس أداء التداول",
           "status": "planned"
         }
       ]
@@ -1649,6 +1645,428 @@
         {
           "sequence": 40,
           "titleAr": "منهجية تقويم اقتصادي موثوق",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "id": "body-care",
+      "parent": "lifestyle",
+      "title": {
+        "ar": "العناية بالبشرة والجسم",
+        "en": "Body & skin care",
+        "fr": "Soins du corps et de la peau"
+      },
+      "description": {
+        "ar": "روتين العناية الواقعي بالجلد والشمس والترطيب والنظافة الشخصية، بمصادر طبية موثوقة بعيداً عن وعود العلاج.",
+        "en": "Everyday sun protection, moisturizing and personal care with cautious dermatologist-informed advice.",
+        "fr": "Protection solaire, hydratation et soins quotidiens fondés sur des recommandations dermatologiques."
+      },
+      "publishedSlugs": [
+        "daily-sunscreen-spf30-body-care-guide",
+        "dry-skin-moisturizing-body-routine"
+      ],
+      "targetArticles": 40,
+      "ideas": [
+        {
+          "sequence": 3,
+          "titleAr": "اختيار غسول وجه لطيف حسب نوع البشرة",
+          "status": "planned"
+        },
+        {
+          "sequence": 4,
+          "titleAr": "متى تستعمل مرطب الشفاه",
+          "status": "planned"
+        },
+        {
+          "sequence": 5,
+          "titleAr": "تنظيم روتين بشرة بسيط للمبتدئين",
+          "status": "planned"
+        },
+        {
+          "sequence": 6,
+          "titleAr": "متى تحتاج واقي شمس ملون",
+          "status": "planned"
+        },
+        {
+          "sequence": 7,
+          "titleAr": "تفريق البشرة الحساسة من التحسس لمادة جديدة",
+          "status": "planned"
+        },
+        {
+          "sequence": 8,
+          "titleAr": "استعمال الكريم بعد غسل اليدين",
+          "status": "planned"
+        },
+        {
+          "sequence": 9,
+          "titleAr": "العناية بالجسم في الشتاء",
+          "status": "planned"
+        },
+        {
+          "sequence": 10,
+          "titleAr": "قواعد النظافة الشخصية اليومية",
+          "status": "planned"
+        },
+        {
+          "sequence": 11,
+          "titleAr": "العناية بالقدمين والجلد الجاف",
+          "status": "planned"
+        },
+        {
+          "sequence": 12,
+          "titleAr": "فهم مكونات المرطبات: غليسرين وسيراميد",
+          "status": "planned"
+        },
+        {
+          "sequence": 13,
+          "titleAr": "الفرق بين الكريم واللوشن والمرهم",
+          "status": "planned"
+        },
+        {
+          "sequence": 14,
+          "titleAr": "تقليل تهيج البشرة عند الحلاقة",
+          "status": "planned"
+        },
+        {
+          "sequence": 15,
+          "titleAr": "العناية بالشفاه المتشققة",
+          "status": "planned"
+        },
+        {
+          "sequence": 16,
+          "titleAr": "الحماية من الشمس أثناء الرياضة",
+          "status": "planned"
+        },
+        {
+          "sequence": 17,
+          "titleAr": "أخطاء استعمال واقي الشمس",
+          "status": "planned"
+        },
+        {
+          "sequence": 18,
+          "titleAr": "العناية بالشعر الجاف بلطف",
+          "status": "planned"
+        },
+        {
+          "sequence": 19,
+          "titleAr": "تجنب الإفراط في غسل الشعر",
+          "status": "planned"
+        },
+        {
+          "sequence": 20,
+          "titleAr": "العناية بفروة الرأس والتعرف على علامات الإزعاج",
+          "status": "planned"
+        },
+        {
+          "sequence": 21,
+          "titleAr": "متى يكون تساقط الشعر سبباً لزيارة الطبيب",
+          "status": "planned"
+        },
+        {
+          "sequence": 22,
+          "titleAr": "مقارنة الشامبو اللطيف والشامبو المنظف",
+          "status": "planned"
+        },
+        {
+          "sequence": 23,
+          "titleAr": "فهم البشرة المعرضة لحب الشباب دون علاجات عشوائية",
+          "status": "planned"
+        },
+        {
+          "sequence": 24,
+          "titleAr": "النظافة بعد التعرق",
+          "status": "planned"
+        },
+        {
+          "sequence": 25,
+          "titleAr": "متى تفيد القفازات في تنظيف المنزل",
+          "status": "planned"
+        },
+        {
+          "sequence": 26,
+          "titleAr": "العناية بالأظافر دون تجريح الجلد",
+          "status": "planned"
+        },
+        {
+          "sequence": 27,
+          "titleAr": "ما معنى خالٍ من العطر على الملصق",
+          "status": "planned"
+        },
+        {
+          "sequence": 28,
+          "titleAr": "كيفية اختبار منتج عناية جديد بحذر",
+          "status": "planned"
+        },
+        {
+          "sequence": 29,
+          "titleAr": "الحلاقة الحساسة وطرق تقليل الاحتكاك",
+          "status": "planned"
+        },
+        {
+          "sequence": 30,
+          "titleAr": "اختيار ملابس مريحة للبشرة المتهيجة",
+          "status": "planned"
+        },
+        {
+          "sequence": 31,
+          "titleAr": "قراءة ملصق غسول الجسم",
+          "status": "planned"
+        },
+        {
+          "sequence": 32,
+          "titleAr": "الحفاظ على نظافة أدوات المكياج",
+          "status": "planned"
+        },
+        {
+          "sequence": 33,
+          "titleAr": "تنظيف الوجه بعد التمارين",
+          "status": "planned"
+        },
+        {
+          "sequence": 34,
+          "titleAr": "متى تحتاج مراجعة مختص للتصبغات",
+          "status": "planned"
+        },
+        {
+          "sequence": 35,
+          "titleAr": "الفرق بين UVA وUVB",
+          "status": "planned"
+        },
+        {
+          "sequence": 36,
+          "titleAr": "العناية باليدين خلال الأعمال المنزلية",
+          "status": "planned"
+        },
+        {
+          "sequence": 37,
+          "titleAr": "العناية بالبشرة بعد السباحة",
+          "status": "planned"
+        },
+        {
+          "sequence": 38,
+          "titleAr": "قواعد استخدام مستحضرات العناية للأطفال",
+          "status": "planned"
+        },
+        {
+          "sequence": 39,
+          "titleAr": "تاريخ صلاحية مستحضرات التجميل",
+          "status": "planned"
+        },
+        {
+          "sequence": 40,
+          "titleAr": "دليل السفر والعناية بالبشرة",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "id": "world-recipes",
+      "parent": "lifestyle",
+      "title": {
+        "ar": "أشهر أطباق العالم والحلويات",
+        "en": "Famous world dishes & desserts",
+        "fr": "Plats du monde célèbres et desserts"
+      },
+      "description": {
+        "ar": "وصفات أصلية عملية لأشهر أطباق المطابخ العالمية والحلويات، بمقادير دقيقة وخطوات وسلامة غذائية وحساسيات واضحة.",
+        "en": "Recognizable international main dishes and desserts with precise ingredients, steps and food-safety notes.",
+        "fr": "Grands plats internationaux et desserts célèbres : ingrédients précis, étapes et sécurité alimentaire."
+      },
+      "publishedSlugs": [
+        "classic-roman-spaghetti-carbonara-recipe",
+        "classic-italian-tiramisu-without-raw-eggs"
+      ],
+      "targetArticles": 40,
+      "ideas": [
+        {
+          "sequence": 3,
+          "titleAr": "بيتزا مارغريتا الإيطالية الأصلية",
+          "status": "planned"
+        },
+        {
+          "sequence": 4,
+          "titleAr": "سوشي ماكي ياباني منزلي بطرق آمنة",
+          "status": "planned"
+        },
+        {
+          "sequence": 5,
+          "titleAr": "رامن ياباني بخطوات واضحة",
+          "status": "planned"
+        },
+        {
+          "sequence": 6,
+          "titleAr": "باييا إسبانية بالمأكولات البحرية",
+          "status": "planned"
+        },
+        {
+          "sequence": 7,
+          "titleAr": "دجاج تيكا ماسالا الهندي",
+          "status": "planned"
+        },
+        {
+          "sequence": 8,
+          "titleAr": "باد تاي تايلاندي",
+          "status": "planned"
+        },
+        {
+          "sequence": 9,
+          "titleAr": "تاكو مكسيكي تقليدي",
+          "status": "planned"
+        },
+        {
+          "sequence": 10,
+          "titleAr": "كيمتشي كوري منزلي ومبادئ تخميره الآمن",
+          "status": "planned"
+        },
+        {
+          "sequence": 11,
+          "titleAr": "بيبمباب كوري",
+          "status": "planned"
+        },
+        {
+          "sequence": 12,
+          "titleAr": "نودلز صينية بالخضار",
+          "status": "planned"
+        },
+        {
+          "sequence": 13,
+          "titleAr": "برغر كلاسيكي وكيفية التسوية الآمنة",
+          "status": "planned"
+        },
+        {
+          "sequence": 14,
+          "titleAr": "سمك وبطاطس بريطانيان",
+          "status": "planned"
+        },
+        {
+          "sequence": 15,
+          "titleAr": "كسكس مغربي تقليدي",
+          "status": "planned"
+        },
+        {
+          "sequence": 16,
+          "titleAr": "طاجين دجاج مغربي بالزيتون",
+          "status": "planned"
+        },
+        {
+          "sequence": 17,
+          "titleAr": "شاورما شرق أوسطية منزلية",
+          "status": "planned"
+        },
+        {
+          "sequence": 18,
+          "titleAr": "فلافل وطريقة القلي",
+          "status": "planned"
+        },
+        {
+          "sequence": 19,
+          "titleAr": "حمص بالطحينة",
+          "status": "planned"
+        },
+        {
+          "sequence": 20,
+          "titleAr": "لازانيا إيطالية بالبشاميل",
+          "status": "planned"
+        },
+        {
+          "sequence": 21,
+          "titleAr": "ريزوتو إيطالي بالفطر",
+          "status": "planned"
+        },
+        {
+          "sequence": 22,
+          "titleAr": "بيتزا نابوليتانا بالخَبز المنزلي",
+          "status": "planned"
+        },
+        {
+          "sequence": 23,
+          "titleAr": "كرواسون فرنسي بالزبدة",
+          "status": "planned"
+        },
+        {
+          "sequence": 24,
+          "titleAr": "ماكارون فرنسي اللوز",
+          "status": "planned"
+        },
+        {
+          "sequence": 25,
+          "titleAr": "كريم بروليه فرنسية",
+          "status": "planned"
+        },
+        {
+          "sequence": 26,
+          "titleAr": "تشيز كيك نيويورك",
+          "status": "planned"
+        },
+        {
+          "sequence": 27,
+          "titleAr": "براونيز شوكولاتة",
+          "status": "planned"
+        },
+        {
+          "sequence": 28,
+          "titleAr": "كيك شوكولاتة كلاسيكي",
+          "status": "planned"
+        },
+        {
+          "sequence": 29,
+          "titleAr": "بان كيك أمريكي",
+          "status": "planned"
+        },
+        {
+          "sequence": 30,
+          "titleAr": "وافل بلجيكي",
+          "status": "planned"
+        },
+        {
+          "sequence": 31,
+          "titleAr": "بافلوفا بالفواكه",
+          "status": "planned"
+        },
+        {
+          "sequence": 32,
+          "titleAr": "بانا كوتا إيطالية",
+          "status": "planned"
+        },
+        {
+          "sequence": 33,
+          "titleAr": "بقلاوة بالفستق",
+          "status": "planned"
+        },
+        {
+          "sequence": 34,
+          "titleAr": "كنافة بالجبن",
+          "status": "planned"
+        },
+        {
+          "sequence": 35,
+          "titleAr": "تشوروس إسبانية",
+          "status": "planned"
+        },
+        {
+          "sequence": 36,
+          "titleAr": "موشي ياباني",
+          "status": "planned"
+        },
+        {
+          "sequence": 37,
+          "titleAr": "دونات أمريكية",
+          "status": "planned"
+        },
+        {
+          "sequence": 38,
+          "titleAr": "كيك الجزر",
+          "status": "planned"
+        },
+        {
+          "sequence": 39,
+          "titleAr": "آيس كريم فانيليا منزلي آمن",
+          "status": "planned"
+        },
+        {
+          "sequence": 40,
+          "titleAr": "كوكيز شوكولاتة أمريكية",
           "status": "planned"
         }
       ]

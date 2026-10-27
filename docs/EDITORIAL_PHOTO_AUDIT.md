@@ -74,6 +74,20 @@ This document maps **one distinct real editorial photograph to every currently p
 | `energy-inflation-us-euro-area-october-2026` | [Unsplash photo](https://unsplash.com/photos/P9XVJiqdA5k) | GG | Fuel pump showing gasoline and payment controls |
 | `how-to-read-fomc-decision-2026` | [Unsplash photo](https://unsplash.com/photos/financial-newspaper-with-stock-chart-XrIfY_4cK1w) | Markus Spiske | Financial newspaper with stock-market chart, illustrative editorial photograph |
 
-**Total: 30 published articles / 30 unique image IDs.**
+**Initial October 2026 audit: 30 published articles / 30 unique image IDs.**
 
 Future articles MUST get a newly sourced, unique, license-checked photograph before publication. Always verify the photograph is semantically relevant and does not misrepresent real-time prices or platform interfaces.
+
+## 27 October 2026 — New editorial photography
+
+All new photographs are unique IDs, manually matched to the topic and independently credited on article pages. The images depict illustrative subjects only and are not medical or market-performance proof.
+
+| Article | Unsplash author | Photo source |
+|---|---|---|
+| `daily-sunscreen-spf30-body-care-guide` | Onela Ymeri | https://unsplash.com/photos/a-person-holding-a-bottle-of-sunscreen-in-their-hand-3Uj7ttuo5kk |
+| `dry-skin-moisturizing-body-routine` | Aleksandrs Karevs | https://unsplash.com/photos/a-white-table-topped-with-bottles-of-makeup-uyhrXEUdL8s |
+| `classic-roman-spaghetti-carbonara-recipe` | Helen Van | https://unsplash.com/photos/a-plate-of-pasta-with-bacon-on-it-bYSvpF8NBmE |
+| `classic-italian-tiramisu-without-raw-eggs` | mediha ekici | https://unsplash.com/photos/a-delicious-tiramisu-dessert-in-a-glass-dish-v5m_Dm7BQ_c |
+| `elliott-wave-technical-analysis-course` | rc.xyz NFT gallery | https://unsplash.com/photos/a-computer-screen-with-a-chart-on-it-w9coDxtsfts |
+
+**Current inventory after publication: 35 articles / 35 unique photo IDs / no shared section photos.**
