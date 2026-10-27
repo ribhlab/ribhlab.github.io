@@ -227,7 +227,7 @@ for(const lang of ['ar','en','fr']){
  if(!fs.existsSync(f)){errors.push('Studio Pro missing locale '+lang);continue;}
  const h=fs.readFileSync(f,'utf8');
  if(!h.includes('Document Studio Pro')||!h.includes('data-price-usd="0"')||!h.includes('data-checkout-enabled="false"'))errors.push('Studio Pro pricing not shown as USD 0 in '+lang);
- if(!h.includes('src="/ribhlab-site/assets/document-studio.js"')&&!h.includes('src="/assets/document-studio.js"'))errors.push('Studio Pro module not loaded '+lang);
+ if(!h.includes('src="'+basePath+'/assets/document-studio.js"'))errors.push('Studio Pro module not loaded '+lang);
  for(const id of ['studio-type','studio-theme','studio-name','studio-client','studio-items','studio-discount','studio-tax','studio-print','studio-html','studio-csv','studio-json-download','studio-save','studio-load','studio-clear','studio-import','studio-ai-prompt-output','studio-preview']){
   if(!h.includes('id="'+id+'"'))errors.push('Studio Pro control '+id+' missing in '+lang);
  }
@@ -255,7 +255,7 @@ for(const fragment of ["modeSwitch(kind)","draft.cvExperience","draft.cvEducatio
 // The free Pro tool must also be discoverable from the home page (below newest stories).
 for(const lang of ['ar','en','fr']){
  const page=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
- if(!page.includes('id="studio-free"')||!page.includes('href="/ribhlab-site/'+lang+'/tools/document-studio/"'))errors.push('Document Studio Pro home CTA missing '+lang);
+ if(!page.includes('id="studio-free"')||!page.includes('href="'+basePath+'/'+lang+'/tools/document-studio/"'))errors.push('Document Studio Pro home CTA missing '+lang);
  if(!page.includes('$0 USD'))errors.push('Free USD 0 homepage offer missing '+lang);
  const newest=page.indexOf('id="latest"'),free=page.indexOf('id="studio-free"');
  if(newest<0||free<newest)errors.push('Newest articles must appear before Pro spotlight in '+lang);
@@ -467,7 +467,7 @@ for(const feature of ['data-story-filters','data-story-grid','data-archive-searc
 for(const lang of ['ar','en','fr']){
  const home=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
  const archive=fs.readFileSync(path.join(dist,lang,'archive','index.html'),'utf8');
- if(!home.includes('href="/ribhlab-site/assets/vivid-theme.css"'))errors.push('VIVA theme absent from '+lang+' homepage');
+ if(!home.includes('href="'+basePath+'/assets/vivid-theme.css"'))errors.push('VIVA theme absent from '+lang+' homepage');
  if(!home.includes('data-story-filters')||!home.includes('data-story-grid'))errors.push('Smart home topic filter not built '+lang);
  if((home.match(/data-story-filter="/g)||[]).length!==5)errors.push('Expected five usable category filter controls '+lang);
  if((home.match(/data-story-topic="/g)||[]).length<9)errors.push('Smart topic identifiers missing on story cards '+lang);
@@ -498,7 +498,7 @@ const navCode=fs.readFileSync(path.join(dist,'assets','app.js'),'utf8');
 if(!navCode.includes("mobileLimit=window.matchMedia('(max-width:1220px)')")||!navCode.includes("event.key==='Escape'"))errors.push('Responsive accessible mobile menu interactions missing');
 for(const lang of ['ar','en','fr']){
  const homepage=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
- if(!homepage.includes('href="/ribhlab-site/assets/responsive.css"'))errors.push('Responsive CSS missing from '+lang);
+ if(!homepage.includes('href="'+basePath+'/assets/responsive.css"'))errors.push('Responsive CSS missing from '+lang);
  if(!homepage.includes('class="lang-short"')||!homepage.includes('aria-controls="site-nav"')||!homepage.includes('aria-expanded="false"'))errors.push('Accessible compact language or mobile navigation missing in '+lang);
 }
 
