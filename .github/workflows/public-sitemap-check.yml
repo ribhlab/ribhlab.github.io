@@ -1,0 +1,63 @@
+name: Confirm public RibhLab sitemap availability
+
+on:
+  workflow_run:
+    workflows: ["Publish RibhLab to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-sitemap:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read sitemap, robots.txt and locale homepages over public HTTPS
+        run: |
+          python3 - <<'PY'
+          import time
+          import urllib.request
+          import urllib.error
+          import xml.etree.ElementTree as ET
+
+          base='https://ribhlab.github.io'
+          wanted=['/robots.txt','/sitemap.xml','/ar/','/en/','/fr/']
+          last=None
+          for attempt in range(1,7):
+              try:
+                  bodies={}
+                  for path in wanted:
+                      req=urllib.request.Request(base+path,headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
+                      with urllib.request.urlopen(req,timeout=15) as resp:
+                          status=resp.status
+                          data=resp.read()
+                          mime=resp.headers.get('Content-Type','')
+                          print(f'GET {path}: HTTP {status}; type={mime}; bytes={len(data)}',flush=True)
+                          assert status==200 and data, f'{path}: empty or non-200 response'
+                          bodies[path]=data
+                  robots=bodies['/robots.txt'].decode('utf-8-sig')
+                  assert 'Sitemap: '+base+'/sitemap.xml' in robots, 'Missing public robots sitemap'
+                  assert 'Disallow: /admin/' in robots, 'Expected private editor excluded'
+                  doc=ET.fromstring(bodies['/sitemap.xml'])
+                  ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+                  assert doc.tag=='{'+ns['s']+'}urlset', f'Unexpected XML root: {doc.tag}'
+                  urls=[n.text for n in doc.findall('./s:url/s:loc',ns)]
+                  assert len(urls)>=30, f'Only {len(urls)} site URLs'
+                  assert len(set(urls))==len(urls), 'Sitemap has duplicate URLs'
+                  assert all(u.startswith(base+'/') for u in urls), 'Wrong domain in sitemap'
+                  assert all(u not in (base+'/',) for u in urls), 'Redirect-only bare homepage in sitemap'
+                  for language in ('ar','en','fr'):
+                      assert base+'/'+language+'/' in urls, f'Missing {language} homepage'
+                      assert b'<meta name="robots" content="index,follow' in bodies['/'+language+'/'], 'Missing indexing meta'
+                  print(f'PUBLIC SITE PASSED: XML parsed; {len(urls)} URLs; robots and multilingual pages available',flush=True)
+                  break
+              except Exception as err:
+                  last=err
+                  print(f'Public check attempt {attempt}/6 failed: {type(err).__name__}: {err}',flush=True)
+                  if attempt<6: time.sleep(8)
+          else:
+              raise SystemExit('Public sitemap could not be verified: '+str(last))
+          PY
