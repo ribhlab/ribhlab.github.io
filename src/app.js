@@ -188,62 +188,6 @@ if(positionOutput){
  recompute();
 }
 
-// Safe in-browser invoice, CV and report preview. No network request, no AI or paid service.
-const studioPreview=byId('studio-preview');
-if(studioPreview){
- const t={
-  ar:{invoice:'فاتورة تجريبية',cv:'السيرة الذاتية',report:'تقرير',issued:'الجهة المصدرة',client:'العميل',qty:'الكمية',price:'الثمن',tax:'الضريبة',total:'المجموع',role:'المسمى المهني',desc:'التفاصيل',save:'تم إنشاء المعاينة محلياً',invalid:'تحقق من الكمية والثمن والضريبة'},
-  en:{invoice:'Draft invoice',cv:'Curriculum vitae',report:'Report',issued:'Issuer',client:'Customer',qty:'Quantity',price:'Unit price',tax:'Tax',total:'Total',role:'Professional title',desc:'Details',save:'Preview generated locally',invalid:'Check quantity, price and tax'},
-  fr:{invoice:'Facture brouillon',cv:'Curriculum vitae',report:'Rapport',issued:'Émetteur',client:'Client',qty:'Quantité',price:'Prix unitaire',tax:'Taxe',total:'Total',role:'Fonction',desc:'Détails',save:'Aperçu créé localement',invalid:'Vérifiez la quantité, le prix et la taxe'}
- }[meta.lang];
- const get=id=>byId(id)?.value.trim()||'';
- const el=(tag,content,cls)=>{
-  const node=document.createElement(tag);
-  node.textContent=content;
-  if(cls)node.className=cls;
-  studioPreview.appendChild(node);
-  return node;
- };
- const render=()=>{
-  studioPreview.replaceChildren();
-  const kind=get('studio-type'),name=get('studio-name'),client=get('studio-client'),txt=get('studio-text');
-  const qty=Number(get('studio-qty')),price=Number(get('studio-price')),rate=Number(get('studio-tax'));
-  if(kind==='invoice'&&(!Number.isFinite(qty)||!Number.isFinite(price)||!Number.isFinite(rate)||qty<=0||price<0||rate<0||rate>100)){
-   byId('studio-status').textContent=t.invalid;return false;
-  }
-  el('h2',kind==='cv'?t.cv:kind==='report'?t.report:t.invoice);
-  if(kind==='invoice'){
-   el('p',t.issued+': '+(name||'—'));
-   el('p',t.client+': '+(client||'—'));
-   el('p',txt||'—','studio-description');
-   const currency=get('studio-currency')||'MAD';
-   el('p',t.qty+': '+qty+' · '+t.price+': '+price.toFixed(2)+' '+currency);
-   const subtotal=qty*price,total=subtotal*(1+rate/100);
-   el('p',t.tax+': '+rate.toFixed(2)+'%');
-   el('strong',t.total+': '+total.toFixed(2)+' '+currency,'studio-total');
-  }else if(kind==='cv'){
-   el('h3',name||'—');el('p',t.role+': '+(client||'—'));el('p',txt||'—','studio-description');
-  }else{
-   el('h3',client||'—');el('p',t.issued+': '+(name||'—'));el('p',txt||'—','studio-description');
-  }
-  byId('studio-status').textContent=t.save;
-  return true;
- };
- byId('studio-render')?.addEventListener('click',render);
- byId('studio-print')?.addEventListener('click',()=>{if(render())window.print();});
- byId('studio-csv')?.addEventListener('click',()=>{
-  if(get('studio-type')!=='invoice'){byId('studio-status').textContent=({ar:'CSV مخصص للفواتير فقط',en:'CSV export is for invoices only',fr:'CSV réservé aux factures'})[meta.lang];return;}
-  if(!render())return;
-  const qty=Number(get('studio-qty')),price=Number(get('studio-price')),tax=Number(get('studio-tax')),cur=get('studio-currency');
-  const safe=v=>{const raw=String(v);const guarded=/^[=+\-@\t\r]/.test(raw)?"'"+raw:raw;return '"'+guarded.replace(/"/g,'""')+'"';};
-  const rows=[['Issuer',get('studio-name')],['Customer',get('studio-client')],['Description',get('studio-text')],['Quantity',qty],['Unit price',price],['Tax percent',tax],['Currency',cur],['Total',(qty*price*(1+tax/100)).toFixed(2)]];
-  const data='\uFEFF'+rows.map(row=>row.map(safe).join(',')).join('\r\n');
-  const blob=new Blob([data],{type:'text/csv;charset=utf-8'});
-  const url=URL.createObjectURL(blob),link=document.createElement('a');
-  link.href=url;link.download='ribhlab-invoice.csv';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
- });
- ['studio-type','studio-name','studio-client','studio-text','studio-qty','studio-price','studio-tax','studio-currency'].forEach(id=>byId(id)?.addEventListener('input',render));
- render();
-}
+// Document Studio Pro uses its own isolated module on the dedicated tool page.
 
 document.querySelectorAll('.pulse-filter').forEach(btn=>btn.addEventListener('click',()=>{const wanted=btn.dataset.pulseFilter;document.querySelectorAll('.pulse-filter').forEach(b=>b.classList.toggle('current',b===btn));document.querySelectorAll('[data-pulse-topic]').forEach(card=>{card.hidden=wanted!=='all'&&card.dataset.pulseTopic!==wanted;});}));

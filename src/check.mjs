@@ -206,8 +206,31 @@ for(const lang of ['ar','en','fr']){
  }
 }
 const app=fs.readFileSync(path.join(dist,'assets','app.js'),'utf8');
-for(const symbol of ['position-units','words-count','json-format','studio-preview','studio-print','studio-csv']){
+for(const symbol of ['position-units','words-count','json-format']){
  if(!app.includes(symbol))errors.push('Missing live tool implementation '+symbol);
+}
+
+
+// Document Studio Pro must remain free and operational; payment/AI claims are forbidden.
+const plan=JSON.parse(fs.readFileSync(path.join(root,'content','tool-pricing.json'),'utf8')).products?.documentStudioPro;
+if(!plan||plan.priceUsd!==0||plan.currency!=='USD'||plan.checkoutEnabled!==false||plan.requiresPaymentMethod!==false||plan.requiresAccount!==false||plan.externalAiEnabled!==false)errors.push('Document Studio Pro must be fully $0 without checkout/account or hosted AI');
+for(const filename of ['document-studio.js','document-studio-core.mjs']){
+ if(!fs.existsSync(path.join(dist,'assets',filename)))errors.push('Missing standalone Document Studio Pro browser module: '+filename);
+}
+const documentApp=fs.readFileSync(path.join(dist,'assets','document-studio.js'),'utf8');
+for(const symbol of ['studio-save','studio-load','studio-html','studio-json-download','studio-print','studio-csv','studio-prompt','studio-import','studio-add-item','computeTotals','normalizeDraft']){
+ if(!documentApp.includes(symbol))errors.push('Document Studio Pro interactive action not implemented: '+symbol);
+}
+if(/\bfetch\s*\(|XMLHttpRequest|WebSocket/.test(documentApp))errors.push('Studio Pro must not silently upload user documents to external services');
+for(const lang of ['ar','en','fr']){
+ const f=path.join(dist,lang,'tools','document-studio','index.html');
+ if(!fs.existsSync(f)){errors.push('Studio Pro missing locale '+lang);continue;}
+ const h=fs.readFileSync(f,'utf8');
+ if(!h.includes('Document Studio Pro')||!h.includes('data-price-usd="0"')||!h.includes('data-checkout-enabled="false"'))errors.push('Studio Pro pricing not shown as USD 0 in '+lang);
+ if(!h.includes('src="/ribhlab-site/assets/document-studio.js"')&&!h.includes('src="/assets/document-studio.js"'))errors.push('Studio Pro module not loaded '+lang);
+ for(const id of ['studio-type','studio-theme','studio-name','studio-client','studio-items','studio-discount','studio-tax','studio-print','studio-html','studio-csv','studio-json-download','studio-save','studio-load','studio-clear','studio-import','studio-ai-prompt-output','studio-preview']){
+  if(!h.includes('id="'+id+'"'))errors.push('Studio Pro control '+id+' missing in '+lang);
+ }
 }
 
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
