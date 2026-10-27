@@ -1,0 +1,52 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const db=JSON.parse(fs.readFileSync(path.join(project,'content/opportunities-data.json'),'utf8'));
+export const categories=['morocco','international','competitions','companies','dv-lottery','immigration','visa-appointments'];
+const langCopy={
+ ar:{hub:'الوظائف والهجرة والفيزا',intro:'مباريات رسمية وفرص عمل داخل وخارج المغرب، ومسارات الهجرة وقرعة أمريكا وروابط مواعيد التأشيرات.',morocco:'وظائف في المغرب',international:'وظائف خارج المغرب',competitions:'مباريات التوظيف',companies:'التوظيف في الشركات', 'dv-lottery':'قرعة أمريكا',immigration:'فرص الهجرة','visa-appointments':'مواعيد التأشيرات',notice:'معلومة موثقة، وليست وعداً بالتوظيف أو الحصول على التأشيرة.',updated:'آخر مراجعة تحريرية',deadline:'آخر أجل للإيداع',posts:'مناصب',expired:'انتهى آخر أجل',check:'راجع الإعلان الرسمي',open:'تصفح المصدر الرسمي',eligible:'تحقق من أهلية الترشح والتأشيرة',filter:'ابحث في الفرص المعروضة',find:'ابحث بعنوان الوظيفة أو المؤسسة',clear:'مسح البحث',none:'ما كاين حتى عرض مطابق',visaInfo:'حالة المواعيد: غير مؤكدة مباشرة',visaWarn:'الرابط الرسمي للحجز لا يعني وجود موعد متاح. المواعيد قد تتغير حسب القنصلية ونوع التأشيرة والحساب الشخصي، ولا نستخدم البوتات أو وسطاء البيع.',dvNotice:'تنبيه رسمي بشأن قرعة أمريكا',dvUnknown:'موعد التسجيل القادم غير مؤكد رسمياً',dvSource:'بوابة التسجيل والاستعلام الرسمية',more:'الأقسام الأخرى',from:'المصدر',kind:'نوع المصدر',platform:'بوابة فرص متجددة',specific:'إعلان توظيف محدد',vDate:'تمت مراجعة هذه المصادر بتاريخ 27 أكتوبر 2026، لا تُحدّث حالة المواعيد تلقائياً. لا تُدخل بياناتك الشخصية إلا في الموقع الرسمي.'},
+ en:{hub:'Jobs, immigration & visas',intro:'Official jobs in Morocco and abroad, public competitions, company careers, US DV, immigration and visa appointment portals.',morocco:'Jobs in Morocco',international:'Jobs abroad',competitions:'Public recruitment exams',companies:'Company careers','dv-lottery':'US Diversity Visa',immigration:'Immigration pathways','visa-appointments':'Visa appointments',notice:'Verified information, not a job or visa guarantee.',updated:'Editorial review',deadline:'Application deadline',posts:'positions',expired:'Deadline passed',check:'Check official notice',open:'Open official source',eligible:'Check eligibility and work permits',filter:'Search listed opportunities',find:'Job title or institution',clear:'Clear',none:'No matching items',visaInfo:'Live appointment availability: not verified',visaWarn:'A booking link does not prove slots are available. Rules differ by consulate, visa class and applicant account. No slot-buying bots or paid intermediaries.',dvNotice:'Official Diversity Visa update',dvUnknown:'Registration dates not officially confirmed',dvSource:'Official registration/status website',more:'Other sections',from:'Source',kind:'Source type',platform:'Continuously updated official portal',specific:'Specific recruitment announcement',vDate:'Sources reviewed 27 October 2026. Appointment status is not checked in real time. Submit personal data only on official websites.'},
+ fr:{hub:'Emplois, immigration et visas',intro:'Offres officielles au Maroc et à l’étranger, concours, carrières, loterie DV, immigration et rendez-vous visa.',morocco:'Emploi au Maroc',international:'Emploi à l’étranger',competitions:'Concours publics',companies:'Recrutement entreprises','dv-lottery':'Loterie DV États-Unis',immigration:'Voies d’immigration','visa-appointments':'Rendez-vous visa',notice:'Information vérifiée, sans garantie d’emploi ou de visa.',updated:'Revue éditoriale',deadline:'Date limite',posts:'postes',expired:'Date limite dépassée',check:'Voir l’annonce officielle',open:'Ouvrir la source officielle',eligible:'Vérifiez admissibilité et permis de travail',filter:'Rechercher les opportunités affichées',find:'Métier ou organisme',clear:'Effacer',none:'Aucun résultat',visaInfo:'Disponibilité des créneaux : non vérifiée en direct',visaWarn:'Un lien de rendez-vous ne garantit pas de place disponible. Les procédures diffèrent selon consulat, visa et compte du demandeur. Pas de robots revendeurs de créneaux.',dvNotice:'Information officielle Diversity Visa',dvUnknown:'Date d’inscription non confirmée',dvSource:'Site officiel inscription / résultats',more:'Autres rubriques',from:'Source',kind:'Type de source',platform:'Portail officiel actualisé',specific:'Annonce de recrutement identifiée',vDate:'Sources consultées le 27 octobre 2026. Aucun suivi en temps réel des créneaux. Utilisez exclusivement les sites officiels.'}
+};
+const safeHref=u=>/^https:\/\/[a-z0-9.-]+(?:\/|$)/i.test(u)?u:'#';
+const fullDate=s=>s?new Date(s+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'}):'';
+function makeCard(item,c,esc){
+ const ended=Boolean(item.deadline&&item.deadline<new Date().toISOString().slice(0,10));
+ const name=esc(item.title),org=esc(item.org);
+ const badge=item.kind==='official_directory'||item.kind==='program'?c.platform:c.specific;
+ const notes=item.note?'<p class="opp-note">'+esc(item.note)+'</p>':'';
+ return '<article class="opp-card" data-opp-item><div class="opp-topline"><span class="opp-type">'+esc(badge)+'</span>'+(ended?'<span class="opp-muted">'+esc(c.expired)+'</span>':'')+'</div><h3>'+name+'</h3><p class="opp-employer">'+org+' · '+esc(item.place)+'</p>'+notes+'<div class="opp-meta">'+(item.count?'<span>'+item.count+' '+esc(c.posts)+'</span>':'')+(item.deadline?'<span>'+esc(c.deadline)+': <strong>'+esc(fullDate(item.deadline))+'</strong></span>':'')+'</div><a class="opp-action" rel="noopener noreferrer external" target="_blank" href="'+esc(safeHref(item.url))+'">'+esc(item.deadline?c.check:c.open)+' ↗</a></article>';
+}
+function sectionIntro(lang,c,title,subtitle,other,esc){
+ return '<section class="page-hero compact-hero opp-hero"><div class="shell"><nav class="breadcrumbs"><a href="/'+lang+'/">'+esc(({ar:'الرئيسية',en:'Home',fr:'Accueil'})[lang])+'</a><span>/</span><a href="/'+lang+'/opportunities/">'+esc(c.hub)+'</a></nav><span class="section-kicker">RIBHLAB / OFFICIAL SOURCES</span><h1>'+esc(title)+'</h1><p>'+esc(subtitle)+'</p></div></section>';
+}
+function navGrid(lang,c,esc,omit=''){
+ return '<div class="opp-cats">'+categories.filter(x=>x!==omit).map(x=>'<a class="opp-cat" href="/'+lang+'/opportunities/'+x+'/"><span>'+esc(c[x])+'</span><span aria-hidden="true">↗</span></a>').join('')+'</div>';
+}
+export function renderOpportunityPages(lang,page,esc){
+ const c=langCopy[lang],base='/'+lang+'/opportunities/';
+ const stamp='<p class="opp-stamp">'+esc(c.updated)+' : <time datetime="'+db.checkedAt+'">'+db.checkedAt+'</time></p>';
+ const advisory='<div class="opp-advisory" role="note"><strong>ⓘ '+esc(c.notice)+'</strong><p>'+esc(db.editorialNote[lang])+'</p></div>';
+ const headings='<div class="opp-search"><label for="opportunity-query">'+esc(c.filter)+'</label><input id="opportunity-query" data-opportunity-search placeholder="'+esc(c.find)+'" type="search" autocomplete="off"><button type="button" data-opportunity-clear>'+esc(c.clear)+'</button></div><p class="opp-no-results" data-opportunity-empty hidden>'+esc(c.none)+'</p>';
+ const script='<script src="/assets/opportunities.js" defer></script>';
+ const cats=categories.map(category=>({category,total:category==='visa-appointments'?db.visa.length:category==='dv-lottery'?1:db.items.filter(x=>x.section===category).length}));
+ const hub='<section class="page-hero opp-hero"><div class="shell"><span class="section-kicker">RIBHLAB / JOBS & MOBILITY</span><h1>'+esc(c.hub)+'</h1><p>'+esc(c.intro)+'</p>'+stamp+'</div></section><section class="section shell">'+advisory+'<div class="opp-cats">'+cats.map(q=>'<a class="opp-cat" href="'+base+q.category+'/"><span>'+esc(c[q.category])+'</span><b>'+q.total+' ↗</b></a>').join('')+'</div></section><section class="section shell"><h2>'+esc(c.dvNotice)+'</h2><div class="opp-advisory"><strong>'+esc(c.dvUnknown)+'</strong><p>'+esc(db.dv.notes[lang])+'</p><a class="opp-action" href="'+esc(db.dv.officialInfo)+'" target="_blank" rel="noopener noreferrer external">'+esc(c.open)+' ↗</a></div></section><section class="section shell"><h2>'+esc(c.visaInfo)+'</h2><p>'+esc(c.visaWarn)+'</p><a class="opp-action" href="'+base+'visa-appointments/">'+esc(c['visa-appointments'])+' ↗</a></section>';
+ page(lang,{title:c.hub+' | RibhLab',desc:c.intro,route:base,content:hub,active:'opportunities'});
+ for(const category of categories){
+  const title=c[category],intro=sectionIntro(lang,c,title,c.intro,category,esc);
+  let body='';
+  if(category==='dv-lottery'){
+   body='<section class="section shell">'+advisory+'<div class="opp-advisory"><strong>'+esc(c.dvUnknown)+'</strong><p>'+esc(db.dv.notes[lang])+'</p><div class="opp-link-row"><a href="'+esc(db.dv.url)+'" class="opp-action" rel="noopener noreferrer external" target="_blank">'+esc(c.dvSource)+' ↗</a><a class="opp-action" href="'+esc(db.dv.officialInfo)+'" rel="noopener noreferrer external" target="_blank">'+esc(c.open)+' ↗</a><a class="opp-action" href="'+esc(db.dv.importantNotice)+'" rel="noopener noreferrer external" target="_blank">'+esc(c.dvNotice)+' ↗</a></div></div></section>';
+  } else if(category==='visa-appointments'){
+   const rows=db.visa.map(v=>'<article class="opp-card" data-opp-item><div class="opp-topline"><span class="opp-type">'+esc(v.service)+'</span><span class="opp-muted">'+esc(c.visaInfo)+'</span></div><h3>'+esc(v.country[lang])+'</h3><p>'+esc(v.note[lang])+'</p><a class="opp-action" href="'+esc(safeHref(v.url))+'" rel="noopener noreferrer external" target="_blank">'+esc(c.open)+' ↗</a></article>').join('');
+   body='<section class="section shell">'+advisory+'<div class="opp-advisory" role="alert"><strong>'+esc(c.visaInfo)+'</strong><p>'+esc(c.visaWarn)+'</p><p>'+esc(c.vDate)+'</p></div>'+headings+'<div class="opp-grid" data-opportunity-list>'+rows+'</div></section>';
+  }else{
+   const list=db.items.filter(i=>i.section===category);
+   body='<section class="section shell">'+advisory+'<p class="opp-guideline">'+esc(c.eligible)+'</p>'+headings+'<div class="opp-grid" data-opportunity-list>'+list.map(i=>makeCard(i,c,esc)).join('')+'</div></section>';
+  }
+  body+='<section class="section shell"><h2>'+esc(c.more)+'</h2>'+navGrid(lang,c,esc,category)+'</section>'+script;
+  page(lang,{title:title+' | RibhLab',desc:c.intro,route:base+category+'/',content:intro+body,active:'opportunities'});
+ }
+}
