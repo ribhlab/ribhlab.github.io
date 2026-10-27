@@ -436,7 +436,7 @@ else{
  for(const required of [
   '@media(max-width:1220px)','@media(max-width:1060px)','@media(max-width:800px)',
   '@media(max-width:600px)','@media(max-width:420px)','@media(max-width:340px)',
-  '.nav-links.open{display:flex}','.mobile-menu{display:grid}','aspect-ratio:16/10',
+  '.nav-links.open{display:flex}','.mobile-menu{display:grid;','aspect-ratio:16/10',
   '.studio-pro .studio-editor','.market-digest-grid','html[dir=rtl]',
   '.studio-pro .studio-document{max-width:100%'
  ])if(!css.includes(required))errors.push('Responsive design feature missing: '+required);
