@@ -283,7 +283,7 @@ function documentStudioTool(l){
  const extra=(id,key,kinds,rows=3)=>'<label class="studio-extra-field" data-studio-kinds="'+kinds+'" for="'+id+'">'+esc(extras[key])+(rows===0?'<input type="text" maxlength="500" id="'+id+'">':'<textarea id="'+id+'" rows="'+rows+'" maxlength="12000"></textarea>')+'</label>';
  const named=(id,key,kinds)=>extra(id,key,kinds,0);
 
- const txt=(id,key,multiline=false)=>'<label for="'+id+'" data-studio-field="'+id+'"><span class="studio-field-caption">'+esc(d[key])+'</span>'(multiline?'<textarea id="'+id+'" maxlength="12000" rows="5"></textarea>':'<input id="'+id+'" type="text" maxlength="500">')+'</label>';
+ const txt=(id,key,multiline=false)=>'<label for="'+id+'" data-studio-field="'+id+'"><span class="studio-field-caption">'+esc(d[key])+'</span>'+(multiline?'<textarea id="'+id+'" maxlength="12000" rows="5"></textarea>':'<input id="'+id+'" type="text" maxlength="500">')+'</label>';
  const date=(id,key)=>'<label for="'+id+'" data-studio-field="'+id+'"><span class="studio-field-caption">'+esc(d[key])+'</span><input type="date" id="'+id+'"></label>';
  const num=(id,key,value)=>'<label for="'+id+'">'+esc(d[key])+'<input id="'+id+'" type="number" value="'+value+'" min="0" max="100" step="0.01"></label>';
  return '<section class="tool-card tool-wide studio-pro" id="document-studio" data-price-usd="'+studioPlan.priceUsd+'" data-checkout-enabled="false">'+
