@@ -27,6 +27,7 @@ jobs:
           node --check src/document-studio-core.test.mjs
           node --check src/check.mjs
           node --check src/update-news.mjs
+          node --check src/market-comments.js
       - name: Test offline Document Studio Pro calculations and import safety
         run: npm run test:studio
       - name: Build multilingual pages
@@ -42,6 +43,9 @@ jobs:
           test -f dist/illustrations/trading.svg
           test -f dist/illustrations/ai.svg
           grep -q 'market-analysis' dist/ar/markets/index.html
+          grep -q 'market-digest-grid' dist/ar/markets/index.html
+          grep -q 'market-comments.js' dist/ar/markets/read/gold-september-2026-etf-flows/index.html
+          grep -q 'images.unsplash.com' dist/fr/markets/read/china-q3-2026-growth/index.html
           grep -q 'href="/ribhlab-site/ar/tools/speed-test/"' dist/ar/tools/index.html
           grep -q 'speed-start' dist/ar/tools/speed-test/index.html
           grep -q 'words-input' dist/ar/tools/word-counter/index.html
