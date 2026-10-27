@@ -176,6 +176,40 @@ for(const lang of ['ar','en','fr']){
  const newest=page.slice(top,sections);
  if((newest.match(/class="article-card /g)||[]).length<6)errors.push('Too few homepage latest cards in '+lang);
 }
+
+// Every tool must have its own directly addressable working page in all languages.
+const toolRoutes=[
+ ['risk-calculator','risk-tool','risk-result'],
+ ['freelance-pricing','fee-tool','fee-result'],
+ ['prompt-builder','prompt-tool','create-prompt'],
+ ['speed-test','speed-tool','speed-start'],
+ ['ad-revenue','rpm-tool','calc-page-result'],
+ ['affiliate-commission','affiliate-tool','calc-aff-result'],
+ ['game-revenue','game-revenue-tool','calc-game-result'],
+ ['word-counter','word-counter','words-input'],
+ ['json-validator','json-formatter','json-format'],
+ ['position-size','position-sizer','position-units'],
+ ['document-studio','document-studio','studio-preview']
+];
+for(const lang of ['ar','en','fr']){
+ const catalogFile=path.join(dist,lang,'tools','index.html');
+ if(!fs.existsSync(catalogFile)){errors.push('Tool index missing '+lang);continue;}
+ const catalog=fs.readFileSync(catalogFile,'utf8');
+ for(const [slug,cardId,controlId] of toolRoutes){
+  const f=path.join(dist,lang,'tools',slug,'index.html');
+  if(!fs.existsSync(f)){errors.push('Missing isolated tool '+lang+'/'+slug);continue;}
+  const html=fs.readFileSync(f,'utf8');
+  if(!html.includes('id="'+cardId+'"')||!html.includes('id="'+controlId+'"'))errors.push('Nonfunctional tool layout '+lang+'/'+slug);
+  if(!catalog.includes('/'+lang+'/tools/'+slug+'/'))errors.push('Tool absent from directory '+lang+'/'+slug);
+  const ids=Array.from(html.matchAll(/\bid="([^"]+)"/g),m=>m[1]);
+  if(new Set(ids).size!==ids.length)errors.push('Duplicate DOM ID in '+lang+'/'+slug);
+ }
+}
+const app=fs.readFileSync(path.join(dist,'assets','app.js'),'utf8');
+for(const symbol of ['position-units','words-count','json-format','studio-preview','studio-print','studio-csv']){
+ if(!app.includes(symbol))errors.push('Missing live tool implementation '+symbol);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 

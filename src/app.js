@@ -135,4 +135,115 @@
  });
 })();
 
+
+// Standalone text and developer utilities run entirely on the visitor's device.
+const wordInput=byId('words-input');
+if(wordInput){
+ const recount=()=>{
+  const v=wordInput.value;
+  let words=0;
+  if(v.trim()){
+   if(typeof Intl.Segmenter==='function'){
+    const seg=new Intl.Segmenter(meta.lang||'en',{granularity:'word'});
+    words=Array.from(seg.segment(v)).filter(x=>x.isWordLike).length;
+   }else words=v.trim().split(/\s+/u).length;
+  }
+  byId('words-count').textContent=String(words);
+  byId('characters-count').textContent=String(Array.from(v).length);
+  byId('lines-count').textContent=String(v?v.split(/\r\n|\r|\n/u).length:0);
+ };
+ wordInput.addEventListener('input',recount);
+ recount();
+}
+const jsonIn=byId('json-input'),jsonOut=byId('json-output'),jsonStatus=byId('json-status');
+byId('json-format')?.addEventListener('click',()=>{
+ try{
+  if(!jsonIn.value.trim())throw new Error('Empty input');
+  jsonOut.value=JSON.stringify(JSON.parse(jsonIn.value),null,2);
+  jsonStatus.textContent=({ar:'✓ JSON صحيح',en:'✓ Valid JSON',fr:'✓ JSON valide'})[meta.lang];
+ }catch(error){
+  jsonOut.value='';
+  const bad=({ar:'JSON غير صحيح',en:'Invalid JSON',fr:'JSON non valide'})[meta.lang];
+  jsonStatus.textContent=bad+': '+error.message;
+ }
+});
+byId('json-copy')?.addEventListener('click',async()=>{
+ if(!jsonOut?.value)return;
+ try{await navigator.clipboard.writeText(jsonOut.value);jsonStatus.textContent=({ar:'✓ تم النسخ',en:'✓ Copied',fr:'✓ Copié'})[meta.lang];}
+ catch{jsonOut.focus();jsonOut.select();jsonStatus.textContent=({ar:'حدد النص وانسخه',en:'Select and copy manually',fr:'Sélectionnez puis copiez'})[meta.lang];}
+});
+
+// Position sizing is intentionally expressed in units, not ambiguous broker lot sizes.
+const positionOutput=byId('position-units');
+if(positionOutput){
+ const recompute=()=>{
+  const capital=n('position-capital'),risk=n('position-risk'),entry=n('position-entry'),stop=n('position-stop'),multiplier=n('position-multiplier');
+  const inputs=[capital,risk,entry,stop,multiplier];
+  const valid=inputs.every(Number.isFinite)&&capital>0&&risk>0&&risk<=100&&entry>0&&stop>0&&multiplier>0&&entry!==stop;
+  const maxLoss=valid?capital*risk/100:NaN;
+  byId('position-loss').textContent=Number.isFinite(maxLoss)?nice(maxLoss):'—';
+  positionOutput.textContent=valid?nice(maxLoss/(Math.abs(entry-stop)*multiplier)):'—';
+ };
+ ['position-capital','position-risk','position-entry','position-stop','position-multiplier'].forEach(id=>byId(id)?.addEventListener('input',recompute));
+ recompute();
+}
+
+// Safe in-browser invoice, CV and report preview. No network request, no AI or paid service.
+const studioPreview=byId('studio-preview');
+if(studioPreview){
+ const t={
+  ar:{invoice:'فاتورة تجريبية',cv:'السيرة الذاتية',report:'تقرير',issued:'الجهة المصدرة',client:'العميل',qty:'الكمية',price:'الثمن',tax:'الضريبة',total:'المجموع',role:'المسمى المهني',desc:'التفاصيل',save:'تم إنشاء المعاينة محلياً',invalid:'تحقق من الكمية والثمن والضريبة'},
+  en:{invoice:'Draft invoice',cv:'Curriculum vitae',report:'Report',issued:'Issuer',client:'Customer',qty:'Quantity',price:'Unit price',tax:'Tax',total:'Total',role:'Professional title',desc:'Details',save:'Preview generated locally',invalid:'Check quantity, price and tax'},
+  fr:{invoice:'Facture brouillon',cv:'Curriculum vitae',report:'Rapport',issued:'Émetteur',client:'Client',qty:'Quantité',price:'Prix unitaire',tax:'Taxe',total:'Total',role:'Fonction',desc:'Détails',save:'Aperçu créé localement',invalid:'Vérifiez la quantité, le prix et la taxe'}
+ }[meta.lang];
+ const get=id=>byId(id)?.value.trim()||'';
+ const el=(tag,content,cls)=>{
+  const node=document.createElement(tag);
+  node.textContent=content;
+  if(cls)node.className=cls;
+  studioPreview.appendChild(node);
+  return node;
+ };
+ const render=()=>{
+  studioPreview.replaceChildren();
+  const kind=get('studio-type'),name=get('studio-name'),client=get('studio-client'),txt=get('studio-text');
+  const qty=Number(get('studio-qty')),price=Number(get('studio-price')),rate=Number(get('studio-tax'));
+  if(kind==='invoice'&&(!Number.isFinite(qty)||!Number.isFinite(price)||!Number.isFinite(rate)||qty<=0||price<0||rate<0||rate>100)){
+   byId('studio-status').textContent=t.invalid;return false;
+  }
+  el('h2',kind==='cv'?t.cv:kind==='report'?t.report:t.invoice);
+  if(kind==='invoice'){
+   el('p',t.issued+': '+(name||'—'));
+   el('p',t.client+': '+(client||'—'));
+   el('p',txt||'—','studio-description');
+   const currency=get('studio-currency')||'MAD';
+   el('p',t.qty+': '+qty+' · '+t.price+': '+price.toFixed(2)+' '+currency);
+   const subtotal=qty*price,total=subtotal*(1+rate/100);
+   el('p',t.tax+': '+rate.toFixed(2)+'%');
+   el('strong',t.total+': '+total.toFixed(2)+' '+currency,'studio-total');
+  }else if(kind==='cv'){
+   el('h3',name||'—');el('p',t.role+': '+(client||'—'));el('p',txt||'—','studio-description');
+  }else{
+   el('h3',client||'—');el('p',t.issued+': '+(name||'—'));el('p',txt||'—','studio-description');
+  }
+  byId('studio-status').textContent=t.save;
+  return true;
+ };
+ byId('studio-render')?.addEventListener('click',render);
+ byId('studio-print')?.addEventListener('click',()=>{if(render())window.print();});
+ byId('studio-csv')?.addEventListener('click',()=>{
+  if(get('studio-type')!=='invoice'){byId('studio-status').textContent=({ar:'CSV مخصص للفواتير فقط',en:'CSV export is for invoices only',fr:'CSV réservé aux factures'})[meta.lang];return;}
+  if(!render())return;
+  const qty=Number(get('studio-qty')),price=Number(get('studio-price')),tax=Number(get('studio-tax')),cur=get('studio-currency');
+  const safe=v=>{const raw=String(v);const guarded=/^[=+\-@\t\r]/.test(raw)?"'"+raw:raw;return '"'+guarded.replace(/"/g,'""')+'"';};
+  const rows=[['Issuer',get('studio-name')],['Customer',get('studio-client')],['Description',get('studio-text')],['Quantity',qty],['Unit price',price],['Tax percent',tax],['Currency',cur],['Total',(qty*price*(1+tax/100)).toFixed(2)]];
+  const data='\uFEFF'+rows.map(row=>row.map(safe).join(',')).join('\r\n');
+  const blob=new Blob([data],{type:'text/csv;charset=utf-8'});
+  const url=URL.createObjectURL(blob),link=document.createElement('a');
+  link.href=url;link.download='ribhlab-invoice.csv';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ });
+ ['studio-type','studio-name','studio-client','studio-text','studio-qty','studio-price','studio-tax','studio-currency'].forEach(id=>byId(id)?.addEventListener('input',render));
+ render();
+}
+
 document.querySelectorAll('.pulse-filter').forEach(btn=>btn.addEventListener('click',()=>{const wanted=btn.dataset.pulseFilter;document.querySelectorAll('.pulse-filter').forEach(b=>b.classList.toggle('current',b===btn));document.querySelectorAll('[data-pulse-topic]').forEach(card=>{card.hidden=wanted!=='all'&&card.dataset.pulseTopic!==wanted;});}));
