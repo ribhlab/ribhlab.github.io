@@ -38,6 +38,8 @@ jobs:
           ADSENSE_PUBLISHER_ID: ${{ vars.RIBHLAB_ADSENSE_PUBLISHER_ID || '' }}
           ENABLE_ADSENSE: ${{ vars.RIBHLAB_ENABLE_ADSENSE || 'false' }}
           GOOGLE_SITE_VERIFICATION: ${{ vars.RIBHLAB_GOOGLE_SITE_VERIFICATION || '' }}
+          UMAMI_WEBSITE_ID: ${{ vars.RIBHLAB_UMAMI_WEBSITE_ID || '' }}
+          AUDIENCE_SHARE_URL: ${{ vars.RIBHLAB_UMAMI_SHARE_URL || '' }}
         run: |
           npm run build
           npm run check
