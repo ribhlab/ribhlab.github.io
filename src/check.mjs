@@ -111,35 +111,40 @@ if(assignedSlugs.size!==knownSlugs.size)errors.push('Not all published articles 
 for(const lang of ['ar','en','fr'])if(!fs.existsSync(path.join(dist,lang,'sections','index.html')))errors.push('Missing section directory '+lang);
 // Licensed photography: valid provenance, source credit and offline SVG fallback across 87 article views.
 const photos=JSON.parse(fs.readFileSync(path.join(root,'content','licensed-photos.json'),'utf8'));
-if(photos.licenseUrl!=='https://unsplash.com/license')errors.push('Licensed-photo record must identify the license');
+if(photos.licenseUrl!=='https://unsplash.com/license')errors.push('Photo catalog must identify Unsplash license');
+if(Object.keys(photos.photos||{}).length)errors.push('Section-level shared image catalog is forbidden');
+const photoSlugs=new Set(Object.keys(photos.articlePhotos||{}));
+const photoIds=new Map(),photoSources=new Map();
 for(const [slug,p] of Object.entries(photos.articlePhotos||{})){
- if(!knownSlugs.has(slug))errors.push('Orphan article-specific licensed photo '+slug);
- if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!/^https:\/\/unsplash\.com\//.test(p.source)||!p.photographer||!p.alt||!p.altAr||!p.altFr||p.license!=='Unsplash License')errors.push('Incomplete original photo credit for '+slug);
+ if(!knownSlugs.has(slug))errors.push('Orphan editorial photo '+slug);
+ if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!/^https:\/\/unsplash\.com\/photos\//.test(p.source)||!p.photographer||!p.alt||!p.altAr||!p.altFr||p.license!=='Unsplash License')errors.push('Incomplete photo license or alt text for '+slug);
+ if(photoIds.has(p.photoId))errors.push('DUPLICATE PHOTO: '+slug+' and '+photoIds.get(p.photoId));
+ if(photoSources.has(p.source))errors.push('DUPLICATE SOURCE: '+slug+' and '+photoSources.get(p.source));
+ photoIds.set(p.photoId,slug);photoSources.set(p.source,slug);
 }
-for(const section of taxonomy.sections){
- const p=photos.photos?.[section.id];
- if(!p||!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!/^https:\/\/unsplash\.com\//.test(p.source)||!p.photographer||!p.alt)errors.push('Missing validated photo attribution for section '+section.id);
-}
+if(photoSlugs.size!==knownSlugs.size)errors.push('Each published article requires exactly one unique photo: '+photoSlugs.size+' photos vs '+knownSlugs.size+' articles');
+for(const slug of knownSlugs)if(!photoSlugs.has(slug))errors.push('MISSING PHOTOGRAPH: '+slug);
 for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
  const a=JSON.parse(fs.readFileSync(path.join(articleDir,filename),'utf8'));
+ const p=photos.articlePhotos[a.slug];
+ if(!p)continue;
  for(const lang of ['ar','en','fr']){
   const f=path.join(dist,lang,a.category,a.slug,'index.html');
   if(!fs.existsSync(f))continue;
   const h=fs.readFileSync(f,'utf8');
-  if(!h.includes('class="article-illustration licensed-editorial-photo"'))errors.push('Missing licensed photo block '+lang+'/'+a.slug);
-  if(!h.includes('class="article-illustration original-cover-figure"'))errors.push('Missing article-specific original illustration '+lang+'/'+a.slug);
-  if(!h.includes('data-fallback-src=')||!h.includes('/covers/'+a.slug+'.svg'))errors.push('Missing unique article illustration '+lang+'/'+a.slug);
-  if(!h.includes('/covers/'+a.slug+'.svg'))errors.push('Missing original art reference '+lang+'/'+a.slug);
-  if(!h.includes('RibhLab original illustration'))errors.push('Missing original illustration credit '+lang+'/'+a.slug);
+  if(!h.includes('class="article-illustration licensed-editorial-photo"'))errors.push('Missing real photographic article figure '+lang+'/'+a.slug);
+  if(!h.includes('images.unsplash.com/'+p.photoId))errors.push('Article image not matched to unique photo '+lang+'/'+a.slug);
+  if(!h.includes('property="og:image" content="https://images.unsplash.com/'+p.photoId))errors.push('Article social preview lacks unique real photo '+lang+'/'+a.slug);
+  if(!h.includes(p.photographer+' / Unsplash'))errors.push('Photographer credit missing '+lang+'/'+a.slug);
+  if(h.includes('/covers/'+a.slug+'.svg')||h.includes('original-cover-figure'))errors.push('Generated SVG illustration still shown '+lang+'/'+a.slug);
  }
 }
 for(const lang of ['ar','en','fr']){
  const h=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
- if(!h.includes('class="card-cover-image editorial-photo"'))errors.push('Latest articles not showing photography '+lang);
+ if(!h.includes('class="card-cover-image editorial-photo"'))errors.push('Homepage missing real photos '+lang);
 }
-if(!fs.readFileSync(path.join(dist,'assets','app.js'),'utf8').includes('photo-fallback-active'))errors.push('Missing accessible fallback script');
 
-// Original-cover and resource-directory checks; each article must get its own SVG and official links.
+// Official links and article attribution checks (SVG artwork is not a photo).
 const resourceConfig=JSON.parse(fs.readFileSync(path.join(root,'content','platform-links.json'),'utf8'));
 for(const [id,item] of Object.entries(resourceConfig.platforms)){
  try{if(new URL(item.url).protocol!=='https:')errors.push('Resource '+id+': insecure URL');}
@@ -148,13 +153,6 @@ for(const [id,item] of Object.entries(resourceConfig.platforms)){
 }
 for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
  const slug=filename.slice(0,-5);
- const coverFile=path.join(dist,'covers',slug+'.svg');
- if(!fs.existsSync(coverFile))errors.push('Missing original cover '+slug);
- else{
-  const svg=fs.readFileSync(coverFile,'utf8');
-  if(!svg.includes('<svg')||!svg.includes('</svg>')||!svg.includes('viewBox="0 0 1200 675"'))errors.push('Invalid original cover '+slug);
-  if(/https?:\/\/.+\.(?:png|jpeg|jpg|webp)/.test(svg))errors.push('Remote image dependency in cover '+slug);
- }
  const refs=resourceConfig.articleLinks[slug];
  if(!Array.isArray(refs)||refs.length<2)errors.push('Insufficient official platform links for '+slug);
  for(const id of refs||[])if(!resourceConfig.platforms[id])errors.push('Unknown platform ID '+id+' for '+slug);
@@ -163,10 +161,9 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   const rendered=path.join(dist,lang,article.category,slug,'index.html');
   if(!fs.existsSync(rendered))continue;
   const html=fs.readFileSync(rendered,'utf8');
-  if(!html.includes('/covers/'+slug+'.svg'))errors.push('Wrong cover in '+lang+'/'+slug);
   if(!html.includes('class="article-resource-box"'))errors.push('Official link box absent '+lang+'/'+slug);
-  const image=html.match(/<figure class="article-illustration original-cover-figure"><img[^>]+>/);
-  if(!image||!image[0].includes('alt='))errors.push('Article cover missing alt '+lang+'/'+slug);
+  const image=html.match(/<figure class="article-illustration licensed-editorial-photo">[\s\S]*?<img[^>]+>/);
+  if(!image||!image[0].includes('alt='))errors.push('Article photograph missing alt '+lang+'/'+slug);
  }
 }
 for(const lang of ['ar','en','fr']){
@@ -179,9 +176,3 @@ for(const lang of ['ar','en','fr']){
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
-// Prevent accidentally reintroducing the same licensed image in multiple articles.
-const ids=new Map();
-for(const [slug,p] of Object.entries(photos.articlePhotos||{})){
- if(ids.has(p.photoId))errors.push('Duplicate licensed photo shared by '+ids.get(p.photoId)+' and '+slug);
- ids.set(p.photoId,slug);
-}
