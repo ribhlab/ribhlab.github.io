@@ -201,3 +201,15 @@ html[lang=ar] .opp-main-hub .opp-hero h1{font-size:clamp(37px,4.6vw,65px)}
  .opportunity-page .opp-cat,.opportunity-page .opp-action{transition:none}
  .opportunity-page .opp-cat:hover,.opportunity-page .opp-action:hover{transform:none}
 }
+
+/* Small-screen safeguards for long French labels and external-site notices. */
+.opportunity-page,.opportunity-page .opp-cats,.opportunity-page .opp-cat,.opportunity-page .opp-card,.opportunity-page .opp-advisory,
+.opportunity-page .opp-grid,.opportunity-page .opp-grid-heading,.opportunity-page .opp-link-row{box-sizing:border-box;min-width:0;max-width:100%}
+.opportunity-page h1,.opportunity-page h2,.opportunity-page h3,.opportunity-page .opp-cat-copy,
+.opportunity-page .opp-advisory p{overflow-wrap:anywhere}
+.opportunity-page .opp-link-row .opp-action{max-width:100%;white-space:normal;overflow-wrap:anywhere;text-align:center}
+@media(max-width:540px){
+ .opportunity-page .opp-section-eyebrow{min-width:0;max-width:100%}
+ .opportunity-page .opp-cat-foot{min-width:0;flex-wrap:wrap}
+ .opportunity-page .opp-cat-copy{min-width:0}
+}
