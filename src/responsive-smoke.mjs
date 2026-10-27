@@ -105,6 +105,10 @@ try{
     const state=await evalJS('(()=>{const b=document.querySelector(".mobile-menu"),n=document.querySelector("#site-nav");if(!b||!n)return {ok:false};b.click();const open=b.getAttribute("aria-expanded")==="true"&&getComputedStyle(n).display!=="none";const rect=n.getBoundingClientRect();document.dispatchEvent(new KeyboardEvent("keydown",{key:"Escape",bubbles:true}));return {ok:open&&b.getAttribute("aria-expanded")==="false"&&getComputedStyle(n).display==="none"&&rect.left>=-2&&rect.right<=innerWidth+2};})()');
     if(!state.ok)fail(label+': mobile menu fails to open/close within viewport');
    }
+   if(test.route.startsWith('/opportunities/')&&test.width===320){
+    const photo=await evalJS('(()=>{const cards=[...document.querySelectorAll(".opp-photo--card")];const hero=document.querySelector(".opp-photo--hero");const badCards=cards.filter(el=>el.getBoundingClientRect().height>135||el.getBoundingClientRect().width>innerWidth+3).length;const badHero=!!hero&&hero.getBoundingClientRect().height>300;const figcaption=!!document.querySelector(".opp-photo figcaption");const names=[...document.querySelectorAll(".opp-cat-copy strong")];const buttonsColored=names.length>0&&names.every(el=>getComputedStyle(el).backgroundColor!=="rgba(0, 0, 0, 0)");const back=!!document.querySelector(".opp-home-btn[href$="/"]");return {ok:!!hero&&cards.length>0&&!badCards&&!badHero&&!figcaption&&buttonsColored&&back,badCards,badHero,figcaption,buttonsColored,back};})()');
+    if(!photo.ok)fail(label+': photo overflow, missing colored category headings, photo-credit text or home button '+JSON.stringify(photo));
+   }
    if(test.width===320&&test.route==='/archive/'){
     const search=await evalJS('(()=>{const i=document.querySelector("#archive-search"),o=document.querySelector("[data-archive-count]"),e=document.querySelector("[data-archive-empty]");if(!i||!o||!e)return false;i.value="__no_matches__";i.dispatchEvent(new Event("input",{bubbles:true}));return o.textContent.startsWith("0")&&!e.hidden;})()');
     if(!search)fail(label+': archive live search not functional');
@@ -113,11 +117,11 @@ try{
     const status=await evalJS('(()=>{const e=document.querySelector("#document-studio"),p=document.querySelector("#studio-preview");return !!e&&!!p&&document.querySelectorAll(".studio-action-buttons button").length>=4&&e.getBoundingClientRect().width<=innerWidth+2;})()');
     if(!status)fail(label+': Document Studio controls missing or too wide');
    }
-   if(test.lang==='ar'&&((test.route==='/'&&[390,1440].includes(test.width))||(test.route==='/tools/document-studio/'&&test.width===320))){
+   if(test.lang==='ar'&&((test.route==='/'&&[390,1440].includes(test.width))||(test.route==='/tools/document-studio/'&&test.width===320)||(test.route==='/opportunities/'&&test.width===320))){
     const img=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
     const out=path.join(dist,'responsive-previews');
     fs.mkdirSync(out,{recursive:true});
-    const kind=test.route==='/'?'home':'studio';
+    const kind=test.route==='/'?'home':test.route==='/opportunities/'?'opportunities':'studio';
     fs.writeFileSync(path.join(out,kind+'-'+test.width+'.png'),Buffer.from(img.data,'base64'));
    }
    checked++;
