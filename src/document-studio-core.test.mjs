@@ -49,3 +49,40 @@ test('Import strips unknown fields, constrains lengths and rejects malformed pro
  assert.throws(()=>normalizeDraft({version:1,document:{taxPercent:-10}}),RangeError);
  assert.throws(()=>normalizeDraft({version:1,document:{issueDate:'yesterday'}}),TypeError);
 });
+
+
+test('Resume draft round-trips experience, education, skills, languages and credentials',()=>{
+ const d=normalizeDraft({version:1,document:{
+  kind:'cv',issuer:'Sample candidate',recipient:'Data Analyst',details:'Summary',
+  cvExperience:'2023–2026: analyst\nBuilt dashboards',
+  cvEducation:'BSc mathematics',cvSkills:'Python, Excel, SQL',
+  cvLanguages:'Arabic, French',cvCertifications:'Data certification',
+  cvLink:'https://example.com/portfolio',
+  items:[{description:'',quantity:1,unitPrice:0}]
+ }});
+ assert.equal(d.kind,'cv');
+ assert.equal(d.cvExperience,'2023–2026: analyst\nBuilt dashboards');
+ assert.equal(d.cvEducation,'BSc mathematics');
+ assert.equal(d.cvSkills,'Python, Excel, SQL');
+ assert.equal(d.cvLanguages,'Arabic, French');
+ assert.equal(d.cvCertifications,'Data certification');
+ assert.equal(d.cvLink,'https://example.com/portfolio');
+ assert.equal(normalizeDraft({version:1,document:d}).cvSkills,d.cvSkills);
+});
+test('Report sections and professional letter data persist safely',()=>{
+ const report=normalizeDraft({version:1,document:{kind:'report',reportContext:'Scope',reportMethod:'Sampling',reportFindings:'Findings',reportRecommendations:'Recommendations',reportConclusion:'Summary'}});
+ assert.equal(report.reportMethod,'Sampling');
+ assert.equal(report.reportRecommendations,'Recommendations');
+ const letter=normalizeDraft({version:1,document:{kind:'letter',letterSubject:'Request',letterGreeting:'Dear team',letterClosing:'Regards'}});
+ assert.equal(letter.letterSubject,'Request');
+ assert.equal(letter.letterClosing,'Regards');
+});
+test('Imported extra field lengths are bounded and old drafts remain compatible',()=>{
+ const legacy=normalizeDraft({version:1,document:{kind:'cv',issuer:'Legacy CV'}});
+ assert.equal(legacy.cvExperience,'');
+ assert.equal(legacy.reportFindings,'');
+ assert.equal(legacy.letterSubject,'');
+ const long=normalizeDraft({version:1,document:{cvExperience:'x'.repeat(13000),cvLink:'z'.repeat(900)}});
+ assert.equal(long.cvExperience.length,12000);
+ assert.equal(long.cvLink.length,500);
+});
