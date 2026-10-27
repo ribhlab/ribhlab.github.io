@@ -73,7 +73,7 @@ try{
   return r.result?.value;
  };
  await cdp('Page.enable');await cdp('Runtime.enable');
- const pages=['/','/archive/','/markets/','/tools/','/tools/document-studio/','/lifestyle/homemade-pizza-margherita-authentic-style-recipe/'];
+ const pages=['/','/archive/','/markets/','/opportunities/','/opportunities/morocco/','/opportunities/visa-appointments/','/audience/','/tools/','/tools/document-studio/','/lifestyle/homemade-pizza-margherita-authentic-style-recipe/'];
  const cases=[];
  for(const lang of ['ar','en','fr']){
   for(const width of [320,390,768,1024,1440])cases.push({lang,width,route:'/'});
