@@ -169,6 +169,37 @@ html[lang=ar] .card-body h3{font-family:var(--editorial-ar);font-weight:800;line
 .section-head.split{gap:18px}
 .section-head .text-link{color:#6543ff}
 
+
+/* Smart filters retain an intentional asymmetric editorial lead, even when the
+   newest overall story belongs to a different category. */
+.latest-first .article-grid[data-filtered=true] .article-card:first-child{
+ grid-column:span 4;
+ grid-row:auto;
+}
+.latest-first .article-grid[data-filtered=true] .article-card:first-child .card-art{
+ height:186px;min-height:0;flex:none;
+}
+.latest-first .article-grid[data-filtered=true] .article-card:first-child .card-body{
+ min-height:185px;padding:19px 21px 21px;
+}
+.latest-first .article-grid[data-filtered=true] .article-card:first-child .card-body h3{font-size:23px}
+.latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead{
+ grid-column:span 8;
+ grid-row:span 2;
+ border-color:#cac4fb;
+ background:linear-gradient(135deg,#fff,#f9f7ff);
+}
+.latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead .card-art{
+ min-height:350px;height:auto;flex:1;
+}
+.latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead .card-body{
+ min-height:190px;padding:29px 34px 32px;
+}
+.latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead .card-body h3{
+ font-size:clamp(29px,3.1vw,44px);line-height:1.17;
+}
+.toc-card a[aria-current=location]{font-weight:850;color:#5940e6;background:#f1efff;border-radius:7px}
+
 /* Strong, memorable editorial topic tiles with category-specific color. */
 .category-grid{gap:17px}
 .topic-card{border:0;border-radius:21px;box-shadow:0 14px 35px #44367d14;min-height:345px;padding:29px;position:relative;isolation:isolate;overflow:hidden}
@@ -306,6 +337,18 @@ html[dir=rtl] .reading-progress-track span{transform-origin:right}
 .footer-languages a{background:#ffffff20;border-radius:8px;color:#eeeaff}
 .footer-languages .selected{background:#dcfa76;color:#2a2459}
 .footer-bottom{border-color:#ffffff29;color:#c5c0f2}
+@media(max-width:760px){
+ .latest-first .article-grid[data-filtered=true] .article-card:first-child{grid-column:span 1;grid-row:auto}
+ .latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead{grid-column:span 2;grid-row:auto}
+ .latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead .card-art{height:320px;min-height:0;flex:none}
+}
+@media(max-width:560px){
+ .latest-first .article-grid[data-filtered=true] .article-card:first-child,
+ .latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead{grid-column:span 1;grid-row:auto}
+ .latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead .card-art{height:250px;min-height:0;flex:none}
+ .latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead .card-body{padding:22px}
+ .latest-first .article-grid[data-filtered=true] .article-card.is-filter-lead .card-body h3{font-size:25px}
+}
 /* Intentional category-aware visual affordances on article/card previews. */
 .article-card[data-story-topic=earning] .read-more{color:#d63c6a}
 .article-card[data-story-topic=trading] .read-more{color:#0286a3}
