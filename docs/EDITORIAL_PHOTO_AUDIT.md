@@ -105,3 +105,18 @@ The existing 35 published articles and all six Market Pulse digests remain in pl
 | `why-gold-moves-with-us-dollar-real-yields-explained` | Mathieu Turle | https://unsplash.com/photos/photo-of-dollar-coins-and-banknotes-uJm-hfuCHm4 |
 
 Preservation inventory: `content/preserved-article-baseline.json`. Dedicated archival links: `/ar/archive/`, `/en/archive/`, `/fr/archive/`. The build quality gate rejects a deleted older article, missing archive link, reused photo or removed market digest.
+
+## 27 October 2026 — External Market Pulse photo watchlist
+
+These **six external headline cards** use six new, different, real photographs, with direct free-use Unsplash source pages and creator attributions. They are **editorial illustrations**, not images distributed by the original news publishers. Photos are unique across published RibhLab articles, six original market digests, and this watchlist. The underlying external headline/date comes from a separately attributed publisher page. Live Google News RSS headlines without an independently cleared image are displayed as **plain linked headlines**, never as fake or repeated photo cards.
+
+| External headline | Photographer | Photo subject | Direct Unsplash source |
+|---|---|---|---|
+| `official-0` | Scottsdale Mint | Real gold bullion bars stacked on a textured table | https://unsplash.com/photos/a-close-up-of-some-gold-bars-on-a-table-QxHfNyWy1Xo |
+| `official-1` | Nathália Rosa | Supermarket shelves with packaged food, illustrative of consumer prices | https://unsplash.com/photos/grocery-store-aisle-with-stocked-shelves-rWMIbqmOxrY |
+| `official-2` | Nicolas Jehly | Shanghai skyline on a cloudy day, illustrative of the Chinese economy | https://unsplash.com/photos/shanghai-skyline-on-a-cloudy-day-0p37Ch2LYQc |
+| `official-3` | bruno neurath-wilson | Euro sign outside the European Central Bank building in Frankfurt | https://unsplash.com/photos/blue-and-yellow-star-decor-7y3G6s201Gk |
+| `official-4` | Franck V. | Close-up of a Japanese yen banknote, not a live currency quote | https://unsplash.com/photos/a-close-up-of-a-japanese-bank-note-e9o9FCteAPQ |
+| `official-5` | Alex Bierwagen | Federal Reserve Bank of San Francisco building, not the FOMC venue | https://unsplash.com/photos/federal-reserve-bank-san-francisco-KvX3L_QXTgM |
+
+Image usage respects the [Unsplash License](https://unsplash.com/license); photography should never be described as a verified image of the specific news event. Future market headline cards require their own unique licensed photo and credit.
