@@ -9,12 +9,12 @@
     {
       "id": "sett-administrator",
       "section": "competitions",
-      "title": "Administrateur 2ème grade — Province de Settat",
+      "title": "Administrateur 2e grade — Audit et contrôle de gestion — Settat",
       "org": "Ministère de l’Intérieur · Province de Settat",
       "place": "Settat, Maroc",
       "count": 4,
       "deadline": "2026-11-09",
-      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "url": "https://www.emploi-public.ma/fr/concours/details/81e89845-6649-430e-98a2-65a32c048a48",
       "kind": "official_notice",
       "verifiedBy": "emploi-public.ma"
     },
@@ -62,7 +62,7 @@
       "place": "Maroc",
       "count": 100,
       "deadline": "2026-11-06",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
+      "url": "https://www.emploi-public.ma/fr/concours/details/0c72b060-b3a6-4d1f-b36a-b01f767b48fe",
       "kind": "official_notice",
       "verifiedBy": "emploi-public.ma"
     },
@@ -134,7 +134,7 @@
       "place": "Sidi Bennour, Maroc",
       "count": 1,
       "deadline": "2026-11-20",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
+      "url": "https://www.emploi-public.ma/fr/concours/details/9c2c4e23-ec32-4b76-8c8d-75e9f50e9090",
       "kind": "official_notice",
       "verifiedBy": "emploi-public.ma"
     },
@@ -329,7 +329,7 @@
       "place": "Marrakech",
       "count": 1,
       "deadline": "2026-11-07",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics",
+      "url": "https://www.emploi-public.ma/fr/concours/details/705f6c1a-b4c6-411e-a1a7-e249a4de0781",
       "kind": "official_notice",
       "verifiedBy": "emploi-public.ma",
       "discoveredVia": "https://alwadifa-maroc.com/offre/public"
@@ -347,6 +347,265 @@
       "kind": "official_notice",
       "verifiedBy": "adha.gov.ma",
       "note": "Expérience minimale de 3 ans; candidature via emploi-public.ma."
+    },
+    {
+      "id": "ofppt-accountant-10",
+      "section": "competitions",
+      "title": "Assistant comptable (RH 135/2026)",
+      "org": "OFPPT",
+      "place": "Maroc",
+      "count": 10,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/320ad0af-40dd-4bf2-aa17-c8257e791ac6",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "ofppt-administration-10",
+      "section": "competitions",
+      "title": "Cadres administratifs (RH 129/2026)",
+      "org": "OFPPT",
+      "place": "Maroc",
+      "count": 10,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/08bc8f9f-fbae-488e-8de6-f5259e3ba3b7",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "ofppt-project-10",
+      "section": "competitions",
+      "title": "Cadres chargés de gestion des projets (RH 130/2026)",
+      "org": "OFPPT",
+      "place": "Maroc",
+      "count": 10,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/e8535a3a-e31a-4465-8eba-168e8ef3fbea",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "ofppt-pedagogy-3",
+      "section": "competitions",
+      "title": "Chef de pôle pédagogique — Casablanca, Rabat, Laâyoune (RH 132/2026)",
+      "org": "OFPPT",
+      "place": "Casablanca / Rabat / Laâyoune",
+      "count": 3,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/b94b323a-2c77-4178-bec3-db5ba3cb49e4",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "amdie-buyer",
+      "section": "competitions",
+      "title": "Cadre Acheteur",
+      "org": "AMDIE",
+      "place": "Maroc",
+      "count": 1,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/686fddc3-8355-43a1-8799-e51f36685f5f",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "amdie-development",
+      "section": "competitions",
+      "title": "Cadre analyste Projets de développement",
+      "org": "AMDIE",
+      "place": "Maroc",
+      "count": 3,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/b135e292-d476-4fe6-bbb4-e57c0f73cdf3",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "amdie-investment",
+      "section": "competitions",
+      "title": "Cadre analyste Projets d’investissement",
+      "org": "AMDIE",
+      "place": "Maroc",
+      "count": 1,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/e3e989b0-e4ce-49fc-bee2-78571029dfec",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "amdie-senior-buyer",
+      "section": "competitions",
+      "title": "Acheteur sénior",
+      "org": "AMDIE",
+      "place": "Maroc",
+      "count": 1,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/261843c9-2094-4efa-88fd-d62a90e51ce8",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "srm-laayoune-responsibles",
+      "section": "competitions",
+      "title": "Responsables dans plusieurs spécialités",
+      "org": "SRM Laâyoune-Sakia El Hamra",
+      "place": "Laâyoune",
+      "count": 15,
+      "deadline": "2026-11-10",
+      "url": "https://www.emploi-public.ma/fr/concours/details/3f1e24f9-c263-409e-9323-c883d9008099",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "srm-laayoune-managers",
+      "section": "competitions",
+      "title": "Cadres dans plusieurs spécialités",
+      "org": "SRM Laâyoune-Sakia El Hamra",
+      "place": "Laâyoune",
+      "count": 13,
+      "deadline": "2026-11-10",
+      "url": "https://www.emploi-public.ma/fr/concours/details/75dd9157-7267-42eb-a260-c5a2b61a343c",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "srm-laayoune-engineers",
+      "section": "competitions",
+      "title": "Ingénieurs dans plusieurs spécialités",
+      "org": "SRM Laâyoune-Sakia El Hamra",
+      "place": "Laâyoune",
+      "count": 26,
+      "deadline": "2026-11-10",
+      "url": "https://www.emploi-public.ma/fr/concours/details/fce03172-1b93-4880-9f7b-05c6f88cb000",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "srm-souss-technician",
+      "section": "competitions",
+      "title": "Technicien 3e grade",
+      "org": "ORMVA Souss Massa",
+      "place": "Souss Massa",
+      "count": 1,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/64194e96-bc55-4817-8ddd-c9b0e5d0d6d1",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "cnrst-administrator-4",
+      "section": "competitions",
+      "title": "Administrateur 3e grade — CNRST",
+      "org": "Centre National pour la Recherche Scientifique et Technique",
+      "place": "Maroc",
+      "count": 4,
+      "deadline": "2026-11-08",
+      "url": "https://www.emploi-public.ma/fr/concours/details/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "cnrst-administrator-2",
+      "section": "competitions",
+      "title": "Administrateur 2e grade — CNRST",
+      "org": "Centre National pour la Recherche Scientifique et Technique",
+      "place": "Maroc",
+      "count": 2,
+      "deadline": "2026-11-08",
+      "url": "https://www.emploi-public.ma/fr/concours/details/c7461e57-f68d-40f0-a846-6bf8be2b8dda",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "justice-secretary-15",
+      "section": "competitions",
+      "title": "Secrétaire juridique adjoint 4e grade",
+      "org": "Conseil Supérieur du Pouvoir Judiciaire",
+      "place": "Maroc",
+      "count": 15,
+      "deadline": "2026-11-10",
+      "url": "https://www.emploi-public.ma/fr/concours/details/fb2e5ca9-e80e-4765-afc1-587b15f0ae33",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "family-technician",
+      "section": "competitions",
+      "title": "Technicien 3e grade — Ministère Famille",
+      "org": "Ministère de la Famille et du Développement social",
+      "place": "Maroc",
+      "count": 1,
+      "deadline": "2026-11-08",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "kadev-assistant",
+      "section": "morocco",
+      "title": "Assistante de Direction — KADEV",
+      "org": "Khouribgha Aménagement et Développement",
+      "place": "Khouribgha",
+      "count": 1,
+      "deadline": "2026-10-28",
+      "url": "https://www.emploi-public.ma/fr/concours/details/c7b80ec7-c4ab-4e7f-8210-caf8773551e3",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "drug-archive",
+      "section": "morocco",
+      "title": "Archiviste documentaliste",
+      "org": "Agence Marocaine des Médicaments et des Produits de Santé",
+      "place": "Maroc",
+      "count": 1,
+      "deadline": "2026-10-28",
+      "url": "https://www.emploi-public.ma/fr/concours/details/a401e758-b9e3-46ab-b171-996f5b20e4f2",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "expert-interior",
+      "section": "competitions",
+      "title": "Expert — Ministère de l’Intérieur",
+      "org": "Ministère de l’Intérieur",
+      "place": "Maroc",
+      "count": 1,
+      "deadline": "2026-11-06",
+      "url": "https://www.emploi-public.ma/fr/experts/details/864df67b-0489-46b4-af1c-5595040c8ef7",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "responsibility-mdiq",
+      "section": "competitions",
+      "title": "Postes de responsabilité — Préfecture M'diq Fnideq",
+      "org": "Ministère de l’Intérieur",
+      "place": "M'diq Fnideq",
+      "deadline": "2026-11-27",
+      "url": "https://www.emploi-public.ma/fr/postes-respo/details/16ea598e-c918-42b1-b1bf-37c2c103f129",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "checkedAt": "2026-10-27"
     }
   ],
   "visa": [
@@ -593,5 +852,32 @@
       "expiresAt": null
     }
   ],
-  "alertGuidance": "Only display a verified, dated official visa-slot opening announcement, with source URL, country, category and end date; a functioning booking URL never proves slots exist."
+  "alertGuidance": "Only display a verified, dated official visa-slot opening announcement, with source URL, country, category and end date; a functioning booking URL never proves slots exist.",
+  "officialDirectories": [
+    {
+      "name": "Concours — جميع المباريات",
+      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "role": "official_full_directory"
+    },
+    {
+      "name": "Etablissements et entreprises publics",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "role": "official_full_directory"
+    },
+    {
+      "name": "Postes de responsabilité",
+      "url": "https://www.emploi-public.ma/fr/postes-respo-liste",
+      "role": "official_full_directory"
+    },
+    {
+      "name": "Emplois supérieurs",
+      "url": "https://www.emploi-public.ma/fr/emploi-sup-liste",
+      "role": "official_full_directory"
+    },
+    {
+      "name": "Experts",
+      "url": "https://www.emploi-public.ma/fr/experts-liste",
+      "role": "official_full_directory"
+    }
+  ]
 }
