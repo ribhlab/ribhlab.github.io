@@ -551,6 +551,33 @@
     }
   ],
   "sortRule": "deadline_ascending_then_verified_current_official_portals_then_missing_deadline; never automatically mark an item open without a currently verified deadline",
-  "visaAlerts": [],
+  "visaAlerts": [
+    {
+      "country": "إسبانيا — الرباط",
+      "category": "شنغن: تأشيرة سابقة خلال 4 سنوات؛ دراسة غير جامعية؛ باقي طالبي شنغن؛ أفراد عائلة مواطني الاتحاد الأوروبي",
+      "consulate": "القنصلية العامة الإسبانية بالرباط / BLS Rabat",
+      "title": "إعلان رسمي 23 أكتوبر 2026: أوقات فتح طلبات مواعيد BLS الرباط حسب فئة التأشيرة",
+      "notice": "أعلنت القنصلية الإسبانية بالرباط أن طلبات مواعيد شنغن تفتح: الأربعاء 16:00 لمن سبق له الحصول على تأشيرة شنغن خلال آخر 4 سنوات؛ الثلاثاء 17:00 للدراسة غير الجامعية بدون تأشيرة سابقة؛ السبت 13:00 لباقي المتقدمين إلى نفاد الحصة الأسبوعية. أفراد عائلة مواطني الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية/سويسرا المستوفون للشروط يمكنهم إيداع الملف لدى BLS الرباط دون موعد من الاثنين إلى الجمعة 09:00–11:00. التوقيت محلي بالمغرب. الإعلان يحدد مواعيد فتح استقبال الطلبات ولا يثبت وجود خانة متاحة الآن. القنصلية تقبل فقط جوازات السفر الصادرة داخل دائرتها القنصلية.",
+      "sourceUrl": "https://www.exteriores.gob.es/Consulados/rabat/es/ServiciosConsulares/Paginas/Procedimiento-de-solicitudes-de-visado.aspx",
+      "publishedAt": "2026-10-23",
+      "verifiedAt": "2026-10-27",
+      "type": "official_booking_schedule",
+      "slotAvailability": "unverified",
+      "expiresAt": null
+    },
+    {
+      "country": "فرنسا — الدار البيضاء",
+      "category": "السياحة والزيارة الخاصة والزيارة العائلية: طلب أول وتجديد أقل من 6 أشهر وتأشيرة تنقل من 6 أشهر إلى 5 سنوات",
+      "consulate": "TLScontact Casablanca / France-Visas",
+      "title": "إعلان رسمي 22 أكتوبر 2026: توسيع الإسناد الآلي لمواعيد TLScontact",
+      "notice": "أعلن TLScontact الدار البيضاء توسيع نظام الإسناد الآلي العشوائي لمواعيد السياحة/الزيارة الخاصة والزيارة العائلية (الطلب الأول وبعض حالات التجديد). بعد اختيار الفئة المناسبة، يتلقى مقدم الطلب تأكيداً بالبريد الإلكتروني عندما يُسند إليه موعد بحسب التوفر. أما باقي الفئات فيمكن اختيار موعد يدوياً من المواعيد المعروضة داخل الحساب. هذا تغيير في طريقة الإسناد، وليس إعلاناً عن توفر مواعيد مفتوحة الآن.",
+      "sourceUrl": "https://visas-fr.tlscontact.com/fr-fr/country/ma/vac/maCAS2fr/news",
+      "publishedAt": "2026-10-22",
+      "verifiedAt": "2026-10-27",
+      "type": "official_booking_process_change",
+      "slotAvailability": "unverified",
+      "expiresAt": null
+    }
+  ],
   "alertGuidance": "Only display a verified, dated official visa-slot opening announcement, with source URL, country, category and end date; a functioning booking URL never proves slots exist."
 }
