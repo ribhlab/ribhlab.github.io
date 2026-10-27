@@ -1,0 +1,203 @@
+/*
+ RibhLab Opportunities — distinct, accessible identities for seven destinations.
+ Loaded after the main theme so the rest of the magazine is unchanged.
+*/
+.opportunity-page{
+  --opp-strong:#2a2465; --opp-accent:#6648ed; --opp-tint:#eeeaff;
+  --opp-soft:#f7f5ff; --opp-outline:#dfd9fb; --opp-on:#fff;
+  background:linear-gradient(180deg,#f8faff 0%,#f7f9fe 100%); color:#202a48;
+  isolation:isolate; padding-bottom:22px;
+}
+.opp-theme-morocco{--opp-strong:#8b153d;--opp-accent:#b92955;--opp-tint:#fff0f3;--opp-soft:#fff5f7;--opp-outline:#f4ccd7}
+.opp-theme-international{--opp-strong:#0b4a99;--opp-accent:#256bd7;--opp-tint:#eaf3ff;--opp-soft:#f2f8ff;--opp-outline:#c9ddfa}
+.opp-theme-competitions{--opp-strong:#84520b;--opp-accent:#bc8121;--opp-tint:#fff5df;--opp-soft:#fff9ed;--opp-outline:#f3e0b9}
+.opp-theme-companies{--opp-strong:#00645a;--opp-accent:#009989;--opp-tint:#e5f9f4;--opp-soft:#f0fbf8;--opp-outline:#bfe7dd}
+.opp-theme-dv-lottery{--opp-strong:#452492;--opp-accent:#7450cc;--opp-tint:#f0eaff;--opp-soft:#f7f3ff;--opp-outline:#d9cefc}
+.opp-theme-immigration{--opp-strong:#9d461c;--opp-accent:#d46f35;--opp-tint:#fff0e5;--opp-soft:#fff8f0;--opp-outline:#f5d7bd}
+.opp-theme-visa-appointments{--opp-strong:#0b5872;--opp-accent:#1184a3;--opp-tint:#e4f7fb;--opp-soft:#f0fbfc;--opp-outline:#c5eaf0}
+
+/* Independent category colors, including the cross-links on every subpage. */
+.opportunity-page .opp-cat--morocco{--tile-accent:#b92955;--tile-bg:#fff0f3;--tile-text:#86213e;--tile-outline:#f5cad7}
+.opportunity-page .opp-cat--international{--tile-accent:#256bd7;--tile-bg:#eaf3ff;--tile-text:#134d9c;--tile-outline:#ccdcf7}
+.opportunity-page .opp-cat--competitions{--tile-accent:#bb8123;--tile-bg:#fff5df;--tile-text:#805007;--tile-outline:#f2dfb7}
+.opportunity-page .opp-cat--companies{--tile-accent:#009989;--tile-bg:#e5f9f4;--tile-text:#00635a;--tile-outline:#bfe9e0}
+.opportunity-page .opp-cat--dv-lottery{--tile-accent:#7450cc;--tile-bg:#f0eaff;--tile-text:#492393;--tile-outline:#dcd2fa}
+.opportunity-page .opp-cat--immigration{--tile-accent:#d46f35;--tile-bg:#fff0e5;--tile-text:#964013;--tile-outline:#f4d6bf}
+.opportunity-page .opp-cat--visa-appointments{--tile-accent:#1184a3;--tile-bg:#e4f7fb;--tile-text:#0c5267;--tile-outline:#bee7ee}
+
+.opportunity-page .opp-hero{
+  background:radial-gradient(ellipse 56% 92% at 8% 0%,var(--opp-tint) 0%,transparent 100%),linear-gradient(115deg,#fff,var(--opp-soft) 96%);
+  border-bottom:1px solid var(--opp-outline);
+  padding-block:52px 62px;
+  min-height:0;
+}
+.opportunity-page .opp-hero .shell{max-width:1300px}
+.opportunity-page .opp-hero h1{
+  font-size:clamp(36px,4.2vw,62px);line-height:1.35;letter-spacing:-.035em;
+  color:var(--opp-strong);margin:18px 0 13px;
+}
+html[lang=ar] .opportunity-page .opp-hero h1{font-size:clamp(35px,4.1vw,58px);letter-spacing:0;line-height:1.6}
+.opportunity-page .opp-hero p{color:#526179;font-size:clamp(14px,1.15vw,17px);line-height:1.9;margin-block:12px 0}
+.opportunity-page .opp-hero .breadcrumbs{font-weight:650;margin-bottom:12px;color:var(--opp-accent)}
+.opportunity-page .opp-hero .breadcrumbs a{color:var(--opp-strong)}
+.opp-section-eyebrow{display:flex;align-items:center;gap:16px;margin-top:24px;max-width:760px}
+.opp-section-eyebrow>span:last-child{display:flex;flex-direction:column;gap:1px}
+.opp-section-symbol{
+  display:grid;place-items:center;font-size:30px;width:65px;height:65px;flex:0 0 65px;
+  background:#fff;border:1px solid var(--opp-outline);border-radius:20px;
+  box-shadow:0 9px 26px color-mix(in srgb,var(--opp-accent) 13%,transparent);
+}
+.opp-ordinal{font:850 11px/1.5 "Outfit",sans-serif;letter-spacing:.15em;color:var(--opp-accent)}
+.opp-section-label{font-size:14px;font-weight:650;line-height:1.55;color:#556077}
+.opp-main-hub .opp-hero{background:radial-gradient(ellipse 45% 96% at 10% 20%,#dfe9ff 0%,transparent 95%),linear-gradient(108deg,#faf8ff,#f5f9ff 75%,#eafff7);padding-block:76px 83px}
+.opp-hub-kicker{
+  display:inline-flex;align-items:center;gap:7px;border-radius:100px;
+  color:#5640ae;background:#eae6ff;border:1px solid #dcd4fb;
+  padding:9px 15px;font:800 11px/1.4 "Outfit",system-ui,sans-serif;letter-spacing:.12em;
+}
+.opp-main-hub .opp-hero h1{font-size:clamp(40px,4.8vw,69px);margin:20px 0 14px}
+html[lang=ar] .opp-main-hub .opp-hero h1{font-size:clamp(37px,4.6vw,65px)}
+.opp-main-hub .opp-hero p{max-width:840px}
+.opp-main-hub .opp-stamp{margin-top:20px;color:#6e7192;font-weight:600}
+
+/* The source banner is a low-emphasis verification note, not another card. */
+.opportunity-page .section.shell{padding-block:40px}
+.opportunity-page .opp-advisory{
+  background:#fff;border:1px solid #e3e6f3;border-inline-start:5px solid var(--opp-accent);
+  border-radius:16px;padding:19px 23px;margin:0 0 25px;
+  box-shadow:0 7px 23px rgba(39,38,92,.035);color:#4e5a70;line-height:1.9;
+}
+.opportunity-page .opp-advisory strong{color:var(--opp-strong)}
+.opportunity-page .opp-advisory p{font-size:14px}
+.opp-grid-heading{display:flex;align-items:end;justify-content:space-between;gap:22px;margin:32px 0 24px}
+.opp-grid-heading>div{min-width:0}
+.opp-grid-heading h2{font-size:clamp(25px,2.6vw,38px);color:#202653;line-height:1.5;margin:7px 0 0}
+.opp-grid-heading>p{max-width:340px;font-size:14px;color:#626d82}
+.opp-mini-label{color:#8165ed;font-size:12px;letter-spacing:.14em;font-weight:800}
+
+/* The 7 destinations each read as separate surfaces; icons, labels, and tints. */
+.opportunity-page .opp-cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin:20px 0 24px}
+.opportunity-page .opp-feature-cats{grid-template-columns:repeat(4,minmax(0,1fr));gap:19px;margin:0}
+.opportunity-page .opp-cat{
+  --tile-accent:#6543ff;--tile-bg:#f2f0ff;--tile-text:#3b2d8c;--tile-outline:#e2dcff;
+  background:linear-gradient(180deg,var(--tile-bg) 0%,#fff 66%);
+  border:1px solid var(--tile-outline);
+  border-top:5px solid var(--tile-accent);
+  border-radius:20px;box-shadow:0 8px 23px rgba(44,42,92,.055);
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:16px;
+  padding:22px;min-width:0;min-height:174px;color:var(--tile-text);
+  text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.opportunity-page .opp-cat:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(43,35,95,.14);border-color:var(--tile-accent)}
+.opportunity-page .opp-cat:focus-visible{outline:3px solid var(--tile-accent);outline-offset:4px}
+.opportunity-page .opp-cat-icon{
+  display:grid;place-items:center;background:#fff;border:1px solid var(--tile-outline);
+  width:50px;height:50px;min-height:50px;border-radius:15px;
+  font-size:25px;line-height:1;filter:none;box-shadow:0 3px 10px rgba(24,30,66,.045)
+}
+.opportunity-page .opp-cat-copy{display:flex;flex-direction:column;gap:5px;min-width:0;width:100%}
+.opportunity-page .opp-cat-copy strong{font-size:17px;line-height:1.55;font-weight:850;color:var(--tile-text)}
+.opportunity-page .opp-cat-copy small{font-size:12.5px;font-weight:550;line-height:1.75;color:#576178}
+.opportunity-page .opp-cat-arrow{
+  align-self:flex-end;margin-top:auto;display:grid;place-items:center;width:30px;height:30px;
+  background:var(--tile-bg);border-radius:9px;color:var(--tile-accent);font-size:17px
+}
+.opportunity-page .opp-cat-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  width:100%;border-top:1px solid var(--tile-outline);padding-top:12px;
+  margin-top:auto;color:var(--tile-text);font-size:12px;font-weight:750
+}
+.opportunity-page .opp-cat-foot b{white-space:nowrap;color:var(--tile-accent);font-size:13px}
+.opportunity-page .opp-feature-cats .opp-cat{min-height:226px}
+.opportunity-page .opp-feature-cats .opp-cat-copy strong{font-size:18px}
+
+/* White paper cards with a clear accented leading edge. */
+.opportunity-page .opp-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.opportunity-page .opp-card{
+  border-radius:17px;border:1px solid #e3e6ee;
+  border-top:4px solid var(--opp-accent);
+  background:#fff;box-shadow:0 8px 24px rgba(36,40,89,.06);
+  padding:22px 23px;gap:13px;
+}
+.opportunity-page .opp-card h3{font-size:clamp(17px,1.35vw,21px);color:#20254a;line-height:1.55}
+.opportunity-page .opp-card .opp-type{background:var(--opp-tint);color:var(--opp-strong);font-weight:780;font-size:11px}
+.opportunity-page .opp-card .opp-meta{
+  display:grid;gap:5px;background:#f7f9fc;border-radius:11px;padding:11px 13px;color:#4c5670
+}
+.opportunity-page .opp-card .opp-employer{font-weight:650;color:#525a73}
+.opportunity-page .opp-card .opp-action{margin-top:auto}
+.opportunity-page .opp-action{
+  background:var(--opp-accent);border-radius:10px;min-height:42px;
+  font-size:13px;padding:10px 16px;box-shadow:0 6px 15px color-mix(in srgb,var(--opp-accent) 16%,transparent);
+  transition:filter .15s ease,transform .15s ease
+}
+.opportunity-page .opp-action:hover{background:var(--opp-strong);transform:translateY(-2px)}
+.opportunity-page .opp-search{border:1px solid #e1e6f3;background:#fff;border-radius:16px;padding:16px;box-shadow:0 6px 15px rgba(44,36,88,.035)}
+.opportunity-page .opp-search input:focus{outline-color:var(--opp-accent)}
+.opportunity-page .opp-search button{color:var(--opp-strong);border-color:var(--opp-outline);background:var(--opp-soft)}
+.opportunity-page .opp-link-row{gap:10px}
+.opportunity-page .opp-section-body{max-width:1050px}
+
+/* America has its own well separated official notice composition. */
+.opp-theme-dv-lottery .section.shell > .opp-advisory:first-child{background:#edf5ff;border-inline-start-color:#2f71cd}
+.opp-theme-dv-lottery .section.shell > .opp-advisory:nth-child(2){
+  padding:28px 32px;border:1px solid #5431a9;border-inline-start:6px solid #ccb1ff;
+  background:radial-gradient(ellipse at 0 0,#7051be,transparent 85%),linear-gradient(115deg,#3d237d,#251751);
+  color:#f4efff;box-shadow:0 18px 39px #35246c2a;
+}
+.opp-theme-dv-lottery .section.shell > .opp-advisory:nth-child(2) strong{font-size:21px;color:#fff}
+.opp-theme-dv-lottery .section.shell > .opp-advisory:nth-child(2) p{color:#f5ecff;line-height:2}
+.opp-theme-dv-lottery .section.shell > .opp-advisory:nth-child(2) .opp-action{background:#fff;color:#432779!important;box-shadow:none;font-weight:800}
+.opp-theme-dv-lottery .section.shell > .opp-advisory:nth-child(2) .opp-action:hover{background:#e8e4ff;color:#35206e!important}
+.opp-theme-visa-appointments .opp-advisory[role="alert"]{background:#eaf8fc;border-color:#bce5f1;border-inline-start-color:#087d9b}
+.opp-theme-immigration .opp-card{border-top-color:#db813e}
+
+/* Visually separate the jobs destination from other header links. */
+.header .nav-links>a[href$="/opportunities/"]{
+  padding:9px 11px!important;background:#e7f8f3;border:1px solid #b8e6d7;
+  color:#08715c!important;border-radius:11px;box-shadow:none!important;white-space:nowrap
+}
+.header .nav-links>a[href$="/opportunities/"]:hover,.header .nav-links>a[href$="/opportunities/"].nav-current{
+  background:#0e7b67;color:#fff!important;border-color:#0e7b67;box-shadow:0 4px 12px #0e7b6728!important
+}
+@media(min-width:1221px) and (max-width:1510px){
+ .header .nav-links>a[href$="/opportunities/"]{padding-inline:8px!important}
+ .header .nav-links{gap:5px!important}
+ .header .nav-links>a{font-size:10.5px!important}
+}
+@media(max-width:1220px){.header .nav-links>a[href$="/opportunities/"]{margin-block:4px;max-width:100%;justify-content:flex-start}}
+@media(max-width:1100px){
+ .opportunity-page .opp-feature-cats{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .opportunity-page .opp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:740px){
+ .opportunity-page .opp-cats,.opportunity-page .opp-feature-cats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .opportunity-page .opp-cat{padding:16px;min-height:158px;gap:10px}
+ .opportunity-page .opp-cat-copy strong{font-size:15px}
+ .opportunity-page .opp-feature-cats .opp-cat{min-height:202px}
+ .opportunity-page .opp-feature-cats .opp-cat-copy strong{font-size:16px}
+ .opportunity-page .opp-section-symbol{width:56px;height:56px;flex-basis:56px;font-size:27px}
+ .opportunity-page .opp-grid{grid-template-columns:1fr}
+ .opportunity-page .opp-hero{padding-block:34px 46px}
+ .opportunity-page .opp-hero h1{margin:12px 0 8px}
+ .opp-main-hub .opp-hero{padding-block:43px 56px}
+ .opp-grid-heading{display:block}
+ .opp-grid-heading>p{margin-top:11px}
+ .opportunity-page .section.shell{padding-block:29px}
+ .opp-theme-dv-lottery .section.shell > .opp-advisory:nth-child(2){padding:20px 17px}
+ .opp-theme-dv-lottery .section.shell > .opp-advisory:nth-child(2) strong{font-size:18px}
+ .opportunity-page .opp-card{padding:19px}
+}
+@media(max-width:460px){
+ .opportunity-page .opp-cats,.opportunity-page .opp-feature-cats{grid-template-columns:1fr}
+ .opportunity-page .opp-feature-cats .opp-cat{min-height:0}
+ .opportunity-page .opp-cat{min-height:0}
+ .opportunity-page .opp-cat-copy small{font-size:12px}
+ .opp-section-eyebrow{gap:10px}
+ .opp-section-label{font-size:12px}
+ .opportunity-page .opp-advisory{padding:15px}
+}
+@media(prefers-reduced-motion:reduce){
+ .opportunity-page .opp-cat,.opportunity-page .opp-action{transition:none}
+ .opportunity-page .opp-cat:hover,.opportunity-page .opp-action:hover{transform:none}
+}
