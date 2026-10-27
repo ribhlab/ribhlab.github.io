@@ -261,6 +261,48 @@ for(const lang of ['ar','en','fr']){
  if(newest<0||free<newest)errors.push('Newest articles must appear before Pro spotlight in '+lang);
 }
 
+
+// Market Pulse editorial quality: primary-source summaries, unique real photographs,
+// one registered-GitHub-only comment thread for each story, and locale-specific pages.
+const digests=JSON.parse(fs.readFileSync(path.join(root,'content','market-digests.json'),'utf8'));
+if(!Array.isArray(digests.items)||digests.items.length<6)errors.push('Fewer than six reviewed Market Pulse stories');
+const marketSlugs=new Set(),marketImages=new Set(),marketSources=new Set(),threads=new Set();
+for(const d of digests.items||[]){
+ if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(d.id||'')||marketSlugs.has(d.id))errors.push('Invalid/duplicate Market Pulse slug '+d.id);
+ marketSlugs.add(d.id);
+ if(!/^\d{4}-\d{2}-\d{2}T/.test(d.publishedAt||'')||d.publishedAt.slice(0,10)>'2026-10-27')errors.push('Source date is invalid or in the future: '+d.id);
+ if(!d.source||!/^https:\/\/(?:www\.)?(?:gold\.org|bls\.gov|stats\.gov\.cn|ecb\.europa\.eu|boj\.or\.jp|federalreserve\.gov)\//.test(d.sourceUrl||''))errors.push('Market summary must cite primary source: '+d.id);
+ if(!Number.isInteger(d.discussionIssue)||d.discussionIssue<1||threads.has(d.discussionIssue))errors.push('Comment issue not uniquely registered: '+d.id);
+ threads.add(d.discussionIssue);
+ const p=d.photo||{};
+ if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId||'')||!/https:\/\/unsplash\.com\/photos\//.test(p.source||'')||p.license!=='Unsplash License'||!p.photographer)errors.push('Unlicensed/invalid editorial photograph '+d.id);
+ if(marketImages.has(p.photoId)||photoIds.has(p.photoId)||marketSources.has(p.source)||photoSources.has(p.source))errors.push('Duplicated photo across Market Pulse and articles: '+d.id);
+ marketImages.add(p.photoId);marketSources.add(p.source);
+ for(const lang of ['ar','en','fr']){
+  const tr=d.translations?.[lang];
+  if(!tr?.title||!tr.summary||tr.summary.length<100||!tr.impact||!tr.watch||!p.alt?.[lang])errors.push('Incomplete translated digest '+lang+'/'+d.id);
+  const f=path.join(dist,lang,'markets','read',d.id,'index.html');
+  if(!fs.existsSync(f)){errors.push('Market Pulse digest page missing '+lang+'/'+d.id);continue;}
+  const html=fs.readFileSync(f,'utf8');
+  if(!html.includes('images.unsplash.com/'+p.photoId)||!html.includes('property="og:image" content="https://images.unsplash.com/'+p.photoId))errors.push('Wrong unique real photo/SEO preview '+lang+'/'+d.id);
+  if(!html.includes('data-market-comment-thread="'+d.discussionIssue+'"')||!html.includes('https://github.com/univcours/ribhlab-site/issues/'+d.discussionIssue))errors.push('Registered comment thread missing '+lang+'/'+d.id);
+  if(!html.includes('market-comments.js')||!html.includes('class="market-summary-main"')||!html.includes('class="market-story-figure"'))errors.push('Market digest incomplete '+lang+'/'+d.id);
+  if(!html.includes(d.sourceUrl)||!html.includes(p.source)||!html.includes(p.photographer))errors.push('Primary source or photo attribution missing '+lang+'/'+d.id);
+ }
+}
+for(const lang of ['ar','en','fr']){
+ const h=fs.readFileSync(path.join(dist,lang,'markets','index.html'),'utf8');
+ if(!h.includes('id="market-digests"')||!h.includes('market-digest-grid'))errors.push('Market Pulse lacks original photo-rich digests '+lang);
+ for(const d of digests.items||[])if(!h.includes('/'+lang+'/markets/read/'+d.id+'/'))errors.push('Market digest absent from list '+lang+'/'+d.id);
+}
+const marketClient=path.join(dist,'assets','market-comments.js');
+if(!fs.existsSync(marketClient))errors.push('Market registered comments module not deployed');
+else{
+ const code=fs.readFileSync(marketClient,'utf8');
+ if(!code.includes('api.github.com/repos/univcours/ribhlab-site/issues/')||!code.includes('document.createTextNode')&& !code.includes('body.textContent='))errors.push('Public comments not safely rendered');
+ if(code.includes('.innerHTML')||code.includes('POST')||code.includes('password'))errors.push('Unsafe client-side comments or unapproved anonymous login');
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
