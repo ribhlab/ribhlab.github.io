@@ -80,6 +80,10 @@ try{
   for(const route of pages.slice(1))cases.push({lang,width:320,route});
   cases.push({lang,width:768,route:'/tools/document-studio/'});
   cases.push({lang,width:768,route:'/archive/'});
+  if(lang==='ar'){
+   for(const width of [390,768,1024,1440])cases.push({lang,width,route:'/markets/'});
+   for(const width of [320,768,1440])cases.push({lang,width,route:'/markets/read/gold-september-2026-etf-flows/'});
+  }
  }
  const inspect='(()=>{const w=innerWidth,selectors=[".header",".nav-inner","#main",".hero-grid",".article-grid",".archive-page",".market-digest-grid",".isolated-tool-layout",".studio-pro",".studio-editor",".studio-preview-panel",".footer-grid"],bad=[];for(const sel of selectors){const el=document.querySelector(sel);if(!el||getComputedStyle(el).display==="none")continue;const r=el.getBoundingClientRect();if(r.width>0&&(r.left < -3 || r.right>w+3))bad.push(sel+":"+r.left.toFixed(0)+".."+r.right.toFixed(0));}return {w,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth,bad,lang:document.documentElement.lang,images:[...document.querySelectorAll(".article-card img.card-cover-image")].every(img=>img.hasAttribute("alt")&&!!img.getAttribute("src"))};})()';
  for(const test of cases){
@@ -109,6 +113,14 @@ try{
     const photo=await evalJS('(()=>{const cards=[...document.querySelectorAll(".opp-photo--card")];const hero=document.querySelector(".opp-photo--hero");const badCards=cards.filter(el=>el.getBoundingClientRect().height>135||el.getBoundingClientRect().width>innerWidth+3).length;const badHero=!!hero&&hero.getBoundingClientRect().height>300;const figcaption=!!document.querySelector(".opp-photo figcaption");const names=[...document.querySelectorAll(".opp-cat-copy strong")];const buttonsColored=names.length>0&&names.every(el=>getComputedStyle(el).backgroundColor!=="rgba(0, 0, 0, 0)");const h=document.querySelector(".opp-home-btn");const back=!!h&&h.getAttribute("href")==="/"+document.documentElement.lang+"/";return {ok:!!hero&&cards.length>0&&!badCards&&!badHero&&!figcaption&&buttonsColored&&back,badCards,badHero,figcaption,buttonsColored,back};})()');
     if(!photo.ok)fail(label+': photo overflow, missing colored category headings, photo-credit text or home button '+JSON.stringify(photo));
    }
+   if(test.route==='/markets/'){
+    const card=await evalJS('(()=>{const grid=document.querySelector("#market-digests .market-digest-grid");const items=[...document.querySelectorAll("#market-digests .market-digest-card")];const first=items[0];const image=first?.querySelector(".market-digest-cover img");const cover=first?.querySelector(".market-digest-cover");const credit=first?.querySelector(".market-digest-photo-credit");const cols=grid?getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length:0;const expected=innerWidth<=620?1:innerWidth<=1020?2:3;const externalImages=[...document.querySelectorAll(".pulse-photo-figure .pulse-photo-img")];const larger=externalImages.filter(e=>e.getBoundingClientRect().height>195).length;const externalCredit=document.querySelector(".pulse-photo-figure figcaption");const home=document.querySelector(".market-home-button");return {ok:!!grid&&items.length>=6&&cols===expected&&!!cover&&cover.getBoundingClientRect().height<=190&&!!image&&image.getBoundingClientRect().height<=190&&!!credit&&getComputedStyle(credit).display==="none"&&larger===0&&(!externalCredit||getComputedStyle(externalCredit).display==="none")&&!!home&&home.getAttribute("href")==="/"+document.documentElement.lang+"/",cols,expected,cover:cover?.getBoundingClientRect().height,larger,home:!!home};})()');
+    if(!card.ok)fail(label+': oversized Market Pulse image or photographer links still visible '+JSON.stringify(card));
+   }
+   if(test.route.startsWith('/markets/read/')){
+    const story=await evalJS('(()=>{const fig=document.querySelector(".market-story-figure"),img=fig?.querySelector("img"),cap=fig?.querySelector("figcaption"),back=document.querySelector(".market-home-button");return {ok:!!fig&&!!img&&img.getBoundingClientRect().height<=345&&fig.getBoundingClientRect().height<=345&&(!cap||getComputedStyle(cap).display==="none")&&!!back,imgHeight:img?.getBoundingClientRect().height,figHeight:fig?.getBoundingClientRect().height,back:!!back};})()');
+    if(!story.ok)fail(label+': Market article image too large or credit clutter '+JSON.stringify(story));
+   }
    if(test.width===320&&test.route==='/archive/'){
     const search=await evalJS('(()=>{const i=document.querySelector("#archive-search"),o=document.querySelector("[data-archive-count]"),e=document.querySelector("[data-archive-empty]");if(!i||!o||!e)return false;i.value="__no_matches__";i.dispatchEvent(new Event("input",{bubbles:true}));return o.textContent.startsWith("0")&&!e.hidden;})()');
     if(!search)fail(label+': archive live search not functional');
@@ -117,11 +129,11 @@ try{
     const status=await evalJS('(()=>{const e=document.querySelector("#document-studio"),p=document.querySelector("#studio-preview");return !!e&&!!p&&document.querySelectorAll(".studio-action-buttons button").length>=4&&e.getBoundingClientRect().width<=innerWidth+2;})()');
     if(!status)fail(label+': Document Studio controls missing or too wide');
    }
-   if(test.lang==='ar'&&((test.route==='/'&&[390,1440].includes(test.width))||(test.route==='/tools/document-studio/'&&test.width===320)||(test.route==='/opportunities/'&&test.width===320))){
+   if(test.lang==='ar'&&((test.route==='/'&&[390,1440].includes(test.width))||(test.route==='/tools/document-studio/'&&test.width===320)||(test.route==='/opportunities/'&&test.width===320)||(test.route==='/markets/'&&[390,1440].includes(test.width)))){
     const img=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
     const out=path.join(dist,'responsive-previews');
     fs.mkdirSync(out,{recursive:true});
-    const kind=test.route==='/'?'home':test.route==='/opportunities/'?'opportunities':'studio';
+    const kind=test.route==='/'?'home':test.route==='/opportunities/'?'opportunities':test.route==='/markets/'?'markets':'studio';
     fs.writeFileSync(path.join(out,kind+'-'+test.width+'.png'),Buffer.from(img.data,'base64'));
    }
    checked++;
