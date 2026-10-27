@@ -64,14 +64,14 @@ jobs:
           grep -q 'studio-preview' dist/ar/tools/document-studio/index.html
           grep -q 'rel="sponsored nofollow' dist/ar/article/fiverr-complete-guide-2026/index.html || grep -rlq 'rel="sponsored nofollow' dist/ar/ || exit 1
 
-      - name: Preflight future root domain without changing the published website
+      - name: Preflight example .com root domain without changing published website
         env:
-          SITE_URL: https://ribhlab.pp.ua
+          SITE_URL: https://example.com
         run: |
           npm run build
           npm run check
           grep -q 'href="/ar/tools/"' dist/ar/index.html
-          grep -q 'https://ribhlab.pp.ua/ar/' dist/sitemap.xml
-          grep -q 'https://ribhlab.pp.ua/sitemap.xml' dist/robots.txt
+          grep -q 'https://example.com/ar/' dist/sitemap.xml
+          grep -q 'https://example.com/sitemap.xml' dist/robots.txt
           grep -q 'href="/assets/style.css"' dist/ar/index.html
           test ! -f dist/CNAME
