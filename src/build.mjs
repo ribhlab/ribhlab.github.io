@@ -51,6 +51,7 @@ const photoAlt=(l,a)=>{const p=photoFor(a);return l==='ar'?p.altAr:l==='fr'?p.al
 const latestArticles=[...articles].sort((a,b)=>b.updated.localeCompare(a.updated)||b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
 const marketFeed=JSON.parse(fs.readFileSync(path.join(root,'content/feeds/latest.json'),'utf8'));
 const marketDigests=JSON.parse(fs.readFileSync(path.join(root,'content/market-digests.json'),'utf8')).items;
+const illustratedMarketHeadlines=JSON.parse(fs.readFileSync(path.join(root,'content/market-photo-watchlist.json'),'utf8')).items;
 const marketCalendar=JSON.parse(fs.readFileSync(path.join(root,'content/calendar/events.json'),'utf8'));
 const marketLabels={
  ar:{title:'نبض الأسواق',head:'أخبار الكريبتو والذهب والاقتصاد',desc:'تحليلات أصلية مفصلة داخل الموقع، مع متابعة منفصلة لأحدث العناوين ومصادرها. لا توجد إشارات تداول أو أسعار لحظية.',calendar:'التقويم الاقتصادي الرسمي',visit:'اقرأ المصدر',note:'المعلومات ومواعيد النشر قابلة للتغيير. راجع المؤسسات الرسمية، خصوصاً قبل اتخاذ أي قرار مالي.',last:'آخر جلب ناجح',warning:'الإشارة إلى عملة جديدة لا تعني تأكيد إدراجها أو ضمان الربح.'},
@@ -244,13 +245,33 @@ function marketDigestPage(l,d){
  page(l,{title:tr.title+' | RibhLab',desc:tr.summary.slice(0,210),route,content:hero+body,type:'market',publishedAt:'2026-10-27T12:00:00Z',socialImage:marketDigestPhoto(d),socialAlt:d.photo.alt[l],active:'markets'});
 }
 
+
+const marketHeadlinePhoto=x=>'https://images.unsplash.com/'+x.photo.photoId+'?auto=format&fit=crop&w=1200&h=675&q=79';
+function illustratedHeadlineCard(l,x){
+ const labels={ar:{source:'اقرأ الخبر عند المصدر',credit:'تصوير توضيحي:'},en:{source:'Read original publisher',credit:'Illustrative photo:'},fr:{source:'Lire la source',credit:'Photo illustrative :'}}[l];
+ return '<article class="pulse-card pulse-photo-card" data-pulse-topic="'+esc(x.topic)+'" data-news-photo-id="'+esc(x.photo.photoId)+'">'+
+ '<a class="pulse-photo-link" href="'+esc(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer nofollow" aria-label="'+esc(x.title)+'"><img class="pulse-photo" src="'+esc(marketHeadlinePhoto(x))+'" loading="lazy" decoding="async" width="1200" height="675" alt="'+esc(x.photo.alt[l])+'"></a>'+
+ '<div class="pulse-card-content"><small>'+esc(x.topic.replaceAll('_',' ').toUpperCase())+' · <time datetime="'+esc(x.publishedAt)+'">'+esc(x.publishedAt.slice(0,10))+'</time></small>'+
+ '<h3><a href="'+esc(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(x.title)+'</a></h3>'+
+ '<p class="pulse-source-label">'+esc(x.sourceName)+'</p>'+
+ '<a class="pulse-open-source" href="'+esc(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(labels.source)+' ↗</a>'+
+ '<p class="pulse-photo-credit">'+esc(labels.credit)+' <a href="'+esc(x.photo.source)+'" target="_blank" rel="noopener noreferrer">'+esc(x.photo.photographer)+' / Unsplash</a></p></div></article>';
+}
 function marketPulse(l){
  const words=marketLabels[l],future=(marketCalendar.events||[]).filter(x=>x.date>=new Date().toISOString().slice(0,10));
  const sourceLinks=[['Federal Reserve','https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm'],['BLS','https://www.bls.gov/schedule/2026/'],['European Central Bank','https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html'],['Bank of Japan','https://www.boj.or.jp/en/about/calendar/index.htm'],['China NBS','https://www.stats.gov.cn/english/PressRelease/index.html'],['World Gold Council','https://www.gold.org/goldhub/research']];
  const topics={crypto:'Crypto',new_tokens:'New tokens',gold:'Gold',us_macro:'US macro',europe:'Europe',japan:'Japan',china:'China',geopolitics:'Geopolitics',ai_future:'AI and future',digital_income:'Digital income'};
  const headlines=(marketFeed.items||[]).filter(x=>x.title&&/^https:\/\//.test(x.url)).slice(0,80);
  const filterBar='<div class="pulse-filters"><button class="pulse-filter current" type="button" data-pulse-filter="all">All</button>'+Object.entries(topics).map(([key,name])=>'<button class="pulse-filter" type="button" data-pulse-filter="'+key+'">'+esc(name)+'</button>').join('')+'</div>';
- const cards=headlines.map(x=>'<article class="pulse-card" data-pulse-topic="'+esc(x.topic)+'"><small>'+esc(topics[x.topic]||x.topic)+' · '+esc(x.publishedAt.slice(0,10))+'</small><h3>'+esc(x.title)+'</h3><p>'+esc(x.source)+'</p><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(words.visit)+' ↗</a></article>').join('');
+ const curatedUrls=new Set(illustratedMarketHeadlines.map(x=>x.sourceUrl));
+ const cards=illustratedMarketHeadlines.map(x=>illustratedHeadlineCard(l,x)).join('');
+ // Google News RSS is text-only. Never falsely attribute stock photos as original news imagery.
+ const plain=headlines.filter(x=>!curatedUrls.has(x.url)).map(x=>
+  '<li class="pulse-text-row" data-pulse-topic="'+esc(x.topic)+'"><span class="pulse-text-date">'+esc(topics[x.topic]||x.topic)+' · '+esc(x.publishedAt.slice(0,10))+'</span>'+
+  '<a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer nofollow">'+esc(x.title)+' ↗</a>'+
+  '<span class="pulse-text-source">'+esc(x.source)+'</span></li>').join('');
+ const plainHeading=({ar:'آخر عناوين RSS — روابط المصادر بدون صور غير مرخّصة',en:'Latest RSS headlines — publisher links without unlicensed photos',fr:'Derniers titres RSS — liens des éditeurs sans images non autorisées'})[l];
+ const mediaNotice=({ar:'الصور هنا فوتوغرافية توضيحية مرخّصة من Unsplash، مع ذكر المصور، وماشي صور ناشر الخبر.',en:'Photos are licensed editorial illustrations credited to their creators, not images provided by the news publisher.',fr:'Photos illustratives sous licence Unsplash, créditées et non fournies par le média d’origine.'})[l];
  const aLabels={ar:['تحليلات أصلية','اقرأ تفسيراً كاملاً للأحداث مع الخلفية والأثر والسيناريوهات والمخاطر والمصادر.','متابعة الأخبار الخارجية'],en:['Original market analysis','Full articles explain evidence, market drivers, scenarios, risks and original sources.','External headlines'],fr:['Analyses originales','Des articles approfondis sur les faits, mécanismes, scénarios et risques, avec sources originales.','Titres des sources externes']}[l];
  const analysis=articles.filter(a=>a.category==='trading').sort((a,b)=>b.date.localeCompare(a.date)).slice(0,9);
  const analysisSection='<section class="section shell" id="market-analysis"><div class="section-head"><div><span class="section-kicker">RIBHLAB / ANALYSIS</span><h2>'+esc(aLabels[0])+'</h2><p>'+esc(aLabels[1])+'</p></div></div><div class="article-grid">'+analysis.map(a=>articleCard(l,a)).join('')+'</div></section>';
@@ -260,7 +281,7 @@ function marketPulse(l){
  const digestOrder=[...marketDigests].sort((a,b)=>(a.topic==='gold'?-1:b.topic==='gold'?1:0)||b.publishedAt.localeCompare(a.publishedAt));
  const digestSection='<section class="section shell" id="market-digests"><div class="section-head"><div><span class="section-kicker">RIBHLAB / ORIGINAL DIGESTS</span><h2>'+esc(digestLabels.section)+'</h2><p>'+esc(digestLabels.intro)+'</p></div></div>'+filterBar+'<div class="market-digest-grid">'+digestOrder.map(d=>marketDigestCard(l,d)).join('')+'</div></section>';
  const body='<section class="page-hero"><div class="shell"><span class="section-kicker">SOURCE-ATTRIBUTED / MARKETS</span><h1>'+esc(words.head)+'</h1><p>'+esc(words.desc)+'</p><a class="btn btn-primary" href="#economic-calendar">'+esc(words.calendar)+' ↗</a></div></section>'+
- digestSection+analysisSection+'<section class="section shell"><div class="section-head"><div><h2>'+esc(digestLabels.externals)+'</h2><p>'+esc(words.note)+'</p><small>'+esc(words.last)+': '+esc(marketFeed.fetchedAt)+' UTC</small></div></div><div class="pulse-grid">'+cards+'</div><p class="pulse-risk">⚠ '+esc(words.warning)+'</p></section>'+
+ digestSection+analysisSection+'<section class="section shell"><div class="section-head"><div><h2>'+esc(digestLabels.externals)+'</h2><p>'+esc(words.note)+'</p><small>'+esc(words.last)+': '+esc(marketFeed.fetchedAt)+' UTC</small></div></div><p class="pulse-illustration-notice">'+esc(mediaNotice)+'</p><div class="pulse-grid">'+cards+'</div>'+(plain?'<div class="pulse-text-news"><h3>'+esc(plainHeading)+'</h3><ul>'+plain+'</ul></div>':'')+'<p class="pulse-risk">⚠ '+esc(words.warning)+'</p></section>'+
  '<section class="section section-sand" id="economic-calendar"><div class="shell"><div class="section-head"><div><h2>'+esc(words.calendar)+'</h2><p>'+esc(words.note)+'</p></div></div><div class="pulse-events">'+(schedule||'<p>'+esc(words.note)+'</p>')+'</div><div class="pulse-sources">'+links+'</div></div></section><div class="shell">'+sharingBar(l)+'</div>';
  page(l,{title:words.head+' | RibhLab',desc:words.desc,route:'/'+l+'/markets/',content:body,active:'markets'});
 }

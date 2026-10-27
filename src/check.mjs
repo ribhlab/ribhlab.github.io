@@ -295,6 +295,40 @@ for(const lang of ['ar','en','fr']){
  if(!h.includes('id="market-digests"')||!h.includes('market-digest-grid'))errors.push('Market Pulse lacks original photo-rich digests '+lang);
  for(const d of digests.items||[])if(!h.includes('/'+lang+'/markets/read/'+d.id+'/'))errors.push('Market digest absent from list '+lang+'/'+d.id);
 }
+// Externally linked Market Pulse cards: 6 different, individually licensed, real photos.
+// The latest Google News RSS entries have no image rights proof and must stay text links.
+const illustratedHeadlines=JSON.parse(fs.readFileSync(path.join(root,'content','market-photo-watchlist.json'),'utf8'));
+if(!Array.isArray(illustratedHeadlines.items)||illustratedHeadlines.items.length!==6)errors.push('Expected six licensed external Market Pulse headline photographs');
+const externalImageIds=new Set(),externalImageSources=new Set(),externalIds=new Set();
+for(const item of illustratedHeadlines.items||[]){
+ if(externalIds.has(item.id)||!/^[a-z0-9-]+$/.test(item.id||''))errors.push('Duplicate/invalid external headline id '+item.id);
+ externalIds.add(item.id);
+ const p=item.photo||{};
+ if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId||'')||!/^https:\/\/unsplash\.com\/photos\//.test(p.source||'')||p.license!=='Unsplash License'||!p.photographer)errors.push('Invalid source/license for headline photograph '+item.id);
+ if(externalImageIds.has(p.photoId)||marketImages.has(p.photoId)||photoIds.has(p.photoId))errors.push('DUPLICATE MARKET NEWS PHOTO '+item.id);
+ if(externalImageSources.has(p.source)||marketSources.has(p.source)||photoSources.has(p.source))errors.push('DUPLICATE MARKET PHOTO SOURCE '+item.id);
+ externalImageIds.add(p.photoId);externalImageSources.add(p.source);
+ if(!item.title||!item.sourceName||!/^https:\/\//.test(item.sourceUrl||'')||!/^\d{4}-\d{2}-\d{2}T/.test(item.publishedAt||''))errors.push('Missing external headline attribution/date '+item.id);
+ for(const lang of ['ar','en','fr'])if(!p.alt?.[lang]||p.alt[lang].length<18)errors.push('Missing translated news photograph alt text '+lang+'/'+item.id);
+}
+for(const lang of ['ar','en','fr']){
+ const file=path.join(dist,lang,'markets','index.html');
+ if(!fs.existsSync(file)){errors.push('Market Pulse index missing '+lang);continue;}
+ const h=fs.readFileSync(file,'utf8');
+ const matches=[...h.matchAll(/data-news-photo-id="([^"]+)"/g)].map(x=>x[1]);
+ if(matches.length!==6||new Set(matches).size!==6)errors.push('Expected 6 non-repeating photo-backed external cards '+lang);
+ if(!h.includes('class="pulse-illustration-notice"'))errors.push('External editorial photo disclosure missing '+lang);
+ for(const item of illustratedHeadlines.items||[]){
+  const p=item.photo||{};
+  if(!h.includes('data-news-photo-id="'+p.photoId+'"')||!h.includes('class="pulse-photo" src="https://images.unsplash.com/'+p.photoId))errors.push('Expected live photo in Market Pulse card '+lang+'/'+item.id);
+  if(!h.includes(p.source)||!h.includes(p.photographer+' / Unsplash')||!h.includes(p.alt[lang]))errors.push('Missing photographer credit or alt for external headline '+lang+'/'+item.id);
+ }
+ // RSS headlines without supplied licensed photographs must be listed, not turned into duplicate-image cards.
+ const rss=JSON.parse(fs.readFileSync(path.join(root,'content','feeds','latest.json'),'utf8'));
+ const ids=new Set((illustratedHeadlines.items||[]).map(x=>x.sourceUrl));
+ if((rss.items||[]).some(x=>x.title&&!ids.has(x.url))&&!h.includes('class="pulse-text-news"'))errors.push('RSS headlines with no photo must remain accessible text links '+lang);
+}
+
 const marketClient=path.join(dist,'assets','market-comments.js');
 if(!fs.existsSync(marketClient))errors.push('Market registered comments module not deployed');
 else{

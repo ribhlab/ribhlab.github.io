@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-27",
+  "description": "Six dated, manually sourced external market headlines, each with one distinct real Unsplash photograph; separate from dynamic RSS headlines lacking confirmed photograph rights.",
+  "items": [
+    {
+      "id": "official-0",
+      "topic": "gold",
+      "title": "World Gold Council commentary on September 2026 gold price and fund flows",
+      "sourceName": "World Gold Council",
+      "sourceUrl": "https://www.gold.org/goldhub/research/gold-market-commentary-september-2026",
+      "publishedAt": "2026-10-07T12:00:00Z",
+      "photo": {
+        "photoId": "photo-1718752773216-8c6731ea35ac",
+        "source": "https://unsplash.com/photos/a-close-up-of-some-gold-bars-on-a-table-QxHfNyWy1Xo",
+        "photographer": "Scottsdale Mint",
+        "license": "Unsplash License",
+        "alt": {
+          "ar": "سبائك ذهبية حقيقية فوق طاولة، صورة توضيحية لسوق الذهب",
+          "en": "Real gold bullion bars stacked on a textured table",
+          "fr": "Lingots d’or sur une table, photo illustrant le marché de l’or"
+        }
+      }
+    },
+    {
+      "id": "official-1",
+      "topic": "us_macro",
+      "title": "September 2026 US consumer-price release and next release date",
+      "sourceName": "U.S. Bureau of Labor Statistics",
+      "sourceUrl": "https://www.bls.gov/cpi/home.htm",
+      "publishedAt": "2026-10-14T12:30:00Z",
+      "photo": {
+        "photoId": "photo-1578916171728-46686eac8d58",
+        "source": "https://unsplash.com/photos/grocery-store-aisle-with-stocked-shelves-rWMIbqmOxrY",
+        "photographer": "Nathália Rosa",
+        "license": "Unsplash License",
+        "alt": {
+          "ar": "رفوف متجر مواد غذائية، صورة توضيحية لأسعار المستهلك",
+          "en": "Supermarket shelves with packaged food, illustrative of consumer prices",
+          "fr": "Rayons de supermarché illustrant les prix à la consommation"
+        }
+      }
+    },
+    {
+      "id": "official-2",
+      "topic": "china",
+      "title": "National Bureau of Statistics: China economic data releases",
+      "sourceName": "NBS China",
+      "sourceUrl": "https://www.stats.gov.cn/english/PressRelease/index.html",
+      "publishedAt": "2026-10-24T12:00:00Z",
+      "photo": {
+        "photoId": "photo-1752662742861-fb76c71576d7",
+        "source": "https://unsplash.com/photos/shanghai-skyline-on-a-cloudy-day-0p37Ch2LYQc",
+        "photographer": "Nicolas Jehly",
+        "license": "Unsplash License",
+        "alt": {
+          "ar": "أفق مدينة شنغهاي في يوم غائم، صورة توضيحية لاقتصاد الصين",
+          "en": "Shanghai skyline on a cloudy day, illustrative of the Chinese economy",
+          "fr": "Panorama de Shanghai par temps nuageux, illustration de l’économie chinoise"
+        }
+      }
+    },
+    {
+      "id": "official-3",
+      "topic": "europe",
+      "title": "ECB October 2026 meeting schedule",
+      "sourceName": "European Central Bank",
+      "sourceUrl": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+      "publishedAt": "2026-10-23T12:00:00Z",
+      "photo": {
+        "photoId": "photo-1589395706442-2fb4c9e65489",
+        "source": "https://unsplash.com/photos/blue-and-yellow-star-decor-7y3G6s201Gk",
+        "photographer": "bruno neurath-wilson",
+        "license": "Unsplash License",
+        "alt": {
+          "ar": "رمز اليورو أمام مبنى البنك المركزي الأوروبي في فرانكفورت",
+          "en": "Euro sign outside the European Central Bank building in Frankfurt",
+          "fr": "Symbole de l’euro devant la Banque centrale européenne à Francfort"
+        }
+      }
+    },
+    {
+      "id": "official-4",
+      "topic": "japan",
+      "title": "Bank of Japan upcoming release schedule",
+      "sourceName": "Bank of Japan",
+      "sourceUrl": "https://www.boj.or.jp/en/about/calendar/index.htm",
+      "publishedAt": "2026-10-23T12:00:00Z",
+      "photo": {
+        "photoId": "photo-1639572655008-7dfbc3b64d30",
+        "source": "https://unsplash.com/photos/a-close-up-of-a-japanese-bank-note-e9o9FCteAPQ",
+        "photographer": "Franck V.",
+        "license": "Unsplash License",
+        "alt": {
+          "ar": "صورة مقرّبة لورقة نقدية بالين الياباني، وليست سعر صرف حي",
+          "en": "Close-up of a Japanese yen banknote, not a live currency quote",
+          "fr": "Gros plan d’un billet en yens japonais, sans cours de change en direct"
+        }
+      }
+    },
+    {
+      "id": "official-5",
+      "topic": "us_macro",
+      "title": "Federal Reserve monetary-policy meeting calendar",
+      "sourceName": "Federal Reserve",
+      "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "publishedAt": "2026-10-23T12:00:00Z",
+      "photo": {
+        "photoId": "photo-1542320728179-bda01e6f5c73",
+        "source": "https://unsplash.com/photos/federal-reserve-bank-san-francisco-KvX3L_QXTgM",
+        "photographer": "Alex Bierwagen",
+        "license": "Unsplash License",
+        "alt": {
+          "ar": "مبنى بنك الاحتياطي الفدرالي في سان فرانسيسكو، وليس مكان اجتماع FOMC",
+          "en": "Federal Reserve Bank of San Francisco building, not the FOMC venue",
+          "fr": "Bâtiment de la Fed de San Francisco, et non le lieu de réunion du FOMC"
+        }
+      }
+    }
+  ]
+}
