@@ -66,7 +66,7 @@ jobs:
 
       - name: Preflight future root domain without changing the published website
         env:
-          SITE_URL: https://ribhlab.pp.ua
+          SITE_URL: https://example.com
         run: |
           npm run build
           npm run check
