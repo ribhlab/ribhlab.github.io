@@ -57,6 +57,23 @@ jobs:
       - name: Check generated sitemap, images and monetization disclaimers
         run: |
           test -s dist/sitemap.xml
+          # Parse the generated XML; text/URL checks alone do not detect malformed XML.
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          doc=ET.parse('dist/sitemap.xml')
+          root=doc.getroot()
+          assert root.tag=='{http://www.sitemaps.org/schemas/sitemap/0.9}urlset', root.tag
+          urls=[node.text for node in root.findall('./s:url/s:loc',ns)]
+          assert len(urls)>=30, f'Only {len(urls)} sitemap URLs'
+          assert len(urls)==len(set(urls)), 'Duplicate sitemap entries'
+          assert all(u.startswith('https://ribhlab.github.io/') for u in urls), 'Unexpected sitemap hostname'
+          assert all('ribhlab-site' not in u for u in urls), 'Old project path leaked into sitemap'
+          robots=Path('dist/robots.txt').read_text()
+          assert 'Sitemap: https://ribhlab.github.io/sitemap.xml' in robots, 'robots.txt missing sitemap link'
+          print(f'Sitemap XML is valid: {len(urls)} canonical URLs on ribhlab.github.io')
+          PY
           test -f dist/illustrations/earning.svg
           test -f dist/illustrations/trading.svg
           test -f dist/illustrations/ai.svg
