@@ -1917,6 +1917,186 @@
           ]
         }
       }
+    },
+    "justice-secretary-15": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Four-page signed Arabic recruitment decision reviewed page by page against the government listing on 28 October 2026; both sources identify the same competition; diploma and licence requirements come from the original decision.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Arrêté officiel du 20 octobre 2026 — décision 87/2026 (4 pages)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/fb2e5ca9-e80e-4765-afc1-587b15f0ae33"
+        },
+        {
+          "label": "Emploi-public — fiche C44297/26 publiée le 26 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/fb2e5ca9-e80e-4765-afc1-587b15f0ae33"
+        },
+        {
+          "label": "Conseil supérieur du pouvoir judiciaire — portail officiel",
+          "url": "https://www.cspj.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Conseil supérieur du pouvoir judiciaire",
+        "reference": "C44297/26",
+        "decision": "87/2026 du 20 octobre 2026",
+        "publishedAt": "2026-10-26",
+        "posts": 15,
+        "city": "Rabat",
+        "country": "Maroc",
+        "grade": "Secrétaire juridique adjoint 4e grade, échelle 5",
+        "specialties": [
+          "Mécanique automobile",
+          "Réparateur de véhicules automobiles",
+          "Électricité automobile",
+          "Mécanique d'entretien"
+        ],
+        "degree": "Certificat de qualification professionnelle dans la spécialité ou équivalent",
+        "experience": "Expérience professionnelle dans la spécialité, durée non précisée",
+        "licence": "Permis C ou D",
+        "age": "18 à 40 ans au 1er janvier 2026, sous réserve d'exceptions légales",
+        "deadline": "2026-11-10T16:30",
+        "examDate": "2026-12-27",
+        "submission": "https://concours.cspj.ma",
+        "selection": "Écrit 3 h coefficient 4; oral ou pratique 15 à 30 min coefficient 3; écrit >=12/20; moyenne finale >=10/20 sans note éliminatoire <=5/20",
+        "salary": null,
+        "documents": [
+          "CNI",
+          "diplôme ou certificat + équivalence si applicable",
+          "permis C ou D",
+          "CV avec photo et coordonnées",
+          "justificatifs de quota si concernés",
+          "autorisation de l'employeur si fonctionnaire ou contractuel"
+        ]
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة 15 أميناً قضائياً مساعداً بالرباط: تخصصات ميكانيك السيارات ورخصة C أو D والملف الكامل",
+          "deck": "قرار رسمي بتاريخ 20 أكتوبر 2026 يفتح 15 منصباً تقنياً بالمجلس الأعلى للسلطة القضائية. دليل الشروط والوثائق والاختبارات وآخر أجل 10 نوفمبر الساعة 16:30.",
+          "sections": [
+            [
+              "الإعلان الرسمي وما الذي يختلف عن عنوان الوظيفة",
+              "يتعلق القرار رقم 87/2026 الصادر بتاريخ 20 أكتوبر 2026 بمباراة لتوظيف خمسة عشر أميناً قضائياً مساعداً من الدرجة الرابعة، السلم الخامس، لدى المجلس الأعلى للسلطة القضائية. لا تعني تسمية «أمين قضائي مساعد» أن التخصص المطلوب قانوني أو إداري؛ فالقرار يحدد تخصصات تقنية مرتبطة بصيانة السيارات. لذلك يجب قراءة جدول التخصصات والشهادات قبل إعداد الترشيح، وعدم الاكتفاء بعنوان البطاقة على بوابة التشغيل العمومي. نُشرت بطاقة المباراة في 26 أكتوبر 2026 تحت المرجع C44297/26."
+            ],
+            [
+              "عدد المناصب ومقر التعيين",
+              "يخصص القرار خمسة عشر منصباً للتعيين لدى المجلس الأعلى للسلطة القضائية في الرباط. وتشمل التخصصات المطلوبة ميكانيك السيارات، وإصلاح مركبات السيارات، وكهرباء السيارات، وميكانيك الصيانة. هذه مجالات مهنية محددة؛ ولا يجوز افتراض قبول دبلوم في المحاسبة أو القانون أو الإعلاميات لمجرد تشابه اسم الدرجة الإدارية. ينبغي للمرشح الذي يقيم خارج الرباط أن يضع احتمال الانتقال أو تكاليف التنقل في الحسبان، دون افتراض أي تعويض سكن أو نقل لم يذكره الإعلان."
+            ],
+            [
+              "الدبلوم والخبرة ورخصة السياقة",
+              "يشترط القرار شهادة التأهيل المهني المسلمة من مؤسسة للتكوين المهني معتمدة وفق الإطار التنظيمي المذكور في القرار، أو شهادة معادلة في التخصص المطلوب. كما يشترط خبرة مهنية في أحد التخصصات المذكورة، لكنه لا يحدد في الجدول عدداً ثابتاً من سنوات الخبرة؛ لذلك لا يصح اختراع حد أدنى بسنتين أو ثلاث. يجب كذلك التوفر على رخصة سياقة من الصنف C أو D. وينبغي التحقق من صلاحية الرخصة ووضوح وثيقة إثبات الخبرة ومطابقة تسمية الشهادة للتخصص قبل التسجيل."
+            ],
+            [
+              "السن والشروط العامة والحصص الخاصة",
+              "يفتح الترشيح للمستوفين للشروط العامة للوظيفة العمومية، الذين تتراوح أعمارهم بين ثماني عشرة وأربعين سنة على الأكثر في فاتح يناير من السنة الجارية، مع مراعاة الأحكام القانونية الخاصة إن انطبقت. ويخصص القرار نسبة 25% من المناصب للفئات المشمولة بصفة مقاوم أو مكفول الأمة أو عسكري قديم أو محارب قديم، ونسبة 7% للأشخاص في وضعية إعاقة وفق الإثبات المطلوب. لا تمثل هذه النسب وظائف إضافية فوق المناصب الخمسة عشر؛ كما لا تغني عن الشروط الأساسية للدبلوم والرخصة والتخصص."
+            ],
+            [
+              "التسجيل من المغرب وآخر أجل",
+              "يتم تقديم طلب الترشيح حصرياً عبر البوابة الإلكترونية للمباريات التابعة للمجلس الأعلى للسلطة القضائية، وليس عبر البريد الإلكتروني أو نموذج الاتصال في بطاقة الإعلان. حدد القرار آخر أجل في 10 نوفمبر 2026 على الساعة الرابعة والنصف مساءً. من الأفضل إنشاء الحساب مبكراً وتجربة رفع الملفات قبل اليوم الأخير، وحفظ ما يثبت إتمام التسجيل. بعد تأكيد الطلب يعتبر التسجيل نهائياً وغير قابل للتعديل بحسب القرار؛ ولذلك يجب مراجعة الاسم ورقم البطاقة والتخصص والملفات قبل الإرسال."
+            ],
+            [
+              "الوثائق المطلوبة وما قد يؤدي إلى الرفض",
+              "يشمل الملف نسخة من البطاقة الوطنية للتعريف، ونسخة من الدبلوم أو شهادة التأهيل المطلوبة مصحوبة بقرار المعادلة عند الاقتضاء، ونسخة من رخصة السياقة C أو D، وسيرة ذاتية تحمل صورة المرشح وعنوانه ورقم هاتفه وبريده الإلكتروني. ويضيف القرار شهادات خاصة للمستفيدين من الحصص القانونية، وترخيصاً نهائياً من الإدارة المشغلة للموظفين أو المتعاقدين. ترفض الطلبات التي تفتقد وثيقة أو تتضمن دبلوماً من مستوى أو تخصص غير مطلوب. لا ينص الإعلان على رسم مالي للترشيح، لذا ينبغي الحذر من وسطاء يطلبون مقابلاً لضمان النجاح."
+            ],
+            [
+              "الاختبار الكتابي والشفوي أو التطبيقي",
+              "حدد القرار يوم 27 ديسمبر 2026 لإجراء المباراة بالرباط ومراكز أخرى عند الاقتضاء. يتضمن الاختبار الكتابي موضوعاً عاماً أو أسئلة متعددة الاختيارات تتصل بالمجلس أو المهام أو التخصصات المطلوبة، ومدته ثلاث ساعات ومعامله أربعة. ثم يجتاز الناجحون اختباراً شفوياً أو تطبيقياً أو هما معاً مدته من خمس عشرة إلى ثلاثين دقيقة ومعامله ثلاثة. قد يتضمن التحضير مراجعة السلامة المهنية وتشخيص الأعطال ومبادئ الصيانة، لكن هذه أمثلة تدريبية وليست قائمة رسمية للأسئلة التي ستطرحها اللجنة."
+            ],
+            [
+              "الانتقاء والنقط واللوائح",
+              "لا ينتقل إلى الاختبار الشفوي أو التطبيقي إلا من حصل على اثنتي عشرة نقطة من عشرين على الأقل في الكتابي دون نقطة إقصائية. ويعتمد ترتيب الناجحين النهائي على معدل عام لا يقل عن عشر نقاط من عشرين، مع عدم الحصول على نقطة إقصائية تساوي أو تقل عن خمس نقاط من عشرين. تنشر اللوائح والاستدعاءات عبر مواقع المجلس والبوابة العمومية. ينبغي للمرشح متابعة الموقعين وتنزيل الاستدعاء؛ فالترشيح الإلكتروني وحده لا يعني القبول لاجتياز الاختبار."
+            ],
+            [
+              "الراتب والمخاطر والتحقق قبل الإرسال",
+              "لم يحدد القرار راتباً صافياً أو تعويضات شخصية؛ وذكر السلم الخامس لا يبرر نشر مبلغ شهري دقيق دون محاكاة رسمية موثقة. أهم المخاطر هي الخلط بين الاسم القانوني للدرجة والتخصص التقني، وعدم التوفر على رخصة C أو D، أو تقديم دبلوم غير مطابق، أو رفع ملف ناقص، أو الاعتماد على ساعة إغلاق غير رسمية. قبل الإرسال، قارن البيانات بين القرار الموقّع وبطاقة الإعلان، وراجع الموقع الرسمي للمجلس لأي تصحيح أو استدعاء لاحق. تاريخ مراجعة هذا الدليل هو 28 أكتوبر 2026."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Morocco judicial council: 15 automotive technical posts, C/D licence and application rules",
+          "deck": "The signed 20 October 2026 decision specifies 15 Rabat posts, automotive qualifications, a C or D driving licence and a 10 November 16:30 deadline.",
+          "sections": [
+            [
+              "What the official recruitment decision actually announces",
+              "Decision 87/2026, dated 20 October 2026, opens a competitive recruitment process for fifteen fourth-grade assistant judicial secretaries, salary scale five, at Morocco's Higher Council of the Judicial Power. The job title may suggest legal clerical work, but the decision explicitly specifies automotive maintenance specializations. Applicants should read the qualification table rather than infer eligibility from the administrative title. The public employment portal published the listing on 26 October 2026 under competition code C44297/26. This distinction matters because applying with an unrelated legal or administrative qualification can lead to rejection."
+            ],
+            [
+              "Posts, work location and technical specializations",
+              "All fifteen advertised positions are assigned to the Higher Council of the Judicial Power in Rabat. The eligible fields are automotive mechanics, vehicle repair, automotive electrical work and maintenance mechanics. These are concrete vocational profiles rather than a general recruitment drive for all graduates. Candidates living outside Rabat should consider the practical implications of commuting or relocating, but the notice does not promise relocation support, housing or travel reimbursement. The number of posts should not be mistaken for fifteen openings in each specialty: the decision presents one combined total."
+            ],
+            [
+              "Qualification, professional experience and driving licence",
+              "The notice requires a vocational qualification certificate awarded by a recognized professional training institution under the cited regulatory framework, or an officially equivalent certificate in the required specialty. Professional experience in the relevant technical field is also required, but the decision does not prescribe a precise minimum number of years. It would therefore be misleading to claim that two or three years are compulsory. Candidates must additionally hold a category C or D driving licence. Check the validity of the licence and whether the diploma and experience documents clearly identify the relevant automotive specialty."
+            ],
+            [
+              "Age and reserved recruitment categories",
+              "The general age range is from eighteen to forty years on 1 January of the current year, subject to any legally applicable exceptions. The decision reserves twenty-five percent of the available positions for the specified categories of resistance members, wards of the nation, former military personnel and former combatants, and seven percent for persons with disabilities, subject to documentary proof. These percentages concern the advertised positions; they are not extra vacancies added to the total of fifteen. Reserved-category applicants must still review the technical qualification and other eligibility requirements."
+            ],
+            [
+              "Online application and exact closing time",
+              "Applications must be submitted through the Council's dedicated online competition portal, not by replying to the employment listing or using its contact form. The signed decision sets the deadline at 10 November 2026, 16:30 local time. Register early, prepare readable files and keep a record of the completed submission. The decision states that registration is final and cannot be edited after confirmation, making it important to verify spelling, identity number, chosen specialization and uploaded attachments before pressing the final submission button. An incomplete draft is not proof of a valid application."
+            ],
+            [
+              "Required documents and common rejection reasons",
+              "The application file includes a copy of the national identity card, a copy of the required qualification with an equivalence decision where applicable, a copy of a C or D driving licence, and a CV with photograph, personal address, telephone number and email address. Applicants claiming reserved status need the corresponding certificate, while employed public servants or contract staff need final authorization from their employer. Missing documents or qualifications outside the specified level or field can lead to rejection. No application fee is announced in the decision; applicants should distrust intermediaries claiming to sell guaranteed selection."
+            ],
+            [
+              "Written examination and practical or oral stage",
+              "The competition is scheduled for 27 December 2026 in Rabat, with other centers possible if required. The written paper lasts three hours, has coefficient four, and may involve a general topic or multiple-choice questions on Council-related matters, job duties or the listed specialties. Candidates who pass may then sit an oral examination, a practical examination, or both, lasting fifteen to thirty minutes and weighted at coefficient three. Reviewing workshop safety, electrical diagnosis and vehicle maintenance is sensible preparation, but these examples are not an official syllabus or a prediction of the exact questions."
+            ],
+            [
+              "Scores, shortlisting and official notifications",
+              "Only applicants scoring at least twelve out of twenty on the written examination, without an eliminatory mark, qualify for the next stage. Final selection requires an overall average of at least ten out of twenty and no eliminatory score of five out of twenty or lower. The Council will publish shortlists, notices and examination invitations through its official site, with information also appearing on the public employment portal. Applicants should monitor these channels and download any required invitation. Submitting an online application does not automatically mean that the applicant has been admitted to the examination."
+            ],
+            [
+              "Pay transparency, risks and final verification",
+              "The recruitment decision identifies salary scale five but does not state a precise net monthly salary or individualized benefits. It would be wrong to invent an amount or present an unofficial estimate as a published offer. The most consequential risks are confusing the judicial job title with legal training, lacking the C or D licence, using an unrelated vocational diploma, omitting documents, or trusting a different closing time. Before applying, compare the signed four-page decision with the official portal listing and watch for formal corrections. This guide was reviewed on 28 October 2026."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours CSPJ : 15 postes techniques automobiles à Rabat, permis C ou D et dossier",
+          "deck": "L'arrêté du 20 octobre 2026 détaille quinze postes, les diplômes et permis exigés, les épreuves et la date limite du 10 novembre à 16 h 30.",
+          "sections": [
+            [
+              "Ce que prévoit réellement l'arrêté de recrutement",
+              "La décision n° 87/2026 du 20 octobre 2026 ouvre un concours pour quinze secrétaires juridiques adjoints de quatrième grade, échelle 5, au Conseil supérieur du pouvoir judiciaire. Malgré l'intitulé administratif du grade, les spécialités demandées relèvent de la maintenance automobile et non du droit ou du secrétariat classique. Il est donc indispensable de consulter le tableau des diplômes avant de déposer sa candidature. La fiche a été publiée le 26 octobre 2026 sur le portail de l'emploi public sous le code C44297/26. Le titre du poste, pris isolément, ne suffit pas à établir l'éligibilité."
+            ],
+            [
+              "Nombre de postes, affectation et spécialités",
+              "Les quinze postes annoncés sont destinés au Conseil supérieur du pouvoir judiciaire, à Rabat. Les spécialités sont la mécanique automobile, la réparation des véhicules automobiles, l'électricité automobile et la mécanique d'entretien. Il s'agit de profils professionnels précis, et non d'un concours ouvert à tous les titulaires d'un diplôme administratif. Les candidats résidant dans une autre ville doivent anticiper la question du déplacement ou d'un éventuel déménagement. Aucun logement ni remboursement de transport n'est garanti par l'arrêté. Les quinze postes constituent un total global, non quinze postes pour chacune des quatre spécialités."
+            ],
+            [
+              "Diplôme, expérience et permis de conduire",
+              "Le texte exige un certificat de qualification professionnelle délivré par un établissement de formation professionnelle reconnu dans le cadre réglementaire cité, ou un titre équivalent dans la spécialité requise. Une expérience professionnelle dans le domaine concerné est également demandée, mais aucune durée minimale chiffrée n'est précisée dans le tableau. Il ne faut donc pas ajouter artificiellement une condition de deux ou trois ans. Le candidat doit aussi posséder un permis de conduire de catégorie C ou D. Avant l'inscription, il convient de vérifier la validité du permis et la correspondance exacte entre diplôme, expérience et spécialité annoncée."
+            ],
+            [
+              "Âge et catégories bénéficiant de quotas",
+              "L'accès est ouvert, selon les conditions générales de la fonction publique, aux personnes âgées d'au moins dix-huit ans et de quarante ans au plus au 1er janvier de l'année en cours, sous réserve des exceptions légales applicables. L'arrêté réserve vingt-cinq pour cent des postes aux catégories prévues de résistants, pupilles de la nation, anciens militaires ou anciens combattants, et sept pour cent aux personnes en situation de handicap, avec justificatifs. Ces parts ne créent pas de postes supplémentaires au-delà des quinze annoncés. L'appartenance à une catégorie réservée ne dispense pas de vérifier les exigences techniques et administratives."
+            ],
+            [
+              "Inscription en ligne et date limite exacte",
+              "La candidature s'effectue obligatoirement sur la plateforme électronique des concours du Conseil, et non par le formulaire de contact figurant sur la fiche du portail public. L'arrêté fixe la clôture au 10 novembre 2026 à 16 h 30. Il est prudent de créer son compte et de télécharger les pièces plusieurs jours avant cette échéance. Le texte précise que l'inscription validée est définitive et ne peut plus être modifiée. Vérifiez donc l'identité, le numéro de carte nationale, la spécialité choisie et la lisibilité des fichiers avant de confirmer. Un dossier simplement commencé n'est pas une candidature déposée."
+            ],
+            [
+              "Pièces justificatives et causes de rejet",
+              "Le dossier comprend une copie de la carte nationale d'identité, une copie du diplôme requis avec décision d'équivalence le cas échéant, une copie du permis C ou D et un CV avec photo, adresse, numéro de téléphone et courriel. Des justificatifs particuliers sont nécessaires pour les candidats relevant des quotas légaux, et une autorisation définitive de l'employeur est exigée des fonctionnaires ou contractuels concernés. L'absence d'une pièce ou la présentation d'un diplôme d'un niveau ou d'une spécialité non admis entraîne un risque de rejet. Aucun frais de candidature n'est indiqué dans l'arrêté : méfiez-vous des promesses de sélection payantes."
+            ],
+            [
+              "Épreuve écrite et entretien ou épreuve pratique",
+              "Le concours est programmé le 27 décembre 2026 à Rabat, avec la possibilité d'autres centres selon les besoins. L'épreuve écrite dure trois heures, coefficient quatre. Elle peut prendre la forme d'un sujet général ou de questions à choix multiples portant sur le Conseil, les missions du poste ou les spécialités recherchées. Les candidats admissibles passent ensuite un entretien, une épreuve pratique ou les deux, d'une durée de quinze à trente minutes, coefficient trois. Réviser la sécurité en atelier, le diagnostic électrique et les opérations d'entretien est utile, mais ces exemples ne constituent pas un programme officiel publié par le jury."
+            ],
+            [
+              "Notes minimales, classement et convocations",
+              "L'accès à l'oral ou à la pratique suppose une note d'au moins douze sur vingt à l'écrit, sans note éliminatoire. Pour figurer parmi les admis définitifs, il faut obtenir une moyenne générale d'au moins dix sur vingt, sans note éliminatoire inférieure ou égale à cinq sur vingt. Les listes de présélection et les convocations seront publiées par les canaux officiels du Conseil et du portail de l'emploi public. Les candidats doivent consulter régulièrement ces pages et télécharger leur convocation lorsqu'elle est disponible. L'inscription en ligne ne vaut pas admission automatique aux épreuves."
+            ],
+            [
+              "Rémunération, points de vigilance et contrôle final",
+              "L'arrêté mentionne l'échelle 5, sans publier de rémunération nette précise ni d'avantages individuels. Une estimation non sourcée ne doit donc pas être présentée comme un salaire garanti. Les principaux pièges sont la confusion entre l'intitulé juridique du grade et les spécialités automobiles, l'absence de permis C ou D, un diplôme non conforme, un dossier incomplet ou une heure limite provenant d'une source secondaire. Avant validation, comparez la décision signée de quatre pages à la fiche du portail et recherchez tout rectificatif officiel. Dernière vérification éditoriale : 28 octobre 2026."
+            ]
+          ]
+        }
+      }
     }
   }
 }
