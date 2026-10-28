@@ -397,6 +397,22 @@
     "appPhotoOneDriveCamera": {
       "name": "Microsoft Support — Automatically save photos with OneDrive",
       "url": "https://support.microsoft.com/en-us/onedrive/automatically-save-photos-videos-with-onedrive"
+    },
+    "unityLearnEssentials": {
+      "name": "Unity Learn — Unity Essentials",
+      "url": "https://learn.unity.com/pathway/unity-essentials"
+    },
+    "unityDeltaTimeDocs": {
+      "name": "Unity Scripting API — Time.deltaTime",
+      "url": "https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Time-deltaTime.html"
+    },
+    "unityWebBuildDocs": {
+      "name": "Unity Manual — Web build settings",
+      "url": "https://docs.unity3d.com/6000.2/Documentation/Manual/web-build-settings.html"
+    },
+    "itchHtml5CreatorDocs": {
+      "name": "itch.io Creator Guide — HTML5 games",
+      "url": "https://itch.io/docs/creators/html5"
     }
   },
   "articleLinks": {
