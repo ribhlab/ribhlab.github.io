@@ -474,8 +474,10 @@
         "aadSunscreen",
         "aadDrySkin"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/tinted-sunscreen-iron-oxides-guide.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "body-care",
