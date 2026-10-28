@@ -110,3 +110,17 @@ jobs:
           grep -q 'google.com, pub-1234567890123456, DIRECT' dist/ads.txt
           ! grep -q 'pagead2.googlesyndication.com/pagead/js' dist/ar/index.html
           test ! -f dist/CNAME
+
+      - name: Simulate approved AdSense disclosure and ad tags only on non-public test domain
+        env:
+          SITE_URL: https://ribhlab-preflight.example
+          ADSENSE_PUBLISHER_ID: ca-pub-1234567890123456
+          ENABLE_ADSENSE: 'true'
+        run: |
+          npm run build
+          npm run check
+          grep -q 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456' dist/ar/index.html
+          grep -q 'cookies or similar identifiers' dist/en/privacy/index.html
+          grep -q 'ملفات تعريف الارتباط' dist/ar/privacy/index.html
+          grep -q 'cookies ou identifiants similaires' dist/fr/privacy/index.html
+
