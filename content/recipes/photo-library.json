@@ -1,7 +1,7 @@
 {
   "checkedAt": "2026-10-28",
   "license": "Unsplash License",
-  "usage": "Illustrative stock food photography, not photographs of recipes tested by RibhLab. The same verified photograph may be used for multiple related dishes until an individual matching licensed image is checked.",
+  "usage": "Exactly one licensed illustrative photograph per uniquely assigned recipe. No photo may be reused in another recipe, article, opportunity or other content. Recipes without a verified individual photograph display their own unique locally generated SVG artwork; never reuse an unrelated photo.",
   "photos": {
     "tagineA": {
       "photoId": "photo-1517314626714-ac1b9a16515e",
@@ -115,13 +115,6 @@
       "photographer": "amin ramezani",
       "subject": "Salad bowl"
     },
-    "saladB": {
-      "photoId": "photo-1644704170910-a0cdf183649b",
-      "url": "https://images.unsplash.com/photo-1644704170910-a0cdf183649b?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-woman-is-holding-a-bowl-of-food-VepJDAuitQ4",
-      "photographer": "Clark Douglas",
-      "subject": "Vegetable and grain bowl"
-    },
     "fishA": {
       "photoId": "photo-1467003909585-2f8a72700288",
       "url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1000&h=625&q=78",
@@ -135,20 +128,6 @@
       "source": "https://unsplash.com/photos/a-fish-is-being-cooked-in-a-frying-pan-1aj1sirGQAA",
       "photographer": "Collab Media",
       "subject": "Salmon in skillet"
-    },
-    "pizza": {
-      "photoId": "photo-1773944052254-7ec12df45471",
-      "url": "https://images.unsplash.com/photo-1773944052254-7ec12df45471?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-slice-of-margherita-pizza-on-a-white-plate-CiMKCrIpM68",
-      "photographer": "Max Griss",
-      "subject": "Margherita pizza"
-    },
-    "pasta": {
-      "photoId": "photo-1683827449087-ccf5a9e6283c",
-      "url": "https://images.unsplash.com/photo-1683827449087-ccf5a9e6283c?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-plate-of-pasta-with-bacon-on-it-bYSvpF8NBmE",
-      "photographer": "Helen Van",
-      "subject": "Spaghetti pasta"
     },
     "cake": {
       "photoId": "photo-1540337706094-da10342c93d8",
@@ -199,5 +178,32 @@
       "photographer": "Olya P",
       "subject": "Fried egg and avocado toast"
     }
+  },
+  "assignments": {
+    "chicken-olive-tagine": "tagineA",
+    "beef-prune-tagine": "tagineB",
+    "seven-vegetable-couscous": "couscous",
+    "mushroom-risotto": "risottoA",
+    "gnocchi-tomato": "risottoB",
+    "baked-falafel": "falafel",
+    "hummus-with-tahini": "hummusA",
+    "baba-ghanoush": "hummusB",
+    "fattoush-salad": "hummusC",
+    "chicken-tikka-masala": "curryA",
+    "chicken-biryani": "curryB",
+    "thai-green-chicken-curry": "curryC",
+    "minestrone-vegetable-soup": "soupA",
+    "indonesian-nasi-goreng": "riceA",
+    "pad-thai-shrimp": "riceB",
+    "greek-salad-feta": "saladA",
+    "healthy-baked-salmon-quinoa": "fishA",
+    "baked-salmon-sweet-potato": "fishB",
+    "chocolate-brownie": "cake",
+    "banana-oat-pancakes": "pancake",
+    "moroccan-harira": "lentilSoupA",
+    "healthy-lentil-spinach-soup": "lentilSoupB",
+    "healthy-oat-berry-breakfast": "oats",
+    "healthy-chickpea-avocado-wrap": "avocado",
+    "french-toast-cinnamon": "eggToast"
   }
 }
