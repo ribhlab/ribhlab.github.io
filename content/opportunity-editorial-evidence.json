@@ -1182,6 +1182,164 @@
           ]
         }
       }
+    },
+    "sidi-finance": {
+      "reviewedAt": "2026-10-28",
+      "state": "verified-source-article-awaiting-live-check",
+      "verification": "Signed 2-page decision and 2-page job specification visually reviewed on 28 October 2026, compared with emploi-public C44257/26 listing; channel wording conflict disclosed; live publication not yet verified.",
+      "sources": [
+        {
+          "label": "SAPSB — signed recruitment decision (2 pages, dated 23 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/9c2c4e23-ec32-4b76-8c8d-75e9f50e9090"
+        },
+        {
+          "label": "SAPSB — detailed job description (2 pages)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/9c2c4e23-ec32-4b76-8c8d-75e9f50e9090/0"
+        },
+        {
+          "label": "Emploi-public — C44257/26 listing, published 23 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/9c2c4e23-ec32-4b76-8c8d-75e9f50e9090"
+        }
+      ],
+      "facts": {
+        "employer": "Société Aménagement de la Province Sidi Bennour SA (SAPSB)",
+        "reference": "C44257/26",
+        "posts": 1,
+        "region": "Casablanca-Settat",
+        "city": "Sidi Bennour",
+        "country": "Maroc",
+        "contract": "Recrutement sous contrat",
+        "degree": "Bac+5 finances ou comptabilité et gestion",
+        "experienceYears": ">5 in a similar position",
+        "nationality": "Marocaine",
+        "language": "Parfaite maîtrise du français écrit et oral",
+        "procurementExperience": "souhaitée, non obligatoire",
+        "deadline": "2026-11-20T16:30",
+        "submissionEmail": "asafsaf@sapsb.com",
+        "submissionConflict": "Signed decision: email only; portal: online filing on administration site, but site field is email",
+        "documents": "Certified CIN, CV, certified employment attestations, certified degrees, signed motivation letter, completed application form, scanned PDF",
+        "selection": "Dossier screening and interviews; results published on portal and at company HQ",
+        "salary": null,
+        "age": null,
+        "writtenExam": null,
+        "sourcePublishedAt": "2026-10-23"
+      },
+      "translations": {
+        "ar": {
+          "title": "سيدي بنور 2026: منصب إطار إداري للمحاسبة والمالية بشروط Bac+5 وخبرة تتجاوز خمس سنوات",
+          "deck": "قراءة القرار الأصلي وبطاقة المهام: التعيين في سيدي بنور، ملف PDF عبر البريد الإلكتروني قبل 20 نوفمبر، وتفاصيل المالية والصفقات والانتقاء.",
+          "sections": [
+            [
+              "جهة التوظيف وطبيعة المنصب",
+              "أعلنت شركة تهيئة إقليم سيدي بنور، وهي شركة مساهمة للتنمية المحلية تعرف اختصاراً بـSAPSB، عن توظيف إطار إداري مكلف بالمحاسبة والمالية، في منصب واحد بمدينة سيدي بنور. يحمل القرار الأصلي الرقم 115/2026 بحسب الكتابة اليدوية الظاهرة في نسخته الموقعة، وتؤكد بوابة التشغيل العمومي الرمز C44257/26 وتاريخ النشر 23 أكتوبر 2026. التوظيف بموجب عقد، وليس مباراة للالتحاق مباشرة بهيئة من هيئات الوظيفة العمومية. تحدد الوثيقة مقر التعيين في سيدي بنور، لكنها لا تعلن راتباً ولا تعويضات أو مدة العقد. يجب التعامل مع العدد باعتباره منصباً معلناً لا وعداً بالتوظيف."
+            ],
+            [
+              "الشهادة والخبرة واللغة: ما هو إلزامي وما هو مرغوب",
+              "يفتح القرار الترشيح للمواطنين المغاربة الحاصلين على شهادة Bac+5 في المالية أو المحاسبة والتسيير، مع خبرة تزيد على خمس سنوات في منصب مشابه. عبارة «أكثر من خمس سنوات» تختلف عن «خمس سنوات على الأقل»، وينبغي ألا يفترض صاحب خمس سنوات بالضبط أنه مستوفٍ للشرط دون توضيح رسمي. يذكر القرار إتقان الفرنسية كتابة وتحدثاً، بينما يصف الخبرة في المشتريات وإبرام الصفقات بأنها مرغوبة وليست شرطاً مستقلاً إلزامياً. لا يحدد القرار سناً أقصى ولا اختباراً لغوياً معيّناً أو معادلة مفصلة للشهادات الأجنبية؛ لذلك لا نضيف شروطاً من إعلانات أخرى."
+            ],
+            [
+              "المهام المالية والمحاسبية اليومية",
+              "تفصل بطاقة الوظيفة الملحقة مسؤوليات تتجاوز تسجيل الفواتير. سيشارك الإطار في صياغة الاستراتيجية المالية، وإعداد الميزانية التشغيلية السنوية مع الإدارة العامة، ومتابعة الخزينة وعلاقات البنوك، وإنتاج تقارير مالية دورية. وتشمل المسؤوليات المحاسبة التحليلية حسب المشروع، والامتثال الضريبي والقانوني، وإعداد التسويات البنكية الشهرية، وأرشفة الوثائق، ومتابعة ملفات أداء الموردين ومقدمي الخدمات. يمكن للمترشح أن يجهز مثالاً موثقاً من خبرته في مطابقة كشف بنكي مع دفتر الأستاذ أو تفسير انحراف ميزانية مشروع. لكن لا يجوز الادعاء بأن الشركة تستعمل نظام ERP بعينه أو تطلب شهادة محاسبية محددة لم تذكرها الوثيقة."
+            ],
+            [
+              "الجانب الإداري والموارد البشرية",
+              "تتضمن بطاقة المنصب إعداد ومتابعة العقود والاتفاقيات، والإشراف على الإجراءات الإدارية اليومية، ومساندة المدير العام في ملفات التوظيف. كما تشمل متابعة بيانات الأجور والعطل والتعويضات، وإعداد عقود العمل والملحقات، والتقيد بالتشريعات ذات الصلة، والتحضير لمجالس الإدارة والجمعيات العامة ومحاضرها. هذه المسؤوليات تفسر لماذا لا يكفي إظهار مهارة في مسك الحسابات وحدها؛ فالوظيفة متعددة التخصصات وتحتاج إلى تنظيم الوثائق والسرية المهنية والقدرة على التواصل مع الإدارة والجهات الخارجية. لا تقدم البطاقة جدول ساعات العمل أو حجم الفريق الذي سيشرف عليه المرشح، فلا ينبغي تخمينهما."
+            ],
+            [
+              "المشتريات والصفقات: ميزة تنافسية مهمة",
+              "تخصص البطاقة الملحقة قسماً واسعاً لتخطيط المشتريات وإعداد الملفات ومراقبة مطابقة العمليات للقواعد المعمول بها. وتشمل مراجعة دفاتر التحملات وملفات الاستشارة والعروض المالية، وتتبع لجان فتح الأظرفة ومحاضرها، ومراقبة تنفيذ العقود والتعديلات والفسخ عند الاقتضاء، والتعامل مع أجهزة الرقابة. لذلك يستفيد المترشح من إبراز خبرة حقيقية في إعداد ملف صفقة أو مراقبة مطابقة طلب شراء، مع وصف دوره الشخصي والنتيجة التي أمكن التحقق منها. ومع ذلك يجب الحفاظ على التمييز: القرار يقول إن الخبرة السابقة في المشتريات وإبرام الصفقات «مرغوبة»، ولا يجعلها شرط قبول قاطعاً."
+            ],
+            [
+              "الوثائق الست وكيفية إعداد ملف PDF",
+              "يطلب القرار نسخة مطابقة للأصل من البطاقة الوطنية، وسيرة ذاتية محينة تبين المهارات والمسار الأكاديمي والمهني، ونسخاً مطابقة للأصل من شهادات العمل التي تثبت الخبرة المطلوبة، ونسخاً مطابقة للأصل من الشهادات الدراسية، ورسالة تحفيزية موقعة موجهة إلى المدير العام للشركة، واستمارة ترشيح معبأة وفق النموذج المرفق. يوجب القرار مسح الملف وإرساله بصيغة PDF. توجد استمارة قابلة للتنزيل في البوابة، لكن الملف المرفق بصيغة Excel؛ ينبغي تعبئته وفق التعليمات ثم التأكد من أن النسخة النهائية المرسلة تستوفي شرط PDF. لا تستبدل الشهادات المطلوبة بتصريحات شخصية غير موثقة."
+            ],
+            [
+              "عنوان الإرسال والموعد النهائي وتناقض وصف القناة",
+              "ينص القرار الأصلي صراحة على أن الإيداع يتم حصرياً وإلزامياً عبر البريد الإلكتروني asafsaf@sapsb.com، قبل 20 نوفمبر 2026 الساعة 16:30. وتعرض بوابة التشغيل العمومي التاريخ والساعة نفسيهما، لكنها تصنف نوع الإيداع بأنه «إلكتروني على موقع الإدارة» بينما تعرض العنوان البريدي نفسه في خانة موقع الإيداع. هذا اختلاف في وصف القناة لا يثبت وجود استمارة ويب أخرى. ينبغي اتباع تعليمات القرار الموقّع، والتحقق من العنوان عبر صفحة الإعلان الرسمية، وإرسال PDF مبكراً مع الاحتفاظ بنسخة الرسالة وإثبات التسليم إن توفر. الطلبات الناقصة أو المتأخرة مستبعدة وفق النص، ولا يضمن الإرسال قبول الترشيح."
+            ],
+            [
+              "الانتقاء والتحضير والمعلومات غير المنشورة",
+              "تبدأ العملية بدراسة أولية للملفات من لجنة تعينها رئاسة مجلس الإدارة للتحقق من ملاءمة المؤهلات. ثم يُستدعى أفضل المرشحين الذين يقع اختيارهم إلى مقابلات انتقاء، وتعتمد النتائج بناءً على تقرير اللجنة وتنشر على البوابة وفي مقر الشركة. لا يذكر القرار اختباراً كتابياً أو تاريخ المقابلات أو سلم التنقيط أو راتباً أو تاريخ بدء العمل. للتحضير بصورة عملية، راجع ميزانية مشروع افتراضي، وفسر إجراء تسوية بنكية، وصف رقابة على صفقة شراء، وتدرب على تقديم تجربتك بالفرنسية دون كشف أسرار جهات عمل سابقة. هذه مقترحات تحضيرية وليست برنامج اختبار رسمي. راجع المصدرين مجدداً قبل الإرسال لأن التعليمات قد تتغير."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Sidi Bennour 2026: accounting and finance administrative officer recruitment",
+          "deck": "Official decision and job specification: one post, Bac+5, over five years' experience, PDF email application by 20 November and selection stages.",
+          "sections": [
+            [
+              "Employer, location and contract nature",
+              "The Société Aménagement de la Province Sidi Bennour SA, abbreviated SAPSB, is recruiting one administrative officer responsible for accounting and finance. The signed decision and the Moroccan public employment portal identify Sidi Bennour as the place of assignment. The portal gives reference C44257/26 and a publication date of 23 October 2026. This is contract recruitment by a local development company, not direct appointment to the civil service. The notice does not specify a salary, benefits, contract length or start date. The single advertised position should not be interpreted as a promise of selection, and candidates should distinguish this recruitment from similarly titled vacancies elsewhere."
+            ],
+            [
+              "Degree, experience and French requirements",
+              "The signed decision requires Moroccan nationality, a Bac+5 qualification in finance or accounting and management, and more than five years of experience in a similar position. More than five years is not automatically the same as at least five years: applicants at the boundary should seek an official clarification rather than assume eligibility. Excellent written and spoken French is expressly required. Experience in purchasing and contract-award procedures is described as desirable, not as an additional absolute admission requirement. The decision provides no age ceiling, named language certificate or detailed rule for assessing foreign qualifications. Those omissions must not be filled with conditions borrowed from another employer."
+            ],
+            [
+              "Financial, accounting and tax responsibilities",
+              "The two-page job description goes well beyond entering invoices. Under the managing director's responsibility, the officer participates in financial strategy, prepares and monitors the annual operating budget, manages cash resources and banking relationships, and provides regular financial reports. Other tasks include project-based analytical accounting, fiscal and legal compliance, monthly bank reconciliations, archiving administrative and accounting records, and following up supplier and service-provider payments. An applicant could prepare a truthful example showing how they reconciled a bank statement to ledger entries or explained a project budget variance. The employer does not identify a specific ERP, accounting software brand or mandatory professional certification, so such requirements must not be invented."
+            ],
+            [
+              "Administrative, legal and HR work",
+              "The position also involves administrative procedures, contracts and financing agreements, and coordination of day-to-day operations. Its HR responsibilities include preparing employment documents, tracking payroll-related information, leave and reimbursements, assisting recruitment procedures, and monitoring legal compliance. The job description refers to preparing board and general meeting materials and minutes, handling general legal matters, insurance and disputes, and preserving confidentiality. This explains why bookkeeping experience alone may not fully demonstrate suitability: the role combines finance, governance, documentation and coordination. The official papers do not state the size of the team, reporting frequency beyond the named duties, working hours or remote-work arrangements. Applicants should ask rather than assume."
+            ],
+            [
+              "Procurement and tender procedures matter",
+              "A substantial part of the attached job description covers procurement planning and the award and monitoring of contracts. The officer may review tender specifications, consultation documents and financial offers, support tender committees and their minutes, monitor contract amendments or termination, and liaise with technical and oversight bodies. The document emphasizes ethical, rigorous and transparent purchasing. A useful application example would describe a real procurement file the applicant prepared or checked, specifying their own contribution without disclosing confidential supplier data. Yet the eligibility decision says procurement experience is desirable; it does not make prior tender-management experience a strict independent prerequisite. Candidates should preserve this distinction when assessing whether to apply."
+            ],
+            [
+              "Six document categories and the PDF requirement",
+              "The decision lists a certified copy of the national identity card, an updated CV detailing skills and academic and professional history, certified employment attestations proving the required experience, certified degree copies, a signed motivation letter addressed to the company's managing director, and a completed application form using the attached template. The application package must be scanned and submitted in PDF format. The portal provides the application form as a separate downloadable spreadsheet; applicants should complete the template and verify that the final submitted package satisfies the decision's PDF requirement. Do not replace required employment evidence with unsupported self-declarations, and do not send banking credentials or unrelated sensitive information."
+            ],
+            [
+              "Deadline, email address and the portal's channel wording",
+              "The signed decision states that applications must be sent exclusively and obligatorily by email to asafsaf@sapsb.com by 20 November 2026 at 16:30. The public portal shows the same deadline but labels the submission type as online filing on the administration's website, while its site-of-submission field contains that email address. This is a discrepancy in channel description, not evidence of an additional online form. The signed document is the clearer source for the submission route; applicants should verify the address on the government listing, submit early and retain the sent message and any delivery acknowledgement. The decision explicitly warns that incomplete or late applications will not be considered. Email transmission alone does not guarantee acceptance."
+            ],
+            [
+              "Selection stages, preparation and unknown details",
+              "An appointed committee first reviews applications to assess fit with the role. Shortlisted candidates may then be invited to selection interviews, and results are validated on the basis of the committee's report and published on the government portal and at the company headquarters. No written examination, interview date, scoring grid, salary or starting date is specified in the reviewed decision. Practical preparation could include explaining a bank reconciliation, defending a sample operating budget, describing controls over procurement documentation and presenting relevant experience in French. These are preparation suggestions, not an official test syllabus. Review the original documents again immediately before applying, since subsequent corrections could change the instructions."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Sidi Bennour 2026 : recrutement d'un cadre administratif en comptabilité et finances",
+          "deck": "Analyse de la décision et de la fiche de poste : un emploi, Bac+5, plus de cinq ans d'expérience, dossier PDF par courriel avant le 20 novembre.",
+          "sections": [
+            [
+              "Employeur, ville et nature du recrutement",
+              "La Société Aménagement de la Province Sidi Bennour SA, ou SAPSB, recrute un cadre administratif chargé de la comptabilité et des finances, pour un seul poste. La décision signée et le portail marocain de l'emploi public indiquent Sidi Bennour comme lieu d'affectation. La référence publiée est C44257/26, avec une date de publication du 23 octobre 2026. Il s'agit d'un recrutement sous contrat au sein d'une société de développement local, et non d'une nomination directe dans la fonction publique. Ni le salaire, ni les avantages, ni la durée du contrat, ni la date de prise de fonction ne sont précisés. L'annonce d'un poste ne garantit évidemment pas l'embauche."
+            ],
+            [
+              "Diplôme, expérience et maîtrise du français",
+              "La décision exige la nationalité marocaine, un diplôme Bac+5 en finances ou en comptabilité et gestion, ainsi qu'une expérience de plus de cinq ans dans un poste similaire. La formule « plus de cinq ans » ne se confond pas automatiquement avec « cinq ans au minimum »; un candidat situé exactement à cette limite devrait demander une clarification officielle. La parfaite maîtrise du français à l'écrit comme à l'oral est explicitement requise. L'expérience en achats et passation des marchés est souhaitée, sans être présentée comme une condition d'accès distincte et obligatoire. Le texte ne précise ni âge maximal, ni certificat linguistique déterminé, ni procédure détaillée d'équivalence de diplômes étrangers."
+            ],
+            [
+              "Missions financières, comptables et fiscales",
+              "La fiche de poste annexée décrit des responsabilités qui dépassent largement la saisie comptable. Sous la responsabilité du directeur général, le cadre participe à la stratégie financière, élabore et pilote le budget opérationnel annuel, gère la trésorerie et les relations bancaires, et produit des états financiers réguliers. Il assure également la comptabilité analytique par projet, la conformité fiscale et légale, les rapprochements bancaires mensuels, l'archivage et le suivi des paiements des prestataires et fournisseurs. Pour préparer sa candidature, une personne peut présenter un exemple réel de rapprochement bancaire ou d'analyse d'écart budgétaire en expliquant précisément sa contribution. Aucun logiciel ERP particulier ni certificat professionnel obligatoire n'est mentionné."
+            ],
+            [
+              "Gestion administrative, ressources humaines et droit",
+              "La fonction comprend aussi les démarches administratives, la préparation des contrats et conventions, ainsi que la supervision des opérations quotidiennes. La fiche mentionne la gestion des contrats de travail et avenants, le suivi des données de paie, des congés et des remboursements, l'assistance aux recrutements et la veille juridique. Elle prévoit également la préparation des conseils d'administration, assemblées générales et procès-verbaux, le traitement de questions juridiques générales et la gestion des assurances et contentieux. Le poste demande donc une capacité de coordination et de confidentialité qui dépasse la seule tenue des comptes. Le nombre de collaborateurs, les horaires et les possibilités de télétravail ne sont pas publiés."
+            ],
+            [
+              "Achats et marchés : une dimension importante",
+              "Une large partie de la fiche concerne la programmation des achats et la passation des marchés et commandes. Les tâches portent notamment sur l'examen des dossiers de consultation, cahiers des charges et offres financières, le suivi des commissions d'appel d'offres et de leurs procès-verbaux, les avenants et résiliations, ainsi que les relations avec les entités techniques et les organismes de contrôle. Le document insiste sur la rigueur, l'éthique et la transparence. Un candidat peut valoriser un dossier d'achat qu'il a réellement préparé ou vérifié, sans divulguer de données confidentielles. Toutefois, l'expérience préalable dans ce domaine est qualifiée de souhaitable dans la décision d'accès, et non de condition éliminatoire autonome."
+            ],
+            [
+              "Pièces à fournir et constitution du PDF",
+              "Le dossier doit contenir une copie certifiée conforme de la carte nationale d'identité, un CV actualisé décrivant compétences et parcours, des copies certifiées des attestations de travail justifiant l'expérience, des copies certifiées des diplômes, une lettre de motivation signée adressée au directeur général, et une fiche de candidature renseignée selon le modèle joint. La décision impose un dossier numérisé au format PDF. Le portail propose la fiche de candidature en téléchargement dans un fichier de tableur; il convient de remplir le modèle et de vérifier que le dossier final respecte bien l'exigence de PDF. Une simple déclaration d'expérience ne remplace pas les attestations exigées. Il est inutile de transmettre des informations bancaires étrangères à la candidature."
+            ],
+            [
+              "Adresse, échéance et divergence de présentation",
+              "La décision signée exige un envoi exclusivement et obligatoirement par courriel à asafsaf@sapsb.com avant le 20 novembre 2026 à 16 h 30. Le portail gouvernemental affiche la même date et la même heure, mais classe le dépôt comme « en ligne sur le site de l'administration », alors que le champ du site de dépôt contient précisément cette adresse électronique. Il s'agit d'une divergence de libellé, pas de la preuve qu'un autre formulaire en ligne existe. Le document signé fournit la consigne la plus explicite. Vérifiez l'adresse sur la page officielle, envoyez suffisamment tôt et conservez une copie du message et de tout accusé de réception. Les dossiers incomplets ou tardifs ne seront pas examinés."
+            ],
+            [
+              "Présélection, entretiens et informations absentes",
+              "Une commission désignée par la présidence du conseil d'administration procède d'abord à l'étude des dossiers pour vérifier l'adéquation des profils. Les meilleurs candidats retenus sont ensuite convoqués à des entretiens de sélection. Les résultats sont validés sur la base du rapport de la commission, puis publiés sur le portail et affichés au siège de la société. Le texte consulté ne prévoit pas d'épreuve écrite annoncée, ni de date d'entretien, ni de barème, ni de salaire publié. Pour se préparer, il est pertinent de savoir expliquer un rapprochement bancaire, un budget opérationnel, le contrôle d'un dossier de marché et son parcours en français. Ce sont des conseils pratiques, non un programme officiel d'examen."
+            ]
+          ]
+        }
+      }
     }
   }
 }
