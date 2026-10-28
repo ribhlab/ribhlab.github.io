@@ -1,0 +1,629 @@
+{
+  "reviewedAt": "2026-10-28",
+  "sports": {
+    "overview": {
+      "ar": "مواعيد ونتائج مثبتة بمصادر الاتحادات والمنظمين. ليست خدمة نتائج مباشرة أو تغطية لجميع مباريات العالم.",
+      "en": "Fixtures and results backed by competition organizers; this is not a live scores service or exhaustive worldwide fixture database.",
+      "fr": "Calendriers et résultats issus des organisateurs. Il ne s'agit ni de scores en direct ni d'une base exhaustive de tous les matchs."
+    },
+    "eventHighlights": [
+      {
+        "id": "f1-mexico-2026",
+        "sport": "motorsport",
+        "from": "2026-10-30",
+        "to": "2026-11-01",
+        "title": {
+          "ar": "جائزة المكسيك الكبرى للفورمولا 1",
+          "en": "Formula 1 — Mexico City Grand Prix",
+          "fr": "Formule 1 — Grand Prix de Mexico"
+        },
+        "source": "Formula 1",
+        "url": "https://www.formula1.com/en/racing/2026"
+      },
+      {
+        "id": "uefa-women-champions-md3",
+        "sport": "football",
+        "from": "2026-10-28",
+        "to": "2026-10-29",
+        "title": {
+          "ar": "دوري أبطال أوروبا للسيدات — الجولة الثالثة",
+          "en": "UEFA Women's Champions League — Matchday 3",
+          "fr": "Ligue des champions féminine — 3e journée"
+        },
+        "source": "UEFA",
+        "url": "https://www.uefa.com/news-media/news/02a0-1f71bdf70a9a-b6067bd647f2-1000--2026-european-football-calendar-match-and-draw-dates-for-a/"
+      },
+      {
+        "id": "uefa-womens-europa",
+        "sport": "football",
+        "from": "2026-10-28",
+        "to": "2026-10-29",
+        "title": {
+          "ar": "كأس أوروبا للسيدات — ذهاب ثمن النهائي",
+          "en": "Women's Europa Cup — Round of 16 first legs",
+          "fr": "Europa Cup féminine — huitièmes de finale aller"
+        },
+        "source": "UEFA",
+        "url": "https://www.uefa.com/news-media/news/02a0-1f71bdf70a9a-b6067bd647f2-1000--2026-european-football-calendar-match-and-draw-dates-for-a/"
+      },
+      {
+        "id": "uefa-ucl-next",
+        "sport": "football",
+        "from": "2026-11-03",
+        "to": "2026-11-04",
+        "title": {
+          "ar": "دوري أبطال أوروبا للرجال — الجولة الرابعة",
+          "en": "UEFA Champions League — Matchday 4",
+          "fr": "Ligue des champions — 4e journée"
+        },
+        "source": "UEFA",
+        "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixtures-a/"
+      }
+    ],
+    "selectedResults": [
+      {
+        "title": "Liverpool 4–3 Villarreal",
+        "sport": "football",
+        "date": "2026-10-20",
+        "source": "UEFA",
+        "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixtures-a/"
+      },
+      {
+        "title": "Paris Saint-Germain 4–2 Barcelona",
+        "sport": "football",
+        "date": "2026-10-20",
+        "source": "UEFA",
+        "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixtures-a/"
+      },
+      {
+        "title": "Real Madrid 4–1 Leipzig",
+        "sport": "football",
+        "date": "2026-10-21",
+        "source": "UEFA",
+        "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fixtures-a/"
+      }
+    ],
+    "leagues": [
+      {
+        "sport": {
+          "ar": "كرة القدم",
+          "en": "Football",
+          "fr": "Football"
+        },
+        "icon": "⚽",
+        "links": [
+          [
+            "FIFA — competitions",
+            "https://www.fifa.com/tournaments"
+          ],
+          [
+            "UEFA — fixtures/results",
+            "https://www.uefa.com/uefachampionsleague/fixtures-results/"
+          ],
+          [
+            "CAF — competitions",
+            "https://www.cafonline.com/"
+          ],
+          [
+            "Premier League — fixtures",
+            "https://www.premierleague.com/fixtures"
+          ],
+          [
+            "LaLiga — results",
+            "https://www.laliga.com/en-GB/laliga-easports/results"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "كرة السلة",
+          "en": "Basketball",
+          "fr": "Basket-ball"
+        },
+        "icon": "🏀",
+        "links": [
+          [
+            "NBA — games",
+            "https://www.nba.com/games"
+          ],
+          [
+            "FIBA — competitions",
+            "https://www.fiba.basketball/"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "التنس",
+          "en": "Tennis",
+          "fr": "Tennis"
+        },
+        "icon": "🎾",
+        "links": [
+          [
+            "ATP — scores",
+            "https://www.atptour.com/en/scores/current"
+          ],
+          [
+            "WTA — tournaments",
+            "https://www.wtatennis.com/tournaments"
+          ],
+          [
+            "ITF — tournaments",
+            "https://www.itftennis.com/en/tournament-calendar/"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "سباقات السيارات",
+          "en": "Motor racing",
+          "fr": "Sport automobile"
+        },
+        "icon": "🏎️",
+        "links": [
+          [
+            "Formula 1 — 2026 calendar",
+            "https://www.formula1.com/en/racing/2026"
+          ],
+          [
+            "FIA — events",
+            "https://www.fia.com/events"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "رياضات المحركات",
+          "en": "Motorcycle racing",
+          "fr": "Motocyclisme"
+        },
+        "icon": "🏍️",
+        "links": [
+          [
+            "MotoGP — calendar",
+            "https://www.motogp.com/en/calendar"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "الملاكمة",
+          "en": "Boxing",
+          "fr": "Boxe"
+        },
+        "icon": "🥊",
+        "links": [
+          [
+            "World Boxing — events",
+            "https://worldboxing.org/"
+          ],
+          [
+            "Olympics — boxing",
+            "https://olympics.com/en/sports/boxing/"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "الفنون القتالية",
+          "en": "Mixed martial arts",
+          "fr": "Arts martiaux mixtes"
+        },
+        "icon": "🥋",
+        "links": [
+          [
+            "UFC — events",
+            "https://www.ufc.com/events"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "الركبي",
+          "en": "Rugby",
+          "fr": "Rugby"
+        },
+        "icon": "🏉",
+        "links": [
+          [
+            "World Rugby — competitions",
+            "https://www.world.rugby/tournaments"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "الكرة الطائرة",
+          "en": "Volleyball",
+          "fr": "Volley-ball"
+        },
+        "icon": "🏐",
+        "links": [
+          [
+            "Volleyball World — schedule",
+            "https://en.volleyballworld.com/"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "السباحة",
+          "en": "Swimming",
+          "fr": "Natation"
+        },
+        "icon": "🏊",
+        "links": [
+          [
+            "World Aquatics — calendar",
+            "https://www.worldaquatics.com/competitions"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "ألعاب القوى",
+          "en": "Athletics",
+          "fr": "Athlétisme"
+        },
+        "icon": "🏃",
+        "links": [
+          [
+            "World Athletics — calendar",
+            "https://worldathletics.org/competition/calendar-results"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "الدراجات",
+          "en": "Cycling",
+          "fr": "Cyclisme"
+        },
+        "icon": "🚴",
+        "links": [
+          [
+            "UCI — calendar",
+            "https://www.uci.org/calendar"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "الكريكيت",
+          "en": "Cricket",
+          "fr": "Cricket"
+        },
+        "icon": "🏏",
+        "links": [
+          [
+            "ICC — fixtures",
+            "https://www.icc-cricket.com/fixtures-results"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "كرة اليد",
+          "en": "Handball",
+          "fr": "Handball"
+        },
+        "icon": "🤾",
+        "links": [
+          [
+            "IHF — competitions",
+            "https://www.ihf.info/competitions"
+          ]
+        ]
+      },
+      {
+        "sport": {
+          "ar": "رياضات إلكترونية",
+          "en": "Esports",
+          "fr": "Esport"
+        },
+        "icon": "🎮",
+        "links": [
+          [
+            "ESL — events",
+            "https://pro.eslgaming.com/"
+          ]
+        ]
+      }
+    ],
+    "video": {
+      "title": {
+        "ar": "ملخص أهداف الجولة الأولى من دوري أبطال أوروبا 2026/27 — قناة UEFA الرسمية",
+        "en": "UEFA 2026/27 Matchday 1 goal highlights — official UEFA channel",
+        "fr": "Buts de la 1re journée de Ligue des champions 2026/27 — chaîne officielle UEFA"
+      },
+      "youtubeId": "DLOUfAVwuXA",
+      "sourceUrl": "https://www.youtube.com/watch?v=DLOUfAVwuXA",
+      "publishedAt": "2026-09-11"
+    },
+    "analysis": {
+      "ar": [
+        "قبل تحليل أي مباراة، راجع الغيابات المؤكدة والجدول وعدد أيام الراحة دون اختلاق تشكيلات أو احتمالات فوز.",
+        "انتقالات اللاعبين: ما كنسميّوش «صفقة رسمية» حتى النادي أو الاتحاد ينشر البلاغ. افصل الشائعة من الخبر المؤكد.",
+        "الترتيب والنقاط خاصها تكون من صفحات الدوري الرسمي المحدثة؛ الروابط أعلاه تعرض المصدر بدل جدول قديم."
+      ],
+      "en": [
+        "Read confirmed absences, fixture congestion and rest days before drawing conclusions; do not invent probable lineups or odds.",
+        "Transfers become confirmed only when the club or organizer publishes an official notice. Separate reports and rumors clearly.",
+        "Standings and rankings should be checked from live organizer pages rather than a stale cached table."
+      ],
+      "fr": [
+        "Vérifiez absences confirmées, fatigue et calendrier avant l'analyse ; n'inventez ni compositions ni probabilités.",
+        "Un transfert n'est confirmé qu'après communiqué officiel du club ou de l'organisateur ; séparez rumeurs et annonces.",
+        "Classements et positions doivent venir des pages des compétitions à jour, pas d'une copie figée."
+      ]
+    },
+    "transferSources": [
+      [
+        "FIFA — regulatory transfer information",
+        "https://inside.fifa.com/legal/football-regulatory/"
+      ],
+      [
+        "UEFA — official football news",
+        "https://www.uefa.com/news-media/"
+      ],
+      [
+        "Premier League — official news",
+        "https://www.premierleague.com/news"
+      ]
+    ]
+  },
+  "technology": {
+    "note": {
+      "ar": "تحديثات موثقة من بيانات المصنّعين. الأرقام التقنية الواردة هي تصريحات الشركات؛ نوضح أنها ليست اختبارات مخبرية مستقلة. الأسعار والتوفر يختلفان حسب البلد.",
+      "en": "Manufacturer-verified announcements. Stated specifications are vendor claims, not independently benchmarked. Prices and availability vary by region.",
+      "fr": "Annonces vérifiées auprès des fabricants. Les caractéristiques annoncées ne constituent pas des tests indépendants. Prix et disponibilité varient selon les marchés."
+    },
+    "phones": [
+      {
+        "brand": "Apple",
+        "region": "US",
+        "announced": "2026-09-09",
+        "name": "iPhone 18 Pro / Pro Max",
+        "detail": {
+          "ar": "أعلنت Apple عن جيل iPhone 18 Pro يوم 9 شتنبر 2026. قارن عمر التحديثات والكاميرا والسعر المحلي من البيان التقني الرسمي.",
+          "en": "Apple introduced iPhone 18 Pro on September 9, 2026. Compare camera, software support and local pricing from the official announcement.",
+          "fr": "Apple a présenté l’iPhone 18 Pro le 9 septembre 2026. Consultez la fiche officielle pour l’appareil photo, le suivi logiciel et le prix local."
+        },
+        "url": "https://www.apple.com/newsroom/topics/iphone/"
+      },
+      {
+        "brand": "Google",
+        "region": "US",
+        "announced": "2026-08-12",
+        "name": "Pixel 11 / Pixel 11 Pro / Pixel 11 Pro XL",
+        "detail": {
+          "ar": "قدمت Google سلسلة Pixel 11 ومعالج Tensor G6 يوم 12 غشت 2026، مع تحسينات معلنة في التصوير والذكاء الاصطناعي.",
+          "en": "Google unveiled the Pixel 11 series and Tensor G6 on August 12, 2026, announcing camera and AI improvements.",
+          "fr": "Google a annoncé la série Pixel 11 et Tensor G6 le 12 août 2026 avec des évolutions photo et IA."
+        },
+        "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/"
+      },
+      {
+        "brand": "Samsung",
+        "region": "KR",
+        "announced": "2026-08-27",
+        "name": "Galaxy S26 FE / Galaxy S26 series",
+        "detail": {
+          "ar": "صفحة سامسونغ الرسمية كتجمع إعلانات Galaxy S26، ومنها S26 FE المعلن يوم 27 غشت. تحقق من النسخة المباعة فبلادك.",
+          "en": "Samsung's official Galaxy S26 newsroom includes the August 27 S26 FE announcement. Confirm variant and availability in your market.",
+          "fr": "Le dossier officiel Galaxy S26 inclut l’annonce du S26 FE le 27 août. Vérifiez le modèle distribué localement."
+        },
+        "url": "https://news.samsung.com/global/galaxy-s26-series"
+      },
+      {
+        "brand": "OPPO",
+        "region": "CN",
+        "announced": "2026-10-21",
+        "name": "Find X10 / Find X10 Pro Max",
+        "detail": {
+          "ar": "أعلنت OPPO عالمياً على Find X10 يوم 21 أكتوبر، مع تركيز كبير على الكاميرا. المواصفات في البيان بيانات الشركة.",
+          "en": "OPPO launched its Find X10 family globally on October 21, emphasizing camera systems. Vendor specifications are not an independent test.",
+          "fr": "OPPO a présenté la gamme Find X10 le 21 octobre, centrée sur la photo. Les chiffres proviennent du fabricant."
+        },
+        "url": "https://www.oppo.com/en/newsroom/press/oppo-find-x10-series-global-launch/"
+      },
+      {
+        "brand": "Sony",
+        "region": "JP",
+        "announced": null,
+        "name": "Xperia — official range",
+        "detail": {
+          "ar": "صفحة Sony الرسمية باش تتحقق من موديلات Xperia المتاحة. ما كننسبوش إطلاقاً جديداً بلا بلاغ بتاريخ واضح.",
+          "en": "Sony's official Xperia range for checking available models. No unverified new product launch is claimed.",
+          "fr": "Gamme Xperia officielle pour vérifier les modèles disponibles, sans annonce de lancement non confirmée."
+        },
+        "url": "https://www.sony.com/electronics/smartphones"
+      }
+    ],
+    "regionalBrands": [
+      {
+        "region": {
+          "ar": "الصين",
+          "en": "China",
+          "fr": "Chine"
+        },
+        "brands": [
+          [
+            "Xiaomi",
+            "https://www.mi.com/global/"
+          ],
+          [
+            "Honor",
+            "https://www.honor.com/global/"
+          ],
+          [
+            "OnePlus",
+            "https://www.oneplus.com/"
+          ],
+          [
+            "vivo",
+            "https://www.vivo.com/en/"
+          ],
+          [
+            "Huawei",
+            "https://consumer.huawei.com/en/"
+          ]
+        ]
+      },
+      {
+        "region": {
+          "ar": "الولايات المتحدة",
+          "en": "United States",
+          "fr": "États-Unis"
+        },
+        "brands": [
+          [
+            "Apple",
+            "https://www.apple.com/iphone/"
+          ],
+          [
+            "Google Pixel",
+            "https://store.google.com/category/phones"
+          ]
+        ]
+      },
+      {
+        "region": {
+          "ar": "كوريا الجنوبية",
+          "en": "South Korea",
+          "fr": "Corée du Sud"
+        },
+        "brands": [
+          [
+            "Samsung",
+            "https://www.samsung.com/global/galaxy/"
+          ]
+        ]
+      },
+      {
+        "region": {
+          "ar": "اليابان",
+          "en": "Japan",
+          "fr": "Japon"
+        },
+        "brands": [
+          [
+            "Sony Xperia",
+            "https://www.sony.com/electronics/smartphones"
+          ],
+          [
+            "Sharp AQUOS",
+            "https://global.sharp/"
+          ]
+        ]
+      },
+      {
+        "region": {
+          "ar": "أوروبا",
+          "en": "Europe",
+          "fr": "Europe"
+        },
+        "brands": [
+          [
+            "Nothing",
+            "https://nothing.tech/"
+          ],
+          [
+            "HMD",
+            "https://www.hmd.com/"
+          ],
+          [
+            "Fairphone",
+            "https://www.fairphone.com/"
+          ]
+        ]
+      }
+    ],
+    "comparison": [
+      {
+        "title": {
+          "ar": "iPhone 18 Pro مقابل Pixel 11 Pro مقابل Galaxy S26",
+          "en": "iPhone 18 Pro vs Pixel 11 Pro vs Galaxy S26",
+          "fr": "iPhone 18 Pro vs Pixel 11 Pro vs Galaxy S26"
+        },
+        "points": {
+          "ar": [
+            "الكاميرا: قارن الصور الحقيقية بنفس الإضاءة، مش غير الميغابكسل.",
+            "البطارية: اختبارات وقت الشاشة مهمة أكثر من رقم السعة فقط.",
+            "الخصوصية: أذونات التطبيقات وسياسات تحديث النظام.",
+            "السعر: تحقق من النسخة والضمان والضرائب فالمغرب."
+          ],
+          "en": [
+            "Camera: compare same-scene photos, not megapixels alone.",
+            "Battery: independent endurance matters more than capacity claims.",
+            "Privacy: app permissions and update policies.",
+            "Price: compare exact storage, warranty and local taxes."
+          ],
+          "fr": [
+            "Photo : comparer des scènes identiques, pas seulement les mégapixels.",
+            "Batterie : privilégier l'autonomie testée plutôt que la capacité annoncée.",
+            "Confidentialité : autorisations et mises à jour.",
+            "Prix : comparer stockage, garantie et taxes locales."
+          ]
+        }
+      }
+    ],
+    "otherDomains": [
+      {
+        "icon": "💻",
+        "name": {
+          "ar": "الحواسيب والمعالجات",
+          "en": "Laptops & processors",
+          "fr": "PC et processeurs"
+        },
+        "url": "https://www.intel.com/content/www/us/en/newsroom/home.html"
+      },
+      {
+        "icon": "🧠",
+        "name": {
+          "ar": "الذكاء الاصطناعي",
+          "en": "Artificial intelligence",
+          "fr": "Intelligence artificielle"
+        },
+        "url": "https://blog.google/technology/ai/"
+      },
+      {
+        "icon": "🔐",
+        "name": {
+          "ar": "الأمن السيبراني",
+          "en": "Cybersecurity",
+          "fr": "Cybersécurité"
+        },
+        "url": "https://www.cisa.gov/news-events"
+      },
+      {
+        "icon": "🚗",
+        "name": {
+          "ar": "السيارات الكهربائية",
+          "en": "Electric vehicles",
+          "fr": "Véhicules électriques"
+        },
+        "url": "https://www.iea.org/topics/electric-vehicles"
+      },
+      {
+        "icon": "📱",
+        "name": {
+          "ar": "أنظمة Android",
+          "en": "Android software",
+          "fr": "Logiciels Android"
+        },
+        "url": "https://blog.google/products/android/"
+      },
+      {
+        "icon": "📡",
+        "name": {
+          "ar": "الاتصالات والشبكات",
+          "en": "Telecom & networks",
+          "fr": "Télécoms et réseaux"
+        },
+        "url": "https://www.gsma.com/newsroom/"
+      }
+    ]
+  }
+}
