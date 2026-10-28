@@ -796,6 +796,10 @@
     "cpi-release-basket-how-read": [
       "bls",
       "fed"
+    ],
+    "ethereum-smart-contracts-wallet-permissions": [
+      "ethereum",
+      "metamaskHelp"
     ]
   }
 }

@@ -584,6 +584,16 @@
       "altFr": "Calculatrice et stylo sur des documents blancs, illustration du calcul sans représentation des données réelles de l'inflation",
       "license": "Unsplash License",
       "note": "Unsplash free photograph by Mediamodifier published 2021-07-02; free license and CDN image identifier confirmed 2026-10-28. Illustrative image only."
+    },
+    "ethereum-smart-contracts-wallet-permissions": {
+      "photoId": "photo-1637597383944-d39bc455d5c0",
+      "source": "https://unsplash.com/photos/two-electronic-devices-sitting-next-to-each-other-VLZ6YOEIN-w",
+      "photographer": "rc.xyz NFT gallery",
+      "alt": "Two cryptocurrency hardware wallet devices; illustrative photograph, not evidence of an audited contract",
+      "altAr": "جهازان ماديان مرتبطان بمحافظ العملات الرقمية؛ صورة توضيحية لا تثبت سلامة أي عقد",
+      "altFr": "Deux dispositifs matériels liés aux portefeuilles crypto ; illustration sans garantie de sécurité d'un contrat",
+      "license": "Unsplash License",
+      "note": "Real free photograph by rc.xyz NFT gallery, published 22 November 2021; image asset https://images.unsplash.com/photo-1637597383944-d39bc455d5c0 confirmed via Unsplash page image link, license page inspected 28 October 2026. Not a wallet or security test. Unique ID and page URL searched in repo, no indexed match."
     }
   }
 }

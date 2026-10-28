@@ -1,0 +1,182 @@
+{
+  "slug": "ethereum-smart-contracts-wallet-permissions",
+  "category": "trading",
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false,
+  "related": [
+    "bitcoin-wallet-recovery-backup-safety-drill",
+    "crypto-new-token-due-diligence"
+  ],
+  "sources": [
+    {
+      "label": "Ethereum.org — ERC-20 token standard and approve/allowance/transferFrom, checked 28 October 2026",
+      "url": "https://ethereum.org/developers/docs/standards/tokens/erc-20/"
+    },
+    {
+      "label": "Ethereum.org — How to revoke smart contract token access, checked 28 October 2026",
+      "url": "https://ethereum.org/guides/how-to-revoke-token-access/"
+    },
+    {
+      "label": "MetaMask Help — What is a token approval?, checked 28 October 2026",
+      "url": "https://support.metamask.io/transactions-and-gas/transactions/what-is-a-token-approval/"
+    },
+    {
+      "label": "MetaMask Help — Disconnecting a dapp does not revoke approvals, checked 28 October 2026",
+      "url": "https://support.metamask.io/more-web3/dapps/manage-dapp-permissions"
+    },
+    {
+      "label": "MetaMask Help — How to revoke smart contract allowances, checked 28 October 2026",
+      "url": "https://support.metamask.io/more-web3/learn/how-to-revoke-smart-contract-allowances-token-approvals"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "عقود Ethereum الذكية وصلاحيات المحافظ: كيف تفحص الموافقات وتقلل المخاطر",
+      "excerpt": "شرح عملي للفرق بين الاتصال بالموقع والتوقيع والموافقة على إنفاق الرموز، مع مثال حسابي وخطوات فحص وإلغاء الصلاحيات دون وعود بالأمان المطلق.",
+      "lead": "قد تبدو عبارة «اتصل بمحفظتك» خطوة بسيطة، لكنها لا تعني الشيء نفسه الذي تعنيه الموافقة على نقل الرموز أو توقيع معاملة. تنفذ العقود الذكية على Ethereum تعليمات منشورة على الشبكة، وقد تمنح بعض المعاملات عنواناً آخر حق التصرف في نوع محدد من الأصول ضمن حد معين. يستند هذا الدليل إلى مواصفة ERC-20 الرسمية ووثائق Ethereum وإرشادات MetaMask التي تمت مراجعتها في 28 أكتوبر 2026. وهو شرح تعليمي لإدارة المخاطر، لا دعوة إلى الاستثمار أو تجربة مواقع مجهولة بأموال حقيقية.",
+      "sections": [
+        {
+          "heading": "1. ما الذي يفعله العقد الذكي وما الذي لا يفعله؟",
+          "paragraphs": [
+            "العقد الذكي برنامج يعمل وفق تعليمات منشورة على سلسلة الكتل. يمكنه التحقق من شروط التحويل وتنفيذ وظائف مالية أو إدارية، لكنه لا يتحول تلقائياً إلى جهة موثوقة لمجرد أن شفرته ظاهرة للعموم. توضح وثائق Ethereum أن التفاعل الذي يغير حالة الشبكة يحتاج عادة إلى معاملة ورسوم تنفيذ، بينما قراءة بيانات عامة مثل الرصيد لا تتطلب معاملة على السلسلة. لا تخلط بين شفافية البيانات وضمان سلامة التطبيق، فقد تكون الواجهة خادعة أو توجد ثغرة في العقد أو في مكونات يعتمد عليها.",
+            "يمكنك التفكير في العقد بوصفه آلة تنفذ قواعد مبرمجة، وليس موظفاً يمكنه إلغاء تحويل خاطئ بناء على طلب شفهي. التحويلات المؤكدة لا تُعكس عادة بمجرد التواصل مع الدعم. قبل التعامل مع خدمة جديدة، افصل بين ثلاثة أسئلة: هل الموقع الذي فتحته هو الموقع الأصلي، وهل عنوان العقد يطابق ما نشره المشروع في قنواته الرسمية، وهل وظيفة المعاملة المعروضة تتفق مع غرضك؟ الإجابة عن سؤال واحد لا تعوض فحص السؤالين الآخرين، ولا يمنح تدقيق الشفرة حماية مطلقة من الاختراق."
+          ]
+        },
+        {
+          "heading": "2. الاتصال بالمحفظة ليس تصريحاً بسحب الرموز",
+          "paragraphs": [
+            "عندما تسمح لموقع بالاتصال بمحفظتك، قد تتيح له رؤية العنوان العام وبعض معلومات الحساب وفق الأذونات التي تعرضها المحفظة. تؤكد وثائق MetaMask أن فصل الموقع يزيل الاتصال، لكنه لا يلغي تلقائياً موافقات إنفاق الرموز المسجلة على الشبكة. هذه نقطة عملية أساسية: قد يختفي الموقع من قائمة التطبيقات المتصلة بينما تبقى صلاحية عقده قائمة. لا تعتبر زر «Disconnect» إجراءً كافياً بعد الاشتباه في موافقة خطرة؛ افحص الموافقات نفسها على الشبكة الصحيحة.",
+            "أما التوقيع فليس نوعاً واحداً؛ قد يكون تأكيد معاملة تغير حالة الشبكة، أو توقيع رسالة لا يرسل معاملة مباشرة، أو تصريحاً يسمح باستخدام رمز ضمن آلية معينة. يجب قراءة تفاصيل الطلب لا عنوان الزر وحده. إذا ظهرت نافذة توقيع غير متوقعة أثناء تصفح صفحة معلومات، أوقف العملية وتحقق من العنوان والمحتوى. لا تشارك عبارة الاسترداد أو المفتاح الخاص مطلقاً؛ فخدمات فحص الموافقات لا تحتاجهما. ولا تُدخل بيانات محفظتك في رابط أرسله شخص يدعي أنه فريق دعم."
+          ]
+        },
+        {
+          "heading": "3. افهم approve وallowance وtransferFrom بمثال واضح",
+          "paragraphs": [
+            "في معيار ERC-20 تحدد وظيفة approve مقدار الرموز التي يُسمح لعنوان آخر بإنفاقها، وتُظهر allowance الحد المتبقي، بينما يمكن لوظيفة transferFrom استخدام هذه الصلاحية ضمن شروط العقد. لنفترض محفظة فيها 600 وحدة من رمز افتراضي، وموافقة لخدمة بمقدار 150 وحدة. إذا استُخدمت 40 وحدة بالطريقة المعتادة يصبح الحد المتبقي 110 وحدات، بصرف النظر عن تغير سعر الرمز. هذا مثال حسابي لشرح الصلاحية، وليس تجربة على شبكة فعلية أو دليلاً على أن كل رمز يطبق المعيار بصورة سليمة.",
+            "إذا منحت عنواناً غير موثوق موافقة شبه غير محدودة، فقد يظل قادراً على نقل رموز من النوع الموافق عليه في المستقبل، حتى بعد خروجك من الموقع، متى توافرت شروط التنفيذ. وفي المقابل، لا تعني موافقة 150 وحدة أن المهاجم يستطيع تلقائياً أخذ كل أنواع الأصول الأخرى في المحفظة؛ نطاق الموافقة يرتبط بالرمز والعقد والشبكة. قد توجد أنماط مختلفة لرموز NFT أو التوقيعات المفوضة، ولذلك افحص اسم الوظيفة والحد المعروض بدلاً من تعميم قاعدة واحدة على جميع الأصول."
+          ]
+        },
+        {
+          "heading": "4. كيف تتحقق من العنوان والحد قبل الموافقة؟",
+          "paragraphs": [
+            "ابدأ بفتح موقع الخدمة من عنوان موثوق تحفظه بنفسك، لا من إعلان ممول أو رسالة خاصة. قارن عنوان العقد الذي تطلب المحفظة منحه الصلاحية بالعنوان المعلن في وثائق المشروع، ثم راجعه في مستكشف الكتل المناسب للشبكة. الاسم والشعار ليسا إثباتاً للهوية؛ قد توجد رموز تحمل أسماء متشابهة. إذا كانت الواجهة لا تعرض العنوان أو ترفض شرح سبب الحاجة إلى حد كبير، فلا توافق. ابحث أيضاً عن إشارات تحذير مستقلة، مع إدراك أن غياب البلاغات لا يساوي ضمان الأمان.",
+            "عند الحاجة إلى عملية محددة، اختر حداً يتناسب مع الكمية المطلوبة إن أتاحت المحفظة ذلك. مثال: إذا كنت تنوي استخدام 25 وحدة فقط، فإن حد 30 وحدة يترك هامشاً قدره 5 وحدات، في حين أن حد 3,000 وحدة يزيد الانكشاف المحتمل مئة مرة مقارنة بحد 30. هذه مقارنة كمية للحدود، لا توقع للخسارة الفعلية؛ فقد يمنع العقد أو الرصيد أو عوامل أخرى تنفيذ السحب. قد يفرض الحد الأصغر موافقات إضافية ورسوم شبكة لاحقاً، ولذلك توازن بين سهولة الاستخدام وتقليل التفويض."
+          ]
+        },
+        {
+          "heading": "5. مراجعة الموافقات وإلغاؤها خطوة بخطوة",
+          "paragraphs": [
+            "افتح أداة موثوقة لمراجعة الموافقات من وثائق Ethereum أو مزود محفظتك، وحدد الشبكة الصحيحة ثم العنوان العام. راجع لكل بند اسم الرمز وعنوان الجهة المخولة وحد الإنفاق، وميّز بين العقود التي ما زلت تستخدمها والأخرى غير المعروفة أو القديمة. لا يكفي فحص Ethereum الرئيسية إذا سبق أن تعاملت مع شبكة أخرى؛ فالسجلات مستقلة بحسب الشبكة. وثّق تاريخ المراجعة في سجل خاص من دون تخزين عبارة الاسترداد أو بيانات الدخول، ولا تفترض أن كل صلاحية غير مألوفة احتيالية دون تحقيق.",
+            "إذا قررت الإلغاء، اقرأ المعاملة التي ستظهر في المحفظة، وتحقق من أنها تخص العنوان والشبكة المقصودين، ثم انتظر تأكيدها على السلسلة. تذكر وثائق Ethereum وMetaMask أن الإلغاء يحتاج عادة إلى رسوم شبكة؛ الضغط على زر الإلغاء وحده لا يثبت نجاحه. أعد فتح أداة المراجعة وتحقق من تغير الحد أو اختفاء الصلاحية. لا تعدك عملية الإلغاء باستعادة أموال نُقلت سابقاً، ولا تعالج تلقائياً سرقة المفتاح الخاص؛ إذا تعرض المفتاح للخطر فالمشكلة أوسع من موافقة واحدة."
+          ]
+        },
+        {
+          "heading": "6. قائمة قرار عملية وحدود الحماية",
+          "paragraphs": [
+            "قبل أي تفاعل، استخدم قائمة من ستة أسئلة: هل العنوان صحيح؟ هل الشبكة صحيحة؟ هل أعرف العقد المخوّل؟ هل أفهم الوظيفة؟ هل حد الإنفاق ضروري؟ وهل أقبل خسارة الأصول المعرضة للخطر؟ إذا لم تستطع الإجابة، فالأكثر تحفظاً عدم التوقيع. يمكن للمبتدئ تجربة القراءة على مستكشف الكتل أو استخدام بيئة اختبار دون تحويل أصول حقيقية. تجنب أي جهة تطلب دفع «رسوم استرجاع» إلى محفظة مجهولة، أو تطلب مشاركة الشاشة وعبارة الاسترداد لحل مشكلة مزعومة.",
+            "لا توجد قائمة تحقق تمنع جميع الخسائر؛ فقد تتغير الواجهات وتُكتشف ثغرات في عقود كانت موثوقة. احفظ نسخة من رابط المعاملة وتاريخها إن حدث خطأ، واطلب مساعدة فنية من القنوات الرسمية دون إرسال أسرار. راجع صلاحياتك دورياً وبعد استعمال خدمة جديدة، لكن لا تُكثر من معاملات الإلغاء بلا فهم لأنها تستهلك رسوماً وقد تتطلب إعادة التفويض لاحقاً. المعلومات هنا عامة ولا تحسم قانونية التعامل بالأصول الرقمية في بلدك؛ تحقق من التنظيم المحلي والضرائب قبل أي نشاط مالي."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Ethereum smart contracts and wallet permissions: a practical approval audit",
+      "excerpt": "A source-checked guide to connections, signatures, ERC-20 allowances, spending caps and revocation, including worked examples and realistic limits.",
+      "lead": "A wallet connection, a message signature, and a token spending approval are three different decisions. Confusing them can leave an account exposed long after the user has closed a website. Smart contracts execute code on Ethereum, and some interactions authorize another address to spend a particular token up to a defined limit. This guide draws on the ERC-20 specification, Ethereum documentation, and MetaMask's wallet support material, checked on 28 October 2026. It offers a repeatable risk-review method, not a claim that any wallet, protocol, or investment is safe.",
+      "sections": [
+        {
+          "heading": "1. What a smart contract can and cannot guarantee",
+          "paragraphs": [
+            "A smart contract is a program deployed at a blockchain address, with functions that can change recorded state when transactions execute. Ethereum distinguishes reading public information, which does not require an on-chain transaction, from writing state, which generally requires authorization and network fees. Public code and transparent transactions are useful for inspection, but neither establishes that a protocol is economically sound. Its website can mislead, its dependencies can fail, and its privileged roles may have powers a casual user does not understand. Technical openness is not the same as a consumer guarantee.",
+            "Think of a contract as a machine following programmed rules rather than a bank employee able to reverse a mistake on request. Confirmed blockchain transfers are normally not undone by contacting support. Before interacting, ask whether you reached the authentic website, whether the contract address matches the project's independently published address, and whether the requested function matches your intention. Each question catches a different failure mode. Even an audited contract can contain overlooked bugs or suffer from compromised interfaces, so avoid presenting any single verification step as proof of safety."
+          ]
+        },
+        {
+          "heading": "2. Connecting a wallet differs from granting token access",
+          "paragraphs": [
+            "Connecting a wallet usually lets a decentralized application identify a public account and request the permissions displayed in the wallet. MetaMask explicitly warns that disconnecting an application does not revoke token spending approvals already recorded on a blockchain. An old allowance may remain usable even after a site disappears from the list of connected applications. If you suspect a dangerous approval, removing the connection alone is insufficient: inspect the actual token allowances on the relevant network. This distinction is particularly important after trying unfamiliar exchanges, reward sites, or NFT marketplaces.",
+            "Not every signature has the same effect. A user might authorize an on-chain transaction, sign a message, or provide a token-related authorization through a different signature mechanism. Read the actual request and the receiving address rather than relying on the button label. An unexpected signature prompt while merely browsing information is a reason to stop and investigate. Never provide a recovery phrase or private key to an approval checker, a supposed administrator, or a troubleshooting form. Legitimate permission inspection does not require surrendering wallet secrets."
+          ]
+        },
+        {
+          "heading": "3. ERC-20 allowance arithmetic without jargon",
+          "paragraphs": [
+            "The ERC-20 standard defines approve for setting another address's permitted spending amount, allowance for querying the remaining permission, and transferFrom for transfers using that authorization. Consider a hypothetical wallet holding 600 units of a token and granting a spender an allowance of 150 units. If 40 units are subsequently transferred under the ordinary allowance mechanism, 110 units remain available. The calculation is 150 minus 40, independent of the token's market price. This is a teaching example, not a real transaction, and unusual token implementations can behave differently.",
+            "An effectively unlimited approval can allow the authorized spender to take more of that token later, including tokens received after the initial interaction, subject to the contract's rules and balance. However, an approval for one token does not automatically authorize withdrawals of every other asset in the wallet. Network, token contract, spender address, and permission mechanism all matter. NFT operators may request broader setApprovalForAll authority, while some token systems use signature-based authorizations. Do not apply the ERC-20 example mechanically to every prompt; identify the function before deciding."
+          ]
+        },
+        {
+          "heading": "4. Verify the destination and right-size the cap",
+          "paragraphs": [
+            "Open a service from a bookmarked or independently verified address rather than a sponsored search result or direct message. Compare the requested spender address with official project documentation and inspect it on the appropriate block explorer. Token names and logos can be copied, so verify contract addresses, not appearances alone. If the interface cannot explain why it needs an unusually broad permission, decline the request. Independent warnings can inform a decision, but the absence of a warning is not evidence that a new contract is harmless.",
+            "When a wallet permits a custom spending cap, consider authorizing only the amount needed for the intended operation. Suppose a planned action requires 25 units: a 30-unit cap provides a five-unit buffer, while a 3,000-unit cap creates a limit one hundred times larger. This ratio describes permission size, not a prediction that an attacker will successfully steal 3,000 units; balances and contract behavior also constrain execution. Smaller caps can require additional approvals and gas fees later. The practical trade-off is between convenience and unnecessary exposure, not between guaranteed safety and certain loss."
+          ]
+        },
+        {
+          "heading": "5. Audit and revoke old approvals carefully",
+          "paragraphs": [
+            "Use an approval-review tool referenced by Ethereum documentation or your wallet provider, select the correct blockchain network, and inspect your public address. For each entry, record the token, authorized spender, and spending limit. Distinguish active services you still understand from obsolete or unfamiliar permissions. A review on Ethereum Mainnet does not automatically cover Polygon or another chain. Keep a dated private checklist of decisions, but never include recovery phrases or passwords. If a contract looks unfamiliar, research it before assuming it is either safe or malicious.",
+            "To revoke an unwanted allowance, inspect the proposed wallet transaction, confirm the correct network and spender, and submit it only if the details make sense. Both Ethereum and MetaMask explain that revocation is an on-chain action requiring gas; clicking a website button is not confirmation. Wait for the transaction to finalize and check the allowance again. Revocation does not recover assets already transferred, and it cannot repair a compromised private key. A user facing a key compromise must address account security separately rather than relying on allowance cleanup."
+          ]
+        },
+        {
+          "heading": "6. A decision checklist and its limits",
+          "paragraphs": [
+            "Before signing, answer six questions: Is the website authentic? Is the network correct? Do I recognize the spender? Do I understand the function? Is the spending limit necessary? Can I tolerate losing the assets exposed? If any answer is unclear, the conservative choice is not to sign. Beginners can first inspect public transactions without connecting a funded wallet, or learn on a test environment. Reject anyone demanding a recovery fee, remote-screen access, or a seed phrase in exchange for reversing a supposed failed transaction.",
+            "No checklist eliminates smart-contract risk. Interfaces change, trusted services can be breached, and contract vulnerabilities may appear after an earlier audit. Preserve a transaction reference and time when investigating a problem, and use official support channels without sharing secrets. Review allowances periodically and after unfamiliar interactions, but remember that unnecessary revocations cost fees and may require new approvals later. This article is general education, not financial advice or a determination of the legality or tax treatment of digital assets in your jurisdiction."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Contrats Ethereum et permissions du portefeuille : auditer les autorisations",
+      "excerpt": "Guide pratique des connexions, signatures, plafonds ERC-20 et révocations, avec exemples chiffrés, vérifications et limites de sécurité.",
+      "lead": "Connecter un portefeuille, signer un message et autoriser la dépense de jetons sont trois décisions distinctes. Les confondre peut laisser des actifs exposés longtemps après la fermeture d'un site. Les contrats intelligents exécutent des règles sur Ethereum, et certaines opérations permettent à une adresse tierce de dépenser un jeton déterminé dans une certaine limite. Ce dossier s'appuie sur la norme ERC-20, les documents d'Ethereum et l'assistance officielle de MetaMask, consultés le 28 octobre 2026. Il propose une méthode de contrôle reproductible, sans promettre la sécurité d'un protocole ni un rendement financier.",
+      "sections": [
+        {
+          "heading": "1. Comprendre le contrat intelligent sans lui prêter des garanties",
+          "paragraphs": [
+            "Un contrat intelligent est un programme déployé à une adresse de la blockchain. Ses fonctions peuvent modifier l'état enregistré lorsqu'une transaction est exécutée. La documentation Ethereum distingue la lecture de données publiques, qui ne nécessite pas de transaction sur la chaîne, de l'écriture, qui implique généralement une autorisation et des frais. La transparence du code facilite l'inspection, mais ne démontre ni la solidité économique du service ni l'absence de faille. Une interface trompeuse, une dépendance défaillante ou des droits administrateur mal compris peuvent créer des risques.",
+            "Il faut imaginer le contrat comme une machine appliquant des règles, et non comme un employé de banque capable d'annuler une erreur sur simple demande. Une transaction confirmée n'est normalement pas inversée par le service client. Avant toute opération, vérifiez séparément l'authenticité du site, la correspondance entre l'adresse du contrat et celle publiée par le projet, puis l'adéquation de la fonction demandée avec votre objectif. Chaque contrôle couvre un danger différent. Même un audit technique sérieux ne supprime pas les vulnérabilités inconnues ni les risques liés aux interfaces."
+          ]
+        },
+        {
+          "heading": "2. Déconnecter une application ne supprime pas les autorisations",
+          "paragraphs": [
+            "La connexion d'un portefeuille permet généralement à une application décentralisée d'identifier une adresse publique et de demander certaines permissions affichées par l'interface. MetaMask précise qu'une déconnexion ne révoque pas les autorisations de dépense de jetons déjà inscrites sur la blockchain. Une ancienne permission peut donc rester active après la disparition du site de la liste des applications connectées. Après une interaction suspecte, ne vous contentez pas du bouton de déconnexion : examinez les autorisations réellement enregistrées sur le réseau concerné.",
+            "Toutes les signatures ne sont pas équivalentes. L'utilisateur peut valider une transaction sur la chaîne, signer un message ou donner une autorisation suivant un mécanisme particulier. Lisez le contenu de la demande et l'adresse destinataire, sans vous fier au seul intitulé du bouton. Une signature inattendue lors de la simple consultation d'informations justifie l'arrêt de l'opération. Ne communiquez jamais la phrase de récupération ou la clé privée à un outil de vérification, à un prétendu administrateur ou à un formulaire d'assistance. L'inspection légitime des permissions n'exige pas ces secrets."
+          ]
+        },
+        {
+          "heading": "3. Calculer une allowance ERC-20 sur un exemple",
+          "paragraphs": [
+            "La norme ERC-20 prévoit approve pour fixer le montant qu'une autre adresse peut dépenser, allowance pour consulter l'autorisation restante et transferFrom pour utiliser cette permission. Imaginons un portefeuille contenant 600 unités d'un jeton fictif et une autorisation initiale de 150 unités. Si 40 unités sont transférées suivant le mécanisme habituel, le plafond restant est de 110 unités : 150 moins 40. Le cours du jeton n'intervient pas dans cette soustraction. Il s'agit d'un exemple pédagogique, non d'une transaction réellement effectuée, et certains jetons possèdent des comportements particuliers.",
+            "Une autorisation pratiquement illimitée peut permettre au bénéficiaire de prélever davantage de ce jeton à l'avenir, y compris après un nouveau dépôt, sous réserve des règles du contrat et du solde disponible. En revanche, autoriser un seul jeton ne donne pas automatiquement accès à tous les autres actifs. Le réseau, le contrat du jeton, l'adresse autorisée et le mécanisme technique doivent être examinés ensemble. Les NFT peuvent utiliser setApprovalForAll, tandis que certaines applications reposent sur des signatures spécifiques. N'appliquez pas mécaniquement le modèle ERC-20 à toutes les fenêtres."
+          ]
+        },
+        {
+          "heading": "4. Vérifier l'adresse et limiter le montant autorisé",
+          "paragraphs": [
+            "Accédez au service par une adresse enregistrée ou vérifiée indépendamment, plutôt que par une publicité ou un message privé. Comparez l'adresse du bénéficiaire affichée dans le portefeuille à la documentation officielle du projet, puis consultez un explorateur de blocs correspondant au réseau. Les noms et logos peuvent être imités : seule leur apparence ne prouve rien. Refusez une demande disproportionnée que l'application ne peut expliquer. Les avertissements externes peuvent aider, mais l'absence de signalement ne garantit pas qu'un nouveau contrat soit sans danger.",
+            "Lorsque le portefeuille propose un plafond personnalisé, choisissez une quantité proche de l'opération envisagée. Pour une utilisation de 25 unités, un plafond de 30 laisse une marge de cinq unités, tandis qu'un plafond de 3 000 est cent fois plus élevé. Ce rapport mesure l'étendue de l'autorisation, pas une perte future certaine : le solde et les règles du contrat influencent aussi les mouvements possibles. Un plafond réduit peut imposer d'autres validations payantes plus tard. Le compromis porte donc sur la commodité et l'exposition inutile, sans certitude absolue."
+          ]
+        },
+        {
+          "heading": "5. Contrôler puis révoquer les permissions anciennes",
+          "paragraphs": [
+            "Utilisez un outil de vérification recommandé par la documentation Ethereum ou par votre fournisseur de portefeuille. Sélectionnez le bon réseau et consultez votre adresse publique. Pour chaque permission, identifiez le jeton, le bénéficiaire et la limite. Distinguez les services encore utilisés des autorisations anciennes ou incomprises. Un contrôle sur Ethereum Mainnet ne couvre pas automatiquement Polygon ou une autre chaîne. Conservez un relevé daté de vos décisions sans y inscrire mots de passe ni phrase de récupération. Une adresse inconnue mérite une recherche, pas une conclusion hâtive.",
+            "Pour révoquer une permission indésirable, lisez la transaction proposée, confirmez le réseau et l'adresse concernés, puis soumettez-la seulement si elle est cohérente. Ethereum et MetaMask expliquent que la révocation est une opération sur la chaîne qui nécessite des frais de réseau. Le clic sur un bouton ne prouve pas son exécution : attendez la confirmation et vérifiez de nouveau la limite. Cette action ne récupère pas des fonds déjà transférés et ne corrige pas une clé privée compromise. La sécurité du compte doit alors être traitée séparément."
+          ]
+        },
+        {
+          "heading": "6. Une liste de décision et des limites explicites",
+          "paragraphs": [
+            "Avant de signer, posez six questions : le site est-il authentique ? Le réseau est-il correct ? Le bénéficiaire est-il identifiable ? La fonction est-elle comprise ? Le plafond est-il justifié ? Puis-je supporter la perte des actifs exposés ? Si une réponse manque, mieux vaut renoncer à la signature. Un débutant peut observer des transactions publiques sans connecter de portefeuille approvisionné, ou s'exercer dans un environnement de test. Refusez les offres de récupération payante exigeant un virement, un partage d'écran ou une phrase secrète.",
+            "Aucune liste ne supprime tous les risques. Une interface peut changer, un service réputé peut être compromis et une faille peut être découverte après un audit. En cas d'incident, conservez la référence et la date de la transaction, puis contactez les canaux officiels sans révéler vos secrets. Examinez régulièrement les autorisations, notamment après un essai inhabituel, mais sachez que les révocations inutiles coûtent des frais et peuvent nécessiter de nouvelles approbations. Ce dossier est pédagogique ; il ne constitue ni un conseil d'investissement ni une analyse de la réglementation ou de la fiscalité de votre pays."
+          ]
+        }
+      ]
+    }
+  }
+}
