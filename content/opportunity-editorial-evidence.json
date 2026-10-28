@@ -349,6 +349,177 @@
           ]
         }
       }
+    },
+    "amdie-finance": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Independently inspected all five pages of AMDIE Decision 510/2026 and attached 2023 job description, then cross-checked with the public competition listing C44255/26 on 28 October 2026. No salary, assignment city, experience minimum or test date inferred.",
+      "state": "official-notice-reviewed",
+      "sources": [
+        {
+          "label": "AMDIE — décision officielle n°510/2026 et fiche de poste annexée, 5 pages, datée du 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/26fa5f83-f86b-446e-b293-0104f8494b9d"
+        },
+        {
+          "label": "Portail de l'emploi public — fiche officielle C44255/26, publiée le 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/26fa5f83-f86b-446e-b293-0104f8494b9d"
+        }
+      ],
+      "facts": {
+        "city": null,
+        "country": "Maroc",
+        "reference": "C44255/26",
+        "decision": "510/2026",
+        "posts": 2,
+        "degree": "Bac+5 ou plus : ingénierie financière, comptabilité, finance ou contrôle de gestion",
+        "nationality": "Marocaine",
+        "age": "Moins de 45 ans à la date du concours",
+        "deadline": "2026-11-09",
+        "submission": "depot.emploi-public.ma, un seul PDF",
+        "tests": "Écrit et oral; dates communiquées par convocation numérique",
+        "salary": null,
+        "experienceYears": null,
+        "postingCity": null
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة AMDIE لسنة 2026: منصبان في تحليل المحاسبة والمالية وشروط الترشيح والاختبارات",
+          "deck": "قراءة مباشرة للقرار 510/2026 وبطاقة الوظيفة المرفقة: دبلوم Bac+5، أقل من 45 سنة، ملف PDF واحد، وآخر أجل 9 نونبر 2026. مكان التعيين والراتب لم يحددا في الإعلان.",
+          "sections": [
+            [
+              "1. الجهة المنظمة وعدد المناصب ومرجع القرار",
+              "أعلنت الوكالة المغربية لتنمية الاستثمارات والصادرات AMDIE عن فتح باب الترشيح لمنصبين اثنين بعنوان «Cadres Analystes Comptabilité & Finance» في إطار توظيف سنة 2026. القرار الرسمي يحمل الرقم 510/2026 وختم تاريخ 23 أكتوبر 2026، وتعرض البوابة الحكومية المباراة تحت المرجع C44255/26. العدد هنا منصبان لهذه الوظيفة بالذات، وليس إجمالي المناصب التي قد تعلنها الوكالة في مسابقات أخرى. يوضح الوصف الوظيفي أن المنصب ينتمي إلى مجال الإدارة المالية، ويرتبط تنظيمياً بقسم الميزانية. يقع مقر الوكالة في الرباط وفق تذييل القرار، لكن الوثيقة لا تعيّن مدينة ممارسة العمل النهائية؛ لا ينبغي تحويل عنوان المقر إلى وعد بالتعيين في الرباط."
+            ],
+            [
+              "2. الجنسية والسن والمؤهل الجامعي المطلوب",
+              "يحدد القرار الجنسية المغربية شرطاً للترشح، وأن يكون المرشح أقل من 45 سنة في تاريخ المباراة. لا يورد القرار في الصفحات المقروءة تاريخاً محدداً للمباراة نفسها، ولذلك ينبغي حساب شرط السن عند إعلان موعد الاختبار رسمياً وعدم اختراع تاريخ مرجعي. يشترط مؤهلاً عالياً بمستوى خمس سنوات بعد البكالوريا على الأقل في الهندسة المالية أو المحاسبة أو المالية أو مراقبة التسيير. لا يعني تشابه عنوان تخصص آخر أنه مقبول تلقائياً. ينص القرار أيضاً على قبول شهادات الجامعات والمدارس العمومية، أو الشهادات التي تتوفر على معادلة صادرة عن وزارة التعليم العالي؛ لذلك على خريج مؤسسة خاصة التحقق من وضع المعادلة قبل الإيداع."
+            ],
+            [
+              "3. ماذا يفعل محلل المحاسبة والمالية فعلياً؟",
+              "بطاقة الوظيفة المرفقة ليست إعلاناً عاماً عن «إدارة الأعمال»، بل تفصل أعمالاً عملية: التحقق من سلامة الوثائق المحاسبية، إعداد جداول أداء الموردين، تسجيل المقبوضات والمشتريات والتفويتات، وإعداد الدفاتر والسجلات المحاسبية. تشمل المهام أيضاً تحليل الحسابات، وإنجاز التسويات البنكية، ومراجعة اتساق الأرصدة، والمساهمة في التصريحات القانونية والجبائية، والإقفال وإعداد الميزانية وحساب المنتجات والتكاليف والوثائق التركيبية. هذه مسؤوليات معلنة في البطاقة الوظيفية، وليست شهادة بأن كل مرشح سيتولى كل مهمة منذ يومه الأول. ويشير الوصف إلى التصنيف والأرشفة، وهو عنصر مهم في إمكانية تتبع المستندات أثناء الرقابة."
+            ],
+            [
+              "4. مراقبة التسيير والتقارير والأنظمة المعلوماتية",
+              "تتجاوز الوظيفة التسجيل المحاسبي إلى إعداد معلومات مالية للمديرين والمساهمة في التقارير الدورية، وتغذية تقرير التسيير، وتطوير أدوات المتابعة والمؤشرات. وتذكر البطاقة المشاركة في تطوير نظام المعلومات المحاسبي، وفي إعداد الإجراءات ومراجع مراقبة التسيير. لذلك من المفيد للمرشح أن يستطيع شرح الفارق بين القيد المحاسبي الموثق والتحليل الإداري: الأول يثبت واقعة مالية ضمن قواعد الاعتراف والتسجيل، والثاني يفسر الانحراف عن الميزانية ويوصي بإجراء قابل للقياس. لا يحدد القرار برنامج ERP بعينه أو شهادة تقنية إلزامية؛ فلا يصح تقديم Sage أو SAP أو Excel المتقدم بوصفه شرطاً رسمياً غير منشور."
+            ],
+            [
+              "5. اللغات والكفاءات والخبرة: ماذا تقول البطاقة بدقة؟",
+              "تسرد بطاقة الوظيفة الفرنسية والعربية ضمن جدول الكفاءات المعرفية، مع مستوى مرجعي مرتفع، إلى جانب المحاسبة العامة والوطنية والجباية والخزينة والرقابة والتحليل المالي. وتذكر معايير مثل دقة العمليات، سرعة الإقفال الشهري والسنوي، مطابقة المعايير المحاسبية، وإدارة المصاريف. لكن القرار لا يفرض شهادة DELF أو IELTS أو اختبار لغة منفصلاً، فلا ينبغي إضافة شرط غير مكتوب. كما يظهر عنوان «Expérience» في خانة الملف الوظيفي دون حد أدنى محدد لسنوات الخبرة في الصفحة المصورة. لهذا لا نستطيع الجزم بأن خمس سنوات خبرة مطلوبة؛ المؤكد هو مستوى الدراسة Bac+5 أو أكثر."
+            ],
+            [
+              "6. وثائق الترشيح المطلوبة وكيفية ترتيبها",
+              "يطلب القرار أربع وثائق أساسية: رسالة تحفيزية موجهة إلى المدير العام للوكالة مع تحديد المنصب، ونسخة مصادقاً عليها من الدبلوم، ونسخة مصادقاً عليها من البطاقة الوطنية للتعريف، وسيرة ذاتية مفصلة ومحدثة. يطلب رفع الوثائق الممسوحة ضوئياً مجتمعة في ملف PDF واحد، وليس إرسال عدة ملفات متفرقة دون التحقق من قبول النظام. ينص الاستثناء الخاص بخريجي دفعة 2026 على إمكان تقديم شهادة النجاح عند التسجيل، على أن يُطلب الدبلوم في المراحل اللاحقة. يستبعد القرار الملفات الناقصة أو غير المطابقة للملف المطلوب، ولذلك من الحكمة مراجعة وضوح المسح، وترتيب الصفحات، وبيانات الاتصال قبل الضغط على زر الإيداع النهائي."
+            ],
+            [
+              "7. أين وكيف ومتى يتم الإيداع؟",
+              "قناة الترشيح المعلنة هي منصة depot.emploi-public.ma التابعة لبوابة التشغيل العمومي، ويصرح القرار بأن الترشيحات المودعة عبر الإنترنت وحدها ستعالج. حدد القرار والبطاقة الحكومية يوم 9 نونبر 2026 آخر أجل؛ لم أجد في النص المنشور ساعة إغلاق مؤكدة، ولذلك يجب عدم اختراع توقيت 16:30 أو 23:59 لهذه المباراة. ابدأ بإنشاء حساب أو تسجيل الدخول إلى البوابة من العنوان الحكومي الصحيح، ثم اختر المرجع C44255/26 وأرفق الملف الموحد. احتفظ بإثبات الإيداع وراجع الرسائل الإلكترونية وملف الرسائل غير المرغوب فيها، ولا تعتبر نموذج «اتصل بالإدارة» في صفحة الإعلان وسيلة لإرسال طلب العمل."
+            ],
+            [
+              "8. الانتقاء والامتحان التحريري والشفوي",
+              "ينص الفصل الرابع من القرار على اختبارين: كتابي وشفوي. ستدرس لجنة التوظيف الملفات أولاً للتحقق من استيفاء الملف الشخصي للشروط، ثم تُرسل دعوات رقمية إلى المرشحين المنتقين مسبقاً تتضمن تاريخ الاختبارات ومكانها. لا يحدد القرار في النسخة التي راجعناها مدة الاختبار الكتابي أو معامل التنقيط أو عتبة النجاح، فلا يجوز استعارة أرقام من مباراة أخرى. يتعين على المرشح متابعة البريد والبوابة لمعرفة موعده الحقيقي. والنتائج ستُنشر لدى الوكالة وعلى بوابة التشغيل العمومي؛ وجود اسم في قائمة المرشحين لا يعني التوظيف النهائي قبل استكمال جميع المراحل."
+            ],
+            [
+              "9. تمرين محاسبي واقعي للاستعداد، لا سؤال رسمي",
+              "للتدرب على مهام المطابقة، افترض أن رصيد حساب البنك في دفتر الأستاذ هو 120,000 درهم، بينما رصيد الكشف البنكي 118,500 درهم في نهاية الشهر. الفارق 1,500 درهم لا يثبت خطأ أو اختلاساً تلقائياً؛ قد ينتج عن شيك لم يقدم بعد أو إيداع لم يظهر أو عمولة لم تسجل. ابدأ بمطابقة كل حركة حسب التاريخ والمبلغ والمرجع، وافصل الحركات المعلقة عن الأخطاء المحاسبية، ثم اقترح القيد التصحيحي فقط بعد معرفة السبب. هذا المثال من إعداد RibhLab وليس بيانات AMDIE أو موضوع اختبار منشور. ويمكن إعداد تمرين ثانٍ على تحليل انحراف مصروف فعلي قدره 108,000 درهم عن ميزانية 100,000 درهم: الانحراف 8,000 درهم أو 8%، ثم البحث عن أسبابه."
+            ],
+            [
+              "10. ما الذي لم يعلنه القرار وما المخاطر العملية؟",
+              "لم أجد في القرار أو بطاقة الوظيفة راتباً شهرياً أو سنوياً محدداً، ولا تاريخاً نهائياً للاختبار، ولا مكاناً مؤكداً للتعيين، ولا شرطاً عددياً واضحاً لسنوات الخبرة. ينبغي إبقاء هذه الخانات غير مؤكدة بدلاً من ملئها بتقديرات أو برواتب وظائف مشابهة. قد تتغير التعليمات بإعلان تصحيحي رسمي، لذا راجع صفحة المرجع C44255/26 يوم الإيداع وقبل موعد الاختبار. لا تدفع لأي وسيط يعد بضمان النجاح أو الوصول إلى أسئلة سرية؛ مصدر التقديم هو المنصة الحكومية، والجهة المنظمة هي التي تصدر الدعوات والنتائج. يظل تقديم ملف مكتمل ومطابق للشروط أفضل من الاعتماد على توقعات غير موثقة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "AMDIE 2026 recruitment: two accounting and finance analyst posts, eligibility and application",
+          "deck": "An original reading of Decision 510/2026 and its job specification: Moroccan nationality, a relevant Bac+5 degree, under 45 at the competition, one PDF application, and a 9 November deadline. Salary and final workplace are not specified.",
+          "sections": [
+            [
+              "1. Employer, exact vacancies and official identifiers",
+              "The Moroccan Agency for Investment and Export Development, AMDIE, has opened recruitment for two Accounting and Finance Analyst positions in 2026. Its signed decision is numbered 510/2026 and bears the date 23 October 2026; the public employment portal identifies the contest as C44255/26. The figure of two applies to this particular analyst recruitment, not to all AMDIE vacancies appearing in other announcements. The attached position specification places the role in the finance function and refers to the Budget Department. AMDIE lists its head-office address in Rabat on the decision, but does not expressly specify the final job posting city. Applicants should not interpret an agency's correspondence address as a confirmed workplace."
+            ],
+            [
+              "2. Nationality, age and eligible education",
+              "The opening decision requires Moroccan nationality and an age below 45 on the date of the competition. The pages reviewed do not provide a fixed examination date, so the age reference should not be replaced by an invented calendar day. Candidates need higher education at Bac+5 level or above in financial engineering, accounting, finance or management control. A loosely related business degree is not automatically equivalent to one of those fields. The notice says degrees from public universities and schools are eligible, along with qualifications backed by an equivalence certificate issued by the Ministry of Higher Education. Graduates of private institutions should verify the recognition and equivalence of their own diploma rather than assume the school name is sufficient."
+            ],
+            [
+              "3. What the analyst is expected to do in accounting",
+              "The original job specification lists concrete responsibilities: receiving and checking accounting documents, preparing supplier payment schedules, recording receipts and purchases, and producing accounting and supporting records. It also covers account analysis, bank reconciliations, checks on ledger consistency, participation in tax and legal declarations, and month-end or year-end close work including balance sheets and income statements. These are tasks in the published job description, not a claim that a newly recruited person will personally perform every task on their first day. Filing and document archiving are also included. For an applicant, the useful preparation is to explain how each transaction is supported by a source document and how discrepancies are investigated before an adjustment is posted."
+            ],
+            [
+              "4. Financial reporting, management control and information systems",
+              "The position goes beyond data entry. The specification mentions compiling and distributing financial information to management, preparing periodic follow-up reports, contributing to management reporting and helping develop the accounting information system. It also refers to control procedures and performance indicators in coordination with operational departments. A good preparation exercise is to distinguish accounting evidence from management interpretation: a validated invoice records a financial event, while a budget variance analysis asks why the event differs from a plan and what corrective action is justified. The official document does not require a named ERP package, certification or proprietary spreadsheet product. Describing Sage, SAP or advanced Excel as a mandatory condition would therefore misrepresent the published notice."
+            ],
+            [
+              "5. Language and experience requirements without embellishment",
+              "French and Arabic appear in the job specification's competency table, together with general accounting, Moroccan accounting, taxation, treasury, analytical accounting and management control. The performance indicators include transaction accuracy, timely monthly and annual close, accounting compliance and expenditure management. The opening decision, however, does not prescribe a particular language certificate or a separate language examination, so no IELTS, DELF or other credential should be invented. The attached job sheet has an experience field but does not set a numerical minimum number of years in the portion inspected. We therefore report Bac+5 as the confirmed education requirement and do not invent a five-year experience requirement."
+            ],
+            [
+              "6. Required application documents and the single-PDF rule",
+              "The decision asks for a motivation letter addressed to AMDIE's Director General specifying the position, a legalized copy of the degree, a legalized copy of the Moroccan national identity card and a detailed current CV. Scanned documents must be assembled into one PDF file for the online application. The document expressly allows members of the 2026 graduating class to submit a certificate of successful completion at the initial stage, with the actual diploma required at a later step. The notice warns that incomplete applications or those not matching the profile will be rejected. A practical check is to review every page for readability, order the attachments clearly and ensure that the job title, candidate identity and contact details are consistent throughout."
+            ],
+            [
+              "7. Submission channel and 9 November 2026 deadline",
+              "The authorized submission route is the government public employment platform at depot.emploi-public.ma. The decision says only internet-submitted applications will be processed. Both the signed notice and the portal page give 9 November 2026 as the closing date. Neither document inspected supplies a verified closing hour for this competition, so it would be misleading to state 4:30 p.m. or 11:59 p.m. as a certainty. Use the official site, select reference C44255/26, upload the single PDF and retain the electronic acknowledgement. Check both the inbox and spam folder for further instructions. The general contact form on the competition page is for enquiries, not a substitute for submitting a candidacy."
+            ],
+            [
+              "8. Screening, written test, oral interview and results",
+              "Article 4 of the signed decision provides for two stages of testing, written and oral, following examination of applications and preselection by a recruitment committee. The dates and venues will be communicated in a digital invitation to selected candidates. The reviewed notice does not specify the written test duration, a weighting coefficient or a minimum pass mark, so none should be borrowed from another public competition. Candidates should monitor the official portal and their registered email address. The decision also says the announcement and test results will be displayed at AMDIE and published through the public employment portal. A preselection invitation is not a final employment offer; further assessments and administrative checks remain possible."
+            ],
+            [
+              "9. Two useful practice exercises, explicitly hypothetical",
+              "To practise bank reconciliation, imagine a general ledger bank balance of MAD 120,000 and a bank statement balance of MAD 118,500 at month-end. The MAD 1,500 difference is not evidence of fraud by itself: an outstanding cheque, deposit in transit, bank fee or posting error may explain it. Match movements by date, amount and reference, isolate timing items and post corrections only after identifying the cause. This is a RibhLab training example, not AMDIE's actual accounts or a leaked exam question. For management control, compare a hypothetical expense budget of MAD 100,000 with actual costs of MAD 108,000: the unfavorable variance is MAD 8,000, or 8% of the budget. Then identify volume and price drivers before proposing action."
+            ],
+            [
+              "10. Unknown facts, fraud warnings and a final checklist",
+              "The reviewed decision and job sheet do not publish an individual salary, a final examination date, a confirmed posting city or a minimum number of years of professional experience. Those facts must remain unknown rather than filled in from other employers' pay scales. Before applying, confirm that you meet the nationality, age, degree and recognition requirements; prepare the four requested documents; combine them into one readable PDF; submit through the official government platform; and save proof of submission. Recheck the competition page for official corrections and invitations. Reject intermediaries promising guaranteed selection, privileged access or secret exam questions. This article documents a real recruitment decision, not a promise of appointment."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Recrutement AMDIE 2026 : deux postes d'analyste comptabilité-finance, profil et candidature",
+          "deck": "Analyse du texte officiel n° 510/2026 et de sa fiche de poste : Bac+5 pertinent, nationalité marocaine, moins de 45 ans à la date du concours, un PDF unique et dépôt avant le 9 novembre. Salaire et affectation non précisés.",
+          "sections": [
+            [
+              "1. Organisme recruteur, postes et références officielles",
+              "L'Agence marocaine de développement des investissements et des exportations, AMDIE, recrute deux cadres analystes en comptabilité et finance au titre de 2026. La décision d'ouverture porte le numéro 510/2026 et le cachet du 23 octobre 2026 ; la fiche du portail national de l'emploi public porte la référence C44255/26. Les deux postes concernent précisément ce recrutement et ne doivent pas être additionnés aux autres annonces de l'agence. La fiche de fonction rattache le métier à la famille finance et au département Budget. Le pied de page de la décision indique l'adresse du siège à Rabat, mais ne précise pas explicitement la ville d'affectation du titulaire. Une adresse administrative ne constitue donc pas une garantie sur le lieu de travail."
+            ],
+            [
+              "2. Nationalité, limite d'âge et diplômes admissibles",
+              "La décision exige la nationalité marocaine et un âge strictement inférieur à 45 ans à la date du concours. Comme les pages consultées ne fixent pas encore la date des épreuves, il serait erroné de calculer cette condition à partir d'une journée inventée. Le diplôme requis est de niveau Bac+5 au minimum dans les domaines de l'ingénierie financière, de la comptabilité, de la finance ou du contrôle de gestion. Une formation voisine ne donne pas automatiquement droit à la candidature. Le texte précise que sont recevables les diplômes des universités et écoles publiques, ainsi que ceux disposant d'une attestation d'équivalence délivrée par le ministère de l'Enseignement supérieur. Un diplômé d'un établissement privé doit donc contrôler la reconnaissance de son propre titre."
+            ],
+            [
+              "3. Les missions comptables réellement décrites",
+              "La fiche de poste détaille la réception, la vérification et la conformité des pièces comptables, la préparation des échéanciers de règlement des fournisseurs, l'enregistrement des recettes et achats et la production des supports comptables. Elle mentionne également l'analyse des comptes, les rapprochements bancaires, la cohérence des soldes, la participation aux déclarations légales et fiscales, les clôtures ainsi que l'établissement du bilan, du compte de produits et charges et d'autres états de synthèse. Ce sont des missions décrites par l'employeur, non la preuve que chaque personne recrutée accomplira toutes ces tâches dès le premier jour. Le classement et l'archivage font aussi partie du périmètre, ce qui rappelle l'importance de la traçabilité documentaire."
+            ],
+            [
+              "4. Reporting, contrôle de gestion et systèmes d'information",
+              "L'analyste doit contribuer à la production et à la diffusion d'informations financières destinées à la hiérarchie, aux tableaux de suivi périodique et au rapport de gestion. La fiche prévoit également une participation au développement du système d'information comptable et à la formalisation des procédures et indicateurs de performance. Pour préparer un entretien, il est utile de distinguer la comptabilisation d'une opération, fondée sur une pièce justificative, de l'analyse d'un écart budgétaire qui vise à comprendre les causes et à proposer une mesure corrective. Aucun logiciel ERP précis ni certificat informatique particulier n'est exigé dans le texte examiné. Présenter Sage, SAP ou un niveau Excel déterminé comme une condition éliminatoire serait une extrapolation."
+            ],
+            [
+              "5. Langues, compétences et expérience : les limites de la source",
+              "Le référentiel de compétences de la fiche mentionne le français et l'arabe, la comptabilité générale et nationale, la fiscalité, la trésorerie, l'analyse financière et le contrôle de gestion. Il comporte des indicateurs de performance portant notamment sur l'exactitude des transactions, la rapidité des clôtures, la conformité comptable et la gestion des dépenses. En revanche, la décision ne réclame pas de certificat linguistique particulier ni d'épreuve linguistique séparée. La rubrique « Expérience » figure dans la fiche de poste, mais aucun nombre minimal d'années n'est clairement renseigné dans la partie inspectée. Le niveau Bac+5 est donc vérifié ; un minimum de cinq ans d'expérience ne l'est pas et ne doit pas être annoncé."
+            ],
+            [
+              "6. Pièces obligatoires et constitution d'un seul fichier PDF",
+              "Le dossier comprend une lettre de motivation adressée au directeur général de l'AMDIE et indiquant le poste demandé, une copie légalisée du diplôme, une copie légalisée de la carte nationale d'identité et un CV détaillé et actualisé. Les documents scannés doivent être joints dans un seul et même fichier PDF lors de la candidature en ligne. Les candidats de la promotion 2026 peuvent présenter leur attestation de réussite au moment de l'inscription ; le diplôme sera exigé ultérieurement. Le texte annonce l'exclusion automatique des dossiers incomplets ou incompatibles avec le profil. Avant l'envoi, contrôlez la lisibilité de chaque page, l'ordre des justificatifs, l'identité et les coordonnées, puis conservez une copie du dossier effectivement transmis."
+            ],
+            [
+              "7. Dépôt officiel et date limite du 9 novembre 2026",
+              "La procédure prévue est exclusivement électronique, sur la plateforme gouvernementale depot.emploi-public.ma. La décision précise que seules les candidatures déposées sur Internet seront traitées. La date du 9 novembre 2026 figure à la fois sur le document signé et sur la fiche de l'annonce. Aucune heure de fermeture n'a pu être établie dans les deux textes inspectés : il serait donc imprudent d'affirmer 16 h 30 ou 23 h 59. Connectez-vous au portail officiel, recherchez la référence C44255/26, joignez le PDF unique et conservez l'accusé de réception. Surveillez également les courriers indésirables. Le formulaire de contact de la page publique sert aux questions et ne constitue pas une voie alternative de dépôt."
+            ],
+            [
+              "8. Présélection, épreuves écrite et orale",
+              "L'article 4 prévoit deux épreuves, écrite et orale. La commission étudie d'abord les dossiers et vérifie leur adéquation avec le profil recherché ; les candidats présélectionnés reçoivent ensuite une convocation numérique indiquant les dates et les lieux. Le document consulté ne fournit ni durée de l'écrit, ni coefficient, ni note éliminatoire, et ces paramètres ne doivent pas être empruntés à un autre concours. Les résultats des épreuves seront affichés dans les locaux de l'agence et publiés sur le portail de l'emploi public. La convocation à une épreuve ne vaut pas recrutement définitif : les étapes d'évaluation et les formalités éventuelles doivent être menées à leur terme."
+            ],
+            [
+              "9. Exercices de préparation chiffrés, non issus du concours",
+              "Pour travailler le rapprochement bancaire, imaginez un solde comptable de 120 000 MAD et un relevé bancaire de 118 500 MAD à la clôture. L'écart de 1 500 MAD ne prouve pas une irrégularité : un chèque non présenté, un versement en transit, des frais ou une erreur de saisie peuvent l'expliquer. Rapprochez les lignes par date, montant et référence, séparez les décalages temporaires des erreurs et ne passez d'écriture corrective qu'après justification. Cet exercice est inventé par RibhLab, il ne provient pas des comptes de l'AMDIE. Pour le contrôle de gestion, comparez un budget fictif de 100 000 MAD à des dépenses réelles de 108 000 MAD : l'écart défavorable est de 8 000 MAD, soit 8 % du budget. Analysez ensuite les effets de prix et de volume."
+            ],
+            [
+              "10. Informations absentes et précautions avant candidature",
+              "Ni la décision ni la fiche de poste inspectées ne fixent un salaire individuel, une date précise d'examen, une ville d'affectation définitive ou un minimum chiffré d'expérience. Ces éléments doivent rester non confirmés, sans recours à des barèmes ou estimations extérieurs présentés comme officiels. Vérifiez votre nationalité, votre âge, le domaine et l'équivalence du diplôme ; réunissez les quatre pièces ; numérisez-les dans un seul PDF ; déposez le dossier sur la plateforme publique et gardez l'accusé de réception. Consultez régulièrement l'annonce pour d'éventuels rectificatifs et convocations. Écartez toute personne qui vendrait un prétendu accès privilégié ou promettrait la réussite. Il s'agit d'un recrutement vérifié, pas d'une garantie d'embauche."
+            ]
+          ]
+        }
+      }
     }
   }
 }
