@@ -32,8 +32,10 @@
         "fiverrHelp",
         "fiverr"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "editorialReviewDate": "2026-10-28",
+      "queuePath": "content/reviewed-queue/gig-description-client-questions-scope.json"
     },
     {
       "sectionId": "freelance",
@@ -499,5 +501,6 @@
       "status": "planned",
       "articleUrl": null
     }
-  ]
+  ],
+  "updatedAt": "2026-10-28"
 }
