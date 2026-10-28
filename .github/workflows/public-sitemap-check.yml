@@ -39,7 +39,7 @@ jobs:
                           print(f'GET {path}: HTTP {status}; type={mime}; bytes={len(data)}',flush=True)
                           assert status==200 and data, f'{path}: empty or non-200 response'
                           bodies[path]=data
-                  for lang, heading in [('ar','بطاقة الفرص الألمانية'),('en',"Germany's Opportunity Card"),('fr','Carte des opportunités allemande')]:
+                  for lang, heading in [('ar','بطاقة الفرص الألمانية'),('en','Opportunity Card in 2026'),('fr','Carte des opportunités allemande')]:
                       path=f'/{lang}/opportunities/immigration/german-opportunity/'
                       html=bodies[path].decode('utf-8')
                       assert heading in html, f'{lang}: full German opportunity article title missing'
