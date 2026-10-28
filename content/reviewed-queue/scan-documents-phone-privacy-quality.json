@@ -163,8 +163,8 @@
     "note": "Unsplash free photo by Jakub Żerdzicki published 2025-10-01. Source page and CDN photo identifier inspected 2026-10-28. Illustration only, not a photograph of scanned private documents."
   },
   "resourceIds": [
-    "appleAppStore",
-    "googlePlay"
+    "appleScanDocuments",
+    "googleDriveScanner"
   ],
   "review": {
     "ready": true,
