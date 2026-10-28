@@ -5,7 +5,7 @@
 const REPO='ribhlab/ribhlab.github.io',BRANCH='main',ROOT='https://api.github.com/repos/'+REPO,API='https://api.github.com';
 const locales=['ar','en','fr'],categories={earning:'الربح الرقمي',trading:'التداول والاقتصاد',ai:'الذكاء الاصطناعي والتقنية',lifestyle:'نمط الحياة'};
 const $=q=>document.querySelector(q),all=q=>Array.from(document.querySelectorAll(q));
-const state={token:null,user:null,sections:null,plan:null,photos:null,resources:null,publication:null,articleFiles:[],draftFiles:[],head:null,marketPhotos:[],editingSection:null,editingArticle:null,articleBase:null,activeLang:'ar',busy:false};
+const state={token:null,user:null,sections:null,plan:null,photos:null,resources:null,publication:null,articleFiles:[],draftFiles:[],head:null,marketPhotos:[],reservedPhotos:[],editingSection:null,editingArticle:null,articleBase:null,activeLang:'ar',busy:false};
 const date=()=>new Date().toISOString().slice(0,10);
 const slugPattern=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const tell=(message,error=false)=>{const node=$('#toast');node.textContent=message;node.className='toast '+(error?'error':'success');node.hidden=false;clearTimeout(tell.handle);tell.handle=setTimeout(()=>node.hidden=true,7500)};
@@ -71,19 +71,19 @@ async function login(token){
  }catch(e){logout(false);throw e}
 }
 function logout(show=true){
- state.token=null;state.user=null;state.sections=null;state.plan=null;state.photos=null;state.resources=null;state.publication=null;state.articleFiles=[];state.draftFiles=[];state.head=null;state.marketPhotos=[];state.editingArticle=null;state.articleBase=null;
+ state.token=null;state.user=null;state.sections=null;state.plan=null;state.photos=null;state.resources=null;state.publication=null;state.articleFiles=[];state.draftFiles=[];state.head=null;state.marketPhotos=[];state.reservedPhotos=[];state.editingArticle=null;state.articleBase=null;
  $('#studio').hidden=true;$('#login-screen').hidden=false;$('#session-user').hidden=true;$('#session-user').textContent='';$('#logout').hidden=true;$('#token').value='';
  if(show)tell('تم تسجيل الخروج. أُزيل مفتاح الوصول من ذاكرة الصفحة.');
 }
 async function loadAll(){
  const before=await request('/git/ref/heads/'+BRANCH);
- const [sections,plan,photos,resources,publication,articles,drafts,digests,feeds]=await Promise.all([
-  readFile('content/sections.json'),readFile('content/editorial-plan.json'),readFile('content/licensed-photos.json'),readFile('content/platform-links.json'),readFile('content/publication-state.json',true),listFolder('content/articles'),listFolder('content/manual-drafts'),readFile('content/market-digests.json',true),readFile('content/market-feed-photos.json',true)
+ const [sections,plan,photos,resources,publication,articles,drafts,digests,feeds,recipeImages,opportunityImages,newsArticles]=await Promise.all([
+  readFile('content/sections.json'),readFile('content/editorial-plan.json'),readFile('content/licensed-photos.json'),readFile('content/platform-links.json'),readFile('content/publication-state.json',true),listFolder('content/articles'),listFolder('content/manual-drafts'),readFile('content/market-digests.json',true),readFile('content/market-feed-photos.json',true),readFile('content/recipes/photo-library.json',true),readFile('content/opportunity-photography.json',true),readFile('content/sports-technology-editorials.json',true)
  ]);
  const after=await request('/git/ref/heads/'+BRANCH);
  if(before.object.sha!==after.object.sha)fail('تغيرت الملفات أثناء التحميل. حاول تحديث البيانات مجدداً.');
  if(!Array.isArray(sections.sections)||!Array.isArray(plan.sections)||!photos.articlePhotos||!resources.platforms)fail('بنية ملفات المحتوى غير متوافقة.');
- Object.assign(state,{sections,plan,photos,resources,publication:publication||{},articleFiles:articles,draftFiles:drafts,head:before.object.sha,marketPhotos:[...(digests?.items||[]).map(x=>x.photo).filter(Boolean),...Object.values(feeds?.topics||{})]});
+ Object.assign(state,{sections,plan,photos,resources,publication:publication||{},articleFiles:articles,draftFiles:drafts,head:before.object.sha,marketPhotos:[...(digests?.items||[]).map(x=>x.photo).filter(Boolean),...Object.values(feeds?.topics||{})],reservedPhotos:[...Object.values(recipeImages?.assignments||{}).map(k=>recipeImages?.photos?.[k]).filter(Boolean),...Object.values(opportunityImages?.items||{}),...(newsArticles?.entries||[]).map(x=>({photoId:x.image}))]});
  renderOverview();renderSections();renderArticleList();populateSections();
 }
 function renderOverview(){
@@ -256,6 +256,7 @@ async function publishArticle(){
  const otherPhoto=Object.entries(state.photos.articlePhotos).find(([key,v])=>key!==slug&&(v.photoId===data.photo.photoId||v.source===data.photo.source));
  if(otherPhoto)fail('الصورة مستخدمة في مقال آخر: '+otherPhoto[0]);
  if(state.marketPhotos.some(p=>p.photoId===data.photo.photoId||p.source===data.photo.source))fail('الصورة مستخدمة بالفعل في قسم أخبار الأسواق. اختر صورة مختلفة.');
+ if(state.reservedPhotos.some(p=>p.photoId===data.photo.photoId||p.source&&p.source===data.photo.source))fail('ممنوع تكرار الصور: هذه الصورة مستخدمة في وصفة أو فرصة أو مقال رياضي/تقني. اختر صورة حصرية.');
  if(!existing){
   const last=Date.parse(state.publication?.lastPublishedAt||'');
   if(Number.isFinite(last)&&Date.now()-last<25*60*1000)fail('للحفاظ على فاصل النشر التحريري، يجب مرور 25 دقيقة على آخر مقالة. احفظ المادة كمسودة ثم انشرها لاحقاً.');
