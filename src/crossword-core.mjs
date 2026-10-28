@@ -24,11 +24,11 @@ export const crosswordPacks={
  ],[
  ['ECHECS','Jeu stratégique du roi et de la dame'],['CAVALIER','Pièce qui saute en forme de L'],['TOUR','Pièce qui se déplace en ligne droite'],['DAME','Pièce la plus mobile aux échecs'],['ROI','Pièce à protéger absolument'],['PION','Pièce avançant principalement tout droit'],['PARTIE','Rencontre entre deux adversaires'],['MATCH','Compétition sportive'],['SPORT','Activité physique réglementée'],['JOUEUR','Participant à une partie'],['EQUIPE','Groupe de joueurs'],['POINT','Unité de score'],['COUP','Déplacement d’une pièce'],['FINALE','Dernière étape d’une compétition'],['MAT','Situation où le roi ne peut plus échapper'],['CLUB','Association de joueurs']
  ],[
- ['CUISINE','Pièce où l’on prépare les repas'],['SALADE','Plat composé souvent de crudités'],['CAROTTE','Légume-racine orange'],['BANANE','Fruit long et jaune'],['TOMATE','Fruit rouge utilisé en sauce'],['ORANGE','Agrume et couleur'],['CITRON','Agrume jaune au goût acide'],['POIVRE','Épice piquante moulue'],['OIGNON','Bulbe utilisé pour parfumer les plats'],['FROMAGE','Aliment issu du lait'],['PAIN','Aliment à base de farine et levure'],['BEURRE','Matière grasse issue du lait'],['POMME','Fruit de pommier'],['DINER','Repas du soir'],['SOUP E'.replace(' ',''),'Plat liquide servi dans un bol'],['OLIVE','Fruit servant à produire une huile']
+ ['CUISINE','Pièce où l’on prépare les repas'],['SALADE','Plat composé souvent de crudités'],['CAROTTE','Légume-racine orange'],['BANANE','Fruit long et jaune'],['TOMATE','Fruit rouge utilisé en sauce'],['ORANGE','Agrume et couleur'],['CITRON','Agrume jaune au goût acide'],['POIVRE','Épice piquante moulue'],['OIGNON','Bulbe utilisé pour parfumer les plats'],['FROMAGE','Aliment issu du lait'],['PAIN','Aliment à base de farine et levure'],['BEURRE','Matière grasse issue du lait'],['POMME','Fruit de pommier'],['DINER','Repas du soir'],['SOUPE','Plat liquide servi dans un bol'],['OLIVE','Fruit servant à produire une huile']
  ]
  ]
 };
-export const cleanCrosswordWord=(word,lang)=>String(word).toLocaleUpperCase(lang).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s/g,'').replace(/[^\p{L}]/gu,'');
+export const cleanCrosswordWord=(word,lang)=>String(word).toLocaleUpperCase(lang).normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670]/g,'').replace(/\s/g,'').replace(/[^\p{L}]/gu,'');
 export function buildCrossword(lang,puzzleIndex=0){
  const packs=crosswordPacks[lang];if(!packs)throw Error('Unsupported crossword language');
  const index=((Number(puzzleIndex)||0)%packs.length+packs.length)%packs.length;
