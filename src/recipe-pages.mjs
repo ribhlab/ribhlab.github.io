@@ -173,7 +173,9 @@ function head(l,k){return TEXT[l][k]}
 function photoFor(recipe,library){
  const ids=new Set(recipe.ingredients.map(i=>i.id)),slug=recipe.slug;
  let group;
- if(slug.includes('couscous')||slug.includes('rfissa'))group=['couscous','tagineA'];
+ if(slug.includes('oat')||recipe.kind==='healthy'&&ids.has('oats'))group=['oats'];
+ else if(slug.includes('avocado'))group=['avocado','eggToast'];
+ else if(slug.includes('couscous')||slug.includes('rfissa'))group=['couscous','tagineA'];
  else if(slug.includes('pizza'))group=['pizza'];
  else if(slug.includes('risotto')||slug.includes('gnocchi'))group=['risottoA','risottoB'];
  else if(slug.includes('hummus')||slug.includes('baba-ghanoush'))group=['hummusA','hummusB','hummusC'];
