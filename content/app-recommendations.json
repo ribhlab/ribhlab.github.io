@@ -155,7 +155,7 @@
         },
         {
           "name": "Snapseed",
-          "url": "https://snapseed.online/",
+          "url": "https://play.google.com/store/apps/details?id=com.niksoftware.snapseed",
           "editorialOrder": 4
         },
         {
@@ -601,8 +601,8 @@
           "editorialOrder": 7
         },
         {
-          "name": "Microsoft Lens",
-          "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-lens",
+          "name": "Microsoft OneDrive",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage",
           "editorialOrder": 8
         },
         {
