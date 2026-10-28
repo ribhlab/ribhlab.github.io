@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 16,
+    "researched": 17,
     "marketEvidence": 5,
-    "pendingDetail": 66
+    "pendingDetail": 65
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -510,9 +510,9 @@
       "section": "competitions",
       "title": "Secrétaire juridique adjoint 4e grade",
       "deadline": "2026-11-10",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
-      "priority": "date:2026-11-10",
+      "priority": "official-decision-verified:2026-10-28",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/fb2e5ca9-e80e-4765-afc1-587b15f0ae33"
     },
     {
