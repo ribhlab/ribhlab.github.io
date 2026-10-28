@@ -111,6 +111,36 @@ for(const lang of ['ar','en','fr']){
  if(!fs.existsSync(f)) errors.push('Public analytics: missing '+lang+' dashboard page');
  else if(!fs.readFileSync(f,'utf8').includes('RIBHLAB / TRANSPARENT AUDIENCE'))errors.push('Public analytics: incorrect '+lang+' page');
 }
+// Sports, technology and 10-app guides must be real localized pages, not dead navigation.
+const appGuide=JSON.parse(fs.readFileSync(path.join(root,'content','app-recommendations.json'),'utf8'));
+const sportTech=JSON.parse(fs.readFileSync(path.join(root,'content','sports-technology-data.json'),'utf8'));
+if(appGuide.categories.length<17)errors.push('Technology: not enough editorial app categories');
+if(new Set(appGuide.categories.map(c=>c.id)).size!==appGuide.categories.length)errors.push('Technology: duplicate app categories');
+for(const c of appGuide.categories){
+ if(c.apps.length!==10)errors.push('Technology: category must contain 10 apps '+c.id);
+ if(new Set(c.apps.map(a=>a.name)).size!==10)errors.push('Technology: duplicate apps '+c.id);
+ for(const a of c.apps){
+  if(!/^https:\/\/[a-z0-9.-]+/i.test(a.url||''))errors.push('Technology: invalid developer URL '+a.name);
+  if(!a.bestFor?.ar||!a.bestFor?.en||!a.bestFor?.fr)errors.push('Technology: missing editorial reason '+a.name);
+ }
+}
+if(sportTech.sports.leagues.length<12)errors.push('Sports: missing sports schedule directories');
+for(const lang of ['ar','en','fr']){
+ const slugPaths=['sports','sports/fixtures','sports/results','sports/analysis','sports/transfers','sports/videos','technology','technology/phones','technology/comparisons','technology/apps'];
+ for(const slug of slugPaths){
+  const p=path.join(dist,lang,...slug.split('/'),'index.html');
+  if(!fs.existsSync(p))errors.push('Sports/tech: missing '+lang+'/'+slug);
+  else if(!fs.readFileSync(p,'utf8').includes('rel="canonical"'))errors.push('Sports/tech: missing canonical '+lang+'/'+slug);
+ }
+ for(const c of appGuide.categories){
+  const p=path.join(dist,lang,'technology','apps',c.id,'index.html');
+  if(!fs.existsSync(p)){errors.push('Apps: missing category '+lang+'/'+c.id);continue;}
+  const h=fs.readFileSync(p,'utf8');
+  const count=(h.match(/class="media-card media-app-card"/g)||[]).length;
+  if(count!==10)errors.push('Apps: expected 10 distinct app cards '+lang+'/'+c.id+' got '+count);
+  if(!h.includes(appGuide.categories.find(x=>x.id===c.id).apps[0].bestFor[lang]))errors.push('Apps: missing use-case comparison '+lang+'/'+c.id);
+ }
+}
 const trackingId=(process.env.UMAMI_WEBSITE_ID||'').trim();
 const outputRoot=fs.readFileSync(path.join(dist,'ar','index.html'),'utf8');
 if(trackingId&&!outputRoot.includes('data-website-id="'+trackingId+'"'))errors.push('Public analytics: expected verified tracker missing');
