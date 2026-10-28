@@ -285,3 +285,22 @@ html[lang=ar] .opp-main-hub .opp-hero h1{font-size:clamp(37px,4.6vw,65px)}
  .opportunity-page .opp-cat .opp-photo--card img{height:122px}
  .opportunity-page .opp-hero-layout .opp-photo--hero{height:166px}
 }
+
+
+/* Long-form editorial guides: readable line length, clear hierarchy, and responsive spacing. */
+.opp-guide-page .opp-guide-header{max-width:890px;margin:30px auto 0;text-align:start}
+.opp-guide-page .opp-guide-header h1{font-size:clamp(28px,3.8vw,48px);line-height:1.35;letter-spacing:-.015em;margin-bottom:18px}
+.opp-guide-page .opp-guide-header>p:not(.opp-guide-meta){font-size:clamp(16px,1.6vw,20px);line-height:1.95;max-width:850px}
+.opp-guide-page .opp-guide-meta{font-size:13px;opacity:.8;margin-top:16px}
+.opp-guide-page .opp-guide-layout{max-width:940px;padding-top:28px;padding-bottom:70px}
+.opp-guide-page .opp-advisory{margin:0 0 30px;padding:18px 24px;line-height:1.85}
+.opp-guide-page .opp-guide-article{background:#fff;border:1px solid #e4e9f1;border-radius:20px;box-shadow:0 10px 30px rgba(23,34,63,.055);padding:clamp(22px,4.8vw,58px)}
+.opp-guide-page .opp-guide-section{padding:0 0 28px;margin:0 0 30px;border-bottom:1px solid #e9edf4}
+.opp-guide-page .opp-guide-section:last-child{border:0;margin-bottom:0;padding-bottom:0}
+.opp-guide-page .opp-guide-section h2{font-size:clamp(20px,2.2vw,27px);line-height:1.5;margin:0 0 15px;color:#19294b}
+.opp-guide-page .opp-guide-section p{max-width:76ch;font-size:clamp(15px,1.34vw,18px);line-height:2.05;letter-spacing:0;margin:0;color:#263653;white-space:normal}
+.opp-guide-page .opp-guide-sources ul{padding-inline-start:24px;margin-top:18px}
+.opp-guide-page .opp-guide-sources li{margin:12px 0;line-height:1.6}
+.opp-guide-page .opp-guide-sources a{overflow-wrap:anywhere}
+.opp-guide-page .opp-guide-section .opp-action{display:inline-flex;margin-top:22px;text-decoration:none}
+@media(max-width:640px){.opp-guide-page .opp-guide-article{border-radius:14px}.opp-guide-page .opp-guide-layout{padding-inline:16px}.opp-guide-page .opp-guide-section{padding-bottom:24px;margin-bottom:24px}}
