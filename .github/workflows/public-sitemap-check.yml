@@ -46,8 +46,9 @@ jobs:
                   assert expected_meta in bodies['/'], 'Publisher ownership meta missing from root homepage'
                   for language in ('ar','en','fr'):
                       assert expected_meta in bodies['/'+language+'/'], f'AdSense ownership meta missing for {language} page'
-                      assert b'pagead2.googlesyndication.com/pagead/js' not in bodies['/'+language+'/'], 'Ad serving is not approved yet'
-                  print('ADSENSE OWNERSHIP PASSED: public /ads.txt and all page head tags agree; ad delivery stays off',flush=True)
+                      assert ('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-'+match.group(1)).encode() in bodies['/'+language+'/'], 'Official AdSense verification code not found'
+                      assert b'<ins class="adsbygoogle"' not in bodies['/'+language+'/'], 'Manual ad units must not be published before approval'
+                  print('ADSENSE CONNECT CHECK PASSED: public /ads.txt, ownership metadata, and official loader all match; no manual ad units',flush=True)
                   robots=bodies['/robots.txt'].decode('utf-8-sig')
                   assert 'Sitemap: '+base+'/sitemap.xml' in robots, 'Missing public robots sitemap'
                   assert 'Disallow: /admin/' in robots, 'Expected private editor excluded'
