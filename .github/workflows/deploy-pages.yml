@@ -4,8 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  # Scheduled market-feed publishing is paused during Blogger migration.
-  # Keep manual dispatch and pushes to preserve the old site as an image/URL archive.
+  # Refresh publicly attributed Market Pulse feeds every five hours.
+  # GitHub schedules are best effort, not guaranteed exact execution times.
+  schedule:
+    - cron: '0 */5 * * *'
 
 permissions:
   contents: read
