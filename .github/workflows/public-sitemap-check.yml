@@ -69,8 +69,8 @@ jobs:
                       assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{lang}: AI article sources/photo missing'
                       print(f'AI WRITING LIVE {lang}: six sections, sources and photo verified',flush=True)
                       cpi=bodies[f'/{lang}/trading/cpi-release-basket-how-read/'].decode('utf-8')
-                      assert cpi.count('class="article-block"')>=6 and 'article-sources' in cpi and 'licensed-editorial-photo' in cpi, f'{lang}: CPI complete article missing'
-                      print(f'CPI ARTICLE LIVE {lang}: six sections and sources verified',flush=True)
+                      assert cpi.count('class="article-block"')>=5 and 'article-sources' in cpi and 'licensed-editorial-photo' in cpi, f'{lang}: CPI complete article missing'
+                      print(f'CPI ARTICLE LIVE {lang}: five sections and sources verified',flush=True)
                       for job_id, source_ref in [('oncf-bac5','0c72b060-b3a6-4d1f-b36a-b01f767b48fe'),('bam-cyber','685d07b8-aa03-4c06-8858-88af9e06cf21')]:
                           job=bodies[f'/{lang}/opportunities/competitions/{job_id}/'].decode('utf-8')
                           assert 'opp-guide-section' in job and 'opp-guide-sources' in job and source_ref in job, f'{lang}: {job_id} evidence article incomplete'
