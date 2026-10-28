@@ -136,7 +136,16 @@ function svgFor(r,dist){
  }).join('');
  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Original abstract plate illustration for '+r.slug+'"><defs><radialGradient id="bg"><stop stop-color="#fff" /><stop offset="1" stop-color="'+a+'"/></radialGradient><filter id="sh"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1b3041" flood-opacity=".18"/></filter></defs><rect width="640" height="400" rx="25" fill="url(#bg)"/><ellipse cx="320" cy="218" rx="202" ry="132" fill="#fff" filter="url(#sh)"/><ellipse cx="320" cy="216" rx="173" ry="108" fill="#f6f5ec" stroke="'+c+'" stroke-width="4"/><ellipse cx="320" cy="214" rx="142" ry="91" fill="'+a+'" opacity=".48"/>'+elements+'<circle cx="320" cy="200" r="24" fill="'+c+'" opacity=".75"/><path d="M272 158q48-55 100 0M270 249q50 34 105-1" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".75"/><path d="M54 70q70-40 150-5M445 339q81 37 140-9" fill="none" stroke="'+b+'" stroke-width="5" stroke-linecap="round" opacity=".35"/></svg>';
 }
-function ingredientText(i,lex,l){return i.amount+' '+lex[i.id][l]}
+const UNITS={
+ g:{ar:'غ',en:'g',fr:'g'},ml:{ar:'مل',en:'ml',fr:'ml'},l:{ar:'لتر',en:'L',fr:'L'},
+ tsp:{ar:'ملعقة صغيرة',en:'tsp',fr:'c. à café'},pc:{ar:'قطعة',en:'piece',fr:'pièce'},pcs:{ar:'قطع',en:'pieces',fr:'pièces'},
+ stalks:{ar:'أعواد',en:'stalks',fr:'tiges'},cloves:{ar:'فصوص',en:'cloves',fr:'gousses'},
+ clove:{ar:'فص',en:'clove',fr:'gousse'},slices:{ar:'شرائح',en:'slices',fr:'tranches'},sheets:{ar:'رقائق',en:'sheets',fr:'feuilles'}
+};
+function ingredientText(i,lex,l){
+ const m=i.amount.match(/^([0-9.]+)([a-zA-Z]+)$/);
+ return (m?m[1]+' '+(UNITS[m[2]]?.[l]||m[2]):i.amount)+' '+lex[i.id][l];
+}
 function allergens(r,l){
  const ids=new Set(r.ingredients.map(i=>i.id));
  const present=Object.values(ALLERGENS).filter(a=>a.ids.some(id=>ids.has(id))).map(a=>a.names[l]);
