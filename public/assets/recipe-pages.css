@@ -54,3 +54,12 @@
 @media(prefers-reduced-motion:reduce){.recipe-card{transition:none}.recipe-card:hover{transform:none}}
 
 .recipe-card[hidden]{display:none!important}
+
+
+/* Editorial homepage now shows independent care and cooking destinations. */
+.category-grid:has(.topic-recipes){grid-template-columns:repeat(3,minmax(0,1fr))}
+.topic-care .topic-symbol{color:#488d81;background:#e6f5ef}
+.topic-recipes .topic-symbol{color:#c37a43;background:#fff0e3}
+.topic-care,.topic-recipes{border-color:#e1e3ee}
+@media(max-width:900px){.category-grid:has(.topic-recipes){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.category-grid:has(.topic-recipes){grid-template-columns:1fr}}
