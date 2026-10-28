@@ -14,8 +14,8 @@
       "eventDate": "2026-11-01",
       "status": "scheduled",
       "image": "photo-1552519507-da3b142c6e3d",
-      "source": "Formula 1 — Mexico 2026 official race timetable",
-      "url": "https://www.formula1.com/en/racing/2026/mexico",
+      "source": "Formula 1 — What time is the 2026 Mexico City Grand Prix and how can I watch it?",
+      "url": "https://www.formula1.com/en/latest/article/what-time-is-the-formula-1-2026-mexico-city-grand-prix-and-how-can-i-watch-it.7ugr1iuBkVF1pD5fqJHNA3",
       "translations": {
         "ar": {
           "title": "سباق المكسيك للفورمولا 1: البرنامج الرسمي وما ينبغي متابعته",
@@ -23,16 +23,28 @@
           "lead": "يعود سباق جائزة مدينة مكسيكو الكبرى ضمن بطولة العالم للفورمولا 1 خلال الفترة من 30 أكتوبر إلى 1 نوفمبر 2026. وتؤكد الروزنامة الرسمية موعد التجارب والتأهيل والسباق؛ أما النتائج فلم تُحسم بعد وقت إعداد المقال.",
           "sections": [
             {
-              "heading": "المواعيد والبرنامج",
-              "text": "تنطلق التجارب الأولى والثانية يوم الجمعة 30 أكتوبر، وتُقام الحصة الثالثة والتأهيل يوم السبت 31 أكتوبر. يُجرى السباق يوم الأحد 1 نوفمبر عند الساعة 14:00 بالتوقيت المحلي لمدينة مكسيكو، وفق الجدول الرسمي، ويمكن أن تتغير الأوقات بقرار المنظمين. ينبغي تحديد المنطقة الزمنية عند نقل الموعد إلى بلد آخر."
+              "heading": "البرنامج الرسمي بالتوقيت المحلي",
+              "text": "نشرت فورمولا 1 دليلاً لمواعيد السباق يوم 27 أكتوبر 2026. تبدأ التجارب الحرة الأولى يوم الجمعة 30 أكتوبر عند الساعة 12:30 ظهراً، والثانية عند 16:00. وتقام التجارب الحرة الثالثة يوم السبت 31 أكتوبر عند 11:30، ثم التصفيات التأهيلية عند 15:00. أما انطلاق السباق فمحدد ليوم الأحد 1 نوفمبر عند الساعة 14:00. جميع هذه الساعات بتوقيت مدينة مكسيكو المحلي، وليست بتوقيت المغرب أو أوروبا؛ ويجب مراجعة المنطقة الزمنية عند متابعة البث، كما أن البرنامج قابل للتعديل الرسمي."
             },
             {
-              "heading": "لماذا يختلف هذا المضمار؟",
-              "text": "يقام السباق على حلبة هيرمانوس رودريغيز، ويبلغ طول اللفة 4.304 كيلومترات. يفرض الموقع المرتفع للمدينة تحديات تتعلق بكثافة الهواء والتبريد والقوة الضاغطة، ولذلك لا يكفي النظر إلى نتيجة الجولة السابقة للتنبؤ بالترتيب. يجب مراجعة بيانات التجارب والإطارات وظروف الحلبة."
+              "heading": "لماذا تمثل الحلبة تحدياً مختلفاً؟",
+              "text": "تبلغ مسافة اللفة في حلبة هيرمانوس رودريغيز 4.304 كيلومترات. وتؤثر طبيعة موقع مدينة مكسيكو المرتفع في كثافة الهواء؛ وهو ما يجعل توازن التبريد والقوة الضاغطة أكثر تعقيداً من بعض الحلبات الأخرى. لا تعني السرعة القصوى المرتفعة بالضرورة امتلاك أفضل سيارة على مدار اللفة؛ إذ يمكن أن تضيع المكاسب في المنعطفات أو عند تدهور الإطارات. هذه قراءة تقنية عامة وليست نتيجة اختبار خاص بسيارات نسخة 2026."
             },
             {
-              "heading": "مؤشرات متابعة السباق",
-              "text": "راقب الفارق بين سرعة اللفة الواحدة والوتيرة الطويلة في التجارب، وقدرة الفرق على إدارة حرارة المكابح والإطارات، والأحداث التنظيمية قبل التأهيل. لا تُعرض أي نتيجة نهائية قبل نشرها رسمياً؛ التغطية هنا قراءة استباقية لا تنبؤ مضمون."
+              "heading": "ماذا تكشف التجارب وماذا لا تكشف؟",
+              "text": "لا تكفي صدارة حصة تجارب واحدة للتنبؤ بالفائز. فقد تختلف كميات الوقود والإطارات وبرامج العمل بين الفرق، ولا تنشر جميع تفاصيلها. يمكن مقارنة ترتيب السائقين عبر حصص متعددة، ومراقبة الأداء في المحاولات القصيرة واللفات المتتالية، لكن ينبغي تجنب تقديم الفوارق الأولية على أنها ترتيب نهائي للقوة. وتتضح الصورة أكثر بعد التأهيل، مع بقاء احتمال الحوادث والعقوبات وتغير الظروف يوم السباق."
+            },
+            {
+              "heading": "كيف تتابع السباق من دون الخلط بين التوقيت والنتيجة؟",
+              "text": "يُعرض الموعد الأصلي حسب التوقيت المحلي للمكسيك، بينما قد يعرض الناقل أو التطبيق الموعد حسب منطقة المشاهد. ويجب كذلك التمييز بين بداية التغطية التلفزيونية وبداية الحصة على المضمار. وتذكر فورمولا 1 أن خدمة F1 TV Pro متاحة في أسواق محددة، لذلك لا يمكن افتراض توافرها في كل بلد. عند مراجعة النتائج، تُعتمد بيانات المنظم بعد نهاية السباق والتحديثات المتعلقة بالعقوبات."
+            },
+            {
+              "heading": "السيناريوهات التي تستحق المتابعة",
+              "text": "قد يصبح تبريد وحدة الطاقة والمكابح عاملاً مؤثراً إذا ارتفعت درجات الحرارة، وقد تتحول إدارة الإطارات إلى عنصر حاسم إذا اختلف تدهورها بين السيارات. كذلك يؤثر مركز الانطلاق في الخيارات الاستراتيجية، لكنه لا يضمن نتيجة بعينها. هذه احتمالات تحليلية، لا معلومات مؤكدة عن إعدادات الفرق أو خططها؛ ولا توجد عند تحرير المادة نتائج للسباق أو قائمة فائزين رسمية."
+            },
+            {
+              "heading": "المصادر وحدود المعلومات",
+              "text": "استندت المواعيد إلى المادة الرسمية التي نشرتها فورمولا 1 بتاريخ 27 أكتوبر 2026، وإلى صفحة الحدث الخاصة بسباق المكسيك. لم تُستخدم اختبارات مستقلة لإثبات تفوق سيارة أو فريق؛ وكل استنتاج تقني ورد هنا بوصفه تحليلاً لا قياساً مخبرياً. يُحدّث هذا المقال عند صدور معلومات رسمية جديدة ذات أثر فعلي."
             }
           ]
         },
@@ -42,16 +54,28 @@
           "lead": "The 2026 Formula 1 Mexico City Grand Prix runs from October 30 to November 1. The organizer has confirmed the session schedule, but race results are not known at the time of this preview.",
           "sections": [
             {
-              "heading": "Confirmed race-week timetable",
-              "text": "Friday, October 30 features the first two practice sessions. Final practice and qualifying take place Saturday, October 31. The Grand Prix starts at 14:00 local Mexico City time on Sunday, November 1 according to the official schedule. Time conversions must reflect local time zones and any schedule amendments."
+              "heading": "The official local-time schedule",
+              "text": "Formula 1 published its race-week timing guide on October 27, 2026. First practice starts on Friday, October 30 at 12:30 local Mexico City time, with second practice at 16:00. Saturday, October 31 brings final practice at 11:30 and qualifying at 15:00. The Grand Prix is scheduled to start on Sunday, November 1 at 14:00 local time. These are not Morocco, British or Central European clock times: viewers should convert from Mexico City and check for official amendments."
             },
             {
-              "heading": "What makes this circuit different",
-              "text": "The Autódromo Hermanos Rodríguez measures 4.304 km per lap. Mexico City's altitude affects air density, power-unit cooling and aerodynamic trade-offs, so prior results at other venues may have limited predictive value. Practice performance and tyre behavior provide more relevant context."
+              "heading": "Why the venue presents an unusual engineering problem",
+              "text": "The Autódromo Hermanos Rodríguez is 4.304 km long. The high-altitude setting changes air density and complicates the balance between cooling and aerodynamic load. A high top-speed reading therefore does not necessarily indicate the fastest race car over a complete lap; a straight-line advantage can be offset in corners or by tyre degradation. This is a general engineering interpretation, not an independent 2026 car test."
             },
             {
-              "heading": "A sensible way to assess the weekend",
-              "text": "Compare one-lap pace with long-run tyre degradation, watch brake and cooling constraints, and distinguish formal penalties from speculation. No winner, finishing position or point allocation should be reported until the organizer releases the actual results."
+              "heading": "What practice data can—and cannot—tell us",
+              "text": "Topping one practice session is not a reliable prediction of victory. Teams may run different fuel loads, compounds and test plans, many of which are not fully disclosed. Comparing several sessions, short runs and longer sequences can help identify tendencies, but preliminary gaps should not be sold as a definitive competitive ranking. Qualifying adds evidence without removing the effects of incidents, penalties and changing race conditions."
+            },
+            {
+              "heading": "How to follow the event accurately",
+              "text": "Broadcast listings may convert the organizer's Mexico City start time into the viewer's local time zone. The start of a television programme is also not necessarily the start of an on-track session. Formula 1 describes F1 TV Pro as available in selected countries, so its availability should not be assumed worldwide. Once the race is run, finishing positions should be checked against the organizer's published results and any subsequent steward decisions."
+            },
+            {
+              "heading": "The strategic questions worth watching",
+              "text": "Cooling of the power unit and brakes may become important if temperatures rise. Tyre management could shape the race if degradation varies between cars, while starting position can influence strategic options without determining the outcome. These are scenarios, not verified team set-ups or confidential race plans. At the time of this preview there is no official result or confirmed winner for the November 1 race."
+            },
+            {
+              "heading": "Evidence and limits",
+              "text": "The session times come from Formula 1's October 27, 2026 official timing article and its Mexico City event page. No independent laboratory testing is cited to rank the cars, and the technical discussion is interpretation rather than measured performance. Substantive updates should follow new verified organizer information, not speculation."
             }
           ]
         },
@@ -61,20 +85,39 @@
           "lead": "Le Grand Prix de Mexico de Formule 1 se déroule du 30 octobre au 1er novembre 2026. Le calendrier des séances est publié par l’organisateur ; aucun résultat de course n’est encore acquis au moment de cette présentation.",
           "sections": [
             {
-              "heading": "Le programme confirmé",
-              "text": "Les deux premières séances d’essais sont prévues le vendredi 30 octobre. La troisième séance et les qualifications auront lieu samedi 31 octobre. La course doit débuter dimanche 1er novembre à 14 h, heure de Mexico, sous réserve d’éventuelles modifications officielles."
+              "heading": "Le programme officiel en heure locale",
+              "text": "Formula 1 a publié son guide horaire le 27 octobre 2026. Vendredi 30 octobre, les essais libres 1 commencent à 12 h 30 et les essais libres 2 à 16 h. Samedi 31 octobre, la troisième séance débute à 11 h 30, puis les qualifications à 15 h. Le départ du Grand Prix est prévu dimanche 1er novembre à 14 h. Toutes ces heures sont celles de Mexico : elles ne correspondent pas automatiquement à l'heure du Maroc, du Royaume-Uni ou de l'Europe centrale. Des modifications officielles restent possibles."
             },
             {
-              "heading": "Altitude et caractéristiques du circuit",
-              "text": "L’Autódromo Hermanos Rodríguez mesure 4,304 km par tour. L’altitude modifie la densité de l’air et les compromis de refroidissement et d’aérodynamique. Les performances d’un autre circuit ne suffisent donc pas à établir une hiérarchie fiable."
+              "heading": "Un circuit aux contraintes techniques particulières",
+              "text": "L'Autódromo Hermanos Rodríguez mesure 4,304 km par tour. Son implantation en altitude modifie la densité de l'air et rend les compromis entre refroidissement et appui aérodynamique particulièrement délicats. Une vitesse de pointe élevée ne garantit donc pas le meilleur temps au tour : le comportement en virage et la dégradation des pneus comptent aussi. Il s'agit d'une analyse technique générale, et non d'un essai indépendant des monoplaces 2026."
             },
             {
-              "heading": "Les indicateurs à suivre",
-              "text": "Comparez le rythme sur un tour et les relais longs, l’usure des pneumatiques, la température des freins et les décisions des commissaires. Les pronostics doivent être distingués des résultats, qui ne seront renseignés qu’après leur publication officielle."
+              "heading": "Ce que les essais permettent réellement de comprendre",
+              "text": "La première place lors d'une séance libre ne suffit pas à désigner un favori certain. Les équipes peuvent utiliser des quantités de carburant, des gommes et des programmes différents, sans tout dévoiler. Il est plus utile de comparer plusieurs séances, les tours rapides et les longs relais, tout en évitant de transformer les écarts provisoires en classement définitif. Les qualifications apportent des indices supplémentaires, mais la course reste exposée aux incidents et aux décisions des commissaires."
+            },
+            {
+              "heading": "Suivre les horaires et les résultats sans confusion",
+              "text": "Les diffuseurs peuvent convertir l'horaire officiel de Mexico dans le fuseau du spectateur. Le début de l'émission télévisée ne coïncide pas nécessairement avec celui de la séance en piste. Formula 1 précise que F1 TV Pro est accessible dans certains pays seulement : sa disponibilité ne doit pas être présumée universelle. Après la course, les classements doivent être confrontés aux résultats de l'organisateur et aux éventuelles sanctions ultérieures."
+            },
+            {
+              "heading": "Les paramètres stratégiques à observer",
+              "text": "Le refroidissement du moteur et des freins pourrait devenir déterminant en cas de forte chaleur. La gestion des pneumatiques peut également faire la différence si leur usure varie sensiblement d'une voiture à l'autre. La position sur la grille influence les options stratégiques sans garantir le résultat. Ces éléments constituent des hypothèses d'analyse, pas des informations confirmées sur les réglages ou les intentions des écuries. Aucun vainqueur n'est connu au moment de cette publication."
+            },
+            {
+              "heading": "Sources et limites de la vérification",
+              "text": "Les horaires proviennent de l'article officiel publié par Formula 1 le 27 octobre 2026 et de la page de l'événement de Mexico. Aucun essai indépendant n'est invoqué pour établir une hiérarchie des voitures ; les explications techniques restent des interprétations. Toute mise à jour importante doit s'appuyer sur une nouvelle information vérifiée de l'organisateur."
             }
           ]
         }
-      }
+      },
+      "sourcePublishedAt": "2026-10-27",
+      "additionalSources": [
+        {
+          "name": "Formula 1 — 2026 Mexico City Grand Prix official event page",
+          "url": "https://www.formula1.com/en/racing/2026/mexico"
+        }
+      ]
     },
     {
       "id": "ucl-matchday3-results-analysis-2026",
