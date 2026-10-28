@@ -780,22 +780,32 @@ for(const x of JSON.parse(fs.readFileSync(path.join(root,'content','market-diges
 for(const [topic,p] of Object.entries(JSON.parse(fs.readFileSync(path.join(root,'content','market-feed-photos.json'),'utf8')).topics||{}))registerVisual(p.photoId,'market-news:'+topic,p.source);
 for(const x of JSON.parse(fs.readFileSync(path.join(root,'content','sports-technology-editorials.json'),'utf8')).entries||[])registerVisual(x.image,'news-article:'+x.id);
 
-// Playable games: three localized hubs and working chess/words interfaces.
+// Three-language chess and actual crossword grids, with browser-to-browser online rooms.
 for(const lang of ['ar','en','fr']){
  const home=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
- for(const slug of ['','chess','words']){
+ for(const slug of ['','chess','crossword','words']){
   const dest=path.join(dist,lang,'games',...(slug?[slug]:[]),'index.html');
   if(!fs.existsSync(dest)){errors.push('Games route missing '+lang+'/'+slug);continue;}
   const html=fs.readFileSync(dest,'utf8');
   if(!html.includes('name="description"')||!html.includes('rel="canonical"'))errors.push('Games SEO missing '+lang+'/'+slug);
-  if(slug&&(!html.includes('data-ribhlab-game="'+slug+'"')||!html.includes('/assets/games.js')))errors.push('Games script/board missing '+lang+'/'+slug);
+  if(slug==='chess'){
+   for(const marker of ['data-ribhlab-game="chess"','/assets/games.js','value="online"','id="chess-create"','id="chess-join"','id="chess-copy"','id="chess-room"'])if(!html.includes(marker))errors.push('Missing online chess room control '+lang+' '+marker);
+  }
+  if(slug==='crossword'){
+   for(const marker of ['data-ribhlab-game="crossword"','/assets/crossword-ui.mjs','id="crossword-grid"','id="crossword-clues"','id="crossword-check"','id="crossword-hint"'])if(!html.includes(marker))errors.push('Missing authentic crossword feature '+lang+' '+marker);
+  }
+  if(slug==='words'&&!html.includes('/'+lang+'/games/crossword/'))errors.push('Old word route must lead to crosswords '+lang);
  }
  if(!home.includes('/'+lang+'/games/'))errors.push('Homepage game link missing '+lang);
  const header=fs.readFileSync(path.join(dist,lang,'games','index.html'),'utf8');
- if(!header.includes('/'+lang+'/games/chess/')||!header.includes('/'+lang+'/games/words/'))errors.push('Games catalog links missing '+lang);
+ if(!header.includes('/'+lang+'/games/chess/')||!header.includes('/'+lang+'/games/crossword/')||header.includes('href="/'+lang+'/games/words/"'))errors.push('Games catalog must link to chess and real crosswords '+lang);
 }
-for(const filename of ['games.js','games.css']){
+for(const filename of ['games.js','games.css','crossword-core.mjs','crossword-ui.mjs']){
  if(!fs.existsSync(path.join(dist,'assets',filename)))errors.push('Missing playable games asset '+filename);
+}
+const chessCode=fs.readFileSync(path.join(dist,'assets','games.js'),'utf8');
+for(const marker of ['loadPeerJS','new Peer(','newButton','net.connected','publishState','validRoom']){
+ if(!chessCode.includes(marker))errors.push('Online chess move synchronization missing '+marker);
 }
 
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
