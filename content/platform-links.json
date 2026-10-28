@@ -800,6 +800,10 @@
     "ethereum-smart-contracts-wallet-permissions": [
       "ethereum",
       "metamaskHelp"
+    ],
+    "gig-description-client-questions-scope": [
+      "fiverrHelp",
+      "fiverr"
     ]
   }
 }
