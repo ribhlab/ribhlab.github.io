@@ -794,14 +794,10 @@
       "publishedSlugs": [
         "make-mobile-games-unity-godot-unreal-gdevelop",
         "reverse-engineering-legally-tools-ghidra",
-        "ai-video-filmmaking-automation-unity-2026"
+        "ai-video-filmmaking-automation-unity-2026",
+        "godot-first-small-game-five-sessions"
       ],
       "ideas": [
-        {
-          "sequence": 4,
-          "titleAr": "Unity للمبتدئين من الصفر",
-          "status": "planned"
-        },
         {
           "sequence": 5,
           "titleAr": "Godot للمبتدئين خطوة بخطوة",
