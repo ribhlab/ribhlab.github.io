@@ -146,6 +146,40 @@ const trackingId=(process.env.UMAMI_WEBSITE_ID||'').trim();
 const outputRoot=fs.readFileSync(path.join(dist,'ar','index.html'),'utf8');
 if(trackingId&&!outputRoot.includes('data-website-id="'+trackingId+'"'))errors.push('Public analytics: expected verified tracker missing');
 if(!trackingId&&outputRoot.includes('cloud.umami.is/script.js'))errors.push('Public analytics: tracking script activated without configured website ID');
+// Sports and technology: source-backed complete articles, not outbound-link-only landing pages.
+const newsroom=JSON.parse(fs.readFileSync(path.join(root,'content/sports-technology-editorials.json'),'utf8'));
+const appsIndex=JSON.parse(fs.readFileSync(path.join(root,'content/app-recommendations.json'),'utf8'));
+const newsroomIds=new Set();
+for(const e of newsroom.entries){
+ if(newsroomIds.has(e.id)||!['sports','technology'].includes(e.kind))errors.push('Newsroom: invalid/duplicate article '+e.id);
+ newsroomIds.add(e.id);
+ if(!e.date||!e.source||!/^https:\/\//.test(e.url)||!/^photo-\d+-[a-f0-9]+$/.test(e.image))errors.push('Newsroom: missing dated evidence/visual '+e.id);
+ for(const lang of ['ar','en','fr']){
+  const t=e.translations?.[lang],fp=path.join(dist,lang,e.kind,e.id,'index.html');
+  if(!t?.title||!t?.lead||!t?.excerpt||!Array.isArray(t?.sections)||t.sections.length<3)errors.push('Newsroom: incomplete '+lang+'/'+e.id);
+  if(!fs.existsSync(fp)){errors.push('Newsroom: page missing '+lang+'/'+e.id);continue;}
+  const h=fs.readFileSync(fp,'utf8');
+  if(!h.includes('NewsArticle')||!h.includes('class="media-article-section"')||!h.includes(e.url)||!h.includes('images.unsplash.com/'+e.image))errors.push('Newsroom: source, image or article body missing '+lang+'/'+e.id);
+ }
+}
+if(newsroomIds.size<7)errors.push('Newsroom: fewer than 7 verified original reports');
+if(appsIndex.categories.length<17)errors.push('App categories missing');
+for(const c of appsIndex.categories){
+ if(c.apps.length!==10)errors.push('App guide must compare 10 apps '+c.id);
+ for(const lang of ['ar','en','fr']){
+  const fp=path.join(dist,lang,'technology','apps',c.id,'index.html');
+  if(!fs.existsSync(fp))errors.push('App guide missing '+lang+'/'+c.id);
+  else{
+    const html=fs.readFileSync(fp,'utf8');
+    for(const a of c.apps)if(!html.includes(a.name))errors.push('App guide missing '+a.name+' in '+lang+'/'+c.id);
+  }
+ }
+}
+for(const lang of ['ar','en','fr'])for(const slug of ['sports','technology','technology/apps']){
+ const fp=path.join(dist,lang,...slug.split('/'),'index.html');
+ if(!fs.existsSync(fp))errors.push('News section missing '+lang+'/'+slug);
+}
+
 // Editorial and SEO regression checks: validate every translated article before publishing.
 const articleDir=path.join(root,'content','articles');
 for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
