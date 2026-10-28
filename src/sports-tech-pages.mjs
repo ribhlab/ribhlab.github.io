@@ -4,6 +4,8 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const appsDb=JSON.parse(fs.readFileSync(path.join(root,'content/app-recommendations.json'),'utf8'));
 const db=JSON.parse(fs.readFileSync(path.join(root,'content/sports-technology-data.json'),'utf8'));
+const editorials=JSON.parse(fs.readFileSync(path.join(root,'content/sports-technology-editorials.json'),'utf8'));
+
 const langs={
  ar:{home:'العودة إلى الرئيسية',sports:'الرياضة',sportDesc:'مباريات الأسبوع والنتائج والبطولات وترتيب الفرق والانتقالات والتحليل ومقاطع الفيديو الرسمية.',technology:'التكنولوجيا',techDesc:'هواتف جديدة وأخبار الشركات ومقارنات وتطبيقات iPhone وAndroid حسب كل مجال.',apps:'أفضل 10 تطبيقات حسب المجال',appsHint:'17 مجالاً، في كل واحد 10 تطبيقات مختلفة: اختيار تحريري للمقارنة وليس ترتيباً رسمياً لمتجر التطبيقات.',fixtures:'مباريات الأسبوع والتظاهرات',results:'النتائج المثبتة',transfers:'انتقالات اللاعبين',analysis:'تحليل الرياضة',videos:'لقطات فيديو رسمية',phones:'الهواتف حول العالم',comparisons:'مقارنات التقنية',other:'مجالات أخرى',source:'المصدر الأصلي',read:'افتح الموقع الرسمي',watch:'شاهد الفيديو الأصلي',today:'تاريخ المراجعة',notice:'تنبيه عن تحديث البيانات',noLive:'ما كايناش عندنا تغطية مباشرة لكل مقابلة؛ المرجع هو الموقع الرسمي ديال البطولة.',selected:'أحداث موثقة ضمن الفترة',from:'من',to:'إلى',platforms:'متجر التطبيقات',choose:'كيفاش تختار التطبيق',method:'الترتيب تحريري وليس مقياساً للتقييمات أو تنزيلات المتجر. المجاني والمدفوع والميزات كتختلف حسب البلد والجهاز. تحقق من الشروط قبل التثبيت.',official:'الموقع الرسمي للمطوّر',appSearch:'البحث عن التطبيق',appCompare:'قارن الخصوصية والثمن والعمل دون إنترنت والدعم والتحديثات قبل الاختيار.',sportLeagues:'المواعيد والنتائج حسب نوع الرياضة',verified:'آخر مراجعة تحريرية'},
  en:{home:'Back to home',sports:'Sports',sportDesc:'Weekly fixtures, verified results, competitions, tables, transfers, analysis and official video.',technology:'Technology',techDesc:'New phones, manufacturer news, comparisons and iPhone/Android apps by category.',apps:'10 apps in each category',appsHint:'17 categories with 10 curated picks each; editorial choices, not official app-store rankings.',fixtures:'Week fixtures and events',results:'Verified results',transfers:'Player transfers',analysis:'Sports analysis',videos:'Official highlights',phones:'Phones around the world',comparisons:'Tech comparisons',other:'Other technology',source:'Original source',read:'Open official source',watch:'Watch official video',today:'Reviewed',notice:'Data freshness note',noLive:'This is not a live score service; check the organizer for real-time updates.',selected:'Selected verified events',from:'From',to:'To',platforms:'App stores',choose:'How to choose',method:'Editorial selection, not an app-store rating or download ranking. Features and costs vary by device and market.',official:'Developer website',appSearch:'Find app',appCompare:'Compare privacy, pricing, offline features, support and software updates before installing.',sportLeagues:'Fixtures by sport',verified:'Editorial snapshot'},
@@ -23,6 +25,30 @@ const label=(text)=>'<span class="media-tag">'+text+'</span>';
 const date=(v)=>v?'<time datetime="'+v+'">'+v+'</time>':'';
 const section=(title,inner)=>'<section class="media-section"><h2>'+title+'</h2>'+inner+'</section>';
 const sources=(t,esc)=>'<p class="media-revision"><strong>'+esc(t.verified)+':</strong> '+db.reviewedAt+'</p>';
+
+const articleUrl=(l,e)=>'/'+l+'/'+e.kind+'/'+e.id+'/';
+const originalArticleCard=(l,e,esc)=>{
+ const p=e.translations[l],src='https://images.unsplash.com/'+e.image+'?auto=format&fit=crop&w=850&h=500&q=78';
+ const lbl={ar:'اقرأ التحليل الأصلي',en:'Read original analysis',fr:'Lire l’analyse originale'}[l];
+ return '<article class="media-card media-original-card"><a class="media-original-image" href="'+articleUrl(l,e)+'" aria-label="'+esc(p.title)+'"><img src="'+esc(src)+'" width="850" height="500" loading="lazy" decoding="async" alt="'+esc(p.title)+'"></a><div class="media-original-body"><span class="media-tag">'+esc(e.source)+' · <time datetime="'+e.date+'">'+e.date+'</time></span><h3><a href="'+articleUrl(l,e)+'">'+esc(p.title)+'</a></h3><p>'+esc(p.excerpt)+'</p><a class="media-link" href="'+articleUrl(l,e)+'">'+esc(lbl)+' ↗</a></div></article>';
+};
+function originalArticlePage(l,e,page,esc){
+ const p=e.translations[l],src='https://images.unsplash.com/'+e.image+'?auto=format&fit=crop&w=1200&h=675&q=82';
+ const copy={ar:{back:'العودة إلى قسم ',source:'المصدر الأصلي للوقائع',method:'التحليل التحريري',methodText:'هذا المقال مراجعة تحريرية مستقلة لمعلومات منشورة بتاريخ محدد. لا تمثل المواصفات التقنية تجربة مخبرية، ولا تُعد المواعيد والنتائج قابلة للتحديث المباشر دون مراجعة جديدة.'},en:{back:'Back to ',source:'Primary factual source',method:'Editorial method',methodText:'This is independent editorial interpretation of dated primary information. Manufacturer claims are not independent lab tests, and scheduled sports events are not live scores.'},fr:{back:'Retour à ',source:'Source primaire des faits',method:'Méthode éditoriale',methodText:'Cette analyse originale s’appuie sur des informations datées. Les affirmations constructeur ne sont pas des essais indépendants et les programmes sportifs ne sont pas des scores en direct.'}}[l];
+ const title=e.kind==='sports'?langs[l].sports:langs[l].technology;
+ const outline='<div class="media-editorial-text"><p class="media-article-lead">'+esc(p.lead)+'</p>'+p.sections.map(z=>'<section class="media-article-section"><h2>'+esc(z.heading)+'</h2><p>'+esc(z.text)+'</p></section>').join('')+'<div class="media-warning"><strong>'+esc(copy.method)+'</strong><p>'+esc(copy.methodText)+'</p></div><h2>'+esc(copy.source)+'</h2>'+btn(e.url,e.source,esc)+'</div>';
+ const follow=editorials.entries.filter(x=>x.id!==e.id&&x.kind===e.kind).slice(0,3);
+ const related='<section class="media-section"><h2>'+esc(({ar:'مقالات أخرى ذات صلة',en:'Related original analysis',fr:'Autres analyses originales'})[l])+'</h2><div class="media-card-grid">'+follow.map(x=>originalArticleCard(l,x,esc)).join('')+'</div></section>';
+ const figure='<figure class="media-article-cover"><img src="'+esc(src)+'" width="1200" height="675" alt="'+esc(p.title)+'" loading="eager" decoding="async"></figure>';
+ const body='<div class="media-page"><header class="media-hero media-hero--'+e.kind+'"><div class="shell"><a class="media-back" href="/'+l+'/'+e.kind+'/">← '+esc(copy.back+title)+'</a><span class="media-kicker">RIBHLAB / '+e.kind.toUpperCase()+' / '+e.date+'</span><h1>'+esc(p.title)+'</h1><p>'+esc(p.excerpt)+'</p></div></header>'+nav(l,e.kind+'/',esc)+main(figure+outline+related,'media-reading')+'</div>';
+ page(l,{title:p.title+' | RibhLab',desc:p.excerpt,route:articleUrl(l,e),content:body,type:'market',active:e.kind,socialImage:src,socialAlt:p.title,publishedAt:e.date});
+}
+const featureSection=(l,kind,esc)=>{
+ const list=editorials.entries.filter(x=>x.kind===kind);
+ const heading=({ar:'تقارير وتحليلات أصلية',en:'Original reports and analysis',fr:'Reportages et analyses originales'})[l];
+ return '<section class="media-section media-original-features"><h2>'+esc(heading)+'</h2><p>'+esc(editorials.editorialPolicy[l])+'</p><div class="media-card-grid">'+list.map(x=>originalArticleCard(l,x,esc)).join('')+'</div></section>';
+};
+
 export function renderSportsTechnologyPages(l,page,esc){
  const t=langs[l],base='/'+l+'/',sport=db.sports,tech=db.technology;
  const sportHero=hero(l,t.sports,t.sportDesc,esc,'sports')+nav(l,'sports/',esc);
@@ -33,7 +59,7 @@ export function renderSportsTechnologyPages(l,page,esc){
  const leagueCards='<div class="media-card-grid media-league-grid">'+sport.leagues.map(q=>card('<span class="media-sport-icon">'+q.icon+'</span><h3>'+esc(q.sport[l])+'</h3><div class="media-inline">'+q.links.map(e=>btn(e[1],e[0],esc)).join('')+'</div>','media-league')).join('')+'</div>';
  const transfer='<div class="media-note">'+sport.analysis[l].map(z=>'<p>'+esc(z)+'</p>').join('')+'</div><div class="media-inline">'+sport.transferSources.map(x=>btn(x[1],x[0],esc)).join('')+'</div>';
  const video='<div class="media-video"><div class="media-video-viewport"><button type="button" class="media-video-start" data-video-id="'+sport.video.youtubeId+'" aria-label="'+esc(t.watch)+'"><span aria-hidden="true">▶</span><strong>'+esc(t.watch)+'</strong><small>YouTube / UEFA</small></button></div><p>'+esc(sport.video.title[l])+' · '+date(sport.video.publishedAt)+'</p>'+btn(sport.video.sourceUrl,t.watch,esc)+'</div><script defer src="/assets/sports-tech.js"></script>';
- const sportIntro=notice(sport.overview[l])+sources(t,esc)+section(t.selected,events)+section(t.sportLeagues,leagueCards)+section(t.results,resultCards)+section(t.videos,video)+section(t.transfers,transfer);
+ const sportIntro=notice(sport.overview[l])+sources(t,esc)+featureSection(l,'sports',esc)+section(t.selected,events)+section(t.sportLeagues,leagueCards)+section(t.results,resultCards)+section(t.videos,video)+section(t.transfers,transfer);
  page(l,{title:t.sports+' | RibhLab',desc:t.sportDesc,route:base+'sports/',content:'<div class="media-page">'+sportHero+main(sportIntro)+'</div>',active:'sports'});
  for(const [key,title,body] of [['fixtures',t.fixtures,notice(sport.overview[l])+section(t.selected,events)+section(t.sportLeagues,leagueCards)],['results',t.results,notice(t.noLive)+section(t.results,resultCards)+section(t.sportLeagues,leagueCards)],['transfers',t.transfers,notice(sport.overview[l])+section(t.transfers,transfer)],['analysis',t.analysis,notice(sport.overview[l])+section(t.analysis,'<div class="media-steps">'+sport.analysis[l].map((x,i)=>'<div><b>'+String(i+1).padStart(2,'0')+'</b><p>'+esc(x)+'</p></div>').join('')+'</div>')+section(t.sportLeagues,leagueCards)],['videos',t.videos,section(t.videos,video)+section(t.sportLeagues,leagueCards)]]){
   const route=base+'sports/'+key+'/';
@@ -44,7 +70,7 @@ export function renderSportsTechnologyPages(l,page,esc){
  const compare='<div class="media-card-grid">'+tech.comparison.map(x=>card('<h3>'+esc(x.title[l])+'</h3><ol class="media-comparison-points">'+x.points[l].map(y=>'<li>'+esc(y)+'</li>').join('')+'</ol>')).join('')+'</div>';
  const other='<div class="media-card-grid">'+tech.otherDomains.map(x=>card('<span class="media-sport-icon">'+x.icon+'</span><h3>'+esc(x.name[l])+'</h3>'+btn(x.url,t.source,esc))).join('')+'</div>';
  const directory='<div class="media-card-grid media-app-category-grid">'+appsDb.categories.map(c=>'<a class="media-app-topic" href="'+base+'technology/apps/'+c.id+'/"><span class="media-sport-icon">'+c.icon+'</span><strong>'+esc(c.title[l])+'</strong><small>10 '+esc(t.apps)+' ↗</small></a>').join('')+'</div>';
- const techIntro=notice(tech.note[l])+sources(t,esc)+section(t.phones,phoneCards)+section(t.comparisons,compare)+section(t.apps,directory)+section(t.other,other)+section(t.phones,regional);
+ const techIntro=notice(tech.note[l])+sources(t,esc)+featureSection(l,'technology',esc)+section(t.phones,phoneCards)+section(t.comparisons,compare)+section(t.apps,directory)+section(t.other,other)+section(t.phones,regional);
  page(l,{title:t.technology+' | RibhLab',desc:t.techDesc,route:base+'technology/',content:'<div class="media-page">'+techHero+main(techIntro)+'</div>',active:'technology'});
  for(const [key,title,body] of [['phones',t.phones,notice(tech.note[l])+section(t.phones,phoneCards)+section(t.phones,regional)],['comparisons',t.comparisons,notice(tech.note[l])+section(t.comparisons,compare)+section(t.phones,phoneCards)]]){
   page(l,{title:title+' | RibhLab',desc:t.techDesc,route:base+'technology/'+key+'/',content:'<div class="media-page">'+hero(l,title,t.techDesc,esc,'technology')+nav(l,'technology/'+key+'/',esc)+main(body+sources(t,esc))+'</div>',active:'technology'});
@@ -57,4 +83,5 @@ export function renderSportsTechnologyPages(l,page,esc){
   const store='<p class="media-revision">'+esc(t.platforms)+': '+btn(iOS,'Apple App Store',esc)+' '+btn(android,'Google Play',esc)+'</p>';
   page(l,{title:title+' — '+t.apps+' | RibhLab',desc:title+' · '+t.appsHint,route:base+'technology/apps/'+c.id+'/',content:'<div class="media-page">'+hero(l,c.icon+' '+title,t.appsHint,esc,'technology')+nav(l,'technology/apps/',esc)+main(appLead+section(title,apps)+store+section(t.apps,directory)+sources(t,esc))+'</div>',active:'technology'});
  }
+ for(const e of editorials.entries) originalArticlePage(l,e,page,esc);
 }
