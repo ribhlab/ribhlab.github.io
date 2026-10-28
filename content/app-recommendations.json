@@ -19,52 +19,102 @@
         {
           "name": "Notion",
           "url": "https://www.notion.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "مساحة معرفة ومشاريع مترابطة",
+            "en": "Connected project and knowledge workspace",
+            "fr": "Espace de projets et de connaissances"
+          }
         },
         {
           "name": "Todoist",
           "url": "https://todoist.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "قوائم المهام وأولويات العمل",
+            "en": "Tasks and priority tracking",
+            "fr": "Suivi des tâches et des priorités"
+          }
         },
         {
           "name": "TickTick",
           "url": "https://ticktick.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "مهام متكررة وعادات وتذكيرات",
+            "en": "Recurring tasks and habits",
+            "fr": "Tâches récurrentes et habitudes"
+          }
         },
         {
           "name": "Trello",
           "url": "https://trello.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "لوحات بصرية لمراحل المشاريع",
+            "en": "Visual project boards",
+            "fr": "Tableaux visuels de projets"
+          }
         },
         {
           "name": "Microsoft OneNote",
           "url": "https://www.onenote.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "دفاتر ملاحظات ومحتوى دراسي",
+            "en": "Flexible digital notebooks",
+            "fr": "Carnets de notes numériques"
+          }
         },
         {
           "name": "Google Keep",
           "url": "https://keep.google.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "ملاحظات سريعة وقوائم قصيرة",
+            "en": "Quick notes and lists",
+            "fr": "Notes et listes rapides"
+          }
         },
         {
           "name": "Evernote",
           "url": "https://evernote.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "تنظيم أرشيف الملاحظات",
+            "en": "Long-term note organization",
+            "fr": "Classement des notes"
+          }
         },
         {
           "name": "Any.do",
           "url": "https://www.any.do/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "تذكيرات ومهام شخصية",
+            "en": "Daily personal task planning",
+            "fr": "Planification personnelle"
+          }
         },
         {
           "name": "Google Calendar",
           "url": "https://calendar.google.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "المواعيد والتقويم المشترك",
+            "en": "Events and shared schedules",
+            "fr": "Agenda et calendriers partagés"
+          }
         },
         {
           "name": "Microsoft To Do",
           "url": "https://to-do.office.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "قوائم بسيطة ضمن منظومة Microsoft",
+            "en": "Simple Microsoft task lists",
+            "fr": "Listes de tâches Microsoft"
+          }
         }
       ]
     },
@@ -80,52 +130,102 @@
         {
           "name": "ChatGPT",
           "url": "https://chatgpt.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "المحادثة والكتابة والتحليل",
+            "en": "General writing and analysis",
+            "fr": "Rédaction et analyse générales"
+          }
         },
         {
           "name": "Google Gemini",
           "url": "https://gemini.google.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "مساعدة مرتبطة بخدمات Google",
+            "en": "Google-connected AI tasks",
+            "fr": "IA intégrée à l'univers Google"
+          }
         },
         {
           "name": "Claude",
           "url": "https://claude.ai/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "تحرير نصوص طويلة ومراجعتها",
+            "en": "Long-form drafting and review",
+            "fr": "Rédaction et révision approfondies"
+          }
         },
         {
           "name": "Microsoft Copilot",
           "url": "https://copilot.microsoft.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "مساعد ضمن بيئة Microsoft",
+            "en": "Microsoft-oriented workflows",
+            "fr": "Flux de travail Microsoft"
+          }
         },
         {
           "name": "Perplexity",
           "url": "https://www.perplexity.ai/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "البحث المدعوم بروابط مصادر",
+            "en": "Research with source links",
+            "fr": "Recherche et sources consultables"
+          }
         },
         {
           "name": "Poe",
           "url": "https://poe.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "استكشاف نماذج مختلفة",
+            "en": "Explore different AI models",
+            "fr": "Explorer plusieurs modèles IA"
+          }
         },
         {
           "name": "DeepSeek",
           "url": "https://www.deepseek.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "التجريب البرمجي والكتابي",
+            "en": "Coding and writing assistance",
+            "fr": "Aide au code et à la rédaction"
+          }
         },
         {
           "name": "Grok",
           "url": "https://grok.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "محادثة ومهام إبداعية",
+            "en": "Chat and creative requests",
+            "fr": "Dialogue et demandes créatives"
+          }
         },
         {
           "name": "Character.AI",
           "url": "https://character.ai/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "حوار مع شخصيات افتراضية",
+            "en": "Character-based conversations",
+            "fr": "Conversations avec personnages"
+          }
         },
         {
           "name": "Canva",
           "url": "https://www.canva.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "تصميم مرئيات بمساعدة AI",
+            "en": "AI-assisted visual design",
+            "fr": "Conception graphique assistée IA"
+          }
         }
       ]
     },
@@ -141,52 +241,102 @@
         {
           "name": "CapCut",
           "url": "https://www.capcut.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "قص الفيديو وإضافة الترجمة",
+            "en": "Short-form video editing",
+            "fr": "Montage de vidéos courtes"
+          }
         },
         {
           "name": "Canva",
           "url": "https://www.canva.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "قوالب التصميم والمنشورات",
+            "en": "Graphics and templates",
+            "fr": "Graphismes et modèles"
+          }
         },
         {
           "name": "Adobe Lightroom",
           "url": "https://www.adobe.com/products/photoshop-lightroom/mobile.html",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "معالجة RAW والألوان",
+            "en": "RAW and photo color editing",
+            "fr": "Traitement RAW et couleurs"
+          }
         },
         {
           "name": "Snapseed",
           "url": "https://play.google.com/store/apps/details?id=com.niksoftware.snapseed",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "تعديل الصور المباشر",
+            "en": "Mobile photo corrections",
+            "fr": "Retouches photo rapides"
+          }
         },
         {
           "name": "VSCO",
           "url": "https://www.vsco.co/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "فلاتر ومعالجة بطابع تصويري",
+            "en": "Photography-style filters",
+            "fr": "Filtres photographiques"
+          }
         },
         {
           "name": "Picsart",
           "url": "https://picsart.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "تركيب الصور والتأثيرات",
+            "en": "Collage and creative effects",
+            "fr": "Montages et effets visuels"
+          }
         },
         {
           "name": "InShot",
           "url": "https://inshot.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "مونتاج فيديو سريع",
+            "en": "Fast mobile video edits",
+            "fr": "Montage vidéo rapide"
+          }
         },
         {
           "name": "VN Video Editor",
           "url": "https://www.vlognow.me/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "خط زمني وتحرير المقاطع",
+            "en": "Timeline-based video work",
+            "fr": "Montage sur chronologie"
+          }
         },
         {
           "name": "Adobe Express",
           "url": "https://www.adobe.com/express/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "تصميم منشورات وهوية بصرية",
+            "en": "Posts and visual brand assets",
+            "fr": "Publications et identité visuelle"
+          }
         },
         {
           "name": "KineMaster",
           "url": "https://www.kinemaster.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "مقاطع فيديو بطبقات متعددة",
+            "en": "Multi-layer video editing",
+            "fr": "Montage vidéo multicouche"
+          }
         }
       ]
     },
@@ -202,52 +352,102 @@
         {
           "name": "Duolingo",
           "url": "https://www.duolingo.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "ممارسة اللغات على فترات قصيرة",
+            "en": "Daily language practice",
+            "fr": "Pratique quotidienne des langues"
+          }
         },
         {
           "name": "Khan Academy",
           "url": "https://www.khanacademy.org/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "دروس أكاديمية مجانية",
+            "en": "Free academic lessons",
+            "fr": "Cours académiques gratuits"
+          }
         },
         {
           "name": "Coursera",
           "url": "https://www.coursera.org/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "دورات جامعية ومهنية",
+            "en": "University and career courses",
+            "fr": "Cours universitaires et professionnels"
+          }
         },
         {
           "name": "edX",
           "url": "https://www.edx.org/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "تعلم من جامعات ومؤسسات",
+            "en": "Institutional online education",
+            "fr": "Formation en ligne institutionnelle"
+          }
         },
         {
           "name": "Quizlet",
           "url": "https://quizlet.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "بطاقات مراجعة واختبارات",
+            "en": "Flashcards and quizzes",
+            "fr": "Fiches de révision et quiz"
+          }
         },
         {
           "name": "Anki",
           "url": "https://apps.ankiweb.net/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "تكرار متباعد للتذكر",
+            "en": "Spaced repetition study",
+            "fr": "Révision à répétition espacée"
+          }
         },
         {
           "name": "Brilliant",
           "url": "https://brilliant.org/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "تمارين التفكير والعلوم",
+            "en": "Interactive logic and science",
+            "fr": "Sciences et logique interactives"
+          }
         },
         {
           "name": "Udemy",
           "url": "https://www.udemy.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "مهارات ودورات حسب المجال",
+            "en": "Skills and specialist courses",
+            "fr": "Cours de compétences spécialisées"
+          }
         },
         {
           "name": "Sololearn",
           "url": "https://www.sololearn.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "دروس تطبيقية للبرمجة",
+            "en": "Hands-on coding lessons",
+            "fr": "Apprentissage pratique du code"
+          }
         },
         {
           "name": "Babbel",
           "url": "https://www.babbel.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "مسارات لتعلم اللغات",
+            "en": "Guided language learning",
+            "fr": "Parcours guidés en langues"
+          }
         }
       ]
     },
@@ -263,52 +463,102 @@
         {
           "name": "Strava",
           "url": "https://www.strava.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "تتبع الجري والدراجات",
+            "en": "Running and cycling activity",
+            "fr": "Suivi course et vélo"
+          }
         },
         {
           "name": "Nike Training Club",
           "url": "https://www.nike.com/ntc-app",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "تمارين منزلية ونوادي",
+            "en": "Home and gym workouts",
+            "fr": "Entraînements domicile et salle"
+          }
         },
         {
           "name": "MyFitnessPal",
           "url": "https://www.myfitnesspal.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "تدوين الطعام والمغذيات",
+            "en": "Food and nutrition logs",
+            "fr": "Journal alimentaire"
+          }
         },
         {
           "name": "Fitbit",
           "url": "https://www.fitbit.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "نشاط المستخدم وأجهزة Fitbit",
+            "en": "Fitbit wearable activity",
+            "fr": "Activité des appareils Fitbit"
+          }
         },
         {
           "name": "Garmin Connect",
           "url": "https://connect.garmin.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "مزامنة بيانات أجهزة Garmin",
+            "en": "Garmin device synchronization",
+            "fr": "Synchronisation appareils Garmin"
+          }
         },
         {
           "name": "Flo",
           "url": "https://flo.health/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "متابعة دورة شهرية وبيانات شخصية",
+            "en": "Cycle tracking",
+            "fr": "Suivi du cycle"
+          }
         },
         {
           "name": "Clue",
           "url": "https://helloclue.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "تدوين الدورة والخصوبة",
+            "en": "Cycle and fertility journal",
+            "fr": "Journal cycle et fertilité"
+          }
         },
         {
           "name": "Headspace",
           "url": "https://www.headspace.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "تمارين التأمل والتركيز",
+            "en": "Meditation and mindfulness",
+            "fr": "Méditation et attention"
+          }
         },
         {
           "name": "Calm",
           "url": "https://www.calm.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "الاسترخاء والنوم",
+            "en": "Sleep and relaxation sessions",
+            "fr": "Sommeil et relaxation"
+          }
         },
         {
           "name": "adidas Running",
           "url": "https://www.runtastic.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "تخطيط الجري والتمارين",
+            "en": "Running and training plans",
+            "fr": "Programmes de course et sport"
+          }
         }
       ]
     },
@@ -324,52 +574,102 @@
         {
           "name": "Google Maps",
           "url": "https://maps.google.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "المسارات والمعلومات المحلية",
+            "en": "General navigation and places",
+            "fr": "Itinéraires et lieux"
+          }
         },
         {
           "name": "Waze",
           "url": "https://www.waze.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "حركة السير وتنبيهات الطرق",
+            "en": "Traffic and road reports",
+            "fr": "Trafic et signalements routiers"
+          }
         },
         {
           "name": "HERE WeGo",
           "url": "https://wego.here.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "ملاحة ومناطق دون اتصال",
+            "en": "Offline maps and navigation",
+            "fr": "Cartes et navigation hors ligne"
+          }
         },
         {
           "name": "Organic Maps",
           "url": "https://organicmaps.app/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "خرائط مفتوحة بلا تتبع إعلاني",
+            "en": "Privacy-minded offline maps",
+            "fr": "Cartes hors ligne et vie privée"
+          }
         },
         {
           "name": "OsmAnd",
           "url": "https://osmand.net/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "تفاصيل الخرائط والمسارات",
+            "en": "Detailed routing and maps",
+            "fr": "Cartes et itinéraires détaillés"
+          }
         },
         {
           "name": "Citymapper",
           "url": "https://citymapper.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "النقل الحضري بالمدن المدعومة",
+            "en": "Urban transit in supported cities",
+            "fr": "Transports urbains compatibles"
+          }
         },
         {
           "name": "Moovit",
           "url": "https://moovitapp.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "النقل العمومي ومواعيده",
+            "en": "Public transit routes",
+            "fr": "Trajets de transports publics"
+          }
         },
         {
           "name": "Komoot",
           "url": "https://www.komoot.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "رحلات المشي والدراجات",
+            "en": "Hiking and cycling routes",
+            "fr": "Randonnées et circuits vélo"
+          }
         },
         {
           "name": "AllTrails",
           "url": "https://www.alltrails.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "المسارات الطبيعية والتنزه",
+            "en": "Trails and outdoor routes",
+            "fr": "Sentiers et plein air"
+          }
         },
         {
           "name": "MAPS.ME",
           "url": "https://maps.me/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "خرائط سفر بلا إنترنت",
+            "en": "Offline travel maps",
+            "fr": "Cartes de voyage hors ligne"
+          }
         }
       ]
     },
@@ -385,52 +685,102 @@
         {
           "name": "YNAB",
           "url": "https://www.ynab.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "تخصيص كل مبلغ لهدف",
+            "en": "Zero-based budget planning",
+            "fr": "Budget à allocation"
+          }
         },
         {
           "name": "Wallet by BudgetBakers",
           "url": "https://budgetbakers.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "لوحة المصاريف والتصنيفات",
+            "en": "Expense overview and categories",
+            "fr": "Vue d'ensemble des dépenses"
+          }
         },
         {
           "name": "Spendee",
           "url": "https://www.spendee.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "تدوين الإنفاق وتصنيفه",
+            "en": "Expense tracking and sorting",
+            "fr": "Suivi et catégorisation"
+          }
         },
         {
           "name": "Goodbudget",
           "url": "https://goodbudget.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "ميزانية بنظام الأظرفة",
+            "en": "Envelope-style budgeting",
+            "fr": "Budget par enveloppes"
+          }
         },
         {
           "name": "Money Manager",
           "url": "https://realbyteapps.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "تسجيل يدوي مفصل للمصاريف",
+            "en": "Detailed manual expense logs",
+            "fr": "Saisie détaillée des dépenses"
+          }
         },
         {
           "name": "Expensify",
           "url": "https://www.expensify.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "مصروفات العمل والتعويض",
+            "en": "Business expense reimbursement",
+            "fr": "Notes de frais professionnelles"
+          }
         },
         {
           "name": "Splitwise",
           "url": "https://www.splitwise.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "تقسيم الفواتير بين الأصدقاء",
+            "en": "Split shared bills",
+            "fr": "Partage des dépenses"
+          }
         },
         {
           "name": "Monarch Money",
           "url": "https://www.monarchmoney.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "إدارة مالية شخصية حيث متاح",
+            "en": "Personal finance in supported regions",
+            "fr": "Finances personnelles selon pays"
+          }
         },
         {
           "name": "MoneyWiz",
           "url": "https://www.wiz.money/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "تتبع أموال وحسابات متعددة",
+            "en": "Multiple accounts and balances",
+            "fr": "Comptes et soldes multiples"
+          }
         },
         {
           "name": "Buddy",
           "url": "https://buddy.download/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "ميزانية فردية بسيطة",
+            "en": "Personal budget tracking",
+            "fr": "Budget individuel simple"
+          }
         }
       ]
     },
@@ -446,52 +796,102 @@
         {
           "name": "WhatsApp",
           "url": "https://www.whatsapp.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "رسائل ومكالمات يومية",
+            "en": "Everyday messages and calls",
+            "fr": "Messagerie et appels"
+          }
         },
         {
           "name": "Telegram",
           "url": "https://telegram.org/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "مجموعات وقنوات ومشاركة ملفات",
+            "en": "Communities, channels and files",
+            "fr": "Groupes, chaînes et fichiers"
+          }
         },
         {
           "name": "Signal",
           "url": "https://signal.org/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "مراسلة تركز على الخصوصية",
+            "en": "Privacy-focused messaging",
+            "fr": "Messagerie axée confidentialité"
+          }
         },
         {
           "name": "Messenger",
           "url": "https://www.messenger.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "التواصل عبر منظومة Meta",
+            "en": "Messaging through Meta services",
+            "fr": "Messages dans l'univers Meta"
+          }
         },
         {
           "name": "Discord",
           "url": "https://discord.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "مجتمعات صوتية ونصية",
+            "en": "Voice and text communities",
+            "fr": "Communautés texte et voix"
+          }
         },
         {
           "name": "Slack",
           "url": "https://slack.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "رسائل وفرق العمل",
+            "en": "Work team communication",
+            "fr": "Communication d'équipe"
+          }
         },
         {
           "name": "Microsoft Teams",
           "url": "https://www.microsoft.com/en-us/microsoft-teams/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "اجتماعات وفرق Microsoft",
+            "en": "Microsoft teams and meetings",
+            "fr": "Équipes et réunions Microsoft"
+          }
         },
         {
           "name": "Google Meet",
           "url": "https://meet.google.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "مكالمات ضمن خدمات Google",
+            "en": "Google video meetings",
+            "fr": "Visioconférences Google"
+          }
         },
         {
           "name": "Zoom",
           "url": "https://zoom.us/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "اجتماعات الفيديو والعمل عن بعد",
+            "en": "Video meetings and webinars",
+            "fr": "Visioconférences et webinaires"
+          }
         },
         {
           "name": "Viber",
           "url": "https://www.viber.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "محادثات ومكالمات دولية",
+            "en": "International messaging and calls",
+            "fr": "Messagerie et appels internationaux"
+          }
         }
       ]
     },
@@ -507,52 +907,102 @@
         {
           "name": "Bitwarden",
           "url": "https://bitwarden.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "إدارة كلمات المرور",
+            "en": "Password management",
+            "fr": "Gestion des mots de passe"
+          }
         },
         {
           "name": "1Password",
           "url": "https://1password.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "خزنة كلمات مرور ومشاركة",
+            "en": "Password vault and sharing",
+            "fr": "Coffre-fort de mots de passe"
+          }
         },
         {
           "name": "Proton Pass",
           "url": "https://proton.me/pass",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "حماية كلمات المرور المشفرة",
+            "en": "Encrypted credentials",
+            "fr": "Identifiants chiffrés"
+          }
         },
         {
           "name": "Microsoft Authenticator",
           "url": "https://www.microsoft.com/en-us/security/mobile-authenticator-app",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "المصادقة الثنائية لحسابات Microsoft",
+            "en": "Microsoft two-factor codes",
+            "fr": "Codes d'authentification Microsoft"
+          }
         },
         {
           "name": "Google Authenticator",
           "url": "https://support.google.com/accounts/answer/1066447",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "رموز المصادقة الثنائية",
+            "en": "Two-factor verification codes",
+            "fr": "Codes de double authentification"
+          }
         },
         {
           "name": "2FAS",
           "url": "https://2fas.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "رموز مؤقتة متعددة الحسابات",
+            "en": "Time-based one-time codes",
+            "fr": "Codes temporaires de comptes"
+          }
         },
         {
           "name": "Authy",
           "url": "https://www.authy.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "رموز وتأمين الوصول",
+            "en": "Account verification codes",
+            "fr": "Codes de vérification"
+          }
         },
         {
           "name": "Proton VPN",
           "url": "https://protonvpn.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "اتصال VPN مع ميزات خصوصية",
+            "en": "Private VPN connection",
+            "fr": "Connexion VPN et confidentialité"
+          }
         },
         {
           "name": "Mullvad VPN",
           "url": "https://mullvad.net/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "خدمة VPN تركز على الخصوصية",
+            "en": "Privacy-oriented VPN service",
+            "fr": "VPN centré sur la vie privée"
+          }
         },
         {
           "name": "Firefox Focus",
           "url": "https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "متصفح خصوصية على الهاتف",
+            "en": "Private mobile browser",
+            "fr": "Navigateur mobile privé"
+          }
         }
       ]
     },
@@ -568,52 +1018,102 @@
         {
           "name": "Microsoft Excel",
           "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "الجداول والحسابات",
+            "en": "Spreadsheets and calculations",
+            "fr": "Tableurs et calculs"
+          }
         },
         {
           "name": "Google Sheets",
           "url": "https://workspace.google.com/products/sheets/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "جداول مشتركة على السحابة",
+            "en": "Collaborative spreadsheets",
+            "fr": "Tableurs collaboratifs"
+          }
         },
         {
           "name": "Microsoft Word",
           "url": "https://www.microsoft.com/en-us/microsoft-365/word",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "تحرير النصوص والوثائق",
+            "en": "Documents and word processing",
+            "fr": "Traitement de texte"
+          }
         },
         {
           "name": "Google Docs",
           "url": "https://workspace.google.com/products/docs/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "تعاون على المستندات",
+            "en": "Shared document editing",
+            "fr": "Documents collaboratifs"
+          }
         },
         {
           "name": "Google Drive",
           "url": "https://drive.google.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "تخزين الملفات ومشاركتها",
+            "en": "Cloud file storage",
+            "fr": "Stockage de fichiers"
+          }
         },
         {
           "name": "Dropbox",
           "url": "https://www.dropbox.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "مزامنة ومشاركة الملفات",
+            "en": "File sync and sharing",
+            "fr": "Synchronisation et partage"
+          }
         },
         {
           "name": "Adobe Acrobat",
           "url": "https://www.adobe.com/acrobat/mobile.html",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "ملفات PDF والتوقيع",
+            "en": "PDF reading and signatures",
+            "fr": "Lecture et signatures PDF"
+          }
         },
         {
           "name": "Microsoft OneDrive",
           "url": "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "حفظ الملفات السحابية Microsoft",
+            "en": "Microsoft cloud storage",
+            "fr": "Stockage cloud Microsoft"
+          }
         },
         {
           "name": "Asana",
           "url": "https://asana.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "تنظيم مهام الفرق",
+            "en": "Project and team work",
+            "fr": "Gestion de projets d'équipe"
+          }
         },
         {
           "name": "Zoho Notebook",
           "url": "https://www.zoho.com/notebook/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "تدوين ملاحظات الشركة",
+            "en": "Digital business notes",
+            "fr": "Notes d'entreprise"
+          }
         }
       ]
     },
@@ -629,52 +1129,102 @@
         {
           "name": "OneFootball",
           "url": "https://onefootball.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "الأخبار والنتائج الكروية",
+            "en": "Football scores and coverage",
+            "fr": "Scores et actualités football"
+          }
         },
         {
           "name": "Sofascore",
           "url": "https://www.sofascore.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "نتائج ومقاييس رياضية متنوعة",
+            "en": "Multisport scores and metrics",
+            "fr": "Scores multisports et statistiques"
+          }
         },
         {
           "name": "FotMob",
           "url": "https://www.fotmob.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "إحصائيات ومتابعة كرة القدم",
+            "en": "Football statistics and alerts",
+            "fr": "Statistiques et alertes football"
+          }
         },
         {
           "name": "Flashscore",
           "url": "https://www.flashscore.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "نتائج بطولات متعددة",
+            "en": "Cross-sport live results",
+            "fr": "Résultats de multiples sports"
+          }
         },
         {
           "name": "365Scores",
           "url": "https://www.365scores.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "تنبيهات فرق وبطولات",
+            "en": "Team and league alerts",
+            "fr": "Alertes d'équipes et de ligues"
+          }
         },
         {
           "name": "ESPN",
           "url": "https://www.espn.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "أخبار ونتائج رياضية",
+            "en": "Sports news and scores",
+            "fr": "Actualités et résultats sportifs"
+          }
         },
         {
           "name": "theScore",
           "url": "https://www.thescore.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "متابعة أخبار بطولات رياضية",
+            "en": "Sports news and highlights",
+            "fr": "Actualités et temps forts"
+          }
         },
         {
           "name": "DAZN",
           "url": "https://www.dazn.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "مشاهدة حسب حقوق البلد",
+            "en": "Streaming by regional rights",
+            "fr": "Streaming selon droits régionaux"
+          }
         },
         {
           "name": "Eurosport",
           "url": "https://www.eurosport.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "تغطية أخبار ومنافسات رياضية",
+            "en": "Competition news and coverage",
+            "fr": "Actualités des compétitions"
+          }
         },
         {
           "name": "Strava",
           "url": "https://www.strava.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "نشاط رياضي شخصي",
+            "en": "Personal workout tracking",
+            "fr": "Suivi sportif personnel"
+          }
         }
       ]
     },
@@ -690,52 +1240,102 @@
         {
           "name": "Booking.com",
           "url": "https://www.booking.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "الفنادق وأماكن الإقامة",
+            "en": "Accommodation booking",
+            "fr": "Réservation d'hébergements"
+          }
         },
         {
           "name": "Airbnb",
           "url": "https://www.airbnb.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "مساكن وتجارب سفر",
+            "en": "Homes and travel stays",
+            "fr": "Logements et séjours"
+          }
         },
         {
           "name": "Trip.com",
           "url": "https://www.trip.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "حجز خدمات سفر مختلفة",
+            "en": "Travel services booking",
+            "fr": "Services de voyage"
+          }
         },
         {
           "name": "Skyscanner",
           "url": "https://www.skyscanner.net/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "مقارنة رحلات الطيران",
+            "en": "Flight price comparison",
+            "fr": "Comparaison de vols"
+          }
         },
         {
           "name": "Google Translate",
           "url": "https://translate.google.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "الترجمة أثناء التنقل",
+            "en": "Travel translation",
+            "fr": "Traduction en voyage"
+          }
         },
         {
           "name": "Omio",
           "url": "https://www.omio.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "قطارات وحافلات ورحلات",
+            "en": "Trains, buses and trips",
+            "fr": "Trains, bus et trajets"
+          }
         },
         {
           "name": "Rome2Rio",
           "url": "https://www.rome2rio.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "تخطيط المسارات بين المدن",
+            "en": "Intercity trip planning",
+            "fr": "Itinéraires entre villes"
+          }
         },
         {
           "name": "Tripadvisor",
           "url": "https://www.tripadvisor.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "آراء وتجارب المسافرين",
+            "en": "Traveler reviews and tips",
+            "fr": "Avis de voyageurs"
+          }
         },
         {
           "name": "Expedia",
           "url": "https://www.expedia.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "حجوزات الفنادق والرحلات",
+            "en": "Hotels and travel booking",
+            "fr": "Hôtels et voyages"
+          }
         },
         {
           "name": "Uber",
           "url": "https://www.uber.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "التنقل داخل المدينة",
+            "en": "Urban transport rides",
+            "fr": "Déplacements urbains"
+          }
         }
       ]
     },
@@ -751,52 +1351,102 @@
         {
           "name": "Spotify",
           "url": "https://www.spotify.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "الموسيقى والبودكاست",
+            "en": "Music and podcasts",
+            "fr": "Musique et podcasts"
+          }
         },
         {
           "name": "Apple Music",
           "url": "https://music.apple.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "مكتبة موسيقى مرتبطة بـApple",
+            "en": "Apple music library",
+            "fr": "Bibliothèque musicale Apple"
+          }
         },
         {
           "name": "YouTube Music",
           "url": "https://music.youtube.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "أغاني ومحتوى موسيقي",
+            "en": "Songs and music videos",
+            "fr": "Chansons et vidéos musicales"
+          }
         },
         {
           "name": "Deezer",
           "url": "https://www.deezer.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "بث موسيقي حسب البلد",
+            "en": "Music streaming services",
+            "fr": "Streaming musical"
+          }
         },
         {
           "name": "SoundCloud",
           "url": "https://soundcloud.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "فنانون ومقاطع منشورة",
+            "en": "Independent audio creators",
+            "fr": "Créateurs audio indépendants"
+          }
         },
         {
           "name": "TIDAL",
           "url": "https://tidal.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "استماع موسيقي باشتراك",
+            "en": "Subscription music playback",
+            "fr": "Musique sur abonnement"
+          }
         },
         {
           "name": "Bandcamp",
           "url": "https://bandcamp.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "شراء ودعم فن مستقل",
+            "en": "Independent artist releases",
+            "fr": "Sorties d'artistes indépendants"
+          }
         },
         {
           "name": "Shazam",
           "url": "https://www.shazam.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "التعرف على اسم الأغنية",
+            "en": "Identify a song",
+            "fr": "Identifier une chanson"
+          }
         },
         {
           "name": "TuneIn",
           "url": "https://tunein.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "محطات إذاعية وبث صوتي",
+            "en": "Online radio stations",
+            "fr": "Radios et audio en direct"
+          }
         },
         {
           "name": "Audible",
           "url": "https://www.audible.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "الكتب الصوتية",
+            "en": "Audiobooks",
+            "fr": "Livres audio"
+          }
         }
       ]
     },
@@ -812,52 +1462,102 @@
         {
           "name": "Amazon Shopping",
           "url": "https://www.amazon.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "تسوق وفئات متنوعة",
+            "en": "General online shopping",
+            "fr": "Achats généralistes"
+          }
         },
         {
           "name": "eBay",
           "url": "https://www.ebay.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "سوق للبيع والشراء",
+            "en": "Marketplace buying and selling",
+            "fr": "Marché de vente et achat"
+          }
         },
         {
           "name": "AliExpress",
           "url": "https://www.aliexpress.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "الشراء الدولي من بائعين",
+            "en": "Cross-border marketplace",
+            "fr": "Place de marché internationale"
+          }
         },
         {
           "name": "Etsy",
           "url": "https://www.etsy.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "منتجات مبدعين مستقلين",
+            "en": "Independent creator goods",
+            "fr": "Produits de créateurs"
+          }
         },
         {
           "name": "Temu",
           "url": "https://www.temu.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "عروض وتسوق دولي",
+            "en": "International discount shopping",
+            "fr": "Achats internationaux à prix réduits"
+          }
         },
         {
           "name": "SHEIN",
           "url": "https://www.shein.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "أزياء وتسوق",
+            "en": "Fashion shopping",
+            "fr": "Shopping mode"
+          }
         },
         {
           "name": "Vinted",
           "url": "https://www.vinted.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "ألبسة مستعملة وإعادة بيع",
+            "en": "Pre-owned clothing resale",
+            "fr": "Vêtements d'occasion"
+          }
         },
         {
           "name": "IKEA",
           "url": "https://www.ikea.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "أثاث ومنزل",
+            "en": "Furniture and home goods",
+            "fr": "Meubles et maison"
+          }
         },
         {
           "name": "Zara",
           "url": "https://www.zara.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "ملابس من العلامة",
+            "en": "Brand fashion collections",
+            "fr": "Collections de mode"
+          }
         },
         {
           "name": "Jumia",
           "url": "https://www.jumia.ma/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "تسوق محلي عبر المغرب",
+            "en": "Morocco marketplace",
+            "fr": "Marketplace marocain"
+          }
         }
       ]
     },
@@ -873,52 +1573,102 @@
         {
           "name": "Cookpad",
           "url": "https://cookpad.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "وصفات وتجارب طبخ المستخدمين",
+            "en": "Community recipes",
+            "fr": "Recettes communautaires"
+          }
         },
         {
           "name": "Kitchen Stories",
           "url": "https://www.kitchenstories.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "تعليم الطبخ بالصور والفيديو",
+            "en": "Visual cooking lessons",
+            "fr": "Cuisine en images et vidéos"
+          }
         },
         {
           "name": "NYT Cooking",
           "url": "https://cooking.nytimes.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "وصفات وتخطيط المطبخ",
+            "en": "Recipe collection and planning",
+            "fr": "Collection de recettes"
+          }
         },
         {
           "name": "Mealime",
           "url": "https://www.mealime.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "تخطيط وجبات أسبوعية",
+            "en": "Weekly meal plans",
+            "fr": "Planification des repas"
+          }
         },
         {
           "name": "SideChef",
           "url": "https://www.sidechef.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "طبخ بخطوات منظمة",
+            "en": "Step-by-step cooking",
+            "fr": "Cuisine guidée"
+          }
         },
         {
           "name": "Samsung Food",
           "url": "https://samsungfood.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "حفظ الوصفات ومشاركتها",
+            "en": "Save and share recipes",
+            "fr": "Sauvegarde et partage"
+          }
         },
         {
           "name": "Allrecipes",
           "url": "https://www.allrecipes.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "وصفات متنوعة",
+            "en": "General recipe ideas",
+            "fr": "Recettes variées"
+          }
         },
         {
           "name": "Paprika Recipe Manager",
           "url": "https://www.paprikaapp.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "دفتر وصفات شخصي",
+            "en": "Personal recipe organizer",
+            "fr": "Carnet de recettes"
+          }
         },
         {
           "name": "Tasty",
           "url": "https://tasty.co/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "وصفات سريعة بالفيديو",
+            "en": "Short recipe videos",
+            "fr": "Recettes vidéo courtes"
+          }
         },
         {
           "name": "Too Good To Go",
           "url": "https://www.toogoodtogo.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "تخفيض هدر الطعام حيث الخدمة متاحة",
+            "en": "Surplus-food offers by region",
+            "fr": "Paniers anti-gaspillage selon pays"
+          }
         }
       ]
     },
@@ -934,52 +1684,102 @@
         {
           "name": "Google News",
           "url": "https://news.google.com/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "تجميع أخبار حسب المواضيع",
+            "en": "News aggregation by topic",
+            "fr": "Actualités par thème"
+          }
         },
         {
           "name": "Flipboard",
           "url": "https://flipboard.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "مجلات وأخبار مختارة",
+            "en": "Curated reading feeds",
+            "fr": "Flux et magazines"
+          }
         },
         {
           "name": "Feedly",
           "url": "https://feedly.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "متابعة مصادر RSS",
+            "en": "RSS subscription feeds",
+            "fr": "Abonnements RSS"
+          }
         },
         {
           "name": "Inoreader",
           "url": "https://www.inoreader.com/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "قراءة خلاصات ومصادر متعددة",
+            "en": "Multiple news feeds",
+            "fr": "Flux d'actualités multiples"
+          }
         },
         {
           "name": "Reuters",
           "url": "https://www.reuters.com/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "أخبار وكالة دولية",
+            "en": "International news agency",
+            "fr": "Agence de presse internationale"
+          }
         },
         {
           "name": "BBC News",
           "url": "https://www.bbc.com/news",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "تقارير وأخبار عامة",
+            "en": "General news coverage",
+            "fr": "Information générale"
+          }
         },
         {
           "name": "AP News",
           "url": "https://apnews.com/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "أخبار وكالة مستقلة",
+            "en": "Wire service reporting",
+            "fr": "Actualités d'agence"
+          }
         },
         {
           "name": "Al Jazeera",
           "url": "https://www.aljazeera.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "أخبار دولية بالعربية وغيرها",
+            "en": "International multilingual news",
+            "fr": "Actualités internationales"
+          }
         },
         {
           "name": "France 24",
           "url": "https://www.france24.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "أخبار بلغات متعددة",
+            "en": "Multilingual world news",
+            "fr": "Actualités multilingues"
+          }
         },
         {
           "name": "DW",
           "url": "https://www.dw.com/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "تقارير دولية وتحليلات",
+            "en": "International news analysis",
+            "fr": "Analyses internationales"
+          }
         }
       ]
     },
@@ -995,54 +1795,109 @@
         {
           "name": "Minecraft",
           "url": "https://www.minecraft.net/",
-          "editorialOrder": 1
+          "editorialOrder": 1,
+          "bestFor": {
+            "ar": "بناء واكتشاف عوالم",
+            "en": "Build and explore worlds",
+            "fr": "Construction et exploration"
+          }
         },
         {
           "name": "Roblox",
           "url": "https://www.roblox.com/",
-          "editorialOrder": 2
+          "editorialOrder": 2,
+          "bestFor": {
+            "ar": "تجارب يصنعها اللاعبون",
+            "en": "User-created game worlds",
+            "fr": "Univers créés par les joueurs"
+          }
         },
         {
           "name": "PUBG Mobile",
           "url": "https://www.pubgmobile.com/",
-          "editorialOrder": 3
+          "editorialOrder": 3,
+          "bestFor": {
+            "ar": "لعبة قتال متعددة اللاعبين",
+            "en": "Online multiplayer action",
+            "fr": "Action multijoueur en ligne"
+          }
         },
         {
           "name": "Brawl Stars",
           "url": "https://supercell.com/en/games/brawlstars/",
-          "editorialOrder": 4
+          "editorialOrder": 4,
+          "bestFor": {
+            "ar": "منافسات سريعة جماعية",
+            "en": "Quick team competitions",
+            "fr": "Compétitions d'équipe"
+          }
         },
         {
           "name": "Clash of Clans",
           "url": "https://supercell.com/en/games/clashofclans/",
-          "editorialOrder": 5
+          "editorialOrder": 5,
+          "bestFor": {
+            "ar": "استراتيجية وبناء قاعدة",
+            "en": "Strategy and base building",
+            "fr": "Stratégie et construction"
+          }
         },
         {
           "name": "Genshin Impact",
           "url": "https://genshin.hoyoverse.com/",
-          "editorialOrder": 6
+          "editorialOrder": 6,
+          "bestFor": {
+            "ar": "استكشاف وعالم مفتوح",
+            "en": "Open-world adventure",
+            "fr": "Aventure en monde ouvert"
+          }
         },
         {
           "name": "Stardew Valley",
           "url": "https://www.stardewvalley.net/",
-          "editorialOrder": 7
+          "editorialOrder": 7,
+          "bestFor": {
+            "ar": "زراعة وإدارة موارد",
+            "en": "Farming and life simulation",
+            "fr": "Gestion agricole et de vie"
+          }
         },
         {
           "name": "Pokémon GO",
           "url": "https://pokemongolive.com/",
-          "editorialOrder": 8
+          "editorialOrder": 8,
+          "bestFor": {
+            "ar": "لعب مع واقع معزز",
+            "en": "Location-based augmented reality",
+            "fr": "Jeu en réalité augmentée"
+          }
         },
         {
           "name": "Monument Valley",
           "url": "https://www.monumentvalleygame.com/",
-          "editorialOrder": 9
+          "editorialOrder": 9,
+          "bestFor": {
+            "ar": "ألغاز وهندسة بصرية",
+            "en": "Perspective puzzles",
+            "fr": "Casse-têtes visuels"
+          }
         },
         {
           "name": "Among Us",
           "url": "https://www.innersloth.com/games/among-us/",
-          "editorialOrder": 10
+          "editorialOrder": 10,
+          "bestFor": {
+            "ar": "لعبة اجتماعية جماعية",
+            "en": "Social deduction multiplayer",
+            "fr": "Déduction sociale en groupe"
+          }
         }
       ]
     }
-  ]
+  ],
+  "editorialPolicy": {
+    "ar": "هذه اختيارات تحريرية للأعمال والمهام وليس اختباراً معملياً. الأرقام 01–10 للعرض فقط ولا تعني تقييم نجوم. بعض التطبيقات لا يتوفر في كل البلدان أو على النظامين؛ تأكد من المتجر الرسمي.",
+    "en": "Numbers 01–10 are editorial display order, not measured scores or official store rankings. Platform, country, prices and compatibility must be verified with each developer.",
+    "fr": "Numéros 01–10 = ordre de présentation éditorial, ni notes mesurées ni classement officiel. Vérifiez plateformes, région et prix auprès de l’éditeur."
+  }
 }
