@@ -1,0 +1,495 @@
+{
+  "reviewedAt": "2026-10-28",
+  "editorialPolicy": {
+    "ar": "مقالات تحريرية أصلية مبنية على مصادر المنظمين والمصنعين. نميز بين النتائج المؤكدة والمواعيد المنتظرة ومواصفات الشركة وبين الاختبارات المستقلة.",
+    "en": "Original editorial reporting based on official organizers and manufacturers. Scheduled matches, confirmed results, vendor specifications and independent tests are not conflated.",
+    "fr": "Articles éditoriaux originaux fondés sur les sources des organisateurs et fabricants. Résultats, programmes, spécifications constructeur et tests indépendants restent distincts."
+  },
+  "entries": [
+    {
+      "id": "f1-mexico-gp-preview-2026",
+      "kind": "sports",
+      "topic": "motorsport",
+      "date": "2026-10-28",
+      "eventDate": "2026-11-01",
+      "status": "scheduled",
+      "image": "photo-1552519507-da3b142c6e3d",
+      "source": "Formula 1 — Mexico 2026 official race timetable",
+      "url": "https://www.formula1.com/en/racing/2026/mexico",
+      "translations": {
+        "ar": {
+          "title": "سباق المكسيك للفورمولا 1: البرنامج الرسمي وما ينبغي متابعته",
+          "excerpt": "من التجارب الحرة إلى التأهيل والسباق يوم 1 نوفمبر، قراءة تحليلية للعوامل التي قد تؤثر في الأداء.",
+          "lead": "يعود سباق جائزة مدينة مكسيكو الكبرى ضمن بطولة العالم للفورمولا 1 خلال الفترة من 30 أكتوبر إلى 1 نوفمبر 2026. وتؤكد الروزنامة الرسمية موعد التجارب والتأهيل والسباق؛ أما النتائج فلم تُحسم بعد وقت إعداد المقال.",
+          "sections": [
+            {
+              "heading": "المواعيد والبرنامج",
+              "text": "تنطلق التجارب الأولى والثانية يوم الجمعة 30 أكتوبر، وتُقام الحصة الثالثة والتأهيل يوم السبت 31 أكتوبر. يُجرى السباق يوم الأحد 1 نوفمبر عند الساعة 14:00 بالتوقيت المحلي لمدينة مكسيكو، وفق الجدول الرسمي، ويمكن أن تتغير الأوقات بقرار المنظمين. ينبغي تحديد المنطقة الزمنية عند نقل الموعد إلى بلد آخر."
+            },
+            {
+              "heading": "لماذا يختلف هذا المضمار؟",
+              "text": "يقام السباق على حلبة هيرمانوس رودريغيز، ويبلغ طول اللفة 4.304 كيلومترات. يفرض الموقع المرتفع للمدينة تحديات تتعلق بكثافة الهواء والتبريد والقوة الضاغطة، ولذلك لا يكفي النظر إلى نتيجة الجولة السابقة للتنبؤ بالترتيب. يجب مراجعة بيانات التجارب والإطارات وظروف الحلبة."
+            },
+            {
+              "heading": "مؤشرات متابعة السباق",
+              "text": "راقب الفارق بين سرعة اللفة الواحدة والوتيرة الطويلة في التجارب، وقدرة الفرق على إدارة حرارة المكابح والإطارات، والأحداث التنظيمية قبل التأهيل. لا تُعرض أي نتيجة نهائية قبل نشرها رسمياً؛ التغطية هنا قراءة استباقية لا تنبؤ مضمون."
+            }
+          ]
+        },
+        "en": {
+          "title": "2026 Mexico City Grand Prix: official timetable and analytical preview",
+          "excerpt": "Practice, qualifying and race dates with a grounded look at altitude, cooling and race strategy.",
+          "lead": "The 2026 Formula 1 Mexico City Grand Prix runs from October 30 to November 1. The organizer has confirmed the session schedule, but race results are not known at the time of this preview.",
+          "sections": [
+            {
+              "heading": "Confirmed race-week timetable",
+              "text": "Friday, October 30 features the first two practice sessions. Final practice and qualifying take place Saturday, October 31. The Grand Prix starts at 14:00 local Mexico City time on Sunday, November 1 according to the official schedule. Time conversions must reflect local time zones and any schedule amendments."
+            },
+            {
+              "heading": "What makes this circuit different",
+              "text": "The Autódromo Hermanos Rodríguez measures 4.304 km per lap. Mexico City's altitude affects air density, power-unit cooling and aerodynamic trade-offs, so prior results at other venues may have limited predictive value. Practice performance and tyre behavior provide more relevant context."
+            },
+            {
+              "heading": "A sensible way to assess the weekend",
+              "text": "Compare one-lap pace with long-run tyre degradation, watch brake and cooling constraints, and distinguish formal penalties from speculation. No winner, finishing position or point allocation should be reported until the organizer releases the actual results."
+            }
+          ]
+        },
+        "fr": {
+          "title": "Grand Prix de Mexico 2026 : programme officiel et analyse avant-course",
+          "excerpt": "Essais, qualifications, horaires et facteurs liés à l’altitude avant la course du 1er novembre.",
+          "lead": "Le Grand Prix de Mexico de Formule 1 se déroule du 30 octobre au 1er novembre 2026. Le calendrier des séances est publié par l’organisateur ; aucun résultat de course n’est encore acquis au moment de cette présentation.",
+          "sections": [
+            {
+              "heading": "Le programme confirmé",
+              "text": "Les deux premières séances d’essais sont prévues le vendredi 30 octobre. La troisième séance et les qualifications auront lieu samedi 31 octobre. La course doit débuter dimanche 1er novembre à 14 h, heure de Mexico, sous réserve d’éventuelles modifications officielles."
+            },
+            {
+              "heading": "Altitude et caractéristiques du circuit",
+              "text": "L’Autódromo Hermanos Rodríguez mesure 4,304 km par tour. L’altitude modifie la densité de l’air et les compromis de refroidissement et d’aérodynamique. Les performances d’un autre circuit ne suffisent donc pas à établir une hiérarchie fiable."
+            },
+            {
+              "heading": "Les indicateurs à suivre",
+              "text": "Comparez le rythme sur un tour et les relais longs, l’usure des pneumatiques, la température des freins et les décisions des commissaires. Les pronostics doivent être distingués des résultats, qui ne seront renseignés qu’après leur publication officielle."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ucl-matchday3-results-analysis-2026",
+      "kind": "sports",
+      "topic": "football",
+      "date": "2026-10-28",
+      "status": "completed",
+      "image": "photo-1579952363873-27f3bade9f55",
+      "source": "UEFA Champions League — 2026/27 league phase results",
+      "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--202627-champions-league-all-the-league-phase-fixtures-and-results/",
+      "translations": {
+        "ar": {
+          "title": "الجولة الثالثة لدوري أبطال أوروبا 2026/27: نتائج بارزة وكيف نقرأها",
+          "excerpt": "ليفربول وباريس سان جيرمان وريال مدريد ضمن أبرز النتائج المؤكدة؛ التحليل يفرق بين النتيجة والأداء.",
+          "lead": "نشرت UEFA نتائج الجولة الثالثة من مرحلة الدوري في 20 و21 أكتوبر 2026. وشهدت مباريات عدة نتائج مرتفعة، لكن القراءة المنضبطة تقتضي الفصل بين الأهداف المسجلة والاستنتاجات المتعلقة بمستوى الفرق.",
+          "sections": [
+            {
+              "heading": "نتائج موثقة من الاتحاد الأوروبي",
+              "text": "انتهت مباراة ليفربول وفياريال بنتيجة 4-3، وفاز باريس سان جيرمان على برشلونة 4-2، بينما فاز ريال مدريد على لايبزيغ 4-1، وفق تقرير UEFA الرسمي. تمثل هذه نتائج محددة من جولة واحدة، ولا تعني وحدها حسم التأهل أو تحديد المرشح الأقوى."
+            },
+            {
+              "heading": "ماذا تعني المباريات كثيرة الأهداف؟",
+              "text": "ارتفاع عدد الأهداف قد يعكس كفاءة هجومية أو أخطاء دفاعية أو أحداثاً ظرفية مثل البطاقات والركلات الثابتة. لا يمكن نسبة السبب إلى عامل واحد من النتيجة وحدها؛ يتطلب ذلك مراجعة الفرص المحققة وجودة التسديد والسياق التكتيكي والغيابات."
+            },
+            {
+              "heading": "كيف نتابع الجولات المقبلة؟",
+              "text": "تستمر مرحلة الدوري حتى يناير 2027، وتختلف مواعيد المباريات وخصوم كل فريق. عند مقارنة الأداء، ينبغي الرجوع إلى جدول الاتحاد والترتيب الرسمي بعد تحديثه، بدلاً من الاعتماد على توقعات غير موثقة أو نسخ قديمة من الجداول."
+            }
+          ]
+        },
+        "en": {
+          "title": "Champions League 2026/27 Matchday 3: standout results and context",
+          "excerpt": "Official UEFA scorelines from October 20–21 and a careful interpretation of high-scoring matches.",
+          "lead": "UEFA published the third round of league-phase results on October 20 and 21. Several fixtures produced high scorelines, but match scores should not be confused with complete evidence about team quality.",
+          "sections": [
+            {
+              "heading": "Verified UEFA scorelines",
+              "text": "Liverpool beat Villarreal 4-3, Paris Saint-Germain beat Barcelona 4-2, and Real Madrid beat Leipzig 4-1 according to UEFA's official report. These are results from one matchday, not a conclusive ranking of teams or a guarantee of qualification."
+            },
+            {
+              "heading": "Why raw goals do not tell the whole story",
+              "text": "An open game can reflect creative attacking, defensive errors, set pieces or unusual circumstances. A proper review must consider shot quality, tactical adjustments, player availability and the timeline of significant incidents rather than inferring a single cause from the final score."
+            },
+            {
+              "heading": "What to check before the next games",
+              "text": "The 2026/27 league phase continues into January 2027. Refer to official fixtures, standings and disciplinary records for each team. A previous week's table may be stale, and transfer rumors should never be presented as confirmed squad changes."
+            }
+          ]
+        },
+        "fr": {
+          "title": "Ligue des champions 2026/27 : résultats de la 3e journée et décryptage",
+          "excerpt": "Scores officiels UEFA des 20–21 octobre et lecture prudente des matchs riches en buts.",
+          "lead": "L’UEFA a publié les résultats de la troisième journée de la phase de ligue. Plusieurs rencontres ont été prolifiques, mais le score final ne suffit pas à mesurer la valeur globale d’une équipe.",
+          "sections": [
+            {
+              "heading": "Trois résultats vérifiés",
+              "text": "Liverpool s’est imposé contre Villarreal 4-3, le Paris Saint-Germain contre Barcelone 4-2 et le Real Madrid contre Leipzig 4-1, selon les données UEFA. Il s’agit de matchs précis, sans conclusion définitive sur la qualification ou la hiérarchie future."
+            },
+            {
+              "heading": "Interpréter les rencontres offensives",
+              "text": "Un nombre élevé de buts peut dépendre de l’efficacité, d’erreurs, de coups de pied arrêtés ou de circonstances particulières. Il faut examiner les occasions, les absences et les adaptations tactiques avant de tirer une conclusion."
+            },
+            {
+              "heading": "Suivi de la compétition",
+              "text": "La phase de ligue se poursuit jusqu’en janvier 2027. Consultez les rencontres, classements et sanctions sur le site officiel, et vérifiez la date de mise à jour des tableaux. Ne confondez pas rumeur de transfert et modification confirmée de l’effectif."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "nba-oct-28-preview-2026",
+      "kind": "sports",
+      "topic": "basketball",
+      "date": "2026-10-28",
+      "eventDate": "2026-10-28",
+      "status": "scheduled",
+      "image": "photo-1546519638-68e109498ffc",
+      "source": "NBA — official October 28, 2026 game schedule",
+      "url": "https://www.nba.com/schedule/2026",
+      "translations": {
+        "ar": {
+          "title": "دوري NBA يوم 28 أكتوبر: اثنتا عشرة مباراة وبرنامج المتابعة",
+          "excerpt": "دليل لمواجهات السلة الأمريكية المؤكدة وكيفية متابعة الإحصاءات والترتيب دون خلط التوقعات بالنتائج.",
+          "lead": "يتضمن الجدول الرسمي للدوري الأمريكي للمحترفين NBA يوم الأربعاء 28 أكتوبر 2026 اثنتي عشرة مباراة. وفي وقت تحرير هذا التقرير كانت مواجهات اليوم مدرجة في الجدول، لا في سجل النتائج النهائية.",
+          "sections": [
+            {
+              "heading": "مواجهات بارزة في البرنامج",
+              "text": "تشمل مباريات اليوم ميامي هيت أمام أتلانتا هوكس، وفيلادلفيا سفنتي سيكسرز أمام إنديانا بيسرز، وأوكلاهوما سيتي ثاندر أمام دالاس مافريكس، ولوس أنجلوس ليكرز أمام كليبرز. تبدأ بعض المباريات بعد منتصف الليل بتوقيت دول أخرى، لذلك ينبغي الانتباه إلى فرق التوقيت."
+            },
+            {
+              "heading": "كيف نقارن الأداء؟",
+              "text": "إحصاءات النقاط وحدها لا تكفي لتقييم فريق؛ ينبغي النظر إلى معدل الاستحواذ والكفاءة الهجومية والدفاعية والإصابات ومواعيد السفر والراحة. تختلف قوة خصوم المباريات الأولى للموسم، ولهذا تكون العينات الصغيرة غير مستقرة."
+            },
+            {
+              "heading": "النتائج والترتيب الفعلي",
+              "text": "تُحدث NBA لوحة المباريات والنتائج رسمياً بعد انطلاق اللقاءات ونهايتها. لا ينبغي نقل الأرقام من معاينة سابقة على أنها مباشرة، ولا إعلان نتيجة مباراة لم تنته بعد. استخدم التقرير بوصفه برنامجاً زمنياً موثقاً وتحليلاً تمهيدياً."
+            }
+          ]
+        },
+        "en": {
+          "title": "NBA October 28, 2026: twelve games and a viewing guide",
+          "excerpt": "A verified schedule snapshot and an explanation of what to watch beyond the scoreboard.",
+          "lead": "The official NBA calendar lists twelve games for Wednesday, October 28, 2026. At the time of this preview, the matchups were scheduled; final scores should not be invented before the games finish.",
+          "sections": [
+            {
+              "heading": "Notable fixtures",
+              "text": "Miami visits Atlanta, Philadelphia visits Indiana, Oklahoma City plays Dallas, and the Lakers face the Clippers. Some games occur after midnight in other time zones. The NBA schedule lists game times in UTC or the user's chosen locale, so local conversions must be handled carefully."
+            },
+            {
+              "heading": "What is worth analyzing",
+              "text": "A team's points per game are not enough. Pace, offensive and defensive efficiency, roster availability, travel and rest all matter. Early-season comparisons rely on small samples and may change rapidly as lineups settle."
+            },
+            {
+              "heading": "Scores and standings",
+              "text": "The league's official scoreboard publishes results once play begins and matches conclude. Do not mistake a schedule preview or cached result for a live score. This article is a dated fixture overview, not a real-time tracking service."
+            }
+          ]
+        },
+        "fr": {
+          "title": "NBA du 28 octobre 2026 : douze rencontres au calendrier",
+          "excerpt": "Programme officiel et critères d’analyse au-delà du simple score.",
+          "lead": "Le calendrier officiel NBA prévoit douze rencontres mercredi 28 octobre 2026. Au moment de la préparation de cet article, les matchs étaient programmés ; leurs scores définitifs ne sont pas encore rapportés.",
+          "sections": [
+            {
+              "heading": "Des affiches à suivre",
+              "text": "Miami se déplace à Atlanta, Philadelphie à Indiana, Oklahoma City affronte Dallas et les Lakers rencontrent les Clippers. Une partie des rencontres a lieu après minuit dans d'autres fuseaux horaires : il faut vérifier l'heure locale."
+            },
+            {
+              "heading": "Regarder au-delà des points",
+              "text": "Le rythme, l'efficacité offensive et défensive, l'état de l'effectif, les déplacements et la récupération sont nécessaires pour comparer les équipes. Les statistiques de début de saison reposent sur de petits échantillons."
+            },
+            {
+              "heading": "Résultats et classements",
+              "text": "Le tableau officiel NBA affiche les résultats après le déroulement des matchs. Une page de calendrier n’équivaut ni à une couverture en direct ni à un tableau de classement actualisé. Cet article constitue une synthèse datée des rencontres annoncées."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "iphone-18-pro-photo-2026",
+      "kind": "technology",
+      "topic": "usa",
+      "date": "2026-10-28",
+      "status": "announced",
+      "image": "photo-1511707171634-5f897ff02aa9",
+      "source": "Apple Newsroom — iPhone 18 Pro",
+      "url": "https://www.apple.com/newsroom/2026/09/get-ready-to-experience-iphone-18-pro-the-new-apple-watch-lineup-and-airpods-5/",
+      "translations": {
+        "ar": {
+          "title": "iPhone 18 Pro: ما الذي تغير في التصوير، وما الذي يحتاج إلى اختبار مستقل؟",
+          "excerpt": "تشرح Apple العدسة ذات الفتحة المتغيرة والتحكم في الكاميرا؛ وهذه طريقة موضوعية لمقارنة الهاتف قبل الشراء.",
+          "lead": "أعلنت Apple عائلة iPhone 18 Pro في سبتمبر 2026، مؤكدة اعتماد كاميرا رئيسية بدقة 48 ميغابكسل مع فتحة عدسة متغيرة. وتظل تفاصيل الأداء الفعلي والبطارية رهناً بتجارب مستقلة وظروف الاستخدام.",
+          "sections": [
+            {
+              "heading": "فتحة العدسة المتغيرة",
+              "text": "تتيح فتحة العدسة المتغيرة في الكاميرا الرئيسية قدراً إضافياً من التحكم في مقدار الضوء وعمق الميدان. لكن الرقم التسويقي وحده لا يثبت تحسن كل صورة؛ فحجم المستشعر والمعالجة والإضاءة وثبات اليد تؤثر جميعها في النتائج."
+            },
+            {
+              "heading": "كيف نقارن مع Android؟",
+              "text": "من الأفضل تصوير المشهد نفسه في ظروف متقاربة مع تثبيت دقة الصورة والإعدادات قدر الإمكان. قارن مدى التفاصيل في الظلال، وتوازن الألوان، وسرعة التركيز، وتصوير الفيديو، لا عدد الميغابكسلات فقط."
+            },
+            {
+              "heading": "عوامل قبل الشراء",
+              "text": "تحقق من سعة التخزين، والإصلاح والضمان المحلي، ومدة دعم البرمجيات، وتوافر مزايا الذكاء الاصطناعي في بلدك ولغتك. لا يُعد ثمن البيع الأمريكي مؤشراً دقيقاً على السعر النهائي في المغرب أو البلدان الأخرى."
+            }
+          ]
+        },
+        "en": {
+          "title": "iPhone 18 Pro: variable aperture and what a fair camera comparison requires",
+          "excerpt": "Apple's September announcement explained, with a buyer's checklist beyond megapixels.",
+          "lead": "Apple announced the iPhone 18 Pro family in September 2026, highlighting a 48-megapixel main camera with variable aperture. Real-world imaging performance and endurance still require independent tests.",
+          "sections": [
+            {
+              "heading": "Why a variable aperture matters",
+              "text": "A variable aperture offers more control over incoming light and depth of field. However, sensor size, exposure processing, stabilization and lighting all affect image quality. A specification sheet cannot prove that every photograph will improve."
+            },
+            {
+              "heading": "Fair comparison with Android rivals",
+              "text": "Shoot the same scenes under similar conditions and evaluate shadow detail, color rendition, autofocus consistency and video stability. Avoid reducing camera quality to nominal megapixel counts."
+            },
+            {
+              "heading": "A practical purchasing checklist",
+              "text": "Check actual storage, update policy, repairability, local warranty and the languages supported by AI features. US launch prices cannot be assumed to match retail prices in Morocco or other markets."
+            }
+          ]
+        },
+        "fr": {
+          "title": "iPhone 18 Pro : ouverture variable et comparaison photo rigoureuse",
+          "excerpt": "Analyse de l’annonce Apple et des critères à vérifier au-delà du nombre de mégapixels.",
+          "lead": "Apple a annoncé l’iPhone 18 Pro en septembre 2026 et met en avant un capteur principal de 48 Mpx avec ouverture variable. La qualité réelle exige toutefois des essais comparatifs indépendants.",
+          "sections": [
+            {
+              "heading": "Pourquoi l’ouverture variable compte",
+              "text": "Modifier l'ouverture permet d'ajuster la lumière et la profondeur de champ, mais la taille du capteur, le traitement de l'image et la stabilisation interviennent aussi. La caractéristique annoncée ne garantit pas le succès de chaque prise de vue."
+            },
+            {
+              "heading": "Comparer plusieurs appareils correctement",
+              "text": "Photographiez les mêmes scènes dans des conditions similaires et analysez ombres, couleurs, précision de la mise au point et stabilité vidéo. Le nombre de mégapixels n'est pas une note de qualité."
+            },
+            {
+              "heading": "Points avant l’achat",
+              "text": "Vérifiez stockage, mises à jour, réparabilité, garantie locale et disponibilité linguistique des fonctions IA. Le prix affiché aux États-Unis n'est pas un prix final garanti sur d'autres marchés."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pixel-11-tensor-g6-2026",
+      "kind": "technology",
+      "topic": "usa",
+      "date": "2026-10-28",
+      "status": "announced",
+      "image": "photo-1598327105666-5b89351aff97",
+      "source": "Google Blog — Pixel 11 series and Tensor G6",
+      "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/",
+      "translations": {
+        "ar": {
+          "title": "سلسلة Pixel 11 ومعالج Tensor G6: المزايا المؤكدة والأسئلة المفتوحة",
+          "excerpt": "تقييم أولي لإعلان Google عن الكاميرات والذكاء الاصطناعي دون افتراض نتائج اختبار لم تُجرَ.",
+          "lead": "قدمت Google هواتف Pixel 11 وPixel 11 Pro وPixel 11 Pro XL في 12 أغسطس 2026، مع معالج Tensor G6 ومزايا تصوير جديدة ودعم أوسع للذكاء الاصطناعي. هذه معلومات إعلان الشركة وليست نتائج مختبر مستقل.",
+          "sections": [
+            {
+              "heading": "العتاد ومعالجة الذكاء الاصطناعي",
+              "text": "تعتمد السلسلة على معالج Tensor G6 مع إمكانات Gemini Nano. لا تعني هذه الحقيقة وحدها أن الهاتف الأسرع في جميع التطبيقات؛ فالأداء المستمر واستهلاك الطاقة وتطبيقات التصوير تستلزم اختبارات واقعية."
+            },
+            {
+              "heading": "الكاميرا وتجربة الاستخدام",
+              "text": "تشير الشركة إلى تحسينات في الكاميرا والمتانة. على المشتري تقييم سرعة الالتقاط والتصوير الليلي وتناسق الفيديو، مع التأكد من توفر بعض مزايا Gemini بحسب البلد واللغة والاشتراك."
+            },
+            {
+              "heading": "المقارنة والقيمة",
+              "text": "يقارن القرار العادل بين Pixel وiPhone وSamsung باستخدام سعر النسخة نفسها وسعة التخزين والضمان وتحديثات النظام وجودة الخدمة المحلية. لا تُقدَّم مزايا الذكاء الاصطناعي كأنها متاحة لجميع المستخدمين دون قيود."
+            }
+          ]
+        },
+        "en": {
+          "title": "Pixel 11 and Tensor G6: confirmed features and questions for buyers",
+          "excerpt": "Google's hardware and AI announcements assessed without claiming independent benchmark results.",
+          "lead": "Google unveiled Pixel 11, Pixel 11 Pro and Pixel 11 Pro XL on August 12, 2026, bringing Tensor G6 and new camera and AI functions. These are manufacturer claims, not a laboratory verdict.",
+          "sections": [
+            {
+              "heading": "Hardware and on-device AI",
+              "text": "The Tensor G6 powers updated Gemini Nano capabilities. That does not establish across-the-board speed or battery superiority; sustained performance, power consumption and app behavior need controlled testing."
+            },
+            {
+              "heading": "Camera and everyday use",
+              "text": "Google highlights camera and durability improvements. Buyers should assess autofocus reliability, night photography, video consistency and whether advertised Gemini features are available in their region and language."
+            },
+            {
+              "heading": "Comparing price and support",
+              "text": "Compare identical storage configurations, local warranty and service, software support and practical battery life against Apple and Samsung alternatives. Promotional AI features may have country, age or subscription restrictions."
+            }
+          ]
+        },
+        "fr": {
+          "title": "Pixel 11 et Tensor G6 : nouveautés confirmées et questions d’achat",
+          "excerpt": "Décryptage des annonces Google sur l’IA et la photo, sans faux résultats de laboratoire.",
+          "lead": "Google a présenté les Pixel 11, Pixel 11 Pro et Pixel 11 Pro XL le 12 août 2026, avec Tensor G6 et des évolutions photo et IA. Il s’agit de caractéristiques annoncées, non de mesures indépendantes.",
+          "sections": [
+            {
+              "heading": "Puce et IA embarquée",
+              "text": "Tensor G6 prend en charge des fonctions Gemini Nano plus avancées. Cela ne prouve pas une supériorité générale de performances ou d’autonomie : les tests prolongés restent nécessaires."
+            },
+            {
+              "heading": "Photo et usages",
+              "text": "Le fabricant met en avant photo et solidité. Comparez la fiabilité de l’autofocus, les scènes nocturnes, la stabilité vidéo et la disponibilité réelle des fonctions IA selon les langues et les pays."
+            },
+            {
+              "heading": "Prix et service après-vente",
+              "text": "Évaluez des versions de stockage équivalentes, la garantie locale, les mises à jour et l’autonomie, puis comparez avec iPhone et Galaxy. Des fonctions promotionnelles peuvent dépendre de la région ou d’un abonnement."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "samsung-fold8-foldables-2026",
+      "kind": "technology",
+      "topic": "korea",
+      "date": "2026-10-28",
+      "status": "announced",
+      "image": "photo-1610945265064-0e34e5519bbf",
+      "source": "Samsung Global Newsroom — Fold8 and Flip8",
+      "url": "https://news.samsung.com/global/samsung-officially-launches-galaxy-z-fold8-ultra-fold8-flip8-watch-ultra2-and-watch9",
+      "translations": {
+        "ar": {
+          "title": "Galaxy Z Fold8 وFlip8: مقارنة عملية بين الهاتف القابل للطي الكبير والصغير",
+          "excerpt": "أعلنت Samsung ثلاثة نماذج في 2026؛ دليل لفهم الاستخدام والحجم والمتانة قبل الشراء.",
+          "lead": "بدأت Samsung طرح Galaxy Z Fold8 Ultra وFold8 وFlip8 عالمياً في أغسطس 2026. وتستهدف الأجهزة أنماطاً مختلفة من الاستخدام، من تعدد المهام إلى الحجم الأصغر. يظل اختيار النموذج مسألة احتياجات لا ترتيباً مطلقاً.",
+          "sections": [
+            {
+              "heading": "اختيار شكل الهاتف",
+              "text": "يقدم Fold8 شاشة داخلية واسعة للمستندات والنوافذ المتعددة، بينما يركز Flip8 على قابلية الحمل والتفاعل مع الشاشة الخارجية. نموذج Ultra موجه للأعمال والتصوير الأكثر تطلباً، لكن حجمه وسعره قد لا يناسبان الجميع."
+            },
+            {
+              "heading": "الكاميرا والمتانة",
+              "text": "تعلن Samsung عن كاميرات وأنظمة مساعدة جديدة، وتذكر أن Fold8 يزن نحو 201 غرام. ينبغي اختبار راحة الإمساك ووضوح الشاشة الخارجية وثنية الشاشة الداخلية وملاءمة الضمان ضد أضرار الطي قبل المقارنة."
+            },
+            {
+              "heading": "الميزات والسعر المحلي",
+              "text": "قد تختلف بعض خدمات الذكاء الاصطناعي والاتصالات حسب اللغة والسوق والاشتراكات. لا تُقارن أسعار نسخة Ultra وFlip قبل توحيد التخزين والضمان والإصلاح؛ كما أن مقاومة الماء لا تعني مناعة كاملة ضد السقوط أو الغبار."
+            }
+          ]
+        },
+        "en": {
+          "title": "Galaxy Z Fold8 versus Flip8: choosing the right foldable design",
+          "excerpt": "Samsung's 2026 foldables compared by practical use, handling and repair considerations.",
+          "lead": "Samsung began rolling out Galaxy Z Fold8 Ultra, Fold8 and Flip8 in August 2026. The devices target different workflows, from multitasking to compact portability. There is no universal winner.",
+          "sections": [
+            {
+              "heading": "Different form factors",
+              "text": "Fold8 offers a larger interior workspace for documents and side-by-side apps. Flip8 emphasizes a compact shape and cover-screen interactions. Ultra targets demanding creators, though its size and price may not suit everyone."
+            },
+            {
+              "heading": "Cameras and durability",
+              "text": "Samsung publishes improvements in imaging and construction and lists Fold8 at about 201 grams. Buyers should assess grip, exterior display legibility, crease visibility and the terms of hinge and screen repair coverage."
+            },
+            {
+              "heading": "Software, region and price",
+              "text": "AI features and supported connections can vary by region, language and account. Match storage, warranty and repair costs when comparing the Ultra and Flip models, and avoid treating laboratory resistance ratings as damage-proof guarantees."
+            }
+          ]
+        },
+        "fr": {
+          "title": "Galaxy Z Fold8 ou Flip8 : quel format pliant pour quel usage ?",
+          "excerpt": "Comparaison des nouveaux pliants Samsung selon la taille, la robustesse et les usages.",
+          "lead": "Samsung a lancé les Galaxy Z Fold8 Ultra, Fold8 et Flip8 à partir d’août 2026. Ces modèles répondent à des besoins distincts : productivité sur grand écran ou compacité, sans gagnant universel.",
+          "sections": [
+            {
+              "heading": "Deux philosophies de format",
+              "text": "Fold8 privilégie une surface intérieure vaste pour documents et multitâche ; Flip8 mise sur la compacité et l’écran externe. Ultra ajoute des ambitions créatives, mais augmente potentiellement l’encombrement et le budget."
+            },
+            {
+              "heading": "Photo et solidité",
+              "text": "Samsung annonce des évolutions photo et de matériaux et indique environ 201 g pour Fold8. Avant l'achat, vérifiez la tenue en main, la lisibilité de l'écran extérieur et les conditions de prise en charge des mécanismes pliants."
+            },
+            {
+              "heading": "Prix et compatibilité",
+              "text": "Fonctions IA et services peuvent dépendre du pays, de la langue ou d’un abonnement. Comparez les variantes à stockage égal et les coûts de réparation, sans assimiler certification de résistance et invulnérabilité."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "oppo-find-x10-camera-2026",
+      "kind": "technology",
+      "topic": "china",
+      "date": "2026-10-28",
+      "status": "announced",
+      "image": "photo-1592750475338-74b7b21085ab",
+      "source": "OPPO Global — Find X10 launch",
+      "url": "https://www.oppo.com/en/newsroom/press/oppo-find-x10-series-global-launch/",
+      "translations": {
+        "ar": {
+          "title": "OPPO Find X10 وPro Max: كاميرات 200 ميغابكسل ومقارنة واعية للمواصفات",
+          "excerpt": "إطلاق صيني عالمي يوم 21 أكتوبر 2026؛ ما الذي تعنيه الكاميرات الثلاثية والبطارية المعلنة عملياً؟",
+          "lead": "أعلنت OPPO يوم 21 أكتوبر 2026 هاتفَي Find X10 وFind X10 Pro Max، وركزت على التصوير ومعالجة الألوان. وتؤكد الشركة وجود كاميرتين بدقة 200 ميغابكسل في النموذج الأساسي وثلاث في Pro Max، لكن النتائج العملية تحتاج اختباراً مستقلاً.",
+          "sections": [
+            {
+              "heading": "الكاميرا ودقة الصورة",
+              "text": "تقدم OPPO محرك LUMO لمعالجة الصور وعدسات بالتعاون مع Hasselblad. زيادة الدقة لا تعني تلقائياً تفاصيل أفضل في كل ظروف الإضاءة؛ تقارن الجودة من خلال المشاهد المماثلة وسرعة التركيز والضوضاء وتناسق الفيديو."
+            },
+            {
+              "heading": "البطارية تختلف حسب السوق",
+              "text": "ذكرت الشركة سعة 8000 ميلي أمبير ساعة لبعض النسخ، مع وجود طرازات بسعة 7150 في أسواق محددة. لذلك يجب مراجعة رقم طراز الهاتف المحلي قبل المقارنة أو الادعاء بأن كل الأجهزة لها البطارية نفسها."
+            },
+            {
+              "heading": "لمن يناسب الهاتف؟",
+              "text": "قد يهتم المصورون بتعدد البعد البؤري وتسجيل الفيديو، بينما يهتم غيرهم بالوزن والتحديثات والخدمة والضمان. الأرقام المنشورة بيانات OPPO في ظروف اختبار خاصة وليست دليلاً مستقلاً على التفوق أو عمر بطارية مضمون."
+            }
+          ]
+        },
+        "en": {
+          "title": "OPPO Find X10 and Pro Max: 200MP cameras with the fine print explained",
+          "excerpt": "A sourced breakdown of the October 21 launch, computational photography and regional battery differences.",
+          "lead": "OPPO introduced Find X10 and Find X10 Pro Max globally on October 21, 2026, emphasizing Hasselblad imaging and its LUMO processing engine. The base model features two 200MP rear cameras and Pro Max three, according to the manufacturer.",
+          "sections": [
+            {
+              "heading": "What the camera figures mean",
+              "text": "Higher nominal resolution may support crops and fine detail, but sensor quality, exposure, processing and autofocus matter just as much. Independent same-scene photography and video testing is required to judge real output."
+            },
+            {
+              "heading": "Battery specifications are regional",
+              "text": "OPPO states an 8,000mAh rating for certain versions but explicitly notes 7,150mAh configurations in selected markets. The exact regional SKU must be checked before making a buying comparison."
+            },
+            {
+              "heading": "Practical buyer questions",
+              "text": "Evaluate focal-length choices, heat during recording, software support, repair options and local pricing. Promotional laboratory claims are not independent battery-life or durability guarantees."
+            }
+          ]
+        },
+        "fr": {
+          "title": "OPPO Find X10 et Pro Max : caméras 200 Mpx et différences régionales",
+          "excerpt": "Décryptage sourcé du lancement du 21 octobre et des réserves sur batterie et photo.",
+          "lead": "OPPO a annoncé le 21 octobre 2026 les Find X10 et Find X10 Pro Max, avec deux caméras arrière de 200 Mpx pour le premier et trois pour le second, selon le fabricant. Ces chiffres ne remplacent pas un essai indépendant.",
+          "sections": [
+            {
+              "heading": "Analyser les capacités photo",
+              "text": "Le moteur LUMO et le partenariat Hasselblad visent un rendu naturel. La résolution ne suffit pourtant pas : capteur, exposition, autofocus et vidéo doivent être comparés dans les mêmes conditions."
+            },
+            {
+              "heading": "La capacité de batterie varie",
+              "text": "OPPO annonce 8 000 mAh pour certaines versions mais précise que 7 150 mAh sont proposés sur des marchés déterminés. Vérifiez impérativement la référence vendue localement."
+            },
+            {
+              "heading": "Questions avant l’achat",
+              "text": "Comparez focales, chauffe en vidéo, support logiciel, réparations, garantie et prix final. Les performances indiquées en laboratoire par la marque ne sont pas des garanties de résultats identiques pour tous les utilisateurs."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
