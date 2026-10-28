@@ -679,6 +679,9 @@ for(const marker of ["permissions?.admin!==true","/git/trees","base_tree:","forc
 }
 if(adminClient.includes('localStorage.setItem')||adminClient.includes('sessionStorage.setItem')||adminClient.includes('Sveltia CMS'))errors.push('Administrator auth must not store bearer token or use public legacy CMS');
 if(adminStyles.length<2000)errors.push('Administrator dashboard CSS missing');
+try{new Function(adminClient)}catch(error){errors.push('Admin dashboard JS does not parse: '+error.message)}
+if(adminPage.includes('@sveltia/cms')||adminPage.includes('unpkg.com'))errors.push('Legacy public CMS loader is still active');
+if(!adminPage.includes('Content-Security-Policy')||!adminPage.includes('connect-src https://api.github.com'))errors.push('Admin dashboard security policy missing');
 
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
