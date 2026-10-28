@@ -37,6 +37,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/immigration/eures-mobility/')
               wanted.append(f'/{lang}/opportunities/morocco/ram-call/')
               wanted.append(f'/{lang}/opportunities/competitions/agriculture-admin/')
+              wanted.append(f'/{lang}/opportunities/companies/sntl-accounting/')
           last=None
           for attempt in range(1,7):
               try:
@@ -87,6 +88,12 @@ jobs:
                       assert 'C44077/26' in agri and '7c571fa5-42a7-46a6-8021-aed9ed9ec5f0' in agri, f'{lang}: Agriculture notice/reference missing'
                       assert agri.count('class="opp-guide-section" id="part-')>=8 and 'opp-guide-sources' in agri, f'{lang}: Agriculture original report incomplete'
                       print(f'AGRICULTURE LIVE {lang}: eight sections and signed original PDF verified',flush=True)
+                      sntl=bodies[f'/{lang}/opportunities/companies/sntl-accounting/'].decode('utf-8')
+                      assert 'C44157/26' in sntl and 'SNTL/TCOMP/2026' in sntl, f'{lang}: SNTL accounting references missing'
+                      assert sntl.count('class="opp-guide-section" id="part-')>=10, f'{lang}: SNTL detailed report lacks ten sections'
+                      assert 'opp-guide-sources' in sntl and 'e7379c18-857e-4135-be2a-53365d665497' in sntl, f'{lang}: SNTL signed notice missing'
+                      assert 'target="_blank"' in sntl, f'{lang}: SNTL external official sources must open new tab'
+                      print(f'SNTL ACCOUNTING LIVE {lang}: ten original-source sections, references and source links verified',flush=True)
                       eures=bodies[f'/{lang}/opportunities/immigration/eures-mobility/'].decode('utf-8')
                       assert eures.count('class="opp-guide-section" id="part-')>=8 and 'opp-guide-sources' in eures, f'{lang}: EURES full guide missing'
                       print(f'EURES LIVE {lang}: detailed guide and sources verified',flush=True)
