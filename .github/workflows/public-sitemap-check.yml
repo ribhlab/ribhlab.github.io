@@ -31,6 +31,10 @@ jobs:
           for lang in ('ar','en','fr'):
               wanted.append(f'/{lang}/opportunities/competitions/amdie-finance/')
               wanted.append(f'/{lang}/ai/ai-writing-assistant-style-guide-versioning/')
+              wanted.append(f'/{lang}/trading/cpi-release-basket-how-read/')
+              wanted.append(f'/{lang}/opportunities/competitions/oncf-bac5/')
+              wanted.append(f'/{lang}/opportunities/competitions/bam-cyber/')
+              wanted.append(f'/{lang}/opportunities/immigration/eures-mobility/')
           last=None
           for attempt in range(1,7):
               try:
@@ -64,6 +68,17 @@ jobs:
                       assert page.count('class="article-block"')>=6, f'{lang}: AI writing article sections missing'
                       assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{lang}: AI article sources/photo missing'
                       print(f'AI WRITING LIVE {lang}: six sections, sources and photo verified',flush=True)
+                      cpi=bodies[f'/{lang}/trading/cpi-release-basket-how-read/'].decode('utf-8')
+                      assert cpi.count('class="article-block"')>=6 and 'article-sources' in cpi and 'licensed-editorial-photo' in cpi, f'{lang}: CPI complete article missing'
+                      print(f'CPI ARTICLE LIVE {lang}: six sections and sources verified',flush=True)
+                      for job_id, source_ref in [('oncf-bac5','0c72b060-b3a6-4d1f-b36a-b01f767b48fe'),('bam-cyber','685d07b8-aa03-4c06-8858-88af9e06cf21')]:
+                          job=bodies[f'/{lang}/opportunities/competitions/{job_id}/'].decode('utf-8')
+                          assert 'opp-guide-section' in job and 'opp-guide-sources' in job and source_ref in job, f'{lang}: {job_id} evidence article incomplete'
+                          assert job.count('class="opp-guide-section" id="part-')>=8, f'{lang}: {job_id} lacks eight sections'
+                          print(f'JOB EVIDENCE LIVE {lang}: {job_id} complete and primary source present',flush=True)
+                      eures=bodies[f'/{lang}/opportunities/immigration/eures-mobility/'].decode('utf-8')
+                      assert eures.count('class="opp-guide-section" id="part-')>=8 and 'opp-guide-sources' in eures, f'{lang}: EURES full guide missing'
+                      print(f'EURES LIVE {lang}: detailed guide and sources verified',flush=True)
                   ads=bodies['/ads.txt'].decode('utf-8-sig').strip()
                   match=re.fullmatch(r'google\.com, pub-(\d{16}), DIRECT, f08c47fec0942fa0',ads)
                   assert match, 'Public ads.txt must contain a properly formatted real publisher entry'
