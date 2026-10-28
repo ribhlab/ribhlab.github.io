@@ -2,7 +2,7 @@
   "reviewedAt": "2026-10-28",
   "sports": {
     "overview": {
-      "ar": "مواعيد ونتائج مثبتة بمصادر الاتحادات والمنظمين. ليست خدمة نتائج مباشرة أو تغطية لجميع مباريات العالم.",
+      "ar": "مواعيد ونتائج مثبتة بمصادر الاتحادات والمنظمين. ليست خدمة نتائج ملكيرة أو تغطية لجميع مباريات العالم.",
       "en": "Fixtures and results backed by competition organizers; this is not a live scores service or exhaustive worldwide fixture database.",
       "fr": "Calendriers et résultats issus des organisateurs. Il ne s'agit ni de scores en direct ni d'une base exhaustive de tous les matchs."
     },
@@ -344,7 +344,7 @@
     "analysis": {
       "ar": [
         "قبل تحليل أي مباراة، راجع الغيابات المؤكدة والجدول وعدد أيام الراحة دون اختلاق تشكيلات أو احتمالات فوز.",
-        "انتقالات اللاعبين: ما كنسميّوش «صفقة رسمية» حتى النادي أو الاتحاد ينشر البلاغ. افصل الشائعة من الخبر المؤكد.",
+        "انتقالات اللاعبين: ما لا نصف «صفقة رسمية» حتى النادي أو الاتحاد ينشر الدونغ. افصل الشائعة من الخبر المؤكد.",
         "الترتيب والنقاط خاصها تكون من صفحات الدوري الرسمي المحدثة؛ الروابط أعلاه تعرض المصدر بدل جدول قديم."
       ],
       "en": [
@@ -410,7 +410,7 @@
         "announced": "2026-08-27",
         "name": "Galaxy S26 FE / Galaxy S26 series",
         "detail": {
-          "ar": "صفحة سامسونغ الرسمية كتجمع إعلانات Galaxy S26، ومنها S26 FE المعلن يوم 27 غشت. تحقق من النسخة المباعة فبلادك.",
+          "ar": "صفحة سامسونغ الرسمية تجمع إعلانات Galaxy S26، ومنها S26 FE المعلن يوم 27 غشت. تحقق من النسخة المباعة في بلدك.",
           "en": "Samsung's official Galaxy S26 newsroom includes the August 27 S26 FE announcement. Confirm variant and availability in your market.",
           "fr": "Le dossier officiel Galaxy S26 inclut l’annonce du S26 FE le 27 août. Vérifiez le modèle distribué localement."
         },
@@ -434,7 +434,7 @@
         "announced": null,
         "name": "Xperia — official range",
         "detail": {
-          "ar": "صفحة Sony الرسمية باش تتحقق من موديلات Xperia المتاحة. ما كننسبوش إطلاقاً جديداً بلا بلاغ بتاريخ واضح.",
+          "ar": "صفحة Sony الرسمية لكي تتحقق من موديلات Xperia المتاحة. لا ننسب إطلاقاً جديداً دون دونغ بتاريخ واضح.",
           "en": "Sony's official Xperia range for checking available models. No unverified new product launch is claimed.",
           "fr": "Gamme Xperia officielle pour vérifier les modèles disponibles, sans annonce de lancement non confirmée."
         },
@@ -552,7 +552,7 @@
             "الكاميرا: قارن الصور الحقيقية بنفس الإضاءة، مش غير الميغابكسل.",
             "البطارية: اختبارات وقت الشاشة مهمة أكثر من رقم السعة فقط.",
             "الخصوصية: أذونات التطبيقات وسياسات تحديث النظام.",
-            "السعر: تحقق من النسخة والضمان والضرائب فالمغرب."
+            "السعر: تحقق من النسخة والضمان والضرائب في المغرب."
           ],
           "en": [
             "Camera: compare same-scene photos, not megapixels alone.",
