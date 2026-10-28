@@ -1,4 +1,16 @@
 (()=>{'use strict';
+// Images must never disappear: preserve a prebuilt, per-recipe local SVG fallback
+// if the external licensed photo cannot be loaded (offline, blockers, network).
+for(const img of document.querySelectorAll('img[data-recipe-photo]')){
+ const fallback=()=>{
+  const local=img.dataset.fallback;
+  if(!local||img.getAttribute('src')===local)return;
+  img.src=local;
+  img.alt=img.alt+' — local illustration fallback';
+ };
+ img.addEventListener('error',fallback,{once:true});
+ if(img.complete&&img.naturalWidth===0)fallback();
+}
 const list=document.querySelector('[data-recipe-list]'),search=document.querySelector('[data-recipe-search]');
 if(!list||!search)return;
 const cards=[...list.querySelectorAll('[data-recipe-card]')],buttons=[...document.querySelectorAll('[data-recipe-filter]')],counter=document.querySelector('[data-recipe-result-count]'),empty=document.querySelector('[data-recipe-empty]');
