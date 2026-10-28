@@ -653,10 +653,10 @@ for(const [id,article] of Object.entries(opportunityEditorial.articles||{})){
   if(!html.includes('class="opp-guide-article"')||!html.includes('class="opp-guide-section opp-guide-sources"'))errors.push('Opportunity full article or sources not rendered: '+id+'/'+lang);
   if((html.match(/class="opp-guide-section" id="part-/g)||[]).length!==tr.sections.length)errors.push('Opportunity sections not all visible: '+id+'/'+lang);
   const sourcePosition=html.indexOf('class="opp-guide-section opp-guide-sources"');
-  const nextStepPosition=html.indexOf('class="opp-action" rel="noopener noreferrer external" target="_blank"');
-  if(sourcePosition<nextStepPosition)errors.push('Opportunity sources must be at the end: '+id+'/'+lang);
+  const lastArticleSection=html.lastIndexOf('class="opp-guide-section" id="part-');
+  if(sourcePosition<0||lastArticleSection<0||sourcePosition<=lastArticleSection)errors.push('Opportunity sources must follow all article sections: '+id+'/'+lang);
   for(const source of article.sources){
-   if(!html.includes('href="'+source.url+'" target="_blank" rel="noopener noreferrer external"'))errors.push('Opportunity external source not in new tab: '+id+'/'+lang+' '+source.url);
+   if(!html.includes('href="'+source.url+'" rel="noopener noreferrer external" target="_blank"'))errors.push('Opportunity external source not in new tab: '+id+'/'+lang+' '+source.url);
   }
   if(!html.includes('href="/'+lang+'/opportunities/immigration/"'))errors.push('Opportunity lacks internal same-tab back link: '+id+'/'+lang);
  }
