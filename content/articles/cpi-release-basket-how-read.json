@@ -1,0 +1,157 @@
+{
+  "slug": "cpi-release-basket-how-read",
+  "category": "trading",
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false,
+  "related": [
+    "how-to-read-fomc-decision-2026",
+    "why-gold-moves-with-us-dollar-real-yields-explained"
+  ],
+  "sources": [
+    {
+      "label": "BLS — CPI for September 2026, released October 14",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+    },
+    {
+      "label": "BLS — Consumer Price Index FAQ and methods",
+      "url": "https://www.bls.gov/cpi/questions-and-answers.htm"
+    },
+    {
+      "label": "BLS — Seasonal adjustment rules and revisions",
+      "url": "https://www.bls.gov/cpi/seasonal-adjustment/"
+    },
+    {
+      "label": "Federal Reserve — The 2% PCE inflation target",
+      "url": "https://www.federalreserve.gov/economy-at-a-glance-inflation-pce.htm"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "فهم مؤشر التضخم الأمريكي CPI: قراءة التقرير الشهري والأرقام الأساسية دون تضليل",
+      "excerpt": "دليل عملي لقراءة مؤشر CPI الأمريكي، والفروق بين التضخم الشهري والسنوي والمعدل موسمياً والمؤشر الأساسي، مع مثال سبتمبر 2026.",
+      "lead": "تظهر أرقام التضخم الأمريكي في عناوين الأسواق خلال ثوانٍ، لكن قراءة نسبة واحدة دون فترة أو منهجية قد تقود إلى استنتاج خاطئ. يشرح هذا الدليل مؤشر أسعار المستهلك CPI وفق بيانات مكتب إحصاءات العمل الأمريكي BLS، ويعرض مثالاً موثقاً من سبتمبر 2026 دون تحويله إلى توقعات مضمونة للأسواق.",
+      "sections": [
+        {
+          "heading": "ما هو CPI وماذا يقيس بالفعل؟",
+          "paragraphs": [
+            "مؤشر أسعار المستهلك الأمريكي CPI يقيس التغير في أسعار سلة من السلع والخدمات التي تشتريها الأسر الحضرية المشمولة بالمسح. تجمع مؤسسة BLS الأسعار من أماكن وقطاعات متعددة، وتمنح الفئات أوزاناً تعكس أنماط الإنفاق. لذلك فإن المؤشر ليس متوسطاً بسيطاً لأسعار كل السلع في المتاجر، وليس قراءة شخصية لما دفعته أسرتك هذا الشهر. قد ترتفع فاتورة شخص يستعمل السيارة أكثر من المتوسط، بينما يختلف أثر تغير إيجار المساكن على أسرة أخرى. كما أن المؤشر يقيس تغير الأسعار عبر الوقت ولا يقيس المستوى المطلق للمعيشة بين مدينتين.",
+            "تتضمن السلة الطعام والطاقة والسكن والخدمات وسلعاً أخرى. ويمكن مراجعة الأوزان النسبية في الجداول الرسمية بدلاً من الاستنتاج من حركة سعر سلعة واحدة. ارتفاع البنزين مثلاً قد يساهم في زيادة المؤشر العام، لكن أثره يتوقف على حجمه داخل السلة وعلى تغير بقية الفئات. لا تجعل منشوراً متداولاً على الشبكات الاجتماعية بديلاً عن جدول المصدر. وتذكر أن البيانات تمثل تقديراً إحصائياً يعتمد على عينات ومناهج محددة، لا سجلاً لكل فاتورة دفعها كل مستهلك."
+          ]
+        },
+        {
+          "heading": "الفرق بين التضخم الشهري والسنوي مع مثال فعلي",
+          "paragraphs": [
+            "ينشر التقرير نسب تغير شهرية وسنوية يجب عدم جمعها أو مقارنتها دون معرفة فترة القياس. في البيان الرسمي الصادر يوم 14 أكتوبر 2026 عن سبتمبر، ارتفع CPI-U العام بمقدار 0.6% في شهر واحد بعد التعديل الموسمي، بينما بلغ تغيره خلال الاثني عشر شهراً السابقة 3.7% دون تعديل موسمي. هذان رقمان مختلفان في الفترة وطريقة العرض، ولا يعني أحدهما أن الأسعار ارتفعت بمقدار 3.7% خلال سبتمبر وحده. كما لا يمكن ضرب نسبة شهر واحد في اثني عشر ثم تسميتها تلقائياً الرقم السنوي الحقيقي.",
+            "لفهم الحساب، افترض أن مؤشر الأسعار انتقل من 200 إلى 201 في شهر: التغير يساوي 1 على 200، أي 0.5%. وإذا كان مستوى المؤشر قبل اثني عشر شهراً 194، فإن تغيره السنوي عند مستوى 201 يساوي تقريباً 3.61%. هذه أرقام افتراضية للتوضيح وليست بيانات سبتمبر. عند قراءة خبر اقتصادي، اكتب بجانب كل نسبة ما إذا كانت شهرياً أو سنوياً، وما إن كانت موسمية أم غير معدلة. غياب هذه المعلومات قد يحول رقماً صحيحاً إلى استنتاج مضلل."
+          ]
+        },
+        {
+          "heading": "العام والأساسي: لماذا تستبعد بعض القراءات الغذاء والطاقة؟",
+          "paragraphs": [
+            "تعرض BLS المؤشر العام لجميع البنود ومؤشراً يستثني الغذاء والطاقة، ويطلق عليه في التغطية الصحفية غالباً «التضخم الأساسي». الغرض من هذا الاستثناء توفير زاوية إضافية لرصد التحركات الأقل ارتباطاً بالتقلبات القوية لبعض أسعار الطاقة والغذاء، وليس القول إن الغذاء أو الوقود لا يؤثران على المعيشة. في سبتمبر 2026، ذكر التقرير أن المؤشر الشهري المستثني للطعام والطاقة ارتفع 0.3% بعد التعديل الموسمي، مقابل 0.6% للمؤشر العام. هذه الملاحظة تبرز الفرق بين الفئات لكنها لا تكفي وحدها لوصف اتجاه الاقتصاد بأكمله.",
+            "يجب النظر كذلك إلى السكن والخدمات والسلع ونطاق ارتفاع الأسعار. يمكن لفئة كبيرة ذات وزن مرتفع أن تدفع المعدل العام حتى لو استقرت عدة بنود صغيرة. أما التركيز على بند اختير لأنه صادم أو مثير للجدل فيمنح صورة منحازة. راجع جدول A والبيانات التفصيلية والتاريخ الكامل، ثم اسأل ما إذا كان تغير شهر واحد مؤقتاً أو جزءاً من سلسلة متكررة. لا تساوِ بين تباطؤ التضخم وانخفاض مستوى الأسعار؛ انخفاض معدل الارتفاع يعني أن الأسعار تزداد بوتيرة أبطأ، وليس بالضرورة أنها تعود إلى مستوياتها القديمة."
+          ]
+        },
+        {
+          "heading": "التعديل الموسمي والمراجعات وحدود الدقة",
+          "paragraphs": [
+            "تؤثر العطلات والمواسم والطقس وتبديل الطرازات على أنماط الأسعار. لذلك تنتج BLS سلسلة غير معدلة وأخرى معدلة موسمياً لبعض المؤشرات لتسهيل مقارنة الشهور المتعاقبة. وفق صفحة التعديل الموسمي الرسمية، أُعيد تقدير العوامل في فبراير 2026 مع إصدار بيانات يناير، ويمكن إعادة حساب المؤشرات الشهرية المعدلة موسمياً عن السنوات الخمس السابقة. ولهذا ينبغي تمييز الجداول المعدلة من غير المعدلة عند بناء رسوم بيانية أو مقارنة نسخة خبر قديم ببيانات جرى تحديثها لاحقاً.",
+            "لا تحمل المنازل نفسها نمط استهلاك مطابقاً لسلة المسح، كما أن قياس الأسعار بعينة يخلق هامشاً من عدم اليقين. التغير الشهري الصغير لا يستحق أحياناً لغة حاسمة للغاية عن اتجاه الاقتصاد إذا كانت الفروق ضمن نطاق التقلب المعتاد. للباحث أو الصحفي، من المهم تدوين تاريخ الإصدار ورقم الجدول وأي مراجعة للمنهجية أو الأوزان، ثم فصل الملاحظة الرقمية عن التفسير. الجداول الرسمية أدق من رسم منشور دون مصدر، لكن حتى الجداول لا تقيس كل جوانب الرفاه أو الضرائب أو دخل الأسرة."
+          ]
+        },
+        {
+          "heading": "كيف تستخدم التقرير دون تحويله إلى إشارة تداول؟",
+          "paragraphs": [
+            "ابدأ بثلاثة أسئلة: هل تغير المؤشر العام على أساس شهري وسنوي؟ ماذا حدث للمؤشر المستثني الغذاء والطاقة؟ وأي الفئات ساهمت أكثر في التغير؟ ثم قارن ذلك بالسياق الاقتصادي بدلاً من توقع رد واحد تلقائي من الذهب أو الدولار أو الأسهم. يمكن أن تتحرك الأسعار المالية بسبب توقعات المستثمرين قبل صدور البيان وبسبب بيانات أخرى في اللحظة نفسها. لا تُستنتج صفقة رابحة من ارتفاع CPI فوق تقدير إعلامي وحده. التذبذب والانزلاق السعري أثناء الخبر قد يسببان خسارة أكبر من المخطط.",
+            "يستهدف الاحتياطي الفيدرالي تضخماً قدره 2% على المدى الطويل وفق مؤشر نفقات الاستهلاك الشخصي PCE لا CPI نفسه، بحسب شرحه الرسمي؛ ولهذا لا ينبغي التعامل مع مؤشر CPI بوصفه معادلة مباشرة لقرار الفائدة القادم. إذا كنت تستعمل البيانات في تحليل أو كتابة، اربط العنوان بتاريخ النشر وجدول BLS، واذكر طبيعة التغير والمراجعات، ثم ميّز بوضوح بين الأرقام المعلنة والتوقعات الخاصة. لا يوصي هذا المقال بشراء أو بيع أداة مالية ولا يضمن نتيجة اقتصادية."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "How to read the US CPI inflation report without misleading comparisons",
+      "excerpt": "An evidence-led guide to headline and core CPI, monthly versus annual change, seasonal revisions and the September 2026 release.",
+      "lead": "US inflation figures move rapidly through financial headlines, but a percentage without its period, adjustment or source can mislead. This guide explains how the Bureau of Labor Statistics calculates CPI, how to interpret headline and core inflation, and why market reactions cannot be predicted from one number alone.",
+      "sections": [
+        {
+          "heading": "What the US CPI measures and what it leaves out",
+          "paragraphs": [
+            "The US Consumer Price Index describes price changes for a weighted basket of goods and services purchased by households represented in its urban consumer population. The Bureau of Labor Statistics collects prices from selected outlets and categories and weights them according to consumer spending patterns. It is not a simple arithmetic average of everything displayed in stores, nor is it an exact reading of one family's expenses. A household that drives extensively may experience energy price changes differently from a household that rents in an expensive city. CPI measures price changes over time, not absolute differences in living costs between cities.",
+            "The basket includes housing, food, energy, goods and many services. The official tables identify relative importance, so the significance of a dramatic change in one commodity depends on its weight and other components. Gasoline may make a notable contribution to headline inflation, yet it cannot explain the full index without reference to the rest of the basket. BLS measurements are statistical estimates built from samples and specific methods, not a ledger of every consumer transaction. Treat a striking chart on social media as a claim to verify rather than a substitute for the original release."
+          ]
+        },
+        {
+          "heading": "Read the month-over-month and year-over-year figures correctly",
+          "paragraphs": [
+            "Monthly and annual inflation figures describe different comparison windows. In the official release dated October 14, 2026, for September, the all-items CPI-U increased 0.6% on a seasonally adjusted monthly basis. The twelve-month all-items change was 3.7% before seasonal adjustment. This does not mean prices increased 3.7% during September alone. Nor should a single monthly figure be multiplied by twelve and labelled the actual twelve-month result: it would ignore the sequence of monthly changes and the difference between compounded and simple percentage calculations.",
+            "Consider an illustrative index rising from 200 to 201 over one month: the change is 1 divided by 200, or 0.5%. If the index was 194 twelve months earlier, the annual change at 201 would be approximately 3.61%. These are teaching numbers, not the actual September data. When reading a headline, note the reference month, the previous month or year used as a comparison, and whether seasonal adjustments were applied. Accurate figures can still be presented misleadingly when the time horizon or adjustment basis is omitted."
+          ]
+        },
+        {
+          "heading": "Headline versus core CPI without dismissing household costs",
+          "paragraphs": [
+            "BLS publishes an all-items index as well as an index excluding food and energy. Journalists frequently call the latter core CPI. It is an additional lens intended to reduce the influence of some volatile food and energy movements; it does not imply that groceries and fuel are unimportant to households. The September 2026 statement reported a 0.3% monthly seasonally adjusted increase excluding food and energy, compared with 0.6% for the overall index. Comparing those observations helps identify the contribution of particular sectors but cannot establish the entire macroeconomic trend from a single release.",
+            "Inspect shelter, services, goods and the distribution of price changes rather than selecting one spectacular item. A category with a substantial weight can move the index even if several small components hardly change. Likewise, the phrase falling inflation often describes slower price growth rather than falling absolute prices. A move from 5% annual inflation to 3% still means the index has increased over the year. Compare a sequence of releases and inspect the detailed tables before drawing a strong conclusion about the persistence or breadth of price pressure."
+          ]
+        },
+        {
+          "heading": "Seasonal adjustment, revisions and measurement uncertainty",
+          "paragraphs": [
+            "Travel seasons, holidays, weather and model changeovers create repeated patterns in some prices. BLS publishes unadjusted and seasonally adjusted series where appropriate so that analysts can better interpret consecutive months. The official methodology states that seasonal factors were updated in February 2026 with the January release and that adjusted indexes from the previous five years may be recalculated. If you download a historical series twice, its seasonally adjusted observations may differ because the factors were revised; keep the date and data version alongside any analysis.",
+            "CPI is based on sampled prices and cannot mirror every household's shopping basket. A small monthly change should not always support sweeping claims about long-run economic policy, especially when sampling and other uncertainties matter. Analysts should capture the publication date, specific series, the source table and adjustment status, then distinguish observation from inference. The index also cannot explain all dimensions of wellbeing, taxes or income changes. A properly cited official table is preferable to an unlabelled graphic, but even official statistics require careful interpretation."
+          ]
+        },
+        {
+          "heading": "A practical checklist without turning CPI into a trading signal",
+          "paragraphs": [
+            "First identify the all-items monthly and annual figures. Second compare the food-and-energy-excluded index. Third look for the components and weights most responsible for the change. Only then examine expectations and other economic data. Prices of gold, shares and currencies respond not merely to the number itself but to what market participants anticipated, how other releases develop and prevailing conditions. Sudden moves around announcements can produce high spreads and slippage. There is no rule that a CPI surprise must generate a profitable trade in any particular direction.",
+            "The Federal Reserve explains that its longer-run 2% inflation goal is defined in terms of the personal consumption expenditures price index, or PCE, rather than CPI alone. That distinction rules out treating a CPI figure as a mechanical formula for the next interest-rate decision. For research or editorial reporting, keep the release date and official BLS reference with every number and disclose whether an argument reflects an observed fact or an independent interpretation. This guide offers no personalized investment recommendation or prediction of a guaranteed market reaction."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Comprendre le CPI américain : variations mensuelles, indice sous-jacent et révisions",
+      "excerpt": "Un guide rigoureux de lecture du CPI : périodes de comparaison, correction saisonnière et exemple officiel de septembre 2026.",
+      "lead": "Les chiffres américains de l'inflation sont relayés immédiatement dans les marchés, mais une variation isolée peut être trompeuse sans sa période et sa méthode. Ce guide présente les statistiques du Bureau of Labor Statistics, l'indice général et l'indice hors alimentation et énergie, avec un exemple daté et les limites d'interprétation.",
+      "sections": [
+        {
+          "heading": "Ce que mesure réellement l'indice américain CPI",
+          "paragraphs": [
+            "L'indice des prix à la consommation CPI mesure les variations de prix d'un panier pondéré de biens et services achetés par la population urbaine couverte par l'enquête américaine. Le Bureau of Labor Statistics relève des prix auprès d'établissements et de catégories sélectionnés, puis applique des pondérations représentatives des dépenses. Il ne s'agit ni de la moyenne simple de tous les prix affichés en magasin ni du relevé exact du budget d'une famille donnée. Un foyer utilisant beaucoup sa voiture peut ressentir différemment le prix du carburant qu'un locataire vivant dans une autre région. L'indice suit les variations dans le temps, pas les niveaux de vie absolus entre villes.",
+            "Le panier rassemble logement, alimentation, énergie, marchandises et services. Les tableaux de BLS indiquent l'importance relative des catégories, donc le mouvement spectaculaire d'un seul produit ne suffit pas à expliquer l'indice général. L'essence peut contribuer fortement à une hausse, mais les autres composantes influencent aussi le résultat. Les données constituent une estimation statistique fondée sur des échantillons et une méthode définie, et non une liste de toutes les factures payées par les Américains. Une image de réseau social mérite une vérification à la source."
+          ]
+        },
+        {
+          "heading": "Distinguer correctement inflation mensuelle et annuelle",
+          "paragraphs": [
+            "Une variation mensuelle et une variation annuelle n'utilisent pas la même période de comparaison. Dans son communiqué du 14 octobre 2026 sur septembre, le BLS annonce une hausse mensuelle corrigée des variations saisonnières de 0,6% pour le CPI-U tous postes, tandis que la variation sur douze mois, non corrigée, atteint 3,7%. Cela ne veut pas dire que les prix ont augmenté de 3,7% pendant le seul mois de septembre. Multiplier une variation mensuelle par douze ne permet pas non plus d'obtenir automatiquement le taux annuel observé, puisque les changements successifs et les bases de calcul diffèrent.",
+            "Exemple purement pédagogique : un indice qui passe de 200 à 201 augmente de 1 sur une base de 200, soit 0,5%. Si la valeur douze mois auparavant était 194, le changement annuel au niveau 201 serait d'environ 3,61%. Ces nombres ne sont pas les observations de septembre. Pour éviter une conclusion trompeuse, notez toujours le mois de référence, la période comparée et le type d'ajustement. Un chiffre exact peut devenir une information faussement interprétée lorsque son horizon temporel n'est pas précisé."
+          ]
+        },
+        {
+          "heading": "Pourquoi suivre à la fois l'indice global et le CPI « core » ?",
+          "paragraphs": [
+            "Le BLS fournit un indice tous postes et une série hors alimentation et énergie, souvent appelée inflation sous-jacente dans la presse. L'exclusion de deux postes volatils offre un point de vue complémentaire ; elle ne signifie pas que ces dépenses comptent peu pour les ménages. Le communiqué de septembre 2026 indique une progression mensuelle corrigée de 0,3% hors alimentation et énergie, contre 0,6% pour tous les postes. Cette différence éclaire le rôle des secteurs, mais ne suffit pas à établir toute la trajectoire économique à partir d'un seul chiffre.",
+            "Il faut aussi regarder le logement, les services, les marchandises et l'étendue des changements. Une catégorie de poids élevé peut entraîner l'indice malgré la stabilité d'autres postes de faible poids. Inversement, choisir seulement une variation spectaculaire sans la replacer dans le panier peut déformer l'histoire. Ralentissement de l'inflation ne signifie pas nécessairement baisse des prix : un taux annuel qui passe de 5% à 3% correspond encore à une hausse du niveau global sur l'année. Consultez plusieurs publications successives et les tableaux détaillés."
+          ]
+        },
+        {
+          "heading": "Corrections saisonnières, révisions et limites statistiques",
+          "paragraphs": [
+            "Les vacances, la météo et les changements de modèles entraînent des mouvements saisonniers dans certaines catégories. Pour faciliter l'analyse d'un mois à l'autre, le BLS publie des séries brutes et d'autres corrigées des variations saisonnières. Sa méthode précise que les facteurs ont été réévalués en février 2026 avec la publication de janvier et que les cinq années précédentes d'indices corrigés peuvent être révisées. Une série historique téléchargée à deux dates peut donc présenter des différences légitimes. Conservez la date d'extraction et le statut d'ajustement.",
+            "L'indice utilise des prix échantillonnés et n'est pas identique au panier de consommation de chaque foyer. Une variation mensuelle faible ne devrait pas justifier des certitudes excessives sur la politique économique. Les chercheurs doivent noter la série, le tableau, la date et la méthode, puis distinguer les chiffres constatés de leur interprétation. Les prélèvements fiscaux, les changements de revenus et de nombreux aspects du bien-être dépassent le champ de cet indice. La fiabilité d'une source officielle n'abolit pas les limites de son objet statistique."
+          ]
+        },
+        {
+          "heading": "Une grille de lecture qui n'est pas un signal d'achat ou de vente",
+          "paragraphs": [
+            "Commencez par lire les variations globale mensuelle et annuelle, puis la série hors alimentation et énergie et enfin les catégories les plus contributives. Examinez ensuite les anticipations et les autres données économiques. L'or, les actions et les devises réagissent à ce qui était déjà intégré par les marchés, aux conditions financières et aux nouvelles concurrentes. Les publications macroéconomiques peuvent provoquer des mouvements rapides avec spreads et glissement de prix. Une surprise de CPI ne garantit aucune transaction rentable, quel que soit son sens.",
+            "La Réserve fédérale rappelle que sa cible d'inflation de 2% à long terme est mesurée à partir de l'indice des dépenses de consommation personnelle PCE, et non du CPI uniquement. Il serait donc erroné de transformer le CPI en formule mécanique permettant de prévoir la prochaine décision sur les taux. Dans un article ou une analyse, reliez chaque chiffre au communiqué BLS daté et indiquez clairement ce qui relève de l'observation ou d'une hypothèse. Ce guide ne fournit aucun conseil personnalisé d'investissement ni promesse de réaction du marché."
+          ]
+        }
+      ]
+    }
+  }
+}

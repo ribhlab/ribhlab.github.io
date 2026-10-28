@@ -772,6 +772,10 @@
       "googlePeopleFirstContent",
       "googleGenerativeAiContent",
       "nistGenAi"
+    ],
+    "cpi-release-basket-how-read": [
+      "bls",
+      "fed"
     ]
   }
 }
