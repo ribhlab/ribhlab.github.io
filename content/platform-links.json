@@ -457,6 +457,22 @@
     "googleGenerativeAiContent": {
       "name": "Google Search Central — Using generative AI content",
       "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+    },
+    "appleScanDocuments": {
+      "name": "Apple Support — Scan documents with iPhone",
+      "url": "https://support.apple.com/en-gb/108963"
+    },
+    "googleDriveScanner": {
+      "name": "Google Drive Help — Scan documents on Android",
+      "url": "https://support.google.com/drive/answer/3145835?co=GENIE.Platform%3DAndroid&hl=en"
+    },
+    "spainPaellaRecipe": {
+      "name": "Spain.info — Paella recipe and variations",
+      "url": "https://www.spain.info/en/recipe/paella/"
+    },
+    "foodSafetySeafood": {
+      "name": "FoodSafety.gov — Seafood cooking temperatures",
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
     }
   },
   "articleLinks": {
