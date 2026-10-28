@@ -9,6 +9,12 @@ const stripBase=u=>basePath&&u.startsWith(basePath+'/')?u.slice(basePath.length)
 if(!fs.existsSync(dist))throw Error('Run npm run build first');
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(path.join(dir,x.name)):[path.join(dir,x.name)]);}
 const pages=walk(dist).filter(p=>p.endsWith('.html'));
+const editorSource=fs.readFileSync(path.join(root,'admin','config.yml'),'utf8');
+
+if(!editorSource.includes('repo: ribhlab/ribhlab.github.io')) throw Error('Admin CMS must target live RibhLab GitHub repository');
+if(editorSource.includes('repo: univcours/ribhlab-site')) throw Error('Admin CMS must not point to obsolete source repository');
+if(!editorSource.includes('options: [earning, trading, ai, lifestyle]')) throw Error('Admin CMS must allow all published editorial categories');
+
 let checked=0;const errors=[];
 for(const p of pages){const h=fs.readFileSync(p,'utf8');const pathName='/'+path.relative(dist,p).replace(/\\/g,'/');
  if(/^\/(?:admin\/)?google[a-z0-9]+\.html$/i.test(pathName)) continue; // Google ownership token is not an editorial page
