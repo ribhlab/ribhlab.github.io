@@ -25,7 +25,7 @@ jobs:
           import re
 
           base='https://ribhlab.github.io'
-          wanted=['/','/ads.txt','/robots.txt','/sitemap.xml','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/']
+          wanted=['/','/ads.txt','/robots.txt','/sitemap.xml','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/','/ar/sports/','/en/sports/f1-mexico-gp-preview-2026/','/fr/technology/oppo-find-x10-camera-2026/','/ar/technology/','/ar/technology/apps/','/ar/technology/apps/productivity/']
           last=None
           for attempt in range(1,7):
               try:
