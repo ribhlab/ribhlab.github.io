@@ -476,8 +476,10 @@
         "fdaDairyEggs",
         "avpnMargherita"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "editorialReviewDate": "2026-10-28",
+      "queuePath": "content/reviewed-queue/seafood-paella-safe-home-preparation.json"
     },
     {
       "sectionId": "world-recipes",
