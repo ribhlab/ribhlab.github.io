@@ -52,3 +52,5 @@
 @media(max-width:620px){.recipe-grid{grid-template-columns:1fr 1fr;gap:12px}.recipe-card-content{padding:12px}.recipe-card h3{font-size:15px}.recipe-meta{gap:7px}.recipe-card strong{font-size:12px}.recipe-library-hero{padding:42px 0}.recipe-detail-layout{grid-template-columns:1fr}.recipe-detail-hero{padding-top:25px}.recipe-panel{padding:18px}.recipe-hero-stats a{padding:11px}.recipe-subnav{gap:7px}.recipe-subnav a{font-size:12px;padding:8px 10px}}
 @media(max-width:390px){.recipe-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.recipe-card{transition:none}.recipe-card:hover{transform:none}}
+
+.recipe-card[hidden]{display:none!important}
