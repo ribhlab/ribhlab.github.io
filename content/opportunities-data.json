@@ -24,14 +24,19 @@
     {
       "id": "sett-engineer",
       "section": "competitions",
-      "title": "Ingénieur d’État 1er grade — Province de Settat",
+      "title": "Ingénieur d’État 1er grade — Génie civil, statistiques, SIG — Settat",
       "org": "Ministère de l’Intérieur · Province de Settat",
       "place": "Settat, Maroc",
-      "count": 2,
-      "deadline": "2026-11-09",
-      "url": "https://www.emploi-public.ma/fr/concours-liste",
+      "count": 3,
+      "deadline": "2026-11-02",
+      "url": "https://www.emploi-public.ma/fr/concours/details/7cf772aa-1a10-4769-8d24-bf2e5d55a471",
       "kind": "official_notice",
-      "verifiedBy": "emploi-public.ma"
+      "verifiedBy": "emploi-public.ma",
+      "portalDeadline": "2026-11-09",
+      "deadlineBasis": "Signed three-page official notice sets 2 November 2026 at 16:30 and 3 engineers (1 civil, 1 statistics, 1 GIS); portal pages show 9 November at 16:30 and GIS card C44151/26 lists 2 posts. No signed correction verified as of 28 October 2026. Apply before earlier deadline.",
+      "noticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/7cf772aa-1a10-4769-8d24-bf2e5d55a471",
+      "portalGISCount": 2,
+      "officialNoticeGISCount": 1
     },
     {
       "id": "civil-protection",
