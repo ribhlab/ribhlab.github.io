@@ -1,0 +1,905 @@
+{
+  "batch": "healthy-01",
+  "recipes": [
+    {
+      "slug": "healthy-quinoa-chickpea-bowl",
+      "title": {
+        "ar": "طبق كينوا بالحمص والخضر",
+        "en": "Quinoa chickpea vegetable bowl",
+        "fr": "Bol quinoa pois chiches et légumes"
+      },
+      "cuisine": "healthy",
+      "method": "salad",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "quinoa",
+          "amount": "260g"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "300g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "220g"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "parsley",
+          "amount": "30g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "اسلق الكينوا واتركها تبرد ثم اخلطها بالحمص والخضر والليمون دون إفراط في الملح.",
+        "en": "Cook quinoa, cool, and toss with chickpeas, vegetables and lemon without relying on excess salt.",
+        "fr": "Cuisez et refroidissez le quinoa puis mélangez aux pois chiches, légumes et citron sans trop saler."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-lentil-spinach-soup",
+      "title": {
+        "ar": "شوربة عدس وسبانخ قليلة الملح",
+        "en": "Lentil and spinach vegetable soup",
+        "fr": "Soupe de lentilles et épinards peu salée"
+      },
+      "cuisine": "healthy",
+      "method": "soup",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lentils",
+          "amount": "250g"
+        },
+        {
+          "id": "spinach",
+          "amount": "250g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "tomato",
+          "amount": "220g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "stock",
+          "amount": "1l"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "15ml"
+        }
+      ],
+      "tip": {
+        "ar": "استخدم مرقاً قليل الملح وأضف السبانخ قرب النهاية حتى لا تفقد قوامها.",
+        "en": "Use low-salt stock and stir in spinach late to retain its texture.",
+        "fr": "Utilisez un bouillon peu salé et ajoutez les épinards près de la fin."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-baked-salmon-quinoa",
+      "title": {
+        "ar": "سلمون مخبوز مع الكينوا والبروكلي",
+        "en": "Baked salmon with quinoa and broccoli",
+        "fr": "Saumon au four quinoa et brocoli"
+      },
+      "cuisine": "healthy",
+      "method": "roast",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "salmon",
+          "amount": "600g"
+        },
+        {
+          "id": "quinoa",
+          "amount": "250g"
+        },
+        {
+          "id": "broccoli",
+          "amount": "400g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        }
+      ],
+      "tip": {
+        "ar": "اطه الكينوا منفصلة ثم تأكد من بلوغ السلمون 63 درجة مئوية قبل التقديم.",
+        "en": "Cook quinoa separately and check salmon reaches 63°C before serving.",
+        "fr": "Cuisez le quinoa séparément et vérifiez que le saumon atteint 63°C à cœur."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-chicken-brown-rice",
+      "title": {
+        "ar": "دجاج وخضر مع الأرز البني",
+        "en": "Chicken vegetable brown-rice bowl",
+        "fr": "Bol de poulet légumes et riz complet"
+      },
+      "cuisine": "healthy",
+      "method": "rice",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickenbreast",
+          "amount": "600g"
+        },
+        {
+          "id": "brownrice",
+          "amount": "300g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "broccoli",
+          "amount": "300g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "امنح الأرز البني وقتاً كافياً واطهِ الدجاج كاملاً عند 74 درجة مئوية.",
+        "en": "Allow enough time for brown rice and cook chicken through to 74°C.",
+        "fr": "Prévoyez assez de temps pour le riz complet et cuisez le poulet à 74°C à cœur."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-chickpea-avocado-wrap",
+      "title": {
+        "ar": "لفائف حمص وأفوكادو بالخس",
+        "en": "Chickpea avocado whole-grain wrap",
+        "fr": "Wrap complet pois chiches et avocat"
+      },
+      "cuisine": "healthy",
+      "method": "sandwich",
+      "minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "wholebread",
+          "amount": "8slices"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "350g"
+        },
+        {
+          "id": "avocado",
+          "amount": "2pcs"
+        },
+        {
+          "id": "lettuce",
+          "amount": "200g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "cucumber",
+          "amount": "180g"
+        }
+      ],
+      "tip": {
+        "ar": "اهرِس الحمص والأفوكادو بالشوكة ثم احشُ الخبز بالخضر المغسولة.",
+        "en": "Mash chickpeas and avocado with a fork, then fill the bread with washed vegetables.",
+        "fr": "Écrasez les pois chiches et l’avocat à la fourchette puis garnissez de crudités lavées."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-roasted-vegetable-tray",
+      "title": {
+        "ar": "صينية خضر مشوية بالحمص",
+        "en": "Roasted vegetables and chickpeas tray",
+        "fr": "Plaque de légumes rôtis aux pois chiches"
+      },
+      "cuisine": "healthy",
+      "method": "roast",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "sweetpotato",
+          "amount": "350g"
+        },
+        {
+          "id": "cauliflower",
+          "amount": "350g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "300g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "قطّع الخضر المتشابهة الأحجام وأضف الحمص المطبوخ بعد التجفيف ليحمّر جيداً.",
+        "en": "Cut vegetables evenly and dry cooked chickpeas before roasting for a better texture.",
+        "fr": "Coupez les légumes régulièrement et séchez les pois chiches cuits avant de rôtir."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-vegetable-egg-muffins",
+      "title": {
+        "ar": "قوالب بيض بالخضر في الفرن",
+        "en": "Baked vegetable egg muffins",
+        "fr": "Muffins salés aux œufs et légumes"
+      },
+      "cuisine": "healthy",
+      "method": "bake",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggs",
+          "amount": "6pcs"
+        },
+        {
+          "id": "spinach",
+          "amount": "200g"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomato",
+          "amount": "150g"
+        },
+        {
+          "id": "milk",
+          "amount": "50ml"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "10ml"
+        }
+      ],
+      "tip": {
+        "ar": "وزّع الخليط في قوالب مدهونة واطهه حتى تبلغ أطباق البيض 71 درجة مئوية.",
+        "en": "Divide into oiled muffin cups and cook until egg dishes reach 71°C.",
+        "fr": "Répartissez dans les moules huilés et cuisez les préparations aux œufs jusqu’à 71°C."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-oat-berry-breakfast",
+      "title": {
+        "ar": "شوفان بالزبادي والتوت",
+        "en": "Oat and berry yogurt breakfast",
+        "fr": "Petit-déjeuner avoine yaourt et fruits rouges"
+      },
+      "cuisine": "healthy",
+      "method": "cold",
+      "minutes": 10,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "oats",
+          "amount": "200g"
+        },
+        {
+          "id": "greekyogurt",
+          "amount": "450g"
+        },
+        {
+          "id": "berries",
+          "amount": "250g"
+        },
+        {
+          "id": "banana",
+          "amount": "1pc"
+        },
+        {
+          "id": "walnuts",
+          "amount": "40g"
+        }
+      ],
+      "tip": {
+        "ar": "اخلط الشوفان بالزبادي ثم أضف الفواكه الطازجة والمكسرات دون سكر مضاف.",
+        "en": "Mix oats with yogurt and top with fresh fruit and nuts without added sugar.",
+        "fr": "Mélangez avoine et yaourt puis ajoutez fruits frais et noix sans sucre ajouté."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-bean-corn-salad",
+      "title": {
+        "ar": "سلطة فاصولياء حمراء وذرة",
+        "en": "Kidney bean and corn salad",
+        "fr": "Salade haricots rouges et maïs"
+      },
+      "cuisine": "healthy",
+      "method": "salad",
+      "minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "kidneybeans",
+          "amount": "450g"
+        },
+        {
+          "id": "corn",
+          "amount": "200g"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "180g"
+        },
+        {
+          "id": "parsley",
+          "amount": "20g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        }
+      ],
+      "tip": {
+        "ar": "اشطف الفاصولياء المعلبة إن استعملتها لتقليل الملح وأضف التتبيلة قبل التقديم.",
+        "en": "Rinse canned beans if used to reduce sodium; add dressing just before serving.",
+        "fr": "Rincez les haricots en conserve pour limiter le sel et assaisonnez juste avant de servir."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-tomato-bean-pasta",
+      "title": {
+        "ar": "معكرونة قمح كامل بالفاصولياء والخضر",
+        "en": "Whole-grain pasta with beans and vegetables",
+        "fr": "Pâtes complètes aux haricots et légumes"
+      },
+      "cuisine": "healthy",
+      "method": "pasta",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "amount": "320g"
+        },
+        {
+          "id": "beans",
+          "amount": "350g"
+        },
+        {
+          "id": "tomato",
+          "amount": "400g"
+        },
+        {
+          "id": "spinach",
+          "amount": "180g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        }
+      ],
+      "tip": {
+        "ar": "اختر المعكرونة الكاملة عند توفرها وادمج الفاصولياء المطبوخة مع صلصة طماطم خفيفة.",
+        "en": "Choose whole-grain pasta when available and combine cooked beans with a light tomato sauce.",
+        "fr": "Choisissez des pâtes complètes si disponibles et mêlez les haricots cuits à une sauce tomate légère."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-bulgur-tabouleh",
+      "title": {
+        "ar": "تبولة برغل وخضر موسمية",
+        "en": "Bulgur and fresh herb salad",
+        "fr": "Salade boulgour herbes fraîches"
+      },
+      "cuisine": "healthy",
+      "method": "salad",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "bulgur",
+          "amount": "260g"
+        },
+        {
+          "id": "tomato",
+          "amount": "300g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "250g"
+        },
+        {
+          "id": "parsley",
+          "amount": "70g"
+        },
+        {
+          "id": "mint",
+          "amount": "25g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        },
+        {
+          "id": "lemon",
+          "amount": "2pcs"
+        }
+      ],
+      "tip": {
+        "ar": "انقع البرغل حتى يلين ثم صفّه قبل إضافة الخضر المغسولة والأعشاب.",
+        "en": "Soak bulgur until tender, drain and combine with well-washed vegetables and herbs.",
+        "fr": "Faites tremper le boulgour, égouttez puis ajoutez les légumes lavés et les herbes."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-vegetable-frittata",
+      "title": {
+        "ar": "فريتاتا بالخضر والسبانخ",
+        "en": "Vegetable and spinach frittata",
+        "fr": "Frittata aux légumes et épinards"
+      },
+      "cuisine": "healthy",
+      "method": "omelet",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggs",
+          "amount": "6pcs"
+        },
+        {
+          "id": "spinach",
+          "amount": "250g"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "mushroom",
+          "amount": "200g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        },
+        {
+          "id": "milk",
+          "amount": "70ml"
+        }
+      ],
+      "tip": {
+        "ar": "اطهِ الفطر حتى يتبخر سائله ثم أضف البيض واترك الطبق ينضج تماماً.",
+        "en": "Cook mushrooms until their liquid evaporates, add eggs and cook the frittata through.",
+        "fr": "Faites évaporer l’eau des champignons avant d’ajouter les œufs et de bien cuire."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-sweetpotato-bean-chili",
+      "title": {
+        "ar": "تشيلي نباتي بالبطاطا الحلوة والفاصولياء",
+        "en": "Sweet potato and bean chili",
+        "fr": "Chili végétarien patate douce et haricots"
+      },
+      "cuisine": "healthy",
+      "method": "stew",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "sweetpotato",
+          "amount": "450g"
+        },
+        {
+          "id": "kidneybeans",
+          "amount": "400g"
+        },
+        {
+          "id": "tomato",
+          "amount": "450g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "stock",
+          "amount": "400ml"
+        }
+      ],
+      "tip": {
+        "ar": "اجعل مكعبات البطاطا صغيرة لتلين مع الصلصة دون إضافة كثير من الزيت.",
+        "en": "Dice sweet potato small so it softens in the sauce without needing much oil.",
+        "fr": "Coupez la patate douce en petits cubes pour une cuisson douce avec peu d’huile."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-grilled-fish-salad",
+      "title": {
+        "ar": "سلطة سمك مشوي بالليمون",
+        "en": "Grilled fish and lemon salad",
+        "fr": "Salade de poisson grillé au citron"
+      },
+      "cuisine": "healthy",
+      "method": "grill",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "fish",
+          "amount": "600g"
+        },
+        {
+          "id": "lettuce",
+          "amount": "260g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "200g"
+        },
+        {
+          "id": "tomato",
+          "amount": "200g"
+        },
+        {
+          "id": "lemon",
+          "amount": "2pcs"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "اطه السمك حتى 63 درجة مئوية ثم اتركه يبرد قليلاً فوق الخضر المغسولة.",
+        "en": "Cook fish to 63°C and let it cool briefly before placing on washed greens.",
+        "fr": "Cuisez le poisson à 63°C puis laissez-le tiédir avant de le déposer sur les crudités."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-turkey-vegetable-soup",
+      "title": {
+        "ar": "شوربة ديك رومي بالخضر",
+        "en": "Turkey and vegetable soup",
+        "fr": "Soupe de dinde aux légumes"
+      },
+      "cuisine": "healthy",
+      "method": "soup",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "turkey",
+          "amount": "550g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "celery",
+          "amount": "2stalks"
+        },
+        {
+          "id": "zucchini",
+          "amount": "1pc"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "stock",
+          "amount": "1.1l"
+        },
+        {
+          "id": "parsley",
+          "amount": "20g"
+        }
+      ],
+      "tip": {
+        "ar": "قطّع الديك الرومي قطعاً صغيرة واطهه كاملاً داخل المرق إلى 74 درجة مئوية.",
+        "en": "Cut turkey into small pieces and cook fully in broth to 74°C.",
+        "fr": "Coupez la dinde en morceaux et cuisez-la entièrement dans le bouillon à 74°C."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-baked-apple-oats",
+      "title": {
+        "ar": "تفاح مخبوز بالشوفان والقرفة",
+        "en": "Baked apple oat cups",
+        "fr": "Coupes pomme avoine au four"
+      },
+      "cuisine": "healthy",
+      "method": "bake",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "apple",
+          "amount": "4pcs"
+        },
+        {
+          "id": "oats",
+          "amount": "180g"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "1tsp"
+        },
+        {
+          "id": "yogurt",
+          "amount": "200g"
+        },
+        {
+          "id": "walnuts",
+          "amount": "40g"
+        }
+      ],
+      "tip": {
+        "ar": "ضع الشوفان داخل أنصاف التفاح واخبزه حتى يلين ثم قدّمه مع الزبادي.",
+        "en": "Fill apple halves with oats, bake until soft and serve with plain yogurt.",
+        "fr": "Garnissez des demi-pommes d’avoine, enfournez jusqu’à tendreté et servez avec yaourt."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-cucumber-yogurt-dip",
+      "title": {
+        "ar": "صلصة خيار وزبادي بالأعشاب",
+        "en": "Cucumber yogurt herb dip",
+        "fr": "Sauce yaourt concombre et herbes"
+      },
+      "cuisine": "healthy",
+      "method": "salad",
+      "minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "greekyogurt",
+          "amount": "450g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "220g"
+        },
+        {
+          "id": "mint",
+          "amount": "20g"
+        },
+        {
+          "id": "garlic",
+          "amount": "1clove"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "اعصر الخيار المبشور وأضفه إلى الزبادي والأعشاب ثم احتفظ بالصلصة في الثلاجة.",
+        "en": "Squeeze grated cucumber, mix with yogurt and herbs, and keep refrigerated.",
+        "fr": "Essorez le concombre râpé, mélangez au yaourt et aux herbes puis gardez au frais."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-cauliflower-chickpea-curry",
+      "title": {
+        "ar": "كاري قرنبيط وحمص بحليب جوز الهند",
+        "en": "Cauliflower chickpea coconut curry",
+        "fr": "Curry de chou-fleur et pois chiches au coco"
+      },
+      "cuisine": "healthy",
+      "method": "curry",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "cauliflower",
+          "amount": "550g"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "400g"
+        },
+        {
+          "id": "tomato",
+          "amount": "300g"
+        },
+        {
+          "id": "coconutmilk",
+          "amount": "220ml"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "استعمل كمية معتدلة من حليب جوز الهند وأضف الحمص المطبوخ بعد تليين القرنبيط.",
+        "en": "Use a moderate amount of coconut milk and add cooked chickpeas once cauliflower begins to soften.",
+        "fr": "Dosez modérément le lait de coco et ajoutez les pois chiches cuits lorsque le chou-fleur s’attendrit."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-quinoa-stuffed-peppers",
+      "title": {
+        "ar": "فلفل محشو بالكينوا والفاصولياء",
+        "en": "Quinoa and bean stuffed peppers",
+        "fr": "Poivrons farcis quinoa et haricots"
+      },
+      "cuisine": "healthy",
+      "method": "bake",
+      "minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pepper",
+          "amount": "4pcs"
+        },
+        {
+          "id": "quinoa",
+          "amount": "250g"
+        },
+        {
+          "id": "blackbeans",
+          "amount": "350g"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        }
+      ],
+      "tip": {
+        "ar": "اسلق الكينوا أولاً وامزجها بالفاصولياء ثم احشُ الفلفل واخبزه حتى يلين.",
+        "en": "Cook quinoa first, combine with beans and stuff the peppers before baking until tender.",
+        "fr": "Cuisez le quinoa, mélangez aux haricots puis farcissez les poivrons et enfournez jusqu’à tendreté."
+      },
+      "kind": "healthy"
+    },
+    {
+      "slug": "healthy-lentil-vegetable-patties",
+      "title": {
+        "ar": "أقراص عدس وخضر بالفرن",
+        "en": "Baked lentil and vegetable patties",
+        "fr": "Galettes de lentilles et légumes au four"
+      },
+      "cuisine": "healthy",
+      "method": "bake",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lentils",
+          "amount": "270g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "oats",
+          "amount": "90g"
+        },
+        {
+          "id": "eggs",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        },
+        {
+          "id": "parsley",
+          "amount": "20g"
+        }
+      ],
+      "tip": {
+        "ar": "اطهِ العدس وصفّه جيداً قبل تشكيل الأقراص واخبزها حتى تتماسك وتنضج.",
+        "en": "Cook and drain lentils thoroughly before shaping patties; bake until firm and cooked through.",
+        "fr": "Cuisez et égouttez bien les lentilles avant de former les galettes et de les cuire jusqu’à fermeté."
+      },
+      "kind": "healthy"
+    }
+  ]
+}
