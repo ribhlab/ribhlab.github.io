@@ -473,6 +473,10 @@
     "foodSafetySeafood": {
       "name": "FoodSafety.gov — Seafood cooking temperatures",
       "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+    },
+    "metamaskHelp": {
+      "name": "MetaMask Help Center",
+      "url": "https://support.metamask.io/"
     }
   },
   "articleLinks": {
