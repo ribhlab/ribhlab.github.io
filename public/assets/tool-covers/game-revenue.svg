@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-hidden="true"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f9ff"/><stop offset=".58" stop-color="#ad98ff" stop-opacity=".24"/><stop offset="1" stop-color="#f6f8ff"/></linearGradient>
+<linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5448c5" stop-opacity=".26"/><stop offset="1" stop-color="#ad98ff" stop-opacity=".08"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#2e3273" flood-opacity=".16"/></filter>
+<filter id="smallShadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#2e3273" flood-opacity=".12"/></filter></defs>
+<rect width="640" height="360" fill="url(#bg)"/><circle cx="535" cy="85" r="136" fill="url(#glow)"/><circle cx="88" cy="293" r="118" fill="url(#glow)" opacity=".6"/>
+<path d="M0 327q130-55 246-19 98 31 180-18 99-47 214-15v85H0z" fill="#ad98ff" opacity=".09"/>
+<path d="M130 200q16-82 91-88h189q74 6 91 88l22 59q6 25-20 36-23 9-42-9l-49-45H217l-47 45q-25 20-44 8-20-14-14-33z" fill="#fff" stroke="#d7cdfd" stroke-width="3" filter="url(#shadow)"/>
+<rect x="182" y="177" width="74" height="20" rx="7" fill="#8d78e8"/><rect x="209" y="150" width="20" height="74" rx="7" fill="#8d78e8"/>
+<circle cx="402" cy="177" r="15" fill="#b291fb"/><circle cx="437" cy="206" r="15" fill="#6952c7"/><circle cx="403" cy="222" r="13" fill="#ded7ff"/><circle cx="469" cy="181" r="12" fill="#cabaf9"/>
+<circle cx="316" cy="219" r="16" fill="#ddd7ff"/><circle cx="352" cy="219" r="16" fill="#ddd7ff"/>
+<rect x="353" y="52" width="163" height="72" rx="18" fill="#fff" filter="url(#smallShadow)"/>
+<rect x="380" y="88" width="21" height="20" rx="6" fill="#cec2fa"/><rect x="410" y="74" width="21" height="34" rx="6" fill="#ab98f2"/><rect x="439" y="63" width="21" height="45" rx="6" fill="#7258d8"/><rect x="469" y="82" width="21" height="26" rx="6" fill="#a58ff2"/>
+
+</svg>
