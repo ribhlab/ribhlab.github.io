@@ -2,7 +2,7 @@
   "reviewedAt": "2026-10-28",
   "selection": "Editorial picks by use case, not an official Store ranking or tested performance leaderboard. Availability and prices vary by country, device and subscription.",
   "criteria": {
-    "ar": "رتبنا التطبيقات حسب تنوع الاستخدام والشهرة والملاءمة لكل مجال؛ ماشي نتائج اختبار معملي ولا ترتيب متجر رسمي. تحقق من السعر والخصوصية وتوفر التطبيق فبلادك قبل التثبيت.",
+    "ar": "رتبنا التطبيقات حسب تنوع الاستخدام والشهرة والملاءمة لكل مجال؛ ليست نتائج اختبار مختبري ولا ترتيباً رسمياً لمتجر التطبيقات. تحقق من السعر والخصوصية وتوفر التطبيق في بلدك قبل التثبيت.",
     "en": "Editorial selection based on task fit and feature diversity; not a performance benchmark or official store ranking. Check privacy, regional availability and costs.",
     "fr": "Sélection éditoriale selon l’usage et la diversité des fonctions, pas un classement officiel des stores ni un benchmark. Vérifiez confidentialité, disponibilité locale et coûts."
   },
@@ -273,7 +273,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.niksoftware.snapseed",
           "editorialOrder": 4,
           "bestFor": {
-            "ar": "تعديل الصور المباشر",
+            "ar": "تعديل الصور الملكير",
             "en": "Mobile photo corrections",
             "fr": "Retouches photo rapides"
           }
@@ -606,7 +606,7 @@
           "url": "https://organicmaps.app/",
           "editorialOrder": 4,
           "bestFor": {
-            "ar": "خرائط مفتوحة بلا تتبع إعلاني",
+            "ar": "خرائط مفتوحة دون تتبع إعلاني",
             "en": "Privacy-minded offline maps",
             "fr": "Cartes hors ligne et vie privée"
           }
@@ -666,7 +666,7 @@
           "url": "https://maps.me/",
           "editorialOrder": 10,
           "bestFor": {
-            "ar": "خرائط سفر بلا إنترنت",
+            "ar": "خرائط سفر دون إنترنت",
             "en": "Offline travel maps",
             "fr": "Cartes de voyage hors ligne"
           }
@@ -1403,7 +1403,7 @@
           "url": "https://tidal.com/",
           "editorialOrder": 6,
           "bestFor": {
-            "ar": "استماع موسيقي باشتراك",
+            "ar": "استماع موسيقي لكيتراك",
             "en": "Subscription music playback",
             "fr": "Musique sur abonnement"
           }
