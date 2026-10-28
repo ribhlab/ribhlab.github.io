@@ -630,6 +630,38 @@ for(const lang of ['ar','en','fr']){
  if(!homepage.includes('class="lang-short"')||!homepage.includes('aria-controls="site-nav"')||!homepage.includes('aria-expanded="false"'))errors.push('Accessible compact language or mobile navigation missing in '+lang);
 }
 
+
+// Deep immigration-opportunity editorial gate: every published long-form guide
+// is trilingual, sourced, navigable on-site, and exposes external sources only at the end.
+const opportunityEditorial=JSON.parse(fs.readFileSync(path.join(root,'content','opportunity-articles.json'),'utf8'));
+const opportunityInventory=JSON.parse(fs.readFileSync(path.join(root,'content','opportunities-data.json'),'utf8'));
+const opportunityIds=new Set((opportunityInventory.items||[]).map(item=>item.id));
+for(const [id,article] of Object.entries(opportunityEditorial.articles||{})){
+ if(!opportunityIds.has(id))errors.push('Orphaned opportunity editorial: '+id);
+ if(article.id!==id||!/^\d{4}-\d{2}-\d{2}$/.test(article.reviewedAt||''))errors.push('Invalid opportunity review metadata: '+id);
+ if(!Array.isArray(article.sources)||article.sources.length<2||article.sources.some(source=>!source.label||!/^https:\/\//.test(source.url)))errors.push('Opportunity requires two specific HTTPS sources: '+id);
+ for(const lang of ['ar','en','fr']){
+  const tr=article.translations?.[lang];
+  if(!tr?.title||!tr?.deck||!Array.isArray(tr.sections)||tr.sections.length<8){errors.push('Opportunity translation incomplete: '+id+'/'+lang);continue;}
+  if(tr.sections.some(section=>!Array.isArray(section)||section.length!==2||section[0].length<12||section[1].length<350))errors.push('Opportunity sections too thin: '+id+'/'+lang);
+  const words=[tr.deck,...tr.sections.map(section=>section[1])].join(' ').trim().split(/\s+/).length;
+  if(words<700)errors.push('Opportunity below 700 words: '+id+'/'+lang+' ('+words+')');
+  if(lang==='ar'&&/(?:^|[\s،؛.!؟])(واش|بغيت|دابا|هادشي|ديال|غادي|حيت)(?=$|[\s،؛.!؟])/u.test([tr.title,tr.deck,...tr.sections.flat()].join(' ')))errors.push('Moroccan colloquial expression in opportunity article: '+id);
+  const htmlPath=path.join(dist,lang,'opportunities','immigration',id,'index.html');
+  if(!fs.existsSync(htmlPath)){errors.push('Opportunity detail page missing: '+id+'/'+lang);continue;}
+  const html=fs.readFileSync(htmlPath,'utf8');
+  if(!html.includes('class="opp-guide-article"')||!html.includes('class="opp-guide-section opp-guide-sources"'))errors.push('Opportunity full article or sources not rendered: '+id+'/'+lang);
+  if((html.match(/class="opp-guide-section" id="part-/g)||[]).length!==tr.sections.length)errors.push('Opportunity sections not all visible: '+id+'/'+lang);
+  const sourcePosition=html.indexOf('class="opp-guide-section opp-guide-sources"');
+  const nextStepPosition=html.indexOf('class="opp-action" rel="noopener noreferrer external" target="_blank"');
+  if(sourcePosition<nextStepPosition)errors.push('Opportunity sources must be at the end: '+id+'/'+lang);
+  for(const source of article.sources){
+   if(!html.includes('href="'+source.url+'" target="_blank" rel="noopener noreferrer external"'))errors.push('Opportunity external source not in new tab: '+id+'/'+lang+' '+source.url);
+  }
+  if(!html.includes('href="/'+lang+'/opportunities/immigration/"'))errors.push('Opportunity lacks internal same-tab back link: '+id+'/'+lang);
+ }
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
