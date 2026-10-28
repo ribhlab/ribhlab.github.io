@@ -1,0 +1,137 @@
+{
+  "reviewedAt": "2026-10-28",
+  "method": "Derived from linked original official notices, not extrapolated from job titles. Never assume published salaries or eligibility.",
+  "articles": {
+    "mediouna-service-agent-informatique-2026": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Official signed two-page recruitment notice and government contest listing",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Avis officiel de recrutement Mediouna Services S.A. — 2 pages",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/881b2d20-4b73-4d68-9489-17013ef786dc"
+        },
+        {
+          "label": "Fiche publique C44076/26",
+          "url": "https://www.emploi-public.ma/fr/concours/details/881b2d20-4b73-4d68-9489-17013ef786dc"
+        }
+      ],
+      "facts": {
+        "city": "Tit Mellil",
+        "country": "Maroc",
+        "reference": "C44076/26",
+        "internalReference": "Agent IT/Recrut/MS/DS/11/26",
+        "deadline": "2026-10-29T16:00",
+        "posts": 1,
+        "degree": "Bac+2 informatique / systèmes et réseaux / équivalent",
+        "contract": "Recrutement sous contrat",
+        "salary": null,
+        "channel": "emploi-public.ma"
+      },
+      "translations": {
+        "ar": {
+          "title": "عون معلوماتي بمديونة للخدمات: شروط Bac+2 والمهام والملف وطريقة التسجيل",
+          "deck": "منصب واحد بعقد عمل بمدينة تيط مليل. دليل مستخرج من قرار التوظيف الأصلي في صفحتين، مع آخر أجل 29 أكتوبر 2026 على الساعة الرابعة مساءً.",
+          "sections": [
+            [
+              "ما المنصب المعلن ومن هي الجهة المشغلة؟",
+              "أعلنت شركة مديونة للخدمات S.A. عن توظيف عون معلوماتي واحد بعقد عمل، في إعلان مؤرخ في 12 أكتوبر 2026. الشركة فاعل عمومي خاضع للقانون الخاص ويشمل نشاطها تجهيزات الخدمات العامة والمشاريع الترابية. مكان العمل المحدد في القرار هو تيط مليل؛ لذلك لا ينبغي التعامل مع المنصب كما لو أنه عمل عن بُعد أو وظيفة يمكن ممارستها من أي مدينة. مرجع البوابة هو C44076/26، ومرجع الوظيفة الداخلي Agent IT/Recrut/MS/DS/11/26."
+            ],
+            [
+              "العمل اليومي: الدعم التقني وليس تطوير المواقع أساساً",
+              "تتعلق المهام بصيانة الحواسيب والطابعات والماسحات والتجهيزات الرقمية، وتركيب برامج العمل وتحديثها وضبط الإعدادات وتشخيص أعطال الشبكات والاتصال بالإنترنت. سيتعامل الموظف مع المستخدمين ومنهم الطلبة، ومع أنظمة المؤسسة والمكتبة ومواردها الوثائقية، ويشارك في النسخ الاحتياطي وأمن البيانات ورقمنة الوثائق وجرد التجهيزات وإعداد تقارير التدخل. ليست البرمجة وحدها معيار اختيار كافياً؛ الخبرة في معالجة حوادث المكاتب والشبكات مهمة عملياً."
+            ],
+            [
+              "الدبلوم المطلوب والمهارات التي ترجح ملف المترشح",
+              "يشترط القرار دبلوماً من مستوى Bac+2 في المعلوماتية أو الأنظمة والشبكات أو تخصصاً معادلاً. ويطلب معرفة أنظمة التشغيل والبرامج المكتبية والشبكات وأدوات الصيانة، والقدرة على تشخيص الأعطال وحلها، والتنظيم والسرعة في الاستجابة والتواصل والعمل الجماعي. كما يعتبر الإلمام بقواعد البيانات وبرامج تسيير المكتبات SIGB والخبرة في مكتبة أو مركز توثيق أو مؤسسة ثقافية نقطتي قوة إضافيتين. لا تحول هذه المزايا إلى شروط إقصائية، ولا تعتبر شهادة أجنبية أو تخصصاً مختلفاً معادلاً دون قرار الجهة المنظمة."
+            ],
+            [
+              "الوثائق الخمس المطلوبة وطريقة إعدادها",
+              "تذكر الصفحة الثانية من قرار التوظيف ملفاً إلزامياً يضم سيرة ذاتية محدّثة، ورسالة تحفيز موجهة إلى المدير العام للشركة، ونسخ جميع الشهادات المطلوبة، وشهادات العمل المثبتة للخبرات المعلنة، وصورة البطاقة الوطنية للتعريف من الوجهين. راجع جودة النسخ وتطابق التواريخ والمناصب قبل الرفع، وسم الملفات بما يسهل التحقق منها. لا تقدم أمثلة تدريبية على أنها خبرات حقيقية؛ ويمكن إعداد ملف أعمال منفصل يتضمن حالات تقنية افتراضية دون كشف بيانات أشخاص."
+            ],
+            [
+              "الموعد النهائي وطريقة التقديم التي يعتمدها القرار",
+              "تودع الترشيحات حصرياً عبر بوابة emploi-public.ma، قبل يوم 29 أكتوبر 2026 الساعة 16:00 بالتوقيت المغربي. يشدد القرار على أن الملفات الناقصة أو المتأخرة أو المودعة بوسيلة أخرى لن تؤخذ بعين الاعتبار. افتح صفحة المباراة واستعمل الرمز C44076/26، ثم جهز الملفات وراجع الاستمارة واحتفظ بما يثبت الإيداع. التواصل مع الشركة أو إرسال السيرة عبر البريد لا يعوض إيداع الطلب إلكترونياً. هذه المعلومة زمنية؛ بعد انتهاء الموعد لا توصف الفرصة بأنها مفتوحة."
+            ],
+            [
+              "كيف تستعد للمقابلة وفق طبيعة الوظيفة الفعلية؟",
+              "تشير الوثيقة إلى لجنة لفحص الملفات وإجراء مقابلات مع المترشحين الذين يستوفون الشروط، دون تحديد راتب أو اختبار كتابي إلزامي. راجع مبادئ عنوان IP وDNS والطابعات المشتركة وحقوق المستخدمين وتحديث أنظمة التشغيل وأمن النسخ الاحتياطي. حضر سيناريو واضحاً: تعطلت طابعة داخل المكتبة؛ كيف تفصل بين مشكل الشبكة والطابعة والصلاحيات، وكيف تتحقق من عودة الخدمة وتكتب تقريراً؟ هذا تدريب مقترح من RibhLab لا سؤال معلن من اللجنة."
+            ],
+            [
+              "ما المعلومات غير المنشورة، وهل يصلح المنصب لك؟",
+              "لا ينص الإعلان على راتب ثابت أو جدول ساعات العمل أو تاريخ المقابلة التفصيلي. لذلك لن ننسب أرقاماً للشركة. يناسب العمل مرشحاً يملك تكويناً تقنياً في الدعم والشبكات ويستطيع التنقل إلى تيط مليل، لا شخصاً يبحث حصراً عن تطوير البرمجيات من المنزل. افحص تكاليف التنقل وطبيعة العقد والالتزامات أثناء التواصل الرسمي، وتأكد من الاعتراف بشهادتك قبل افتراض الأهلية. القرار النهائي للانتقاء يعود للشركة ولا يمكن لأي موقع ضمانه."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Mediouna Services IT agent in Tit Mellil: diploma, tasks and application documents",
+          "deck": "One contract IT support role in Tit Mellil, Morocco. Official notice C44076/26 closes 29 October 2026 at 16:00 local time.",
+          "sections": [
+            [
+              "The employer, contract and exact place of work",
+              "Mediouna Services S.A., a local public-service development operator governed by private law, published a recruitment notice dated 12 October 2026 for a single IT agent under contract. The stated workplace is Tit Mellil. This should not be described as an online or location-free position. The official job competition reference is C44076/26, while the employer's internal reference is Agent IT/Recrut/MS/DS/11/26. Applicants should keep both references when organizing their documents."
+            ],
+            [
+              "What this role actually does every day",
+              "The official notice lists supporting computers, printers, scanners and other digital equipment, installing and updating common software and databases, troubleshooting networks and internet access, and helping staff and students use systems. Backup, data protection, document digitization, library information resources, hardware inventory and intervention reporting are also within scope. The work is primarily operational technical support, not simply programming a website. An applicant should be able to discuss practical incident handling and preventive maintenance."
+            ],
+            [
+              "Required education and skills that can strengthen an application",
+              "The employer asks for a Bac+2 qualification in IT, systems and networks or a comparable field. The profile includes operating systems, office software, networking, maintenance tools, troubleshooting, organization, responsiveness, communication and team skills. Experience with library management systems (SIGB) and previous work in a library, media library or documentation center are noted as advantages, not as separate universal eligibility requirements. Do not assume an unrelated diploma automatically counts as equivalent without confirmation from the recruiting organization."
+            ],
+            [
+              "The documents that must accompany the application",
+              "Page two specifies five types of supporting materials: a current CV, a motivation letter addressed to the company's managing director, copies of every required diploma, experience certificates supporting professional employment claims, and both sides of the national identity card. Scan every document clearly, check date consistency and follow the official portal's current file-format rules. A portfolio containing fictional troubleshooting examples may help preparation but cannot replace a mandatory document or justify an invented employment record."
+            ],
+            [
+              "Where to apply and the precise deadline",
+              "Applications must be submitted exclusively via emploi-public.ma before 29 October 2026 at 16:00 Morocco time. The notice explicitly rejects late, incomplete or differently submitted applications. Search the official contest reference C44076/26, review the attached PDF and upload the required materials through the government's candidate process. Keep the receipt or submission reference if available. Sending a private message, posting on social media or emailing an unrelated recruiter is not an alternative to the prescribed channel."
+            ],
+            [
+              "Selection and realistic technical interview preparation",
+              "The company plans a committee review of files and interviews for eligible applicants. The notice does not announce a fixed written test or compensation amount. Candidates can review IP addressing, DNS, shared printer permissions, workstation updates, backup routines and incident documentation. Practice a hypothetical help-desk case in which a library printer stops working, showing diagnosis, validation, communication and logging. This is suggested preparation, not a claim about questions the selection committee will actually ask."
+            ],
+            [
+              "Unpublished conditions and suitability assessment",
+              "The signed notice does not specify salary, full working hours or a detailed interview date. RibhLab should not invent these details or imply a pay guarantee. The opportunity best suits a technically trained candidate comfortable with on-site network and device support in Tit Mellil, including user-facing library services. Assess commuting feasibility, actual troubleshooting skills and degree equivalence before applying. The employer, not an independent editorial site, makes final decisions about eligibility and selection."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Agent informatique Mediouna Services à Tit Mellil : missions, Bac+2 et candidature",
+          "deck": "Un poste contractuel d'assistance informatique à Tit Mellil, référence C44076/26. Dépôt avant le 29 octobre 2026 à 16 h.",
+          "sections": [
+            [
+              "Entreprise, poste et lieu exact d'affectation",
+              "Mediouna Services S.A. est une société de développement local intervenant dans les équipements de service public et les projets territoriaux. L'avis daté du 12 octobre 2026 concerne un seul poste d'agent informatique sous contrat, avec un lieu de travail indiqué à Tit Mellil. Il ne s'agit pas d'un emploi à distance. Le code de concours est C44076/26, tandis que la référence interne du poste est Agent IT/Recrut/MS/DS/11/26. Les deux doivent être distingués lors de la préparation du dossier."
+            ],
+            [
+              "Les tâches concrètes décrites par l'employeur",
+              "Le poste comprend la maintenance des ordinateurs, imprimantes, scanners et équipements numériques, l'installation et la mise à jour des logiciels et bases documentaires, le dépannage des réseaux et de l'accès à internet ainsi que l'assistance aux agents et étudiants. La sauvegarde des données, la sécurité, la numérisation des ressources de bibliothèque, le suivi de l'inventaire et les rapports d'incident font aussi partie des missions. Il s'agit d'un métier de support technique opérationnel, et non principalement de développement de sites."
+            ],
+            [
+              "Diplôme obligatoire et compétences valorisées",
+              "L'avis demande un diplôme Bac+2 en informatique, systèmes et réseaux ou domaine équivalent. Il insiste sur les systèmes d'exploitation, la bureautique, les réseaux, les outils de maintenance et la capacité à diagnostiquer les incidents. L'organisation, la réactivité, l'autonomie et la communication sont attendues. La connaissance des systèmes de gestion de bibliothèque SIGB et une expérience en médiathèque, centre documentaire ou établissement culturel constituent des atouts supplémentaires. Ne les présentez pas comme des conditions éliminatoires, ni un diplôme d'une autre spécialité comme automatiquement équivalent."
+            ],
+            [
+              "Les cinq éléments obligatoires du dossier",
+              "Selon la deuxième page de l'arrêté, il faut transmettre un CV actualisé, une lettre de motivation adressée au directeur général, les copies de tous les diplômes exigés, les attestations de travail correspondant aux expériences invoquées et la copie recto-verso de la CIN. Vérifiez la lisibilité, la concordance des dates et les exigences techniques du formulaire avant la validation. Une démonstration fictive de dépannage peut compléter une préparation d'entretien, mais ne saurait se substituer aux documents officiels ou servir d'attestation d'expérience."
+            ],
+            [
+              "Candidature électronique et date limite",
+              "La candidature se fait exclusivement sur emploi-public.ma et doit parvenir avant le 29 octobre 2026 à 16 h, heure locale. Les dossiers incomplets, en retard ou envoyés par un autre canal sont explicitement exclus. Recherchez le code C44076/26, lisez le PDF joint et téléversez les pièces via le parcours du portail officiel. Conservez toute preuve de dépôt. Envoyer un courriel à un tiers ou commenter une publication ne constitue pas un dépôt valable. Une fois l'échéance dépassée, l'annonce ne doit plus être présentée comme ouverte."
+            ],
+            [
+              "Étude des dossiers et préparation technique pertinente",
+              "Une commission examinera les candidatures et organisera des entretiens avec les profils recevables. Aucun salaire ni examen écrit obligatoire n'est précisé dans ce document. Révisez l'adressage IP, le DNS, les imprimantes partagées, les droits utilisateurs, les sauvegardes et les mises à jour de systèmes. Préparez un exemple hypothétique de panne d'imprimante dans une bibliothèque en expliquant l'identification de la cause, la résolution, la vérification et le compte rendu. Cet exercice n'est pas une question officielle annoncée."
+            ],
+            [
+              "Éléments à confirmer et adéquation au profil",
+              "L'annonce ne publie ni rémunération fixe, ni horaires détaillés, ni date des entretiens. Ces informations ne doivent pas être inventées. Le poste est adapté à une personne formée au support des appareils et réseaux sur site, capable d'interagir avec des utilisateurs et de travailler à Tit Mellil. Comparez la distance de déplacement, les qualifications exigées et vos preuves d'expérience. La vérification des équivalences et la décision de recrutement demeurent du ressort de Mediouna Services."
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
