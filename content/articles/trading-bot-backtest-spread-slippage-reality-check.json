@@ -1,0 +1,120 @@
+{
+  "slug": "trading-bot-backtest-spread-slippage-reality-check",
+  "category": "trading",
+  "date": "2026-10-27",
+  "updated": "2026-10-27",
+  "featured": false,
+  "sources": [
+    {
+      "label": "Investor.gov — Investor Bulletin: Performance Claims",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-47"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "اختبار بوت التداول: السبريد والانزلاق وخطر النتائج المزيّفة",
+      "excerpt": "كيفاش تفرق بين باكتيست مضبوط ونتيجة مزوّقة قبل المخاطرة بفلوس حقيقية.",
+      "lead": "نتيجة خضراء فباكتيست ما كتعنيش أن البوت غادي يربح فالسوق الحقيقي. لا بد من اختبار التكاليف وجودة الأسعار ومنع قراءة معلومات المستقبل، مع حفظ النسخة اللي جربتي فعلا.",
+      "sections": [
+        {
+          "heading": "وصف البيانات والقواعد",
+          "paragraphs": [
+            "سجل اسم السوق ومصدر البيانات والمنطقة الزمنية وإطار الشموع وساعات التداول. الذهب وناسداك كيختلفو من وسيط لآخر فحجم النقطة والتنفيذ.",
+            "ممنوع تاخد قرار فشمعة وتستعمل معلومات ما ظهرت حتى من بعد. إعادة رسم المؤشرات أو استعمال إغلاق شمعة مستقبلية كتشوه الاختبار."
+          ]
+        },
+        {
+          "heading": "احسب جميع التكاليف",
+          "paragraphs": [
+            "لكل صفقة حسب فرق سعر الشراء والبيع والعمولة والانزلاق السعري والسواب إلا كان مطلوب. استراتيجية كتعطي 20 دولار قبل المصاريف يمكن تولي سلبية من بعدها.",
+            "جرب ضغط بسبريد أكبر وانزلاق أصعب، خصوصا فترة الأخبار والسيولة الضعيفة. اكتب معايير تجنب التداول قبل ما تشوف النتائج."
+          ]
+        },
+        {
+          "heading": "قسم الفترة بلا غش",
+          "paragraphs": [
+            "استعمل مدة لتطوير الاستراتيجية ومدة أخرى Out-of-sample مستقلة للتقييم النهائي. إلا رجعتي تغير الإعدادات اعتمادا على الفترة الثانية، ما بقاتش اختبارا مستقلا.",
+            "عرض الربح الصافي مع أقصى تراجع، الخسارات المتتالية، عدد الصفقات وحجم العينات. شهر واحد رابح ما كيضمنش الاستمرارية."
+          ]
+        },
+        {
+          "heading": "نتيجة قابلة لإعادة التجربة",
+          "paragraphs": [
+            "احتافظ بملف الأسعار والشفرة وإعدادات اللوت والجلسة ونسخة البوت، ودير جدول لكل شهر فيه الربح والخسارة والتراجع.",
+            "Investor.gov كيشرح أن الباكتيست أداء افتراضي وماشي نتيجة تداول حقيقية، وأن الماضي ما كيتنبأش بالمستقبل. ما تعد حتى بشي مبلغ مضمون يوميا."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "A credible trading-bot backtest: spreads, slippage and hidden bias",
+      "excerpt": "Check data integrity, execution assumptions, out-of-sample risk and reproducibility before trusting results.",
+      "lead": "A strategy can seem profitable in a simulator that ignores trading costs, uses future candles or optimizes against the entire sample. Treat a backtest as an experiment, not a promise.",
+      "sections": [
+        {
+          "heading": "Document data and execution rules",
+          "paragraphs": [
+            "Record instrument, provider, tick or candle frequency, timezone, broker contract specifications and session window. Comparable index or gold symbols can trade differently across providers.",
+            "At every simulated decision point, use only information available at that time. Repainting indicators and future-bar references invalidate apparent profits."
+          ]
+        },
+        {
+          "heading": "Include trading costs",
+          "paragraphs": [
+            "Deduct spread, commission, slippage and financing whenever applicable. A positive result before trading costs can become negative after realistic execution.",
+            "Stress-test widened spreads and worse fills. Define news restrictions and position sizing before examining which historical trades were profitable."
+          ]
+        },
+        {
+          "heading": "Keep out-of-sample data untouched",
+          "paragraphs": [
+            "Separate calibration data from a final evaluation window. If you tune after examining final results, reserve a new unseen interval for another honest test.",
+            "Monitor drawdown, losing streaks, trade count, average trade, net equity and recovery time alongside returns. A single good month may not cover regime changes."
+          ]
+        },
+        {
+          "heading": "Publish honest assumptions",
+          "paragraphs": [
+            "Save the tested source-code version, dataset and configuration, including starting balance and lot sizing. Another analyst should be able to reproduce your calculations.",
+            "Investor.gov emphasizes that hypothetical performance is not live trading performance and past results cannot predict the future. No test guarantees daily profits."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Backtest d’un robot de trading : coûts, glissement et biais cachés",
+      "excerpt": "Contrôler les données, les frais, la période hors échantillon et le drawdown avant tout emploi réel.",
+      "lead": "Un backtest positif ne constitue pas une preuve de rentabilité future. Les hypothèses de cotation, de frais et le risque de surajustement doivent être documentés.",
+      "sections": [
+        {
+          "heading": "Définir correctement les données",
+          "paragraphs": [
+            "Consignez l'instrument, le courtier, le fuseau horaire, la granularité et les heures de séance. Deux symboles similaires n'ont pas nécessairement la même valeur de point.",
+            "Aucune opération simulée ne doit utiliser des bougies futures ou un indicateur qui repeint. Le prix de clôture futur ne pouvait pas être connu au moment de l'ordre."
+          ]
+        },
+        {
+          "heading": "Mesurer les frais d’exécution",
+          "paragraphs": [
+            "Intégrez spread, commission, glissement et financement selon le cas. Un résultat théorique brut peut devenir déficitaire une fois les coûts pris en compte.",
+            "Testez un scénario de stress avec spreads élargis et mauvaise liquidité. Les règles d'exclusion de séances doivent être fixées avant lecture des profits."
+          ]
+        },
+        {
+          "heading": "Réserver un test indépendant",
+          "paragraphs": [
+            "Séparez la phase d'optimisation d'une période hors échantillon jamais utilisée pour régler les paramètres. Une retouche fondée sur cette période la rend impropre au contrôle final.",
+            "Analysez le drawdown maximal, le nombre d'opérations, les séquences de pertes et le temps de récupération, en plus du résultat net."
+          ]
+        },
+        {
+          "heading": "Publier des preuves reproductibles",
+          "paragraphs": [
+            "Archivez les cotations, la version du code, les paramètres de lot, la période et le coût de transaction appliqué. Faites un bilan par mois et par régime.",
+            "Investor.gov rappelle qu'une performance historique simulée est hypothétique et ne garantit pas une performance future. Aucune promesse de gains quotidiens ne peut être déduite de ces chiffres."
+          ]
+        }
+      ]
+    }
+  }
+}
