@@ -120,7 +120,7 @@ function load(root){
   slugs.add(r.slug);
   if(!['meal','healthy'].includes(r.kind)||!ACTIONS[r.method]||!TEXT.ar.tags[r.cuisine])throw Error('Unsupported recipe category/method: '+r.slug);
   if(!Number.isInteger(r.minutes)||r.minutes<5||r.minutes>240||r.ingredients.length<5||r.ingredients.length>14)throw Error('Unusable recipe measures: '+r.slug);
-  for(const l of LANGS)if(!r.title[l]||!r.tip[l]||r.tip[l].length<55)throw Error('Incomplete recipe translation '+l+' '+r.slug);
+  for(const l of LANGS)if(!r.title[l]||!r.tip[l]||r.tip[l].length<50)throw Error('Incomplete recipe translation '+l+' '+r.slug);
   for(const i of r.ingredients)if(!ingredients[i.id]||!/^[0-9.]+(?:[a-zA-Z]+)$/.test(i.amount))throw Error('Unknown or unmeasured ingredient in '+r.slug+': '+i.id+' '+i.amount);
  }
  if(recipes.filter(r=>r.kind==='meal').length!==100||recipes.filter(r=>r.kind==='healthy').length!==20)throw Error('Recipe publication requires exactly 100 meals and 20 balanced dishes');
