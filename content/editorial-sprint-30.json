@@ -269,8 +269,10 @@
         "unreal",
         "godot"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/unreal-engine-when-to-choose.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "games-security",
