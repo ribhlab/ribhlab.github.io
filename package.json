@@ -7,9 +7,10 @@
     "build": "node src/build.mjs",
     "dev": "node src/build.mjs && node src/server.mjs",
     "serve": "node src/server.mjs",
-    "check": "node src/check.mjs",
+    "check": "node src/check.mjs && node --test src/games-core.test.mjs",
     "test:studio": "node --test src/document-studio-core.test.mjs",
-    "test:responsive": "node src/responsive-smoke.mjs"
+    "test:responsive": "node src/responsive-smoke.mjs",
+    "test:games": "node --test src/games-core.test.mjs"
   },
   "engines": {
     "node": ">=20"
