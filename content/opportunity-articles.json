@@ -163,6 +163,148 @@
           ]
         }
       }
+    },
+    "uk-visa": {
+      "id": "uk-visa",
+      "reviewedAt": "2026-10-28",
+      "sources": [
+        {
+          "label": "GOV.UK — Skilled Worker visa overview",
+          "url": "https://www.gov.uk/skilled-worker-visa"
+        },
+        {
+          "label": "GOV.UK — Eligibility and occupation salary",
+          "url": "https://www.gov.uk/skilled-worker-visa/your-job"
+        },
+        {
+          "label": "GOV.UK — Proof of English",
+          "url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english"
+        },
+        {
+          "label": "GOV.UK — Fees and financial requirements",
+          "url": "https://www.gov.uk/skilled-worker-visa/how-much-it-costs"
+        },
+        {
+          "label": "GOV.UK — Official list of licensed sponsors",
+          "url": "https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "تأشيرة العامل الماهر في بريطانيا 2026: الشروط والرواتب والبحث عن الشركات المرخصة",
+          "deck": "دليل عملي لفهم تأشيرة Skilled Worker: المهن المؤهلة، الراتب، مستوى الإنجليزية، التكلفة والخطوات القانونية من خارج المملكة المتحدة.",
+          "sections": [
+            [
+              "ما هي تأشيرة العامل الماهر وما الذي لا تمنحه؟",
+              "تسمح تأشيرة Skilled Worker بالعمل لدى صاحب عمل بريطاني مرخص في وظيفة محددة تستوفي قواعد الهجرة. وهي ليست تصريحاً عاماً للسفر ثم البحث عن وظيفة. يشترط وجود عرض عمل مؤكد وشهادة رعاية صادرة من المشغل المعتمد قبل طلب التأشيرة. يمكن أن تمتد مدة التأشيرة إلى خمس سنوات مع إمكان التمديد متى استمرت الشروط، وقد يحق للشخص طلب الاستقرار الدائم بعد مدة الإقامة المطلوبة وفق القواعد السارية؛ لكنه ليس حقاً تلقائياً. ولا يُسمح عادة بتغيير صاحب العمل دون اتباع إجراءات تحديث التأشيرة. لذلك تبدأ الخطة المنطقية بالتحقق من الوظيفة والمشغل قبل دفع رسوم الإجراءات."
+            ],
+            [
+              "كيف تتحقق من أن الشركة يمكنها رعايتك؟",
+              "تنشر وزارة الداخلية البريطانية سجلاً رسمياً للشركات والهيئات التي تحمل ترخيص رعاية العمال، ويتضمن اسم المؤسسة ومدينة نشاطها ونوع المسار وتصنيف الترخيص. البحث في هذا السجل خطوة مهمة لتجنب عروض العمل الوهمية، لكنه لا يعني أن كل شركة مدرجة توظف حالياً أو تقبل المرشحين من الخارج. ابحث عن الفرص في صفحات التوظيف الخاصة بهذه الشركات، وطابق الاسم القانوني في الإعلان مع اسم الجهة المسجلة، ثم تواصل عبر نطاق البريد الرسمي. اسأل مبكراً إن كانت المؤسسة مستعدة لإصدار شهادة رعاية لهذه الوظيفة بالذات. لا تشترِ شهادة رعاية من وسيط، ولا تخلط بين رخصة شركة ورعاية وظيفة مؤهلة فعلاً."
+            ],
+            [
+              "الوظائف المؤهلة والراتب الأدنى في 2026",
+              "لكل مهنة رمز تصنيف يتكون من أربعة أرقام، وقد تكون بعض المهن غير مؤهلة رغم وجود طلب في السوق. يوضح موقع GOV.UK جدول المهن المقبولة وقواعد الأجر لكل رمز. في الحالة العامة يلزم راتب سنوي لا يقل عن 41,700 جنيه إسترليني أو الأجر المرجعي للمهنة إذا كان أعلى. على سبيل المثال، إذا عرضت شركة 42,000 جنيه ولكن الأجر المرجعي للوظيفة 45,000 جنيه، فقد لا يستوفي العرض الشرط المعتاد. وتوجد استثناءات محددة لبعض الخريجين الجدد والباحثين والمهن المدرجة في لوائح خاصة، لكن لا تُطبق آلياً. يجب أيضاً أن تلتزم الوظيفة بالحد الأدنى للأجر وساعات العمل الفعلية. لا تعتمد على لقب «محاسب» أو «مدير» دون التحقق من المهام ورمزها."
+            ],
+            [
+              "اختبار الإنجليزية وإثبات المؤهلات",
+              "تتطلب الطلبات الجديدة، في الغالب، إثبات القدرة على القراءة والكتابة والتحدث والفهم بمستوى B2 وفق الإطار الأوروبي، حسب صفحة GOV.UK الحالية. يمكن إثباته باختبار لغة إنجليزية معتمد، أو بمؤهل بريطاني مناسب، أو بشهادة جامعية دُرست بالإنجليزية خارج بريطانيا بعد تقييم رسمي من Ecctis عندما ينطبق ذلك. بعض تجديدات الإقامات القديمة لها قاعدة انتقالية مختلفة، فلا ينبغي تعميمها على أول طلب جديد. جهّز سيرتك الذاتية وشهادات الخبرة باللغة المطلوبة وتحقق من أن المعلومات متطابقة مع عقد العمل وشهادة الرعاية. اجتياز اختبار لغة عادي غير وارد ضمن مزودي الاختبار المعتمدين لا يكفي لمجرد أنه يحمل المستوى نفسه."
+            ],
+            [
+              "المصاريف: التأشيرة والتغطية الصحية والرصيد البنكي",
+              "تظهر صفحة GOV.UK عند التحقق رسوماً اعتيادية للطلب من الخارج تبدأ من 819 جنيهاً للتأشيرات التي لا تتجاوز ثلاث سنوات، وتصل إلى 1,618 جنيهاً لفترات أطول في الحالة القياسية، مع احتمال اختلافها وفق الفئة. وتبلغ مساهمة الرعاية الصحية عادة 1,035 جنيهاً عن كل سنة، وقد يُطلب إثبات مبلغ 1,270 جنيهاً للمعيشة محفوظاً في الحساب مدة محددة، ما لم ينطبق إعفاء أو يضمن المشغل الإعالة حسب النظام. مثال تقريبي لتأشيرة سنتين: 819 + 2 × 1,035 = 2,889 جنيهاً قبل السفر والترجمة. هذه ليست كلفة السفر الكاملة؛ أضف السكن والتأمينات الأخرى والأفراد المرافقين. تحقق دائماً من الرسوم المعروضة لحالتك قبل الدفع."
+            ],
+            [
+              "كيفية التقديم من المغرب خطوة بخطوة",
+              "ابدأ بإعداد ملف مهني صادق يوضح خبرتك، وابحث عن شركات راعية ووظائف ذات رمز مهني مؤهل. بعد مقابلة صاحب العمل والحصول على عقد واضح، تحقق من الراتب السنوي ورمز المهنة وشهادة الرعاية CoS التي يصدرها صاحب العمل. اجمع إثبات الإنجليزية وجواز السفر والوثائق المالية وأي أوراق إضافية يحددها نموذج الحكومة. تقدم إلكترونياً من GOV.UK خلال الفترة المسموح بها ووفق تاريخ بدء العمل المثبت في شهادة الرعاية، ثم اتبع تعليمات إثبات الهوية والقياسات الحيوية. تقول الحكومة إن القرار يستغرق عادة نحو ثلاثة أسابيع للطلبات من خارج المملكة المتحدة بعد استكمال الهوية والملف، لكن قد تطول المدة عند الحاجة لفحوص إضافية. لا تحجز سفراً غير قابل للاسترداد على أساس مدة تقديرية."
+            ],
+            [
+              "ما المسار الأقل مخاطرة وما البدائل؟",
+              "المسار العملي هو البدء بالعرض الوظيفي وليس بشراء خدمات هجرة؛ ادرس مهنة واحدة أو اثنتين تتوافقان فعلياً مع مؤهلاتك وراجع معدل رواتبهما الرسمي، ثم استهدف أصحاب العمل المسجلين. إذا كان الأجر أقل من العتبة العامة، تحقق من الاستثناء المحدد قانونياً بدلاً من مطالبة المشغل بتغيير مسمى الوظيفة فقط. وقد يكون لدى العاملين المؤهلين في قطاعات صحية معينة مسار Health and Care Worker برسوم مختلفة وإعفاء من مساهمة الرعاية الصحية، لكنه لا يشمل كل مهنة. احسب صافي الراتب المتوقع وتكلفة الإيجار والتنقل قبل قبول العرض. تجنب أصحاب العمل الذين يطالبونك بتحويل رسوم غير رسمية إلى حساب شخصي مقابل ضمان الرعاية."
+            ],
+            [
+              "الأسرة وتجديد التأشيرة وقرارات ما بعد الوصول",
+              "قد يتمكن الزوج أو الزوجة والأطفال من تقديم طلبات لمرافقة العامل وفق شروط التبعية المعمول بها، مع رسوم وإثباتات مالية تخص أفراد الأسرة أيضاً، وتوجد قيود إضافية لبعض الوظائف والظروف. يتيح نظام Skilled Worker عادة مزاولة الوظيفة المحددة والدراسة وبعض الأعمال الإضافية بضوابط، لكنه لا يتيح الحصول على معظم المساعدات الحكومية. يجب تحديث التأشيرة إذا تغير صاحب العمل أو نوع العمل بالطريقة التي تقتضيها اللوائح. احتفظ بنسخ من العقد وشهادة الرعاية ومستندات الدخل والإقامة، وراقب مدة صلاحية التأشيرة. هذا الدليل يشرح الإجراءات القائمة بتاريخ المراجعة، ولا يعد وعداً بالتوظيف أو قراراً مسبقاً من السلطات البريطانية."
+            ]
+          ]
+        },
+        "en": {
+          "title": "UK Skilled Worker visa in 2026: sponsors, salary, English and full application steps",
+          "deck": "An evidence-based guide to eligible jobs, licensed sponsors, salary thresholds, immigration fees and an application from abroad.",
+          "sections": [
+            [
+              "What the visa permits and what it does not",
+              "The Skilled Worker visa allows eligible employment with an approved UK sponsor. It does not grant a general right to enter the country and search for work. A confirmed job offer and an employer-issued Certificate of Sponsorship (CoS) are essential before applying. Permission can last up to five years, with extensions subject to continuing eligibility. Permanent settlement may become possible after the applicable residence period and conditions, but is not automatic. Changes of employer usually require an immigration update. A sensible application starts with assessing the job and sponsor, rather than buying a visa service before knowing whether the conditions can be met."
+            ],
+            [
+              "How to identify a genuine licensed sponsor",
+              "The Home Office publishes a regularly updated register of organizations allowed to sponsor workers, listing their registered names, locations, routes and ratings. Check the employer against this register, but remember that a sponsor licence does not mean the organization is actively hiring, or that it will sponsor every advertised position. Look for vacancies on the firm's own careers site and cross-check the legal name, office address and domain used in recruiter emails. Ask whether the specific role carries immigration sponsorship. Fraudsters sometimes present a genuine company name with an unrelated payment account. Do not purchase a CoS from a broker, and do not send passport scans before verifying the recipient."
+            ],
+            [
+              "Occupation code and salary: two independent tests",
+              "Each eligible occupation uses a four-digit code. Some apparently similar jobs have different codes and eligibility outcomes, so the actual duties matter more than an appealing job title. GOV.UK normally requires the higher of £41,700 gross yearly or the occupation's official going rate, with particular exceptions. An offer at £42,000 is insufficient under the standard test if the going rate for that code is £45,000. Certain new entrants, research or listed shortage roles may face different thresholds, but these require the exact applicable legal criteria. Check that actual working hours and minimum-wage laws are satisfied as well. The sponsor should provide the code and explain how the salary meets the relevant rule."
+            ],
+            [
+              "English-language proof and degree evaluation",
+              "For most new Skilled Worker applications, the current GOV.UK guidance requires English at CEFR B2 in speaking, listening, reading and writing. Applicants can use an approved secure language test, a suitable UK qualification, or a foreign degree taught in English when Ecctis has assessed it as required. A diploma printed in English is not the same as proof that its instruction and qualification meet the government's criteria. Older visa holders extending permission may qualify under a transitional B1 rule; this should not be assumed for first-time applicants. Prepare truthful education and employment records, and ensure every document is consistent with the sponsor details. Unapproved language tests may not satisfy immigration rules."
+            ],
+            [
+              "Application fees, healthcare charge and maintenance funds",
+              "As checked in October 2026, GOV.UK lists a standard overseas application fee of £819 for stays up to three years and £1,618 for longer stays, subject to route-specific variations. The immigration health surcharge is commonly £1,035 per year. A separate maintenance requirement of £1,270 normally applies, with an evidence period, unless the applicant is exempt or the sponsor certifies support. An illustrative two-year case costs £819 plus twice £1,035, totalling £2,889 before travel and other expenses. Dependants can require additional fees and funds. This amount should never be advertised as a guaranteed total cost, because the exact visa length, individual circumstances, translations and moving expenses can differ."
+            ],
+            [
+              "Step-by-step application from outside the United Kingdom",
+              "First, shortlist genuinely eligible roles at businesses that hold the correct sponsorship permission. Interview with the employer, secure a real offer, and verify the occupation code, working conditions and gross salary. The sponsor issues the CoS reference, after which the applicant follows the online Skilled Worker process. Prepare a passport, acceptable English evidence, required financial information and any additional documents applicable to the job or nationality. Identity checks may involve an app or biometrics at a visa application centre. GOV.UK says applicants outside the UK usually receive a decision around three weeks after the application and identity steps are complete, although delays can occur. Do not book nonrefundable travel solely on this estimate."
+            ],
+            [
+              "The most practical strategy and lawful alternatives",
+              "Rather than buying a promise of sponsorship, focus on occupational fit and verifiable employer demand. Compare the official occupation code and salary before spending time on an application. Where a salary is below the usual threshold, investigate whether a specific legal exception applies; changing the job title without changing the duties will not make a role eligible. Some qualifying healthcare occupations instead have a Health and Care Worker route with different charges and no annual immigration health surcharge, but this is not open to every applicant. Evaluate likely take-home pay and accommodation costs before committing. Avoid recruiters demanding unofficial transfers or claiming to control immigration decisions."
+            ],
+            [
+              "Family applications and what changes after arrival",
+              "Eligible partners and children may be able to apply as dependants, but additional restrictions apply in particular situations and their own fees and savings rules must be assessed. Skilled Workers can usually perform their sponsored role, study and travel, with limits on additional work and access to public funds. A move to another employer or certain job changes requires an application to update permission. Keep copies of the sponsorship record, employment contract and important immigration correspondence, and check expiry dates well before travel or renewal. Future settlement depends on the law in force and the applicant's circumstances. No employer or adviser can guarantee a successful visa or settlement decision."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Visa Skilled Worker au Royaume-Uni en 2026 : employeurs agréés, salaires et démarches",
+          "deck": "Guide détaillé pour vérifier les métiers éligibles, la licence de parrainage, l'anglais, les coûts et la demande depuis l'étranger.",
+          "sections": [
+            [
+              "Ce que permet réellement le visa Skilled Worker",
+              "Le visa Skilled Worker autorise à exercer une activité éligible auprès d'un employeur agréé par le Royaume-Uni. Il ne constitue pas un visa général de recherche d'emploi. Une offre ferme et un certificat de parrainage, ou CoS, délivré par l'employeur sont indispensables avant la demande. L'autorisation peut aller jusqu'à cinq ans, avec possibilité de prolongation si les conditions restent remplies. Un séjour durable peut être envisageable après la durée et les conditions prévues par le droit applicable, sans être automatique. Changer d'employeur suppose normalement une mise à jour du statut. Il faut donc vérifier l'emploi et le sponsor avant de payer des prestations de visa."
+            ],
+            [
+              "Trouver et contrôler un employeur habilité à parrainer",
+              "Le ministère de l'Intérieur britannique publie un registre actualisé des organisations détenant une licence de parrainage. On y trouve la dénomination de l'employeur, la localisation, le type de visa et l'évaluation de la licence. Une inscription ne prouve pas que l'entreprise recrute actuellement ni qu'elle propose le parrainage pour tous ses postes. Consultez les offres sur son site de carrière, comparez la raison sociale et les coordonnées, puis demandez une confirmation écrite du sponsoring pour l'emploi précis. Les fraudeurs peuvent copier le nom d'une société authentique tout en utilisant une adresse électronique ou un compte bancaire différent. Aucun intermédiaire ne doit vendre un certificat de parrainage prétendument garanti."
+            ],
+            [
+              "Code de profession et salaire : deux vérifications",
+              "Chaque métier possède un code professionnel à quatre chiffres, et des fonctions voisines peuvent relever de codes distincts. Il faut vérifier le contenu réel du poste et son inscription dans les tableaux officiels. Sauf dérogation, le salaire annuel brut doit atteindre le plus élevé des deux montants suivants : 41 700 £ ou le taux applicable au code de profession. Ainsi, une proposition à 42 000 £ ne suffit pas si le taux du métier est de 45 000 £. Des exceptions existent pour des catégories définies, notamment certains profils débutants ou postes figurant sur des listes particulières, mais elles doivent être justifiées. La durée du travail et le salaire minimum légal restent également applicables."
+            ],
+            [
+              "Langue anglaise et reconnaissance des études",
+              "Les nouvelles demandes doivent généralement démontrer le niveau B2 en compréhension, expression orale, lecture et écriture selon les indications actuelles de GOV.UK. La preuve peut provenir d'un test officiel de langue, d'un diplôme britannique reconnu ou d'un diplôme étranger enseigné en anglais évalué par Ecctis lorsque cela est requis. Un diplôme rédigé en anglais ne suffit pas à prouver que la formation répond aux critères. Certains titulaires d'anciens visas peuvent bénéficier d'une disposition transitoire avec le niveau B1, mais celle-ci ne vaut pas automatiquement pour une première demande. Préparez des attestations professionnelles exactes et vérifiez la cohérence du parcours avec le poste proposé."
+            ],
+            [
+              "Budget : demande, santé et épargne à justifier",
+              "En octobre 2026, GOV.UK affiche un droit standard de 819 £ pour une demande depuis l'étranger jusqu'à trois ans et 1 618 £ pour un séjour plus long, selon la situation. La contribution sanitaire est généralement de 1 035 £ par an. Il faut souvent justifier de 1 270 £ de fonds disponibles dans les conditions de durée prévues, sauf exception ou prise en charge certifiée par l'employeur. Exemple de simulation pour deux ans : 819 £ + 2 fois 1 035 £ = 2 889 £ avant transport et installation. Les membres de la famille entraînent des frais et justificatifs distincts. Cette simulation n'est pas un devis définitif : les frais applicables, la durée et les dépenses privées doivent être contrôlés."
+            ],
+            [
+              "Déposer une demande depuis le Maroc ou un autre pays",
+              "Commencez par rechercher des offres réelles dans des métiers éligibles chez des employeurs titulaires de la licence appropriée. À l'issue du recrutement, contrôlez le code du métier, le salaire annuel brut, le contrat et la référence de certificat CoS. Rassemblez un passeport valide, la preuve d'anglais, les justificatifs financiers et les pièces supplémentaires demandées pour votre situation. Déposez ensuite la demande directement sur GOV.UK et suivez les consignes d'identification et, si nécessaire, de biométrie. Le délai habituellement annoncé pour une demande de l'étranger est d'environ trois semaines après réception des éléments requis, sans garantie en cas de vérifications additionnelles. Évitez de réserver un voyage non remboursable avant d'obtenir la décision."
+            ],
+            [
+              "La stratégie la moins risquée et les alternatives",
+              "Le plus rationnel est de concentrer les efforts sur des métiers qui correspondent réellement à votre expérience, puis de vérifier le salaire réglementaire et les entreprises susceptibles de parrainer. Un poste trop faiblement rémunéré ne devient pas admissible par un simple changement d'intitulé. Il faut étudier les exceptions légales lorsqu'elles correspondent effectivement au profil. Certains professionnels du secteur de la santé peuvent relever du visa Health and Care Worker, avec des frais différents et une exonération de contribution sanitaire, mais les conditions sont strictes. Comparez la rémunération nette probable avec les loyers, charges et transports. Refusez les demandes de paiement à un compte personnel pour un contrat ou un parrainage garanti."
+            ],
+            [
+              "Famille, changement d'emploi et renouvellement",
+              "Un conjoint ou des enfants peuvent parfois demander le statut de personnes à charge, sous réserve de conditions et de restrictions spécifiques à certaines fonctions. Chaque dossier peut nécessiter ses propres frais et preuves financières. Le titulaire du visa peut exercer le poste autorisé, étudier et voyager selon les règles, mais l'accès aux aides publiques et l'activité complémentaire sont encadrés. Un changement d'employeur ou certaines modifications du poste impose une démarche d'actualisation. Conservez le contrat, les informations de parrainage et les communications administratives et anticipez toute échéance. L'accès ultérieur au séjour permanent dépend de la réglementation applicable à cette date ; aucun recrutement ne constitue une promesse de visa."
+            ]
+          ]
+        }
+      }
     }
   }
 }
