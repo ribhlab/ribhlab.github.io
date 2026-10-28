@@ -100,8 +100,10 @@
         "googleSearch",
         "googleAdsense"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/newsletter-start-free-first-90-days.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "online-business",
