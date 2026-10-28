@@ -477,6 +477,22 @@
     "metamaskHelp": {
       "name": "MetaMask Help Center",
       "url": "https://support.metamask.io/"
+    },
+    "icoEmailMarketing": {
+      "name": "UK ICO — Email marketing guidance",
+      "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/"
+    },
+    "ftcCanSpam": {
+      "name": "US FTC — CAN-SPAM compliance guide",
+      "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+    },
+    "mailchimpOptin": {
+      "name": "Mailchimp — Double opt-in documentation",
+      "url": "https://mailchimp.com/help/about-double-opt-in/"
+    },
+    "gmailSenderRules": {
+      "name": "Google Gmail — Sender guidelines",
+      "url": "https://support.google.com/mail/answer/81126?hl=en"
     }
   },
   "articleLinks": {
