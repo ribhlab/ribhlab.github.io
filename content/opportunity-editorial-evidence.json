@@ -1737,6 +1737,186 @@
           ]
         }
       }
+    },
+    "marrakech-cash": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Original three-page scanned employer recruitment notice visually inspected page by page (pages 1-3) and cross-checked with Emploi-public listing C44277/26 on 28 October 2026. Explicit contract placeholder conflict and absence of closing hour disclosed; no invented pay, exam dates or eligibility.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "SDL Marrakech Mousafir — avis officiel et fiche de poste, 3 pages (consulté le 28 octobre 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/705f6c1a-b4c6-411e-a1a7-e249a4de0781"
+        },
+        {
+          "label": "Emploi-public — annonce C44277/26 publiée le 24 octobre 2026 (consultée le 28 octobre 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/705f6c1a-b4c6-411e-a1a7-e249a4de0781"
+        }
+      ],
+      "facts": {
+        "employer": "SDL Marrakech Mousafir S.A.",
+        "reference": "C44277/26",
+        "posts": 1,
+        "city": "Marrakech — Gare Routière des Voyageurs Al Azzouzia",
+        "country": "Maroc",
+        "contract": "Portal: recrutement sous contrat; original PDF: [à préciser avant publication]",
+        "contractConflict": "Portal says under contract; signed notice retains unfilled contract-type placeholder",
+        "degree": "Bac+2 ou Bac+3 en comptabilité, finance ou gestion",
+        "experience": "Au moins 2 ans en comptabilité et contrôle de caisse",
+        "experienceBonus": "Transport, distribution, hôtellerie, services à encaissements fréquents — atout, non obligation",
+        "requiredSkills": [
+          "Excel",
+          "logiciel comptable",
+          "rapprochements de caisse et de banque",
+          "analyse d'écarts",
+          "confidentialité"
+        ],
+        "workplace": "Gare Routière des Voyageurs Al Azzouzia, Marrakech; gare exploitée 24h/24, vacations planifiées",
+        "submission": "https://depot.emploi-public.ma",
+        "documents": [
+          "CV détaillé",
+          "lettre de motivation",
+          "copie du diplôme",
+          "attestations d'expérience professionnelle",
+          "copie de la carte nationale d'identité"
+        ],
+        "selection": "Examen des dossiers, test pratique sur arrêté de caisse/rapprochement bancaire/détection d'anomalies, entretien",
+        "deadline": "2026-11-07",
+        "deadlineHour": null,
+        "examDate": null,
+        "salary": null,
+        "age": null,
+        "nationality": null,
+        "sourcePublishedAt": "2026-10-24",
+        "sourcesCheckedAt": "2026-10-28"
+      },
+      "translations": {
+        "ar": {
+          "title": "محاسب لمراقبة إيرادات محطة مراكش العزوزية: الشروط والمهام والاختبار العملي",
+          "deck": "منصب واحد لدى مراكش مسافر، Bac+2 أو Bac+3 وخبرة سنتين في مراقبة الصندوق؛ آخر أجل معلن 7 نوفمبر 2026. قراءة للقرار الأصلي في ثلاث صفحات مع توضيح نقص بيانات العقد وساعة الإغلاق.",
+          "sections": [
+            [
+              "المشغل والموقع: وظيفة واحدة في محطة العزوزية",
+              "أعلنت شركة التنمية المحلية «مراكش مسافر» ش.م. عن توظيف محاسب مكلف بمراقبة الإيرادات والصناديق، بعدد منصب واحد، وفق الإعلان الذي نشرته بوابة التشغيل العمومي في 24 أكتوبر 2026 تحت المرجع C44277/26. يحدد الملف الأصلي مكان العمل في المحطة الطرقية للمسافرين بالعزوزية في مراكش، وليس في مقر إداري مجهول أو ضمن عمل عن بُعد. هذه المعلومة مهمة عند حساب تكاليف التنقل والاستعداد لدوام مرتبط بعمليات محطة تعمل على مدار الساعة. تعني عبارة تشغيل المحطة 24 ساعة أن أنشطة المراقبة تتعلق بفترات تشغيل متعددة؛ ولا تعني أن الموظف سيعمل 24 ساعة متواصلة."
+            ],
+            [
+              "الهدف من الوظيفة: حماية سلسلة الإيراد من الشباك إلى البنك",
+              "ليست الوظيفة مجرد إدخال فواتير أو ترتيب ملفات محاسبية. تصف بطاقة المنصب سلسلة متكاملة تبدأ بتذاكر المحطة والمبالغ المقبوضة لدى الشبابيك، ثم إقفالات الصناديق والتحويل إلى الصندوق المركزي، وصولاً إلى إشعارات الإيداع والحركات البنكية. المطلوب هو التأكد من أن كل مبلغ مسجل يطابق مستنده وأن العمليات غير العادية تُفسر دون إخفاء الفروق. يرتبط المنصب بالمسؤول الإداري والمالي، مع رفع المخالفات المهمة إلى الإدارة العامة. هذا الترتيب يجعل جودة الإثبات المحاسبي والتوثيق أكثر أهمية من سرعة إدخال البيانات وحدها."
+            ],
+            [
+              "المؤهل والخبرة: ماذا يشترط القرار تحديداً؟",
+              "تشترط الوثيقة تكويناً بمستوى Bac+2 أو Bac+3 في المحاسبة أو المالية أو التسيير، مع خبرة لا تقل عن سنتين في المحاسبة ومراقبة الصندوق. وتعتبر الخبرة في النقل أو التوزيع أو الفندقة أو الخدمات كثيرة التحصيل ميزة إضافية، وليست شرطاً إلزامياً مستقلاً. تذكر البطاقة إتقان التسويات النقدية والبنكية وExcel وبرنامج محاسبي، والقدرة على تحليل عدد كبير من العمليات. لا تذكر الوثيقة سناً أقصى أو جنسية خاصة أو شهادة مهنية إضافية، ولذلك لا يصح اختراع هذه الشروط. على المترشح مقارنة شهادته وخبرته الفعلية بالنص قبل إعداد الملف."
+            ],
+            [
+              "مراقبة إقفالات الصندوق وتسليم العهد بين الفرق",
+              "تشمل المهام مراجعة إقفال كل شباك وكل أمين صندوق وكل فترة عمل، ثم جمعها على مستوى يوم التشغيل. يجب التحقق من الرصيد الافتتاحي والمقبوضات والمبالغ المعادة بتصريح والتحويلات والرصيد الختامي، والمشاركة في العدّ بحضور المسؤول عن الصندوق مع توقيع محاضر مؤرخة. تؤكد الوثيقة ضرورة تتبع تسليم العهد بين الفرق وعدم مقاصة عجز شباك بفائض شباك آخر أو عجز يوم بفائض يوم آخر. مثال توضيحي غير مأخوذ من بيانات الشركة: إذا سجل شباك 9,800 درهم وكان النقد الفعلي 9,650 درهماً، يوثق فرق 150 درهماً منفصلاً ويُبحث عن سببه ومستنده قبل أي تصحيح."
+            ],
+            [
+              "التحقق من اكتمال الإيرادات والتسويات البنكية",
+              "تطلب بطاقة المنصب مطابقة الإيرادات المعلنة مع التذاكر والإيصالات وسجلات نظام E-GRV ومعطيات النشاط المتاحة، بما في ذلك مرور المسافرين والانطلاقات والخدمات المفوترة. ويجب فحص التسعيرات المعتمدة والإعفاءات والخصومات والإلغاءات والمبالغ المستردة، إضافة إلى تسلسل أرقام الوثائق واكتشاف الأرقام المفقودة أو المكررة. في الجانب البنكي، يتعين ربط إيداعات الشبابيك والصندوق المركزي بوصولات الإيداع والقيود البنكية، وتتبع المبالغ قيد التحويل والإيداعات المتأخرة. وتشترط البطاقة إعداد التسويات البنكية وعرضها على مراجعة مستقلة، وهو فصل رقابي جوهري بين مُعد التسوية ومُعتمدها."
+            ],
+            [
+              "المراقبة الداخلية والتقارير التي ينتظرها المشغل",
+              "ينص الملف على مراقبات مفاجئة للصندوق ضمن برنامج مصادق عليه، ومراجعة صلاحيات الوصول إلى نظام الصندوق وأي تعديل غير عادي أو ضعف في أثر المراجعة. كما يتعين مراقبة مصاريف الصندوق الصغيرة والسلف وتسويتها بوثائق سليمة، واقتراح إجراءات قابلة للتطبيق ومتابعة نتائج التدقيق. يومياً يُنتظر بيان الإيرادات وأرصدة الصناديق والإيداعات والمبالغ في الطريق والفروق؛ وباستمرار سجل للمخالفات يوضح تاريخها وأسبابها والإجراءات؛ وشهرياً ملخص التسويات والمشكلات المتكررة. في حال فرق جوهري أو شبهة تلاعب، يفرض الملف إشعاراً كتابياً فورياً للإدارة. لا يمنح المنصب حقاً مستقلاً في إصدار المدفوعات أو تعديل التعريفات."
+            ],
+            [
+              "ملف الترشيح وطريقة الإيداع المعتمدة",
+              "تحدد الصفحة الأولى خمسة عناصر: سيرة ذاتية تشرح التكوين والمهارات والخبرة، ورسالة تحفيزية، ونسخة من الدبلوم، وشهادات تثبت الخبرة المطلوبة، ونسخة من البطاقة الوطنية للتعريف. يجب مسح الملف بصيغة PDF وإيداعه على بوابة depot.emploi-public.ma، وهي القناة المذكورة في قرار المشغل وفي بطاقة الوظيفة الحكومية. لا تذكر الوثيقة إرسال الملف بالبريد الإلكتروني ولا تشترط شهادة راتب أو كشف حساب أو أداء رسوم. افحص وضوح الملفات وأسماءها وتطابق التواريخ في شهادات العمل، واحتفظ بإثبات الإيداع. استكمل أي حقول إضافية يطلبها نموذج البوابة الفعلي دون افتراض أنها مذكورة في القرار."
+            ],
+            [
+              "آخر أجل ونوع العقد: ما الذي نعرفه وما الذي لا نعرفه؟",
+              "تعرض البوابة الرسمية يوم 7 نوفمبر 2026 بوصفه آخر أجل للترشيح، من دون ساعة محددة في البطاقة التي راجعناها. أما الوثيقة المصورة ذات الصفحات الثلاث فلا تحدد ساعة إغلاق ولا تذكر تاريخاً مختلفاً، لذلك ينبغي تقديم الطلب مبكراً بدلاً من افتراض أن الإيداع ممكن حتى منتصف الليل. تسمي البوابة نوع التوظيف «بعقد»، لكن الصفحة الأولى من وثيقة المشغل ما زالت تحتوي عبارة «نوع العقد: يحدد قبل النشر»، وهي خانة لم تُستكمل؛ يجب طلب توضيح رسمي بشأن طبيعة العقد ومدته. لم يُنشر مبلغ للأجر أو نظام تفصيلي للتعويضات، فلا ننسب أي رقم للمشغل."
+            ],
+            [
+              "الاختبار العملي والمقابلة: خطة استعداد قابلة للتنفيذ",
+              "تحدد بطاقة المنصب مراحل الانتقاء: فحص الملفات، ثم اختبار عملي في إقفال الصندوق والتسوية البنكية وكشف الاختلالات، ثم مقابلة وفق مسطرة الشركة. لم تحدد الوثيقة تاريخ الاختبار أو مدته أو نقطه أو نسبة النجاح. للاستعداد، أنشئ مثالاً تدريبياً من بيانات افتراضية لثلاثة شبابيك وفترتين، ووازن المقبوضات مع المبالغ المودعة، ثم حرر محضر فرق منفصل لكل شباك. درّب نفسك كذلك على تسوية شيك أو إيداع في الطريق دون تسجيله مرتين، وعلى عرض نتائجك بوضوح أمام مسؤول مالي. لا تستخدم بيانات مشغل سابق سرية في ملف أعمالك؛ اعتمد أرقاماً افتراضية واذكر أنها تدريبية."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Marrakech Mousafir revenue-control accountant: duties, eligibility and practical test",
+          "deck": "One job at Al Azzouzia bus station: Bac+2/3 and two years in accounting and cash control. Official deadline 7 November 2026; the contract type and closing hour need clarification.",
+          "sections": [
+            [
+              "Employer, headcount and exact workplace",
+              "Marrakech Mousafir S.A., a local development company, is recruiting one accountant responsible for revenue and cash control. The government employment portal published notice C44277/26 on 24 October 2026. The employer's three-page notice places the job at the Al Azzouzia passenger bus station in Marrakech. This is a specific operational site, not an unspecified headquarters or a remote-work vacancy. The station operates around the clock, with multiple counters and work shifts; that describes the environment the accountant must monitor, not a claim that an individual employee works a continuous 24-hour shift. Candidates should consider travel to the station and availability for controls across scheduled shifts."
+            ],
+            [
+              "A revenue-control role rather than routine invoice entry",
+              "The position covers the trail from ticket sales and counter collections to central cash, bank deposits and accounting records. The employer expects daily verification of revenue, cash closures, reconciliations and irregularities. The role reports to the administrative and financial manager, with significant anomalies escalated to general management. It involves working with cashiers, counter supervisors, operations staff, field controllers, information-systems personnel and an external accounting firm. The value of this role lies in evidence and control: each declared amount needs a source record, a cash or banking counterpart and an explanation when the figures disagree. Fast data entry alone would not satisfy the advertised responsibilities."
+            ],
+            [
+              "Degree, experience and technical skills",
+              "The original notice accepts Bac+2 or Bac+3 training in accounting, finance or management, plus at least two years of experience in accounting and cash control. Experience in transport, distribution, hospitality or other high-volume collection environments is described as an advantage rather than a separate mandatory condition. The job specification calls for Excel, accounting software, cash and bank reconciliations, the ability to analyze substantial transaction volumes, accuracy, integrity and confidentiality. It does not state a specific age ceiling, nationality requirement or extra professional certification. Candidates should compare their actual education and documented experience with these published criteria instead of assuming that an unrelated accounting diploma or internship automatically proves the required experience."
+            ],
+            [
+              "Cash closures and handovers between shifts",
+              "The accountant checks cash closures by counter, cashier and shift, then consolidates them by operating day. Reviews cover opening floats, collections, authorized refunds, transfers and closing balances. The employer also expects joint physical counts with cash custodians, recorded in dated and signed statements, and traceability when one team hands funds to the next. Importantly, cash differences must not be offset across cashiers or days. As an invented training example, if a counter reports MAD 9,800 while the physical count shows MAD 9,650, the MAD 150 shortfall must be documented for that counter and investigated against the supporting records. This example is not company data."
+            ],
+            [
+              "Completeness of revenue and banking reconciliation",
+              "The job description requires matching declared revenue to tickets, receipts, E-GRV system journals and available operating data such as journeys, departures and billable services. It also calls for checks of approved tariffs, free services, discounts, cancellations and authorized refunds, plus the numbering sequence of supporting documents. Missing numbers, duplicates and unusual transactions should be examined rather than silently corrected. On the banking side, counter collections and central-cash movements must be traced through deposit slips and bank credits. Cash in transit, deposits awaiting credit and delays require follow-up. Bank reconciliations must be prepared and submitted for independent review, which is a key control against a single person preparing and approving their own adjustments."
+            ],
+            [
+              "Internal controls and the reporting calendar",
+              "The employer expects unannounced cash checks under an approved program, review of collection and custody procedures, scrutiny of petty-cash expenses and advances, and alerts about unusual system access rights or changes that weaken the audit trail. The accountant must support audits and monitor corrective actions. Daily deliverables include revenue, cash balances, deposits, funds in transit and differences. An ongoing exception register should record the cause, age and action for each issue. Monthly reporting summarizes reconciliations, recurring incidents and recommendations. Significant differences, altered documents or suspected irregularities require prompt written escalation. The role does not independently authorize spending, payments or tariff changes; those powers remain subject to formal delegation."
+            ],
+            [
+              "Required application documents and filing route",
+              "The employer lists five documents: a detailed CV showing education, skills and experience; a motivation letter; a diploma copy; employment certificates proving the required experience; and a national identity card copy. The original notice requires scanned PDF documents submitted through depot.emploi-public.ma, consistent with the government portal's online filing instruction. It does not instruct candidates to send an email or pay an application fee. Check readability, consistent dates and the completeness of each file before submitting, then retain the confirmation. If the live portal requests additional fields, follow its official instructions while distinguishing those fields from the document list explicitly printed in the employer notice."
+            ],
+            [
+              "Deadline and contract wording require careful reading",
+              "The government listing gives 7 November 2026 as the application deadline, but the page checked does not specify a closing hour. The three-page employer document contains no conflicting calendar date or hour. Do not assume that submissions remain possible until midnight; apply early and check for an official update. The portal classifies the recruitment as under contract, yet the employer's first page still contains the uncompleted placeholder 'contract type: to be specified before publication.' That is a documentation gap worth clarifying with the organizer, not a basis for guessing the duration or conditions. Neither source publishes a salary figure or a detailed benefits schedule, so no compensation number is attributed to this job."
+            ],
+            [
+              "Practical test and interview: prepare with fictional data",
+              "The job specification describes a selection sequence of application screening, a practical test on cash closing, bank reconciliation and anomaly detection, then an interview. It does not publish a test date, duration, pass mark or scoring grid. Prepare a fictional worksheet with three counters across two shifts and reconcile collections to central cash and bank deposits. Document each unexplained difference separately, including the evidence needed for resolution, and explain how you would keep duties segregated. Practice tracing a deposit in transit without recording the same receipt twice. Present the result as a short control note with a clear recommendation. Never include confidential records from a previous employer in a public portfolio."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Marrakech Mousafir recrute un comptable contrôle recettes et caisses : conditions et test",
+          "deck": "Un poste à la gare Al Azzouzia, Bac+2/3 et deux ans d'expérience en comptabilité et contrôle de caisse. Date limite affichée : 7 novembre 2026 ; type de contrat et heure de clôture à confirmer.",
+          "sections": [
+            [
+              "Employeur, effectif et lieu d'affectation précis",
+              "La Société de Développement Local Marrakech Mousafir S.A. recrute un comptable chargé du contrôle des recettes et des caisses, pour un seul poste. Le portail de l'emploi public a publié l'annonce C44277/26 le 24 octobre 2026. L'avis de trois pages situe expressément l'affectation à la Gare Routière des Voyageurs Al Azzouzia, à Marrakech. Il ne s'agit donc ni d'un emploi à distance ni d'un poste dont le lieu serait laissé à l'appréciation du candidat. La gare fonctionne vingt-quatre heures sur vingt-quatre avec plusieurs guichets et vacations ; cette donnée décrit l'exploitation à contrôler, pas un horaire individuel de vingt-quatre heures consécutives."
+            ],
+            [
+              "Une mission de contrôle des recettes, pas de simple saisie",
+              "Le poste couvre toute la chaîne allant des tickets et encaissements aux guichets jusqu'à la caisse centrale, aux bordereaux de dépôt et aux mouvements bancaires. Il s'agit de contrôler les arrêtés, la fiabilité des recettes, les rapprochements et le traitement des anomalies. Le rattachement prévu est le responsable administratif et financier, avec remontée des écarts significatifs à la Direction générale. Les interlocuteurs comprennent les caissiers, chefs de guichet, équipes d'exploitation, contrôle de terrain, service informatique et cabinet comptable externe. La valeur attendue réside dans la traçabilité : chaque montant doit pouvoir être relié à un justificatif, à un flux financier et, en cas d'écart, à une analyse documentée."
+            ],
+            [
+              "Diplôme, ancienneté et compétences réellement exigés",
+              "L'avis exige une formation Bac+2 ou Bac+3 en comptabilité, finance ou gestion, ainsi qu'au moins deux années d'expérience en comptabilité et contrôle de caisse. Une expérience dans le transport, la distribution, l'hôtellerie ou les services générant de nombreux encaissements constitue un atout, non une condition obligatoire supplémentaire. La fiche de poste cite Excel, un logiciel comptable, les rapprochements de caisse et de banque, l'analyse de volumes importants et la rigueur professionnelle. Elle ne fixe ni âge maximal ni certification additionnelle précise. Il convient de vérifier que les attestations professionnelles décrivent réellement les fonctions et la durée d'expérience requises, sans supposer que n'importe quel stage répond au critère."
+            ],
+            [
+              "Arrêtés de caisse et passation entre les équipes",
+              "Le comptable doit vérifier les arrêtés par guichet, caissier et vacation, puis leur consolidation par journée d'exploitation. Les contrôles portent sur les fonds de caisse, les recettes, les remboursements autorisés, les transferts et les soldes de clôture. Des comptages contradictoires avec les détenteurs de fonds doivent être consignés dans des états datés et signés. La traçabilité des passations entre équipes est expressément demandée. L'avis interdit de compenser les écarts entre caissiers ou journées. Exemple purement pédagogique : si un guichet déclare 9 800 MAD et que le comptage donne 9 650 MAD, l'écart de 150 MAD doit rester identifié pour ce guichet jusqu'à justification et validation."
+            ],
+            [
+              "Exhaustivité des recettes et rapprochements bancaires",
+              "La fiche demande de rapprocher les recettes déclarées des tickets, quittances, journaux du système E-GRV et données d'exploitation disponibles, notamment passages, départs et prestations facturables. Les tarifs autorisés, gratuités, remises, annulations et remboursements doivent être justifiés. La continuité de numérotation des titres est également contrôlée afin d'identifier les pièces manquantes, les doublons et les opérations atypiques. Sur le plan bancaire, les remises des guichets, mouvements de caisse centrale, bordereaux de dépôt et crédits doivent être réconciliés. Les fonds en transit et retards de dépôt nécessitent un suivi. Les rapprochements bancaires préparés par le titulaire sont soumis à une revue indépendante, ce qui évite l'autocontrôle."
+            ],
+            [
+              "Contrôle interne, alertes et livrables périodiques",
+              "L'employeur prévoit des contrôles de caisse inopinés selon un programme validé, le suivi des procédures de conservation des fonds, des avances et petites dépenses, ainsi que la détection des modifications inhabituelles dans les outils de caisse. Le titulaire participe aux audits et au suivi des mesures correctives. Chaque jour, il produit une situation des recettes, soldes, remises, fonds en transit et écarts. En continu, il tient un suivi des anomalies avec origine, ancienneté et actions engagées. Chaque mois, il synthétise rapprochements, incidents récurrents et recommandations. Un écart significatif, une pièce altérée ou une suspicion d'irrégularité entraîne une alerte écrite sans délai. Aucune autorisation autonome de paiement ou de modification tarifaire n'est accordée."
+            ],
+            [
+              "Dossier à fournir et canal officiel de candidature",
+              "L'avis énumère un CV détaillant formation, compétences et expériences, une lettre de motivation, une copie du diplôme, les attestations justifiant l'expérience requise et une copie de la carte nationale d'identité. Les documents doivent être numérisés en PDF et déposés sur depot.emploi-public.ma. La fiche du portail confirme un dépôt en ligne sur emploi-public ; aucun envoi par courriel n'est prévu dans la décision. Vérifiez la lisibilité des pièces, la cohérence des dates d'emploi et l'identité avant validation, puis conservez l'accusé de dépôt. Si le formulaire en ligne exige d'autres champs, distinguez ces demandes de la liste des documents expressément publiée par l'employeur. Aucun frais de candidature n'est annoncé."
+            ],
+            [
+              "Échéance et contrat : les précisions manquantes",
+              "Le portail officiel affiche le 7 novembre 2026 comme date limite, sans heure de fermeture précisée dans la fiche consultée. L'avis de l'employeur ne fournit pas de date concurrente ; il serait néanmoins imprudent d'attendre la fin de journée sans connaître les règles de fermeture du portail. Déposez votre dossier en avance et vérifiez les éventuels rectificatifs. Le portail classe l'offre en recrutement sous contrat, alors que le document original contient encore la mention non complétée « type de contrat : à préciser avant publication ». La durée et les modalités exactes méritent donc une clarification officielle. Aucun salaire ni barème d'avantages n'est publié, et nous n'en inventons pas."
+            ],
+            [
+              "Épreuve pratique et entretien : préparation concrète",
+              "La fiche annonce l'examen des candidatures, un test pratique sur un arrêté de caisse, un rapprochement bancaire et la détection d'anomalies, puis un entretien. Elle ne donne ni date d'épreuve, ni durée, ni seuil d'admission. Pour vous entraîner, créez un tableau fictif comportant trois guichets et deux vacations, rapprochez les encaissements, les remises en caisse centrale et les dépôts bancaires, puis documentez chaque différence sans compensation. Préparez une note synthétique distinguant les écarts de date, les pièces manquantes et les erreurs de montant, avec une proposition de correction contrôlable. Expliquez enfin comment séparer préparation et validation des rapprochements. N'utilisez jamais des données confidentielles d'un ancien employeur dans un dossier public."
+            ]
+          ]
+        }
+      }
     }
   }
 }
