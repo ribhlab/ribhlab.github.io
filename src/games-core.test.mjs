@@ -1,7 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {parseFen,apply,legal,checked,gameStatus,index,markGuess,chessStartFen} from "./games.js";
+import {parseFen,apply,legal,checked,gameStatus,index,chessStartFen} from "./games.js";
 
+import {buildCrossword,cleanCrosswordWord} from './crossword-core.mjs';
 function go(s,uci){
  const moves=legal(s),m=moves.find(x=>("abcdefgh"[x[0]&7]+(8-(x[0]>>4))+"abcdefgh"[x[1]&7]+(8-(x[1]>>4))+x[2])===uci);
  assert.ok(m,"Expected legal move "+uci);
@@ -39,7 +40,35 @@ test("fool's mate produces a black checkmate",()=>{
  assert.equal(checked(s),true);
  const result=gameStatus(h);assert.equal(result.done,true);assert.equal(result.kind,"checkmate");assert.equal(result.winner,-1);
 });
-test("word-color scoring handles repeated letters without overcounting",()=>{
- assert.deepEqual(markGuess("apple","apply"),["correct","correct","correct","correct","absent"]);
- assert.deepEqual(markGuess("eagle","apple"),["absent","present","absent","correct","correct"]);
+
+test("nine complete, authentic crossword grids in Arabic, French and English",()=>{
+ for(const lang of ["ar","en","fr"])for(let index=0;index<3;index++){
+  const g=buildCrossword(lang,index),starts=new Map(),cells=new Map;
+  assert.ok(g.entries.length>=7,lang+index+" should have multiple answers");
+  assert.ok(g.intersectionCount>=g.entries.length-1,lang+index+" must have genuine intersections");
+  assert.ok(g.width<=19&&g.height<=19);
+  for(const e of g.entries){
+   assert.ok(["across","down"].includes(e.axis));
+   assert.equal(e.cells.length,Array.from(e.answer).length);
+   const start=e.cells[0].join(",");
+   if(starts.has(start))assert.equal(starts.get(start),e.number);
+   starts.set(start,e.number);
+   assert.ok(e.clue.length>=5);
+   for(let i=0;i<e.cells.length;i++){
+    const [row,col]=e.cells[i],letter=e.answer[i];
+    assert.equal(g.cells[row][col],letter);
+    const key=row+","+col;
+    if(!cells.has(key))cells.set(key,[]);
+    cells.get(key).push(e.axis);
+    assert.ok(cells.get(key).length<=2,"At most one across and one down word per cell");
+   }
+  }
+  assert.ok([...cells.values()].some(v=>v.includes("across")&&v.includes("down")),"Words must share at least one actual square");
+  assert.equal(new Set(g.entries.map(x=>x.answer)).size,g.entries.length);
+ }
+});
+test("crosswords normalize Latin accents but preserve Arabic letters",()=>{
+ assert.equal(cleanCrosswordWord("Rivière","fr"),"RIVIERE");
+ assert.equal(cleanCrosswordWord("مَدرسة","ar"),"مدرسة");
+ assert.equal(cleanCrosswordWord("chess","en"),"CHESS");
 });
