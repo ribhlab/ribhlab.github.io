@@ -5,6 +5,10 @@ import {fileURLToPath} from 'node:url';
 const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const db=JSON.parse(fs.readFileSync(path.join(project,'content/opportunities-data.json'),'utf8'));
 const researchedArticles=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-articles.json'),'utf8')).articles;
+const editorialEvidence=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-editorial-evidence.json'),'utf8')).articles;
+const countryDemand=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-country-demand.json'),'utf8')).markets;
+const demandFor=id=>Object.values(countryDemand).find(group=>group.ids.includes(id));
+const researchedFor=id=>researchedArticles[id]||editorialEvidence[id];
 const guidance=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-guides.json'),'utf8')).guides;
 const visualCatalog=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-photography.json'),'utf8'));
 const photoFor=key=>visualCatalog.items[key];
@@ -43,7 +47,10 @@ function makeCard(item,c,esc){
  const badge=item.kind==='official_directory'||item.kind==='program'?c.platform:c.specific;
  const notes=item.note?'<p class="opp-note">'+esc(item.note)+'</p>':'';
  const detailLink='/'+c.locale+'/opportunities/'+encodeURIComponent(item.section)+'/'+encodeURIComponent(item.id)+'/';
- return '<article class="opp-card" data-opp-item data-deadline="'+esc(item.deadline||'')+'"><div class="opp-topline"><span class="opp-type">'+esc(badge)+'</span>'+(ended?'<span class="opp-muted">'+esc(c.expired)+'</span>':'')+'</div><h3>'+name+'</h3><p class="opp-employer">'+org+' · '+esc(item.place)+'</p>'+notes+'<div class="opp-meta">'+(item.count?'<span>'+item.count+' '+esc(c.posts)+'</span>':'')+(item.deadline?'<span>'+esc(c.deadline)+': <strong>'+esc(fullDate(item.deadline))+'</strong></span>':'')+'</div><a class="opp-action" href="'+esc(detailLink)+'">'+esc(c.readGuide)+' →</a></article>';
+ const fullyResearched=Boolean(researchedFor(item.id)||demandFor(item.id));
+ const linkLabel=fullyResearched?c.readGuide:({ar:'اطلع على البيانات المؤكدة والمصدر',en:'See verified listing facts and source',fr:'Voir les faits vérifiés et la source'})[c.locale];
+ const conflict=item.id==='sett-administrator'?'<p class="opp-deadline-conflict">'+esc(({ar:'تنبيه: يوجد تعارض بين تاريخ الإغلاق في القرار وصفحة البوابة',en:'Warning: the signed notice and portal show conflicting deadlines',fr:'Attention : échéances contradictoires entre arrêté et portail'})[c.locale])+'</p>':'';
+ return '<article class="opp-card" data-opp-item data-deadline="'+esc(item.deadline||'')+'"><div class="opp-topline"><span class="opp-type">'+esc(badge)+'</span>'+(ended?'<span class="opp-muted">'+esc(c.expired)+'</span>':'')+'</div><h3>'+name+'</h3><p class="opp-employer">'+org+' · '+esc(item.place)+'</p>'+notes+conflict+'<div class="opp-meta">'+(item.count?'<span>'+item.count+' '+esc(c.posts)+'</span>':'')+(item.deadline?'<span>'+esc(c.deadline)+': <strong>'+esc(fullDate(item.deadline))+'</strong></span>':'')+'</div><a class="opp-action" href="'+esc(detailLink)+'">'+esc(linkLabel)+' →</a></article>';
 }
 const homeLabels={ar:'العودة إلى الصفحة الرئيسية',en:'Back to home',fr:'Retour à l’accueil'};
 const homeLink=(lang,esc)=>'<a class="opp-home-btn" href="/'+lang+'/"><span aria-hidden="true">'+(lang==='ar'?'←':'←')+'</span>'+esc(homeLabels[lang])+'</a>';
@@ -83,46 +90,50 @@ export function renderOpportunityPages(lang,page,esc){
   page(lang,{title:title+' | RibhLab',desc:sectionIdentity[category].summary[lang],route:base+category+'/',content:'<div class="opportunity-page opp-theme-'+category+'">'+intro+body+'</div>',active:'opportunities'});
  }
 
-  // Each opportunity card opens an on-site guide before the external official source.
-  // Tailored migration guides are editorially curated; other listing pages clearly
-  // distinguish general application guidance from verified facts in the notice.
+
+  // Content rule: factual on-site reporting, never a cloned generic four-paragraph "guide".
+  // An unreviewed official notice gets an honest evidence status instead of fabricated duties.
   for(const item of db.items){
-   const special=guidance[item.id]?.[lang];
-   const h=({ar:['ما الذي يقدمه هذا البرنامج؟','الفرص والشروط','المسار العملي الأبسط','التكاليف والاحتياطات'],en:['What the route offers','Opportunities and eligibility','A practical route','Costs and precautions'],fr:['Présentation du dispositif','Possibilités et conditions','Démarche pratique','Coûts et précautions']})[lang];
-   const general=({ar:[
-    'هذا المدخل يعرّف بالجهة أو الإعلان الوارد في الدليل. لا يُعتبر وجود البطاقة تأكيداً بأن باب الترشح مفتوح حالياً؛ يجب الرجوع إلى الإعلان الرسمي للتحقق من التاريخ وعدد المناصب وشروط الأهلية.',
-    'افحص طبيعة الوظائف أو البرامج المتاحة لدى الجهة، والشهادة والخبرة واللغة والموقع المطلوبة. لا تفترض أهلية أي مترشح دون الرجوع إلى تفاصيل الإعلان الحالي.',
-    'ابدأ بمراجعة نص الإعلان وتاريخ الإغلاق، ثم حضّر سيرة ذاتية وملفاً مطابقاً للمطلوب. قارن الشروط بمؤهلاتك وقدم طلبك حصراً بالقناة التي تحددها الجهة الرسمية.',
-    'لا ترسل بياناتك أو تدفع مبالغ لوسطاء غير موثوقين. قد تتغير الشروط أو يغلق باب التقديم دون تحديث تلقائي للبطاقة.'
-   ],en:[
-    'This directory card identifies an employer, program or official listing. Its presence does not confirm a currently open application window; check the official notice for dates, position counts and eligibility.',
-    'Review available positions or schemes, qualifications, experience, language and location requirements. Eligibility must be established using the current notice.',
-    'Read the notice and deadline, prepare a tailored CV and supporting documents, and apply only through the authority’s designated channel.',
-    'Avoid unverified intermediaries, fees and premature disclosure of sensitive data. Availability and conditions can change.'
-   ],fr:[
-    'Cette fiche présente un employeur, un programme ou une annonce officielle. Sa présence ne signifie pas que les candidatures sont encore ouvertes : vérifiez les dates et critères sur le site source.',
-    'Examinez les postes ou dispositifs disponibles, les diplômes, expériences, langues et lieux exigés. L’admissibilité dépend de l’annonce actuelle.',
-    'Consultez l’avis et son échéance, préparez un CV adapté et les pièces requises, puis candidatez uniquement via la procédure officielle.',
-    'Évitez les intermédiaires douteux et les paiements non vérifiés. Les conditions et disponibilités peuvent évoluer.'
-   ]})[lang];
-   const researched=researchedArticles[item.id];
-   const manuscript=researched?.translations?.[lang];
-   const articleSections=manuscript?.sections?.length>=6
-     ? manuscript.sections.map(([heading,text],i)=>'<section class="opp-guide-section" id="part-'+(i+1)+'"><h2>'+esc(heading)+'</h2><p>'+esc(text)+'</p></section>').join('')
-     : '';
-   const sections=(special?special.slice(1):general).map((body,i)=>'<section class="opp-guide-section"><h2>'+esc(h[i])+'</h2><p>'+esc(body)+'</p></section>').join('');
-   const lead=manuscript?.deck||(special?special[0]:item.title);
+   const verified=researchedFor(item.id);
+   const manuscript=verified?.translations?.[lang];
+   const demand=demandFor(item.id);
+   const demandText=demand?.translations?.[lang];
+   const isDetailed=Boolean(manuscript);
    const back=base+item.section+'/';
-   const official='<a class="opp-action" rel="noopener noreferrer external" target="_blank" href="'+esc(safeHref(item.url))+'">'+esc(({ar:'انتقل إلى المصدر الرسمي للتحقق أو التقديم',en:'Visit official source to verify or apply',fr:'Consulter la source officielle pour vérifier ou postuler'})[lang])+' ↗</a>';
-   const introText=({ar:'دليل تحريري داخل RibhLab، وليس ضماناً بوجود منصب أو قبول طلب. تحقق من آخر التحديثات قبل اتخاذ القرار.',en:'An on-site editorial guide, not a guarantee of vacancy or acceptance. Verify current details before acting.',fr:'Guide éditorial sur RibhLab, sans garantie de poste ou d’admission. Vérifiez les informations actuelles.'})[lang];
-   const sources=researched?.sources?.length
-     ? '<section class="opp-guide-section opp-guide-sources"><h2>'+esc(({ar:'المصادر الرسمية والمؤسسية التي استند إليها المقال',en:'Official and institutional sources consulted',fr:'Sources officielles et institutionnelles consultées'})[lang])+'</h2><p>'+esc(({ar:'هذه المصادر موضوعة للمراجعة والتقديم بعد قراءة المقال. تفتح في تبويب جديد.',en:'These sources support the article and open in a new tab for verification or applications.',fr:'Ces sources fondent le guide ; elles s’ouvrent dans un nouvel onglet pour vérification ou démarches.'})[lang])+'</p><ul>'+researched.sources.map(source=>'<li><a href="'+esc(safeHref(source.url))+'" target="_blank" rel="noopener noreferrer external">'+esc(source.label)+' ↗</a></li>').join('')+'</ul></section>'
-     : '';
-   const articleMeta=manuscript?'<p class="opp-guide-meta">'+esc(({ar:'مراجعة المصادر',en:'Sources reviewed',fr:'Sources vérifiées'})[lang])+' : <time datetime="'+esc(researched.reviewedAt)+'">'+esc(researched.reviewedAt)+'</time> · '+manuscript.sections.length+' '+esc(({ar:'محاور تفصيلية',en:'detailed sections',fr:'rubriques détaillées'})[lang])+'</p>':'';
-   const inner=manuscript?articleSections:sections;
-   const body='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><div class="opp-guide-header"><h1>'+esc(manuscript?.title||item.title)+'</h1><p>'+esc(lead)+'</p>'+articleMeta+'</div></div></section><main class="section shell opp-guide-layout"><div class="opp-advisory"><p>'+esc(introText)+'</p></div><article class="opp-guide-article">'+inner+'<section class="opp-guide-section"><h2>'+esc(({ar:'المصدر والخطوة التالية',en:'Official source and next step',fr:'Source officielle et prochaine étape'})[lang])+'</h2><p>'+esc(item.org)+' · '+esc(item.place)+'</p>'+(item.reference?'<p>'+esc(({ar:'مرجع الإعلان',en:'Notice reference',fr:'Référence de l’avis'})[lang])+': '+esc(item.reference)+'</p>':'')+(item.deadline?'<p>'+esc(c.deadline)+': <time datetime="'+esc(item.deadline)+'">'+esc(fullDate(item.deadline))+'</time></p>':'')+(item.count?'<p>'+esc(({ar:'عدد المناصب',en:'Number of positions',fr:'Nombre de postes'})[lang])+': '+esc(String(item.count))+'</p>':'')+official+(item.officialSite?'<p><a href="'+esc(safeHref(item.officialSite))+'" rel="noopener noreferrer external" target="_blank">'+esc(({ar:'موقع المؤسسة الرسمي',en:'Official employer website',fr:'Site officiel de l’employeur'})[lang])+' ↗</a></p>':'')+'</section>'+sources+'</article></main></div>';
-   page(lang,{title:(manuscript?.title||item.title)+' | RibhLab',desc:manuscript?.deck||(special?special[1]:introText),route:base+item.section+'/'+encodeURIComponent(item.id)+'/',content:body,active:'opportunities'});
-   // Retain the short UK route as an internal page, not an external redirect.
-   if(item.id==='uk-visa') page(lang,{title:(manuscript?.title||item.title)+' | RibhLab',desc:manuscript?.deck||(special?special[1]:introText),route:base+'immigration/uk/',content:body,active:'opportunities'});
+   const label=({ar:{facts:'البيانات المؤكدة من الإعلان',source:'المصادر الأصلية وطريقة التقديم',evidence:'حالة التحقق التحريري',market:'احتياجات سوق العمل والجهات المعلنة',unknown:'ما الذي لم نتأكد منه بعد؟',apply:'انتقل إلى المصدر الرسمي'},en:{facts:'Verified listing facts',source:'Official sources and application',evidence:'Editorial verification status',market:'Evidence on labour market demand',unknown:'What has not been verified?',apply:'Visit the official source'},fr:{facts:'Données vérifiées de l’annonce',source:'Sources officielles et candidature',evidence:'État de vérification éditoriale',market:'Données sur les besoins de recrutement',unknown:'Points non encore vérifiés',apply:'Consulter la source officielle'}})[lang];
+   const location=([item.place,verified?.facts?.city].filter(Boolean)).join(' · ');
+   const factRows=[
+    [({ar:'المؤسسة',en:'Employer or institution',fr:'Employeur / organisme'})[lang],item.org],
+    [({ar:'الموقع الجغرافي',en:'Location',fr:'Lieu'})[lang],location],
+    [({ar:'عدد المناصب',en:'Positions',fr:'Postes'})[lang],item.count?String(item.count):''],
+    [({ar:'مرجع الإعلان',en:'Notice reference',fr:'Référence'})[lang],item.reference||verified?.facts?.reference],
+    [({ar:'نوع الإعلان',en:'Listing type',fr:'Type d’annonce'})[lang],item.kind==='official_directory'?({ar:'بوابة إعلانات وليست وظيفة محددة',en:'Official job directory, not a specific vacancy',fr:'Portail d’offres, pas une annonce unique'})[lang]:item.kind==='program'?({ar:'برنامج، وليس عقد عمل',en:'Programme, not an employment contract',fr:'Programme, pas un contrat de travail'})[lang]:({ar:'إعلان توظيف محدد',en:'Specific recruitment notice',fr:'Annonce de recrutement précise'})[lang]],
+    [({ar:'آخر أجل حسب بطاقة البوابة',en:'Portal-listed deadline',fr:'Date limite affichée'})[lang],item.deadline?fullDate(item.deadline):''],
+    [({ar:'شرط الدبلوم وفق الوثيقة',en:'Qualification in source notice',fr:'Diplôme dans l’avis'})[lang],verified?.facts?.degree],
+    [({ar:'نوع العقد',en:'Employment type',fr:'Nature du contrat'})[lang],verified?.facts?.contract],
+    [({ar:'الأجر',en:'Salary',fr:'Salaire'})[lang],verified?.facts?.salary]
+   ].filter(([,v])=>v!==undefined&&v!==null&&v!=='');
+   const facts='<section class="opp-guide-section opp-fact-sheet"><h2>'+esc(label.facts)+'</h2><dl class="opp-fact-grid">'+factRows.map(([k,v])=>'<div><dt>'+esc(k)+'</dt><dd>'+esc(String(v))+'</dd></div>').join('')+'</dl></section>';
+   const conflict=verified?.facts?.deadlineConflicts;
+   const conflictBlock=conflict?.length?'<aside class="opp-evidence-warning"><strong>'+esc(({ar:'تنبيه مهم: تضارب تاريخ الإغلاق بين وثيقتين رسميتين',en:'Important: conflicting official application deadlines',fr:'Alerte : dates limites contradictoires dans deux documents officiels'})[lang])+'</strong><p>'+esc(conflict.join(' / '))+'</p><p>'+esc(({ar:'احتياطياً، قدم الطلب قبل التاريخ الأسبق، واطلب تأكيداً أو قراراً تصحيحياً من الجهة المنظمة.',en:'Submit before the earlier date as a precaution, and seek an official correction or written confirmation.',fr:'Par précaution, déposez avant la première date et recherchez un rectificatif officiel.'})[lang])+'</p></aside>':'';
+   const articleSections=isDetailed&&Array.isArray(manuscript.sections)?manuscript.sections.map(([h,t],i)=>'<section class="opp-guide-section" id="part-'+(i+1)+'"><h2>'+esc(h)+'</h2><p>'+esc(t)+'</p></section>').join(''):'';
+   const marketSection=demandText?'<section class="opp-guide-section opp-demand-intro"><h2>'+esc(demandText.title)+'</h2><p>'+esc(({ar:'أرقام مؤرخة من الجهات الرسمية، وليست ضماناً بوجود منصب مفتوح أو حق تلقائي في التأشيرة.',en:'Dated official statistics and listings, not guaranteed vacancies or immigration rights.',fr:'Données publiques datées, sans garantie de poste ni de visa.'})[lang])+'</p></section>'+demandText.paragraphs.map((text,i)=>'<section class="opp-guide-section opp-market-paragraph"><h3>'+esc(({ar:'التحليل والمعلومات الموثقة',en:'Evidence and practical interpretation',fr:'Données et interprétation pratique'})[lang])+' '+(i+1)+'</h3><p>'+esc(text)+'</p></section>').join(''):'';
+   const missingText=item.kind==='official_directory'
+    ?({ar:'هذه بطاقة بوابة رسمية تتغير إعلاناتها باستمرار. لا ننسب إليها عدد فرص أو مدينة أو أجراً محدداً دون إعلان فردي موثق ومؤرخ.',en:'This is a changing government job directory. We do not assign specific city, wages or open positions without a verified individual posting.',fr:'Ce portail évolue ; aucun emploi, salaire ou ville n’est attribué sans annonce individuelle datée et vérifiée.'})[lang]
+    :({ar:'تأكدنا من بيانات البطاقة المنشورة، لكننا لم نستخرج بعد شروط الأهلية والوثائق والراتب من القرار الكامل لهذا الإعلان. لا نعوّض ذلك بنص مكرر أو تخمينات؛ راجع الوثيقة الحكومية من الرابط أسفله قبل التقديم.',en:'The listing metadata is recorded, but detailed diploma, documents and pay conditions have not yet been independently extracted from this notice. We will not invent them. Read the signed employer document via the official link below.',fr:'Les métadonnées de l’annonce sont identifiées, mais les conditions détaillées, pièces et salaires n’ont pas encore été extraits et contrôlés. Nous ne les inventons pas ; consultez la pièce officielle ci-dessous.'})[lang];
+   const missing=!isDetailed&&!demandText?'<section class="opp-guide-section opp-unverified"><h2>'+esc(label.unknown)+'</h2><p>'+esc(missingText)+'</p></section>':'';
+   const refs=[...(verified?.sources||[]),...(demand?.sources||[])].filter(x=>x?.url);
+   const uniqueRefs=refs.filter((s,i)=>refs.findIndex(y=>y.url===s.url)===i);
+   const links=uniqueRefs.length?'<ul class="opp-primary-sources">'+uniqueRefs.map(a=>'<li><a href="'+esc(safeHref(a.url))+'" rel="noopener noreferrer external" target="_blank">'+esc(a.label)+' ↗</a></li>').join('')+'</ul>':'';
+   const origin='<a class="opp-action" rel="noopener noreferrer external" target="_blank" href="'+esc(safeHref(item.url))+'">'+esc(label.apply)+' ↗</a>';
+   const sources='<section class="opp-guide-section opp-guide-sources"><h2>'+esc(label.source)+'</h2><p>'+esc(item.org)+' · '+esc(item.place)+'</p>'+links+'<p>'+origin+'</p></section>';
+   const introductory=isDetailed?manuscript.deck:demandText?demandText.title:({ar:'سجل معلومات للإعلان الأصلي، وليس مقالاً بحثياً مكتمل التحقق. سننشر تفاصيل الشروط حين تثبتها الوثائق.',en:'A verified record of the listed source, not a fully researched job guide. Specific conditions will only appear after source verification.',fr:'Fiche descriptive de la source, pas encore un dossier intégralement analysé. Les conditions seront ajoutées après vérification.'})[lang];
+   const editorialNote=verified?({ar:'استُخرجت تفاصيل هذه المادة من المصدر الأصلي وتمت مراجعتها تحريرياً.',en:'This report was independently checked against the original notice.',fr:'Cette analyse a été contrôlée avec l’avis d’origine.'})[lang]:demand?({ar:'هذا تحليل سوق العمل، ويجب التمييز بين الإحصاء وإعلان العمل الفردي.',en:'This labour-market analysis does not replace an individual job posting.',fr:'Cette analyse de marché ne remplace pas une offre individuelle.'})[lang]:({ar:'لا نسمي هذه الصفحة «مقالاً كاملاً» قبل استخراج التفاصيل المطلوبة.',en:'This entry is not represented as a full report until its individual notice is analyzed.',fr:'Cette fiche n’est pas présentée comme un dossier complet avant vérification des détails.'})[lang];
+   const articleDate=verified?.reviewedAt||demand&&'2026-10-28'||db.checkedAt;
+   const title=manuscript?.title||item.title;
+   const body='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><div class="opp-guide-header"><h1>'+esc(title)+'</h1><p>'+esc(introductory)+'</p><p class="opp-guide-meta">'+esc(c.updated)+' : <time datetime="'+esc(articleDate)+'">'+esc(articleDate)+'</time></p></div></div></section><main class="section shell opp-guide-layout"><div class="opp-advisory" role="note"><p>'+esc(editorialNote)+'</p></div><article class="opp-guide-article">'+conflictBlock+facts+articleSections+marketSection+missing+sources+'</article></main></div>';
+   const url=base+item.section+'/'+encodeURIComponent(item.id)+'/';
+   page(lang,{title:title+' | RibhLab',desc:introductory,route:url,content:body,active:'opportunities'});
+   if(item.id==='uk-visa')page(lang,{title:title+' | RibhLab',desc:introductory,route:base+'immigration/uk/',content:body,active:'opportunities'});
   }
 }
