@@ -50,8 +50,10 @@
         "fiverrHelp",
         "canva"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/gig-gallery-original-images-checklist.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "freelance",
