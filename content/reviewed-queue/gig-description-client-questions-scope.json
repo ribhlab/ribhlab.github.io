@@ -1,0 +1,199 @@
+{
+  "sectionId": "freelance",
+  "article": {
+    "slug": "gig-description-client-questions-scope",
+    "category": "earning",
+    "date": "2026-10-28",
+    "updated": "2026-10-28",
+    "featured": false,
+    "related": [
+      "fiverr-complete-guide-2026",
+      "choose-freelance-niche-skills-evidence-14-day-test"
+    ],
+    "sources": [
+      {
+        "label": "Fiverr Help Center — Creating a Gig",
+        "url": "https://help.fiverr.com/hc/en-us/articles/360010451397-Creating-a-Gig"
+      },
+      {
+        "label": "Fiverr Help Center — Gigs best practices",
+        "url": "https://help.fiverr.com/hc/en-us/articles/360010452317-Gigs-best-practices"
+      },
+      {
+        "label": "Fiverr Help Center — Requirements and guidelines for your Gig",
+        "url": "https://help.fiverr.com/hc/en-us/articles/360011421218-Requirements-and-guidelines-for-your-Gig"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "كتابة وصف خدمة Fiverr يجذب الاستفسارات المناسبة ويمنع سوء الفهم",
+        "excerpt": "من اختيار نتيجة واضحة إلى تحديد النطاق والتعديلات ومتطلبات العميل: نموذج تطبيقي لخدمة Excel على Fiverr دون وعود بترتيب أو مبيعات مضمونة.",
+        "lead": "يتعامل المشتري مع صفحة الخدمة بوصفها اتفاقاً أولياً، لا مساحة للشعارات. الوصف الناجح يجيب عن أربعة أسئلة: ما المشكلة التي ستحلها، وما النتيجة التي سيتسلمها، ومتى، وما المعلومات التي تحتاجها. لا توجد صياغة تضمن الحصول على طلبات، لكن الدقة تقلل الرسائل غير المناسبة وتساعد الطرفين على مقارنة التوقعات قبل الدفع.",
+        "sections": [
+          {
+            "heading": "1. ابدأ بالمشكلة التجارية لا بقائمة المهارات",
+            "paragraphs": [
+              "تخيل صاحب متجر يملك اثني عشر ملف مبيعات بصيغ مختلفة ويريد تقريراً موحداً. عبارة «أنا خبير Excel وPower BI والذكاء الاصطناعي» لا تشرح له ما الذي سيحصل عليه. البديل الأكثر فائدة هو: «سأجمع بيانات مبيعاتك في جدول منظم مع تقرير يوضح الإجماليات والأخطاء المحتملة». هذا مثال توضيحي لصياغة عرض، وليس إعلاناً عن مشروع تم تنفيذه بالفعل. اختر مشكلة واحدة قابلة للتعريف، واذكر ناتجاً يستطيع العميل فتحه وفحصه، مثل ملف XLSX موثق أو تقرير PDF.",
+              "قبل كتابة النص، حدد القارئ المقصود: صاحب مشروع صغير أم محلل مالي أم فريق إداري؟ تحتاج كل فئة إلى مستوى مختلف من التفصيل. بالنسبة إلى المشروع الصغير، اشرح الفائدة بلغة بسيطة؛ وبالنسبة إلى الفريق المالي، بين أسماء الجداول وقواعد المطابقة وحدود المسؤولية. لا تضع كلمات مفتاحية لا علاقة لها بالعمل لمجرد جذب الزيارات. الأفضل أن يعثر عليك مشتري مناسب على أن تجذب زيارات لا يمكن تحويلها إلى اتفاق واضح."
+            ]
+          },
+          {
+            "heading": "2. اكتب عنواناً محدداً وأول فقرة عملية",
+            "paragraphs": [
+              "توضح إرشادات Fiverr أن عنوان الخدمة يبدأ عادة بالصياغة الإنجليزية التي توفرها المنصة «I will»، وأن الوصف محدود بعدد من الحروف، لذلك يجب استعمال المساحة بعناية. مثال خدمة محددة: «I will clean, merge and validate your Excel sales reports». لا تعِد بتحليل ضريبي أو استشارة محاسبية إذا كانت الخدمة مقتصرة على تنظيف البيانات. اذكر الأدوات المستخدمة عندما تكون مؤثرة في النتيجة، لكن لا تجعل اسم الأداة بديلاً عن النتيجة المطلوبة.",
+              "يمكن بناء أول فقرة من ثلاث وحدات: «لمن الخدمة»، «ماذا سأفعل»، «ماذا سأقدم». مثال: «إذا كانت تقارير المبيعات موزعة على ملفات شهرية، سأراجع بنية الأعمدة وأدمج الملفات المتوافقة وأسلّم جدولاً منظماً وسجلاً بالأخطاء التي تحتاج مراجعتك». هذه الصياغة لا تدّعي اكتشاف جميع الأخطاء ولا استعادة بيانات مفقودة؛ إنها تحدد عملاً يمكن اختباره في نطاق معلوم. حافظ على النص قصيراً في واجهة البيع واترك التفاصيل المكملة للباقات والأسئلة المتكررة."
+            ]
+          },
+          {
+            "heading": "3. حدّد ما يدخل في الخدمة وما يُستثنى منها",
+            "paragraphs": [
+              "أهم جزء في وصف الخدمة هو الحدود. في مثال Excel، عرّف عدد الملفات والصفوف التقريبي، أنواع الصيغ المقبولة، نطاق تنظيف التكرارات، وطبيعة المخرجات. يمكن كتابة «تشمل الباقة توحيد أسماء الأعمدة وحذف الصفوف المتطابقة بعد موافقتك، ولا تشمل إصلاح ملفات تالفة أو استخراج بيانات من صور منخفضة الجودة». هذه ليست محاولة للتهرب من العمل؛ إنها حماية للعميل من المفاجآت، وتساعد على تقديم سعر عادل حسب الجهد.",
+              "اسأل أيضاً عما يحدث عند اكتشاف مشكلة غير متوقعة: ملف مشفر، تنسيقات تواريخ متضاربة، بيانات ناقصة أو تحويل عملة لا يملك سعر صرف موثقاً. الحل المسؤول هو إبلاغ العميل بالمشكلة وإرسال أثرها على الجدول الزمني والتكلفة قبل توسيع نطاق الاتفاق. لا تتعهد بتسليم «لوحة احترافية كاملة» دون تحديد المقاييس والمعايير والاختبارات التي تجعلها مقبولة. وفر عينة صغيرة مصنوعة ببيانات تجريبية لا تكشف ملفات زبائن سابقين."
+            ]
+          },
+          {
+            "heading": "4. اجعل الباقات والمدة والمراجعات قابلة للقياس",
+            "paragraphs": [
+              "تسمح المنصة بباقات مختلفة، لكن الفرق بينها ينبغي أن يكون في المخرجات الحقيقية لا في الأسماء فقط. نموذج تعليمي: باقة أساسية لتنظيم ملف واحد، وباقة متوسطة لتجميع ثلاثة ملفات، وباقة موسعة لإضافة لوحة ملخص وتعليمات استخدام. هذه ليست أسعاراً رسمية ولا حداً أدنى عاماً؛ تقدير المقابل يحتاج حساب عدد الساعات والتكاليف وعمولات المنصة والضرائب المحتملة. إذا كان تنظيف ملف واحد يستغرق ساعتين وتوثيق العمل نصف ساعة، فهذا وقت يجب أخذه في الحسبان قبل تحديد مدة التسليم.",
+              "حدد معنى «المراجعة» بصورة منصفة. يمكن أن تشمل تصحيح خطأ في تطبيق القواعد المتفق عليها أو تعديل لون الرسم البياني، لكنها لا تعني تلقائياً إضافة مصدر بيانات جديد أو بناء تقرير ثانٍ. سجل المطلوب قبل بدء الطلب، وأرسل نسخة أولية عندما يسمح الوقت حتى يلاحظ العميل سوء الفهم مبكراً. إذا طلب المستفيد تغييرات جوهرية، قدم عرضاً إضافياً واضحاً داخل منصة Fiverr بدلاً من مناقشة ترتيبات دفع خارجها."
+            ]
+          },
+          {
+            "heading": "5. استخدم الأسئلة المتكررة ومتطلبات البداية لتجنب التعطيل",
+            "paragraphs": [
+              "تتيح Fiverr إضافة أسئلة متكررة ومتطلبات يجيب عنها العميل. في خدمة التقارير يمكن أن تسأل: «هل جميع الملفات تخص السنة نفسها؟»، «هل يجوز حذف التكرارات؟»، «ما الأعمدة التي تحدد العملية الواحدة؟»، «هل ترغب في تقرير أسبوعي أم شهري؟». اجعل بعض الأسئلة إلزامياً عند الحاجة حتى لا تبدأ مدة التنفيذ والبيانات الأساسية مفقودة. لا تطلب كلمة مرور أو بيانات حساب مصرفي لمجرد تنظيف ملف. إذا كانت المهمة حساسة، ناقش تقليل البيانات قبل قبولها.",
+              "اكتب سؤالاً متكرراً حول التسليم، وآخر حول السرية، وثالثاً حول التعديلات. لا حاجة لتكرار النص كله في كل جواب؛ المطلوب إزالة التباس محدد. مثلاً «هل أحتاج إلى Excel 365؟» يمكن الإجابة عنه بعد معرفة الوظائف المستخدمة والتوافق المطلوب. عندما تتغير نسخة البرامج أو خصائص المنصة، حدث الوصف لأن الوعود القديمة قد تصبح غير قابلة للتنفيذ. لا تستخدم تقييمات مزيفة أو شهادات مجهولة المصدر لتغطية غياب معرض أعمال حقيقي."
+            ]
+          },
+          {
+            "heading": "6. راجع صدق العرض واختبره قبل النشر",
+            "paragraphs": [
+              "اختبر الوصف كما يفعل عميل لم يسمع بك من قبل: هل يفهم المطلوب إرساله؟ هل يعرف شكل الملفات التي سيتسلمها؟ هل يمكنه التمييز بين الباقات؟ هل يجد موعد التسليم وعدد المراجعات؟ أرسل النص إلى شخص مستقل واقرأ أسئلته دون شرح شفهي؛ إن كرر سؤالاً أساسياً فهذا دليل على حاجة الوصف إلى تعديل. بعد النشر، يمكن مقارنة نسبة الرسائل التي تحولت إلى طلبات، ولكن أي تغير قد ينتج عن السعر والطلب والمنافسة وليس عن الكلمات وحدها.",
+              "تنصح المصادر الرسمية بعدم إدراج معلومات اتصال لتحويل المعاملة خارج Fiverr وباستعمال صور تملك حقها. يمكن للنص أن يذكر صفحة أعمال تعرض نماذجك ضمن حدود القواعد، لكن لا تطلب من العميل الاتصال عبر بريد أو تحويل مالي شخصي. لا تستخدم عبارات مثل «الأول في العالم» أو «نتائج مضمونة» بلا دليل. الخطوة التالية العملية هي إعداد عينة تنظيف لملف افتراضي وإرفاق صورة دقيقة لها، ثم تحسين العنوان والوصف بعد ملاحظات حقيقية، لا بعد تخمينات التسويق."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "How to write a Fiverr Gig description that attracts the right client questions",
+        "excerpt": "A practical guide to benefits, precise scope, client requirements, revisions and a worked Excel-service listing—without promising orders.",
+        "lead": "A buyer reads a Gig description as an early service agreement, not as a collection of marketing slogans. A useful description should identify the problem, state the deliverable, explain the timeline and clarify the information needed to begin. No wording guarantees sales or search visibility, but precise scope can reduce mismatched enquiries and avoid preventable disputes once an order starts.",
+        "sections": [
+          {
+            "heading": "1. Lead with a customer problem, not your skill inventory",
+            "paragraphs": [
+              "Imagine a shop owner with twelve monthly sales files in inconsistent formats. The statement “I am an expert in Excel, Power BI and AI” provides little evidence about the result. A more useful description says that the provider will consolidate compatible files into a tidy sales table and report inconsistencies for review. This is an illustrative service example rather than a claim about a project completed by the author. Identify the output the buyer can inspect: a documented workbook, a validation sheet or a concise PDF summary. Do not call an undelivered promise a verified business result.",
+              "Define your intended buyer before choosing the wording. A small-business owner may need a plain-language explanation; a finance team may expect details about joins, reconciliation keys and data quality rules. The service must remain recognizable to both without using unrelated keywords simply to attract search traffic. A vague Gig can produce many messages from people whose needs do not fit the skill or time available. A narrower, falsifiable offer is often easier to price and evaluate."
+            ]
+          },
+          {
+            "heading": "2. Make the headline and first paragraph do different jobs",
+            "paragraphs": [
+              "Fiverr's help materials explain that the platform pre-fills the start of a Gig headline with “I will” and provides a bounded description field. A headline such as “I will clean, merge and validate your Excel sales reports” names the action and the deliverable. Avoid promising tax certification, audit assurance or legal advice if the work is ordinary data cleaning. Names of software can add context when compatibility matters, but the tools should never substitute for a clear statement of what the customer receives at delivery.",
+              "The first paragraph can use a repeatable three-part structure: who the service helps, what process will be performed, and what will be handed over. For example, a provider could review column structures, combine compatible files and deliver a cleaned dataset with a list of anomalies requiring client decisions. This does not promise to repair corrupted files or recover missing transactions automatically. Keep the overview readable in the marketplace interface, while placing supplementary questions about formats, boundaries and exceptions in the package details and FAQ."
+            ]
+          },
+          {
+            "heading": "3. State the included work and the excluded work",
+            "paragraphs": [
+              "Describe what is included using measurable units: number of source files, approximate rows, supported formats, permitted deduplication rules and output types. A seller may include normalizing column labels and flagging duplicate rows, while excluding password recovery, low-quality image extraction or building an unrelated management dashboard. These exclusions are not excuses; they help the customer distinguish a fixed-price task from an open-ended consulting engagement. One deliverable should be tested against written acceptance criteria before a seller makes a confident promise.",
+              "Plan what happens when the source data differ from the example: encrypted files, conflicting date formats, missing customer identifiers or currency amounts without a verified exchange rate. The correct response is to report the obstacle and request written approval for any change to timing or cost. Do not silently invent values to make a dashboard look complete. A before-and-after sample can demonstrate the process, provided the input data are simulated, anonymized or published with permission rather than copied from a previous customer's confidential documents."
+            ]
+          },
+          {
+            "heading": "4. Make packages, revisions and deadlines measurable",
+            "paragraphs": [
+              "Fiverr permits different service packages, but each should offer a meaningful difference in workload. An illustrative three-tier structure might clean one worksheet, consolidate three files, or add a documented summary dashboard in the largest package. These are scope examples, not recommended universal prices. Estimate work hours, platform charges, taxes where applicable and the cost of quality checking. Even a seemingly simple cleaning task includes time for opening files, examining data types, resolving ambiguities and verifying that totals reconcile with the original information.",
+              "Define a revision before the order starts. Correcting an overlooked rule or adjusting a chart label fits naturally within an agreed revision; adding a fresh department or entirely new dataset may constitute additional work. Explain how many rounds are included and when feedback should be delivered. If a significant new request appears, offer a clear extension or custom offer through Fiverr instead of shifting payment to a personal account. Accurate boundaries can protect both buyer expectations and a freelancer's ability to deliver reliably."
+            ]
+          },
+          {
+            "heading": "5. Use FAQs and requirements to prevent stalled orders",
+            "paragraphs": [
+              "Fiverr provides FAQs and required buyer questions because a seller cannot complete a task without enough information. For a spreadsheet Gig, useful questions include whether all files use the same reporting period, which columns identify unique transactions, whether duplicates may be removed, and which outputs must be compatible with older Excel versions. Mark genuinely essential inputs as required and explain why they matter. Do not request passwords, bank credentials or more personal information than is needed for the service.",
+              "Write concise answers about delivery format, confidentiality, revisions and technical compatibility. Repeating the whole Gig description in each answer wastes the buyer's attention. Instead, focus on the decisions the buyer needs to make, such as whether a chart should compare monthly sales or cash collections. Where client information may be sensitive, consider asking for a small anonymized sample before accepting the full dataset. Review requirements whenever workflows or software change, rather than letting outdated promises accumulate."
+            ]
+          },
+          {
+            "heading": "6. Proofread, reality-check and improve after publication",
+            "paragraphs": [
+              "Read your listing like a first-time buyer who cannot ask you follow-up questions: is the input clear, the output inspectable, the deadline realistic and the revision policy visible? Show the draft to someone outside the field and note the questions they ask without explanation. Then revise the confusing points. Over time, track enquiries, orders and delivery issues; a change in conversion is not automatically caused by one edit because pricing, competition and seasonality also vary. Avoid presenting a correlation as evidence that a particular phrase guarantees higher search ranking.",
+              "Fiverr's policies require truthful descriptions and rights to uploaded media, and discourage moving business off-platform. A portfolio may show work samples according to the platform's rules, but it should not ask buyers to pay through an unrelated website or reveal private client records. Skip unverifiable superlatives and fabricated endorsements. A useful final step is to create one small, clearly labeled demonstration using fictional sales data, capture its result in an original image and compare the published Gig with the project's actual delivery checklist."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Rédiger une annonce Fiverr qui attire les bonnes demandes sans promesses trompeuses",
+        "excerpt": "Un guide pratique pour préciser le résultat, les exclusions, les informations client et les retouches, avec un exemple de service Excel.",
+        "lead": "L'acheteur interprète la description d'un Gig comme un premier accord sur la prestation, pas comme une succession de slogans. Un texte utile précise le problème à résoudre, le livrable, le délai et les éléments nécessaires au démarrage. Aucune formule ne garantit les commandes ou une position de recherche, mais un périmètre clair peut diminuer les demandes inadaptées et limiter les désaccords pendant la réalisation.",
+        "sections": [
+          {
+            "heading": "1. Commencer par le problème du client plutôt que par les compétences",
+            "paragraphs": [
+              "Imaginons une petite entreprise dont les douze fichiers de ventes mensuelles utilisent des formats hétérogènes. « Je maîtrise Excel, Power BI et l'IA » ne précise ni le résultat ni son contrôle. Une proposition concrète consiste à réunir les fichiers compatibles dans un tableau structuré et à signaler les anomalies à confirmer. Il s'agit d'un exemple pédagogique, et non d'une réalisation réelle attribuée au rédacteur. Le client doit pouvoir comprendre ce qui sera livré : un classeur documenté, une liste de contrôles ou une note de synthèse. Évitez d'assimiler une promesse commerciale à un résultat vérifié.",
+              "Définissez ensuite le public visé. Un artisan ou un commerçant souhaite souvent une explication simple ; une direction financière attend des informations sur les clés de rapprochement et la qualité des données. Il est inutile d'ajouter des mots-clés sans lien avec la mission dans le seul but de multiplier les affichages. Une annonce imprécise peut générer de nombreux échanges avec des prospects dont les besoins ne correspondent ni à vos compétences ni au budget. Une prestation ciblée facilite l'évaluation et la comparaison des offres."
+            ]
+          },
+          {
+            "heading": "2. Utiliser le titre et l'introduction à bon escient",
+            "paragraphs": [
+              "La documentation Fiverr précise que le titre débute généralement par « I will » dans l'interface anglophone et que le champ de description impose une limite de caractères. « I will clean, merge and validate your Excel sales reports » indique une action identifiable et un livrable précis. Ne promettez pas un audit légal ou une certification fiscale pour une simple mission de nettoyage de données. Le nom d'un logiciel peut clarifier la compatibilité, mais ne doit pas remplacer la définition de ce que l'acheteur recevra après validation.",
+              "L'introduction peut être construite autour de trois éléments : le public concerné, la méthode et le résultat. Par exemple, vous examinerez la structure des colonnes, regrouperez les tableaux compatibles et livrerez un fichier nettoyé accompagné des anomalies qui nécessitent un arbitrage. Cette description ne prétend pas récupérer toutes les données perdues ou réparer des fichiers endommagés. Gardez le texte principal lisible et réservez les modalités complémentaires aux forfaits, aux questions fréquentes et aux informations à fournir lors de la commande."
+            ]
+          },
+          {
+            "heading": "3. Définir précisément les inclusions et les exclusions",
+            "paragraphs": [
+              "Une prestation tarifée doit préciser ses unités : nombre de fichiers, volume approximatif de lignes, formats acceptés, règles autorisées pour les doublons et nature du fichier final. Un vendeur peut inclure l'harmonisation des intitulés de colonnes et le signalement de doublons, tout en excluant le déverrouillage de mots de passe ou la création d'un tableau de bord non prévu. Les exclusions ne servent pas à éluder une responsabilité : elles permettent au client de comprendre la différence entre une commande à prix fixe et une mission de conseil sans périmètre défini. Les critères de réception doivent être écrits avant d'annoncer une qualité garantie.",
+              "Prévoyez aussi les difficultés susceptibles d'apparaître : des documents chiffrés, des dates contradictoires, des identifiants manquants ou des montants en plusieurs devises sans référence de conversion. Le prestataire doit signaler ces limites et obtenir l'accord du client avant toute modification importante des coûts ou des délais. Il ne faut pas inventer des chiffres pour compléter un rapport. Un exemple avant-après peut illustrer le travail, à condition d'utiliser des données fictives, anonymisées ou publiées avec l'autorisation nécessaire."
+            ]
+          },
+          {
+            "heading": "4. Structurer les forfaits, les retouches et les échéances",
+            "paragraphs": [
+              "Les niveaux Basic, Standard et Premium doivent représenter des différences réelles de contenu. À titre illustratif, le premier peut traiter un fichier, le deuxième consolider trois sources et le troisième ajouter un tableau de synthèse documenté. Ces périmètres ne correspondent pas à une grille de prix officielle. Estimez les heures, les commissions, les frais éventuels, les contrôles de qualité et l'impôt selon la situation. Une simple opération de nettoyage inclut aussi la préparation, la vérification des types de données et la comparaison des totaux avant et après traitement.",
+              "Définissez ce que représente une retouche. Corriger une règle convenue ou ajuster l'étiquette d'un graphique n'est pas équivalent à intégrer une nouvelle filiale ou une base supplémentaire. Indiquez le nombre de cycles inclus et le délai de retour attendu. Lorsque la demande dépasse le périmètre, proposez une extension ou une offre personnalisée dans les outils de la plateforme. L'accord doit rester traçable, sans solliciter de transfert vers un compte personnel. La clarté protège la relation de travail autant que la rentabilité de la prestation."
+            ]
+          },
+          {
+            "heading": "5. Préparer une FAQ et des questions client réellement utiles",
+            "paragraphs": [
+              "Les questions fréquentes et les prérequis proposés par Fiverr évitent de recevoir une commande impossible à exécuter faute de données. Pour un service Excel, demandez si tous les fichiers concernent la même période, quelles colonnes identifient une opération unique, si les doublons peuvent être supprimés et quelle version du logiciel doit ouvrir le résultat. Rendez obligatoires seulement les informations essentielles en expliquant leur rôle. Ne réclamez pas de mots de passe bancaires ou de données personnelles sans lien avec la prestation.",
+              "Rédigez des réponses courtes sur les formats de livraison, la confidentialité, la compatibilité et les limites des modifications. Répéter intégralement l'annonce dans chaque réponse n'apporte aucune valeur. Préférez expliquer un choix, par exemple la différence entre un indicateur mensuel de ventes et un suivi des encaissements. Si les données sont sensibles, commencez par une petite extraction anonymisée. Actualisez régulièrement ces exigences : une ancienne promesse peut devenir irréaliste après un changement d'outil ou de processus."
+            ]
+          },
+          {
+            "heading": "6. Relire l'annonce, vérifier ses promesses et apprendre après publication",
+            "paragraphs": [
+              "Relisez l'annonce comme un client qui ne connaît ni le prestataire ni ses méthodes. Les fichiers à transmettre sont-ils définis ? Le livrable peut-il être vérifié ? Le délai et la règle des retouches sont-ils compréhensibles ? Faites lire le texte à une personne extérieure au métier et relevez ses questions spontanées. Après la publication, suivez les demandes et les problèmes de livraison, sans attribuer une évolution des résultats à une phrase isolée : la concurrence, les prix et la saison influencent aussi la demande. Un indice de corrélation ne constitue pas une promesse de visibilité.",
+              "Les règles officielles de Fiverr exigent des informations fidèles et des médias utilisables légalement et encadrent la communication en dehors de la plateforme. Un portfolio peut présenter des exemples autorisés, mais ne doit pas servir à récupérer un paiement privé ou à exposer les documents d'anciens clients. Évitez les affirmations invérifiables comme « meilleur prestataire garanti ». Terminez en créant un petit exemple avec des données de ventes inventées et une capture originale, puis confrontez le contenu de l'annonce à la liste de contrôle employée lors de chaque livraison."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1743796055651-41c743ff2465",
+    "source": "https://unsplash.com/photos/person-is-working-on-a-laptop-and-writing-in-a-notebook-45u1mboQtQE",
+    "photographer": "MJ Duford",
+    "alt": "Hands working on a laptop beside a notebook, illustrating freelance service planning",
+    "altAr": "يد تعمل على حاسوب محمول بجانب دفتر ملاحظات لتوضيح تخطيط خدمات العمل الحر",
+    "altFr": "Mains sur ordinateur portable près d’un carnet, illustration de la préparation d’une prestation freelance",
+    "license": "Unsplash License",
+    "note": "Unsplash image page inspected 2026-10-28, free under Unsplash License, published 2025-04-04; illustrative only, not a claimed Fiverr project. Unique photo ID checked against published and queued photo registries."
+  },
+  "resourceIds": [
+    "fiverrHelp",
+    "fiverr"
+  ],
+  "review": {
+    "ready": true,
+    "checkedAt": "2026-10-28",
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Compared Fiverr official Creating a Gig, Gigs best practices and Gig requirements on 28 October 2026; three original complete translations checked for consistency and practical examples. No promised results or simulated real customer. Unsplash page image ID, photographer and free license reviewed and checked for uniqueness against published and queued content. Paragraph sizes and word counts: {\"ar\":893,\"en\":1057,\"fr\":1104}"
+  }
+}
