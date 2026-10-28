@@ -697,6 +697,160 @@
           ]
         }
       }
+    },
+    "bam-cyber": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Read the original one-page Bank Al-Maghrib notice and compared the 27 October 2026 government listing on 28 October 2026; employer date has no hour, portal specifies 16:30. Full original AR/EN/FR reports checked. No fabricated salary, test dates or required attachments.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Bank Al-Maghrib — original vacancy AC/DSI/27102026 (one-page PDF)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/685d07b8-aa03-4c06-8858-88af9e06cf21"
+        },
+        {
+          "label": "Emploi-public — competition C44303/26, published 27 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/685d07b8-aa03-4c06-8858-88af9e06cf21"
+        },
+        {
+          "label": "Bank Al-Maghrib — official application portal",
+          "url": "https://bkam.csod.com/ats/careersite/search.aspx?site=11&c=bkam2026/02"
+        }
+      ],
+      "facts": {
+        "country": "Maroc",
+        "city": "Salé",
+        "postingCity": "Salé",
+        "reference": "AC/DSI/27102026; C44303/26",
+        "posts": 1,
+        "degree": "Bac+5 informatique/sécurité ou équivalent",
+        "experienceYears": 8,
+        "nationality": "Marocaine",
+        "age": "moins de 40 ans; date de référence non précisée",
+        "deadline": "2026-11-10T16:30",
+        "pdfDeadlineWording": "10/11/2026 sans heure",
+        "submission": "https://bkam.csod.com/ats/careersite/search.aspx?site=11&c=bkam2026/02",
+        "tests": "Présélection sur dossier puis entretien, date et lieu communiqués par mail",
+        "salary": null,
+        "documents": "Formulaire en ligne obligatoire; aucune liste exhaustive de pièces dans le PDF",
+        "sourcePublishedAt": "2026-10-27",
+        "certifications": "CISSP, CISM, CCSP, SABSA, cloud : atouts"
+      },
+      "translations": {
+        "ar": {
+          "title": "بنك المغرب 2026: مهندس معماري للأمن السيبراني بسلا، شروط الترشيح وآخر أجل",
+          "deck": "تحليل الإعلان الرسمي الأصلي: منصب واحد بسلا، Bac+5، ثماني سنوات خبرة، شهادات إضافية اختيارية وآخر أجل 10 نوفمبر 2026 الساعة 16:30 وفق البوابة.",
+          "sections": [
+            [
+              "1. المشغل ومكان العمل والعدد",
+              "نشر بنك المغرب في 27 أكتوبر 2026 إعلاناً لتوظيف مهندس معماري واحد للأمن السيبراني، تحت المرجع AC/DSI/27102026 والرمز الحكومي C44303/26. يحدد الإعلان الأصلي مكان العمل في سلا، ولا يعلن توزيعاً بين مدن أخرى. المنصب تابع لمديرية نظم المعلومات، ويتعلق بتصميم منظومة الحماية وليس بمهمة دعم تقني مبتدئة. عدد المناصب واحد، ولا يصح تحويل الإعلان إلى حملة واسعة أو اعتبار استيفاء الشروط ضماناً للقبول. يجب على المترشح مقارنة مؤهلاته بمتطلبات المنصب الفعلية، وقراءة ورقة الوظيفة الأصلية بدلاً من الاكتفاء بعنوان مختصر في موقع تجميع."
+            ],
+            [
+              "2. الهدف من المنصب وحدود المسؤولية",
+              "تتمثل المهمة في تحديد هندسة الأمن السيبراني ومعاييره وخريطته التقنية بما يحمي النظام المعلوماتي للبنك، مع احترام الاستراتيجية ومستوى تقبل المخاطر والالتزامات التنظيمية. يذكر القرار العمل مع مسؤول أمن نظم المعلومات RSSI ومع فرق التطبيقات والبيانات والشبكات والسحابة والعمليات. لا يقتصر الدور على متابعة التنبيهات أو شراء برامج الحماية، بل يتطلب تحويل المخاطر إلى خيارات تصميمية قابلة للتنفيذ والمراجعة. يمكن للمترشح عرض مثال مهني مجهول البيانات يشرح كيف اختار ضوابط أمنية، وما البدائل التي رفضها ولماذا، وكيف تحقق من النتائج. لا يجوز الكشف عن مخططات سرية لمشغل سابق."
+            ],
+            [
+              "3. الدبلوم والخبرة والجنسية والعمر",
+              "يشترط الإعلان شهادة Bac+5 في الإعلاميات أو الأمن أو تخصص معادل، وخبرة مهنية ملائمة للمنصب لا تقل عن ثماني سنوات. ويشترط الجنسية المغربية وأن يكون عمر المرشح أقل من أربعين سنة. لا يذكر المستند تاريخاً مرجعياً مستقلاً لحساب السن؛ لذا ينبغي طلب توضيح رسمي إذا كان المترشح قريباً من الحد الأقصى، بدلاً من اختراع قاعدة حسابية. الخبرة المطلوبة ليست مجرد ثماني سنوات في أي وظيفة معلوماتية، بل يجب أن تكون ذات صلة بالمهام المعلنة. ولا يذكر المصدر استثناءً عاماً من شرط الخبرة أو الدبلوم. يجب كتابة تواريخ الوظائف والمسؤوليات بدقة قابلة للتحقق."
+            ],
+            [
+              "4. الشهادات المهنية والمهارات المعمارية",
+              "ترد CISSP وCISM وCCSP وSABSA وشهادات أمن السحابة في الإعلان بوصفها ميزات إضافية، وليست شروطاً إلزامية مستقلة. تشمل الكفاءات المطلوبة هندسة Zero Trust، وتقسيم الشبكات، وإدارة الهويات والصلاحيات IAM، وحماية التطبيقات وواجهات API، والتشفير وإدارة المفاتيح PKI وHSM. كما يشير الإعلان إلى نمذجة التهديدات وأمن الحاويات والسحابة وخطط استمرارية الأعمال والتعافي من الحوادث. الأفضل أن يوضح المرشح درجة إتقانه لكل مجال بمثال قابل للشرح، وألا ينسب إلى نفسه شهادة لم يحصل عليها. لا يعني ذكر تقنية معينة أن اختباراً رسمياً سيُجرى فيها بالضرورة."
+            ],
+            [
+              "5. التطوير الآمن والرقابة والتنسيق",
+              "تشمل المسؤوليات دمج الأمن في مسارات التطوير CI/CD وتطبيق DevSecOps وأدوات SAST وDAST وIAST، فضلاً عن البنية التحتية بوصفها شفرة والسياسات القابلة للأتمتة. يذكر المصدر كذلك مراقبة الثغرات وSIEM وSOAR وأمن الأطراف الثالثة والتنسيق بشأن الاستجابة للحوادث. لا ينبغي تفسير هذه القائمة على أنها برنامج امتحان كتابي، لأن الإعلان لم ينشر برنامجاً كهذا. للتحضير للمقابلة، يمكن تنظيم حالة عمل في خمس مراحل: الحاجة التشغيلية، المخاطر، الخيارات، القرار، والتحقق من الضوابط. ويجب توضيح دور المترشح الشخصي داخل الفريق وعدم تقديم إنجاز جماعي باعتباره عملاً فردياً حصرياً."
+            ],
+            [
+              "6. التقديم الإلكتروني والوثائق",
+              "يفرض الإعلان ملء استمارة التوظيف الخاصة بالمنصب عبر قسم المسار المهني في الموقع الرسمي لبنك المغرب، وتعرض بوابة التشغيل العمومي رابط منصة الترشيح. لم تتضمن ورقة الوظيفة ذات الصفحة الواحدة لائحة نهائية للمرفقات أو أحجام الملفات أو صيغها. يمكن إعداد سيرة ذاتية واضحة وبيانات الدبلوم والخبرة مسبقاً، لكن يجب اتباع تعليمات الاستمارة الفعلية قبل رفع الوثائق. لا يجوز وصف وثيقة بأنها إلزامية لمجرد أنها شائعة في مباريات أخرى. احتفظ بتأكيد الإيداع إن صدر، وراجع البريد الإلكتروني باستمرار. لا ترسل البطاقة الوطنية أو معلومات الحساب إلى وسيط يزعم ضمان التوظيف."
+            ],
+            [
+              "7. الموعد النهائي والانتقاء",
+              "تحدد البوابة الحكومية آخر أجل في 10 نوفمبر 2026 الساعة 16:30، بينما يذكر الإعلان الأصلي تاريخ 10/11/2026 دون ساعة. هذا اختلاف في دقة الصياغة، وليس دليلاً على تمديد الموعد؛ ينبغي الإيداع مبكراً قبل التوقيت المحدد في البوابة ومتابعة أي تصحيح رسمي. يذكر الإعلان أن المرشحين المنتقين أولياً على أساس الملفات سيُخبرون بتاريخ المقابلة ومكانها عبر البريد الإلكتروني. لا يحدد الإعلان اختباراً كتابياً أو موعداً ثابتاً للمقابلة أو تاريخاً لإعلان النتائج. لا تعتبر رسالة تأكيد الطلب استدعاءً أو وعداً بالتوظيف. يجب الاحتفاظ بنسخة من المعلومات المقدمة والتحقق من مصدر أي رسالة لاحقة."
+            ],
+            [
+              "8. الأجر والتحضير وحدود المعلومات",
+              "لا ينشر القرار راتباً أو تعويضات أو جدول ساعات العمل أو تاريخ مباشرة المهام. لذلك لا يجوز تقديم متوسطات الأجور المنشورة على مواقع أخرى باعتبارها عرضاً صادراً عن بنك المغرب. يمكن للمرشح إعداد جدول يربط كل مسؤولية معلنة بمشروع مهني موثق، مع شرح إدارة المخاطر والتفاوض مع أصحاب المصلحة واستمرارية الخدمة. ينبغي السؤال عن موقع العمل النهائي والعقد والأجر كتابة عند الوصول إلى المرحلة المناسبة. تمت مراجعة القرار الأصلي وصفحة البوابة بتاريخ 28 أكتوبر 2026؛ وقد تتغير التفاصيل لاحقاً بإعلان رسمي. أي بيانات غير مؤكدة، مثل عدد المتقدمين أو نسب النجاح، تُترك خارج التقرير."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Bank Al-Maghrib 2026: Cybersecurity Architect in Salé, requirements and deadline",
+          "deck": "Original-source analysis: one Salé vacancy, Bac+5, eight relevant years, optional certifications and 10 November 2026 deadline.",
+          "sections": [
+            [
+              "1. Employer, vacancy and location",
+              "Bank Al-Maghrib published a vacancy on 27 October 2026 for one Cybersecurity Architect, referenced AC/DSI/27102026 in the employer's notice and C44303/26 on the government portal. The one-page document explicitly places the job in Salé; it does not distribute vacancies across other cities. The position belongs to the Information Systems Directorate and concerns security architecture rather than entry-level helpdesk support. Only one position is advertised. Meeting formal eligibility requirements is not a promise of selection, and an applicant should read the original job description rather than infer duties from a short aggregator headline."
+            ],
+            [
+              "2. Mission and design responsibilities",
+              "The architect will define cybersecurity architectures, standards, and technology roadmaps to protect the bank's information systems while respecting strategy, risk appetite, and regulatory requirements. The notice describes coordination with the information security officer and teams handling applications, data, infrastructure, cloud, and operations. This is more than monitoring alerts or buying security products: it requires turning threats into defensible design decisions. An applicant can prepare an anonymized professional example explaining the business constraint, alternatives considered, control selected, and verification method. Do not disclose confidential diagrams or credentials from a previous employer merely to demonstrate technical competence."
+            ],
+            [
+              "3. Degree, experience, nationality and age",
+              "The employer requires a Bac+5 degree in computer science, security, or an equivalent field and at least eight years of experience relevant to the role. Candidates must be Moroccan nationals and under forty years old. The PDF does not specify a separate reference date for calculating age, so a borderline candidate should request official clarification rather than invent a rule. Eight years in a generic IT job do not automatically demonstrate eight years of appropriate cybersecurity architecture experience. Applicants should show the actual dates, responsibilities, and complexity of their work, avoiding inflated titles or unsupported claims of exemptions."
+            ],
+            [
+              "4. Certifications and technical knowledge",
+              "The original notice describes CISSP, CISM, CCSP, SABSA, and cloud security certifications as advantages rather than standalone mandatory qualifications. Its technical scope includes Zero Trust, network segmentation, identity and access management, application and API security, cryptography, PKI, HSM, and key rotation. It also mentions cloud and container hardening, threat modelling, continuity plans, and disaster recovery. A credible application distinguishes hands-on delivery from academic familiarity and names the applicant's contribution to each project. Do not claim a certificate you have not earned. The presence of a technology in the job description does not prove that it will appear in a formal examination."
+            ],
+            [
+              "5. Development security and operational controls",
+              "Responsibilities include embedding controls in development and CI/CD pipelines through DevSecOps practices and SAST, DAST, and IAST techniques. The notice also covers infrastructure as code, policy as code, vulnerability management, SIEM and SOAR, incident response, and security of cloud providers and other third parties. These are stated job competencies, not a published written-test syllabus. To prepare for an interview, document one sanitized architecture decision in five parts: requirement, threat, options, decision, and evidence of effectiveness. Explain which actions you personally performed and which were delivered by a team, without revealing client secrets."
+            ],
+            [
+              "6. Application route and missing document details",
+              "The employer requires candidates to complete the recruitment form for this specific position in the careers section of Bank Al-Maghrib's official website. The government portal provides the corresponding online application link. The one-page notice does not publish a definitive list of required attachments, file formats, or maximum file sizes. Candidates can prepare an accurate CV and degree and employment information, but should follow the actual form rather than an unrelated competition's checklist. Save a submission receipt if available and monitor the contact email used. Never send identity papers or banking information to an intermediary claiming guaranteed admission."
+            ],
+            [
+              "7. Deadline and selection stages",
+              "The government portal gives 10 November 2026 at 16:30 as the application deadline, whereas the employer PDF gives 10 November without a time. This is a difference in precision, not evidence of an extension. Apply before the portal's stated time and watch for official amendments. The employer says shortlisted candidates will be notified by email of the date and place of an interview. The reviewed notice does not announce a written examination, an interview date, or a results calendar. An application acknowledgement is not an invitation, and an invitation is not an employment contract. Retain the submitted information for later verification."
+            ],
+            [
+              "8. Pay, preparation and limits of evidence",
+              "The original notice does not state salary, allowances, working hours, or a starting date. An estimated wage on a third-party website should not be presented as Bank Al-Maghrib's offer. Candidates can build a requirement-to-evidence matrix connecting each responsibility to a non-confidential professional project, highlighting risk assessment, stakeholder decisions, and resilience. At the appropriate recruitment stage, request written clarification of contractual terms, final workplace, and remuneration. The original PDF and government listing were checked on 28 October 2026. Later official updates take precedence, and unsupported claims about applicant numbers or success rates have deliberately been excluded."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Bank Al-Maghrib 2026 : architecte cybersécurité à Salé, profil et candidature",
+          "deck": "Lecture de l'avis officiel : un poste à Salé, Bac+5, huit ans d'expérience, certifications appréciées et clôture le 10 novembre 2026.",
+          "sections": [
+            [
+              "1. Recruteur, poste et lieu d'affectation",
+              "Bank Al-Maghrib a publié le 27 octobre 2026 une offre pour un architecte cybersécurité, référencée AC/DSI/27102026 dans l'avis de l'employeur et C44303/26 sur le portail public. Le document d'une page situe explicitement le poste à Salé, sans répartition annoncée entre d'autres villes. La fonction relève de la Direction Système d'Information et concerne la conception de la sécurité, non l'assistance informatique débutante. Un seul poste est proposé. Remplir les conditions formelles ne garantit pas le recrutement ; il faut lire la fiche originale plutôt que déduire les missions d'un simple titre repris par un agrégateur."
+            ],
+            [
+              "2. Mission et responsabilité architecturale",
+              "L'architecte définit les architectures, les normes et les feuilles de route de cybersécurité afin de protéger le système d'information de la Banque. Les décisions doivent respecter la stratégie, l'appétence aux risques et les obligations réglementaires. Le document prévoit une coordination avec le RSSI et les équipes des applications, des données, des infrastructures, du cloud et de l'exploitation. La fonction dépasse la surveillance des alertes ou l'achat de produits. Le candidat peut préparer un exemple professionnel anonymisé présentant la contrainte métier, les options examinées, le contrôle retenu et sa vérification, sans révéler de schémas confidentiels d'un ancien employeur."
+            ],
+            [
+              "3. Diplôme, expérience, nationalité et âge",
+              "L'avis exige un Bac+5 en informatique, sécurité ou domaine équivalent et au moins huit années d'expérience pertinente pour la fonction. Les candidats doivent être marocains et âgés de moins de quarante ans. Le PDF ne donne pas de date de référence distincte pour le calcul de l'âge ; une personne proche de la limite devrait demander une clarification officielle. Huit années d'activité informatique générale ne prouvent pas automatiquement huit années d'architecture cybersécurité adaptée. Il convient d'exposer des dates, responsabilités et réalisations vérifiables, sans gonfler les intitulés ni supposer une dispense de condition que l'employeur n'a pas annoncée."
+            ],
+            [
+              "4. Certifications et compétences techniques",
+              "Les certifications CISSP, CISM, CCSP, SABSA et les titres de sécurité cloud sont indiqués comme des atouts, non comme des conditions obligatoires autonomes. Le poste couvre Zero Trust, la segmentation, la gestion des identités et accès, la sécurité des applications et API, la cryptographie, PKI, HSM et la rotation des clés. Il comprend également le durcissement du cloud et des conteneurs, la modélisation des menaces et la continuité d'activité. Une candidature crédible distingue les projets réellement menés des notions seulement étudiées. Il serait trompeur de déclarer une certification non obtenue ou de présenter cette liste comme le programme officiel d'une épreuve."
+            ],
+            [
+              "5. Développement sécurisé et contrôle opérationnel",
+              "La fiche prévoit l'intégration de contrôles dans les chaînes de développement et CI/CD, avec DevSecOps, SAST, DAST et IAST. Elle mentionne l'infrastructure as code, les politiques automatisées, la gestion des vulnérabilités, SIEM et SOAR, la réponse aux incidents et la sécurité des prestataires. Ce sont des compétences professionnelles annoncées, pas un programme d'examen écrit. Pour préparer un entretien, on peut exposer une décision d'architecture anonymisée en cinq étapes : besoin, menace, alternatives, choix, puis preuve d'efficacité. Il faut préciser sa contribution personnelle et celle de l'équipe, tout en protégeant les secrets des clients et des employeurs."
+            ],
+            [
+              "6. Candidature et pièces non détaillées",
+              "L'employeur impose de remplir le formulaire de recrutement correspondant au poste dans la rubrique carrières du site officiel de Bank Al-Maghrib. Le portail gouvernemental fournit le lien vers la plateforme de candidature. L'avis d'une page ne présente pas de liste définitive de pièces jointes, de formats ou de tailles maximales. Un CV exact et les renseignements sur le diplôme et l'expérience peuvent être préparés, mais les consignes du formulaire font foi. Conservez une preuve de dépôt si elle est fournie et surveillez votre courriel. Ne transmettez pas vos documents d'identité à un intermédiaire promettant une sélection certaine."
+            ],
+            [
+              "7. Date limite et sélection",
+              "Le portail public fixe la clôture au 10 novembre 2026 à 16 h 30, tandis que le PDF indique seulement le 10 novembre. Cette différence de précision ne prouve aucune prolongation. Il faut déposer le dossier avant l'heure publiée et suivre les rectificatifs officiels. Selon l'employeur, les candidats présélectionnés seront informés par courriel de la date et du lieu de l'entretien. Aucun examen écrit, calendrier d'entretien ou date de résultats n'est précisé dans l'avis examiné. Un accusé de dépôt n'est pas une convocation, et une convocation n'est pas une promesse d'embauche. Gardez une copie des informations transmises."
+            ],
+            [
+              "8. Salaire, préparation et prudence",
+              "L'avis original ne publie ni rémunération, ni avantages, ni horaires de travail, ni date d'entrée en fonction. Les estimations salariales d'autres sites ne doivent pas être attribuées à Bank Al-Maghrib. Le candidat peut préparer une matrice reliant chaque responsabilité à un projet professionnel documenté et non confidentiel, en détaillant les risques, les arbitrages et la résilience. Les conditions contractuelles, l'affectation définitive et le salaire devront être confirmés par écrit au stade approprié. Le PDF et la fiche gouvernementale ont été consultés le 28 octobre 2026 ; tout changement officiel ultérieur prévaut sur cette analyse datée."
+            ]
+          ]
+        }
+      }
     }
   }
 }
