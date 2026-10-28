@@ -304,3 +304,21 @@ html[lang=ar] .opp-main-hub .opp-hero h1{font-size:clamp(37px,4.6vw,65px)}
 .opp-guide-page .opp-guide-sources a{overflow-wrap:anywhere}
 .opp-guide-page .opp-guide-section .opp-action{display:inline-flex;margin-top:22px;text-decoration:none}
 @media(max-width:640px){.opp-guide-page .opp-guide-article{border-radius:14px}.opp-guide-page .opp-guide-layout{padding-inline:16px}.opp-guide-page .opp-guide-section{padding-bottom:24px;margin-bottom:24px}}
+
+
+/* Evidence-led listings and migration labour-market data, 2026-10-28 */
+.opp-guide-page .opp-fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;margin:18px 0 8px;padding:0}
+.opp-guide-page .opp-fact-grid>div{background:#f6f8fc;border:1px solid #e5e8f3;border-radius:12px;padding:13px 16px;min-width:0}
+.opp-guide-page .opp-fact-grid dt{font-size:13px;color:#606f88;font-weight:650;margin-bottom:6px}
+.opp-guide-page .opp-fact-grid dd{font-size:16px;line-height:1.65;color:#182d4b;font-weight:650;margin:0;overflow-wrap:anywhere}
+.opp-guide-page .opp-evidence-warning{border:1px solid #f0b967;border-inline-start:5px solid #d68b28;background:#fffaee;border-radius:12px;padding:19px 23px;margin-bottom:30px;color:#684419}
+.opp-guide-page .opp-evidence-warning p{margin:9px 0 0;line-height:1.8}
+.opp-guide-page .opp-evidence-warning strong{font-size:17px}
+.opp-deadline-conflict{font-size:13px!important;color:#b65a20!important;font-weight:700}
+.opp-guide-page .opp-primary-sources{padding-inline-start:25px;margin:16px 0 24px}
+.opp-guide-page .opp-primary-sources li{margin-bottom:12px;line-height:1.65}
+.opp-guide-page .opp-primary-sources a{color:#4e45b4;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.opp-guide-page .opp-market-paragraph h3{color:#34496b;font-size:18px;line-height:1.5;margin:0 0 12px}
+.opp-guide-page .opp-market-paragraph p,.opp-guide-page .opp-unverified p{font-size:16px;line-height:2.05}
+.opp-guide-page .opp-unverified{background:#fafbfe;border-radius:12px;padding:19px 23px}
+@media(max-width:620px){.opp-guide-page .opp-fact-grid{grid-template-columns:1fr}.opp-guide-page .opp-guide-article{padding:18px}.opp-guide-page .opp-fact-grid dd{font-size:15px}}
