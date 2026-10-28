@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 8,
+    "researched": 10,
     "marketEvidence": 5,
-    "pendingDetail": 74
+    "pendingDetail": 72
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -69,10 +69,13 @@
       "section": "competitions",
       "title": "Cadres ingénieurs et gestionnaires Bac+5",
       "deadline": "2026-11-06",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-06",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/0c72b060-b3a6-4d1f-b36a-b01f767b48fe"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/0c72b060-b3a6-4d1f-b36a-b01f767b48fe",
+      "researchedAt": "2026-10-28",
+      "verification": "Original notice and portal evidence in content/opportunity-editorial-evidence.json; trilingual full article live HTTP 200 with sections and primary source in public-sitemap-check run 40721235285",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/oncf-bac5/"
     },
     {
       "id": "amdie-finance",
@@ -102,10 +105,13 @@
       "section": "competitions",
       "title": "Architecte Cybersécurité",
       "deadline": "2026-11-10",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-10",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "researchedAt": "2026-10-28",
+      "verification": "Original notice and portal evidence in content/opportunity-editorial-evidence.json; trilingual full article live HTTP 200 with sections and primary source in public-sitemap-check run 40721235285",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/bam-cyber/"
     },
     {
       "id": "ram-call",
