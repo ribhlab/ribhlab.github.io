@@ -73,7 +73,7 @@ try{
   return r.result?.value;
  };
  await cdp('Page.enable');await cdp('Runtime.enable');
- const pages=['/','/archive/','/markets/','/opportunities/','/opportunities/morocco/','/opportunities/visa-appointments/','/audience/','/tools/','/tools/document-studio/','/lifestyle/homemade-pizza-margherita-authentic-style-recipe/'];
+ const pages=['/','/archive/','/markets/','/opportunities/','/opportunities/morocco/','/opportunities/visa-appointments/','/audience/','/sports/','/sports/fixtures/','/sports/results/','/sports/transfers/','/sports/videos/','/technology/','/technology/phones/','/technology/comparisons/','/technology/apps/','/technology/apps/productivity/','/technology/apps/ai/','/technology/apps/sports/','/tools/','/tools/document-studio/','/lifestyle/homemade-pizza-margherita-authentic-style-recipe/'];
  const cases=[];
  for(const lang of ['ar','en','fr']){
   for(const width of [320,390,768,1024,1440])cases.push({lang,width,route:'/'});
@@ -120,6 +120,14 @@ try{
    if(test.route.startsWith('/markets/read/')){
     const story=await evalJS('(()=>{const fig=document.querySelector(".market-story-figure"),img=fig?.querySelector("img"),cap=fig?.querySelector("figcaption"),back=document.querySelector(".market-home-button");return {ok:!!fig&&!!img&&img.getBoundingClientRect().height<=345&&fig.getBoundingClientRect().height<=345&&(!cap||getComputedStyle(cap).display==="none")&&!!back,imgHeight:img?.getBoundingClientRect().height,figHeight:fig?.getBoundingClientRect().height,back:!!back};})()');
     if(!story.ok)fail(label+': Market article image too large or credit clutter '+JSON.stringify(story));
+   }
+   if(test.route.startsWith('/technology/apps/')&&test.route!='/technology/apps/'){
+     const check=await evalJS('(()=>{const cards=document.querySelectorAll(".media-app-card"),reason=document.querySelectorAll(".media-app-fit");const links=[...cards].every(c=>c.querySelector("a.media-link")?.getAttribute("href")?.startsWith("https://"));return {ok:cards.length===10&&reason.length===10&&links,cards:cards.length,reasons:reason.length,links};})()');
+     if(!check.ok)fail(label+': 10-app guide missing editorial use-cases or real developer links '+JSON.stringify(check));
+   }
+   if(test.route==='/technology/'||test.route==='/sports/'){
+     const check=await evalJS('(()=>{const p=document.querySelector(".media-page"),nav=document.querySelector(".media-tabnav"),hero=document.querySelector(".media-hero"),cards=document.querySelectorAll(".media-card");return {ok:!!p&&!!nav&&!!hero&&cards.length>=3&&hero.getBoundingClientRect().width<=innerWidth+3,cards:cards.length};})()');
+     if(!check.ok)fail(label+': missing sports/technology newsroom layout '+JSON.stringify(check));
    }
    if(test.width===320&&test.route==='/archive/'){
     const search=await evalJS('(()=>{const i=document.querySelector("#archive-search"),o=document.querySelector("[data-archive-count]"),e=document.querySelector("[data-archive-empty]");if(!i||!o||!e)return false;i.value="__no_matches__";i.dispatchEvent(new Event("input",{bubbles:true}));return o.textContent.startsWith("0")&&!e.hidden;})()');
