@@ -58,19 +58,23 @@ if(pubId){
  if(fs.existsSync(adsOutput))errors.push('AdSense: ads.txt must not carry an invented publisher account');
  if(bareHome.includes('name="google-adsense-account"'))errors.push('AdSense: published ownership meta without verified publisher ID');
 }
-const activeAds=String(process.env.ENABLE_ADSENSE||'false')==='true';
-if(activeAds){
- if(!pubId)errors.push('AdSense: ad scripts activated without valid publisher ID');
+const publisherConfig=JSON.parse(fs.readFileSync(path.join(root,'site.config.json'),'utf8'));
+const activeAds=String(process.env.ENABLE_ADSENSE??publisherConfig.enableAdsense??false)==='true';
+const verifyWithLoader=String(process.env.ADSENSE_VERIFICATION_SCRIPT??publisherConfig.adsenseVerificationScript??false)==='true';
+const scriptRequired=activeAds||verifyWithLoader;
+if(scriptRequired){
+ if(!pubId)errors.push('AdSense: verification script requested without valid publisher ID');
+ const loader='pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+pubId;
+ if(!bareHome.includes(loader))errors.push('AdSense: verification script missing on bare domain');
  for(const lang of ['ar','en','fr']){
   const html=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
   const privacy=fs.readFileSync(path.join(dist,lang,'privacy','index.html'),'utf8');
-  if(!html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+pubId))errors.push('AdSense: missing real ad script '+lang);
-  if(!privacy.includes(({ar:'ملفات تعريف الارتباط',en:'cookies or similar identifiers',fr:'cookies ou identifiants similaires'})[lang]))errors.push('AdSense: missing advertising-specific privacy disclosure '+lang);
+  if(!html.includes(loader)||!html.includes('crossorigin="anonymous"'))errors.push('AdSense: exact publisher loader missing '+lang);
+  if(!privacy.includes(({ar:'ملفات تعريف الارتباط',en:'cookies or similar identifiers',fr:'cookies ou identifiants similaires'})[lang]))errors.push('AdSense: missing Google request and advertising privacy disclosure '+lang);
  }
 }else{
- for(const lang of ['ar','en','fr']){
-  const html=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
-  if(html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))errors.push('AdSense: ad scripts loaded before explicit activation '+lang);
+ for(const html of [bareHome,...['ar','en','fr'].map(lang=>fs.readFileSync(path.join(dist,lang,'index.html'),'utf8'))]){
+  if(html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))errors.push('AdSense: loading script without configured verification or activation');
  }
 }
 
