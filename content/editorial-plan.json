@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastReviewed": "2026-10-27",
+  "lastReviewed": "2026-10-28",
   "languages": [
     "ar",
     "en",
@@ -238,19 +238,11 @@
         "affiliate-marketing-ethically",
         "sell-digital-products",
         "online-income-real-business-models",
-        "twelve-online-income-models-startup-costs-risks"
+        "twelve-online-income-models-startup-costs-risks",
+        "best-mobile-budget-expense-apps-2026",
+        "adsense-ready-original-site-2026-checklist"
       ],
       "ideas": [
-        {
-          "sequence": 5,
-          "titleAr": "كيف تختار مشروع رقمي بلا رأس مال كبير",
-          "status": "planned"
-        },
-        {
-          "sequence": 6,
-          "titleAr": "المنتجات الرقمية الأكثر ملاءمة للمبتدئ",
-          "status": "planned"
-        },
         {
           "sequence": 7,
           "titleAr": "بيع قوالب Excel بطريقة قانونية",
@@ -444,14 +436,10 @@
         "automate-excel-ai",
         "ai-video-workflow",
         "ai-assistant-vs-ai-agent-workflows-practical-guide",
-        "ai-agents-business-security-human-checklist"
+        "ai-agents-business-security-human-checklist",
+        "ai-assistant-apps-2026-iphone-android-comparison"
       ],
       "ideas": [
-        {
-          "sequence": 8,
-          "titleAr": "كتابة برومبت بحث موثق بالمصادر",
-          "status": "planned"
-        },
         {
           "sequence": 9,
           "titleAr": "اختبار هلوسة النماذج الكبيرة",
@@ -630,29 +618,13 @@
       "targetArticles": 40,
       "publishedSlugs": [
         "best-android-iphone-apps-productivity-2026",
-        "android-app-monetization-ads-purchases-subscriptions-guide-2026"
+        "android-app-monetization-ads-purchases-subscriptions-guide-2026",
+        "iphone-android-productivity-apps-2026-comparison",
+        "iphone-18-pixel-11-galaxy-s26-buying-guide-2026",
+        "mobile-photo-video-editing-apps-2026-guide",
+        "football-results-sports-apps-2026-guide"
       ],
       "ideas": [
-        {
-          "sequence": 3,
-          "titleAr": "أفضل تطبيقات إدارة المهام Android",
-          "status": "planned"
-        },
-        {
-          "sequence": 4,
-          "titleAr": "أفضل تطبيقات الملاحظات iPhone",
-          "status": "planned"
-        },
-        {
-          "sequence": 5,
-          "titleAr": "مقارنة تطبيقات تقويم الهاتف",
-          "status": "planned"
-        },
-        {
-          "sequence": 6,
-          "titleAr": "تطبيقات إدارة الملفات بأمان",
-          "status": "planned"
-        },
         {
           "sequence": 7,
           "titleAr": "تطبيقات النسخ الاحتياطي للصور",
