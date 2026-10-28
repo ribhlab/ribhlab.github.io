@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 11,
+    "researched": 12,
     "marketEvidence": 5,
-    "pendingDetail": 71
+    "pendingDetail": 70
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -59,10 +59,14 @@
       "section": "competitions",
       "title": "Administrateur 2ème grade — Agriculture",
       "deadline": "2026-10-30",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-10-30",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0",
+      "researchedAt": "2026-10-28",
+      "evidencePath": "content/opportunity-editorial-evidence.json",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/agriculture-admin/",
+      "verification": "Signed original 2-page ministerial notice and official government listing reviewed 28 Oct 2026; build 40740825050 and Pages deployment 40740824945 succeeded; live AR/EN/FR pages with eight sections and original PDF checked in public-sitemap-check 40740922162."
     },
     {
       "id": "oncf-bac5",
