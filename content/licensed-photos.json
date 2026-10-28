@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "license": "Unsplash License — free commercial use and modification, no resale of unmodified images or competing image collections; third-party rights must also be respected",
   "licenseUrl": "https://unsplash.com/license",
   "purpose": "One distinct, topic-matched, real photographic image per published article, licensed under Unsplash License; editorial illustration only.",
@@ -434,6 +434,76 @@
       "altFr": "Bol de céréales et de légumes frais",
       "license": "Unsplash License",
       "note": "Distinct authentic editorial illustration; not a photograph of a specific recruitment process or trade result."
+    },
+    "iphone-android-productivity-apps-2026-comparison": {
+      "photoId": "photo-1759215524630-a6572b3cfb86",
+      "source": "https://unsplash.com/photos/smartphone-on-notebook-and-laptop-on-table-CGvC8yWgC-g",
+      "photographer": "Swello",
+      "alt": "Phone and laptop on a work desk",
+      "altAr": "هاتف وحاسوب على مكتب للعمل",
+      "altFr": "Téléphone et ordinateur sur un bureau",
+      "license": "Unsplash License",
+      "note": "Authentic illustration, not a hands-on product or app review nor a tested result."
+    },
+    "ai-assistant-apps-2026-iphone-android-comparison": {
+      "photoId": "photo-1744900647430-965ccc7a6078",
+      "source": "https://unsplash.com/photos/a-hand-holds-a-smartphone-with-various-apps-P5sGqNT_Aj8",
+      "photographer": "Aerps.com",
+      "alt": "Phone showing different AI apps",
+      "altAr": "هاتف يعرض تطبيقات للذكاء الاصطناعي",
+      "altFr": "Téléphone affichant des applications IA",
+      "license": "Unsplash License",
+      "note": "Authentic illustration, not a hands-on product or app review nor a tested result."
+    },
+    "iphone-18-pixel-11-galaxy-s26-buying-guide-2026": {
+      "photoId": "photo-1758186366128-b7f4588ac75f",
+      "source": "https://unsplash.com/photos/hand-holding-a-dark-blue-smartphone-with-apple-logo-WkywZLOM_Ks",
+      "photographer": "Amanz",
+      "alt": "Blue smartphone held in a person's hand, illustrative older model",
+      "altAr": "هاتف أزرق في اليد صورة توضيحية لجهاز أقدم",
+      "altFr": "Téléphone bleu tenu en main, illustration d'un ancien modèle",
+      "license": "Unsplash License",
+      "note": "Authentic illustration, not a hands-on product or app review nor a tested result."
+    },
+    "mobile-photo-video-editing-apps-2026-guide": {
+      "photoId": "photo-1649269290804-b6d4bffbe7c1",
+      "source": "https://unsplash.com/photos/a-person-taking-a-picture-with-a-cell-phone-26Oj0HHkYf8",
+      "photographer": "Jayson Hinrichsen",
+      "alt": "Person photographing with a smartphone",
+      "altAr": "شخص يصور بهاتف ذكي",
+      "altFr": "Personne prenant une photo avec un smartphone",
+      "license": "Unsplash License",
+      "note": "Authentic illustration, not a hands-on product or app review nor a tested result."
+    },
+    "football-results-sports-apps-2026-guide": {
+      "photoId": "photo-1762769124581-696bd2298830",
+      "source": "https://unsplash.com/photos/person-holding-a-smartphone-with-apps-displayed-Ahx-C-abq_U",
+      "photographer": "Amanz",
+      "alt": "Mobile gaming apps screen illustrating entertainment apps, not live sports",
+      "altAr": "شاشة تطبيقات وألعاب على الهاتف، صورة توضيحية وليس نتائج مباشرة",
+      "altFr": "Écran d'applications et jeux, photographie illustrative",
+      "license": "Unsplash License",
+      "note": "Authentic illustration, not a hands-on product or app review nor a tested result."
+    },
+    "best-mobile-budget-expense-apps-2026": {
+      "photoId": "photo-1508873699372-7aeab60b44ab",
+      "source": "https://unsplash.com/photos/pen-notebook-and-smartphone-on-table-bU6JyhSI6zo",
+      "photographer": "Dose Media",
+      "alt": "Notebook, pen and smartphone for planning expenses",
+      "altAr": "دفتر وقلم وهاتف لتنظيم المصاريف",
+      "altFr": "Carnet, stylo et téléphone pour planifier les dépenses",
+      "license": "Unsplash License",
+      "note": "Authentic illustration, not a hands-on product or app review nor a tested result."
+    },
+    "adsense-ready-original-site-2026-checklist": {
+      "photoId": "photo-1753731462800-170bd4f5f0d2",
+      "source": "https://unsplash.com/photos/a-hand-holds-a-smartphone-with-a-blue-display-wacJKvwkrv0",
+      "photographer": "Andrey Matveev",
+      "alt": "Person holding a modern smartphone, illustrative of mobile website use",
+      "altAr": "شخص يمسك هاتفا حديثا، صورة توضيحية لاستعمال المواقع",
+      "altFr": "Personne tenant un smartphone, illustration de l'usage mobile",
+      "license": "Unsplash License",
+      "note": "Authentic illustration, not a hands-on product or app review nor a tested result."
     }
   }
 }
