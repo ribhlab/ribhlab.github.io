@@ -141,6 +141,7 @@ async function saveSection(){
  const oldPlan=plan.sections.find(s=>s.id===candidate.id);
  if(!oldId&&existing)fail('معرّف القسم مستخدم مسبقاً.');
  if(oldId&&!existing)fail('القسم المراد تعديله غير موجود.');
+ if(['freelance','online-business','ai-automation','mobile-apps','games-security','trading-risk','crypto-web3','gold-macro','body-care','world-recipes'].includes(candidate.id)&&candidate.targetArticles!==40)fail('الأقسام الأصلية محفوظة بهدف 40 مقالاً لكل قسم؛ لا يمكن تغيير سعتها من لوحة الإدارة.');
  if(existing&&existing.publishedSlugs.length&&candidate.parent!==existing.parent)fail('لا يمكن تغيير المجال لقسم يضم مقالات منشورة.');
  if(existing&&candidate.targetArticles<existing.publishedSlugs.length)fail('الحد الجديد أقل من عدد المقالات المنشورة بالقسم.');
  const next=existing?{...existing,...candidate}:{...candidate,publishedSlugs:[]};
