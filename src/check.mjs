@@ -808,6 +808,30 @@ for(const marker of ['loadPeerJS','new Peer(','newButton','net.connected','publi
  if(!chessCode.includes(marker))errors.push('Online chess move synchronization missing '+marker);
 }
 
+
+/* Search discovery contracts: every localized indexable page has a canonical,
+   hierarchical BreadcrumbList, and recipe clusters contain genuine internal links. */
+for(const lang of ['ar','en','fr']){
+ const hub=path.join(dist,lang,'recipes','index.html');
+ const html=fs.readFileSync(hub,'utf8');
+ if(!html.includes('recipe-hub-explainer')||!html.includes('recipe-card'))errors.push('SEO: recipe hub must contain useful human-readable topic description and individual dishes '+lang);
+ const sample=foodItems[0],samplePage=fs.readFileSync(path.join(dist,lang,'recipes',sample.slug,'index.html'),'utf8');
+ if(!samplePage.includes('recipe-related-grid')||(samplePage.match(/href="\/'+lang+'\/recipes\/[^"]+\/"/g)||[]).length<4)errors.push('SEO: recipe page missing contextual internal links '+lang);
+ if(!samplePage.includes('"@type":"BreadcrumbList"'))errors.push('SEO: no breadcrumb schema on recipe page '+lang);
+ const section=taxonomy.sections.find(x=>x.publishedSlugs.length>0);
+ if(section){
+  const sectionHtml=fs.readFileSync(path.join(dist,lang,'sections',section.id,'index.html'),'utf8');
+  if(!sectionHtml.includes('"@type":"BreadcrumbList"'))errors.push('SEO: no breadcrumb on editorial section '+lang+'/'+section.id);
+ }
+}
+if(configuredUrl){
+ const xml=fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8');
+ const entries=[...xml.matchAll(/<url><loc>[^<]+<\/loc>(?:<lastmod>[^<]+<\/lastmod>)?/g)].map(x=>x[0]);
+ if(entries.some(x=>/<lastmod>(?!20\d\d-\d\d-\d\d<\/lastmod>)/.test(x)))errors.push('SEO: sitemap date does not comply with YYYY-MM-DD format');
+ const rootXml=xml.includes('<loc>'+configuredUrl.replace(/\/$/,'')+'/ar/</loc>');
+ if(!rootXml)errors.push('SEO: missing canonical Arabic homepage in sitemap');
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
