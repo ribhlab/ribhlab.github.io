@@ -816,7 +816,7 @@ for(const lang of ['ar','en','fr']){
  const html=fs.readFileSync(hub,'utf8');
  if(!html.includes('recipe-hub-explainer')||!html.includes('recipe-card'))errors.push('SEO: recipe hub must contain useful human-readable topic description and individual dishes '+lang);
  const sample=foodItems[0],samplePage=fs.readFileSync(path.join(dist,lang,'recipes',sample.slug,'index.html'),'utf8');
- if(!samplePage.includes('recipe-related-grid')||(samplePage.match(new RegExp('href="/'+lang+'/recipes/[^"]+/"','g'))||[]).length<4)errors.push('SEO: recipe page missing contextual internal links '+lang);
+ if(!samplePage.includes('recipe-related-grid')||(samplePage.match(new RegExp('href="/'+lang+'/recipes/[^" ]+/"','g'))||[]).length<4)errors.push('SEO: recipe page missing contextual internal links '+lang);
  if(!samplePage.includes('"@type":"BreadcrumbList"'))errors.push('SEO: no breadcrumb schema on recipe page '+lang);
  const section=taxonomy.sections.find(x=>x.publishedSlugs.length>0);
  if(section){
