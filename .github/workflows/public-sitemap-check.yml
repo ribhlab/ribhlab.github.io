@@ -36,6 +36,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/bam-cyber/')
               wanted.append(f'/{lang}/opportunities/immigration/eures-mobility/')
               wanted.append(f'/{lang}/opportunities/morocco/ram-call/')
+              wanted.append(f'/{lang}/opportunities/competitions/agriculture-admin/')
           last=None
           for attempt in range(1,7):
               try:
@@ -82,6 +83,10 @@ jobs:
                       assert ram.count('class="opp-guide-section" id="part-')>=8, f'{lang}: Atlas On Line full report missing sections'
                       assert 'opp-guide-sources' in ram and '75a63a0e-655b-4db8-8d4a-ffdeed8e61f9' in ram, f'{lang}: original employer PDF missing'
                       print(f'ATLAS ON LINE LIVE {lang}: original-source recruitment report verified',flush=True)
+                      agri=bodies[f'/{lang}/opportunities/competitions/agriculture-admin/'].decode('utf-8')
+                      assert 'C44077/26' in agri and '7c571fa5-42a7-46a6-8021-aed9ed9ec5f0' in agri, f'{lang}: Agriculture notice/reference missing'
+                      assert agri.count('class="opp-guide-section" id="part-')>=8 and 'opp-guide-sources' in agri, f'{lang}: Agriculture original report incomplete'
+                      print(f'AGRICULTURE LIVE {lang}: eight sections and signed original PDF verified',flush=True)
                       eures=bodies[f'/{lang}/opportunities/immigration/eures-mobility/'].decode('utf-8')
                       assert eures.count('class="opp-guide-section" id="part-')>=8 and 'opp-guide-sources' in eures, f'{lang}: EURES full guide missing'
                       print(f'EURES LIVE {lang}: detailed guide and sources verified',flush=True)
