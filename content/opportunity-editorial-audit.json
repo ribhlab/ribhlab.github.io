@@ -1,0 +1,984 @@
+{
+  "reviewedAt": "2026-10-28",
+  "scope": "All opportunity cards in this repository (jobs, employers, contests, immigration pathways and visa appointment services).",
+  "statusDefinitions": {
+    "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
+    "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
+    "source-listing-awaiting-detailed-review": "Verified source record only; full job eligibility/duties/pay not yet extracted; not a complete article",
+    "official-booking-source-only": "The country-specific official booking instructions are available; no real-time appointment slots verified"
+  },
+  "totals": {
+    "cards": 87,
+    "visa": 12,
+    "researched": 7,
+    "marketEvidence": 5,
+    "pendingDetail": 75
+  },
+  "requirements": [
+    "Read each individual recruitment PDF or government page, NOT only the listing title",
+    "Report salary only if the employer actually publishes it",
+    "Mention city, employer, number of positions, real eligibility, diploma, work schedule and deadline exactly as sourced",
+    "Separate national shortage statistics and regional forecasts from live jobs and visas",
+    "Publish trilingual AR-standard, FR and EN deep articles with source dates and references",
+    "Warn about official date conflicts and expiry instead of quietly choosing a convenient date",
+    "Keep internal cards within RibhLab and external primary sources in new tabs"
+  ],
+  "cards": [
+    {
+      "id": "sett-administrator",
+      "section": "competitions",
+      "title": "Administrateur 2e grade — Audit et contrôle de gestion — Settat",
+      "deadline": "2026-11-02",
+      "status": "researched-article",
+      "marketKey": null,
+      "priority": "date:2026-11-02",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/81e89845-6649-430e-98a2-65a32c048a48"
+    },
+    {
+      "id": "sett-engineer",
+      "section": "competitions",
+      "title": "Ingénieur d’État 1er grade — Province de Settat",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste"
+    },
+    {
+      "id": "civil-protection",
+      "section": "competitions",
+      "title": "Élèves officiers — Protection civile",
+      "deadline": "2026-10-31",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-31",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste"
+    },
+    {
+      "id": "agriculture-admin",
+      "section": "competitions",
+      "title": "Administrateur 2ème grade — Agriculture",
+      "deadline": "2026-10-30",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-30",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste"
+    },
+    {
+      "id": "oncf-bac5",
+      "section": "competitions",
+      "title": "Cadres ingénieurs et gestionnaires Bac+5",
+      "deadline": "2026-11-06",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-06",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/0c72b060-b3a6-4d1f-b36a-b01f767b48fe"
+    },
+    {
+      "id": "amdie-finance",
+      "section": "competitions",
+      "title": "Cadre Analyste Comptabilité et Finances",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/26fa5f83-f86b-446e-b293-0104f8494b9d"
+    },
+    {
+      "id": "srm-technicians",
+      "section": "competitions",
+      "title": "Techniciens — SRM Laâyoune-Sakia El Hamra",
+      "deadline": "2026-11-10",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-10",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics"
+    },
+    {
+      "id": "bam-cyber",
+      "section": "competitions",
+      "title": "Architecte Cybersécurité",
+      "deadline": "2026-11-10",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-10",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics"
+    },
+    {
+      "id": "ram-call",
+      "section": "morocco",
+      "title": "Téléconseillers — Atlas On Line / Groupe RAM",
+      "deadline": "2026-11-06",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-06",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9"
+    },
+    {
+      "id": "sett-network",
+      "section": "morocco",
+      "title": "Technicien systèmes et réseaux",
+      "deadline": "2026-11-16",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-16",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics"
+    },
+    {
+      "id": "sidi-finance",
+      "section": "morocco",
+      "title": "Cadre administratif et chargé de la comptabilité et finances",
+      "deadline": "2026-11-20",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-20",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/9c2c4e23-ec32-4b76-8c8d-75e9f50e9090"
+    },
+    {
+      "id": "eures",
+      "section": "international",
+      "title": "EURES — offres d’emploi dans l’Union européenne",
+      "deadline": null,
+      "status": "official-labour-evidence",
+      "marketKey": "europe",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://eures.europa.eu/index_en"
+    },
+    {
+      "id": "germany-jobs",
+      "section": "international",
+      "title": "Make it in Germany — offres d’emploi et formations",
+      "deadline": null,
+      "status": "official-labour-evidence",
+      "marketKey": "germany",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://www.make-it-in-germany.com/en/working-in-germany/job-listings"
+    },
+    {
+      "id": "canada-foreign",
+      "section": "international",
+      "title": "Job Bank — offres ouvertes aux candidats étrangers",
+      "deadline": null,
+      "status": "official-labour-evidence",
+      "marketKey": "canada",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://www.jobbank.gc.ca/trouverunemploi/candidats-etrangers"
+    },
+    {
+      "id": "france-travail",
+      "section": "international",
+      "title": "France Travail — offres d’emploi",
+      "deadline": null,
+      "status": "official-labour-evidence",
+      "marketKey": "france",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://www.francetravail.fr/"
+    },
+    {
+      "id": "un-careers",
+      "section": "international",
+      "title": "Nations Unies — postes, stages et contrats",
+      "deadline": null,
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "evergreen-source",
+      "sourceUrl": "https://careers.un.org/jobopening?language=en"
+    },
+    {
+      "id": "ocp-career",
+      "section": "companies",
+      "title": "OCP — carrière et candidature spontanée",
+      "deadline": null,
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "evergreen-source",
+      "sourceUrl": "https://careers.ocpgroup.ma/fr/carrieres/nous-rejoindre/nos-offres"
+    },
+    {
+      "id": "ocp-spontaneous",
+      "section": "companies",
+      "title": "OCP — candidature spontanée",
+      "deadline": null,
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "evergreen-source",
+      "sourceUrl": "https://careers.ocpgroup.ma/fr/carrieres/nous-rejoindre/candidature-spontanee"
+    },
+    {
+      "id": "ram-company",
+      "section": "companies",
+      "title": "Atlas On Line / Groupe RAM — téléconseillers",
+      "deadline": "2026-11-06",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-06",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9"
+    },
+    {
+      "id": "srm-company",
+      "section": "companies",
+      "title": "SRM Laâyoune — ingénieurs et techniciens",
+      "deadline": "2026-11-10",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-10",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics"
+    },
+    {
+      "id": "express-entry",
+      "section": "immigration",
+      "title": "Canada — Entrée express (Express Entry)",
+      "deadline": null,
+      "status": "researched-article",
+      "marketKey": "canada",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html"
+    },
+    {
+      "id": "canada-program",
+      "section": "immigration",
+      "title": "Canada — programmes d’immigration et permis de travail",
+      "deadline": null,
+      "status": "researched-article",
+      "marketKey": "canada",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html"
+    },
+    {
+      "id": "german-opportunity",
+      "section": "immigration",
+      "title": "Allemagne — carte des opportunités (Chancenkarte)",
+      "deadline": null,
+      "status": "researched-article",
+      "marketKey": "germany",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://www.make-it-in-germany.com/en/visa-residence/types/job-search-opportunity-card"
+    },
+    {
+      "id": "uk-visa",
+      "section": "immigration",
+      "title": "Royaume-Uni — Skilled Worker visa",
+      "deadline": null,
+      "status": "researched-article",
+      "marketKey": null,
+      "priority": "evergreen-source",
+      "sourceUrl": "https://www.gov.uk/skilled-worker-visa"
+    },
+    {
+      "id": "france-talent",
+      "section": "immigration",
+      "title": "France — Passeport talent et titres de séjour",
+      "deadline": null,
+      "status": "researched-article",
+      "marketKey": "france",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://france-visas.gouv.fr/"
+    },
+    {
+      "id": "eures-mobility",
+      "section": "immigration",
+      "title": "Europe — emploi et conditions de mobilité",
+      "deadline": null,
+      "status": "official-labour-evidence",
+      "marketKey": "europe",
+      "priority": "evergreen-source",
+      "sourceUrl": "https://eures.europa.eu/index_en"
+    },
+    {
+      "id": "srm-fes-meknes-271",
+      "section": "competitions",
+      "title": "271 postes — 25 cadres, 119 agents de maîtrise, 127 agents d'exécution",
+      "deadline": "2026-10-31",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-31",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e25c50f3-f5dc-4570-b991-981517e9a17b"
+    },
+    {
+      "id": "lpee-12",
+      "section": "competitions",
+      "title": "12 postes — génie civil, HSE, gestion et commerce",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/f2ac90c1-7561-482a-a517-17eeb1f65ac5"
+    },
+    {
+      "id": "sntl-accounting",
+      "section": "companies",
+      "title": "Technicien Comptable — 4 postes",
+      "deadline": "2026-11-03",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-03",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e7379c18-857e-4135-be2a-53365d665497"
+    },
+    {
+      "id": "marrakech-cash",
+      "section": "companies",
+      "title": "Comptable — contrôle des recettes et encaissements",
+      "deadline": "2026-11-07",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-07",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/705f6c1a-b4c6-411e-a1a7-e249a4de0781"
+    },
+    {
+      "id": "adha-civil-engineers-2026",
+      "section": "competitions",
+      "title": "5 Ingénieurs d’État — Génie civil",
+      "deadline": "2026-11-04",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-04",
+      "sourceUrl": "https://adha.gov.ma/recrutement.php?lang=fr"
+    },
+    {
+      "id": "ofppt-accountant-10",
+      "section": "competitions",
+      "title": "Assistant comptable (RH 135/2026)",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/320ad0af-40dd-4bf2-aa17-c8257e791ac6"
+    },
+    {
+      "id": "ofppt-administration-10",
+      "section": "competitions",
+      "title": "Cadres administratifs (RH 129/2026)",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/08bc8f9f-fbae-488e-8de6-f5259e3ba3b7"
+    },
+    {
+      "id": "ofppt-project-10",
+      "section": "competitions",
+      "title": "Cadres chargés de gestion des projets (RH 130/2026)",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e8535a3a-e31a-4465-8eba-168e8ef3fbea"
+    },
+    {
+      "id": "ofppt-pedagogy-3",
+      "section": "competitions",
+      "title": "Chef de pôle pédagogique — Casablanca, Rabat, Laâyoune (RH 132/2026)",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b94b323a-2c77-4178-bec3-db5ba3cb49e4"
+    },
+    {
+      "id": "amdie-buyer",
+      "section": "competitions",
+      "title": "Cadre Acheteur",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/686fddc3-8355-43a1-8799-e51f36685f5f"
+    },
+    {
+      "id": "amdie-development",
+      "section": "competitions",
+      "title": "Cadre analyste Projets de développement",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b135e292-d476-4fe6-bbb4-e57c0f73cdf3"
+    },
+    {
+      "id": "amdie-investment",
+      "section": "competitions",
+      "title": "Cadre analyste Projets d’investissement",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e3e989b0-e4ce-49fc-bee2-78571029dfec"
+    },
+    {
+      "id": "amdie-senior-buyer",
+      "section": "competitions",
+      "title": "Acheteur sénior",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/261843c9-2094-4efa-88fd-d62a90e51ce8"
+    },
+    {
+      "id": "srm-laayoune-responsibles",
+      "section": "competitions",
+      "title": "Responsables dans plusieurs spécialités",
+      "deadline": "2026-11-10",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-10",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/3f1e24f9-c263-409e-9323-c883d9008099"
+    },
+    {
+      "id": "srm-laayoune-managers",
+      "section": "competitions",
+      "title": "Cadres dans plusieurs spécialités",
+      "deadline": "2026-11-10",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-10",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/75dd9157-7267-42eb-a260-c5a2b61a343c"
+    },
+    {
+      "id": "srm-laayoune-engineers",
+      "section": "competitions",
+      "title": "Ingénieurs dans plusieurs spécialités",
+      "deadline": "2026-11-10",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-10",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/fce03172-1b93-4880-9f7b-05c6f88cb000"
+    },
+    {
+      "id": "srm-souss-technician",
+      "section": "competitions",
+      "title": "Technicien 3e grade",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/64194e96-bc55-4817-8ddd-c9b0e5d0d6d1"
+    },
+    {
+      "id": "cnrst-administrator-4",
+      "section": "competitions",
+      "title": "Administrateur 3e grade — CNRST",
+      "deadline": "2026-11-08",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-08",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf"
+    },
+    {
+      "id": "cnrst-administrator-2",
+      "section": "competitions",
+      "title": "Administrateur 2e grade — CNRST",
+      "deadline": "2026-11-08",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-08",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7461e57-f68d-40f0-a846-6bf8be2b8dda"
+    },
+    {
+      "id": "justice-secretary-15",
+      "section": "competitions",
+      "title": "Secrétaire juridique adjoint 4e grade",
+      "deadline": "2026-11-10",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-10",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/fb2e5ca9-e80e-4765-afc1-587b15f0ae33"
+    },
+    {
+      "id": "family-technician",
+      "section": "competitions",
+      "title": "Technicien 3e grade — Ministère Famille",
+      "deadline": "2026-11-08",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-08",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1"
+    },
+    {
+      "id": "kadev-assistant",
+      "section": "morocco",
+      "title": "Assistante de Direction — KADEV",
+      "deadline": "2026-10-28",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-28",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7b80ec7-c4ab-4e7f-8210-caf8773551e3"
+    },
+    {
+      "id": "drug-archive",
+      "section": "morocco",
+      "title": "Archiviste documentaliste",
+      "deadline": "2026-10-28",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-28",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/a401e758-b9e3-46ab-b171-996f5b20e4f2"
+    },
+    {
+      "id": "expert-interior",
+      "section": "competitions",
+      "title": "Expert — Ministère de l’Intérieur",
+      "deadline": "2026-11-06",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-06",
+      "sourceUrl": "https://www.emploi-public.ma/fr/experts/details/864df67b-0489-46b4-af1c-5595040c8ef7"
+    },
+    {
+      "id": "responsibility-mdiq",
+      "section": "competitions",
+      "title": "Postes de responsabilité — Préfecture M'diq Fnideq",
+      "deadline": "2026-11-27",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-27",
+      "sourceUrl": "https://www.emploi-public.ma/fr/postes-respo/details/16ea598e-c918-42b1-b1bf-37c2c103f129"
+    },
+    {
+      "id": "cdg-rates-equity-supervision",
+      "section": "competitions",
+      "title": "Responsable Supervision Taux et Actions",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b5fe236e-2c63-40cc-8c74-c6f40a68d275"
+    },
+    {
+      "id": "uh2c-medecine-professors-12",
+      "section": "competitions",
+      "title": "12 Maîtres de conférences — Faculté de Médecine et Pharmacie",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/a99cc5ed-f11c-4832-be6d-456cded59e58"
+    },
+    {
+      "id": "ucd-english-maitre-conference",
+      "section": "competitions",
+      "title": "Maître de conférences — langue anglaise",
+      "deadline": "2026-11-11",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-11",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/af01576c-b687-48d7-8b41-0434b035acfb"
+    },
+    {
+      "id": "sdl-marrakech-communication",
+      "section": "competitions",
+      "title": "Chargé communication, image de marque et partenariats",
+      "deadline": "2026-11-07",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-07",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/d19fded1-36a4-4108-8637-69297dbd27bc"
+    },
+    {
+      "id": "au-kenitra-architect",
+      "section": "competitions",
+      "title": "Architecte — antenne de Sidi Slimane",
+      "deadline": "2026-11-11",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-11",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/1f9f832d-e82c-4c61-9294-1a27921af5e5"
+    },
+    {
+      "id": "au-kenitra-data-science-ai",
+      "section": "competitions",
+      "title": "Ingénieur d’État — Big Data, Data Science ou IA",
+      "deadline": "2026-11-11",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-11",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b526d274-b490-4982-833e-71d21ea20813"
+    },
+    {
+      "id": "au-kenitra-assistante-direction",
+      "section": "competitions",
+      "title": "Assistante de direction",
+      "deadline": "2026-11-11",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-11",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/927d656a-4d17-418e-a25e-f74d8dc5f1b6"
+    },
+    {
+      "id": "anapec-finance-audit-3",
+      "section": "competitions",
+      "title": "Administrateur 2ème grade — Finance, comptabilité, audit, contrôle de gestion",
+      "deadline": "2026-11-05",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-05",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/bea98a46-0101-4906-afd5-4bdc57b30dab"
+    },
+    {
+      "id": "anapec-management-regions-4",
+      "section": "competitions",
+      "title": "Administrateur 3ème grade — Gestion, économie, commerce, management",
+      "deadline": "2026-11-05",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-05",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/532fb079-28b5-4a07-9f13-145387fc6435"
+    },
+    {
+      "id": "onmt-cadres-9",
+      "section": "companies",
+      "title": "Cadres — 9 postes (plusieurs spécialités)",
+      "deadline": "2026-10-29",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-29",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/7811f3e2-c098-4e12-a1d2-f87e040c10e5"
+    },
+    {
+      "id": "onmt-chef-audit-interne",
+      "section": "competitions",
+      "title": "Chef de Département Audit Interne",
+      "deadline": "2026-11-06",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-06",
+      "sourceUrl": "https://www.emploi-public.ma/fr/postes-respo/details/c5c04868-20c3-4941-beda-316a347b156e"
+    },
+    {
+      "id": "onmt-chef-controle-engagements",
+      "section": "competitions",
+      "title": "Chef de Département Contrôle des Engagements — fonctionnaires",
+      "deadline": "2026-10-29",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-29",
+      "sourceUrl": "https://www.emploi-public.ma/fr/postes-respo/details/24ef1357-974f-4e42-a880-e0f15c6e43e9"
+    },
+    {
+      "id": "onmt-chef-controle-paiements",
+      "section": "competitions",
+      "title": "Chef de Département Contrôle des Paiements — fonctionnaires",
+      "deadline": "2026-10-29",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-29",
+      "sourceUrl": "https://www.emploi-public.ma/fr/postes-respo/details/88b3be89-d109-43b2-8cb3-52949de69c0d"
+    },
+    {
+      "id": "onmt-chef-paiements-fournisseurs",
+      "section": "competitions",
+      "title": "Chef de Service Paiement Fournisseurs — fonctionnaires",
+      "deadline": "2026-10-29",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-29",
+      "sourceUrl": "https://www.emploi-public.ma/fr/postes-respo/details/4a58b650-4838-485d-8a52-cdf305163588"
+    },
+    {
+      "id": "sntl-cadre-juriste-1",
+      "section": "companies",
+      "title": "Cadre Supérieur Juriste",
+      "deadline": "2026-11-03",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-03",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/22e15000-86a6-4c58-87a2-9db969a11a7a"
+    },
+    {
+      "id": "sntl-dev-logiciel-2",
+      "section": "companies",
+      "title": "Technicien en Développement Logiciel",
+      "deadline": "2026-11-03",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-03",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7a92e36-cc06-48a4-9c8d-22c4e339a716"
+    },
+    {
+      "id": "sntl-assistant-juriste-1",
+      "section": "companies",
+      "title": "Assistant Juriste",
+      "deadline": "2026-11-03",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-03",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/8df1189c-3b8a-40d0-b085-78758d3faa7d"
+    },
+    {
+      "id": "bam-assurances-2026",
+      "section": "companies",
+      "title": "Chargé de suivi dossiers d'assurances",
+      "deadline": "2026-11-02",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-02",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/d0a32a44-0138-4be0-bc53-8159712e6edc"
+    },
+    {
+      "id": "smit-pmo-suivi-post-financement",
+      "section": "companies",
+      "title": "PMO Suivi et Post Financement",
+      "deadline": "2026-10-31",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-31",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b0891a13-73e3-48bc-b993-05bafc21b55f"
+    },
+    {
+      "id": "smit-pmo-gestion-admin-si",
+      "section": "companies",
+      "title": "PMO Gestion Administrative et Plateforme SI",
+      "deadline": "2026-10-31",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-31",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/82d114a7-a77f-42d7-8fba-93183494b937"
+    },
+    {
+      "id": "srm-rsk-cadres-responsables-10",
+      "section": "competitions",
+      "title": "Cadres Responsables — 10 postes",
+      "deadline": "2026-10-31",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-31",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/cd4a0dc3-10d2-48d8-9ba4-bc32f50fbfc2"
+    },
+    {
+      "id": "ofppt-auditeurs-rh116-5",
+      "section": "competitions",
+      "title": "Auditeur (RH 116/2026) — 5 postes",
+      "deadline": "2026-10-29",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-29",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/dcbaa097-b156-495d-ad61-5d3adad082dd"
+    },
+    {
+      "id": "amdie-projets-assistance-maitrise-ouvrage",
+      "section": "competitions",
+      "title": "Chargé de projets en Assistance à Maîtrise d’Ouvrage",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/8707fee2-8dd7-4396-be9c-8e0b49865f09"
+    },
+    {
+      "id": "auer-ingenieur-topographe-2026",
+      "section": "competitions",
+      "title": "Ingénieur topographe",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/289c68f3-51dc-4105-9183-240733dac387"
+    },
+    {
+      "id": "sidi-bennour-ingenieur-genie-civil-2026",
+      "section": "companies",
+      "title": "Ingénieur génie civil",
+      "deadline": "2026-11-20",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-20",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/d4d3e4fb-d86d-47c4-968f-96f57bea27d9"
+    },
+    {
+      "id": "cnrst-admin2-biotechnologie-4",
+      "section": "competitions",
+      "title": "Administrateur 2e grade — Biotechnologie",
+      "deadline": "2026-11-08",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-08",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/df3fe31a-3eb5-4cee-8cbf-7c8f4189f715"
+    },
+    {
+      "id": "cnrst-admin2-chimie-materiaux-3",
+      "section": "competitions",
+      "title": "Administrateur 2e grade — Chimie des matériaux",
+      "deadline": "2026-11-08",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-08",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/085ba9e3-acba-4799-8549-e4dbeb9fd2e1"
+    },
+    {
+      "id": "cnrst-admin2-chimie-analytique-9",
+      "section": "competitions",
+      "title": "Administrateur 2e grade — Chimie analytique",
+      "deadline": "2026-11-08",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-08",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/7cf24989-fe26-4c24-80d6-7f055911bca3"
+    },
+    {
+      "id": "ena-meknes-maitre-conf-fermentation-2026",
+      "section": "competitions",
+      "title": "Maître de conférences — Biotechnologie des fermentations et microbiologie alimentaire",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/f9d10920-e672-4141-b0d5-59643d479eaa"
+    },
+    {
+      "id": "ena-meknes-maitre-conf-agronomie-2026",
+      "section": "competitions",
+      "title": "Maître de conférences — Agronomie / Production végétale",
+      "deadline": "2026-11-09",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-09",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/5eb149aa-5179-410a-8f2d-45f52691215f"
+    },
+    {
+      "id": "sdl-marrakech-vice-directeur-2026",
+      "section": "companies",
+      "title": "Vice-Directeur",
+      "deadline": "2026-10-28",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-10-28",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/9184ebef-9cb3-4996-8aef-edbcdbe5ed13"
+    },
+    {
+      "id": "mediouna-service-agent-informatique-2026",
+      "section": "companies",
+      "title": "Agent informatique",
+      "deadline": "2026-10-29",
+      "status": "researched-article",
+      "marketKey": null,
+      "priority": "date:2026-10-29",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/881b2d20-4b73-4d68-9489-17013ef786dc"
+    },
+    {
+      "id": "atlas-online-teleconseiller-c44304-2026",
+      "section": "morocco",
+      "title": "Téléconseiller — 30 postes (nouvel avis C44304/26)",
+      "deadline": "2026-11-17",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-17",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/324feef9-2a0c-4523-9db6-e19788bf7243"
+    },
+    {
+      "id": "nador-west-med-rse-social-2026",
+      "section": "companies",
+      "title": "Responsable RSE et Projets Sociaux — Nador West Med",
+      "deadline": "2026-11-16",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-16",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/54117e5b-ad4a-42ca-97f0-288e221e8d38"
+    },
+    {
+      "id": "anapec-port-logistics-engineer-c44220-2026",
+      "section": "competitions",
+      "title": "Ingénieur d'État — Génie maritime, portuaire ou logistique portuaire (2 postes)",
+      "deadline": "2026-11-05",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-05",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c9eededd-d036-4083-a700-655fff401651"
+    },
+    {
+      "id": "cnrst-biology-c44246-2026",
+      "section": "competitions",
+      "title": "Administrateur 2e grade — Biologie (2 postes)",
+      "deadline": "2026-11-08",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-11-08",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/0d951947-f970-4e52-97db-2ae203fd450d"
+    }
+  ],
+  "visaCards": [
+    {
+      "id": "fr",
+      "section": "visa-appointments",
+      "title": "France",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://www.france-visas.gouv.fr/ar/web/france-visas/maroc"
+    },
+    {
+      "id": "es",
+      "section": "visa-appointments",
+      "title": "Espagne",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://blsspainmorocco.com/"
+    },
+    {
+      "id": "pt",
+      "section": "visa-appointments",
+      "title": "Portugal",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://www.blsinternational.com/portugal/morocco/english/"
+    },
+    {
+      "id": "de",
+      "section": "visa-appointments",
+      "title": "Allemagne",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://rabat.diplo.de/ma-fr/service/visa"
+    },
+    {
+      "id": "it",
+      "section": "visa-appointments",
+      "title": "Italie",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://visa.vfsglobal.com/mar/fr/ita/"
+    },
+    {
+      "id": "nl",
+      "section": "visa-appointments",
+      "title": "Pays-Bas",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://visa.vfsglobal.com/mar/fr/nld/"
+    },
+    {
+      "id": "ch",
+      "section": "visa-appointments",
+      "title": "Suisse",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://www.eda.admin.ch/countries/morocco/fr/home/visa/entree-ch/jusq-a-90-jours/ou-deposer-schengen.html/1000"
+    },
+    {
+      "id": "at",
+      "section": "visa-appointments",
+      "title": "Autriche",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://visa.vfsglobal.com/mar/fr/aut/apply-visa"
+    },
+    {
+      "id": "gb",
+      "section": "visa-appointments",
+      "title": "Royaume-Uni",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://www.gov.uk/find-a-visa-application-centre"
+    },
+    {
+      "id": "ca",
+      "section": "visa-appointments",
+      "title": "Canada",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://visa.vfsglobal.com/mar/fr/can"
+    },
+    {
+      "id": "us",
+      "section": "visa-appointments",
+      "title": "États-Unis",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://www.ustraveldocs.com/ma/en/nonimmigrant-visa"
+    },
+    {
+      "id": "tr",
+      "section": "visa-appointments",
+      "title": "Turquie",
+      "status": "official-booking-source-only",
+      "sourceUrl": "https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa"
+    }
+  ]
+}
