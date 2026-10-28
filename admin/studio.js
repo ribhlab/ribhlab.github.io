@@ -266,7 +266,8 @@ async function publishArticle(){
  if(!s||!p)fail('الملف التحريري للقسم غير متطابق.');
  if(s.publishedSlugs.length>=s.targetArticles||p.publishedSlugs.length>=p.targetArticles)fail('القسم بلغ الحد المستهدف. عدّل سعة القسم أولاً.');
  s.publishedSlugs.push(slug);p.publishedSlugs.push(slug);
- if(!existing&&Array.isArray(p.ideas)&&p.ideas.length)p.ideas.shift();
+ // A manual article takes the last reserved slot, preserving near-term planned topics.
+ if(!existing&&Array.isArray(p.ideas)&&p.ideas.length)p.ideas.pop();
  plan.lastReviewed=date();
  photos.articlePhotos[slug]=data.photo;photos.updated=date();
  const ids=[];
