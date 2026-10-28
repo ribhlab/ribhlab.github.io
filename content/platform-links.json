@@ -429,6 +429,14 @@
     "fedPceInflationTarget": {
       "name": "Federal Reserve — Inflation (PCE) and 2% target",
       "url": "https://www.federalreserve.gov/economy-at-a-glance-inflation-pce.htm"
+    },
+    "aadChappedLips": {
+      "name": "American Academy of Dermatology — Healing dry, chapped lips",
+      "url": "https://www.aad.org/public/everyday-care/skin-care-basics/dry/heal-dry-chapped-lips"
+    },
+    "nhsDryLips": {
+      "name": "NHS — Sore or dry lips",
+      "url": "https://www.nhs.uk/symptoms/sore-or-dry-lips/"
     }
   },
   "articleLinks": {
