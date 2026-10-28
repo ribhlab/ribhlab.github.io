@@ -1,0 +1,187 @@
+{
+  "slug": "sell-original-excel-templates-rights-pricing-quality-checklist",
+  "category": "earning",
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false,
+  "related": [
+    "sell-digital-products",
+    "excel-powerbi-freelance-client-project-guide-2026",
+    "twelve-online-income-models-startup-costs-risks"
+  ],
+  "sources": [
+    {
+      "label": "Microsoft Support — Save a workbook as a template (checked 28 October 2026)",
+      "url": "https://support.microsoft.com/en-us/excel/save-a-workbook-as-a-template"
+    },
+    {
+      "label": "Microsoft Support — Protection and security in Excel (checked 28 October 2026)",
+      "url": "https://support.microsoft.com/en-us/excel/protection-and-security-in-excel"
+    },
+    {
+      "label": "Microsoft Legal — Trademark and Brand Guidelines (checked 28 October 2026)",
+      "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    },
+    {
+      "label": "Gumroad Help — Things not allowed (checked 28 October 2026)",
+      "url": "https://gumroad.com/help/article/155-things-you-cant-sell-on-gumroad"
+    },
+    {
+      "label": "Gumroad Help — Fees (checked 28 October 2026)",
+      "url": "https://gumroad.com/help/article/66-gumroads-fees"
+    },
+    {
+      "label": "Gumroad Help — Refund policy (checked 28 October 2026)",
+      "url": "https://gumroad.com/help/article/51-what-is-gumroads-refund-policy"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "بيع قوالب Excel الأصلية: الحقوق، اختبار الجودة وحساب السعر الصافي",
+      "excerpt": "دليل عملي لبناء قالب Excel من الصفر، تجنب إعادة بيع الملفات المحمية، اختبار الصيغ، حساب عمولات المنصة وكتابة صفحة بيع شفافة.",
+      "lead": "بيع قالب جدول بيانات ليس مجرد رفع ملف وتسميته منتجاً رقمياً. المشتري يحتاج أداة مفهومة تعالج مشكلة محددة، والبائع يحتاج دليلاً على أنه يملك حق توزيع كل عنصر فيها. سنطبق الفكرة على قالب متابعة مصاريف مشروع صغير، مع اختبار حسابي قابل للتكرار ومثال افتراضي للرسوم. راجعنا وثائق Microsoft الخاصة بالقوالب والحماية والعلامات التجارية وسياسات Gumroad المتعلقة بالمنتجات المحظورة والعمولات والاسترداد في 28 أكتوبر 2026. الأرقام هنا تعليمية وليست توقعاً للمبيعات أو استشارة قانونية أو ضريبية.",
+      "sections": [
+        {
+          "heading": "1. افحص حقوق المحتوى قبل التفكير في البيع",
+          "paragraphs": [
+            "ابدأ بمصنف فارغ وأنشئ الجداول والصيغ والنصوص التوضيحية بنفسك. لا تعتبر العثور على قالب مجاني إذناً بإعادة بيعه؛ فالتحميل والاستخدام الشخصي وإعادة التوزيع التجاري حقوق مختلفة. تذكر سياسة Gumroad بشأن المنتجات المحظورة إعادة بيع قوالب ومنتجات مملوكة للغير ضمن الأمثلة غير المسموحة. احتفظ بملف المصدر وسجل التعديلات وتراخيص الصور والخطوط والأيقونات، ولا تضع بيانات عميل حقيقي في النسخة التجريبية حتى لو أزلت اسمه الظاهر.",
+            "اسم Excel يصف البرنامج المتوافق معه لكنه ليس علامتك التجارية. توصي إرشادات Microsoft بعدم استعمال علاماتها أو شعاراتها بطريقة توحي بالشراكة أو المصادقة. سمّ المنتج مثلاً «قالب ميزانية مشروع صغير» واشرح في الوصف أنه مخصص للاستخدام مع Microsoft Excel، مع توضيح استقلالية المنتج. افحص كذلك مصدر كل ماكرو أو رسم أو صورة مستعملة. تغيير ألوان ملف منسوخ لا يمنحك ملكيته، والحقوق القانونية تختلف بحسب الترخيص والبلد."
+          ]
+        },
+        {
+          "heading": "2. صمم مهمة واحدة واختبر الصيغ بأرقام معلومة",
+          "paragraphs": [
+            "أنشئ ثلاث أوراق: «الإدخال» و«الملخص» و«التعليمات». تتضمن الأولى التاريخ والفئة والوصف والمبلغ ونوع الحركة، وتسمح بإضافة صفوف جديدة دون كسر الحسابات. استخدم جدول Excel منظماً بدلاً من نطاق ثابت ينتهي عند صف محدد. اجعل الملخص يفصل الإيرادات عن المصروفات ويعرض الفرق. وضح العملة وما إذا كانت المبالغ تشمل الضرائب، ولا تدّع أن القالب يقدم محاسبة قانونية أو ربطاً بنكياً آلياً إن لم يكن ذلك موجوداً.",
+            "اختبر مصنفاً وهمياً بأربع حركات: إيراد 1,000، مصروف إيجار 300، مصروف أدوات 120، وإيراد آخر 200. يجب أن تكون الإيرادات 1,200 والمصروفات 420 والصافي 780، لأن 1,200 ناقص 420 يساوي 780. أضف صفاً خامساً ثم احذف صفاً تجريبياً، وتأكد من تحديث الملخص. جرّب الخلايا الفارغة والمبالغ السالبة والتواريخ الخاطئة. هذه أرقام مصطنعة لا تمثل نتائج شركة حقيقية، والغرض منها كشف الأخطاء."
+          ]
+        },
+        {
+          "heading": "3. جهز ملف التسليم واحم المستخدم من المفاجآت",
+          "paragraphs": [
+            "تشرح Microsoft طريقة حفظ المصنف كقالب قابل لإعادة الاستخدام. الصيغة xltx للقالب العادي وxltm للقالب الذي يتضمن ماكرو؛ تجنب الماكرو إن لم يكن ضرورياً لأنه يزيد متطلبات الأمان والتوافق. سلم القالب ونسخة مثال ببيانات خيالية وتعليمات قصيرة تشرح طريقة إضافة الصفوف وإصلاح أخطاء الإدخال. اذكر إصدارات Excel التي اختبرتها فعلاً، ولا تعد بالتوافق مع Google Sheets أو الإصدارات القديمة قبل إجراء اختبار مستقل.",
+            "ميز خلايا الإدخال عن خلايا المعادلات ويمكنك حماية الورقة لتقليل التعديلات العرضية، لكن Microsoft تنبه إلى أن حماية الورقة ليست وسيلة أمنية لحماية المعلومات السرية. احذف البيانات الشخصية وخصائص الملف غير المقصودة والروابط المحلية والاتصالات الخارجية قبل التسليم. أعد فتح الملف على جهاز أو ملف مستخدم نظيف. إذا ظهرت مطالبة غريبة بتمكين ماكرو أو الاتصال بمصدر مجهول، افحص السبب بدلاً من مطالبة المشتري بتجاهل التحذير."
+          ]
+        },
+        {
+          "heading": "4. احسب المبلغ المتبقي بعد رسوم البيع",
+          "paragraphs": [
+            "تعرض صفحة رسوم Gumroad التي راجعناها رسوماً للبيع المباشر على الموقع قدرها 10% زائد 0.50 دولار للمعاملة، وتضيف لمعالجة البطاقة 2.9% زائد 0.30 دولار، مع تفاصيل واستثناءات تتعلق بالضرائب ووسائل الدفع. إذا كان السعر الافتراضي 20 دولاراً فالحساب المبسط هو 20 ناقص 2.00 ناقص 0.50 ناقص 0.58 ناقص 0.30، أي 16.62 دولاراً قبل التكاليف الأخرى. راجع الرسوم الفعلية عند البيع لأنها قابلة للتغيير.",
+            "وتذكر الصفحة نفسها أن المبيعات عبر سوق الاكتشاف تخضع لرسوم 30% شاملة المعالجة؛ من سعر 20 دولاراً يبقى افتراضياً 14 دولاراً. إذا استغرق البناء والتحديث عشر ساعات وقيّمت ساعة عملك افتراضياً بـ15 دولاراً، فتكون تكلفة الوقت 150 دولاراً. تحتاج حسابياً عشر مبيعات مباشرة لتجاوز هذه التكلفة وفق النموذج المبسط، أو إحدى عشرة مبيعة عبر الاكتشاف. لا يعني ذلك أن المبيعات ستحدث؛ الضرائب والمرتجعات والصرف والدعم قد تغير النتيجة."
+          ]
+        },
+        {
+          "heading": "5. اكتب صفحة منتج وسياسة دعم صادقتين",
+          "paragraphs": [
+            "اعرض صوراً من النسخة التجريبية وليس من ملفات مشترين. اذكر عدد الأوراق والصيغ الأساسية واللغة وإصدارات البرنامج المختبرة وطريقة التسليم وما إذا كانت التحديثات والتخصيصات مشمولة. ميّز بين ملف عام للتحميل الفوري وخدمة مخصصة تحتاج اتفاقاً مختلفاً. لا تضع شعار Microsoft كختم اعتماد، ولا تصف منتجك بأنه رسمي. من المفيد توفير لقطة توضح خلية الإدخال وأخرى تظهر نتيجة المثال الحسابي حتى يعرف المشتري ما يحصل عليه.",
+            "اقرأ سياسة الاسترداد قبل كتابة «لا استرداد». تتيح Gumroad للبائع وضع سياسة لكنها تحتفظ بحق رد بعض المدفوعات، كما تختلف حقوق المستهلك بحسب البلد وقد تحدث اعتراضات بنكية. ضع وسيلة دعم حقيقية ومهلة رد تستطيع احترامها واحتفظ بسجل الإصدارات والإصلاحات. لا تطلب بيانات شخصية لا تحتاجها لحل المشكلة، وتحقق من التزامات الضرائب والخصوصية المحلية بدلاً من افتراض أن منصة الدفع تعالج جميع مسؤولياتك."
+          ]
+        },
+        {
+          "heading": "6. اختبر مع مستخدمين ثم حسّن المنتج",
+          "paragraphs": [
+            "قبل البيع اطلب من شخصين لا يعرفان المصنف إدخال خمس عمليات وتصحيح فئة وشرح الملخص دون مساعدتك. سجل المهمة والنتيجة المتوقعة والنتيجة الفعلية وإصدار الملف وتاريخ التصحيح. إذا لم يفهم أحدهما معنى «الصافي» أو لم يعرف أين يكتب المبلغ، حسّن التسميات والتعليمات قبل إضافة رسوم بيانية معقدة. أعد الاختبار بعد تعديل أي صيغة، لأن تغييراً صغيراً قد يؤثر في صفوف جديدة أو في المجاميع.",
+            "بعد الإطلاق راقب أسئلة الدعم والأخطاء المتكررة وأسباب الاسترداد والوقت الذي تستهلكه الصيانة. الزيارات والإعجابات لا تثبت جودة المنتج، وقلة المبيعات لا تعني تلقائياً أن القالب معيب. إذا طلب المشترون وظيفة لم تعد بها، فإما أن تضيفها في إصدار موثق أو توضح حدود المنتج بجلاء. راجع شروط المنصة ورسومها عند تغيرها. الهدف منتج مفيد يمكن اختباره وفهمه، وليس ادعاء تحقيق دخل سلبي مضمون."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Selling Original Excel Templates: Rights, Quality Tests and Net Pricing",
+      "excerpt": "An actionable guide to creating your own spreadsheet template, testing formulas, respecting intellectual property and estimating marketplace fees.",
+      "lead": "A spreadsheet is not a saleable product merely because someone uploads a workbook to a storefront. Buyers need a clear use case, dependable calculations and an honest explanation of compatibility. Sellers also need distribution rights for every included element. This guide uses a fictional small-business cash tracker to demonstrate a workflow from a blank file to a transparent listing. We checked Microsoft's original documentation on templates, workbook security and trademarks, and Gumroad's prohibited-product, fee and refund pages on 28 October 2026. All sales figures and transactions are hypothetical, not forecasts or legal and tax advice.",
+      "sections": [
+        {
+          "heading": "1. Confirm rights before opening a shop",
+          "paragraphs": [
+            "Create the layout, formulas, instructions and examples in a blank workbook yourself. A freely downloadable template is not automatically licensed for resale: personal use, adaptation and commercial distribution are different permissions. Gumroad's prohibited-product documentation specifically identifies reselling other people's proprietary templates among disallowed activities. Keep your source workbook, revision history and written permissions for any third-party fonts, icons or photographs. Never ship a demo containing real customer invoices or personal data, even if the visible customer name was deleted.",
+            "Excel is a compatibility description, not your brand. Microsoft's trademark guidelines discourage using its marks or logos in a way that implies approval, sponsorship or an official partnership. Name your product something descriptive, such as 'Small Business Cash Tracker', and separately state that it was designed for Microsoft Excel without implying endorsement. Check the origin of every macro, chart asset and image. Changing the colours of a copied file does not make it original, and the applicable legal rights depend on the actual license and jurisdiction."
+          ]
+        },
+        {
+          "heading": "2. Design one job and test known totals",
+          "paragraphs": [
+            "Create three sheets named Input, Summary and Instructions. Input can record transaction date, category, description, amount and whether money came in or went out. Use a structured Excel table so added rows enter calculations rather than falling outside a short fixed range. The Summary should distinguish receipts, expenses and their difference. Document the assumed currency, whether values include taxes and which tasks the workbook cannot perform, such as statutory bookkeeping or automatic bank reconciliation.",
+            "Test a fictional ledger with four entries: revenue of 1,000, rent expense of 300, supplies expense of 120 and additional revenue of 200. Expected receipts are 1,200, expenses are 420 and net cash is 780 because 1,200 minus 420 equals 780. Add a fifth test entry, delete a duplicate and verify the totals change correctly. Try empty categories, negative amounts and invalid dates. These invented figures are test fixtures, not evidence of actual business performance."
+          ]
+        },
+        {
+          "heading": "3. Deliver a usable file without hidden surprises",
+          "paragraphs": [
+            "Microsoft documents how to save a workbook as a reusable template. The xltx format is for a standard template and xltm for a macro-enabled template. Avoid macros unless the functionality genuinely requires them because they introduce security warnings and compatibility questions. Deliver the template, a separate example filled with invented data and short instructions for adding rows and correcting inputs. State the Excel versions you actually tested. Do not promise that Google Sheets or every older desktop version will behave identically without testing.",
+            "Mark input cells clearly and consider protecting formula cells from accidental edits, but Microsoft explicitly warns that worksheet protection is not a security feature for confidential information. Remove personal data, unintended document properties, broken local file paths and external data connections before delivery. Reopen the file using a clean user profile or device. If a mysterious prompt asks buyers to enable macros or connect to an unknown source, investigate the cause instead of telling them to ignore the warning."
+          ]
+        },
+        {
+          "heading": "4. Calculate what remains after platform fees",
+          "paragraphs": [
+            "At the time checked, Gumroad's fee page listed 10% plus $0.50 for a direct sale through its website, with card processing of 2.9% plus $0.30 shown separately; payment methods and taxes can change the actual settlement. At a hypothetical price of $20, simplified arithmetic is $20 minus $2.00 minus $0.50 minus $0.58 minus $0.30, leaving $16.62 before other expenses. This is not a transaction statement, and fees should be checked again when pricing.",
+            "The same Gumroad page lists a 30% discovery-marketplace fee that includes processing, leaving $14 from the same hypothetical $20 sale before other costs. Suppose the first version and a planned update require ten hours, valued at an assumed $15 per hour: your time costs $150. Under those simplified assumptions, ten direct sales exceed $150 while eleven discovery sales exceed it. Neither calculation predicts demand or accounts fully for taxes, refunds, exchange rates or future customer support."
+          ]
+        },
+        {
+          "heading": "5. Write a truthful listing and support policy",
+          "paragraphs": [
+            "Show screenshots from your synthetic demo rather than private buyer files. Explain the number of sheets, principal formulas, language, download format, versions actually tested and whether customization or updates are included. Distinguish an instant digital download from a bespoke implementation service that may have different marketplace rules. Do not display a Microsoft logo as a seal of approval or call an independent workbook official. A screenshot of the entry sheet and one showing the tested result help buyers understand the scope.",
+            "Read the refund policy before promising 'no refunds'. Gumroad lets sellers choose policies but reserves discretion to refund some purchases, and consumer rights can vary by jurisdiction. Card disputes can also occur. Provide a genuine support contact, a response time you can meet and versioned notes explaining bug fixes. Collect only customer data necessary for support. Check your local tax and privacy duties rather than assuming a payment platform automatically handles every seller obligation."
+          ]
+        },
+        {
+          "heading": "6. Test with unfamiliar users and improve from evidence",
+          "paragraphs": [
+            "Before launching, ask two people who have not seen the workbook to enter five transactions, correct a category and explain the Summary without coaching. Record each task, expected result, observed result, file version and fix. If a tester cannot find the editable cells or misunderstands 'net', improve labels before adding elaborate dashboards. Repeat the same tasks after a formula change because a small edit may unexpectedly break new rows or existing totals.",
+            "After launch, track actual support questions, reproducible errors, refund reasons and maintenance time. Page views and likes do not prove usefulness, and low initial sales do not automatically prove the template is defective. If buyers repeatedly request a feature you did not promise, either add it to a clearly versioned update or clarify the product's boundaries. Recheck the platform's terms when they change. The goal is a verifiable tool, not a guarantee of effortless passive income."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Vendre ses propres modèles Excel : droits, tests qualité et prix net",
+      "excerpt": "Une méthode pour concevoir un modèle de tableur original, vérifier les formules et les licences, estimer les frais et décrire honnêtement son produit.",
+      "lead": "Un classeur n'est pas un produit commercialisable simplement parce qu'il a été déposé sur une boutique. L'acheteur a besoin d'un usage précis, de calculs fiables et d'une description claire de la compatibilité. Le vendeur doit aussi disposer des droits de diffusion sur tous les éléments inclus. Ce guide prend l'exemple fictif d'un suivi de trésorerie pour petite entreprise. Nous avons vérifié le 28 octobre 2026 les documents officiels de Microsoft concernant les modèles, la protection et les marques, ainsi que les règles de Gumroad sur les produits interdits, les frais et les remboursements. Les montants sont des simulations, non des ventes réalisées ni des conseils juridiques ou fiscaux.",
+      "sections": [
+        {
+          "heading": "1. Vérifier les droits avant d'ouvrir une boutique",
+          "paragraphs": [
+            "Créez vous-même les feuilles, les formules, les explications et les exemples dans un classeur vierge. Un fichier téléchargeable gratuitement n'est pas nécessairement autorisé à la revente : usage personnel, adaptation et redistribution commerciale sont des droits distincts. Gumroad cite explicitement la revente de modèles propriétaires appartenant à autrui parmi les pratiques interdites. Conservez votre fichier source, l'historique des versions et les autorisations écrites pour les icônes, polices et photographies externes. N'incluez jamais de véritables factures de clients dans la démonstration.",
+            "Le mot Excel sert à préciser la compatibilité, pas à construire votre marque. Les règles de Microsoft déconseillent l'utilisation de ses logos et marques qui laisserait supposer une certification, un partenariat ou un soutien officiel. Choisissez un titre descriptif comme « Suivi de trésorerie pour petite entreprise », puis indiquez séparément qu'il est conçu pour Microsoft Excel. Contrôlez aussi la provenance des macros et des éléments graphiques. Changer les couleurs d'un modèle trouvé en ligne ne transfère pas ses droits d'auteur."
+          ]
+        },
+        {
+          "heading": "2. Concevoir une fonction claire et vérifier les totaux",
+          "paragraphs": [
+            "Prévoyez trois feuilles : Saisie, Synthèse et Mode d'emploi. La saisie contient la date, la catégorie, le libellé, le montant et le sens du flux. Utilisez un tableau Excel structuré afin que les lignes ajoutées entrent dans les calculs, plutôt qu'une plage fixe trop courte. La synthèse sépare les encaissements, les décaissements et leur différence. Précisez la devise, le traitement des taxes et les limites du fichier, notamment l'absence éventuelle de comptabilité réglementaire ou de rapprochement bancaire automatique.",
+            "Testez quatre opérations fictives : une recette de 1 000, un loyer de 300, des fournitures de 120 et une autre recette de 200. Les recettes doivent totaliser 1 200, les dépenses 420 et le solde net 780, car 1 200 moins 420 égale 780. Ajoutez une cinquième ligne puis supprimez un doublon pour vérifier la mise à jour. Essayez les catégories vides, les montants négatifs et les dates invalides. Ce sont des données de contrôle inventées, pas des résultats financiers observés."
+          ]
+        },
+        {
+          "heading": "3. Livrer un fichier utilisable et sans mauvaises surprises",
+          "paragraphs": [
+            "Microsoft décrit l'enregistrement d'un classeur sous forme de modèle réutilisable. Le format xltx convient au modèle standard, tandis que xltm est prévu pour un modèle avec macros. Évitez les macros inutiles, car elles ajoutent des alertes de sécurité et des difficultés de compatibilité. Livrez le modèle, un exemple séparé avec des données inventées et des instructions pour ajouter une ligne ou corriger une saisie. Mentionnez les versions d'Excel réellement testées. Ne promettez pas une compatibilité parfaite avec Google Sheets sans essais.",
+            "Différenciez visuellement les cellules de saisie des formules et protégez éventuellement ces dernières contre les modifications accidentelles. Microsoft précise cependant que la protection d'une feuille ne sécurise pas les données confidentielles. Retirez les informations personnelles, les métadonnées involontaires, les chemins locaux cassés et les connexions externes avant la livraison. Rouvrez le fichier avec un profil utilisateur propre. Si un avertissement demande d'activer une macro inconnue, examinez la cause au lieu d'inviter l'acheteur à l'ignorer."
+          ]
+        },
+        {
+          "heading": "4. Calculer le montant réellement conservé",
+          "paragraphs": [
+            "Lors de notre vérification, Gumroad indiquait pour une vente directe des frais de 10 % plus 0,50 dollar par transaction, auxquels s'ajoutaient 2,9 % plus 0,30 dollar pour le traitement par carte ; les taxes et moyens de paiement peuvent modifier le règlement final. Pour un prix fictif de 20 dollars, le calcul simplifié est 20 moins 2,00 moins 0,50 moins 0,58 moins 0,30, soit 16,62 dollars avant les autres charges. Vérifiez les conditions actuelles avant de fixer votre prix.",
+            "La même page annonce 30 % de frais, traitement inclus, pour une vente issue de la place de marché de découverte : il resterait donc 14 dollars sur un prix fictif de 20 dollars. Supposons dix heures de conception et de mise à jour valorisées arbitrairement à 15 dollars chacune, soit 150 dollars. Selon ce modèle simplifié, dix ventes directes dépasseraient 150 dollars, contre onze ventes de découverte. Cela ne prédit aucune vente et n'intègre pas tous les impôts, remboursements, coûts de support et effets de change."
+          ]
+        },
+        {
+          "heading": "5. Rédiger une offre et des conditions d'assistance honnêtes",
+          "paragraphs": [
+            "Montrez des captures de votre démonstration fictive, jamais des documents confidentiels d'acheteurs. Indiquez le nombre de feuilles, les principales formules, la langue, le format, les versions testées et les mises à jour ou personnalisations incluses. Distinguez le téléchargement immédiat d'une prestation sur mesure qui peut relever de règles différentes. Ne présentez pas un logo Microsoft comme une certification et ne qualifiez pas votre modèle de produit officiel. Des captures de saisie et de synthèse permettent de comprendre précisément la livraison.",
+            "Lisez les règles de remboursement avant d'écrire « aucun remboursement ». Gumroad permet au vendeur de choisir une politique, mais peut rembourser certaines opérations et les droits du consommateur varient selon les pays. Des contestations bancaires restent possibles. Proposez un véritable contact d'assistance, un délai de réponse réaliste et un historique des versions et corrections. Ne recueillez que les données nécessaires au support et vérifiez les obligations fiscales et de confidentialité qui s'appliquent localement."
+          ]
+        },
+        {
+          "heading": "6. Tester avec des utilisateurs et améliorer le résultat",
+          "paragraphs": [
+            "Avant le lancement, demandez à deux personnes qui ne connaissent pas le fichier d'enregistrer cinq opérations, de corriger une catégorie et d'expliquer la synthèse sans aide. Notez chaque tâche, le résultat attendu, le résultat observé, la version et la correction apportée. Si un testeur ne repère pas les cellules modifiables ou comprend mal la notion de solde, améliorez les libellés avant d'ajouter des graphiques sophistiqués. Répétez les mêmes contrôles après toute modification des formules.",
+            "Après la mise en vente, suivez les demandes d'assistance, les erreurs reproductibles, les motifs de remboursement et le temps de maintenance. Les visites ne prouvent pas la qualité, et peu de ventes initiales ne démontrent pas automatiquement un défaut. Si plusieurs acheteurs réclament une fonction absente, ajoutez-la dans une version identifiée ou expliquez les limites du produit. Revérifiez les tarifs et restrictions de la plateforme lorsqu'ils évoluent. L'objectif reste un outil testable, sans promesse de revenus passifs garantis."
+          ]
+        }
+      ]
+    }
+  }
+}
