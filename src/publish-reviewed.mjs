@@ -109,6 +109,17 @@ const digests=readJSON(path.join(content,'market-digests.json')).items;
 if(digests.some(d=>d.photo?.photoId===photo.photoId||d.photo?.source===photo.source))fail('Photo reused from Market Pulse');
 const feedPhotos=readJSON(path.join(content,'market-feed-photos.json')).topics;
 if(Object.values(feedPhotos).some(p=>p.photoId===photo.photoId||p.source===photo.source))fail('Photo reused from market headlines');
+
+const recipePictures=readJSON(path.join(content,'recipes','photo-library.json'));
+for(const key of Object.values(recipePictures.assignments||{})){
+ const p=recipePictures.photos[key];
+ if(p?.photoId===photo.photoId||p?.source===photo.source)fail('Photo already assigned to a recipe; one photo per content item');
+}
+const opportunityPictures=readJSON(path.join(content,'opportunity-photography.json')).items;
+if(Object.values(opportunityPictures).some(p=>p.photoId===photo.photoId||p.source===photo.source))fail('Photo already reserved for an opportunity category');
+const sportsTechPictures=readJSON(path.join(content,'sports-technology-editorials.json')).entries;
+if(sportsTechPictures.some(p=>p.image===photo.photoId))fail('Photo already used by a sports or technology article');
+
 for(const id of resourceIds)if(!resources.platforms[id])fail('Unknown reference '+id);
 if(resourceIds.some(id=>!/^https:\/\//.test(resources.platforms[id].url)))fail('Insecure resource URL');
 const finalArticle={...article,date:today,updated:today,featured:false};
