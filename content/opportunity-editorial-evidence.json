@@ -1340,6 +1340,194 @@
           ]
         }
       }
+    },
+    "sntl-accounting": {
+      "reviewedAt": "2026-10-28",
+      "state": "verified",
+      "verification": "Read both pages of SNTL signed vacancy notice (page 1 duties, page 2 eligibility/application) and cross-checked the national public employment listing on 28 October 2026. No salary or exact posting city stated.",
+      "sources": [
+        {
+          "label": "SNTL — original two-page Accounting Technician recruitment notice SNTL/TCOMP/2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/e7379c18-857e-4135-be2a-53365d665497"
+        },
+        {
+          "label": "Emploi-public.ma — public listing C44157/26, published 20 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/e7379c18-857e-4135-be2a-53365d665497"
+        },
+        {
+          "label": "SNTL — official application portal (submission channel, availability not independently confirmed)",
+          "url": "https://www.sntl.ma/recrutement"
+        }
+      ],
+      "facts": {
+        "employer": "Société Nationale des Transports et de la Logistique (SNTL)",
+        "reference": "C44157/26",
+        "internalReference": "SNTL/TCOMP/2026",
+        "posts": 4,
+        "title": "Technicien comptable",
+        "city": null,
+        "locationCaveat": "SNTL headquarters Rabat, but actual posting may be SNTL or a subsidiary and requires geographic mobility",
+        "directorates": "DFCG & DCAMR",
+        "country": "Maroc",
+        "nationality": "Marocaine",
+        "age": "35 ans maximum au 01/01/2026",
+        "degree": "Bac+2 Technicien spécialisé ou Bac+3 en comptabilité / gestion des entreprises, diplôme reconnu par l'État; équivalence pour diplômes étrangers",
+        "experience": "Deux ans cumulés minimum en poste similaire, stages exclus",
+        "applicationDocuments": [
+          "Formulaire de candidature SNTL rempli électroniquement",
+          "CV actualisé",
+          "Lettre de motivation",
+          "Copie du diplôme",
+          "Attestations de travail justifiant durée et domaine",
+          "Copie de la CIN"
+        ],
+        "selection": "Présélection des dossiers, épreuve écrite, entretien oral, test psychotechnique éventuel",
+        "submission": "https://www.sntl.ma/recrutement",
+        "deadline": "2026-11-03T23:55",
+        "publishedAt": "2026-10-20",
+        "salary": null,
+        "contract": null
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة SNTL لتوظيف 4 تقنيين محاسبين: الدبلوم والخبرة والملف وآخر أجل 3 نوفمبر 2026",
+          "deck": "قراءة موثقة للإعلان الأصلي من صفحتين: شرط السن 35 سنة في 1 يناير 2026، وخبرة سنتين دون احتساب التدريب، وطريقة الإيداع الإلكتروني ومراحل الانتقاء دون اختلاق الأجر أو مدينة التعيين.",
+          "sections": [
+            [
+              "الإعلان الرسمي والعدد الحقيقي للمناصب",
+              "تعلن الشركة الوطنية للنقل والوسائل اللوجستيكية (SNTL) عن أربعة مناصب بعنوان «تقني محاسبة» ضمن مرجع التوظيف الداخلي SNTL/TCOMP/2026، ويظهر الإعلان في البوابة الوطنية للتشغيل العمومي تحت الرمز C44157/26. نُشر الإعلان في 20 أكتوبر 2026، وحددت البوابة آخر أجل لإيداع الملفات في 3 نوفمبر 2026 على الساعة 23:55. هذا عرض توظيف محدد، وليس وعداً عاماً بالتشغيل أو برنامجاً مفتوحاً بلا تاريخ. ينبغي التمييز بين عدد المناصب المعلن وبين عدد المرشحين الذين سيُقبلون فعلياً، إذ يوضح القرار أن العدد قد يرتفع أو ينخفض وفق الحاجات عند التوظيف."
+            ],
+            [
+              "مكان العمل والجهة المشغلة: لماذا لا يصح افتراض مدينة معينة؟",
+              "يحدد القرار الجهة الوظيفية المستفيدة بعبارة DFCG & DCAMR، لكنه لا يحصر مكان التعيين في مدينة بعينها. يقع المقر الاجتماعي للشركة في الرباط، غير أن هذا العنوان لا يساوي بالضرورة موقع العمل النهائي. ينص الإعلان على ضرورة الاستعداد للتنقل الجغرافي، وإمكان إلحاق الناجحين بالشركة أو بإحدى فروعها بحسب حاجاتها. لهذا لا ينبغي تقديم هذه الوظائف على أنها «أربع فرص في الرباط» أو «عمل عن بعد». قبل التقديم، ينبغي للمرشح تقدير قدرته على تغيير المدينة وطلب توضيح نطاق التعيين من الإدارة إن كان ذلك حاسماً لقراره."
+            ],
+            [
+              "المهام اليومية: من الفاتورة إلى الإقفال المحاسبي",
+              "لا تقتصر الوظيفة على إدخال الفواتير. تشمل مراقبة مطابقة المستندات المحاسبية والمبررات، وتسجيل فواتير الموردين والعملاء والعمليات غير المدمجة آلياً في نظام ERP، ومتابعة المصاريف والإيرادات والتحصيلات. يشارك التقني في إعداد ملفات الأداء وأوامر الدفع ومراقبة تنفيذها، وفي متابعة الشيكات والكمبيالات والتحويلات والتسويات البنكية. كما يتولى مطابقة أرصدة العملاء والموردين والبنوك والحسابات الضريبية، وتحليل فروق المطابقة وحفظ أثر الوثائق. ومن الأعمال المنصوص عليها المشاركة في التصريحات الضريبية والإقفال الشهري والسنوي، وتسجيل قيود الجرد والفواتير غير المتوصل بها والتسويات."
+            ],
+            [
+              "شروط الجنسية والسن والدبلوم: اختبر أهليتك أولاً",
+              "يشترط الإعلان الجنسية المغربية، وألا يتجاوز عمر المرشح 35 سنة في 1 يناير 2026؛ تاريخ القياس مهم، وليس العمر يوم المقابلة. ويقبل دبلوماً من مستوى Bac+2 (تقني متخصص) أو Bac+3 في المحاسبة أو تدبير المقاولات، صادراً عن مؤسسة عمومية أو خاصة معترف بها من الدولة. يؤكد القرار أن الشهادات الأجنبية يجب أن تكون معادلة للشهادات الوطنية. لا يكفي أن يكون لدى المترشح تكوين قريب في المالية من دون التحقق من تسمية الشهادة واعتراف المؤسسة بها. ينبغي إعداد نسخة واضحة من الدبلوم وإثبات المعادلة عند الاقتضاء."
+            ],
+            [
+              "الخبرة المطلوبة وكيف تُحتسب",
+              "يشترط القرار خبرة مهنية تراكمية لا تقل عن سنتين في منصب مشابه، مع تقديم شهادات عمل تثبت المدة والمجال. وينص صراحة على أن فترات التدريب لا تُحتسب خبرة مهنية. لا ينبغي للمترشح إدراج تدريب مدته ستة أشهر على أنه نصف سنة من الخبرة المقبولة، حتى لو تضمن مهام محاسبية فعلية. من الأفضل ترتيب شهادات العمل زمنياً وإبراز المسمى الوظيفي والمدة والمسؤوليات، ثم مقارنة مجموع الفترات بشرط السنتين. ويطلب الإعلان أيضاً إتقان المحاسبة العامة والتحليلية والتدبير النقدي والضريبة والتحليل المالي وإعداد التقارير، ويذكر معرفة التوحيد المحاسبي ضمن المهارات."
+            ],
+            [
+              "وثائق الملف: قائمة عملية قبل رفع الطلب",
+              "يتضمن الملف الإلزامي استمارة الترشيح التي تُحمّل من بوابة SNTL وتُملأ إلكترونياً وتُرفق بالطلب، وسيرة ذاتية محينة، ورسالة تحفيزية، ونسخة من الدبلوم المطلوب، وشهادات العمل المثبتة للمدة والخبرة، ونسخة من البطاقة الوطنية للتعريف. هذه القائمة مستخرجة من القرار الأصلي، لا من افتراضات عامة حول مباريات القطاع العام. ينبغي تسمية الملفات بوضوح، والتحقق من قابلية قراءتها، ومطابقة التواريخ بين السيرة الذاتية والشهادات، وعدم إرسال بيانات شخصية إلى وسيط غير رسمي. قد تؤدي المعلومات غير الدقيقة أو الملفات الناقصة إلى رفض تلقائي بحسب نص الإعلان."
+            ],
+            [
+              "كيفية التقديم من المغرب والموعد النهائي",
+              "تنص البوابة الوطنية على أن الإيداع إلكتروني في موقع الإدارة، وتحدد رابط التقديم الرسمي sntl.ma/recrutement. يجب الدخول إلى البوابة المذكورة، اختيار إعلان تقني المحاسبة ذي المرجع SNTL/TCOMP/2026، وإرفاق استمارة الترشيح المعبأة والوثائق المطلوبة قبل 3 نوفمبر 2026. تعرض البوابة ساعة 23:55، بينما يرد تاريخ 03 NOV. 2026 في نسخة القرار المصورة من دون تأكيد ساعة مقروءة. لذلك يُنصح بالإيداع قبل اليوم الأخير، والاحتفاظ بإشعار التسجيل إن أصدره الموقع، وعدم اعتبار ظهور رسالة عامة دليلاً على قبول الملف. إذا تعذر فتح موقع التقديم، فالخطوة الآمنة هي مراجعة البوابة والإدارة مباشرة، لا دفع رسوم لوسيط."
+            ],
+            [
+              "مراحل الانتقاء: ماذا يحدث بعد الإيداع؟",
+              "بعد الفرز الأولي للملفات، يُبلَّغ المرشحون المقبولون بتاريخ ومكان الاختبار الكتابي عبر البريد الإلكتروني، وفق القرار. ويمكن للناجحين في الاختبار الكتابي المرور إلى مقابلة شفوية، وقد يُنظم اختبار سيكوتقني بعد المقابلة. لا يذكر الإعلان تاريخاً ثابتاً للاختبار الكتابي أو عدد المرشحين الذين سيُستدعون، لذلك لا يصح اختلاق رزنامة دقيقة. على المرشح متابعة البريد، بما فيه مجلد الرسائل غير المرغوب فيها، والتحضير لتطبيقات المحاسبة والتسويات البنكية والضرائب والإقفال، إلى جانب أسئلة عن التنظيم والتواصل."
+            ],
+            [
+              "الأجر والمخاطر ونقاط التحقق قبل اتخاذ القرار",
+              "لا ينشر القرار ولا بطاقة البوابة راتباً محدداً، ولا يجوز استنتاج مبلغ شهري من المسمى «تقني» أو من حجم الشركة. كذلك لا يؤكد الإعلان مكان التعيين النهائي ولا طبيعة كل مكونات التعويض. لا يضمن استيفاء الشروط الاستدعاء أو التوظيف. وتشمل المخاطر العملية فقدان أجل الإيداع، وإرفاق استمارة غير مكتملة، والاعتماد على شهادة تدريب بدل خبرة، وتجاهل شرط السن أو المعادلة. ينبغي الرجوع إلى النص الرسمي عند أي تغيير، ومراجعة أي توضيح صادر عن SNTL بدلاً من الاعتماد على صفحات تنقل الإعلان من دون مرفقاته."
+            ],
+            [
+              "مثال تطبيقي لفرز الأهلية دون اختلاق نتائج",
+              "لنفترض مرشحة مغربية عمرها 32 سنة في 1 يناير 2026، حاصلة على دبلوم تقني متخصص في المحاسبة من مؤسسة معترف بها، وعملت 26 شهراً بوظيفة مساعدة محاسبة بعقد عمل وشهادات قابلة للإثبات. تبدو مستوفية للشروط الشكلية الأساسية، بشرط أن تثبت الشهادات طبيعة الوظيفة وتقدم الوثائق كاملة. في المقابل، مرشح عمره 36 سنة في التاريخ المرجعي، أو مرشح لا يملك سوى سنتين من التدريب، لا يستوفي الشرط المعني وفق نص القرار. هذا المثال تعليمي ولا يحدد قبول أي شخص؛ القرار النهائي للجهة المشغلة. مصادر هذا الدليل: الإعلان الأصلي في صفحتين والبطاقة الرسمية C44157/26، وقد روجعا في 28 أكتوبر 2026."
+            ]
+          ]
+        },
+        "en": {
+          "title": "SNTL recruiting four Accounting Technicians: qualifications, experience, application and 3 November 2026 deadline",
+          "deck": "An evidence-based reading of the two-page original notice: age limit, two years of qualifying experience excluding internships, required documents, online submission and selection stages, with no invented salary or posting city.",
+          "sections": [
+            [
+              "The actual vacancy and the official reference",
+              "The Société Nationale des Transports et de la Logistique (SNTL) is recruiting four Accounting Technicians under internal reference SNTL/TCOMP/2026. The national public-employment portal lists the recruitment as C44157/26, published on 20 October 2026, with applications due on 3 November 2026 at 23:55. This is a specific recruitment notice, not a general invitation to register interest in a future programme. The signed notice also states that the number of posts may rise or fall depending on recruitment needs. Readers should distinguish the four advertised places from the number of applicants who will ultimately receive offers."
+            ],
+            [
+              "Location and mobility: the headquarters is not the posting",
+              "The signed job description names the relevant directorates as DFCG & DCAMR, but does not assign all four roles to a specific city. SNTL's registered office is in Rabat; that does not mean every successful candidate will work there. The notice explicitly requires geographical mobility and says that recruits may be assigned to SNTL or one of its subsidiaries according to operational needs. Describing the opening as four guaranteed Rabat jobs, or as remote work, would therefore be inaccurate. Before applying, candidates should assess whether they can relocate and seek clarification from the employer if location is a decisive constraint."
+            ],
+            [
+              "The actual work: invoices, bank reconciliation and closing",
+              "The technician is expected to verify accounting evidence and supporting documents, post supplier and customer invoices in the ERP and related systems, and account for recurring expenses, receipts and transactions not automatically interfaced. The role also covers preparing payment files and payment orders, tracking execution, handling supplier settlements and following incoming payments, cheques and bills of exchange. Periodic reconciliation and substantiation of supplier, customer, bank and tax accounts are expressly mentioned. The technician helps investigate unidentified bank movements, maintain traceable records, prepare periodic tax declarations, contribute to monthly and annual closing, and record inventory entries, accruals and invoices not yet received."
+            ],
+            [
+              "Nationality, age and qualifications: apply the exact tests",
+              "Applicants must be Moroccan nationals and must be no older than 35 on 1 January 2026. That reference date matters: it is not the applicant's age on interview day. The qualification is Bac+2, specifically a specialised technician diploma, or Bac+3 in accounting or business management from a public institution or a private institution recognised by the state. Foreign-issued diplomas must be equivalent to national qualifications. Candidates should check the exact title of their qualification and recognition status before relying on a broadly related finance course. The recruitment notice does not waive these formal requirements merely because a person has practical accounting experience."
+            ],
+            [
+              "Two years of relevant experience: internships do not count",
+              "SNTL requires at least two cumulative years of professional experience in a similar role, supported by employment certificates proving duration and field. The notice expressly excludes internships from professional-experience calculations. A six-month placement should not be presented as six months of qualifying employment even if it involved real accounting tasks. Prepare a chronological record of paid positions and ensure certificates align with the CV. The skills profile covers general and cost accounting, treasury management, tax rules, financial analysis, reporting and consolidation. These are stated areas of competence, not a guarantee that every task will be performed on the first day."
+            ],
+            [
+              "Application documents: an evidence-based checklist",
+              "The compulsory file contains the SNTL application form downloaded from its recruitment portal, completed electronically and attached to the submission; an updated CV; a motivation letter; a copy of the required diploma; employment certificates showing the duration and field of experience; and a copy of the Moroccan national identity card. This list comes from the signed notice, not a generic public-sector application template. Make scans readable, keep dates consistent, and avoid disclosing identity documents to unofficial intermediaries. The employer warns that incomplete applications, mismatched profiles and false declarations can trigger automatic rejection."
+            ],
+            [
+              "Submitting online from Morocco before the deadline",
+              "The public portal says applications must be lodged online through the administration's own website, specifically sntl.ma/recrutement. Select the Accounting Technician notice with reference SNTL/TCOMP/2026 and upload the electronically completed form together with the supporting documents. The portal gives 3 November 2026 at 23:55 as the closing time; the scanned signed notice shows the same date, while the hour is not clearly stated in the scan. Apply early rather than relying on last-minute access. Keep any acknowledgement the system provides. A generic page load is not evidence of a completed submission. If the employer portal is temporarily unreachable, consult the official announcement and employer rather than paying an agent to apply."
+            ],
+            [
+              "Selection stages and realistic preparation",
+              "SNTL will first shortlist files. Candidates selected after this screening will receive the date and venue of a written test by email. Those who pass the written stage may be invited to an oral interview, followed potentially by a psychometric assessment. Neither a fixed examination date nor a guaranteed interview rate appears in the notice. Check the registered email account and its spam folder. Prepare to explain an invoice-to-payment cycle, bank reconciliation differences, supplier and customer account matching, tax documentation and monthly closing, alongside organisational and communication skills. These are preparation suggestions derived from the listed duties, not leaked examination questions."
+            ],
+            [
+              "Pay, uncertainties and common reasons for rejection",
+              "Neither the signed recruitment notice nor the public listing publishes a salary. It would be misleading to infer a monthly amount from the job title or from SNTL's size. The final location and detailed compensation terms are also not confirmed. Meeting minimum criteria does not guarantee a test invitation or an offer. Concrete risks include missing the deadline, attaching an uncompleted form, counting internships as experience, overlooking the age rule or failing to document equivalence of a foreign qualification. Check the primary notice for amendments rather than trusting third-party reposts that may omit pages or change the closing hour."
+            ],
+            [
+              "Worked eligibility example, with limits",
+              "Consider a hypothetical Moroccan candidate who was 32 on 1 January 2026, holds a recognised specialised accounting technician diploma and has 26 documented months in a comparable accounting assistant role. On the facts stated, this candidate appears to satisfy the basic formal conditions, subject to the certificates demonstrating the duties and a complete application. A candidate aged 36 on the reference date, or one relying only on two years of internships, would not meet the corresponding rule. This is an educational screening example, not an eligibility ruling. The employer decides whom to shortlist. This guide was checked against the two-page SNTL notice and the public listing C44157/26 on 28 October 2026."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "SNTL recrute quatre techniciens comptables : diplôme, expérience, dossier et échéance du 3 novembre 2026",
+          "deck": "Analyse de l'avis original en deux pages : limite d'âge au 1er janvier 2026, deux ans d'expérience hors stages, pièces obligatoires, dépôt en ligne et sélection, sans inventer salaire ni ville d'affectation.",
+          "sections": [
+            [
+              "L'offre exacte et ses références officielles",
+              "La Société Nationale des Transports et de la Logistique (SNTL) recrute quatre techniciens comptables sous la référence interne SNTL/TCOMP/2026. Le portail national de l'emploi public présente l'avis sous le code C44157/26, publié le 20 octobre 2026, avec une date limite de dépôt au 3 novembre 2026 à 23 h 55. Il s'agit d'un recrutement identifié, et non d'un programme permanent d'inscription. L'avis précise également que le nombre de postes peut augmenter ou diminuer selon les besoins au moment du recrutement. Les quatre postes annoncés ne constituent donc pas une promesse de quatre embauches définitivement garanties."
+            ],
+            [
+              "Affectation et mobilité : ne pas confondre siège et lieu de travail",
+              "L'avis rattache le poste aux directions DFCG & DCAMR, sans fixer les quatre affectations dans une ville déterminée. Le siège social de la SNTL est situé à Rabat, mais cette adresse n'est pas nécessairement celle de chaque emploi. Le document demande explicitement une mobilité géographique et prévoit une affectation à la SNTL ou à l'une de ses filiales, selon les besoins. Il serait donc inexact de présenter l'annonce comme quatre postes garantis à Rabat ou comme du télétravail. Avant de déposer son dossier, le candidat doit apprécier sa capacité à changer de ville et solliciter des précisions auprès de l'employeur si cette question est décisive."
+            ],
+            [
+              "Missions comptables : du contrôle des pièces à la clôture",
+              "Le technicien contrôle les pièces justificatives, comptabilise les factures fournisseurs et clients dans l'ERP et les systèmes associés, et traite les charges récurrentes, encaissements et opérations non interfacées. Il prépare les dossiers et ordres de paiement, en suit l'exécution et participe à l'alimentation des comptes bancaires. Le suivi des règlements, effets, chèques et encaissements fait partie du périmètre. L'avis prévoit aussi le lettrage et la justification des comptes fournisseurs, clients, bancaires et fiscaux, ainsi que les rapprochements bancaires et l'analyse des écarts. Enfin, le poste contribue aux déclarations fiscales, aux clôtures mensuelles et annuelles et aux écritures d'inventaire, FNP et régularisations."
+            ],
+            [
+              "Nationalité, âge et diplôme : vérifier chaque critère",
+              "Le candidat doit être de nationalité marocaine et avoir 35 ans au maximum au 1er janvier 2026. Il faut appliquer cette date de référence, et non l'âge au jour de l'entretien. La formation demandée est un Bac+2 de technicien spécialisé ou un Bac+3 en comptabilité ou en gestion des entreprises, délivré par un établissement public ou privé reconnu par l'État. Les diplômes étrangers doivent être équivalents aux diplômes nationaux. Avant de postuler, il est prudent de vérifier l'intitulé exact du diplôme, la reconnaissance de l'établissement et les pièces attestant l'équivalence. Une expérience pratique solide ne supprime pas à elle seule les conditions formelles écrites dans l'avis."
+            ],
+            [
+              "Expérience exigée : les stages sont explicitement exclus",
+              "Le texte demande au moins deux années d'expérience professionnelle cumulée dans un poste similaire, à justifier par des attestations de travail précisant durée et domaine. Il indique expressément que les stages ne sont pas considérés comme une expérience professionnelle. Un stage de six mois ne peut donc pas être additionné aux contrats de travail pour atteindre les deux ans requis. Le candidat gagnera à classer ses attestations dans l'ordre chronologique et à faire correspondre les périodes avec son CV. Les savoir-faire cités comprennent comptabilité générale et analytique, trésorerie, réglementation fiscale, analyse financière, reporting et consolidation. Ce sont des compétences attendues, pas une liste de tâches exclusives."
+            ],
+            [
+              "Dossier de candidature : les six pièces à préparer",
+              "L'avis exige le formulaire de candidature téléchargé sur le site de recrutement de la SNTL, rempli électroniquement puis joint au dossier, un CV actualisé, une lettre de motivation, une copie du diplôme demandé, des attestations de travail justifiant la durée et le domaine de l'expérience et une copie de la carte nationale d'identité. Cette liste provient du document officiel, et non d'un modèle générique. Vérifiez la lisibilité des fichiers, la concordance des dates et la présence de toutes les annexes. Évitez de transmettre la CIN à des intermédiaires non officiels. Le texte annonce le rejet automatique des dossiers incomplets, non conformes au profil ou comportant de fausses déclarations."
+            ],
+            [
+              "Dépôt en ligne et échéance du 3 novembre 2026",
+              "Le portail national précise que la candidature se dépose en ligne sur le site de l'administration, à l'adresse sntl.ma/recrutement. Recherchez l'offre Technicien comptable portant la référence SNTL/TCOMP/2026, puis joignez le formulaire rempli et les documents exigés. La fiche publique donne le 3 novembre 2026 à 23 h 55 comme date et heure limites. L'avis scanné mentionne également le 03 NOV. 2026, mais son heure n'est pas clairement lisible. Déposez le dossier suffisamment tôt et conservez l'accusé de réception éventuel. Le simple affichage de la page ne prouve pas que la candidature est enregistrée. Si le site ne répond pas, consultez les canaux officiels plutôt que de payer un intermédiaire."
+            ],
+            [
+              "Présélection, épreuve écrite et entretien oral",
+              "Les dossiers font d'abord l'objet d'une présélection. Les candidats retenus seront informés par courrier électronique de la date et du lieu de l'épreuve écrite. Ceux qui réussissent pourront accéder à un entretien oral, puis éventuellement à un test psychotechnique. L'avis ne fixe pas de date précise pour l'écrit et ne garantit pas que chaque candidature conforme recevra une convocation. Il est conseillé de surveiller l'adresse électronique fournie, y compris les courriers indésirables. Pour se préparer, on peut réviser les cycles achats-paiements, les rapprochements bancaires, le lettrage des tiers, les déclarations fiscales et la clôture comptable. Ces thèmes découlent des missions publiées, sans préjuger des questions réellement posées."
+            ],
+            [
+              "Rémunération et risques : ce que l'annonce ne dit pas",
+              "Aucun salaire n'est communiqué dans l'avis signé ou la fiche du portail. Il serait trompeur de déduire une rémunération du titre de technicien ou de la taille de la SNTL. La ville d'affectation définitive et les modalités détaillées de rémunération ne sont pas non plus confirmées. Respecter les critères minimaux ne garantit ni convocation ni embauche. Les risques principaux sont le dépôt tardif, le formulaire incomplet, les stages comptabilisés à tort comme expérience, le dépassement de l'âge limite ou l'absence d'équivalence d'un diplôme étranger. En cas de modification, privilégiez les documents émis par la SNTL et le portail national plutôt que les copies diffusées par des sites tiers."
+            ],
+            [
+              "Exemple de vérification préalable, sans promesse de sélection",
+              "Prenons le cas fictif d'une candidate marocaine âgée de 32 ans au 1er janvier 2026, titulaire d'un diplôme reconnu de technicien spécialisé en comptabilité et justifiant de 26 mois dans un poste comparable d'assistante comptable. Elle semble satisfaire les conditions formelles essentielles, sous réserve d'attestations détaillées et d'un dossier complet. À l'inverse, un candidat de 36 ans à la date de référence, ou une personne ne justifiant que de deux années de stages, ne répondrait pas à la condition concernée. Cet exemple sert uniquement à lire l'avis ; seule la SNTL décide de la recevabilité et de la sélection. Vérification réalisée le 28 octobre 2026 à partir de l'avis original de deux pages et de la fiche officielle C44157/26."
+            ]
+          ]
+        }
+      }
     }
   }
 }
