@@ -709,6 +709,10 @@
       "appPhotoGoogleBackup",
       "appPhotoAppleICloud",
       "appPhotoOneDriveCamera"
+    ],
+    "bitcoin-wallet-recovery-backup-safety-drill": [
+      "bitcoin",
+      "ethereum"
     ]
   }
 }

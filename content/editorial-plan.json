@@ -1212,14 +1212,10 @@
       "publishedSlugs": [
         "crypto-new-token-due-diligence",
         "crypto-perpetual-futures-funding-and-liquidation",
-        "redotpay-card-referrals-morocco-eligibility-2026"
+        "redotpay-card-referrals-morocco-eligibility-2026",
+        "bitcoin-wallet-recovery-backup-safety-drill"
       ],
       "ideas": [
-        {
-          "sequence": 4,
-          "titleAr": "البيتكوين: شرح الشبكة والحفظ",
-          "status": "planned"
-        },
         {
           "sequence": 5,
           "titleAr": "Ethereum والعقود الذكية",
