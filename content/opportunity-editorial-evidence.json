@@ -851,6 +851,158 @@
           ]
         }
       }
+    },
+    "ram-call": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Original one-page employer notice and government portal listing reviewed on 28 October 2026. Unresolved submission channel conflict and language ambiguity explicitly disclosed; no invented salary, tests, age, or city.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Atlas On Line — original TELECONSEILLER recruitment notice (one-page PDF)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9"
+        },
+        {
+          "label": "Emploi-public — C44260/26, published 23 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9"
+        }
+      ],
+      "facts": {
+        "employer": "Atlas On Line / Groupe Royal Air Maroc",
+        "reference": "C44260/26",
+        "posts": 30,
+        "region": "Grand Casablanca-Settat",
+        "city": null,
+        "country": "Maroc",
+        "contract": "Recrutement sous contrat",
+        "degree": "Bac+2 minimum (DEUG, licence ou équivalent)",
+        "languages": "Français + anglais/allemand/italien; PDF describes anglophone advisers",
+        "experienceYears": null,
+        "age": null,
+        "nationality": null,
+        "deadline": "2026-11-06T16:30",
+        "pdfDeadline": null,
+        "submissionConflict": "PDF: Rh_Aol@Atlasonline.Ma; portal: Dépôt en ligne sur emploi-public",
+        "documents": "CV in PDF; no exhaustive list",
+        "tests": null,
+        "salary": null,
+        "sourcePublishedAt": "2026-10-23"
+      },
+      "translations": {
+        "ar": {
+          "title": "Atlas On Line 2026: ثلاثون منصباً لمستشاري الزبائن بجهة الدار البيضاء–سطات",
+          "deck": "تحليل الإعلان الأصلي والبوابة: Bac+2 والفرنسية ولغة ثانية، آخر أجل 6 نوفمبر، وتعارض مهم بين البريد والإيداع الإلكتروني.",
+          "sections": [
+            [
+              "المشغل والعدد والموقع",
+              "نشر موقع التشغيل العمومي المغربي في 23 أكتوبر 2026 إعلان شركة Atlas On Line التابعة لمجموعة الخطوط الملكية المغربية تحت الرمز C44260/26. يتعلق الإعلان بثلاثين منصباً لمستشاري الزبائن، في إطار توظيف تعاقدي، وتحدد البوابة جهة الدار البيضاء–سطات موقعاً عاماً لهذه المناصب. لا تذكر الصفحة مدينة تعيين نهائية لكل مترشح، ولا توزع المناصب على فروع محددة، لذلك لا يصح اختراع عنوان عمل دقيق. تصف الورقة الأصلية الشركة بأنها مركز لإدارة العلاقة مع الزبائن في النقل الجوي، وتذكر الدعم والبيع عن بعد وخدمة ما بعد البيع. ينبغي التمييز بين إعلان توظيف تعاقدي وبين مباراة للتوظيف في سلك الوظيفة العمومية؛ كما أن عدد المناصب ليس ضماناً للاستدعاء أو القبول."
+            ],
+            [
+              "المهام الفعلية لمستشار الزبائن",
+              "تحدد الورقة الأصلية ثلاث مجموعات من المهام: استقبال المكالمات والتعرف على طلب الزبون، وتحليل الحاجة وتقديم المشورة والمساعدة، والمساهمة في تحقيق أهداف البيع ومعالجة الشكاوى. لذلك يتطلب المنصب إنصاتاً وفهماً للسياق وليس ترديد عبارات محفوظة فقط. مثال تحضيري افتراضي: يتصل مسافر ليسأل عن تعديل حجز؛ يبدأ المستشار بالتحقق من المعلومات المسموح طلبها، ثم يحدد نوع المشكلة ويوضح الخطوات وفق السياسة المعتمدة. لا يجوز للمترشح اختلاق قواعد استرجاع أو رسوم تغيير لم ترد في إعلان الشركة. لا توضح الوثيقة نظام المناوبات أو ساعات العمل أو إمكانية العمل عن بعد أو البرامج المستخدمة، ويجب ترك هذه التفاصيل غير محسومة حتى يصدر توضيح رسمي."
+            ],
+            [
+              "الشهادة واللغات المطلوبة",
+              "تشترط الشركة مستوى دراسياً لا يقل عن Bac+2، وتذكر DEUG والإجازة أو ما يعادلها أمثلة للمؤهلات المقبولة. وتطلب مستوى مناسباً في الفرنسية مع لغة ثانية من الإنجليزية أو الألمانية أو الإيطالية. لكن بداية الورقة تصف المستهدفين بأنهم مستشارو زبائن ناطقون بالإنجليزية، ما يخلق غموضاً حقيقياً حول اللغة الثانية المطلوبة لكل فريق. لا ينبغي تحويل القائمة إلى وعد بأن جميع اللغات مقبولة بالتساوي، ولا الجزم بأن الإنجليزية وحدها إلزامية دون استفسار. لا تحدد الوثيقة مستوى CEFR أو درجة IELTS أو اختباراً رسمياً للغات. يمكن للمترشح إعداد تقديم قصير ومحادثة خدمة زبائن بلغاته الحقيقية، ثم سؤال المشغل عن متطلبات الفريق المحدد."
+            ],
+            [
+              "المهارات والخبرة غير المحددة",
+              "يركز الإعلان على حسن التواصل والإنصات النشط والتعاون مع الفريق، وهي صفات مهمة عندما تكون المكالمات مرتبطة بشكاوى أو طلبات عاجلة. لا تتضمن الورقة شرطاً معلناً لعدد سنوات الخبرة، أو سناً أقصى، أو شرط جنسية، أو تخصصاً إلزامياً في الطيران. لا يجوز نقل شروط من إعلانات Atlas On Line القديمة إلى هذا الإعلان لمجرد تشابه العنوان. من المفيد أن يجهز المترشح مثالاً واقعياً من تدريب أو عمل أو مشروع جامعي يبين كيف تعامل مع سوء فهم أو شكوى، مع شرح ما قام به بنفسه. ويجب عدم ادعاء استعمال نظام حجز أو إدارة مكالمات لم يتدرب عليه فعلاً، لأن المقابلة قد تكشف ذلك."
+            ],
+            [
+              "تعارض طريقة التقديم بين المصدرين",
+              "توجد نقطة تحريرية مهمة: تطلب الورقة الأصلية إرسال السيرة الذاتية إلى البريد Rh_Aol@Atlasonline.Ma، بينما تسجل البوابة الحكومية طريقة الإيداع على أنها إلكترونية عبر emploi-public. لا يوضح المصدران ما إذا كان أحد المسارين بديلاً للآخر أو ما إذا كان الإعلان قد خضع لتعديل. لذلك لا يمكننا إعلان أن البريد ألغي أو أن استعمال القناتين إلزامي. الأفضل فتح صفحة المباراة من الحساب الرسمي وفحص نموذج الإيداع الحالي، ثم التواصل مع المشغل أو إدارة البوابة عند استمرار الغموض. احتفظ بإثبات الإيداع ونسخة من الإعلان، ولا ترسل البطاقة الوطنية أو المعلومات المصرفية إلى وسيط غير معروف. التعارض نفسه سبب إضافي للتقديم المبكر."
+            ],
+            [
+              "الموعد النهائي والوثائق",
+              "تذكر البوابة الحكومية أن آخر أجل للترشيح هو 6 نوفمبر 2026 في الساعة 16:30، بينما لا تتضمن الورقة الأصلية ذات الصفحة الواحدة تاريخاً أو ساعة نهائية. هذا اختلاف في اكتمال المعلومات وليس دليلاً على تمديد محتمل. ينبغي اعتماد الموعد المنشور في البوابة عند التخطيط، مع الإيداع قبل انتهاء المهلة بوقت كاف. تذكر الورقة السيرة الذاتية فقط ولا تعرض لائحة نهائية للشهادات أو الوثائق أو صيغ الملفات. يمكن تجهيز بيانات الدبلوم والتجارب واللغات، لكن لا يجوز وصف نسخة البطاقة الوطنية أو شهادة معينة بأنها إلزامية دون نص رسمي. راجع تعليمات الواجهة عند التقديم ولا تفترض أن تأكيد الإرسال يعني قبول الملف."
+            ],
+            [
+              "الانتقاء والراتب والمعلومات الغائبة",
+              "لا تحدد الوثيقة التي تمت مراجعتها اختباراً كتابياً أو تاريخ مقابلة أو مراحل انتقاء مفصلة أو تاريخ إعلان النتائج. كما لا تعلن راتباً أو تعويضات أو عمولات بيع أو ساعات عمل أو مدة العقد أو تاريخ بداية العمل. لهذا لا يصح تقديم متوسط أجر مراكز الاتصال باعتباره عرضاً رسمياً من Atlas On Line. يمكن للمترشح الاستعداد لمقابلة محتملة عبر تدريب على محادثة بالفرنسية ولغة ثانية، وعلى تلخيص شكوى بوضوح واحترام، لكن ذلك اقتراح عملي وليس برنامج امتحان منشوراً. من الأفضل طلب توضيح مكتوب حول ظروف العمل والراتب في مرحلة مناسبة من التوظيف. ولا توجد رسوم توظيف منشورة في المصدرين تبرر الدفع لوسيط."
+            ],
+            [
+              "خطة عملية ومخاطر الخلط بين الحملات",
+              "ابدأ بمقارنة مؤهلك بشرط Bac+2، ثم أعد سيرة ذاتية دقيقة تبرز التواصل وخدمة الزبائن واللغات التي تستطيع استعمالها في مكالمة حقيقية. دوّن الرمز C44260/26 لأن الشركة نشرت حملات سابقة بأعداد ومواعيد مختلفة، ولا يجوز اعتبارها الإعلان نفسه. راجع الورقة الأصلية وصفحة البوابة في يوم التقديم للتحقق من أي تصحيح في قناة الإيداع أو الموعد. إذا اخترت استعمال البريد الوارد في الورقة، تحقق من نطاقه رسمياً ولا ترسل بيانات حساسة غير مطلوبة. تمت مراجعة المصدرين بتاريخ 28 أكتوبر 2026، وقد تظهر تعديلات لاحقة. لا توجد في هذه الدراسة وعود بقبول الترشيح أو باستدعاء جميع المؤهلين."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Atlas On Line 2026: 30 customer adviser jobs and conflicting application routes",
+          "deck": "Original-source analysis: Bac+2, French and a second language, 6 November deadline, and an unresolved submission-channel discrepancy.",
+          "sections": [
+            [
+              "Employer, positions and location",
+              "The Moroccan public employment portal published an Atlas On Line listing on 23 October 2026 under competition reference C44260/26. Atlas On Line is a Royal Air Maroc group subsidiary operating a customer relationship centre for the aviation sector. The listing advertises 30 customer adviser positions under contract in the Greater Casablanca–Settat region. Neither the portal nor the original one-page notice assigns each vacancy to a precise city or office. It would therefore be misleading to publish an invented workplace address. The employer describes remote sales, customer support and after-sales assistance among its activities. This is contract recruitment according to the government portal, not an appointment to the civil service. The advertised number is not a guarantee of selection for an individual applicant."
+            ],
+            [
+              "Actual customer adviser responsibilities",
+              "The original notice lists receiving calls and identifying the caller's request, analysing customer needs and providing suitable assistance, and contributing to sales and complaint-resolution objectives. The job consequently requires attentive listening and judgment rather than merely reading a script. For preparation, imagine a traveller asking about a reservation change: a responsible adviser clarifies the request, checks only necessary information and explains the next step according to verified company rules. Do not invent airline refund conditions or promise authority to change bookings. The reviewed document does not disclose shift patterns, daily hours, remote-work eligibility or the specific reservation software used. Those omissions should remain visible rather than being filled with assumptions drawn from other call-centre jobs."
+            ],
+            [
+              "Degree and the unresolved language question",
+              "The employer requires at least Bac+2 education, citing DEUG, licence or equivalent qualifications. It asks for adequate French and a second language chosen from English, German or Italian. However, the opening sentence calls the targeted advisers English-speaking. This discrepancy raises a real question about which languages are required for particular teams. It does not prove that every advertised position accepts any of the three alternatives, nor does it justify asserting that English is the only possible second language. The PDF gives no IELTS score, CEFR level or formal language-test procedure. Applicants should state their genuine spoken proficiency and seek clarification from the employer about the language of the actual assignment."
+            ],
+            [
+              "Communication skills and unstated criteria",
+              "The notice specifically values interpersonal communication, active listening and teamwork. These skills matter when customers call with complaints, uncertainty or urgent travel questions. It does not state a minimum number of years of work experience, a maximum age, a nationality requirement or a specialist aviation diploma. Conditions found in older Atlas On Line campaigns must not be silently imported into this one. A candidate may prepare a truthful example from employment, training or university work showing how they clarified a difficult request and coordinated with others. Explain your personal contribution instead of claiming the team's work as your own. Never claim hands-on experience with booking or call-management software that you have not actually used."
+            ],
+            [
+              "Two official sources disagree on how to apply",
+              "The employer's original PDF asks candidates to send their CV to Rh_Aol@Atlasonline.Ma. The government portal, by contrast, marks the submission method as an online application through emploi-public. Neither document says whether one route supersedes the other or whether the instructions have been updated. It would be irresponsible to claim that the email is cancelled or that both routes are compulsory. Open the current competition page while logged into the official portal, inspect its submission instructions, and request clarification from the employer or portal if the discrepancy remains. Keep a copy of the notice and proof of submission. Never send identity documents or bank details to an unverified intermediary."
+            ],
+            [
+              "Deadline and supporting documents",
+              "The government listing states 6 November 2026 at 16:30 as the deadline. The one-page employer notice reviewed here does not specify a closing date or hour. That is a difference in available detail, not evidence that applicants have extra time. Plan to submit well before the portal deadline, allowing for technical difficulties. The employer PDF expressly requests a CV but does not provide a complete list of required attachments, acceptable formats or file-size limits. Prepare accurate education, work-history and language information, then follow the current official application interface rather than another competition's checklist. An upload confirmation or delivered email does not itself establish that a candidate has been shortlisted."
+            ],
+            [
+              "Selection, salary and other unknowns",
+              "The original notice does not publish a written examination, interview date, number of selection rounds or results timetable. It also does not disclose base salary, sales commissions, allowances, working hours, contract duration or the intended starting date. General call-centre salary estimates must not be presented as this employer's formal offer. A candidate can practise answering service questions in French and the second language and explaining a complaint calmly, but that is practical preparation, not an officially announced examination syllabus. Ask for working conditions and remuneration in writing when appropriate. Neither official source establishes a recruitment fee that would justify paying a third-party broker promising admission."
+            ],
+            [
+              "Practical checklist and risk of confusing campaigns",
+              "First verify that your qualification meets the Bac+2 threshold. Prepare a concise and accurate CV emphasizing customer communication, complaint handling and languages you can genuinely use in a telephone conversation. Record reference C44260/26, because Atlas On Line has published previous recruitment campaigns with different dates and vacancy counts. Recheck the original PDF and the portal on the day you apply, especially the conflicting submission channels. If you use the email printed in the employer notice, verify the domain independently and avoid unnecessary sensitive attachments. Both sources were reviewed on 28 October 2026; later official corrections may change the process. No application or interview outcome is guaranteed."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Atlas On Line 2026 : 30 postes de téléconseillers et modalités de candidature à vérifier",
+          "deck": "Analyse du PDF et du portail : Bac+2, français et seconde langue, échéance du 6 novembre et divergence sur le dépôt.",
+          "sections": [
+            [
+              "Employeur, postes et zone d'affectation",
+              "Le portail marocain de l'emploi public a publié le 23 octobre 2026 une annonce Atlas On Line sous la référence C44260/26. Cette filiale du groupe Royal Air Maroc exploite un centre de relation client spécialisé dans le transport aérien. La fiche annonce 30 postes de téléconseillers sous contrat pour la région du Grand Casablanca–Settat. Ni la fiche ni le PDF d'une page ne répartissent les postes entre des villes ou des bureaux précis. Il serait donc trompeur de présenter une adresse d'affectation inventée. L'employeur mentionne notamment l'assistance, la vente à distance et le service après-vente. Il s'agit d'un recrutement contractuel selon le portail, et non d'une titularisation dans la fonction publique. Trente postes annoncés ne signifient pas trente candidatures automatiquement retenues."
+            ],
+            [
+              "Missions quotidiennes réellement publiées",
+              "Le document original cite l'accueil et l'identification de la demande du client, l'analyse de son besoin pour fournir conseil et assistance, ainsi que la contribution aux objectifs de vente et au traitement des réclamations. Le travail suppose donc écoute et discernement, pas uniquement la lecture d'un script. Pour s'entraîner, on peut imaginer un voyageur demandant une modification de réservation : le conseiller clarifie le problème, vérifie les informations nécessaires et explique les démarches selon les règles de l'entreprise. Il ne faut pas inventer les conditions de remboursement de la compagnie. L'annonce ne précise ni les rotations, ni les horaires, ni la possibilité de télétravail, ni les logiciels utilisés. Ces éléments restent inconnus."
+            ],
+            [
+              "Diplôme et question linguistique non résolue",
+              "L'employeur exige un niveau Bac+2 minimum, en citant DEUG, licence ou diplôme équivalent. Il demande une maîtrise convenable du français et une seconde langue parmi l'anglais, l'allemand ou l'italien. Pourtant, l'introduction du PDF décrit les candidats recherchés comme des chargés de clientèle anglophones. Cette différence mérite une clarification sur les équipes concernées ; elle ne prouve pas que toutes les langues sont acceptées indifféremment pour chaque poste. Aucun score IELTS, niveau CECRL précis ou examen linguistique obligatoire n'est publié. Le candidat doit décrire ses compétences orales réelles et demander à l'employeur quelle langue sera effectivement utilisée dans la mission proposée."
+            ],
+            [
+              "Qualités personnelles et critères non mentionnés",
+              "L'écoute active, les relations humaines, la communication et le travail en équipe figurent dans le profil recherché. Ces qualités sont importantes pour traiter des demandes complexes ou des réclamations. En revanche, le document ne fixe pas de nombre minimal d'années d'expérience, de plafond d'âge, de condition de nationalité ni de diplôme spécialisé dans l'aéronautique. Il serait incorrect de reprendre les critères d'anciennes campagnes Atlas On Line sans preuve qu'ils s'appliquent ici. Un candidat peut présenter un exemple authentique tiré d'un stage, d'un emploi ou d'un projet universitaire, en expliquant son rôle personnel. Il ne doit pas prétendre connaître un logiciel de réservation qu'il n'a jamais utilisé."
+            ],
+            [
+              "Divergence entre les deux canaux de candidature",
+              "Le PDF de l'employeur demande d'envoyer le CV à Rh_Aol@Atlasonline.Ma, alors que le portail gouvernemental indique un dépôt en ligne sur emploi-public. Aucun des deux documents ne précise si une voie remplace l'autre ou si les consignes ont changé. Il serait donc imprudent d'affirmer que l'adresse électronique a été supprimée ou que les deux dépôts sont obligatoires. Consultez la fiche actuelle depuis votre compte sur le portail et, en cas de doute, demandez une confirmation à l'entreprise ou au service compétent. Conservez le document original et une preuve de dépôt. Ne transmettez jamais vos coordonnées bancaires ou vos documents d'identité à un intermédiaire non vérifié."
+            ],
+            [
+              "Date limite et documents justificatifs",
+              "La fiche gouvernementale affiche le 6 novembre 2026 à 16 h 30 comme dernier délai de candidature. Le document original d'une page ne mentionne ni date ni heure de clôture. Il s'agit d'une différence de précision, pas d'une preuve de prolongation. Déposez votre candidature avant l'échéance indiquée par le portail, avec une marge suffisante pour résoudre un problème technique. Le PDF demande explicitement un CV, mais ne publie pas de liste exhaustive des autres pièces, formats ou tailles de fichiers. Préparez vos informations sur les diplômes, l'expérience et les langues, puis suivez les consignes actuelles de l'interface officielle. Un accusé de réception ne vaut pas présélection."
+            ],
+            [
+              "Sélection, salaire et autres informations absentes",
+              "Le PDF examiné ne donne pas de programme d'épreuve écrite, de date d'entretien, de nombre d'étapes de sélection ou de calendrier de résultats. Il ne précise pas non plus le salaire de base, les commissions de vente, les primes, les horaires, la durée du contrat ou la date d'entrée en fonction. Une moyenne salariale observée dans un autre centre d'appels ne constitue pas une proposition de cet employeur. S'entraîner à répondre calmement en français et dans sa seconde langue peut être utile, mais cela ne doit pas être présenté comme une épreuve officiellement annoncée. Les conditions contractuelles et financières devront être confirmées par écrit au stade approprié."
+            ],
+            [
+              "Méthode pratique et risque de confusion",
+              "Vérifiez d'abord que votre diplôme atteint le niveau Bac+2. Rédigez ensuite un CV exact mettant en valeur l'écoute, la gestion des réclamations et les langues que vous pouvez réellement utiliser au téléphone. Notez la référence C44260/26, car Atlas On Line a publié d'autres campagnes avec des effectifs et des dates différents. Le jour du dépôt, relisez le PDF et la fiche gouvernementale pour repérer une éventuelle correction des canaux de candidature. Si vous utilisez l'adresse du document, vérifiez indépendamment le domaine et n'envoyez pas de pièces sensibles inutiles. Sources contrôlées le 28 octobre 2026 ; aucune sélection ni convocation n'est garantie."
+            ]
+          ]
+        }
+      }
     }
   }
 }
