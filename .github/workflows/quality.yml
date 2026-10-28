@@ -96,6 +96,7 @@ jobs:
           GOOGLE_SITE_VERIFICATION: test-verification-token_1234567890
           ADSENSE_PUBLISHER_ID: ca-pub-1234567890123456
           ENABLE_ADSENSE: 'false'
+          ADSENSE_VERIFICATION_SCRIPT: 'false'
         run: |
           npm run build
           npm run check
@@ -116,6 +117,7 @@ jobs:
           SITE_URL: https://ribhlab-preflight.example
           ADSENSE_PUBLISHER_ID: ca-pub-1234567890123456
           ENABLE_ADSENSE: 'true'
+          ADSENSE_VERIFICATION_SCRIPT: 'true'
         run: |
           npm run build
           npm run check
