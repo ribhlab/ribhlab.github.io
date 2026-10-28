@@ -1,0 +1,177 @@
+{
+  "sectionId": "trading-risk",
+  "article": {
+    "slug": "risk-budget-drawdown-math-beginners",
+    "category": "trading",
+    "date": "2026-10-28",
+    "updated": "2026-10-28",
+    "featured": false,
+    "related": [
+      "trading-bot-backtest-spread-slippage-reality-check"
+    ],
+    "sources": [
+      {
+        "label": "CFTC — Eight Things Before Trading Forex",
+        "url": "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_MustKnowForex.html"
+      },
+      {
+        "label": "Investor.gov — Asset Allocation and Diversification",
+        "url": "https://www.investor.gov/introduction-investing/getting-started/asset-allocation"
+      },
+      {
+        "label": "Investor.gov — Leveraged Investing Risks",
+        "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/leveraged-investing-strategies-know-risks-using-these-advanced-investment-tools"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "إدارة رأس المال للمبتدئ: حساب المخاطرة والتراجع قبل فتح الصفقة",
+        "excerpt": "شرح حسابي لإدارة رأس المال في التداول، والفارق بين الخسارة الاسمية والتراجع المركب، مع حدود أوامر الوقف ومخاطر الرافعة.",
+        "lead": "ليست إدارة رأس المال طريقة لصنع أرباح مضمونة؛ إنها محاولة لوضع حدود للخسائر المحتملة قبل اتخاذ قرار التداول. يمكن أن تؤدي الأسواق والرافعة المالية وفجوات الأسعار إلى نتائج أسوأ من المخطط، ولذلك ينبغي الفصل بين الحساب النظري والمبلغ الذي قد يُخصم فعلاً من الحساب. الأمثلة التالية تعليمية بأرقام افتراضية وليست توصية بصفقة أو نسبة مخاطرة مناسبة للجميع.",
+        "sections": [
+          {
+            "heading": "ميزانية الخسارة تبدأ من رأس المال القابل للمخاطرة",
+            "paragraphs": [
+              "افترض حساباً تعليمياً بقيمة 10,000 وحدة نقدية. اختيار ميزانية خسارة نظرية قدرها 1% يعني 100 وحدة للصفقة الواحدة قبل احتساب الرسوم والانزلاق. لا تمثل هذه النسبة قاعدة مهنية ملزمة ولا ضماناً بأن الخسارة ستتوقف عند 100. القرار الحقيقي يجب أن يراعي القدرة المالية على تحمل الخسائر والحاجة إلى السيولة ومستوى الخبرة. لا تستخدم أموال المعيشة أو الديون لمجرد أن معادلة حسابية أظهرت رقماً يبدو صغيراً.",
+              "تعرّف هيئة Investor.gov تحمّل المخاطر بأنه القدرة والرغبة في فقدان جزء من الاستثمار سعياً وراء عائد محتمل، ويتغير ذلك بحسب الأهداف والأفق الزمني. بالنسبة إلى المضاربة قصيرة المدى، يجب أيضاً حساب عمولات التنفيذ والتمويل وهامش الضمان. لا تبدأ بقيمة عقد ثم تحاول تبريرها بأمر وقف؛ ابدأ بالسيناريو الذي يبطل فكرة الصفقة، ثم قيّم ما إذا كان فقدان المبلغ المحتمل مقبولاً أصلاً."
+            ]
+          },
+          {
+            "heading": "لماذا تحتاج خسارة 20% إلى ربح 25% للتعويض؟",
+            "paragraphs": [
+              "إذا انخفض رأس مال افتراضي من 10,000 إلى 8,000، يكون التراجع 20%، لكن العودة إلى 10,000 تتطلب زيادة 2,000 على أساس 8,000، أي 25%. وعند خسارة نصف القيمة، يتطلب التعويض زيادة 100% من الرصيد المتبقي. هذه علاقة حسابية لا تتوقف على نوع السوق، وتوضح لماذا يصبح التعافي أصعب كلما ازداد التراجع. لا تفترض أن استراتيجية خاسرة ستعود تلقائياً إلى المستوى السابق بمجرد مضاعفة حجم العقود.",
+              "عند تعرض الحساب لخمس خسائر نسبية متتالية، لا يصح جمع نسب خسارة محسوبة على أرصدة مختلفة باعتبارها خسارة خطية بسيطة. فلو خسر الرصيد 1% في كل مرة بعد إعادة الحساب يصبح 10,000 × 0.99 أس 5، أي نحو 9,509.90، قبل الرسوم. يمكن لتراكم تكاليف التمويل والتداول أن يزيد الانخفاض. اكتب رصيد البداية والنهاية لكل صفقة بدلاً من الاكتفاء بنسبة «النجاح» التي قد تخفي خسائر قليلة كبيرة."
+            ]
+          },
+          {
+            "heading": "حجم الصفقة ليس هو نسبة الهامش المحجوز",
+            "paragraphs": [
+              "في الحساب النظري، يربط بعض المتداولين حجم المركز بالمسافة بين نقطة الدخول ومستوى وقف الخسارة: الميزانية النقدية ÷ الخسارة المقدرة لكل وحدة. لكن قيمة النقطة وحجم العقد والعملة تختلف بين الأسهم والعقود والعملات، لذا يجب تحديد الوحدة قبل استعمال المعادلة. إن ترك هذه المتغيرات مجهولة قد ينتج حجماً أكبر بكثير مما يمكن للحساب تحمله. اختبر حساباتك على بيانات تجريبية وراجع مواصفات الوسيط بدقة.",
+              "تحذر CFTC من أن متطلبات الهامش المنخفضة تسمح بالتعرض لقيم اسمية كبيرة، ومن إمكانية خسارة الهامش وربما أكثر بحسب المنتج والاتفاق. هامش 2% لا يعني أن الخسارة القصوى 2% من قيمة الصفقة؛ إنه جزء من الضمان المطلوب لفتح المركز. راجع مستوى التصفية وقواعد نداء الهامش، وتجنب اعتبار رافعة أكبر وسيلة لتعويض خسائر سابقة. الرسوم والفروق بين أسعار البيع والشراء تؤثر في الأداء الفعلي."
+            ]
+          },
+          {
+            "heading": "الأوامر الوقائية لا تلغي فجوات الأسعار والانزلاق",
+            "paragraphs": [
+              "قد يحدد المتداول وقفاً عند سعر معين، لكن التنفيذ الفعلي قد يحدث بسعر أسوأ أثناء الأخبار أو عند انخفاض السيولة. بعض الأوامر لا تضمن سعر التنفيذ، وتختلف نتائجها حسب نوع الأمر والوسيط والسوق. لهذا فإن ضرب عدد الوحدات في المسافة إلى الوقف يعطي خسارة تقديرية، لا سقفاً نهائياً مضموناً. اختبر سيناريو أسوأ من المعتاد، ودوّن أثر السبريد والعمولة والتمويل والأخطاء البشرية.",
+              "تزداد المخاطر عندما تبدو عدة صفقات مستقلة لكنها تتحرك عملياً مع الخبر الاقتصادي نفسه. مثال: مركزان مرتبطان بالدولار قد يتعرضان للضغط في الوقت ذاته، فلا يكفي وصف كل واحد منهما بأنه «1% مخاطرة» إذا كان المجموع كبيراً على مستوى الحساب. تابع الانكشاف الكلي وإمكان وقوع خسائر متزامنة، ولا تعتبر التنويع الشكلي علاجاً لمخاطر المنتجات المتشابهة. راجع سياسة إغلاق السوق وفترات التذبذب العالي."
+            ]
+          },
+          {
+            "heading": "قائمة مراجعة قبل كل صفقة وبعدها",
+            "paragraphs": [
+              "قبل إدخال أي أمر، دوّن سبب الدخول ومستوى إبطال الفكرة والميزانية النظرية للوحدة والحجم الإجمالي والرسوم المتوقعة وحجم الانكشاف المرتبط بصفقات أخرى. حدد أيضاً ظرفاً تتوقف فيه عن التداول مثل فقدان القدرة على الالتزام بالخطة أو ظهور خطأ في بيانات الأسعار. لا تغيّر الوقف فقط لتجنب تسجيل خسارة، ولا تستعمل متوسط التكلفة لتجاهل حدود المركز المفتوح. هذه ضوابط تعليمية لتقليل الاندفاع ولا تقدم نتيجة مضمونة.",
+              "بعد الإغلاق، سجل سعر التنفيذ الفعلي والفارق عن السعر المقصود وأسباب التغير ورسوم الوسيط وصافي النتيجة. قيّم العينة على مدى كافٍ بدلاً من اعتبار خمس صفقات ناجحة إثباتاً لاستراتيجية مربحة. احسب التراجع الأقصى ونسبة الخسائر الكبيرة ومدى الاعتماد على الرافعة. إذا تعذر تفسير التنفيذ أو ظهرت شروط وسيط غير واضحة، فالامتناع عن الصفقة خيار مشروع. الأسواق قد تسبب فقدان كامل رأس المال، ولا تغني هذه المادة عن تقييم مالي شخصي مستقل."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Beginner risk budgeting: drawdown mathematics before placing a trade",
+        "excerpt": "A practical explanation of position risk, compound losses, leverage and why stop orders do not guarantee a maximum loss.",
+        "lead": "Risk budgeting cannot make trading profitable or guarantee that losses remain within a planned amount. It is a way to think about possible harm before opening a position. Leverage, market gaps, financing charges and execution conditions can all produce worse outcomes than a spreadsheet model. The calculations below are hypothetical examples, not a recommendation to risk a particular percentage of your account.",
+        "sections": [
+          {
+            "heading": "Start with losses you can actually afford",
+            "paragraphs": [
+              "Consider an illustrative account of 10,000 currency units. A theoretical per-trade loss budget of 1% would equal 100 units before commissions and slippage. That percentage is not a professional rule suitable for everyone, nor is it a guaranteed maximum realized loss. Personal financial commitments, liquidity needs and the possibility of losing the investment matter more than whether the arithmetic is easy. Do not risk money needed for ordinary expenses or borrow simply because an attractive trade setup appears.",
+              "Investor.gov defines risk tolerance in terms of both willingness and capacity to lose capital while pursuing returns. An investor with a near-term spending need may have very different constraints from someone with a long time horizon. Short-term leveraged positions also require attention to margin, financing and market access. It is more useful to define the event that invalidates a trade and assess the possible damage than to pick a very large position first and invent a stop afterward."
+            ]
+          },
+          {
+            "heading": "Why recovering from a drawdown gets harder",
+            "paragraphs": [
+              "If a hypothetical account declines from 10,000 to 8,000, the drawdown is 20%. Recovering the original balance requires an increase of 2,000 relative to 8,000, or 25%. A 50% loss requires a 100% gain on the remaining capital just to return to the starting point. This mathematical asymmetry exists whether the position was in currency, stocks or another asset. It does not prove a losing strategy will recover if the size is doubled after a setback.",
+              "Compound percentages matter. Five consecutive losses of 1%, each calculated on the declining balance, leave about 10,000 multiplied by 0.99 to the fifth power, or roughly 9,509.90 before costs. The sequence cannot be treated as five identical cash losses from the original balance. Financing charges, spreads and transactions can increase the decline. Recording the equity after each trade provides more information than reporting a headline win rate that hides a few particularly large losing positions."
+            ]
+          },
+          {
+            "heading": "A position size formula still needs correct units",
+            "paragraphs": [
+              "One common theoretical position-sizing approach divides a monetary loss budget by the estimated loss per unit between entry and the invalidation level. But the value of a price movement depends on the instrument, contract size, quote currency and tick conventions. Mixing units can create a position far larger than intended. Calculate a sample in a simulated environment first, compare it with the product specifications and confirm whether fees are included. Never assume that one pip or one point has the same value for every instrument.",
+              "The CFTC warns that low margin requirements may provide exposure to a much larger notional position and that a trader may lose the margin and potentially more. A 2% margin requirement does not mean the maximum financial loss is limited to 2% of the trade value. It means the intermediary may require that amount as initial collateral under the applicable conditions. Check liquidation rules and margin calls instead of treating leverage as a shortcut to restoring losses."
+            ]
+          },
+          {
+            "heading": "Why an intended stop is not an execution guarantee",
+            "paragraphs": [
+              "An order designed to limit a loss can fill at a worse price during a market gap, major economic release or episode of low liquidity. Different order types and venues have distinct execution mechanics. Multiplying position size by the distance to a planned stop therefore estimates a scenario rather than ensuring the final debit will equal that estimate. Include spread, commission, financing and a more adverse price scenario in any pre-trade review. Real-world execution is an observable variable, not a fixed assumption.",
+              "Portfolio exposure matters as well. Two positions may appear diversified but respond to the same currency shock or interest-rate announcement. Calling each one a 1% risk trade can hide an aggregate exposure much larger than the owner intends to tolerate. Review correlated positions and potential simultaneous losses. Nominal diversification is not sufficient if the relevant drivers are shared. Consider the broker's operating hours, the possibility of platform interruptions and the consequences of orders that remain active."
+            ]
+          },
+          {
+            "heading": "A useful pre-trade and post-trade checklist",
+            "paragraphs": [
+              "Before placing an order, record the reason for the idea, its invalidation level, estimated monetary loss, size, applicable fees and exposure alongside other open positions. Specify conditions under which trading should stop, including inability to follow the plan or evidence that pricing data are unreliable. Moving a stop merely to avoid booking a loss defeats the original risk assumption. Averaging down without an overall limit can likewise create more exposure than the initial analysis considered.",
+              "After closing the position, compare intended with actual execution and log the reason for any difference, financing charge, fee and net outcome. Assess a meaningful series rather than inferring success from a small handful of favorable trades. Maximum drawdown and the distribution of unusually large losses matter at least as much as a high win rate. If the dealer's terms or execution are not understandable, choosing not to trade is a valid decision. Loss of all capital remains possible."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Gérer le risque en trading : comprendre le drawdown et les pertes cumulées",
+        "excerpt": "Calculs concrets sur le budget de perte, la taille des positions, les effets de levier et les limites des stops.",
+        "lead": "Établir un budget de risque ne rend pas une stratégie rentable et ne garantit pas que les pertes resteront sous un plafond théorique. Cette démarche aide surtout à évaluer les conséquences possibles avant une opération. L'effet de levier, les gaps, les frais et les conditions d'exécution peuvent produire des pertes supérieures aux prévisions. Les exemples chiffrés sont fictifs et ne constituent pas une recommandation personnelle.",
+        "sections": [
+          {
+            "heading": "Définir une perte compatible avec sa situation",
+            "paragraphs": [
+              "Prenons un capital fictif de 10 000 unités monétaires. Un budget théorique de 1 % par opération correspondrait à 100 unités avant frais et glissement de prix. Ce pourcentage ne constitue pas une règle universelle ni une garantie de perte maximale. Il faut tenir compte des besoins financiers, de la liquidité et de la capacité réelle à supporter une perte. Il serait dangereux d'engager l'argent des dépenses quotidiennes ou de s'endetter au seul motif qu'une opération semble mathématiquement limitée.",
+              "Investor.gov relie la tolérance au risque à la volonté et à la capacité de subir une perte pour rechercher un rendement potentiel. Les contraintes changent selon les objectifs et l'horizon de placement. Le trading à court terme avec levier ajoute des variables spécifiques : financement, marge et qualité d'exécution. Il est préférable de préciser ce qui invaliderait l'idée d'investissement puis de chiffrer les conséquences que de choisir d'abord un gros volume et de chercher ensuite un stop capable de le justifier."
+            ]
+          },
+          {
+            "heading": "Comprendre le calcul des pertes et du redressement",
+            "paragraphs": [
+              "Une diminution de 10 000 à 8 000 constitue une perte de 20 %. Pour retrouver 10 000, il faut ensuite gagner 2 000 sur une base de 8 000, soit 25 %. Après une perte de 50 %, une hausse de 100 % du capital restant est nécessaire pour revenir au point de départ. Cette asymétrie arithmétique s'applique à différents marchés et explique pourquoi le redressement devient plus difficile après une forte baisse. Augmenter les positions ne garantit pas la récupération.",
+              "Les variations successives se composent. Cinq pertes de 1 % calculées chacune sur le solde après la perte précédente laissent environ 10 000 multiplié par 0,99 puissance cinq, soit 9 509,90 avant frais. Il ne s'agit pas de cinq pertes de montant identique calculées sur le capital initial. Les spreads et le financement peuvent accentuer le recul. Conservez les soldes après chaque position ; un taux de réussite élevé peut masquer quelques pertes exceptionnellement lourdes."
+            ]
+          },
+          {
+            "heading": "La taille de position dépend des unités correctes",
+            "paragraphs": [
+              "Une formule pédagogique consiste à diviser le budget de perte par la perte estimée pour une unité entre l'entrée et le niveau d'invalidation. Mais la valeur d'un point varie selon le produit, la devise, la taille du contrat et les règles de cotation. Une confusion entre ces unités peut provoquer une exposition excessive. Vérifiez les spécifications du courtier et effectuez d'abord des simulations, en intégrant les frais lorsqu'ils sont connus. Une formule correcte appliquée aux mauvaises unités donne un résultat dangereux.",
+              "La CFTC avertit que de faibles exigences de marge permettent de prendre des positions notionnelles très importantes. Une marge de 2 % ne limite pas la perte maximale à 2 % de la valeur négociée ; elle indique une exigence de garantie sous certaines conditions. Les pertes peuvent dépasser la marge et parfois l'apport initial, selon les contrats. Étudiez les appels de marge, les règles de liquidation et les charges de financement avant d'envisager un effet de levier important."
+            ]
+          },
+          {
+            "heading": "Le stop prévu ne garantit pas le prix exécuté",
+            "paragraphs": [
+              "Un ordre destiné à limiter la perte peut être exécuté à un prix moins favorable pendant un gap, une publication économique ou une période de faible liquidité. Les modalités dépendent du type d'ordre, du marché et de l'intermédiaire. Le produit de la taille de position et de la distance au stop correspond ainsi à une estimation, non à un plafond absolu. Examinez un scénario plus défavorable et intégrez spreads, commissions et frais de financement. La qualité de l'exécution doit être mesurée, pas supposée.",
+              "Deux opérations différentes peuvent réagir au même choc sur les taux ou le dollar. Considérer séparément chaque position comme exposant 1 % du compte peut dissimuler un risque global beaucoup plus important. Vérifiez les actifs corrélés et la possibilité de pertes simultanées. Une diversification nominale ne suffit pas lorsque les facteurs économiques sont identiques. Prenez aussi en compte les horaires du marché, les interruptions possibles du courtier et la présence d'ordres non exécutés."
+            ]
+          },
+          {
+            "heading": "Évaluer la stratégie avant et après l'exécution",
+            "paragraphs": [
+              "Avant chaque opération, consignez l'idée, le niveau d'invalidation, la perte monétaire prévue, la taille, les frais et l'exposition totale avec les autres positions. Précisez les circonstances dans lesquelles vous déciderez de ne pas intervenir, notamment une mauvaise compréhension du produit ou l'impossibilité de suivre la méthode. Déplacer un stop uniquement pour éviter de constater une perte modifie l'hypothèse initiale. Renforcer une position perdante sans plafond global augmente encore le risque.",
+              "Après la clôture, comparez le prix prévu et le prix réellement obtenu puis notez les coûts et le résultat net. Étudiez un échantillon suffisamment large au lieu de considérer quelques gains comme preuve de rentabilité. Le recul maximal, les pertes extrêmes et la dépendance à l'effet de levier comptent autant que le taux de réussite. Si les conditions du courtier restent opaques, l'abstention constitue une décision rationnelle. Une perte totale du capital demeure possible malgré ces précautions."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1707157284454-553ef0a4ed0d",
+    "source": "https://unsplash.com/photos/office-desk-with-smartphone-and-financial-charts-heiYgqp0Tsk",
+    "photographer": "Jakub Żerdzicki",
+    "alt": "Financial charts and phone at a desk, illustrative risk-budgeting concept",
+    "altAr": "رسوم بيانية مالية وهاتف على مكتب لتوضيح مفهوم إدارة المخاطر",
+    "altFr": "Graphiques financiers et téléphone sur un bureau, illustration du budget de risque",
+    "license": "Unsplash License",
+    "note": "Verified free Unsplash photograph, photographer Jakub Żerdzicki, published February 5 2024; photo used as illustration, not as real trading performance."
+  },
+  "resourceIds": [
+    "investor",
+    "cftc"
+  ],
+  "review": {
+    "ready": true,
+    "checkedAt": "2026-10-28",
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Independently checked US SEC Investor.gov and CFTC official risk documents 2026-10-28, recomputed 10,000×0.99^5=9509.90 and -20% requires +25%, -50% requires +100%. Original AR/EN/FR full editorial; photo rights and unique ID verified. No performance or strategy guarantees. Word counts {\"ar\":699,\"en\":843,\"fr\":845}"
+  }
+}
