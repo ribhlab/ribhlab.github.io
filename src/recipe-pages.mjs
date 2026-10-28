@@ -186,7 +186,7 @@ function photoFor(recipe,library){
  else if(slug.includes('rice')||['rice','stirfry'].includes(recipe.method))group=['riceA','riceB','curryB'];
  else if(['fish','shrimp','mussels'].some(id=>ids.has(id)))group=['fishA','fishB'];
  else if(['pasta','spaghetti'].some(id=>ids.has(id))||recipe.method==='pasta')group=['pasta','risottoA'];
- else if(recipe.method==='soup')group=['soupA','curryC'];
+ else if(recipe.method==='soup'||slug.includes('harira')||slug.includes('lentil'))group=['lentilSoupA','lentilSoupB','soupA'];
  else if(recipe.method==='salad'||recipe.method==='cold'||recipe.kind==='healthy'&&['quinoa','bulgur','cucumber','lettuce'].some(id=>ids.has(id)))group=['saladA','saladB','hummusC'];
  else if(recipe.cuisine==='moroccan')group=['tagineA','tagineB','couscous'];
  else if(recipe.cuisine==='levant')group=['hummusC','falafel'];
