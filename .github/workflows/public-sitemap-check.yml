@@ -22,9 +22,10 @@ jobs:
           import urllib.request
           import urllib.error
           import xml.etree.ElementTree as ET
+          import re
 
           base='https://ribhlab.github.io'
-          wanted=['/robots.txt','/sitemap.xml','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/']
+          wanted=['/','/ads.txt','/robots.txt','/sitemap.xml','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/']
           last=None
           for attempt in range(1,7):
               try:
@@ -38,6 +39,15 @@ jobs:
                           print(f'GET {path}: HTTP {status}; type={mime}; bytes={len(data)}',flush=True)
                           assert status==200 and data, f'{path}: empty or non-200 response'
                           bodies[path]=data
+                  ads=bodies['/ads.txt'].decode('utf-8-sig').strip()
+                  match=re.fullmatch(r'google\.com, pub-(\d{16}), DIRECT, f08c47fec0942fa0',ads)
+                  assert match, 'Public ads.txt must contain a properly formatted real publisher entry'
+                  expected_meta=('name="google-adsense-account" content="ca-pub-'+match.group(1)+'"').encode()
+                  assert expected_meta in bodies['/'], 'Publisher ownership meta missing from root homepage'
+                  for language in ('ar','en','fr'):
+                      assert expected_meta in bodies['/'+language+'/'], f'AdSense ownership meta missing for {language} page'
+                      assert b'pagead2.googlesyndication.com/pagead/js' not in bodies['/'+language+'/'], 'Ad serving is not approved yet'
+                  print('ADSENSE OWNERSHIP PASSED: public /ads.txt and all page head tags agree; ad delivery stays off',flush=True)
                   robots=bodies['/robots.txt'].decode('utf-8-sig')
                   assert 'Sitemap: '+base+'/sitemap.xml' in robots, 'Missing public robots sitemap'
                   assert 'Disallow: /admin/' in robots, 'Expected private editor excluded'
