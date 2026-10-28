@@ -1,8 +1,8 @@
-# Replace univcours/ribhlab-site with your actual public/private repository.
+# Live RibhLab editor repository; changes must publish to the active GitHub Pages website.
 # Sign in with a GitHub fine-grained access token, or configure OAuth (see README).
 backend:
   name: github
-  repo: univcours/ribhlab-site
+  repo: ribhlab/ribhlab.github.io
   branch: main
 
 media_folder: public/uploads
@@ -22,7 +22,7 @@ collections:
     summary: "{{slug}} — {{category}}"
     fields:
       - {label: Slug (Latin URL, unique), name: slug, widget: string, pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase Latin letters, numbers and hyphens']}
-      - {label: Category, name: category, widget: select, options: [earning, trading, ai]}
+      - {label: Category, name: category, widget: select, options: [earning, trading, ai, lifestyle]}
       - {label: Publication date, name: date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false}
       - {label: Updated date, name: updated, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false}
       - {label: Featured, name: featured, widget: boolean, default: false}
