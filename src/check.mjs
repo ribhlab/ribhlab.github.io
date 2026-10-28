@@ -687,6 +687,8 @@ if(!adminPage.includes('Content-Security-Policy')||!adminPage.includes('connect-
 // Independent food and lifestyle navigation / recipe integrity contract.
 const recipePath=path.join(root,'content','recipes');
 const foodLex=JSON.parse(fs.readFileSync(path.join(recipePath,'ingredients.json'),'utf8')).ingredients;
+const foodPhotoLibrary=JSON.parse(fs.readFileSync(path.join(recipePath,'photo-library.json'),'utf8'));
+if(Object.keys(foodPhotoLibrary.photos||{}).length<18||foodPhotoLibrary.license!=='Unsplash License')errors.push('Need verified source-linked food photos for recipe gallery');
 const foodItems=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.join(recipePath,file),'utf8')).recipes);
 const meals=foodItems.filter(r=>r.kind==='meal'),balancedMeals=foodItems.filter(r=>r.kind==='healthy');
 if(meals.length!==100||balancedMeals.length!==20)errors.push('Recipes require 100 varied meals and 20 balanced dishes, not placeholder titles');
@@ -703,6 +705,7 @@ for(const food of foodItems){
   const html=fs.readFileSync(file,'utf8');
   if(!html.includes('class="recipe-ingredient-list"')||!html.includes('class="recipe-step-list"')||!html.includes('https://www.foodsafety.gov/'))errors.push('Recipe missing quantities, method, or food-safety source '+l+'/'+food.slug);
   if(!html.includes('"@type":"Recipe"'))errors.push('Missing Recipe schema '+l+'/'+food.slug);
+  if(!html.includes('data-recipe-photo')||!html.includes('https://images.unsplash.com/photo-')||!html.includes('data-fallback="/assets/recipe-images/'+food.slug+'.svg"')||!html.includes('recipe-photo-credit'))errors.push('Missing verified real food photo, attribution, or local fallback '+l+'/'+food.slug);
  }
 }
 for(const l of ['ar','en','fr']){
@@ -711,6 +714,9 @@ for(const l of ['ar','en','fr']){
  }
  const landing=fs.readFileSync(path.join(dist,l,'recipes','index.html'),'utf8');
  if((landing.match(/class="recipe-card"/g)||[]).length!==120)errors.push('Kitchen landing must show 120 individually linked recipes '+l);
+ if((landing.match(/data-recipe-photo/g)||[]).length!==120)errors.push('Each of 120 recipe cards must show a real food photograph '+l);
+ const healthyPhotoHtml=fs.readFileSync(path.join(dist,l,'recipes','healthy','index.html'),'utf8');
+ if((healthyPhotoHtml.match(/data-recipe-photo/g)||[]).length!==20)errors.push('All twenty healthy recipe cards must have photographs '+l);
  const index=fs.readFileSync(path.join(dist,l,'index.html'),'utf8');
  if(!index.includes('/'+l+'/care/')||!index.includes('/'+l+'/recipes/'))errors.push('Homepage must link care and cooking separately '+l);
 }
