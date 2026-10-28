@@ -537,6 +537,18 @@
     "usVisaVetting2026": {
       "name": "US Department of State — expanded visa vetting, effective October 2026",
       "url": "https://travel.state.gov/en/newsroom/visas/2026/announcement-of-expanded-screening-and-vetting-for-visa-applicants.html"
+    },
+    "fedSeptemberSep2026": {
+      "name": "Federal Reserve — September 2026 Summary of Economic Projections",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm"
+    },
+    "blsSeptemberCpi2026": {
+      "name": "BLS — September 2026 CPI and inflation data",
+      "url": "https://www.bls.gov/cpi/"
+    },
+    "beaAugustPce2026": {
+      "name": "BEA — Personal income and PCE, August 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-August-2026"
     }
   },
   "articleLinks": {
