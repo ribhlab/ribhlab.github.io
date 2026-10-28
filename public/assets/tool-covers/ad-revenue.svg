@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-hidden="true"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f9ff"/><stop offset=".58" stop-color="#ffca93" stop-opacity=".24"/><stop offset="1" stop-color="#f6f8ff"/></linearGradient>
+<linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#de703f" stop-opacity=".26"/><stop offset="1" stop-color="#ffca93" stop-opacity=".08"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#2e3273" flood-opacity=".16"/></filter>
+<filter id="smallShadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#2e3273" flood-opacity=".12"/></filter></defs>
+<rect width="640" height="360" fill="url(#bg)"/><circle cx="535" cy="85" r="136" fill="url(#glow)"/><circle cx="88" cy="293" r="118" fill="url(#glow)" opacity=".6"/>
+<path d="M0 327q130-55 246-19 98 31 180-18 99-47 214-15v85H0z" fill="#ffca93" opacity=".09"/>
+<rect x="79" y="59" width="458" height="248" rx="23" fill="#fff" filter="url(#shadow)"/><rect x="79" y="59" width="458" height="38" rx="23" fill="#fff0e6"/><circle cx="109" cy="78" r="6" fill="#ffa46e"/><circle cx="131" cy="78" r="6" fill="#ffc29f"/><circle cx="153" cy="78" r="6" fill="#ffc29f"/>
+<rect x="106" y="121" width="175" height="130" rx="15" fill="#fdf0e7"/><rect x="121" y="137" width="144" height="55" rx="10" fill="#ffd09a"/><path d="M134 176 166 152 196 168 232 141" stroke="#e77a41" stroke-width="7" fill="none" stroke-linecap="round"/>
+<rect x="301" y="121" width="203" height="26" rx="8" fill="#ffdebf"/><rect x="301" y="164" width="168" height="12" rx="6" fill="#e9e6ea"/><rect x="301" y="186" width="190" height="12" rx="6" fill="#e9e6ea"/><rect x="301" y="208" width="140" height="12" rx="6" fill="#e9e6ea"/>
+<circle cx="490" cy="248" r="47" fill="#e68c50" filter="url(#smallShadow)"/><circle cx="490" cy="248" r="33" fill="#ffd5a3"/><path d="M477 237h23m-25 12h29m-24 12h21" stroke="#b96e36" stroke-width="6" stroke-linecap="round"/>
+
+</svg>
