@@ -130,8 +130,10 @@
         "chatgpt",
         "googleSearch"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/ai-writing-assistant-style-guide-versioning.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "ai-automation",
