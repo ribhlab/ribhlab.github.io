@@ -766,6 +766,12 @@
       "gumroadProhibited",
       "gumroadFees",
       "gumroadRefunds"
+    ],
+    "ai-writing-assistant-style-guide-versioning": [
+      "openaiEvalGuide",
+      "googlePeopleFirstContent",
+      "googleGenerativeAiContent",
+      "nistGenAi"
     ]
   }
 }

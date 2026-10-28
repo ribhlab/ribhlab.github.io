@@ -1,0 +1,179 @@
+{
+  "slug": "ai-writing-assistant-style-guide-versioning",
+  "category": "ai",
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false,
+  "related": [
+    "ai-prompts-at-work",
+    "ai-assistant-vs-ai-agent-workflows-practical-guide",
+    "ai-agents-business-security-human-checklist"
+  ],
+  "sources": [
+    {
+      "label": "OpenAI Developers — Evaluation best practices (official documentation, accessed 28 October 2026)",
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices"
+    },
+    {
+      "label": "Google Search Central — Creating helpful, reliable, people-first content (official guidance, accessed 28 October 2026)",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    },
+    {
+      "label": "Google Search Central — Guidance on using generative AI content (updated 1 October 2026; accessed 28 October 2026)",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+    },
+    {
+      "label": "NIST — Generative AI Risk Management Profile (published 26 July 2024; accessed 28 October 2026)",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "إنشاء مساعد كتابة بالذكاء الاصطناعي يحافظ على الأسلوب مع دليل تحرير وإصدارات قابلة للتدقيق",
+      "excerpt": "منهج عملي لتحديد صوت التحرير واختبار المسودات وحماية المعلومات وتوثيق التصحيحات، من دون نسخ محتوى الآخرين أو اختلاق مصادر.",
+      "lead": "قد يكتب مساعد الذكاء الاصطناعي فقرة سليمة خلال ثوانٍ، لكنه لا يعرف تلقائياً نبرة مؤسستك أو حدود الادعاءات التي يجوز نشرها باسمها. تبدأ المشكلة حين تختلف المصطلحات بين المقالات أو تختفي أسباب التعديل أو تتحول صياغة واثقة إلى حقيقة بلا دليل. توصي إرشادات OpenAI بتقييم المخرجات على حالات ممثلة للعمل الفعلي، وتؤكد Google Search Central أهمية الأصالة والمراجعة البشرية، بينما يعرض NIST مخاطر المحتوى التوليدي وإدارة مصدره. يقدم هذا الدليل طريقة تحرير قابلة للتطبيق، لا وعداً بأن أداة معينة ستنتج نصوصاً صحيحة دائماً.",
+      "sections": [
+        {
+          "heading": "1. حدد مهمة تحريرية ضيقة ومسؤولية بشرية واضحة",
+          "paragraphs": [
+            "ابدأ بمهمة واحدة، مثل إعداد شرح لتسوية كشف حساب بنكي لموظف جديد، بدلاً من تكليف المساعد بالكتابة عن جميع المجالات. صف القارئ وما يعرفه والمشكلة التي يريد حلها والنتيجة العملية المطلوبة. حدد أن الأداة تقترح الهيكل والمسودة، بينما يتولى المحرر البحث في المصادر والتثبت من الأرقام والموافقة على النشر. عندما يحتاج الموضوع إلى أسعار أو لوائح حديثة، يجب أن يذكر المساعد المعلومات الناقصة بدلاً من استكمالها بتخمينات.",
+            "أنشئ بطاقة تكليف تشمل الغرض والجمهور والمصطلحات المطلوبة والمراجع وطولاً إرشادياً وقيوداً واضحة. مثال افتراضي: «اشرح الفروق بين الرصيد البنكي والرصيد المحاسبي دون استخدام بيانات عملاء حقيقية». تستطيع بعدها قياس الفائدة بسؤال محدد: هل يشرح النص خطوات المصالحة والاستثناءات؟ وهل يميز بين الحقيقة والمثال؟ وهل يتجنب الادعاء بتجربة لم تُنفذ؟ النص السلس ليس ناجحاً إذا لم يحل مشكلة القارئ."
+          ]
+        },
+        {
+          "heading": "2. اكتب دليل أسلوب قابل للمراجعة بدلاً من صفات عامة",
+          "paragraphs": [
+            "اجمع قواعد الأسلوب في صفحة واحدة: جمل مباشرة، ومصطلحات ثابتة، وشرح الاختصارات أول مرة، وأمثلة معلنة بأنها افتراضية، وعناوين وصفية، وتمييز بين الرأي والواقعة. أضف معجماً صغيراً بالعربية والإنجليزية والفرنسية، خصوصاً للمفاهيم المتقاربة مثل سير العمل والوكيل والمراجعة والتدقيق. لا تكفي تعليمات من نوع «اكتب بطريقة احترافية وممتعة»، لأن كل محرر أو نموذج قد يفهمها بصورة مختلفة.",
+            "قدّم ثلاثة أمثلة قصيرة من صياغتك توضح الجملة المرفوضة وبديلها وسبب التعديل. مثال: «الأداة توفر الوقت دائماً» تتحول إلى «قد تختصر إعداد المسودة، لكن التحقق من المعلومات يتطلب وقتاً إضافياً». لا تستعمل مقالات المنافسين كقوالب تُنسخ أو تُعاد صياغتها فقرة بفقرة. وإذا كانت سياسة النشر تتطلب العربية الفصحى، فأدرج منع التعابير العامية في قائمة تحقق مستقلة، مع عدم التضحية بوضوح الأسلوب."
+          ]
+        },
+        {
+          "heading": "3. رتب التعليمات وبيّن الأخطاء الممنوعة",
+          "paragraphs": [
+            "يمكن ترتيب التعليمات في ست خانات: الدور، والقارئ، وقواعد اللغة، والمراجع، وشكل الناتج، وأسئلة المراجعة الذاتية. اطلب مقدمة تشرح المشكلة وأقساماً متدرجة وخطوات عملية وخاتمة تحدد الحدود. ألزم المساعد بوضع علامة «يحتاج إلى تحقق» على أي معلومة بلا دليل بدلاً من اختلاق مرجع يبدو مقنعاً. ويجب تقليل الاقتباسات المباشرة إلى القدر الضروري مع إسنادها، وعدم إعادة بناء نص مصدر آخر بتغيير مفرداته فقط.",
+            "أضف أمثلة على المخرجات المرفوضة: وعد بأرباح، أو تجربة لم تقع، أو اقتباس بلا إذن، أو نص قانوني مترجم يعرض تفسيراً غير مؤكد كحقيقة. يمكن أن تنص بطاقة العمل على «اكتب مسودة تعليمية، ثم قائمة بالادعاءات التي تحتاج مصادر، ولا تخترع شهادات أو بيانات». هذه التعليمات لا تضمن وحدها الامتثال؛ لا بد من فحص بشري. افصل دليل الأسلوب العام عن أسرار العملاء وكلمات المرور والملفات التي تحكمها السرية."
+          ]
+        },
+        {
+          "heading": "4. اختبر المساعد بحالات ثابتة واحسب النتيجة بدقة",
+          "paragraphs": [
+            "توصي وثائق OpenAI بتحديد المهمة وحالات الاختبار ثم تحليل الفشل قبل تعديل التعليمات. اختر خمس حالات: شرح إجراء، وتصحيح فقرة غامضة، وتلخيص مرجع أصلي، وترجمة مصطلحات، والرد عند غياب الدليل. افحص لكل حالة أربعة معايير محددة سلفاً: صحة المعلومات، واحترام الأسلوب، وفائدة الخطوات، والاعتراف بحدود المعرفة. احتفظ بنص الأمر والمخرجات وملاحظات المراجع كي لا تتحول العلامات إلى أحكام انطباعية.",
+            "مثال حسابي افتراضي، وليس نتيجة اختبار أجري فعلياً: خمس حالات مضروبة في أربعة معايير تساوي عشرين خانة. إذا نجحت سبع عشرة خانة فالنسبة 17 ÷ 20 = 85%. هذه النسبة لا تعني أن 85% من الوقائع صحيحة أو أن الأداة آمنة للنشر؛ فقد يكفي إخفاق واحد في الخصوصية لرفض النص كله. بعد تعديل التعليمات، اختبر حالات إضافية لم تُستخدم في الضبط حتى لا يبدو الأداء جيداً لمجرد حفظ الأمثلة القديمة."
+          ]
+        },
+        {
+          "heading": "5. وثق الإصدارات وأسباب القرارات التحريرية",
+          "paragraphs": [
+            "احفظ دليل الأسلوب بإصدار مثل 1.0 وتاريخ حقيقي واسم المسؤول عن المراجعة وسبب كل تغيير. عندما تعدل قاعدة شرح الاختصارات، أنشئ الإصدار 1.1 واحتفظ بالفروق بينهما. دوّن أيضاً إصدار الأداة أو النموذج وتاريخ الاختبار إن كان معروفاً، لأن النتائج قد تتغير مع تحديث الخدمة. لا تكتب «اختُبر بنجاح» من دون سجلات تثبت الاختبار، ولا تعتبر وجود سجل تغييرات دليلاً على أن كل قرار سابق كان صائباً.",
+            "اجعل دورة المقال واضحة: تكليف، ومسودة، وتحقق من الوقائع، ومراجعة لغوية، ثم موافقة. اكتب في السجل «حذفنا تقدير التكلفة لأن المصدر الرسمي غير متاح» بدلاً من «تحسين الجودة». احتفظ بتاريخ نشر المصدر وتاريخ اطلاعك عليه باعتبارهما تاريخين مختلفين. وعند تغيير معلومة حساسة راجع النسخ العربية والإنجليزية والفرنسية معاً، حتى لا يبقى تصحيح في لغة بينما تستمر المعلومة الخاطئة في لغة أخرى."
+          ]
+        },
+        {
+          "heading": "6. اجعل الخصوصية والأصالة شرطين لا يتجاوزهما النشر",
+          "paragraphs": [
+            "يبرز إطار NIST أهمية الحوكمة ومصدر المحتوى والتقييم في إدارة مخاطر الذكاء الاصطناعي التوليدي. عملياً، احذف أسماء العملاء وأرقام الحسابات والبيانات الصحية وبنود العقود السرية قبل إرسال أي مثال إلى خدمة خارجية. افحص سياسات الاحتفاظ بالبيانات وقواعد مؤسستك، واستعمل أمثلة اصطناعية معلنة بوضوح. إذا منع العقد مشاركة الملف، فقد يكون الامتناع عن رفعه هو القرار الصحيح، مهما كانت مزايا الأداة المعلنة.",
+            "اسأل قبل النشر: هل يضيف المقال تفسيراً أصيلاً أو مثالاً قابلاً للتطبيق أم يبدل كلمات صفحة أخرى؟ تحذر Google من إنتاج صفحات كثيرة دون قيمة إضافية وتطلب مراجعة الدقة حتى في العناوين والأوصاف والبيانات المنظمة. تحقق يدوياً من الروابط والأرقام والصور وتراخيصها، واطلب مراجعة مستقلة عند الإمكان. إذا لم تجد دليلاً لادعاء محوري فاحذفه أو أوقف النشر؛ الهدف إفادة القارئ لا الوصول إلى عدد معين من المقالات."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Build an AI writing assistant with a testable style guide and version history",
+      "excerpt": "Define editorial voice, evaluate drafts, track revisions and protect client information without copying other writers or inventing evidence.",
+      "lead": "An AI writing assistant can draft a paragraph in seconds, but it does not automatically know an organization's voice or the limits of claims that may safely appear under its name. Problems begin when terminology changes between articles, correction reasons disappear or confident wording disguises unsupported statements. OpenAI's guidance emphasizes evaluating outputs on representative tasks; Google Search Central emphasizes original value and human verification; NIST addresses generative AI governance and provenance risks. This guide translates those principles into a practical editorial workflow. It does not assume that a custom model is necessary or promise that any prompt will always produce accurate work.",
+      "sections": [
+        {
+          "heading": "1. Define a narrow editorial assignment and human ownership",
+          "paragraphs": [
+            "Start with one task, such as explaining bank reconciliation to new accounting staff, instead of asking the assistant to write about everything. Describe the reader, their prior knowledge, the problem to solve and the practical outcome. Assign responsibility explicitly: the assistant proposes an outline and draft, while an editor researches sources, checks numbers and authorizes publication. When a topic requires recent prices or regulations, the assistant should identify missing evidence instead of filling the gaps with plausible guesses.",
+            "Create an assignment card specifying purpose, audience, terminology, sources, approximate length as a planning aid, and prohibitions. A fictional example is: 'Explain differences between a bank statement and ledger balance without using real customer records.' You can then test whether the text explains reconciliation steps and exceptions, distinguishes examples from facts and avoids claiming to have performed an experiment. Smooth writing is not successful if it leaves the reader unable to solve the stated problem."
+          ]
+        },
+        {
+          "heading": "2. Make voice a set of observable rules",
+          "paragraphs": [
+            "Put concrete rules on one page: direct sentences, consistent terminology, abbreviations explained at first mention, hypothetical examples labeled as such, descriptive headlines and a visible separation of opinion from fact. Add a small glossary across Arabic, English and French, particularly for terms such as workflow, agent, review and audit. A direction to sound 'professional and engaging' is too vague: different editors and models may interpret those adjectives in incompatible ways.",
+            "Write three brief before-and-after examples yourself and explain each change. For example, replace 'This tool always saves time' with 'It may reduce drafting time, but checking facts requires additional effort.' Do not copy a competitor's article or mechanically rewrite it paragraph by paragraph as a style template. If the Arabic edition must use Modern Standard Arabic, add a separate check against colloquial phrasing without sacrificing clarity. The style guide should support consistent judgment, not erase the author's responsibility."
+          ]
+        },
+        {
+          "heading": "3. Structure instructions and describe unacceptable outputs",
+          "paragraphs": [
+            "Arrange instructions in six slots: role, audience, language rules, evidence requirements, output structure and self-review questions. Ask for an introduction explaining the problem, logically ordered sections, practical steps and a conclusion stating limitations. Require a 'verification needed' marker when an assertion lacks evidence instead of allowing fabricated citations. Direct quotations should be limited to what is necessary and attributed accurately. Changing the vocabulary of someone else's work is not an original contribution.",
+            "Include examples of rejected outputs: guaranteed earnings, a test that never occurred, an unattributed quotation or a translated legal claim presented as certain. A reusable request can say: 'Draft an educational article, then list claims requiring sources; invent no testimonials or performance results.' Instructions alone cannot guarantee compliance, so retain human review. Keep the general style guide separate from client secrets, passwords and confidential attachments; copying such information into persistent prompts can widen its exposure."
+          ]
+        },
+        {
+          "heading": "4. Evaluate on fixed cases and calculate honestly",
+          "paragraphs": [
+            "OpenAI's evaluation documentation recommends defining the task, using representative inputs and studying failures before changing the prompt. Prepare five cases: explain a procedure, improve an ambiguous paragraph, summarize a primary source, translate technical terms and respond when evidence is missing. For each case, score four pre-defined criteria: factual support, voice consistency, useful instructions and honest expression of uncertainty. Save the exact prompt, generated output and reviewer notes so a second person can understand the decision.",
+            "Here is a hypothetical calculation, not a test actually performed: five cases times four criteria give twenty checks. If seventeen checks pass, the descriptive score is 17 divided by 20, or 85%. It does not mean that 85% of claims are true or that the system is safe for publication. A single privacy failure may be grounds to reject a draft altogether. After changing instructions, test additional untouched cases rather than optimizing only for examples the assistant has already seen."
+          ]
+        },
+        {
+          "heading": "5. Version the guide and record editorial decisions",
+          "paragraphs": [
+            "Save the guide with a version such as 1.0, a real date, an accountable reviewer and a reason for each revision. If the abbreviation rule changes, create version 1.1 and preserve a comparison. When available, note the model or service version and evaluation date, because output can change after a platform update. Do not write 'successfully tested' without actual records. A change log provides accountability, but its existence is not evidence that every earlier decision was correct.",
+            "Use a simple article lifecycle: assignment, draft, fact-check, language review and approval. Record 'removed the fee estimate because the official schedule was unavailable' instead of 'quality improved'. Keep the source publication date distinct from the date you accessed it. When a sensitive statement changes, review Arabic, English and French together so a correction in one language does not leave an error in another. Version control is useful precisely because editors can revisit the reasoning behind decisions."
+          ]
+        },
+        {
+          "heading": "6. Treat privacy and originality as release gates",
+          "paragraphs": [
+            "NIST's generative AI risk profile emphasizes governance, content provenance and evaluation. In practice, remove client names, account numbers, medical details and confidential contract terms before sending examples to an external service. Check retention settings and organizational rules; use clearly labeled synthetic examples instead of real files. Never present invented figures as empirical findings. If a contract prohibits disclosure, choosing not to upload the material may be the correct response regardless of advertised security features.",
+            "Before publishing, ask whether the article adds an original explanation or usable worked example, or merely substitutes words from another page. Google warns that mass-producing pages without added value can violate scaled-content policies and recommends reviewing titles, descriptions and structured metadata as well as the body. Manually verify links, numbers, images and licensing, and request an independent review when feasible. Remove unsupported central claims or delay publication. The objective is reader value and accountable editing, not meeting an automated article quota."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Créer un assistant de rédaction IA avec charte testable et historique des versions",
+      "excerpt": "Définir une voix éditoriale, évaluer les brouillons, tracer les corrections et protéger les données clients sans copier d'autres auteurs.",
+      "lead": "Un assistant de rédaction IA peut proposer un paragraphe en quelques secondes, mais il ne connaît pas spontanément la voix d'une organisation ni les limites des affirmations publiables sous son nom. Les problèmes commencent lorsque le vocabulaire change entre deux articles, que les motifs des corrections disparaissent ou qu'une formulation assurée cache un fait non vérifié. OpenAI recommande d'évaluer les résultats sur des tâches représentatives ; Google Search Central privilégie la valeur originale et la vérification humaine ; le NIST décrit les risques de gouvernance et de provenance de l'IA générative. Ce guide propose une méthode concrète, sans prétendre qu'un modèle personnalisé est indispensable ou qu'une consigne garantit toujours l'exactitude.",
+      "sections": [
+        {
+          "heading": "1. Définir une mission précise et la responsabilité humaine",
+          "paragraphs": [
+            "Commencez par une tâche limitée, par exemple expliquer le rapprochement bancaire à des débutants en comptabilité, plutôt que demander à l'outil d'écrire sur tous les sujets. Décrivez le lecteur, ses connaissances, le problème et le résultat pratique attendu. Répartissez les rôles : l'assistant propose le plan et le brouillon, tandis qu'un éditeur recherche les sources, contrôle les chiffres et autorise la publication. Si le sujet exige des tarifs ou des règles récentes, l'outil doit signaler les informations manquantes au lieu d'inventer des réponses vraisemblables.",
+            "Rédigez une fiche de commande avec objectif, public, terminologie, sources, longueur indicative et interdictions. Exemple fictif : « Expliquer la différence entre le relevé bancaire et le solde comptable sans utiliser de véritables dossiers clients. » Vous pourrez vérifier si le texte décrit les étapes et les exceptions, distingue exemples et faits, et ne prétend pas avoir réalisé une expérience. Une prose agréable n'est pas une réussite lorsque le lecteur ne peut toujours pas résoudre le problème annoncé."
+          ]
+        },
+        {
+          "heading": "2. Traduire la voix de marque en règles observables",
+          "paragraphs": [
+            "Réunissez sur une page des règles concrètes : phrases directes, termes cohérents, sigles expliqués à leur première apparition, exemples fictifs clairement identifiés, titres descriptifs et distinction entre opinion et fait. Ajoutez un petit glossaire en arabe, anglais et français, notamment pour « workflow », « agent », « revue » et « audit ». Une instruction telle que « être professionnel et captivant » est insuffisante, car deux éditeurs peuvent comprendre ces adjectifs de façons très différentes.",
+            "Rédigez vous-même trois exemples avant-après et justifiez les corrections. Remplacez par exemple « Cet outil fait toujours gagner du temps » par « Il peut accélérer le brouillon, mais la vérification des faits exige un effort supplémentaire ». Ne copiez pas l'article d'un concurrent pour le réécrire paragraphe par paragraphe en guise de modèle. Si l'édition arabe impose l'arabe standard, prévoyez un contrôle spécifique des tournures familières. La charte aide à juger les textes ; elle ne supprime pas la responsabilité de l'auteur."
+          ]
+        },
+        {
+          "heading": "3. Organiser les consignes et montrer les sorties à refuser",
+          "paragraphs": [
+            "Classez les instructions en six rubriques : rôle, public, règles linguistiques, exigences de preuve, structure de livraison et questions d'autocontrôle. Demandez une introduction exposant le problème, des sections ordonnées, des étapes pratiques et une conclusion signalant les limites. Une affirmation non étayée doit recevoir la mention « à vérifier » plutôt qu'une référence inventée. Limitez les citations directes au nécessaire et attribuez-les correctement. Changer les mots d'une page tierce ne constitue pas une contribution originale.",
+            "Ajoutez des exemples de textes refusés : promesse de bénéfices, essai jamais effectué, citation sans attribution ou affirmation juridique traduite et présentée comme certaine. Une consigne réutilisable peut préciser : « Préparer un article pédagogique et une liste de faits à vérifier ; ne fabriquer ni témoignages ni résultats ». Les instructions ne garantissent pas leur propre respect : une relecture humaine reste indispensable. Séparez la charte générale des mots de passe, secrets commerciaux et pièces confidentielles qui pourraient être recopiés dans d'autres outils."
+          ]
+        },
+        {
+          "heading": "4. Évaluer sur des cas fixes avec un calcul transparent",
+          "paragraphs": [
+            "La documentation d'OpenAI recommande de définir la tâche, d'utiliser des entrées représentatives et d'analyser les échecs avant de modifier la consigne. Préparez cinq cas : expliquer une procédure, améliorer un paragraphe ambigu, résumer une source primaire, traduire des termes techniques et répondre en l'absence de preuve. Évaluez quatre critères définis à l'avance : exactitude étayée, cohérence du ton, utilité des étapes et reconnaissance de l'incertitude. Conservez la consigne exacte, le texte produit et les commentaires du relecteur.",
+            "Voici un calcul purement fictif et non le résultat d'un essai réalisé : cinq cas multipliés par quatre critères donnent vingt contrôles. Si dix-sept réussissent, le score descriptif est de 17 ÷ 20 = 85 %. Cela ne signifie pas que 85 % des affirmations sont vraies ni que le système est prêt à publier. Une seule faute de confidentialité peut justifier le rejet total. Après une modification, testez de nouveaux cas non utilisés pour le réglage afin de ne pas optimiser uniquement les exemples connus."
+          ]
+        },
+        {
+          "heading": "5. Versionner la charte et expliquer les décisions",
+          "paragraphs": [
+            "Conservez la charte sous un numéro comme 1.0, avec une date réelle, un responsable et le motif de chaque modification. Si la règle sur les sigles évolue, créez la version 1.1 et gardez la comparaison. Lorsque l'information existe, notez aussi la version du modèle ou du service et la date de l'évaluation, car les réponses peuvent changer après une mise à jour. N'écrivez pas « testé avec succès » sans avoir enregistré de véritables entrées et résultats. L'historique sert à rendre des comptes, non à prouver que toutes les anciennes décisions étaient justes.",
+            "Suivez un circuit simple : commande, brouillon, contrôle des faits, relecture linguistique et validation. Notez « estimation de frais supprimée faute de barème officiel vérifiable » plutôt que « qualité améliorée ». Distinguez la date de publication d'une source de celle de sa consultation. Lorsqu'un renseignement sensible est corrigé, vérifiez ensemble les versions arabe, anglaise et française. Une correction isolée peut laisser subsister la même erreur dans une autre langue si personne ne compare les éditions."
+          ]
+        },
+        {
+          "heading": "6. Faire de la confidentialité et de l'originalité des conditions de sortie",
+          "paragraphs": [
+            "Le profil de risque du NIST consacré à l'IA générative souligne l'importance de la gouvernance, de la provenance et de l'évaluation. Supprimez donc les noms de clients, numéros de compte, données médicales et clauses confidentielles avant de transmettre des exemples à un service externe. Consultez les paramètres de conservation et les règles internes, puis utilisez des données synthétiques explicitement signalées. Ne présentez jamais des chiffres inventés comme des observations. Si un contrat interdit le transfert, ne pas importer le fichier peut être la décision correcte.",
+            "Avant la publication, vérifiez si le texte apporte une explication originale ou un exemple applicable, ou s'il se contente de remplacer les mots d'une autre page. Google avertit que produire de nombreuses pages sans valeur supplémentaire peut enfreindre les règles contre le contenu généré à grande échelle. Vérifiez manuellement les liens, chiffres, images, droits et métadonnées, et sollicitez si possible un second relecteur. Supprimez toute affirmation centrale non documentée ou reportez la publication. Le but reste l'utilité pour le lecteur, pas un quota automatique."
+          ]
+        }
+      ]
+    }
+  }
+}
