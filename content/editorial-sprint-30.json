@@ -333,8 +333,10 @@
         "ethereum",
         "bitcoin"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/ethereum-smart-contracts-wallet-permissions.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "crypto-web3",
