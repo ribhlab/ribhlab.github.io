@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 10,
+    "researched": 11,
     "marketEvidence": 5,
-    "pendingDetail": 72
+    "pendingDetail": 71
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -118,10 +118,14 @@
       "section": "morocco",
       "title": "Téléconseillers — Atlas On Line / Groupe RAM",
       "deadline": "2026-11-06",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-06",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9",
+      "researchedAt": "2026-10-28",
+      "verification": "Original Atlas On Line one-page PDF and emploi-public portal checked 28 October 2026. Trilingual eight-section report verified over public HTTPS by public-sitemap-check run 40730738690; conflicting submission methods and language ambiguity disclosed.",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/morocco/ram-call/",
+      "evidencePath": "content/opportunity-editorial-evidence.json"
     },
     {
       "id": "sett-network",
