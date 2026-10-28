@@ -437,6 +437,18 @@
     "nhsDryLips": {
       "name": "NHS — Sore or dry lips",
       "url": "https://www.nhs.uk/symptoms/sore-or-dry-lips/"
+    },
+    "jocSpicyShoyuRamen": {
+      "name": "Just One Cookbook — Spicy Shoyu Ramen",
+      "url": "https://www.justonecookbook.com/spicy-shoyu-ramen/"
+    },
+    "japaneseCooking101ChickenRamen": {
+      "name": "Japanese Cooking 101 — Chicken Ramen",
+      "url": "https://japanesecooking101.com/chicken-ramen-recipe/"
+    },
+    "foodSafetyGameDay": {
+      "name": "FoodSafety.gov — Game Day Food Safety Tips",
+      "url": "https://www.foodsafety.gov/blog/game-day-food-safety-tips"
     }
   },
   "articleLinks": {
