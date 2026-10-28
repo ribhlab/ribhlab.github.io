@@ -39,6 +39,35 @@ const gscToken=(process.env.GOOGLE_SITE_VERIFICATION||'').trim();
 if(gscToken&&!bareHome.includes('name="google-site-verification" content="'+gscToken+'"'))errors.push('Search Console: bare homepage lacks verification meta');
 const pubId=(process.env.ADSENSE_PUBLISHER_ID||'').trim();
 if(pubId&&!bareHome.includes('name="google-adsense-account" content="'+pubId+'"'))errors.push('AdSense: bare homepage lacks ownership meta');
+const adsOutput=path.join(dist,'ads.txt');
+const expectedAdsLine=pubId?'google.com, pub-'+pubId.slice(7)+', DIRECT, f08c47fec0942fa0':'';
+if(pubId){
+ if(!fs.existsSync(adsOutput))errors.push('AdSense: authenticated publisher requires root ads.txt');
+ else if(!fs.readFileSync(adsOutput,'utf8').includes(expectedAdsLine))errors.push('AdSense: publisher account mismatch in ads.txt');
+ for(const lang of ['ar','en','fr']){
+  const html=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+  if(!html.includes('name="google-adsense-account" content="'+pubId+'"'))errors.push('AdSense: missing publisher ownership meta '+lang);
+ }
+}else{
+ if(fs.existsSync(adsOutput))errors.push('AdSense: ads.txt must not carry an invented publisher account');
+ if(bareHome.includes('name="google-adsense-account"'))errors.push('AdSense: published ownership meta without verified publisher ID');
+}
+const activeAds=String(process.env.ENABLE_ADSENSE||'false')==='true';
+if(activeAds){
+ if(!pubId)errors.push('AdSense: ad scripts activated without valid publisher ID');
+ for(const lang of ['ar','en','fr']){
+  const html=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+  const privacy=fs.readFileSync(path.join(dist,lang,'privacy','index.html'),'utf8');
+  if(!html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+pubId))errors.push('AdSense: missing real ad script '+lang);
+  if(!privacy.includes(({ar:'ملفات تعريف الارتباط',en:'cookies or similar identifiers',fr:'cookies ou identifiants similaires'})[lang]))errors.push('AdSense: missing advertising-specific privacy disclosure '+lang);
+ }
+}else{
+ for(const lang of ['ar','en','fr']){
+  const html=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+  if(html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))errors.push('AdSense: ad scripts loaded before explicit activation '+lang);
+ }
+}
+
 if(configuredUrl&&!bareHome.includes('rel="canonical" href="'+configuredUrl.replace(/\/$/,'')+'/ar/"'))errors.push('Bare homepage: incorrect canonical');
 // Keep the Search Console ownership token intact across all releases.
 const tokenName='googlee227daed117c5deb.html';
