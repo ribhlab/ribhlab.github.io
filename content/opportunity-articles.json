@@ -305,6 +305,201 @@
           ]
         }
       }
+    },
+    "express-entry": {
+      "id": "express-entry",
+      "reviewedAt": "2026-10-28",
+      "sourceBasis": "Official IRCC program, 2026 fees and 3 November 2026 announced changes independently cross-checked with WES and IELTS original institutional documentation on 28 October 2026. Settlement-fund table is expressly dated July 2025, not presented as a 2026 revision. No job offer or personal eligibility represented.",
+      "sources": [
+        {
+          "label": "IRCC — Express Entry: programs and process (official page updated 16 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+        },
+        {
+          "label": "IRCC — Federal Skilled Worker Program: experience, 67-point grid and language",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html"
+        },
+        {
+          "label": "IRCC — Express Entry rounds: 16 October 2026 French-language invitation round",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html"
+        },
+        {
+          "label": "IRCC — Changes to CRS and job offers scheduled for 3 November 2026 (announced October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        },
+        {
+          "label": "IRCC — Proof of funds: table marked 7 July 2025, checked 28 October 2026",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html"
+        },
+        {
+          "label": "IRCC — Permanent residence fees revised 30 April 2026",
+          "url": "https://ircc.canada.ca/english/information/fees/fee-changes.asp"
+        },
+        {
+          "label": "IRCC — Police certificates and 60-day invitation deadline",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/police-certificates.html"
+        },
+        {
+          "label": "IRCC — ECA validity and professional licensing distinction",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessment.html"
+        },
+        {
+          "label": "IRCC — Language tests and validity",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html"
+        },
+        {
+          "label": "World Education Services — designated ECA provider and five-year validity (independent institutional source)",
+          "url": "https://www.wes.org/eca/"
+        },
+        {
+          "label": "IELTS — General Training format for migration (independent testing organization)",
+          "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test"
+        },
+        {
+          "label": "IRCC — Processing times and service delivery report, 23 March 2026",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/transparency/committees/cimm-mar-23-2026/processing-times-service-delivery.html"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "إكسبريس إنتري إلى كندا في 2026: الأهلية والنقاط والوثائق والتكاليف من المغرب",
+          "deck": "دليل مستقل يميز بين شروط البرنامج ونقاط المفاضلة، ويوضح اختبار اللغة ومعادلة الشهادة وإثبات الأموال والرسوم وخطوات التقديم، مع التغييرات المعلنة لنوفمبر 2026.",
+          "sections": [
+            [
+              "ما الذي يفعله إكسبريس إنتري وما الذي لا يفعله؟",
+              "إكسبريس إنتري نظام إلكتروني تديره دائرة الهجرة واللاجئين والمواطنة الكندية IRCC لإدارة طلبات الإقامة الدائمة للعمال المهرة. يشمل برنامج العمال المهرة الفيدرالي، وفئة الخبرة الكندية، وبرنامج الحرف المهرة الفيدرالي. إدخال ملف شخصي في مجموعة المرشحين ليس طلب إقامة دائمة نهائياً، ولا يعني الحصول على وظيفة أو تصريح عمل أو دعوة مضمونة. تبدأ العملية بتحديد أهلية أحد البرامج، ثم إنشاء الملف وتلقي ترتيب وفق نظام التصنيف الشامل CRS، وبعد الدعوة فقط يقدم المرشح طلب الإقامة بالمستندات. بالنسبة إلى مقيم في المغرب لم يعمل بكندا، يكون برنامج العمال المهرة الفيدرالي غالباً أول مسار يستحق الفحص، لكن ذلك ليس حكماً مسبقاً بالأهلية. كما أن إكسبريس إنتري ليس البرنامج المعتاد لمن يخطط للاستقرار في كيبيك، حيث توجد قواعد اختيار مستقلة يجب مراجعتها."
+            ],
+            [
+              "الأهلية الفيدرالية: خبرة مدفوعة ومهنة مصنفة وليست مجرد لقب وظيفي",
+              "يتطلب برنامج العمال المهرة الفيدرالي عادة سنة متصلة على الأقل من الخبرة المهنية المدفوعة، أو ما يعادل 1560 ساعة وفق قواعد البرنامج، خلال السنوات العشر السابقة، في مهنة من فئات TEER 0 أو 1 أو 2 أو 3. يجب أن تتطابق الواجبات الفعلية مع الوصف الأساسي ومعظم المهام الرئيسية في التصنيف المهني الوطني NOC؛ لا تكفي تسمية «مدير» أو «محاسب» على شهادة العمل. الخبرة غير المدفوعة لا تعوض هذا الشرط. يشترط أيضاً استيفاء الحد اللغوي والتعليم ومعايير القبول الأخرى. أما فئة الخبرة الكندية فتتطلب خبرة عمل مؤهلة داخل كندا وفق قواعدها، وبرنامج الحرف المهرة له شروط مهنية وعرض عمل أو شهادة تأهيل حسب الحالة. لذلك لا تخلط بين الفئات الثلاث أو تستخدم خبرة في المغرب لإثبات خبرة كندية لم تحصل عليها."
+            ],
+            [
+              "شبكة 67 نقطة ليست نتيجة CRS ولا تضمن دعوة",
+              "بعد استيفاء الحد الأدنى، يستخدم برنامج العمال المهرة الفيدرالي شبكة اختيار من 100 نقطة تعتمد اللغة والتعليم والخبرة والعمر والعمل المرتب والتكيف. بلوغ 67 نقطة أو أكثر قد يتيح التأهل لهذا البرنامج وإنشاء ملف إكسبريس إنتري، لكنه لا يمثل درجة CRS التي تحدد الترتيب بين المرشحين. مثال توضيحي: مرشح يحصل على 70 نقطة في شبكة الأهلية لا يعني أن نتيجته 470 في CRS، ولا أن أمامه فرصة قبول نسبتها 70%. تتغير عتبات جولات الدعوة حسب نوع الجولة وعدد الدعوات والمنافسة. سجلت الصفحة الرسمية لجولات الدعوة بتاريخ 16 أكتوبر 2026 جولة فرنسية بلغت عتبتها 435 نقطة CRS؛ هذه نتيجة تاريخية لتلك الجولة تحديداً، وليست الحد الأدنى العام أو توقعاً للجولات المقبلة. استخدم الحاسبة الرسمية بعد إدخال بيانات مثبتة فقط."
+            ],
+            [
+              "اللغة: الاختبار الصحيح قد يكون أهم من التسرع في إنشاء الملف",
+              "بالنسبة إلى برنامج العمال المهرة الفيدرالي، الحد اللغوي الأساسي هو CLB 7 أو NCLC 7 في المهارات الأربع للغة الرسمية الأولى، وليس مجرد مستوى عام مكتوب في السيرة الذاتية. يجب إجراء اختبار معتمد لدى IRCC؛ للإنجليزية يمكن اختيار IELTS General Training أو اختبار آخر مدرج في القائمة الرسمية، وللفرنسية توجد اختبارات معتمدة مثل TEF Canada وTCF Canada. يوضح موقع IELTS أن النسخة General Training تختلف عن Academic في القراءة والكتابة؛ لا تفترض قبول شهادة IELTS Academic للهجرة الاقتصادية لمجرد أنها مستخدمة للدراسة. نتائج اللغة يجب أن تكون أقل من سنتين عند إنشاء الملف وعند تقديم طلب الإقامة. وقد تتيح الكفاءة الفرنسية فرصاً ضمن جولات فئوية معينة، لكنها لا تلغي شروط البرنامج ولا تضمن الدعوة. افحص جدول تحويل نتيجة الاختبار إلى CLB أو NCLC لكل مهارة على حدة."
+            ],
+            [
+              "الشهادة المغربية: تقرير ECA يثبت المعادلة لأغراض الهجرة فقط",
+              "إذا كانت شهادتك صادرة خارج كندا وتريد التقديم بصفة مرشح رئيسي ضمن برنامج العمال المهرة الفيدرالي، فستحتاج عادة إلى تقرير تقييم المؤهل الدراسي ECA من جهة تعترف بها IRCC. تؤكد WES، وهي إحدى الجهات المعتمدة، أن تقريرها الخاص بالهجرة صالح خمس سنوات؛ ويجب أن يبقى ضمن المدة المسموح بها عند إنشاء الملف وعند تقديم الطلب. لا يعني تقرير المعادلة أنك حصلت على ترخيص مزاولة مهنة منظمة أو أن صاحب عمل كندياً سيقبل شهادتك تلقائياً. جهّز اسم المؤسسة المانحة وتواريخ الدراسة ونسخ الشهادات وكشوف النقط، ثم اتبع طريقة إرسال الوثائق التي تطلبها جهة التقييم نفسها. تختلف المهن المنظمة مثل بعض المهن الصحية والهندسية عن وظائف الإدارة والمحاسبة غير المنظمة في بعض المواقع، لذا راجع الهيئة المهنية في المقاطعة المستهدفة قبل إنفاق المال على إجراءات لا تلزم مسارك."
+            ],
+            [
+              "الترتيب والعروض الوظيفية: انتبه إلى تغيير 3 نوفمبر 2026",
+              "وفق إعلان IRCC المراجع في 28 أكتوبر 2026، من المقرر أن تتغير قواعد احتساب نقاط الخبرة الكندية وعروض العمل ابتداءً من 3 نوفمبر 2026. يتضمن التغيير المرتقب عاملاً جديداً للاندماج في سوق العمل، مع نقاط لبعض عروض الوظائف عالية الأجر أو الخبرة الكندية المؤهلة، على أن يحتسب الأعلى منهما لا مجموعهما. كما أعلنت الإدارة تغييرات في اشتراط تقييم أثر سوق العمل LMIA لبعض عروض العمل المؤهلة. هذه أحكام معلنة لموعد مستقبلي وليست قواعد نافذة يوم كتابة المقال؛ لذلك لا تطبق جدول النقاط الجديد على حساب اليوم قبل دخول التعديل حيز التنفيذ. لا تدفع مالاً لشراء عرض عمل أو LMIA، ولا تخلط بين عرض يثبت شرط أهلية في برنامج معين وبين عرض يمنح نقاط CRS. وتبقى صحة العرض خاضعة للتحقق من صاحب العمل وطبيعة الوظيفة."
+            ],
+            [
+              "إثبات الأموال للأسرة: رصيد متاح وليس رسماً تدفعه للحكومة",
+              "يحتاج مرشحا العمال المهرة الفيدرالي والحرف المهرة غالباً إلى إثبات أموال الاستقرار، مع استثناءات رسمية، منها فئة الخبرة الكندية وبعض حالات العمل المصرح به مع عرض صالح. الجدول الرسمي المعروض وقت المراجعة مؤرخ في 7 يوليو 2025، ويذكر 15263 دولاراً كندياً للفرد، و19001 لفردين، و23360 لأسرة من ثلاثة، و28362 لأربعة؛ لا نقدم هذه الأرقام باعتبارها جدولاً جديداً صدر في 2026. يدخل الزوج والأطفال المعالون في حجم الأسرة حتى إذا لم يرافقوا مقدم الطلب في بعض الحالات. يجب أن تكون الأموال متاحة وغير مقترضة، مع خطاب بنكي يتضمن المعلومات التي تطلبها IRCC. مثال: أسرة من ثلاثة لديها 20000 دولار كندي تحتاج، وفق الجدول المشار إليه، إلى 3360 دولاراً إضافياً للوصول إلى 23360؛ وهذه ليست رسوم طلب ولا ضمان قبول. تحقق من الجدول الحالي قبل الإرسال لأنه يُراجع دورياً."
+            ],
+            [
+              "الرسوم والتكاليف: ميزانية منفصلة عن أموال الاستقرار",
+              "تُظهر قائمة الرسوم الرسمية اعتباراً من 30 أبريل 2026 مبلغ 990 دولاراً كندياً لمعالجة طلب العامل الماهر الرئيسي، و600 دولار لحق الإقامة الدائمة، أي 1590 دولاراً للبالغ الرئيسي إذا دفع الحق مع الطلب. يطبق المبلغ نفسه على الزوج المرافق وفق الفئة، ويبلغ رسم الطفل المعال 270 دولاراً، بينما رسوم القياسات الحيوية 85 للفرد أو 170 حداً أقصى للأسرة المتقدمة معاً إذا انطبق ذلك. مثال حسابي لزوجين وطفل: 1590 + 1590 + 270 + 170 = 3620 دولاراً كندياً كرسوم حكومية وقياسات حيوية مفترضة. لا تشمل هذه القيمة اختبار اللغة وECA والفحص الطبي والترجمة وشهادات الشرطة والسفر والسكن. ولا يجوز خصم مبلغ إثبات الاستقرار من الرسوم أو معاملته كمبلغ يُحوّل إلى وسيط. راجع حاسبة الرسوم الرسمية قبل الدفع لأن الاستثناءات والتعديلات ممكنة."
+            ],
+            [
+              "خطوات عملية من المغرب: ترتيب المستندات قبل مهلة الستين يوماً",
+              "ابدأ باختيار رمز NOC وفق الواجبات الحقيقية، ثم افحص شروط البرنامج عبر أداة IRCC الرسمية. احجز اختبار لغة معتمداً واحصل على تقرير ECA المناسب، واجمع إثباتات الخبرة المدفوعة التي تبين المسمى والمهام والتواريخ وساعات العمل والأجر. بعد ذلك قدّر نقاط CRS وأنشئ ملفك في حساب IRCC الحقيقي؛ إدخال الملف لا يمنحك وضعاً قانونياً داخل كندا. إذا وصلتك دعوة، تكون لديك عادة 60 يوماً لتقديم طلب الإقامة والمستندات والرسوم. حضّر جواز السفر ووثائق الأسرة وشهادات الشرطة والتقارير الطبية عند طلبها وإثبات الأموال، وترجمات معتمدة حسب التعليمات. تنبه IRCC إلى أن شهادة الشرطة الخاصة ببلد الإقامة الحالي يجب أن تكون حديثة وفق قواعدها، وأن بعض الدول تستغرق وقتاً طويلاً في الإصدار. احتفظ بوثائق تدعم كل معلومة في الملف، ولا تعتمد على نصيحة بإخفاء تاريخ عمل أو سفر."
+            ],
+            [
+              "المدة والمخاطر والبدائل القانونية الأقل تعقيداً",
+              "تذكر IRCC معيار خدمة يقارب ستة أشهر لمعالجة كثير من طلبات إكسبريس إنتري المكتملة بعد استلامها، لكن هذا ليس مهلة مضمونة ولا يشمل وقت انتظار الدعوة أو إعداد الاختبارات والوثائق. أظهرت بيانات رسمية منشورة في مارس 2026 زمناً تاريخياً يقارب سبعة أشهر لطلبات العمال المهرة الفيدرالية حتى 31 يناير 2026؛ تختلف المدد حسب الفئة والملف. قد تنتهي صلاحية الاختبارات أو يتغير ترتيبك أو يُرفض الملف بسبب بيانات غير صحيحة. إذا لم تكن نقاطك تنافسية، افحص تحسين اللغة أو برامج ترشيح المقاطعات المفتوحة بشروطها الحالية أو عروض العمل المباشرة بتصريح مناسب؛ لا تفترض أن أي برنامج إقليمي مفتوح دائماً. وبالنسبة إلى مقيم بالمغرب، قد يكون البحث عن عمل موثق من البلد أولاً أقل كلفة من دفع مصاريف انتقال غير مضمون. لا توجد وظيفة محددة معروضة في هذا الدليل، ولا طريق مضمون للحصول على الإقامة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Canada Express Entry in 2026: eligibility, CRS, documents, costs and a Morocco-based plan",
+          "deck": "An evidence-led guide to the federal programs, language tests, credential assessments, settlement funds, application fees and announced November 2026 scoring changes.",
+          "sections": [
+            [
+              "What Express Entry does, and why a profile is not permanent residence",
+              "Express Entry is Immigration, Refugees and Citizenship Canada's online management system for skilled-worker permanent residence applications. It covers the Federal Skilled Worker Program, Canadian Experience Class and Federal Skilled Trades Program. You first establish eligibility for at least one program and enter a candidate pool; the Comprehensive Ranking System, or CRS, ranks profiles for invitation rounds. Only an invitation permits the next stage, a complete permanent residence application that an officer assesses. Entering the pool is not a job offer, work permit, visa or promise of an invitation. For someone living in Morocco without Canadian employment history, the Federal Skilled Worker route is often the first one worth examining, but this does not establish eligibility. Applicants intending to settle in Quebec should separately investigate Quebec's selection arrangements rather than assume the federal Express Entry pathway applies in exactly the same way."
+            ],
+            [
+              "Federal Skilled Worker eligibility: paid duties matter more than job titles",
+              "Under the Federal Skilled Worker Program, qualifying work must generally be paid, continuous for at least one year or 1,560 hours under the program's calculation, and gained within the previous ten years. The occupation must fall within National Occupational Classification TEER 0, 1, 2 or 3, and the actual work must match the NOC lead statement and most main duties. Calling yourself a manager, accountant or analyst is not enough if the reference letters describe different responsibilities. Unpaid internships do not satisfy the paid-work requirement. Minimum language, education, admissibility and other requirements also apply. The Canadian Experience Class has its own qualifying Canadian-work requirements; the Federal Skilled Trades Program addresses eligible trades with distinct experience and offer or qualification conditions. Foreign experience in Morocco should never be relabelled as Canadian experience to enter the wrong stream."
+            ],
+            [
+              "The 67-point eligibility grid is not your CRS ranking",
+              "Federal Skilled Worker candidates who meet the minimum requirements are assessed using a selection grid covering language, education, experience, age, arranged employment and adaptability. A score of at least 67 out of 100 may establish eligibility for that program. The separate CRS then ranks candidates in the Express Entry pool; it is not the same calculation and has no universal invitation threshold. For illustration, a hypothetical candidate scoring 70 on the Federal Skilled Worker grid does not automatically have 470 CRS points, nor a 70 percent approval probability. Invitation thresholds depend on the draw type, eligible pool and number of invitations. The official round table records a French-language round on 16 October 2026 with a 435 CRS cutoff, but that is a historical result for that round only. Recalculate your own CRS using the current government tool and avoid advertisements that present an old draw score as a permanent entry requirement."
+            ],
+            [
+              "Language tests: choose the correct immigration format and protect validity",
+              "The Federal Skilled Worker Program generally requires at least CLB 7 or NCLC 7 in each of the four abilities for the first official language. This is not an informal description such as 'fluent French' or a single overall exam band. Take a test currently accepted by IRCC: English options include IELTS General Training and other listed tests, while approved French options include TEF Canada and TCF Canada. IELTS itself explains that General Training differs from Academic in reading and writing; a study-oriented Academic result should not be assumed valid for this immigration route. Results must be less than two years old both when creating a profile and when submitting the residence application. Strong French may open access to certain category-based invitation rounds, subject to their precise rules and competition. Check the official conversion chart for each listening, speaking, reading and writing score rather than estimating Canadian benchmarks from a CV."
+            ],
+            [
+              "Foreign degrees and ECA: immigration equivalence is not a professional licence",
+              "A principal applicant relying on education completed outside Canada for Federal Skilled Worker eligibility generally needs an Educational Credential Assessment, or ECA, from an IRCC-designated organization. World Education Services, one such organization, confirms that its immigration ECA is valid for five years; IRCC requires the report to be within its validity period when you create the profile and submit the application. An ECA establishes an immigration-purpose comparison of a credential, not a professional licence or a guarantee that a Canadian employer will hire you. Prepare accurate institutional names, transcripts, degree certificates and any documents the assessment provider requests directly from the issuing institution. Regulated professions may require a separate provincial licence even after an ECA. Check the relevant professional regulator before paying for unrelated evaluations, particularly where your job duties and desired province determine the licensing process."
+            ],
+            [
+              "CRS and job offers: a November 2026 change is announced, not yet in force",
+              "IRCC announced that from 3 November 2026 the CRS is scheduled to change how it awards points for qualifying Canadian work experience and certain high-wage job offers. The new labour-market integration factor would use whichever eligible component yields the higher points, rather than adding both together. The government also announced changes to Labour Market Impact Assessment requirements for qualifying job offers. At the 28 October 2026 editorial review date, these are future-dated changes, so a candidate must not calculate today's score as if the new system already applied. A job offer can also matter differently for program eligibility and for CRS ranking. IRCC says genuine offers will still be assessed for employer operations, reasonable staffing needs and the candidate's ability to do the work. Never purchase a purported job offer or LMIA, and do not assume that a recruiter using a real company's name is authorized to hire."
+            ],
+            [
+              "Settlement funds: an accessible bank balance, not an application payment",
+              "Federal Skilled Worker and Federal Skilled Trades applicants normally need to show settlement funds, subject to exceptions such as the Canadian Experience Class and certain people authorized to work in Canada with a valid offer. The IRCC table visible at the time of this review was dated 7 July 2025, not a newly announced 2026 table: it listed CAD 15,263 for one family member, 19,001 for two, 23,360 for three and 28,362 for four. Family size can include a spouse and dependent children even when they will not accompany the applicant. Funds must be available rather than borrowed, supported by a bank letter meeting IRCC's information requirements. A hypothetical three-person family holding CAD 20,000 would be CAD 3,360 short of the listed CAD 23,360 threshold. These are settlement assets, not a government charge or money to wire to an agent. Always recheck the official table before submitting because amounts are revised."
+            ],
+            [
+              "Fees and a worked family budget: separate charges from savings",
+              "IRCC's fee schedule effective 30 April 2026 lists CAD 990 to process a federal high-skilled principal applicant and CAD 600 for the right of permanent residence, totaling CAD 1,590 for one adult if both are paid together. The same adult fees apply to an accompanying spouse under the listed category, while a dependent child costs CAD 270. Biometrics generally cost CAD 85 per individual, with a CAD 170 family maximum where applicable. An illustrative application for two adults and one child therefore totals 1,590 + 1,590 + 270 + 170 = CAD 3,620 in those government and biometric charges. Language exams, ECA, police certificates, medical examinations, translations, travel and housing are additional and vary. The separate settlement-funds requirement cannot be subtracted from this total or paid to a consultant. Verify your own fee calculation through IRCC before making a payment."
+            ],
+            [
+              "From Morocco to application: prepare evidence before the 60-day deadline",
+              "Begin by matching your real work duties to the correct NOC code and running the official program eligibility check. Arrange an approved language test and, if required, a designated ECA; obtain detailed employer reference letters showing paid duties, dates, hours and remuneration. Estimate your CRS with verified information, then create your profile through the genuine IRCC account. A pool profile does not authorize you to work in Canada. If invited, you normally have 60 days to submit a complete permanent residence application with supporting documents and payment. Prepare your passport, family records, proof of funds, police certificates, and medical evidence when requested, following the personalized checklist. IRCC warns that police documents from the country where you currently live have recency rules and that certificates from other countries may take time. Never hide employment gaps or travel history because an agent suggests it will simplify the file."
+            ],
+            [
+              "Timelines, fraud risks and lawful alternatives if the score is weak",
+              "IRCC has a six-month service standard for many complete Express Entry applications, but that is not a guaranteed processing deadline and does not include waiting for an invitation, language testing or document preparation. Government figures published in March 2026 reported a roughly seven-month historical Federal Skilled Worker processing time as of 31 January 2026; actual timelines vary by program and case. Scores may fall, exams can expire and inaccurate information can lead to refusal or serious penalties. If your CRS is not competitive, investigate language improvement, currently open provincial nomination routes, or a genuine direct employer-sponsored work pathway with the appropriate permit. A province's nomination is not automatic, and programs may close or change without notice. Applying from Morocco before relocating can be less expensive than speculative travel. This guide does not advertise a particular job vacancy or guarantee immigration success."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Entrée express Canada 2026 : admissibilité, classement CRS, documents et budget depuis le Maroc",
+          "deck": "Une étude pratique des trois programmes fédéraux, des tests linguistiques, de l'EDE, des fonds d'établissement, des frais et des changements annoncés pour novembre 2026.",
+          "sections": [
+            [
+              "Comprendre Entrée express sans confondre profil et résidence permanente",
+              "Entrée express est le système électronique d'Immigration, Réfugiés et Citoyenneté Canada, ou IRCC, qui gère les demandes de résidence permanente de certains travailleurs qualifiés. Il couvre le Programme des travailleurs qualifiés fédéral, la catégorie de l'expérience canadienne et le Programme des métiers spécialisés fédéral. Le candidat doit d'abord satisfaire aux exigences d'au moins un programme, créer un profil et entrer dans un bassin où le Système de classement global, appelé SCG ou CRS, détermine son rang. Seule une invitation permet ensuite de déposer une demande complète, soumise à une décision administrative. Le profil ne vaut ni permis de travail, ni offre d'emploi, ni garantie de sélection. Pour une personne résidant au Maroc sans expérience canadienne, le programme fédéral des travailleurs qualifiés mérite souvent un premier examen, sans préjuger de son admissibilité. Le Québec possède des modalités de sélection distinctes qu'il faut étudier séparément."
+            ],
+            [
+              "Expérience qualifiée : vérifier les fonctions réelles plutôt que l'intitulé",
+              "Le Programme des travailleurs qualifiés fédéral exige en principe une expérience rémunérée d'au moins un an continu, soit 1 560 heures selon les règles du programme, acquise durant les dix années précédentes. La profession doit appartenir aux catégories FEER ou TEER 0, 1, 2 ou 3 de la Classification nationale des professions. Les fonctions réellement exercées doivent correspondre à l'énoncé principal et à la majorité des tâches de la profession déclarée. Un titre de directeur financier ou de comptable ne suffit pas si les attestations décrivent une activité différente. Les stages non rémunérés ne remplacent pas cette expérience. Les exigences linguistiques, scolaires et d'admissibilité restent également applicables. La catégorie de l'expérience canadienne repose sur un parcours de travail qualifié au Canada, tandis que les métiers spécialisés suivent d'autres critères. Ne transformez jamais une expérience marocaine en expérience canadienne dans votre dossier."
+            ],
+            [
+              "Les 67 points d'admissibilité ne sont pas le classement CRS",
+              "Après vérification des conditions minimales, le programme des travailleurs qualifiés utilise une grille de sélection sur cent points : langues, études, expérience, âge, emploi réservé et capacité d'adaptation. Un résultat d'au moins 67 points peut rendre le candidat admissible à ce programme, mais ne constitue pas son score de classement global dans le bassin Entrée express. Exemple purement pédagogique : 70 points sur cette grille ne donnent ni 470 points CRS ni 70 % de chances d'obtenir la résidence. Les seuils d'invitation dépendent du type de ronde, du nombre d'invitations et du niveau des candidats admissibles. Le tableau officiel fait état d'une ronde francophone du 16 octobre 2026 dont le seuil était de 435 points CRS ; cette valeur historique ne constitue pas une exigence générale pour les rondes futures. Utilisez le calculateur gouvernemental avec des informations documentées et évitez les simulateurs qui promettent une invitation."
+            ],
+            [
+              "Langues : choisir le bon examen et surveiller les dates de validité",
+              "Le programme des travailleurs qualifiés exige généralement un niveau minimal NCLC 7 ou CLB 7 dans chacune des quatre compétences de la première langue officielle. La mention « très bon français » sur un CV ne remplace pas un résultat reconnu. Les examens doivent figurer sur la liste approuvée par IRCC : TEF Canada et TCF Canada sont des options pour le français ; IELTS General Training et d'autres tests autorisés existent pour l'anglais. L'organisme IELTS précise que les versions General Training et Academic ne mesurent pas exactement de la même façon la lecture et l'écriture. Un résultat Academic destiné aux études ne doit donc pas être présumé valable pour ce programme d'immigration. Les résultats doivent dater de moins de deux ans à la création du profil et au dépôt de la demande. Un bon niveau de français peut ouvrir certaines rondes ciblées, mais n'efface pas les autres critères ni la concurrence. Vérifiez chaque compétence dans les tableaux de conversion officiels."
+            ],
+            [
+              "Diplômes marocains : l'EDE ne remplace pas une autorisation professionnelle",
+              "Un candidat principal qui utilise des études accomplies hors du Canada pour le programme fédéral doit généralement obtenir une évaluation des diplômes d'études, ou EDE, auprès d'un organisme désigné par IRCC. World Education Services, l'un de ces organismes, confirme une validité de cinq ans pour son rapport destiné à l'immigration. IRCC exige que l'évaluation soit encore valide au moment de créer le profil et de présenter la demande. Ce rapport compare les diplômes à des références canadiennes à des fins d'immigration ; il ne constitue ni une autorisation d'exercer une profession réglementée, ni une promesse d'embauche. Rassemblez les diplômes, relevés de notes, coordonnées exactes des établissements et autres pièces requises, en respectant les modalités de transmission de l'organisme évaluateur. Pour les métiers réglementés, les provinces peuvent imposer une reconnaissance professionnelle distincte. Vérifiez cette obligation avant d'engager des dépenses inutiles."
+            ],
+            [
+              "Offres d'emploi et CRS : le changement du 3 novembre reste à venir",
+              "IRCC a annoncé pour le 3 novembre 2026 une modification du classement CRS concernant l'expérience professionnelle canadienne admissible et certaines offres d'emploi dans des professions à rémunération élevée. Le futur facteur d'intégration au marché du travail retiendra l'option donnant le plus de points parmi les composantes éligibles, sans additionner les deux. Des changements ont également été annoncés concernant l'étude d'impact sur le marché du travail, ou EIMT, pour certaines offres. À la date de révision du 28 octobre 2026, ces dispositions sont annoncées mais pas encore entrées en vigueur : ne calculez pas le score actuel en utilisant prématurément le futur barème. Une offre peut intervenir différemment dans l'admissibilité au programme et dans le classement CRS. IRCC continuera de contrôler la réalité de l'entreprise, les besoins du poste et la capacité du candidat à l'occuper. N'achetez jamais une prétendue offre ou une EIMT auprès d'un intermédiaire."
+            ],
+            [
+              "Fonds d'établissement : une épargne disponible, pas un paiement",
+              "Les candidats des programmes fédéraux des travailleurs qualifiés et des métiers spécialisés doivent normalement prouver des fonds d'établissement, sauf exceptions officielles, notamment pour la catégorie de l'expérience canadienne et certaines personnes autorisées à travailler avec une offre valide. Le tableau visible lors de la vérification portait la date du 7 juillet 2025, et non celle d'une nouvelle révision en 2026. Il indiquait 15 263 dollars canadiens pour une personne, 19 001 pour deux, 23 360 pour trois et 28 362 pour quatre. La taille du foyer peut comprendre le conjoint et les enfants à charge même s'ils ne voyagent pas tous. L'argent doit être réellement disponible, sans prêt artificiel, et justifié par une attestation bancaire conforme aux exigences d'IRCC. Exemple : un foyer de trois personnes disposant de 20 000 dollars canadiens manque de 3 360 dollars pour atteindre 23 360 selon ce tableau. Il ne s'agit pas de frais à transférer au gouvernement ou à une agence. Revérifiez toujours les montants actualisés."
+            ],
+            [
+              "Frais de résidence et exemple de budget familial vérifiable",
+              "Le barème d'IRCC applicable depuis le 30 avril 2026 prévoit 990 dollars canadiens de frais de traitement pour le demandeur principal dans la catégorie fédérale hautement qualifiée, auxquels s'ajoutent 600 dollars pour le droit de résidence permanente, soit 1 590 dollars par adulte si les deux montants sont payés ensemble. Le conjoint accompagnant relève du même barème indiqué, et les frais pour un enfant à charge sont de 270 dollars. Les données biométriques coûtent généralement 85 dollars par personne, avec un plafond familial de 170 dollars lorsque les conditions s'appliquent. Pour deux adultes et un enfant, l'exemple donne 1 590 + 1 590 + 270 + 170 = 3 620 dollars canadiens de frais gouvernementaux et biométriques. Il faut ajouter tests linguistiques, EDE, certificats de police, examens médicaux, traductions et dépenses de voyage. Les fonds d'établissement sont distincts de ces frais. Vérifiez le calculateur officiel avant paiement."
+            ],
+            [
+              "Depuis le Maroc : organiser les preuves avant les soixante jours",
+              "Commencez par déterminer le code CNP correspondant à vos fonctions, puis contrôlez les conditions du programme sur le site d'IRCC. Passez un examen linguistique reconnu et demandez l'EDE si nécessaire ; obtenez des attestations professionnelles détaillant rémunération, responsabilités, dates et heures travaillées. Calculez ensuite votre CRS sur la base des pièces disponibles et créez votre profil uniquement dans le compte officiel. L'inscription au bassin ne permet pas de travailler au Canada. Si une invitation arrive, le délai normal pour soumettre la demande complète est de soixante jours. Préparez passeport, actes relatifs à la famille, preuves financières, certificats de police, documents médicaux lorsqu'ils sont demandés et traductions conformes à la liste personnalisée. IRCC impose des règles de fraîcheur aux certificats de police du pays de résidence et avertit que certains pays délivrent lentement ces documents. Ne dissimulez ni périodes d'emploi ni séjours à l'étranger."
+            ],
+            [
+              "Délais réels, fraude et solutions alternatives plus prudentes",
+              "IRCC affiche un objectif de service d'environ six mois pour de nombreuses demandes complètes issues d'Entrée express, mais ce n'est pas un délai garanti et il exclut la période d'attente d'une invitation. Des données gouvernementales publiées en mars 2026 indiquaient environ sept mois de traitement historique pour les travailleurs qualifiés fédéraux à la date du 31 janvier 2026 ; les délais varient selon les dossiers. Un test peut expirer, le classement peut évoluer et des renseignements inexacts peuvent entraîner un refus ou des sanctions. Si le score reste insuffisant, examinez une amélioration linguistique, les programmes provinciaux actuellement ouverts ou un véritable recrutement direct avec autorisation de travail adaptée. Une nomination provinciale n'est jamais automatique et les volets peuvent changer. Chercher depuis le Maroc avant de financer un départ est souvent une option plus prudente. Ce dossier ne présente aucune offre d'emploi précise et ne garantit aucune décision favorable."
+            ]
+          ]
+        }
+      }
     }
   }
 }
