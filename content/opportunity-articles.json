@@ -715,6 +715,173 @@
           ]
         }
       }
+    },
+    "german-opportunity": {
+      "id": "german-opportunity",
+      "reviewedAt": "2026-10-28",
+      "sourceBasis": "Official Make it in Germany Opportunity Card and EU Blue Card pages checked 2026-10-28; German Embassy Rabat points route (25 June 2026) and recognized-worker route checked; federal BIBB recognition guidance checked independently. 2026 financial figure €1,091/month and Blue Card thresholds €50,700/€45,934.20 verified. 20-hour weekly cap corroborated against federal portal and embassy recognized-worker page (Rabat points-route page contains a conflicting 'at least 20 hours' typo). Arithmetic 1,091×12=13,092; 1,091×6=6,546; example 1+2+2+1=6. No actual vacancies, personal approvals, financial returns or expedited processing claimed.",
+      "sources": [
+        {
+          "label": "Make it in Germany — Opportunity Card, eligibility, points and 2026 funds (official federal portal, consulted 28 October 2026)",
+          "url": "https://www.make-it-in-germany.com/en/visa-recognition/opportunity-card/job-search"
+        },
+        {
+          "label": "German Embassy in Rabat — Opportunity Card points route (published 25 June 2026; checked 28 October 2026)",
+          "url": "https://rabat.diplo.de/ma-fr/service/visa/2798396-2798396"
+        },
+        {
+          "label": "German Embassy in Rabat — Opportunity Card for recognized skilled workers (published 25 June 2026; checked 28 October 2026)",
+          "url": "https://rabat.diplo.de/ma-fr/service/visa/2798398-2798398"
+        },
+        {
+          "label": "Anerkennung in Deutschland — How do I get recognition? (Federal Institute for Vocational Education and Training portal; checked 28 October 2026)",
+          "url": "https://www.anerkennung-in-deutschland.de/html/en/getting-recognition.php"
+        },
+        {
+          "label": "Make it in Germany — EU Blue Card, 2026 salary thresholds and direct-employment alternative (checked 28 October 2026)",
+          "url": "https://www.make-it-in-germany.com/en/visa-recognition/visa-types/eu-blue-card"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "بطاقة الفرص الألمانية 2026 من المغرب: الشروط والنقاط والتمويل والبدائل القانونية",
+          "deck": "دليل مفصل يميز بين الاعتراف الكامل ونظام النقاط، ويشرح معادلة الشهادة واللغة والتكاليف والوثائق والعمل الجزئي وخطوات التقديم من المغرب دون وعود بوظيفة أو تأشيرة.",
+          "sections": [
+            [
+              "ما المقصود ببطاقة الفرص الألمانية وما الذي لا تضمنه؟",
+              "بطاقة الفرص الألمانية Chancenkarte تصريح للإقامة بغرض البحث عن عمل مؤهل أو إجراء يساعد على الاعتراف بالمؤهلات، وفق المادة 20a من قانون الإقامة الألماني. ليست إعلان توظيف ولا عقد عمل ولا إذناً مفتوحاً بالعمل بدوام كامل فور الوصول. يمكن إصدارها في البداية لمدة لا تتجاوز سنة واحدة، مع مراعاة القدرة على تمويل الإقامة. وهي تتيح البحث المباشر ومقابلة الشركات، لكنها لا تلزم أي صاحب عمل بتوظيف حاملها. إذا كنت تقيم في المغرب، فالسؤال الأول ليس كم نقطة تملك، بل هل تحتاج أصلاً إلى السفر للبحث؟ يمكن إرسال الطلبات وإجراء المقابلات عن بعد، وإذا حصلت على عرض عمل مؤهل فقد يكون طلب تأشيرة العمل المباشرة أقل تكلفة وأقل مخاطرة من تمويل سنة بحث دون نتيجة مضمونة. المعلومات الواردة هنا تستند إلى المصادر الألمانية الرسمية التي راجعناها في 28 أكتوبر 2026، ولا تمثل قراراً بشأن أهلية شخص بعينه."
+            ],
+            [
+              "مساران للأهلية: الاعتراف الكامل أو ست نقاط مع شروط مسبقة",
+              "المسار الأول مخصص لمن يحمل مؤهلاً جامعياً أو مهنياً ألمانياً، أو مؤهلاً أجنبياً معترفاً به اعترافاً كاملاً في ألمانيا. في هذه الحالة لا يحتاج طالب بطاقة الفرص إلى جمع ست نقاط، ولا يُطلب إثبات لغة كشرط خاص بهذا المسار، وإن كانت الألمانية مهمة فعلياً للحصول على وظيفة. المسار الثاني لمن لا تتوافر لديه المعادلة الألمانية الكاملة: يجب إثبات مؤهل أكاديمي معترف به من دولة منحه، أو تدريب مهني معترف به هناك مدته سنتان على الأقل، أو مؤهل AHK مستوفٍ للشروط؛ ثم تقديم دليل على الألمانية A1 على الأقل أو الإنجليزية B2 على الأقل، وجمع ست نقاط موثقة. لا يعوّض ارتفاع النقاط غياب شرط المؤهل أو اللغة. كما أن شهادة جامعية مغربية لا تعني تلقائياً الاعتراف الألماني الكامل؛ ينبغي فحص نوع المؤسسة والشهادة والإجراء المناسب قبل الإنفاق على الملف."
+            ],
+            [
+              "حساب النقاط دون الخلط بين الخبرة والشهادة",
+              "وفق البوابة الحكومية Make it in Germany، يمنح الاعتراف الجزئي بالمؤهل أربع نقاط، ويمنح التأهيل في مهنة نقص نقطة واحدة. الخبرة المرتبطة بالمؤهل بعد التخرج تمنح نقطتين عند إثبات سنتين خلال السنوات الخمس الماضية، أو ثلاث نقاط عند إثبات خمس سنوات خلال السنوات السبع الماضية. تمنح الألمانية A2 نقطة، وB1 نقطتين، وB2 فأعلى ثلاث نقاط؛ ولا تجمع نقاط المستويات الألمانية بعضها فوق بعض. قد تضيف الإنجليزية C1 نقطة، والعمر حتى ما قبل 35 عاماً نقطتين، ومن 35 إلى 40 عاماً نقطة واحدة، وإقامة قانونية مؤهلة في ألمانيا ستة أشهر خلال خمس سنوات نقطة، وكذلك الشريك المؤهل المتقدم معك نقطة وفق الشروط. مثال افتراضي: متقدم عمره 36 سنة، لديه B1 ألمانية، وسنتا خبرة موثقتان في تخصصه، ومؤهله ضمن مهنة نقص: 1 + 2 + 2 + 1 = 6 نقاط. هذا تمرين حسابي وليس تأكيداً لاعتراف المؤهل أو قبول الطلب؛ كل بند يحتاج إثباتاً رسمياً."
+            ],
+            [
+              "معادلة المؤهل المغربي والمهن المنظمة",
+              "افصل بين ثلاثة أسئلة: هل الشهادة معترف بها رسمياً في المغرب؟ هل يمكن إثبات وضعها لأغراض بطاقة الفرص؟ وهل تسمح لك بمزاولة مهنة منظمة في ألمانيا؟ للمؤهلات الجامعية الأجنبية تشير البوابة الألمانية إلى فحص قاعدة anabin أو طلب بيان مقارنة من ZAB بحسب الحالة؛ وللتكوين المهني قد يلزم بيان رقمي عن المؤهل. ويشرح موقع Anerkennung in Deutschland الحكومي أن بعض المهن، مثل المهن الصحية المنظمة، تحتاج إجراءات اعتراف وترخيص مستقلة قبل المزاولة، حتى لو حصل صاحبها على إقامة للبحث. ابدأ بتحديد المسمى المهني الألماني المرجعي، والجهة المختصة في الولاية، والوثائق المطلوبة. احتفظ بنسخ من الدبلومات وكشوف الدرجات ومحتوى التكوين وشهادات العمل. لا تدفع لمكتب يعدك بمعادلة فورية؛ قرار الاعتراف تصدره الجهة المختصة، وقد ينتهي باعتراف كامل أو جزئي أو بمتطلبات تعويضية."
+            ],
+            [
+              "اللغة والوظيفة: الحد القانوني ليس مستوى المنافسة",
+              "في مسار النقاط يكفي قانونياً، ضمن الشروط الأساسية، إثبات ألمانية A1 أو إنجليزية B2، لكن هذا الحد لا يعني أن المقابلات المهنية أو العمل اليومي سيكونان متاحين باللغة نفسها. تتطلب وظائف عديدة التواصل مع الزملاء والعملاء وقراءة تعليمات السلامة بالألمانية، وتفرض المهن المنظمة أحياناً مستويات لغوية مهنية إضافية. السفارة الألمانية بالرباط تذكر جهات شهادات ألمانية معتمدة، منها Goethe-Institut وtelc وÖSD وTestDaF وECL، وتشير في صفحتها المحدثة إلى شرط حداثة الشهادة خلال 12 شهراً عند تقديم الطلب وإلى إمكان التحقق من المستوى الفعلي. وتقبل في سياق إثبات الإنجليزية IELTS وTOEFL بحسب إرشاداتها. قبل حجز اختبار، طابق اسم الاختبار ونوعه وصلاحيته مع قائمة السفارة الحالية؛ فوجود شهادة لغة عامة لا يضمن قبولها لكل غرض."
+            ],
+            [
+              "الميزانية الواقعية: الأموال المحجوزة ليست رسوم التأشيرة",
+              "تحدد البوابة الحكومية لعام 2026 دليلاً مالياً لا يقل عن 1,091 يورو شهرياً لتغطية البحث عن عمل، ويمكن إثباته بحساب محجوز أو تعهد رسمي مقبول من كفيل وفق الشروط. إذا خططت لإقامة اثني عشر شهراً، فالحساب التوضيحي هو 1,091 × 12 = 13,092 يورو، وليس رسماً تدفعه للسفارة ولا مبلغاً مضمون الاسترداد نقداً دفعة واحدة؛ بل مورد معيشة يخضع لآلية الصرف. وإذا كانت الإقامة ستة أشهر فالمبلغ الحسابي 6,546 يورو، رهناً بمدة الإقامة المقبولة وطريقة الإثبات. تذكر السفارة رسماً عادياً للتأشيرة قدره 75 يورو يُدفع بالدرهم المغربي وفق سعر الصرف المعتمد، وقد تضاف رسوم TLScontact. أضف إلى ميزانيتك تكاليف التأمين والترجمة والاعتراف والسكن والتنقل والودائع وتذاكر السفر. لا تبنِ خطة على افتراض الحصول على عمل جزئي فور الوصول؛ فالعرض الفعلي والدخل غير مضمونين."
+            ],
+            [
+              "ملف التقديم من المغرب خطوة بخطوة",
+              "ابدأ بالتحقق من نوع المسار عبر الصفحة الرسمية، ثم جهّز جواز سفر صالحاً وصفحتي تأشيرة فارغتين على الأقل، ونموذج الطلب والصور البيومترية والسيرة الذاتية ورسالة توضح القطاعات المستهدفة وخطة البحث والسكن والتمويل. أرفق الدبلومات وأدلة الاعتراف أو بيان ZAB المناسب، وشهادات الخبرة التي تذكر المهام الفعلية والتواريخ، وشهادات اللغة، وإثبات التمويل، والتأمين الصحي الملائم. تطلب السفارة ترجمة الوثائق غير المكتوبة بالألمانية أو الإنجليزية أو الفرنسية، وقد تستلزم بعض الوثائق المغربية تصديقاً. توضح صفحة سفارة الرباط المنشورة في 25 يونيو 2026 إمكان تقديم الطلب عبر البوابة القنصلية الرقمية، ثم استكمال إجراءات التحقق من الأصول والبيانات البيومترية والمقابلة أو الموعد المعتمد. تحقق من التعليمات قبل كل خطوة ولا تسلم جواز السفر أو المستندات الأصلية لوسيط غير معتمد."
+            ],
+            [
+              "المدة والعمل الجزئي وما يحدث بعد العثور على وظيفة",
+              "تذكر سفارة الرباط أن معالجة الطلب قد تمتد من بضعة أيام عمل إلى عدة أشهر، وتقترح التخطيط لنحو ثلاثة أشهر مع إمكان التأخير؛ لا يوجد موعد قبول مضمون. عند الحصول على بطاقة الفرص يمكن البحث عن عمل وممارسة عمل أو أعمال جانبية بمجموع لا يتجاوز 20 ساعة أسبوعياً، مع تجارب عمل تصل إلى أسبوعين لكل صاحب عمل وفق الغرض المحدد. هذا لا يساوي تصريح عمل دائم بدوام كامل، ولا يلغي متطلبات الحد الأدنى للأجر أو القوانين المهنية. بعد العثور على وظيفة مؤهلة يجب التواصل مع دائرة الأجانب المحلية للحصول على تصريح الإقامة المناسب للعمل قبل تجاوز حدود البطاقة. وتذكر البوابة الحكومية احتمال تمديد بطاقة الفرص حتى سنتين في حالات محددة عندما تتوافر وظيفة مؤهلة ولا تنطبق أنواع إقامة أخرى؛ ليس التمديد آلياً. سجّل تواريخ صلاحية التأشيرة والتأمين والإقامة لتجنب انتهاء الوضع القانوني أثناء البحث."
+            ],
+            [
+              "بدائل قانونية قد تكون أيسر من تمويل سنة بحث",
+              "إذا حصلت وأنت في المغرب على عرض عمل حقيقي مناسب لمؤهلك، افحص تأشيرة العامل الماهر أو البطاقة الزرقاء الأوروبية بدلاً من افتراض أن بطاقة الفرص مرحلة إلزامية. في 2026 تذكر البوابة الرسمية للبطاقة الزرقاء حداً عاماً للراتب السنوي الإجمالي قدره 50,700 يورو، وحداً مخفضاً قدره 45,934.20 يورو لفئات محددة مع شروط إضافية وموافقة جهة العمل المختصة عند الاقتضاء. لا ينطبق الحد المخفض تلقائياً على كل وظيفة، ولا تقارن الأجر الصافي بهذه العتبات الإجمالية. ولمن يحتاج استكمال الاعتراف المهني، قد يكون مسار الشراكة للاعتراف أو تدابير التأهيل أنسب بحسب صاحب العمل والمهنة. أما من لا يملك عرضاً ولا تمويلاً كافياً، فالخيار الأقل كلفة غالباً هو تحسين اللغة والتقدم من المغرب عبر مواقع الشركات الرسمية قبل السفر. هذه مقارنة بين إجراءات قانونية، وليست ترشيحاً لوظائف شاغرة أو وعداً بالتوظيف."
+            ],
+            [
+              "مخاطر الاحتيال وخطة قرار قبل دفع أي مبلغ",
+              "تحذر السفارة الألمانية من وسطاء يدّعون امتلاك مواعيد أسرع أو نفوذاً في إصدار التأشيرات، وتؤكد أن القرار يعود إلى الجهة القنصلية المختصة. لا تشترِ عقد عمل أو شهادة لغة أو موعداً، ولا تحول مبالغ إلى حساب شخصي مقابل وعد بالقبول. تحقق من الموقع الإلكتروني الرسمي للمشغل، ومن رقم السجل إن توفر، وطابق المسمى والمهام والراتب الإجمالي ومكان العمل وشروط العقد. ضع قائمة قرار من أربع خانات: أهلية المسار، أدلة المؤهل واللغة، تمويل يكفي المدة، وخطة واقعية للبحث عن عمل والعودة إن لم تنجح المحاولة. إذا غاب أحد الشروط الأساسية، أجّل النفقات غير القابلة للاسترداد. راجع الأرقام والنماذج مرة أخرى قبل الإيداع لأن قواعد الإقامة والرسوم قد تتغير. آخر مراجعة تحريرية لهذه المعلومات: 28 أكتوبر 2026، وليست استشارة قانونية فردية."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Germany's Opportunity Card in 2026: eligibility, points, costs and applying from Morocco",
+          "deck": "An evidence-based guide to recognized qualifications, the six-point route, language, blocked funds, applications from Morocco, limited work rights and lawful alternatives.",
+          "sections": [
+            [
+              "What the German Opportunity Card is—and what it does not promise",
+              "Germany's Chancenkarte is a residence route under Section 20a of the Residence Act for seeking qualified employment or a measure leading to recognition of foreign qualifications. It is not a job vacancy, an employment contract, or unrestricted permission to work full-time immediately on arrival. The initial job-search card can last up to one year, provided the applicant can finance the stay. It may make in-person interviews and employer contact easier, but no company is obliged to recruit a cardholder. For a resident of Morocco, the first question should therefore be whether travel is necessary at all. Applications and some interviews can be handled remotely. A genuine qualified job offer obtained before departure may make a direct employment visa a less expensive, lower-risk option than financing a year of searching without guaranteed results. This report reflects German official guidance checked on 28 October 2026, not an individualized eligibility decision."
+            ],
+            [
+              "Two eligibility routes: full recognition or six documented points",
+              "The first route is for applicants holding a German academic or vocational qualification, or a foreign qualification fully recognized in Germany. These recognized skilled workers do not need to score six points and are not subject to the points-route language-proof prerequisite, although German remains valuable in real workplaces. The second route applies when full German recognition is absent. Applicants must demonstrate an academic qualification officially recognized in the country of award, or state-recognized vocational training of at least two years, or a qualifying German Chamber Abroad certificate. They must also prove at least A1 German or B2 English and reach six supported points. A high score cannot replace the basic qualification and language requirements. Equally, a Moroccan university diploma does not automatically mean full recognition in Germany. Verify the institution, degree and appropriate recognition process before paying for assessments or making travel plans."
+            ],
+            [
+              "Calculate the points without double-counting credentials or experience",
+              "The federal Make it in Germany portal awards four points for partial recognition of a qualification and one for training in a listed shortage occupation. Relevant post-qualification professional experience earns two points for at least two years within the past five, or three for at least five years within the past seven. German at A2 earns one point, B1 two and B2 or higher three; those German levels are alternatives, not cumulative bonuses. English at C1 or above may add one point. Applicants younger than 35 receive two age points, while those aged 35 to 40 receive one. A qualifying six-month lawful stay in Germany during the previous five years and an eligible accompanying partner may each add a point under their rules. Consider a fictional 36-year-old with B1 German, two documented years of related experience and a qualification in a shortage occupation: 1 + 2 + 2 + 1 = 6. That arithmetic is correct, but it does not prove that the qualification, experience or occupation meets official evidentiary standards."
+            ],
+            [
+              "Recognizing a Moroccan diploma and identifying regulated occupations",
+              "Ask three different questions: is the credential officially recognized in Morocco, is its status provable for the Opportunity Card, and does it authorize work in a regulated German profession? For foreign academic qualifications, the German portal points applicants toward the anabin database or a ZAB Statement of Comparability as appropriate. Vocational applicants may need the Digital Statement on Professional Qualification. The government's Anerkennung in Deutschland service explains that regulated occupations can require professional recognition and a license even when a person has permission to reside in Germany to search for work. Start by identifying the German reference occupation, the competent authority in the relevant federal state and the required documents. Keep degree certificates, transcripts, course details and dated employment attestations. Avoid intermediaries promising instant equivalence: only the competent body can issue the decision, which may establish full recognition, partial recognition or additional compensatory requirements."
+            ],
+            [
+              "Language: the legal threshold is not the hiring threshold",
+              "Under the points route, A1 German or B2 English can satisfy the basic language condition, but this says little about how confidently an applicant can interview, read safety instructions or serve customers in German. Many roles require stronger practical German, and regulated professions may have their own professional-language obligations. The German Embassy in Rabat identifies accepted German certificate providers including Goethe-Institut, telc, ÖSD, TestDaF and ECL. Its updated guidance also specifies that a certificate should generally be no older than twelve months at application and warns that genuine proficiency may be checked. For English evidence it refers to IELTS and TOEFL within the relevant visa instructions. Before booking an exam, confirm the exact test type, validity period and accepted provider on the embassy's current page. An impressive informal language assessment is not a substitute for an accepted certificate when documentary proof is required."
+            ],
+            [
+              "A realistic budget: blocked funds are not a visa fee",
+              "For 2026 the federal portal lists a minimum of €1,091 net per month as a way of demonstrating living funds for the job-search period. A blocked account or an acceptable formal declaration of commitment can provide evidence under the relevant conditions. For a proposed twelve-month stay, the illustrative blocked-funds calculation is 1,091 × 12 = €13,092; for six months it is €6,546, subject to the approved duration and evidence method. This is not an embassy processing charge or a sum guaranteed to be returned as a single payment: it supports living expenses through the account's withdrawal mechanism. The embassy separately lists the ordinary visa fee as €75, payable in Moroccan dirhams at the applicable rate, with possible additional TLScontact service charges. Add health insurance, translations, recognition fees, accommodation deposits, transport and flights. Never assume that permitted part-time work will immediately cover rent or that a job offer will arrive within a particular month."
+            ],
+            [
+              "Applying from Morocco: a verifiable document sequence",
+              "First determine which legal route you meet, then prepare a valid passport with at least two blank visa pages, the application form, biometric photographs, a detailed CV and a motivation letter explaining target occupations, intended location, accommodation and financing. Add your diplomas and the appropriate recognition or ZAB evidence, employer certificates with duties and dates, accepted language results, financial evidence and suitable health insurance. The Rabat embassy requires translations for documents not issued in German, English or French; Moroccan civil documents may also require legalization depending on the category. The embassy's guidance dated 25 June 2026 describes the online consular portal and subsequent verification of originals, biometrics and the relevant appointment procedure. Check the current checklist immediately before submitting, because missing documents can delay or defeat an application. Do not surrender original documents or passport control to an unverified intermediary promising priority treatment."
+            ],
+            [
+              "Processing times, limited work rights and the next residence permit",
+              "The Rabat embassy warns that processing can take anything from several working days to months and advises planning for roughly three months, with longer cases possible. A positive result or exact decision date is never guaranteed. While holding the job-search Opportunity Card, a person may perform one or several secondary jobs totalling no more than 20 hours per week. Job trials may last up to two weeks per employer when connected to the stated qualifying purpose. These rights are not a general full-time work permit and do not override professional licensing or employment law. After finding suitable qualified work, contact the local foreigners authority and apply for the appropriate employment residence title before exceeding the card's limits. The federal portal also describes a possible Opportunity Card extension of up to two years in specified circumstances where qualified employment is found but another title is unavailable; extension is not automatic. Track all expiry dates for your visa, insurance and residence permission."
+            ],
+            [
+              "Legal alternatives that may be easier than financing a year of searching",
+              "If you obtain a genuine qualified job offer while still in Morocco, compare a direct skilled-worker visa or EU Blue Card instead of treating the Opportunity Card as a mandatory preliminary step. In 2026 the official Blue Card guide gives a standard gross annual salary threshold of €50,700 and a reduced €45,934.20 threshold for specified categories subject to additional conditions and, where required, Federal Employment Agency approval. The lower amount does not automatically apply to every occupation, and net monthly pay should never be compared with a gross annual legal threshold. If recognition is incomplete, a recognition partnership or a qualification measure may be more relevant depending on the employer and occupation. If you have neither an offer nor adequate savings, improving German and applying from Morocco through authentic employer websites may be the least costly lawful first move. These are comparisons of routes, not claims that particular jobs are available."
+            ],
+            [
+              "Fraud risks and a decision framework before spending money",
+              "The German Embassy warns against agents claiming privileged access to visa appointments or influence over consular decisions. Do not purchase an employment contract, language certificate or appointment, and never transfer money to a private account in exchange for a promised approval. Verify the employer's authentic website and legal identity, and compare the job description, gross salary, work location and contract conditions with what the company itself confirms. Use a four-part decision sheet: eligibility route, evidence of qualification and language, finance for the proposed duration, and a credible job-search and return plan if no offer emerges. If a basic requirement is missing, postpone non-refundable expenditure. Recheck thresholds and forms just before submission because immigration rules and administrative charges can change. Editorial review date: 28 October 2026. This is public information and practical planning, not personalized legal advice."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Carte des opportunités allemande 2026 depuis le Maroc : conditions, points et budget",
+          "deck": "Guide détaillé sur les deux voies d'éligibilité, les diplômes, la langue, les ressources, les pièces, le travail autorisé et les alternatives légales sans promesse d'emploi.",
+          "sections": [
+            [
+              "La carte des opportunités allemande : objet et limites réelles",
+              "La Chancenkarte est un titre de séjour prévu à l'article 20a de la loi allemande sur le séjour, destiné à rechercher un emploi qualifié ou une mesure permettant de faire reconnaître une qualification étrangère. Ce n'est ni une offre d'emploi, ni un contrat, ni une autorisation générale de travailler immédiatement à temps plein. La carte initiale peut être accordée pour une période maximale d'un an, sous réserve de ressources suffisantes. Elle facilite les entretiens sur place, sans obliger aucune entreprise à recruter. Depuis le Maroc, il faut donc commencer par une question économique : le déplacement est-il indispensable ? Des candidatures et certains entretiens peuvent se réaliser à distance. Un véritable contrat qualifié obtenu avant le départ peut rendre un visa de travail direct moins coûteux et moins risqué qu'une année de recherche financée sans résultat certain. Cette analyse repose sur les sources officielles allemandes consultées le 28 octobre 2026 et ne préjuge d'aucune décision individuelle."
+            ],
+            [
+              "Deux voies d'accès : reconnaissance complète ou six points prouvés",
+              "La première voie concerne les personnes titulaires d'une qualification universitaire ou professionnelle allemande, ou d'un diplôme étranger entièrement reconnu en Allemagne. Ces travailleurs qualifiés n'ont pas à réunir six points et ne sont pas soumis à la condition linguistique documentaire de la voie à points, même si l'allemand reste essentiel dans de nombreux emplois. La seconde voie concerne les candidats sans reconnaissance allemande complète. Il faut posséder un diplôme universitaire officiellement reconnu dans le pays de délivrance, ou une formation professionnelle reconnue d'au moins deux ans, ou un certificat admissible d'une chambre de commerce allemande à l'étranger. Il faut aussi prouver au moins A1 en allemand ou B2 en anglais et atteindre six points justifiés. Un bon score ne compense jamais l'absence d'un diplôme admissible ou de la langue requise. Un diplôme marocain ne vaut pas automatiquement équivalence complète en Allemagne ; vérifiez son statut avant toute dépense."
+            ],
+            [
+              "Calculer les points sans additionner plusieurs fois le même critère",
+              "Selon le portail fédéral Make it in Germany, une reconnaissance partielle peut apporter quatre points et une qualification dans un métier en pénurie un point. Une expérience professionnelle pertinente, acquise après la qualification, donne deux points pour deux années sur les cinq dernières, ou trois points pour cinq années sur les sept dernières. L'allemand A2 apporte un point, B1 deux et B2 ou davantage trois : ces niveaux ne se cumulent pas. Un anglais C1 ou supérieur peut ajouter un point. Les candidats de moins de 35 ans obtiennent deux points d'âge ; entre 35 et 40 ans, un point. Un séjour légal qualifiant d'au moins six mois en Allemagne durant les cinq dernières années et un conjoint éligible demandant la carte peuvent chacun apporter un point selon les règles. Exemple fictif : une personne de 36 ans, avec allemand B1, deux ans d'expérience liée au diplôme et une qualification dans un métier en pénurie totalise 1 + 2 + 2 + 1 = 6. Le calcul n'atteste ni la reconnaissance du diplôme ni l'acceptation des justificatifs."
+            ],
+            [
+              "Reconnaissance des diplômes marocains et professions réglementées",
+              "Il faut distinguer la reconnaissance du diplôme au Maroc, sa preuve pour la carte des opportunités et l'autorisation d'exercer une profession réglementée en Allemagne. Pour les qualifications universitaires étrangères, les autorités renvoient selon le dossier à la base anabin ou à une attestation de comparabilité du ZAB. Les formations professionnelles peuvent nécessiter une information numérique officielle sur la qualification. Le portail public Anerkennung in Deutschland explique que certaines professions, notamment réglementées, exigent une reconnaissance et une autorisation d'exercice distinctes, même si un titre de séjour autorise la recherche d'emploi. Identifiez d'abord la profession allemande de référence, l'autorité compétente dans le Land concerné et les pièces exigées. Conservez diplômes, relevés de notes, programmes et attestations d'emploi datées. Méfiez-vous des intermédiaires promettant une équivalence immédiate : seule l'autorité compétente décide d'une reconnaissance complète, partielle ou de mesures compensatoires."
+            ],
+            [
+              "Langue : le minimum juridique ne suffit pas toujours au recrutement",
+              "Pour la voie à points, un niveau A1 en allemand ou B2 en anglais peut satisfaire la condition linguistique initiale, mais ne garantit ni un entretien réussi ni la capacité de communiquer avec des collègues ou des clients en allemand. De nombreuses fonctions demandent un niveau pratique supérieur, tandis que certaines professions réglementées imposent des exigences linguistiques spécifiques. L'ambassade allemande à Rabat mentionne notamment les organismes Goethe-Institut, telc, ÖSD, TestDaF et ECL pour les attestations d'allemand. Ses consignes actualisées précisent une ancienneté maximale de douze mois du certificat lors du dépôt et rappellent qu'une vérification du niveau réel est possible. Pour l'anglais, les justificatifs IELTS et TOEFL figurent dans les consignes applicables. Avant de payer un examen, contrôlez la version acceptée, la date de validité et le fournisseur sur la page actuelle de l'ambassade ; une simple déclaration de niveau ne suffit pas."
+            ],
+            [
+              "Budget : les fonds bloqués ne sont pas les frais du visa",
+              "Pour 2026, le portail fédéral indique un minimum de 1 091 euros nets par mois pour démontrer la capacité de financer la recherche d'emploi. Un compte bloqué ou une déclaration officielle de prise en charge peut être utilisé selon les conditions du dossier. Pour douze mois, le calcul indicatif est 1 091 × 12 = 13 092 euros ; pour six mois, 6 546 euros, sous réserve de la durée retenue et du mode de preuve accepté. Ce montant ne correspond pas aux frais consulaires et n'est pas une somme nécessairement récupérable en un seul retrait : il sert aux dépenses de séjour selon les règles du compte. L'ambassade de Rabat affiche séparément 75 euros de frais ordinaires, payables en dirhams au taux appliqué, auxquels peuvent s'ajouter des frais TLScontact. Prévoyez aussi assurance maladie, traductions, reconnaissance des diplômes, logement, caution, déplacements et billet d'avion. Ne présumez jamais qu'un emploi à temps partiel couvrira immédiatement les dépenses."
+            ],
+            [
+              "Constituer le dossier depuis le Maroc, étape par étape",
+              "Commencez par confirmer la voie juridique applicable, puis réunissez un passeport valide comportant au moins deux pages libres, le formulaire, les photographies biométriques, un CV détaillé et une lettre de motivation indiquant les métiers recherchés, les régions visées, l'hébergement et les moyens de subsistance. Ajoutez diplômes et preuves de reconnaissance ou documents ZAB appropriés, attestations d'emploi décrivant les fonctions et dates, certificats linguistiques, financement et assurance maladie adaptée. L'ambassade demande une traduction des documents qui ne sont pas en allemand, en anglais ou en français ; certains actes marocains peuvent aussi nécessiter une légalisation. La page consulaire du 25 juin 2026 prévoit le dépôt via le portail numérique, suivi du contrôle des originaux, des données biométriques et des modalités de rendez-vous applicables. Relisez la liste officielle juste avant le dépôt, car un document manquant peut entraîner un retard ou un refus. Ne confiez pas vos originaux à un intermédiaire non vérifié."
+            ],
+            [
+              "Délais, emploi limité et titre de séjour après le recrutement",
+              "L'ambassade de Rabat indique que l'instruction peut durer de quelques jours ouvrables à plusieurs mois et recommande de prévoir environ trois mois, parfois davantage. Aucun délai exact ni résultat favorable n'est garanti. Pendant la recherche, le titulaire peut exercer un ou plusieurs emplois accessoires totalisant au maximum vingt heures par semaine. Des périodes d'essai professionnel allant jusqu'à deux semaines par employeur sont possibles dans le cadre prévu. Ces droits ne constituent pas une autorisation générale de travail à temps plein et ne remplacent pas les licences professionnelles requises. Lorsqu'un emploi qualifié est trouvé, il faut contacter l'autorité locale des étrangers et solliciter le titre de séjour adapté avant de dépasser les limites de la carte. Le portail fédéral évoque également, dans des situations précises, une prolongation pouvant atteindre deux ans lorsqu'un emploi qualifié existe mais qu'aucun autre titre ne convient ; cette prolongation n'est pas automatique. Surveillez les échéances du visa, de l'assurance et du séjour."
+            ],
+            [
+              "Solutions légales parfois plus simples que financer une année de recherche",
+              "Si vous obtenez depuis le Maroc une offre d'emploi qualifiée authentique, comparez directement le visa de travail pour professionnels qualifiés et la carte bleue européenne. Pour 2026, le portail officiel indique un seuil général de salaire annuel brut de 50 700 euros pour la carte bleue, et un seuil réduit de 45 934,20 euros pour certaines catégories, avec des conditions supplémentaires et, selon les cas, l'accord de l'Agence fédérale pour l'emploi. Le seuil réduit ne s'applique pas à tous les postes et un salaire net mensuel ne se compare pas directement à un minimum brut annuel. Si la reconnaissance du diplôme est incomplète, un partenariat de reconnaissance ou une mesure de qualification peut être plus adapté selon le métier et l'employeur. Sans offre ni ressources suffisantes, améliorer l'allemand et candidater depuis le Maroc sur les sites officiels des entreprises est souvent une première étape moins coûteuse. Il ne s'agit pas d'annonces d'emplois disponibles."
+            ],
+            [
+              "Fraudes, vérifications et décision avant toute dépense",
+              "L'ambassade allemande met en garde contre les intermédiaires prétendant obtenir des rendez-vous prioritaires ou influencer les décisions consulaires. N'achetez ni contrat de travail, ni certificat de langue, ni rendez-vous, et ne transférez pas d'argent à un particulier contre une promesse de visa. Vérifiez le site authentique de l'entreprise, son identité légale et la concordance du poste, des missions, du salaire brut, du lieu et des clauses du contrat. Établissez une grille de décision à quatre entrées : voie d'éligibilité, preuves du diplôme et de la langue, financement de la durée envisagée, stratégie crédible de recherche et de retour en cas d'échec. Si une condition de base manque, reportez les frais non remboursables. Recontrôlez les seuils et formulaires avant le dépôt, car les règles et les tarifs peuvent évoluer. Dernière vérification éditoriale : 28 octobre 2026. Ce dossier informe sur des démarches publiques sans remplacer un conseil juridique personnalisé."
+            ]
+          ]
+        }
+      }
     }
   }
 }
