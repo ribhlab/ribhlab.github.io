@@ -111,5 +111,7 @@ export function renderOpportunityPages(lang,page,esc){
    const introText=({ar:'دليل تحريري داخل RibhLab، وليس ضماناً بوجود منصب أو قبول طلب. تحقق من آخر التحديثات قبل اتخاذ القرار.',en:'An on-site editorial guide, not a guarantee of vacancy or acceptance. Verify current details before acting.',fr:'Guide éditorial sur RibhLab, sans garantie de poste ou d’admission. Vérifiez les informations actuelles.'})[lang];
    const body='<div class="opportunity-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><h1>'+esc(item.title)+'</h1><p>'+esc(lead)+'</p></div></section><main class="section shell"><div class="opp-advisory"><p>'+esc(introText)+'</p></div><article class="opp-guide-article">'+sections+'<section class="opp-guide-section"><h2>'+esc(({ar:'المصدر والخطوة التالية',en:'Official source and next step',fr:'Source officielle et prochaine étape'})[lang])+'</h2><p>'+esc(item.org)+' · '+esc(item.place)+'</p>'+official+'</section></article></main></div>';
    page(lang,{title:item.title+' | RibhLab',desc:special?special[1]:introText,route:base+item.section+'/'+encodeURIComponent(item.id)+'/',content:body,active:'opportunities'});
+   // Retain the short UK route as an internal page, not an external redirect.
+   if(item.id==='uk-visa') page(lang,{title:item.title+' | RibhLab',desc:special?special[1]:introText,route:base+'immigration/uk/',content:body,active:'opportunities'});
   }
 }
