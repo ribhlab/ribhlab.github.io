@@ -205,8 +205,10 @@
         "googlePlay",
         "appleAppStore"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/voice-recording-transcription-mobile-accuracy.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "mobile-apps",
