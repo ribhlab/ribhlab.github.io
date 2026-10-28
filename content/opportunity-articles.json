@@ -500,6 +500,221 @@
           ]
         }
       }
+    },
+    "canada-program": {
+      "id": "canada-program",
+      "reviewedAt": "2026-10-28",
+      "sourceBasis": "Independently checked IRCC federal program and work-permit guidance, Government of Alberta's 7 April 2026 Worker EOI fee, Government of Ontario's 2026 targeted invitation conditions, and ESDC employer-fee rules on 28 October 2026. Sources describe programs, not confirmed vacancies or personal eligibility. All fees and processing estimates are dated snapshots; CAD 155 + 85 = CAD 240 and 380 + 600 = 980 verified as hypothetical arithmetic. Arabic reviewed for Modern Standard Arabic, no Moroccan dialect. The opportunity editorial system is separate from the scheduled reviewed-queue publisher.",
+      "sources": [
+        {
+          "label": "IRCC — Provincial Nominee Program: Express Entry and non-Express Entry procedures (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html"
+        },
+        {
+          "label": "IRCC — PNP Express Entry: confirmation, 30-day acceptance and 600 CRS points (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/express-entry/get-confirm-nomination.html"
+        },
+        {
+          "label": "IRCC — Non-Express Entry PNP: documentation and nomination (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/non-express-entry/documents.html"
+        },
+        {
+          "label": "IRCC — Outside-Canada work permit eligibility (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit-outside/eligibility.html"
+        },
+        {
+          "label": "IRCC — Outside-Canada work permit application and fees (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit-outside/apply.html"
+        },
+        {
+          "label": "IRCC — Francophone Mobility work permit, NCLC 5 and employer C16 (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/special-instructions/francophone-mobility/eligibility.html"
+        },
+        {
+          "label": "IRCC — Atlantic Immigration Program eligibility and designated employers (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration/how-to-immigrate/eligibility.html"
+        },
+        {
+          "label": "IRCC — Atlantic program employer offer conditions (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration/how-to-immigrate/job-offer.html"
+        },
+        {
+          "label": "IRCC — Rural Community Immigration Pilot eligibility and language levels (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration/eligibility.html"
+        },
+        {
+          "label": "IRCC — Rural Community Immigration Pilot language test levels (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration/eligibility/language-test.html"
+        },
+        {
+          "label": "IRCC — Francophone Community Immigration Pilot eligibility (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/franco-immigration/eligibility.html"
+        },
+        {
+          "label": "Government of Alberta — AAIP Worker EOI: CAD 135 effective 7 April 2026 (consulted 28 October 2026)",
+          "url": "https://www.alberta.ca/how-to-apply-to-aaip-worker-streams"
+        },
+        {
+          "label": "Government of Ontario — OINP 2026 invitation conditions and provincial priorities (consulted 28 October 2026)",
+          "url": "https://www.ontario.ca/page/2026-ontario-immigrant-nominee-program-updates"
+        },
+        {
+          "label": "Employment and Social Development Canada — Employer LMIA processing fee and prohibition on recovery from worker (consulted 28 October 2026)",
+          "url": "https://www.canada.ca/en/employment-social-development/services/foreign-workers/median-wage/high/requirements.html"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "الهجرة والعمل في كندا من المغرب في 2026: مقارنة الترشيح الإقليمي والتصاريح والبرامج المجتمعية",
+          "deck": "دليل مقارن للطرق القانونية المختلفة: متى تحتاج عرض عمل، ومتى تفيد الفرنسية، وما الذي تدفعه فعلاً، وكيف تميّز الإقامة الدائمة من تصريح العمل المؤقت دون وعود بالقبول.",
+          "sections": [
+            [
+              "لماذا لا يوجد «برنامج كندا» واحد يصلح للجميع؟",
+              "تجمع بطاقة «برامج كندا» في هذا الموقع مسارات قانونية مختلفة وليست إعلان توظيف أو تأشيرة واحدة. الإقامة الدائمة عبر الترشيح الإقليمي PNP تختلف عن تصريح عمل مؤقت مرتبط بصاحب عمل، كما تختلف عن برنامج الهجرة الأطلسي والبرامج المجتمعية. لكل مسار جهة تختار المرشح وشروط عمل ولغة وموارد مستقلة. إذا كنت تقيم في المغرب، ابدأ بتحديد هدفك: هل تريد الإقامة الدائمة مباشرة، أم لديك صاحب عمل مستعد لاستقدامك مؤقتاً، أم تستهدف منطقة كندية بعينها؟ لا يكفي أن تكون حاصلاً على شهادة أو تتحدث الفرنسية لتنال حق الدخول والعمل. طلب الإقامة لا يمنح تصريح عمل تلقائياً، والتصريح المؤقت لا يضمن الإقامة الدائمة. لذلك قارن أولاً نوع الوضع القانوني، ثم شروط الأهلية والتكاليف والوقت، قبل دفع أي مبلغ لوسيط."
+            ],
+            [
+              "الترشيح الإقليمي: طريقان مختلفان ونية حقيقية للاستقرار",
+              "يختار برنامج الترشيح الإقليمي مرشحين وفق احتياجات المقاطعات والأقاليم، باستثناء كيبيك ونونافوت اللتين لا تملكان برنامج PNP. في مسار الترشيح المتصل بإكسبريس إنتري يجب استيفاء شروط فئة فيدرالية مؤهلة وشروط مسار المقاطعة معاً؛ وبعد تأكيد الترشيح وقبوله تضاف 600 نقطة إلى تصنيف CRS، ولا يعني ذلك موافقة نهائية على الإقامة. أما مسار PNP غير المتصل بإكسبريس إنتري فيبدأ عادة بترشيح المقاطعة ثم تقديم طلب الإقامة الدائمة عبر بوابة IRCC، من دون اشتراط الأهلية لإحدى فئات إكسبريس إنتري الثلاث. لا تتعامل مع كل مقاطعة كقائمة مفتوحة لجميع المهن: بعض المسارات تتطلب عرض عمل، أو إقامة وعمل سابقين داخل المقاطعة، أو تخصصاً محدداً. ويُفحص أيضاً صدق نيتك الاستقرار في المقاطعة التي رشحتك."
+            ],
+            [
+              "لا تخلط بين الاهتمام الإقليمي والدعوة والترشيح",
+              "إذا أنشأت ملف إكسبريس إنتري مؤهلاً، تستطيع إظهار اهتمامك بمقاطعات محددة أو بكل المقاطعات المشاركة. قد ترسل مقاطعة إشعار اهتمام، لكنه ليس ترشيحاً ولا دعوة مضمونة إلى الإقامة الدائمة. بعد استيفاء شروطها وتقديم طلب الترشيح، تؤكد المقاطعة ترشيحك إلكترونياً؛ وتوضح IRCC أن أمامك 30 يوماً تقويمياً لقبول الترشيح أو رفضه في الحساب. وإذا وصلتك دعوة نهائية لتقديم طلب إقامة عبر إكسبريس إنتري، تكون مهلة التقديم 60 يوماً تقويمياً وفق تعليمات IRCC. المثال العملي: امتلاك درجة CRS قدرها 380 مع ترشيح مؤكد قد يرفع المجموع حسابياً إلى 980، لكن هذا مثال افتراضي لا يثبت أن المقاطعة ستختارك أو أن الملف سيُقبل. اقرأ صفحة المقاطعة الرسمية في يوم التقديم؛ فالاختيارات والحصص تتغير."
+            ],
+            [
+              "تصريح العمل من المغرب: عرض حقيقي قبل طلب التأشيرة",
+              "في الغالب يحتاج من يتقدم من خارج كندا إلى تصريح عمل مرتبط بصاحب عمل محدد، ويكون عرض العمل الحقيقي أساس الطلب. قد يحتاج المشغّل إلى تقييم أثر سوق العمل LMIA من وزارة التوظيف والتنمية الاجتماعية الكندية، أو يكون التوظيف معفى منه بموجب برنامج التنقل الدولي IMP. في الحالة الأولى يقدم صاحب العمل مستند LMIA الإيجابي عند اللزوم؛ وفي الحالة المعفاة يقدم رقم عرض العمل عبر بوابة أصحاب العمل وفق القواعد المطبقة. تصريح العمل المفتوح متاح لفئات محددة فقط، وليس خياراً عاماً لكل باحث عن وظيفة من المغرب. وتوضح IRCC أن عليك إثبات الموارد المناسبة للإقامة والعودة، واستيفاء شروط القبول والوثائق. لا تسافر بتأشيرة زيارة على افتراض أنها تبيح لك بدء العمل؛ فحق الزيارة ليس حق العمل."
+            ],
+            [
+              "ميزة عملية للناطقين بالفرنسية: التنقل الفرنكوفوني",
+              "مسار Mobilité francophone ضمن برنامج التنقل الدولي قد يسمح لصاحب عمل خارج كيبيك بتوظيف مرشح يتحدث الفرنسية دون LMIA، لكن العرض الوظيفي يبقى ضرورياً. وفق شروط IRCC المعمول بها للطلبات المقدمة منذ 15 يونيو 2023، يلزم مستوى متوسط في التحدث والاستماع بالفرنسية يعادل NCLC 5 على الأقل، مع عمل في إحدى المقاطعات التسع أو الأقاليم الثلاثة خارج كيبيك. يشمل الإعفاء مهن TEER المختلفة باستثناء بعض الوظائف الزراعية الأولية في TEER 4 و5. قبل طلب تصريح العمل، يرفع صاحب العمل العرض برمز الإعفاء C16 ويدفع رسم امتثال مقداره 230 دولاراً كندياً ويمنحك رقم العرض. هذا الرسم مسؤولية المشغّل، ولا يُعد تأشيرة مدفوعة يمكن شراؤها. اللغة الفرنسية ميزة محتملة لمن يجد عرضاً صحيحاً، لا وعداً بالحصول على وظيفة."
+            ],
+            [
+              "برنامج الهجرة الأطلسي: وظيفة ومشغّل معتمد وخطة استقرار",
+              "يغطي برنامج الهجرة الأطلسي مقاطعات نيوبرنزويك ونوفاسكوشا وجزيرة الأمير إدوارد ونيوفاوندلاند ولابرادور. لا يكفي العثور على إعلان وظيفة؛ يجب أن يصدر العرض من صاحب عمل معتمد من المقاطعة، وأن يكون بدوام كامل لا يقل عن 30 ساعة أسبوعياً وغير موسمي. يتطلب البرنامج عادة خبرة مدفوعة مؤهلة تبلغ 1560 ساعة خلال السنوات الخمس السابقة، مع استثناءات محددة لبعض خريجي مؤسسات الأطلسي، فضلاً عن التعليم واللغة وإثبات الموارد عند الاقتضاء. بعد العرض تُعد خطة استقرار مجانية مع جهة خدمة معترف بها، ثم تطلب جهة العمل اعتماد العرض من المقاطعة. لا تقدم طلب الإقامة قبل الحصول على وثيقة الاعتماد المطلوبة. وقد يتاح تصريح عمل مؤقت خاص بالبرنامج لبعض المؤهلين أثناء دراسة الإقامة، لكنه لا يضمن القرار النهائي."
+            ],
+            [
+              "البرامج الريفية والفرنكوفونية: لا تخلط المبادرة بوظيفة متاحة",
+              "تتطلب مبادرتا الهجرة للمجتمعات الريفية RCIP والمجتمعات الفرنكوفونية FCIP عرضاً مؤهلاً من مشغّل معتمد داخل مجتمع مشارك، إلى جانب شروط خبرة ولغة وتعليم وموارد. تشير IRCC في المسار الريفي إلى خبرة مرتبطة لا تقل عادة عن سنة أو 1560 ساعة خلال السنوات الثلاث الماضية، مع استثناءات لبعض الخريجين المحليين. وتتفاوت عتبة اللغة بحسب فئة الوظيفة: CLB أو NCLC 6 لفئتي TEER 0 و1، و5 للفئتين 2 و3، و4 للفئتين 4 و5. لا تنشئ هذه المبادرات خدمة حكومية توزع عقود العمل تلقائياً؛ بل توضح الحكومة أن صاحب العمل والمرشح يتواصلان مباشرة. تأكد من اسم المجتمع وقائمة المشغّلين المعتمدين وتاريخ فتح باب الطلبات قبل إعداد ملف مكلف."
+            ],
+            [
+              "المؤهل والراتب واللغة: شروط تتغير بحسب الطريق",
+              "لا توجد عتبة راتب كندية موحدة تصلح لجميع هذه البرامج. عند تقييم وظيفة مؤقتة، ينظر المشغّل والجهة المختصة إلى الأجر المعمول به والولاية وفئة المهنة وقواعد LMIA أو الإعفاء؛ أما برامج المقاطعات فقد تشترط مستوى أجر وعقداً دائماً أو خبرة محلية. حدد رمز NOC من المهام الفعلية لا من المسمى الوظيفي فقط، وافحص إن كانت المهنة منظمة وتتطلب ترخيصاً مهنياً منفصلاً. لا تعني معادلة الشهادة الأجنبية الحق التلقائي في مزاولة مهنة منظمة. اختبارات اللغة المعتمدة ومستوياتها تختلف بين إكسبريس إنتري والأطلسي والمبادرات المجتمعية. وفي بعض سحوبات أونتاريو لعام 2026 كانت الدعوات موجهة لمن يقيمون بالفعل في كندا بتصريح ساري؛ فلا تُقدَّم تلك السحوبات باعتبارها دعوات مفتوحة مباشرة لكل مقيم في المغرب."
+            ],
+            [
+              "ملف الانطلاق من المغرب: وثائق مرتبة قبل الرسوم",
+              "جهز جواز سفر صالحاً، وسيرة ذاتية تصف المهام والخبرة بصدق، وشهادات ودراسات وبيانات العمل تتضمن التواريخ والساعات والأجر وبيانات المشغّل، ثم قارنها برمز NOC المناسب. إذا طلب المسار تقييماً للمؤهل الدراسي ECA أو اختبار لغة معتمداً، فاختر الجهة والاختبار المقبولين لذلك المسار تحديداً؛ لا تدفع ثمن تقييم لا تحتاجه. في ملفات الإقامة الدائمة قد تُطلب شهادات الشرطة والفحص الطبي والبصمات ووثائق الحالة العائلية وترجمات إلى الإنجليزية أو الفرنسية عند اللزوم. وفق تعليمات PNP غير المتصل بإكسبريس إنتري، تُملأ استمارات محددة عبر بوابة الإقامة وتُرفق شهادة الترشيح. بالنسبة إلى تصريح العمل من خارج كندا، انتظر قائمة المستندات الشخصية في حساب IRCC وخطاب تعليمات البصمات قبل حجز الموعد. احتفظ بنسخ من المراسلات الرسمية والإيصالات."
+            ],
+            [
+              "التكلفة والمدة: ميزانية قابلة للتفسير لا رقماً تسويقياً",
+              "تعرض IRCC في دليل تصريح العمل من الخارج رسم معالجة قدره 155 دولاراً كندياً، ورسم بصمات للفرد قدره 85 دولاراً عند انطباقه؛ أي 155 + 85 = 240 دولاراً كندياً في مثال فرد واحد، من دون احتساب الاختبار اللغوي والترجمة والفحص الطبي والسفر. وقد يضاف 100 دولار كندي فقط لمن يتأهل لتصريح عمل مفتوح. في ألبرتا، أصبح تسجيل إبداء الاهتمام للعامل WEOI خاضعاً لرسم 135 دولاراً كندياً اعتباراً من 7 أبريل 2026؛ لا تدفعه إلا بعد قراءة أهلية المسار. وتُظهر صفحات IRCC أزمنة معالجة إرشادية تقارب 7 أشهر للترشيح المرتبط بإكسبريس إنتري و13 شهراً لغير المرتبط، لكنها تقديرات متغيرة لا آجال قانونية مضمونة. الرسوم الإقليمية ورسوم الإقامة الدائمة وتكاليف الأسرة تختلف ويجب التحقق منها عند الدفع."
+            ],
+            [
+              "اختر الطريق الأقل تعقيداً قانونياً واحذر الاحتيال",
+              "استعمل شجرة قرار بسيطة: إذا كنت مؤهلاً لإكسبريس إنتري دون عرض عمل، افحص مساره المستقل أولاً؛ وإذا كان لديك عرض موثق خارج كيبيك وتتحدث الفرنسية، افحص التنقل الفرنكوفوني قبل افتراض ضرورة LMIA؛ وإذا كان العرض من مشغّل أطلسي معتمد، قارن برنامج الأطلسي؛ وإذا ارتبطت بمقاطعة أو مجتمع محدد، راجع ترشيحه وشروطه المحلية. هذه مقارنة للإجراءات وليست ترتيباً مضموناً للقبول أو الكلفة. احذر من شخص يبيع لك «ترشيحاً» أو عقداً مؤكداً أو يطلب دفع رسم LMIA البالغ عادة 1000 دولار كندي نيابة عن المشغّل؛ توضح الحكومة أن المشغّل لا يجوز له استرداد رسم LMIA من العامل. تحقّق من هوية الشركة وعنوانها والراتب المكتوب وموقع الحكومة قبل أي دفع، ولا ترسل بيانات جوازك أو حسابك إلى وسيط غير موثوق."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Canada immigration and work routes in 2026: provincial nominations, employer permits and community programs",
+          "deck": "A practical comparison for applicants in Morocco: eligibility, language, real job offers, costs, documents, timing, and lawful alternatives without promises of selection.",
+          "sections": [
+            [
+              "There is no single Canadian immigration program for everyone",
+              "The Canada programs card covers several different legal pathways, not a vacancy or a single visa. Permanent residence through a Provincial Nominee Program (PNP) differs from a temporary employer-specific work permit, the Atlantic Immigration Program and community immigration pilots. Each route has its own decision-maker, selection rules, work requirements, language evidence and financial conditions. If you live in Morocco, begin by identifying your objective: permanent residence without a current employer, a genuine employer prepared to hire you temporarily, or settlement in a particular province. A university degree or conversational French alone does not confer permission to enter and work. A permanent residence application does not automatically grant a work permit, and a temporary permit does not guarantee permanent residence. Compare the legal outcome before comparing application prices."
+            ],
+            [
+              "Provincial nomination: Express Entry and non-Express Entry are distinct",
+              "The PNP allows provinces and territories to select candidates for local labour-market needs; Quebec and Nunavut do not operate PNPs. In an Express Entry-aligned provincial stream, you must satisfy both a provincial stream and one of the eligible federal Express Entry programs. Once a nomination is confirmed and accepted, 600 CRS points are added, but permanent residence still requires federal assessment. A non-Express Entry PNP stream instead usually begins with a provincial nomination followed by a permanent residence application through the IRCC PR Portal; it does not require eligibility for one of the three federal Express Entry categories. Provincial rules are not interchangeable: some demand a job offer, existing work authorization, local experience or a specific occupation. Officials also examine whether you genuinely intend to live in the nominating province."
+            ],
+            [
+              "An expression of interest is not a nomination or an invitation",
+              "An eligible Express Entry profile can indicate interest in one or more participating provinces. A province may issue a notification of interest, but that is neither a nomination nor a guaranteed invitation to permanent residence. If you subsequently qualify and obtain provincial approval, the province confirms the nomination electronically. IRCC says you have 30 calendar days to accept or decline it in your account. If a later Express Entry invitation to apply for permanent residence arrives, the application deadline is 60 calendar days. For illustration, a fictional candidate with 380 CRS points and a confirmed nomination would reach 980 after the additional 600 points. This arithmetic does not imply that the candidate will receive a nomination or pass medical, security and document checks. Provincial quotas and targeted selections can change rapidly."
+            ],
+            [
+              "Work permits from Morocco require a genuine employment basis",
+              "For most people applying from outside Canada, the relevant option is an employer-specific work permit backed by a genuine offer. The employer may need a positive Labour Market Impact Assessment (LMIA) through Employment and Social Development Canada, or may be able to hire under an LMIA-exempt International Mobility Program category. Where an LMIA is required, the employer provides the applicable decision documents; where an exemption applies, the employer normally submits the offer through the employer portal and provides the offer number. An open work permit is limited to defined eligible groups, not a general job-search permit available to every applicant abroad. IRCC also requires adequate resources for the stay and return journey, complete evidence and admissibility. A visitor visa should never be treated as authorization to begin employment."
+            ],
+            [
+              "Francophone Mobility can simplify employer paperwork, not remove the job offer",
+              "Under the Francophone Mobility LMIA exemption, an employer outside Quebec may hire a qualifying French-speaking candidate without the standard LMIA process. IRCC rules for applications from 15 June 2023 onward require intermediate French speaking and listening, approximately NCLC level 5 or higher, and an offer to work in one of the nine provinces or three territories outside Quebec. The route covers most TEER occupational categories, except certain primary-agriculture roles in TEER 4 and 5. Before the worker applies, the employer submits an offer with exemption code C16, pays a CAD 230 employer-compliance fee and gives the applicant an offer number. That employer fee is not a visa product for sale. This route can be attractive to French-speaking applicants who already have a legitimate employer, but language proficiency by itself does not create a job."
+            ],
+            [
+              "Atlantic Immigration Program: designated employer plus endorsement",
+              "The Atlantic Immigration Program operates in New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland and Labrador. A generic job advert is insufficient: the offer must come from a provincially designated employer and be full-time, at least 30 hours weekly, and non-seasonal. Applicants generally need 1,560 hours of qualifying paid work within the previous five years, subject to a specific exception for some Atlantic graduates, plus suitable education, language evidence and settlement funds when required. After the offer, an approved settlement-service provider prepares a free settlement plan; the employer then seeks provincial endorsement. The candidate should not submit the permanent residence application until the required endorsement is secured. Some applicants can obtain a temporary employer-specific permit while permanent residence is assessed, but the temporary permit does not prejudge the final decision."
+            ],
+            [
+              "Rural and Francophone community pilots do not allocate jobs automatically",
+              "The Rural Community Immigration Pilot (RCIP) and Francophone Community Immigration Pilot (FCIP) require a qualifying offer from a designated employer in a participating community, together with evidence of work experience, education, language and settlement funds. IRCC's rural pilot normally asks for at least one year, or 1,560 hours, of related experience within the past three years, with exemptions for certain local graduates. The rural language threshold depends on the job: CLB/NCLC 6 for TEER 0 or 1, level 5 for TEER 2 or 3, and level 4 for TEER 4 or 5. IRCC explicitly says these pilots do not match candidates with jobs. Check the current participating communities, their designated employers, local recommendations and intake windows before investing in documentation."
+            ],
+            [
+              "Language, wages and credentials must be checked route by route",
+              "There is no universal Canadian salary threshold applicable to every immigration and work pathway. For temporary jobs, wage rules depend on the occupation, province, LMIA stream or exemption; provincial nominations may require a permanent offer, particular wage level or local work experience. Identify the National Occupational Classification (NOC) code from the actual duties, not merely a job title, and investigate licensing if the occupation is regulated. An educational credential assessment does not automatically authorize professional practice. Accepted language tests and thresholds differ between Express Entry, Atlantic immigration and community pilots. Ontario's targeted invitation rounds in parts of 2026 included restrictions requiring candidates to be already living in Canada with valid status. Such rounds must not be advertised as universally open invitations for people still residing in Morocco."
+            ],
+            [
+              "Prepare the Moroccan application file before paying optional fees",
+              "Start with a valid passport, a truthful CV and employment evidence showing dates, duties, hours, salary and employer contact information. Compare these documents with the intended NOC classification. Only order an Educational Credential Assessment or an approved language test after confirming that the specific pathway requires and accepts it. Permanent residence applications may need police certificates, medical examinations, biometrics, family documents and translations into English or French. For non-Express Entry PNP, IRCC specifies portal forms and the provincial nomination confirmation. For an outside-Canada work permit, follow the personalized document checklist in the IRCC account and wait for the biometrics instruction letter before booking biometrics. Keep dated copies of official notices and receipts, and avoid sending identity documents to unknown recruiters."
+            ],
+            [
+              "Understand costs and processing estimates without sales promises",
+              "IRCC lists a CAD 155 work-permit processing fee and CAD 85 individual biometrics fee when applicable: 155 + 85 = CAD 240 for one illustrative applicant, excluding language tests, translations, medical checks and travel. An additional CAD 100 open-work-permit holder fee applies only to eligible open-permit applicants. Alberta introduced a CAD 135 Worker Expression of Interest fee effective 7 April 2026; verify the worker stream before paying it. IRCC's PNP pages show approximate processing estimates around seven months for Express Entry-linked nominations and thirteen months for non-Express Entry applications, but these are moving service estimates, not legal deadlines or promises. Permanent residence fees, provincial charges and family expenses are separate and should be checked directly at the payment stage."
+            ],
+            [
+              "A lower-friction decision tree and the main fraud warning",
+              "Use a simple decision tree rather than buying a package labelled Canada immigration. If you qualify for Express Entry without an employer, assess that route independently. If you have a verified offer outside Quebec and speak French, check Francophone Mobility before assuming an LMIA is necessary. If the employer is designated in Atlantic Canada, examine the Atlantic program; if your plans involve a specific province or community, assess its exact stream and eligibility. This compares administrative pathways, not guaranteed acceptance or a universal cheapest option. Be wary of anyone selling a nomination, a guaranteed contract or a supposedly worker-paid LMIA. The Canadian government says the usual CAD 1,000 LMIA processing fee must not be recovered from the foreign worker. Independently verify the employer, written wage, official government website and any recruiter's legal standing before sharing personal documents."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Immigrer ou travailler au Canada depuis le Maroc en 2026 : provinces, permis et programmes communautaires",
+          "deck": "Comparatif des voies légales : admissibilité, offre d'emploi, français, frais, documents, délais et risques, sans promesse de recrutement ni de résidence permanente.",
+          "sections": [
+            [
+              "Il n'existe pas un programme canadien unique pour tous les candidats",
+              "La carte consacrée aux programmes canadiens rassemble plusieurs dispositifs juridiques, et non une offre d'emploi ou un visa universel. La résidence permanente par désignation provinciale ne fonctionne pas comme un permis temporaire lié à un employeur, le Programme d'immigration au Canada atlantique ou les projets pilotes communautaires. Chaque voie dépend de ses propres autorités, critères de sélection, preuves linguistiques et ressources financières. Depuis le Maroc, définissez d'abord votre objectif : résidence permanente sans employeur, emploi temporaire auprès d'une entreprise authentique ou installation dans une province précise. Un diplôme universitaire ou une bonne maîtrise du français ne suffit pas à obtenir le droit de travailler. Une demande de résidence ne délivre pas automatiquement un permis, et un permis temporaire ne garantit pas la résidence permanente. Comparez d'abord les statuts juridiques avant les tarifs."
+            ],
+            [
+              "Désignation provinciale : deux procédures fédérales à ne pas confondre",
+              "Le Programme des candidats des provinces, ou PCP, permet aux provinces et territoires de sélectionner des profils répondant à leurs besoins économiques. Le Québec et le Nunavut n'ont pas de PCP. Dans un volet lié à Entrée express, le candidat doit satisfaire simultanément aux critères provinciaux et à ceux d'un programme fédéral admissible. Une désignation confirmée et acceptée ajoute 600 points au classement CRS, mais la décision fédérale de résidence reste nécessaire. Dans un volet non lié à Entrée express, la province désigne d'abord le candidat, qui dépose ensuite sa demande de résidence permanente sur le portail d'IRCC sans devoir être admissible à l'un des trois programmes d'Entrée express. Les critères changent selon les provinces : offre d'emploi, expérience locale, statut au Canada ou profession ciblée. L'intention réelle de s'établir dans la province désignante compte également."
+            ],
+            [
+              "Une déclaration d'intérêt ne vaut ni désignation ni invitation",
+              "Un profil admissible dans Entrée express peut indiquer un intérêt pour certaines provinces ou pour l'ensemble des provinces participantes. Une province peut transmettre une notification d'intérêt, mais ce document n'est pas une désignation et ne garantit aucune invitation à la résidence permanente. Après vérification de ses propres critères, la province peut confirmer électroniquement une désignation. IRCC prévoit alors 30 jours civils pour l'accepter ou la refuser dans le compte du candidat. Si une invitation fédérale à présenter une demande arrive ensuite, le délai de dépôt est de 60 jours civils. Exemple purement arithmétique : un profil fictif à 380 points CRS passerait à 980 après l'ajout de 600 points d'une désignation confirmée. Cela ne prouve ni la sélection provinciale ni l'approbation finale, soumise aux vérifications et aux quotas."
+            ],
+            [
+              "Permis de travail depuis le Maroc : une offre réelle reste centrale",
+              "Pour la plupart des candidats résidant hors du Canada, le permis de travail lié à un employeur repose sur une offre authentique. Selon le poste, l'employeur doit obtenir une étude d'impact sur le marché du travail, appelée EIMT ou LMIA, ou peut relever d'une dispense dans le Programme de mobilité internationale. Lorsque l'EIMT est nécessaire, il fournit les documents de décision correspondants ; en cas de dispense, il transmet généralement l'offre dans son portail et communique le numéro d'offre. Le permis de travail ouvert n'est accessible qu'à des catégories déterminées, pas à toute personne cherchant un emploi depuis l'étranger. IRCC exige également les justificatifs, les ressources adaptées au séjour et au retour ainsi que le respect des conditions d'admissibilité. Un visa de visiteur ne doit jamais être considéré comme une autorisation de commencer à travailler."
+            ],
+            [
+              "Mobilité francophone : une dispense d'EIMT, pas une dispense d'emploi",
+              "Le dispositif Mobilité francophone peut permettre à un employeur situé hors Québec de recruter un candidat francophone sans EIMT. Pour les demandes déposées depuis le 15 juin 2023, IRCC exige notamment un niveau intermédiaire de français à l'oral, en expression et compréhension, correspondant au minimum au NCLC 5, ainsi qu'une offre dans l'une des neuf provinces ou l'un des trois territoires hors Québec. La plupart des catégories TEER sont couvertes, à l'exception de certaines activités agricoles primaires classées TEER 4 et 5. Avant la demande du salarié, l'employeur dépose l'offre avec le code de dispense C16, règle des frais de conformité de 230 dollars canadiens et transmet le numéro d'offre. Ces frais relèvent de l'employeur. Le français facilite potentiellement une procédure de recrutement réelle, mais ne crée pas de poste vacant."
+            ],
+            [
+              "Canada atlantique : employeur désigné et approbation provinciale",
+              "Le Programme d'immigration au Canada atlantique concerne le Nouveau-Brunswick, la Nouvelle-Écosse, l'Île-du-Prince-Édouard et Terre-Neuve-et-Labrador. Une annonce ordinaire ne suffit pas : l'offre doit provenir d'un employeur désigné par la province, être à temps plein, au moins trente heures par semaine, et non saisonnière. Le candidat doit normalement justifier de 1 560 heures d'expérience rémunérée admissible pendant les cinq dernières années, sous réserve d'exemptions pour certains diplômés locaux, ainsi que de l'éducation, de la langue et des ressources exigées. Après l'offre, un organisme compétent prépare gratuitement un plan d'établissement, puis l'employeur obtient l'approbation provinciale de l'offre. La demande de résidence permanente ne doit pas être déposée avant cette approbation. Un permis temporaire spécifique peut être envisageable, sans préjuger de la décision finale."
+            ],
+            [
+              "Projets pilotes ruraux et francophones : aucune distribution automatique de contrats",
+              "Les projets pilotes d'immigration dans les communautés rurales RCIP et francophones FCIP exigent une offre admissible d'un employeur désigné dans une communauté participante, ainsi que des justificatifs d'expérience, de diplôme, de langue et de ressources. Dans le projet rural, IRCC demande normalement une année, soit 1 560 heures, d'expérience professionnelle pertinente au cours des trois dernières années, avec certaines exemptions pour des diplômés locaux. Les niveaux linguistiques dépendent de la catégorie du poste : CLB ou NCLC 6 pour TEER 0 ou 1, niveau 5 pour TEER 2 ou 3, et niveau 4 pour TEER 4 ou 5. IRCC précise que ces dispositifs ne mettent pas automatiquement les candidats en relation avec des employeurs. Vérifiez la communauté, les employeurs désignés, la recommandation locale et les périodes d'ouverture."
+            ],
+            [
+              "Langue, salaire et diplôme : vérifier le dispositif exact",
+              "Il n'existe pas de seuil salarial canadien universel applicable à tous les parcours présentés. Pour un emploi temporaire, les exigences de rémunération dépendent du métier, de la province et des règles d'EIMT ou de dispense. Certains volets provinciaux imposent une offre permanente, un salaire précis ou une expérience professionnelle locale. Choisissez le code de la Classification nationale des professions, CNP ou NOC, à partir des fonctions réellement exercées plutôt que du seul intitulé du poste. Pour les professions réglementées, une reconnaissance de diplôme ne remplace pas nécessairement le permis d'exercice professionnel. Les tests linguistiques et leurs seuils diffèrent entre Entrée express, le programme atlantique et les pilotes. En 2026, plusieurs invitations ciblées de l'Ontario exigeaient déjà une résidence au Canada et un statut valide ; elles ne constituaient donc pas des appels ouverts à tous les candidats du Maroc."
+            ],
+            [
+              "Préparer au Maroc un dossier cohérent avant de payer",
+              "Commencez par un passeport valide, un CV exact et des attestations d'emploi détaillant les dates, tâches, heures, rémunération et coordonnées de l'employeur. Confrontez ces pièces au code CNP correspondant aux fonctions. Ne commandez une évaluation des diplômes d'études, ou EDE, et un test linguistique que si la voie visée les demande et reconnaît l'organisme choisi. La résidence permanente peut exiger des certificats de police, des examens médicaux, des données biométriques, des actes familiaux et des traductions en anglais ou en français. Pour un PCP hors Entrée express, IRCC précise les formulaires du portail et la preuve de désignation. Pour un permis de travail demandé depuis l'étranger, suivez la liste personnalisée du compte IRCC et attendez la lettre d'instructions biométriques avant de prendre rendez-vous. Archivez les avis et reçus officiels."
+            ],
+            [
+              "Frais et délais : faire des calculs transparents, sans garantie",
+              "IRCC affiche 155 dollars canadiens de frais de traitement pour un permis de travail et 85 dollars pour la biométrie individuelle lorsqu'elle s'applique : 155 + 85 = 240 dollars canadiens dans l'exemple d'une personne, hors tests, traductions, visites médicales et voyage. Des frais supplémentaires de 100 dollars concernent uniquement les personnes admissibles à un permis ouvert. En Alberta, une déclaration d'intérêt des travailleurs WEOI coûte 135 dollars depuis le 7 avril 2026 ; il faut vérifier l'admissibilité avant de la déposer. Les pages IRCC affichent des délais indicatifs d'environ sept mois pour les PCP liés à Entrée express et treize mois pour les autres, mais ces estimations évoluent et ne constituent pas des échéances garanties. Les frais de résidence permanente, les taxes provinciales et les dépenses familiales doivent être vérifiés séparément."
+            ],
+            [
+              "Choisir la voie juridiquement la plus simple et éviter les escroqueries",
+              "Adoptez un arbre de décision plutôt qu'un forfait commercial intitulé immigration au Canada. Si vous êtes admissible à Entrée express sans employeur, évaluez d'abord ce dispositif. Si vous disposez d'une offre vérifiée hors Québec et parlez français, étudiez Mobilité francophone avant de supposer qu'une EIMT est indispensable. Si l'entreprise est désignée au Canada atlantique, examinez le programme atlantique ; si une province ou une communauté précise vous intéresse, vérifiez son volet exact. Il s'agit d'une comparaison de démarches, non d'une garantie d'acceptation ou du parcours universellement le moins cher. Méfiez-vous de la vente de désignations ou de contrats garantis et de la demande de payer l'EIMT à la place de l'employeur : le gouvernement interdit de récupérer auprès du travailleur les frais habituels d'EIMT de 1 000 dollars. Contrôlez indépendamment l'entreprise et les documents."
+            ]
+          ]
+        }
+      }
     }
   }
 }
