@@ -1,0 +1,695 @@
+{
+  "updated": "2026-10-28",
+  "ingredients": {
+    "oliveoil": {
+      "ar": "زيت الزيتون",
+      "en": "olive oil",
+      "fr": "huile d’olive"
+    },
+    "oil": {
+      "ar": "زيت نباتي",
+      "en": "neutral cooking oil",
+      "fr": "huile neutre"
+    },
+    "butter": {
+      "ar": "زبدة",
+      "en": "butter",
+      "fr": "beurre"
+    },
+    "onion": {
+      "ar": "بصل",
+      "en": "onion",
+      "fr": "oignon"
+    },
+    "garlic": {
+      "ar": "ثوم",
+      "en": "garlic",
+      "fr": "ail"
+    },
+    "tomato": {
+      "ar": "طماطم",
+      "en": "tomatoes",
+      "fr": "tomates"
+    },
+    "tomatopaste": {
+      "ar": "معجون الطماطم",
+      "en": "tomato paste",
+      "fr": "concentré de tomates"
+    },
+    "pepper": {
+      "ar": "فلفل حلو",
+      "en": "bell pepper",
+      "fr": "poivron"
+    },
+    "chili": {
+      "ar": "فلفل حار",
+      "en": "chili pepper",
+      "fr": "piment"
+    },
+    "carrot": {
+      "ar": "جزر",
+      "en": "carrots",
+      "fr": "carottes"
+    },
+    "potato": {
+      "ar": "بطاطس",
+      "en": "potatoes",
+      "fr": "pommes de terre"
+    },
+    "sweetpotato": {
+      "ar": "بطاطا حلوة",
+      "en": "sweet potato",
+      "fr": "patate douce"
+    },
+    "zucchini": {
+      "ar": "كوسة",
+      "en": "zucchini",
+      "fr": "courgette"
+    },
+    "eggplant": {
+      "ar": "باذنجان",
+      "en": "eggplant",
+      "fr": "aubergine"
+    },
+    "pumpkin": {
+      "ar": "قرع",
+      "en": "pumpkin",
+      "fr": "potiron"
+    },
+    "cauliflower": {
+      "ar": "قرنبيط",
+      "en": "cauliflower",
+      "fr": "chou-fleur"
+    },
+    "broccoli": {
+      "ar": "بروكلي",
+      "en": "broccoli",
+      "fr": "brocoli"
+    },
+    "cabbage": {
+      "ar": "ملفوف",
+      "en": "cabbage",
+      "fr": "chou"
+    },
+    "spinach": {
+      "ar": "سبانخ",
+      "en": "spinach",
+      "fr": "épinards"
+    },
+    "kale": {
+      "ar": "كرنب أجعد",
+      "en": "kale",
+      "fr": "chou kale"
+    },
+    "lettuce": {
+      "ar": "خس",
+      "en": "lettuce",
+      "fr": "laitue"
+    },
+    "cucumber": {
+      "ar": "خيار",
+      "en": "cucumber",
+      "fr": "concombre"
+    },
+    "avocado": {
+      "ar": "أفوكادو",
+      "en": "avocado",
+      "fr": "avocat"
+    },
+    "leek": {
+      "ar": "كراث",
+      "en": "leeks",
+      "fr": "poireaux"
+    },
+    "mushroom": {
+      "ar": "فطر",
+      "en": "mushrooms",
+      "fr": "champignons"
+    },
+    "peas": {
+      "ar": "بازلاء",
+      "en": "peas",
+      "fr": "petits pois"
+    },
+    "greenbeans": {
+      "ar": "فاصولياء خضراء",
+      "en": "green beans",
+      "fr": "haricots verts"
+    },
+    "corn": {
+      "ar": "ذرة",
+      "en": "corn",
+      "fr": "maïs"
+    },
+    "chickpeas": {
+      "ar": "حمص مطبوخ",
+      "en": "cooked chickpeas",
+      "fr": "pois chiches cuits"
+    },
+    "drychickpeas": {
+      "ar": "حمص يابس منقوع طوال الليل",
+      "en": "dried chickpeas soaked overnight",
+      "fr": "pois chiches secs trempés une nuit"
+    },
+    "lentils": {
+      "ar": "عدس يابس",
+      "en": "dry lentils",
+      "fr": "lentilles sèches"
+    },
+    "redlentils": {
+      "ar": "عدس أحمر",
+      "en": "red lentils",
+      "fr": "lentilles corail"
+    },
+    "beans": {
+      "ar": "فاصولياء بيضاء مطبوخة",
+      "en": "cooked white beans",
+      "fr": "haricots blancs cuits"
+    },
+    "kidneybeans": {
+      "ar": "فاصولياء حمراء مطبوخة",
+      "en": "cooked kidney beans",
+      "fr": "haricots rouges cuits"
+    },
+    "blackbeans": {
+      "ar": "فاصولياء سوداء مطبوخة",
+      "en": "cooked black beans",
+      "fr": "haricots noirs cuits"
+    },
+    "tofu": {
+      "ar": "توفو متماسك",
+      "en": "firm tofu",
+      "fr": "tofu ferme"
+    },
+    "chicken": {
+      "ar": "دجاج منزوع العظم",
+      "en": "boneless chicken",
+      "fr": "poulet désossé"
+    },
+    "chickenthighs": {
+      "ar": "أفخاذ دجاج",
+      "en": "chicken thighs",
+      "fr": "cuisses de poulet"
+    },
+    "chickenbreast": {
+      "ar": "صدر دجاج",
+      "en": "chicken breast",
+      "fr": "blanc de poulet"
+    },
+    "turkey": {
+      "ar": "صدر ديك رومي",
+      "en": "turkey breast",
+      "fr": "blanc de dinde"
+    },
+    "groundbeef": {
+      "ar": "لحم بقري مفروم",
+      "en": "ground beef",
+      "fr": "bœuf haché"
+    },
+    "beef": {
+      "ar": "قطع لحم بقري",
+      "en": "beef pieces",
+      "fr": "morceaux de bœuf"
+    },
+    "lamb": {
+      "ar": "قطع لحم غنم",
+      "en": "lamb pieces",
+      "fr": "morceaux d’agneau"
+    },
+    "fish": {
+      "ar": "سمك أبيض",
+      "en": "firm white fish",
+      "fr": "poisson blanc"
+    },
+    "salmon": {
+      "ar": "شرائح سلمون",
+      "en": "salmon fillets",
+      "fr": "filets de saumon"
+    },
+    "tuna": {
+      "ar": "تونة معلبة مصفاة",
+      "en": "canned tuna drained",
+      "fr": "thon en conserve égoutté"
+    },
+    "shrimp": {
+      "ar": "روبيان مقشر",
+      "en": "peeled shrimp",
+      "fr": "crevettes décortiquées"
+    },
+    "squid": {
+      "ar": "حبار مقطع",
+      "en": "sliced squid",
+      "fr": "calmar émincé"
+    },
+    "mussels": {
+      "ar": "بلح البحر منظف",
+      "en": "cleaned mussels",
+      "fr": "moules nettoyées"
+    },
+    "eggs": {
+      "ar": "بيض",
+      "en": "eggs",
+      "fr": "œufs"
+    },
+    "milk": {
+      "ar": "حليب",
+      "en": "milk",
+      "fr": "lait"
+    },
+    "yogurt": {
+      "ar": "زبادي طبيعي",
+      "en": "plain yogurt",
+      "fr": "yaourt nature"
+    },
+    "greekyogurt": {
+      "ar": "زبادي يوناني طبيعي",
+      "en": "plain Greek yogurt",
+      "fr": "yaourt grec nature"
+    },
+    "cream": {
+      "ar": "قشدة سائلة",
+      "en": "cooking cream",
+      "fr": "crème liquide"
+    },
+    "cheese": {
+      "ar": "جبن مبشور",
+      "en": "grated cheese",
+      "fr": "fromage râpé"
+    },
+    "feta": {
+      "ar": "جبن فيتا",
+      "en": "feta cheese",
+      "fr": "feta"
+    },
+    "mozzarella": {
+      "ar": "موزاريلا",
+      "en": "mozzarella",
+      "fr": "mozzarella"
+    },
+    "parmesan": {
+      "ar": "جبن بارميزان",
+      "en": "Parmesan cheese",
+      "fr": "parmesan"
+    },
+    "rice": {
+      "ar": "أرز",
+      "en": "rice",
+      "fr": "riz"
+    },
+    "brownrice": {
+      "ar": "أرز بني",
+      "en": "brown rice",
+      "fr": "riz complet"
+    },
+    "basmatirice": {
+      "ar": "أرز بسمتي",
+      "en": "basmati rice",
+      "fr": "riz basmati"
+    },
+    "couscous": {
+      "ar": "سميد كسكس",
+      "en": "couscous semolina",
+      "fr": "semoule à couscous"
+    },
+    "bulgur": {
+      "ar": "برغل",
+      "en": "bulgur",
+      "fr": "boulgour"
+    },
+    "quinoa": {
+      "ar": "كينوا",
+      "en": "quinoa",
+      "fr": "quinoa"
+    },
+    "oats": {
+      "ar": "شوفان",
+      "en": "rolled oats",
+      "fr": "flocons d’avoine"
+    },
+    "flour": {
+      "ar": "دقيق قمح",
+      "en": "wheat flour",
+      "fr": "farine de blé"
+    },
+    "wholeflour": {
+      "ar": "دقيق قمح كامل",
+      "en": "whole-wheat flour",
+      "fr": "farine complète"
+    },
+    "semolina": {
+      "ar": "سميد ناعم",
+      "en": "fine semolina",
+      "fr": "semoule fine"
+    },
+    "pasta": {
+      "ar": "معكرونة جافة",
+      "en": "dry pasta",
+      "fr": "pâtes sèches"
+    },
+    "spaghetti": {
+      "ar": "سباغيتي",
+      "en": "spaghetti",
+      "fr": "spaghettis"
+    },
+    "noodles": {
+      "ar": "شعيرية أرز",
+      "en": "rice noodles",
+      "fr": "nouilles de riz"
+    },
+    "bread": {
+      "ar": "خبز",
+      "en": "bread",
+      "fr": "pain"
+    },
+    "wholebread": {
+      "ar": "خبز كامل الحبوب",
+      "en": "whole-grain bread",
+      "fr": "pain complet"
+    },
+    "pita": {
+      "ar": "خبز بيتا",
+      "en": "pita bread",
+      "fr": "pain pita"
+    },
+    "tortilla": {
+      "ar": "تورتيلا",
+      "en": "tortillas",
+      "fr": "tortillas"
+    },
+    "ricepaper": {
+      "ar": "رقائق ورق الأرز",
+      "en": "rice paper sheets",
+      "fr": "feuilles de riz"
+    },
+    "breadcrumbs": {
+      "ar": "فتات خبز",
+      "en": "breadcrumbs",
+      "fr": "chapelure"
+    },
+    "potatostarch": {
+      "ar": "نشا الذرة",
+      "en": "cornstarch",
+      "fr": "fécule de maïs"
+    },
+    "yeast": {
+      "ar": "خميرة خبز جافة",
+      "en": "dry baker's yeast",
+      "fr": "levure boulangère sèche"
+    },
+    "bakingpowder": {
+      "ar": "خميرة حلويات",
+      "en": "baking powder",
+      "fr": "levure chimique"
+    },
+    "sugar": {
+      "ar": "سكر",
+      "en": "sugar",
+      "fr": "sucre"
+    },
+    "honey": {
+      "ar": "عسل",
+      "en": "honey",
+      "fr": "miel"
+    },
+    "dates": {
+      "ar": "تمر منزوع النوى",
+      "en": "pitted dates",
+      "fr": "dattes dénoyautées"
+    },
+    "raisins": {
+      "ar": "زبيب",
+      "en": "raisins",
+      "fr": "raisins secs"
+    },
+    "almonds": {
+      "ar": "لوز",
+      "en": "almonds",
+      "fr": "amandes"
+    },
+    "walnuts": {
+      "ar": "جوز",
+      "en": "walnuts",
+      "fr": "noix"
+    },
+    "peanuts": {
+      "ar": "فول سوداني",
+      "en": "peanuts",
+      "fr": "cacahuètes"
+    },
+    "sesame": {
+      "ar": "سمسم",
+      "en": "sesame seeds",
+      "fr": "graines de sésame"
+    },
+    "tahini": {
+      "ar": "طحينة",
+      "en": "tahini",
+      "fr": "tahini"
+    },
+    "peanutbutter": {
+      "ar": "زبدة فول سوداني",
+      "en": "peanut butter",
+      "fr": "beurre de cacahuète"
+    },
+    "chocolate": {
+      "ar": "شوكولاتة داكنة",
+      "en": "dark chocolate",
+      "fr": "chocolat noir"
+    },
+    "cocoa": {
+      "ar": "كاكاو غير محلى",
+      "en": "unsweetened cocoa",
+      "fr": "cacao non sucré"
+    },
+    "vanilla": {
+      "ar": "فانيليا",
+      "en": "vanilla",
+      "fr": "vanille"
+    },
+    "cinnamon": {
+      "ar": "قرفة",
+      "en": "cinnamon",
+      "fr": "cannelle"
+    },
+    "ginger": {
+      "ar": "زنجبيل",
+      "en": "ginger",
+      "fr": "gingembre"
+    },
+    "turmeric": {
+      "ar": "كركم",
+      "en": "turmeric",
+      "fr": "curcuma"
+    },
+    "cumin": {
+      "ar": "كمون مطحون",
+      "en": "ground cumin",
+      "fr": "cumin moulu"
+    },
+    "paprika": {
+      "ar": "بابريكا",
+      "en": "paprika",
+      "fr": "paprika"
+    },
+    "coriander": {
+      "ar": "كزبرة طازجة",
+      "en": "fresh coriander",
+      "fr": "coriandre fraîche"
+    },
+    "parsley": {
+      "ar": "بقدونس",
+      "en": "parsley",
+      "fr": "persil"
+    },
+    "mint": {
+      "ar": "نعناع",
+      "en": "mint",
+      "fr": "menthe"
+    },
+    "basil": {
+      "ar": "ريحان طازج",
+      "en": "fresh basil",
+      "fr": "basilic frais"
+    },
+    "oregano": {
+      "ar": "أوريغانو مجفف",
+      "en": "dried oregano",
+      "fr": "origan séché"
+    },
+    "thyme": {
+      "ar": "زعتر",
+      "en": "thyme",
+      "fr": "thym"
+    },
+    "rosemary": {
+      "ar": "إكليل الجبل",
+      "en": "rosemary",
+      "fr": "romarin"
+    },
+    "saffron": {
+      "ar": "زعفران",
+      "en": "saffron",
+      "fr": "safran"
+    },
+    "lemon": {
+      "ar": "ليمون",
+      "en": "lemon",
+      "fr": "citron"
+    },
+    "lime": {
+      "ar": "ليمون أخضر",
+      "en": "lime",
+      "fr": "citron vert"
+    },
+    "orange": {
+      "ar": "برتقال",
+      "en": "orange",
+      "fr": "orange"
+    },
+    "apple": {
+      "ar": "تفاح",
+      "en": "apples",
+      "fr": "pommes"
+    },
+    "banana": {
+      "ar": "موز",
+      "en": "bananas",
+      "fr": "bananes"
+    },
+    "berries": {
+      "ar": "توت مشكل",
+      "en": "mixed berries",
+      "fr": "fruits rouges"
+    },
+    "mango": {
+      "ar": "مانجو",
+      "en": "mango",
+      "fr": "mangue"
+    },
+    "pineapple": {
+      "ar": "أناناس",
+      "en": "pineapple",
+      "fr": "ananas"
+    },
+    "coconutmilk": {
+      "ar": "حليب جوز الهند",
+      "en": "coconut milk",
+      "fr": "lait de coco"
+    },
+    "coconut": {
+      "ar": "جوز هند مبشور",
+      "en": "shredded coconut",
+      "fr": "noix de coco râpée"
+    },
+    "olives": {
+      "ar": "زيتون",
+      "en": "olives",
+      "fr": "olives"
+    },
+    "preservedlemon": {
+      "ar": "ليمون مصير",
+      "en": "preserved lemon",
+      "fr": "citron confit"
+    },
+    "stock": {
+      "ar": "مرق خضار قليل الملح",
+      "en": "low-salt vegetable stock",
+      "fr": "bouillon de légumes peu salé"
+    },
+    "chickenstock": {
+      "ar": "مرق دجاج",
+      "en": "chicken stock",
+      "fr": "bouillon de volaille"
+    },
+    "fishstock": {
+      "ar": "مرق سمك",
+      "en": "fish stock",
+      "fr": "bouillon de poisson"
+    },
+    "water": {
+      "ar": "ماء",
+      "en": "water",
+      "fr": "eau"
+    },
+    "soysauce": {
+      "ar": "صلصة صويا",
+      "en": "soy sauce",
+      "fr": "sauce soja"
+    },
+    "vinegar": {
+      "ar": "خل",
+      "en": "vinegar",
+      "fr": "vinaigre"
+    },
+    "ricevinegar": {
+      "ar": "خل أرز",
+      "en": "rice vinegar",
+      "fr": "vinaigre de riz"
+    },
+    "fishsauce": {
+      "ar": "صلصة السمك",
+      "en": "fish sauce",
+      "fr": "sauce de poisson"
+    },
+    "mustard": {
+      "ar": "خردل",
+      "en": "mustard",
+      "fr": "moutarde"
+    },
+    "tomatosauce": {
+      "ar": "صلصة طماطم طبيعية",
+      "en": "plain tomato sauce",
+      "fr": "sauce tomate nature"
+    },
+    "salsa": {
+      "ar": "صلصة سالسا طماطم",
+      "en": "tomato salsa",
+      "fr": "salsa de tomate"
+    },
+    "hummus": {
+      "ar": "حمص مهروس متبل",
+      "en": "plain hummus",
+      "fr": "houmous nature"
+    },
+    "beansprouts": {
+      "ar": "براعم فاصولياء",
+      "en": "bean sprouts",
+      "fr": "germes de soja"
+    },
+    "chickpeaflour": {
+      "ar": "دقيق حمص",
+      "en": "chickpea flour",
+      "fr": "farine de pois chiches"
+    },
+    "beet": {
+      "ar": "شمندر",
+      "en": "beetroot",
+      "fr": "betterave"
+    },
+    "celery": {
+      "ar": "كرفس",
+      "en": "celery",
+      "fr": "céleri"
+    },
+    "gingerpaste": {
+      "ar": "معجون زنجبيل وثوم",
+      "en": "ginger-garlic paste",
+      "fr": "pâte de gingembre et ail"
+    },
+    "raisinnuts": {
+      "ar": "فواكه مجففة ومكسرات مشكلة",
+      "en": "mixed dried fruit and nuts",
+      "fr": "fruits secs et noix mélangés"
+    },
+    "bakingchocolate": {
+      "ar": "شوكولاتة للخبز",
+      "en": "baking chocolate",
+      "fr": "chocolat pâtissier"
+    },
+    "chickpeasflour": {
+      "ar": "دقيق حمص محمص",
+      "en": "roasted chickpea flour",
+      "fr": "farine de pois chiches torréfiée"
+    }
+  }
+}
