@@ -70,8 +70,10 @@
         "fiverrHelp",
         "upwork"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/freelance-basic-standard-premium-cost-model.json",
+      "editorialReviewDate": "2026-10-28"
     },
     {
       "sectionId": "online-business",
