@@ -99,7 +99,8 @@ const photos=readJSON(path.join(content,'licensed-photos.json'));
 const resources=readJSON(path.join(content,'platform-links.json'));
 const target=tax.sections.find(s=>s.id===sectionId);
 const planned=plan.sections.find(s=>s.id===sectionId);
-if(!target||!planned||target.parent!==article.category||planned.parent!==article.category||!planned.ideas?.length)fail('Invalid/filled editorial section '+sectionId);
+if(!target||!planned||target.parent!==article.category||planned.parent!==article.category||!Array.isArray(planned.ideas))fail('Invalid editorial section '+sectionId);
+if(target.publishedSlugs.length>=target.targetArticles||planned.publishedSlugs.length>=planned.targetArticles)fail('Editorial section publication capacity reached '+sectionId);
 if(target.publishedSlugs.includes(article.slug)||planned.publishedSlugs.includes(article.slug))fail('Duplicate taxonomy slug');
 for(const x of Object.values(photos.articlePhotos)){
  if(x.photoId===photo.photoId||x.source===photo.source)fail('Photo reused from another article');
@@ -113,7 +114,7 @@ if(resourceIds.some(id=>!/^https:\/\//.test(resources.platforms[id].url)))fail('
 const finalArticle={...article,date:today,updated:today,featured:false};
 target.publishedSlugs.push(article.slug);
 planned.publishedSlugs.push(article.slug);
-planned.ideas.shift();
+if(planned.ideas.length)planned.ideas.shift();
 plan.lastReviewed=today;
 photos.articlePhotos[article.slug]=photo;
 photos.updated=today;
