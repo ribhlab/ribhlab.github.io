@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "note": "Curated editorial directory of official provider domains. Listings are educational references, not a ranking or an endorsement. Commercial links remain separately disclosed.",
   "platforms": {
     "fiverr": {
@@ -281,6 +281,82 @@
     "foodSafety": {
       "name": "FoodSafety.gov — safe food preparation and refrigeration",
       "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety"
+    },
+    "appAppleCategories": {
+      "name": "Apple App Store — categories",
+      "url": "https://developer.apple.com/app-store/categories/"
+    },
+    "appPlayCategories": {
+      "name": "Google Play — app categories",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859673?hl=en"
+    },
+    "appNotion": {
+      "name": "Notion",
+      "url": "https://www.notion.com/"
+    },
+    "appTodoist": {
+      "name": "Todoist",
+      "url": "https://todoist.com/"
+    },
+    "appChatGPT": {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/"
+    },
+    "appGemini": {
+      "name": "Google Gemini",
+      "url": "https://gemini.google.com/"
+    },
+    "appPixel11": {
+      "name": "Google — Pixel 11 official announcement",
+      "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/"
+    },
+    "appIPhone18": {
+      "name": "Apple — iPhone Newsroom",
+      "url": "https://www.apple.com/newsroom/topics/iphone/"
+    },
+    "appSamsung26": {
+      "name": "Samsung — Galaxy S26 Newsroom",
+      "url": "https://news.samsung.com/global/galaxy-s26-series"
+    },
+    "appLightroom": {
+      "name": "Adobe Lightroom mobile",
+      "url": "https://www.adobe.com/products/photoshop-lightroom/mobile.html"
+    },
+    "appCapCut": {
+      "name": "CapCut",
+      "url": "https://www.capcut.com/"
+    },
+    "appUEFA": {
+      "name": "UEFA — official fixtures",
+      "url": "https://www.uefa.com/uefachampionsleague/fixtures-results/"
+    },
+    "appOneFootball": {
+      "name": "OneFootball",
+      "url": "https://onefootball.com/"
+    },
+    "appSofascore": {
+      "name": "Sofascore",
+      "url": "https://www.sofascore.com/"
+    },
+    "appBudgetYNAB": {
+      "name": "YNAB",
+      "url": "https://www.ynab.com/"
+    },
+    "appSplitwise": {
+      "name": "Splitwise",
+      "url": "https://www.splitwise.com/"
+    },
+    "appAdsenseEligibility": {
+      "name": "Google AdSense — eligibility",
+      "url": "https://support.google.com/adsense/answer/9724?hl=en"
+    },
+    "appAdsenseQuality": {
+      "name": "Google AdSense — insufficient content",
+      "url": "https://blog.google/products/adsense/how-to-address-insufficient-content/"
+    },
+    "appAdsenseCMP": {
+      "name": "Google AdSense — consent management",
+      "url": "https://support.google.com/adsense/answer/13554116?hl=en"
     }
   },
   "articleLinks": {
@@ -509,6 +585,41 @@
     "grain-and-vegetable-bowl-easy-recipe": [
       "foodSafety",
       "foodSafetyEggs"
+    ],
+    "iphone-android-productivity-apps-2026-comparison": [
+      "appAppleCategories",
+      "appNotion",
+      "appTodoist"
+    ],
+    "ai-assistant-apps-2026-iphone-android-comparison": [
+      "appChatGPT",
+      "appGemini",
+      "appPlayCategories"
+    ],
+    "iphone-18-pixel-11-galaxy-s26-buying-guide-2026": [
+      "appIPhone18",
+      "appPixel11",
+      "appSamsung26"
+    ],
+    "mobile-photo-video-editing-apps-2026-guide": [
+      "appLightroom",
+      "appCapCut",
+      "appAppleCategories"
+    ],
+    "football-results-sports-apps-2026-guide": [
+      "appUEFA",
+      "appOneFootball",
+      "appSofascore"
+    ],
+    "best-mobile-budget-expense-apps-2026": [
+      "appBudgetYNAB",
+      "appSplitwise",
+      "appPlayCategories"
+    ],
+    "adsense-ready-original-site-2026-checklist": [
+      "appAdsenseEligibility",
+      "appAdsenseQuality",
+      "appAdsenseCMP"
     ]
   }
 }
