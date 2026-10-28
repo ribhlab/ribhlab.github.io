@@ -8,5 +8,6 @@
     "youtube": "",
     "linkedin": ""
   },
-  "enableAdsense": false
+  "enableAdsense": false,
+  "adsenseVerificationScript": true
 }
