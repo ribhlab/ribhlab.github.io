@@ -218,12 +218,15 @@ for(const pagePath of pages){
 // Editorial taxonomy: every real article has exactly one section and each section has forty slots.
 const taxonomy=JSON.parse(fs.readFileSync(path.join(root,'content','sections.json'),'utf8'));
 const publishingPlan=JSON.parse(fs.readFileSync(path.join(root,'content','editorial-plan.json'),'utf8'));
-if(taxonomy.sections.length!==10||publishingPlan.sections.length!==10)errors.push('Editorial taxonomy: expected ten sections');
+if(taxonomy.sections.length<10||publishingPlan.sections.length!==taxonomy.sections.length)errors.push('Editorial taxonomy: preserve the ten original sections and keep plans in sync');
+const originalSectionIds=new Set(['freelance','online-business','ai-automation','mobile-apps','games-security','trading-risk','crypto-web3','gold-macro','body-care','world-recipes']);
+for(const id of originalSectionIds)if(!taxonomy.sections.some(s=>s.id===id))errors.push('Protected original editorial section missing: '+id);
 const assignedSlugs=new Set(),knownSlugs=new Set(fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')).map(f=>f.slice(0,-5)));
 for(const s of taxonomy.sections){
  const plan=publishingPlan.sections.find(x=>x.id===s.id);
  if(!plan)errors.push('Editorial plan missing '+s.id);
- if(s.targetArticles!==40||!plan||plan.publishedSlugs.length+plan.ideas.length!==40)errors.push('Section target count must equal 40: '+s.id);
+ if(!Number.isInteger(s.targetArticles)||s.targetArticles<1||!plan||!Array.isArray(plan.ideas)||plan.targetArticles!==s.targetArticles||s.publishedSlugs.length>s.targetArticles)errors.push('Invalid section capacity or publishing plan: '+s.id);
+ if(originalSectionIds.has(s.id)&&(!plan||s.targetArticles!==40||plan.publishedSlugs.length+plan.ideas.length!==40))errors.push('Protected original 40-slot plan changed: '+s.id);
  if(plan&&JSON.stringify(plan.publishedSlugs)!==JSON.stringify(s.publishedSlugs))errors.push('Plan mapping out of sync: '+s.id);
  for(const slug of s.publishedSlugs){
   if(!knownSlugs.has(slug)||assignedSlugs.has(slug))errors.push('Missing or duplicate article classification: '+slug);
@@ -661,6 +664,21 @@ for(const [id,article] of Object.entries(opportunityEditorial.articles||{})){
   if(!html.includes('href="/'+lang+'/opportunities/immigration/"'))errors.push('Opportunity lacks internal same-tab back link: '+id+'/'+lang);
  }
 }
+
+
+// RibhLab administrator studio must be accessible only as a login form until
+// GitHub confirms ADMIN access; actual writes are authorized by GitHub, not JS.
+const adminPage=fs.readFileSync(path.join(dist,'admin','index.html'),'utf8');
+const adminClient=fs.readFileSync(path.join(dist,'admin','studio.js'),'utf8');
+const adminStyles=fs.readFileSync(path.join(dist,'admin','studio.css'),'utf8');
+for(const marker of ['id="login-screen"','id="studio"','hidden','noindex,nofollow','/admin/studio.js','/admin/studio.css']){
+ if(!adminPage.includes(marker))errors.push('Administrator login/dashboard missing '+marker);
+}
+for(const marker of ["permissions?.admin!==true","/git/trees","base_tree:","force:false","state.token=null","content/sections.json","content/editorial-plan.json","content/licensed-photos.json","content/platform-links.json","content/manual-drafts/"]){
+ if(!adminClient.includes(marker))errors.push('Administrator dashboard safety contract missing '+marker);
+}
+if(adminClient.includes('localStorage.setItem')||adminClient.includes('sessionStorage.setItem')||adminClient.includes('Sveltia CMS'))errors.push('Administrator auth must not store bearer token or use public legacy CMS');
+if(adminStyles.length<2000)errors.push('Administrator dashboard CSS missing');
 
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
