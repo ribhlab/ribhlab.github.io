@@ -449,6 +449,14 @@
     "foodSafetyGameDay": {
       "name": "FoodSafety.gov — Game Day Food Safety Tips",
       "url": "https://www.foodsafety.gov/blog/game-day-food-safety-tips"
+    },
+    "googlePeopleFirstContent": {
+      "name": "Google Search Central — Creating helpful, reliable, people-first content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    },
+    "googleGenerativeAiContent": {
+      "name": "Google Search Central — Using generative AI content",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
     }
   },
   "articleLinks": {
