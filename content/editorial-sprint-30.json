@@ -418,8 +418,10 @@
         "aadFaceWashing",
         "aadSunscreen"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "editorialReviewDate": "2026-10-28",
+      "queuePath": "content/reviewed-queue/minimal-skin-routine-cleanser-moisturizer-spf.json"
     },
     {
       "sectionId": "body-care",
