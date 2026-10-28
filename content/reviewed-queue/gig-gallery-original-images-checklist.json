@@ -1,0 +1,206 @@
+{
+  "sectionId": "freelance",
+  "article": {
+    "slug": "gig-gallery-original-images-checklist",
+    "category": "earning",
+    "date": "2026-10-28",
+    "updated": "2026-10-28",
+    "featured": false,
+    "related": [
+      "fiverr-complete-guide-2026",
+      "gig-description-client-questions-scope"
+    ],
+    "sources": [
+      {
+        "label": "Fiverr Help Center — Creating Gig images and tagging your Gig gallery (reviewed 28 October 2026)",
+        "url": "https://help.fiverr.com/hc/en-us/articles/15863342952977-Creating-Gig-images-and-tagging-your-Gig-gallery"
+      },
+      {
+        "label": "Fiverr Help Center — Requirements and guidelines for your Gig (reviewed 28 October 2026)",
+        "url": "https://help.fiverr.com/hc/en-us/articles/360011421218-Requirements-and-guidelines-for-your-Gig"
+      },
+      {
+        "label": "World Intellectual Property Organization — Copyright and online creative works",
+        "url": "https://www.wipo.int/ar/web/ipday/2016/ip_digital"
+      },
+      {
+        "label": "Creative Commons — Six licenses and conditions",
+        "url": "https://creativecommons.org/share-your-work/use-remix/cc-licenses/"
+      },
+      {
+        "label": "Unsplash — License and permitted uses",
+        "url": "https://unsplash.com/license"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "صور معرض خدمة Fiverr: دليل الأصالة والحقوق واختبار الجودة قبل النشر",
+        "excerpt": "قائمة تدقيق عملية لبناء معرض صور خدمة مستقل صادق، بالمقاسات الرسمية ونماذج أصلية وحماية بيانات العملاء وحقوق الصور.",
+        "lead": "تُظهر صور معرض الخدمة للمشتري ما الذي يستطيع المستقل تقديمه، لكنها قد تتحول إلى مصدر سوء فهم إذا كانت عامة أو مأخوذة من أعمال لا يملك حقوقها. هذا الدليل يميز بين صورة توضيحية ونتيجة عمل حقيقية، ويقترح خطوات تصميم وفحص يمكن تكرارها قبل النشر. استندت المراجعة بتاريخ 28 أكتوبر 2026 إلى تعليمات Fiverr الرسمية وإرشادات المنظمة العالمية للملكية الفكرية والمشاع الإبداعي ورخصة Unsplash. القواعد قابلة للتغيير، ولا يقدم هذا المقال استشارة قانونية أو وعداً بالحصول على طلبات.",
+        "sections": [
+          {
+            "heading": "1. حوّل معرض الصور إلى دليل على الخدمة لا إلى إعلان مبهم",
+            "paragraphs": [
+              "تخيل مستقلاً يقدم تنظيف ملفات Excel. صورة حاسوب لامع مع عبارة «أفضل خدمة في العالم» لا تثبت قدرته على معالجة صف واحد. الصورة الأكثر فائدة تعرض جدولاً تجريبياً قبل التنظيف وبعده، مع إبراز الأعمدة التي تغيرت وقاعدة التحقق التي استُعملت. هذا مثال مقترح للتصميم وليس عملاً منجزاً لعميل حقيقي. ابدأ بتحديد سؤال المشتري: ما الذي سأتسلمه؟ ثم خصص كل عنصر بصري للإجابة عن جانب واحد من هذا السؤال بدلاً من حشد كلمات التسويق.",
+              "أنشئ مخططاً من ثلاث صور: الأولى تعرض النتيجة الأساسية، والثانية تكشف خطوة من منهج العمل، والثالثة توضح شكل التسليم أو حدود الخدمة. لا توحِ بأن لقطة الشاشة تخص مشروعاً مدفوعاً إن كانت بياناتها مصطنعة. اكتب تحتها «بيانات توضيحية» عندما يكون ذلك ضرورياً لتجنب اللبس. تؤكد إرشادات Fiverr أن صور المعرض يجب أن ترتبط مباشرة بالخدمة، وأن الوسائط غير ذات الصلة قد تضلل المشتري. لا توجد صورة تضمن ترتيباً في البحث أو طلبات شراء."
+            ]
+          },
+          {
+            "heading": "2. احترم المقاسات وحدود المعرض ثم اختبر العرض المصغر",
+            "paragraphs": [
+              "وفق إرشادات Fiverr التي راجعتها في 28 أكتوبر 2026، المقاس الموصى به لصورة الخدمة هو 1280 × 769 بكسلاً عند 72 نقطة في البوصة، والحد الأدنى 712 × 430، والحد الأعلى 4000 × 2416. يسمح المعرض بما يصل إلى ثلاث صور وفيديو واحد وملفي PDF. هذه حدود منصة قابلة للتعديل، ولذلك ينبغي إعادة التحقق منها قبل رفع الملفات. اختر تصميماً أفقياً واضحاً، ولا تمدد صورة صغيرة حتى لا تصبح ضبابية أو مشوهة.",
+              "افتح النسخة النهائية بحجم بطاقة صغيرة على هاتف ثم على شاشة حاسوب. إذا اختفى النص أو لم تعد النتيجة مرئية، قلل العناصر ولا تضف ظلالاً وزخارف جديدة. تنصح المنصة بألا يتجاوز النص المضاف إلى الصورة عشر كلمات، مع تباين جيد وحروف مقروءة. احتفظ بالنسخة الأصلية القابلة للتحرير وصدّر نسخة للنشر، وافحصها بعد الضغط والتصغير. وإذا فشل رفع ملف JPEG، جرّب تصديراً خالياً من البيانات الوصفية أو ملف PNG وفق توجيه المنصة."
+            ]
+          },
+          {
+            "heading": "3. أنشئ نماذج أصلية واحمِ بيانات العملاء",
+            "paragraphs": [
+              "لا تستخدم فاتورة عميل أو كشف رواتب أو لوحة بيانات داخلية كعينة عامة دون موافقة صريحة ومحددة. إزالة الاسم وحده لا تكفي أحياناً؛ فقد تكشف التواريخ والأرقام النادرة أو أسماء المشاريع هوية صاحب البيانات. الحل الأكثر أماناً هو بناء ملف تجريبي من الصفر يتضمن أسماء افتراضية ومبالغ واضحة أنها للتوضيح. وثّق كيفية توليد المثال حتى لا تخلط لاحقاً بين النموذج ونتيجة حقيقية. وعند عرض خدمة تصميم، أنشئ عملاً تجريبياً أصلياً بدلاً من نسب تصميم منشور لشخص آخر إلى نفسك.",
+              "تفرض Fiverr أصالة الصور في فئات التصميم، وتطلب حق الاستخدام التجاري في الوسائط الأخرى. كما تمنع إدراج معلومات اتصال شخصية أو بيانات عملاء في المعرض. راجع كل زاوية من لقطة الشاشة: أسماء التبويبات، شريط المتصفح، عناوين البريد، الشعارات والملفات المفتوحة. استبدل العناصر الحساسة ببيانات مصطنعة قبل التصوير، ولا تعتمد على تمويه خفيف قد يمكن عكسه. إذا كانت العينة من عمل سابق بموافقة صاحبه، احتفظ بدليل الموافقة وحدد بدقة الأجزاء المسموح بنشرها."
+            ]
+          },
+          {
+            "heading": "4. افصل ترخيص الصورة عن حقوق العلامة والشخص الظاهر",
+            "paragraphs": [
+              "الصورة المتاحة على الإنترنت ليست تلقائياً مجانية للاستعمال التجاري. تشرح المنظمة العالمية للملكية الفكرية أن المبدع يحتفظ بحقوقه وأن الترخيص يحدد الاستعمال المسموح. وعند استخدام مواد تحت رخص المشاع الإبداعي، يجب قراءة الرمز كاملاً: شرط النسبة إلى المؤلف، ومنع الاستخدام التجاري NC، ومنع التعديل ND، أو الترخيص بالمثل SA. لا يكفي أن ترى كلمة «مجاني» على صفحة تحميل. أنشئ سجلاً يتضمن اسم المصور ورابط الأصل ونوع الرخصة وتاريخ الفحص وطريقة التعديل.",
+              "تسمح رخصة Unsplash باستخدام الصور لأغراض تجارية وغير تجارية دون طلب إذن عام، لكنها لا تمنح تلقائياً حقوق العلامات التجارية أو صور الأشخاص المعروفين أو الأعمال الفنية الظاهرة. لهذا لا تضع شعار شركة معروفة على صورة خدمتك لتوحي بوجود شراكة، ولا تستخدم وجهاً معروفاً في إعلان يوحي بالتأييد. الأفضل في معرض الخدمات أن يكون العمل الأساسي من إنتاجك أنت، وأن تستعمل الصورة المرخصة خلفية توضيحية فقط عند الحاجة. وإذا تعذر التحقق من سلسلة الحقوق، استبعد الصورة."
+            ]
+          },
+          {
+            "heading": "5. اختبر صدق الادعاءات والتناسق بين الباقات والصور",
+            "paragraphs": [
+              "اكتب جدول مراجعة بسيطاً بثلاثة أعمدة: «ما الذي توحي به الصورة»، «ما الذي تنص عليه الباقة»، و«الدليل المتاح». إذا أظهرت الصورة لوحة تفاعلية متعددة الصفحات بينما الباقة الأساسية تقدم جدولاً ثابتاً، فهناك تعارض يجب إصلاحه. وإذا كانت الصورة تعرض خمس لغات بينما لا تقدم إلا لغة واحدة، أزل الإيحاء الخاطئ. لا تستعمل أوسمة تقييم أو مستويات أو شارات Fiverr المصنوعة يدوياً؛ فإرشادات المنصة تمنع إضافتها لأن النظام يعرض الشارات الحقيقية بنفسه.",
+              "اختبر ثلاثة أسئلة مع شخص لم يقرأ وصف الخدمة: ماذا سيحصل العميل؟ ما الخطوة التي تُظهرها الصورة؟ وما الذي لا تشمله الباقة؟ دوّن سوء الفهم وعدّل الصورة أو الوصف بناء عليه. يمكنك مقارنة نسختين بمرور الوقت، لكن لا تنسب زيادة الزيارات إلى التصميم وحده دون عزل أثر السعر والموسم والمنافسة. لا تنشر مراجعات أو نتائج قبل وبعد على أنها حقيقية إذا لم تكن كذلك. الدليل الجيد يوضح المهارة وحدودها أكثر مما يثير التوقعات غير الواقعية."
+            ]
+          },
+          {
+            "heading": "6. قائمة تدقيق قبل النشر وخطة صيانة بعده",
+            "paragraphs": [
+              "قبل رفع المعرض تحقق من وضوح النص بحجم صغير، وصحة المقاس، وسلامة اتجاه الكتابة العربية، وحقوق جميع العناصر، وخلو الصور من بيانات الاتصال، وتطابق الأمثلة مع الخدمة الفعلية. افتح ملفات PDF المرفقة إن وجدت، وتأكد من عدم احتوائها على تعليقات مخفية أو أسماء مؤلفين أو بيانات وصفية حساسة. استخدم أسماء ملفات وصفية، ثم عاين المعرض بعد النشر على الهاتف والحاسوب. لا تكرر الصورة نفسها لخدمات مختلفة إذا كانت النتائج التي تعرضها مختلفة.",
+              "حدد موعد مراجعة دوري كلما تغيرت الباقات أو البرنامج الذي تقدم به الخدمة أو قواعد Fiverr. احتفظ بنسخة مؤرخة من الصور والنصوص وروابط التراخيص، وسجل سبب كل تعديل حتى تستطيع معالجة اعتراض متعلق بالحقوق أو تضارب المخرجات. إذا طلب عميل استعمال صور تخصه، اطلب موافقة واضحة على نطاق الاستعمال قبل إضافتها إلى معرضك العام. الهدف من هذه القائمة ليس ضمان المبيعات؛ بل تقديم وصف بصري أمين يقلل النزاعات ويجعل قرار الشراء مبنياً على معلومات يمكن فحصها."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Build an honest Fiverr Gig gallery: original images, licensing and quality checks",
+        "excerpt": "A practical gallery checklist covering official image sizes, demonstrable samples, copyright, client privacy and truthful package claims.",
+        "lead": "A Fiverr gallery can help buyers understand a service, but polished pictures are not proof of work unless their claims are accurate. This guide separates illustrative mockups from actual client results and proposes a repeatable review process for size, legibility, provenance and privacy. The research was checked on 28 October 2026 against Fiverr's official guidance, WIPO copyright material, Creative Commons license explanations and the Unsplash License. Platform rules can change. The article is not legal advice and makes no promise about orders or earnings.",
+        "sections": [
+          {
+            "heading": "1. Treat the gallery as evidence of a deliverable, not decoration",
+            "paragraphs": [
+              "Imagine a freelancer offering Excel data cleanup. A glamorous laptop photograph with the words 'world's best service' proves nothing about their ability to reconcile a spreadsheet. A more useful first image presents a deliberately fictional before-and-after table, identifies the changed columns and shows the rule used to flag duplicates. This is a proposed demonstration, not a claim about a completed client assignment. Start by asking what the buyer needs to inspect before ordering, then give each gallery item one clear job rather than stacking several vague sales promises.",
+              "Plan a sequence of three visuals: the first shows the final output, the second explains a step in the workflow, and the third shows the delivery format or an important limitation. Label invented data as illustrative whenever the distinction could be missed. Do not imply that a mockup is a paid customer case study. Fiverr's current gallery guidance asks for images directly related to the service and warns that irrelevant or misleading imagery can damage trust. No particular photograph or arrangement guarantees search ranking, clicks or orders."
+            ]
+          },
+          {
+            "heading": "2. Follow the technical limits and test the thumbnail",
+            "paragraphs": [
+              "Fiverr's gallery guidance, checked on 28 October 2026, recommends 1280 by 769 pixels at 72 DPI, with a minimum of 712 by 430 and a maximum of 4000 by 2416 pixels. A Gig gallery may contain up to three images, one video and two PDFs. These are platform rules, not universal design standards, and they may change. Export a landscape image at a suitable resolution instead of stretching a tiny screenshot into a blurred banner. Keep the editable source separately so future revisions do not degrade the image.",
+              "Inspect the finished artwork as a small marketplace card on a phone and as a larger desktop preview. If a buyer cannot read the central promise at thumbnail size, remove decoration rather than adding more text. Fiverr currently advises no more than ten words of overlay text and enough contrast for readability. Check the result after compression, especially thin type and detailed tables. If a JPEG fails to upload, the platform suggests removing embedded metadata or trying PNG. An upload that succeeds technically still needs a visual accuracy check."
+            ]
+          },
+          {
+            "heading": "3. Make original samples without exposing client information",
+            "paragraphs": [
+              "A client's invoice, payroll workbook or private dashboard is not suitable public portfolio material merely because you completed the project. Removing a name may leave identifying invoice patterns, dates, account codes or unusual amounts. The safer demonstration is a synthetic dataset created for the sample, with fictional customers and explicitly illustrative figures. Keep a note of how the sample was produced so it is never confused with actual results. A design freelancer can similarly produce a self-initiated concept rather than presenting someone else's published work as their own.",
+              "Fiverr requires original imagery in Design categories and permission for media in other categories. It also prohibits personal contact information in Gig media. Inspect the edges of every screenshot: browser tabs, email addresses, folder paths, logos, chat notifications and workbook metadata. Replace sensitive content before taking the screenshot; weak blur is not a reliable privacy control. If a previous client has explicitly authorized a public example, preserve the scope and evidence of that permission. Permission for private delivery does not automatically authorize a permanent public advertisement."
+            ]
+          },
+          {
+            "heading": "4. Check copyright, license conditions and third-party rights separately",
+            "paragraphs": [
+              "An image being searchable online does not make it free for commercial advertising. The World Intellectual Property Organization explains that creators have rights in original work and may license particular uses. Creative Commons offers several distinct licenses: attribution is required under its standard licenses, while NC restricts commercial use, ND limits distribution of adaptations and SA imposes share-alike conditions. A download button is not a license. Record the original URL, creator, license name, review date, any edits and the attribution wording required by that specific work.",
+              "The Unsplash License allows many commercial and noncommercial uses without a general permission request, but it does not automatically clear trademarks, recognizable people's publicity rights or copyrighted artwork depicted in a photo. Do not place a third-party company logo on your Gig to suggest endorsement, and do not imply that a person in a stock photo is your satisfied customer. An original project screenshot is generally stronger evidence of your own skill than a generic licensed background. When rights cannot be established, leave the asset out rather than relying on an unsupported assumption."
+            ]
+          },
+          {
+            "heading": "5. Audit visual promises against packages and delivery terms",
+            "paragraphs": [
+              "Build a simple three-column check: what the image suggests, what the package actually includes, and what evidence supports the claim. A screenshot of a five-page interactive dashboard conflicts with a basic package offering a single static table unless the difference is explained. Likewise, a multilingual example can mislead buyers if you only deliver in one language. Fiverr explicitly warns against manually adding its badges, level marks or ratings to gallery images, because authentic status indicators are handled by the platform. Avoid fake reviews, invented client logos and unsupported performance statistics.",
+              "Ask someone unfamiliar with the listing three questions after seeing the gallery: what will the buyer receive, what skill does the sample demonstrate, and what is excluded? Note their interpretation without explaining it away, then correct mismatches in the picture or package text. You can test alternate images over time, but any traffic change may reflect competition, price, seasonality or the service itself. A clean visual audit reduces avoidable misunderstandings; it does not predict conversion. Keep a copy of the approved version for later comparison."
+            ]
+          },
+          {
+            "heading": "6. Use a pre-publication checklist and maintain the evidence",
+            "paragraphs": [
+              "Before publishing, confirm dimensions, legibility at small sizes, right-to-left layout where Arabic appears, provenance of every visual element, absence of contact details and agreement with the actual deliverable. If you attach PDFs, open them and inspect hidden comments, author metadata and confidential information. Use descriptive filenames, upload the media and view the live gallery on both mobile and desktop. Reusing the same generic banner for unrelated services can hide meaningful differences in scope. One carefully documented example is better than three decorative images that buyers cannot evaluate.",
+              "Review the gallery whenever the service packages, software versions or Fiverr rules change. Archive dated image versions and license records, and note why each change was made. If a customer asks you to use their materials, distinguish permission to perform the job from permission to advertise the result publicly. Ask before adding any customer asset to a permanent public gallery. The objective is not to manufacture social proof or promise revenue; it is to make an honest, testable representation of the work and lower the risk of rights disputes or disappointing delivery."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Créer une galerie Fiverr honnête : images originales, droits et contrôle qualité",
+        "excerpt": "Une méthode pratique pour vérifier les dimensions, les exemples de travail, les licences, la confidentialité et les promesses d'une prestation.",
+        "lead": "La galerie d'une prestation Fiverr peut éclairer le choix d'un acheteur, mais une belle image ne démontre pas à elle seule une compétence. Ce guide distingue les maquettes fictives des résultats réellement obtenus et propose une méthode reproductible pour contrôler dimensions, lisibilité, droits et confidentialité. La recherche a été vérifiée le 28 octobre 2026 à partir des consignes officielles de Fiverr, des explications de l'OMPI, de Creative Commons et de la licence Unsplash. Les règles peuvent changer. Il ne s'agit ni d'un avis juridique ni d'une promesse de commandes.",
+        "sections": [
+          {
+            "heading": "1. Utiliser la galerie comme preuve du livrable, pas comme décoration",
+            "paragraphs": [
+              "Imaginons une prestation de nettoyage de fichiers Excel. Une photographie séduisante d'ordinateur accompagnée de « meilleur service au monde » ne prouve aucune compétence de rapprochement des données. Une première image plus utile montre un tableau fictif avant et après traitement, les colonnes modifiées et la règle de détection des doublons. Il s'agit d'une démonstration proposée, et non d'une mission réellement effectuée pour un client. Commencez par identifier ce que l'acheteur doit pouvoir vérifier avant de commander, puis attribuez une fonction précise à chaque élément visuel.",
+              "Prévoyez trois illustrations complémentaires : le résultat final, une étape de la méthode et le format de livraison ou une limite importante. Indiquez clairement « données fictives » lorsque la distinction pourrait échapper au lecteur. Ne présentez jamais une maquette comme une étude de cas payante. Les recommandations actuelles de Fiverr demandent des visuels directement liés à la prestation et mettent en garde contre les images trompeuses ou hors sujet. Aucune composition graphique ne garantit une meilleure position dans les recherches, des commandes ou un revenu."
+            ]
+          },
+          {
+            "heading": "2. Respecter les dimensions et vérifier l'aperçu miniature",
+            "paragraphs": [
+              "Selon les recommandations de Fiverr consultées le 28 octobre 2026, l'image conseillée mesure 1280 × 769 pixels à 72 DPI ; le minimum est de 712 × 430 et le maximum de 4000 × 2416 pixels. Une galerie peut contenir trois images, une vidéo et deux PDF au maximum. Ces paramètres propres à la plateforme peuvent évoluer. Préparez un visuel horizontal net au lieu d'agrandir une capture de mauvaise qualité. Conservez le fichier source modifiable pour les corrections futures, sans multiplier les compressions successives.",
+              "Examinez la miniature dans une simulation de carte mobile, puis dans l'affichage sur ordinateur. Si le message essentiel disparaît, supprimez les ornements plutôt que d'ajouter de nouvelles phrases. Fiverr recommande actuellement dix mots au maximum en surimpression et un contraste suffisant. Vérifiez le rendu après exportation, surtout les caractères fins et les tableaux. Si un JPEG ne passe pas, l'aide de la plateforme propose de retirer les métadonnées ou d'essayer le PNG. La réussite du téléchargement ne dispense jamais de contrôler la véracité du visuel."
+            ]
+          },
+          {
+            "heading": "3. Créer des exemples originaux sans divulguer de données privées",
+            "paragraphs": [
+              "Une facture de client, un fichier de paie ou un tableau de bord interne ne devient pas une pièce de portfolio public simplement parce que vous avez réalisé la mission. Effacer un nom peut laisser des dates, des codes ou des montants suffisamment singuliers pour identifier une personne. Construisez plutôt un jeu de données synthétique avec des clients imaginaires et des chiffres présentés comme des exemples. Documentez sa fabrication afin de ne jamais le confondre avec un résultat réel. Pour une prestation de design, produisez un concept personnel plutôt que de vous attribuer le travail d'autrui.",
+              "Fiverr exige des visuels originaux dans les catégories de design et une autorisation d'utilisation pour les autres médias. Les coordonnées personnelles sont également interdites dans les supports de la prestation. Inspectez les onglets du navigateur, les adresses électroniques, les chemins de fichiers, les notifications et les métadonnées. Remplacez les informations sensibles avant la capture ; un floutage léger peut rester insuffisant. Si un ancien client autorise expressément un exemple public, conservez la preuve et le périmètre exact de son accord. L'autorisation de livrer un travail n'est pas automatiquement une autorisation de publicité."
+            ]
+          },
+          {
+            "heading": "4. Distinguer droit d'auteur, licence et droits des tiers",
+            "paragraphs": [
+              "Une image accessible dans un moteur de recherche n'est pas libre de droits pour une annonce commerciale. L'Organisation mondiale de la propriété intellectuelle rappelle que le créateur dispose de droits et peut autoriser certains usages. Les licences Creative Commons ne sont pas interchangeables : l'attribution est exigée par les licences standards, NC restreint l'usage commercial, ND limite les adaptations diffusées et SA impose des conditions de partage. Le bouton « télécharger » ne constitue pas une autorisation. Notez le lien d'origine, l'auteur, la licence exacte, la date de vérification et les modifications effectuées.",
+              "La licence Unsplash autorise de nombreux usages commerciaux et non commerciaux, mais elle ne règle pas automatiquement les droits sur les marques, l'image des personnes reconnaissables ou les œuvres protégées visibles dans une photographie. N'utilisez pas un logo connu pour suggérer un partenariat inexistant, ni une personne figurant sur une photo comme prétendu client satisfait. Un exemple de votre propre travail est souvent plus probant qu'un arrière-plan générique. Lorsque la chaîne des droits reste incertaine, renoncez au fichier au lieu de transformer une hypothèse en autorisation."
+            ]
+          },
+          {
+            "heading": "5. Comparer les promesses visuelles aux offres réellement vendues",
+            "paragraphs": [
+              "Construisez une grille à trois colonnes : ce que l'image laisse penser, ce que la formule inclut réellement et la preuve disponible. Une capture de tableau de bord interactif sur cinq pages contredit une offre de base limitée à un tableau statique si la différence n'est pas explicitée. De même, une démonstration en plusieurs langues peut tromper l'acheteur si vous ne livrez qu'en français. Fiverr interdit d'ajouter soi-même ses badges, niveaux ou évaluations aux images, car la plateforme affiche les véritables indicateurs. Excluez les faux avis et les statistiques de performance non documentées.",
+              "Montrez la galerie à une personne qui ne connaît pas votre activité et demandez-lui ce qu'elle pense recevoir, quelle compétence est démontrée et ce qui n'est pas inclus. Notez les malentendus sans fournir d'explication orale, puis corrigez les images ou les formules. Tester deux visuels dans le temps est possible, mais une évolution du trafic peut dépendre du prix, de la concurrence ou de la saison. Une vérification honnête réduit les risques de litige ; elle ne permet pas de prévoir le taux de conversion ni de promettre des ventes."
+            ]
+          },
+          {
+            "heading": "6. Effectuer les contrôles avant publication et conserver les preuves",
+            "paragraphs": [
+              "Avant la mise en ligne, vérifiez la taille, la lisibilité en miniature, l'orientation des textes arabes éventuels, la provenance de chaque élément et l'absence de coordonnées ou de données privées. Assurez-vous que les exemples correspondent au livrable réel. Si vous joignez un PDF, ouvrez-le et inspectez les commentaires cachés, les noms d'auteurs et les métadonnées. Choisissez des noms de fichiers descriptifs, puis contrôlez l'affichage public sur mobile et sur ordinateur. Une seule démonstration solide vaut mieux que plusieurs images décoratives sans rapport précis avec le service.",
+              "Réexaminez la galerie après chaque changement des formules, du logiciel utilisé ou des règles de Fiverr. Archivez les versions datées, les licences et la raison de chaque modification. Si un client souhaite fournir ses propres images, distinguez son autorisation de les utiliser pour exécuter la commande de celle de les publier dans une publicité permanente. Obtenez un accord explicite avant toute exposition publique. Cette démarche ne promet ni revenu ni classement : elle rend la prestation vérifiable et réduit les risques de contestation sur les droits ou le contenu livré."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1758468772752-ed3da7e9b8ee",
+    "source": "https://unsplash.com/photos/laptop-camera-and-notebook-on-wooden-desk-8tItT1tfKhE",
+    "photographer": "Fujiphilm",
+    "alt": "Laptop, camera and notebook arranged on a wooden desk",
+    "altAr": "حاسوب محمول وكاميرا ودفتر ملاحظات فوق مكتب خشبي",
+    "altFr": "Ordinateur portable, appareil photo et carnet sur un bureau en bois",
+    "license": "Unsplash License"
+  },
+  "resourceIds": [
+    "fiverr",
+    "fiverrHelp"
+  ],
+  "review": {
+    "checkedAt": "2026-10-28",
+    "ready": true,
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Official Fiverr rules, WIPO and Creative Commons independently checked; Unsplash photo free license verified 2026-10-28, unique against published photo registries; all three translations edited for factual alignment and standard Arabic."
+  }
+}
