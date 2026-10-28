@@ -13,10 +13,13 @@
       "org": "Ministère de l’Intérieur · Province de Settat",
       "place": "Settat, Maroc",
       "count": 4,
-      "deadline": "2026-11-09",
+      "deadline": "2026-11-02",
       "url": "https://www.emploi-public.ma/fr/concours/details/81e89845-6649-430e-98a2-65a32c048a48",
       "kind": "official_notice",
-      "verifiedBy": "emploi-public.ma"
+      "verifiedBy": "emploi-public.ma",
+      "portalDeadline": "2026-11-09",
+      "deadlineBasis": "Earlier date in three-page signed official opening notice; portal currently lists 2026-11-09 at 16:30. Treat the difference as unresolved and apply before 2026-11-02 16:30.",
+      "noticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/81e89845-6649-430e-98a2-65a32c048a48"
     },
     {
       "id": "sett-engineer",
