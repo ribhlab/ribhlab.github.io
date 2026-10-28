@@ -264,7 +264,9 @@ async function publishArticle(){
  const s=tax.sections.find(k=>k.id===data.sectionId),p=plan.sections.find(k=>k.id===data.sectionId);
  if(!s||!p)fail('الملف التحريري للقسم غير متطابق.');
  if(s.publishedSlugs.length>=s.targetArticles||p.publishedSlugs.length>=p.targetArticles)fail('القسم بلغ الحد المستهدف. عدّل سعة القسم أولاً.');
- s.publishedSlugs.push(slug);p.publishedSlugs.push(slug);plan.lastReviewed=date();
+ s.publishedSlugs.push(slug);p.publishedSlugs.push(slug);
+ if(!existing&&Array.isArray(p.ideas)&&p.ideas.length)p.ideas.shift();
+ plan.lastReviewed=date();
  photos.articlePhotos[slug]=data.photo;photos.updated=date();
  const ids=[];
  for(let i=0;i<Math.min(data.article.sources.length,10);i++){
