@@ -385,10 +385,11 @@
         "bls",
         "fed"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/cpi-release-basket-how-read/",
       "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/cpi-release-basket-how-read.json"
+      "publishedVerifiedAt": "2026-10-28",
+      "verification": "Source JSON in content/articles, build and deploy success runs 40721146519/40721146355; live HTTP 200, five sections, sources and licensed photo verified for AR/EN/FR in public-sitemap run 40721235285"
     },
     {
       "sectionId": "gold-macro",
