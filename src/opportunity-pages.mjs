@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 
 const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const db=JSON.parse(fs.readFileSync(path.join(project,'content/opportunities-data.json'),'utf8'));
+const researchedArticles=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-articles.json'),'utf8')).articles;
 const guidance=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-guides.json'),'utf8')).guides;
 const visualCatalog=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-photography.json'),'utf8'));
 const photoFor=key=>visualCatalog.items[key];
@@ -104,14 +105,24 @@ export function renderOpportunityPages(lang,page,esc){
     'Consultez l’avis et son échéance, préparez un CV adapté et les pièces requises, puis candidatez uniquement via la procédure officielle.',
     'Évitez les intermédiaires douteux et les paiements non vérifiés. Les conditions et disponibilités peuvent évoluer.'
    ]})[lang];
+   const researched=researchedArticles[item.id];
+   const manuscript=researched?.translations?.[lang];
+   const articleSections=manuscript?.sections?.length>=6
+     ? manuscript.sections.map(([heading,text],i)=>'<section class="opp-guide-section" id="part-'+(i+1)+'"><h2>'+esc(heading)+'</h2><p>'+esc(text)+'</p></section>').join('')
+     : '';
    const sections=(special?special.slice(1):general).map((body,i)=>'<section class="opp-guide-section"><h2>'+esc(h[i])+'</h2><p>'+esc(body)+'</p></section>').join('');
-   const lead=special?special[0]:item.title;
+   const lead=manuscript?.deck||(special?special[0]:item.title);
    const back=base+item.section+'/';
    const official='<a class="opp-action" rel="noopener noreferrer external" target="_blank" href="'+esc(safeHref(item.url))+'">'+esc(({ar:'انتقل إلى المصدر الرسمي للتحقق أو التقديم',en:'Visit official source to verify or apply',fr:'Consulter la source officielle pour vérifier ou postuler'})[lang])+' ↗</a>';
    const introText=({ar:'دليل تحريري داخل RibhLab، وليس ضماناً بوجود منصب أو قبول طلب. تحقق من آخر التحديثات قبل اتخاذ القرار.',en:'An on-site editorial guide, not a guarantee of vacancy or acceptance. Verify current details before acting.',fr:'Guide éditorial sur RibhLab, sans garantie de poste ou d’admission. Vérifiez les informations actuelles.'})[lang];
-   const body='<div class="opportunity-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><h1>'+esc(item.title)+'</h1><p>'+esc(lead)+'</p></div></section><main class="section shell"><div class="opp-advisory"><p>'+esc(introText)+'</p></div><article class="opp-guide-article">'+sections+'<section class="opp-guide-section"><h2>'+esc(({ar:'المصدر والخطوة التالية',en:'Official source and next step',fr:'Source officielle et prochaine étape'})[lang])+'</h2><p>'+esc(item.org)+' · '+esc(item.place)+'</p>'+official+'</section></article></main></div>';
-   page(lang,{title:item.title+' | RibhLab',desc:special?special[1]:introText,route:base+item.section+'/'+encodeURIComponent(item.id)+'/',content:body,active:'opportunities'});
+   const sources=researched?.sources?.length
+     ? '<section class="opp-guide-section opp-guide-sources"><h2>'+esc(({ar:'المصادر الحكومية التي استند إليها المقال',en:'Official government sources consulted',fr:'Sources officielles consultées'})[lang])+'</h2><p>'+esc(({ar:'هذه المصادر موضوعة للمراجعة والتقديم بعد قراءة المقال. تفتح في تبويب جديد.',en:'These sources support the article and open in a new tab for verification or applications.',fr:'Ces sources fondent le guide ; elles s’ouvrent dans un nouvel onglet pour vérification ou démarches.'})[lang])+'</p><ul>'+researched.sources.map(source=>'<li><a href="'+esc(safeHref(source.url))+'" target="_blank" rel="noopener noreferrer external">'+esc(source.label)+' ↗</a></li>').join('')+'</ul></section>'
+     : '';
+   const articleMeta=manuscript?'<p class="opp-guide-meta">'+esc(({ar:'مراجعة المصادر',en:'Sources reviewed',fr:'Sources vérifiées'})[lang])+' : <time datetime="'+esc(researched.reviewedAt)+'">'+esc(researched.reviewedAt)+'</time> · '+manuscript.sections.length+' '+esc(({ar:'محاور تفصيلية',en:'detailed sections',fr:'rubriques détaillées'})[lang])+'</p>':'';
+   const inner=manuscript?articleSections+sources:sections;
+   const body='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><div class="opp-guide-header"><h1>'+esc(manuscript?.title||item.title)+'</h1><p>'+esc(lead)+'</p>'+articleMeta+'</div></div></section><main class="section shell opp-guide-layout"><div class="opp-advisory"><p>'+esc(introText)+'</p></div><article class="opp-guide-article">'+inner+'<section class="opp-guide-section"><h2>'+esc(({ar:'المصدر والخطوة التالية',en:'Official source and next step',fr:'Source officielle et prochaine étape'})[lang])+'</h2><p>'+esc(item.org)+' · '+esc(item.place)+'</p>'+official+'</section></article></main></div>';
+   page(lang,{title:(manuscript?.title||item.title)+' | RibhLab',desc:manuscript?.deck||(special?special[1]:introText),route:base+item.section+'/'+encodeURIComponent(item.id)+'/',content:body,active:'opportunities'});
    // Retain the short UK route as an internal page, not an external redirect.
-   if(item.id==='uk-visa') page(lang,{title:item.title+' | RibhLab',desc:special?special[1]:introText,route:base+'immigration/uk/',content:body,active:'opportunities'});
+   if(item.id==='uk-visa') page(lang,{title:(manuscript?.title||item.title)+' | RibhLab',desc:manuscript?.deck||(special?special[1]:introText),route:base+'immigration/uk/',content:body,active:'opportunities'});
   }
 }
