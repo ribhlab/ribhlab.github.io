@@ -1528,6 +1528,215 @@
           ]
         }
       }
+    },
+    "sett-engineer": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Read all three pages of the official Arabic signed opening decision and compared three individual official emploi-public portal cards on 28 October 2026. The deadline and SIG post count conflict; no signed corrigendum was located.",
+      "state": "verified-with-official-deadline-and-headcount-conflicts",
+      "sources": [
+        {
+          "label": "Province de Settat — signed three-page recruitment notice (original PDF, consulted 28 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/7cf772aa-1a10-4769-8d24-bf2e5d55a471"
+        },
+        {
+          "label": "Official portal — GIS State Engineer C44151/26 (2 positions shown, 9 November deadline; checked 28 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/7cf772aa-1a10-4769-8d24-bf2e5d55a471"
+        },
+        {
+          "label": "Official portal — Applied statistics C44150/26 (checked 28 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/53e69319-5ad4-41c7-a63a-ae85dbb6094b"
+        },
+        {
+          "label": "Official portal — Civil engineering C44149/26 (checked 28 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/932f24ff-71a0-4088-8356-e919e41bd720"
+        },
+        {
+          "label": "Moroccan ministry responsible for public administration — Public Employment Portal service description (consulted 28 October 2026)",
+          "url": "https://mmsp.gov.ma/fr/nos-services/portail-de-l%E2%80%99emploi-public"
+        }
+      ],
+      "facts": {
+        "employer": "Ministère de l’Intérieur — Province de Settat",
+        "city": "Settat",
+        "country": "Maroc",
+        "reference": "C44149/26; C44150/26; C44151/26",
+        "grade": "Ingénieur d'État 1er grade, échelle 11",
+        "posts": 3,
+        "officialSignedPostBreakdown": {
+          "civil": 1,
+          "statistics": 1,
+          "gis": 1
+        },
+        "portalGISCount": 2,
+        "positionCountConflicts": [
+          "Signed three-page notice: 1 GIS post; portal C44151/26: 2 GIS posts (28 October 2026)"
+        ],
+        "deadline": "2026-11-02T16:30",
+        "portalDeadline": "2026-11-09T16:30",
+        "deadlineConflicts": [
+          "2026-11-02T16:30 (signed opening notice, page 3)",
+          "2026-11-09T16:30 (official portal, 28 October 2026)"
+        ],
+        "testDate": "2026-11-29",
+        "testPlace": "Faculté des sciences juridiques et politiques de Settat; other centers if required",
+        "nationality": "Marocaine",
+        "age": "18 à 45 ans au 1er janvier 2026",
+        "degree": "Diplôme d'ingénieur d'État dans la spécialité indiquée, ou équivalent légal",
+        "experienceYears": null,
+        "submission": "https://depot.emploi-public.ma/",
+        "documents": [
+          "Copie du diplôme",
+          "Copie de la CNIE",
+          "CV",
+          "Décision d'équivalence pour diplôme étranger ou privé si applicable",
+          "Autorisation administrative pour fonctionnaires si applicable",
+          "Justificatifs des catégories réservées ou du handicap si applicable"
+        ],
+        "writtenExam": "3 heures, coefficient 4; seuil de 12/20 pour accéder à l'oral",
+        "oralExam": "Oral et/ou pratique, 30 à 45 minutes, coefficient 3",
+        "salary": null,
+        "reviewedSourcesAt": "2026-10-28"
+      },
+      "translations": {
+        "ar": {
+          "title": "مهندسو الدولة بعمالة سطات 2026: ثلاثة تخصصات وشروط المباراة وتحذير من اختلاف الموعد",
+          "deck": "قراءة موثقة لقرار توظيف مهندسين في الهندسة المدنية والإحصاء ونظم المعلومات الجغرافية: ثلاثة مناصب في القرار، ومباراة 29 نوفمبر، وتعارض رسمي بين 2 و9 نوفمبر في آخر أجل وبين عدد مناصب SIG.",
+          "sections": [
+            [
+              "ما الذي أعلنته عمالة إقليم سطات فعلياً؟",
+              "أصدرت عمالة إقليم سطات، التابعة لوزارة الداخلية المغربية، إعلاناً من ثلاث صفحات لتنظيم مباراة يوم الأحد 29 نوفمبر 2026 بكلية العلوم القانونية والسياسية بسطات، مع إمكان اعتماد مراكز أخرى عند الحاجة. يضم القرار ثلاثة مناصب لمهندسي الدولة من الدرجة الأولى، السلم 11: منصباً للهندسة المدنية، ومنصباً للإحصاء والاقتصاد التطبيقي، ومنصباً لنظم المعلومات الجغرافية. ويشمل الإعلان نفسه خمسة مناصب أخرى للمتصرفين، لكنها ليست جزءاً من هذا الدليل الهندسي. لا يجوز جمع هذه الدرجات في وظيفة واحدة أو اعتبار الإعلان عقد عمل خاصاً؛ نحن أمام مباراة للتوظيف العمومي تخضع للانتقاء والاختبارات المعلنة."
+            ],
+            [
+              "التخصصات المقبولة: الهندسة المدنية والإحصاء والجيوماتيك",
+              "يفصل الجدول الأصلي ثلاث فئات هندسية مختلفة. في الهندسة المدنية يرد تخصص Ingénieur en Génie civil. وفي الإحصاء والاقتصاد التطبيقي تُذكر هندسة البيانات وذكاء الأعمال، وعلوم البيانات والذكاء الاصطناعي، والاقتصاد التطبيقي والإحصاء والبيانات الضخمة، والتحليلات وعلوم البيانات. أما نظم المعلومات الجغرافية فتشمل الجيوماتيك ونظم المعلومات الجغرافية، والطبوغرافيا والجيوماتيك، والعلوم الجيومكانية والاستشعار عن بعد، وعلوم المعلومات الجغرافية والهندسة الطبوغرافية. هذه أمثلة للتسميات التي يذكرها القرار، وليست تصريحاً بأن أي شهادة تحمل كلمة «بيانات» أو «هندسة» تُقبل تلقائياً. راجع اسم تخصصك المكتوب في الدبلوم مقابل نص الجدول."
+            ],
+            [
+              "شرط الجنسية والسن والشهادة عند التسجيل",
+              "يشترط الإعلان الجنسية المغربية، وأن يكون عمر المترشح بين 18 و45 سنة في فاتح يناير من السنة الجارية، أي في 1 يناير 2026. ويطلب دبلوم مهندس دولة في التخصص المعني صادر عن مؤسسة وطنية مؤهلة، أو شهادة معادلة وفق النصوص التنظيمية. لا يكفي امتلاك إجازة في المعلوماتية أو ماستر في مجال قريب لإثبات الأهلية لمنصب مهندس دولة دون تحقق من طبيعة الشهادة والمعادلة المطلوبة. وعلى خريج مؤسسة خاصة أو أجنبية مراجعة قرار المعادلة المنشور في الجريدة الرسمية، وإرفاقه عند الاقتضاء. لا يذكر القرار شرط سنوات خبرة مهنية، ولذلك لا ينبغي اختلاق حد أدنى للخبرة."
+            ],
+            [
+              "تعارض جوهري بين القرار والبوابة: آخر أجل وعدد مناصب SIG",
+              "تحدد الصفحة الثالثة من القرار الأصلي فترة التسجيل من 19 أكتوبر إلى الاثنين 2 نوفمبر 2026 عند الساعة 16:30. لكن بطاقات البوابة الرسمية للمهندسين، التي روجعت يوم 28 أكتوبر، تعرض 9 نوفمبر 2026 عند الساعة 16:30. ويوجد اختلاف آخر: قرار التوظيف يخصص منصباً واحداً لنظم المعلومات الجغرافية، بينما تعرض بطاقة SIG ذات المرجع C44151/26 منصبين. لا نملك قراراً تصحيحياً رسمياً يفسر هذين الاختلافين، ولا يصح تقديم التاريخ المتأخر أو العدد الأكبر باعتبارهما محسومين. الاحتياط العملي هو استكمال التسجيل قبل 2 نوفمبر 16:30 والتواصل مع الجهة المنظمة لطلب توضيح مكتوب، ومراقبة أي إعلان تصحيحي."
+            ],
+            [
+              "كيف تختار البطاقة الرسمية الصحيحة قبل التقديم؟",
+              "توجد ثلاث بطاقات رسمية مرتبطة بالتخصصات الهندسية: C44149/26 للهندسة المدنية، وC44150/26 للإحصاء والاقتصاد التطبيقي، وC44151/26 لنظم المعلومات الجغرافية. افتح بطاقة التخصص الذي يطابق دبلومك واقرأ قرار المباراة المرفق بها، ولا تكتفِ بعنوان «مهندس دولة» العام. افحص عدد المناصب وتاريخ آخر أجل في البطاقة ثم قارنهما بالقرار الموقع، لأن الاختلاف هنا موثق. استعمل بوابة الإيداع depot.emploi-public.ma لإرسال الطلب؛ نموذج «الاتصال بالإدارة» الظاهر في صفحة التفاصيل ليس قناة ترشح. احفظ رقم المرجع ونسخة من وصل الإيداع وأي رسالة تؤكد نجاح التسجيل."
+            ],
+            [
+              "الوثائق الأساسية والملفات التي تتطلب إثباتاً إضافياً",
+              "تذكر الصفحة الثالثة إرفاق نسخة من الدبلوم المطلوب، ونسخة من البطاقة الوطنية للتعريف الإلكترونية، والسيرة الذاتية. بالنسبة للشهادات الأجنبية أو الصادرة عن المؤسسات الخاصة، يطلب القرار وثيقة المعادلة المنشورة في الجريدة الرسمية والشهادة المعنية. ويجب على الموظفين العموميين الحصول على موافقة إدارتهم على المشاركة، إضافة إلى التسجيل الإلكتروني. أما أصحاب صفات مقاوم أو مكفول الأمة أو عسكري قديم، فعليهم سلوك المسطرة الإدارية الإضافية المبينة في القرار. ويقدم المترشح في وضعية إعاقة الشهادة المختصة. لا نضيف وثائق إلزامية من عندنا؛ إن طلبت المنصة حقولاً إضافية، اتبع تعليماتها واحفظ الملفات واضحة ومقروءة."
+            ],
+            [
+              "الاختبار الكتابي والشفوي: المدة والمعامل والانتقال",
+              "تخصص المباراة للمهندسين اختباراً كتابياً مدته ثلاث ساعات بمعامل 4. يمكن أن يكون موضوعاً عاماً أو أسئلة متعددة الاختيارات حول المهام والوظائف المطلوبة، واختصاصات وزارة الداخلية، أو التخصص الهندسي المعلن. يليه اختبار شفوي أو تطبيقي أو هما معاً، مدته بين 30 و45 دقيقة بمعامل 3، وتناقش فيه اللجنة مسائل مرتبطة بالقدرة على ممارسة المهام. ولا ينتقل إلى الاختبار الشفوي إلا من حصل على 12 من 20 على الأقل في الكتابي. لا يذكر القرار نموذج أسئلة ثابتاً ولا يضمن اجتياز الاختبار بمجرد بلوغ عتبة الكتابي؛ الترتيب النهائي والنتائج يخضعان لإجراءات المباراة."
+            ],
+            [
+              "خطة تحضير واقعية حسب كل تخصص",
+              "للهندسة المدنية، يمكن بناء مراجعة حول قراءة المخططات، تقدير الكميات، أساسيات الأشغال العمومية والسلامة، ثم ربط الإجابات باختصاصات الجماعات والإدارة الترابية دون ادعاء أن هذه محاور رسمية حصرية. وللإحصاء وعلوم البيانات، راجع تنظيف البيانات، تصميم المؤشرات، التحيز في العينات، تفسير النتائج وحماية المعطيات الشخصية؛ حضّر مثالاً يبين الفرق بين ارتباط إحصائي وقرار إداري. وفي SIG، تمرن على نظم الإحداثيات، جودة الطبقات، الإسقاطات، الاستشعار عن بعد والتحقق الميداني. هذه مقترحات تدريبية من هيئة التحرير وليست لائحة رسمية للأسئلة. اترك وقتاً لمراجعة دور وزارة الداخلية والتواصل الشفوي الواضح."
+            ],
+            [
+              "الحصص القانونية والنتائج ومكان التعيين والراتب",
+              "ينص القرار على تخصيص 25% من المناصب المالية المتبارى بشأنها للفئات المحددة من المقاومين ومكفولي الأمة والعسكريين القدامى، و7% للأشخاص في وضعية إعاقة وفق الشروط القانونية. لا يعني ذلك ضمان منصب لكل مترشح من هذه الفئات، ولا ينبغي تفسير النسب بمعزل عن آليات تطبيقها على العدد المحدود للمناصب. تنشر لوائح المقبولين ونتائج الاختبارات عبر بوابة التشغيل العمومي، ويُعد نشر الاستدعاء على الموقع بمثابة استدعاء للمشاركة. يحدد الإعلان إجراء الاختبار بسطات وتعيين الناجحين بعمالة الإقليم، لكنه لا يحدد أجراً شهرياً صافياً. السلم 11 توصيف للدرجة، وليس راتباً فردياً مؤكداً."
+            ],
+            [
+              "الخطوات الأخيرة والمخاطر التي ينبغي تجنبها",
+              "ابدأ بمقارنة تخصص شهادة مهندس الدولة بالجدول الأصلي، ثم افتح البطاقة الحكومية ذات المرجع المناسب. جهز ملفات الهوية والدبلوم والسيرة الذاتية والمعادلة أو الترخيص الإداري إن لزم، وسجل عبر القناة الرسمية قبل الموعد الأسبق الوارد في القرار. بعد الإرسال، تحقق من وصول الطلب ولا تعتمد على لقطة شاشة غير مكتملة. تابع لائحة المقبولين ومواعيد الاختبارات على الموقع نفسه، وتجنب دفع مبالغ لوسطاء يدعون حجز مقاعد أو تسريب مواضيع. إذا ظهر تصحيح رسمي يغير التاريخ أو عدد المناصب، ينبغي تحديث هذا التقرير وتوثيق رابط القرار الجديد. حتى ذلك الحين يبقى اختلاف 2 و9 نوفمبر، وكذلك اختلاف عدد مناصب SIG، معلناً بوضوح."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Settat State Engineer recruitment 2026: three disciplines and conflicting official deadlines",
+          "deck": "A source-checked guide to civil engineering, applied statistics and GIS positions, examination rules and documents. The signed notice gives 2 November and one GIS post; the government portal shows 9 November and two GIS posts.",
+          "sections": [
+            [
+              "What Settat Province actually announced",
+              "The Province of Settat, part of Morocco's Ministry of the Interior, issued a three-page recruitment notice for a public-service examination on Sunday 29 November 2026. The venue is the Faculty of Legal and Political Sciences in Settat, with additional centres possible if needed. The signed notice allocates three first-grade State Engineer positions, scale 11: one in civil engineering, one in applied statistics and economics, and one in geographic information systems. The same document lists five separate second-grade administrator positions; these are not engineering jobs and should not be included in the three-position engineering total. This is a competitive public recruitment process, not a private employment offer or a promise of appointment."
+            ],
+            [
+              "Three different engineering specialties and their accepted labels",
+              "The signed table identifies civil engineering as Ingénieur en Génie civil. For applied statistics and economics, it lists data engineering and business intelligence, data science and artificial intelligence, applied economics with statistics and big data, business intelligence and analytics, and data science. The GIS track includes geomatics and geographic information systems, surveying and geomatics, geospatial sciences and remote sensing, geographic information sciences, and geomatics with surveying engineering. These labels are taken from the original notice; they do not mean that every degree containing the word engineering or data is automatically eligible. Candidates must compare the actual designation of their State Engineer diploma and any equivalence decision with the relevant specialty."
+            ],
+            [
+              "Nationality, age and diploma requirements",
+              "The notice opens the competition to Moroccan nationals aged at least 18 and at most 45 on 1 January 2026. It requires a State Engineer diploma in the specified specialty issued by an authorized Moroccan institution, or a legally equivalent qualification. A bachelor's degree in computing or a related master's degree should not be treated as automatically satisfying a State Engineer diploma requirement. Graduates of foreign or private institutions should check whether an equivalence decision published in the Official Bulletin is necessary and include the appropriate evidence. The notice does not impose a minimum number of years of professional experience. Adding a fictional experience threshold would wrongly discourage potentially eligible applicants."
+            ],
+            [
+              "Two official contradictions: closing date and GIS headcount",
+              "Page three of the signed notice states that online applications run from 19 October until Monday 2 November 2026 at 16:30. Yet the government portal pages checked on 28 October display 9 November 2026 at 16:30. The discrepancy is not limited to dates: the signed decision assigns one GIS post, whereas the portal's GIS entry C44151/26 displays two posts. We have not located a signed correction resolving either difference. RibhLab therefore does not present the later deadline or the higher count as established fact. The prudent approach is to submit by the earlier 2 November deadline, seek written clarification from the organizer and watch for an official amended decision."
+            ],
+            [
+              "Choose the exact government listing before submitting",
+              "Three distinct government references identify the engineering specialties: C44149/26 for civil engineering, C44150/26 for applied statistics and economics, and C44151/26 for GIS. Open the entry that matches your diploma, download its attached signed notice and compare the specialty table, headcount and deadline. The general heading 'State Engineer' is not sufficient to establish which vacancy you are applying for. The official submission channel is depot.emploi-public.ma; the contact-the-administration form on a listing page does not submit a candidacy. Save the reference code, an acknowledgment or receipt if supplied, and the time of your submission. Never assume an unfinished form is a registered application."
+            ],
+            [
+              "Application documents and special supporting evidence",
+              "The notice expressly requests a copy of the required diploma, a copy of the Moroccan electronic national identity card and a CV. Foreign or private qualifications may require the published equivalence decision as well as the underlying diploma. Applicants already employed in public administration must obtain authorization from their employer to participate, in addition to completing online registration. Candidates applying under the legally recognized categories for resistance veterans, wards of the nation or former military personnel must follow the additional administrative procedure stated in the notice. Applicants with disabilities should provide the relevant official certificate. These are the document rules found in the original text, not a speculative checklist of extra mandatory attachments."
+            ],
+            [
+              "Written test, oral or practical assessment and threshold",
+              "For State Engineers, the written examination lasts three hours and carries coefficient four. It may take the form of a general topic or multiple-choice questions relating to the position's duties, the Ministry of the Interior's responsibilities or the advertised engineering discipline. A subsequent oral and/or practical assessment lasts between 30 and 45 minutes with coefficient three. Candidates must achieve at least 12 out of 20 in the written examination to qualify for the oral stage. Passing that threshold does not guarantee final selection, and the notice does not publish a fixed question bank. Preparation should address technical reasoning and the ability to explain decisions, rather than relying on purported leaked questions."
+            ],
+            [
+              "A preparation plan tailored to the chosen discipline",
+              "Civil-engineering candidates can practise interpreting drawings, estimating quantities, public works safety and basic project controls, while learning how territorial administrations operate. Statistics and data candidates should revisit data cleaning, indicator definitions, sample bias, interpretation, reproducibility and personal-data safeguards; a worked example can show why correlation is not administrative causation. GIS candidates can revise coordinate reference systems, projections, layer quality, remote-sensing interpretation and field validation. These are independent preparation suggestions, not an official syllabus. All candidates should reserve time for the Ministry's functions, concise oral communication and timed practice, because the assessment may test both technical knowledge and the ability to justify practical choices."
+            ],
+            [
+              "Reserved quotas, results, work location and pay",
+              "The notice specifies 25% of the budgeted posts for the legally identified categories of resistance veterans, wards of the nation and former military personnel, and 7% for people with disabilities, subject to the applicable rules. These percentages should not be mistaken for guaranteed individual appointments, particularly when only a few positions are involved. The public employment portal publishes the list of admitted candidates and subsequent results; the online publication of the examination summons counts as notification. The examination venue is Settat and the signed notice says successful candidates will be appointed in the Province of Settat. It does not publish a precise net monthly salary. Scale 11 identifies the grade, not an individualized take-home-pay quote."
+            ],
+            [
+              "Final application checklist and avoidable risks",
+              "First compare your diploma with the signed specialty table, then use the corresponding official listing and prepare identity, diploma and CV files. Add a published equivalence decision, public-employer authorization or protected-category evidence when applicable. Complete the online submission before the earlier date stated in the signed notice and retain proof that the application was received. Monitor the official portal for admission lists and any amended decision. Do not pay intermediaries who claim to reserve posts or sell examination questions. If a formal correction changes the deadline or GIS headcount, the published guide must be updated with its date and source. Until then, the conflicting 2 and 9 November dates and the one-versus-two GIS discrepancy remain unresolved."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours d'ingénieurs d'État à Settat 2026 : spécialités et contradictions officielles",
+          "deck": "Analyse de l'avis signé pour trois spécialités d'ingénieur, les conditions, les pièces et les épreuves. L'arrêté fixe le 2 novembre et un poste SIG ; le portail affiche le 9 novembre et deux postes SIG.",
+          "sections": [
+            [
+              "Ce qu'annonce réellement la Province de Settat",
+              "La Province de Settat, relevant du ministère marocain de l'Intérieur, a publié un avis de concours de trois pages pour une épreuve organisée le dimanche 29 novembre 2026 à la Faculté des sciences juridiques et politiques de Settat, avec d'autres centres possibles en cas de nécessité. L'avis signé prévoit trois postes d'ingénieur d'État de premier grade, échelle 11 : un en génie civil, un en statistiques et économie appliquée et un en systèmes d'information géographique. Le même document annonce cinq postes distincts d'administrateur de deuxième grade ; ils ne doivent pas être confondus avec les trois postes d'ingénieur. Il s'agit d'un concours de recrutement public, et non d'une embauche privée garantie."
+            ],
+            [
+              "Trois spécialités et les intitulés de formation admis",
+              "Le tableau original mentionne le diplôme d'ingénieur en génie civil pour le premier poste. Pour les statistiques et l'économie appliquée, il énumère l'ingénierie des données et la business intelligence, la data science et l'intelligence artificielle, l'économie appliquée avec statistique et big data, la business intelligence et l'analytics, ainsi que la data science. Pour les SIG, les domaines cités comprennent la géomatique et les systèmes d'information géographique, la topographie et la géomatique, les sciences géospatiales et la télédétection, les sciences de l'information géographique et l'ingénierie topographique. Ces formulations sont celles de l'avis, pas une équivalence automatique pour tout diplôme contenant les mots « données » ou « ingénierie ». Vérifiez l'intitulé exact de votre diplôme."
+            ],
+            [
+              "Nationalité, âge et diplôme requis",
+              "Le concours est ouvert aux candidats de nationalité marocaine âgés de 18 à 45 ans au 1er janvier 2026. Il exige un diplôme d'ingénieur d'État dans la spécialité concernée, délivré par un établissement national habilité, ou un titre reconnu équivalent selon les textes applicables. Une licence en informatique ou un master voisin ne satisfait pas automatiquement à cette exigence spécifique. Les diplômés d'établissements privés ou étrangers doivent vérifier l'existence de la décision d'équivalence publiée au Bulletin officiel et joindre les justificatifs nécessaires. L'avis ne fixe pas de durée minimale d'expérience professionnelle ; il serait donc trompeur d'inventer un seuil d'ancienneté pour sélectionner les candidats."
+            ],
+            [
+              "Deux contradictions officielles : date limite et postes SIG",
+              "La troisième page de l'avis signé indique que les candidatures en ligne sont reçues du 19 octobre au lundi 2 novembre 2026 à 16 h 30. Les fiches du portail public consultées le 28 octobre affichent pourtant le 9 novembre 2026 à 16 h 30. Une autre divergence concerne les effectifs : l'avis signé prévoit un poste SIG, tandis que la fiche SIG C44151/26 indique deux postes. Nous n'avons pas identifié d'arrêté rectificatif signé expliquant ces différences. Le 9 novembre et le chiffre de deux ne peuvent donc être présentés comme définitivement confirmés. Par prudence, déposez avant le 2 novembre, demandez une confirmation écrite à l'organisateur et surveillez la publication d'un rectificatif officiel."
+            ],
+            [
+              "Identifier la bonne fiche de concours",
+              "Trois références officielles correspondent aux spécialités : C44149/26 pour le génie civil, C44150/26 pour les statistiques et l'économie appliquée, C44151/26 pour les SIG. Ouvrez la fiche correspondant précisément à votre diplôme, puis téléchargez l'avis signé qui lui est associé. Comparez l'intitulé de la spécialité, le nombre de postes et la date limite ; l'intitulé générique « Ingénieur d'État » ne suffit pas. Le dépôt de candidature s'effectue sur depot.emploi-public.ma. Le formulaire « contacter l'administration » visible sur une page d'annonce n'est pas une procédure d'inscription. Conservez la référence du concours, la preuve éventuelle de dépôt et l'heure d'envoi, plutôt que de supposer qu'un formulaire non finalisé a été enregistré."
+            ],
+            [
+              "Pièces à joindre et situations particulières",
+              "L'avis exige une copie du diplôme demandé, une copie de la carte nationale d'identité électronique et un curriculum vitae. Pour un diplôme étranger ou délivré par un établissement privé, il peut être nécessaire de joindre la décision d'équivalence publiée au Bulletin officiel. Les fonctionnaires doivent obtenir l'autorisation de leur administration pour participer au concours, en plus de l'inscription électronique. Les candidats relevant des catégories réglementaires de résistants, pupilles de la nation ou anciens militaires suivent la procédure administrative complémentaire prévue par l'avis. Les personnes en situation de handicap produisent l'attestation compétente. Nous ne présentons pas comme obligatoires des documents supplémentaires non cités dans l'arrêté ; il convient néanmoins de respecter les instructions techniques affichées par le portail."
+            ],
+            [
+              "Épreuves, coefficients et note minimale",
+              "L'épreuve écrite des ingénieurs dure trois heures et possède un coefficient de quatre. Elle peut prendre la forme d'un sujet général ou d'un questionnaire à choix multiples sur les missions du poste, les attributions du ministère de l'Intérieur ou la spécialité concernée. L'épreuve orale, pratique ou combinée dure de 30 à 45 minutes et possède un coefficient de trois. Seuls les candidats ayant obtenu au moins 12 sur 20 à l'écrit sont admis à poursuivre vers l'oral. Cette note constitue un seuil d'accès, pas une promesse de recrutement. L'avis ne publie aucune banque de questions officielle et les classements finaux dépendent de la procédure de sélection."
+            ],
+            [
+              "Préparer une épreuve pertinente sans inventer le programme",
+              "En génie civil, une préparation raisonnable peut comprendre la lecture de plans, les métrés, la sécurité des travaux publics et le suivi élémentaire de chantier, en reliant les exemples aux missions de l'administration territoriale. En statistiques, révisez la qualité des données, la construction d'indicateurs, les biais d'échantillonnage, la reproductibilité et la protection des données personnelles ; préparez un exemple de décision fondée sur une analyse correctement interprétée. En SIG, entraînez-vous aux systèmes de coordonnées, aux projections, à la qualité des couches géographiques, à la télédétection et aux vérifications de terrain. Ce sont des conseils éditoriaux, non une liste officielle de sujets. Réservez aussi du temps à la communication orale et aux missions du ministère."
+            ],
+            [
+              "Quotas, résultats, affectation et rémunération",
+              "L'avis réserve 25 % des postes budgétaires aux catégories légalement prévues de résistants, pupilles de la nation et anciens militaires, et 7 % aux personnes en situation de handicap, dans les conditions réglementaires. Ces proportions ne garantissent pas un recrutement individuel, surtout lorsque le nombre de postes est faible. Le portail de l'emploi public publie les listes des candidats admis, les convocations et les résultats ; la mise en ligne de la convocation vaut notification selon l'avis. Le concours est organisé à Settat et le texte prévoit l'affectation des lauréats à la Province de Settat. Aucun salaire net mensuel précis n'est publié. L'échelle 11 correspond à un grade, pas à un montant personnel de rémunération vérifié."
+            ],
+            [
+              "Vérifications finales et risques évitables",
+              "Comparez d'abord votre diplôme au tableau signé, sélectionnez ensuite la référence officielle exacte et préparez les pièces d'identité, le diplôme et le CV. Ajoutez l'équivalence, l'autorisation administrative ou les justificatifs spécifiques si votre situation le nécessite. Finalisez la candidature avant la date la plus proche figurant dans l'arrêté et gardez une preuve de réception. Suivez les listes de candidats et les éventuels rectificatifs sur le portail public. Refusez les intermédiaires prétendant vendre des places ou des sujets d'examen. Si un nouvel arrêté officiel corrige la date ou le nombre de postes SIG, ce dossier devra être actualisé avec la source et sa date. En attendant, les divergences entre le 2 et le 9 novembre et entre un et deux postes SIG restent explicitement signalées."
+            ]
+          ]
+        }
+      }
     }
   }
 }
