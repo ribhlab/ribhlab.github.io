@@ -114,6 +114,20 @@ jobs:
                   for language in ('ar','en','fr'):
                       assert base+'/'+language+'/' in urls, f'Missing {language} homepage'
                       assert b'<meta name="robots" content="index,follow' in bodies['/'+language+'/'], 'Missing indexing meta'
+                  # Sprint articles are only marked published after their real trilingual
+                  # pages, editorial sections, sources and licensed photos are visible.
+                  for slug in ('gig-description-client-questions-scope','ethereum-smart-contracts-wallet-permissions'):
+                      for language in ('ar','en','fr'):
+                          matches=[u for u in urls if u.endswith('/'+slug+'/') and '/'+language+'/' in u]
+                          assert len(matches)==1, f'{language}: published sprint URL missing or duplicated for {slug}'
+                          url=matches[0]
+                          req=urllib.request.Request(url,headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
+                          with urllib.request.urlopen(req,timeout=15) as resp:
+                              page=resp.read().decode('utf-8')
+                              assert resp.status==200, f'{language}: sprint page not live for {slug}'
+                          assert page.count('class="article-block"')>=4, f'{language}: sprint sections missing for {slug}'
+                          assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources or photo missing for {slug}'
+                          print(f'SPRINT LIVE {language}: {slug} complete and sourced',flush=True)
                   print(f'PUBLIC SITE PASSED: XML parsed; {len(urls)} URLs; robots and multilingual pages available',flush=True)
                   break
               except Exception as err:
