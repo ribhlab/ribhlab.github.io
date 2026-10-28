@@ -70,10 +70,12 @@
         "fiverrHelp",
         "upwork"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/earning/freelance-basic-standard-premium-cost-model/",
       "queuePath": "content/reviewed-queue/freelance-basic-standard-premium-cost-model.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-28",
+      "verification": "Existing content/articles trilingual article confirmed; GitHub Pages build/deploy 40768567546/40768567556 success; public-sitemap-check 40768676182 verified live HTTP 200, required sections, official sources and licensed photo in AR/EN/FR."
     },
     {
       "sectionId": "online-business",
@@ -247,10 +249,12 @@
         "godot",
         "github"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/godot-first-small-game-five-sessions/",
       "queuePath": "content/reviewed-queue/godot-first-small-game-five-sessions.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-28",
+      "verification": "Existing content/articles trilingual article confirmed; GitHub Pages build/deploy 40768567546/40768567556 success; public-sitemap-check 40768676182 verified live HTTP 200, required sections, official sources and licensed photo in AR/EN/FR."
     },
     {
       "sectionId": "games-security",
