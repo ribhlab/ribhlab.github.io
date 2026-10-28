@@ -15,7 +15,7 @@ const contact=(process.env.CONTACT_EMAIL||cfg.contactEmail||'').trim();
 const publisher=(process.env.ADSENSE_PUBLISHER_ID||cfg.adsensePublisherId||'').trim();
 const adsEnabled=String(process.env.ENABLE_ADSENSE||cfg.enableAdsense||'false')==='true';
 // AdSense's official crawler may require its verification snippet before site approval.
-// Verification-only loading is separate from enabling ad units or Auto Ads placements.
+// The owner-supplied loader enables AdSense site connection checks before approval. Its future ad behavior is controlled by Google settings.
 const adsenseVerificationScript=String(process.env.ADSENSE_VERIFICATION_SCRIPT??cfg.adsenseVerificationScript??false)==='true';
 const googleSiteVerification=(process.env.GOOGLE_SITE_VERIFICATION||'').trim();
 const umamiWebsiteId=(process.env.UMAMI_WEBSITE_ID||'').trim();
@@ -112,9 +112,9 @@ if(umamiWebsiteId){
 }
 // Disclose third-party advertising only when it is actually enabled.
 if(adsEnabled||adsenseVerificationScript){
- staticCopy.ar.privacy.push('عندما يتم تفعيل إعلانات Google AdSense فعلياً، يمكن لشركة Google وشركائها استعمال ملفات تعريف الارتباط أو معرّفات وتقنيات مشابهة لعرض الإعلانات وقياسها والحد من الاحتيال، حسب خيارات الموافقة والبلد. يمكنكم مراجعة إعدادات الإعلانات في Google وسياسة الخصوصية الخاصة بها. الإعلانات لا تؤثر على تحرير المقالات.');
- staticCopy.en.privacy.push('When Google AdSense advertising is activated, Google and its advertising partners may use cookies or similar identifiers to serve and measure ads and prevent fraud, depending on regional consent choices. Review Google advertising and privacy controls. Advertising does not influence editorial decisions.');
- staticCopy.fr.privacy.push('Lorsque les annonces Google AdSense sont effectivement activées, Google et ses partenaires peuvent utiliser des cookies ou identifiants similaires pour diffuser et mesurer les publicités et prévenir la fraude, selon le consentement et la région. Consultez les paramètres publicitaires et règles de confidentialité de Google. La publicité n’influence pas les articles.');
+ staticCopy.ar.privacy.push('يستعمل RibhLab كود Google AdSense للتحقق من ربط الموقع بحساب الناشر. قد يتصل المتصفح بخوادم Google وتُعالج بيانات تقنية لهذا الغرض حتى قبل الموافقة على عرض الإعلانات. عند تفعيل الإعلان مستقبلاً، قد تستخدم Google وشركاؤها ملفات تعريف الارتباط أو معرّفات مشابهة حسب البلد والموافقة. الإعلانات لا تتحكم في محتوى المقالات.');
+ staticCopy.en.privacy.push('RibhLab loads Google AdSense code for publisher site verification. Your browser may contact Google servers and technical data may be processed for verification before advertising is approved. When ad serving is activated, Google and partners may use cookies or similar identifiers depending on country and consent. Advertising does not influence editorial decisions.');
+ staticCopy.fr.privacy.push('RibhLab charge le code Google AdSense afin de vérifier le rattachement du site au compte éditeur. Votre navigateur peut contacter les serveurs de Google et certaines données techniques peuvent être traitées avant l’approbation publicitaire. Lorsque la diffusion est activée, Google et ses partenaires peuvent utiliser des cookies ou identifiants similaires selon le pays et le consentement. Les annonces n’influencent pas la rédaction.');
 }
 const esc=s=>String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const urlFor=(l,a)=>`/${l}/${a.category}/${a.slug}/`;
@@ -518,8 +518,9 @@ for(const l of locales){renderOpportunityPages(l,page,esc);renderAudiencePage(l,
 // The bare homepage is also inspected for Search Console and AdSense site ownership.
 const rootVerification=googleSiteVerification?`<meta name="google-site-verification" content="${esc(googleSiteVerification)}">`:''; 
 const rootPublisher=publisher?`<meta name="google-adsense-account" content="${esc(publisher)}">`:'';
+const rootAdsenseLoader=(publisher&&(adsEnabled||adsenseVerificationScript))?`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisher}" crossorigin="anonymous"></script>`:'';
 const rootCanonical=domain?`<link rel="canonical" href="${esc(domain+'/ar/')}"><link rel="alternate" hreflang="ar" href="${esc(domain+'/ar/')}"><link rel="alternate" hreflang="en" href="${esc(domain+'/en/')}"><link rel="alternate" hreflang="fr" href="${esc(domain+'/fr/')}">`:'';
-fs.writeFileSync(path.join(dist,'index.html'),`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RibhLab — ربح لاب</title><meta name="description" content="مجلة ربح لاب الرقمية: أدلة ومقالات وأدوات مجانية بالعربية والإنجليزية والفرنسية.">${rootVerification}${rootPublisher}${rootCanonical}<meta http-equiv="refresh" content="0; url=/ar/"></head><body><main><h1>RibhLab — ربح لاب</h1><p>اختر اللغة / Choose your language / Choisissez votre langue</p><nav><a href="/ar/">العربية</a> · <a href="/en/">English</a> · <a href="/fr/">Français</a></nav></main></body></html>`);
+fs.writeFileSync(path.join(dist,'index.html'),`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RibhLab — ربح لاب</title><meta name="description" content="مجلة ربح لاب الرقمية: أدلة ومقالات وأدوات مجانية بالعربية والإنجليزية والفرنسية.">${rootVerification}${rootPublisher}${rootCanonical}${rootAdsenseLoader}<meta http-equiv="refresh" content="0; url=/ar/"></head><body><main><h1>RibhLab — ربح لاب</h1><p>اختر اللغة / Choose your language / Choisissez votre langue</p><nav><a href="/ar/">العربية</a> · <a href="/en/">English</a> · <a href="/fr/">Français</a></nav></main></body></html>`);
 fs.writeFileSync(path.join(dist,'404.html'),'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>404 | RibhLab</title><link rel="stylesheet" href="/assets/style.css"></head><body class="error-page"><h1>404</h1><p>Page not found · الصفحة غير موجودة · Page introuvable</p><a class="btn btn-primary" href="/ar/">Return home</a></body></html>');
 const allRoutes=routes.map(x=>x.route);
 fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /admin/\n${domain?'Sitemap: '+domain+'/sitemap.xml\n':''}`);
