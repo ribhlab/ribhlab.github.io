@@ -1,4 +1,4 @@
-/* RibhLab browser games. Local-only chess and five-letter word puzzle. */
+/* RibhLab legal chess, with local and peer-to-peer online multiplayer. */
 const chessStartFen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 const glyph={K:"♔",Q:"♕",R:"♖",B:"♗",N:"♘",P:"♙",k:"♚",q:"♛",r:"♜",b:"♝",n:"♞",p:"\u265F\uFE0E",".":""};
 const dirs={n:[-33,-31,-18,-14,14,18,31,33],b:[-17,-15,15,17],r:[-16,-1,1,16],k:[-17,-16,-15,-1,1,15,16,17]};
@@ -98,29 +98,135 @@ function gameStatus(history){
  if(s.half>=150||repeats>=5)return{done:true,kind:s.half>=150?"seventyfive":"repetition",winner:0,claim:"",check};
  return{done:false,kind:"",winner:0,claim:repeats>=3?"repetition":s.half>=100?"fifty":"",check};
 }
-const words={
- ar:[["مدرسة","مكان الدراسة"],["حديقة","مكان تنمو فيه النباتات"],["مكتبة","مكان الكتب"],["سفينة","تسافر فوق الماء"],["نافذة","تدخل منها أشعة الشمس"],["مدينة","أكبر من قرية"],["حقيبة","نحمل فيها أغراضنا"],["سيارة","وسيلة نقل على الطريق"],["زرافة","حيوان برقبة طويلة"],["طاولة","نضع عليها الأشياء"]],
- en:[["apple","A familiar fruit"],["grape","Small fruit in bunches"],["train","Rail transport"],["chess","Board game with kings"],["bread","Baked staple food"],["plant","Living thing that grows"],["water","Clear liquid to drink"],["light","Makes a room bright"],["beach","Sand beside the sea"],["music","Melody and rhythm"]],
- fr:[["livre","On le lit"],["porte","On la franchit pour entrer"],["table","Meuble pour les repas"],["plage","Bord de mer sableux"],["fleur","Elle peut pousser dans un jardin"],["monde","La planète et ses habitants"],["route","Les véhicules y circulent"],["pomme","Fruit croquant"],["sucre","Ingrédient au goût doux"],["chien","Animal domestique qui aboie"]]
-};
 const short={
  ar:{white:"الأبيض",black:"الأسود",move:"دوره",check:"كش",mate:"كش مات",stalemate:"تعادل بالتوقف",insufficient:"تعادل: قطع غير كافية",repetition:"تعادل بالتكرار",fifty:"تعادل بقاعدة 50 نقلة",seventyfive:"تعادل بقاعدة 75 نقلة",illegal:"نقلة غير مسموحة",wins:"فاز",claimed:"تم إعلان التعادل",tries:"المحاولة",hint:"تلميح",invalid:"أدخل كلمة من خمسة أحرف",won:"أحسنت! اكتشفت الكلمة.",lost:"انتهت المحاولات. الكلمة: ",promote:{q:"وزير",r:"قلعة",b:"فيل",n:"حصان"}},
  en:{white:"White",black:"Black",move:"to move",check:"Check",mate:"Checkmate",stalemate:"Stalemate",insufficient:"Draw: insufficient material",repetition:"Draw by repetition",fifty:"Draw by 50-move rule",seventyfive:"Draw by 75-move rule",illegal:"Illegal move",wins:"wins",claimed:"Draw claimed",tries:"Attempt",hint:"Clue",invalid:"Type exactly five letters",won:"Well done! You found the word.",lost:"No attempts left. The word was: ",promote:{q:"Queen",r:"Rook",b:"Bishop",n:"Knight"}},
  fr:{white:"Blancs",black:"Noirs",move:"jouent",check:"Échec",mate:"Échec et mat",stalemate:"Pat",insufficient:"Nulle : matériel insuffisant",repetition:"Nulle par répétition",fifty:"Nulle : règle des 50 coups",seventyfive:"Nulle : règle des 75 coups",illegal:"Coup illégal",wins:"gagnent",claimed:"Nulle réclamée",tries:"Essai",hint:"Indice",invalid:"Saisissez exactement cinq lettres",won:"Bravo ! Mot trouvé.",lost:"Plus d'essais. Le mot était : ",promote:{q:"Dame",r:"Tour",b:"Fou",n:"Cavalier"}}
 };
+
+const onlineText={
+ ar:{idle:'يمكنك إنشاء غرفة أو الانضمام إلى غرفة صديقك.',loading:'جارٍ فتح الاتصال بالشطرنج الأونلاين…',hosting:'الغرفة جاهزة. شارك الرابط وانتظر اللاعب الأسود.',joining:'جارٍ الاتصال بغرفة صديقك…',ready:'متصل: الأبيض صاحب الغرفة والأسود الضيف. العب عندما يحين دورك.',waiting:'في انتظار تأكيد النقلة…',closed:'انقطع اتصال المنافس. أعد الانضمام أو أنشئ غرفة جديدة.',error:'تعذر الاتصال عبر هذه الشبكة. جرّب شبكة أخرى أو اللعب المحلي.',invalid:'رمز الغرفة غير صحيح. استعمل الرمز المكوّن من 12 حرفاً أو رقماً.',full:'هذه الغرفة مشغولة بلاعب آخر.',copied:'تم نسخ رابط الدعوة.',copyFailed:'انسخ الرابط يدوياً من شريط العنوان.',guest:'الضيف يتحكم في الأسود فقط.',host:'صاحب الغرفة يتحكم في الأبيض فقط.',noReset:'الضيف لا يستطيع إعادة المباراة؛ اطلب من صاحب الغرفة ذلك.'},
+ en:{idle:'Create a private room or join a friend.',loading:'Opening the online chess connection…',hosting:'Room ready. Share the link and wait for the Black player.',joining:'Connecting to your friend’s room…',ready:'Connected: the host plays White, the guest Black. Wait for your turn.',waiting:'Waiting for move confirmation…',closed:'Opponent disconnected. Rejoin or create a new room.',error:'Peer connection unavailable on this network. Try another network or local play.',invalid:'Invalid room code. Use the 12-character code.',full:'This room already has a guest.',copied:'Invite link copied.',copyFailed:'Copy the room link manually from the address bar.',guest:'Guests control Black only.',host:'Hosts control White only.',noReset:'Only the host can restart the online game.'},
+ fr:{idle:'Créez une salle privée ou rejoignez un ami.',loading:'Ouverture de la connexion en ligne…',hosting:'Salle prête. Partagez le lien et attendez le joueur noir.',joining:'Connexion à la salle de votre ami…',ready:'Connecté : l’hôte joue les Blancs, l’invité les Noirs.',waiting:'En attente de confirmation du coup…',closed:'L’adversaire s’est déconnecté. Rejoignez ou recréez une salle.',error:'Connexion pair à pair impossible sur ce réseau. Essayez un autre réseau.',invalid:'Code de salle incorrect : 12 caractères requis.',full:'Cette salle a déjà un invité.',copied:'Lien d’invitation copié.',copyFailed:'Copiez le lien dans la barre d’adresse.',guest:'L’invité joue uniquement les Noirs.',host:'L’hôte joue uniquement les Blancs.',noReset:'Seul l’hôte peut recommencer.'}
+};
+let peerScriptPromise=null;
+function loadPeerJS(){
+ if(typeof window==='undefined')return Promise.reject(Error('Browser required'));
+ if(window.Peer)return Promise.resolve(window.Peer);
+ if(peerScriptPromise)return peerScriptPromise;
+ peerScriptPromise=new Promise((resolve,reject)=>{
+  const src='https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js';
+  const script=document.createElement('script');script.src=src;script.async=true;script.crossOrigin='anonymous';
+  const timeout=setTimeout(()=>{script.remove();reject(Error('PeerJS loading timed out'));},12000);
+  script.onload=()=>{clearTimeout(timeout);if(window.Peer)resolve(window.Peer);else reject(Error('PeerJS unavailable'))};
+  script.onerror=()=>{clearTimeout(timeout);reject(Error('PeerJS library blocked'))};
+  document.head.append(script);
+ }).catch(e=>{peerScriptPromise=null;throw e});
+ return peerScriptPromise;
+}
+const onlineRoomId=code=>'ribhlab-chess-v1-'+code.toLowerCase();
+function validRoom(code){return /^[A-Z0-9]{12}$/.test(code);}
+function randomRoomCode(){
+ const bytes=new Uint8Array(12);window.crypto.getRandomValues(bytes);
+ const abc='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+ return Array.from(bytes,x=>abc[x%abc.length]).join('');
+}
 function initChess(root){
  const lang=root.dataset.lang||"ar",t=short[lang],board=root.querySelector("#chess-board"),statusEl=root.querySelector("#chess-status"),list=root.querySelector("#chess-moves"),mode=root.querySelector("#chess-mode"),claim=root.querySelector("#chess-claim"),back=root.querySelector("#chess-back"),promoBox=root.querySelector("#chess-promotion"),promoOptions=root.querySelector("#chess-promotion-options"),claimText=root.querySelector("#chess-claim");
- let history=[parseFen(chessStartFen)],labels=[],selected=-1,pending=[],claimed=false,notification="",serial=0;
+ let history=[parseFen(chessStartFen)],labels=[],uciHistory=[],selected=-1,pending=[],claimed=false,notification="",serial=0;
+ const onlinePanel=root.querySelector('#chess-online'),onlineStatus=root.querySelector('#chess-online-status'),roomInput=root.querySelector('#chess-room'),createButton=root.querySelector('#chess-create'),joinButton=root.querySelector('#chess-join'),copyButton=root.querySelector('#chess-copy'),leaveButton=root.querySelector('#chess-leave'),newButton=root.querySelector('#chess-new');
+ const otext=onlineText[lang],net={peer:null,conn:null,room:'',role:'',connected:false,awaiting:false,serial:0};
+ function netNotice(message){if(onlineStatus)onlineStatus.textContent=message;}
+ function stopOnline(message=''){
+  net.serial++;net.conn?.close();net.peer?.destroy();
+  net.peer=null;net.conn=null;net.connected=false;net.awaiting=false;net.room='';net.role='';
+  if(copyButton)copyButton.hidden=true;if(leaveButton)leaveButton.hidden=true;
+  if(message)netNotice(message);
+ }
+ function send(data){if(net.conn?.open){try{net.conn.send(data);return true}catch{}}return false;}
+ function publishState(){if(net.role==='host'&&net.connected)send({type:'state',moves:uciHistory.slice(),claimed});}
+ function acceptState(data){
+  if(!Array.isArray(data.moves)||data.moves.length>500||data.moves.some(x=>typeof x!=='string'||!/^[a-h][1-8][a-h][1-8][qrbn]?$/.test(x)))return;
+  let h=[parseFen(chessStartFen)],labelsNext=[],uciNext=[];
+  for(const uci of data.moves){
+   const start=h[h.length-1],move=legal(start).find(m=>key(m)===uci);
+   if(!move)return;labelsNext.push(moveLabel(start,move));h.push(apply(start,move));uciNext.push(uci);
+  }
+  serial++;history=h;labels=labelsNext;uciHistory=uciNext;selected=-1;pending=[];claimed=data.claimed===true&&!!gameStatus(history).claim;net.awaiting=false;notification='';redraw();
+ }
+ function connectLine(conn,role,id){
+  const session=net.serial;net.conn=conn;net.role=role;
+  conn.on('open',()=>{
+   if(session!==net.serial)return;
+   net.connected=true;net.awaiting=false;netNotice(otext.ready);
+   if(role==='host')publishState();redraw();
+  });
+  conn.on('data',data=>{
+   if(session!==net.serial||!data||typeof data!=='object')return;
+   if(role==='guest'){
+    if(data.type==='state')acceptState(data);
+    else if(data.type==='full')netNotice(otext.full);
+    return;
+   }
+   if(data.type==='move'){
+    if(state().t!==-1||!Number.isInteger(data.ply)||data.ply!==uciHistory.length){publishState();return;}
+    const found=typeof data.uci==='string'?legal(state()).find(m=>key(m)===data.uci):null;
+    if(found)play(found,true);else publishState();
+   }else if(data.type==='claim'&&gameStatus(history).claim){claimed=true;publishState();redraw();}
+   else if(data.type==='sync')publishState();
+  });
+  conn.on('close',()=>{
+   if(session!==net.serial)return;
+   net.connected=false;net.awaiting=false;net.conn=null;
+   netNotice(otext.closed);redraw();
+  });
+  conn.on('error',()=>{if(session===net.serial){netNotice(otext.error);redraw();}});
+ }
+ async function openOnline(role,room){
+  stopOnline();if(!validRoom(room)){netNotice(otext.invalid);return;}
+  net.room=room;net.role=role;netNotice(otext.loading);
+  const session=net.serial;
+  try{
+   const Peer=await loadPeerJS();if(session!==net.serial||mode.value!=='online')return;
+   const peer=role==='host'?new Peer(onlineRoomId(room),{host:'0.peerjs.com',port:443,secure:true,debug:0}):new Peer({host:'0.peerjs.com',port:443,secure:true,debug:0});
+   net.peer=peer;
+   peer.on('error',()=>{if(session===net.serial){netNotice(otext.error);redraw();}});
+   peer.on('disconnected',()=>{if(session===net.serial&&!net.connected)netNotice(otext.closed);});
+   peer.on('open',()=>{
+    if(session!==net.serial)return;
+    if(role==='host'){
+     netNotice(otext.hosting);
+     const url=new URL(window.location.href);url.searchParams.set('room',room);window.history.replaceState(null,'',url.pathname+url.search);
+     copyButton.hidden=false;leaveButton.hidden=false;redraw();
+    }else{
+     netNotice(otext.joining);const conn=peer.connect(onlineRoomId(room),{reliable:true,serialization:'json'});
+     connectLine(conn,'guest',session);leaveButton.hidden=false;
+    }
+   });
+   if(role==='host')peer.on('connection',conn=>{
+    if(session!==net.serial){conn.close();return;}
+    if(net.connected||net.conn){conn.on('open',()=>{conn.send({type:'full'});conn.close();});return;}
+    connectLine(conn,'host',session);
+   });
+   if(role==='host'){resetGame(false);}
+  }catch{if(session===net.serial){stopOnline(otext.error);redraw();}}
+ }
+ function resetGame(broadcast=true){
+  serial++;history=[parseFen(chessStartFen)];labels=[];uciHistory=[];selected=-1;pending=[];claimed=false;notification='';net.awaiting=false;redraw();
+  if(broadcast)publishState();
+ }
+
  const state=()=>history[history.length-1];
  const selection=()=>legal(state()).filter(m=>m[0]===selected);
  const botTurn=()=>mode.value==="computer"&&state().t===-1;
+ const peerTurn=()=>mode.value==='online'&&(!net.connected||net.awaiting||state().t!==(net.role==='host'?1:-1));
  function status(){
   const z=gameStatus(history);if(claimed)return t.claimed;
   if(z.done){if(z.kind==="checkmate")return t.mate+" — "+(z.winner===1?t.white:t.black)+" "+t.wins;return t[z.kind]||z.kind;}
   return (state().t===1?t.white:t.black)+" "+t.move+(z.check?" · "+t.check:"");
  }
  function redraw(){
-  const s=state(),valid=legal(s),canPlay=!gameStatus(history).done&&!claimed&&!pending.length&&!botTurn(),targets=selection().map(m=>m[1]);
+  const s=state(),valid=legal(s),canPlay=!gameStatus(history).done&&!claimed&&!pending.length&&!botTurn()&&!peerTurn(),targets=selection().map(m=>m[1]);
   board.replaceChildren();
   for(let r=0;r<8;r++)for(let c=0;c<8;c++){
    const i=r*16+c,p=s.b[i],button=document.createElement("button");
@@ -136,14 +242,25 @@ function initChess(root){
   }
   statusEl.textContent=notification||status();
   list.replaceChildren();labels.forEach(x=>{const li=document.createElement("li");li.textContent=x;list.append(li);});list.scrollTop=list.scrollHeight;
-  back.disabled=history.length===1;claim.hidden=!gameStatus(history).claim||claimed;claimText.textContent=gameStatus(history).claim==="fifty"?t.fifty:t.repetition;
+  back.disabled=history.length===1||mode.value==='online';
+  newButton.disabled=mode.value==='online'&&net.role==='guest';
+  claim.hidden=!gameStatus(history).claim||claimed||(mode.value==='online'&&!net.connected);claimText.textContent=gameStatus(history).claim==="fifty"?t.fifty:t.repetition;
   promoBox.hidden=!pending.length;
   promoOptions.replaceChildren();
   if(pending.length)for(const m of pending){const b=document.createElement("button");b.type="button";b.textContent=t.promote[m[2]];b.addEventListener("click",()=>play(m));promoOptions.append(b);}
  }
- function play(m){
+ function play(m,remote=false){
   const s=state(),actual=legal(s).find(x=>key(x)===key(m));if(!actual)return;
-  labels.push(moveLabel(s,actual));history.push(apply(s,actual));pending=[];selected=-1;notification="";redraw();
+  if(mode.value==='online'&&!remote){
+   if(!net.connected||s.t!==(net.role==='host'?1:-1)||net.awaiting)return;
+   if(net.role==='guest'){
+    net.awaiting=true;selected=-1;pending=[];notification=otext.waiting;
+    if(!send({type:'move',ply:uciHistory.length,uci:key(actual)})){net.awaiting=false;notification=otext.closed;}
+    redraw();return;
+   }
+  }
+  labels.push(moveLabel(s,actual));uciHistory.push(key(actual));history.push(apply(s,actual));pending=[];selected=-1;notification="";redraw();
+  if(mode.value==='online'&&net.role==='host')publishState();
   if(botTurn()&&!gameStatus(history).done)queueBot();
  }
  function queueBot(){
@@ -174,59 +291,43 @@ function initChess(root){
   else if(choices.length===1)play(choices[0]);
   else{notification=t.illegal;redraw();}
  });
- function restart(){serial++;history=[parseFen(chessStartFen)];labels=[];selected=-1;pending=[];claimed=false;notification="";redraw();}
- root.querySelector("#chess-new").addEventListener("click",restart);
- mode.addEventListener("change",restart);
+ newButton.addEventListener('click',()=>{if(mode.value==='online'&&net.role==='guest'){netNotice(otext.noReset);return;}resetGame();});
+ mode.addEventListener('change',()=>{
+  stopOnline(otext.idle);onlinePanel.hidden=mode.value!=='online';
+  resetGame(false);
+ });
+ createButton.addEventListener('click',()=>{if(mode.value==='online')openOnline('host',randomRoomCode());});
+ joinButton.addEventListener('click',()=>{
+  const code=roomInput.value.trim().toUpperCase().replace(/^.*[?&]room=/,'').split('&')[0];
+  if(!validRoom(code)){netNotice(otext.invalid);return;}openOnline('guest',code);
+ });
+ copyButton.addEventListener('click',async()=>{
+  const url=new URL(window.location.href);url.searchParams.set('room',net.room);
+  try{await navigator.clipboard.writeText(url.href);netNotice(otext.copied);}catch{roomInput.value=url.href;roomInput.select();netNotice(otext.copyFailed);}
+ });
+ leaveButton.addEventListener('click',()=>{
+  stopOnline(otext.closed);resetGame(false);
+  const url=new URL(window.location.href);url.searchParams.delete('room');window.history.replaceState(null,'',url.pathname+url.search);
+ });
+ const invitedRoom=new URL(window.location.href).searchParams.get('room');
+ if(invitedRoom&&validRoom(invitedRoom.toUpperCase())){mode.value='online';onlinePanel.hidden=false;roomInput.value=invitedRoom.toUpperCase();netNotice(otext.idle);}
+ else netNotice(otext.idle);
  back.addEventListener("click",()=>{
   serial++;if(history.length<=1)return;
   const howMany=mode.value==="computer"&&history.length>=3&&state().t===1?2:1;
-  history.splice(-howMany);labels.splice(-howMany);selected=-1;pending=[];claimed=false;notification="";redraw();
+  history.splice(-howMany);labels.splice(-howMany);uciHistory.splice(-howMany);selected=-1;pending=[];claimed=false;notification="";redraw();
   if(botTurn())queueBot();
  });
  root.querySelector("#chess-promotion-cancel").addEventListener("click",()=>{pending=[];redraw();});
- claim.addEventListener("click",()=>{if(gameStatus(history).claim){serial++;claimed=true;redraw();}});
+ claim.addEventListener('click',()=>{
+  if(!gameStatus(history).claim)return;
+  if(mode.value==='online'&&net.role==='guest'){send({type:'claim'});return;}
+  serial++;claimed=true;redraw();publishState();
+ });
  redraw();
-}
-function markGuess(guess,answer){
- const g=Array.from(guess),a=Array.from(answer),res=Array(5).fill("absent"),remain={};
- for(let i=0;i<5;i++)if(g[i]===a[i])res[i]="correct";else remain[a[i]]=(remain[a[i]]||0)+1;
- for(let i=0;i<5;i++)if(res[i]!=="correct"&&remain[g[i]]>0){res[i]="present";remain[g[i]]--;}
- return res;
-}
-function initWords(root){
- const lang=root.dataset.lang||"ar",t=short[lang],entries=words[lang],grid=root.querySelector("#word-grid"),input=root.querySelector("#word-input"),statusEl=root.querySelector("#word-status"),count=root.querySelector("#word-count"),clue=root.querySelector("#word-clue"),form=root.querySelector("#word-form");
- let answer="",hint="",attempts=[],done=false,last=-1;
- function next(){
-  let i=Math.floor(Math.random()*entries.length);if(entries.length>1&&i===last)i=(i+1)%entries.length;last=i;[answer,hint]=entries[i];attempts=[];done=false;input.value="";input.disabled=false;form.querySelector("button").disabled=false;statusEl.textContent="";paint();input.focus();
- }
- function paint(){
-  grid.replaceChildren();
-  for(let r=0;r<6;r++){
-   const entry=attempts[r],marks=entry?markGuess(entry,answer):[],letters=entry?Array.from(entry):[];
-   const line=document.createElement("div");line.className="word-row";
-   for(let c=0;c<5;c++){const cell=document.createElement("span");cell.className="tile "+(marks[c]||"");cell.textContent=letters[c]||"";cell.setAttribute("aria-label",(r+1)+":"+(c+1)+" "+(marks[c]||"empty"));line.append(cell);}grid.append(line);
-  }
-  count.textContent=t.tries+" "+(attempts.length+(!done?1:0))+" / 6";
-  clue.textContent=t.hint+": "+hint;
- }
- function submit(e){
-  e.preventDefault();if(done)return;
-  let guess=input.value.trim().toLocaleLowerCase(lang).normalize("NFC");guess=guess.replace(/\s/g,"");
-  if(lang==="ar"){guess=guess.replace(/[\u064B-\u065F\u0670]/g,"").replace(/[أإآ]/g,"ا");}
-  if(Array.from(guess).length!==5||(lang==="ar"?!/^[\u0621-\u064A\u0671-\u06D3]{5}$/u.test(guess):!/^[a-z]{5}$/.test(guess))){statusEl.textContent=t.invalid;return;}
-  attempts.push(guess);input.value="";
-  if(guess===answer){done=true;statusEl.textContent=t.won;}
-  else if(attempts.length>=6){done=true;statusEl.textContent=t.lost+answer;}
-  else statusEl.textContent="";
-  if(done){input.disabled=true;form.querySelector("button").disabled=true;}
-  paint();
- }
- form.addEventListener("submit",submit);
- root.querySelector("#word-new").addEventListener("click",next);
- next();
 }
 if(typeof document!=="undefined"){
  const root=document.querySelector("[data-ribhlab-game]");
- if(root){if(root.dataset.ribhlabGame==="chess")initChess(root);else if(root.dataset.ribhlabGame==="words")initWords(root);}
+ if(root){if(root.dataset.ribhlabGame==="chess")initChess(root);}
 }
-export{parseFen,apply,legal,checked,san,gameStatus,moveLabel,index,markGuess,chessStartFen};
+export{parseFen,apply,legal,checked,san,gameStatus,moveLabel,index,chessStartFen};
