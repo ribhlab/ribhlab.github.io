@@ -1,0 +1,196 @@
+{
+  "checkedAt": "2026-10-28",
+  "license": "Unsplash License",
+  "usage": "Illustrative stock food photography, not photographs of recipes tested by RibhLab. The same verified photograph may be used for multiple related dishes until an individual matching licensed image is checked.",
+  "photos": {
+    "tagineA": {
+      "photoId": "photo-1517314626714-ac1b9a16515e",
+      "url": "https://images.unsplash.com/photo-1517314626714-ac1b9a16515e?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/food-served-on-table-_V4v7BbG338",
+      "photographer": "Annie Spratt",
+      "subject": "Moroccan tagine meal"
+    },
+    "tagineB": {
+      "photoId": "photo-1517314597476-e1788060b6cb",
+      "url": "https://images.unsplash.com/photo-1517314597476-e1788060b6cb?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/flavored-food-on-bowl-beside-plate-on-top-of-table-wGzO3Qvp98Q",
+      "photographer": "Annie Spratt",
+      "subject": "Moroccan tagine dining"
+    },
+    "couscous": {
+      "photoId": "photo-1749993086443-93a5a88eb4c2",
+      "url": "https://images.unsplash.com/photo-1749993086443-93a5a88eb4c2?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/couscous-with-meat-and-a-topping-Bi_hJh5oEtA",
+      "photographer": "Othman Alghanmi",
+      "subject": "Moroccan couscous"
+    },
+    "risottoA": {
+      "photoId": "photo-1633964913295-ceb43826e7c9",
+      "url": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-food-on-a-wooden-table-qrleIV6KkfI",
+      "photographer": "Rob Wicks",
+      "subject": "Mushroom risotto"
+    },
+    "risottoB": {
+      "photoId": "photo-1584946763546-5db5e2468fbf",
+      "url": "https://images.unsplash.com/photo-1584946763546-5db5e2468fbf?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/black-cooking-pan-with-cooked-food-X0vTYDNL6XI",
+      "photographer": "The Fry Family Food Co.",
+      "subject": "Mushroom risotto in pan"
+    },
+    "falafel": {
+      "photoId": "photo-1701688596783-231b3764ef67",
+      "url": "https://images.unsplash.com/photo-1701688596783-231b3764ef67?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-plate-of-food-that-includes-rice-meatballs-and-salad-FIZm4yokxo8",
+      "photographer": "Burak B",
+      "subject": "Falafel bowl"
+    },
+    "hummusA": {
+      "photoId": "photo-1637949385162-e416fb15b2ce",
+      "url": "https://images.unsplash.com/photo-1637949385162-e416fb15b2ce?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-hummus-with-a-garnish-on-top-yr-sW_x9aHk",
+      "photographer": "Ludovic Avice",
+      "subject": "Creamy hummus"
+    },
+    "hummusB": {
+      "photoId": "photo-1673960854897-749f9d9ebafc",
+      "url": "https://images.unsplash.com/photo-1673960854897-749f9d9ebafc?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-hummus-next-to-some-garlic--ulJ5sF0NPg",
+      "photographer": "Sandie Clarke",
+      "subject": "Hummus with garlic"
+    },
+    "hummusC": {
+      "photoId": "photo-1697126248475-a537cc5cce28",
+      "url": "https://images.unsplash.com/photo-1697126248475-a537cc5cce28?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-plate-of-hummus-pita-bread-and-a-bowl-of-olive-oil-n5I4Ix008-0",
+      "photographer": "Imad 786",
+      "subject": "Hummus and pita"
+    },
+    "curryA": {
+      "photoId": "photo-1772730065344-4cf131b39951",
+      "url": "https://images.unsplash.com/photo-1772730065344-4cf131b39951?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/creamy-chicken-curry-with-fresh-mint-and-naan-bread-vl2y3qoKq3E",
+      "photographer": "Mohammad Fahim",
+      "subject": "Creamy chicken curry"
+    },
+    "curryB": {
+      "photoId": "photo-1768179669433-bd9d52949c20",
+      "url": "https://images.unsplash.com/photo-1768179669433-bd9d52949c20?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/chicken-curry-with-rice-and-salad-ncXvQnrmStA",
+      "photographer": "tommao wang",
+      "subject": "Chicken curry and rice"
+    },
+    "curryC": {
+      "photoId": "photo-1455619452474-d2be8b1e70cd",
+      "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/flat-lay-photography-of-vegetable-soup-on-white-ceramic-cup-XoByiBymX20",
+      "photographer": "emy",
+      "subject": "Red curry bowl"
+    },
+    "soupA": {
+      "photoId": "photo-1741796105489-33ea406ac1b7",
+      "url": "https://images.unsplash.com/photo-1741796105489-33ea406ac1b7?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/delicious-hearty-vegetable-soup-with-carrots-and-herbs-sIKxa702NbA",
+      "photographer": "Elena Leya",
+      "subject": "Hearty vegetable soup"
+    },
+    "soupB": {
+      "photoId": "photo-1670237735381-ac5c7fa72c51",
+      "url": "https://images.unsplash.com/photo-1670237735381-ac5c7fa72c51?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-salad-PipzrGSil-c",
+      "photographer": "amin ramezani",
+      "subject": "Mixed salad bowl"
+    },
+    "riceA": {
+      "photoId": "photo-1772729440931-e8efd3adc748",
+      "url": "https://images.unsplash.com/photo-1772729440931-e8efd3adc748?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/fried-rice-with-chicken-and-vegetables-on-plate-gpkRa3elzrI",
+      "photographer": "Mohammad Fahim",
+      "subject": "Fried rice with vegetables"
+    },
+    "riceB": {
+      "photoId": "photo-1741612552052-2c5806e8a9ea",
+      "url": "https://images.unsplash.com/photo-1741612552052-2c5806e8a9ea?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/hibachi-fried-rice-and-shrimp-ds1ZAP0faGQ",
+      "photographer": "Harold Castro",
+      "subject": "Shrimp fried rice"
+    },
+    "saladA": {
+      "photoId": "photo-1670237735381-ac5c7fa72c51",
+      "url": "https://images.unsplash.com/photo-1670237735381-ac5c7fa72c51?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-salad-PipzrGSil-c",
+      "photographer": "amin ramezani",
+      "subject": "Salad bowl"
+    },
+    "saladB": {
+      "photoId": "photo-1644704170910-a0cdf183649b",
+      "url": "https://images.unsplash.com/photo-1644704170910-a0cdf183649b?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-woman-is-holding-a-bowl-of-food-VepJDAuitQ4",
+      "photographer": "Unsplash contributor",
+      "subject": "Vegetable and grain bowl"
+    },
+    "fishA": {
+      "photoId": "photo-1467003909585-2f8a72700288",
+      "url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/cooked-food-awj7sRviVXo",
+      "photographer": "Casey Lee",
+      "subject": "Salmon and vegetables"
+    },
+    "fishB": {
+      "photoId": "photo-1645120091968-5f24af8eaff5",
+      "url": "https://images.unsplash.com/photo-1645120091968-5f24af8eaff5?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-fish-is-being-cooked-in-a-frying-pan-1aj1sirGQAA",
+      "photographer": "Collab Media",
+      "subject": "Salmon in skillet"
+    },
+    "pizza": {
+      "photoId": "photo-1773944052254-7ec12df45471",
+      "url": "https://images.unsplash.com/photo-1773944052254-7ec12df45471?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-slice-of-margherita-pizza-on-a-white-plate-CiMKCrIpM68",
+      "photographer": "Unsplash contributor",
+      "subject": "Margherita pizza"
+    },
+    "pasta": {
+      "photoId": "photo-1683827449087-ccf5a9e6283c",
+      "url": "https://images.unsplash.com/photo-1683827449087-ccf5a9e6283c?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-plate-of-pasta-with-bacon-on-it-bYSvpF8NBmE",
+      "photographer": "Unsplash contributor",
+      "subject": "Spaghetti pasta"
+    },
+    "cake": {
+      "photoId": "photo-1540337706094-da10342c93d8",
+      "url": "https://images.unsplash.com/photo-1540337706094-da10342c93d8?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/chocolate-cake-gRZYR210m0U",
+      "photographer": "Jennifer Pallian",
+      "subject": "Chocolate cake"
+    },
+    "pancake": {
+      "photoId": "photo-1723691802547-b79f65c16b5f",
+      "url": "https://images.unsplash.com/photo-1723691802547-b79f65c16b5f?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-person-cooking-pancakes-in-a-pan-on-a-stove-465ZLD7Ia2s",
+      "photographer": "Hanxiao Xu",
+      "subject": "Pancakes cooking"
+    },
+    "sushi": {
+      "photoId": "photo-1562802378-59658231443f",
+      "url": "https://images.unsplash.com/photo-1562802378-59658231443f?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/sushi-F1X9dQGyU3Q",
+      "photographer": "Giovanna Gomes",
+      "subject": "Sushi"
+    },
+    "healthyA": {
+      "photoId": "photo-1670237735381-ac5c7fa72c51",
+      "url": "https://images.unsplash.com/photo-1670237735381-ac5c7fa72c51?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-salad-PipzrGSil-c",
+      "photographer": "amin ramezani",
+      "subject": "Mixed vegetables"
+    },
+    "soupC": {
+      "photoId": "photo-1741796105489-33ea406ac1b7",
+      "url": "https://images.unsplash.com/photo-1741796105489-33ea406ac1b7?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/delicious-hearty-vegetable-soup-with-carrots-and-herbs-sIKxa702NbA",
+      "photographer": "Elena Leya",
+      "subject": "Homemade soup"
+    }
+  }
+}
