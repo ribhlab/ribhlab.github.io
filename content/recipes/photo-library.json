@@ -163,6 +163,20 @@
       "source": "https://unsplash.com/photos/a-person-cooking-pancakes-in-a-pan-on-a-stove-465ZLD7Ia2s",
       "photographer": "Hanxiao Xu",
       "subject": "Pancakes cooking"
+    },
+    "lentilSoupA": {
+      "photoId": "photo-1712334619829-831fa0625a0f",
+      "url": "https://images.unsplash.com/photo-1712334619829-831fa0625a0f?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-soup-next-to-a-glass-of-orange-juice-CJxPligcG8s",
+      "photographer": "Clay Banks",
+      "subject": "Lentil soup"
+    },
+    "lentilSoupB": {
+      "photoId": "photo-1734772682896-2db9bf254596",
+      "url": "https://images.unsplash.com/photo-1734772682896-2db9bf254596?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-red-bowl-filled-with-soup-on-top-of-a-white-counter-SmejxSpxsbE",
+      "photographer": "Snappr",
+      "subject": "Lentil soup in terracotta bowl"
     }
   }
 }
