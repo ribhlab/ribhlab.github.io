@@ -1,0 +1,132 @@
+{
+  "slug": "ai-assistant-apps-2026-iphone-android-comparison",
+  "category": "ai",
+  "sources": [
+    {
+      "label": "OpenAI — ChatGPT",
+      "url": "https://chatgpt.com/"
+    },
+    {
+      "label": "Google — Gemini",
+      "url": "https://gemini.google.com/"
+    },
+    {
+      "label": "Anthropic — Claude",
+      "url": "https://claude.ai/"
+    },
+    {
+      "label": "Microsoft — Copilot",
+      "url": "https://copilot.microsoft.com/"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "أفضل 10 تطبيقات ذكاء اصطناعي للآيفون والأندرويد في 2026",
+      "excerpt": "مقارنة ChatGPT وGemini وClaude وCopilot وPerplexity وPoe وغيرهم حسب الوظيفة والخصوصية.",
+      "lead": "كاين فرق بين مساعد كيكتب ويشرح، واحد كيقلب على مصادر، وواحد مرتبط بتطبيقات الإنتاجية. جمعنا عشرة اختيارات شائعة للتجربة، ولكن ما عندناش قياس مستقل يثبت أن واحد منهم أفضل للناس كاملين.",
+      "sections": [
+        {
+          "heading": "اختيارات للمحادثة والعمل",
+          "paragraphs": [
+            "ChatGPT وClaude وGoogle Gemini وMicrosoft Copilot كيساعدو في الصياغة والتلخيص وشرح المعلومات، مع اختلاف أدوات الربط والمزايا المتاحة حسب الخطة والنظام.",
+            "Perplexity كيركز على البحث والإحالات، وPoe كيجمع طرق للوصول لنماذج مختلفة. DeepSeek وGrok وCharacter.AI وCanva كيغطي كل واحد نوعا آخر من استعمال الذكاء الاصطناعي."
+          ]
+        },
+        {
+          "heading": "كيفاش نقارن بطريقة عادلة",
+          "paragraphs": [
+            "عطي نفس المهمة لثلاثة مساعدين: فقرة تلخيص مع مصادر، جدول بنود مع استخراج أرقام، أو صياغة رسالة. قارن الدقة ووضوح المراجع وسهولة التصحيح، ماشي السرعة فقط.",
+            "فالمعلومات الحساسة، طلب المرجع الرسمي وراجع الأرقام بنفسك. توليد جواب مقنع ما كيعنيش أنه صحيح، خصوصا فالمالية والقانون والصحة."
+          ]
+        },
+        {
+          "heading": "البيانات والتكلفة",
+          "paragraphs": [
+            "قبل رفع ملفات الشركة راجع إعدادات الاحتفاظ بالمحادثات وتدريب النماذج والمشاركة مع الأطراف الأخرى. ما ترفعش أسرار أو كلمات مرور إلى خدمة غير معتمدة.",
+            "النسخ المجانية فيها حدود تتبدل، والاشتراكات كتختلف حسب البلد. شوف واش الميزات اللي باغي متاحة فالهاتف فعلا وماشي فقط فالموقع."
+          ]
+        },
+        {
+          "heading": "اختار الأداة حسب المهمة",
+          "paragraphs": [
+            "للبحث اللي يحتاج أدلة، جرب مصدرا يعطي روابط قابلة للفتح وتأكد منها. للأتمتة الإدارية، قارن التكاملات والصلاحيات. للصور والفيديو، شوف شروط حقوق النشر ودرجة التحكم.",
+            "ما تعتبرش هاد اللائحة تصنيف أداء أو ضماناً لجودة النتائج. جرّب مهام قصيرة من إنتاجك واحتافظ بالتدخل البشري فكل قرار مهم."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "10 AI assistant apps for iPhone and Android in 2026",
+      "excerpt": "Compare ChatGPT, Gemini, Claude, Copilot, Perplexity and alternatives by tasks, evidence and privacy.",
+      "lead": "Writing, research, programming and visual generation require different tools. This is a practical editorial shortlist rather than a universal performance ranking or independent benchmark.",
+      "sections": [
+        {
+          "heading": "Different families of assistants",
+          "paragraphs": [
+            "ChatGPT, Gemini, Claude and Microsoft Copilot can help summarize, draft and explain, though their integrations, model access and mobile feature sets differ.",
+            "Perplexity emphasizes search and citations; Poe offers access to different model experiences; DeepSeek, Grok, Character.AI and Canva serve other conversation, creation or entertainment contexts."
+          ]
+        },
+        {
+          "heading": "Compare on repeatable tasks",
+          "paragraphs": [
+            "Run the same prompt across three apps using a factual question, spreadsheet extraction and a short writing brief. Check reference quality, error handling, corrections and whether features work on your device.",
+            "A fluent answer can still contain invented facts or inaccurate calculations. Verify critical medical, legal and financial claims with primary sources."
+          ]
+        },
+        {
+          "heading": "Check privacy and pricing",
+          "paragraphs": [
+            "Review settings for data retention, model training, sharing and account access before uploading confidential files or client information.",
+            "Free tiers have limits; premium features and prices vary by region and platform. Confirm that a feature advertised for desktop is also supported in the mobile app."
+          ]
+        },
+        {
+          "heading": "Match tools to a clear goal",
+          "paragraphs": [
+            "Prefer evidence-backed workflows for research, controlled permissions for work automation and transparent usage rights for content generation.",
+            "The final choice depends on your own tests. Avoid treating this list as proof of benchmark leadership or guaranteed output quality."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "10 assistants IA sur iPhone et Android : comparatif 2026",
+      "excerpt": "ChatGPT, Gemini, Claude, Copilot, Perplexity et alternatives selon les usages et la confidentialité.",
+      "lead": "Recherche, rédaction, programmation et création visuelle ne mobilisent pas les mêmes fonctions. Cette sélection explique les usages et les limites sans prétendre établir un classement universel.",
+      "sections": [
+        {
+          "heading": "Comparer des fonctions, pas des slogans",
+          "paragraphs": [
+            "ChatGPT, Gemini, Claude et Microsoft Copilot aident à rédiger, expliquer et résumer, avec des différences d'intégration, d'abonnement et d'accès mobile.",
+            "Perplexity est orienté vers la recherche sourcée, Poe regroupe différents modèles, tandis que DeepSeek, Grok, Character.AI et Canva couvrent d'autres types de conversations et créations."
+          ]
+        },
+        {
+          "heading": "Un protocole de test simple",
+          "paragraphs": [
+            "Posez la même demande à plusieurs assistants : question factuelle avec sources, extraction d'un tableau, puis révision d'un texte. Comparez exactitude et capacité de correction.",
+            "Un texte convaincant peut être faux. Vérifiez les citations et les calculs auprès de références indépendantes, notamment en finance et en santé."
+          ]
+        },
+        {
+          "heading": "Données et abonnements",
+          "paragraphs": [
+            "Consultez les réglages sur conservation, entraînement et partage des données avant de charger des documents professionnels.",
+            "Les fonctionnalités gratuites et prix varient selon le pays et le système. Certaines fonctions n'existent que sur ordinateur ou avec un forfait particulier."
+          ]
+        },
+        {
+          "heading": "Un choix adapté au besoin",
+          "paragraphs": [
+            "Pour une recherche, privilégiez des sources vérifiables ; pour l'automatisation, les permissions ; pour la création, les droits de réutilisation et l'édition.",
+            "Ce comparatif ne mesure pas les performances de laboratoire. Essayez vos tâches réelles et maintenez une validation humaine pour les décisions importantes."
+          ]
+        }
+      ]
+    }
+  },
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false
+}
