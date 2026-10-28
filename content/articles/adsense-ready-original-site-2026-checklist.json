@@ -1,0 +1,128 @@
+{
+  "slug": "adsense-ready-original-site-2026-checklist",
+  "category": "earning",
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false,
+  "sources": [
+    {
+      "label": "Google AdSense Help — eligibility",
+      "url": "https://support.google.com/adsense/answer/9724?hl=en"
+    },
+    {
+      "label": "Google AdSense — insufficient content",
+      "url": "https://blog.google/products/adsense/how-to-address-insufficient-content/"
+    },
+    {
+      "label": "Google — site approval checklist",
+      "url": "https://adsense.google.com/start/resources/monetization-tips-to-optimize-google-adsense/"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "كيفاش تجهز موقعك لقبول Google AdSense في 2026 بلا خرافة عدد المقالات",
+      "excerpt": "شرح عملي للمحتوى الأصلي وصفحات الثقة وتجربة الهاتف والتحقق من الموقع قبل طلب مراجعة AdSense.",
+      "lead": "ما كاينش شرط رسمي كيقول خصك 20 ولا 50 ولا 100 مقال باش يوافق Google AdSense. المعيار هو واش الموقع عندو محتوى أصلي ومفيد وتجربة واضحة، وواش كيمتثل للسياسات. هاد الدليل مبني على صفحات Google نفسها.",
+      "sections": [
+        {
+          "heading": "1. العدد ماشي ضمان القبول",
+          "paragraphs": [
+            "شروط الأهلية الرسمية كتطلب محتوى مملوك لصاحب الموقع وأصلي ومفيد، لكنها ما كتحددش رقم معين للمقالات. 50 مقال قصير مكرر ماشي بالضرورة أحسن من 20 شرح متكامل.",
+            "Google كتذكر أن نقص النصوص أو موقع في طور البناء ممكن يسبب الرفض. الصور والفيديو بلا شرح كافي ما كيساعدوش النظام يعرف شنو كتقدم الصفحة."
+          ]
+        },
+        {
+          "heading": "2. راجع المحتوى صفحة بصفحة",
+          "paragraphs": [
+            "كل مقال خاصو يجاوب على سؤال محدد، يشرح الخطوات بعبارات مفهومة ويذكر المصادر المهمة وتاريخ المراجعة. تجنب نسخ مقالات مواقع أخرى أو ترجمة آلية بلا تحرير وتحقق.",
+            "بالمقارنات، وضح طريقة الاختيار واش جربت المنتج بنفسك ولا اعتمدت على بيانات الشركة. لا تخترع تقييمات أو صور اختبار ولا وعد بالأرباح أو قبول الإعلانات."
+          ]
+        },
+        {
+          "heading": "3. الثقة والتنقل والخصوصية",
+          "paragraphs": [
+            "خلي روابط من نحن والتواصل وسياسة الخصوصية والشروط واضحة فالقائمة أو أسفل الموقع. وجود بريد تواصل حقيقي أو قناة مخصصة للاستفسارات أحسن من معلومات ناقصة أو مزيفة.",
+            "اختبر الهاتف والصفحات على أكثر من عرض شاشة وتأكد من الروابط والصور وحجم النص. إذا كنت كتستعمل تحليلات أو إعلانات، وضح سياسة ملفات تعريف الارتباط وخيارات الموافقة المطلوبة حسب القوانين المعمول بها."
+          ]
+        },
+        {
+          "heading": "4. قبل الضغط على طلب المراجعة",
+          "paragraphs": [
+            "تحقق من ملكية النطاق وصلاحية robots.txt وsitemap.xml، ومن أن الصفحات كتفتح عبر HTTPS بلا أخطاء أو روابط مكسورة. اطلب الفهرسة للمقالات المهمة دون انتظار نتائج فورية.",
+            "أدخل كود AdSense الحقيقي المرتبط بحسابك فقط، وما تفعّلش وحدات إعلانية كتخالف السياسات. الموافقة كتجي من Google بعد مراجعة الموقع والحساب، وقد يطلب منك معلومات أو تصحيحات أخرى."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Getting a website ready for Google AdSense in 2026: no magic article count",
+      "excerpt": "Official requirements for original content, navigation, privacy and site approval before submitting.",
+      "lead": "Google AdSense does not publish a fixed requirement of 20, 50 or 100 posts. Approval depends on original useful content, compliance and a functional site. This guide separates published policy from internet folklore.",
+      "sections": [
+        {
+          "heading": "Article count is not a pass mark",
+          "paragraphs": [
+            "The official eligibility page asks for original content owned by the applicant, but names no universal number of articles. Dozens of thin duplicates are not a substitute for good explanations.",
+            "Google has explained that sites with too little text or incomplete construction may fail. Image-only galleries and videos without useful context may not provide enough information for review."
+          ]
+        },
+        {
+          "heading": "Audit every editorial page",
+          "paragraphs": [
+            "Each article should answer a clear question, explain reasoning, identify sources where needed and include a meaningful review date. Avoid copying pages or mechanically translating without checking accuracy.",
+            "Comparison guides should disclose methodology: manufacturer specifications are not independent testing, and a claimed ranking requires defined criteria. Never fabricate outcomes or testimonials."
+          ]
+        },
+        {
+          "heading": "Make trust and navigation visible",
+          "paragraphs": [
+            "Provide real About, Contact, Privacy and Terms pages and easy routes between sections. A genuine contact address or documented editorial contact workflow is more credible than invented information.",
+            "Test responsive layout, image loading, broken links and page readability on mobile. Disclose analytics and advertising data practices, and implement regional consent mechanisms where applicable."
+          ]
+        },
+        {
+          "heading": "Final pre-application checks",
+          "paragraphs": [
+            "Verify domain ownership, HTTPS accessibility, robots and sitemap validity. Important articles should be discoverable through internal links; indexing requests do not guarantee search placement.",
+            "Use your own AdSense publisher details for verification and follow the account's actual site-review status. Only Google can approve the site, and additional corrections may be required."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Préparer son site à Google AdSense en 2026 : aucun nombre magique d’articles",
+      "excerpt": "Les conditions officielles pour le contenu original, la navigation, les mentions et la vérification avant candidature.",
+      "lead": "Google AdSense ne fixe pas un minimum universel de 20, 50 ou 100 articles. La qualité, l'originalité, la conformité et un site fonctionnel restent essentiels. Voici une méthode fondée sur les documents de Google.",
+      "sections": [
+        {
+          "heading": "Le nombre ne garantit rien",
+          "paragraphs": [
+            "La page officielle d’éligibilité demande un contenu original et intéressant dont vous disposez des droits, sans annoncer un seuil précis de publications. Multiplier des pages répétitives ne compense pas l’absence de valeur.",
+            "Google explique qu’un site en chantier, ou composé surtout d’images et de vidéos sans texte suffisant, peut être refusé pour manque de contenu."
+          ]
+        },
+        {
+          "heading": "Auditer les pages une par une",
+          "paragraphs": [
+            "Chaque article doit traiter un problème précis, fournir des étapes pertinentes et citer ses sources importantes. Vérifiez traductions, dates et exactitude plutôt que d'automatiser des textes sans relecture.",
+            "Dans un comparatif, distinguez les caractéristiques fournies par le fabricant des tests réalisés personnellement. Aucune donnée de performance ou recommandation inventée ne doit être publiée."
+          ]
+        },
+        {
+          "heading": "Transparence et expérience",
+          "paragraphs": [
+            "Rendez accessibles les rubriques À propos, Contact, Confidentialité et Conditions. Utilisez des coordonnées authentiques ou une procédure éditoriale de contact claire.",
+            "Vérifiez la navigation mobile, les images, la lisibilité et les liens. Informez des usages publicitaires et analytiques, avec le dispositif de consentement exigé dans les juridictions concernées."
+          ]
+        },
+        {
+          "heading": "Avant de demander la validation",
+          "paragraphs": [
+            "Confirmez HTTPS, propriété du domaine, robots.txt, sitemap.xml et absence de liens cassés. Les pages importantes doivent être accessibles par la navigation interne.",
+            "Insérez uniquement l’identifiant AdSense qui vous appartient et consultez les indications de votre compte. L'approbation dépend exclusivement de Google et n'est jamais garantie."
+          ]
+        }
+      ]
+    }
+  }
+}
