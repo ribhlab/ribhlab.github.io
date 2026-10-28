@@ -138,7 +138,8 @@ for(const lang of ['ar','en','fr']){
   const h=fs.readFileSync(p,'utf8');
   const count=(h.match(/class="media-card media-app-card"/g)||[]).length;
   if(count!==10)errors.push('Apps: expected 10 distinct app cards '+lang+'/'+c.id+' got '+count);
-  if(!h.includes(appGuide.categories.find(x=>x.id===c.id).apps[0].bestFor[lang]))errors.push('Apps: missing use-case comparison '+lang+'/'+c.id);
+  const phrase=c.apps[0].bestFor[lang].replace(/&/g,'&amp;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  if(!h.includes(phrase))errors.push('Apps: missing use-case comparison '+lang+'/'+c.id);
  }
 }
 const trackingId=(process.env.UMAMI_WEBSITE_ID||'').trim();
