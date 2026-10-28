@@ -322,3 +322,15 @@ html[lang=ar] .opp-main-hub .opp-hero h1{font-size:clamp(37px,4.6vw,65px)}
 .opp-guide-page .opp-market-paragraph p,.opp-guide-page .opp-unverified p{font-size:16px;line-height:2.05}
 .opp-guide-page .opp-unverified{background:#fafbfe;border-radius:12px;padding:19px 23px}
 @media(max-width:620px){.opp-guide-page .opp-fact-grid{grid-template-columns:1fr}.opp-guide-page .opp-guide-article{padding:18px}.opp-guide-page .opp-fact-grid dd{font-size:15px}}
+
+
+/* Source-led country and migration opportunity preview */
+.opp-market-preview{padding-block:36px 46px}
+.opp-market-preview h2{font-size:clamp(23px,2.6vw,34px);line-height:1.45;margin:10px 0 22px;color:#172a4b}
+.opp-market-preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.opp-market-preview-card{border-radius:17px;border:1px solid #dfdff4;background:#fff;padding:24px 26px;box-shadow:0 9px 25px rgba(40,32,91,.05);display:flex;flex-direction:column}
+.opp-market-preview-card h3{font-size:19px;margin:0 0 13px;color:#182c4e}
+.opp-market-preview-card p{font-size:15px;line-height:1.85;color:#374966;margin:0 0 20px}
+.opp-market-preview-card a{color:#6849d4;font-weight:700;text-decoration:none;margin-top:auto}
+.opp-market-preview-card a:hover{text-decoration:underline}
+@media(max-width:700px){.opp-market-preview-grid{grid-template-columns:1fr}.opp-market-preview-card{padding:20px}}
