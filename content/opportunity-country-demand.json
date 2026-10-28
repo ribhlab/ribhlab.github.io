@@ -1,0 +1,199 @@
+{
+  "checkedAt": "2026-10-28",
+  "method": "Snapshots from national official vacancy portals and 2025/2026 demand surveys. Demand forecasts are NOT job offers; no work permit is implied.",
+  "markets": {
+    "germany": {
+      "ids": [
+        "german-opportunity",
+        "germany-jobs"
+      ],
+      "sources": [
+        {
+          "label": "Make it in Germany — job listings, sectors and federal states",
+          "url": "https://www.make-it-in-germany.com/en/working-in-germany/job-listings"
+        },
+        {
+          "label": "Make it in Germany — professions in demand",
+          "url": "https://www.make-it-in-germany.com/en/working-in-germany/job-search-application/professions-in-demand"
+        },
+        {
+          "label": "Make it in Germany — labour market skilled workers",
+          "url": "https://www.make-it-in-germany.com/en/why-germany/labour-market-skilled-workers"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "أين توجد الوظائف في ألمانيا؟ قطاعات ومناطق بأرقام من البوابة الحكومية",
+          "paragraphs": [
+            "بتاريخ مراجعة 28 أكتوبر 2026، عرضت بوابة Make it in Germany نحو 12,274 فرصة ضمن الصحة والخدمات الاجتماعية والتعليم، و8,142 في الصناعة والإنتاج، و3,652 في البناء والهندسة المعمارية والخدمات التقنية للمباني، و2,310 في النقل واللوجستيك والأمن، و2,232 في الإدارة والمحاسبة والقانون والتنظيم. هذه أعداد تظهرها مرشحات منصة عروض العمل وقد تتغير يومياً، ولا تعني أن كل عرض يقبل مرشحاً من خارج الاتحاد الأوروبي.",
+            "في مرشحات الولايات ظهرت بافاريا 7,652، وشمال الراين–وستفاليا 6,156، وبادن–فورتمبيرغ 6,053، وهِسّن 4,094، وبرلين 1,206. هذه أرقام الولايات وليست أرقام مدن مثل ميونيخ أو كولونيا؛ يجب تصفية البحث باسم المدينة للعثور على وظائف مناسبة هناك. لا ينبغي جمع نتائج المرشحات المختلفة باعتبارها عدد الوظائف الفريدة من دون التحقق من طريقة حساب المنصة.",
+            "تصنف البوابة التمريض والأطباء والهندسة والمعلوماتية والحرف المهنية والنقل بين المجالات المطلوبة، مع اختلاف كبير بحسب اللغة والشهادة والولاية. الوظائف الصحية وبعض المهن المنظمة تحتاج اعترافاً بالمؤهل وترخيصاً لمزاولة المهنة. بالنسبة إلى المعلوماتية والهندسة، تحقق من المهام والخبرة واللغة التي حددها المشغّل، وليس فقط اسم المهنة.",
+            "ابدأ بكلمة مهنة دقيقة بالألمانية أو الإنجليزية ثم اختر الولاية، وافتح الإعلان لمعرفة اسم الشركة والمدينة ونمط العمل والراتب إن نُشر، قبل مقارنة ذلك بمتطلبات تأشيرة العامل المؤهل أو البطاقة الزرقاء أو بطاقة الفرص. تصريح الدخول ليس مضموناً بمجرد ظهور إعلان في منصة رسمية؛ احسب الاعتراف بالمؤهل واللغة وتكاليف الانتقال والميزانية اللازمة. لا تقدم أعداد المرشحات باعتبارها فرصاً مؤكدة للأجانب."
+          ]
+        },
+        "en": {
+          "title": "Where Germany has jobs: official sector and state-level figures",
+          "paragraphs": [
+            "As checked on 28 October 2026, Make it in Germany displayed around 12,274 listings in health, social care and education, 8,142 in manufacturing, 3,652 in construction and technical building services, 2,310 in transport and logistics, and 2,232 in business administration, accounting and law. These are changing search-filter figures, not guarantees that every employer hires non-EU applicants.",
+            "Federal-state filters showed Bavaria at 7,652, North Rhine-Westphalia at 6,156, Baden-Württemberg at 6,053, Hesse at 4,094 and Berlin at 1,206. State totals are not city counts for Munich, Cologne or Frankfurt. Search individual cities to inspect specific vacancies, and do not sum overlapping filters without understanding the portal's method.",
+            "The official portal highlights nursing, medicine, engineering, IT, skilled trades and transport as areas of demand. Required German, recognition of credentials and professional licensing depend on the occupation and employer. A reported shortage is not the same thing as a job offer that is open to an overseas candidate.",
+            "Search by a precise job title, filter a state or city and verify the employer, salary if disclosed, contract and qualifications on the individual posting. Separately assess skilled-worker visa, EU Blue Card or Opportunity Card rules. Budget for recognition and travel, and never assume a visa results automatically from a listing."
+          ]
+        },
+        "fr": {
+          "title": "Où se situent les emplois en Allemagne : secteurs et Länder selon la plateforme officielle",
+          "paragraphs": [
+            "Au 28 octobre 2026, la plateforme Make it in Germany affichait environ 12 274 annonces dans la santé et le social, 8 142 dans la production industrielle, 3 652 dans le bâtiment et les services techniques, 2 310 dans le transport et la logistique, et 2 232 dans l'administration, la comptabilité et le droit. Ces nombres issus des filtres évoluent et ne garantissent pas un recrutement hors UE.",
+            "Les Länder affichaient notamment 7 652 annonces en Bavière, 6 156 en Rhénanie-du-Nord-Westphalie, 6 053 au Bade-Wurtemberg, 4 094 en Hesse et 1 206 à Berlin. Il ne s'agit pas de chiffres par ville comme Munich ou Cologne. Les recherches par ville et par profession doivent être effectuées pour vérifier les offres réellement pertinentes.",
+            "Le portail identifie les soins infirmiers, la médecine, l'ingénierie, l'informatique, l'artisanat et le transport comme secteurs recherchés. Reconnaissance du diplôme, allemand et autorisation d'exercer changent selon le métier. Une pénurie statistique ne constitue ni une offre contractuelle ni une promesse de visa.",
+            "Choisissez le métier et le Land, examinez l'annonce individuelle pour l'employeur, la ville, le contrat et le salaire publié, puis vérifiez séparément les visas de travail, la carte bleue européenne ou la Chancenkarte. Les dépenses de reconnaissance et d'installation doivent être anticipées."
+          ]
+        }
+      }
+    },
+    "france": {
+      "ids": [
+        "france-travail",
+        "france-talent"
+      ],
+      "sources": [
+        {
+          "label": "France Travail — Enquête besoins en main-d'œuvre 2026, statistiques régionales",
+          "url": "https://statistiques.francetravail.org/bmo/bmo?la=0&pp=2026&ss=1"
+        },
+        {
+          "label": "France Travail — Portail des offres",
+          "url": "https://candidat.francetravail.fr/offres/recherche"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "فرنسا 2026: أين تتركز مشاريع التوظيف وما الفرق بين الطلب والتأشيرة؟",
+          "paragraphs": [
+            "حسب مسح احتياجات اليد العاملة BMO 2026 الصادر عن France Travail، يوجد 2,279,500 مشروع توظيف متوقع خلال السنة، منها 43.8% يصنفها المشغّلون صعبة التوظيف و32.2% موسمية. هذه مشاريع ونوايا توظيف إحصائية وليست وظائف منشورة يمكن الترشح لها فوراً، ولا تعطي حق العمل لمواطن من خارج الاتحاد الأوروبي.",
+            "توزعت مشاريع التوظيف وفق المناطق على Île-de-France بنحو 388,810، وAuvergne-Rhône-Alpes بنحو 255,410، وNouvelle-Aquitaine بنحو 248,800، وProvence-Alpes-Côte d'Azur بنحو 214,180، وOccitanie بنحو 200,470. هذه أرقام مناطق إدارية وليست أرقام مدن باريس وليون وبوردو ومرسيليا منفردة. البحث عن مدينة يحتاج التصفية داخل بوابة الإعلانات.",
+            "للعثور على فرص حقيقية، افتح نتائج France Travail حسب المهنة والمدينة ونوع العقد وتاريخ النشر. اقرأ شرط شهادة اللغة والاعتراف بالمؤهل وطبيعة العرض، واسأل هل يقبل المشغّل إصدار الوثائق اللازمة لعامل من خارج فرنسا. لا يكفي عدد مشاريع التوظيف في منطقة لتقييم فرصة شخصية أو لقبول تأشيرة.",
+            "قارن بعد العثور على عقد مناسب بين مسار salarié أو travailleur temporaire والمسارات الخاصة ببطاقة talent، بحسب الراتب والدرجة والمهام والتأهيل. رسوم التأشيرة والإقامة وتعليمات France-Visas تختلف حسب المسار. لا ننقل أرقام BMO بوصفها رواتب أو عروضاً مؤكدة."
+          ]
+        },
+        "en": {
+          "title": "France 2026: recruitment plans by region versus actual open vacancies",
+          "paragraphs": [
+            "France Travail's official BMO 2026 survey estimated 2,279,500 recruitment projects for the year, with 43.8% reported as difficult to fill and 32.2% classed as seasonal. These are employer recruitment intentions, not individual advertised vacancies or automatic permission for non-EU workers.",
+            "Regional estimates were about 388,810 in Île-de-France, 255,410 in Auvergne-Rhône-Alpes, 248,800 in Nouvelle-Aquitaine, 214,180 in Provence-Alpes-Côte d'Azur and 200,470 in Occitanie. They are broad region totals, not city-specific figures for Paris, Lyon, Bordeaux or Marseille.",
+            "Find a genuine job through France Travail's live listing search and filter by occupation, city, contract and publication date. Check the employer, required language, regulated credentials and whether they will support the lawful work authorization. High regional recruitment demand does not automatically translate into an offer for an overseas applicant.",
+            "After securing a viable offer, compare ordinary salaried-work authorization with the relevant Talent residence categories according to duties, gross salary and qualifications. Visa costs and document rules are separate; BMO survey estimates should never be shown as guaranteed vacancies."
+          ]
+        },
+        "fr": {
+          "title": "France 2026 : projets de recrutement par région et annonces réellement ouvertes",
+          "paragraphs": [
+            "L'enquête BMO 2026 de France Travail estime à 2 279 500 les projets de recrutement pour l'année, dont 43,8 % jugés difficiles et 32,2 % saisonniers. Il s'agit d'intentions de recrutement déclarées, non d'offres individuelles disponibles ni d'une autorisation automatique pour un candidat hors UE.",
+            "Les volumes régionaux atteignent environ 388 810 projets en Île-de-France, 255 410 en Auvergne-Rhône-Alpes, 248 800 en Nouvelle-Aquitaine, 214 180 en Provence-Alpes-Côte d'Azur et 200 470 en Occitanie. Ces données sont régionales, pas des statistiques limitées à Paris, Lyon, Bordeaux ou Marseille.",
+            "Pour trouver un poste réel, utilisez les offres de France Travail avec filtres métier, ville, contrat et date, puis vérifiez les exigences de langue et de diplôme. Le besoin de recrutement ne garantit pas que l'employeur soit disposé ou autorisé à embaucher un candidat résidant à l'étranger.",
+            "Une fois une offre concrète trouvée, comparez le visa salarié de droit commun et les catégories Talent selon les fonctions, le salaire brut et la qualification. Les statistiques BMO ne représentent pas un salaire promis, un contrat ou une chance individuelle de visa."
+          ]
+        }
+      }
+    },
+    "canada": {
+      "ids": [
+        "canada-foreign",
+        "canada-program",
+        "express-entry"
+      ],
+      "sources": [
+        {
+          "label": "Job Bank — Foreign candidates outside Canada",
+          "url": "https://www.jobbank.gc.ca/findajob/foreign-candidates"
+        },
+        {
+          "label": "Job Bank — Temporary foreign worker vacancies",
+          "url": "https://www.jobbank.gc.ca/temporary-foreign-workers"
+        },
+        {
+          "label": "Job Bank — mechanic in Laval, official posting #3705899",
+          "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50593886?source=searchresults"
+        },
+        {
+          "label": "Job Bank — foreign applicant eligibility guide",
+          "url": "https://www.ab.jobbank.gc.ca/support/question?qaid=31&tid=10"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "كندا: عروض موجهة للأجانب مع مدن وأجور حقيقية من Job Bank",
+          "paragraphs": [
+            "توضح بوابة Job Bank الحكومية أن المتقدم المقيم خارج كندا دون تصريح عمل صالح يجب أن يركز على الإعلانات التي تسمح بطلبات المرشحين الدوليين. توفر البوابة مرشحاً اسمه Canadians and international candidates، وقسماً خاصاً بأصحاب عمل تقدموا بطلب LMIA أو حصلوا عليها. وجود طلب LMIA لا يعني الموافقة عليه أو صدور تصريح عمل، كما أن الوظائف لا تشمل كل المقاطعات بالتساوي.",
+            "مثال موثق منشور في 27 أكتوبر 2026: شركة RMO-Carrosserie في مدينة Laval بمقاطعة Québec تطلب mécanicien automobile واحداً بدوام كامل، بأجر 37 دولاراً كندياً للساعة مقابل 40 ساعة أسبوعياً، وتطلب شهادة التعليم الثانوي وخبرة 5 سنوات أو أكثر؛ مرجع Job Bank هو #3705899، وحالة LMIA المطلوبة لا تعني اعتمادها. هذا إعلان واقعي ذو مدينة وأجر وشروط، لكنه قد يغلق أو يتغير؛ يلزم فتحه ومراجعة خانة Who can apply قبل إرسال الطلب.",
+            "يجب عدم الخلط بين فرص العمل المؤقتة وبرنامج الإقامة الدائمة Express Entry. الأخير يدير ملفات أهلية ونقاط CRS وسحوبات وفق البرنامج والفئة؛ لا يمنح وظيفة تلقائياً. إذا كانت المهنة منظمة، افحص شرط الترخيص أو الاعتراف بالشهادة في المقاطعة. قارن مستوى الفرنسية والإنجليزية والخبرة والموارد المالية مع المتطلبات الرسمية قبل دفع أي رسوم.",
+            "ابدأ بتحديد المهنة والمقاطعة مثل Québec أو Ontario أو British Columbia، ثم استخدم مرشح المرشحين الدوليين واحفظ رقم الإعلان وموقع العمل والراتب واسم المشغّل. لا تدفع لشركة مقابل وعد بوظيفة مؤكدة. وتحقق من حالة الطلب ومن متطلبات تصريح العمل لدى IRCC قبل السفر؛ Job Bank منصة وظائف وليست جهة منح التأشيرات."
+          ]
+        },
+        "en": {
+          "title": "Canada: real foreign-candidate job listings with city, salary and requirements",
+          "paragraphs": [
+            "Government Job Bank explains that applicants outside Canada without a valid work permit should focus on vacancies marked open to Canadians and international candidates. Its temporary foreign worker section lists employers who have applied for or obtained an LMIA. A requested LMIA is not an approved LMIA, and neither automatically creates a work permit.",
+            "A dated example from 27 October 2026 is RMO-Carrosserie, recruiting one automobile mechanic in Laval, Québec, on-site, full-time, for CAD 37 per hour over 40 hours a week. The posting asks for secondary-school graduation and at least five years of experience, reference Job Bank #3705899. It is labelled LMIA requested, not approved. The employer, salary and city are verified in the individual posting, but availability may change and the 'Who can apply' field must be checked before applying.",
+            "Temporary employer recruitment is separate from permanent residence via Express Entry, which manages eligibility, CRS ranking and invitations. Having a profile is not a job offer, and a work permit does not automatically grant permanent residence. Regulated occupations can require provincial credential recognition or licensing, plus language and other requirements.",
+            "Choose an occupation and a province such as Québec, Ontario or British Columbia, apply the international-candidate filter, and inspect each dated job's company, location, wage and requirements. Check work-permit rules at IRCC separately. Never pay for purportedly guaranteed employment or an LMIA; Job Bank does not issue immigration permissions."
+          ]
+        },
+        "fr": {
+          "title": "Canada : offres officielles accessibles aux candidats étrangers, par ville et salaire",
+          "paragraphs": [
+            "Le Guichet-Emplois du Canada explique qu'une personne vivant à l'étranger sans permis de travail valide doit chercher les annonces ouvertes aux candidats internationaux. Le filtre « Canadians and international candidates » et la rubrique des travailleurs étrangers temporaires orientent vers les employeurs pertinents. Une EIMT/LMIA demandée n'est pas une EIMT approuvée et ne constitue pas un permis de travail.",
+            "Exemple concret publié le 27 octobre 2026 : RMO-Carrosserie recherche un mécanicien automobile à Laval, Québec, sur site et à temps plein, à 37 CAD de l'heure pour 40 heures hebdomadaires. L'annonce demande un diplôme secondaire et cinq années d'expérience ou plus. Référence Job Bank #3705899 ; statut LMIA requested, donc non assimilable à une approbation. La fiche peut être modifiée ou fermée ; vérifiez la rubrique des personnes autorisées à postuler.",
+            "L'emploi temporaire doit être distingué d'Entrée express, qui organise des programmes d'admissibilité, un classement CRS et des invitations à demander la résidence permanente. Déposer un profil n'est pas recevoir un contrat, et obtenir un permis de travail n'offre pas automatiquement une résidence permanente. Certaines professions exigent une reconnaissance provinciale du diplôme.",
+            "Choisissez un métier, une province comme le Québec, l'Ontario ou la Colombie-Britannique, puis examinez la ville, le salaire, l'entreprise, la date et les critères de chaque annonce. Vérifiez séparément les exigences d'immigration auprès d'IRCC et refusez les promesses payantes de contrat ou de permis garanti."
+          ]
+        }
+      }
+    },
+    "europe": {
+      "ids": [
+        "eures",
+        "eures-mobility"
+      ],
+      "sources": [
+        {
+          "label": "EURES/ELA — Labour shortages and surpluses in Europe",
+          "url": "https://eures.europa.eu/living-and-working/labour-shortages-and-surpluses-europe_en"
+        },
+        {
+          "label": "EURES — Latest report and country comparison (29 June 2026)",
+          "url": "https://eures.europa.eu/what-latest-data-reveals-about-labour-market-imbalances-across-europe-2026-06-29_en"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "أوروبا: الدول والمهن التي تعاني خصاصاً وفق EURES 2025",
+          "paragraphs": [
+            "توضح الشبكة الأوروبية EURES في تقريرها المنشور في يونيو 2026 عن اختلالات سوق العمل أن دولاً مثل بلغاريا وإيطاليا وهولندا تواجه صعوبة في ملء عدد متنوع من المهن، منها أطباء اختصاصيون ولحامون. في المقابل، تظهر فوائض في مهن أخرى في لاتفيا والنمسا وفنلندا، وخصوصاً بعض الوظائف المكتبية والمجالات الإبداعية. هذه نتائج مقارنة وطنية وليست قائمة شركات تقدم عقود عمل.",
+            "يشير التقرير إلى أن 57% من حالات الخصاص المصنفة تحمل مستوى شدة متوسطاً أو مرتفعاً، وأن 98% من المهن التي تعرف خصاصاً في بلد واحد على الأقل تظهر فائضاً في بلد آخر. تختلف قابلية التنقل بسبب الاعتراف بالشهادة واللغة والأجر وشروط العمل؛ لذلك فإن وجود خصاص في إيطاليا لا يعني تلقائياً إمكانية حصول طالب مغربي على تأشيرة أو وظيفة.",
+            "ابدأ باختيار بلد محدد ومهنة محددة ثم افتح منصة عروض العمل في EURES وصفحات التوظيف الوطنية، وابحث بالمدينة ونوع العقد واللغة. قارن الطلب المهني الفعلي من صاحب العمل بالشهادات المطلوبة والحماية الاجتماعية والسكن. تجنب وصف قطاع كامل بأنه مفتوح لكل المهاجرين؛ فبعض الوظائف المنظمة تحتاج تراخيص واعترافاً بالمؤهل.",
+            "مهم: تقرير EURES يقيس اختلالات العرض والطلب وليس الوظائف المفتوحة في اللحظة الحالية. ينبغي أن تتضمن أي مقالة عن عرض محدد اسم الشركة والمدينة وتاريخ الإعلان وآخر أجل والأجر إذا نشرته الجهة. أما طلب إقامة العمل فيُفحص لدى الدولة المعنية ولا تمنحه EURES."
+          ]
+        },
+        "en": {
+          "title": "Europe: which countries and occupations show shortages in EURES evidence?",
+          "paragraphs": [
+            "EURES' June 2026 interpretation of its 2025 labour-shortage report describes diverse unfilled occupations in countries including Bulgaria, Italy and the Netherlands, ranging from specialist doctors to welders. Countries including Latvia, Austria and Finland report surpluses in other jobs, especially some clerical and creative occupations. These are labour-market signals, not a list of employers offering guaranteed contracts.",
+            "The report says 57% of recorded shortages are medium or high severity and that 98% of occupations experiencing a shortage in at least one country are simultaneously in surplus elsewhere. Qualifications, national recognition, language and pay prevent a simple one-to-one movement of workers. A shortage in Italy does not establish eligibility for a non-EU applicant to work there.",
+            "Choose a specific country and occupation and use EURES and the corresponding public employment service to find individual employers, cities, contract types and language requirements. Compare regulatory recognition and working conditions before assuming that a vacancy is accessible to you. Some health and licensed professions require formal authorization.",
+            "The dashboard is evidence about demand and supply, not real-time job availability. Actual postings must state employer and city, dated conditions and salary when supplied. EURES does not issue national work visas or waive immigration rules."
+          ]
+        },
+        "fr": {
+          "title": "Europe : pays et métiers en tension selon les données EURES",
+          "paragraphs": [
+            "Le rapport EURES commenté en juin 2026 décrit des pénuries professionnelles variées en Bulgarie, en Italie et aux Pays-Bas, notamment chez certains médecins spécialistes et soudeurs. La Lettonie, l'Autriche et la Finlande présentent au contraire des surplus dans d'autres professions, particulièrement des métiers administratifs et créatifs. Ce sont des indications nationales et non des contrats garantis.",
+            "Selon l'analyse, 57 % des pénuries recensées sont de gravité moyenne ou élevée, tandis que 98 % des professions déficitaires dans au moins un pays présentent simultanément un surplus ailleurs. Langue, reconnaissance des qualifications et niveaux de rémunération freinent les mobilités. Une pénurie italienne ne signifie pas qu'un candidat hors UE obtient automatiquement une autorisation de travail.",
+            "Sélectionnez un pays et un métier précis, puis consultez les annonces EURES et le service public national pour trouver un employeur, une ville, un contrat et des exigences linguistiques. Les professions réglementées peuvent exiger une reconnaissance formelle des diplômes et un droit d'exercer.",
+            "Les tableaux de pénuries sont des statistiques structurelles, pas une liste de postes ouverts à cette minute. Une véritable offre doit être vérifiée individuellement, avec date, employeur, ville et rémunération si publiée. Les visas restent de la compétence de chaque pays."
+          ]
+        }
+      }
+    }
+  }
+}
