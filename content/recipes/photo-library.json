@@ -177,6 +177,27 @@
       "source": "https://unsplash.com/photos/a-red-bowl-filled-with-soup-on-top-of-a-white-counter-SmejxSpxsbE",
       "photographer": "Snappr",
       "subject": "Lentil soup in terracotta bowl"
+    },
+    "oats": {
+      "photoId": "photo-1720356778303-6cdc6d2e95ce",
+      "url": "https://images.unsplash.com/photo-1720356778303-6cdc6d2e95ce?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/a-bowl-of-oatmeal-with-blackberries-and-cottage-cheese-EtR0Pj0txhs",
+      "photographer": "Lala Azizli",
+      "subject": "Oatmeal, berries and cottage cheese"
+    },
+    "avocado": {
+      "photoId": "photo-1561467792-ba0b66ddfc83",
+      "url": "https://images.unsplash.com/photo-1561467792-ba0b66ddfc83?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/cooked-food-Hb5OfGzeKNk",
+      "photographer": "Ellen Bordal",
+      "subject": "Avocado toast and egg"
+    },
+    "eggToast": {
+      "photoId": "photo-1580641825459-2293b0e9ad72",
+      "url": "https://images.unsplash.com/photo-1580641825459-2293b0e9ad72?auto=format&fit=crop&w=1000&h=625&q=78",
+      "source": "https://unsplash.com/photos/fried-egg-with-avocado-toast-breakfast-orMrxgkA4EA",
+      "photographer": "Olya P",
+      "subject": "Fried egg and avocado toast"
     }
   }
 }
