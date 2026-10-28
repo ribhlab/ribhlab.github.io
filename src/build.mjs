@@ -150,7 +150,7 @@ function categoryGrid(l){const t=i18n[l];const newTopics={games:{ar:['الألع
 function archivePage(l){
  const t=i18n[l];
  const words={
-  ar:{title:'أرشيف جميع المقالات',intro:'جميع مقالات ربح لاب، القديمة والجديدة، فمكان واحد. كنزيدو المحتوى وكنحتافظو بالمقالات المنشورة وبروابطها الأصلية.',browse:'تصفح جميع المقالات',count:'مقال ودليل',home:'الصفحة الرئيسية'},
+  ar:{title:'أرشيف جميع المقالات',intro:'جميع مقالات ربح لاب، القديمة والجديدة، في مكان واحد. نواصل إثراء المحتوى ونحافظ على المقالات المنشورة وروابطها الأصلية.',browse:'تصفح جميع المقالات',count:'مقال ودليل',home:'الصفحة الرئيسية'},
   en:{title:'All stories & guides',intro:'The complete RibhLab journal archive: original articles from previous editions alongside every new publication. Older links stay available.',browse:'Browse the full archive',count:'articles and guides',home:'Home'},
   fr:{title:'Tous les articles du journal',intro:'Les articles des éditions précédentes restent accessibles avec les nouvelles publications : une archive complète, sans effacement des contenus.',browse:'Parcourir les archives',count:'articles et guides',home:'Accueil'}
  }[l];
