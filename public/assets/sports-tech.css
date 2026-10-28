@@ -72,3 +72,8 @@
 .media-app-fit strong{font-weight:850;color:#185f96}
 .media-app-caution{font-size:11.5px!important;color:#718095!important}
 .media-app-card .media-link{margin-top:auto}
+
+.media-video-start{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;border:0;border-radius:12px;background:radial-gradient(ellipse at 48% 28%,#394b6d,#132638 72%);color:#fff;font-size:16px;font-weight:800}
+.media-video-start>span{display:grid;place-items:center;font-size:29px;width:75px;height:55px;color:#fff;background:#d92630;border-radius:15px;box-shadow:0 7px 20px #0005}
+.media-video-start small{font-size:12px;color:#d0e4f6;font-weight:650}
+.media-video-start:hover>span,.media-video-start:focus-visible>span{background:#f02c36;transform:scale(1.05)}
