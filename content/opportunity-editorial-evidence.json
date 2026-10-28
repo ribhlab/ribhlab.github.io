@@ -60,6 +60,22 @@
             [
               "ما المعلومات غير المنشورة، وهل يصلح المنصب لك؟",
               "لا ينص الإعلان على راتب ثابت أو جدول ساعات العمل أو تاريخ المقابلة التفصيلي. لذلك لن ننسب أرقاماً للشركة. يناسب العمل مرشحاً يملك تكويناً تقنياً في الدعم والشبكات ويستطيع التنقل إلى تيط مليل، لا شخصاً يبحث حصراً عن تطوير البرمجيات من المنزل. افحص تكاليف التنقل وطبيعة العقد والالتزامات أثناء التواصل الرسمي، وتأكد من الاعتراف بشهادتك قبل افتراض الأهلية. القرار النهائي للانتقاء يعود للشركة ولا يمكن لأي موقع ضمانه."
+            ],
+            [
+              "نموذج تطبيقي: عطل شبكة في المكتبة وكيف تعالج المشكلة دون إرباك الخدمة",
+              "تخيل أن عشرة حواسيب داخل قاعة مطالعة فقدت الوصول إلى فهرس المكتبة، بينما بقي الإنترنت يعمل في قاعة أخرى. الخطوة الأولى ليست إعادة تشغيل جميع الخوادم، بل تحديد نطاق الانقطاع: هل المشكلة في جهاز واحد، أم موزع الشبكة، أم عنوان IP، أم خدمة DNS، أم تطبيق الفهرسة؟ اجمع وقت ظهور العطل، والأجهزة المتأثرة، والرسائل الظاهرة، ثم اختبر الاتصال المحلي قبل الانتقال إلى الخدمات البعيدة. وثّق الإجراءات واطلب الإذن قبل أي تغيير قد يقطع خدمة المستخدمين. بعد الإصلاح، جرّب البحث في الفهرس على أكثر من جهاز، وأرسل تقريراً مختصراً بالسبب والإجراء والوقاية. هذا سيناريو تدريبي من RibhLab وليس حادثة حقيقية في مديونة للخدمات."
+            ],
+            [
+              "النسخ الاحتياطي وحماية بيانات المرتفقين: ما الذي يجب الانتباه إليه؟",
+              "يؤكد الإعلان أهمية النسخ الاحتياطي وأمن المعطيات. في هذا النوع من المرافق قد تتضمن قواعد البيانات معلومات تهم العاملين أو رواد المكتبة، ولذلك لا ينبغي نسخها إلى حساب سحابي شخصي أو حملها على ذاكرة USB غير معتمدة. ينبغي فهم مبدأ أقل صلاحية، وتوثيق من يمكنه النفاذ إلى الملفات، والتحقق دورياً من إمكان استعادة النسخة الاحتياطية. كما ينبغي الفصل بين حفظ ملف وبين القدرة الفعلية على استرجاعه بعد خلل. إذا طلب مستخدم معرفة بيانات قارئ آخر، لا يمنحه العون التقني الاطلاع لمجرد امتلاكه صلاحية إدارية. هذه مبادئ مهنية للاستعداد ولا تعني أن الشركة أعلنت نظاماً أمنياً محدداً."
+            ],
+            [
+              "كيف توائم السيرة الذاتية ورسالة التحفيز مع الإعلان؟",
+              "قسم السيرة إلى التكوين والخبرات والأدوات وحالات الدعم الموثقة. بدلاً من عبارة مبهمة مثل «إتقان الشبكات»، اذكر نطاقاً حقيقياً سبق أن تعاملت معه، مثل إعداد نقاط اتصال داخل شركة أو صيانة طابعات مشتركة، إذا كانت لديك بالفعل تلك الخبرة. في رسالة التحفيز الموجهة للمدير العام، اربط بين Bac+2 المطلوب وخدمتك للمستخدمين وحل الحوادث وحماية المعلومات، واذكر الاستعداد للعمل في تيط مليل دون مبالغة. يمكن أن ترفق مثالاً شخصياً من مختبر منزلي تحت عنوان تجربة تدريبية. لا تنسب لنفسك إدارة مركز توثيق إن لم تفعل، ولا تكتب أرقام تحسين أو نسب نجاح من غير سجل قابل للإثبات."
+            ],
+            [
+              "أسئلة ينبغي التحقق منها مع المشغل إذا استدعيت للمقابلة",
+              "لأن الإعلان لم يذكر تعويضاً مالياً أو تفاصيل الدوام، يمكن سؤال المشغل بأدب عن طبيعة العقد ومدته، ومقرات العمل المرتبطة بالمهمة، وحجم فريق المعلوماتية، وسياسة المناوبة عند تعطل الخدمة، والأدوات التي تتيحها المؤسسة للصيانة. ويستحسن معرفة هل تتطلب الوظيفة العمل أحياناً في عطلة أو القيام بتنقلات بين المرافق، وهل توجد خطة تدريب عند استخدام نظام تسيير مكتبات جديد. هذه أسئلة مقترحة للمرشح وليست التزامات أعلنتها الشركة. لا توقع عقداً قبل قراءته، وقارن الراتب المعروض فعلاً بمصاريف الانتقال ووقت التنقل ومحتوى المهام."
             ]
           ]
         },
@@ -94,6 +110,22 @@
             [
               "Unpublished conditions and suitability assessment",
               "The signed notice does not specify salary, full working hours or a detailed interview date. RibhLab should not invent these details or imply a pay guarantee. The opportunity best suits a technically trained candidate comfortable with on-site network and device support in Tit Mellil, including user-facing library services. Assess commuting feasibility, actual troubleshooting skills and degree equivalence before applying. The employer, not an independent editorial site, makes final decisions about eligibility and selection."
+            ],
+            [
+              "Practical example: diagnose a library network interruption",
+              "Imagine ten library computers losing access to the catalogue while devices in another room still browse the internet. Do not restart every server blindly. First define the scope: one device, a switch, IP allocation, DNS, an application service or its database. Record when the fault appeared, who is affected and which messages occur. Test local connectivity before changing shared services, and obtain appropriate permission for actions that may interrupt users. After recovery, check the catalogue from more than one workstation and document the root cause, intervention and prevention measure. This is an illustrative RibhLab exercise, not an incident reported by Mediouna Services."
+            ],
+            [
+              "Data security and backups in a public-facing facility",
+              "The vacancy mentions backup and data protection, which have concrete implications for facilities serving staff and students. A technician should not copy patron records to a private cloud drive or unapproved USB memory simply for convenience. Explain the principle of least privilege, access logs, authorized backup locations and periodic restore testing. A backup file's existence is not proof that the organization can recover after an outage. Having administrator access does not mean a support agent should disclose another user's record. These are useful professional principles, not claims about the exact systems or security arrangements operated by the hiring company."
+            ],
+            [
+              "Tailor the CV and motivation letter to the evidence",
+              "Separate genuine education, troubleshooting experience, tools and documented projects on the CV. Replace vague claims such as 'advanced networks' with an accurately described example of configuring office connectivity or maintaining a shared printer, if that work was actually performed. Address the motivation letter to the managing director and connect your training to user assistance, equipment availability and secure operations in Tit Mellil. A self-initiated home lab may be labelled as a learning exercise, not paid employment. Avoid unproven performance percentages or fictitious library-management experience. Matching the announcement matters more than filling every page with software names."
+            ],
+            [
+              "Questions for the employer if invited to interview",
+              "Because the original notice does not state compensation or exact working hours, an applicant may politely ask about the contract duration, work locations, size of the IT team, on-call arrangements, provided maintenance tools and training for library systems. Determine whether the job involves movement between facilities or occasional work outside ordinary hours. These are suggestions for candidate due diligence, not conditions disclosed by Mediouna Services. Read any eventual contract before signing and compare the real offered pay with commuting costs and the duties involved, rather than using unsupported salary estimates from online forums."
             ]
           ]
         },
@@ -128,6 +160,22 @@
             [
               "Éléments à confirmer et adéquation au profil",
               "L'annonce ne publie ni rémunération fixe, ni horaires détaillés, ni date des entretiens. Ces informations ne doivent pas être inventées. Le poste est adapté à une personne formée au support des appareils et réseaux sur site, capable d'interagir avec des utilisateurs et de travailler à Tit Mellil. Comparez la distance de déplacement, les qualifications exigées et vos preuves d'expérience. La vérification des équivalences et la décision de recrutement demeurent du ressort de Mediouna Services."
+            ],
+            [
+              "Exercice de diagnostic : un catalogue inaccessible en bibliothèque",
+              "Imaginons que dix ordinateurs ne puissent plus accéder au catalogue de la bibliothèque alors que l'internet fonctionne dans une autre salle. Le bon réflexe n'est pas de redémarrer tous les serveurs. Il faut délimiter l'incident : poste isolé, commutateur, adressage IP, résolution DNS ou application métier. Notez l'heure, les postes concernés et les messages affichés, puis testez la connectivité avant d'intervenir sur un service partagé. Obtenez les autorisations nécessaires, vérifiez le retour du catalogue sur plusieurs postes et rédigez une fiche indiquant la cause, les mesures et les recommandations. Cet exercice est fictif, et non un incident réel de l'entreprise."
+            ],
+            [
+              "Sauvegarde et confidentialité des données des usagers",
+              "L'avis souligne la sauvegarde et la sécurité informatique. Dans un établissement accueillant des lecteurs et des étudiants, des bases peuvent contenir des informations personnelles ; elles ne devraient pas être copiées sur un compte privé ou une clé USB non approuvée. Il importe de comprendre les droits minimaux d'accès, l'identification des personnes habilitées et le contrôle régulier de la restauration des copies. Un fichier de sauvegarde n'est pas une preuve de récupération possible après incident. Une permission d'administration n'autorise pas à communiquer le dossier d'un autre usager sans motif valable. Ces principes ne décrivent pas un système de sécurité particulier de Mediouna Services."
+            ],
+            [
+              "Rédiger une candidature cohérente avec le poste",
+              "Distinguez dans le CV les diplômes, les compétences réellement maîtrisées, les interventions et les projets vérifiables. Plutôt que d'écrire « expert réseau », indiquez précisément une opération effectuée, comme la configuration de postes ou l'entretien d'imprimantes partagées, si vous l'avez réellement réalisée. Dans la lettre adressée au directeur général, reliez votre formation Bac+2 à l'assistance aux utilisateurs, à la continuité de service et à la protection des informations. Un exercice personnel peut être présenté comme tel, sans le faire passer pour une expérience salariée. Évitez les résultats chiffrés inventés et les compétences bibliothécaires non acquises."
+            ],
+            [
+              "Questions à poser si vous êtes convoqué à l'entretien",
+              "Puisque l'avis ne publie ni salaire ni horaires détaillés, vous pouvez demander la durée du contrat, les lieux précis d'intervention, la taille de l'équipe technique, les éventuelles astreintes, les équipements disponibles et les formations aux logiciels documentaires. Informez-vous sur les déplacements entre établissements et sur les interventions possibles en dehors des heures habituelles. Il s'agit de questions conseillées, pas de dispositions annoncées dans l'arrêté. Avant de signer un éventuel contrat, vérifiez les obligations et comparez la rémunération effective au coût du trajet vers Tit Mellil."
             ]
           ]
         }
@@ -189,6 +237,22 @@
             [
               "كيف يستعد المرشح ويقيس ملاءمة تخصصه؟",
               "يفيد ربط المجال بأمثلة عملية: تدقيق مسار طلب شراء من الاعتماد إلى التسلم والأداء؛ تصميم لوحة تسيير تقارن الإنجاز بالميزانية؛ تحديد سبب انحراف التكاليف وإعداد توصية قابلة للمتابعة. هذه أمثلة تعليمية توضح الفرق بين التدقيق الذي يبحث عن أدلة وفاعلية الضوابط، ومراقبة التسيير التي تقيس الأداء دورياً. لا يحدد الإعلان راتباً فردياً مخصصاً أو مكان العمل النهائي بالتفصيل، فلا يمكن اختلاقه. قبل أي قرار، راجع التخصص والسن وموقع الامتحان بعد الاستدعاء الرسمي."
+            ],
+            [
+              "مثال عملي لفهم مراقبة التسيير في الإدارة الترابية",
+              "للاستعداد، افترض أن مصلحة إدارية وضعت ميزانية لخدمة محلية، ثم التزمت بعقود وصرفت جزءاً من الاعتمادات. ابنِ جدولاً يفصل بين الاعتماد المفتوح، والالتزامات، والنفقات المؤداة، والمبلغ المتبقي، ونسبة الإنجاز. اسأل لماذا قد يكون معدل الالتزام مرتفعاً بينما يظل الأداء منخفضاً، وما دور آجال تسلم الخدمة أو مطابقة الفواتير. مثل هذا التمرين يختبر فهم السلسلة الإدارية والمالية أكثر من حفظ تعريفات عامة. لكنه مثال تحضيري وضعناه نحن، وليس سؤالاً مسرباً أو موضوعاً رسمياً منشوراً من لجنة المباراة."
+            ],
+            [
+              "مثال عملي مختلف: التدقيق الداخلي وتوثيق الملاحظات",
+              "في التدقيق، لا يكفي القول إن مسطرة الشراء «غير فعالة». اختر عملية افتراضية وحدد الضابط المنتظر والدليل الذي يجب أن يثبته، ثم قارن الوثائق الفعلية: طلب الشراء، الموافقة، التسلم، الفاتورة، وأثر الأداء. إذا غاب محضر تسلم، لا تستنتج تلقائياً وجود احتيال؛ سجل الملاحظة وحدد معيارها وسببها المحتمل وتأثيرها وتوصية عملية قابلة للمتابعة. المترشح الذي يشرح هذه المنهجية دون اتهامات غير مثبتة يعطي صورة أفضل عن استقلالية المدقق. لا يتعلق هذا المثال بخلل ثبت في عمالة سطات أو أي جهة معلنة."
+            ],
+            [
+              "كيفية تنظيم المراجعة قبل الاختبار دون إهدار الوقت",
+              "قسّم التدريب إلى ثلاثة محاور: فهم مهمة التدقيق والرقابة الداخلية، وتحليل الميزانية ومؤشرات الأداء، وصياغة إجابة كتابية منظمة في ثلاث ساعات. يمكن تخصيص جلسة لمحاكاة موضوع من اختيارك مع ضبط الوقت، ثم مراجعة جودة الاستدلال والمراجع واللغة. في الشفوي، تمرن على شرح الفرق بين الرأي والواقعة المثبتة، والتعامل مع تعارض المصالح، واقتراح متابعة لتوصية تدقيق. لا توجد في القرار لائحة كتب أو مواضيع محددة تضمن النجاح، لذلك تجنب شراء «أسئلة المباراة المؤكدة» من حسابات مجهولة."
+            ],
+            [
+              "ترتيب الأولويات عند تضارب آخر أجل",
+              "لأن التسجيل الإلكتروني يستغرق وقتاً في إعداد نسخ الدبلومات والبطاقة والسيرة وقرار المعادلة عند الحاجة، فإن انتظار التاسع من نونبر اعتماداً على صفحة البوابة فقط يحمل مخاطرة حقيقية إذا اعتمد المنظم نص القرار الذي يذكر الثاني من نونبر. أفضل ترتيب هو تجهيز الملف اليوم، ورفع الوثائق مبكراً، والاحتفاظ بإثبات الإيداع، ثم التحقق يومياً من أي تصحيح رسمي. إذا ظهرت تعليمات جديدة فلا تعتمد صورة متداولة بلا رابط حكومي. هذه توصية احترازية لحماية فرصة التقديم وليست تفسيراً قانونياً يحسم التناقض بين الوثيقتين."
             ]
           ]
         },
@@ -219,6 +283,22 @@
             [
               "How to judge your fit for audit and management control",
               "Prepare practical examples that compare budget allocations, obligations, services received, payments and remaining amounts. Audit emphasizes evidence, testing and remediation of controls, while management control tracks trends and deviations against targets. These concepts are relevant to the field but the official notice does not promise a particular syllabus or detailed job description. It also does not specify an individual salary. Resolve the deadline conflict and your qualification status before spending time on unsupported assumptions."
+            ],
+            [
+              "Practice budgeting and management control with a worked scenario",
+              "For preparation, imagine a local service with an approved budget, contracts committed during the year and invoices paid later. Build a table separating the initial allocation, commitments, payments, remaining funds and completion percentage. Explain why a high commitment rate can coexist with slower payments, and how delayed acceptance of services or incomplete documentation might affect the numbers. This exercise tests understanding of administrative and financial processes rather than memorizing definitions. It is RibhLab's illustrative study case, not a leaked or officially announced examination question."
+            ],
+            [
+              "Internal audit is about testable evidence and careful language",
+              "Suppose a purchase file seems incomplete. A responsible auditor defines the control expected and the documentary evidence needed, such as purchase authorization, receipt record, invoice and approval trail. If a signed receipt is missing, that fact does not by itself prove fraud. Record the observation, criterion, possible cause, operational impact and a recommendation the department can later verify. Candidates should show how they distinguish verified findings from suspicions and why professional independence matters. This is not an allegation about any process at the Province of Settat."
+            ],
+            [
+              "A structured study plan for written and oral phases",
+              "Divide preparation between internal control and audit methods, budgeting and performance indicators, and concise structured written responses under a three-hour time limit. Draft a hypothetical case, time yourself and review the logic of each conclusion. For the oral stage, practice explaining an observed variance, the difference between evidence and opinion, and how to respond to a potential conflict of interest. The opening decision does not publish a guaranteed book list or precise questions, so avoid paid promises of privileged exam papers or certain success."
+            ],
+            [
+              "Treat conflicting deadlines as an operational risk",
+              "Completing online registration can require scanning the qualification, identity document, CV and, in applicable cases, equivalence papers. Waiting until the portal's later 9 November date is risky because the attached signed notice says 2 November. The prudent sequence is to prepare the file immediately, submit before the earlier date, keep proof of registration and check for official corrections. A circulating screenshot without a traceable government link is not enough to establish that the legal deadline has changed. This precaution cannot by itself settle the administrative conflict."
             ]
           ]
         },
@@ -249,6 +329,22 @@
             [
               "Analyser sa candidature sans inventer un poste",
               "Un exemple utile pour se préparer consiste à relier une dépense publique à son budget, à l'engagement, à la réception, au paiement et au contrôle des écarts. L'audit cherche des preuves de conformité et d'efficacité des contrôles ; le contrôle de gestion analyse l'exécution et les indicateurs pour aider à décider. Cette illustration pédagogique ne remplace pas une fiche de poste détaillée. L'annonce ne précise pas de salaire individuel, et l'essentiel est de vérifier la spécialité et le délai avant de poser sa candidature."
+            ],
+            [
+              "Exemple de contrôle de gestion dans une administration territoriale",
+              "Pour réviser, imaginez un service local doté d'un budget voté, de contrats engagés et de paiements exécutés plus tard. Construisez un tableau séparant l'enveloppe initiale, les engagements, les factures payées, le solde disponible et le taux de réalisation. Expliquez pourquoi un engagement important peut coexister avec un paiement plus faible, et le rôle éventuel des délais de réception et de validation. Cet exercice sollicite une compréhension des processus administratifs et financiers, pas seulement des définitions apprises. Il s'agit d'un exemple pédagogique RibhLab, non d'une question officielle."
+            ],
+            [
+              "Différencier l'audit interne de la simple recherche d'erreurs",
+              "Dans une mission d'audit fictive, commencez par définir le contrôle attendu et les preuves documentaires : autorisation, commande, réception, facture, visa et trace du règlement. L'absence d'un document ne suffit pas à prouver une fraude. Décrivez le constat, le critère, la cause possible, les conséquences et une recommandation que l'administration pourrait suivre. Un candidat doit montrer son sens de la preuve, son indépendance et la distinction entre fait et hypothèse. Cet exemple ne porte sur aucune irrégularité réelle de la Province de Settat."
+            ],
+            [
+              "Organiser les révisions en respectant le temps de l'épreuve",
+              "Répartissez le travail entre méthodologie d'audit et contrôle interne, suivi budgétaire et indicateurs, puis entraînement à une copie argumentée dans un délai de trois heures. Préparez des cas fictifs, corrigez les conclusions insuffisamment fondées et entraînez-vous à expliquer les écarts. Pour l'entretien, travaillez l'expression orale, la gestion d'un conflit d'intérêts et la justification d'une recommandation. L'arrêté ne donne pas de liste d'ouvrages ou de sujets garantis ; méfiez-vous des offres de prétendues questions d'examen réservées."
+            ],
+            [
+              "Éviter la perte de candidature due à la contradiction des dates",
+              "L'inscription nécessite le temps de rassembler CIN, diplôme, CV et éventuellement les équivalences exigées. Attendre le 9 novembre affiché sur le portail présente un risque parce que l'arrêté signé mentionne le 2 novembre. Il est préférable de préparer le dossier sans délai, déposer avant la date précoce et conserver le justificatif de validation. Vérifiez régulièrement si l'administration publie un rectificatif officiel. Une capture d'écran partagée sans lien officiel ne suffit pas à établir un changement. Cette précaution ne tranche pas juridiquement le désaccord des sources."
             ]
           ]
         }
