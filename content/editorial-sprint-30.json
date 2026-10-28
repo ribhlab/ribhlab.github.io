@@ -180,8 +180,10 @@
         "googlePlay",
         "appleAppStore"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "editorialReviewDate": "2026-10-28",
+      "queuePath": "content/reviewed-queue/scan-documents-phone-privacy-quality.json"
     },
     {
       "sectionId": "mobile-apps",
