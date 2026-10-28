@@ -25,7 +25,7 @@ jobs:
           import re
 
           base='https://ribhlab.github.io'
-          wanted=['/','/ads.txt','/robots.txt','/sitemap.xml','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/','/ar/sports/','/en/sports/f1-mexico-gp-preview-2026/','/fr/technology/oppo-find-x10-camera-2026/','/ar/technology/','/ar/technology/apps/','/ar/technology/apps/productivity/']
+          wanted=['/','/ads.txt','/robots.txt','/sitemap.xml','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/','/ar/sports/','/en/sports/f1-mexico-gp-preview-2026/','/fr/technology/oppo-find-x10-camera-2026/','/ar/technology/','/ar/technology/apps/','/ar/technology/apps/productivity/','/ar/opportunities/immigration/german-opportunity/','/en/opportunities/immigration/german-opportunity/','/fr/opportunities/immigration/german-opportunity/']
           last=None
           for attempt in range(1,7):
               try:
@@ -39,6 +39,13 @@ jobs:
                           print(f'GET {path}: HTTP {status}; type={mime}; bytes={len(data)}',flush=True)
                           assert status==200 and data, f'{path}: empty or non-200 response'
                           bodies[path]=data
+                  for lang, heading in [('ar','بطاقة الفرص الألمانية'),('en',"Germany's Opportunity Card"),('fr','Carte des opportunités allemande')]:
+                      path=f'/{lang}/opportunities/immigration/german-opportunity/'
+                      html=bodies[path].decode('utf-8')
+                      assert heading in html, f'{lang}: full German opportunity article title missing'
+                      assert html.count('opp-guide-section')>=11, f'{lang}: detailed article sections missing'
+                      assert 'opp-guide-sources' in html, f'{lang}: official sources missing'
+                      print(f'GERMAN OPPORTUNITY LIVE {lang}: detailed article and sources present',flush=True)
                   ads=bodies['/ads.txt'].decode('utf-8-sig').strip()
                   match=re.fullmatch(r'google\.com, pub-(\d{16}), DIRECT, f08c47fec0942fa0',ads)
                   assert match, 'Public ads.txt must contain a properly formatted real publisher entry'
