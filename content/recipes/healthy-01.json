@@ -198,8 +198,8 @@
       "servings": 4,
       "ingredients": [
         {
-          "id": "wholebread",
-          "amount": "8slices"
+          "id": "tortilla",
+          "amount": "4pcs"
         },
         {
           "id": "chickpeas",
@@ -223,9 +223,9 @@
         }
       ],
       "tip": {
-        "ar": "اهرِس الحمص والأفوكادو بالشوكة ثم احشُ الخبز بالخضر المغسولة.",
-        "en": "Mash chickpeas and avocado with a fork, then fill the bread with washed vegetables.",
-        "fr": "Écrasez les pois chiches et l’avocat à la fourchette puis garnissez de crudités lavées."
+        "ar": "استعمل تورتيلا من القمح الكامل إن توفرت؛ اهرِس الحمص والأفوكادو بالشوكة ثم احشُها بالخضر المغسولة.",
+        "en": "Choose whole-grain tortillas where available; mash chickpeas and avocado with a fork and fill with washed vegetables.",
+        "fr": "Choisissez des tortillas complètes si disponibles; écrasez pois chiches et avocat puis garnissez de crudités lavées."
       },
       "kind": "healthy"
     },
