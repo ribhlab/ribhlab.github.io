@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 14,
+    "researched": 15,
     "marketEvidence": 5,
-    "pendingDetail": 68
+    "pendingDetail": 67
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -45,7 +45,7 @@
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/7cf772aa-1a10-4769-8d24-bf2e5d55a471",
       "reviewedAt": "2026-10-28",
       "evidenceId": "sett-engineer",
-      "reviewNote": "Original three-page signed decision read; 3 engineer posts (1 civil, 1 statistics, 1 GIS), 2 Nov 16:30 deadline. Official portal shows 9 Nov 16:30 and GIS count 2. Both conflicts prominently displayed in trilingual report. Build/deploy successful on commit fc106d9; specific live-page assertion added to public-sitemap-check workflow and awaiting next successful run.",
+      "reviewNote": "Signed 3-page Settat decision checked: 3 engineer positions and 2 November 16:30 closing; portal 9 November and GIS 2 positions conflict. Ten sections AR/EN/FR and two prominent conflict warnings verified over public HTTPS by GitHub Actions run 40776881064 after successful deployment 40776741283.",
       "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/7cf772aa-1a10-4769-8d24-bf2e5d55a471"
     },
     {
@@ -150,10 +150,13 @@
       "section": "morocco",
       "title": "Cadre administratif et chargé de la comptabilité et finances",
       "deadline": "2026-11-20",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-20",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/9c2c4e23-ec32-4b76-8c8d-75e9f50e9090"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/9c2c4e23-ec32-4b76-8c8d-75e9f50e9090",
+      "reviewedAt": "2026-10-28",
+      "evidenceId": "sidi-finance",
+      "reviewNote": "Detailed trilingual employer-source article already in content/opportunity-editorial-evidence.json; 8+ sections and official C44257/26 reference verified on live public HTTPS in all languages by GitHub Actions 40776881064. Signed decision's email submission differs from portal channel and is explained in article."
     },
     {
       "id": "eures",
