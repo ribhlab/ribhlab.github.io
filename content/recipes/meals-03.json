@@ -1,0 +1,1217 @@
+{
+  "batch": "meals-03",
+  "recipes": [
+    {
+      "slug": "chicken-tikka-masala",
+      "title": {
+        "ar": "دجاج تيكا ماسالا بالطماطم",
+        "en": "Chicken tikka masala",
+        "fr": "Poulet tikka masala"
+      },
+      "cuisine": "south-asian",
+      "method": "curry",
+      "minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "yogurt",
+          "amount": "180g"
+        },
+        {
+          "id": "tomato",
+          "amount": "450g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "cream",
+          "amount": "120ml"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "انقع الدجاج بالزبادي والبهارات قبل تحميره ثم أكمل التسوية في صلصة الطماطم.",
+        "en": "Marinate chicken in yogurt and spices before browning, then finish safely in tomato sauce.",
+        "fr": "Marine le poulet au yaourt et épices, dorez puis terminez sa cuisson dans la sauce tomate."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chana-masala",
+      "title": {
+        "ar": "كاري الحمص الهندي",
+        "en": "Indian chana masala chickpea curry",
+        "fr": "Curry de pois chiches chana masala"
+      },
+      "cuisine": "south-asian",
+      "method": "curry",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "amount": "550g"
+        },
+        {
+          "id": "tomato",
+          "amount": "400g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "اهرِس جزءاً صغيراً من الحمص داخل الصلصة لتصبح أكثر كثافة دون قشدة.",
+        "en": "Mash a small portion of chickpeas into the sauce to thicken it without cream.",
+        "fr": "Écrasez une petite partie des pois chiches dans la sauce pour l’épaissir sans crème."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "dal-tadka-lentils",
+      "title": {
+        "ar": "دال تادكا بالعدس",
+        "en": "Indian dal tadka lentils",
+        "fr": "Dal tadka indien aux lentilles"
+      },
+      "cuisine": "south-asian",
+      "method": "soup",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "redlentils",
+          "amount": "300g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "ginger",
+          "amount": "12g"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "water",
+          "amount": "1l"
+        }
+      ],
+      "tip": {
+        "ar": "حمّر الكمون والثوم سريعاً في قليل من الزيت وأضفهما إلى العدس قرب النهاية.",
+        "en": "Briefly toast cumin and garlic in a little oil and stir them into the lentils near the end.",
+        "fr": "Faites revenir rapidement cumin et ail dans un peu d’huile, puis ajoutez-les aux lentilles."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "vegetable-biryani",
+      "title": {
+        "ar": "برياني بالخضر والبسمتي",
+        "en": "Vegetable basmati biryani",
+        "fr": "Biryani végétarien au basmati"
+      },
+      "cuisine": "south-asian",
+      "method": "rice",
+      "minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "basmatirice",
+          "amount": "400g"
+        },
+        {
+          "id": "carrot",
+          "amount": "180g"
+        },
+        {
+          "id": "peas",
+          "amount": "160g"
+        },
+        {
+          "id": "cauliflower",
+          "amount": "200g"
+        },
+        {
+          "id": "onion",
+          "amount": "2pcs"
+        },
+        {
+          "id": "yogurt",
+          "amount": "100g"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "stock",
+          "amount": "650ml"
+        }
+      ],
+      "tip": {
+        "ar": "انقع البسمتي ثم اطهه جزئياً قبل ترتيب طبقات الأرز والخضر مع بخار هادئ.",
+        "en": "Soak basmati, partially cook it, then layer with vegetables and finish with gentle steam.",
+        "fr": "Faites tremper le basmati, précuisez-le puis superposez riz et légumes avant une cuisson douce à la vapeur."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chicken-biryani",
+      "title": {
+        "ar": "برياني الدجاج بالبسمتي",
+        "en": "Chicken basmati biryani",
+        "fr": "Biryani de poulet au basmati"
+      },
+      "cuisine": "south-asian",
+      "method": "rice",
+      "minutes": 75,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "basmatirice",
+          "amount": "400g"
+        },
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "onion",
+          "amount": "2pcs"
+        },
+        {
+          "id": "yogurt",
+          "amount": "160g"
+        },
+        {
+          "id": "tomato",
+          "amount": "200g"
+        },
+        {
+          "id": "ginger",
+          "amount": "20g"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "stock",
+          "amount": "700ml"
+        }
+      ],
+      "tip": {
+        "ar": "أنضج الدجاج بالبهارات قبل دمجه مع البسمتي الجزئي التسوية ثم أكمل البخار.",
+        "en": "Cook the spiced chicken safely before combining with partly cooked basmati and steaming.",
+        "fr": "Cuisez d’abord le poulet épicé, puis ajoutez le basmati précuit et terminez à la vapeur."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "palak-paneer-style",
+      "title": {
+        "ar": "سبانخ كريمية بجبن طري",
+        "en": "Indian-style creamy spinach and cheese",
+        "fr": "Épinards crémeux et fromage à l’indienne"
+      },
+      "cuisine": "south-asian",
+      "method": "curry",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "spinach",
+          "amount": "650g"
+        },
+        {
+          "id": "cheese",
+          "amount": "250g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomato",
+          "amount": "220g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "ginger",
+          "amount": "12g"
+        },
+        {
+          "id": "cream",
+          "amount": "100ml"
+        }
+      ],
+      "tip": {
+        "ar": "امزج جزءاً من السبانخ المطهوة لصلصة ناعمة وأضف قطع الجبن في النهاية.",
+        "en": "Blend part of the cooked spinach into a smooth sauce and add the cheese near the end.",
+        "fr": "Mixez une partie des épinards cuits puis ajoutez les dés de fromage en fin de cuisson."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "aloo-gobi",
+      "title": {
+        "ar": "آلو غوبي بالبطاطس والقرنبيط",
+        "en": "Aloo gobi potato cauliflower",
+        "fr": "Aloo gobi pommes de terre et chou-fleur"
+      },
+      "cuisine": "south-asian",
+      "method": "stew",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "amount": "450g"
+        },
+        {
+          "id": "cauliflower",
+          "amount": "500g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        }
+      ],
+      "tip": {
+        "ar": "قطّع البطاطس صغيرة وراقب القرنبيط كي لا يتفكك قبل نضج البطاطس.",
+        "en": "Dice potatoes relatively small and prevent cauliflower from falling apart before potatoes cook.",
+        "fr": "Coupez les pommes de terre assez petit et surveillez le chou-fleur pour préserver ses fleurettes."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "coconut-shrimp-curry",
+      "title": {
+        "ar": "كاري الروبيان بحليب جوز الهند",
+        "en": "Coconut shrimp curry",
+        "fr": "Curry de crevettes au lait de coco"
+      },
+      "cuisine": "south-asian",
+      "method": "curry",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "shrimp",
+          "amount": "650g"
+        },
+        {
+          "id": "coconutmilk",
+          "amount": "400ml"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "lime",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "أضف الروبيان في الدقائق الأخيرة فقط حتى يصبح لحمه معتماً دون أن يقسو.",
+        "en": "Add shrimp only at the end and cook until opaque without turning tough.",
+        "fr": "Ajoutez les crevettes en fin de cuisson jusqu’à ce que leur chair soit opaque sans durcir."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "raita-cucumber",
+      "title": {
+        "ar": "رايتا الزبادي والخيار",
+        "en": "Cucumber yogurt raita",
+        "fr": "Raïta au yaourt et concombre"
+      },
+      "cuisine": "south-asian",
+      "method": "salad",
+      "minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "yogurt",
+          "amount": "450g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "250g"
+        },
+        {
+          "id": "mint",
+          "amount": "15g"
+        },
+        {
+          "id": "cumin",
+          "amount": "0.5tsp"
+        },
+        {
+          "id": "lemon",
+          "amount": "0.5pc"
+        }
+      ],
+      "tip": {
+        "ar": "صفِّ ماء الخيار قبل مزجه بالزبادي للحصول على صلصة باردة متماسكة.",
+        "en": "Drain grated cucumber before combining with yogurt for a thicker chilled sauce.",
+        "fr": "Égouttez le concombre râpé avant de le mélanger au yaourt pour une sauce froide épaisse."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "tandoori-style-chicken",
+      "title": {
+        "ar": "دجاج متبل تندوري بالفرن",
+        "en": "Oven tandoori-style chicken",
+        "fr": "Poulet façon tandoori au four"
+      },
+      "cuisine": "south-asian",
+      "method": "roast",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickenthighs",
+          "amount": "800g"
+        },
+        {
+          "id": "yogurt",
+          "amount": "250g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "20g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "paprika",
+          "amount": "2tsp"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "اترك الدجاج يتبل في الثلاجة ثم اشوه وتحقق من 74 درجة مئوية في أكثر الأجزاء سمكاً.",
+        "en": "Marinate chicken in the refrigerator, roast and verify 74°C in the thickest part.",
+        "fr": "Faites mariner au réfrigérateur, rôtissez et vérifiez 74°C dans la partie la plus épaisse."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "pad-thai-shrimp",
+      "title": {
+        "ar": "باد تاي تايلاندي بالروبيان",
+        "en": "Shrimp pad Thai noodles",
+        "fr": "Pad thaï aux crevettes"
+      },
+      "cuisine": "southeast-asian",
+      "method": "stirfry",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "noodles",
+          "amount": "350g"
+        },
+        {
+          "id": "shrimp",
+          "amount": "350g"
+        },
+        {
+          "id": "eggs",
+          "amount": "2pcs"
+        },
+        {
+          "id": "beansprouts",
+          "amount": "160g"
+        },
+        {
+          "id": "peanuts",
+          "amount": "65g"
+        },
+        {
+          "id": "fishsauce",
+          "amount": "30ml"
+        },
+        {
+          "id": "lime",
+          "amount": "2pcs"
+        },
+        {
+          "id": "oil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "بلّل شعيرية الأرز قبل القلي وأضف الفول السوداني والليمون بعد إطفاء النار.",
+        "en": "Soften rice noodles before stir-frying and add peanuts and lime after turning off the heat.",
+        "fr": "Assouplissez les nouilles de riz avant cuisson puis ajoutez cacahuètes et citron vert hors du feu."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "thai-green-chicken-curry",
+      "title": {
+        "ar": "كاري دجاج تايلاندي أخضر مبسط",
+        "en": "Simplified Thai green chicken curry",
+        "fr": "Curry vert thaï simplifié au poulet"
+      },
+      "cuisine": "southeast-asian",
+      "method": "curry",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "coconutmilk",
+          "amount": "400ml"
+        },
+        {
+          "id": "zucchini",
+          "amount": "250g"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "chili",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "lime",
+          "amount": "1pc"
+        },
+        {
+          "id": "basil",
+          "amount": "20g"
+        }
+      ],
+      "tip": {
+        "ar": "وازن حدة الفلفل بحليب جوز الهند وأكمل تسوية الدجاج قبل إضافة الريحان.",
+        "en": "Balance chili heat with coconut milk; cook chicken safely before adding basil.",
+        "fr": "Équilibrez le piment avec le lait de coco et terminez la cuisson du poulet avant le basilic."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "vietnamese-rice-paper-rolls",
+      "title": {
+        "ar": "لفائف فيتنامية بالخضر والروبيان",
+        "en": "Vietnamese shrimp rice paper rolls",
+        "fr": "Rouleaux vietnamiens aux crevettes"
+      },
+      "cuisine": "southeast-asian",
+      "method": "cold",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "ricepaper",
+          "amount": "12sheets"
+        },
+        {
+          "id": "shrimp",
+          "amount": "350g"
+        },
+        {
+          "id": "noodles",
+          "amount": "150g"
+        },
+        {
+          "id": "lettuce",
+          "amount": "180g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "180g"
+        },
+        {
+          "id": "mint",
+          "amount": "25g"
+        },
+        {
+          "id": "ricevinegar",
+          "amount": "20ml"
+        }
+      ],
+      "tip": {
+        "ar": "اطه الروبيان جيداً وبرّده قبل لفه مع الخضر المغسولة وورق الأرز المرطب.",
+        "en": "Cook shrimp thoroughly and cool before rolling with washed vegetables in moistened rice paper.",
+        "fr": "Cuisez puis refroidissez les crevettes avant de les rouler avec les légumes lavés dans les feuilles de riz."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "vietnamese-beef-noodle-soup",
+      "title": {
+        "ar": "شوربة شعيرية فيتنامية بلحم البقر",
+        "en": "Vietnamese-style beef noodle soup",
+        "fr": "Soupe vietnamienne de nouilles au bœuf"
+      },
+      "cuisine": "southeast-asian",
+      "method": "soup",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "beef",
+          "amount": "550g"
+        },
+        {
+          "id": "noodles",
+          "amount": "300g"
+        },
+        {
+          "id": "stock",
+          "amount": "1.4l"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "20g"
+        },
+        {
+          "id": "coriander",
+          "amount": "25g"
+        },
+        {
+          "id": "lime",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "اطه اللحم حتى ينضج في المرق ثم أضف الشعيرية المبللة قرب التقديم.",
+        "en": "Cook beef thoroughly in the broth and add the softened noodles near serving time.",
+        "fr": "Cuisez bien le bœuf dans le bouillon puis ajoutez les nouilles assouplies au dernier moment."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "indonesian-nasi-goreng",
+      "title": {
+        "ar": "ناسي غورينغ إندونيسي بالأرز والخضر",
+        "en": "Indonesian vegetable nasi goreng",
+        "fr": "Nasi goreng indonésien aux légumes"
+      },
+      "cuisine": "southeast-asian",
+      "method": "stirfry",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "350g"
+        },
+        {
+          "id": "eggs",
+          "amount": "3pcs"
+        },
+        {
+          "id": "carrot",
+          "amount": "1pc"
+        },
+        {
+          "id": "peas",
+          "amount": "150g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "soysauce",
+          "amount": "35ml"
+        },
+        {
+          "id": "oil",
+          "amount": "30ml"
+        }
+      ],
+      "tip": {
+        "ar": "استعمل أرزاً مطهواً ومبرداً سريعاً ومخزناً في الثلاجة ثم أعد تسخينه جيداً عند القلي.",
+        "en": "Use promptly cooled refrigerated cooked rice and reheat it thoroughly while stir-frying.",
+        "fr": "Utilisez du riz cuit refroidi rapidement et réfrigéré, puis réchauffez-le complètement au wok."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "malaysian-coconut-rice",
+      "title": {
+        "ar": "أرز جوز الهند الماليزي",
+        "en": "Malaysian coconut rice",
+        "fr": "Riz malaisien au lait de coco"
+      },
+      "cuisine": "southeast-asian",
+      "method": "rice",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "basmatirice",
+          "amount": "350g"
+        },
+        {
+          "id": "coconutmilk",
+          "amount": "300ml"
+        },
+        {
+          "id": "water",
+          "amount": "250ml"
+        },
+        {
+          "id": "cucumber",
+          "amount": "1pc"
+        },
+        {
+          "id": "peanuts",
+          "amount": "80g"
+        },
+        {
+          "id": "eggs",
+          "amount": "4pcs"
+        }
+      ],
+      "tip": {
+        "ar": "اطه الأرز بخليط ماء وجوز هند على نار هادئة وقدمه مع الخيار والبيض المطهو.",
+        "en": "Simmer rice gently in coconut milk and water; serve with cucumber and fully cooked eggs.",
+        "fr": "Faites mijoter le riz au lait de coco et à l’eau, puis servez avec concombre et œufs bien cuits."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "thai-basil-beef",
+      "title": {
+        "ar": "لحم بقري بالريحان على الطريقة التايلاندية",
+        "en": "Thai-style basil beef",
+        "fr": "Bœuf au basilic façon thaï"
+      },
+      "cuisine": "southeast-asian",
+      "method": "stirfry",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "groundbeef",
+          "amount": "550g"
+        },
+        {
+          "id": "pepper",
+          "amount": "2pcs"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "basil",
+          "amount": "30g"
+        },
+        {
+          "id": "soysauce",
+          "amount": "30ml"
+        },
+        {
+          "id": "chili",
+          "amount": "1pc"
+        },
+        {
+          "id": "oil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "افصل اللحم المفروم في المقلاة واطهه جيداً قبل إضافة الريحان في النهاية.",
+        "en": "Break up ground beef in the pan and cook thoroughly before stirring in basil at the end.",
+        "fr": "Émiettez le bœuf haché et cuisez-le à cœur avant d’ajouter le basilic en fin de cuisson."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "tom-yum-shrimp-soup",
+      "title": {
+        "ar": "توم يام بالروبيان والفطر",
+        "en": "Tom yum-style shrimp mushroom soup",
+        "fr": "Soupe tom yum crevettes et champignons"
+      },
+      "cuisine": "southeast-asian",
+      "method": "soup",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "shrimp",
+          "amount": "450g"
+        },
+        {
+          "id": "mushroom",
+          "amount": "250g"
+        },
+        {
+          "id": "tomato",
+          "amount": "220g"
+        },
+        {
+          "id": "ginger",
+          "amount": "25g"
+        },
+        {
+          "id": "lime",
+          "amount": "2pcs"
+        },
+        {
+          "id": "chili",
+          "amount": "1pc"
+        },
+        {
+          "id": "stock",
+          "amount": "1l"
+        }
+      ],
+      "tip": {
+        "ar": "أضف عصير الليمون عند التقديم حتى تبقى نكهته مشرقة ولا يقسو الروبيان.",
+        "en": "Add lime juice at serving so it stays lively and shrimp do not overcook.",
+        "fr": "Ajoutez le jus de citron vert au service pour préserver sa fraîcheur sans surcuire les crevettes."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "korean-beef-rice-bowl",
+      "title": {
+        "ar": "أرز كوري بالخضر ولحم البقر",
+        "en": "Korean-style beef rice bowl",
+        "fr": "Bol de riz coréen au bœuf"
+      },
+      "cuisine": "east-asian",
+      "method": "stirfry",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "350g"
+        },
+        {
+          "id": "groundbeef",
+          "amount": "500g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "spinach",
+          "amount": "180g"
+        },
+        {
+          "id": "soysauce",
+          "amount": "30ml"
+        },
+        {
+          "id": "sesame",
+          "amount": "15g"
+        },
+        {
+          "id": "oil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "جهّز الخضر في المقلاة على دفعات ثم ضعها فوق الأرز مع اللحم المطهو بالكامل.",
+        "en": "Cook vegetables in batches and arrange over rice with thoroughly cooked beef.",
+        "fr": "Sautez les légumes séparément puis disposez-les sur le riz avec le bœuf bien cuit."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "japanese-chicken-teriyaki",
+      "title": {
+        "ar": "دجاج ترياكي منزلي",
+        "en": "Home-style chicken teriyaki",
+        "fr": "Poulet teriyaki maison"
+      },
+      "cuisine": "east-asian",
+      "method": "skillet",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "soysauce",
+          "amount": "50ml"
+        },
+        {
+          "id": "honey",
+          "amount": "30g"
+        },
+        {
+          "id": "ricevinegar",
+          "amount": "25ml"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "rice",
+          "amount": "350g"
+        }
+      ],
+      "tip": {
+        "ar": "قلّل صلصة الصويا والعسل حتى تلمع ثم غلّف بها الدجاج المطهو جيداً.",
+        "en": "Reduce soy and honey glaze until shiny, then coat thoroughly cooked chicken.",
+        "fr": "Réduisez la sauce soja et miel jusqu’à brillance puis enrobez le poulet bien cuit."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "miso-mushroom-noodles",
+      "title": {
+        "ar": "شعيرية الفطر بمرق آسيوي",
+        "en": "Asian mushroom noodle broth",
+        "fr": "Bouillon asiatique aux champignons et nouilles"
+      },
+      "cuisine": "east-asian",
+      "method": "soup",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "mushroom",
+          "amount": "350g"
+        },
+        {
+          "id": "noodles",
+          "amount": "300g"
+        },
+        {
+          "id": "stock",
+          "amount": "1.2l"
+        },
+        {
+          "id": "ginger",
+          "amount": "20g"
+        },
+        {
+          "id": "soysauce",
+          "amount": "30ml"
+        },
+        {
+          "id": "spinach",
+          "amount": "160g"
+        }
+      ],
+      "tip": {
+        "ar": "ضع الشعيرية بعد غلي المرق والخضر وأوقف النار عند بلوغ القوام المطلوب.",
+        "en": "Add noodles after the broth and vegetables cook; stop when texture is just right.",
+        "fr": "Ajoutez les nouilles après cuisson du bouillon et des légumes et arrêtez dès la texture souhaitée."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chinese-ginger-fish",
+      "title": {
+        "ar": "سمك بالزنجبيل والثوم على الطريقة الصينية",
+        "en": "Chinese-style ginger garlic fish",
+        "fr": "Poisson au gingembre et ail façon chinoise"
+      },
+      "cuisine": "east-asian",
+      "method": "steam",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "fish",
+          "amount": "650g"
+        },
+        {
+          "id": "ginger",
+          "amount": "25g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "soysauce",
+          "amount": "30ml"
+        },
+        {
+          "id": "leek",
+          "amount": "1pc"
+        },
+        {
+          "id": "sesame",
+          "amount": "10g"
+        }
+      ],
+      "tip": {
+        "ar": "ضع السمك فوق شرائح الزنجبيل في سلة البخار وراقب وصوله لحرارة 63 درجة مئوية.",
+        "en": "Steam fish over ginger slices and verify a safe 63°C internal temperature.",
+        "fr": "Cuisez le poisson à la vapeur sur le gingembre et vérifiez une température à cœur de 63°C."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "vegetable-fried-noodles",
+      "title": {
+        "ar": "شعيرية مقلية بالخضر",
+        "en": "Vegetable stir-fried rice noodles",
+        "fr": "Nouilles de riz sautées aux légumes"
+      },
+      "cuisine": "east-asian",
+      "method": "stirfry",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "noodles",
+          "amount": "350g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "cabbage",
+          "amount": "200g"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "soysauce",
+          "amount": "40ml"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "طهِّ الخضر على نار عالية لوقت قصير ثم قلّب معها الشعيرية المبللة والصلصة.",
+        "en": "Quickly stir-fry the vegetables, then toss with softened noodles and sauce.",
+        "fr": "Saisissez brièvement les légumes à feu vif puis ajoutez les nouilles assouplies et la sauce."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "tofu-vegetable-stirfry",
+      "title": {
+        "ar": "توفو مقلي مع البروكلي والخضر",
+        "en": "Tofu and broccoli stir-fry",
+        "fr": "Tofu sauté au brocoli et légumes"
+      },
+      "cuisine": "east-asian",
+      "method": "stirfry",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tofu",
+          "amount": "500g"
+        },
+        {
+          "id": "broccoli",
+          "amount": "350g"
+        },
+        {
+          "id": "carrot",
+          "amount": "1pc"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "soysauce",
+          "amount": "35ml"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "oil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "جفّف التوفو قبل تحميره لتتكون حواف ذهبية ثم أضف الصلصة في النهاية.",
+        "en": "Pat tofu dry before browning for crisp edges; add sauce only near the end.",
+        "fr": "Séchez le tofu avant de le dorer puis incorporez la sauce en fin de cuisson."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "egg-fried-rice",
+      "title": {
+        "ar": "أرز مقلي بالبيض والخضر",
+        "en": "Vegetable egg fried rice",
+        "fr": "Riz sauté aux œufs et légumes"
+      },
+      "cuisine": "east-asian",
+      "method": "stirfry",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "350g"
+        },
+        {
+          "id": "eggs",
+          "amount": "3pcs"
+        },
+        {
+          "id": "peas",
+          "amount": "130g"
+        },
+        {
+          "id": "carrot",
+          "amount": "1pc"
+        },
+        {
+          "id": "soysauce",
+          "amount": "35ml"
+        },
+        {
+          "id": "oil",
+          "amount": "25ml"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "اخفق البيض واطهه جيداً منفصلاً ثم امزجه بالأرز المبرد والمحفوظ بأمان.",
+        "en": "Cook scrambled eggs through separately, then toss with safely chilled cooked rice.",
+        "fr": "Cuisez entièrement les œufs brouillés à part puis mélangez avec du riz cuit refroidi et conservé au frais."
+      },
+      "kind": "meal"
+    }
+  ]
+}
