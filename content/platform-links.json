@@ -493,6 +493,50 @@
     "gmailSenderRules": {
       "name": "Google Gmail — Sender guidelines",
       "url": "https://support.google.com/mail/answer/81126?hl=en"
+    },
+    "fedOctDecision2026": {
+      "name": "Federal Reserve — FOMC statement 28 October 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+    },
+    "fedOctImplementation2026": {
+      "name": "Federal Reserve — Implementation note 28 October 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm"
+    },
+    "fedDecemberCalendar2026": {
+      "name": "Federal Reserve — December 2026 official calendar",
+      "url": "https://www.federalreserve.gov/newsevents/2026-december.htm"
+    },
+    "fedSeptemberDecision2026": {
+      "name": "Federal Reserve — FOMC statement 16 September 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    },
+    "eiaOctoberSteo2026": {
+      "name": "EIA — October 2026 Short-Term Energy Outlook, crude market",
+      "url": "https://www.eia.gov/outlooks/steo/marketreview/crude.php"
+    },
+    "ieaOctoberOil2026": {
+      "name": "IEA — October 2026 Oil Market Report",
+      "url": "https://www.iea.org/reports/oil-market-report-october-2026"
+    },
+    "iefOilComparativeOctober2026": {
+      "name": "International Energy Forum — October 2026 oil forecast comparison",
+      "url": "https://www.ief.org/news/comparative-analysis-of-monthly-reports-on-the-oil-market-80"
+    },
+    "gdcPayroll2026": {
+      "name": "GDC Middle East — Payroll Specialist Saudi Arabia, posted 27 October 2026",
+      "url": "https://careers.gdcme.com/en/saudi-arabia/jobs/payroll-specialist-1100091697/"
+    },
+    "euresNonEuFaq": {
+      "name": "EURES — rights of non-EU applicants and job-search guidance",
+      "url": "https://eures.europa.eu/eures-services/help-and-support_en"
+    },
+    "microsoftJobsBayArea2026": {
+      "name": "Microsoft Careers — Bay Area vacancies, AI Infrastructure, updated October 2026",
+      "url": "https://careers.microsoft.com/v2/global/en/locations/bay-area.html"
+    },
+    "usVisaVetting2026": {
+      "name": "US Department of State — expanded visa vetting, effective October 2026",
+      "url": "https://travel.state.gov/en/newsroom/visas/2026/announcement-of-expanded-screening-and-vetting-for-visa-applicants.html"
     }
   },
   "articleLinks": {
