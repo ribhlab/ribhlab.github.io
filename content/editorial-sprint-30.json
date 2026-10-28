@@ -292,8 +292,10 @@
         "cftc",
         "investor"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "editorialReviewDate": "2026-10-28",
+      "queuePath": "content/reviewed-queue/risk-budget-drawdown-math-beginners.json"
     },
     {
       "sectionId": "trading-risk",
