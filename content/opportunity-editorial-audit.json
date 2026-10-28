@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 7,
+    "researched": 8,
     "marketEvidence": 5,
-    "pendingDetail": 75
+    "pendingDetail": 74
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -79,10 +79,13 @@
       "section": "competitions",
       "title": "Cadre Analyste Comptabilité et Finances",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/26fa5f83-f86b-446e-b293-0104f8494b9d"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/26fa5f83-f86b-446e-b293-0104f8494b9d",
+      "reviewedAt": "2026-10-28",
+      "evidencePath": "content/opportunity-editorial-evidence.json",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/amdie-finance/"
     },
     {
       "id": "srm-technicians",
