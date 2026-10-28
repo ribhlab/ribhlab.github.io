@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 15,
+    "researched": 16,
     "marketEvidence": 5,
-    "pendingDetail": 67
+    "pendingDetail": 66
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -347,10 +347,13 @@
       "section": "companies",
       "title": "Comptable — contrôle des recettes et encaissements",
       "deadline": "2026-11-07",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-07",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/705f6c1a-b4c6-411e-a1a7-e249a4de0781"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/705f6c1a-b4c6-411e-a1a7-e249a4de0781",
+      "researchedAt": "2026-10-28",
+      "evidenceKey": "marrakech-cash",
+      "researchNote": "Three-page original employer notice visually verified: one job, exact station, Bac+2/3, two years, five documents, practical test, contract placeholder conflict and missing deadline hour; complete AR/EN/FR editorial guide."
     },
     {
       "id": "adha-civil-engineers-2026",
