@@ -40,6 +40,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/companies/sntl-accounting/')
               wanted.append(f'/{lang}/opportunities/competitions/sett-engineer/')
               wanted.append(f'/{lang}/opportunities/morocco/sidi-finance/')
+              wanted.append(f'/{lang}/opportunities/companies/marrakech-cash/')
           last=None
           for attempt in range(1,7):
               try:
@@ -90,6 +91,12 @@ jobs:
                       assert 'C44077/26' in agri and '7c571fa5-42a7-46a6-8021-aed9ed9ec5f0' in agri, f'{lang}: Agriculture notice/reference missing'
                       assert agri.count('class="opp-guide-section" id="part-')>=8 and 'opp-guide-sources' in agri, f'{lang}: Agriculture original report incomplete'
                       print(f'AGRICULTURE LIVE {lang}: eight sections and signed original PDF verified',flush=True)
+                      marrakech=bodies[f'/{lang}/opportunities/companies/marrakech-cash/'].decode('utf-8')
+                      assert 'C44277/26' in marrakech and 'Marrakech' in marrakech, f'{lang}: Marrakech cash-control job reference missing'
+                      assert marrakech.count('class="opp-guide-section" id="part-')>=9, f'{lang}: Marrakech researched guide lacks nine sections'
+                      assert '705f6c1a-b4c6-411e-a1a7-e249a4de0781' in marrakech and 'opp-guide-sources' in marrakech, f'{lang}: Marrakech original three-page PDF/source absent'
+                      assert 'target="_blank"' in marrakech, f'{lang}: Marrakech official sources should open new tab'
+                      print(f'MARRAKECH CASH LIVE {lang}: nine original-source sections, official PDF and application details',flush=True)
                       sntl=bodies[f'/{lang}/opportunities/companies/sntl-accounting/'].decode('utf-8')
                       assert 'C44157/26' in sntl and 'SNTL/TCOMP/2026' in sntl, f'{lang}: SNTL accounting references missing'
                       assert sntl.count('class="opp-guide-section" id="part-')>=10, f'{lang}: SNTL detailed report lacks ten sections'
