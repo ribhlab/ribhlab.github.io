@@ -882,6 +882,209 @@
           ]
         }
       }
+    },
+    "eures-mobility": {
+      "id": "eures-mobility",
+      "reviewedAt": "2026-10-28",
+      "sourceBasis": "Official EURES, European Labour Authority and European Commission pages checked 28 October 2026. ELA 2025 shortage report published 8 June 2026; EU immigration country guides updated 1 April 2025. Distinguishes EURES vacancies from work permits and TMS residence eligibility; no individual vacancy or salary threshold claimed.",
+      "sources": [
+        {
+          "label": "EURES — Living and working in Europe (consulted 28 October 2026)",
+          "url": "https://eures.europa.eu/living-and-working_en"
+        },
+        {
+          "label": "EURES — Labour market information by country and region (consulted 28 October 2026)",
+          "url": "https://eures.europa.eu/living-and-working/labour-market-information_en"
+        },
+        {
+          "label": "European Labour Authority — Labour shortages and surpluses in Europe 2025 (published 8 June 2026)",
+          "url": "https://www.ela.europa.eu/en/publications/labour-shortages-and-surpluses-europe-2025"
+        },
+        {
+          "label": "EURES — Targeted Mobility Scheme eligibility and support (consulted 28 October 2026)",
+          "url": "https://eures.europa.eu/eures-services/eures-targeted-mobility-scheme-tms_en"
+        },
+        {
+          "label": "European Commission — EU Blue Card requirements (consulted 28 October 2026)",
+          "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/eu-blue-card_en"
+        },
+        {
+          "label": "European Commission — Employed worker in Italy (updated 1 April 2025)",
+          "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/employed-worker-italy_en"
+        },
+        {
+          "label": "European Commission — Employed worker in Spain (updated 1 April 2025)",
+          "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/employed-worker-spain_en"
+        },
+        {
+          "label": "Your Europe — Regulated professions and non-EU qualifications (consulted 28 October 2026)",
+          "url": "https://europa.eu/youreurope/citizens/work/professional-qualifications/regulated-professions/index_en.htm"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "البحث عن عمل في أوروبا عبر EURES من المغرب: دليل الإعلانات والتصاريح والتكاليف والمخاطر",
+          "deck": "دليل عملي يميّز بين إعلانات التوظيف والحق القانوني في العمل، ويقارن مسارات إيطاليا وإسبانيا وشروط دعم التنقل الأوروبي، دون وعود بالتأشيرة.",
+          "sections": [
+            [
+              "ما شبكة EURES وما حدود دورها؟",
+              "EURES شبكة أوروبية لخدمات التوظيف وتبادل معلومات سوق العمل والتنقل المهني، وليست برنامج هجرة يمنح التأشيرات. تجمع بوابتها إعلانات عمل ومعلومات عن المعيشة والضرائب والحقوق المهنية، وتساعد الباحث على المقارنة بين البلدان والمناطق. وجود إعلان على المنصة لا يعني أن الشركة مستعدة لتوظيف شخص يقيم خارج الاتحاد الأوروبي أو رعاية إجراءات إقامته. يجب الفصل بين ثلاث مراحل مستقلة: العثور على وظيفة مناسبة، والحصول على عرض حقيقي من مشغل يمكن التحقق منه، ثم استيفاء شروط العمل والإقامة الوطنية. لا توجد «تأشيرة EURES» موحدة، ولا يصح التعامل مع التسجيل في بوابة الوظائف باعتباره موافقة على الهجرة."
+            ],
+            [
+              "هل يستطيع المقيم في المغرب الاستفادة؟",
+              "يمكن للمقيم في المغرب استعمال المعلومات العامة عن الوظائف وظروف العمل للبحث والتواصل مع المشغلين، لكن حق العمل في دولة أوروبية لا ينشأ بمجرد استعمال الموقع. المواطن المغربي الذي لا يحمل جنسية أوروبية أو إقامة تمنحه حق العمل يحتاج عادة إلى مسار وطني يسمح بالتوظيف، وقد تتطلب الإجراءات تصريح عمل وتأشيرة طويلة الأجل وإقامة بعد الوصول. تختلف القواعد من إيطاليا إلى إسبانيا وألمانيا وغيرها، وتوجد استثناءات لفئات محددة. إذا كتب الإعلان أن المرشح يجب أن يملك مسبقاً تصريح عمل صالحاً، فلا تعتبره عرضاً يضمن استقدامك. اسأل المشغل صراحة هل يقبل مرشحاً من خارج أوروبا وهل يستطيع اتباع الإجراءات القانونية المطلوبة."
+            ],
+            [
+              "كيف تبحث عن إعلان قابل للتحقق؟",
+              "ابدأ من وظيفة محددة لا من عبارة عامة مثل «العمل في أوروبا». اختر بلداً ومهنة ومدينة أو إقليماً، ثم قارن مسمى الوظيفة بمهامها الفعلية ونوع العقد وساعات العمل والموقع وتاريخ الإعلان. احفظ رقم المرجع واسم الشركة والرابط وتاريخ الاطلاع، ثم افتح موقع صاحب العمل للتحقق من وجود الوظيفة نفسها إن أمكن. تحقق من اللغة المطلوبة، وطريقة التقديم، وما إذا كان الإعلان لا يزال نشطاً. إذا لم يُذكر راتب فلا تخترع رقماً من متوسطات الأجور الوطنية. وإذا ظهر راتب إجمالي، فلا تساوه بصافي المبلغ الذي سيصل إلى حسابك بعد الضرائب والاشتراكات والسكن."
+            ],
+            [
+              "استخدم بيانات النقص المهني بحذر",
+              "يقدم تقرير هيئة العمل الأوروبية عن النقص والفائض المهني في 2025 صورة إحصائية لاتجاهات أسواق متعددة، لكنه لا يمثل قائمة عقود متاحة اليوم. قد تكون مهنة مطلوبة في دولة وفائضة في أخرى؛ كما أن العجز المهني لا يلغي شروط اللغة أو الاعتراف بالدبلوم أو تصريح العمل. تظهر المهن الصحية والحرف الفنية ضمن قطاعات تواجه صعوبات متكررة في بلدان مختلفة، ولكن الانتقال من هذه المعلومة إلى وظيفة فعلية يتطلب إعلاناً محدداً ومشغلاً مستعداً للتوظيف. استخدم بيانات البلد والإقليم لتحديد أين تبحث أولاً، ثم ارجع إلى الإعلانات الفردية. لا تحوّل عدد المهن المصنفة ضمن النقص إلى عدد وظائف مفتوحة."
+            ],
+            [
+              "مقارنة عملية بين إيطاليا وإسبانيا",
+              "يوضح دليل الهجرة الرسمي للاتحاد الأوروبي اختلاف الإجراءات الوطنية. في إيطاليا، يحتاج العامل من خارج الاتحاد عادة إلى ترخيص عمل وتأشيرة قبل الدخول، وتخضع فئات عديدة لنظام حصص سنوية، بينما توجد فئات مستثناة. ويتقدم المشغل بطلب الترخيص لدى الجهات الإيطالية المختصة. وفي إسبانيا، تتطلب القاعدة العامة تصريح عمل وإقامة وتأشيرة مناسبة، ويبدأ المشغل عادة بإجراءات الترخيص، مع مراعاة سوق العمل والاستثناءات. النتيجة العملية: إعلان مماثل في البلدين لا يقود بالضرورة إلى المسار نفسه أو المدة نفسها. قبل قبول العرض، اطلب من المشغل تحديد الإجراء الوطني، والجهة التي تقدم الطلب، والوثائق المطلوبة منك."
+            ],
+            [
+              "الشهادات المغربية والمهن المنظمة",
+              "لا يعني امتلاك شهادة جامعية مغربية أن ممارسة كل مهنة مسموحة تلقائياً في دولة أوروبية. المهن المنظمة، ومنها عدد من المهن الصحية، قد تشترط اعترافاً رسمياً بالمؤهل أو التسجيل في هيئة مهنية أو اختبار لغة أو تدريباً إضافياً. وتوضح بوابة «أوروبا لك» أن الاعتراف بالمؤهل الصادر من خارج الاتحاد الأوروبي يخضع عادة لقواعد بلد العمل. أما المهن غير المنظمة فقد لا تحتاج إلى قرار اعتراف مهني بالمعنى القانوني، لكن المشغل قد يطلب تقييم الشهادة أو إثبات الخبرة. قبل ترجمة جميع الوثائق ودفع الرسوم، تحقق أولاً من وضع مهنتك في الدولة المقصودة ومن السلطة المختصة."
+            ],
+            [
+              "اللغة والراتب والتكاليف الحقيقية",
+              "لا توجد شهادة لغة واحدة صالحة لكل وظائف EURES. يحدد المشغل لغة العمل، وقد تفرض الجهة المنظمة لمهنة معينة مستوى لغوياً إضافياً. ابدأ بمقارنة الإعلان بمستواك الفعلي، ثم جهز سيرة ذاتية ورسالة قصيرة بلغة الإعلان دون ادعاء إتقان غير موجود. افصل بين الأجر الإجمالي والصافي، وتحقق من عدد الدفعات السنوية وساعات العمل والعمل الإضافي. مثال حسابي محض: عرض إجمالي قدره 2,400 يورو شهرياً لمدة اثني عشر شهراً يساوي 28,800 يورو إجمالياً في السنة، وليس صافي الدخل. أضف إلى ميزانيتك تكاليف ترجمة الوثائق والاعتراف والسفر والسكن المؤقت والتأمين والرسوم الوطنية؛ لا توجد تكلفة أوروبية موحدة لكل المسارات."
+            ],
+            [
+              "من المغرب إلى الطلب القانوني: ترتيب الخطوات",
+              "ابدأ بتحديد البلد والمهنة وتحقق من أهلية التوظيف من خارج الاتحاد، ثم ابحث عن إعلانات فردية وتواصل مع المشغل عبر قنواته المعلنة. بعد تلقي عرض مكتوب، راجع هوية الشركة والعقد والراتب والموقع والمدة والمهام قبل إرسال بيانات شخصية حساسة. بعد ذلك، حدد من المسؤول عن طلب تصريح العمل وما إذا كانت موافقة السلطات مطلوبة قبل حجز موعد التأشيرة. جهز جواز السفر والدبلومات وشهادات الخبرة والترجمات وغيرها فقط بحسب قائمة الجهة الرسمية المختصة؛ قد تتطلب بعض الدول إثبات السكن أو التأمين أو السجل العدلي. لا تشتر تذكرة غير قابلة للاسترداد ولا تستقل من عملك اعتماداً على وعد شفهي."
+            ],
+            [
+              "هل يشمل برنامج التنقل الموجّه TMS سكان المغرب؟",
+              "برنامج EURES Targeted Mobility Scheme ليس منحة سفر عامة لكل من يرى إعلاناً أوروبياً. تذكر الصفحة الرسمية أن الباحث المؤهل يبلغ 18 سنة على الأقل وأن يكون مواطناً في دولة من الاتحاد الأوروبي أو النرويج أو آيسلندا، أو مقيماً إقامة قانونية في إحدى هذه الدول. ولذلك لا يكفي مجرد الإقامة في المغرب أو امتلاك جواز مغربي للحصول على تمويل TMS. وقد تشمل المساعدة المؤهلين تكاليف لغة أو اعتراف بالمؤهل أو تنقل وفق شروط المشاريع القائمة. إذا كنت تحمل إقامة قانونية مؤهلة، تحقق من شروط المشروع المعني مباشرة قبل حساب أي دعم؛ لا تعتبر التمويل حقاً تلقائياً."
+            ],
+            [
+              "البطاقة الزرقاء والبدائل الأسهل قانونياً",
+              "للمهن عالية التأهيل يمكن فحص البطاقة الزرقاء الأوروبية إذا وُجد عرض عمل مؤهل يحقق شرط المدة والمؤهلات والراتب الوطني. يوضح الدليل الأوروبي أن العقد أو العرض الملزم يكون عادة لستة أشهر على الأقل، وأن حدود الراتب تختلف بحسب الدولة، ولذلك لا يجوز نقل رقم قديم من بلد إلى آخر. لبعض المهن والبلدان مسارات وطنية للعمل المأجور أو تصاريح خاصة، وقد تكون أوضح من محاولة دخول البلاد أولاً للبحث عن وظيفة. الأسهل قانونياً هو المسار الذي تستوفي شروطه فعلاً، لا البلد الذي يَعِد وسيط بأنه الأسرع. قارن الشروط والرسوم وحقوق الأسرة ومدة المعالجة من البوابة الحكومية المختصة قبل اتخاذ القرار."
+            ],
+            [
+              "خطة بحث لمدة أربعة أسابيع ومؤشرات متابعة",
+              "في الأسبوع الأول اختر بلدين فقط وثلاث مهن متوافقة مع خبرتك، واقرأ شروط الإقامة والاعتراف المهني. في الثاني أنشئ جدولاً يضم اسم المشغل والمدينة والمرجع وتاريخ الإعلان واللغة والراتب المنشور وشرط حق العمل. في الثالث قدم طلبات مخصصة للأدوار التي تطابق مؤهلاتك، ودوّن الردود بدلاً من إرسال عشرات الطلبات المتطابقة. في الرابع راجع النتائج: كم إعلاناً كان مناسباً فعلاً، وكم شركة تقبل مرشحاً من المغرب، وما العائق الأكثر تكراراً؟ مثال توضيحي: من عشرين إعلاناً قد يستوفي ملفك شروط ستة فقط؛ هذه ليست نسبة نجاح متوقعة بل طريقة لمنع الخلط بين عدد الروابط وعدد الفرص الواقعية."
+            ],
+            [
+              "الاحتيال وتاريخ المراجعة وحدود هذا الدليل",
+              "احذر الجهات التي تطلب تحويل مال شخصي مقابل «ضمان عقد EURES» أو تزعم إصدار تصريح العمل فوراً. تحقق من النطاق الرسمي للبريد، والسجل التجاري للمشغل عند الحاجة، ولا تشارك صورة جواز السفر أو بيانات البنك إلا عبر مسار موثوق وضروري. التواريخ والرواتب ومتطلبات التأشيرات قد تتغير، ولا يمكن لهذا الدليل تأكيد أن وظيفة بعينها مفتوحة أو أن طلباً سيُقبل. تمت مراجعة مصادر الشبكة الأوروبية وهيئة العمل الأوروبية ودليل الهجرة الأوروبي بتاريخ 28 أكتوبر 2026، مع الإشارة إلى سنوات التقارير أو تحديثات الصفحات الأصلية. اقرأ أحدث تعليمات البلد قبل دفع أي رسوم أو الانتقال."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Using EURES to seek work in Europe from Morocco: vacancies, permits, costs and risks",
+          "deck": "A practical, source-checked guide separating job advertisements from immigration permission, comparing Italy and Spain, and explaining who can actually receive EURES mobility support.",
+          "sections": [
+            [
+              "What EURES is—and what it is not",
+              "EURES is a European network for employment services, vacancies and cross-border labour-market information, not an immigration programme that issues visas. Its portal helps people explore jobs, working conditions, taxes and practical aspects of relocation. An advertised vacancy does not establish that the employer will recruit someone living outside the European Union or sponsor a national immigration procedure. Keep three separate decisions in mind: identifying a suitable position, securing a verifiable offer from a real employer, and obtaining the appropriate national permission to work and reside. There is no single EURES visa. Registering for job information is not an approval to immigrate, and a shortage occupation is not a promise of employment."
+            ],
+            [
+              "Can someone living in Morocco use it?",
+              "A resident of Morocco can consult publicly available job information and contact employers, but browsing EURES does not confer European work rights. A Moroccan citizen without EU nationality or an existing right to work generally needs the destination country's applicable route, potentially including employer authorisation, a long-stay visa and a residence permit. Requirements differ between Italy, Spain, Germany and other countries, and exceptions apply to specific categories. If a vacancy says applicants must already have unrestricted work authorisation, do not treat it as an invitation for overseas sponsorship. Ask the employer directly whether applications from outside Europe are accepted and which national work-permit procedure, if any, the organisation is willing to follow."
+            ],
+            [
+              "Find a vacancy that can actually be checked",
+              "Start with a specific occupation rather than the broad idea of 'working in Europe'. Filter by country, region or city, then examine duties, contract type, working hours, location and posting date. Record the reference number, employer name, link and date checked; where possible, confirm the same vacancy on the employer's own recruitment site. Check the application method, language requirement and whether the advert remains active. Do not infer a salary from national averages if the employer has not published one. Where a gross salary is stated, remember that deductions and housing costs affect disposable income. A listing may be real but unsuitable because of language, licensing, relocation timing or an existing-work-rights condition."
+            ],
+            [
+              "Interpret shortage statistics without inventing vacancies",
+              "The European Labour Authority's 2025 shortage and surplus report analyses structural imbalances across EURES countries. It is not a live list of contracts. An occupation can be in shortage in one country and surplus in another; shortage status also does not waive language, qualification-recognition or immigration rules. Healthcare and skilled trades feature among recurring problem areas in different labour markets, but an individual job still requires a specific vacancy and an employer prepared to recruit. Use national and regional evidence to decide where to investigate first, then verify individual advertisements. Counts of shortage occupations are not counts of open jobs, and projections of hiring demand are not issued work permits."
+            ],
+            [
+              "A concrete comparison: Italy and Spain",
+              "The European Commission's immigration portal illustrates why country-specific research matters. In Italy, a non-EU employed worker generally needs work authorisation and a visa before entry; many categories fall under annual quotas, with exceptions, and the employer initiates the authorisation procedure. In Spain, the standard employed-worker route requires work and residence authorisation and a suitable visa, with the employer generally applying first and labour-market rules or exemptions potentially relevant. Similar job titles in these two countries can therefore imply different documents, eligibility tests and timing. Before accepting an offer, ask who submits the application, which authority decides, whether quotas apply, and what the contract must contain."
+            ],
+            [
+              "Moroccan qualifications and regulated professions",
+              "Holding a Moroccan university diploma does not automatically authorise practice of every occupation in an EU country. Regulated professions, including various healthcare roles, can require formal recognition, professional registration, language evidence or supplementary training. The EU's Your Europe guidance explains that qualifications obtained outside the EU are normally assessed under the destination country's national recognition rules. In non-regulated occupations, legal professional recognition may not be necessary, although employers can still request diploma evaluations and proof of experience. Before paying for multiple translations or assessments, check whether the exact profession is regulated in the target country and identify the competent authority. Recognition of a diploma and immigration permission remain distinct questions."
+            ],
+            [
+              "Language, salary and a realistic cost calculation",
+              "There is no universal language certificate for all EURES jobs. The employer sets working-language expectations, while regulated professions may impose separate standards. Apply in the advertised language with a truthful description of your abilities. Distinguish gross pay, net pay, payment frequency and overtime conditions. As an arithmetic example only, EUR 2,400 gross per month paid twelve times equals EUR 28,800 gross per year; it is not a take-home-income estimate. Your relocation budget may include translations, qualification recognition, official application fees, travel, initial accommodation, insurance and emergency savings. Costs and processing times are country-specific. Do not use an unrelated country's visa fee or an outdated salary threshold as if it applied throughout Europe."
+            ],
+            [
+              "A lawful sequence from Morocco to employment",
+              "First choose a country and profession and establish whether overseas recruitment is legally possible. Then identify individual vacancies and approach employers through verified channels. When a written offer arrives, check the company's identity, contract duties, salary, location and duration before sharing sensitive documents. Determine who must apply for work authorisation and whether approval is required before a visa appointment. Prepare a passport, diplomas, employment certificates, translations and other records according to the actual consular or immigration checklist, not an agent's generic template. Some routes require accommodation, insurance or police records. Avoid non-refundable travel commitments or resigning from current employment on the strength of an informal promise."
+            ],
+            [
+              "Who really qualifies for Targeted Mobility Scheme support?",
+              "EURES Targeted Mobility Scheme, or TMS, is not a universal travel grant for everyone who finds a European vacancy. Its official eligibility description covers jobseekers aged at least 18 who are nationals of an EU country, Norway or Iceland, or legally resident in one of those countries. Living in Morocco alone does not meet that residence criterion. Depending on an active project's conditions, eligible participants may receive help for language training, recognition, travel or subsistence. This is not an automatic entitlement, and a person with qualifying legal residence should check the specific project before budgeting any financial assistance. TMS funding must not be confused with a visa or the right to work."
+            ],
+            [
+              "Blue Card and other lawful alternatives",
+              "Highly qualified applicants with a suitable job offer can investigate the EU Blue Card route. The Commission explains that it generally requires a qualifying contract or binding offer of at least six months, relevant qualifications and a salary meeting the destination state's threshold. Those thresholds vary by country and change over time, so a figure quoted for one year or country should not be recycled elsewhere. Other applicants may fit national employed-worker routes or occupation-specific permits. Often the most practical legal option is a direct job-and-permit route rather than paying to relocate before finding work. Compare official eligibility, costs, family rights and processing rules; no agent can declare a country universally easiest for every applicant."
+            ],
+            [
+              "A four-week research workflow",
+              "In week one, shortlist two countries and three occupations matching your documented experience, then study their permit and qualification rules. In week two, maintain a spreadsheet with employer, city, vacancy reference, posting date, language, published salary and work-authorisation condition. In week three, send tailored applications only where you meet the essentials, and track responses instead of mass-sending identical messages. In week four, review the evidence: how many roles actually fit, how many employers consider overseas applicants, and which requirement blocks progress? For illustration, you might find only six suitable vacancies among twenty links. That is a screening example, not a predicted acceptance rate or a claim about the current labour market."
+            ],
+            [
+              "Fraud, review date and remaining uncertainty",
+              "Be cautious of anyone requesting personal transfers in exchange for a 'guaranteed EURES contract' or claiming an immediate work permit. Check employer domains and corporate identity, and share passport or bank details only through necessary, trustworthy processes. A legitimate listing can expire, immigration thresholds can change, and official processing can be delayed. This guide does not confirm a specific open vacancy or guarantee a visa. EURES, European Labour Authority and European Commission source pages were reviewed on 28 October 2026; their underlying reports and national guidance carry their own publication or revision dates. Recheck the destination country's current instructions before paying, travelling or signing binding commitments."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Chercher un emploi en Europe depuis le Maroc avec EURES : offres, permis, coûts et risques",
+          "deck": "Un dossier pratique qui distingue annonces et droit au travail, compare les procédures italienne et espagnole et précise les conditions des aides à la mobilité EURES.",
+          "sections": [
+            [
+              "Ce qu'est EURES et ce que le réseau ne promet pas",
+              "EURES est un réseau européen de services de l'emploi, d'offres et d'informations sur la mobilité professionnelle. Il ne délivre pas de visa et ne constitue pas un programme d'immigration. Son portail permet de consulter des annonces et de comparer les conditions de travail, la fiscalité et la vie quotidienne. Une annonce publiée ne signifie pas que l'employeur acceptera de recruter une personne résidant hors de l'Union européenne ou de soutenir une procédure nationale d'immigration. Il faut distinguer trois étapes : repérer un poste adapté, obtenir une proposition vérifiable d'un employeur réel, puis remplir les conditions de travail et de séjour du pays concerné. Il n'existe pas de « visa EURES » unique."
+            ],
+            [
+              "Une personne résidant au Maroc peut-elle utiliser EURES ?",
+              "Un résident du Maroc peut consulter les informations publiques et contacter des employeurs, mais la consultation du portail ne confère aucun droit au travail en Europe. Un ressortissant marocain sans nationalité européenne ni droit de travail préexistant doit généralement suivre la procédure du pays d'accueil, qui peut nécessiter une autorisation de travail, un visa de long séjour et un titre de séjour. Les règles varient entre l'Italie, l'Espagne, l'Allemagne et les autres pays; des exceptions existent selon les catégories. Si une annonce exige déjà une autorisation de travail illimitée, elle ne constitue pas une promesse de recrutement international. Demandez clairement si l'employeur accepte les candidatures depuis le Maroc et connaît la procédure applicable."
+            ],
+            [
+              "Vérifier une annonce plutôt qu'accumuler des liens",
+              "Commencez par un métier précis, puis filtrez les offres par pays, région ou ville. Examinez les missions, le type de contrat, les horaires, le lieu et la date de publication. Conservez la référence, le nom de l'entreprise, le lien et la date de consultation. Vérifiez si possible que la même offre figure sur le site de recrutement de l'employeur. Contrôlez la langue exigée, le canal de candidature et la validité de l'annonce. N'inventez pas un salaire en utilisant une moyenne nationale si l'entreprise n'en publie aucun. Lorsqu'un salaire brut apparaît, ne le confondez pas avec le revenu net après cotisations, impôts et dépenses de logement."
+            ],
+            [
+              "Comprendre les pénuries sans inventer d'emplois",
+              "Le rapport 2025 de l'Autorité européenne du travail analyse les pénuries et excédents de main-d'œuvre dans plusieurs pays EURES. Il ne s'agit pas d'une liste de contrats actuellement proposés. Une profession peut être en pénurie dans un pays et en excédent dans un autre. La pénurie ne supprime ni les exigences linguistiques, ni la reconnaissance des qualifications, ni les règles de séjour. Les métiers de santé et plusieurs métiers techniques figurent parmi les secteurs confrontés à des difficultés récurrentes, mais chaque candidature nécessite une offre individuelle et un employeur réellement disposé à recruter. Utilisez les données nationales et régionales pour orienter votre recherche, puis vérifiez chaque annonce. Le nombre de métiers en tension n'est pas un nombre de postes ouverts."
+            ],
+            [
+              "Deux procédures différentes : Italie et Espagne",
+              "Le portail européen de l'immigration montre pourquoi une comparaison juridique par pays est indispensable. En Italie, le travailleur salarié non européen doit généralement obtenir une autorisation de travail et un visa avant l'entrée. Plusieurs catégories sont soumises à des quotas annuels, avec des exceptions, et l'employeur introduit la demande d'autorisation. En Espagne, le parcours ordinaire exige une autorisation de travail et de séjour ainsi qu'un visa approprié; l'employeur commence généralement la procédure, sous réserve des règles du marché du travail et de leurs exceptions. Deux offres aux intitulés semblables peuvent donc entraîner des délais et documents différents. Avant d'accepter, demandez quelle autorité statue et qui prépare le dossier."
+            ],
+            [
+              "Diplômes marocains et professions réglementées",
+              "Un diplôme universitaire marocain ne donne pas automatiquement accès à toutes les professions européennes. Les professions réglementées, notamment plusieurs métiers de santé, peuvent exiger une reconnaissance officielle, une inscription professionnelle, une preuve linguistique ou une formation complémentaire. Le portail Your Europe indique que la reconnaissance d'une qualification obtenue hors de l'Union relève normalement des règles nationales du pays où l'on souhaite exercer. Dans une profession non réglementée, une décision de reconnaissance professionnelle n'est pas toujours nécessaire, même si l'employeur peut demander une évaluation du diplôme et des attestations d'expérience. Vérifiez d'abord le statut exact de votre métier et l'autorité compétente avant de payer traductions, certifications et évaluations."
+            ],
+            [
+              "Langue, salaire et budget de départ",
+              "Il n'existe pas de certificat linguistique universel pour les emplois EURES. L'employeur définit la langue de travail, tandis qu'une profession réglementée peut imposer ses propres exigences. Rédigez votre candidature dans la langue annoncée sans exagérer votre niveau. Distinguez salaire brut, salaire net, fréquence des versements et heures supplémentaires. Exemple purement arithmétique : 2 400 euros bruts par mois versés douze fois représentent 28 800 euros bruts par an, pas un revenu disponible garanti. Le budget peut comprendre traductions, reconnaissance du diplôme, frais administratifs, transport, logement initial, assurance et réserve de sécurité. Les montants et délais varient selon les pays; aucun tarif de visa unique ne s'applique à toute l'Europe."
+            ],
+            [
+              "Les étapes légales depuis le Maroc",
+              "Sélectionnez d'abord un pays et un métier, puis vérifiez si le recrutement depuis l'étranger est possible. Recherchez des annonces individuelles et contactez les employeurs par leurs canaux vérifiés. Lorsqu'une offre écrite arrive, examinez l'identité de l'entreprise, les missions, le salaire, la localisation et la durée du contrat avant de transmettre des documents sensibles. Déterminez ensuite qui sollicite l'autorisation de travail et si une approbation est requise avant le rendez-vous consulaire. Préparez passeport, diplômes, attestations d'emploi et traductions conformément à la liste officielle du pays concerné; des justificatifs de logement, d'assurance ou de casier judiciaire peuvent être nécessaires. Évitez tout voyage non remboursable fondé sur une simple promesse orale."
+            ],
+            [
+              "La mobilité ciblée TMS est-elle ouverte depuis le Maroc ?",
+              "Le dispositif EURES Targeted Mobility Scheme n'est pas une bourse de voyage universelle. Selon la page officielle, les demandeurs d'emploi doivent avoir au moins 18 ans et être ressortissants d'un pays de l'Union, de Norvège ou d'Islande, ou résider légalement dans l'un de ces pays. La seule résidence au Maroc ne satisfait donc pas ce critère. Les projets actifs peuvent aider certains participants éligibles à financer des cours de langue, la reconnaissance des qualifications, le voyage ou la subsistance. Cette aide n'est jamais automatique : une personne disposant d'une résidence légale admissible doit vérifier les conditions du projet précis avant d'intégrer une subvention dans son budget. TMS ne remplace pas un titre autorisant le travail."
+            ],
+            [
+              "Carte bleue européenne et autres voies légales",
+              "Les profils hautement qualifiés disposant d'une offre appropriée peuvent étudier la carte bleue européenne. La Commission indique notamment un contrat ou une offre ferme d'au moins six mois, des qualifications adaptées et un salaire atteignant le seuil national. Ces seuils diffèrent d'un pays à l'autre et évoluent; un montant ancien ne peut pas être appliqué partout. D'autres candidats relèvent plutôt des autorisations nationales de travail salarié ou de régimes particuliers. Une offre obtenue à distance suivie d'une procédure de travail directe peut être moins risquée qu'un départ sans emploi. Comparez les conditions officielles, les frais, les droits familiaux et les délais avant de choisir. Aucun intermédiaire ne peut garantir la voie la plus facile pour tous."
+            ],
+            [
+              "Un programme de recherche sur quatre semaines",
+              "Pendant la première semaine, choisissez deux pays et trois métiers cohérents avec votre expérience prouvée, puis lisez les règles de séjour et de reconnaissance. La deuxième semaine, construisez un tableau avec employeur, ville, référence, date, langue, salaire effectivement publié et condition d'autorisation de travail. La troisième semaine, envoyez des candidatures personnalisées uniquement aux postes réellement adaptés et notez les réponses. La quatrième semaine, mesurez les obstacles : combien d'offres conviennent, combien d'entreprises examinent les candidatures depuis le Maroc, quelle condition revient le plus souvent ? Exemple fictif : sur vingt liens, seuls six peuvent correspondre à votre dossier. Ce calcul illustre le tri, pas un taux de réussite ni une statistique de marché."
+            ],
+            [
+              "Fraudes, dates et limites de la vérification",
+              "Méfiez-vous des personnes demandant un paiement personnel pour un « contrat EURES garanti » ou promettant une autorisation immédiate. Vérifiez les domaines de messagerie, l'identité de l'entreprise et la nécessité réelle de communiquer passeport ou coordonnées bancaires. Une annonce peut expirer, les seuils administratifs peuvent changer et les délais officiels se prolonger. Ce dossier ne confirme aucune offre individuelle encore ouverte et ne garantit ni recrutement ni visa. Les pages d'EURES, de l'Autorité européenne du travail et de la Commission ont été consultées le 28 octobre 2026; leurs rapports et fiches nationales possèdent leurs propres dates de publication ou de mise à jour. Consultez toujours les instructions nationales les plus récentes avant tout paiement ou déplacement."
+            ]
+          ]
+        }
+      }
     }
   }
 }
