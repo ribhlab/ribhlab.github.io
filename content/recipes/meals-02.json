@@ -1,0 +1,1169 @@
+{
+  "batch": "meals-02",
+  "recipes": [
+    {
+      "slug": "margherita-pizza",
+      "title": {
+        "ar": "بيتزا مارغريتا منزلية",
+        "en": "Home-style Margherita pizza",
+        "fr": "Pizza Margherita maison"
+      },
+      "cuisine": "italian",
+      "method": "bake",
+      "minutes": 95,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "amount": "400g"
+        },
+        {
+          "id": "yeast",
+          "amount": "6g"
+        },
+        {
+          "id": "water",
+          "amount": "250ml"
+        },
+        {
+          "id": "tomatosauce",
+          "amount": "200g"
+        },
+        {
+          "id": "mozzarella",
+          "amount": "220g"
+        },
+        {
+          "id": "basil",
+          "amount": "15g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        }
+      ],
+      "tip": {
+        "ar": "اترك عجين البيتزا يختمر ثم سخّن الفرن جيداً قبل الخبز وأضف الريحان بعد الطهي.",
+        "en": "Let the dough rise and preheat the oven fully; add basil after baking.",
+        "fr": "Laissez lever la pâte, préchauffez bien le four puis ajoutez le basilic après cuisson."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "spaghetti-tomato-basil",
+      "title": {
+        "ar": "سباغيتي بصلصة الطماطم والريحان",
+        "en": "Spaghetti with tomato and basil",
+        "fr": "Spaghettis tomate et basilic"
+      },
+      "cuisine": "italian",
+      "method": "pasta",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "spaghetti",
+          "amount": "350g"
+        },
+        {
+          "id": "tomato",
+          "amount": "500g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "basil",
+          "amount": "20g"
+        },
+        {
+          "id": "parmesan",
+          "amount": "40g"
+        }
+      ],
+      "tip": {
+        "ar": "احتفظ بقليل من ماء سلق المعكرونة لربط الصلصة قبل التقديم.",
+        "en": "Reserve some pasta cooking water to bind the sauce before serving.",
+        "fr": "Réservez un peu d’eau de cuisson des pâtes pour lier la sauce."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "pesto-pasta",
+      "title": {
+        "ar": "معكرونة بالريحان والجوز",
+        "en": "Basil and walnut pesto pasta",
+        "fr": "Pâtes au pesto basilic et noix"
+      },
+      "cuisine": "italian",
+      "method": "pasta",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "amount": "350g"
+        },
+        {
+          "id": "basil",
+          "amount": "50g"
+        },
+        {
+          "id": "walnuts",
+          "amount": "65g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "75ml"
+        },
+        {
+          "id": "parmesan",
+          "amount": "55g"
+        }
+      ],
+      "tip": {
+        "ar": "امزج البيستو خارج النار مع ماء سلق المعكرونة حتى لا يفقد الريحان لونه.",
+        "en": "Mix the pesto off the heat with a little pasta water to preserve the basil color.",
+        "fr": "Mélangez le pesto hors du feu avec un peu d’eau de cuisson pour préserver le basilic."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "mushroom-risotto",
+      "title": {
+        "ar": "ريزوتو إيطالي بالفطر",
+        "en": "Italian mushroom risotto",
+        "fr": "Risotto italien aux champignons"
+      },
+      "cuisine": "italian",
+      "method": "rice",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "330g"
+        },
+        {
+          "id": "mushroom",
+          "amount": "350g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "stock",
+          "amount": "1l"
+        },
+        {
+          "id": "butter",
+          "amount": "45g"
+        },
+        {
+          "id": "parmesan",
+          "amount": "60g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "15ml"
+        }
+      ],
+      "tip": {
+        "ar": "أضف المرق الساخن على دفعات صغيرة مع التقليب حتى يصبح الأرز كريميّاً ويبقى متماسكاً.",
+        "en": "Add warm stock in small additions and stir until the rice is creamy but still firm.",
+        "fr": "Versez le bouillon chaud progressivement en remuant pour un riz crémeux mais ferme."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "eggplant-parmesan-bake",
+      "title": {
+        "ar": "غراتان باذنجان بالطماطم والجبن",
+        "en": "Eggplant Parmesan bake",
+        "fr": "Gratin d’aubergines à la tomate et parmesan"
+      },
+      "cuisine": "italian",
+      "method": "bake",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "amount": "650g"
+        },
+        {
+          "id": "tomatosauce",
+          "amount": "450g"
+        },
+        {
+          "id": "mozzarella",
+          "amount": "180g"
+        },
+        {
+          "id": "parmesan",
+          "amount": "55g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "40ml"
+        },
+        {
+          "id": "basil",
+          "amount": "15g"
+        }
+      ],
+      "tip": {
+        "ar": "اشوِ شرائح الباذنجان أولاً ثم رتبها مع الصلصة والجبن في طبقات.",
+        "en": "Roast eggplant slices first, then layer with tomato sauce and cheese.",
+        "fr": "Faites rôtir les tranches d’aubergine puis alternez-les avec sauce et fromage."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "spinach-ricotta-lasagna",
+      "title": {
+        "ar": "لازانيا السبانخ والجبن",
+        "en": "Spinach and cheese lasagna",
+        "fr": "Lasagnes épinards et fromage"
+      },
+      "cuisine": "italian",
+      "method": "bake",
+      "minutes": 75,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "amount": "320g"
+        },
+        {
+          "id": "spinach",
+          "amount": "450g"
+        },
+        {
+          "id": "cheese",
+          "amount": "300g"
+        },
+        {
+          "id": "mozzarella",
+          "amount": "170g"
+        },
+        {
+          "id": "tomatosauce",
+          "amount": "500g"
+        },
+        {
+          "id": "milk",
+          "amount": "250ml"
+        },
+        {
+          "id": "flour",
+          "amount": "25g"
+        }
+      ],
+      "tip": {
+        "ar": "صفِّ السبانخ جيداً ورتب طبقات المعكرونة والصلصة والحشوة قبل الخبز.",
+        "en": "Drain spinach well and build even pasta, sauce and filling layers before baking.",
+        "fr": "Égouttez bien les épinards et montez des couches régulières de pâtes, sauce et farce."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "minestrone-vegetable-soup",
+      "title": {
+        "ar": "شوربة مينستروني بالخضر",
+        "en": "Italian vegetable minestrone",
+        "fr": "Minestrone italien aux légumes"
+      },
+      "cuisine": "italian",
+      "method": "soup",
+      "minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "beans",
+          "amount": "250g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "celery",
+          "amount": "2stalks"
+        },
+        {
+          "id": "tomato",
+          "amount": "350g"
+        },
+        {
+          "id": "zucchini",
+          "amount": "1pc"
+        },
+        {
+          "id": "pasta",
+          "amount": "100g"
+        },
+        {
+          "id": "stock",
+          "amount": "1.1l"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "أضف المعكرونة قرب النهاية لتبقى متماسكة ولا تمتص المرق كله.",
+        "en": "Add the pasta late so it stays intact and does not absorb all the broth.",
+        "fr": "Ajoutez les pâtes vers la fin pour qu’elles restent fermes sans absorber tout le bouillon."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chicken-cacciatore",
+      "title": {
+        "ar": "دجاج كاتشاتوري بالطماطم",
+        "en": "Chicken cacciatore",
+        "fr": "Poulet cacciatore à la tomate"
+      },
+      "cuisine": "italian",
+      "method": "stew",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickenthighs",
+          "amount": "700g"
+        },
+        {
+          "id": "tomato",
+          "amount": "500g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "olives",
+          "amount": "100g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        },
+        {
+          "id": "oregano",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "حمّر الدجاج ثم أكمل طهيه ببطء في الصلصة حتى يبلغ الحرارة الآمنة للدواجن.",
+        "en": "Brown the chicken, then simmer gently in sauce until it reaches a safe poultry temperature.",
+        "fr": "Dorez le poulet puis mijotez dans la sauce jusqu’à la température sûre pour la volaille."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "gnocchi-tomato",
+      "title": {
+        "ar": "نيوكي البطاطس بصلصة الطماطم",
+        "en": "Potato gnocchi with tomato sauce",
+        "fr": "Gnocchis de pommes de terre à la tomate"
+      },
+      "cuisine": "italian",
+      "method": "boil",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "amount": "600g"
+        },
+        {
+          "id": "flour",
+          "amount": "170g"
+        },
+        {
+          "id": "eggs",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomatosauce",
+          "amount": "400g"
+        },
+        {
+          "id": "basil",
+          "amount": "20g"
+        },
+        {
+          "id": "parmesan",
+          "amount": "45g"
+        }
+      ],
+      "tip": {
+        "ar": "اهرِس البطاطس وهي ساخنة واتركها تبرد قليلاً قبل إضافة الدقيق لتجنب عجينة قاسية.",
+        "en": "Mash warm potatoes, cool slightly, and use just enough flour to avoid tough dough.",
+        "fr": "Écrasez les pommes de terre tièdes, laissez refroidir puis ajoutez juste assez de farine."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "tuna-pasta-salad",
+      "title": {
+        "ar": "سلطة المعكرونة بالتونة والزيتون",
+        "en": "Tuna and olive pasta salad",
+        "fr": "Salade de pâtes au thon et olives"
+      },
+      "cuisine": "italian",
+      "method": "salad",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "amount": "330g"
+        },
+        {
+          "id": "tuna",
+          "amount": "220g"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "olives",
+          "amount": "80g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "150g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "برّد المعكرونة بعد سلقها قبل خلط التونة والخضر واحفظ السلطة مبردة.",
+        "en": "Cool the cooked pasta before adding tuna and vegetables; keep the salad chilled.",
+        "fr": "Refroidissez les pâtes cuites avant d’ajouter thon et légumes, puis gardez au frais."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "french-onion-soup",
+      "title": {
+        "ar": "شوربة البصل الفرنسية",
+        "en": "French onion soup",
+        "fr": "Soupe à l’oignon française"
+      },
+      "cuisine": "french",
+      "method": "soup",
+      "minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "onion",
+          "amount": "650g"
+        },
+        {
+          "id": "butter",
+          "amount": "45g"
+        },
+        {
+          "id": "stock",
+          "amount": "1l"
+        },
+        {
+          "id": "bread",
+          "amount": "4slices"
+        },
+        {
+          "id": "cheese",
+          "amount": "130g"
+        },
+        {
+          "id": "thyme",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "كرمل البصل ببطء حتى يصبح ذهبياً ثم غطِّ الحساء بخبز محمص وجبن قبل التحميص.",
+        "en": "Caramelize onions patiently, then top soup with toasted bread and cheese before briefly broiling.",
+        "fr": "Caramélisez les oignons lentement puis gratinez la soupe avec du pain grillé et du fromage."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chicken-mushroom-cream",
+      "title": {
+        "ar": "دجاج بالفطر وصلصة القشدة",
+        "en": "Creamy chicken and mushroom skillet",
+        "fr": "Poulet crémeux aux champignons"
+      },
+      "cuisine": "french",
+      "method": "skillet",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickenbreast",
+          "amount": "650g"
+        },
+        {
+          "id": "mushroom",
+          "amount": "350g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "cream",
+          "amount": "180ml"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "butter",
+          "amount": "25g"
+        },
+        {
+          "id": "thyme",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "أخرج الدجاج بعد تحميره ثم أعده إلى الصلصة حتى ينضج دون أن يجف.",
+        "en": "Remove chicken after browning, then finish it in the sauce without drying it out.",
+        "fr": "Réservez le poulet doré puis terminez sa cuisson dans la sauce sans le dessécher."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "potato-leek-gratin",
+      "title": {
+        "ar": "غراتان البطاطس والكراث",
+        "en": "Potato and leek gratin",
+        "fr": "Gratin de pommes de terre et poireaux"
+      },
+      "cuisine": "french",
+      "method": "bake",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "amount": "700g"
+        },
+        {
+          "id": "leek",
+          "amount": "2pcs"
+        },
+        {
+          "id": "cream",
+          "amount": "250ml"
+        },
+        {
+          "id": "milk",
+          "amount": "180ml"
+        },
+        {
+          "id": "cheese",
+          "amount": "120g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        }
+      ],
+      "tip": {
+        "ar": "اجعل شرائح البطاطس رقيقة ومتقاربة السمك حتى ينضج الغراتان بالتساوي.",
+        "en": "Slice potatoes thinly and evenly so the gratin cooks through at the same rate.",
+        "fr": "Tranchez les pommes de terre finement et régulièrement pour une cuisson homogène."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "nicoise-style-salad",
+      "title": {
+        "ar": "سلطة نيسواز بالتونة والبيض",
+        "en": "Niçoise-style tuna and egg salad",
+        "fr": "Salade niçoise au thon et œufs"
+      },
+      "cuisine": "french",
+      "method": "salad",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tuna",
+          "amount": "240g"
+        },
+        {
+          "id": "eggs",
+          "amount": "4pcs"
+        },
+        {
+          "id": "tomato",
+          "amount": "300g"
+        },
+        {
+          "id": "greenbeans",
+          "amount": "220g"
+        },
+        {
+          "id": "olives",
+          "amount": "100g"
+        },
+        {
+          "id": "potato",
+          "amount": "250g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "اطهِ الفاصولياء والبطاطس والبيض بشكل منفصل ثم اجمع المكونات بعد تبريدها.",
+        "en": "Cook green beans, potatoes and eggs separately; cool before assembling.",
+        "fr": "Cuisez haricots verts, pommes de terre et œufs séparément puis laissez refroidir avant de dresser."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "quiche-spinach",
+      "title": {
+        "ar": "كيش السبانخ والجبن",
+        "en": "Spinach and cheese quiche",
+        "fr": "Quiche aux épinards et fromage"
+      },
+      "cuisine": "french",
+      "method": "bake",
+      "minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "amount": "220g"
+        },
+        {
+          "id": "butter",
+          "amount": "95g"
+        },
+        {
+          "id": "eggs",
+          "amount": "4pcs"
+        },
+        {
+          "id": "spinach",
+          "amount": "250g"
+        },
+        {
+          "id": "milk",
+          "amount": "200ml"
+        },
+        {
+          "id": "cheese",
+          "amount": "140g"
+        }
+      ],
+      "tip": {
+        "ar": "اخبز قاعدة الكيش قليلاً قبل الحشو وصفِّ السبانخ حتى لا يصبح الوسط مائياً.",
+        "en": "Part-bake the crust and drain spinach so the egg filling sets instead of turning watery.",
+        "fr": "Précuisez la pâte et égouttez les épinards pour obtenir une garniture ferme."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "hummus-with-tahini",
+      "title": {
+        "ar": "حمص بالطحينة والليمون",
+        "en": "Hummus with tahini and lemon",
+        "fr": "Houmous au tahini et citron"
+      },
+      "cuisine": "levant",
+      "method": "puree",
+      "minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "amount": "450g"
+        },
+        {
+          "id": "tahini",
+          "amount": "85g"
+        },
+        {
+          "id": "lemon",
+          "amount": "2pcs"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "water",
+          "amount": "80ml"
+        }
+      ],
+      "tip": {
+        "ar": "امزج الحمص جيداً وأضف ماء بارداً تدريجياً للحصول على قوام ناعم.",
+        "en": "Blend the chickpeas well and add cold water gradually for a silky texture.",
+        "fr": "Mixez les pois chiches avec de l’eau froide ajoutée peu à peu pour une texture lisse."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "tabbouleh-bulgur",
+      "title": {
+        "ar": "تبولة بالبقدونس والبرغل",
+        "en": "Parsley-rich tabbouleh",
+        "fr": "Taboulé au persil et boulgour"
+      },
+      "cuisine": "levant",
+      "method": "salad",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "parsley",
+          "amount": "170g"
+        },
+        {
+          "id": "bulgur",
+          "amount": "80g"
+        },
+        {
+          "id": "tomato",
+          "amount": "220g"
+        },
+        {
+          "id": "mint",
+          "amount": "20g"
+        },
+        {
+          "id": "lemon",
+          "amount": "2pcs"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "35ml"
+        }
+      ],
+      "tip": {
+        "ar": "اجعل البقدونس المفروم أساس السلطة واستعمل البرغل بعد نقعه وتصفيته جيداً.",
+        "en": "Let chopped parsley dominate and drain the soaked bulgur thoroughly.",
+        "fr": "Mettez le persil finement haché à l’honneur et égouttez bien le boulgour trempé."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "fattoush-salad",
+      "title": {
+        "ar": "فتوش بالخضر والخبز المحمص",
+        "en": "Fattoush with toasted pita",
+        "fr": "Fattouche aux crudités et pita grillée"
+      },
+      "cuisine": "levant",
+      "method": "salad",
+      "minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lettuce",
+          "amount": "220g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "220g"
+        },
+        {
+          "id": "tomato",
+          "amount": "300g"
+        },
+        {
+          "id": "pita",
+          "amount": "3pcs"
+        },
+        {
+          "id": "mint",
+          "amount": "15g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        }
+      ],
+      "tip": {
+        "ar": "أضف مكعبات الخبز المحمص قبل التقديم مباشرة ليبقى مقرمشاً.",
+        "en": "Add toasted pita pieces just before serving to keep them crunchy.",
+        "fr": "Ajoutez le pain pita grillé juste avant de servir pour conserver le croquant."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "mujaddara-lentils-rice",
+      "title": {
+        "ar": "مجدرة العدس والأرز بالبصل",
+        "en": "Lentil and rice mujaddara",
+        "fr": "Moujadara aux lentilles et riz"
+      },
+      "cuisine": "levant",
+      "method": "rice",
+      "minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lentils",
+          "amount": "250g"
+        },
+        {
+          "id": "rice",
+          "amount": "200g"
+        },
+        {
+          "id": "onion",
+          "amount": "3pcs"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "40ml"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "water",
+          "amount": "950ml"
+        }
+      ],
+      "tip": {
+        "ar": "حمّر شرائح البصل حتى تكرمل وقدم معظمها فوق العدس والأرز.",
+        "en": "Caramelize sliced onions and reserve most to top the lentil-rice mixture.",
+        "fr": "Faites caraméliser les oignons émincés et gardez-en la majorité pour garnir le riz aux lentilles."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "baked-falafel",
+      "title": {
+        "ar": "فلافل حمص بالفرن",
+        "en": "Oven-baked chickpea falafel",
+        "fr": "Falafels de pois chiches au four"
+      },
+      "cuisine": "levant",
+      "method": "bake",
+      "minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "drychickpeas",
+          "amount": "350g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "parsley",
+          "amount": "35g"
+        },
+        {
+          "id": "coriander",
+          "amount": "20g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "35ml"
+        }
+      ],
+      "tip": {
+        "ar": "استعمل حمصاً منقوعاً وغير مسلوق للفلافل واطحنه خشناً ثم شكّل أقراصاً واخبزها.",
+        "en": "Use soaked uncooked chickpeas, pulse coarsely, shape patties and bake until firm.",
+        "fr": "Utilisez des pois chiches trempés mais non cuits, mixez grossièrement et faites cuire les palets au four."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "baba-ghanoush",
+      "title": {
+        "ar": "بابا غنوج بالباذنجان المشوي",
+        "en": "Smoky baba ghanoush",
+        "fr": "Baba ganoush aux aubergines grillées"
+      },
+      "cuisine": "levant",
+      "method": "puree",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "amount": "650g"
+        },
+        {
+          "id": "tahini",
+          "amount": "65g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "parsley",
+          "amount": "10g"
+        }
+      ],
+      "tip": {
+        "ar": "اشوِ الباذنجان حتى يلين تماماً وانزع قشره قبل هرس اللب مع الطحينة.",
+        "en": "Roast eggplant until very soft, remove the skin and mash the flesh with tahini.",
+        "fr": "Faites griller les aubergines jusqu’à tendreté, pelez puis écrasez la chair avec le tahini."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chicken-shawarma-bowl",
+      "title": {
+        "ar": "طبق شاورما الدجاج مع الأرز",
+        "en": "Chicken shawarma rice bowl",
+        "fr": "Bol de riz au poulet façon chawarma"
+      },
+      "cuisine": "levant",
+      "method": "grill",
+      "minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "rice",
+          "amount": "300g"
+        },
+        {
+          "id": "yogurt",
+          "amount": "130g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "cucumber",
+          "amount": "200g"
+        }
+      ],
+      "tip": {
+        "ar": "انقع الدجاج باللبن والبهارات ثم اشوه وقطّعه شرائح فوق الأرز المطهو.",
+        "en": "Marinate chicken in yogurt and spices, grill it fully and slice over cooked rice.",
+        "fr": "Marine le poulet au yaourt et épices, grillez-le puis émincez-le sur le riz cuit."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "kofta-kebab",
+      "title": {
+        "ar": "كباب كفتة بالفرن",
+        "en": "Oven-baked beef kofta kebabs",
+        "fr": "Brochettes de kefta de bœuf au four"
+      },
+      "cuisine": "levant",
+      "method": "bake",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "groundbeef",
+          "amount": "600g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "parsley",
+          "amount": "25g"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        }
+      ],
+      "tip": {
+        "ar": "شكّل اللحم المفروم على هيئة أصابع متساوية السمك وتأكد من نضجه الداخلي.",
+        "en": "Form even-thickness minced-meat logs and verify the safe internal temperature.",
+        "fr": "Façonnez des boudins de viande réguliers et vérifiez la température de cuisson à cœur."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "red-lentil-soup",
+      "title": {
+        "ar": "شوربة العدس الأحمر بالكمون",
+        "en": "Red lentil and cumin soup",
+        "fr": "Soupe de lentilles corail au cumin"
+      },
+      "cuisine": "levant",
+      "method": "soup",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "redlentils",
+          "amount": "280g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "stock",
+          "amount": "950ml"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "اطه العدس الأحمر حتى يلين ثم اهرسه جزئياً وقدّم الليمون منفصلاً حسب الذوق.",
+        "en": "Simmer red lentils until soft, blend partly and add lemon to taste at serving.",
+        "fr": "Faites cuire les lentilles corail, mixez partiellement puis ajoutez le citron selon le goût."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "spinach-fatayer",
+      "title": {
+        "ar": "فطائر سبانخ بالليمون",
+        "en": "Spinach and lemon fatayer",
+        "fr": "Fatayers aux épinards et citron"
+      },
+      "cuisine": "levant",
+      "method": "bake",
+      "minutes": 80,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "amount": "380g"
+        },
+        {
+          "id": "yeast",
+          "amount": "6g"
+        },
+        {
+          "id": "water",
+          "amount": "220ml"
+        },
+        {
+          "id": "spinach",
+          "amount": "450g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "35ml"
+        }
+      ],
+      "tip": {
+        "ar": "اعصر السبانخ بعد تتبيلها بالليمون واغلق الفطائر جيداً قبل الخبز.",
+        "en": "Squeeze the lemon-seasoned spinach, seal the pastries carefully and bake until golden.",
+        "fr": "Essorez les épinards citronnés, fermez les chaussons puis faites dorer au four."
+      },
+      "kind": "meal"
+    }
+  ]
+}
