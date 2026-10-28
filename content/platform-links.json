@@ -385,6 +385,18 @@
     "openaiEvalGuide": {
       "name": "OpenAI Developers — Evaluation best practices",
       "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices"
+    },
+    "appPhotoGoogleBackup": {
+      "name": "Google Photos Help — Back up photos and videos",
+      "url": "https://support.google.com/photos/answer/6193313?hl=en"
+    },
+    "appPhotoAppleICloud": {
+      "name": "Apple Support — Set up and use iCloud Photos",
+      "url": "https://support.apple.com/en-us/108782"
+    },
+    "appPhotoOneDriveCamera": {
+      "name": "Microsoft Support — Automatically save photos with OneDrive",
+      "url": "https://support.microsoft.com/en-us/onedrive/automatically-save-photos-videos-with-onedrive"
     }
   },
   "articleLinks": {
