@@ -1,0 +1,1205 @@
+{
+  "batch": "meals-01",
+  "recipes": [
+    {
+      "slug": "moroccan-harira",
+      "title": {
+        "ar": "حريرة مغربية بالحمص والعدس",
+        "en": "Moroccan chickpea and lentil harira",
+        "fr": "Harira marocaine aux pois chiches et lentilles"
+      },
+      "cuisine": "moroccan",
+      "method": "soup",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "amount": "400g"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "180g"
+        },
+        {
+          "id": "lentils",
+          "amount": "100g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "celery",
+          "amount": "2stalks"
+        },
+        {
+          "id": "coriander",
+          "amount": "20g"
+        },
+        {
+          "id": "stock",
+          "amount": "1.2l"
+        },
+        {
+          "id": "flour",
+          "amount": "35g"
+        }
+      ],
+      "tip": {
+        "ar": "امزج الدقيق بقليل من الماء البارد وأضفه تدريجياً في النهاية لتكثيف الحريرة.",
+        "en": "Whisk flour with cold water and add gradually near the end for the characteristic light thickening.",
+        "fr": "Délayez la farine dans un peu d’eau froide et ajoutez-la progressivement en fin de cuisson."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chicken-olive-tagine",
+      "title": {
+        "ar": "طاجين الدجاج بالزيتون والليمون المصير",
+        "en": "Chicken tagine with olives and preserved lemon",
+        "fr": "Tajine de poulet aux olives et citron confit"
+      },
+      "cuisine": "moroccan",
+      "method": "tagine",
+      "minutes": 70,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickenthighs",
+          "amount": "700g"
+        },
+        {
+          "id": "onion",
+          "amount": "2pcs"
+        },
+        {
+          "id": "olives",
+          "amount": "120g"
+        },
+        {
+          "id": "preservedlemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "ginger",
+          "amount": "1tsp"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        },
+        {
+          "id": "water",
+          "amount": "300ml"
+        }
+      ],
+      "tip": {
+        "ar": "أضف الزيتون والليمون المصير في آخر ربع ساعة حتى لا يطغى الملح.",
+        "en": "Add olives and preserved lemon in the final 15 minutes so their salt does not overpower the sauce.",
+        "fr": "Ajoutez les olives et le citron confit durant les quinze dernières minutes pour équilibrer le sel."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "beef-prune-tagine",
+      "title": {
+        "ar": "طاجين اللحم بالبرقوق والزبيب",
+        "en": "Moroccan beef tagine with raisins",
+        "fr": "Tajine de bœuf aux raisins"
+      },
+      "cuisine": "moroccan",
+      "method": "tagine",
+      "minutes": 95,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "beef",
+          "amount": "700g"
+        },
+        {
+          "id": "onion",
+          "amount": "2pcs"
+        },
+        {
+          "id": "raisins",
+          "amount": "130g"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "1tsp"
+        },
+        {
+          "id": "ginger",
+          "amount": "1tsp"
+        },
+        {
+          "id": "honey",
+          "amount": "15g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "water",
+          "amount": "450ml"
+        }
+      ],
+      "tip": {
+        "ar": "انقع الزبيب وأضفه في الجزء الأخير ليبقى طرياً دون أن يتفتت.",
+        "en": "Soak the raisins and add them late so they become tender without breaking down.",
+        "fr": "Faites tremper les raisins et incorporez-les en fin de cuisson pour préserver leur texture."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "seven-vegetable-couscous",
+      "title": {
+        "ar": "كسكس مغربي بسبع خضر",
+        "en": "Seven-vegetable Moroccan couscous",
+        "fr": "Couscous marocain aux sept légumes"
+      },
+      "cuisine": "moroccan",
+      "method": "couscous",
+      "minutes": 75,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "couscous",
+          "amount": "400g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "zucchini",
+          "amount": "2pcs"
+        },
+        {
+          "id": "pumpkin",
+          "amount": "250g"
+        },
+        {
+          "id": "cabbage",
+          "amount": "180g"
+        },
+        {
+          "id": "potato",
+          "amount": "2pcs"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "160g"
+        },
+        {
+          "id": "stock",
+          "amount": "900ml"
+        }
+      ],
+      "tip": {
+        "ar": "اطه الخضر القاسية أولاً ثم أضف الكوسة والقرع لاحقاً حتى لا يتهرسا.",
+        "en": "Start the firmer vegetables first and add zucchini and pumpkin later to avoid overcooking.",
+        "fr": "Commencez par les légumes fermes et ajoutez les courgettes et le potiron plus tard."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "lamb-vegetable-couscous",
+      "title": {
+        "ar": "كسكس بلحم الغنم والخضر",
+        "en": "Lamb and vegetable couscous",
+        "fr": "Couscous à l’agneau et aux légumes"
+      },
+      "cuisine": "moroccan",
+      "method": "couscous",
+      "minutes": 95,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "couscous",
+          "amount": "400g"
+        },
+        {
+          "id": "lamb",
+          "amount": "650g"
+        },
+        {
+          "id": "carrot",
+          "amount": "3pcs"
+        },
+        {
+          "id": "zucchini",
+          "amount": "2pcs"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "150g"
+        },
+        {
+          "id": "stock",
+          "amount": "1l"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "اسلق اللحم حتى يطرى قبل إضافة الخضر التي تنضج بسرعة.",
+        "en": "Cook the lamb until tender before adding vegetables that soften quickly.",
+        "fr": "Attendrissez l’agneau avant d’ajouter les légumes les plus fragiles."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "kefta-tagine-eggs",
+      "title": {
+        "ar": "طاجين كفتة بالبيض والطماطم",
+        "en": "Moroccan kefta and egg tagine",
+        "fr": "Tajine de kefta aux œufs et tomates"
+      },
+      "cuisine": "moroccan",
+      "method": "skillet",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "groundbeef",
+          "amount": "500g"
+        },
+        {
+          "id": "eggs",
+          "amount": "4pcs"
+        },
+        {
+          "id": "tomato",
+          "amount": "400g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "parsley",
+          "amount": "15g"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "شكّل الكفتة كرات صغيرة وأنضجها في الصلصة قبل كسر البيض فوقها.",
+        "en": "Shape small meatballs, simmer them in the sauce, then crack the eggs over the top.",
+        "fr": "Formez de petites boulettes, cuisez-les dans la sauce puis cassez les œufs dessus."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "zaalouk-eggplant",
+      "title": {
+        "ar": "زعلوك الباذنجان المغربي",
+        "en": "Moroccan zaalouk eggplant salad",
+        "fr": "Zaalouk marocain aux aubergines"
+      },
+      "cuisine": "moroccan",
+      "method": "stew",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "amount": "600g"
+        },
+        {
+          "id": "tomato",
+          "amount": "350g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "35ml"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "parsley",
+          "amount": "15g"
+        }
+      ],
+      "tip": {
+        "ar": "اهرِس الباذنجان المطهو مع الطماطم حتى يتبخر الماء ويصبح قوامه قابلاً للدهن.",
+        "en": "Mash the cooked eggplant into the tomato mixture until the excess moisture evaporates.",
+        "fr": "Écrasez l’aubergine cuite avec la tomate jusqu’à évaporation de l’excès d’eau."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "taktouka-peppers",
+      "title": {
+        "ar": "تكتوكة الفلفل والطماطم",
+        "en": "Moroccan roasted pepper taktouka",
+        "fr": "Taktouka marocaine aux poivrons grillés"
+      },
+      "cuisine": "moroccan",
+      "method": "stew",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pepper",
+          "amount": "4pcs"
+        },
+        {
+          "id": "tomato",
+          "amount": "400g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "cumin",
+          "amount": "0.5tsp"
+        }
+      ],
+      "tip": {
+        "ar": "اشوِ الفلفل وقشّره قبل تقطيعه لتحصل على نكهة مدخنة وقوام ناعم.",
+        "en": "Char and peel the peppers before dicing them for a smoky flavor and tender texture.",
+        "fr": "Grillez puis pelez les poivrons avant de les couper pour une saveur fumée."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "lentil-moroccan-stew",
+      "title": {
+        "ar": "عدس مغربي بالطماطم والكمون",
+        "en": "Moroccan tomato-cumin lentils",
+        "fr": "Lentilles marocaines à la tomate et cumin"
+      },
+      "cuisine": "moroccan",
+      "method": "soup",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "lentils",
+          "amount": "250g"
+        },
+        {
+          "id": "tomato",
+          "amount": "300g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "carrot",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "water",
+          "amount": "950ml"
+        }
+      ],
+      "tip": {
+        "ar": "أضف الملح في آخر الطهي وعدّل قوام العدس بالماء الساخن إن لزم.",
+        "en": "Season near the end and adjust the lentil consistency with warm water if needed.",
+        "fr": "Assaisonnez en fin de cuisson et ajustez la consistance avec un peu d’eau chaude."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "moroccan-white-beans",
+      "title": {
+        "ar": "لوبيا مغربية في صلصة الطماطم",
+        "en": "Moroccan white beans in tomato sauce",
+        "fr": "Loubia marocaine à la tomate"
+      },
+      "cuisine": "moroccan",
+      "method": "stew",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "beans",
+          "amount": "500g"
+        },
+        {
+          "id": "tomato",
+          "amount": "350g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "water",
+          "amount": "250ml"
+        }
+      ],
+      "tip": {
+        "ar": "استعمل فاصولياء مطبوخة جيداً ودعها تتشرب الصلصة دون أن تتكسر.",
+        "en": "Use fully cooked beans and let them absorb the sauce without falling apart.",
+        "fr": "Utilisez des haricots déjà bien cuits et laissez-les absorber la sauce sans les écraser."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "moroccan-sardine-balls",
+      "title": {
+        "ar": "كرات السردين بصلصة الطماطم",
+        "en": "Moroccan-style fish balls in tomato sauce",
+        "fr": "Boulettes de poisson à la marocaine"
+      },
+      "cuisine": "moroccan",
+      "method": "skillet",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "fish",
+          "amount": "600g"
+        },
+        {
+          "id": "tomato",
+          "amount": "450g"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "parsley",
+          "amount": "20g"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "افرُم السمك دون تحويله إلى عجين ناعم وشكّل كرات صغيرة لتطهى بالتساوي.",
+        "en": "Chop fish finely but not into a paste; form small balls that cook evenly in the sauce.",
+        "fr": "Hachez le poisson sans le réduire en purée et formez de petites boulettes régulières."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chicken-pastilla-home",
+      "title": {
+        "ar": "بسطيلة الدجاج المنزلية",
+        "en": "Home-style Moroccan chicken pastilla",
+        "fr": "Pastilla maison au poulet"
+      },
+      "cuisine": "moroccan",
+      "method": "bake",
+      "minutes": 80,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "onion",
+          "amount": "2pcs"
+        },
+        {
+          "id": "eggs",
+          "amount": "3pcs"
+        },
+        {
+          "id": "almonds",
+          "amount": "100g"
+        },
+        {
+          "id": "flour",
+          "amount": "250g"
+        },
+        {
+          "id": "butter",
+          "amount": "60g"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "1tsp"
+        },
+        {
+          "id": "parsley",
+          "amount": "15g"
+        }
+      ],
+      "tip": {
+        "ar": "اطه الحشوة مسبقاً وجففها جيداً قبل تغليفها بالعجين لتبقى القشرة مقرمشة.",
+        "en": "Cook and dry the filling before wrapping so the pastry can become crisp.",
+        "fr": "Cuisez et asséchez la farce avant de l’envelopper pour obtenir une croûte croustillante."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "briouats-spinach-cheese",
+      "title": {
+        "ar": "بريوات السبانخ والجبن",
+        "en": "Spinach and cheese briouats",
+        "fr": "Briouates aux épinards et au fromage"
+      },
+      "cuisine": "moroccan",
+      "method": "bake",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "amount": "250g"
+        },
+        {
+          "id": "spinach",
+          "amount": "300g"
+        },
+        {
+          "id": "feta",
+          "amount": "120g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "20ml"
+        },
+        {
+          "id": "eggs",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "عصّر السبانخ بعد طهيها لتجنب تسرب الماء إلى العجين أثناء الخبز.",
+        "en": "Squeeze cooked spinach well before filling to prevent soggy pastry.",
+        "fr": "Égouttez soigneusement les épinards cuits pour éviter de détremper la pâte."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "rfissa-chicken-lentils",
+      "title": {
+        "ar": "رفيسة بالدجاج والعدس",
+        "en": "Moroccan rfissa with chicken and lentils",
+        "fr": "Rfissa marocaine au poulet et lentilles"
+      },
+      "cuisine": "moroccan",
+      "method": "stew",
+      "minutes": 95,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickenthighs",
+          "amount": "700g"
+        },
+        {
+          "id": "lentils",
+          "amount": "220g"
+        },
+        {
+          "id": "onion",
+          "amount": "3pcs"
+        },
+        {
+          "id": "wholeflour",
+          "amount": "300g"
+        },
+        {
+          "id": "turmeric",
+          "amount": "1tsp"
+        },
+        {
+          "id": "ginger",
+          "amount": "1tsp"
+        },
+        {
+          "id": "stock",
+          "amount": "850ml"
+        }
+      ],
+      "tip": {
+        "ar": "حضّر رقائق خبز رقيقة من الدقيق والماء وقدمها تحت مرق الدجاج والعدس الساخن.",
+        "en": "Make thin cooked flatbread strips and place them under the hot chicken and lentil broth.",
+        "fr": "Préparez de fines galettes cuites puis déposez-les sous le bouillon chaud au poulet et lentilles."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "harcha-semolina",
+      "title": {
+        "ar": "حرشة مغربية بالسميد",
+        "en": "Moroccan semolina harcha",
+        "fr": "Harcha marocaine à la semoule"
+      },
+      "cuisine": "moroccan",
+      "method": "pancake",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "semolina",
+          "amount": "300g"
+        },
+        {
+          "id": "milk",
+          "amount": "180ml"
+        },
+        {
+          "id": "butter",
+          "amount": "50g"
+        },
+        {
+          "id": "bakingpowder",
+          "amount": "8g"
+        },
+        {
+          "id": "sugar",
+          "amount": "10g"
+        }
+      ],
+      "tip": {
+        "ar": "لا تعجن السميد طويلاً؛ شكّل أقراصاً سميكة واطهها على مقلاة هادئة.",
+        "en": "Do not overwork the semolina; shape thick rounds and griddle over gentle heat.",
+        "fr": "Travaillez peu la semoule; formez des galettes épaisses et cuisez à feu doux."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "baghrir-thousand-holes",
+      "title": {
+        "ar": "بغرير مغربي بثقوب كثيرة",
+        "en": "Moroccan baghrir pancakes",
+        "fr": "Baghrir marocain aux mille trous"
+      },
+      "cuisine": "moroccan",
+      "method": "pancake",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "semolina",
+          "amount": "240g"
+        },
+        {
+          "id": "flour",
+          "amount": "60g"
+        },
+        {
+          "id": "yeast",
+          "amount": "5g"
+        },
+        {
+          "id": "bakingpowder",
+          "amount": "8g"
+        },
+        {
+          "id": "water",
+          "amount": "550ml"
+        },
+        {
+          "id": "honey",
+          "amount": "40g"
+        }
+      ],
+      "tip": {
+        "ar": "اترك العجين يرتاح حتى تتشكل فقاعات ثم اطه البغرير من جهة واحدة دون قلبه.",
+        "en": "Allow the batter to bubble, then cook each baghrir on one side without flipping.",
+        "fr": "Laissez fermenter jusqu’aux bulles puis cuisez chaque baghrir sur une seule face."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "msemen-home",
+      "title": {
+        "ar": "مسمن مغربي مطوي",
+        "en": "Moroccan folded msemen flatbread",
+        "fr": "Msemen marocain feuilleté"
+      },
+      "cuisine": "moroccan",
+      "method": "pancake",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "amount": "300g"
+        },
+        {
+          "id": "semolina",
+          "amount": "150g"
+        },
+        {
+          "id": "water",
+          "amount": "260ml"
+        },
+        {
+          "id": "oil",
+          "amount": "70ml"
+        },
+        {
+          "id": "butter",
+          "amount": "30g"
+        }
+      ],
+      "tip": {
+        "ar": "افرد العجين رقيقاً واطوه على شكل مربعات مع دهن خفيف قبل طهيه.",
+        "en": "Stretch dough thin and fold into oiled squares before griddling.",
+        "fr": "Étirez la pâte finement et repliez-la en carrés légèrement huilés avant cuisson."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "berkoukes-vegetables",
+      "title": {
+        "ar": "بركوكس مغربي بالخضر",
+        "en": "Moroccan berkoukes with vegetables",
+        "fr": "Berkoukes marocain aux légumes"
+      },
+      "cuisine": "moroccan",
+      "method": "soup",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "semolina",
+          "amount": "280g"
+        },
+        {
+          "id": "tomato",
+          "amount": "350g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "zucchini",
+          "amount": "1pc"
+        },
+        {
+          "id": "chickpeas",
+          "amount": "150g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "stock",
+          "amount": "1.2l"
+        }
+      ],
+      "tip": {
+        "ar": "استعمل حبيبات البركوكس الكبيرة إن توفرت أو شكّل حبيبات من السميد ثم راقب امتصاصها للمرق.",
+        "en": "Use large berkoukes grains if available or form coarse semolina pearls; watch how they absorb broth.",
+        "fr": "Utilisez les grosses graines de berkoukes si disponibles ou façonnez des perles de semoule, puis surveillez l’absorption."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "vegetable-tagine",
+      "title": {
+        "ar": "طاجين الخضر الموسمية",
+        "en": "Seasonal vegetable tagine",
+        "fr": "Tajine de légumes de saison"
+      },
+      "cuisine": "moroccan",
+      "method": "tagine",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "amount": "250g"
+        },
+        {
+          "id": "carrot",
+          "amount": "250g"
+        },
+        {
+          "id": "zucchini",
+          "amount": "200g"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "35ml"
+        },
+        {
+          "id": "preservedlemon",
+          "amount": "0.5pc"
+        },
+        {
+          "id": "water",
+          "amount": "250ml"
+        }
+      ],
+      "tip": {
+        "ar": "رتب الجذور في الأسفل والكوسة فوقها وأضف الماء بحذر لتبقى الصلصة مركزة.",
+        "en": "Layer roots below the zucchini and add water sparingly for a concentrated sauce.",
+        "fr": "Placez les légumes racines au fond et la courgette dessus; ajoutez peu d’eau pour concentrer la sauce."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "moroccan-beef-peas",
+      "title": {
+        "ar": "طاجين لحم البقر بالبازلاء",
+        "en": "Moroccan beef and pea tagine",
+        "fr": "Tajine de bœuf aux petits pois"
+      },
+      "cuisine": "moroccan",
+      "method": "tagine",
+      "minutes": 85,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "beef",
+          "amount": "650g"
+        },
+        {
+          "id": "peas",
+          "amount": "300g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomato",
+          "amount": "200g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "ginger",
+          "amount": "1tsp"
+        },
+        {
+          "id": "water",
+          "amount": "400ml"
+        }
+      ],
+      "tip": {
+        "ar": "لا تضف البازلاء إلا بعد أن يطرى اللحم لتحتفظ بلونها وقوامها.",
+        "en": "Add peas once the beef is tender so they retain color and texture.",
+        "fr": "Ajoutez les petits pois une fois le bœuf tendre pour préserver leur texture."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "greek-salad-feta",
+      "title": {
+        "ar": "سلطة يونانية بالفيتا",
+        "en": "Greek salad with feta",
+        "fr": "Salade grecque à la feta"
+      },
+      "cuisine": "mediterranean",
+      "method": "salad",
+      "minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tomato",
+          "amount": "300g"
+        },
+        {
+          "id": "cucumber",
+          "amount": "250g"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "olives",
+          "amount": "100g"
+        },
+        {
+          "id": "feta",
+          "amount": "150g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "قطّع الخضر إلى قطع كبيرة وأضف الفيتا في النهاية دون تحريك عنيف.",
+        "en": "Cut vegetables into generous pieces and add the feta last without crushing it.",
+        "fr": "Coupez les légumes en gros morceaux et ajoutez la feta en dernier sans l’écraser."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "spanish-tortilla-potato",
+      "title": {
+        "ar": "تورتيلا إسبانية بالبطاطس",
+        "en": "Spanish potato tortilla",
+        "fr": "Tortilla espagnole aux pommes de terre"
+      },
+      "cuisine": "mediterranean",
+      "method": "omelet",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "potato",
+          "amount": "450g"
+        },
+        {
+          "id": "eggs",
+          "amount": "6pcs"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "45ml"
+        }
+      ],
+      "tip": {
+        "ar": "اسلق أو اطه شرائح البطاطس مسبقاً ثم اسكب البيض واطهه حتى يثبت الوسط تماماً.",
+        "en": "Pre-cook potato slices, add beaten eggs, and cook until the centre is completely set.",
+        "fr": "Précuisez les pommes de terre, versez les œufs battus et poursuivez jusqu’à prise complète du centre."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "ratatouille-provencal",
+      "title": {
+        "ar": "راتاتوي الخضر الفرنسية",
+        "en": "French ratatouille vegetables",
+        "fr": "Ratatouille provençale"
+      },
+      "cuisine": "mediterranean",
+      "method": "stew",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggplant",
+          "amount": "250g"
+        },
+        {
+          "id": "zucchini",
+          "amount": "250g"
+        },
+        {
+          "id": "pepper",
+          "amount": "2pcs"
+        },
+        {
+          "id": "tomato",
+          "amount": "400g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "35ml"
+        },
+        {
+          "id": "thyme",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "شوّح كل نوع خضر على حدة أولاً ثم اجمعه ليحتفظ بنكهته ولا يتحول إلى هريس.",
+        "en": "Sauté vegetable groups separately before combining so they retain flavor and shape.",
+        "fr": "Faites revenir les légumes séparément puis réunissez-les pour conserver leurs textures."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "shakshuka-pepper-eggs",
+      "title": {
+        "ar": "شكشوكة بالبيض والفلفل",
+        "en": "Pepper and tomato shakshuka",
+        "fr": "Chakchouka aux œufs et poivrons"
+      },
+      "cuisine": "mediterranean",
+      "method": "skillet",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggs",
+          "amount": "4pcs"
+        },
+        {
+          "id": "tomato",
+          "amount": "450g"
+        },
+        {
+          "id": "pepper",
+          "amount": "2pcs"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "اصنع تجاويف في صلصة الطماطم وأضف البيض ثم غطّ المقلاة حتى ينضج.",
+        "en": "Make wells in the tomato sauce, add eggs, cover and cook until properly set.",
+        "fr": "Creusez des puits dans la sauce tomate, ajoutez les œufs et couvrez jusqu’à cuisson suffisante."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "mediterranean-fish-lemon",
+      "title": {
+        "ar": "سمك متوسطي بالليمون والأعشاب",
+        "en": "Mediterranean lemon-herb fish",
+        "fr": "Poisson méditerranéen au citron et herbes"
+      },
+      "cuisine": "mediterranean",
+      "method": "roast",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "fish",
+          "amount": "650g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        },
+        {
+          "id": "parsley",
+          "amount": "20g"
+        },
+        {
+          "id": "potato",
+          "amount": "300g"
+        }
+      ],
+      "tip": {
+        "ar": "قطّع البطاطس رقيقة لتبدأ نضجها قبل إضافة السمك الذي يحتاج مدة أقصر.",
+        "en": "Slice potatoes thin and start them before adding fish, which cooks faster.",
+        "fr": "Tranchez finement les pommes de terre et commencez leur cuisson avant d’ajouter le poisson."
+      },
+      "kind": "meal"
+    }
+  ]
+}
