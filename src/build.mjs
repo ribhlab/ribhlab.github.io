@@ -107,6 +107,12 @@ if(umamiWebsiteId){
  staticCopy.en.privacy[1]='We use Umami to measure aggregate website visits, pages and country distribution without RibhLab tracking cookies or personal visitor profiles. The analytics provider processes limited technical signals to estimate visits and countries; the tracker respects browser Do Not Track preferences.';
  staticCopy.fr.privacy[1]='Nous utilisons Umami pour mesurer de façon agrégée les visites, pages et pays, sans cookies de suivi ni profils individuels sur RibhLab. Le fournisseur traite certains signaux techniques pour estimer les visites et pays ; le signal Do Not Track du navigateur est respecté.';
 }
+// Disclose third-party advertising only when it is actually enabled.
+if(adsEnabled){
+ staticCopy.ar.privacy.push('عندما يتم تفعيل إعلانات Google AdSense فعلياً، يمكن لشركة Google وشركائها استعمال ملفات تعريف الارتباط أو معرّفات وتقنيات مشابهة لعرض الإعلانات وقياسها والحد من الاحتيال، حسب خيارات الموافقة والبلد. يمكنكم مراجعة إعدادات الإعلانات في Google وسياسة الخصوصية الخاصة بها. الإعلانات لا تؤثر على تحرير المقالات.');
+ staticCopy.en.privacy.push('When Google AdSense advertising is activated, Google and its advertising partners may use cookies or similar identifiers to serve and measure ads and prevent fraud, depending on regional consent choices. Review Google advertising and privacy controls. Advertising does not influence editorial decisions.');
+ staticCopy.fr.privacy.push('Lorsque les annonces Google AdSense sont effectivement activées, Google et ses partenaires peuvent utiliser des cookies ou identifiants similaires pour diffuser et mesurer les publicités et prévenir la fraude, selon le consentement et la région. Consultez les paramètres publicitaires et règles de confidentialité de Google. La publicité n’influence pas les articles.');
+}
 const esc=s=>String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
 const urlFor=(l,a)=>`/${l}/${a.category}/${a.slug}/`;
 const catUrl=(l,cat)=>`/${l}/${cat}/`;
@@ -313,7 +319,7 @@ function marketPulse(l){
  page(l,{title:words.head+' | RibhLab',desc:words.desc,route:'/'+l+'/markets/',content:body,active:'markets'});
 }
 
-function staticPage(l,key){const t=i18n[l],c=staticCopy[l][key];let sections=c.slice(1).map(p=>`<p>${esc(p)}</p>`).join('');if(key==='contact')sections+=`<div class="contact-box"><span class="contact-illustration">✉</span><h2>${esc(t.contactInfo)}</h2><p>${esc(t.emailText)}</p>${contact?`<a class="contact-email" href="mailto:${esc(contact)}">${esc(contact)}</a>`:`<p class="notice-setup">${esc(t.contactPending)}</p><p><a href="https://github.com/${esc(repoForIssues)}/issues/new" target="_blank" rel="noopener noreferrer">GitHub — public editorial issue / تصحيح معلومة / correction ↗</a></p><p>Public issue: do not post private data / رجاءً لا تنشر معلومات شخصية / ne partagez pas de données privées.</p>`}</div>`;
+function staticPage(l,key){const t=i18n[l],c=staticCopy[l][key];let sections=c.slice(1).map(p=>`<p>${esc(p)}</p>`).join('');if(key==='contact')sections+=`<div class="contact-box"><span class="contact-illustration">✉</span><h2>${esc(t.contactInfo)}</h2><p>${esc(t.emailText)}</p>${contact?`<a class="contact-email" href="mailto:${esc(contact)}">${esc(contact)}</a>`:`<p><a href="https://github.com/${esc(repoForIssues)}/issues/new" target="_blank" rel="noopener noreferrer">GitHub — public editorial issue / تصحيح معلومة / correction ↗</a></p><p>Public issue: do not post private data / رجاءً لا تنشر معلومات شخصية / ne partagez pas de données privées.</p>`}</div>`;
 if(key==='privacy')sections+=`<p><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google — Advertising Technologies ↗</a></p>`;
  const content=`<section class="page-hero"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/${l}/">${esc(t.navHome)}</a><span>/</span><span>${esc(c[0])}</span></nav><span class="section-kicker">RIBHLAB / INFORMATION</span><h1>${esc(c[0])}</h1></div></section><div class="shell prose-layout"><div class="prose-page">${sections}<div class="policy-updated">${esc(t.updated)}: ${idDate('2026-10-25')}</div></div></div>`;
  page(l,{title:`${c[0]} | RibhLab`,desc:c[1],route:`/${l}/${key}/`,content});
