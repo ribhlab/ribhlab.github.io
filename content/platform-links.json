@@ -381,6 +381,10 @@
     "gumroadRefunds": {
       "name": "Gumroad Help — Refund policy",
       "url": "https://gumroad.com/help/article/51-what-is-gumroads-refund-policy"
+    },
+    "openaiEvalGuide": {
+      "name": "OpenAI Developers — Evaluation best practices",
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices"
     }
   },
   "articleLinks": {
