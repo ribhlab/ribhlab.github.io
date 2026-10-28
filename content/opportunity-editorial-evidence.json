@@ -520,6 +520,183 @@
           ]
         }
       }
+    },
+    "oncf-bac5": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Original one-page ONCF recruitment poster visually inspected and cross-checked with public employment portal on 28 October 2026; portal has exact 23:00 deadline, poster says 'before 06 November'.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "ONCF — affiche officielle de recrutement 2026, une page",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/0c72b060-b3a6-4d1f-b36a-b01f767b48fe"
+        },
+        {
+          "label": "Portail de l'emploi public — annonce ONCF C44266/26, publiée 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/0c72b060-b3a6-4d1f-b36a-b01f767b48fe"
+        },
+        {
+          "label": "ONCF — plateforme de candidature mentionnée sur l'affiche",
+          "url": "https://recrutement-oncf.com/"
+        }
+      ],
+      "facts": {
+        "country": "Maroc",
+        "city": null,
+        "postingCity": null,
+        "reference": "C44266/26",
+        "posts": 100,
+        "degree": "Ingénieur d'État ou Master (Bac+5), spécialités listées dans l'affiche",
+        "nationality": "Marocaine",
+        "age": "35 ans au plus au 31 décembre 2026",
+        "deadline": "2026-11-06T23:00",
+        "posterDeadlineWording": "avant le 06 novembre 2026",
+        "submission": "https://recrutement-oncf.com/",
+        "tests": "Candidature en ligne, test en ligne, entretien, tests psychotechniques et médicaux, onboarding",
+        "salary": null,
+        "experienceYears": null,
+        "documents": "Not enumerated in the one-page official poster",
+        "sourcePublishedAt": "2026-10-23"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة ONCF 2026: مئة منصب للمهندسين وحاملي الماستر، التخصصات والسن وآخر أجل",
+          "deck": "تحليل الإعلان الأصلي للمكتب الوطني للسكك الحديدية: شروط Bac+5 والجنسية والسن ومراحل الاختبار، مع تنبيه لاختلاف صياغة الموعد بين الملصق والبوابة.",
+          "sections": [
+            [
+              "1. ما طبيعة إعلان ONCF وعدد المناصب؟",
+              "نشر المكتب الوطني للسكك الحديدية ONCF حملة توظيف لسنة 2026 موجهة إلى مهندسي الدولة وحاملي الماستر من مستوى Bac+5. تعرض بوابة التشغيل العمومي 100 منصب تحت المرجع C44266/26، وتحدد تاريخ نشر الإعلان في 23 أكتوبر 2026. هذا العدد يخص الحملة الإجمالية، ولا تتضمن الصورة الرسمية توزيعاً رقمياً مؤكداً للمناصب بين تخصصات الهندسة والتدبير. لذلك لا يجوز الادعاء بأن هناك عدداً معيناً من وظائف المحاسبة أو البرمجيات وحدها. الإعلان دعوة إلى الترشيح وليس وعداً بالتوظيف، ويتعين على كل مترشح مطابقة دبلومه مع التخصصات المحددة في الملصق الرسمي."
+            ],
+            [
+              "2. تخصصات الهندسة المطلوبة بالتحديد",
+              "يسرد الملصق الأصلي تخصصات مهندسي الدولة التالية: الهندسة المعلوماتية، هندسة البرمجيات، علم البيانات، الهندسة المدنية، الكهربائية، الكهروتقنية، الكهروميكانيكية، الصناعية، الميكانيكية، اللوجستية، والجودة والصحة والسلامة والبيئة QHSE. كما يذكر علوم القرار والبحث العملياتي، والأنظمة المدمجة والمعلوماتية الصناعية، والإلكترونيات والأنظمة المدمجة. لا يعني هذا أن أي شهادة هندسية تقبل تلقائياً؛ فالعبرة بالمسمى الفعلي للدبلوم ومطابقته لقائمة الحملة. وإذا كان التخصص مركباً أو يحمل تسمية مختلفة، ينبغي الاستفسار عبر قناة التوظيف الرسمية بدلاً من تقديم معادلة غير موثقة من عندنا."
+            ],
+            [
+              "3. تخصصات الماستر في الإدارة والمالية",
+              "تتضمن لائحة الماستر المعلوماتية، والتدقيق ومراقبة التسيير، والمحاسبة والمراقبة والتدقيق، والتنمية المستدامة، وقانون الأعمال، والتدبير المالي والمحاسبي، وتدبير اللوجستيك، والتسويق، والتسويق والتجارة، والتسويق والتواصل، والموارد البشرية. هذه القائمة مهمة خصوصاً لخريجي المحاسبة والمالية لأنها تميز بين ثلاثة مسميات قريبة لكنها ليست متطابقة. لا يحدد الإعلان في الملصق توزيع المقاعد لكل تخصص، ولا يثبت وجود وظيفة مدير مالي أو محاسب رئيسي بمسمى محدد. ينبغي للمترشح إعداد ملف يوضح علاقة وحدات تكوينه وخبرته بالمجال الذي يختاره دون تغيير اسم شهادته الحقيقي."
+            ],
+            [
+              "4. شروط الجنسية والدبلوم والعمر",
+              "ينص الإعلان المصور على الجنسية المغربية، وعلى التوفر على دبلوم مهندس دولة أو ماستر من مستوى Bac+5 في تخصص مدرج. ويشترط ألا يتجاوز سن المترشح 35 سنة في 31 ديسمبر 2026. هذا تاريخ مرجعي لحساب السن، وليس تاريخ إيداع الملف أو موعد الاختبار. على سبيل المثال، من سيبلغ 36 سنة قبل نهاية سنة 2026 لا يستوفي شرط الحد الأقصى المذكور، حتى لو كان عمره 35 سنة عند إرسال الطلب. لا يذكر الملصق شرطاً عاماً محدداً لعدد سنوات الخبرة، ولذلك لا ينبغي اختراع شرط خبرة أو إعفاء منه دون الرجوع إلى التعليمات التفصيلية للمنصة."
+            ],
+            [
+              "5. آخر أجل وطريقة إيداع الترشيح",
+              "تحدد البوابة الحكومية آخر أجل في 6 نوفمبر 2026 على الساعة 23:00، بينما يكتفي الملصق بعبارة «قبل 06 نوفمبر 2026». يوجد هنا اختلاف في دقة الصياغة وربما في شمول اليوم الأخير؛ لذا ينبغي تقديم الطلب قبل التاريخ بوقت كاف وعدم الانتظار إلى الساعة الأخيرة اعتماداً على تفسير الملصق. قناة الإيداع المعلنة هي موقع التوظيف الإلكتروني الخاص بالحملة، وليس البريد الشخصي ولا استمارة التواصل العامة في بوابة التشغيل. احفظ تأكيد الإيداع ونسخة من البيانات التي قدمتها، وراقب أي توضيح رسمي إذا تغير الموعد أو تعطلت المنصة."
+            ],
+            [
+              "6. مراحل الانتقاء كما وردت في الملصق",
+              "يعرض الملصق مساراً متسلسلاً يبدأ بالترشيح عبر الإنترنت، ثم اختبار إلكتروني، فمقابلة، ثم اختبارات سيكوتقنية وطبية، وصولاً إلى الإدماج الوظيفي. لا يحدد المصدر مواعيد هذه المراحل ولا عدد الأسئلة ولا سلم التنقيط أو مواد الامتحان، ومن غير المهني الادعاء بأن اختباراً معيناً سيكون حاسماً. الاستعداد العملي يتضمن مراجعة أساسيات التخصص، والتدرب على شرح مشروع دراسي أو مهني، والتأكد من اتصال الإنترنت والبريد الإلكتروني. لا تعتبر الدعوة إلى اختبار أو مقابلة قبولاً نهائياً؛ فالانتقاء يستمر عبر المراحل اللاحقة التي يعلنها المكتب."
+            ],
+            [
+              "7. ما الوثائق التي ينبغي إعدادها دون اختلاق قائمة؟",
+              "لا يورد الملصق ذي الصفحة الواحدة قائمة نهائية بالمرفقات المطلوبة. من المعقول تجهيز نسخة واضحة من الدبلوم والسيرة الذاتية ووثيقة الهوية والشهادات ذات الصلة، لكن هذه أمثلة للاستعداد وليست لائحة إلزامية منسوبة إلى ONCF. قبل رفع أي ملف، اقرأ تعليمات موقع التوظيف بشأن الصيغ والحجم وطريقة تسمية الوثائق، وتأكد من أن الاسم والتاريخ والتخصص متسقة بين الاستمارة والشهادات. لا ترسل بيانات بنكية أو صور وثائق حساسة إلى حسابات مراسلة غير رسمية. احتفظ بالأصل والنسخ، ولا تدفع لمتوسط يزعم أنه يستطيع ضمان استدعائك."
+            ],
+            [
+              "8. مكان العمل والأجر والخبرة: معلومات غير منشورة",
+              "لم يحدد الإعلان الذي راجعناه مدينة تعيين نهائية لكل منصب، ولم ينشر راتباً شهرياً أو سنوياً أو شبكة تعويضات لهذه الحملة. كما لا يتضمن الملصق حداً موحداً لسنوات الخبرة. لا يصح استنتاج أن جميع الناجحين سيعملون في الرباط أو الدار البيضاء لمجرد وجود مؤسسات تابعة للمكتب هناك. ولا يجوز تحويل متوسط أجور القطاع إلى أجر معروض لهذه الوظائف. قبل توقيع عقد، اطلب توضيح موقع التعيين الفعلي ونوع العقد والأجر الإجمالي والامتيازات وساعات العمل وفترة التجربة إن وجدت، بالاستناد إلى العرض المكتوب الصادر من المشغل."
+            ],
+            [
+              "9. مثال عملي لتقييم الأهلية قبل التقديم",
+              "لنفترض مترشحاً مغربياً يحمل ماستراً في المحاسبة والمراقبة والتدقيق، وسيكون عمره 33 سنة في 31 ديسمبر 2026. يطابق هذا المثال ثلاثة عناصر معلنة: الجنسية والمستوى والتخصص والسن، لكنه لا يضمن استيفاء جميع متطلبات المنصة أو النجاح في الاختبارات. بالمقابل، شخص يبلغ 36 سنة في التاريخ المرجعي لا يطابق شرط العمر المنشور ولو كان مؤهله مناسباً. يفضل بناء جدول تحقق بسيط: الجنسية، نوع الشهادة، التخصص الدقيق، السن في التاريخ المرجعي، اكتمال الوثائق، ثم تأكيد إرسال الطلب. هذه أمثلة توضيحية لا تتعلق بمرشحين حقيقيين."
+            ],
+            [
+              "10. مصادر القرار ومخاطر المعلومات المتداولة",
+              "اعتمد هذا الدليل على الملصق الأصلي ذي الصفحة الواحدة المتاح للتحميل من بوابة التشغيل العمومي وعلى صفحة المباراة الحكومية، وقد تمت مراجعتهما في 28 أكتوبر 2026. تتطابق الجهتان في تاريخ 6 نوفمبر وعدد الحملة المعروض في البوابة، لكن صياغة الملصق «قبل» تختلف عن تحديد البوابة الساعة 23:00؛ لهذا ننصح بعدم التأخير. احذر المواقع التي تعيد نشر الملصق مع إضافة رواتب أو مقاعد حسب التخصص دون مستند. ينبغي متابعة الموقع الرسمي لأي تعديل أو استدعاء لاحق، والتحقق من عنوان صفحة الترشيح قبل إدخال بيانات شخصية. لا نملك تأكيداً على نتائج الانتقاء أو أسماء المقبولين."
+            ]
+          ]
+        },
+        "en": {
+          "title": "ONCF 2026 recruitment: 100 engineering and Master's positions, eligibility and deadline",
+          "deck": "A source-checked reading of the original railway recruitment poster, including listed specialities, age rule, online stages and a deadline-wording caution.",
+          "sections": [
+            [
+              "1. Employer, campaign and number of positions",
+              "Morocco's National Railways Office, ONCF, announced a 2026 recruitment campaign for State Engineers and Master's graduates at Bac+5 level. The public employment portal lists 100 positions under competition reference C44266/26, with an announcement date of 23 October 2026. That figure describes the overall campaign; the one-page official poster does not allocate a verified number of positions to each engineering or management speciality. It would therefore be misleading to claim a fixed number of accounting or software jobs. This is an invitation to apply, not an employment guarantee. Applicants should first compare the precise title of their qualification with the specialities expressly printed on the employer's poster."
+            ],
+            [
+              "2. Engineering disciplines in the original poster",
+              "The engineering list includes computer engineering, software engineering, data science, civil engineering, electrical engineering, electrotechnics, electromechanical engineering, industrial engineering, mechanical engineering, logistics engineering, and quality, health, safety and environment (QHSE). It also mentions decision science and operations research, embedded systems and industrial computing, and electronics and embedded systems. A general engineering degree is not automatically accepted simply because it sounds similar to one of these subjects. The actual diploma title and the recruitment platform's eligibility instructions matter. Candidates with combined or differently named degrees should seek clarification through the official recruitment channel rather than rely on an unofficial equivalence invented by a job aggregator."
+            ],
+            [
+              "3. Master's disciplines: finance, audit and other fields",
+              "The Master's list expressly includes computer science; audit and management control; accounting, control and audit; sustainable development; business law; financial and accounting management; logistics management; marketing; marketing and commerce; marketing and communication; and human resources. The distinctions between audit and management control, accounting-control-audit, and financial-accounting management are particularly relevant to finance graduates. The poster does not break down the 100 campaign positions by speciality and does not advertise a specific chief accountant or finance director vacancy. Candidates should explain how their actual coursework and documented experience relate to the selected field, without altering their diploma title to resemble the announcement."
+            ],
+            [
+              "4. Nationality, qualification and age rules",
+              "The original recruitment poster specifies Moroccan nationality and a State Engineer diploma or Master's qualification at Bac+5 level in a listed speciality. Applicants must be no older than 35 on 31 December 2026. This is the age reference date, not the application date or a test date. For example, someone who turns 36 before the end of 2026 does not satisfy the published maximum even if they are still 35 when submitting the form. The one-page poster does not state a universal minimum number of years of professional experience. It would be wrong to invent an experience requirement or an exemption without reading any additional detailed instructions on the official application platform."
+            ],
+            [
+              "5. Deadline and official online application route",
+              "The government vacancy page gives the deadline as 6 November 2026 at 23:00, while the poster says to apply 'before 06 November 2026'. The wording is not equally precise and could be read differently about inclusion of the final day. Applicants should therefore submit well in advance rather than depend on a last-hour interpretation. The designated route is the campaign's online recruitment website, not an individual's email address or the government portal's general contact form. Keep the submission acknowledgement and a copy of the information entered. If the platform becomes unavailable or the deadline changes, rely on a new official announcement rather than unverified social-media screenshots."
+            ],
+            [
+              "6. Selection stages actually disclosed",
+              "The poster shows an application journey starting with online submission, followed by an online test, an interview, psychometric and medical tests, and onboarding. It does not disclose dates for those stages, the number of questions, scoring weights or examination syllabus. It would be irresponsible to present a guessed test format as official. Useful preparation includes reviewing the fundamentals of the chosen speciality, practising a concise explanation of a university or workplace project, and ensuring reliable access to email and internet connectivity. Being invited to an online test or interview does not equal final acceptance. Candidates should follow official communications for any subsequent timetable or required identification."
+            ],
+            [
+              "7. Documents: prepare carefully without inventing a checklist",
+              "The single-page poster does not provide a definitive list of required attachments. It is sensible to have legible copies of a diploma, CV, identity document and relevant certificates ready, but these are preparation examples, not an ONCF-mandated checklist. Read the actual application form for permitted file types, size limits and naming rules before uploading. Ensure that names, dates and speciality information match across the form and supporting documents. Avoid sending banking information or sensitive scans to unverified messaging accounts. Keep originals available for later verification. No intermediary can guarantee a test invitation, and payment requests for preferential selection should be treated as suspicious."
+            ],
+            [
+              "8. Work location, salary and experience: not disclosed",
+              "Neither the government listing nor the poster reviewed here assigns a final city to each position, publishes a salary range for the campaign or specifies a general experience threshold. Do not infer that every successful candidate will work in Rabat or Casablanca simply because the railway organisation has facilities there. Likewise, sector-average pay is not an employer-published salary for these positions. Before signing any contract, obtain written clarification of the actual posting location, employment conditions, gross compensation, benefits, working hours and probation terms where applicable. A recruitment campaign's headline and a final individual offer are different documents with different levels of detail."
+            ],
+            [
+              "9. An illustrative eligibility check",
+              "Consider a fictional Moroccan applicant with a Master's degree in accounting, control and audit who will be 33 on 31 December 2026. Their nationality, degree level, listed speciality and age align with the poster, but that does not guarantee acceptance by the platform or success in the selection stages. In contrast, an applicant who will be 36 on the reference date does not meet the published age ceiling, even if their diploma is relevant. A practical checklist can track nationality, diploma type, exact speciality, age at the reference date, documents requested and submission confirmation. These examples illustrate the screening logic and do not describe actual candidates or results."
+            ],
+            [
+              "10. Source record and the deadline wording risk",
+              "This guide was prepared from the original one-page ONCF recruitment poster downloadable from Morocco's official public-employment portal and from the corresponding government competition page, both checked on 28 October 2026. The portal states the campaign's 100 positions and gives 6 November at 23:00, whereas the poster uses the less precise expression 'before 06 November'. Apply early and watch for an official clarification. Be wary of reposts that add salary promises or speciality quotas without a primary document. Always check the recruitment domain before entering personal information and follow the employer's official announcements for later tests and results. No outcome or appointment is confirmed here."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Recrutement ONCF 2026 : 100 postes Bac+5, spécialités, âge et date limite",
+          "deck": "Analyse de l'affiche originale : filières d'ingénieurs et de masters, conditions d'âge et de nationalité, étapes de sélection et divergence de formulation de la date.",
+          "sections": [
+            [
+              "1. Organisme recruteur et nombre de postes",
+              "L'Office national des chemins de fer, ONCF, a lancé une campagne de recrutement 2026 destinée aux ingénieurs d'État et aux titulaires d'un master Bac+5. Le portail marocain de l'emploi public annonce 100 postes sous la référence C44266/26 et indique une publication le 23 octobre 2026. Ce nombre concerne l'ensemble de la campagne : l'affiche officielle d'une page ne précise pas la répartition des postes par spécialité. Il serait donc inexact d'annoncer un quota particulier de postes en comptabilité ou en informatique. Cette campagne ouvre une procédure de candidature, sans garantie d'embauche. Chaque personne doit comparer l'intitulé exact de son diplôme avec les spécialités mentionnées sur le document original."
+            ],
+            [
+              "2. Les spécialités d'ingénieur d'État",
+              "L'affiche cite le génie informatique, le génie logiciel, la data science, le génie civil, électrique, électrotechnique, électromécanique, industriel, mécanique et logistique, ainsi que la qualité, l'hygiène, la sécurité et l'environnement (QHSE). Elle mentionne aussi les sciences de la décision et la recherche opérationnelle, les systèmes embarqués et l'informatique industrielle, puis l'électronique et les systèmes embarqués. Le simple fait de posséder un diplôme d'ingénieur ne suffit pas à démontrer une correspondance avec toutes ces filières. Le libellé réel du diplôme et les instructions de la plateforme restent déterminants. En cas de spécialité mixte, mieux vaut demander une précision au canal officiel plutôt qu'inventer une équivalence."
+            ],
+            [
+              "3. Les masters, notamment en audit et finance",
+              "La liste des masters comprend l'informatique, l'audit et contrôle de gestion, la comptabilité-contrôle-audit, le développement durable, le droit des affaires, la gestion financière et comptable, le management de la logistique, le marketing, le marketing-commerce, le marketing-communication et les ressources humaines. Pour les candidats financiers, il importe de distinguer les intitulés proches : audit et contrôle de gestion, comptabilité-contrôle-audit et gestion financière et comptable. L'affiche ne répartit pas les 100 postes entre ces domaines et ne publie pas de poste distinct de directeur financier ou de chef comptable. Présentez votre formation réelle et vos expériences documentées sans modifier artificiellement l'intitulé du diplôme."
+            ],
+            [
+              "4. Nationalité, diplôme et limite d'âge",
+              "Le document officiel exige la nationalité marocaine et un diplôme d'ingénieur d'État ou un master Bac+5 dans une spécialité indiquée. L'âge maximal est fixé à 35 ans au 31 décembre 2026. Cette date sert de référence pour calculer l'âge et ne correspond ni au dépôt de candidature ni à l'épreuve. Une personne qui atteindra 36 ans avant la fin de 2026 ne satisfait donc pas à cette limite, même si elle a encore 35 ans au moment de s'inscrire. L'affiche ne mentionne pas un nombre minimal général d'années d'expérience. Il faut éviter d'ajouter une condition d'ancienneté ou une dispense non documentée sans consulter les éventuelles instructions détaillées de la plateforme."
+            ],
+            [
+              "5. Date limite et dépôt sur le site annoncé",
+              "Le portail gouvernemental fixe le dépôt au 6 novembre 2026 à 23 h 00, tandis que l'affiche indique « avant le 06 novembre 2026 ». Les deux formulations ne donnent pas exactement la même précision sur le dernier jour; il est prudent de déposer le dossier plusieurs jours avant l'échéance. Les candidatures doivent être effectuées sur le site de recrutement en ligne annoncé, et non par un courriel personnel ou le formulaire général de contact du portail public. Conservez l'accusé de réception et une copie des informations saisies. En cas d'incident technique ou de changement de date, vérifiez une communication officielle plutôt qu'une capture d'écran relayée sur les réseaux sociaux."
+            ],
+            [
+              "6. Étapes de sélection figurant sur l'affiche",
+              "Le parcours présenté par l'ONCF commence par la candidature en ligne, suivie d'un test en ligne, d'un entretien, de tests psychotechniques et médicaux, puis de l'intégration. Le document ne précise ni le calendrier de chaque étape, ni le nombre de questions, ni le barème ou le programme des épreuves. Présenter un examen supposé comme une certitude serait trompeur. Une préparation raisonnable consiste à réviser les notions fondamentales de sa spécialité, à expliquer clairement un projet d'études ou une réalisation professionnelle, et à vérifier l'accès à son adresse électronique. Une convocation à un test ou à un entretien ne constitue pas une admission définitive."
+            ],
+            [
+              "7. Pièces à préparer sans fabriquer une liste officielle",
+              "L'affiche d'une page ne fournit pas de liste exhaustive des pièces à joindre. Préparer des copies lisibles du diplôme, du CV, d'une pièce d'identité et des attestations pertinentes peut être utile, mais il s'agit de conseils d'organisation, pas d'exigences officiellement attribuées à l'ONCF. Consultez le formulaire pour connaître les formats, tailles et modalités de téléchargement autorisés. Vérifiez la cohérence des noms, dates et spécialités sur les documents. N'envoyez pas de coordonnées bancaires ni de scans sensibles à des comptes de messagerie non vérifiés. Gardez les originaux pour les contrôles éventuels et refusez les offres payantes promettant une convocation privilégiée."
+            ],
+            [
+              "8. Affectation, rémunération et expérience inconnues",
+              "Les deux sources examinées ne désignent pas la ville d'affectation finale de chaque poste et ne publient ni salaire de campagne ni condition générale chiffrée d'expérience professionnelle. Il ne faut pas supposer une affectation systématique à Rabat ou Casablanca parce que l'office possède des installations dans ces villes. Un salaire moyen du secteur ferroviaire ne constitue pas non plus la rémunération proposée par cet employeur pour ce recrutement. Avant toute signature, demandez un document précisant le lieu réel de travail, le type de contrat, le salaire brut, les avantages, les horaires et, le cas échéant, la période d'essai. Une affiche de campagne n'est pas un contrat individuel."
+            ],
+            [
+              "9. Exemple de vérification de l'éligibilité",
+              "Imaginons une candidate marocaine titulaire d'un master en comptabilité, contrôle et audit, âgée de 33 ans au 31 décembre 2026. Sa nationalité, le niveau et la spécialité de son diplôme ainsi que son âge correspondent aux conditions affichées, sans pour autant garantir l'acceptation du dossier ni la réussite des tests. À l'inverse, une personne ayant 36 ans à la date de référence ne satisfait pas au plafond publié, même si sa formation convient. Un tableau simple peut vérifier la nationalité, le diplôme, la spécialité exacte, l'âge au jour de référence, les pièces demandées et la preuve de dépôt. Ces profils sont fictifs et ne décrivent aucun résultat de recrutement."
+            ],
+            [
+              "10. Sources, divergence de formulation et prudence",
+              "Cette analyse repose sur l'affiche officielle ONCF d'une page téléchargée depuis le portail marocain de l'emploi public et sur la fiche gouvernementale correspondante, consultées le 28 octobre 2026. Le portail précise 100 postes et une clôture le 6 novembre à 23 h 00, tandis que l'affiche emploie « avant le 06 novembre », formulation moins précise. Pour éviter tout risque, candidatez tôt et surveillez les rectifications officielles. Méfiez-vous des reprises ajoutant des salaires ou des quotas par spécialité sans document original. Vérifiez l'adresse du site de dépôt avant de saisir vos données et consultez les annonces de l'ONCF pour les convocations ultérieures. Aucun résultat d'admission n'est affirmé."
+            ]
+          ]
+        }
+      }
     }
   }
 }
