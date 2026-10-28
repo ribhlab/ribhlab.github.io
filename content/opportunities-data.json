@@ -606,6 +606,113 @@
       "kind": "official_notice",
       "verifiedBy": "emploi-public.ma",
       "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "cdg-rates-equity-supervision",
+      "section": "competitions",
+      "title": "Responsable Supervision Taux et Actions",
+      "org": "Caisse de Dépôt et de Gestion (CDG)",
+      "place": "Rabat-Salé-Kénitra",
+      "count": 1,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/b5fe236e-2c63-40cc-8c74-c6f40a68d275",
+      "applicationUrl": "https://recrutement.cdg.ma/Agirhcv/PartageOffre?Id_Offre=253",
+      "publishedAt": "2026-10-26",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "sourceCategory": "public_institutions",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "uh2c-medecine-professors-12",
+      "section": "competitions",
+      "title": "12 Maîtres de conférences — Faculté de Médecine et Pharmacie",
+      "org": "Université Hassan II de Casablanca",
+      "place": "Casablanca",
+      "count": 12,
+      "deadline": "2026-11-09",
+      "url": "https://www.emploi-public.ma/fr/concours/details/a99cc5ed-f11c-4832-be6d-456cded59e58",
+      "publishedAt": "2026-10-26",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "sourceCategory": "public_institutions",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "ucd-english-maitre-conference",
+      "section": "competitions",
+      "title": "Maître de conférences — langue anglaise",
+      "org": "Université Chouaïb Doukkali",
+      "place": "El Jadida",
+      "count": 1,
+      "deadline": "2026-11-11",
+      "url": "https://www.emploi-public.ma/fr/concours/details/af01576c-b687-48d7-8b41-0434b035acfb",
+      "applicationUrl": "https://recrutement.enssup.gov.ma",
+      "publishedAt": "2026-10-26",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "sourceCategory": "public_institutions",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "sdl-marrakech-communication",
+      "section": "competitions",
+      "title": "Chargé communication, image de marque et partenariats",
+      "org": "SDL Marrakech Moussafir",
+      "place": "Marrakech",
+      "count": 1,
+      "deadline": "2026-11-07",
+      "url": "https://www.emploi-public.ma/fr/concours/details/d19fded1-36a4-4108-8637-69297dbd27bc",
+      "publishedAt": "2026-10-24",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "sourceCategory": "public_institutions",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "au-kenitra-architect",
+      "section": "competitions",
+      "title": "Architecte — antenne de Sidi Slimane",
+      "org": "Agence urbaine de Kénitra-Sidi Kacem",
+      "place": "Sidi Slimane",
+      "count": 1,
+      "deadline": "2026-11-11",
+      "url": "https://www.emploi-public.ma/fr/concours/details/1f9f832d-e82c-4c61-9294-1a27921af5e5",
+      "publishedAt": "2026-10-27",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "sourceCategory": "public_institutions",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "au-kenitra-data-science-ai",
+      "section": "competitions",
+      "title": "Ingénieur d’État — Big Data, Data Science ou IA",
+      "org": "Agence urbaine de Kénitra-Sidi Kacem",
+      "place": "Kénitra",
+      "count": 1,
+      "deadline": "2026-11-11",
+      "url": "https://www.emploi-public.ma/fr/concours/details/b526d274-b490-4982-833e-71d21ea20813",
+      "publishedAt": "2026-10-27",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "sourceCategory": "public_institutions",
+      "checkedAt": "2026-10-27"
+    },
+    {
+      "id": "au-kenitra-assistante-direction",
+      "section": "competitions",
+      "title": "Assistante de direction",
+      "org": "Agence urbaine de Kénitra-Sidi Kacem",
+      "place": "Kénitra",
+      "count": 1,
+      "deadline": "2026-11-11",
+      "url": "https://www.emploi-public.ma/fr/concours/details/927d656a-4d17-418e-a25e-f74d8dc5f1b6",
+      "publishedAt": "2026-10-27",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "sourceCategory": "public_institutions",
+      "checkedAt": "2026-10-27"
     }
   ],
   "visa": [
@@ -878,6 +985,21 @@
       "name": "Experts",
       "url": "https://www.emploi-public.ma/fr/experts-liste",
       "role": "official_full_directory"
+    },
+    {
+      "name": "Page 2 — Institutions et entreprises publiques",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics",
+      "role": "official_public_institutions"
+    },
+    {
+      "name": "Page 3 — Institutions et entreprises publiques",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=3&stat=etab_publics",
+      "role": "official_public_institutions"
     }
-  ]
+  ],
+  "editorialMethod": {
+    "ar": "قائمة المؤسسات والمقاولات العمومية رسمية؛ تحقّقنا من إعلانات 27 أكتوبر 2026 المباشرة. 7,026 نتيجة فالمنصة تشمل الأرشيف، وماشي كلها مناصب مفتوحة.",
+    "en": "Official public institution and enterprise notices, verified on 27 October 2026. The portal's 7,026 search hits include historic entries, not only open vacancies.",
+    "fr": "Avis officiels des établissements et entreprises publics vérifiés le 27 octobre 2026. Les 7 026 résultats du portail incluent les archives et ne correspondent pas tous à des candidatures ouvertes."
+  }
 }
