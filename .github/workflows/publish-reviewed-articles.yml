@@ -1,0 +1,60 @@
+name: Publish reviewed RibhLab article every 25 minutes
+
+on:
+  schedule:
+    # GitHub cron cannot express a continuously repeating 25-minute interval.
+    # Poll every 5 minutes; publisher enforces >=25 minutes since last release.
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: ribhlab-reviewed-article-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Release one reviewed article only if quality gate and 25-minute interval pass
+        run: node src/publish-reviewed.mjs
+      - name: Validate complete build, uniqueness, licensed photos and SEO
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard content/articles/)" ]; then
+            echo "No vetted item available or 25-minute interval not reached."
+          else
+            npm run build
+            npm run check
+          fi
+      - name: Commit completed reviewed article
+        id: save
+        run: |
+          git add content/articles content/sections.json content/editorial-plan.json content/licensed-photos.json content/platform-links.json content/publication-state.json content/reviewed-queue
+          if git diff --cached --quiet; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "QUEUE_NOOP: no reviewed article available to publish"
+            exit 0
+          fi
+          git config user.name "ribhlab-editorial-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish verified multilingual RibhLab editorial article"
+          git push origin HEAD:main
+          echo "published=true" >> "$GITHUB_OUTPUT"
+      - name: Trigger site build for GITHUB_TOKEN commits
+        if: steps.save.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main
