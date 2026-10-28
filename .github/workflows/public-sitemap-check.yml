@@ -55,7 +55,7 @@ jobs:
                       opp=f'/{lang}/opportunities/competitions/amdie-finance/'
                       html=bodies[opp].decode('utf-8')
                       assert 'AMDIE' in html and 'C44255/26' in html, f'{lang}: AMDIE identity/reference missing'
-                      assert html.count('class="opp-guide-section"')>=11, f'{lang}: AMDIE ten detailed sections missing'
+                      assert html.count('class="opp-guide-section" id="part-')>=10, f'{lang}: AMDIE ten detailed sections missing'
                       assert 'opp-guide-sources' in html and '26fa5f83-f86b-446e-b293-0104f8494b9d' in html, f'{lang}: AMDIE original decision missing'
                       assert 'target="_blank"' in html, f'{lang}: AMDIE external source tab missing'
                       print(f'AMDIE LIVE {lang}: full primary-source recruitment article verified',flush=True)
