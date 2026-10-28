@@ -334,3 +334,10 @@ html[lang=ar] .opp-main-hub .opp-hero h1{font-size:clamp(37px,4.6vw,65px)}
 .opp-market-preview-card a{color:#6849d4;font-weight:700;text-decoration:none;margin-top:auto}
 .opp-market-preview-card a:hover{text-decoration:underline}
 @media(max-width:700px){.opp-market-preview-grid{grid-template-columns:1fr}.opp-market-preview-card{padding:20px}}
+
+
+/* Unique per-opportunity imagery: generated artwork belongs to one record only. */
+.opp-card>.opp-item-art{margin:-1.2rem -1.2rem .95rem;border-radius:14px 14px 0 0;overflow:hidden;background:#f0f3f8}
+.opp-item-art svg{display:block;width:100%;height:auto;aspect-ratio:8/3}
+.opp-guide-header>.opp-item-art{max-width:640px;margin:0 0 21px;border-radius:15px;overflow:hidden}
+.opp-guide-header>.opp-item-art svg{aspect-ratio:8/3;max-height:230px}
