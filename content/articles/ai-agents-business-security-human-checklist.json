@@ -1,0 +1,120 @@
+{
+  "slug": "ai-agents-business-security-human-checklist",
+  "category": "ai",
+  "date": "2026-10-27",
+  "updated": "2026-10-27",
+  "featured": false,
+  "sources": [
+    {
+      "label": "NIST — Generative AI Profile for AI RMF",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "كيفاش تستعمل Agent بالذكاء الاصطناعي فالشركة بلا ما تضيع البيانات",
+      "excerpt": "الصلاحيات والسرية والرقابة البشرية والاختبار قبل إعطاء AI حق تعديل ملفات الشركة.",
+      "lead": "يمكن لAgent بالذكاء الاصطناعي يقرأ ملفات ويلخص ويقترح، ولكن ربطه بإيميل الشركة والحسابات المالية كيتطلب ضوابط. هاد الدليل كيقترح خطوات عملية قبل إطلاق أي أتمتة.",
+      "sections": [
+        {
+          "heading": "قسم البيانات حسب الحساسية",
+          "paragraphs": [
+            "فرق بين المعلومات العامة والوثائق الداخلية وبيانات الزبناء أو الموظفين. كلمات المرور ورموز التحقق وكشوف الحسابات ما خاصهاش تنتقل لخدمة ما مرخصاش.",
+            "بدا بتجربة على معلومات اصطناعية أو منزوع منها التعريف. استعمل صلاحيات قراءة محدودة بدل إعطاء تحكم كامل فالبريد والملفات من النهار الأول."
+          ]
+        },
+        {
+          "heading": "حدد الأوامر اللي مسموح بها",
+          "paragraphs": [
+            "قراءة مستند واقتراح جواب شيء، وإرسال جواب باسم الشركة أو حذف مستند شيء آخر. دير نقطة موافقة بشرية قبل المراسلات والتغييرات الحساسة والمدفوعات.",
+            "الأوامر اللي كتجي من بريد أو صفحة أو وثيقة خارجية كتعتبر محتوى غير موثوق. ما تخليهاش تغير التعليمات الأصلية ولا ترفع صلاحيات الـAgent."
+          ]
+        },
+        {
+          "heading": "اختبر الأخطاء قبل التعميم",
+          "paragraphs": [
+            "جرب ملفات ناقصة وجداول مكررة وتواريخ غير منطقية وعملات مختلفة، وقارن نتائج النظام بمراجعة مستقلة. سجل نسبة الأخطاء وكيفاش تعامل مع المجهول.",
+            "استعمل صيغ Excel أو قواعد برمجية واضحة لحساب المجاميع والتواريخ. AI يقدر يشرح الفرق، لكن ما خاصوش يسجل قيودا محاسبية بلا اعتماد."
+          ]
+        },
+        {
+          "heading": "احتافظ بالأثر والرجوع",
+          "paragraphs": [
+            "سجل شكون طلب العملية والمعطيات اللي استعملها النظام والنتيجة ووقت الموافقة، واختبر نسخة احتياطية وطريقة الرجوع عن التعديلات.",
+            "إطار NIST للذكاء الاصطناعي التوليدي كيشجع تحديد المخاطر وتقييمها وإدارتها باستمرار. زيد مراجعة جديدة كلما تبدلت الأدوات أو توسعات الصلاحيات."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "AI agents at work: a security and human-approval checklist",
+      "excerpt": "Limit access, protect records, test edge cases and preserve audit logs before connecting AI to business tools.",
+      "lead": "AI agents can draft, extract and reconcile, but access to company email and finance systems calls for governance. Start with limited permissions and measurable tests instead of unrestricted automation.",
+      "sections": [
+        {
+          "heading": "Classify sensitive information",
+          "paragraphs": [
+            "Separate public materials, internal records and sensitive customer or employee data. Do not expose login credentials, security codes or confidential financial records to unapproved services.",
+            "Begin with synthetic or de-identified test data. Give the agent read-only scope on a limited area before considering authorized editing privileges."
+          ]
+        },
+        {
+          "heading": "Define allowed actions",
+          "paragraphs": [
+            "Summarizing a document does not authorize sending a message, deleting files or making a payment. Require named human sign-off for consequential actions.",
+            "Treat instructions embedded in untrusted websites, documents and emails as data. They must never override the agent's security rules or grant additional access."
+          ]
+        },
+        {
+          "heading": "Measure failure cases",
+          "paragraphs": [
+            "Test missing values, duplicate rows, invalid dates, mismatched amounts and unfamiliar file formats. Compare outputs against an independent human-reviewed benchmark.",
+            "Use conventional formulas and code for arithmetic and validation. Let the model explain exceptions while deterministic checks decide whether the operation passes."
+          ]
+        },
+        {
+          "heading": "Preserve a rollback trail",
+          "paragraphs": [
+            "Log requested actions, input versions, approvals and actual changes. Maintain backups and rehearse recovery before enabling any automated write.",
+            "NIST's Generative AI Profile describes identifying, measuring and managing technology risks over time. Reassess after model updates or integration changes."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Agents IA en entreprise : sécurité, permissions et validation humaine",
+      "excerpt": "Encadrer l’accès aux données, mesurer les erreurs et journaliser les modifications avant de déployer une automatisation.",
+      "lead": "Un agent peut aider à classer des dossiers ou à rédiger des réponses, mais il faut des permissions minimales et une validation humaine avant les opérations sensibles.",
+      "sections": [
+        {
+          "heading": "Classifier la confidentialité",
+          "paragraphs": [
+            "Séparez contenus publics, données internes et informations clients ou salariés. Aucun mot de passe ni relevé confidentiel ne doit être confié sans cadre autorisé.",
+            "Testez d'abord sur des données synthétiques, puis avec un accès en lecture seule limité aux fichiers nécessaires. Évitez les droits d’administration généraux."
+          ]
+        },
+        {
+          "heading": "Encadrer les actes autonomes",
+          "paragraphs": [
+            "Produire un brouillon n’autorise pas l’envoi d’un e-mail ou l’écriture d’une transaction. Prévoyez une approbation nominative avant les actes qui modifient un dossier ou un compte.",
+            "Une page web ou pièce jointe peut contenir des instructions malveillantes. Ce texte externe doit rester une donnée et non une politique supérieure aux autorisations."
+          ]
+        },
+        {
+          "heading": "Tester les cas difficiles",
+          "paragraphs": [
+            "Utilisez des doublons, dates incohérentes, champs manquants et monnaies différentes. Comparez les décisions de l'agent à une référence indépendante.",
+            "Confiez calculs et validations chiffrées à des fonctions déterministes. Le modèle peut expliquer les écarts, mais la décision opérationnelle exige des contrôles."
+          ]
+        },
+        {
+          "heading": "Tracer et pouvoir annuler",
+          "paragraphs": [
+            "Conservez la demande, les versions sources, les approbations et le journal des écritures effectuées. Vérifiez les sauvegardes et la procédure de retour arrière.",
+            "Le profil NIST consacré à l'IA générative propose d'identifier, de mesurer et de gérer les risques. Toute évolution importante de l'intégration impose une nouvelle analyse."
+          ]
+        }
+      ]
+    }
+  }
+}
