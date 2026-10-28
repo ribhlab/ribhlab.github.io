@@ -1,0 +1,144 @@
+{
+  "reviewedAt": "2026-10-28",
+  "editorialNote": "Guides summarise official routes, not live vacancies, eligibility approvals or immigration advice. Verify before applying.",
+  "guides": {
+    "express-entry": {
+      "ar": [
+        "نظام الإقامة الدائمة للعمال المؤهلين",
+        "يدير برنامج إكسبريس إنتري طلبات الإقامة الدائمة في ثلاث فئات رئيسية: العمال المهرة الفيدراليون، الحرفيون المهرة والخبرة الكندية. إدخال الملف في المجموعة لا يعني الحصول على دعوة أو إقامة.",
+        "تبدأ الفرص بتحديد الفئة التي تستوفي شروطها، ثم تقييم الاختبارات اللغوية المعتمدة والشهادة والخبرة المهنية. قد يكون مستوى الفرنسية ميزة في السحوبات القائمة على الفئات، لكنه ليس ضماناً للاختيار.",
+        "الطريق العملي: تحقق من الأهلية في موقع IRCC، احسب نقاط CRS، جهّز وثائق الخبرة والشهادات واللغة، ثم أنشئ ملفاً صحيحاً. تابع السحوبات الرسمية؛ لا تعتبر عتبة آخر سحب قاعدة ثابتة.",
+        "قد تتحمل تكاليف اختبار اللغة وتقييم المؤهل والرسوم الحكومية والفحوص. تحقق من شروط الفئة المعنية يوم التقديم وتجنب الوسطاء الذين يعدون بالدعوة."
+      ],
+      "en": [
+        "A permanent residence pathway for skilled workers",
+        "Express Entry manages permanent-residence applications in three main programs: Federal Skilled Worker, Federal Skilled Trades and Canadian Experience Class. Joining the pool does not guarantee an invitation.",
+        "Start by assessing which program you qualify for, then check approved language tests, credentials and work experience. French proficiency can help with category-based selection, but is not a guarantee.",
+        "Practical route: verify eligibility on IRCC, calculate your CRS score, prepare evidence of language, education and experience, and submit an accurate profile. Track official invitation rounds rather than assuming previous thresholds will repeat.",
+        "Budget for language testing, credential assessments, government fees and any medical requirements. Check the current rules and avoid guaranteed-invitation claims."
+      ],
+      "fr": [
+        "Une voie vers la résidence permanente pour travailleurs qualifiés",
+        "Entrée express gère les demandes dans trois programmes : travailleurs qualifiés fédéraux, métiers spécialisés et expérience canadienne. Un profil dans le bassin ne garantit pas une invitation.",
+        "Vérifiez d'abord le programme accessible selon votre expérience, vos diplômes et vos tests linguistiques. La maîtrise du français peut favoriser une sélection par catégorie, sans garantie.",
+        "Démarche : vérifiez l'admissibilité sur IRCC, calculez votre score CRS, préparez diplômes, attestations d'emploi et résultats linguistiques, puis déposez un profil exact. Suivez les tirages officiels sans extrapoler les seuils précédents.",
+        "Prévoyez les frais d'examens, d'évaluation des diplômes, de demande et les éventuels examens médicaux. Méfiez-vous des promesses de sélection assurée."
+      ]
+    },
+    "canada-program": {
+      "ar": [
+        "مسارات متعددة للهجرة والعمل في كندا",
+        "تشمل الخيارات الكندية الإقامة الدائمة عبر إكسبريس إنتري والترشيح الإقليمي وبعض البرامج الأخرى، إضافة إلى تصاريح العمل المؤقتة. تختلف شروط كل طريق ولا يوجد برنامج واحد مناسب للجميع.",
+        "إذا كنت صاحب خبرة مهنية، قارن شروط إكسبريس إنتري ببرامج الترشيح الإقليمي. وإذا وجدت صاحب عمل كندياً، افحص إن كان عرض الوظيفة يحتاج إلى تقييم أثر سوق العمل أو يدخل ضمن إعفاء رسمي.",
+        "ابدأ باختيار المقاطعة والمهنة، ثم تحقق من معادلة المؤهل واللغة والقدرة المالية والوثائق المطلوبة من خلال بوابات الحكومة. لا تدفع رسوماً مقابل وعد بعرض عمل.",
+        "التقديم للهجرة لا يمنح تلقائياً حق العمل، وتصريح العمل لا يعني الإقامة الدائمة. يجب التمييز بين نوعي الطلبات والتحقق من الرسوم والأهلية الرسمية."
+      ],
+      "en": [
+        "Comparing Canadian immigration and work routes",
+        "Canada offers different permanent-residence pathways, including Express Entry and provincial nominations, alongside temporary work permits. Conditions differ and no one route fits everyone.",
+        "Skilled applicants can compare Express Entry with provincial programs. With a Canadian job offer, check whether a labour-market assessment or an official exemption applies.",
+        "Choose a province and occupation, confirm credentials, language and funds, and use official government application pages. Do not pay for a supposedly guaranteed job offer.",
+        "Immigration applications do not automatically allow work, and work permits do not automatically lead to permanent residence. Check current eligibility and fees."
+      ],
+      "fr": [
+        "Comparer les parcours canadiens d'immigration et de travail",
+        "Le Canada propose plusieurs voies de résidence permanente, notamment Entrée express et les programmes provinciaux, ainsi que des permis de travail temporaires. Les conditions varient.",
+        "Les profils qualifiés peuvent comparer Entrée express avec les programmes provinciaux. En présence d'une offre d'emploi, il faut vérifier si une étude d'impact sur le marché du travail est exigée ou si une exemption existe.",
+        "Choisissez une province et une profession, vérifiez diplômes, langues, ressources et documents sur les portails officiels. Ne payez pas pour une promesse d'emploi garanti.",
+        "Une demande d'immigration ne permet pas automatiquement de travailler, et un permis de travail ne conduit pas automatiquement à la résidence permanente."
+      ]
+    },
+    "german-opportunity": {
+      "ar": [
+        "البحث عن وظيفة في ألمانيا عبر بطاقة الفرص",
+        "تتيح بطاقة الفرص لبعض المؤهلين من خارج الاتحاد الأوروبي البحث عن عمل داخل ألمانيا لفترة محددة. وهي ليست عقد عمل ولا تضمن الحصول على وظيفة.",
+        "يمكن التأهل عبر مؤهل معترف به بالكامل أو عبر نظام نقاط يتطلب إثبات المؤهلات واللغة واستيفاء الحد المطلوب. يجب إثبات القدرة على تمويل الإقامة وفق القواعد الجارية.",
+        "الأسهل من حيث التكاليف غالباً أن تبدأ بالبحث عن وظيفة من بلدك، وتفحص الاعتراف بشهادتك والوظائف على موقع Make it in Germany. إن حصلت على عقد مناسب فقد يكون مسار تأشيرة العمل المباشرة أنسب من السفر للبحث.",
+        "افحص مدة البطاقة وحدود العمل الجزئي والتأمين الصحي والموارد المالية على الموقع الرسمي قبل اتخاذ أي قرار. لا تفترض أن العمل الجزئي سيمول كل الإقامة."
+      ],
+      "en": [
+        "Germany's Opportunity Card for job seekers",
+        "The Opportunity Card may let certain qualified non-EU nationals enter Germany for a limited job-search period. It is not an employment contract and does not guarantee a job.",
+        "Eligibility may follow full recognition of qualifications or a points-based route with language and qualification requirements. Proof of adequate financial means is also required.",
+        "A potentially lower-cost first step is to search from your home country, check recognition of your qualification and apply directly through Make it in Germany. A qualifying employment offer may make a direct work visa more suitable.",
+        "Review the current validity, part-time work limits, insurance and financial requirements before travelling. Do not assume part-time earnings will cover living costs."
+      ],
+      "fr": [
+        "Chercher un emploi en Allemagne avec la Chancenkarte",
+        "La carte des opportunités permet à certains ressortissants qualifiés hors UE de venir chercher un emploi pendant une durée limitée. Elle ne garantit aucun contrat.",
+        "L'admissibilité peut reposer sur une qualification pleinement reconnue ou sur un système de points, avec conditions de langue et de diplôme. Des moyens financiers suffisants doivent être prouvés.",
+        "Une première étape parfois moins coûteuse consiste à chercher depuis son pays, vérifier la reconnaissance du diplôme et postuler directement. Une offre adaptée peut rendre le visa de travail direct plus pertinent.",
+        "Vérifiez la durée de validité, les limites du travail à temps partiel, l'assurance et les ressources exigées avant tout déplacement."
+      ]
+    },
+    "uk-visa": {
+      "ar": [
+        "تأشيرة العمل الماهر في المملكة المتحدة",
+        "تتطلب تأشيرة Skilled Worker عادة عرض عمل حقيقياً من جهة مرخصة بالكفالة، ومهنة مؤهلة، واستيفاء شروط الراتب واللغة الإنجليزية. لا تكفي الرغبة في العمل وحدها.",
+        "ابدأ بالبحث عن شركات لديها ترخيص رعاية التأشيرات، ثم افحص رمز المهنة والراتب الساري وما إذا كانت هناك استثناءات رسمية لبعض الحالات. العروض غير المؤهلة لا تصلح للتأشيرة.",
+        "الخطوات: أنشئ سيرة ذاتية ملائمة للمهنة، تقدم إلى أصحاب عمل مرخصين، تحقق من عرض العمل وشهادة الرعاية، ثم استعمل حاسبة الرسوم وإجراءات التأشيرة الحكومية.",
+        "لا تدفع مقابل شهادة رعاية مزيفة، واحسب رسوم التأشيرة والتغطية الصحية والنفقات الشخصية. حدود الأجور والمتطلبات تتغير؛ اعتمد على النص الحكومي وقت التقديم."
+      ],
+      "en": [
+        "UK Skilled Worker visa: eligibility first",
+        "The Skilled Worker visa normally requires a genuine offer from an approved sponsor, an eligible occupation, and compliance with salary and English-language requirements. Wanting to work in the UK is not sufficient.",
+        "Search for employers licensed to sponsor workers and verify the occupation code, current salary rules and any official exceptions. An unsuitable job offer will not qualify.",
+        "Prepare an occupation-specific CV, apply to licensed sponsors, verify the certificate of sponsorship, then follow the government visa procedure and fee guidance.",
+        "Beware fake sponsorship offers. Budget for visa charges, the healthcare surcharge and relocation. Always check updated salary thresholds."
+      ],
+      "fr": [
+        "Visa britannique Skilled Worker : les conditions",
+        "Ce visa exige généralement une offre réelle d'un employeur agréé, un métier admissible ainsi que le respect des règles de salaire et de niveau d'anglais.",
+        "Recherchez les entreprises habilitées à parrainer, vérifiez le code de profession, le salaire en vigueur et les éventuelles exceptions. Une offre non admissible ne suffit pas.",
+        "Préparez un CV ciblé, candidatez auprès d'employeurs agréés, contrôlez le certificat de parrainage, puis utilisez les procédures et barèmes officiels.",
+        "Évitez les fausses offres de parrainage. Calculez frais de visa, contribution santé et installation, en tenant compte des règles actualisées."
+      ]
+    },
+    "france-talent": {
+      "ar": [
+        "إقامة المواهب والعمل المؤهل في فرنسا",
+        "توجد مسارات إقامة مختلفة تحت فئة المواهب، حسب الوضع المهني: موظفون مؤهلون، باحثون، بعض أصحاب المشاريع وحالات أخرى. لا تُمنح كل هذه الإقامات بالشروط نفسها.",
+        "حدد الفئة المرتبطة بعقدك ومؤهلاتك وراتبك، ثم راجع الوثائق والمتطلبات المعلنة في France-Visas. بعض الفئات تتطلب عقداً بمواصفات محددة أو حداً أدنى من الأجر.",
+        "الأيسر عملياً هو الحصول أولاً على عرض عمل مناسب ثم مقارنة مسار المواهب بتأشيرة العمل العادية؛ استعمل المساعد الرسمي لتحديد نوع التأشيرة بدلاً من افتراض أن لقب الوظيفة يكفي.",
+        "تحقق من صلاحية الوثائق والرسوم وخطوات طلب تصريح الإقامة بعد الوصول. تجنب الجهات التي تعد بتأشيرة مؤكدة."
+      ],
+      "en": [
+        "France's talent residence routes",
+        "France offers several talent-related residence routes depending on employment, research, entrepreneurship and other circumstances. They do not all share the same eligibility rules.",
+        "Identify the category matching your contract, qualifications and salary and read the supporting-document requirements on France-Visas. Some routes require defined contract lengths or minimum remuneration.",
+        "A practical approach is to obtain a suitable offer first, then compare the talent route with ordinary employment-visa options using the official visa wizard.",
+        "Check fees, documents and post-arrival residence formalities. No private agent can guarantee approval."
+      ],
+      "fr": [
+        "Les titres de séjour talent en France",
+        "La France prévoit plusieurs catégories de séjour talent selon le contrat de travail, la recherche, l'entrepreneuriat et d'autres situations. Les critères ne sont pas uniformes.",
+        "Choisissez la catégorie correspondant à votre contrat, vos diplômes et votre rémunération. Certaines exigent une durée de contrat ou un niveau de salaire précis.",
+        "Une démarche concrète consiste à obtenir une offre adaptée puis comparer le titre talent et les voies de visa salarié classiques avec l'assistant France-Visas.",
+        "Vérifiez les pièces, les frais et les démarches de séjour après l'arrivée. Aucune agence privée ne garantit la délivrance du visa."
+      ]
+    },
+    "eures-mobility": {
+      "ar": [
+        "البحث عن العمل في أوروبا عبر EURES",
+        "تجمع شبكة EURES فرص عمل ومعلومات عن ظروف العمل والعيش في دول أوروبية. عرض الوظيفة على منصة أوروبية لا يمنح تلقائياً إذناً بدخول البلد أو العمل فيه.",
+        "قارن المهن المطلوبة واللغة والرواتب وتكلفة السكن، ثم راجع شروط تصريح العمل لكل دولة. بعض برامج التنقل والتمويل لا تشمل جميع الجنسيات أو أوضاع الإقامة.",
+        "ابدأ من ملف مهني واضح وابحث في الوظائف المناسبة، وتحقق من هوية المؤسسة وعقد العمل. بالنسبة إلى غير مواطني الاتحاد الأوروبي، راجع بالتوازي المسار القانوني الوطني للتأشيرة وتصريح العمل.",
+        "لا تدفع رسوم توظيف مشبوهة أو ترسل وثائق حساسة قبل التحقق من الجهة. شروط التنقل وحقوق العمل تختلف حسب الجنسية والبلد."
+      ],
+      "en": [
+        "Using EURES for European job research",
+        "EURES brings together vacancies and information about living and working conditions across Europe. A listing does not automatically grant entry or work permission.",
+        "Compare occupation demand, languages, salaries and housing costs; check national work-permit requirements. Some mobility and funding measures do not cover every nationality or residence status.",
+        "Build an appropriate CV, apply for verified vacancies and check employers. Non-EU applicants should investigate the relevant national visa and work-authorization process in parallel.",
+        "Avoid suspicious placement charges and never send sensitive documents before verifying the employer. Rules vary by country and nationality."
+      ],
+      "fr": [
+        "Chercher un emploi européen avec EURES",
+        "EURES regroupe des offres et des informations sur les conditions de vie et de travail en Europe. Une annonce ne confère pas automatiquement un droit d'entrée ou de travail.",
+        "Comparez métiers, langues, salaires et logement, puis vérifiez les règles nationales de permis de travail. Certaines aides à la mobilité sont réservées à des catégories précises.",
+        "Préparez un CV adapté, identifiez des offres fiables, contrôlez l'employeur et, hors UE, examinez parallèlement la procédure nationale de visa et de travail.",
+        "Évitez les frais de placement suspects et le partage prématuré de pièces sensibles. Les règles varient selon le pays et la nationalité."
+      ]
+    }
+  }
+}
