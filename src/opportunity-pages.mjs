@@ -143,8 +143,8 @@ export function renderOpportunityPages(lang,page,esc){
    const title=manuscript?.title||item.title;
    const body='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><div class="opp-guide-header"><h1>'+esc(title)+'</h1><p>'+esc(introductory)+'</p><p class="opp-guide-meta">'+esc(c.updated)+' : <time datetime="'+esc(articleDate)+'">'+esc(articleDate)+'</time></p></div></div></section><main class="section shell opp-guide-layout"><div class="opp-advisory" role="note"><p>'+esc(editorialNote)+'</p></div><article class="opp-guide-article">'+conflictBlock+facts+articleSections+marketSection+missing+sources+'</article></main></div>';
    const url=base+item.section+'/'+encodeURIComponent(item.id)+'/';
-   page(lang,{title:title+' | RibhLab',desc:introductory,route:url,content:body,active:'opportunities'});
-   if(item.id==='uk-visa')page(lang,{title:title+' | RibhLab',desc:introductory,route:base+'immigration/uk/',content:body,active:'opportunities'});
+   page(lang,{title:title+' | RibhLab',desc:introductory,route:url,content:body,active:'opportunities',noindex:!isDetailed&&!demandText});
+   if(item.id==='uk-visa')page(lang,{title:title+' | RibhLab',desc:introductory,route:base+'immigration/uk/',content:body,active:'opportunities',noindex:true});
   }
   // Every appointment card has an on-site country-specific verified source record.
   // Appointment slots cannot be inferred or invented from a public booking URL.
@@ -153,7 +153,7 @@ export function renderOpportunityPages(lang,page,esc){
    const intro=({ar:'لا تعني الصفحة أو رابط الحجز توفر موعد حالياً؛ ذلك يتطلب مراجعة حساب مقدم الطلب ونوع التأشيرة والمركز.',en:'A booking page does not prove a slot is available. The applicant must check the visa category, centre and personal account.',fr:'La présence du lien ne prouve pas la disponibilité des créneaux. Le type de visa, le centre et le compte personnel doivent être vérifiés.'})[lang];
    const specific=visa.note?.[lang]||intro;
    const detail='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+base+'visa-appointments/">← '+esc(c['visa-appointments'])+'</a><div class="opp-guide-header"><h1>'+esc(t.title)+' — '+esc(visa.country[lang])+'</h1><p>'+esc(visa.service)+'</p></div></div></section><main class="section shell opp-guide-layout"><div class="opp-advisory"><p>'+esc(intro)+'</p></div><article class="opp-guide-article"><section class="opp-guide-section"><h2>'+esc(t.overview)+'</h2><p>'+esc(specific)+'</p></section><section class="opp-guide-section opp-fact-sheet"><h2>'+esc(t.service)+'</h2><dl class="opp-fact-grid"><div><dt>'+esc(t.country)+'</dt><dd>'+esc(visa.country[lang])+'</dd></div><div><dt>'+esc(t.service)+'</dt><dd>'+esc(visa.service)+'</dd></div></dl></section><section class="opp-guide-section"><h2>'+esc(t.status)+'</h2><p>'+esc(intro)+'</p></section><section class="opp-guide-section"><h2>'+esc(t.out)+'</h2><a class="opp-action" href="'+esc(safeHref(visa.url))+'" rel="noopener noreferrer external" target="_blank">'+esc(t.out)+' ↗</a></section></article></main></div>';
-   page(lang,{title:t.title+' — '+visa.country[lang]+' | RibhLab',desc:visa.service+': '+specific,route:base+'visa-appointments/'+encodeURIComponent(visa.id)+'/',content:detail,active:'opportunities'});
+   page(lang,{title:t.title+' — '+visa.country[lang]+' | RibhLab',desc:visa.service+': '+specific,route:base+'visa-appointments/'+encodeURIComponent(visa.id)+'/',content:detail,active:'opportunities',noindex:true});
   }
 
 }
