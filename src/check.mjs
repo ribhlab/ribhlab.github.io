@@ -511,7 +511,7 @@ for(const lang of ['ar','en','fr']){
  const cards=[...home.matchAll(/class="card-cover-image editorial-photo"[^>]*\bsrc="([^"]+)"/g)].map(m=>m[1]);
  if(!cover||cards.length<9)errors.push('Homepage editorial photography incomplete '+lang);
  if(new Set([cover,...cards]).size!==cards.length+1)errors.push('Same article photograph repeated in journal homepage '+lang);
- if(!home.includes('/'+lang+'/markets/')||!home.includes('/'+lang+'/lifestyle/')||!home.includes('/'+lang+'/tools/'))errors.push('Journal topic rail missing useful routes '+lang);
+ if(!home.includes('/'+lang+'/markets/')||!home.includes('/'+lang+'/care/')||!home.includes('/'+lang+'/recipes/')||!home.includes('/'+lang+'/tools/'))errors.push('Journal rail must separately link care, cooking, markets and tools '+lang);
 }
 
 
