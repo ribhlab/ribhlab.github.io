@@ -132,6 +132,127 @@
           ]
         }
       }
+    },
+    "sett-administrator": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Three-page signed Ministry of Interior notice versus government contest listing",
+      "state": "deadline-conflict",
+      "sources": [
+        {
+          "label": "قرار فتح المباراة الأصلي / Arrêté — 3 pages",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/81e89845-6649-430e-98a2-65a32c048a48"
+        },
+        {
+          "label": "Fiche emploi-public C44147/26",
+          "url": "https://www.emploi-public.ma/fr/concours/details/81e89845-6649-430e-98a2-65a32c048a48"
+        }
+      ],
+      "facts": {
+        "city": "Settat",
+        "country": "Maroc",
+        "reference": "C44147/26",
+        "posts": 4,
+        "degree": "Master / Master spécialisé / diplôme équivalent, audit et contrôle de gestion",
+        "grade": "Administrateur 2e grade, échelle 11",
+        "deadlineConflicts": [
+          "2026-11-02T16:30 (PDF)",
+          "2026-11-09T16:30 (portal)"
+        ],
+        "testDate": "2026-11-29",
+        "salary": null
+      },
+      "translations": {
+        "ar": {
+          "title": "4 متصرفين بسطات في التدقيق ومراقبة التسيير: شروط الماستر والاختبارات وتعارض آخر أجل",
+          "deck": "توجد مفارقة رسمية مهمة: وثيقة فتح المباراة تذكر 2 نونبر الساعة 16:30، بينما صفحة البوابة تعرض 9 نونبر. راجع التاريخ الأسبق إلى حين صدور توضيح رسمي.",
+          "sections": [
+            [
+              "الجهة المنظمة والمناصب والتخصص الدقيق",
+              "تعلن عمالة إقليم سطات التابعة لوزارة الداخلية عن أربعة مناصب في تخصص التدقيق ومراقبة التسيير ضمن درجة متصرف من الدرجة الثانية، السلم 11. يضم القرار نفسه تخصصات أخرى في الهندسة والتعمير، لكن لا يجوز جمعها مع المناصب الأربعة الخاصة بالتدقيق. رقم المباراة على البوابة C44147/26، والتاريخ المعلن للامتحان 29 نونبر 2026. يتعين على صاحب شهادة في المحاسبة أو المالية قراءة اسم التخصص المقبول حرفياً بدلاً من افتراض أن جميع تخصصات الإدارة متساوية."
+            ],
+            [
+              "شروط السن والجنسية والمؤهل عند التسجيل",
+              "تذكر الوثيقة الأصلية الجنسية المغربية وسناً يبدأ من 18 سنة ولا يتجاوز 45 سنة في فاتح يناير من سنة 2026، مع مراعاة الحالات الخاصة القانونية. يشترط لمسار التدقيق ومراقبة التسيير دبلوم الدراسات العليا المعمقة أو المتخصصة أو الماستر أو الماستر المتخصص في التخصص المحدد، أو شهادة تعادلها قانوناً. لا تكفي الإجازة وحدها لهذه الدرجة. وتذكر الوثيقة إجراءات إثبات معادلة الشهادات الأجنبية أو الصادرة عن مؤسسات خاصة متى كانت المعادلة مطلوبة. يحتفظ المنظم بتقدير استيفاء الشروط."
+            ],
+            [
+              "تنبيه موثق: موعدان متناقضان لا يجوز إخفاؤهما",
+              "في صفحة المباراة الحكومية يظهر 9 نونبر 2026 عند الساعة 16:30 كآخر أجل، لكن الصفحة الثالثة من قرار فتح المباراة المرفق بها تنص على التسجيل من 19 أكتوبر إلى 2 نونبر 2026 عند الساعة 16:30. هذه ليست مسألة تحريرية أو تقديراً منا، بل نصان متعارضان في نفس سلسلة المصادر الرسمية. الأفضل إتمام الإيداع قبل 2 نونبر وعدم انتظار 9 نونبر، مع التحقق من أي إعلان تصحيحي أو استفسار من الإدارة. لا يمكن الجزم بأن التاريخ المتأخر ناسخ للقرار من دون وثيقة رسمية."
+            ],
+            [
+              "اختبارات التحريري والشفوي وفق القرار",
+              "ينص القرار على اختبار كتابي للمتصرفين من الدرجة الثانية مدته ثلاث ساعات ومعامله 4، ويكون موضوعاً أو أسئلة متعددة الاختيارات مرتبطة بالتخصص أو مهام الوظيفة أو اختصاصات وزارة الداخلية. ويأتي بعده اختبار شفوي مدته بين 15 و30 دقيقة ومعامله 3. التأهل للشفوي مشروط بالحصول على معدل لا يقل عن 12/20 في التحريري. يمكن التدريب على ميزانيات البرامج وأدلة التدقيق ومؤشرات الأداء ومراقبة الالتزامات، لكن هذه أمثلة من RibhLab وليست مواد امتحان مضمونة."
+            ],
+            [
+              "الملف الإلكتروني وقناة الإيداع",
+              "تحدد الوثيقة بوابة depot.emploi-public.ma للإيداع الإلكتروني. يجب إرفاق البطاقة الوطنية ودبلوم التخصص والسيرة الذاتية، مع قرارات المعادلة والوثائق التابعة لها حسب الحالة. للموظفين المرشحين وبعض الفئات القانونية إجراءات إضافية تخص موافقة الإدارة أو الإثبات القانوني للحالة. حضر الصور بوضوح وأسماء مفهومة، ولا تترك خانات غير مكتملة أو بيانات متناقضة. احتفظ بما يثبت التسجيل النهائي، وتابع الاستدعاءات والنتائج عبر القنوات الرسمية دون الاعتماد على صفحات الوساطة."
+            ],
+            [
+              "كيف يستعد المرشح ويقيس ملاءمة تخصصه؟",
+              "يفيد ربط المجال بأمثلة عملية: تدقيق مسار طلب شراء من الاعتماد إلى التسلم والأداء؛ تصميم لوحة تسيير تقارن الإنجاز بالميزانية؛ تحديد سبب انحراف التكاليف وإعداد توصية قابلة للمتابعة. هذه أمثلة تعليمية توضح الفرق بين التدقيق الذي يبحث عن أدلة وفاعلية الضوابط، ومراقبة التسيير التي تقيس الأداء دورياً. لا يحدد الإعلان راتباً فردياً مخصصاً أو مكان العمل النهائي بالتفصيل، فلا يمكن اختلاقه. قبل أي قرار، راجع التخصص والسن وموقع الامتحان بعد الاستدعاء الرسمي."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Settat audit and management control competition: four positions and conflicting official deadlines",
+          "deck": "Government portal says 9 November 2026, but the signed three-page opening notice says 2 November at 16:30. Submit before the earlier date unless an official correction clarifies.",
+          "sections": [
+            [
+              "Four posts and the exact specialization",
+              "The Province of Settat under Morocco's Ministry of Interior announces four second-grade administrator posts (scale 11) in audit and management control. The same official notice covers unrelated engineering and urban-planning specializations, which should not be counted as part of the four audit positions. The public contest reference is C44147/26 and the examination date is scheduled for 29 November 2026. A general finance qualification does not automatically qualify unless the diploma meets the specified specialty and equivalence conditions."
+            ],
+            [
+              "Age, nationality and higher education requirements",
+              "The signed notice requires Moroccan nationality and an age of 18 to 45 on 1 January 2026, subject to particular legal rules. The audit and management-control positions require an advanced graduate diploma, specialized graduate diploma, master or specialized master relevant to the specialization, or a legally equivalent award. An undergraduate bachelor alone is not the stated qualification. Holders of foreign or particular private degrees may need formal published equivalence documents. The hiring authority determines whether the submitted file meets its requirements."
+            ],
+            [
+              "The critical discrepancy between two official sources",
+              "The government job-listing page reports a deadline of 9 November 2026 at 16:30. However, page three of the attached signed competition notice explicitly gives a registration period from 19 October to 2 November 2026 at 16:30. There is no safe editorial basis for quietly choosing the later date. Applicants should file before 2 November and seek an official corrigendum or direct confirmation from the organizer. The RibhLab guide must visibly display both dates and must never describe the later one as definitive without evidence."
+            ],
+            [
+              "Written examination, interview and coefficients",
+              "For second-grade administrators, the written exam lasts three hours, with coefficient 4, and consists of an essay or multiple-choice questions relating to the job, the ministry or the specialization. The oral part lasts 15 to 30 minutes and carries coefficient 3. At least 12 out of 20 on the written component is required to reach the oral examination. Candidates can prepare internal-control cases, budgeting, evidence quality and performance indicators. These are study suggestions rather than a claim about questions that will actually appear."
+            ],
+            [
+              "Online documents and special applicant conditions",
+              "The notice requires electronic registration at depot.emploi-public.ma with national ID, the required diploma and a CV. Equivalence decisions and supporting papers are required in applicable circumstances. Existing public employees and people in certain legally defined groups may have additional consent or evidence requirements. Check readability and consistency before submitting and keep a confirmation of receipt. Follow government notices for call-ups and results; a third party cannot legitimately promise an examination invitation."
+            ],
+            [
+              "How to judge your fit for audit and management control",
+              "Prepare practical examples that compare budget allocations, obligations, services received, payments and remaining amounts. Audit emphasizes evidence, testing and remediation of controls, while management control tracks trends and deviations against targets. These concepts are relevant to the field but the official notice does not promise a particular syllabus or detailed job description. It also does not specify an individual salary. Resolve the deadline conflict and your qualification status before spending time on unsupported assumptions."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours audit et contrôle de gestion à Settat : 4 postes et deux échéances officielles",
+          "deck": "La fiche du portail indique le 9 novembre 2026, tandis que l'arrêté signé mentionne le 2 novembre à 16 h 30. Il est prudent de déposer avant la date la plus proche.",
+          "sections": [
+            [
+              "Postes annoncés et spécialité concernée",
+              "La Province de Settat, sous l'autorité du ministère de l'Intérieur, ouvre quatre postes d'administrateur de deuxième grade, échelle 11, en audit et contrôle de gestion. Le même arrêté regroupe d'autres spécialités d'ingénierie et d'urbanisme, qui ne doivent pas être confondues avec les quatre postes d'audit. La référence du concours est C44147/26 et l'épreuve est annoncée pour le 29 novembre 2026. Un diplôme général de finance ne garantit pas l'admissibilité si la spécialité ou l'équivalence ne répond pas au texte exact."
+            ],
+            [
+              "Nationalité, limite d'âge et diplôme requis",
+              "L'avis signé exige la nationalité marocaine et un âge compris entre 18 et 45 ans au 1er janvier 2026, sous réserve des dispositions particulières prévues par les textes. Il faut détenir un diplôme d'études supérieures approfondies ou spécialisées, un master, un master spécialisé dans le domaine demandé, ou un diplôme reconnu équivalent. Une licence seule n'est pas le diplôme annoncé. Les qualifications étrangères ou issues de certains établissements privés peuvent nécessiter un arrêté d'équivalence publié avec les pièces exigées."
+            ],
+            [
+              "Incohérence majeure entre la fiche et l'arrêté",
+              "La page publique du concours mentionne le 9 novembre 2026 à 16 h 30 comme date limite. Mais la troisième page de l'arrêté officiel attaché indique une période de dépôt du 19 octobre au 2 novembre 2026 à 16 h 30. Ces références appartiennent à la même chaîne officielle et se contredisent. Il ne faut ni masquer le conflit ni considérer automatiquement la date la plus tardive comme correcte. La conduite prudente est de déposer avant le 2 novembre et de chercher un correctif officiel auprès de l'administration."
+            ],
+            [
+              "Épreuves écrites et orales annoncées",
+              "L'administrateur de deuxième grade passe une épreuve écrite de trois heures, coefficient 4, qui peut être un sujet ou un questionnaire à choix multiples sur le poste, le ministère ou la spécialité. L'entretien oral dure entre 15 et 30 minutes avec coefficient 3. Il faut au moins 12/20 à l'écrit pour être admis à l'oral. Une préparation sur les contrôles internes, le suivi budgétaire et les indicateurs de performance est pertinente mais ne doit pas être présentée comme une liste de sujets officiellement garantie."
+            ],
+            [
+              "Téléversement et pièces supplémentaires possibles",
+              "L'inscription se fait à depot.emploi-public.ma avec copie de la CIN, diplôme requis et CV. Une décision d'équivalence et les justificatifs correspondants peuvent être nécessaires pour certaines qualifications. Les fonctionnaires et catégories particulières doivent respecter les formalités supplémentaires qui les concernent. Vérifiez qualité des fichiers, spécialité sélectionnée et preuve de validation. Les convocations et résultats sont publiés par les autorités compétentes, et aucune agence privée ne peut garantir l'admission."
+            ],
+            [
+              "Analyser sa candidature sans inventer un poste",
+              "Un exemple utile pour se préparer consiste à relier une dépense publique à son budget, à l'engagement, à la réception, au paiement et au contrôle des écarts. L'audit cherche des preuves de conformité et d'efficacité des contrôles ; le contrôle de gestion analyse l'exécution et les indicateurs pour aider à décider. Cette illustration pédagogique ne remplace pas une fiche de poste détaillée. L'annonce ne précise pas de salaire individuel, et l'essentiel est de vérifier la spécialité et le délai avant de poser sa candidature."
+            ]
+          ]
+        }
+      }
     }
   }
 }
