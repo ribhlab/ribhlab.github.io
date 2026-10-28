@@ -82,8 +82,10 @@
         "gumroad",
         "shopify"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "editorialReviewDate": "2026-10-28",
+      "queuePath": "content/reviewed-queue/notion-template-originality-support-guide.json"
     },
     {
       "sectionId": "online-business",
