@@ -55,3 +55,15 @@
 @media(max-width:1060px){.media-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.media-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.media-card-grid,.media-steps{grid-template-columns:1fr}.media-hero{padding:30px 0 42px}.media-content{padding-block:22px 45px}.media-tabnav{padding:12px 16px;gap:7px}.media-tabnav a{padding:8px 10px;font-size:11px}.media-card{min-height:0;padding:17px}.media-app-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:430px){.media-app-category-grid{grid-template-columns:1fr}.media-card-grid .media-card{min-height:0}.media-page .media-hero h1{font-size:30px}.media-tabnav{gap:6px}.media-tabnav a{font-size:10.5px}.media-link{font-size:11px;white-space:normal}}
+
+.media-home-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin:25px 0}
+.media-home-tile{display:flex;flex-direction:column;min-height:185px;gap:9px;padding:23px 25px;background:linear-gradient(130deg,#e4f6ea,#fff);border:1px solid #b8e7ce;border-top:5px solid #168763;border-radius:17px;color:#17644f;text-decoration:none;box-shadow:0 7px 21px #2440750d}
+.media-home-tile>span{font-size:31px;line-height:1.1}.media-home-tile h3{font-size:clamp(18px,1.7vw,24px);color:inherit;margin:0}.media-home-tile p{font-size:13px;color:#526276;line-height:1.75;margin:0}
+.media-home-tile:hover{transform:translateY(-2px);box-shadow:0 11px 27px #24375e1a}
+.media-home-technology{background:linear-gradient(130deg,#e9f2ff,#fff);border-color:#c4dbff;border-top-color:#2c6ec5;color:#2557a0}
+.media-home-apps{background:linear-gradient(130deg,#f2ecff,#fff);border-color:#d9cef8;border-top-color:#8659ce;color:#573aa5}
+@media(min-width:951px){
+.header .nav-links>a[href$="/sports/"]{--nav-ink:#136947;--nav-tint:#e4f8ed;--nav-line:#bde8d0}
+.header .nav-links>a[href$="/technology/"]{--nav-ink:#1766b0;--nav-tint:#e6f2ff;--nav-line:#c1dafa}
+}
+@media(max-width:760px){.media-home-grid{grid-template-columns:1fr}.media-home-tile{min-height:0}}
