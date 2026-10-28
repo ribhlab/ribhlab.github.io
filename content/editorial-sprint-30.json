@@ -376,8 +376,10 @@
         "bls",
         "fed"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "editorialReviewDate": "2026-10-28",
+      "queuePath": "content/reviewed-queue/cpi-release-basket-how-read.json"
     },
     {
       "sectionId": "gold-macro",
