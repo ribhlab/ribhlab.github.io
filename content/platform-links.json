@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "note": "Curated editorial directory of official provider domains. Listings are educational references, not a ranking or an endorsement. Commercial links remain separately disclosed.",
   "platforms": {
     "fiverr": {
@@ -261,6 +261,26 @@
     "wgcGoldLimits": {
       "name": "World Gold Council — The limits of gold/dollar/real-rate models",
       "url": "https://www.gold.org/goldhub/research/qaurum-vs-us-real-rates-and-dollar-model"
+    },
+    "emploiPublic": {
+      "name": "Emploi-public.ma — concours publics",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics"
+    },
+    "emploiPublicFaq": {
+      "name": "Emploi-public.ma — questions fréquentes",
+      "url": "https://www.emploi-public.ma/fr/faq-liste"
+    },
+    "nistGenAi": {
+      "name": "NIST — Generative AI Risk Management Profile",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    },
+    "investorBacktesting": {
+      "name": "SEC Investor.gov — backtesting and performance claims",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-47"
+    },
+    "foodSafety": {
+      "name": "FoodSafety.gov — safe food preparation and refrigeration",
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety"
     }
   },
   "articleLinks": {
@@ -471,6 +491,24 @@
       "wgcGoldDollarRates",
       "wgcGoldLimits",
       "fed"
+    ],
+    "morocco-public-job-application-checklist-2026": [
+      "emploiPublic",
+      "emploiPublicFaq"
+    ],
+    "trading-bot-backtest-spread-slippage-reality-check": [
+      "investorBacktesting",
+      "investor",
+      "cftc"
+    ],
+    "ai-agents-business-security-human-checklist": [
+      "nistGenAi",
+      "owasp",
+      "github"
+    ],
+    "grain-and-vegetable-bowl-easy-recipe": [
+      "foodSafety",
+      "foodSafetyEggs"
     ]
   }
 }
