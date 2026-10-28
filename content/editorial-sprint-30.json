@@ -1,0 +1,503 @@
+{
+  "campaign": "30-original-articles-all-sections-2026-10",
+  "createdAt": "2026-10-28",
+  "repository": "ribhlab/ribhlab.github.io",
+  "target": 30,
+  "languages": [
+    "ar",
+    "en",
+    "fr"
+  ],
+  "statusMeaning": "planned is not published; count only content/articles with complete trilingual translations after successful build and live verification",
+  "editorialRequirements": {
+    "minimumWordsPerLanguage": 480,
+    "minimumSections": 4,
+    "minimumIndependentSources": 2,
+    "verifiedLicensedImageUnique": true,
+    "noMoroccanDialect": true,
+    "noFiller": true,
+    "releaseGateMinutes": 25
+  },
+  "items": [
+    {
+      "sectionId": "freelance",
+      "slug": "gig-description-client-questions-scope",
+      "title": {
+        "ar": "كتابة وصف خدمة Fiverr يوضح النطاق ويجذب الاستفسارات",
+        "en": "Writing a Fiverr Gig description that sets clear expectations",
+        "fr": "Rédiger une annonce Fiverr qui clarifie les attentes"
+      },
+      "editorialBrief": "Start with the buyer problem, deliverables, exclusions, FAQs and requirements; example spreadsheet cleaning",
+      "proposedResourceIds": [
+        "fiverrHelp",
+        "fiverr"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "freelance",
+      "slug": "gig-gallery-original-images-checklist",
+      "title": {
+        "ar": "تصميم صور أصلية لخدمة Fiverr دون انتهاك الحقوق",
+        "en": "Designing a rights-safe Fiverr Gig gallery",
+        "fr": "Créer une galerie Fiverr originale respectant les droits"
+      },
+      "editorialBrief": "Check image size, own work, small readable text, licensing and before/after integrity",
+      "proposedResourceIds": [
+        "fiverrHelp",
+        "canva"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "freelance",
+      "slug": "freelance-basic-standard-premium-cost-model",
+      "title": {
+        "ar": "تسعير باقات الخدمات الحرة وفق الوقت والتكاليف والتعديلات",
+        "en": "Pricing Basic Standard Premium using a cost model",
+        "fr": "Tarifer les offres Basic Standard Premium avec un modèle de coûts"
+      },
+      "editorialBrief": "Cost worked example for 3 scope tiers, fees, taxes, revision limits and acceptance criteria",
+      "proposedResourceIds": [
+        "fiverrHelp",
+        "upwork"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "online-business",
+      "slug": "notion-template-originality-support-guide",
+      "title": {
+        "ar": "بيع قوالب Notion الأصلية مع ضمان الجودة والدعم",
+        "en": "Selling original Notion templates with support and quality checks",
+        "fr": "Vendre des modèles Notion originaux et maintenables"
+      },
+      "editorialBrief": "Template originality, database testing, accessibility, instructions, maintenance and refund risks",
+      "proposedResourceIds": [
+        "gumroad",
+        "shopify"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "online-business",
+      "slug": "newsletter-start-free-first-90-days",
+      "title": {
+        "ar": "إطلاق نشرة بريدية مفيدة خلال أول تسعين يوماً",
+        "en": "Launching a useful newsletter in the first ninety days",
+        "fr": "Lancer une newsletter utile durant les 90 premiers jours"
+      },
+      "editorialBrief": "Opt-in permission, editorial calendar, measuring opens responsibly and testing value before monetization",
+      "proposedResourceIds": [
+        "googleSearch",
+        "googleAdsense"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "online-business",
+      "slug": "niche-educational-blog-content-audit",
+      "title": {
+        "ar": "إنشاء مدونة متخصصة بمقالات أصلية وخطة بحث",
+        "en": "Building a niche learning blog with an evidence-based content audit",
+        "fr": "Créer un blog éducatif spécialisé avec audit éditorial"
+      },
+      "editorialBrief": "Topic map, search intent, actual expertise, sourcing, maintenance and avoiding scaled low-value publishing",
+      "proposedResourceIds": [
+        "googleSearch",
+        "googleAdsense"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "ai-automation",
+      "slug": "ai-writing-assistant-style-guide-versioning",
+      "title": {
+        "ar": "إنشاء مساعد كتابة يحافظ على أسلوب التحرير دون نسخ",
+        "en": "Building an AI writing assistant with an editable style guide",
+        "fr": "Créer un assistant de rédaction IA fidèle à une charte"
+      },
+      "editorialBrief": "Brand voice as testable rules; editorial review, originality, corrections and version history",
+      "proposedResourceIds": [
+        "chatgpt",
+        "googleSearch"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "ai-automation",
+      "slug": "safe-excel-ai-analysis-redaction-checklist",
+      "title": {
+        "ar": "تحليل ملفات Excel بالذكاء الاصطناعي دون كشف بيانات العملاء",
+        "en": "Analyzing Excel with AI without exposing client information",
+        "fr": "Analyser Excel avec l’IA sans divulguer des données clients"
+      },
+      "editorialBrief": "Anonymize personal columns, test formulas, reconcile totals and avoid uploading confidential data",
+      "proposedResourceIds": [
+        "powerquery",
+        "powerbi"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "ai-automation",
+      "slug": "power-query-ai-assisted-transformations-audit",
+      "title": {
+        "ar": "تطوير تحويلات Power Query بمساعدة الذكاء الاصطناعي والتحقق",
+        "en": "Auditing AI-assisted Power Query transformations",
+        "fr": "Auditer les transformations Power Query assistées par IA"
+      },
+      "editorialBrief": "Before/after row counts, nulls, joins, refresh safety, M-code checks and deterministic QA",
+      "proposedResourceIds": [
+        "powerquery",
+        "powerbi"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "mobile-apps",
+      "slug": "scan-documents-phone-privacy-quality",
+      "title": {
+        "ar": "مسح المستندات بالهاتف: الدقة والخصوصية وطرق الأرشفة",
+        "en": "Scanning documents by phone: quality and privacy",
+        "fr": "Numériser des documents sur mobile : qualité et confidentialité"
+      },
+      "editorialBrief": "Perspective correction, PDF vs image, offline storage, sensitive data masking and searchable text errors",
+      "proposedResourceIds": [
+        "googlePlay",
+        "appleAppStore"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "mobile-apps",
+      "slug": "voice-recording-transcription-mobile-accuracy",
+      "title": {
+        "ar": "تسجيل الصوت وتحويله إلى نص: الأذونات والأخطاء",
+        "en": "Mobile recording and transcription: consent and accuracy",
+        "fr": "Enregistrement et transcription mobile : consentement et précision"
+      },
+      "editorialBrief": "Recording consent laws vary; test names, multilingual audio, timestamps and safe cloud options",
+      "proposedResourceIds": [
+        "googlePlay",
+        "appleAppStore"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "mobile-apps",
+      "slug": "english-learning-apps-pronunciation-plan",
+      "title": {
+        "ar": "مقارنة تطبيقات تعلم الإنجليزية مع اختبار تطور النطق",
+        "en": "Choosing English-learning apps with a measurable speaking plan",
+        "fr": "Comparer les applications d’anglais avec un plan de prononciation"
+      },
+      "editorialBrief": "Four-week self-test, spaced repetition, speech practice, subscription and privacy conditions",
+      "proposedResourceIds": [
+        "googlePlay",
+        "appleAppStore"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "games-security",
+      "slug": "godot-first-small-game-five-sessions",
+      "title": {
+        "ar": "إنشاء أول لعبة صغيرة بمحرك Godot خلال خمس حصص",
+        "en": "Your first small Godot game in five practice sessions",
+        "fr": "Créer un premier jeu Godot en cinq séances"
+      },
+      "editorialBrief": "Sprites, physics, scoring, scene structure, playtest, attribution and export QA",
+      "proposedResourceIds": [
+        "godot",
+        "github"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "games-security",
+      "slug": "unreal-engine-when-to-choose",
+      "title": {
+        "ar": "متى تختار Unreal Engine بدلاً من المحركات الأخرى",
+        "en": "When Unreal Engine is the right choice",
+        "fr": "Quand choisir Unreal Engine plutôt qu’un autre moteur"
+      },
+      "editorialBrief": "Performance budgets, project scale, blueprint/prototype, licensing checks and accessibility",
+      "proposedResourceIds": [
+        "unreal",
+        "godot"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "games-security",
+      "slug": "gdevelop-no-code-first-prototype",
+      "title": {
+        "ar": "نموذج لعبة بلا برمجة باستعمال GDevelop مع اختبار الجودة",
+        "en": "A no-code GDevelop game prototype with testing",
+        "fr": "Prototyper un jeu sans code avec GDevelop et le tester"
+      },
+      "editorialBrief": "Events, collision, scoring, device responsiveness and test checklist",
+      "proposedResourceIds": [
+        "gdevelop",
+        "godot"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "trading-risk",
+      "slug": "trend-channels-false-breakouts-risk",
+      "title": {
+        "ar": "القنوات السعرية والاختراقات الكاذبة وإدارة المخاطر",
+        "en": "Price channels and false breakouts: a falsifiable approach",
+        "fr": "Canaux de prix et fausses cassures : une méthode vérifiable"
+      },
+      "editorialBrief": "Chart protocol, bounded losses, avoid hindsight and log signal failures",
+      "proposedResourceIds": [
+        "tradingview",
+        "cftc"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "trading-risk",
+      "slug": "risk-budget-drawdown-math-beginners",
+      "title": {
+        "ar": "إدارة رأس المال وحساب التراجع المركب للمبتدئين",
+        "en": "Capital preservation and compound drawdown mathematics",
+        "fr": "Préserver le capital : comprendre les pertes cumulées"
+      },
+      "editorialBrief": "Drawdown arithmetic, varying risk by position, commissions, no profit guarantees",
+      "proposedResourceIds": [
+        "cftc",
+        "investor"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "trading-risk",
+      "slug": "fixed-versus-trailing-stop-order-frictions",
+      "title": {
+        "ar": "وقف الخسارة الثابت والمتحرك وتكاليف التنفيذ",
+        "en": "Fixed versus trailing stops under real execution costs",
+        "fr": "Stops fixes et suiveurs face aux coûts d’exécution"
+      },
+      "editorialBrief": "Examples with slips/gaps and partial fills; risk not guaranteed",
+      "proposedResourceIds": [
+        "investor",
+        "cftc"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "crypto-web3",
+      "slug": "ethereum-smart-contracts-wallet-permissions",
+      "title": {
+        "ar": "عقود Ethereum الذكية وصلاحيات المحافظ والمخاطر",
+        "en": "Ethereum smart contracts and wallet-permission risks",
+        "fr": "Contrats Ethereum et risques des autorisations de portefeuille"
+      },
+      "editorialBrief": "Approvals, gas, signing vs transactions, immutable code and security red flags",
+      "proposedResourceIds": [
+        "ethereum",
+        "bitcoin"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "crypto-web3",
+      "slug": "coin-versus-token-claim-verification",
+      "title": {
+        "ar": "الفرق بين العملات الأصلية والرموز وكيفية فحص الادعاءات",
+        "en": "Coins versus tokens: verify the project claims",
+        "fr": "Coins et tokens : vérifier les promesses d’un projet"
+      },
+      "editorialBrief": "Native asset vs issued token, contract identity, bridge risk, independent sources",
+      "proposedResourceIds": [
+        "ethereum",
+        "coingecko"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "crypto-web3",
+      "slug": "crypto-whitepaper-audit-without-hype",
+      "title": {
+        "ar": "قراءة الورقة البيضاء لمشروع رقمي دون الوقوع في التضليل",
+        "en": "A practical crypto whitepaper audit without hype",
+        "fr": "Lire un livre blanc crypto sans céder aux promesses"
+      },
+      "editorialBrief": "Supply, vesting, team, governance, legal disclaimers, measurable milestones",
+      "proposedResourceIds": [
+        "coingecko",
+        "ethereum"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "gold-macro",
+      "slug": "cpi-release-basket-how-read",
+      "title": {
+        "ar": "كيفية قراءة مؤشر أسعار المستهلك الأمريكي CPI دون تضليل",
+        "en": "How to read US CPI releases without false precision",
+        "fr": "Comprendre les publications CPI américaines sans exagération"
+      },
+      "editorialBrief": "Headline vs core, seasonality, revisions, monthly/annual comparisons and limitations",
+      "proposedResourceIds": [
+        "bls",
+        "fed"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "gold-macro",
+      "slug": "cpi-versus-pce-prices-fed",
+      "title": {
+        "ar": "مقارنة مؤشري CPI وPCE في تحليل التضخم",
+        "en": "CPI versus PCE in inflation analysis",
+        "fr": "Comparer CPI et PCE pour analyser l’inflation"
+      },
+      "editorialBrief": "Index design, weights, coverage, methodology and Federal Reserve relevance",
+      "proposedResourceIds": [
+        "bls",
+        "fed"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "gold-macro",
+      "slug": "nfp-payrolls-revisions-market-guide",
+      "title": {
+        "ar": "قراءة تقرير الوظائف الأمريكي NFP والمراجعات اللاحقة",
+        "en": "Reading US payroll data and revisions responsibly",
+        "fr": "Lire l’emploi salarié américain et ses révisions"
+      },
+      "editorialBrief": "Payroll vs household survey, employment change, unemployment rate, revisions and calendar",
+      "proposedResourceIds": [
+        "bls",
+        "fed"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "body-care",
+      "slug": "minimal-skin-routine-cleanser-moisturizer-spf",
+      "title": {
+        "ar": "روتين عناية بالبشرة من ثلاث خطوات مع مراعاة الحساسية",
+        "en": "A minimal three-step skincare routine",
+        "fr": "Une routine cutanée simple en trois gestes"
+      },
+      "editorialBrief": "Gentle cleanser moisturizer sunscreen, patch testing and consult doctor if irritation",
+      "proposedResourceIds": [
+        "aadFaceWashing",
+        "aadSunscreen"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "body-care",
+      "slug": "tinted-sunscreen-iron-oxides-guide",
+      "title": {
+        "ar": "متى يفيد واقي الشمس الملون وما حدوده؟",
+        "en": "When tinted sunscreen may help—and its limits",
+        "fr": "Quand un écran solaire teinté peut être utile"
+      },
+      "editorialBrief": "Visible light, broad-spectrum SPF, skin type, proper application and limitations",
+      "proposedResourceIds": [
+        "aadSunscreen",
+        "aadDrySkin"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "body-care",
+      "slug": "sensitive-skin-versus-contact-reaction",
+      "title": {
+        "ar": "الفرق بين البشرة الحساسة والتهاب الجلد التماسي",
+        "en": "Sensitive skin versus contact reactions",
+        "fr": "Peau sensible et réaction de contact : les distinguer"
+      },
+      "editorialBrief": "Irritant vs allergic signals, stop new products, avoid self-diagnosis and urgent symptoms",
+      "proposedResourceIds": [
+        "aadDrySkin",
+        "aadFaceWashing"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "world-recipes",
+      "slug": "seafood-paella-safe-home-preparation",
+      "title": {
+        "ar": "باييّا المأكولات البحرية في المنزل مع تسوية آمنة",
+        "en": "Home seafood paella with food-safety checkpoints",
+        "fr": "Paella de fruits de mer maison et sécurité alimentaire"
+      },
+      "editorialBrief": "Recipe with measured ingredient amounts, preparation, seafood handling and alternatives",
+      "proposedResourceIds": [
+        "fdaDairyEggs",
+        "avpnMargherita"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "world-recipes",
+      "slug": "chicken-tikka-masala-temperature-guide",
+      "title": {
+        "ar": "دجاج تيكا ماسالا منزلي مع قياس التسوية الآمنة",
+        "en": "Homemade chicken tikka masala with temperature guidance",
+        "fr": "Poulet tikka masala maison et cuisson contrôlée"
+      },
+      "editorialBrief": "Steps, portions, marinade, safe poultry temperature, vegetarian alternatives",
+      "proposedResourceIds": [
+        "fdaDairyEggs",
+        "avpnMargherita"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    },
+    {
+      "sectionId": "world-recipes",
+      "slug": "pad-thai-noodles-peanut-allergy-plan",
+      "title": {
+        "ar": "باد تاي تايلاندي منزلي مع بدائل للحساسية",
+        "en": "Home-style pad thai with allergy-aware swaps",
+        "fr": "Pad thaï maison et substitutions pour allergies"
+      },
+      "editorialBrief": "Rice noodles sauce, pan sequence, fish sauce, peanuts/allergens and cooking safety",
+      "proposedResourceIds": [
+        "fdaDairyEggs",
+        "avpnMargherita"
+      ],
+      "status": "planned",
+      "articleUrl": null
+    }
+  ]
+}
