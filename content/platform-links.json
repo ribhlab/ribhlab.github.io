@@ -885,6 +885,14 @@
     "freelance-basic-standard-premium-cost-model": [
       "fiverrHelp",
       "upwork"
+    ],
+    "fed-october-28-2026-decision-december-rate-scenarios": [
+      "fedOctDecision2026",
+      "fedOctImplementation2026",
+      "fedDecemberCalendar2026",
+      "fedSeptemberSep2026",
+      "blsSeptemberCpi2026",
+      "beaAugustPce2026"
     ]
   }
 }

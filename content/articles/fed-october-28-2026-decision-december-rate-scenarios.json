@@ -1,0 +1,187 @@
+{
+  "slug": "fed-october-28-2026-decision-december-rate-scenarios",
+  "category": "trading",
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false,
+  "related": [
+    "how-to-read-fomc-decision-2026",
+    "why-gold-moves-with-us-dollar-real-yields-explained",
+    "macro-calendar-us-europe-japan-china"
+  ],
+  "sources": [
+    {
+      "label": "Federal Reserve — Official 28 October 2026 FOMC decision and 10–2 vote; checked 28 October 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+    },
+    {
+      "label": "Federal Reserve — 28 October 2026 implementation note; checked 28 October 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm"
+    },
+    {
+      "label": "Federal Reserve — December 2026 calendar; checked 28 October 2026",
+      "url": "https://www.federalreserve.gov/newsevents/2026-december.htm"
+    },
+    {
+      "label": "Federal Reserve — September 2026 Economic Projections, historic dated baseline; checked 28 October 2026",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm"
+    },
+    {
+      "label": "BLS — September 2026 CPI and release schedule; checked 28 October 2026",
+      "url": "https://www.bls.gov/cpi/"
+    },
+    {
+      "label": "BEA — August 2026 PCE and September release schedule; checked 28 October 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-August-2026"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "قرار الفيدرالي 28 أكتوبر 2026: سيناريوهات فائدة دجنبر وتأثيرها في الدولار والذهب والقروض",
+      "excerpt": "تحليل موثق لقرار تثبيت الفائدة 3.75%–4.00%، مع قراءة انقسام التصويت وتضخم الولايات المتحدة وخريطة بيانات دجنبر دون اعتبار السيناريوهات توقعات مؤكدة.",
+      "lead": "في 28 أكتوبر 2026 أعلن مجلس الاحتياطي الفيدرالي تثبيت النطاق المستهدف للفائدة على الأموال الفيدرالية بين 3.75% و4.00%، بعد رفعه بربع نقطة في شتنبر. صوّت عشرة أعضاء للتثبيت واثنان للرفع الفوري. هذه حقيقة منشورة في بيان اللجنة، بينما قرار اجتماع 8 و9 دجنبر لم يتخذ بعد. ينبغي فصل البيان الرسمي عن توقعات المتعاملين، وفصل كل منهما عن حركة السوق اللحظية. لفهم الخطوة القادمة، سنقارن التضخم والأجور والوظائف والتوقعات الرسمية، ونحوّل ذلك إلى سيناريوهات قابلة للمراجعة بدل وعد بارتفاع الدولار أو انخفاض الذهب.",
+      "sections": [
+        {
+          "heading": "1. ما الذي قرره البنك وما معنى تصويت 10 مقابل 2؟",
+          "paragraphs": [
+            "ثبتت لجنة السوق المفتوحة نطاق الفائدة عند 3.75%–4.00% في 28 أكتوبر. قال نص البيان إن النشاط الاقتصادي يتوسع بوتيرة قوية وإن الإنفاق المحلي والرساميل المنتجة متماسكان، لكنه أكد استمرار ارتفاع التضخم. خالف ليزا كوك وبيث هاماك القرار، مفضلتين رفع الفائدة بمقدار 25 نقطة أساس فوراً. لا تعني مخالفة عضوين أن رفع دجنبر تقرر بالفعل، كما أن إجماع سبتمبر السابق على الرفع لا يضمن تكراره؛ كل اجتماع يستند إلى بيانات جديدة وتقييم المخاطر.",
+            "يختلف النطاق المستهدف للفائدة عن معدل فائدة الرهن العقاري أو البطاقة البنكية. هو إشارة سياسة نقدية قصيرة الأجل تنتقل إلى سوق الأموال ثم إلى منحنى العوائد والائتمان والعملة عبر قنوات غير فورية. أما ملاحظة التنفيذ الرسمية الصادرة في اليوم نفسه فحددت عائد أرصدة الاحتياطي عند 3.90% ابتداءً من 29 أكتوبر، مع أسعار لعمليات إعادة الشراء والتسهيلات المرتبطة بالنطاق. هذه أدوات تنفيذ وليست زيادة إضافية إلى 3.90% فوق فائدة الأموال الفيدرالية."
+          ]
+        },
+        {
+          "heading": "2. لماذا تعارض قوة الاقتصاد هدف خفض التضخم؟",
+          "paragraphs": [
+            "أوضح مكتب إحصاءات العمل أن مؤشر أسعار المستهلك في شتنبر ارتفع 0.6% خلال شهر و3.7% على أساس سنوي، بينما ارتفع المقياس المستثني للغذاء والطاقة 2.6% سنوياً. هذا الرقم غير مطابق لمؤشر نفقات الاستهلاك الشخصي PCE الذي يستهدف البنك استقرار أسعاره عند 2% على المدى الطويل. وفق مكتب التحليل الاقتصادي، بلغ تضخم PCE الإجمالي في غشت 3.4% والأساسي 3.0% سنوياً. اختلاف الوزن والمنهج والفترة يفسر عدم المساواة بين الرقمين؛ لذا لا تجمعهما على أنهما سلسلة واحدة.",
+            "تشير وثيقة التوقعات الاقتصادية المنشورة في شتنبر إلى أن المشاركين توقعوا نمواً وسيطاً للناتج الحقيقي قدره 2.3% في 2026، وبطالة وسيطة 4.1%، وتضخم PCE سنوياً 3.7%. هي توقعات وضعها أفراد اللجنة في شتنبر وليست توقعات جديدة صادرة مع قرار أكتوبر. في بيئة يرتفع فيها النفط وترتفع تكاليف الشحن، قد يتباطأ إنفاق الأسر بينما يبقى التضخم مرتفعاً، فتتعقد المفاضلة بين استقرار الأسعار والتوظيف. مجرد ارتفاع التضخم لا يفرض آلياً رفع الفائدة إذا ظهرت صدمة عرض مؤقتة أو تراجع حاد في العمالة."
+          ]
+        },
+        {
+          "heading": "3. ثلاثة مسارات لدجنبر: تثبيت أو زيادة أو تحول مفاجئ",
+          "paragraphs": [
+            "موعد اللجنة التالي هو 8 و9 دجنبر 2026، ويصدر البيان يوم 9. السيناريو الأول هو الإبقاء على 3.75%–4.00% إذا أراد الأعضاء مراقبة انحسار صدمة الطاقة أو تباطؤ طلب المستهلكين. السيناريو الثاني رفع ربع نقطة إلى 4.00%–4.25% إذا بقي التضخم واسع الانتشار وكانت الوظائف والإنفاق قويين. السيناريو الثالث تحوّل أقل توقعاً، كإرجاء الإشارة إلى التشديد أو خفض الفائدة إذا طرأ تدهور اقتصادي كبير. هذه حالات شرطية للتحليل وليست الاحتمالات الرسمية للبنك ولا توقعاً منا بفوز أحدها.",
+            "حتى لو كان المسار المتداول في الأسواق هو الرفع، لا ينبغي نقل نسبة متغيرة دون وقت اقتباس أو ذكر مصدر العقود الآجلة ومنهجها. العقود تعكس أسعاراً وتفضيلات تحوط وسيولة وليست تصويتاً مسبقاً لأعضاء اللجنة. يمكن أن يتغير تقييم السوق بعد تقرير أسعار المستهلك في نونبر أو أرقام الأجور أو بيانات PCE. لقراءة النتيجة لا تكتف بأول سطر: راقب نطاق الفائدة الجديد وانقسام التصويت والعبارات المتعلقة بالتضخم والنشاط، ثم المؤتمر الصحفي والوثائق الاقتصادية إن صدرت."
+          ]
+        },
+        {
+          "heading": "4. ماذا تكشف خريطة النقاط وما الذي لا تقوله؟",
+          "paragraphs": [
+            "أظهر ملخص توقعات شتنبر وسيطاً لمعدل الفائدة المستهدف في نهاية 2026 قرب 4.1% وفق تنسيق وثيقة البنك، مع تشتت كبير في تقديرات المشاركين. النقطة هي تقييم كل مشارك للمسار الملائم تحت فرضياته، وليست وعداً شخصياً أو تصويتاً مسبقاً أو مساراً ملزماً للفيدرالي. ولأن توقعات شتنبر سبقت اجتماع أكتوبر، فمن الخطأ نسبتها إلى بيان 28 أكتوبر أو التعامل معها كاستجابة محسومة لأرقام نوفمبر المستقبلية.",
+            "مثال حسابي لفهم الوحدات: 25 نقطة أساس تساوي 0.25 نقطة مئوية، أي الانتقال من 3.75%–4.00% إلى 4.00%–4.25% عند رفع كامل النطاق. قرض افتراضي ثابت الأصل بقيمة 100,000 دولار يزداد عبء فائدته السنوي النظري 250 دولاراً عند ارتفاع معدله بمقدار 0.25 نقطة، إذا انتقل الارتفاع إليه بالكامل وبقي الأصل ثابتاً طوال السنة. هذا ليس حساب قسط شهري؛ ذلك يتطلب مدة القرض وطريقة الإهلاك وشروط البنك. معظم القروض لا تتغير لحظياً واحداً لواحد مع قرار اللجنة."
+          ]
+        },
+        {
+          "heading": "5. انتقال القرار إلى الدولار والذهب والنفط والسندات",
+          "paragraphs": [
+            "قد يدعم تشديد الفائدة الدولار إذا ارتفعت العوائد الأمريكية مقارنة بنظيراتها، لكنه قد يضعف أيضاً إذا كان القرار متوقعاً مسبقاً أو زادت مخاوف التباطؤ. الذهب لا يتحرك وفق قاعدة بسيطة؛ تؤثر فيه العوائد الحقيقية وقوة الدولار ومخاطر الجغرافيا السياسية وطلب البنوك المركزية. السندات الطويلة قد ترتفع عوائدها بسبب توقعات التضخم حتى عندما يثبت البنك الفائدة القصيرة. لذلك يجب تحديد الأفق الزمني والأداة والسعر الذي كان متوقعاً قبل الخبر قبل تفسير رد الفعل.",
+            "في مثال توضيحي لا يمثل السوق، إذا ارتفع العائد الاسمي لسند من 4.0% إلى 4.3% وبقي التضخم المتوقع عند 2.5%، ارتفع العائد الحقيقي التقريبي من 1.5% إلى 1.8%، أي 0.3 نقطة مئوية. لكن إذا صعد توقع التضخم إلى 2.9% يصبح الحقيقي التقريبي 1.4%، رغم ارتفاع العائد الاسمي. هذه حسابات فرق بسيطة وليست قياس عائد TIPS الفعلي. كما أن سعر النفط نفسه قد يرفع التضخم ويخفض النمو في وقت واحد، فيجعل علاقة الفائدة والذهب غير خطية."
+          ]
+        },
+        {
+          "heading": "6. لوحة متابعة عملية حتى اجتماع 9 دجنبر",
+          "paragraphs": [
+            "أنشئ ورقة متابعة من ستة أعمدة: تاريخ نشر البيان، المؤشر، القيمة السابقة، القيمة الجديدة، الفرق، وأثره المشروط على السيناريوهات. ابدأ ببيانات CPI وPCE والوظائف والبطالة والأجور وتوقعات التضخم، وسجل إن كان البيان أولياً أو معدلاً. على سبيل المثال، أعلن مكتب إحصاءات العمل موعد نشر CPI أكتوبر في 10 نونبر، وأعلن مكتب التحليل الاقتصادي إصدار PCE شتنبر في 29 أكتوبر. لا تنسب لهذين التقريرين أرقاماً قبل موعد نشرهما؛ تحديث المقال بعدهما ضروري حتى لا يصبح التحليل قديماً.",
+            "خصص فقرة تصحيح مؤرخة فور كل بيانات جوهرية، واحتفظ بنسخة من توقعك المشروط السابق كي لا تعيد كتابته بعد معرفة النتيجة. إذا كنت مقترضاً أو مدير ميزانية، اختبر ثلاثة معدلات لقروضك بدلاً من فتح صفقة فور خبر السياسة؛ وإذا كنت مستثمراً فافصل تحليل سياسة الفائدة عن قرار المخاطرة الخاص بمحفظتك. لا يقدم هذا المقال توصية تداول أو يقيناً بشأن اجتماع دجنبر. مصدر القرار النهائي الوحيد يوم 9 دجنبر هو البيان الرسمي الصادر عن الاحتياطي الفيدرالي."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Fed decision of 28 October 2026: December rate scenarios, inflation and market transmission",
+      "excerpt": "What the official 10–2 hold at 3.75%–4.00% means, what September projections actually say, and how to monitor December without calling scenarios decisions.",
+      "lead": "On 28 October 2026 the Federal Open Market Committee kept its federal funds target range at 3.75%–4.00%, after increasing the range by a quarter-point in September. Ten members supported the hold; two preferred another increase immediately. The December 8–9 meeting has not happened. Readers need to distinguish the central bank's published decision, individual policymakers' projections, market-priced expectations and retrospective explanations of asset-price moves. This guide uses first-party Federal Reserve, Bureau of Labor Statistics and Bureau of Economic Analysis documents to build a falsifiable December monitoring framework, not a prediction of guaranteed returns.",
+      "sections": [
+        {
+          "heading": "1. The October vote, and why a hold is not an easing",
+          "paragraphs": [
+            "The October statement says activity is expanding strongly, spending is resilient and inflation remains elevated. Lisa Cook and Beth Hammack voted against holding rates, each preferring a 25-basis-point increase. That split conveys a real policy disagreement about the urgency of inflation control, not a binding promise that the majority will join the dissenters in December. September's decision had raised the range from 3.50%–3.75% to 3.75%–4.00%, and was unanimous; a comparison of votes is evidence about those specific meetings, not proof of a future trend.",
+            "The target range governs a very short-term money-market benchmark, not the interest rate paid on every household mortgage or credit card. The October implementation note kept interest on reserve balances at 3.90%, effective October 29, and set related standing-facility terms. Those administrative instruments help implement the stance; they do not constitute a second rate increase layered on top of the 3.75%–4.00% target. Financial conditions depend also on longer yields, bank margins, lending standards, exchange rates and expectations already embedded in market prices."
+          ]
+        },
+        {
+          "heading": "2. Read the inflation gauges before declaring a direction",
+          "paragraphs": [
+            "The Bureau of Labor Statistics reported September consumer-price inflation of 0.6% month over month and 3.7% year over year, with the index excluding food and energy up 2.6% over twelve months. The Federal Reserve's preferred personal-consumption-expenditures price index is a different statistical product. The Bureau of Economic Analysis reported headline PCE inflation of 3.4% and core PCE of 3.0% year over year in August. Different expenditure weights, definitions and reference months mean that the CPI and PCE figures cannot be substituted for one another without explanation.",
+            "At the September meeting, the median Fed participant projected real GDP growth of 2.3% in 2026, unemployment of 4.1%, and PCE inflation of 3.7% for 2026. These are September assumptions rather than newly updated October projections. A jump in oil and shipping costs can lift inflation while simultaneously reducing households' purchasing power and profits in energy-intensive sectors. The committee must judge whether price pressures spread to wages and services or fade as disrupted supply returns. It is therefore inaccurate to claim that a single inflation headline mechanically determines the next decision."
+          ]
+        },
+        {
+          "heading": "3. Three conditional December cases, not three promises",
+          "paragraphs": [
+            "The official calendar places the next FOMC meeting on December 8–9, with a decision scheduled for December 9. A hold case would leave the range at 3.75%–4.00%, potentially reflecting a desire to inspect incoming data and distinguish energy-related pressure from broader demand. An additional quarter-point hike would move it to 4.00%–4.25% if policymakers judge underlying inflation and activity strong enough. A materially weaker growth and employment picture could instead prompt a change in rhetoric or policy. These are illustrative decision branches, not published Federal Reserve probabilities.",
+            "Do not attach an undated percentage to the likelihood of a December increase. Futures-derived probabilities change with prices, contract conventions and new information; the outcome is still decided at the meeting. Important inputs include October and November inflation releases, employment figures, wage growth and consumer spending. A good post-meeting review compares the statement's language, the vote, the rate range and any new economic projections, rather than treating a single media headline or the first move in the dollar as a full reading of policy."
+          ]
+        },
+        {
+          "heading": "4. What the dot plot does and does not establish",
+          "paragraphs": [
+            "The September Summary of Economic Projections displayed a median end-2026 federal funds rate projection around 4.1%, alongside a range of opinions. Each dot represents an individual participant's assessment of an appropriate path given their economic assumptions. It is neither an anonymous committee vote on a future date nor a fixed schedule of rate changes. The October hold was accompanied by an official statement, not a new September-style projection table. A December article should keep the dates attached to every dot plot and show when projections were revised.",
+            "A basis point is one hundredth of a percentage point, so 25 basis points equal 0.25 percentage point. For a deliberately simplified example, if a loan's effective annual rate rose from 6.00% to 6.25% on an unchanged principal balance of $100,000 for a full year, the additional simple interest would be $250. It would not necessarily raise an amortizing loan's next payment by that amount: repayment term, principal reduction, contract type and repricing dates matter. Nor is an overnight central bank rate automatically transmitted one-for-one to every borrower."
+          ]
+        },
+        {
+          "heading": "5. Why the dollar, gold, bonds and oil may respond differently",
+          "paragraphs": [
+            "A rate increase could support the dollar when it lifts expected US interest-rate differentials; it could also coincide with dollar weakness if expected beforehand or accompanied by stronger recession concerns. Gold can react to real yields, currency movements, geopolitical risk and reserve demand, sometimes in competing directions. Long-duration bonds incorporate future inflation expectations and term premiums; their yields need not follow the overnight policy rate. Report the pre-announcement consensus and the observation window before claiming that any single asset move was caused by the Federal Reserve.",
+            "Suppose, purely as a classroom example, a nominal yield rises from 4.0% to 4.3%, while expected inflation stays at 2.5%. A rough nominal-minus-inflation calculation changes from 1.5% to 1.8% in real terms. If expected inflation simultaneously rises to 2.9%, the same approximation gives 1.4% instead. Neither calculation replaces an actual inflation-indexed bond yield. A supply shock that raises crude prices may increase measured inflation and hurt future growth together, further weakening simplistic claims that higher policy rates necessarily mean lower gold prices."
+          ]
+        },
+        {
+          "heading": "6. A reader's evidence table for the weeks before December",
+          "paragraphs": [
+            "Make a six-column worksheet: publication date, indicator, prior observation, new observation, change, and conditional implication. Track CPI, PCE, jobs, unemployment, pay growth and inflation expectations using original statistical releases. BLS listed November 10 for the October CPI release, while BEA listed October 29 for September PCE. Those figures should not be filled in from guesses ahead of publication. Record revisions as revisions, and avoid mixing a September policy projection with an October inflation observation unless their differing dates are clear.",
+            "Keep dated snapshots of your assessment so you can check after the event whether the decision matched your stated conditions. A household or treasury manager can calculate debt-service sensitivity under multiple rates rather than rushing to trade on the announcement. Even a correct forecast of the policy move would not guarantee a profitable trade because assets price in expectations. The December meeting outcome must be updated from the Federal Reserve's own December statement when available; until then the cases in this article remain uncertainty-aware illustrations, not investment advice."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Fed du 28 octobre 2026 : scénarios de décembre, inflation et effets sur les marchés",
+      "excerpt": "Analyse de la décision officielle à 10 voix contre 2 et des taux à 3,75 %–4,00 %, avec scénarios conditionnels pour décembre et tableau de suivi économique.",
+      "lead": "Le 28 octobre 2026, le Comité fédéral de l'open market a maintenu la fourchette cible des fonds fédéraux entre 3,75 % et 4,00 %, après une hausse d'un quart de point en septembre. Dix membres ont soutenu cette décision ; deux ont préféré relever immédiatement les taux. La réunion des 8 et 9 décembre n'a pas encore eu lieu. Pour éviter de transformer une opinion de marché en fait, il faut séparer le communiqué officiel, les projections individuelles des responsables, les anticipations financières et les mouvements observés des actifs. Notre grille de lecture s'appuie sur les documents du Fed, du BLS et du BEA, sans prétendre prédire un gain.",
+      "sections": [
+        {
+          "heading": "1. Une décision de maintien qui ne constitue pas un assouplissement",
+          "paragraphs": [
+            "Le communiqué d'octobre présente une activité économique en forte expansion, des dépenses intérieures résistantes et une inflation encore élevée. Lisa Cook et Beth Hammack se sont opposées au maintien, préférant chacune une hausse de 25 points de base. Ce désaccord révèle deux appréciations de l'urgence inflationniste, sans signifier que les dix autres membres voteront nécessairement une hausse en décembre. La décision de septembre avait porté la fourchette de 3,50 %–3,75 % à 3,75 %–4,00 %, à l'unanimité ; l'évolution du vote doit être décrite précisément, sans en faire une règle prédictive.",
+            "Le taux des fonds fédéraux constitue une référence monétaire à très court terme et non le taux directement payé sur chaque prêt immobilier ou carte bancaire. La note d'application d'octobre maintient à 3,90 % la rémunération des réserves à compter du 29 octobre et précise les conditions des facilités permanentes. Il s'agit d'instruments de mise en œuvre et non d'une augmentation supplémentaire de 3,90 points. Les conditions financières dépendent aussi des obligations à long terme, de la concurrence bancaire, des marges de crédit et des anticipations incorporées dans les prix."
+          ]
+        },
+        {
+          "heading": "2. L'inflation reste le nœud du débat de décembre",
+          "paragraphs": [
+            "Le Bureau of Labor Statistics a annoncé pour septembre une hausse de l'indice des prix à la consommation de 0,6 % sur un mois et 3,7 % sur un an. Hors alimentation et énergie, la progression annuelle était de 2,6 %. La mesure PCE, privilégiée dans le cadre de la cible de stabilité des prix de la Fed, repose sur d'autres pondérations. Selon le Bureau of Economic Analysis, le PCE total d'août progressait de 3,4 % sur un an et le PCE sous-jacent de 3,0 %. Additionner ou interchanger ces chiffres comme une série homogène serait trompeur.",
+            "Les projections économiques publiées en septembre faisaient apparaître, pour 2026, une médiane de croissance réelle du PIB de 2,3 %, de chômage de 4,1 % et d'inflation PCE de 3,7 %. Ce sont des appréciations formulées avant le communiqué d'octobre. La flambée du pétrole ou du transport peut renchérir les coûts tout en réduisant le pouvoir d'achat, ce qui complique la double mission de stabilité des prix et d'emploi. Le comité doit distinguer une hausse transitoire liée à l'offre d'une inflation qui se propage aux services, aux salaires et à la demande."
+          ]
+        },
+        {
+          "heading": "3. Trois scénarios conditionnels pour les 8 et 9 décembre",
+          "paragraphs": [
+            "Le calendrier officiel annonce une réunion les 8 et 9 décembre, avec la décision le 9. Le maintien à 3,75 %–4,00 % serait envisageable si le comité souhaite observer l'évolution de l'énergie et de la consommation. Une hausse d'un quart de point produirait une fourchette de 4,00 %–4,25 % si l'inflation persistait avec une demande robuste. Un net affaiblissement du marché du travail pourrait au contraire changer le discours, voire la décision. Ce sont des exercices de raisonnement conditionnels, pas des probabilités officielles ni une prévision garantie.",
+            "Il serait imprudent de reprendre un pourcentage de probabilité trouvé sur un site sans dater la cotation des contrats à terme qui le produit. Ces prix changent avec les données publiées, les couvertures et la liquidité ; ils ne comptabilisent pas les votes futurs de la Fed. Entre les deux réunions, il faudra suivre les nouvelles statistiques de prix, d'emploi et de consommation. Le jour de la décision, comparer le nouveau taux, le résultat du vote, les formulations du communiqué et les éventuelles projections sera plus fiable qu'une interprétation tirée d'une variation immédiate du dollar."
+          ]
+        },
+        {
+          "heading": "4. Les points de projection ne sont pas un engagement",
+          "paragraphs": [
+            "Les projections de septembre donnaient une médiane du taux directeur de fin 2026 proche de 4,1 %, avec une dispersion entre membres. Chaque point représente le jugement d'un participant sur la politique appropriée compte tenu de ses hypothèses. Il ne s'agit ni d'un vote anticipé à date fixe ni d'une trajectoire obligatoire. La réunion d'octobre n'a pas transformé ces points de septembre en nouvelle annonce. Toute analyse de décembre doit donc mentionner clairement la date des projections, puis mettre à jour les chiffres si le comité publie un nouveau tableau.",
+            "Vingt-cinq points de base correspondent à 0,25 point de pourcentage. Prenons un prêt fictif de 100 000 dollars dont le taux annuel passe de 6,00 % à 6,25 %, avec un capital supposé constant pendant douze mois : la différence d'intérêts simples est de 250 dollars sur l'année. Ce n'est pas le calcul d'une mensualité amortissable, qui exige de connaître durée, échéances et amortissement. Dans la réalité, la variation du taux interbancaire ne se répercute pas nécessairement au même rythme, ni intégralement, sur tous les crédits."
+          ]
+        },
+        {
+          "heading": "5. Dollar, or, obligations et pétrole : plusieurs canaux simultanés",
+          "paragraphs": [
+            "Un resserrement peut soutenir le dollar s'il élargit le différentiel de rendement attendu en faveur des États-Unis, mais la monnaie peut aussi reculer lorsque la décision était déjà intégrée ou que le risque de ralentissement domine. L'or dépend des taux réels, de la devise, des tensions géopolitiques et de la demande institutionnelle. Les rendements obligataires longs intègrent l'inflation anticipée et des primes spécifiques ; ils ne suivent pas mécaniquement le taux à un jour. Il faut documenter le niveau attendu avant le communiqué et la fenêtre de mesure avant de parler de causalité.",
+            "Exemple purement pédagogique : si un rendement nominal passe de 4,0 % à 4,3 % avec une inflation attendue de 2,5 %, le taux réel approximatif progresse de 1,5 % à 1,8 %. Si l'inflation attendue monte parallèlement à 2,9 %, la même soustraction donne 1,4 %. Cette approximation ne remplace pas une obligation indexée réellement cotée. Une perturbation de l'offre pétrolière peut augmenter les prix et freiner la croissance, rendant toute relation automatique entre taux, dollar et prix de l'or particulièrement fragile."
+          ]
+        },
+        {
+          "heading": "6. Un tableau de bord révisable avant la décision finale",
+          "paragraphs": [
+            "Créez une feuille avec date de publication, indicateur, ancienne valeur, nouvelle valeur, écart et interprétation conditionnelle. Renseignez-y CPI, PCE, créations d'emplois, chômage, salaires et anticipations d'inflation à partir des publications d'origine. Le BLS annonçait la prochaine publication du CPI d'octobre le 10 novembre, tandis que le BEA prévoyait celle du PCE de septembre le 29 octobre. Ces dates ne permettent pas d'inventer à l'avance leurs chiffres. Conservez aussi les révisions et la source exacte pour vérifier ultérieurement les conclusions.",
+            "Une photographie datée de chaque scénario empêche de réécrire l'analyse après avoir vu le résultat. Pour un ménage ou une trésorerie d'entreprise, le premier usage concret peut être une simulation de charges d'intérêt à taux variables, sans prendre une position spéculative sur une conférence de presse. Prévoir correctement la hausse ou le maintien ne suffit pas à gagner sur un actif qui l'avait déjà anticipé. La décision de décembre devra être ajoutée à partir du communiqué fédéral officiel du 9 décembre ; pour l'instant, ces scénarios restent des hypothèses éducatives et non des conseils en investissement."
+          ]
+        }
+      ]
+    }
+  }
+}
