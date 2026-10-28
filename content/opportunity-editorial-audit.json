@@ -10,9 +10,9 @@
   "totals": {
     "cards": 87,
     "visa": 12,
-    "researched": 13,
+    "researched": 14,
     "marketEvidence": 5,
-    "pendingDetail": 69
+    "pendingDetail": 68
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -37,12 +37,16 @@
     {
       "id": "sett-engineer",
       "section": "competitions",
-      "title": "Ingénieur d’État 1er grade — Province de Settat",
-      "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "title": "Ingénieur d’État 1er grade — Génie civil, statistiques et SIG — Settat",
+      "deadline": "2026-11-02",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/7cf772aa-1a10-4769-8d24-bf2e5d55a471",
+      "reviewedAt": "2026-10-28",
+      "evidenceId": "sett-engineer",
+      "reviewNote": "Original three-page signed decision read; 3 engineer posts (1 civil, 1 statistics, 1 GIS), 2 Nov 16:30 deadline. Official portal shows 9 Nov 16:30 and GIS count 2. Both conflicts prominently displayed in trilingual report. Build/deploy successful on commit fc106d9; specific live-page assertion added to public-sitemap-check workflow and awaiting next successful run.",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/7cf772aa-1a10-4769-8d24-bf2e5d55a471"
     },
     {
       "id": "civil-protection",
