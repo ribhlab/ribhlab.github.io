@@ -1,0 +1,205 @@
+{
+  "sectionId": "online-business",
+  "article": {
+    "slug": "niche-educational-blog-content-audit",
+    "category": "earning",
+    "date": "2026-10-28",
+    "updated": "2026-10-28",
+    "featured": false,
+    "related": [
+      "adsense-ready-original-site-2026-checklist",
+      "sell-digital-products",
+      "choose-freelance-niche-skills-evidence-14-day-test"
+    ],
+    "sources": [
+      {
+        "label": "Google Search Central — Creating helpful, reliable, people-first content (checked 28 October 2026)",
+        "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      },
+      {
+        "label": "Google Search Central — Spam policies and scaled content abuse (checked 28 October 2026)",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+        "label": "W3C — Web Content Accessibility Guidelines 2.2, Recommendation 12 December 2024 (checked 28 October 2026)",
+        "url": "https://www.w3.org/TR/wcag/"
+      },
+      {
+        "label": "US Federal Trade Commission — Endorsement Guides Q&A, revised 2023 (checked 28 October 2026)",
+        "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "إنشاء مدونة تعليمية متخصصة: تدقيق المحتوى والأدلة قبل كتابة المقالات",
+        "excerpt": "من اختيار مشكلة قابلة للبحث إلى سجل المصادر وتقييم الفجوات: نموذج عملي لبناء مدونة مفيدة دون إغراقها بصفحات مكررة أو وعود زيارات.",
+        "lead": "قد تبدو فكرة إنشاء مدونة تعليمية بسيطة: اختيار موضوع، ونشر عدد كبير من المقالات، ثم انتظار الزيارات. لكن القارئ لا يحتاج نسخة أخرى من إجابة عامة؛ إنه يحتاج حلاً دقيقاً يمكن التحقق من مصادره وتجربته أو تطبيقه. هذا الدليل يقترح عملية تحريرية قابلة للمراجعة، تبدأ بخريطة أسئلة الجمهور وتنتهي بتحديث الصفحات وإيقاف الموضوعات التي لا تقدم قيمة جديدة. تستند مبادئ الجودة إلى إرشادات Google Search Central، وإلى معايير الإتاحة الصادرة عن W3C، وإرشادات الإفصاح الإعلاني لدى FTC، بينما الأرقام والأمثلة الواردة أدناه نماذج تخطيطية لا نتائج موقع حقيقي.",
+        "sections": [
+          {
+            "heading": "1. حدّد جمهوراً ضيقاً ومشكلة يمكن قياس حلها",
+            "paragraphs": [
+              "ابدأ بوصف قارئ واحد في موقف محدد، لا بعبارة فضفاضة مثل «كل المهتمين بالتكنولوجيا». على سبيل المثال: صاحب مشروع صغير يتلقى ملف مبيعات بصيغة CSV ويريد معرفة لماذا لا تتطابق المجاميع بعد استيراده إلى جدول بيانات. يمكن لهذه المشكلة أن تولّد مقالة عن ترميز الأحرف، وأخرى عن الفواصل العشرية، وثالثة عن الصفوف المكررة؛ لكن كل مقالة يجب أن تحل سؤالاً مستقلاً. اكتب لكل سؤال النتيجة التي ينبغي أن يستطيع القارئ تحقيقها، والملفات أو الأدوات التي يحتاجها، وحدود الإجابة. إذا لم تتمكن من صياغة نتيجة عملية، فقد تكون الفكرة مجرد عنوان جذاب.",
+              "أنشئ خريطة من ثلاثة مستويات: موضوع رئيسي، وأسئلة فرعية، وحالات فشل شائعة. ميّز نية البحث بين «ما هو CSV؟» و«كيف أصلح أرقام CSV المستوردة؟»؛ فالأولى تفسيرية والثانية تتطلب خطوات واختبارات. لا تعتمد على حجم البحث المفترض وحده، ولا تكتب أنك تعرف ما يبحث عنه الناس من دون دليل. يمكن جمع الأسئلة من توثيق المنتجات ومن الأسئلة المتكررة المعلنة ومن ملاحظات تحريرية مسجلة، مع إزالة أي بيانات شخصية. معيار اختيار الموضوع هو القدرة على تقديم جواب صحيح ومحدد، وليس سهولة إنتاج مئات العناوين."
+            ]
+          },
+          {
+            "heading": "2. ابنِ سجل مصادر قبل صياغة الاستنتاجات",
+            "paragraphs": [
+              "لكل مقالة، افتح سجلاً صغيراً يضم الادعاء، ومصدره الأصلي، وتاريخ الاطلاع، وما الذي لا يثبته المصدر. إذا كتبت أن أداة ما تسمح باستيراد نوع محدد من الملفات، فوثائق الشركة المنتجة أصلح من مدونة تكرر الخبر. وإذا شرحت مبدأ عاماً في الإتاحة، فإن معيار W3C يصلح مرجعاً مستقلاً عن محركات البحث. عند وجود معلومة متغيرة مثل سعر اشتراك أو سياسة منصة، أضف تاريخ التحقق ونطاق البلد أو الخطة؛ ولا تنقل السعر إلى مقال جديد من دون إعادة فتح صفحة الشروط.",
+              "فرّق بين مصدرين يكرران البيان الصحفي نفسه ومصدرين مستقلين في المنهج أو الاختصاص. لا تعني كثرة الروابط صحة الادعاء. يمكن أن يجمع المقال بين توثيق رسمي، ومعيار مهني، ومثال حسابي من إعداد المحرر يشرح التطبيق. اكتب في مسودة العمل «غير مؤكد» أمام كل رقم لم تتمكن من إثباته، واحذفه أو اذكر حدوده بدلاً من تخمينه. وتذكّر أن الصور تحتاج تدقيقاً منفصلاً للترخيص والملكية؛ ظهورها في نتائج البحث لا يثبت جواز إعادة نشرها."
+            ]
+          },
+          {
+            "heading": "3. اختبر الفجوة التحريرية بمصفوفة بسيطة",
+            "paragraphs": [
+              "قبل إضافة صفحة جديدة، قارنها بما نشرته بالفعل. امنح كل فكرة درجة من صفر إلى ثلاثة في أربعة معايير: وضوح مشكلة القارئ، وإمكان إثبات الحقائق، ووجود مثال تطبيقي أصيل، والقدرة على تحديث المعلومات. هذه أداة قرار تحريرية مقترحة، وليست خوارزمية Google أو دراسة إحصائية. مثال افتراضي: دليل «تنظيف ملف CSV يحتوي فواصل عشرية مختلفة» قد يحصل على 3 و3 و3 و2، أي 11 من 12، لأنه يسمح بعرض ملف تجريبي واختبار مجموع قبل المعالجة وبعدها. أما عنوان «أفضل ألف أداة لكل الأعمال» فقد يحصل على 1 و1 و0 و0، أي نقطتين فقط.",
+              "لا تجعل المجموع بديلاً عن الحكم المهني. قد يكون موضوع منخفض الطلب شديد الأهمية إذا كان يتعلق بالسلامة أو خطأ مالي خطير، وقد يكون موضوع واسع الطلب غير مناسب لقدرات فريق التحرير. إذا كان لديك بالفعل مقال يشرح الخطوات نفسها، فحدّثه أو أضف حالة استخدام واضحة بدلاً من نشر صفحة موازية. توضح سياسة Google ضد إساءة إنتاج المحتوى على نطاق واسع أن المشكلة هي إنشاء صفحات كثيرة أساساً للتلاعب بالترتيب من دون فائدة حقيقية، سواء استُخدمت الأتمتة أم لا. العدد وحده لا يثبت الجودة."
+            ]
+          },
+          {
+            "heading": "4. صمّم المقال حول اختبار يستطيع القارئ إعادة تنفيذه",
+            "paragraphs": [
+              "يمكن تحويل المثال السابق إلى تجربة تعليمية صغيرة: ملف افتراضي من عشرة صفوف، مجموع مبيعات متوقع مقداره 1,250 وحدة نقدية، وخطأ استيراد يجعل أحد الأعمدة نصياً. هذه الأرقام من إنشاء المحرر لتوضيح المنهج، وليست بيانات عميل أو نتائج بحث. اشرح كيفية حفظ نسخة من الملف، وفحص نوع العمود، وتحويل القيم وفق الإعدادات المحلية، ثم إعادة حساب المجموع ومقارنته بالرقم المتوقع. ضع شرط نجاح واضحاً: عشرة صفوف محفوظة، ولا قيم مفقودة، والمجموع متطابق. إذا فشل الاختبار، اذكر طريقة الرجوع إلى النسخة الأصلية.",
+              "ينبغي أن تتضمن المقالة وصفاً للمقدمات والقيود والحالات التي لا تعمل فيها الطريقة. لا يكفي أن تقول «اضغط هذا الزر» من دون شرح لماذا أو ماذا تفعل إذا تغيّرت واجهة البرنامج. ويمكن إضافة جدول قرار صغير أو ملف بيانات مصطنع قابل للنسخ، مع الإشارة الصريحة إلى أنه تجريبي. تحث إرشادات Google على المعلومات الأصلية والتحليل الذي يتجاوز إعادة صياغة المصادر. لذلك لا تُنسب تجربة لم تجرها إلى نفسك، ولا تُستخدم صور واجهات مأخوذة من مواقع الآخرين دون مراجعة الحقوق والأذونات."
+            ]
+          },
+          {
+            "heading": "5. راجع الإتاحة والشفافية قبل التفكير في الربح",
+            "paragraphs": [
+              "المقال المفيد قد يصبح غير قابل للاستخدام إذا كانت عناوينه غير منظمة أو صور خطواته بلا بديل نصي أو أزراره لا تعمل بلوحة المفاتيح. يوصي معيار WCAG 2.2 بتوفير بدائل نصية مناسبة للمحتوى غير النصي وبناء واجهات قابلة للإدراك والاستخدام. في مراجعة عملية، اقرأ الصفحة من الهاتف، وانتقل بين الروابط بلوحة المفاتيح، وتأكد من أن الوصف البديل يشرح وظيفة الصورة لا يكرر كلمة «صورة». اختبر تباين النص وتسمية حقول الإدخال، ولا تضع معلومة أساسية داخل صورة وحدها.",
+              "إذا احتوى المقال على رابط عمولة أو مراجعة مدفوعة، فاذكر العلاقة التجارية قرب التوصية بلغة يفهمها القارئ. توضح إرشادات FTC أن عبارة مبهمة مثل «رابط تابع» قد لا تفسر أن الناشر يحصل على مقابل عند الشراء؛ كما أن القواعد تختلف حسب البلد والجمهور، ولذلك لا يُغني المثال الأمريكي عن مراجعة القانون المحلي. افصل الإعلان عن الاستنتاج التحريري، ولا تضع ادعاء «جرّبنا المنتج» إذا لم توجد تجربة فعلية موثقة. قد يظل نشر مدونة جيدة غير مربح، ولا تضمن هذه الخطوات قبول الإعلانات أو تصدر نتائج البحث."
+            ]
+          },
+          {
+            "heading": "6. دورة مراجعة من تسعين يوماً بدل سباق النشر",
+            "paragraphs": [
+              "اقترح تقسيماً عملياً للأشهر الثلاثة الأولى: في الأسابيع الأربعة الأولى، أنشئ خريطة من 12 سؤالاً، واختر أربعة يمكن توثيقها واختبارها، ثم انشرها بعد تدقيق اللغة والروابط. في الأسابيع من الخامس إلى الثامن، اجمع الأخطاء التي يبلغ عنها القراء، واختبر الصفحات على الهاتف، وصحح الأمثلة التي لا تعمل. وفي الأسابيع من التاسع إلى الثاني عشر، راجع المصادر التي تغيّرت وأعد تقييم الفجوات قبل إنتاج صفحات إضافية. هذه خطة تنظيمية افتراضية، وليست وعداً بمعدل نمو أو عدد زوار.",
+              "احتفظ بسجل لكل صفحة: تاريخ النشر، وآخر مراجعة، والادعاءات الحساسة، وروابط المصادر، وترخيص الصورة، وقرار «تحديث أو دمج أو إبقاء أو إيقاف». استخدم مؤشرات يمكن التحكم فيها، مثل نسبة الروابط التي فُحصت، وعدد الأخطاء المصححة، ونجاح خطوات المثال لدى مراجع مستقل، بدلاً من اختلاق زيارات أو أرباح. إذا لم يستطع الفريق صيانة موضوع متغير بسرعة، فليحدد نطاقه أو يختَر موضوعاً أكثر ثباتاً. المدونة المتخصصة تصبح مرجعاً عندما تُظهر للقارئ ما تعرفه، وكيف تحققت منه، وأين تنتهي حدود معرفتك."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Building a niche educational blog with an evidence-based content audit",
+        "excerpt": "A practical method for choosing useful questions, checking original sources, testing examples, reviewing accessibility and maintaining a focused blog without mass-produced filler.",
+        "lead": "Starting an educational blog can look deceptively easy: pick a subject, publish many posts and hope traffic follows. But readers rarely need another generic explanation. They need a specific answer they can verify and apply. This guide proposes an editorial workflow from audience questions to source records, repeatable demonstrations and scheduled maintenance. The principles draw on Google Search Central's people-first guidance, W3C accessibility standards and the US Federal Trade Commission's disclosure advice. Scores, schedules and numerical examples below are proposed teaching tools, not claims about a real site's traffic or earnings.",
+        "sections": [
+          {
+            "heading": "1. Define a narrow reader problem before choosing keywords",
+            "paragraphs": [
+              "Start with one reader in a concrete situation rather than an audience such as everyone interested in technology. For example, a small-business owner imports a CSV sales file and cannot reconcile the total after opening it in a spreadsheet. That situation could support separate guides about character encoding, decimal separators and duplicate rows, but only if each article answers a distinct question. Write the intended outcome, required files or tools and boundaries of the solution before drafting a headline. If the outcome cannot be described in operational terms, the idea may be a catchy title without a useful article behind it.",
+              "Build a three-level topic map: core problem, related questions and common failure modes. Distinguish informational intent, such as what a CSV file is, from task intent, such as fixing an imported CSV total. The latter needs a procedure and a verification step. Do not claim to know what audiences search for without evidence or invent keyword-volume figures. Questions can be collected from product documentation, published support discussions and editorial notes stripped of personal data. Choose subjects because you can answer them accurately and independently, not because you can generate hundreds of similar headings."
+            ]
+          },
+          {
+            "heading": "2. Maintain a claim-to-source ledger",
+            "paragraphs": [
+              "For each article, maintain a short working record containing the claim, original reference, date checked and what the reference does not establish. If you say a software product supports a particular import format, its official documentation is more appropriate than a blog repeating the same announcement. If you discuss accessibility, a W3C standard supplies a separate authority from a search-engine provider. For changing information such as subscription prices or platform policies, record the plan, country and verification date. Reopen the terms before repeating a figure in a new article.",
+              "Two websites quoting the same press release are not necessarily two independent sources. More links do not automatically mean better evidence. Combine authoritative product documentation, a professional standard and an original worked example where that combination is appropriate. Mark unverified numbers as uncertain during drafting, then remove them or explain the limitation rather than guessing. Treat imagery as a separate rights question: finding a photograph in a search result does not grant permission to republish it. Keep a source and license record for each image you actually use."
+            ]
+          },
+          {
+            "heading": "3. Score the editorial gap, not the temptation to publish",
+            "paragraphs": [
+              "Before adding a new page, compare it with your existing archive. Give a proposed subject zero to three points for each of four editorial criteria: clarity of the reader problem, verifiability of claims, potential for an original practical demonstration, and maintainability. This is a proposed decision aid, not Google's ranking algorithm or a validated research instrument. In a hypothetical assessment, fixing CSV decimal separators might score 3, 3, 3 and 2, or 11 out of 12, because you can supply a synthetic file and check totals before and after. A vague article promising a thousand tools for every job might score 1, 1, 0 and 0.",
+              "Do not let the score override editorial judgment. A low-volume question can be vital when a safety or financial error is at stake; a popular question may exceed your team's expertise. If an existing article already explains the same steps, update it or add a clearly different use case rather than creating a parallel page. Google Search's scaled-content-abuse policy addresses producing many pages primarily to manipulate rankings without helping people, regardless of whether the process is automated or manual. The number of published URLs is not itself evidence of reader value."
+            ]
+          },
+          {
+            "heading": "4. Build a demonstration that readers can reproduce",
+            "paragraphs": [
+              "Turn the CSV example into a small teaching experiment: a synthetic ten-row file with an expected sales total of 1,250 currency units, and an import mistake that leaves one column as text. These figures are invented for illustration, not real customer data or reported test results. Explain how to preserve the original file, inspect column types, convert values with the correct locale, recalculate the total and compare it with the expected result. Define an acceptance test: all ten rows remain, no values disappear and the total matches. If the test fails, show how to restore the original rather than encouraging risky edits.",
+              "Every procedure should state its assumptions, limitations and likely failure cases. Instructions such as click this button are fragile unless they explain why the action matters and what to do when the interface changes. A small decision table or downloadable synthetic dataset may help more than several decorative screenshots. Google recommends original information and analysis beyond paraphrased sources. Do not claim to have personally tested a method unless you actually did, and do not reproduce someone else's interface imagery without checking permissions. Distinguish a proposed example from an independently observed outcome."
+            ]
+          },
+          {
+            "heading": "5. Check accessibility and commercial transparency",
+            "paragraphs": [
+              "A useful article becomes hard to use when headings are disordered, process images lack alternatives or controls cannot be reached with a keyboard. WCAG 2.2 addresses text alternatives and other testable accessibility requirements across devices. As an editorial check, read the page on a phone, navigate interactive elements using a keyboard, and make sure alternative text communicates what a meaningful image contributes rather than merely saying image. Review contrast and form labels, and avoid placing essential instructions solely inside a picture. Accessibility is not a decorative SEO feature; it affects whether readers can use the explanation.",
+              "If an article includes an affiliate commission link or paid recommendation, disclose the relationship close to the recommendation in clear language. The FTC explains that vague terms such as affiliate link may not adequately tell consumers that a publisher can earn money from a purchase. The US guidance is not a substitute for laws that apply in other jurisdictions. Separate sponsorship from editorial conclusions, and never write we tested it without evidence of an actual test. A well-researched blog can still earn nothing, and neither this workflow nor compliance with these principles guarantees advertising approval or a position in search results."
+            ]
+          },
+          {
+            "heading": "6. Use a 90-day maintenance loop rather than a publishing race",
+            "paragraphs": [
+              "A practical first-quarter plan could allocate weeks one through four to mapping twelve reader questions, selecting four that can be sourced and demonstrated, and publishing them after language and link review. During weeks five through eight, record corrections reported by readers, test the pages on mobile devices and repair examples that fail. In weeks nine through twelve, revisit changed sources and reassess editorial gaps before commissioning more pages. This is a suggested management schedule, not a growth forecast, a promise of audience size or a measured result from an existing publication.",
+              "Keep a record for each page: publication date, latest review, sensitive claims, source links, image-license evidence and a decision to update, merge, retain or retire. Measure what the team can genuinely verify, such as links checked, errors corrected and whether an independent reviewer can reproduce the example. Do not invent visitors, conversion rates or revenue to make the project look successful. If the team cannot maintain a rapidly changing subject, narrow its scope or choose a more stable topic. A focused educational publication earns credibility by explaining what it knows, how it knows it and where its knowledge stops."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Créer un blog éducatif spécialisé avec un audit éditorial fondé sur les preuves",
+        "excerpt": "Une méthode concrète pour choisir des questions utiles, vérifier les sources originales, tester les exemples, améliorer l'accessibilité et maintenir un blog sans contenus répétitifs.",
+        "lead": "Créer un blog éducatif paraît simple : choisir un sujet, publier de nombreux billets et attendre les visites. Pourtant, le lecteur a rarement besoin d'une explication générale supplémentaire. Il recherche une réponse précise, vérifiable et applicable. Ce guide propose un processus éditorial allant de la cartographie des questions à la tenue d'un registre de sources, aux démonstrations reproductibles et à la maintenance. Il s'appuie sur les recommandations de Google Search Central, les normes d'accessibilité du W3C et les conseils de la Federal Trade Commission américaine sur la transparence commerciale. Les scores et chiffres utilisés ici sont des exemples de planification, non des résultats réels d'audience ou de revenus.",
+        "sections": [
+          {
+            "heading": "1. Partir d'un problème précis plutôt que d'une liste de mots-clés",
+            "paragraphs": [
+              "Décrivez d'abord un lecteur dans une situation concrète, et non un public aussi large que toutes les personnes intéressées par la technologie. Prenons un dirigeant de petite entreprise qui importe un fichier CSV de ventes et ne retrouve plus le total attendu dans son tableur. Ce problème peut justifier des articles distincts sur l'encodage, les séparateurs décimaux et les lignes dupliquées, à condition que chacun réponde à une question autonome. Avant d'écrire le titre, définissez le résultat attendu, les outils nécessaires et les limites de la solution. Sans résultat vérifiable, le sujet risque de n'être qu'une formule attractive.",
+              "Construisez une carte à trois niveaux : problème central, questions connexes et erreurs fréquentes. Distinguez une intention de compréhension, comme savoir ce qu'est un fichier CSV, d'une intention pratique, comme corriger un total après importation. La seconde exige une procédure et un contrôle final. Ne prétendez pas connaître les recherches du public sans données et n'inventez pas de volumes de mots-clés. Les questions peuvent provenir de documentations officielles, de discussions d'assistance publiques ou de notes éditoriales débarrassées de données personnelles. Retenez les sujets que vous pouvez traiter avec exactitude, pas ceux qui produisent le plus de titres."
+            ]
+          },
+          {
+            "heading": "2. Relier chaque affirmation à une source et à une date",
+            "paragraphs": [
+              "Pour chaque article, tenez un registre comprenant l'affirmation, la référence d'origine, la date de vérification et ce que la source ne permet pas de conclure. Pour une fonction d'importation logicielle, la documentation de l'éditeur vaut mieux qu'un billet qui reprend son annonce. Pour l'accessibilité, une norme du W3C constitue une autorité distincte de celle d'un moteur de recherche. Pour des informations évolutives, telles que des tarifs ou des règles de plateforme, notez la formule, le pays et la date de consultation. Rouvrez les conditions avant de reproduire un chiffre dans un autre contenu.",
+              "Deux sites qui répètent le même communiqué ne représentent pas forcément deux sources indépendantes. Accumuler des liens ne garantit pas la qualité de la preuve. Selon le sujet, combinez une documentation produit, une norme professionnelle et un exemple pratique conçu par la rédaction. Pendant la préparation, signalez les chiffres non vérifiés puis supprimez-les ou explicitez leur incertitude au lieu de les deviner. Les images demandent un contrôle distinct : leur présence dans les résultats d'un moteur de recherche n'autorise pas leur republication. Conservez la preuve de la licence et de l'origine de chaque photographie utilisée."
+            ]
+          },
+          {
+            "heading": "3. Évaluer le manque éditorial avec une grille transparente",
+            "paragraphs": [
+              "Avant de créer une nouvelle page, comparez-la aux contenus déjà publiés. Attribuez de zéro à trois points selon quatre critères : précision du problème du lecteur, vérifiabilité des faits, possibilité d'une démonstration originale et facilité de mise à jour. Cette grille est un outil éditorial proposé, ni un algorithme de Google ni une mesure scientifique validée. Dans un exemple fictif, la correction des séparateurs décimaux d'un CSV pourrait obtenir 3, 3, 3 et 2, soit 11 sur 12, car un fichier synthétique permet de comparer les totaux avant et après traitement. Un article vague promettant mille outils pour tous les métiers pourrait obtenir seulement 1, 1, 0 et 0.",
+              "Le score ne remplace pas le jugement professionnel. Une question peu recherchée peut être essentielle lorsqu'elle concerne la sécurité ou une erreur financière ; un sujet populaire peut dépasser les compétences de l'équipe. Si un ancien article explique déjà les mêmes étapes, mettez-le à jour ou ajoutez un cas réellement différent au lieu de créer une page parallèle. La politique de Google sur l'abus de contenus produits à grande échelle vise la multiplication de pages conçues surtout pour manipuler les classements sans aider les utilisateurs, quelle que soit la méthode de production. Le nombre d'URL ne prouve pas leur utilité."
+            ]
+          },
+          {
+            "heading": "4. Construire une démonstration que le lecteur peut reproduire",
+            "paragraphs": [
+              "Transformez l'exemple CSV en petite expérience pédagogique : un fichier fictif de dix lignes, un total de ventes attendu de 1 250 unités monétaires et une erreur d'importation qui transforme une colonne en texte. Ces chiffres sont inventés pour illustrer la méthode ; ils ne proviennent ni d'un client ni d'un test réel rapporté. Expliquez comment conserver une copie originale, examiner les types de colonnes, convertir les valeurs selon les paramètres régionaux, recalculer le total puis le comparer à l'attendu. Fixez un critère de réussite : dix lignes conservées, aucune valeur perdue et total identique. En cas d'échec, prévoyez le retour à la copie initiale.",
+              "Une procédure sérieuse précise ses hypothèses, ses limites et ses principaux cas d'échec. Une instruction telle que cliquez sur ce bouton devient fragile si elle n'explique pas son utilité ou la solution en cas de changement d'interface. Un petit tableau de décision ou un jeu de données synthétiques peut être plus utile que des captures décoratives. Google encourage les informations et analyses originales qui dépassent la paraphrase de sources. Ne prétendez pas avoir personnellement testé une méthode sans l'avoir fait, et ne reproduisez pas des images d'interfaces appartenant à d'autres sans vérifier les droits. Séparez exemple proposé et résultat observé."
+            ]
+          },
+          {
+            "heading": "5. Vérifier l'accessibilité et la transparence commerciale",
+            "paragraphs": [
+              "Un article utile peut devenir inutilisable si ses titres sont mal hiérarchisés, si les images explicatives n'ont pas de texte alternatif ou si les commandes ne sont pas accessibles au clavier. WCAG 2.2 décrit notamment les alternatives textuelles et d'autres exigences d'accessibilité vérifiables sur différents appareils. Pour un contrôle pratique, consultez la page sur téléphone, parcourez les éléments interactifs au clavier et assurez-vous que les descriptions d'images apportent une information utile au lieu de répéter simplement image. Vérifiez le contraste et les étiquettes des champs ; ne placez pas une instruction indispensable uniquement dans une photographie.",
+              "Lorsqu'un article contient un lien rémunéré ou une recommandation sponsorisée, signalez la relation commerciale près de la recommandation avec des mots compréhensibles. La FTC indique qu'une mention ambiguë comme lien affilié ne suffit pas toujours à expliquer qu'un achat peut rémunérer l'éditeur. Cette doctrine américaine ne remplace pas les règles des autres pays. Distinguez publicité et conclusion éditoriale et n'affirmez jamais avoir essayé un produit sans trace d'un essai réel. Même un blog soigneusement documenté peut ne générer aucun revenu ; la méthode ne garantit ni acceptation publicitaire ni visibilité dans les résultats de recherche."
+            ]
+          },
+          {
+            "heading": "6. Organiser une revue sur 90 jours plutôt qu'une course aux publications",
+            "paragraphs": [
+              "Un premier trimestre pourrait être organisé ainsi : pendant les semaines une à quatre, cartographier douze questions, en choisir quatre que l'on peut documenter et démontrer, puis publier après relecture linguistique et vérification des liens. Pendant les semaines cinq à huit, consigner les corrections reçues, tester les pages sur mobile et réparer les exemples défaillants. Pendant les semaines neuf à douze, rouvrir les sources susceptibles d'avoir changé et réévaluer les lacunes avant de commander de nouvelles pages. Il s'agit d'un calendrier de gestion proposé, et non d'une prévision de croissance, de visites ou de chiffre d'affaires.",
+              "Pour chaque page, conservez la date de publication, la dernière revue, les affirmations sensibles, les références, la preuve de licence de l'image et une décision : actualiser, fusionner, conserver ou retirer. Mesurez des éléments réellement contrôlables, tels que les liens vérifiés, les erreurs corrigées et la capacité d'un relecteur indépendant à reproduire la démonstration. N'inventez pas de visiteurs, de taux de conversion ou de revenus pour valoriser le projet. Si l'équipe ne peut suivre un sujet très changeant, réduisez son périmètre ou choisissez une question plus stable. Un média spécialisé devient crédible lorsqu'il expose ce qu'il sait, comment il l'a vérifié et où s'arrêtent ses connaissances."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1769794371055-54436b54577e",
+    "source": "https://unsplash.com/photos/desk-with-open-book-laptop-and-study-materials-HNjWq8WPyoY",
+    "photographer": "Yen Vu",
+    "alt": "A research desk with an open book, laptop, handwritten notes and study materials",
+    "altAr": "مكتب بحث يضم كتاباً مفتوحاً وحاسوباً محمولاً وملاحظات مكتوبة وأدوات دراسة",
+    "altFr": "Bureau de recherche avec livre ouvert, ordinateur portable, notes manuscrites et matériel d'étude",
+    "license": "Unsplash License",
+    "note": "Original Unsplash photograph by Yen Vu, published 30 January 2026, free under Unsplash License. Photo URL and image ID verified on original photo page 28 October 2026; not a claimed RibhLab workspace or original research photograph."
+  },
+  "resourceIds": [
+    "googlePeopleFirstContent",
+    "googleGenerativeAiContent",
+    "googleSearch"
+  ],
+  "review": {
+    "ready": true,
+    "checkedAt": "2026-10-28",
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Independently checked Google Search Central people-first and scaled-content policies, W3C WCAG 2.2 normative recommendation and FTC 2023 Endorsement Guides on 28 October 2026. Authored six substantial, original two-paragraph sections in AR/EN/FR; reviewed language, examples and non-guarantee caveats. Example 10-row CSV and 1,250-unit total are explicitly hypothetical. Verified Yen Vu original free Unsplash photo, photographer, publication date and exact image ID; checked uniqueness across published photos, market digests/feed, recipes, opportunities, sports-tech and all existing queued JSONs. No invented analytics, client tests, earnings or SEO results."
+  }
+}
