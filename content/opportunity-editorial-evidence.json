@@ -1003,6 +1003,185 @@
           ]
         }
       }
+    },
+    "agriculture-admin": {
+      "reviewedAt": "2026-10-28",
+      "verification": "Read both pages of the signed Arabic ministerial competition announcement (original PDF) and compared official emploi-public listing C44077/26 on 28 October 2026; no salary, precise job location or distribution of 38 positions published.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Ministère de l'Agriculture — avis officiel signé du concours (2 pages, 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0"
+        },
+        {
+          "label": "Emploi-public — annonce C44077/26, publiée le 12 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0"
+        },
+        {
+          "label": "Ministère de l'Agriculture — plateforme officielle des candidatures",
+          "url": "https://concours.agriculture.gov.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Ministère de l’Agriculture, de la Pêche maritime et de la Souveraineté alimentaire — Département de l’Agriculture",
+        "reference": "C44077/26",
+        "country": "Maroc",
+        "posts": 38,
+        "grade": "Administrateur de 2ème grade, échelle 11",
+        "jobCity": null,
+        "examLocations": [
+          "Rabat",
+          "Meknès",
+          "autres centres éventuels"
+        ],
+        "examDate": "2026-12-06",
+        "deadline": "2026-10-30T16:30",
+        "applicationsOpen": "2026-10-14",
+        "sourcePublishedAt": "2026-10-12",
+        "nationality": "Marocaine",
+        "age": "18 à 45 ans au 1er janvier 2026",
+        "degrees": "Master, master spécialisé, diplôme des études supérieures spécialisées ou approfondies, ou équivalent légal dans la spécialité",
+        "fields": [
+          "gestion administrative et financière, finance et comptabilité",
+          "ressources humaines",
+          "marketing stratégique",
+          "communication",
+          "droit international et relations internationales",
+          "ingénierie des données, Big Data, sciences des données et systèmes décisionnels"
+        ],
+        "submission": "https://concours.agriculture.gov.ma/",
+        "format": "Pièces en PDF",
+        "documents": [
+          "CV avec photo, téléphone, adresse et e-mail",
+          "CNIE recto-verso en cours de validité",
+          "diplôme de spécialité",
+          "équivalence le cas échéant",
+          "justificatif handicap le cas échéant",
+          "autorisation administrative pour fonctionnaires le cas échéant",
+          "justificatifs de qualité ancien combattant/résistant/pupille de la Nation le cas échéant"
+        ],
+        "writtenTest": "4 heures, coefficient 4",
+        "oralTest": "15 à 30 minutes, coefficient 3",
+        "quotas": "25 % pour catégories protégées précisées dans l'avis, 7 % personnes en situation de handicap",
+        "salary": null,
+        "postAllocation": null
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة وزارة الفلاحة 2026: 38 منصب متصرف من الدرجة الثانية والتخصصات والوثائق والاختبارات",
+          "deck": "قراءة موثقة للإعلان الوزاري الأصلي من صفحتين: شروط الماستر والسن، ملف PDF، التسجيل حتى 30 أكتوبر 2026 الساعة 16:30، واختبار 6 ديسمبر دون اختلاق راتب أو مدينة تعيين.",
+          "sections": [
+            [
+              "الجهة المنظمة وعدد المناصب: ماذا يثبت القرار؟",
+              "تنظم وزارة الفلاحة والصيد البحري والسيادة الغذائية، قطاع الفلاحة، مباراة لتوظيف 38 متصرفاً من الدرجة الثانية، السلم 11، وفق الإعلان الوزاري الأصلي والبطاقة الحكومية ذات المرجع C44077/26. تاريخ الاختبار المعلن هو 6 ديسمبر 2026، في الرباط ومكناس مع احتمال مراكز أخرى. هذه المدن تخص إجراء المباراة ولا تعني أن المناصب موزعة بينها أو أن مقر التعيين محدد سلفاً. لم ينشر الإعلان توزيعاً عددياً على التخصصات أو الأقاليم؛ لذا ينبغي للمترشح ألا يفترض وجود عدد معين من المناصب في المالية أو البيانات، وأن يتابع الإعلانات اللاحقة للوزارة."
+            ],
+            [
+              "التخصصات المقبولة وكيف تقارن دبلومك بالقائمة؟",
+              "حدد القرار ست مجموعات: التدبير الإداري والمالي أو التدبير المالي والمحاسبي والمالية والمحاسبة؛ الموارد البشرية؛ التسويق الاستراتيجي؛ التواصل؛ القانون الدولي أو العلاقات الدولية؛ وهندسة البيانات أو البيانات الضخمة أو علوم البيانات والنظم التقريرية. لا تكفي عبارة «تخصص قريب» في السيرة الذاتية لإثبات المطابقة؛ راجع الاسم الرسمي للدبلوم وكشف الوحدات وقرار المعادلة عند الاقتضاء. مثال توضيحي: حامل ماستر في المحاسبة يمكنه مقارنة التسمية مباشرة بفئة المالية والمحاسبة، بينما لا ينبغي لحامل شهادة عامة في التجارة افتراض قبوله في التسويق الاستراتيجي دون تحقق. لا يحدد الإعلان حصصاً لكل فرع."
+            ],
+            [
+              "الجنسية والسن والشهادة: الشروط الإقصائية الأصلية",
+              "تفتح المباراة للمغاربة البالغين من 18 إلى 45 سنة على الأكثر في فاتح يناير من السنة الجارية، وفق الصياغة الواردة في القرار. ويطلب ماستر أو ماستر متخصصاً أو دبلوم الدراسات العليا المتخصصة أو المعمقة أو شهادة معادلة قانوناً، في أحد التخصصات المذكورة. لا يصح استبدال ذلك بعبارة عامة مثل «كل Bac+5 مقبول»؛ لأن نوع الشهادة وتخصصها والمعادلة قد تكون حاسمة. إذا كان الدبلوم صادراً من مؤسسة خاصة معتمدة أو من الخارج، راجع وثيقة الاعتراف أو المعادلة المطلوبة في الإعلان قبل الإيداع، ولا تؤجلها إلى يوم الامتحان."
+            ],
+            [
+              "التسجيل الإلكتروني والموعد الذي لا يجوز تجاوزه",
+              "بدأ التسجيل بحسب القرار يوم الأربعاء 14 أكتوبر 2026، ويغلق يوم الجمعة 30 أكتوبر 2026 عند الساعة الرابعة والنصف مساءً بالتوقيت المغربي. يُنجز الترشيح حصرياً على منصة مباريات الوزارة concours.agriculture.gov.ma؛ لا يكفي إرسال سيرة ذاتية بالبريد الإلكتروني أو ملء استمارة الاستفسار في بوابة التشغيل العمومي. ادخل إلى المنصة، واختر المباراة الصحيحة، واملأ بيانات الهوية والتخصص، وارفع الوثائق بصيغة PDF، ثم تحقق من تأكيد الإيداع. قد تتعطل الشبكة أو يرفض النظام ملفاً كبيراً؛ لذلك لا تنتظر الدقائق الأخيرة. التسجيل النهائي غير قابل للتعديل بحسب الإعلان، فراجع جميع الخانات قبل الإرسال."
+            ],
+            [
+              "الوثائق المطلوبة: قائمة تدقيق قبل رفع ملفات PDF",
+              "يطلب القرار سيرة ذاتية تتضمن الصورة ورقم الهاتف والعنوان والبريد الإلكتروني، ونسخة من البطاقة الوطنية الإلكترونية سارية الصلاحية من الوجهين، ونسخة الدبلوم في التخصص المعلن. تُرفق وثيقة المعادلة عندما تنطبق حالة الدبلوم الأجنبي أو الخاص، ووثيقة الإعاقة للمترشح المعني، والترخيص الإداري النهائي للموظف الذي يترشح، وشهادة الصفة الخاصة للفئات المذكورة في القرار عند الاقتضاء. لا تطلب من الجميع شهادة إعاقة أو ترخيصاً وظيفياً. افحص وضوح الاسم والأختام وتطابق البيانات بين المستندات، واحتفظ بنسخ محلية وبتأكيد التسجيل؛ الملفات الناقصة أو غير المسجلة إلكترونياً قد تُرفض."
+            ],
+            [
+              "الاختبار الكتابي والشفوي: المدة والمعامل",
+              "يتضمن الانتقاء اختباراً كتابياً مدته أربع ساعات ومعامله 4، في اختصاصات الإدارة المعنية أو التدبير العمومي أو التخصصات المطلوبة أو المهام المرتبطة بالوظيفة. ثم اختباراً شفوياً مدته بين 15 و30 دقيقة ومعامله 3، تناقش خلاله اللجنة موضوعات وحالات لتقييم القدرة على ممارسة مهام الدرجة. لا يحدد القرار برنامجاً مفصلاً أو أسئلة بعينها؛ ومن غير المهني الادعاء بوجود «أسئلة مضمونة». للتحضير، اربط تخصصك بمهمة إدارية قابلة للتحقق: مراقبة فاتورة، تنظيم مسار توظيف، تقييم بيانات، أو إعداد مذكرة مختصرة، وتمرن على شرح خطواتك وقيودها بوضوح."
+            ],
+            [
+              "الحصص الخاصة والإعلانات اللاحقة دون إساءة تفسيرها",
+              "يشير القرار إلى تخصيص 25% من المناصب لفئات محددة من المقاومين ومكفولي الأمة والعسكريين والمحاربين القدامى، و7% للأشخاص في وضعية إعاقة، وفق الشروط والإثباتات الواردة فيه. هذه نسب تنظيمية لا تعني قبول أي شخص تلقائياً ولا تسمح بتخمين عدد الناجحين في كل تخصص. ستُرسل استدعاءات المدعوين للاختبارات عبر البريد الإلكتروني، وستنشر لوائح المدعوين والناجحين في موقع الوزارة وبوابة التشغيل العمومي، وتعتبر اللوائح المنشورة بمثابة استدعاء. تابع البريد بما فيه الرسائل غير المرغوب فيها، ولا تدفع رسوماً لوسطاء يعدون بمقعد أو بترتيب متقدم."
+            ],
+            [
+              "الراتب ومكان العمل وما ينبغي التحقق منه قبل القرار",
+              "يذكر الإعلان الدرجة الثانية والسلم 11، لكنه لا يحدد راتباً صافياً أو تعويضات فردية أو مدينة التعيين النهائية أو توزيع المناصب بين الإدارات. لا يجوز تحويل رقم السلم إلى وعد براتب ثابت؛ فالوضعية الإدارية والاقتطاعات والتعويضات قد تؤثر في الأجر. بعد اجتياز المباراة قد تُحدد مقرات العمل من طرف الإدارة المركزية أو المصالح اللاممركزة حسب الحاجات، كما يذكر القرار. إذا كنت تعمل حالياً، فلا تستقل بناء على مجرد الترشيح أو الدعوة للكتابي. راجع النتائج الرسمية والقرار الفردي للتعيين قبل أي التزام مالي أو مهني لا رجعة فيه."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Morocco Agriculture Ministry 2026 competition: 38 second-grade administrator posts and application checklist",
+          "deck": "Evidence-based guide to the signed two-page notice: eligible master's fields, age rule, PDFs, 30 October 16:30 deadline and 6 December exam, without invented salary or posting city.",
+          "sections": [
+            [
+              "What is being recruited, and where is the examination?",
+              "Morocco's Ministry of Agriculture, Maritime Fisheries and Food Sovereignty, Agriculture Department, has announced 38 positions at second-grade administrator level, pay scale 11. The government listing carries reference C44077/26 and identifies 6 December 2026 as the examination date. The signed notice names Rabat, Meknes and potentially other examination centres. These are examination locations, not confirmed employment destinations. Neither document allocates the 38 posts by specialty, office or city. An applicant should therefore avoid treating an assumed vacancy count in finance, communications or data science as an official promise. Keep the official notice and the portal listing together for reference."
+            ],
+            [
+              "The six specialty groups and the diploma-name problem",
+              "The listed fields are administrative and financial management, financial and accounting management, finance or accounting; human resources; strategic marketing; communications; international law or international relations; and data engineering, Big Data, data science or decision-support systems. Check the exact name printed on your qualification, not just the general subject you studied. A master's degree in accounting can be compared with the explicitly named accounting field, whereas a general business degree should not automatically be treated as a strategic-marketing qualification. Course content may help you understand your background, but only the recruiting authority can determine eligibility where the diploma title or equivalence is unclear."
+            ],
+            [
+              "Nationality, age and higher-education eligibility",
+              "The original notice requires Moroccan nationality and an age between 18 and 45 inclusive as of 1 January of the current year. It lists a master's degree, specialized master's, advanced or specialized postgraduate diploma, or a legally equivalent qualification in an advertised specialty. This is more precise than the shorthand 'any five-year degree': a qualification must meet both the specified level and subject. Graduates of foreign institutions and relevant private institutions should examine the equivalence or recognition documents that the announcement calls for. Do not assume that a translated diploma alone is a legal equivalence decision. Verify your date of birth against the official reference date before spending time preparing the application."
+            ],
+            [
+              "Application window and the only announced submission channel",
+              "The ministerial notice opens online registration on Wednesday 14 October 2026 and closes it on Friday 30 October 2026 at 16:30 Morocco time. Applications must be filed through the ministry's dedicated concours.agriculture.gov.ma platform, not through a message to an unofficial intermediary. Select the correct competition, enter identity and specialty information, upload the PDF attachments and check the final confirmation. The notice warns that completed online registration is final and cannot be edited. Prepare files before the last day: a slow upload, an unreadable scan or a mismatch between identity and diploma can cost the application. A generic contact form on emploi-public is not the application form."
+            ],
+            [
+              "PDF documents and conditional supporting evidence",
+              "The application includes a CV with photograph, telephone number, address and email; both sides of a valid Moroccan electronic identity card; and the qualifying diploma. Depending on the applicant's situation, the signed notice also requests a legal equivalence or recognition document, proof of disability, final authorization from the employing administration for current public employees, or documents confirming qualifying protected status. These are conditional attachments, not universal requirements for every candidate. Check the legibility of stamps, dates and names; use PDFs as instructed and keep a private copy of the submitted package. A file missing a mandatory attachment may be rejected even if the applicant otherwise satisfies the academic criteria."
+            ],
+            [
+              "Written and oral examinations: what the notice actually says",
+              "The written test lasts four hours and has coefficient 4. It concerns the recruiting administration's fields, public management, the advertised specialties or duties associated with the grade. The oral stage lasts 15 to 30 minutes with coefficient 3, and the panel discusses subjects or situations to assess readiness for the duties. The notice does not publish a list of exact questions or guarantee a particular exam format beyond these descriptions. A practical preparation exercise is to explain a realistic problem from your specialty: how to reconcile a payment, document a personnel decision or check the quality of a dataset. State assumptions and controls rather than memorizing unverifiable 'leaked' answers."
+            ],
+            [
+              "Reserved categories and how invitations are announced",
+              "The notice reserves 25% of positions for the specified categories of veterans, resistance members and wards of the nation, and 7% for applicants with disabilities, subject to the relevant rules and evidence. Those percentages do not create an automatic appointment and do not identify how many positions each specialty receives. Invitations to the written and oral stages are sent by email, and official lists of invited and successful candidates are published on the ministry website and emploi-public. The published lists also function as summons. Check the email address supplied in your application and monitor official notices, rather than paying anyone who claims to secure a place on a list."
+            ],
+            [
+              "Salary, final workplace and a responsible decision",
+              "Scale 11 is specified, but neither the original two-page notice nor the public listing provides an individual net salary, allowances, confirmed work city or geographic allocation of the 38 positions. It would be misleading to convert the grade into a promised take-home amount or to call Rabat and Meknes confirmed job locations. The notice indicates that successful candidates may be assigned to central or decentralized agriculture services according to administrative needs. If you are currently employed, do not resign simply because you submitted a form or were invited to sit a test. Wait for official results and an individual appointment decision, and verify the applicable pay rules separately."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours Agriculture Maroc 2026 : 38 administrateurs de 2e grade, diplômes, pièces et épreuves",
+          "deck": "Analyse de l'avis ministériel signé de deux pages : spécialités de master, âge, dépôt PDF avant le 30 octobre à 16 h 30, concours du 6 décembre et informations non publiées.",
+          "sections": [
+            [
+              "Trente-huit postes : ce que confirme l'avis officiel",
+              "Le ministère de l'Agriculture, de la Pêche maritime et de la Souveraineté alimentaire, département de l'Agriculture, ouvre un concours pour recruter 38 administrateurs de deuxième grade, échelle 11. L'annonce figure sur le portail public sous la référence C44077/26. L'épreuve est annoncée pour le 6 décembre 2026, à Rabat, Meknès et éventuellement dans d'autres centres. Il faut distinguer le lieu du concours du futur lieu d'affectation : aucun des deux documents consultés ne répartit les postes par ville ou par spécialité. Une estimation du nombre de places réservées à la finance ou aux données ne serait donc pas une information officielle."
+            ],
+            [
+              "Les spécialités et la vérification de l'intitulé du diplôme",
+              "Les domaines mentionnés sont la gestion administrative et financière, la gestion financière et comptable, la finance ou la comptabilité ; les ressources humaines ; le marketing stratégique ; la communication ; le droit international ou les relations internationales ; et l'ingénierie des données, le Big Data, les sciences des données ou les systèmes décisionnels. Comparez l'intitulé exact de votre diplôme avec cette liste avant de sélectionner une spécialité. Un master en comptabilité correspond à une appellation citée, tandis qu'un diplôme généraliste de commerce ne garantit pas à lui seul l'admissibilité au marketing stratégique. En cas de doute sur une équivalence, demandez confirmation à l'administration."
+            ],
+            [
+              "Nationalité, âge et niveau de formation exigés",
+              "Le texte signé réserve le concours aux candidats de nationalité marocaine âgés de 18 à 45 ans au plus au 1er janvier de l'année en cours. Il demande un master, master spécialisé, diplôme d'études supérieures spécialisées ou approfondies, ou un diplôme reconnu équivalent conformément aux règles en vigueur, dans l'une des spécialités annoncées. L'expression simplifiée « Bac+5 » ne suffit donc pas pour apprécier l'éligibilité : la nature et la spécialité du titre comptent également. Pour une formation suivie à l'étranger ou dans un établissement privé concerné par les règles de reconnaissance, examinez les pièces d'équivalence demandées avant de déposer votre dossier."
+            ],
+            [
+              "Inscription : dates, site officiel et confirmation finale",
+              "Selon l'avis, les inscriptions s'effectuent du mercredi 14 octobre au vendredi 30 octobre 2026 à 16 h 30, heure marocaine, exclusivement sur concours.agriculture.gov.ma. Le formulaire de contact du portail emploi-public n'est pas un moyen de candidature. Sélectionnez le bon concours, remplissez les champs d'identité et de spécialité, puis joignez les PDF requis. Relisez attentivement chaque donnée avant de valider : l'avis indique que l'inscription électronique définitive n'est pas modifiable. Il est prudent de conserver la preuve de dépôt et de ne pas attendre la dernière heure, notamment si une numérisation est illisible ou si le portail refuse un fichier."
+            ],
+            [
+              "Pièces PDF : tronc commun et justificatifs particuliers",
+              "Le dossier comporte un CV avec photo, téléphone, adresse et courriel ; une copie recto verso de la carte nationale électronique d'identité en cours de validité ; et le diplôme correspondant à la spécialité. D'autres justificatifs sont requis selon les situations : document d'équivalence, preuve du handicap, autorisation administrative définitive pour les fonctionnaires, ou attestation de la qualité ouvrant droit aux catégories protégées indiquées par le texte. Ces pièces particulières ne doivent pas être présentées comme obligatoires pour tous. Contrôlez la lisibilité des noms, dates et cachets, la cohérence du dossier et le format PDF. Une candidature incomplète ou transmise hors plateforme risque d'être écartée."
+            ],
+            [
+              "Écrit et oral : durées, coefficients et préparation",
+              "L'épreuve écrite dure quatre heures et porte le coefficient 4. Elle peut traiter des domaines d'intervention du département, de la gestion publique, des spécialités recherchées ou des tâches du grade. L'entretien oral, de 15 à 30 minutes, est affecté du coefficient 3 ; le jury y examine des sujets ou des situations permettant d'apprécier les aptitudes du candidat. Le document ne donne ni banque officielle de questions ni programme détaillé par spécialité. Pour préparer une réponse solide, entraînez-vous à expliquer une démarche contrôlable : rapprochement comptable, décision RH, analyse de données ou note de synthèse, avec hypothèses, vérifications et limites."
+            ],
+            [
+              "Quotas réglementaires, convocations et résultats",
+              "Le texte mentionne une réserve de 25 % pour certaines catégories de résistants, pupilles de la nation et anciens militaires ou combattants, et de 7 % pour les personnes en situation de handicap, dans les conditions applicables. Il ne faut pas interpréter ces pourcentages comme une admission automatique ou comme une ventilation des 38 postes par filière. Les candidats convoqués aux épreuves écrites et orales sont informés par courriel. Les listes officielles des convocations et des résultats sont publiées sur le site du ministère et sur emploi-public ; elles valent convocation. Surveillez ces canaux, sans faire confiance à un intermédiaire qui promet un classement favorable."
+            ],
+            [
+              "Rémunération et affectation : les informations absentes",
+              "Le grade et l'échelle 11 figurent dans l'annonce, mais aucun salaire net individuel, montant de prime, lieu d'affectation définitif ou tableau de répartition géographique n'y est publié. Il serait incorrect d'annoncer un revenu garanti à partir de l'échelle seule. Le texte prévoit des affectations selon les besoins de l'administration centrale et des services déconcentrés. Les villes d'examen ne doivent pas être confondues avec les villes d'emploi. Avant de quitter un poste actuel ou de prendre un engagement financier, attendez les résultats officiels et la décision individuelle de nomination ; vérifiez séparément les règles de rémunération applicables."
+            ]
+          ]
+        }
+      }
     }
   }
 }
