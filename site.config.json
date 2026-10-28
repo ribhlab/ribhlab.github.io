@@ -3,9 +3,10 @@
   "domain": "https://ribhlab.github.io",
   "contactEmail": "",
   "publisherName": "RibhLab Editorial Team",
-  "adsensePublisherId": "",
+  "adsensePublisherId": "ca-pub-7832982742727178",
   "social": {
     "youtube": "",
     "linkedin": ""
-  }
+  },
+  "enableAdsense": false
 }
