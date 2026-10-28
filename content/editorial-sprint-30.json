@@ -132,10 +132,11 @@
         "chatgpt",
         "googleSearch"
       ],
-      "status": "queued",
-      "articleUrl": null,
-      "queuePath": "content/reviewed-queue/ai-writing-assistant-style-guide-versioning.json",
-      "editorialReviewDate": "2026-10-28"
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/ai-writing-assistant-style-guide-versioning/",
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-28",
+      "verification": "GitHub Actions build/deploy success 40695649217/40695649288; live HTTP 200 and six sections, sources and photo in AR/EN/FR verified in public-sitemap-check run 40695736982"
     },
     {
       "sectionId": "ai-automation",
