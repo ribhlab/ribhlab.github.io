@@ -1,0 +1,1145 @@
+{
+  "batch": "meals-04",
+  "recipes": [
+    {
+      "slug": "ethiopian-lentil-stew",
+      "title": {
+        "ar": "يخنة عدس إثيوبية بالطماطم",
+        "en": "Ethiopian-inspired spiced lentil stew",
+        "fr": "Ragoût de lentilles inspiré d’Éthiopie"
+      },
+      "cuisine": "african",
+      "method": "stew",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "redlentils",
+          "amount": "300g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomato",
+          "amount": "380g"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        },
+        {
+          "id": "paprika",
+          "amount": "2tsp"
+        },
+        {
+          "id": "stock",
+          "amount": "850ml"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        }
+      ],
+      "tip": {
+        "ar": "اطه العدس حتى يصبح ناعماً واستخدم البابريكا والزنجبيل لدفء النكهة دون ادعاء وصفة تقليدية حرفية.",
+        "en": "Cook lentils until soft, building warm flavor with paprika and ginger; this is a home adaptation.",
+        "fr": "Cuisez les lentilles jusqu’à tendreté et parfumez au paprika et au gingembre : version adaptée."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "west-african-peanut-stew",
+      "title": {
+        "ar": "يخنة إفريقية بزبدة الفول السوداني",
+        "en": "West African-inspired peanut stew",
+        "fr": "Ragoût africain à la cacahuète"
+      },
+      "cuisine": "african",
+      "method": "stew",
+      "minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "sweetpotato",
+          "amount": "450g"
+        },
+        {
+          "id": "peanutbutter",
+          "amount": "110g"
+        },
+        {
+          "id": "tomato",
+          "amount": "380g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "spinach",
+          "amount": "200g"
+        },
+        {
+          "id": "stock",
+          "amount": "850ml"
+        },
+        {
+          "id": "ginger",
+          "amount": "15g"
+        }
+      ],
+      "tip": {
+        "ar": "خفّف زبدة الفول السوداني بمرق ساخن قبل إضافتها حتى لا تتكتل واذكر حساسية الفول السوداني.",
+        "en": "Loosen peanut butter with hot broth before adding to prevent lumps; flag the peanut allergen.",
+        "fr": "Délayez le beurre de cacahuète avec du bouillon chaud pour éviter les grumeaux; attention à l’allergène."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "senegalese-fish-rice",
+      "title": {
+        "ar": "أرز سنغالي بالسمك والخضر",
+        "en": "Senegalese-inspired fish and vegetable rice",
+        "fr": "Riz au poisson et légumes inspiré du Sénégal"
+      },
+      "cuisine": "african",
+      "method": "rice",
+      "minutes": 70,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "380g"
+        },
+        {
+          "id": "fish",
+          "amount": "600g"
+        },
+        {
+          "id": "tomato",
+          "amount": "350g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "cabbage",
+          "amount": "200g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "stock",
+          "amount": "950ml"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        }
+      ],
+      "tip": {
+        "ar": "اسلق الخضر في المرق المتبل وأخرج السمك عند نضجه ثم اطه الأرز في السائل الباقي.",
+        "en": "Simmer vegetables in the seasoned stock, remove fish when done and cook rice in the remaining liquid.",
+        "fr": "Mijotez les légumes dans le bouillon, retirez le poisson cuit puis faites cuire le riz dans le liquide."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "nigerian-jollof-style-rice",
+      "title": {
+        "ar": "أرز جولوف بالطماطم والفلفل",
+        "en": "Jollof-style tomato pepper rice",
+        "fr": "Riz façon jollof tomate et poivron"
+      },
+      "cuisine": "african",
+      "method": "rice",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "400g"
+        },
+        {
+          "id": "tomato",
+          "amount": "500g"
+        },
+        {
+          "id": "pepper",
+          "amount": "2pcs"
+        },
+        {
+          "id": "onion",
+          "amount": "2pcs"
+        },
+        {
+          "id": "tomatopaste",
+          "amount": "40g"
+        },
+        {
+          "id": "stock",
+          "amount": "650ml"
+        },
+        {
+          "id": "oil",
+          "amount": "30ml"
+        },
+        {
+          "id": "thyme",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "اطه خليط الطماطم والفلفل حتى يفقد طعمه النيئ قبل إضافة الأرز والمرق.",
+        "en": "Cook down blended tomato and pepper until the raw flavor fades before adding rice.",
+        "fr": "Faites réduire la purée de tomate et poivron avant d’ajouter le riz et le bouillon."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "north-african-chickpea-soup",
+      "title": {
+        "ar": "شوربة حمص شمال إفريقية بالخضر",
+        "en": "North African chickpea vegetable soup",
+        "fr": "Soupe nord-africaine aux pois chiches et légumes"
+      },
+      "cuisine": "african",
+      "method": "soup",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickpeas",
+          "amount": "500g"
+        },
+        {
+          "id": "tomato",
+          "amount": "300g"
+        },
+        {
+          "id": "carrot",
+          "amount": "2pcs"
+        },
+        {
+          "id": "zucchini",
+          "amount": "1pc"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "stock",
+          "amount": "1l"
+        }
+      ],
+      "tip": {
+        "ar": "اترك بعض الحمص كاملاً واهرِس جزءاً آخر إذا رغبت في حساء أكثر تماسكاً.",
+        "en": "Leave some chickpeas whole and mash a few for a heartier broth.",
+        "fr": "Gardez une partie des pois chiches entiers et écrasez-en quelques-uns pour épaissir."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "mexican-bean-tacos",
+      "title": {
+        "ar": "تاكوس مكسيكي بالفاصولياء",
+        "en": "Mexican-style black bean tacos",
+        "fr": "Tacos aux haricots noirs façon mexicaine"
+      },
+      "cuisine": "american",
+      "method": "sandwich",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tortilla",
+          "amount": "8pcs"
+        },
+        {
+          "id": "blackbeans",
+          "amount": "450g"
+        },
+        {
+          "id": "tomato",
+          "amount": "240g"
+        },
+        {
+          "id": "avocado",
+          "amount": "1pc"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "lime",
+          "amount": "1pc"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "سخّن التورتيلا قبل الحشو وقدّم الأفوكادو والليمون في النهاية.",
+        "en": "Warm tortillas before filling, then top with avocado and lime at serving.",
+        "fr": "Chauffez les tortillas avant de garnir, puis ajoutez avocat et citron vert au service."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chicken-fajita-wraps",
+      "title": {
+        "ar": "تورتيلا فاهيتا الدجاج",
+        "en": "Chicken pepper fajita wraps",
+        "fr": "Wraps de fajitas au poulet et poivrons"
+      },
+      "cuisine": "american",
+      "method": "skillet",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "tortilla",
+          "amount": "8pcs"
+        },
+        {
+          "id": "pepper",
+          "amount": "3pcs"
+        },
+        {
+          "id": "onion",
+          "amount": "2pcs"
+        },
+        {
+          "id": "lime",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "قطّع الدجاج والخضر شرائح متقاربة ثم اطه الدجاج جيداً قبل جمع الحشوة في الخبز.",
+        "en": "Cut chicken and peppers into even strips and cook poultry fully before filling tortillas.",
+        "fr": "Coupez poulet et poivrons en lanières régulières et cuisez entièrement le poulet avant de garnir."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "beef-chili-beans",
+      "title": {
+        "ar": "تشيلي اللحم والفاصولياء",
+        "en": "Beef and red bean chili",
+        "fr": "Chili de bœuf aux haricots rouges"
+      },
+      "cuisine": "american",
+      "method": "stew",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "groundbeef",
+          "amount": "550g"
+        },
+        {
+          "id": "kidneybeans",
+          "amount": "450g"
+        },
+        {
+          "id": "tomato",
+          "amount": "500g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "cumin",
+          "amount": "1tsp"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "حمّر اللحم المفروم حتى تمام النضج ثم أضف الفاصولياء المطبوخة وصلصة الطماطم.",
+        "en": "Brown ground beef thoroughly before adding cooked beans and tomato sauce.",
+        "fr": "Faites bien cuire le bœuf haché avant d’incorporer les haricots cuits et la tomate."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "sweetcorn-quesadillas",
+      "title": {
+        "ar": "كيساديلا الذرة والجبن",
+        "en": "Corn and cheese quesadillas",
+        "fr": "Quesadillas maïs et fromage"
+      },
+      "cuisine": "american",
+      "method": "skillet",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "tortilla",
+          "amount": "8pcs"
+        },
+        {
+          "id": "corn",
+          "amount": "220g"
+        },
+        {
+          "id": "cheese",
+          "amount": "260g"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "tomato",
+          "amount": "150g"
+        }
+      ],
+      "tip": {
+        "ar": "وزّع الحشوة في نصف التورتيلا واطوها ثم حمّر الجهتين حتى يذوب الجبن.",
+        "en": "Fill one half of each tortilla, fold and toast both sides until the cheese melts.",
+        "fr": "Garnissez une moitié de tortilla, repliez puis faites dorer les deux faces jusqu’à fonte du fromage."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "peruvian-chicken-rice",
+      "title": {
+        "ar": "أرز بالدجاج والكزبرة على الطريقة البيروفية",
+        "en": "Peruvian-inspired cilantro chicken rice",
+        "fr": "Riz au poulet et coriandre façon péruvienne"
+      },
+      "cuisine": "american",
+      "method": "rice",
+      "minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chicken",
+          "amount": "650g"
+        },
+        {
+          "id": "rice",
+          "amount": "350g"
+        },
+        {
+          "id": "coriander",
+          "amount": "50g"
+        },
+        {
+          "id": "peas",
+          "amount": "200g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "stock",
+          "amount": "700ml"
+        }
+      ],
+      "tip": {
+        "ar": "امزج الكزبرة بقليل من المرق وأضفها للأرز مع الدجاج المطهو جيداً.",
+        "en": "Blend cilantro with some broth before adding to rice and thoroughly cooked chicken.",
+        "fr": "Mixez la coriandre avec un peu de bouillon puis ajoutez-la au riz avec le poulet bien cuit."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "brazilian-black-bean-stew",
+      "title": {
+        "ar": "يخنة فاصولياء سوداء برازيلية نباتية",
+        "en": "Brazilian-style vegetarian black bean stew",
+        "fr": "Ragoût végétarien de haricots noirs façon brésilienne"
+      },
+      "cuisine": "american",
+      "method": "stew",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "blackbeans",
+          "amount": "600g"
+        },
+        {
+          "id": "onion",
+          "amount": "1pc"
+        },
+        {
+          "id": "garlic",
+          "amount": "3cloves"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "pepper",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "25ml"
+        },
+        {
+          "id": "rice",
+          "amount": "300g"
+        }
+      ],
+      "tip": {
+        "ar": "اهرِس بعض الفاصولياء داخل القدر وقدّمها مع أرز مسلوق بشكل منفصل.",
+        "en": "Mash some beans in the pot for a thicker sauce and serve with separately cooked rice.",
+        "fr": "Écrasez une partie des haricots pour épaissir puis servez avec du riz cuit à part."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "baked-salmon-sweet-potato",
+      "title": {
+        "ar": "سلمون مشوي بالبطاطا الحلوة",
+        "en": "Baked salmon with sweet potato",
+        "fr": "Saumon au four et patate douce"
+      },
+      "cuisine": "american",
+      "method": "roast",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "salmon",
+          "amount": "650g"
+        },
+        {
+          "id": "sweetpotato",
+          "amount": "550g"
+        },
+        {
+          "id": "broccoli",
+          "amount": "350g"
+        },
+        {
+          "id": "lemon",
+          "amount": "1pc"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "30ml"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        }
+      ],
+      "tip": {
+        "ar": "ابدأ البطاطا الحلوة قبل السلمون لأن زمن التسوية مختلف، وقِس حرارة السمك الداخلية.",
+        "en": "Start sweet potatoes before adding salmon because cooking times differ; check fish temperature.",
+        "fr": "Commencez la patate douce avant le saumon et vérifiez la température du poisson."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "bbq-chicken-oven",
+      "title": {
+        "ar": "دجاج بالفرن بصلصة طماطم مدخنة",
+        "en": "Oven BBQ-style chicken",
+        "fr": "Poulet au four façon barbecue"
+      },
+      "cuisine": "american",
+      "method": "roast",
+      "minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chickenthighs",
+          "amount": "800g"
+        },
+        {
+          "id": "tomatosauce",
+          "amount": "200g"
+        },
+        {
+          "id": "honey",
+          "amount": "25g"
+        },
+        {
+          "id": "vinegar",
+          "amount": "25ml"
+        },
+        {
+          "id": "paprika",
+          "amount": "1tsp"
+        },
+        {
+          "id": "garlic",
+          "amount": "2cloves"
+        }
+      ],
+      "tip": {
+        "ar": "ادهن صلصة الطماطم والعسل في الجزء الأخير حتى لا تحترق السكريات قبل نضج الدجاج.",
+        "en": "Brush the sweet tomato glaze near the end to avoid burning sugars before chicken cooks.",
+        "fr": "Badigeonnez la sauce tomate miellée en fin de cuisson pour éviter de brûler les sucres."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "vegetable-burrito-bowl",
+      "title": {
+        "ar": "طبق بوريتو بالأرز والخضر",
+        "en": "Vegetable burrito rice bowl",
+        "fr": "Bol burrito végétarien au riz"
+      },
+      "cuisine": "american",
+      "method": "rice",
+      "minutes": 35,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "320g"
+        },
+        {
+          "id": "blackbeans",
+          "amount": "400g"
+        },
+        {
+          "id": "corn",
+          "amount": "200g"
+        },
+        {
+          "id": "tomato",
+          "amount": "250g"
+        },
+        {
+          "id": "avocado",
+          "amount": "1pc"
+        },
+        {
+          "id": "lettuce",
+          "amount": "150g"
+        },
+        {
+          "id": "lime",
+          "amount": "1pc"
+        }
+      ],
+      "tip": {
+        "ar": "رتب الأرز الساخن والفاصولياء مع خضر طازجة مغسولة وقدّم الليمون منفصلاً.",
+        "en": "Arrange hot rice and beans with washed fresh vegetables and offer lime separately.",
+        "fr": "Disposez riz chaud et haricots avec des crudités lavées et servez le citron vert à part."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "american-macaroni-cheese",
+      "title": {
+        "ar": "معكرونة بالجبن في الفرن",
+        "en": "Baked macaroni and cheese",
+        "fr": "Gratin de macaroni au fromage"
+      },
+      "cuisine": "american",
+      "method": "bake",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "pasta",
+          "amount": "350g"
+        },
+        {
+          "id": "milk",
+          "amount": "500ml"
+        },
+        {
+          "id": "cheese",
+          "amount": "300g"
+        },
+        {
+          "id": "butter",
+          "amount": "40g"
+        },
+        {
+          "id": "flour",
+          "amount": "35g"
+        },
+        {
+          "id": "breadcrumbs",
+          "amount": "70g"
+        }
+      ],
+      "tip": {
+        "ar": "حضّر صلصة من الزبدة والدقيق والحليب ثم أضف الجبن قبل خبز المعكرونة.",
+        "en": "Make a butter-flour-milk sauce, melt in cheese and bake over cooked pasta.",
+        "fr": "Préparez une sauce beurre-farine-lait, incorporez le fromage puis gratinez les pâtes cuites."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "overnight-oats-apple",
+      "title": {
+        "ar": "شوفان بالتفاح والقرفة",
+        "en": "Apple cinnamon overnight oats",
+        "fr": "Flocons d’avoine pomme cannelle sans cuisson"
+      },
+      "cuisine": "breakfast",
+      "method": "cold",
+      "minutes": 10,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "oats",
+          "amount": "240g"
+        },
+        {
+          "id": "milk",
+          "amount": "450ml"
+        },
+        {
+          "id": "apple",
+          "amount": "2pcs"
+        },
+        {
+          "id": "yogurt",
+          "amount": "180g"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "1tsp"
+        },
+        {
+          "id": "walnuts",
+          "amount": "50g"
+        }
+      ],
+      "tip": {
+        "ar": "برد الشوفان في الثلاجة طوال الليل ثم أضف التفاح المقطع والجوز عند التقديم.",
+        "en": "Refrigerate the oats overnight, then add diced apple and walnuts before eating.",
+        "fr": "Laissez les flocons au réfrigérateur une nuit puis ajoutez pomme et noix au service."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "banana-oat-pancakes",
+      "title": {
+        "ar": "بان كيك الموز والشوفان",
+        "en": "Banana oat pancakes",
+        "fr": "Pancakes banane et avoine"
+      },
+      "cuisine": "breakfast",
+      "method": "pancake",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "banana",
+          "amount": "2pcs"
+        },
+        {
+          "id": "oats",
+          "amount": "180g"
+        },
+        {
+          "id": "eggs",
+          "amount": "2pcs"
+        },
+        {
+          "id": "milk",
+          "amount": "100ml"
+        },
+        {
+          "id": "bakingpowder",
+          "amount": "7g"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "0.5tsp"
+        }
+      ],
+      "tip": {
+        "ar": "اهرِس الموز وامزجه بالشوفان المطحون ثم اطه أقراصاً صغيرة حتى يثبت وسطها.",
+        "en": "Mash bananas with ground oats and cook small pancakes until the centres set.",
+        "fr": "Écrasez les bananes avec l’avoine mixée et cuisez de petites crêpes épaisses bien prises."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "french-toast-cinnamon",
+      "title": {
+        "ar": "خبز فرنسي محمص بالقرفة",
+        "en": "Cinnamon French toast",
+        "fr": "Pain perdu à la cannelle"
+      },
+      "cuisine": "breakfast",
+      "method": "skillet",
+      "minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "bread",
+          "amount": "8slices"
+        },
+        {
+          "id": "eggs",
+          "amount": "3pcs"
+        },
+        {
+          "id": "milk",
+          "amount": "220ml"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "1tsp"
+        },
+        {
+          "id": "butter",
+          "amount": "30g"
+        },
+        {
+          "id": "berries",
+          "amount": "150g"
+        }
+      ],
+      "tip": {
+        "ar": "اغمس الخبز سريعاً في خليط البيض والحليب ثم اطهه حتى ينضج البيض داخله.",
+        "en": "Dip bread briefly in the egg-milk mixture and cook until the egg custard is fully set.",
+        "fr": "Trempez brièvement le pain dans œufs et lait puis cuisez jusqu’à prise complète."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "tomato-cheese-omelet",
+      "title": {
+        "ar": "عجة الطماطم والجبن",
+        "en": "Tomato and cheese omelet",
+        "fr": "Omelette tomates et fromage"
+      },
+      "cuisine": "breakfast",
+      "method": "omelet",
+      "minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "eggs",
+          "amount": "5pcs"
+        },
+        {
+          "id": "tomato",
+          "amount": "200g"
+        },
+        {
+          "id": "cheese",
+          "amount": "90g"
+        },
+        {
+          "id": "parsley",
+          "amount": "15g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "15ml"
+        }
+      ],
+      "tip": {
+        "ar": "جفف الطماطم في المقلاة أولاً حتى لا تصبح العجة مائية، ثم أضف البيض.",
+        "en": "Cook excess moisture from the tomato before adding eggs to keep the omelet tender.",
+        "fr": "Faites évaporer l’eau des tomates avant de verser les œufs."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "rice-pudding-cinnamon",
+      "title": {
+        "ar": "أرز بالحليب والقرفة",
+        "en": "Cinnamon rice pudding",
+        "fr": "Riz au lait à la cannelle"
+      },
+      "cuisine": "dessert",
+      "method": "dessert",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "rice",
+          "amount": "170g"
+        },
+        {
+          "id": "milk",
+          "amount": "900ml"
+        },
+        {
+          "id": "sugar",
+          "amount": "65g"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "1tsp"
+        },
+        {
+          "id": "vanilla",
+          "amount": "1tsp"
+        }
+      ],
+      "tip": {
+        "ar": "حرّك الأرز بالحليب على نار هادئة بانتظام حتى يتكثف من دون أن يلتصق.",
+        "en": "Stir the milk and rice often over low heat until creamy without sticking.",
+        "fr": "Remuez régulièrement riz et lait à feu doux jusqu’à consistance crémeuse."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "baked-apple-walnuts",
+      "title": {
+        "ar": "تفاح مخبوز بالجوز والقرفة",
+        "en": "Baked apples with walnuts",
+        "fr": "Pommes au four aux noix et cannelle"
+      },
+      "cuisine": "dessert",
+      "method": "bake",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "apple",
+          "amount": "4pcs"
+        },
+        {
+          "id": "walnuts",
+          "amount": "100g"
+        },
+        {
+          "id": "honey",
+          "amount": "40g"
+        },
+        {
+          "id": "cinnamon",
+          "amount": "1tsp"
+        },
+        {
+          "id": "butter",
+          "amount": "20g"
+        }
+      ],
+      "tip": {
+        "ar": "أزل قلب كل تفاحة دون قطع قاعدتها واحشها بالجوز قبل الخبز حتى تلين.",
+        "en": "Core apples without cutting through the bottom, fill with walnuts and bake until tender.",
+        "fr": "Évidez les pommes sans percer la base, garnissez de noix et enfournez jusqu’à tendreté."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "chocolate-brownie",
+      "title": {
+        "ar": "براونيز شوكولاتة منزلية",
+        "en": "Home-style chocolate brownies",
+        "fr": "Brownies maison au chocolat"
+      },
+      "cuisine": "dessert",
+      "method": "bake",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "chocolate",
+          "amount": "220g"
+        },
+        {
+          "id": "butter",
+          "amount": "130g"
+        },
+        {
+          "id": "eggs",
+          "amount": "3pcs"
+        },
+        {
+          "id": "flour",
+          "amount": "120g"
+        },
+        {
+          "id": "sugar",
+          "amount": "140g"
+        },
+        {
+          "id": "cocoa",
+          "amount": "25g"
+        }
+      ],
+      "tip": {
+        "ar": "اذب الشوكولاتة بلطف واخلط العجين دون إفراط ثم اخبزه حتى يتماسك الوسط.",
+        "en": "Melt chocolate gently, mix only until combined and bake until the centre is set.",
+        "fr": "Faites fondre le chocolat doucement, mélangez sans excès et cuisez jusqu’à prise du centre."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "lemon-yogurt-cake",
+      "title": {
+        "ar": "كيك الليمون والزبادي",
+        "en": "Lemon yogurt cake",
+        "fr": "Gâteau citron au yaourt"
+      },
+      "cuisine": "dessert",
+      "method": "bake",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "flour",
+          "amount": "250g"
+        },
+        {
+          "id": "yogurt",
+          "amount": "220g"
+        },
+        {
+          "id": "eggs",
+          "amount": "3pcs"
+        },
+        {
+          "id": "sugar",
+          "amount": "110g"
+        },
+        {
+          "id": "oliveoil",
+          "amount": "100ml"
+        },
+        {
+          "id": "lemon",
+          "amount": "2pcs"
+        },
+        {
+          "id": "bakingpowder",
+          "amount": "12g"
+        }
+      ],
+      "tip": {
+        "ar": "أضف بشر الليمون للعجين وافحص النضج بعود نظيف في وسط الكيك.",
+        "en": "Add lemon zest to the batter and test the cake centre with a clean skewer.",
+        "fr": "Ajoutez le zeste de citron à la pâte et vérifiez le centre avec une pique propre."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "semolina-orange-cake",
+      "title": {
+        "ar": "بسبوسة بالبرتقال والسميد",
+        "en": "Orange semolina cake",
+        "fr": "Gâteau de semoule à l’orange"
+      },
+      "cuisine": "dessert",
+      "method": "bake",
+      "minutes": 55,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "semolina",
+          "amount": "300g"
+        },
+        {
+          "id": "yogurt",
+          "amount": "250g"
+        },
+        {
+          "id": "orange",
+          "amount": "2pcs"
+        },
+        {
+          "id": "sugar",
+          "amount": "110g"
+        },
+        {
+          "id": "butter",
+          "amount": "80g"
+        },
+        {
+          "id": "bakingpowder",
+          "amount": "12g"
+        }
+      ],
+      "tip": {
+        "ar": "اسكب عصير البرتقال على سطح الكيك الدافئ تدريجياً بعد الخبز ليتشرب دون أن يتفتت.",
+        "en": "Drizzle orange juice gradually over the warm baked cake without soaking it to collapse.",
+        "fr": "Versez progressivement le jus d’orange sur le gâteau tiède pour l’imbiber sans le défaire."
+      },
+      "kind": "meal"
+    },
+    {
+      "slug": "fruit-yogurt-parfait",
+      "title": {
+        "ar": "كؤوس زبادي بالفواكه والشوفان",
+        "en": "Fruit and yogurt parfait cups",
+        "fr": "Verrines de yaourt aux fruits et avoine"
+      },
+      "cuisine": "dessert",
+      "method": "cold",
+      "minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "id": "greekyogurt",
+          "amount": "500g"
+        },
+        {
+          "id": "berries",
+          "amount": "200g"
+        },
+        {
+          "id": "banana",
+          "amount": "2pcs"
+        },
+        {
+          "id": "oats",
+          "amount": "120g"
+        },
+        {
+          "id": "almonds",
+          "amount": "60g"
+        }
+      ],
+      "tip": {
+        "ar": "كوّن طبقات من الزبادي والفواكه والشوفان وأضف المكسرات قرب التقديم لتبقى مقرمشة.",
+        "en": "Layer yogurt, fruit and oats, adding nuts just before serving to keep them crisp.",
+        "fr": "Superposez yaourt, fruits et avoine, puis ajoutez les noix au moment de servir."
+      },
+      "kind": "meal"
+    }
+  ]
+}
