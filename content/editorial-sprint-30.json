@@ -32,10 +32,12 @@
         "fiverrHelp",
         "fiverr"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/earning/gig-description-client-questions-scope/",
       "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/gig-description-client-questions-scope.json"
+      "queuePath": "content/reviewed-queue/gig-description-client-questions-scope.json",
+      "publishedVerifiedAt": "2026-10-28",
+      "verification": "content/articles present; GitHub Actions build/deploy 40750290991/40750291005 success; public-sitemap-check 40750409434 verified live HTTP 200, >=4 editorial sections, sources and licensed photo in AR/EN/FR."
     },
     {
       "sectionId": "freelance",
@@ -341,10 +343,12 @@
         "ethereum",
         "bitcoin"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/ethereum-smart-contracts-wallet-permissions/",
       "queuePath": "content/reviewed-queue/ethereum-smart-contracts-wallet-permissions.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-28",
+      "verification": "content/articles present; GitHub Actions build/deploy 40750290991/40750291005 success; public-sitemap-check 40750409434 verified live HTTP 200, >=4 editorial sections, sources and licensed photo in AR/EN/FR."
     },
     {
       "sectionId": "crypto-web3",
