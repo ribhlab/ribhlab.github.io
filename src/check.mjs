@@ -43,7 +43,7 @@ const bareHome=fs.readFileSync(path.join(dist,'index.html'),'utf8');
 if(!bareHome.includes('href="/ar/"')&&!bareHome.includes('url=/ar/'))errors.push('Bare homepage: Arabic entry missing');
 const gscToken=(process.env.GOOGLE_SITE_VERIFICATION||'').trim();
 if(gscToken&&!bareHome.includes('name="google-site-verification" content="'+gscToken+'"'))errors.push('Search Console: bare homepage lacks verification meta');
-const pubId=(process.env.ADSENSE_PUBLISHER_ID||'').trim();
+const pubId=(process.env.ADSENSE_PUBLISHER_ID||JSON.parse(fs.readFileSync(path.join(root,'site.config.json'),'utf8')).adsensePublisherId||'').trim();
 if(pubId&&!bareHome.includes('name="google-adsense-account" content="'+pubId+'"'))errors.push('AdSense: bare homepage lacks ownership meta');
 const adsOutput=path.join(dist,'ads.txt');
 const expectedAdsLine=pubId?'google.com, pub-'+pubId.slice(7)+', DIRECT, f08c47fec0942fa0':'';
