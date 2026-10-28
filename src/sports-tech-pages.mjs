@@ -17,7 +17,7 @@ const nav=(l,active,esc)=>{
  const t=langs[l],items=[['sports/',t.sports],['sports/fixtures/',t.fixtures],['sports/results/',t.results],['sports/transfers/',t.transfers],['sports/analysis/',t.analysis],['sports/videos/',t.videos],['technology/',t.technology],['technology/phones/',t.phones],['technology/comparisons/',t.comparisons],['technology/apps/',t.apps]];
  return '<nav class="media-tabnav" aria-label="'+esc(t.sports+' / '+t.technology)+'">'+items.map(([url,name])=>'<a href="/'+l+'/'+url+'" '+(active===url?'aria-current="page"':'')+'>'+esc(name)+'</a>').join('')+'</nav>';
 };
-const main=(v,cls='')=>'<main class="media-content shell '+cls+'">'+v+'</main>';
+const main=(v,cls='')=>'<div class="media-content shell '+cls+'">'+v+'</div>';
 const card=(content,cls='')=>'<article class="media-card '+cls+'">'+content+'</article>';
 const label=(text)=>'<span class="media-tag">'+text+'</span>';
 const date=(v)=>v?'<time datetime="'+v+'">'+v+'</time>':'';
