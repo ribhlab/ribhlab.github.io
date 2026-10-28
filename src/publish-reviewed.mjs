@@ -55,6 +55,42 @@ for(const lang of locales){
 if(!photo||!/^photo-\d+-[a-f0-9]+$/.test(photo.photoId||'')||!/^https:\/\/unsplash\.com\/photos\//.test(photo.source||'')||!photo.photographer||!photo.alt||!photo.altAr||!photo.altFr||photo.license!=='Unsplash License')fail('Unlicensed photo or missing image metadata');
 if(!Array.isArray(resourceIds)||resourceIds.length<2||new Set(resourceIds).size!==resourceIds.length)fail('Two unique credible resource links needed');
 
+// Reject near-duplicate structure and phrasing, not just duplicate URLs/slugs.
+// This is a mechanical similarity test, NOT an external plagiarism scan.
+const normalized=x=>String(x||'').toLocaleLowerCase().normalize('NFKC').replace(/[\u064b-\u065f]/g,'').replace(/[^\p{L}\p{N}]+/gu,' ').replace(/\s+/g,' ').trim();
+const tokenSet=x=>new Set(normalized(x).split(' ').filter(w=>w.length>=3));
+const fiveGrams=x=>{
+ const w=normalized(x).split(' ').filter(Boolean),sets=new Set();
+ for(let i=0;i+4<w.length;i++)sets.add(w.slice(i,i+5).join(' '));
+ return sets;
+};
+const overlap=(a,b)=>{
+ if(!a.size||!b.size)return 0;
+ let common=0;
+ for(const key of a)if(b.has(key))common++;
+ return common/Math.min(a.size,b.size);
+};
+const articleText=(a,lang)=>{
+ const t=a.translations?.[lang];
+ return t?[t.lead,...(t.sections||[]).flatMap(k=>[k.heading,...(k.paragraphs||[])])].join(' '):'';
+};
+const titleWords=tokenSet(article.translations.ar.title);
+for(const filename of fs.readdirSync(articlesDir).filter(name=>name.endsWith('.json'))){
+ const old=readJSON(path.join(articlesDir,filename));
+ if(normalized(old.translations?.ar?.title)===normalized(article.translations.ar.title))fail('Duplicate article title: '+old.slug);
+ if(overlap(titleWords,tokenSet(old.translations?.ar?.title))>.88)fail('Near-duplicate topic/title versus '+old.slug);
+ for(const lang of locales){
+  if(overlap(fiveGrams(articleText(article,lang)),fiveGrams(articleText(old,lang)))>.33)fail('Near-duplicate '+lang+' text versus '+old.slug);
+ }
+}
+for(const other of bundles){
+ if(other===candidate||!other.article)continue;
+ if(other.article.slug===article.slug||normalized(other.article.translations?.ar?.title)===normalized(article.translations.ar.title))fail('Duplicate reviewed queue item '+other.filename);
+ for(const lang of locales){
+  if(overlap(fiveGrams(articleText(article,lang)),fiveGrams(articleText(other.article,lang)))>.33)fail('Similar queued article content '+other.filename+' ('+lang+')');
+ }
+}
+
 const articlePath=path.join(articlesDir,article.slug+'.json');
 if(fs.existsSync(articlePath))fail('Article already exists: '+article.slug);
 const tax=readJSON(path.join(content,'sections.json'));
