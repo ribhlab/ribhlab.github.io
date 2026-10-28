@@ -1,0 +1,132 @@
+{
+  "slug": "iphone-android-productivity-apps-2026-comparison",
+  "category": "ai",
+  "sources": [
+    {
+      "label": "Apple Developer — App Store categories",
+      "url": "https://developer.apple.com/app-store/categories/"
+    },
+    {
+      "label": "Todoist — official product",
+      "url": "https://todoist.com/"
+    },
+    {
+      "label": "Notion — official workspace",
+      "url": "https://www.notion.com/"
+    },
+    {
+      "label": "Google Keep — official notes",
+      "url": "https://keep.google.com/"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "أفضل 10 تطبيقات إنتاجية لـiPhone وAndroid: مقارنة 2026",
+      "excerpt": "Notion وTodoist وTickTick وTrello وغيرها: شنو يميز كل تطبيق ومتى تختار البديل المناسب؟",
+      "lead": "ما كاينش تطبيق واحد يصلح للجميع. تنظيم مشاريع فريق مختلف عن تسجيل المواعيد أو تذكير يومي بسيط. هادي مقارنة تحريرية لعشرة تطبيقات مع روابط مطوريها، بدون ادعاء تجربة مخبرية أو ترتيب رسمي للمتاجر.",
+      "sections": [
+        {
+          "heading": "1. التطبيقات العشرة ومجالاتها",
+          "paragraphs": [
+            "Notion مناسب لصفحات المعرفة والمشاريع، Todoist وMicrosoft To Do للمهام والتذكير، TickTick للقوائم والتخطيط، وTrello للوحات العمل على شكل مراحل. الفرق الأساسي هو هل باغي ملاحظات مترابطة ولا لائحة واجبات ولا مسار مشروع جماعي.",
+            "OneNote وEvernote للدفاتر والملاحظات، Google Keep للتقاط فكرة بسرعة، Any.do للمهام اليومية، وGoogle Calendar للمواعيد المتكررة. هاد الأسماء ماشي ترتيب بحسب عدد التحميلات؛ هي أمثلة على استعمالات مختلفة."
+          ]
+        },
+        {
+          "heading": "2. قارن الوظائف قبل الثمن",
+          "paragraphs": [
+            "جرب أسبوع بواحد أو جوج تطبيقات فقط، وسجل واش كيساعدك تدير المهمة بسرعة، واش كيتزامن مزيان بين الهاتف والحاسوب، وكيفاش كيتعامل مع المرفقات والعمل بدون إنترنت.",
+            "في فرق العمل، شوف صلاحيات المشاركة والتنبيهات والتصدير والتكامل مع البريد. بعض الخصائص كتحتاج اشتراكا، والثمن والميزات قد يختلفو حسب البلد ونوع الجهاز."
+          ]
+        },
+        {
+          "heading": "3. السرية وانتقال البيانات",
+          "paragraphs": [
+            "ملاحظات العمل قد تحتوي أسماء زبناء أو وثائق سرية. راجع سياسة الخصوصية ومكان تخزين البيانات وشروط مشاركة الصفحات، وفعل المصادقة الثنائية إذا كانت متاحة.",
+            "ما تدخلش جميع معلوماتك من نهار الأول؛ اختبر تصدير الملفات أو المهام قبل ما تلتزم بالتطبيق. إلا حبس الاشتراك خاصك تعرف واش تقدر تاخد نسخة قابلة للاستعمال خارج المنصة."
+          ]
+        },
+        {
+          "heading": "4. اختيارات حسب نوع المستخدم",
+          "paragraphs": [
+            "إذا كان عندك مشروع فيه مراحل ومهام لفريق، جرّب Trello أو Notion. لتذكير شخصي بسيط، Google Keep أو Microsoft To Do قد يكونو أسهل. للائحة مهام طويلة ومتكررة، قارن Todoist وTickTick.",
+            "الاختيار النهائي مبني على التجربة ديالك، ماشي التقييم بالنجوم فقط. حمل التطبيقات من روابط المطورين أو المتاجر الرسمية، وقارن تواريخ التحديث والسعر الفعلي قبل تثبيتها."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "10 iPhone and Android productivity apps compared for 2026",
+      "excerpt": "Notion, Todoist, Trello, TickTick and practical alternatives by notes, projects, tasks and calendars.",
+      "lead": "The right productivity app depends on whether you capture notes, coordinate a team or need a reliable personal task list. This editorial shortlist compares roles rather than claiming a universal winner.",
+      "sections": [
+        {
+          "heading": "Map ten apps to actual jobs",
+          "paragraphs": [
+            "Notion combines connected documents and projects, while Todoist, TickTick and Microsoft To Do focus on task tracking. Trello uses visual boards that can work well for multi-step team workflows.",
+            "Microsoft OneNote and Evernote emphasize notebooks; Google Keep supports quick note capture; Any.do covers personal to-do workflows and Google Calendar centers schedules. Their approaches are not interchangeable."
+          ]
+        },
+        {
+          "heading": "Test workflow fit before subscribing",
+          "paragraphs": [
+            "Try two alternatives with the same seven-day task sample. Compare input speed, recurring tasks, sharing, notifications, offline access and synchronization between mobile and desktop.",
+            "For teams, inspect permissions, exports, external integrations and whether shared collaborators need paid seats. Regional prices and individual features can change."
+          ]
+        },
+        {
+          "heading": "Privacy and data portability",
+          "paragraphs": [
+            "Work notes may include confidential client identifiers. Examine link sharing defaults, privacy documentation, two-factor authentication and storage controls before transferring sensitive material.",
+            "Export a sample project or notes and confirm it can be opened outside the app. A small migration test can prevent dependence on an unsuitable subscription."
+          ]
+        },
+        {
+          "heading": "Selection by use case",
+          "paragraphs": [
+            "Try Trello or Notion for organized team projects, Keep or Microsoft To Do for light personal use, and compare Todoist with TickTick when repeated tasks matter.",
+            "These are editorial choices, not measured battery, security or performance rankings. Install from the publisher or an official app store, and check the current feature plan."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "10 applications de productivité iPhone et Android comparées en 2026",
+      "excerpt": "Notion, Todoist, TickTick, Trello : choisir selon les notes, projets, tâches et calendriers.",
+      "lead": "Le meilleur outil dépend de votre besoin : saisir une idée, coordonner un projet ou suivre des échéances. Cette sélection éditoriale compare dix approches, sans se présenter comme un palmarès officiel des stores.",
+      "sections": [
+        {
+          "heading": "Dix outils pour des usages distincts",
+          "paragraphs": [
+            "Notion relie documents et projets ; Todoist, TickTick et Microsoft To Do servent principalement au suivi des tâches. Trello favorise les tableaux visuels et les étapes de travail.",
+            "OneNote et Evernote proposent des carnets de notes, Google Keep facilite la capture rapide, Any.do l’organisation personnelle et Google Calendar la gestion des rendez-vous."
+          ]
+        },
+        {
+          "heading": "Évaluer le fonctionnement réel",
+          "paragraphs": [
+            "Testez les mêmes tâches sur deux applications durant une semaine. Mesurez la simplicité de saisie, les tâches récurrentes, rappels, partages et synchronisation entre appareils.",
+            "Dans une équipe, vérifiez droits d’accès, exports et coût des collaborateurs. Les fonctions gratuites et tarifs peuvent dépendre du pays et de la version."
+          ]
+        },
+        {
+          "heading": "Confidentialité et export",
+          "paragraphs": [
+            "Des notes professionnelles peuvent révéler des données clients. Étudiez paramètres de partage, authentification à deux facteurs et politique de confidentialité.",
+            "Exportez un projet test et vérifiez qu’il reste exploitable sans l’application. Évitez d’y importer des données sensibles avant ce contrôle."
+          ]
+        },
+        {
+          "heading": "Quelques choix raisonnés",
+          "paragraphs": [
+            "Notion ou Trello pour les projets, Keep ou Microsoft To Do pour une organisation légère, Todoist ou TickTick pour des listes récurrentes complexes : comparez avant d'adopter.",
+            "Ces exemples ne sont pas des résultats de laboratoire. Consultez les sites des éditeurs et les tarifs applicables avant toute installation."
+          ]
+        }
+      ]
+    }
+  },
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false
+}
