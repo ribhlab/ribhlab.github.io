@@ -40,7 +40,8 @@ const candidate=bundles.find(b=>b.sectionId!==state.lastSectionId)||bundles[0];
 const {article,photo,resourceIds,sectionId,review}=candidate;
 if(!article?.slug||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.slug))fail('Invalid article slug');
 if(!allowedCategories.has(article.category))fail('Invalid article category');
-if(!review||review.ready!==true||review.checkedAt!==today||review.sourcesIndependentlyChecked!==true||review.translationsReviewed!==true||review.photoProvenanceChecked!==true)fail('Review signoff incomplete or stale for '+article.slug);
+const reviewMs=Date.parse((review?.checkedAt||'')+'T00:00:00Z');
+if(!review||review.ready!==true||!Number.isFinite(reviewMs)||reviewMs>now.getTime()||now.getTime()-reviewMs>7*24*60*60*1000||review.sourcesIndependentlyChecked!==true||review.translationsReviewed!==true||review.photoProvenanceChecked!==true)fail('Review signoff incomplete or older than seven days for '+article.slug);
 if(!Array.isArray(article.sources)||article.sources.length<2||article.sources.some(s=>!s.label||!/^https:\/\/[^/]+\/.+/.test(s.url)))fail('At least two specific HTTPS primary references required for '+article.slug);
 for(const lang of locales){
  const tr=article.translations?.[lang];
