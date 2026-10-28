@@ -1,0 +1,91 @@
+{
+  "reviewedAt": "2026-10-28",
+  "note": "Original comparisons use category-specific criteria; no hands-on test or store ranking is claimed unless independently documented.",
+  "guides": {
+    "productivity": {
+      "ar": "تحديد التطبيقات الأكثر ملاءمة يبدأ بطبيعة المهام: كتابة الملاحظات أم تنظيم مشاريع فريق أم ضبط المواعيد. قارن إمكان العمل دون اتصال، ومزامنة الأجهزة، واستيراد البيانات، والقيود التي تفرضها الخطط المجانية.",
+      "en": "Choose between note-taking, team project management and scheduling rather than counting features. Test offline work, device sync, export formats and the limits of free plans.",
+      "fr": "Distinguez prise de notes, gestion de projets en équipe et agenda. Vérifiez l’usage hors ligne, la synchronisation, l’exportation et les limites des offres gratuites."
+    },
+    "ai": {
+      "ar": "تختلف المساعدات الذكية في دعم الملفات والبحث والمصادر والتكامل مع التطبيقات. جرّب المهمة نفسها على أكثر من خدمة، وافحص الدقة وسرية البيانات وحدود الاستخدام قبل شراء اشتراك.",
+      "en": "AI assistants differ in file handling, citations, tool integrations and usage limits. Test the same real task, verify claims and check privacy terms before upgrading.",
+      "fr": "Les assistants IA varient selon les fichiers pris en charge, les sources citées et les intégrations. Essayez une tâche identique et contrôlez fiabilité et confidentialité avant de payer."
+    },
+    "photo-video": {
+      "ar": "ليس عدد المرشحات معياراً لجودة تطبيق الصور أو الفيديو. افحص دقة التصدير والعلامات المائية وحقوق المواد الموسيقية وسهولة التحكم في الألوان وسير العمل على الهاتف.",
+      "en": "For photo and video editing, export quality, watermarks, music licensing and editing controls matter more than template counts. Check whether projects remain portable between devices.",
+      "fr": "La qualité d’export, les filigranes, les droits musicaux et les réglages d’image sont plus décisifs que le nombre de modèles. Vérifiez aussi la portabilité des projets."
+    },
+    "learning": {
+      "ar": "تطبيق اللغة يختلف عن منصة الدورات أو أداة البطاقات التعليمية. قيّم جودة التمارين، وتوفر الترجمة العربية، وإمكان الدراسة دون اتصال، ومدى وضوح شهادات إتمام الدورات.",
+      "en": "Language drills, full courses and flashcards serve distinct learning goals. Assess lesson depth, accessibility, offline options and whether certificates actually matter for your purpose.",
+      "fr": "Les exercices de langue, cours complets et fiches de révision répondent à des objectifs différents. Évaluez la profondeur, l’accessibilité, l’usage hors ligne et la portée des certificats."
+    },
+    "wellness": {
+      "ar": "تطبيقات اللياقة أدوات للمساعدة لا بديل عن الطبيب. راجع دقة إدخال النشاطات، وشفافية البيانات الصحية والأذونات، وتوافق الأجهزة القابلة للارتداء، وتكاليف الاشتراك.",
+      "en": "Fitness apps are planning tools, not medical diagnoses. Check wearable integration, health-data permissions, manual correction options and recurring subscription costs.",
+      "fr": "Les applications de forme physique ne remplacent pas un avis médical. Examinez la compatibilité des capteurs, les permissions de santé, les corrections manuelles et le coût de l’abonnement."
+    },
+    "navigation": {
+      "ar": "دقة الخرائط تختلف حسب البلد ونوع التنقل. افحص جودة الخرائط غير المتصلة، وتحديثات الطرق، وإمكانية التنقل مشياً أو بالدراجة، واستعمال بيانات الموقع في الخلفية.",
+      "en": "Mapping quality depends on region and travel mode. Compare offline downloads, walking and cycling support, route freshness and background location collection.",
+      "fr": "La qualité des cartes dépend du pays et du mode de déplacement. Comparez cartes hors ligne, itinéraires piétons et cyclistes, mises à jour et collecte de localisation."
+    },
+    "budget": {
+      "ar": "قبل ربط الحساب البنكي بأي تطبيق، اختبر إدخال العمليات يدوياً وحماية البيانات وإمكان استخراج CSV. بعض التطبيقات تركز على الميزانيات المشتركة وأخرى على التقارير أو التخطيط طويل الأجل.",
+      "en": "Before connecting bank accounts, test manual tracking, CSV export and privacy controls. Shared budgets, spending analytics and long-term planning are different use cases.",
+      "fr": "Avant de relier un compte bancaire, vérifiez saisie manuelle, export CSV et protections des données. Budget partagé, analyse des dépenses et planification ne sont pas équivalents."
+    },
+    "communication": {
+      "ar": "عند اختيار تطبيق مراسلة، ميّز بين التشفير الافتراضي والتشفير الاختياري، وإمكانية المكالمات الجماعية، والإدارة المهنية للمجموعات، وسياسة الاحتفاظ بالبيانات.",
+      "en": "Compare default versus optional encryption, group administration, calls, file limits and how long services retain metadata. An app popular with friends may not suit a workplace.",
+      "fr": "Comparez chiffrement par défaut ou optionnel, gestion de groupes, appels, partage de fichiers et conservation des métadonnées. Popularité ne signifie pas adéquation professionnelle."
+    },
+    "security": {
+      "ar": "الأمان يعتمد على الإعداد الصحيح أكثر من الاسم التجاري. استخدم مدير كلمات مرور موثوقاً، وفعّل المصادقة الثنائية، وراجع الاسترداد والنسخ الاحتياطي وأذونات المتصفح أو النظام.",
+      "en": "Security tools only help when configured correctly. Check password-manager recovery, two-factor authentication, backup methods and device permissions rather than relying on branding.",
+      "fr": "Les outils de sécurité exigent une configuration correcte. Vérifiez récupération des mots de passe, authentification à deux facteurs, sauvegardes et autorisations."
+    },
+    "office": {
+      "ar": "ملفات Word وExcel وPDF قد تفقد بعض التنسيقات عند الانتقال بين التطبيقات. جرّب نموذجاً حقيقياً فيه جداول وصيغ وتوقيعات، وقارن التحرير التعاوني والعمل دون إنترنت.",
+      "en": "Office apps can differ in complex spreadsheet formulas, document formatting, PDF annotations and collaboration. Test your real files and offline workflows before migrating.",
+      "fr": "Les outils bureautiques diffèrent sur les formules, mises en forme, PDF et collaboration. Testez vos documents réels et le fonctionnement hors ligne."
+    },
+    "sports": {
+      "ar": "تطبيق النتائج الرياضية ليس بديلاً عن الجهة المنظمة للبطولة. قارن سرعة التنبيهات، والتغطية حسب الرياضة والبلد، وتوقيت المباريات المحلي، والروابط إلى النتائج الرسمية.",
+      "en": "Sports apps vary in alerts, competition depth, local time display and statistics. Cross-check disputed scores or standings with the competition organizer.",
+      "fr": "Les applications sportives diffèrent par les alertes, la couverture des compétitions et les statistiques. Confirmez les scores contestés auprès de l’organisateur."
+    },
+    "travel": {
+      "ar": "الأسعار المعروضة عند البحث عن رحلة أو إقامة لا تشمل دائماً كل الرسوم. قارن سياسات الإلغاء والدفع والعملات ودعم العملاء وخدمات الطوارئ عند السفر.",
+      "en": "A search price may exclude service fees, baggage or taxes. Compare refund policies, currency conversion, customer support and booking conditions before payment.",
+      "fr": "Le tarif affiché peut exclure bagages, taxes ou frais. Comparez annulation, devises, service client et conditions de réservation avant le paiement."
+    },
+    "music": {
+      "ar": "المكتبة الموسيقية تتغير حسب البلد وحقوق النشر. عند المقارنة افحص الجودة الصوتية، والتنزيل للاستماع دون اتصال، والقوائم المشتركة، وتوافر الاشتراك العائلي.",
+      "en": "Music catalogs and licensing vary by country. Evaluate audio quality, offline playback, playlist sharing and family plans rather than relying on headline catalog size.",
+      "fr": "Les catalogues dépendent du pays et des licences. Comparez qualité audio, écoute hors ligne, partage des playlists et formules familiales."
+    },
+    "shopping": {
+      "ar": "لا يكفي تخفيض ظاهر في التطبيق لتحديد الصفقة الأفضل. احسب السعر النهائي مع الشحن والرسوم، وتحقق من سياسة الإرجاع وموثوقية البائع وبلد الشحن.",
+      "en": "A discount badge does not establish good value. Compare final landed cost, returns, seller reputation and shipping origin, especially for cross-border purchases.",
+      "fr": "Une remise affichée ne garantit pas une bonne affaire. Vérifiez coût livré, retours, réputation du vendeur et pays d’expédition."
+    },
+    "food": {
+      "ar": "تطبيق الوصفات الجيد يقدم مقادير قابلة للتعديل وخطوات واضحة. تأكد من تعليمات السلامة الغذائية والحساسية وإمكانية حفظ الوصفات وتعديل قوائم التسوق.",
+      "en": "A useful recipe app supports reliable measurements, clear steps, ingredient substitution and grocery planning. Check allergy notices and food-safety guidance.",
+      "fr": "Une bonne application de recettes fournit quantités fiables, étapes, substitutions et liste de courses. Vérifiez allergies et consignes de sécurité alimentaire."
+    },
+    "news": {
+      "ar": "تجميع الأخبار يختلف عن التحقق من صحتها. ابحث عن تنوع المصادر وتاريخ النشر وإمكان استبعاد العناوين المكررة، وتجنب الاعتماد على التنبيهات وحدها في الأخبار الحساسة.",
+      "en": "News aggregators help discovery but do not guarantee verification. Check source diversity, publication times, duplicate filtering and direct access to original reporting.",
+      "fr": "Les agrégateurs facilitent la veille sans garantir la vérification. Examinez diversité des sources, datation, doublons et accès aux articles originaux."
+    },
+    "gaming": {
+      "ar": "قبل تثبيت لعبة، راجع متطلبات الجهاز والاتصال وحجم التنزيل وعمليات الشراء داخل اللعبة. الألعاب الجماعية تحتاج كذلك إلى تقييم الخصوصية وإعدادات تواصل الأطفال.",
+      "en": "Assess device requirements, download size, offline support and in-app purchases. Multiplayer games also require checking privacy and child communication settings.",
+      "fr": "Vérifiez exigences matérielles, taille, jeu hors ligne et achats intégrés. Les jeux multijoueurs nécessitent aussi des contrôles de confidentialité et de communication."
+    }
+  }
+}
