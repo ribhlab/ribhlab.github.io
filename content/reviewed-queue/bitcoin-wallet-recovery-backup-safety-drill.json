@@ -1,0 +1,200 @@
+{
+  "sectionId": "crypto-web3",
+  "article": {
+    "slug": "bitcoin-wallet-recovery-backup-safety-drill",
+    "category": "trading",
+    "date": "2026-10-28",
+    "updated": "2026-10-28",
+    "featured": false,
+    "related": [
+      "crypto-new-token-due-diligence",
+      "crypto-perpetual-futures-funding-and-liquidation",
+      "trading-risk-management"
+    ],
+    "sources": [
+      {
+        "label": "Bitcoin.org — Securing your wallet (original Bitcoin security guidance; verified 28 October 2026)",
+        "url": "https://bitcoin.org/en/secure-your-wallet"
+      },
+      {
+        "label": "Ethereum.org — Ethereum security and scam prevention (official security guide; verified 28 October 2026)",
+        "url": "https://ethereum.org/security/"
+      },
+      {
+        "label": "Trezor Knowledge Base — How to use a wallet backup (manufacturer backup instructions; verified 28 October 2026)",
+        "url": "https://trezor.io/guides/backups-recovery/general-standards/how-to-use-a-wallet-backup"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "محفظة بيتكوين وعبارة الاسترداد: خطة نسخ احتياطي واختبار آمن دون كشف المفاتيح",
+        "excerpt": "دليل عملي للتمييز بين الحفظ الذاتي والحفظ لدى منصة، وتوثيق نسخة الاسترداد خارج الإنترنت، واختبار خطة الطوارئ دون إرسال كلمات سرية إلى أي موقع.",
+        "lead": "فقدان الهاتف لا يعني بالضرورة ضياع بيتكوين، لكن امتلاك هاتف سليم لا يعني أيضاً أن أصولك محمية. العامل الحاسم في المحفظة ذات الحفظ الذاتي هو القدرة على التحكم في المفاتيح واستعادتها دون تمكين شخص آخر من نسخها. تشرح Bitcoin.org ضرورة حماية النسخ الاحتياطية وتجنب الاعتماد على نقطة فشل واحدة، وتحذر Ethereum.org من تصوير عبارة الاسترداد أو مشاركتها. يقدم هذا الدليل بروتوكولاً تعليمياً قابلاً للتنفيذ بمبالغ صفرية أو بمحفظة اختبار جديدة؛ لا يطلب إدخال كلمات سرية في موقع أو محادثة، ولا يعد بحماية مطلقة أو بعائد استثماري.",
+        "sections": [
+          {
+            "heading": "1. اعرف أولاً من يملك المفاتيح ومن يستطيع استعادة الوصول",
+            "paragraphs": [
+              "إذا كانت عملاتك محفوظة داخل حساب بمنصة مركزية، فقد تكون المنصة هي الجهة التي تدير المفاتيح، وتختلف استعادة الحساب فيها عن استعادة محفظة خاصة. قد توفر المنصة إجراءات تحقق لاسترجاع تسجيل الدخول، لكنك تعتمد على سياساتها وسلامتها وتوافرها. أما في الحفظ الذاتي فعادةً تمنحك المحفظة كلمات استرداد أو وسيلة نسخ أخرى تستطيع بها إعادة بناء مفاتيح الوصول. عند ضياع الوسيلة الوحيدة قد لا يوجد مكتب دعم يعيد الأموال لك؛ لذلك لا تخلط أبداً بين كلمة مرور التطبيق ومفتاح ملكية الأصول.",
+              "قبل أي تغيير دوّن اسم تطبيق المحفظة ومصدر تنزيله الرسمي ونوع الشبكة والأصول المدعومة ووجود كلمة مرور إضافية أو إعداد متعدد التواقيع. احتفظ بمعلومات عامة فقط، مثل اسم التطبيق والإصدار وعناوين عامة تتحقق منها محلياً؛ لا تكتب المفاتيح الخاصة أو العبارة في ملف ملاحظات مشترك. اقرأ دليل الاستعادة الخاص بتلك المحفظة، لأن بعض الأنواع تستخدم ملفاً مشفراً أو أسلوب نسخ غير مطابق لعبارة من 12 أو 24 كلمة. لا تفترض أن كل محفظة تستطيع استيراد كل أنواع النسخ الاحتياطية."
+            ]
+          },
+          {
+            "heading": "2. أنشئ خطة حماية قبل شراء جهاز أو نقل أموال",
+            "paragraphs": [
+              "اسأل عن ثلاثة أحداث منفصلة: سرقة الهاتف، تلف وسيلة النسخ الورقية، وخداعك لكتابة العبارة في صفحة مزورة. كل حدث يحتاج حاجزاً مختلفاً؛ قفل الهاتف يقلل خطر الوصول المحلي لكنه لا يحمي من إفشاء العبارة، والنسخة الورقية تساعد عند تلف الجهاز لكنها قد تُسرق أو تحترق. توصي Bitcoin.org بمواقع حفظ آمنة متعددة وتشرح الفرق بين الأموال اليومية والمحافظ غير المتصلة بالشبكة. اختر أولاً حجم الخسارة الذي يمكنك تحمله، ثم قيّم إن كنت تحتاج جهازاً متخصصاً أو يكفيك حساب تجريبي بلا أموال.",
+              "استخدم الأجهزة والبرامج من الجهات الرسمية وتحقق من عنوان الموقع بنفسك، ولا تثبّت تحديثاً قادماً من رسالة خاصة أو إعلان بحث غير موثوق. أجهزة التوقيع غير المتصلة بالإنترنت تقلل تعرض المفاتيح لهجمات الجهاز المتصل، لكنها لا تمنع إرسال الأموال لعنوان خاطئ أو الموافقة على طلب خبيث. وفي المحفظة ذات الإعداد متعدد التواقيع، قد يزيد توزيع الصلاحيات الأمان لكنه يرفع تعقيد الاستعادة. لا تبدأ بهذا التعقيد قبل القدرة على شرح كيف ستستعيد الأصول إذا تعطّل جهاز أو غاب أحد الموقّعين."
+            ]
+          },
+          {
+            "heading": "3. اكتب النسخة الاحتياطية خارج الإنترنت واحمِ السياق",
+            "paragraphs": [
+              "عندما تُنشئ محفظة اختبار جديدة وفق تعليمات موفّرها، انسخ الكلمات المعروضة على الجهاز بالترتيب الصحيح إلى وسيط مادي خاص، ثم راجع التهجئة والترتيب باستعمال آلية التحقق الرسمية داخل الجهاز نفسه. لا تصور الشاشة ولا تحفظ الكلمات في البريد أو التخزين السحابي أو مدير مهام أو روبوت محادثة. توضح Trezor أن النسخ قد تختلف بين 12 و20 و24 كلمة بحسب الصيغة والجهاز؛ اختلاف العدد ليس خطأ بالضرورة. لا تستخدم قائمة كلمات عشوائية من الإنترنت لإنشاء نسخة، ولا تنقل مثالاً منشوراً على أنه محفظة خاصة بك.",
+              "احفظ النسخ المادية في مكانين آمنين ومستقلين قدر الإمكان، مع التفكير في خطر الحريق والرطوبة والسرقة وإمكانية وصول أشخاص غير مخولين. ليست نسختان في الدرج نفسه حماية من الحريق، وليست صورتان داخل السحابة حماية من اختراق الحساب. لا تقسّم عبارة واحدة إلى نصفين وتفترض أن ذلك نظام متعدد التواقيع أو نسخ موزعة آمنة؛ فقد يزيد خطر ضياع جزء منها. إذا استخدمت عبارة مرور إضافية مدعومة من المحفظة، فهي عنصر منفصل ينبغي توثيق خطة استعادته بأمان؛ نسيانه قد يمنع الوصول رغم امتلاك قائمة الكلمات."
+            ]
+          },
+          {
+            "heading": "4. اختبر خطة الاستعادة دون كشف عبارة حقيقية",
+            "paragraphs": [
+              "أفضل تدريب أولي هو إنشاء محفظة تجريبية جديدة خالية من الأموال على جهاز موثوق، ثم استخدام وظيفة التحقق من النسخة الاحتياطية الرسمية إن كانت متاحة. افصل بوضوح بين المحفظة التجريبية وأي محفظة تحتوي على أصول. لا تمسح محفظتك الفعلية فقط لاختبار الفضول، ولا تدخل كلماتك في صفحة تدّعي فحص صلاحية الاسترداد. بعض الأجهزة، مثل أجهزة Trezor المتوافقة، توفر إجراء تحقق رسمياً؛ يجب اتباع الخطوات المعروضة على الجهاز والتوثيق الأصلي، لا تقليد الخطوات عبر تطبيق غير معروف.",
+              "صمّم ورقة متابعة لا تحتوي أسراراً: تاريخ التمرين، اسم الجهاز التجريبي، اسم التطبيق الرسمي، نسخة الدليل، هل تعرّفت على عنوان الاستلام المتوقع، والعوائق التي ظهرت. لا ترسل صورة الورقة إذا كانت تكشف مواقع التخزين أو معلومات أمنية حساسة. للتمرين المكتبي، تخيل أن الهاتف سُرق وأن اتصال الإنترنت غير متاح: هل تعرف مكان النسخة؟ هل تستطيع الحصول على جهاز متوافق؟ هل تملك إعدادات كلمة المرور الإضافية إن وجدت؟ الاختبار النظري لا يثبت أن عملية الاسترداد الفعلية ستنجح، لذلك ميّز صراحة بين المحاكاة والتحقق العملي المسموح."
+            ]
+          },
+          {
+            "heading": "5. رتّب المخاطر بمصفوفة بسيطة من دون ادعاء إحصائي",
+            "paragraphs": [
+              "اعمل بجدول من ثلاث خانات: الحدث، احتمالية تقديرية من 1 إلى 5، وشدة أثر تقديرية من 1 إلى 5. اضرب الرقمين لتحديد أولوية المناقشة، لا لتقدير احتمال خسارة علمي. في مثال افتراضي، سرقة الهاتف درجتها 4 × 3 = 12، وكشف عبارة الاسترداد 5 × 2 = 10، وتلف نسخة ورقية واحدة 5 × 1 = 5. لأن هذه أرقام افتراضية يضعها صاحب الخطة، فلا يجوز وصف 12 بأنه احتمال خسارة نسبته 12% أو الادعاء أنها مبنية على بيانات سرقات فعلية.",
+              "ضع لكل خطر إجراءً واضحاً وتاريخ مراجعة: قفل قوي وتحديثات للهاتف، منع أي مشاركة للكلمات، ونسخة في مكان مستقل لمواجهة التلف. أعد التقييم عند تغيير المحفظة أو السكن أو الأشخاص المخولين بالوصول؛ فدرجة التقدير تتبدل إذا احتفظت بنسختين في المكان نفسه أو أصبح شخص آخر يعرف موقعهما. الأهم من حاصل الضرب أن تستطيع إثبات تنفيذ كل إجراء آمن دون نشر الدليل السري. وميّز دائماً بين منع الوصول غير المصرح به وبين القدرة على استعادة الوصول بعد كارثة."
+            ]
+          },
+          {
+            "heading": "6. واجه التصيد وخطط للطوارئ قبل أن تقع",
+            "paragraphs": [
+              "تذكر قاعدة واحدة لا تقبل التفاوض: لا جهة دعم شرعية تطلب منك كلمات استرداد محفظتك. الرسائل التي تعرض إصلاح محفظة أو تعويض تحويل أو تحديثاً عاجلاً قد تقود إلى مواقع نسخ للمفاتيح أو إلى طلب توقيع عملية ضارة. افتح عنوان الخدمة بنفسك من مرجع رسمي، وافحص على الجهاز الموثوق عنوان المستلم والشبكة ومقدار التحويل قبل الموافقة. المعاملة الموقعة على شبكة عامة قد تكون غير قابلة للعكس، كما أن رسوم الشبكة والتأخير وتغير التطبيقات قد يعقّد الاسترجاع.",
+              "إذا اشتبهت في كشف العبارة، فلا تنتظر رسالة مطمئنة من حساب مجهول ولا تتبع تعليمات من شخص ينتحل صفة الدعم. استشر الوثائق الرسمية لمحفظتك واتبع إجراءات نقل الأصول إلى محفظة جديدة أُنشئت بأمان، إذا كنت تتحكم فيها وبإمكانك التحقق من الخطوات؛ قد يستلزم ذلك رسوماً وقد يكون الرصيد عُرض للاختراق بالفعل. ضع كذلك خطة وصول قانونية للورثة أو شخص موثوق دون وضع العبارة في وصية عامة أو إرسالها بالبريد. هذا الدليل توعية أمنية لا نصيحة استثمارية أو ضماناً للاسترداد."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Bitcoin wallet recovery: an offline backup and safe practice drill",
+        "excerpt": "Distinguish self-custody from exchange accounts, protect recovery words offline, and rehearse a disaster plan without revealing real keys or transferring funds.",
+        "lead": "A lost phone need not mean lost bitcoin, and a working phone does not prove a wallet is safe. With self-custody, recovery depends on controlling the right keys and backups while keeping them out of other people's hands. Bitcoin.org advises secure backups without single points of failure; Ethereum.org warns against screenshots or sharing recovery phrases. This guide converts those principles into a practical checklist and a no-funds training exercise. It does not ask you to enter a secret phrase on a website, and it cannot promise perfect security, recoverability, or financial returns.",
+        "sections": [
+          {
+            "heading": "1. Identify who controls the keys before choosing a recovery method",
+            "paragraphs": [
+              "An account with a centralized exchange and a self-custody wallet are different arrangements. An exchange may control the keys and offer an account-recovery procedure, but you depend on the operator's policies, security and continued availability. A self-custody wallet normally gives you a recovery method that can rebuild signing keys without contacting that operator. Losing the only valid recovery method can mean permanent loss of access. An application password or device PIN is not the same thing as ownership of the underlying blockchain funds, and unlocking an app is not a substitute for a tested backup.",
+              "Make a non-secret inventory of the wallet's official app, download source, supported network, backup format, and whether an extra passphrase or multi-signature setup is used. You may note a public receiving address for later comparison, but never put private keys or recovery words in a shared spreadsheet, chat, ticket or screenshot. Read the actual wallet's recovery documentation rather than assuming every product imports twelve or twenty-four words. Some wallets use encrypted files, different derivation options or other backup schemes, so a generic internet guide is not proof of compatibility."
+            ]
+          },
+          {
+            "heading": "2. Build a threat model before buying a device or moving coins",
+            "paragraphs": [
+              "Separate three incidents: theft of the phone, destruction of a paper backup and a phishing message that persuades you to disclose recovery words. Each needs a different defense. A phone lock can reduce casual local access but does not protect words voluntarily typed into a fake form. An offline copy may help after device failure but can itself be stolen, damaged or photographed. Bitcoin.org explains both independent backup locations and the distinction between everyday spending wallets and offline savings setups. Decide what failure you are trying to prevent before buying additional equipment.",
+              "Install software from the developer's authentic source, verify the destination address yourself and reject unsolicited update links. A hardware signing device can reduce exposure of private keys to internet-connected malware, yet it cannot stop you from approving the wrong recipient or a malicious transaction. Multi-signature arrangements can spread authorization across devices or people but complicate disaster recovery. If you cannot explain who can sign, where the backups are and what happens when one signer disappears, rehearse on an empty wallet instead of moving valuable assets into an untested arrangement."
+            ]
+          },
+          {
+            "heading": "3. Record the backup offline and preserve the missing context",
+            "paragraphs": [
+              "When setting up a new empty training wallet, use its official guided backup process and copy any displayed words in the correct order onto a private physical medium. Verify spelling and order through the supported check inside the trusted device. Do not take a photograph, upload to cloud notes, paste into email, or ask a chatbot to validate the phrase. Trezor documents multiple backup formats, including twelve-, twenty- and twenty-four-word arrangements depending on product and format. The number of words alone cannot tell you whether a backup is wrong; follow the specific wallet's documentation.",
+              "Keep physical copies in two secure locations where practical, while considering fire, water, theft and unauthorized readers. Two envelopes in the same drawer do not protect against a house fire; two cloud screenshots do not create independent security. Cutting one recovery phrase into two halves is not equivalent to a supported multi-share backup or multi-signature system, and may simply make recovery harder. If your wallet supports an additional passphrase, understand that it changes the keys you access and requires its own secure continuity plan. A correct word list without the required extra passphrase may not restore the intended account."
+            ]
+          },
+          {
+            "heading": "4. Rehearse without exposing a real recovery phrase",
+            "paragraphs": [
+              "For a first exercise, create a brand-new wallet with no funds on a trusted device and use the vendor's built-in backup-checking feature if available. Keep this training setup separate from every funded account. Do not wipe an actual wallet solely to conduct an experiment, and never enter sensitive words into a webpage offering a free seed check or a supposed recovery service. Some supported hardware devices offer an official verification procedure; use only the manufacturer-documented steps and prompts on your trusted device, not a tool recommended by an anonymous support message.",
+              "Write a test log that contains no secrets: date, trial device, official application, documentation version, whether a known public receiving address matched, and any obstacle encountered. Do not publish storage locations or identifying security details. Then run a tabletop scenario: your phone is stolen, the internet is unavailable, and your backup copy must be retrieved. Can you find a compatible replacement and any separate passphrase instructions? A tabletop drill only checks preparation, not cryptographic recovery; label it accordingly. If full restoration is ever tested, do it only through a trusted, documented flow with a separate empty practice wallet."
+            ]
+          },
+          {
+            "heading": "5. Prioritize failures with a simple risk worksheet",
+            "paragraphs": [
+              "Create columns for an incident, estimated likelihood from one to five, and estimated impact from one to five. Multiply the ordinal scores to organize discussion, not to calculate a real-world loss probability. For a completely fictional example, phone theft gets 4 × 3 = 12, disclosure of the recovery phrase gets 5 × 2 = 10, and damage to one paper copy gets 5 × 1 = 5. These are invented planning scores, not measurements from theft databases. Calling a score of twelve a twelve-percent chance of losing funds would be mathematically and methodologically false.",
+              "Assign an action and review date to each row: strong device lock and software updates for theft exposure, a strict no-sharing rule for the recovery words, and geographically or physically independent storage against damage. Reconsider assumptions after changing homes, wallets, co-signers or backup locations. Two copies stored beside one another still share the same fire risk. A checklist becomes useful when you can verify that safeguards exist without disclosing the underlying secrets. Keep confidentiality and availability separate: hiding a phrase very well is not enough if no authorized person can ever retrieve it."
+            ]
+          },
+          {
+            "heading": "6. Defend against phishing and plan for emergencies",
+            "paragraphs": [
+              "A legitimate support agent does not need your wallet recovery words. Messages promising to repair a frozen wallet, reimburse a failed transaction or force an urgent update can be traps to harvest keys or trick you into signing. Reach the provider through a separately verified official address and inspect the recipient, network, and amount on a trusted device before approval. A confirmed blockchain transfer may be irreversible, and fees, compatibility limitations and new software versions can complicate recovery. Security advice should never be confused with a suggestion to buy, trade or transfer crypto.",
+              "If you suspect your recovery phrase has been exposed, do not trust reassurance from someone claiming to be support. Consult your wallet's official compromise guidance and, where you still have safe control, consider a properly created replacement wallet following verified instructions; transferring funds may incur network fees, and theft may already have occurred. Also plan lawful access for an authorized heir or trusted person without placing the phrase in a public will or emailing it. The objective is a documented response to foreseeable failures, not a promise that self-custody can eliminate operational or market risk."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Récupérer un portefeuille Bitcoin : sauvegarde hors ligne et exercice sans risque de divulgation",
+        "excerpt": "Distinguer la garde personnelle d'un compte de plateforme, conserver les mots de récupération hors ligne et simuler une panne sans dévoiler ses clés.",
+        "lead": "Perdre un téléphone ne signifie pas nécessairement perdre ses bitcoins, mais disposer d'un téléphone fonctionnel ne prouve pas que les fonds sont protégés. Avec un portefeuille en garde personnelle, tout dépend du contrôle des clés et de la capacité de les restaurer sans exposer la sauvegarde à des tiers. Bitcoin.org recommande de sécuriser les sauvegardes et d'éviter un point de défaillance unique ; Ethereum.org déconseille les captures d'écran et la divulgation des phrases de récupération. Ce guide propose une méthode de préparation et un exercice avec un portefeuille vide. Il ne promet ni sécurité absolue, ni récupération garantie, ni rendement financier.",
+        "sections": [
+          {
+            "heading": "1. Identifier le détenteur des clés avant de parler de récupération",
+            "paragraphs": [
+              "Un compte sur une plateforme centralisée ne fonctionne pas comme un portefeuille dont vous détenez personnellement les clés. La plateforme peut gérer les clés et disposer d'une procédure de rétablissement du compte, mais sa disponibilité, ses contrôles et ses règles deviennent essentiels. En garde personnelle, la méthode de sauvegarde permet normalement de reconstruire les clés nécessaires aux signatures sans l'intervention de cet opérateur. Si la seule méthode valide disparaît, l'accès peut être définitivement perdu. Le mot de passe de l'application ou le code PIN du téléphone ne remplace pas une vraie sauvegarde des clés.",
+              "Établissez une fiche ne contenant aucun secret : nom de l'application officielle, origine du téléchargement, réseau pris en charge, format de sauvegarde, présence éventuelle d'une phrase secrète supplémentaire ou de plusieurs signatures. Une adresse publique de réception peut servir de repère, mais jamais une clé privée dans un tableur partagé ou un message. Consultez le manuel de restauration du portefeuille concerné, car tous les produits ne savent pas importer les mêmes suites de mots. Certains utilisent des fichiers chiffrés ou des chemins de dérivation particuliers ; une procédure générique ne prouve donc pas la compatibilité."
+            ]
+          },
+          {
+            "heading": "2. Distinguer les menaces avant d'acheter du matériel",
+            "paragraphs": [
+              "Imaginez trois incidents distincts : un téléphone volé, une sauvegarde papier détruite et un message frauduleux vous poussant à saisir les mots sur un faux site. Chaque scénario appelle une défense différente. Le verrouillage du téléphone aide contre certains accès locaux, mais reste inutile si les mots sont remis volontairement à un imposteur. Une copie physique permet parfois de surmonter la panne d'un appareil, tout en créant des risques de vol ou de détérioration. Bitcoin.org évoque plusieurs lieux sécurisés et la différence entre portefeuille de dépenses courantes et stockage hors ligne.",
+              "Téléchargez les logiciels depuis une source vérifiée indépendamment et refusez les mises à jour proposées dans des messages non sollicités. Un portefeuille matériel réduit l'exposition des clés aux logiciels malveillants connectés, sans empêcher une signature vers une mauvaise adresse ni l'autorisation d'une opération dangereuse. La multisignature peut répartir les pouvoirs, mais ajoute des contraintes de coordination et de récupération. Avant de déplacer des fonds, soyez capable d'expliquer qui autorise une opération, où se trouvent les sauvegardes et comment remplacer un signataire indisponible. Sinon, entraînez-vous d'abord sur un portefeuille vide."
+            ]
+          },
+          {
+            "heading": "3. Conserver la sauvegarde hors ligne avec les informations utiles",
+            "paragraphs": [
+              "Lors de la création d'un portefeuille d'entraînement neuf et vide, suivez la procédure officielle et recopiez dans l'ordre exact les mots présentés sur l'appareil. Contrôlez l'orthographe et l'ordre grâce à la fonction de vérification prévue par le fabricant. Ne prenez pas de photo, ne déposez rien dans un espace cloud, un courriel ou un assistant conversationnel. La documentation Trezor décrit notamment des formats à douze, vingt ou vingt-quatre mots selon les produits et les standards. Une longueur différente n'est donc pas nécessairement une anomalie ; seul le manuel du portefeuille concerné fait autorité.",
+              "Conservez si possible deux copies physiques dans des lieux sûrs qui ne subissent pas exactement les mêmes risques de feu, d'humidité ou de vol. Deux enveloppes dans le même tiroir ne résistent pas mieux à l'incendie du logement, tandis que deux copies numériques dans le même cloud partagent les mêmes vulnérabilités. Couper une phrase en deux morceaux n'est pas une méthode de partage cryptographique reconnue et peut rendre la récupération impossible. Si une phrase de passe additionnelle est utilisée, son oubli peut conduire à un portefeuille différent malgré la possession des mots ; prévoyez un moyen sûr de maintenir cette information."
+            ]
+          },
+          {
+            "heading": "4. Répéter le scénario de récupération sans exposer de vrais secrets",
+            "paragraphs": [
+              "Pour un premier entraînement, créez un nouveau portefeuille sans fonds sur un appareil fiable, puis utilisez la fonction officielle de contrôle de sauvegarde lorsqu'elle existe. Séparez entièrement cette configuration de tout portefeuille contenant de véritables actifs. N'effacez pas un portefeuille réel par curiosité et n'entrez jamais les mots sur une page proposant de tester gratuitement une phrase de récupération. Certains appareils matériels proposent une vérification guidée : respectez les instructions du fabricant et les indications du dispositif authentique, plutôt que celles d'un interlocuteur inconnu prétendant appartenir au support.",
+              "Rédigez un compte rendu sans secrets : date de l'exercice, appareil d'essai, application officielle, version de la documentation, concordance éventuelle d'une adresse publique connue et difficultés rencontrées. Ne publiez ni l'emplacement des copies ni de renseignements sensibles sur votre organisation. Simulez ensuite un téléphone volé et une connexion internet indisponible : savez-vous localiser la sauvegarde, disposer d'un matériel compatible et retrouver une éventuelle phrase supplémentaire ? Cette simulation vérifie la préparation, pas la restauration cryptographique effective. Pour une restauration technique, limitez-vous à un circuit fiable, documenté et testé avec un portefeuille vide."
+            ]
+          },
+          {
+            "heading": "5. Classer les risques sans inventer des probabilités",
+            "paragraphs": [
+              "Construisez un tableau avec l'incident, une vraisemblance estimée entre un et cinq, et un impact estimé entre un et cinq. Le produit sert uniquement à hiérarchiser la discussion. Dans un exemple totalement fictif, le vol du téléphone obtient 4 × 3 = 12, la divulgation des mots 5 × 2 = 10, et la destruction d'une copie papier 5 × 1 = 5. Il s'agit de notes arbitraires choisies pour illustrer la méthode et non de mesures statistiques. Un score de douze n'indique absolument pas une probabilité de perte de douze pour cent.",
+              "Associez à chaque ligne une action vérifiable et une date de révision : verrouillage robuste et mises à jour de l'appareil, interdiction de transmettre les mots, lieux de stockage réellement indépendants. Réévaluez les notes après un déménagement, un changement de portefeuille ou l'arrivée d'un nouveau cosignataire. Deux copies réunies dans le même endroit restent exposées au même sinistre. La grille doit permettre de constater l'existence des protections sans dévoiler les sauvegardes. Distinguez toujours confidentialité et disponibilité : cacher parfaitement des mots ne suffit pas si personne d'autorisé ne peut les retrouver au moment nécessaire."
+            ]
+          },
+          {
+            "heading": "6. Reconnaître le hameçonnage et préparer les situations critiques",
+            "paragraphs": [
+              "Un service d'assistance légitime n'a pas besoin de votre phrase de récupération. Les messages annonçant un portefeuille bloqué, un remboursement inattendu ou une mise à jour urgente peuvent mener à un faux formulaire ou à une signature malveillante. Ouvrez le site officiel à partir d'une adresse vérifiée séparément, puis contrôlez le bénéficiaire, le réseau et le montant sur un appareil de confiance. Les transferts confirmés peuvent être irréversibles ; les frais, les incompatibilités techniques et les évolutions logicielles compliquent aussi la récupération. Aucun exercice de sécurité n'est une recommandation d'achat ou de négociation.",
+              "En cas de divulgation suspectée, ne faites pas confiance à une personne inconnue qui promet de bloquer la fraude. Consultez exclusivement les procédures officielles de votre portefeuille et, si vous disposez encore d'un accès sûr, étudiez la migration vers une nouvelle sauvegarde créée dans de bonnes conditions ; des frais s'appliquent parfois et les fonds peuvent avoir déjà été déplacés. Prévoyez également les modalités légales d'accès pour un héritier ou un tiers de confiance, sans publier les mots dans un testament accessible ni les envoyer par courriel. L'objectif reste une meilleure préparation, pas une garantie de survie des actifs."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1764712097764-94caf81dd1b3",
+    "source": "https://unsplash.com/photos/hand-holding-ledger-hardware-wallet-over-keyboard-_mrKRTorDkA",
+    "photographer": "CARTIST",
+    "alt": "Hand holding a hardware cryptocurrency wallet above a keyboard; illustrative security scene",
+    "altAr": "يد تحمل محفظة عملات رقمية مادية فوق لوحة مفاتيح؛ صورة توضيحية للأمان",
+    "altFr": "Main tenant un portefeuille matériel de cryptomonnaies au-dessus d'un clavier ; illustration de sécurité",
+    "license": "Unsplash License",
+    "note": "Actual free Unsplash photograph by CARTIST published 2 December 2025. Photo page and Unsplash License inspected 28 October 2026; illustrative only, not a claim about a wallet test or product endorsement."
+  },
+  "resourceIds": [
+    "bitcoin",
+    "ethereum"
+  ],
+  "review": {
+    "ready": true,
+    "checkedAt": "2026-10-28",
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Independently checked Bitcoin.org wallet security, Ethereum.org wallet security, and Trezor wallet-backup documentation on 28 October 2026. Inspected original free Unsplash image by CARTIST and its Unsplash License; verified unique photo ID/source against published licensed-photo registry, market digests, market-feed topics and queued article images. Manually authored/reviewed six substantive sections in AR, EN and FR; verified hypothetical 4×3=12, 5×2=10 and 5×1=5 risk-priority arithmetic. No actual wallet recovery or security penetration test was performed and no investment results are claimed."
+  }
+}
