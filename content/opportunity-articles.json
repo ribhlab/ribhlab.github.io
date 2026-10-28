@@ -1,0 +1,168 @@
+{
+  "reviewedAt": "2026-10-28",
+  "articles": {
+    "france-talent": {
+      "id": "france-talent",
+      "reviewedAt": "2026-10-28",
+      "sourceBasis": "Official France-Visas and Service-Public pages checked 28 October 2026; thresholds may change.",
+      "sources": [
+        {
+          "label": "Service-Public — Carte talent (révision 1 juin 2026)",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16922"
+        },
+        {
+          "label": "France-Visas — Talents internationaux",
+          "url": "https://www.france-visas.gouv.fr/web/france-visas/talents-internationaux-et-attractivite-economique"
+        },
+        {
+          "label": "France-Visas — Déposer son dossier au Maroc",
+          "url": "https://france-visas.gouv.fr/ar/maroc"
+        },
+        {
+          "label": "France-Visas — Questions fréquentes et frais",
+          "url": "https://france-visas.gouv.fr/fr/faq"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "العمل والإقامة في فرنسا: الدليل المفصل لبطاقة المواهب والتأشيرات البديلة في 2026",
+          "deck": "من اختيار المسار المناسب إلى شرط الراتب وإعداد الملف من المغرب: قراءة عملية للنصوص الرسمية، مع التمييز بين بطاقة المواهب وتأشيرة العمل العادية.",
+          "sections": [
+            [
+              "ما المقصود بإقامة «المواهب»؟ وهل تصلح لكل راغب في العمل؟",
+              "بطاقة الإقامة «Talent» هي إطار قانوني لعدة فئات من المهنيين والباحثين والمستثمرين وأصحاب المشاريع، وليست تأشيرة عامة للبحث عن وظيفة. تختلف المعايير بحسب سبب الإقامة؛ لذلك لا يكفي أن يكون طالب التأشيرة حاصلاً على شهادة جامعية أو يشغل منصباً إدارياً. يشترط في أغلب مسارات العمل وجود عقد أو مهمة أو مشروع محدد ومستندات داعمة. وتكون الإقامة متعددة السنوات في بعض الحالات لمدة قد تصل إلى أربع سنوات، بحسب مدة العقد ونوع الإقامة. أهم خطوة قبل جمع الوثائق هي تحديد الفئة الدقيقة، لأن الخلط بين «الموظف المؤهل» و«البطاقة الزرقاء الأوروبية» يؤدي إلى اعتماد شرط راتب أو شهادة غير صحيح. دليلنا يشرح المسارات العملية ولا يقرر أهلية أي شخص دون مراجعة ملفه."
+            ],
+            [
+              "الموظف المؤهل: شرط الشهادة الفرنسية والحد الأدنى للأجر",
+              "يشمل مسار «Talent – salarié qualifié» في فئة الموظف المؤهل الحاصل في فرنسا على شهادة لا تقل عن الماستر أو مؤهل محدد معترف به من مؤتمر المدارس الكبرى، مع عقد عمل يتجاوز ثلاثة أشهر وأجر سنوي إجمالي لا يقل، وفق بيانات خدمة المعلومات الحكومية المراجعة في يونيو 2026، عن 39,582 يورو. هذه نقطة حاسمة: شهادة الماستر الصادرة من بلد أجنبي لا تساوي تلقائياً شرط الشهادة الفرنسية في هذه الفئة بالذات. كما لا يعادل الراتب الصافي الراتب الإجمالي المطلوب قانوناً. مثال توضيحي: عرض بقيمة 3,000 يورو إجمالي شهرياً على اثني عشر شهراً يمثل 36,000 يورو سنوياً، فيقع دون الحد المذكور حتى لو كان المسمى الوظيفي «مديراً». يجب مراجعة أي عناصر راتب ومكافآت وفق طريقة احتساب الإدارة الفرنسية وليس مجرد جمع غير موثق."
+            ],
+            [
+              "الشركة المبتكرة والانتقال داخل مجموعة دولية",
+              "يوجد مساران آخران ضمن فئة الموظف المؤهل. الأول للموظف الذي تستقدمه شركة فرنسية تستوفي صفة الابتكار المعترف بها، وتكون مهامه مرتبطة مباشرة بنشاطها المعني، مع شروط العقد والراتب. الثاني «salarié en mission» للتنقل داخل مجموعة شركات: يتطلب عادة خبرة سابقة لا تقل عن ثلاثة أشهر لدى شركة خارج فرنسا تنتمي إلى المجموعة نفسها، وعقد عمل مع الكيان الفرنسي، وحد الراتب القانوني المحدد للفئة. يُظهر Service-Public مبلغ 39,582 يورو إجمالياً سنوياً لهذه المسارات في مرجع يونيو 2026. لا يكفي إرسال رسالة من شركة مستقلة تقول إنها «شريك»؛ يجب تحقق العلاقة بين شركات المجموعة وتوافر العقد والمستندات. لذلك يُعد هذا الخيار أكثر واقعية لمن يعمل فعلاً داخل مجموعة لديها منشأة فرنسية، لا لمن يبحث عن أول فرصة من الصفر."
+            ],
+            [
+              "البطاقة الزرقاء الأوروبية: مسار مختلف للخبرات العليا",
+              "المسار المعروف باسم «Talent – carte bleue européenne» لا يطابق فئة الموظف المؤهل السابقة. بحسب Service-Public، يتطلب عادة شهادة تعليم عالٍ لثلاث سنوات على الأقل أو خمس سنوات من الخبرة المهنية ذات المستوى المقارن، مع إمكان استثناء محدد لبعض المهن يسمح بثلاث سنوات خبرة ضمن السنوات السبع السابقة. يتطلب كذلك عقد عمل لا تقل مدته عن ستة أشهر وأجراً سنوياً إجمالياً لا يقل عن 59,373 يورو وفق العتبة المعروضة وقت التحقق. للمقارنة، عرض بقيمة 4,500 يورو إجمالي شهرياً يساوي 54,000 يورو في اثني عشر شهراً؛ وبالتالي لا يصل إلى العتبة المذكورة. تمتاز هذه الفئة بشروط خاصة للتنقل داخل الاتحاد الأوروبي، لكن لا يجوز افتراض أن أي إقامة أوروبية سابقة تسمح بتحويلها تلقائياً دون استيفاء الشروط والإجراءات."
+            ],
+            [
+              "البحث العلمي وإنشاء الشركة والاستثمار: متى تكون مناسبة؟",
+              "قد يكون مسار «الباحث» مناسباً لمن يحمل شهادة بمستوى الماستر ويتوفر على اتفاقية استقبال رسمية مع مؤسسة فرنسية بحثية أو جامعية معتمدة؛ مجرد التسجيل في دورات أو تلقي دعوة غير رسمية لا يكفي. أما «حامل مشروع – إنشاء شركة» فيتطلب مشروعاً حقيقياً وجاداً في فرنسا، وشهادة ماستر أو خبرة مماثلة من خمس سنوات، وإثبات موارد للمعيشة وتمويل للمشروع لا يقل عن 30,000 يورو وفق Service-Public. ومسار المشروع الاقتصادي المبتكر يحتاج اعترافاً من الجهة المختصة، بينما الاستثمار الاقتصادي المباشر له شروط مختلفة وقد يصل حد الاستثمار الأدنى فيه إلى 300,000 يورو مع التزامات تخص النشاط والوظائف. ليست هذه الطرق اختصارات لشراء تأشيرة؛ وعلى صاحب المشروع أن يختبر السوق والتمويل والمخاطر التجارية قبل التقديم."
+            ],
+            [
+              "ما المسار العملي الأقل تعقيداً؟",
+              "بالنسبة إلى شخص يعيش خارج فرنسا ويبحث عن وظيفة محاسبة أو مالية أو تقنية، غالباً يكون البحث عن صاحب عمل مستعد للتوظيف هو البداية الأكثر عملية، قبل دفع مصاريف التأشيرة أو السفر. ابحث عن إعلان يناسب شهادتك وخبرتك ولغتك، واطلب من جهة التوظيف توضيح الراتب الإجمالي ومدة العقد ونوع الإقامة الذي يمكن أن ينطبق فعلاً. إذا لم تستوفِ مسارات المواهب، فهناك مسار التأشيرة المرتبط بالعمل المأجور العادي الذي يحتاج، بحسب الحالة، إلى ترخيص عمل يجريه صاحب العمل. المقارنة الصحيحة ليست بين «فيزا سهلة وصعبة» بشكل مطلق، بل بين متطلبات كل مسار وعقدك الحقيقي. ومن غير السليم الاعتماد على دعوى أن كل حامل شهادة ماستر يمكنه التقديم مباشرة دون عقد، أو أن هناك جهة تضمن القبول."
+            ],
+            [
+              "الوثائق وخطوات إيداع الملف من المغرب",
+              "ابدأ عبر مساعد France-Visas لتحديد نوع التأشيرة والوثائق الشخصية الخاصة بحالتك. في المسارات المهنية، يُطلب عادة جواز سفر صالح، وطلب التأشيرة ومعلومات الهوية، والعقد أو عرض العمل أو اتفاقية الاستقبال بحسب الفئة، وإثبات المؤهل والخبرة، ووثائق صاحب العمل المرتبطة بالفئة المحددة. قد تحتاج لاحقاً لإثبات السكن والصورة الرقمية والتصريح بالالتزام بمبادئ الجمهورية عند طلب بطاقة الإقامة، وفق القائمة الرسمية. في المغرب تُنجز الاستمارة عبر France-Visas ويُودع الملف في مراكز TLScontact المعنية، بينما تتخذ السلطات القنصلية الفرنسية قرار التأشيرة. اختر المركز من الصفحة الرسمية بحسب اختصاصه؛ لا تعتمد على روابط وسطاء أو صفحة مواعيد منشورة في مجموعة اجتماعية. بعد إتمام الإيداع، احتفظ بوصل الطلب وراجع الحساب الرسمي لتتبع الملف."
+            ],
+            [
+              "الرسوم والمواعيد وما الذي يحدث بعد الوصول؟",
+              "تذكر France-Visas أن رسم التأشيرة الطويلة في الحالة العامة يبلغ 99 يورو، مع وجود إعفاءات أو تخفيضات بحسب الوضع. وتعرض صفحة المغرب رسوماً إضافية للخدمة لدى مركز الإيداع، بنحو 258 درهماً عند التحقق، وهي قيمة قابلة للتعديل. وتشير Service-Public إلى رسم قدره 350 يورو عند منح بطاقة الإقامة Talent في الحالات المعروضة، يُسدّد حسب الإجراءات الرسمية، فضلاً عن مصروفات الترجمة والسفر والسكن والتأمين إن وجدت. بالنسبة إلى إجراءات المغرب، قد تستغرق معالجة التأشيرة الطويلة من ثلاثة أسابيع إلى ثلاثة أشهر، وليست تلك مهلة مضمونة. يختلف الإجراء بعد الوصول: تُفعّل تأشيرة VLS-TS إلكترونياً خلال ثلاثة أشهر إذا كانت هي الصيغة الممنوحة، أما تأشيرة الإقامة الطويلة التي تستوجب بطاقة فيلزم اتباع إجراءات طلب البطاقة عبر ANEF في الأجل القانوني. افحص الوثيقة المكتوبة على تأشيرتك تحديداً."
+            ],
+            [
+              "هل يمكن اصطحاب الأسرة؟ وما الاحتياطات؟",
+              "توجد آلية مبسطة للأسرة المرافقة لبعض حاملي بطاقة Talent، ويمكن أن تشمل الزوج أو الزوجة والأطفال القاصرين وفق الشروط، دون المرور دائماً بمسطرة لمّ الشمل العادية. لا يعني ذلك أن أفراد الأسرة يستغنون عن طلبات التأشيرة والوثائق والإجراءات. كما يجب الانتباه إلى الوظائف المنظمة مهنياً، إذ قد تحتاج إلى ترخيص أو معادلة أو تسجيل مهني مستقل عن حق الإقامة. تحقّق من هوية صاحب العمل وعنوانه ورقم التسجيل، ولا تدفع مالاً مقابل عقد وهمي أو وعد بالحصول على تأشيرة. قبل اتخاذ قرار الاستقالة أو السفر، قارن الراتب الصافي المتوقع بالسكن والنقل والضرائب والتكاليف العائلية. إذا تغيّر القانون أو سلم الرواتب بعد تاريخ مراجعتنا، يكون المرجع هو النص الحكومي الساري عند تقديم الطلب."
+            ],
+            [
+              "خلاصة عملية: قائمة قرار من خمس مراحل",
+              "أولاً، عرّف هدفك: وظيفة، بحث علمي، مشروع تجاري أم استثمار. ثانياً، اختر من صفحة Service-Public الفئة المحددة، وتحقق من شرط الشهادة والراتب ومدة العقد بدقة. ثالثاً، ابحث عن عرض أو مشروع حقيقي واحصل على الوثائق الداعمة قبل أداء أي رسوم غير قابلة للاسترداد. رابعاً، شغّل مساعد France-Visas وحدد بلد الإقامة، ثم حضّر الملف المخصص للفئة لا ملفاً عاماً. خامساً، بعد الإيداع تابع جهة المعالجة الرسمية وحدد الإجراء اللازم بعد دخول فرنسا. إذا كانت لديك شهادة أجنبية ولا تستوفي شرط المؤهل الفرنسي لمسار salarié qualifié، لا تفترض أن الطلب مرفوض في جميع المسارات؛ افحص البطاقة الزرقاء أو تأشيرة العمل العادية أو غيرها وفق خصائص عقدك."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Working and living in France in 2026: a detailed guide to the Talent residence routes",
+          "deck": "A practical comparison of qualified employee, EU Blue Card, intra-group transfer and project pathways, with application steps for residents of Morocco.",
+          "sections": [
+            [
+              "What does the French Talent residence route actually offer?",
+              "The French Talent residence framework is a collection of legal categories for skilled employees, researchers, founders, investors and some other professionals. It is not a universal job-seeker visa. Eligibility depends on the precise legal category, the purpose of stay and evidence such as a contract, hosting agreement or business project. Some qualifying residence cards may last up to four years, but the duration depends on the circumstances. A frequent mistake is to treat the Talent qualified-employee route and the EU Blue Card as one program. They apply different tests to education, experience, salary and contract length. A job title, university diploma or recruitment message alone cannot establish eligibility. Decide which category fits your situation before paying for documentation or a visa application."
+            ],
+            [
+              "Qualified employee: a France-specific diploma requirement",
+              "For the Talent qualified-employee pathway described by Service-Public in June 2026, applicants normally need a qualifying degree obtained in France at least equivalent to a master's level, or a specified qualification labelled by the Conférence des grandes écoles. They also need an employment contract longer than three months with gross annual pay of at least €39,582 under the published threshold. This detail matters for graduates from outside France: an overseas master's degree does not automatically meet this particular degree requirement. Compare gross, not net, salaries. For example, a contract paying €3,000 gross monthly over twelve months represents €36,000 annually and therefore falls below that stated threshold. Check which pay components French authorities actually accept instead of assuming a discretionary bonus automatically counts."
+            ],
+            [
+              "Innovative employers and international corporate groups",
+              "Two related categories cover employees hired by a qualifying innovative company and people transferred between companies within the same multinational group. The innovative-company route requires evidence of the employer's recognized status, appropriate duties connected to the business and the relevant contract and salary requirements. The intra-group employee-on-assignment route requires, among other conditions, at least three months of prior employment within the group outside France, a French employment contract and the salary threshold. Service-Public displays €39,582 gross annually for these routes in its June 2026 guidance. A partnership between two unrelated businesses is not necessarily an intra-group transfer. This category is especially relevant where the employer already has a French subsidiary that can provide documents, rather than for a person who has not yet found a genuine employer."
+            ],
+            [
+              "EU Blue Card: a separate option for highly qualified professionals",
+              "The Talent EU Blue Card pathway has distinct conditions: generally a higher-education qualification representing at least three years of study, or five years of comparable relevant experience. A limited rule for specified occupations may allow three years of experience gained within the preceding seven years. According to Service-Public, a contract lasting at least six months and gross annual salary of at least €59,373 are required at the date checked. A simple comparison illustrates the threshold: €4,500 gross monthly paid twelve times equals €54,000 a year, below that figure. The Blue Card also provides specific conditions for mobility from another EU member state. Such mobility is not automatic freedom to disregard French documentation, residence rules or the relevant eligibility tests."
+            ],
+            [
+              "Research, entrepreneurship and investment are not the same application",
+              "A researcher may use the Talent researcher pathway where a suitable master's-level qualification and a formal hosting agreement with an authorized research or higher-education institution are available. Founders must distinguish between a serious business-creation project, an officially recognized innovative project and direct economic investment. The business-creation path described by Service-Public calls for a master's-level qualification or comparable five-year experience, sufficient living resources and business funding of at least €30,000. Its direct-investment route instead refers to an investment of at least €300,000, together with ownership, control or job-creation conditions. These are materially different tests; neither route is a way to buy an assured residence permit. Evaluate market feasibility, financial exposure and the documents the economic authorities must validate before choosing one."
+            ],
+            [
+              "Which route is the most practical for an overseas applicant?",
+              "For someone outside France seeking a finance, accounting, engineering or technology job, the useful first step is normally to obtain a real employer conversation and a properly documented offer, not to select a visa solely because its name sounds attractive. Ask employers for the expected gross annual compensation, employment location, contract duration and the category they believe fits. Check those details independently against official law and guidance. If the Talent categories do not fit, an ordinary salaried-work visa may be more realistic, although employers may need work authorization depending on the case. There is no universally easiest route: a qualified French graduate, a senior professional with a high salary and a corporate transferee have different starting points. A private agent cannot guarantee hiring or approval."
+            ],
+            [
+              "How to prepare and submit an application from Morocco",
+              "Use the France-Visas online visa assistant to identify the relevant long-stay category and obtain your individual document checklist. Employment cases commonly involve identity and passport information, the contract or formal assignment, qualifications, experience records and documents prepared by the employer; researchers and founders must provide their category-specific evidence. For later residence-card steps, further proofs such as address, digital photographs and prescribed declarations can apply. In Morocco, visa forms are completed on France-Visas and files are normally lodged via the appropriate TLScontact visa centre, while French consular authorities make the decision. Choose the current centre and booking method from the official Morocco page rather than from a social-media intermediary. Keep the application receipt and use the official tracking facility."
+            ],
+            [
+              "Fees, processing and post-arrival formalities",
+              "France-Visas lists a general €99 long-stay visa fee, subject to exceptions. Its Morocco page also lists a separate basic visa-centre service charge of approximately MAD 258 at the time checked; verify the current payable amount and currency. Service-Public indicates €350 in fiscal stamp and residence taxes where the Talent card is issued under the covered cases. Applicants should separately budget for any translations, document preparation, travel, housing and healthcare-related expenses. The France-Visas Morocco page says long-stay processing may range from three weeks to three months; this is not a guaranteed service deadline. After arrival, a VLS-TS must normally be validated online within three months, whereas a long-stay visa requiring a Talent residence card involves a separate online ANEF application within the prescribed time. Follow the procedure associated with the exact visa you receive."
+            ],
+            [
+              "Family members, professional licensing and fraud risks",
+              "A simplified accompanying-family procedure may apply to the spouse and minor children of an eligible Talent permit holder, without the ordinary family-reunification procedure in the cases covered. Separate consular and documentary requirements still apply. Professional residence permission also does not erase the separate rules governing regulated occupations: licensing, authorization or recognition can still be necessary. Confirm that the employer exists, that the offer contains real employment conditions and that the contract can be independently verified. Avoid paying for alleged guaranteed sponsorship or guaranteed appointments. Before accepting, compare expected take-home income with housing, taxes, transport and family expenses. Thresholds and procedural requirements can change, so the government sources current on your application date take precedence over this guide."
+            ],
+            [
+              "A five-step decision checklist",
+              "First, define whether your purpose is paid employment, research, business creation or investment. Second, identify the specific category on the government residence-information page and compare education, experience, gross pay and contract duration. Third, secure genuine evidence from an employer, host institution or project authority before spending money on nonrefundable services. Fourth, use the France-Visas assistant with your actual country of residence, complete the tailored checklist and follow the official booking process. Finally, track the consular decision and read the entry and residence instructions written on the visa itself. If a non-French degree rules out the narrow qualified-employee category, that does not automatically rule out an EU Blue Card, ordinary work authorization or another lawful route."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Travailler et s'installer en France en 2026 : guide complet des titres de séjour talent",
+          "deck": "Conditions, salaires, diplômes, procédures depuis le Maroc et alternatives : une analyse pratique des dispositifs officiels français.",
+          "sections": [
+            [
+              "Comprendre le titre de séjour « talent » et ses limites",
+              "La mention « talent » regroupe plusieurs catégories juridiques destinées à des salariés qualifiés, chercheurs, créateurs d'entreprise, investisseurs et autres professionnels. Il ne s'agit pas d'un visa général permettant à chacun de venir chercher un emploi. L'admissibilité dépend du fondement exact de la demande, de la durée du séjour et de justificatifs comme un contrat, une convention d'accueil ou un projet économique. Certaines cartes peuvent être délivrées pour une durée allant jusqu'à quatre ans selon la situation. Il faut surtout distinguer le parcours salarié qualifié de la carte bleue européenne : leurs conditions de diplôme, d'expérience, de salaire et de contrat ne sont pas identiques. Un titre de poste ou un diplôme universitaire ne suffit donc pas à conclure que le demandeur est éligible."
+            ],
+            [
+              "Salarié qualifié : le rôle décisif du diplôme obtenu en France",
+              "Selon les conditions affichées par Service-Public en juin 2026, le parcours « talent-salarié qualifié » suppose notamment un diplôme obtenu en France au moins équivalent au master, ou un diplôme précis labellisé par la Conférence des grandes écoles. Il exige également un contrat de travail de plus de trois mois prévoyant une rémunération brute annuelle d'au moins 39 582 €. Un master délivré à l'étranger ne satisfait donc pas automatiquement à cette condition de diplôme spécifique. Il faut comparer les salaires bruts et non nets. À titre d'illustration, une offre à 3 000 € bruts par mois sur douze mois représente 36 000 € annuels et reste sous le seuil indiqué. Les primes éventuellement incluses dans la rémunération doivent être examinées selon les règles applicables et non ajoutées arbitrairement."
+            ],
+            [
+              "Entreprise innovante ou mobilité au sein d'un groupe international",
+              "Le même ensemble de dispositifs comprend notamment le salarié recruté par une entreprise innovante éligible et le salarié en mission au sein d'un groupe international. Dans le premier cas, la qualité de l'entreprise doit être justifiée et les fonctions doivent correspondre aux activités reconnues, avec les exigences de contrat et de rémunération. Pour le salarié en mission, il faut notamment une ancienneté minimale de trois mois dans le groupe à l'étranger, un contrat de travail avec l'entreprise française et le salaire requis. Service-Public indique un seuil de 39 582 € bruts annuels dans la version consultée pour ces parcours. Un simple accord commercial entre deux sociétés indépendantes ne prouve pas une mobilité intragroupe. Ces dispositifs sont surtout pertinents lorsque l'entreprise dispose déjà d'une implantation réelle en France et peut documenter le transfert."
+            ],
+            [
+              "La carte bleue européenne : une voie distincte",
+              "Le titre « talent-carte bleue européenne » relève de conditions différentes. Il demande en principe un diplôme sanctionnant au moins trois années d'études supérieures ou cinq années d'expérience professionnelle comparable et pertinente. Une règle particulière prévoit, pour certains métiers définis, trois années d'expérience acquises au cours des sept années précédant la demande. D'après Service-Public, le contrat doit durer au moins six mois et le salaire brut annuel atteindre 59 373 € à la date de notre vérification. Une proposition à 4 500 € bruts mensuels versés douze fois correspond à 54 000 € et demeure inférieure au seuil. Des mécanismes de mobilité existent pour les titulaires venant d'autres États membres, mais ils restent soumis à des conditions et formalités propres ; ils ne remplacent pas une vérification du dossier."
+            ],
+            [
+              "Recherche, création d'entreprise et investissement : trois logiques différentes",
+              "Le parcours chercheur peut concerner les titulaires d'un diplôme au moins équivalent au master accueillis par un organisme de recherche ou d'enseignement supérieur habilité, avec une convention d'accueil régulière. Pour créer une entreprise, le demandeur doit justifier d'un projet réel et sérieux, d'un diplôme de niveau master ou de cinq années d'expérience comparable, de ressources suffisantes et d'un financement du projet d'au moins 30 000 € selon Service-Public. Un projet économique innovant doit suivre le mécanisme de reconnaissance correspondant. L'investissement économique direct constitue une autre catégorie, avec un seuil de 300 000 € et des exigences relatives à la participation, à la direction ou à l'emploi. Ces montants ne constituent pas un tarif d'achat d'un titre de séjour : le projet doit être sérieux et les conditions juridiques remplies."
+            ],
+            [
+              "Quelle démarche paraît la plus accessible depuis l'étranger ?",
+              "Pour un candidat situé au Maroc et recherchant un emploi en comptabilité, finance, ingénierie ou informatique, commencer par identifier un employeur fiable est généralement plus opérationnel que choisir d'abord une catégorie de visa. Le candidat doit demander le salaire annuel brut, la durée du contrat, le lieu de travail et le type de procédure envisagé. Il compare ensuite ces éléments aux critères officiels. Si la mention talent ne convient pas, le visa de travail salarié ordinaire reste une alternative possible, sous réserve notamment de l'autorisation de travail que l'employeur doit éventuellement obtenir. Il n'existe donc pas de voie universellement « facile ». Le parcours d'un diplômé français, celui d'un cadre hautement rémunéré et celui d'un salarié transféré n'ont pas les mêmes conditions. Les garanties privées d'embauche ou de visa doivent être écartées."
+            ],
+            [
+              "Constituer et déposer son dossier depuis le Maroc",
+              "L'assistant France-Visas permet d'identifier la catégorie de visa ainsi que la liste personnalisée des pièces. Selon le dossier, il faut préparer le passeport et l'état civil, le formulaire, le contrat ou la mission, les diplômes et attestations d'expérience, puis les documents spécifiques fournis par l'employeur ou l'organisme d'accueil. Au stade du titre de séjour en France, des justificatifs supplémentaires, tels que le domicile, l'e-photo et les engagements réglementaires, peuvent être exigés. Au Maroc, la démarche électronique débute sur France-Visas, puis le dépôt physique s'effectue normalement dans le centre TLScontact compétent. Les décisions demeurent de la compétence des autorités consulaires françaises. Il convient de choisir le centre et le rendez-vous uniquement depuis les informations officielles et de conserver les justificatifs de dépôt."
+            ],
+            [
+              "Frais, délais d'instruction et formalités à l'arrivée",
+              "France-Visas indique un droit général de 99 € pour le visa de long séjour, avec des cas d'exemption ou de tarif réduit. La page consacrée au Maroc mentionne également des frais de service du centre de dépôt d'environ 258 MAD lors de la vérification, montant susceptible de varier. Service-Public prévoit 350 € de taxes et de timbre fiscal lors de la délivrance de la carte talent dans les situations décrites. S'y ajoutent, selon les cas, les traductions, déplacements, justificatifs et dépenses d'installation. Le traitement des visas de long séjour au Maroc peut aller de trois semaines à trois mois selon France-Visas, sans certitude de délai. Après l'arrivée, le VLS-TS doit en principe être validé en ligne dans les trois mois. Pour un visa de long séjour nécessitant la délivrance d'une carte, la demande doit être effectuée sur ANEF dans le délai approprié. La mention inscrite sur le visa détermine la démarche."
+            ],
+            [
+              "Conjoint, enfants, professions réglementées et vigilance",
+              "Une procédure simplifiée de famille accompagnante peut bénéficier au conjoint et aux enfants mineurs d'un titulaire éligible, dans les conditions définies pour la carte « talent-famille ». Cela ne dispense pas d'effectuer les formalités consulaires et de produire les justificatifs. Il faut aussi distinguer le droit de séjour de l'autorisation d'exercer une profession réglementée : une reconnaissance des diplômes, une inscription ou une habilitation supplémentaire peut être nécessaire. Avant de transmettre des documents sensibles, vérifiez l'existence légale de l'employeur, le contenu du contrat et les coordonnées du recruteur. Refusez les offres prétendant garantir un visa contre paiement. Enfin, comparez le salaire net probable avec le logement, les impôts, les déplacements et le coût de la vie familiale. Les textes en vigueur au jour du dépôt prévalent toujours."
+            ],
+            [
+              "Conclusion : cinq vérifications avant de déposer une demande",
+              "Définissez d'abord votre projet : travailler comme salarié, poursuivre une activité de recherche, créer une société ou investir. Choisissez ensuite le motif précis sur Service-Public et vérifiez le diplôme, l'expérience, la durée du contrat et le salaire brut. Obtenez les pièces probantes de l'employeur ou de l'organisme concerné avant d'engager des dépenses non récupérables. Utilisez ensuite l'assistant France-Visas en sélectionnant votre pays de résidence et respectez la liste personnalisée des pièces ainsi que le canal officiel de rendez-vous. Enfin, suivez la décision consulaire et les indications correspondant au visa réellement délivré. Si le diplôme étranger ne permet pas le parcours salarié qualifié strict, examinez séparément la carte bleue européenne, le visa salarié ordinaire et les autres voies légales pertinentes."
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
