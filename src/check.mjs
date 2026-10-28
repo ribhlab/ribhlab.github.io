@@ -721,6 +721,24 @@ for(const l of ['ar','en','fr']){
  if(!index.includes('/'+l+'/care/')||!index.includes('/'+l+'/recipes/'))errors.push('Homepage must link care and cooking separately '+l);
 }
 
+// Playable games: three localized hubs and working chess/words interfaces.
+for(const lang of ['ar','en','fr']){
+ const home=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ for(const slug of ['','chess','words']){
+  const dest=path.join(dist,lang,'games',...(slug?[slug]:[]),'index.html');
+  if(!fs.existsSync(dest)){errors.push('Games route missing '+lang+'/'+slug);continue;}
+  const html=fs.readFileSync(dest,'utf8');
+  if(!html.includes('name="description"')||!html.includes('rel="canonical"'))errors.push('Games SEO missing '+lang+'/'+slug);
+  if(slug&&(!html.includes('data-ribhlab-game="'+slug+'"')||!html.includes('/assets/games.js')))errors.push('Games script/board missing '+lang+'/'+slug);
+ }
+ if(!home.includes('/'+lang+'/games/'))errors.push('Homepage game link missing '+lang);
+ const header=fs.readFileSync(path.join(dist,lang,'games','index.html'),'utf8');
+ if(!header.includes('/'+lang+'/games/chess/')||!header.includes('/'+lang+'/games/words/'))errors.push('Games catalog links missing '+lang);
+}
+for(const filename of ['games.js','games.css']){
+ if(!fs.existsSync(path.join(dist,'assets',filename)))errors.push('Missing playable games asset '+filename);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
