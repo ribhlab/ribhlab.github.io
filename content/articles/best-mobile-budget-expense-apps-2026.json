@@ -1,0 +1,132 @@
+{
+  "slug": "best-mobile-budget-expense-apps-2026",
+  "category": "earning",
+  "sources": [
+    {
+      "label": "YNAB — official budgeting",
+      "url": "https://www.ynab.com/"
+    },
+    {
+      "label": "BudgetBakers Wallet",
+      "url": "https://budgetbakers.com/"
+    },
+    {
+      "label": "Splitwise",
+      "url": "https://www.splitwise.com/"
+    },
+    {
+      "label": "Expensify",
+      "url": "https://www.expensify.com/"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "أفضل 10 تطبيقات للميزانية والمصاريف على الهاتف: مقارنة 2026",
+      "excerpt": "YNAB وWallet وSpendee وSplitwise وExpensify: شكون مناسب للميزانية أو المصاريف المشتركة؟",
+      "lead": "ما كاينش تطبيق ميزانية كيحل وحدو مشكل الصرف. خاصك أولاً تعرف شنو باغي تتابع: نفقات الأسرة، فواتير الشركة، المصاريف المشتركة، أو التخطيط للادخار.",
+      "sections": [
+        {
+          "heading": "عشرة تطبيقات واستعمالات مختلفة",
+          "paragraphs": [
+            "YNAB كيعتمد على تخطيط الميزانية، Wallet by BudgetBakers وSpendee لتتبع النفقات والتصنيفات، وGoodbudget لفكرة الظرف أو المبلغ المخصص لكل مجال.",
+            "Money Manager وMoneyWiz وBuddy بدائل لتسجيل المصاريف، Expensify للوثائق والنفقات المهنية، Splitwise لتقسيم نفقات الأشخاص، وMonarch Money لإدارة مالية شخصية حسب البلدان المدعومة."
+          ]
+        },
+        {
+          "heading": "قارن الربط البنكي والخصوصية",
+          "paragraphs": [
+            "قبل ما تربط حساب بنكي تأكد من توفر المؤسسة المصرفية فالمغرب وشروط استخدام خدمة الربط. كثير من المزايا المعروضة عالميا كتخدم فقط في بلدان معينة.",
+            "البديل الآمن للي ما محتاجش مزامنة هو تسجيل يدوي أو استيراد CSV بعد إزالة بيانات حساسة. اختبر تصدير المعلومات واحذف الحسابات التجريبية غير الضرورية."
+          ]
+        },
+        {
+          "heading": "اختبار ميزانية شهرية",
+          "paragraphs": [
+            "حدد فئات المأكل والنقل والسكن والديون والترفيه، وراقب 30 يوما بدون أحكام. قارن المبلغ المتوقع بالمصاريف الفعلية واكتب سبب الفرق.",
+            "ما تعتبرش الرسم البياني دليلا على استثمار رابح. الميزانية أداة للتخطيط؛ أي تنبؤ أو خدمة مصرفية أو ادخار تلقائي يحتاج موافقة وفهم الشروط."
+          ]
+        },
+        {
+          "heading": "التكلفة والقيمة",
+          "paragraphs": [
+            "بعض التطبيقات كتفرض اشتراكاً سنوياً؛ قارن واش المزايا المدفوعة فعلا كتختصر عليك الوقت. راجع سياسة النسخ الاحتياطي والخصوصية وإلغاء الاشتراك.",
+            "إذا كتسير مصاريف فريق، اشتغل على صلاحيات واضحة ووصول محدود للوثائق، وما ترسلش كلمات المرور لأي تطبيق لمجرد وعد بالمزامنة."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "10 budget and expense apps for iPhone and Android in 2026",
+      "excerpt": "YNAB, Wallet, Spendee, Splitwise and Expensify compared by budgeting, team expenses and privacy.",
+      "lead": "A spending tracker does not fix finances automatically. Choosing among ten apps starts by defining whether you need household planning, shared bills or reimbursable business expenses.",
+      "sections": [
+        {
+          "heading": "Budget, receipts and split bills",
+          "paragraphs": [
+            "YNAB emphasizes planning; Wallet by BudgetBakers and Spendee organize tracked spending; Goodbudget uses a category-envelope approach.",
+            "Money Manager, MoneyWiz and Buddy are additional expense tools, Expensify is oriented toward work expenses, Splitwise handles shared costs, and Monarch Money provides personal-finance workflows in supported regions."
+          ]
+        },
+        {
+          "heading": "Bank access and regional limits",
+          "paragraphs": [
+            "Confirm whether bank connections actually support your country and institution. A feature advertised internationally can be unavailable for Moroccan accounts.",
+            "Manual entry or imported CSV records can be useful without granting account access. Test backups and exports before relying on a product for important history."
+          ]
+        },
+        {
+          "heading": "Try a monthly experiment",
+          "paragraphs": [
+            "Create categories for housing, food, travel, debts and discretionary spending, then record transactions for a month. Compare planned versus actual totals and investigate unusual gaps.",
+            "Charts are aids for discussion, not proof of investment results or guaranteed savings. Confirm payment and automation rules before authorizing transfers."
+          ]
+        },
+        {
+          "heading": "Subscription value and data safety",
+          "paragraphs": [
+            "Compare annual cost with the time saved, shared access, recurring budgets and cancellation terms. Verify encryption and privacy information.",
+            "For team expenses, use role-based permissions and documented approvals. Never give passwords to a third party merely because syncing is offered."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "10 applications budget et dépenses sur iPhone et Android : comparatif 2026",
+      "excerpt": "YNAB, Wallet, Spendee, Splitwise et Expensify selon le budget familial ou les dépenses professionnelles.",
+      "lead": "Une application ne remplace ni une stratégie financière ni la maîtrise de ses dépenses. Commencez par identifier l’usage principal : budget du foyer, partage des achats ou notes de frais.",
+      "sections": [
+        {
+          "heading": "Des usages complémentaires",
+          "paragraphs": [
+            "YNAB privilégie la planification ; Wallet et Spendee suivent les dépenses ; Goodbudget reprend la logique des enveloppes.",
+            "Money Manager, MoneyWiz et Buddy proposent d'autres méthodes de suivi, Expensify cible les notes de frais, Splitwise les dépenses partagées et Monarch Money certaines finances personnelles selon les marchés."
+          ]
+        },
+        {
+          "heading": "Connexions et pays",
+          "paragraphs": [
+            "La compatibilité bancaire dépend de la région. Vérifiez explicitement la banque et le pays avant toute autorisation de synchronisation.",
+            "Une saisie manuelle ou un import CSV peut éviter de donner des accès inutiles. Testez l’export avant de déplacer tout l’historique."
+          ]
+        },
+        {
+          "heading": "Un essai sur trente jours",
+          "paragraphs": [
+            "Créez vos catégories logement, alimentation, transports et autres charges, puis comparez prévisions et réalisations. Identifiez les écarts plutôt que de regarder uniquement un joli graphique.",
+            "Aucun tableau de bord ne prouve une épargne future. Les opérations bancaires exigent un consentement et une compréhension des conditions."
+          ]
+        },
+        {
+          "heading": "Coûts et protection",
+          "paragraphs": [
+            "Confrontez le prix d’abonnement aux fonctions réellement utilisées et vérifiez la résiliation et les sauvegardes.",
+            "Pour les remboursements en entreprise, limitez les droits, faites valider les dépenses et protégez les justificatifs personnels."
+          ]
+        }
+      ]
+    }
+  },
+  "date": "2026-10-28",
+  "updated": "2026-10-28",
+  "featured": false
+}
