@@ -116,6 +116,9 @@ function load(root){
  const recipes=FILES.flatMap(file=>JSON.parse(fs.readFileSync(path.join(dir,file),'utf8')).recipes);
  const photoLibrary=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'utf8'));
  const photos=photoLibrary.photos;
+ const assignments=photoLibrary.assignments||{};
+ if(new Set(Object.values(assignments)).size!==Object.keys(assignments).length||Object.keys(assignments).length!==Object.keys(photos).length)throw Error('Recipe photos must be assigned exactly once');
+ if(new Set(Object.values(photos).map(p=>p.photoId)).size!==Object.keys(photos).length)throw Error('Duplicate photo IDs in recipes');
  if(photoLibrary.license!=='Unsplash License'||Object.keys(photos).length<18)throw Error('Verified food photo library is incomplete');
  for(const [key,p] of Object.entries(photos))if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!p.url?.startsWith('https://images.unsplash.com/'+p.photoId+'?')||!p.source?.startsWith('https://unsplash.com/photos/')||!p.photographer)throw Error('Unverified food photography '+key);
  const slugs=new Set();
@@ -128,7 +131,8 @@ function load(root){
   for(const i of r.ingredients)if(!ingredients[i.id]||!/^[0-9.]+(?:[a-zA-Z]+)$/.test(i.amount))throw Error('Unknown or unmeasured ingredient in '+r.slug+': '+i.id+' '+i.amount);
  }
  if(recipes.filter(r=>r.kind==='meal').length!==100||recipes.filter(r=>r.kind==='healthy').length!==20)throw Error('Recipe publication requires exactly 100 meals and 20 balanced dishes');
- return {ingredients,recipes,photos};
+ for(const [slug,key] of Object.entries(assignments))if(!slugs.has(slug)||!photos[key])throw Error('Orphan recipe photo: '+slug);
+ return {ingredients,recipes,photos:photoLibrary};
 }
 function svgFor(r,dist){
  const hash=[...r.slug].reduce((n,c)=>(n*31+c.charCodeAt(0))>>>0,11);
@@ -170,41 +174,12 @@ function head(l,k){return TEXT[l][k]}
 
 // Use verified food photographs by matching cuisine, preparation and principal ingredients.
 // A reused stock photo is labelled illustrative; it is never presented as a tested result.
-function photoFor(recipe,library){
- const ids=new Set(recipe.ingredients.map(i=>i.id)),slug=recipe.slug;
- let group;
- if(slug.includes('oat')||recipe.kind==='healthy'&&ids.has('oats'))group=['oats'];
- else if(slug.includes('avocado'))group=['avocado','eggToast'];
- else if(slug.includes('couscous')||slug.includes('rfissa'))group=['couscous','tagineA'];
- else if(slug.includes('pizza'))group=['pizza'];
- else if(slug.includes('risotto')||slug.includes('gnocchi'))group=['risottoA','risottoB'];
- else if(slug.includes('hummus')||slug.includes('baba-ghanoush'))group=['hummusA','hummusB','hummusC'];
- else if(slug.includes('falafel')||slug.includes('patties'))group=['falafel'];
- else if(slug.includes('salmon')||ids.has('salmon'))group=['fishA','fishB'];
- else if(slug.includes('pancake')||slug.includes('baghrir')||slug.includes('msemen')||slug.includes('harcha'))group=['pancake'];
- else if(slug.includes('chocolate')||slug.includes('brownie')||slug.includes('cake'))group=['cake'];
- else if(slug.includes('shakshuka')||slug.includes('kefta')||slug.includes('tagine'))group=['tagineA','tagineB'];
- else if(slug.includes('curry')||['south-asian','southeast-asian'].includes(recipe.cuisine)&&ids.has('coconutmilk'))group=['curryA','curryB','curryC'];
- else if(slug.includes('rice')||['rice','stirfry'].includes(recipe.method))group=['riceA','riceB','curryB'];
- else if(['fish','shrimp','mussels'].some(id=>ids.has(id)))group=['fishA','fishB'];
- else if(['pasta','spaghetti'].some(id=>ids.has(id))||recipe.method==='pasta')group=['pasta','risottoA'];
- else if(recipe.method==='soup'||slug.includes('harira')||slug.includes('lentil'))group=['lentilSoupA','lentilSoupB','soupA'];
- else if(recipe.method==='salad'||recipe.method==='cold'||recipe.kind==='healthy'&&['quinoa','bulgur','cucumber','lettuce'].some(id=>ids.has(id)))group=['saladA','saladB','hummusC'];
- else if(recipe.cuisine==='moroccan')group=['tagineA','tagineB','couscous'];
- else if(recipe.cuisine==='levant')group=['hummusC','falafel'];
- else if(['bake','roast','grill'].includes(recipe.method))group=['fishA','tagineA','curryA'];
- else if(recipe.kind==='healthy')group=['saladA','saladB','soupA'];
- else group=['tagineA','curryA','riceA','saladA'];
- const n=[...slug].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7);
- const selected=library[group[n%group.length]];
- if(!selected)throw Error('Missing food photo for recipe '+slug);
- return selected;
+function photoFor(recipe,library){const key=library.assignments?.[recipe.slug];return key?library.photos[key]:null;}
+function recipeImage(r,l,library,esc,loading='lazy'){
+ const p=photoFor(r,library),local='/assets/recipe-images/'+r.slug+'.svg';
+ const alt=p?({ar:'صورة فوتوغرافية توضيحية مخصصة لهذه الوصفة وحدها: ',en:'Exclusive illustrative photograph assigned to this recipe only: ',fr:'Photographie illustrative réservée à cette seule recette : '})[l]:({ar:'رسم أصلي فريد لهذه الوصفة، وليس صورة فوتوغرافية: ',en:'Original artwork unique to this recipe, not a photograph: ',fr:'Illustration originale propre à cette recette, pas une photographie : '})[l];
+ return '<img '+(p?'data-recipe-photo data-fallback="'+local+'" ':'')+'src="'+esc(p?.url||local)+'" alt="'+esc(alt+r.title[l])+'" width="640" height="400" loading="'+loading+'" decoding="async"'+(p?' referrerpolicy="no-referrer"':'')+'>';
 }
-function recipeImage(r,l,photos,esc,loading='lazy'){
- const p=photoFor(r,photos),alt=({ar:'صورة فوتوغرافية توضيحية لطعام من نفس الفئة، قد لا تطابق الوصفة المنزلية حرفياً: ',en:'Illustrative food photograph of a related dish, not a photograph of the exact tested recipe: ',fr:'Photographie illustrative d’un plat comparable, ne montrant pas exactement la recette : '})[l];
- return '<img data-recipe-photo data-fallback="/assets/recipe-images/'+r.slug+'.svg" src="'+esc(p.url)+'" alt="'+esc(alt+r.title[l])+'" width="640" height="400" loading="'+loading+'" decoding="async" referrerpolicy="no-referrer">';
-}
-
 function cards(rows,l,lex,esc,photos){
  const t=TEXT[l];
  return rows.map(r=>{
@@ -215,16 +190,16 @@ function cards(rows,l,lex,esc,photos){
 }
 function recipePage(r,l,lex,page,esc,photos){
  const photo=photoFor(r,photos),featuredImage=recipeImage(r,l,photos,esc,'eager');
- const photoNote=({ar:'صورة طعام توضيحية من Unsplash، وقد تختلف عن الوصفة المذكورة.',en:'Illustrative food photo from Unsplash; the exact recipe may differ.',fr:'Photo culinaire illustrative provenant d’Unsplash ; la recette exacte peut différer.'})[l];
+ const photoNote=photo?({ar:'صورة مرخّصة مخصصة حصرياً لهذه الوصفة، وقد تختلف عن التحضير المنزلي.',en:'Licensed photograph exclusively assigned to this recipe; the home preparation may differ.',fr:'Photographie sous licence réservée à cette recette ; la réalisation maison peut différer.'})[l]:({ar:'رسم توضيحي أصلي وفريد لهذه الوصفة، إلى حين توفير صورة فوتوغرافية فريدة موثقة.',en:'Unique original illustration until a verified exclusive photograph is available.',fr:'Illustration originale unique dans l’attente d’une photographie vérifiée et exclusive.'})[l];
  const t=TEXT[l],label=r.title[l],arr=r.ingredients.map(i=>ingredientText(i,lex,l)),steps=[...ACTIONS[r.method][l],r.tip[l],safety(r,l)];
  const howTo=steps.map((s,i)=>'<li class="recipe-step"><span class="recipe-step-index">'+(i+1)+'</span><div><h3>'+esc(t.steps[i])+'</h3><p>'+esc(s)+'</p></div></li>').join('');
  const list=arr.map(i=>'<li>'+esc(i)+'</li>').join('');
  const kindName=t.tags[r.kind==='healthy'?'healthy':r.cuisine];
  const info='<div class="recipe-facts"><span>⏱ '+r.minutes+' '+esc(t.minutes)+'</span><span>🍽 '+r.servings+' '+esc(t.servings)+'</span><span>🌍 '+esc(kindName)+'</span></div>';
  const references='<p class="recipe-reference">'+esc(t.source)+': <a href="https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures" target="_blank" rel="noopener noreferrer external">FoodSafety.gov</a> · <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener noreferrer external">WHO</a></p>';
- const jsonLD={"@context":"https://schema.org","@type":"Recipe",name:label,description:r.tip[l],recipeYield:String(r.servings),totalTime:'PT'+r.minutes+'M',image:'https://ribhlab.github.io/assets/recipe-images/'+r.slug+'.svg',recipeIngredient:arr,recipeInstructions:steps.slice(0,4).map((s,i)=>({"@type":"HowToStep",position:i+1,text:s})),recipeCategory:r.kind==='healthy'?t.healthy:t.meals,recipeCuisine:kindName,author:{"@type":"Organization",name:"RibhLab"}};
+ const jsonLD={"@context":"https://schema.org","@type":"Recipe",name:label,description:r.tip[l],recipeYield:String(r.servings),totalTime:'PT'+r.minutes+'M',image:photo?photo.url:'https://ribhlab.github.io/assets/recipe-images/'+r.slug+'.svg',recipeIngredient:arr,recipeInstructions:steps.slice(0,4).map((s,i)=>({"@type":"HowToStep",position:i+1,text:s})),recipeCategory:r.kind==='healthy'?t.healthy:t.meals,recipeCuisine:kindName,author:{"@type":"Organization",name:"RibhLab"}};
  const linked='<script type="application/ld+json">'+JSON.stringify(jsonLD).replace(/</g,'\\u003c')+'</script>';
- const content='<div class="recipe-page"><section class="recipe-detail-hero shell"><nav class="recipe-breadcrumb"><a href="/'+l+'/">'+esc(t.home)+'</a> / <a href="/'+l+'/recipes/">'+esc(t.recipes)+'</a> / '+esc(label)+'</nav><div class="recipe-detail-layout"><div><span class="recipe-kicker">RIBHLAB / KITCHEN</span><h1>'+esc(label)+'</h1><p>'+esc(r.tip[l])+'</p>'+info+'<a class="recipe-back" href="/'+l+'/recipes/'+(r.kind==='healthy'?'healthy/':'meals/')+'">'+esc(t.browse)+' ↗</a></div><div class="recipe-photo-figure">'+featuredImage+'<p class="recipe-photo-credit">'+esc(photoNote)+' <a href="'+esc(photo.source)+'" target="_blank" rel="noopener noreferrer external">'+esc(photo.photographer)+' / Unsplash ↗</a></p></div></div></section><main class="shell recipe-detail-content"><div class="recipe-cols"><section class="recipe-panel"><h2>'+esc(t.ingredients)+'</h2><p>'+esc(t.measure)+'</p><ul class="recipe-ingredient-list">'+list+'</ul></section><section class="recipe-panel"><h2>'+esc(t.method)+'</h2><ol class="recipe-step-list">'+howTo+'</ol></section></div><section class="recipe-alert"><h2>'+esc(t.safety)+'</h2><p>'+esc(safety(r,l))+'</p><p><strong>'+esc(SAFE[l].allergen)+':</strong> '+esc(allergens(r,l))+'</p><p>'+esc(t.legal)+'</p>'+references+'</section><p><a class="recipe-back" href="/'+l+'/recipes/">← '+esc(t.head)+'</a></p></main></div>'+linked+'<script defer src="/assets/recipe-filter.js"></script>';
+ const content='<div class="recipe-page"><section class="recipe-detail-hero shell"><nav class="recipe-breadcrumb"><a href="/'+l+'/">'+esc(t.home)+'</a> / <a href="/'+l+'/recipes/">'+esc(t.recipes)+'</a> / '+esc(label)+'</nav><div class="recipe-detail-layout"><div><span class="recipe-kicker">RIBHLAB / KITCHEN</span><h1>'+esc(label)+'</h1><p>'+esc(r.tip[l])+'</p>'+info+'<a class="recipe-back" href="/'+l+'/recipes/'+(r.kind==='healthy'?'healthy/':'meals/')+'">'+esc(t.browse)+' ↗</a></div><div class="recipe-photo-figure">'+featuredImage+'<p class="recipe-photo-credit">'+esc(photoNote)+(photo?' <a href="'+esc(photo.source)+'" target="_blank" rel="noopener noreferrer external">'+esc(photo.photographer)+' / Unsplash ↗</a>':'')+'</p></div></div></section><main class="shell recipe-detail-content"><div class="recipe-cols"><section class="recipe-panel"><h2>'+esc(t.ingredients)+'</h2><p>'+esc(t.measure)+'</p><ul class="recipe-ingredient-list">'+list+'</ul></section><section class="recipe-panel"><h2>'+esc(t.method)+'</h2><ol class="recipe-step-list">'+howTo+'</ol></section></div><section class="recipe-alert"><h2>'+esc(t.safety)+'</h2><p>'+esc(safety(r,l))+'</p><p><strong>'+esc(SAFE[l].allergen)+':</strong> '+esc(allergens(r,l))+'</p><p>'+esc(t.legal)+'</p>'+references+'</section><p><a class="recipe-back" href="/'+l+'/recipes/">← '+esc(t.head)+'</a></p></main></div>'+linked+'<script defer src="/assets/recipe-filter.js"></script>';
  page(l,{title:label+' | RibhLab',desc:r.tip[l]+' '+t.measure,route:'/'+l+'/recipes/'+r.slug+'/',content,active:'recipes'});
 }
 export function renderRecipePages(l,page,esc,root,dist){
