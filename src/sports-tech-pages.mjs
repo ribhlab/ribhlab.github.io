@@ -3,6 +3,8 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const appsDb=JSON.parse(fs.readFileSync(path.join(root,'content/app-recommendations.json'),'utf8'));
+const appInsights=JSON.parse(fs.readFileSync(path.join(root,'content/app-category-insights.json'),'utf8'));
+
 const db=JSON.parse(fs.readFileSync(path.join(root,'content/sports-technology-data.json'),'utf8'));
 const editorials=JSON.parse(fs.readFileSync(path.join(root,'content/sports-technology-editorials.json'),'utf8'));
 
@@ -76,12 +78,13 @@ export function renderSportsTechnologyPages(l,page,esc){
   page(l,{title:title+' | RibhLab',desc:t.techDesc,route:base+'technology/'+key+'/',content:'<div class="media-page">'+hero(l,title,t.techDesc,esc,'technology')+nav(l,'technology/'+key+'/',esc)+main(body+sources(t,esc))+'</div>',active:'technology'});
  }
  const appLead='<div class="media-warning"><strong>'+esc(t.choose)+'</strong><p>'+esc(appsDb.criteria[l])+'</p><p>'+esc(appsDb.editorialPolicy[l])+'</p></div>';
+ const editorialIntro=(c)=>'<section class="media-section media-app-editorial"><h2>'+esc(({ar:'كيف نقارن تطبيقات هذا المجال؟',en:'How to compare apps in this category',fr:'Comment comparer les applications de cette catégorie ?'})[l])+'</h2><p>'+esc(appInsights.guides[c.id][l])+'</p><p>'+esc(({ar:'اختياراتنا تحريرية لتسهيل المقارنة؛ لا تمثل نتيجة اختبار مستقل ولا ترتيباً رسمياً لمتاجر التطبيقات.',en:'These editorial selections help comparison; they are not a laboratory benchmark or an official app-store ranking.',fr:'Cette sélection éditoriale facilite le choix ; elle ne représente ni un test de laboratoire ni un classement officiel des boutiques.'})[l])+'</p></section>';
  page(l,{title:t.apps+' | RibhLab',desc:t.appsHint,route:base+'technology/apps/',content:'<div class="media-page">'+hero(l,t.apps,t.appsHint,esc,'technology')+nav(l,'technology/apps/',esc)+main(appLead+section(t.apps,directory)+sources(t,esc))+'</div>',active:'technology'});
  for(const c of appsDb.categories){
   const title=c.title[l],apps='<div class="media-card-grid media-apps-grid">'+c.apps.map((a,i)=>card('<div class="media-app-order">'+String(i+1).padStart(2,'0')+'</div><h3>'+esc(a.name)+'</h3><p class="media-app-fit"><strong>'+esc(({ar:'مناسب لـ',en:'Useful for',fr:'Utile pour'})[l])+': </strong>'+esc(a.bestFor[l])+'</p><p class="media-app-caution">'+esc(t.appCompare)+'</p><div class="media-inline">'+btn(a.url,t.official,esc)+'</div>','media-app-card')).join('')+'</div>';
   const iOS='https://apps.apple.com/ma/iphone',android='https://play.google.com/store/apps';
   const store='<p class="media-revision">'+esc(t.platforms)+': '+btn(iOS,'Apple App Store',esc)+' '+btn(android,'Google Play',esc)+'</p>';
-  page(l,{title:title+' — '+t.apps+' | RibhLab',desc:title+' · '+t.appsHint,route:base+'technology/apps/'+c.id+'/',content:'<div class="media-page">'+hero(l,c.icon+' '+title,t.appsHint,esc,'technology')+nav(l,'technology/apps/',esc)+main(appLead+section(title,apps)+store+section(t.apps,directory)+sources(t,esc))+'</div>',active:'technology'});
+  page(l,{title:title+' — '+t.apps+' | RibhLab',desc:title+' · '+t.appsHint,route:base+'technology/apps/'+c.id+'/',content:'<div class="media-page">'+hero(l,c.icon+' '+title,t.appsHint,esc,'technology')+nav(l,'technology/apps/',esc)+main(appLead+editorialIntro(c)+section(title,apps)+store+section(t.apps,directory)+sources(t,esc))+'</div>',active:'technology'});
  }
  for(const e of editorials.entries) originalArticlePage(l,e,page,esc);
 }
