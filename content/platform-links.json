@@ -417,6 +417,18 @@
     "schwabEducation": {
       "name": "Charles Schwab — Support and Resistance Education",
       "url": "https://www.schwab.com/learn/story/use-support-and-resistance-to-read-stock-charts"
+    },
+    "blsCpiMethodology": {
+      "name": "U.S. Bureau of Labor Statistics — Consumer Price Index FAQ and methodology",
+      "url": "https://www.bls.gov/cpi/questions-and-answers.htm"
+    },
+    "beaCpiPceDifferences": {
+      "name": "U.S. Bureau of Economic Analysis — Why PCE and CPI differ",
+      "url": "https://www.bea.gov/help/faq/555"
+    },
+    "fedPceInflationTarget": {
+      "name": "Federal Reserve — Inflation (PCE) and 2% target",
+      "url": "https://www.federalreserve.gov/economy-at-a-glance-inflation-pce.htm"
     }
   },
   "articleLinks": {
