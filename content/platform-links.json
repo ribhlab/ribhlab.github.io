@@ -357,6 +357,30 @@
     "appAdsenseCMP": {
       "name": "Google AdSense — consent management",
       "url": "https://support.google.com/adsense/answer/13554116?hl=en"
+    },
+    "microsoftExcelTemplateHelp": {
+      "name": "Microsoft Support — Save a workbook as a template",
+      "url": "https://support.microsoft.com/en-us/excel/save-a-workbook-as-a-template"
+    },
+    "microsoftExcelProtection": {
+      "name": "Microsoft Support — Protection and security in Excel",
+      "url": "https://support.microsoft.com/en-us/excel/protection-and-security-in-excel"
+    },
+    "microsoftTrademarkGuide": {
+      "name": "Microsoft Legal — Trademark and Brand Guidelines",
+      "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+    },
+    "gumroadProhibited": {
+      "name": "Gumroad Help — Things not allowed",
+      "url": "https://gumroad.com/help/article/155-things-you-cant-sell-on-gumroad"
+    },
+    "gumroadFees": {
+      "name": "Gumroad Help — Fees",
+      "url": "https://gumroad.com/help/article/66-gumroads-fees"
+    },
+    "gumroadRefunds": {
+      "name": "Gumroad Help — Refund policy",
+      "url": "https://gumroad.com/help/article/51-what-is-gumroads-refund-policy"
     }
   },
   "articleLinks": {
