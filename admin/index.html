@@ -1,2 +1,80 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>RibhLab | Content Studio</title><style>body{margin:0;font-family:system-ui,sans-serif;background:#0a1428;color:white}noscript{padding:2rem;display:block}</style></head><body><noscript>This content studio requires JavaScript.</noscript><script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" defer></script></body></html>
+<html lang="ar" dir="rtl">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow,noarchive">
+ <meta name="referrer" content="no-referrer">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://api.github.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+ <title>RibhLab Studio | إدارة المحتوى</title>
+ <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+ <link rel="stylesheet" href="/admin/studio.css">
+ <script defer src="/admin/studio.js"></script>
+</head>
+<body>
+ <a class="skip" href="#main">الانتقال إلى المحتوى</a>
+ <header class="mast">
+  <div class="mast-inner"><a class="logo" href="/ar/" aria-label="العودة إلى RibhLab">R<span>.</span> <strong>RibhLab</strong></a><span class="mast-label">استوديو إدارة المحتوى</span><div class="mast-status"><span id="session-user" hidden></span><button id="logout" class="button ghost small" type="button" hidden>تسجيل الخروج</button></div></div>
+ </header>
+ <main id="main">
+  <section id="login-screen" class="signin-shell">
+   <div class="signin-card">
+    <div class="lock-icon" aria-hidden="true">◆</div>
+    <p class="eyebrow">PRIVATE EDITORIAL WORKSPACE</p>
+    <h1>دخول المسؤول</h1>
+    <p class="muted">هذه المساحة مخصصة لإدارة أقسام ومقالات RibhLab. يتطلب الدخول حساب GitHub يتمتع بصلاحية <strong>Admin</strong> على المستودع.</p>
+    <form id="signin-form">
+     <label for="token">رمز وصول GitHub مخصص للمستودع</label>
+     <input id="token" type="password" autocomplete="off" spellcheck="false" required placeholder="github_pat_..." aria-describedby="token-help">
+     <p class="hint" id="token-help">صلاحية Contents: Read and write للمستودع ribhlab/ribhlab.github.io. لا يُحفظ الرمز في ملفات الموقع أو التخزين المحلي، ويُنسى عند إغلاق الصفحة أو تحديثها.</p>
+     <button id="signin-button" class="button primary full" type="submit">التحقق من هوية المسؤول <span aria-hidden="true">↗</span></button>
+    </form>
+    <p class="signin-link"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">إنشاء رمز وصول من GitHub الرسمي</a></p>
+   </div>
+  </section>
+  <section id="studio" class="workspace" hidden>
+   <div class="workspace-top"><div><p class="eyebrow">RIBHLAB / CONTENT STUDIO</p><h1>لوحة إدارة المحتوى</h1><p class="muted">إدارة الأقسام والمقالات العربية والإنجليزية والفرنسية من مكان واحد.</p></div><div class="workspace-actions"><button id="reload" class="button secondary" type="button">تحديث البيانات</button><a class="button ghost" href="/ar/" target="_blank" rel="noopener noreferrer">عرض الموقع ↗</a></div></div>
+   <nav class="tabs" aria-label="أقسام الإدارة"><button class="tab active" type="button" data-tab="overview">نظرة عامة</button><button class="tab" type="button" data-tab="sections">الأقسام</button><button class="tab" type="button" data-tab="articles">المقالات</button></nav>
+   <section class="pane" id="pane-overview">
+    <div class="stats"><div class="stat"><strong id="stat-sections">—</strong><span>الأقسام التحريرية</span></div><div class="stat"><strong id="stat-articles">—</strong><span>المقالات المنشورة</span></div><div class="stat"><strong id="stat-drafts">—</strong><span>المسودات اليدوية</span></div></div>
+    <div class="panel two-cols"><div><h2>نشر منظم وآمن</h2><p>المقالات المنشورة تظهر في الموقع بعد حفظ التغييرات ونجاح بناء GitHub Pages. المسودات لا تظهر للزوار. لا تُنشر مقالة دون نسخ مكتملة باللغات الثلاث ومصادر موثقة وصورة بحقوق استخدام واضحة.</p><p>تُحفظ ملفات المقال وتصنيفه والصورة والمراجع في عملية Git واحدة لتجنب تعارض بيانات الموقع.</p></div><div><h2>اختصارات</h2><div class="stack"><button class="button primary" type="button" data-action="new-article">إضافة مقال جديد</button><button class="button secondary" type="button" data-action="new-section">إضافة قسم جديد</button><a class="button ghost" href="https://github.com/ribhlab/ribhlab.github.io/actions" rel="noopener noreferrer" target="_blank">فحص النشر على GitHub ↗</a></div></div></div>
+   </section>
+   <section class="pane" id="pane-sections" hidden>
+    <div class="panel-head"><div><h2>إدارة الأقسام</h2><p class="muted">أضف قسماً جديداً داخل أحد المجالات الرئيسية الأربعة أو عدّل بيانات قسم قائم.</p></div><button class="button primary" id="new-section" type="button">+ قسم جديد</button></div>
+    <div class="layout"><div class="panel" id="sections-list" aria-label="الأقسام المتاحة"></div><form id="section-form" class="panel editor-form" hidden>
+     <div class="form-head"><h3 id="section-form-title">إضافة قسم</h3><button type="button" class="button ghost small" id="cancel-section">إلغاء</button></div>
+     <label>معرّف القسم (بالأحرف اللاتينية)<input name="id" id="section-id" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="financial-literacy"></label>
+     <label>المجال الرئيسي<select id="section-parent" name="parent" required><option value="earning">الربح الرقمي</option><option value="trading">التداول والاقتصاد</option><option value="ai">الذكاء الاصطناعي والتقنية</option><option value="lifestyle">نمط الحياة</option></select></label>
+     <div class="input-grid"><label>عنوان القسم بالعربية<input name="titleAr" required></label><label>Title in English<input name="titleEn" required dir="ltr"></label><label>Titre en français<input name="titleFr" required dir="ltr"></label></div>
+     <div class="input-grid"><label>وصف بالعربية<textarea name="descAr" rows="3" required></textarea></label><label>English description<textarea name="descEn" rows="3" required dir="ltr"></textarea></label><label>Description en français<textarea name="descFr" rows="3" required dir="ltr"></textarea></label></div>
+     <label>الحد المستهدف للمقالات<input name="target" type="number" min="1" max="500" value="40" required></label>
+     <button class="button primary full" type="submit">حفظ القسم في الموقع</button>
+    </form></div>
+   </section>
+   <section class="pane" id="pane-articles" hidden>
+    <div class="panel-head"><div><h2>إدارة المقالات</h2><p class="muted">أضف محتوى جديداً أو احفظ مسودة، ثم انشر بعد استيفاء المراجعة والمراجع والصورة.</p></div><button class="button primary" id="new-article" type="button">+ مقال جديد</button></div>
+    <div class="article-list-panel panel"><label class="search-label" for="article-search">بحث في المقالات والمسودات<input id="article-search" placeholder="ابحث بالعنوان أو المعرف"></label><div id="articles-list" class="article-list"></div></div>
+    <form id="article-form" class="panel editor-form article-editor" hidden>
+      <div class="form-head"><h3 id="article-form-title">إضافة مقال جديد</h3><button type="button" class="button ghost small" id="cancel-article">إغلاق المحرر</button></div>
+      <div class="input-grid"><label>معرّف المقال URL<input name="slug" id="article-slug" pattern="[a-z0-9]+(?:-[a-z0-9]+)*" required placeholder="practical-topic-guide"></label><label>القسم<select id="article-section" name="section" required></select></label></div>
+      <label class="switch-label"><input type="checkbox" name="featured">إظهار المقال ضمن اختيارات المحرر</label>
+      <div class="language-tabs" role="tablist" aria-label="لغات المقال"><button type="button" class="lang-tab active" data-lang="ar">العربية</button><button type="button" class="lang-tab" data-lang="en">English</button><button type="button" class="lang-tab" data-lang="fr">Français</button></div>
+      <div id="translation-fields"></div>
+      <div class="detail-panel"><h4>المصادر والمراجع</h4><p class="hint">سطر لكل مصدر: اسم المصدر | https://example.com/source — مصدران مستقلان على الأقل عند النشر.</p><textarea name="sources" rows="4" dir="ltr" placeholder="Official source | https://example.com/report&#10;Research source | https://example.com/study"></textarea></div>
+      <div class="detail-panel"><h4>الصورة وحقوق استخدامها</h4><p class="hint">يُستعمل رابط الصورة من Unsplash مع مُعرّف الصورة والاعتماد الصحيح للمصور. يجب عدم تكرار صورة مقالة أخرى.</p>
+       <div class="input-grid"><label>Photo ID<input name="photoId" dir="ltr" placeholder="photo-123456789-abcdef"></label><label>رابط صفحة Unsplash<input name="photoSource" dir="ltr" placeholder="https://unsplash.com/photos/..."></label><label>اسم المصور<input name="photographer"></label></div>
+       <div class="input-grid"><label>وصف الصورة بالعربية<input name="altAr"></label><label>English alt text<input name="altEn" dir="ltr"></label><label>Description en français<input name="altFr" dir="ltr"></label></div>
+       <label>ملاحظة عن مصدر الصورة أو التحقق<input name="photoNote"></label>
+      </div>
+      <div class="detail-panel"><h4>مراجعة قبل النشر</h4>
+       <label class="switch-label"><input type="checkbox" id="review-confirm">أقرّ بأن المصادر تمت مراجعتها، والمقال أصلي، وترجماته كاملة، والصورة مسموح باستخدامها.</label>
+       <p class="hint">النشر يتحقق من اكتمال 4 محاور على الأقل وفقرات مفصلة في كل لغة و480 كلمة كحد أدنى لكل نسخة. تُراجع الأخطاء والمحتوى قبل الاعتماد.</p>
+      </div>
+      <div class="form-footer"><button class="button secondary" type="button" id="save-draft">حفظ مسودة خاصة</button><button class="button primary" type="submit">نشر المقال بعد المراجعة</button></div>
+    </form>
+   </section>
+  </section>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+ </main>
+</body>
+</html>
