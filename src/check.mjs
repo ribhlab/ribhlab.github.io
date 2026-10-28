@@ -683,6 +683,38 @@ try{new Function(adminClient)}catch(error){errors.push('Admin dashboard JS does 
 if(adminPage.includes('@sveltia/cms')||adminPage.includes('unpkg.com'))errors.push('Legacy public CMS loader is still active');
 if(!adminPage.includes('Content-Security-Policy')||!adminPage.includes('connect-src https://api.github.com'))errors.push('Admin dashboard security policy missing');
 
+
+// Independent food and lifestyle navigation / recipe integrity contract.
+const recipePath=path.join(root,'content','recipes');
+const foodLex=JSON.parse(fs.readFileSync(path.join(recipePath,'ingredients.json'),'utf8')).ingredients;
+const foodItems=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.join(recipePath,file),'utf8')).recipes);
+const meals=foodItems.filter(r=>r.kind==='meal'),balancedMeals=foodItems.filter(r=>r.kind==='healthy');
+if(meals.length!==100||balancedMeals.length!==20)errors.push('Recipes require 100 varied meals and 20 balanced dishes, not placeholder titles');
+if(new Set(foodItems.map(r=>r.slug)).size!==120)errors.push('Repeated recipe slugs');
+for(const food of foodItems){
+ if(food.ingredients.length<4||!food.tip?.ar||!food.tip?.en||!food.tip?.fr)errors.push('Incomplete measured recipe '+food.slug);
+ for(const ingredient of food.ingredients)if(!foodLex[ingredient.id]||!/^[0-9.]+(?:[a-zA-Z]+)$/.test(ingredient.amount))errors.push('Unknown ingredient or quantity in '+food.slug);
+ const image=path.join(dist,'assets','recipe-images',food.slug+'.svg');
+ if(!fs.existsSync(image))errors.push('Missing original recipe card illustration '+food.slug);
+ for(const l of ['ar','en','fr']){
+  if(!food.title?.[l])errors.push('Untranslated recipe title '+food.slug+' '+l);
+  const file=path.join(dist,l,'recipes',food.slug,'index.html');
+  if(!fs.existsSync(file)){errors.push('Missing recipe page '+l+'/'+food.slug);continue;}
+  const html=fs.readFileSync(file,'utf8');
+  if(!html.includes('class="recipe-ingredient-list"')||!html.includes('class="recipe-step-list"')||!html.includes('https://www.foodsafety.gov/'))errors.push('Recipe missing quantities, method, or food-safety source '+l+'/'+food.slug);
+  if(!html.includes('"@type":"Recipe"'))errors.push('Missing Recipe schema '+l+'/'+food.slug);
+ }
+}
+for(const l of ['ar','en','fr']){
+ for(const p of ['care','recipes','recipes/meals','recipes/healthy']){
+  if(!fs.existsSync(path.join(dist,l,...p.split('/'),'index.html')))errors.push('Missing split care/cooking route '+l+'/'+p);
+ }
+ const landing=fs.readFileSync(path.join(dist,l,'recipes','index.html'),'utf8');
+ if((landing.match(/class="recipe-card"/g)||[]).length!==120)errors.push('Kitchen landing must show 120 individually linked recipes '+l);
+ const index=fs.readFileSync(path.join(dist,l,'index.html'),'utf8');
+ if(!index.includes('/'+l+'/care/')||!index.includes('/'+l+'/recipes/'))errors.push('Homepage must link care and cooking separately '+l);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
