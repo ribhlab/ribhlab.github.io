@@ -1,0 +1,124 @@
+{
+  "slug": "morocco-public-job-application-checklist-2026",
+  "category": "earning",
+  "date": "2026-10-27",
+  "updated": "2026-10-27",
+  "featured": false,
+  "sources": [
+    {
+      "label": "Emploi-public — Foire aux questions",
+      "url": "https://www.emploi-public.ma/fr/faq-liste"
+    },
+    {
+      "label": "Emploi-public — recrutement établissements publics",
+      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=2&stat=etab_publics"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "دليل الترشيح لمباريات التوظيف العمومي بالمغرب: خطوة بخطوة",
+      "excerpt": "من قراءة الإعلان وجمع الوثائق إلى الإيداع وتتبع النتائج، مع تنبيهات لأخطاء المرشحين الشائعة.",
+      "lead": "مباريات القطاع العمومي بالمغرب عندها آجال وشروط مختلفة حسب المؤسسة. باش ما يضيعش الترشيح بسبب إجراء بسيط، استعمل هاد اللائحة العملية مع قراءة الإعلان الرسمي والوثائق الملحقة به.",
+      "sections": [
+        {
+          "heading": "تحقق من المباراة الحقيقية",
+          "paragraphs": [
+            "افتح إعلان المباراة وقرأ قرار الفتح وملف المنصب، ماشي غير العنوان الموجود فنتائج البحث. راجع التخصص المطلوب والشهادة والسن والخبرة والمنطقة وعدد المناصب وطريقة الإيداع.",
+            "المنصة كتخلط مراحل الإعلان والاستدعاء والنتائج. وجود مباراة فقاعدة البيانات ما كيعنيش أن الترشح باق مفتوح؛ آخر أجل هو المعلومة اللي خاصك تثبتها من الإعلان الحالي."
+          ]
+        },
+        {
+          "heading": "جهز الوثائق قبل الوقت",
+          "paragraphs": [
+            "اجمع CV محين، الشواهد وكشوف النقط وباقي الوثائق المذكورة صراحة. سمي الملفات بأسماء مفهومة وتأكد من وضوح الصفحات وتطابق معلومات الاستمارة مع الوثائق.",
+            "حسب الأسئلة الشائعة الرسمية، ملفات المرفقات المقبولة PDF وحجم الوثيقة ما خاصوش يتجاوز 2 ميغابايت. هاد الشرط خاص إعادة التأكد منه حسب كل إعلان ومنصة."
+          ]
+        },
+        {
+          "heading": "أرسل واحتافظ بالتأكيد",
+          "paragraphs": [
+            "إذا المؤسسة كتستقبل عبر فضاء مرشح emploi-public، أنشئ الحساب وعمر الخبرات والدبلومات قبل إرسال الترشيح. مؤسسات أخرى كتستعمل مواقعها الخاصة أو إيداع مختلف، لذلك تبع دائماً الرابط اللي فالإعلان.",
+            "صور صفحة تأكيد الإيداع أو حمل الوصل واحتافظ برقم الملف. من الأحسن ما تسناش لآخر ساعة لأن مشكل فالإنترنت أو الحجم قد يحرمك من الإيداع داخل الأجل."
+          ]
+        },
+        {
+          "heading": "تتبع المباراة وأمن حسابك",
+          "paragraphs": [
+            "تابع الاستدعاءات للامتحانات الكتابية والشفوية ثم النتائج من نفس صفحة الإعلان. رسالة توصل أو إنشاء حساب ما كيضمنوش قبول الترشيح أو التوظيف.",
+            "ما تعطيش كلمة المرور أو رمز التحقق لشي وسيط ولا تؤدي رسوم لشخص كيوعد بنتيجة مضمونة. أي استفسار تقني أو حول الشروط ديرو عبر المؤسسة المنظمة أو الدعم الرسمي."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Applying for public-sector jobs in Morocco: a practical checklist",
+      "excerpt": "Read the original announcement, prepare PDF documents, submit before the deadline and track each recruitment stage.",
+      "lead": "Moroccan public-sector competitions have different qualification rules and submission channels. Use the official notice rather than relying solely on search-result snippets or forwarded social posts.",
+      "sections": [
+        {
+          "heading": "Verify the current notice",
+          "paragraphs": [
+            "Open the recruitment order and job description, then check the degree, specialty, experience, age requirements if applicable, location, number of seats and application deadline.",
+            "The government portal also displays interview invitations and historical results. A search hit alone does not mean a vacancy is still open."
+          ]
+        },
+        {
+          "heading": "Prepare the supporting documents",
+          "paragraphs": [
+            "Gather an up-to-date CV, diplomas, transcripts and any supporting evidence the notice requests. Use clear filenames and ensure each scanned page is complete and readable.",
+            "The portal's published FAQ describes PDF uploads with a two-megabyte limit per attachment. Confirm requirements again on the actual submission form and institution website."
+          ]
+        },
+        {
+          "heading": "Submit and save confirmation",
+          "paragraphs": [
+            "For portal-managed applications, update your candidate account before filing. Other institutions require applying on their own official site, so follow the specific notice.",
+            "Keep the confirmation number, receipt or acknowledgement. Submitting early gives time to correct validation errors before the closing hour."
+          ]
+        },
+        {
+          "heading": "Follow the process securely",
+          "paragraphs": [
+            "Review written-exam convocations, oral interview notices and final results on the official competition page. Filing an application is not an employment guarantee.",
+            "Never give intermediaries account passwords or one-time security codes. Avoid anyone requesting payment in exchange for a guaranteed appointment."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Concours publics marocains : préparer son dossier et déposer sa candidature",
+      "excerpt": "Une méthode pas à pas pour les annonces officielles, les documents PDF, les dates limites et le suivi.",
+      "lead": "Chaque concours possède son arrêté et ses critères d'admission. Une candidature fiable commence par la consultation de l’annonce originale plutôt que d’une publication relayée sur les réseaux.",
+      "sections": [
+        {
+          "heading": "Contrôler l’annonce et les critères",
+          "paragraphs": [
+            "Téléchargez l’arrêté d’ouverture et la fiche de poste, puis vérifiez diplôme, spécialité, expérience, région, nombre de postes et date limite.",
+            "Une recherche sur le portail affiche aussi des convocations et résultats archivés. Leur présence ne signifie pas que les candidatures sont toujours ouvertes."
+          ]
+        },
+        {
+          "heading": "Préparer les justificatifs",
+          "paragraphs": [
+            "Constituez CV, diplômes et autres pièces précisément mentionnées. Donnez des noms explicites aux fichiers et vérifiez que les scans sont lisibles et complets.",
+            "Selon la FAQ officielle, les pièces PDF doivent actuellement respecter une limite de deux mégaoctets chacune. Les règles propres au concours doivent être relues avant le dépôt."
+          ]
+        },
+        {
+          "heading": "Déposer et conserver la preuve",
+          "paragraphs": [
+            "Complétez les informations de l'espace candidat lorsque l'administration utilise emploi-public.ma. Sinon, utilisez le site de recrutement indiqué dans l'annonce.",
+            "Enregistrez accusé de réception, référence du dossier et date. Ne laissez pas un formulaire volumineux pour la dernière heure."
+          ]
+        },
+        {
+          "heading": "Suivre et rester vigilant",
+          "paragraphs": [
+            "Consultez les convocations aux épreuves et résultats sur le site officiel. L'envoi du dossier ne vaut pas admission.",
+            "Ne communiquez aucun mot de passe ou code unique à un prétendu intermédiaire. Un recrutement public ne peut pas être garanti contre paiement à un inconnu."
+          ]
+        }
+      ]
+    }
+  }
+}
