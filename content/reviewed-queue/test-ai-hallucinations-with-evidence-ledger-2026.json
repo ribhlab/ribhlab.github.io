@@ -22,7 +22,7 @@
       },
       {
         "label": "NIST AI Resource Center — Testing, evaluation, verification and validation resources (checked 28 October 2026)",
-        "url": "https://airc.nist.gov/"
+        "url": "https://airc.nist.gov/airmf-resources/"
       }
     ],
     "translations": {
@@ -174,6 +174,6 @@
     "sourcesIndependentlyChecked": true,
     "translationsReviewed": true,
     "photoProvenanceChecked": true,
-    "notes": "Independently inspected NIST 2024 Generative AI Profile and NIST AIRC, plus OpenAI evaluation best practices on 2026-10-28. Authored and reviewed three complete original versions; checked hypothetical arithmetic 3*80+2*45=330, 4/20=20%, 14/20=70%, 2/20=10%. Verified Unsplash photographer, free-license indication and unique image ID/source against article, market digest, market feed and queued-photo registries. No actual model benchmark was conducted."
+    "notes": "Independently inspected NIST 2024 Generative AI Profile and NIST AIRC, plus OpenAI evaluation best practices on 2026-10-28. Authored and reviewed three complete original versions; checked hypothetical arithmetic 3*80+2*45=330, 4/20=20%, 14/20=70%, 2/20=10%. Verified Unsplash photographer, free-license indication and unique image ID/source against article, market digest, market feed and queued-photo registries. No actual model benchmark was conducted. 29 October 2026: corrected the NIST AIRC homepage-only URL to its verified AI RMF Resources page to meet publisher's specific-path source validation."
   }
 }
