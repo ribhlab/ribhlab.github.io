@@ -3703,6 +3703,192 @@
           ]
         }
       }
+    },
+    "ofppt-pedagogy-3": {
+      "id": "ofppt-pedagogy-3",
+      "reviewedAt": "2026-10-29",
+      "verification": "Primary one-page Avis Rectificatif RH 132/26 read in full on 2026-10-29; independently compared with live OFPPT recruitment vacancy 3822 and emploi-public C44258/26. Official current sources show corrected 13 Nov 2026 midnight; older search snippets/republished pages show 9 Nov. No salary or test date claimed.",
+      "state": "official-rectificatif-verified",
+      "sources": [
+        {
+          "label": "OFPPT — Avis rectificatif officiel RH 132/26 (PDF, consulté le 29 octobre 2026)",
+          "url": "https://recrutement.ofppt.ma/files/offer/3822/avis_concours/s3_Jal5rfp1DHOwMEo.pdf?preview=Y"
+        },
+        {
+          "label": "OFPPT — fiche de candidature RH 132/26, échéance rectifiée",
+          "url": "https://recrutement.ofppt.ma/offre/3822"
+        },
+        {
+          "label": "Emploi-public — concours C44258/26, avis et date mise à jour",
+          "url": "https://www.emploi-public.ma/fr/concours/details/b94b323a-2c77-4178-bec3-db5ba3cb49e4"
+        },
+        {
+          "label": "Emploi-public — PDF de l'avis rectificatif",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/b94b323a-2c77-4178-bec3-db5ba3cb49e4"
+        }
+      ],
+      "facts": {
+        "employer": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
+        "reference": "RH 132/26",
+        "publicReference": "C44258/26",
+        "jobTitle": "Chef de pôle Pédagogique",
+        "posts": 3,
+        "country": "Maroc",
+        "cities": [
+          "Casablanca",
+          "Laâyoune",
+          "Rabat"
+        ],
+        "publishedAt": "2026-10-23",
+        "deadline": "2026-11-13",
+        "deadlineText": "13 novembre 2026 à minuit, selon l'Avis Rectificatif vérifié le 29 octobre 2026",
+        "previousDeadline": "2026-11-09",
+        "correctedDeadlineEvidence": "Avis Rectificatif PDF + employer live offer + updated emploi-public listing; older snippets/third-party listings may retain 9 November",
+        "nationality": "Marocaine (candidats externes)",
+        "externalDegree": "Diplôme d'ingénieur donnant accès à l'échelle 11 de la fonction publique",
+        "externalExperience": "4 années cumulées au minimum dans des établissements publics ou privés; avoir exercé comme Manager",
+        "externalAge": "Moins de 45 ans à la prise de service",
+        "internalEligibility": "Agent titulaire OFPPT, échelle 19 minimum; ou dérogation échelle 16 avec au moins 4 années de service effectif en catégorie C",
+        "documents": [
+          "Formulaire F1 externe ou F2 agent OFPPT (PDF)",
+          "CV actualisé et détaillé (PDF)",
+          "Diplôme requis et attestations d'équivalence pour diplômes étrangers (PDF)",
+          "CNI recto-verso sur une seule page (PDF)"
+        ],
+        "application": "https://recrutement.ofppt.ma/offre/3822",
+        "selection": "Présélection sur dossier puis tests d'évaluation; dates et lieux annoncés ultérieurement",
+        "assignment": "Selon besoins et ordre de mérite dans les trois villes citées",
+        "salary": null,
+        "examDate": null
+      },
+      "translations": {
+        "ar": {
+          "title": "OFPPT: توظيف 3 رؤساء أقطاب بيداغوجية وتصحيح الأجل إلى 13 نوفمبر 2026",
+          "deck": "دليل من الإعلان التصحيحي RH 132/26: شروط المهندس والخبرة والإدارة، مسار موظفي المكتب، الوثائق، المدن الثلاث وتنبيه إلى تغيير الموعد من 9 إلى 13 نوفمبر.",
+          "sections": [
+            [
+              "تصحيح رسمي غيّر الموعد النهائي من 9 إلى 13 نوفمبر",
+              "تخص هذه المباراة ثلاثة مناصب لرئيس قطب بيداغوجي لدى مكتب التكوين المهني وإنعاش الشغل، بالمرجع RH 132/26 والرمز C44258/26 على بوابة التشغيل العمومي. نشر الإعلان في 23 أكتوبر 2026، لكن وثيقة المؤسسة المتاحة حالياً تحمل عبارة «إعلان تصحيحي» وتحدد آخر أجل في 13 نوفمبر 2026 عند منتصف الليل. كانت نسخ سابقة من صفحة التوظيف ومواقع ناقلة تذكر 9 نوفمبر؛ لذلك لا ينبغي الخلط بين التاريخ الأصلي والتعديل اللاحق. تحققنا يوم 29 أكتوبر من أن صفحة التوظيف الرسمية والقرار التصحيحي وبطاقة التشغيل العمومي المحدثة تعرض جميعها 13 نوفمبر. يُستحسن حفظ نسخة من الإعلان التصحيحي ومراقبة أي تحديث جديد قبل إرسال الملف، دون انتظار الساعات الأخيرة."
+            ],
+            [
+              "طبيعة الوظيفة: إدارة التكوين لا التدريس وحده",
+              "لا يتعلق المنصب بمجرد تدريس مادة تقنية أو الإشراف على قاعة دراسية. يشارك رئيس القطب في وضع خطة تطوير المؤسسة وعقد برنامجها، ويحول التوجهات إلى خطة عمل قابلة للتنفيذ. كما يخطط للبرامج التكوينية ويؤطر سيرها ويوازن بين القاعات والتجهيزات والمدربين والاحتياجات التشغيلية. ويشمل العمل متابعة جودة التنفيذ البيداغوجي وتدبير الموارد البشرية والمادية والمساهمة في التكوين المستمر. هذا الوصف وارد في الإعلان الأصلي، أما مؤشرات الأداء أو حجم الفريق أو نظام العمل اليومي فلم تُحدد فيه. على المرشح أن يقدم أمثلة موثقة عن التخطيط والمتابعة والتنسيق وإدارة الموارد، لا أن يكتفي بسرد شهاداته أو دوراته."
+            ],
+            [
+              "شروط المرشحين من خارج المكتب",
+              "يشترط الإعلان للمرشح الخارجي الجنسية المغربية، ودبلوم مهندس يتيح الولوج إلى السلم 11 في الوظيفة العمومية، وخبرة مهنية تراكمية لا تقل عن أربع سنوات داخل مؤسسات عمومية أو خاصة. ويشترط أيضاً أن يكون قد مارس وظيفة مدير أو مسؤول تدبير، وأن يقل عمره عن 45 سنة في تاريخ مباشرة العمل، لا بالضرورة في تاريخ نشر الإعلان. لا يذكر القرار تخصصاً هندسياً حصرياً أو عدداً مستقلاً من سنوات الإدارة، ولذلك لا يجوز اختراع شرط من هذا النوع. ومع ذلك، لا تكفي أربع سنوات في أي نشاط لإثبات ممارسة الإدارة؛ يجب أن تظهر المسؤوليات الفعلية بوضوح في السيرة الذاتية، ويمكن طلب توضيح رسمي عند الشك في قبول شهادة معينة."
+            ],
+            [
+              "مسار مختلف لموظفي OFPPT الحاليين",
+              "يفرق القرار بين المرشحين الخارجيين وموظفي المكتب. بالنسبة إلى موظفي OFPPT، يشترط أن يكون المرشح موظفاً مرسماً ومصنفاً في السلم 19 على الأقل، أو أن يستفيد استثناءً وهو في السلم 16 مع أربع سنوات على الأقل من الخدمة الفعلية في الفئة C. لا يصح نقل شرط دبلوم المهندس والخبرة الخارجية تلقائياً إلى هذه الفئة من دون قراءة بندها الخاص، كما لا يجوز افتراض أن الاستثناء يمنح لكل موظف في السلم 16. حدد الإعلان استمارة F2 لموظفي المكتب مقابل F1 للمرشحين الخارجيين. من الأفضل التأكد من الوضعية الإدارية والسلم وسنوات الخدمة في السجلات الداخلية قبل الشروع في تحميل المستندات."
+            ],
+            [
+              "الوثائق المطلوبة وكيفية إعدادها دون نقص",
+              "تتكون الحقيبة الأساسية من استمارة الترشيح F1 أو F2 حسب الصفة، وسيرة ذاتية محينة تشرح الخبرات المرتبطة بالمنصب بالتفصيل، ونسخة من الدبلوم المطلوب، ونسخة من البطاقة الوطنية للتعريف بوجهيها في صفحة PDF واحدة. إذا صدر الدبلوم عن مؤسسة أجنبية، يلزم إرفاق نسخ من شهادات المعادلة. جميع الوثائق المطلوبة بصيغة PDF، والاستمارة قابلة للتنزيل من موقع المكتب. عملياً، ينبغي أن تعرض السيرة فترات العمل ومؤسسات التشغيل والمسؤوليات الإدارية ومخرجات المشاريع بعبارات دقيقة يمكن التحقق منها. افحص وضوح وجهي البطاقة، وتطابق الاسم، وقابلية فتح الملفات، ولا تضع بيانات شخصية إضافية لا يطلبها الإعلان."
+            ],
+            [
+              "خطوات الترشيح الإلكتروني والتحقق من الاستلام",
+              "يطلب القرار إنشاء حساب أو استعمال حساب قائم في منصة التوظيف الرسمية للمكتب، ثم اختيار العرض RH 132/26 وتحميل وثائق الملف بصيغة PDF عبر المنصة نفسها. لا تُقبل الملفات المرسلة عبر قناة أخرى، كما ينبه الإعلان إلى استبعاد الملفات الناقصة وإلغاء الترشيح عند تقديم معلومات غير صحيحة. قبل الضغط على الإرسال، طابق اسم الوظيفة وعدد المناصب والمرجع مع صفحة العرض، ثم راجع كل مرفق بعد التحميل. احتفظ بتأكيد الإرسال أو رقم الطلب إذا أصدرته المنصة؛ ولا تفترض أن ظهور زر «تحميل» يعني تسجيل الترشيح نهائياً. آخر أجل مصحح هو 13 نوفمبر 2026 عند منتصف الليل، لكن الإرسال المبكر يقلل مخاطر ازدحام الخدمة."
+            ],
+            [
+              "الانتقاء والاختبارات: ما هو معلوم وما لم يُعلن",
+              "توضح الوثيقة أن المرشحين الذين يجتازون الانتقاء الأولي للملفات سيستدعون إلى اختبارات تقييم، وأن مواعيدها وأماكنها ستبلغ لاحقاً. لم يحدد الإعلان تاريخ اختبار مكتوب أو مقابلة شفهية أو معايير تنقيط تفصيلية؛ لذلك لا يجوز نشر رزنامة متخيلة. يمكن الاستعداد بصورة مهنية بمراجعة أمثلة عن تنظيم جداول التكوين وتوزيع الموارد ومعالجة تأخر برنامج بيداغوجي وقيادة فريق متعدد الاختصاصات. هذه أمثلة تحضيرية وليست أسئلة رسمية مسربة. تابع حسابك في منصة الترشيح وإعلانات المكتب، وتحقق من مصدر أي استدعاء قبل مشاركة الوثائق أو دفع مبالغ إلى جهات غير معروفة."
+            ],
+            [
+              "أماكن التعيين والراتب والالتزامات العملية",
+              "يسمي الإعلان ثلاث مدن محتملة للتعيين: الدار البيضاء والعيون والرباط. ويذكر أن التوزيع يتم وفق حاجات المكتب وترتيب الاستحقاق، ولا يمنح المرشح حق اختيار مدينة معينة أو ضمان منصب في المدينة الأقرب إليه. لا يحدد الإعلان راتباً شهرياً أو تعويضات أو ساعات عمل مفصلة، وبالتالي لا ننشر رقماً تقديرياً بوصفه عرضاً رسمياً. قبل قبول التعيين، يجب التحقق من شروط العقد والوضعية الإدارية والتنقل والإقامة وأي التزامات أخرى من الجهة المشغلة. كما أن إعلان ثلاثة مناصب لا يعني ثلاثة مناصب في كل مدينة؛ العدد الإجمالي المعلن هو ثلاثة فقط."
+            ],
+            [
+              "قائمة تدقيق أخيرة وحدود المعلومات المنشورة",
+              "ابدأ بمطابقة المرجع RH 132/26 والرمز C44258/26، ثم حدد هل تترشح بصفة خارجية أم موظفاً بالمكتب. راجع الشهادة والسن والخبرة الإدارية، وأكمل الاستمارة المناسبة، وحول الوثائق إلى PDF واضح، وارفعها في الحساب الصحيح. راجع إشعار الإرسال، ثم تابع مستجدات الاختبارات من المصادر الرسمية. الفرق بين 9 و13 نوفمبر يبرهن على ضرورة إعادة قراءة القرار الأصلي عند كل تحديث؛ فالأجل المتأخر يستند هنا إلى إعلان تصحيحي رسمي وليس إلى تخمين. لا توجد في المصادر التي راجعناها معلومات مؤكدة عن الراتب أو عدد المناصب لكل مدينة أو تاريخ الاختبار، ولا ينبغي أن تتحول هذه الفراغات إلى وعود أو نصائح حاسمة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "OFPPT hiring 3 pedagogical-pole managers: corrected 13 November deadline",
+          "deck": "Primary-source guide to RH 132/26: engineer diploma, four years of experience, management requirement, internal staff route, documents, cities and the official deadline correction.",
+          "sections": [
+            [
+              "Official correction: the deadline moved from 9 to 13 November",
+              "This recruitment concerns three pedagogical-pole manager positions at Morocco's Office of Vocational Training and Employment Promotion, under employer reference RH 132/26 and public portal code C44258/26. The notice was published on 23 October 2026. A later document, explicitly headed 'Avis Rectificatif', sets the application deadline at midnight on 13 November 2026. Older copies of the vacancy and third-party listings still mention 9 November, which can mislead applicants. On 29 October we checked the corrected PDF, the employer's live vacancy page and the updated public employment listing; all three now show 13 November. Save the correction for your records, monitor any further amendment and avoid treating a search-engine snippet as the controlling legal notice."
+            ],
+            [
+              "The actual job: managing training operations, not only teaching",
+              "The position is a management function within a training establishment rather than a conventional classroom teaching vacancy. The manager contributes to the institution's development plan and programme agreement, turns strategic priorities into an operational action plan and coordinates the scheduling and supervision of training. Responsibilities also include allocating resources, monitoring pedagogical implementation, managing staff and equipment and supporting continuing-training initiatives. These duties are described in the employer's document; the size of the team, daily timetable and specific performance indicators are not published. Applicants should therefore describe concrete examples of planning, coordination, staff supervision and resource decisions rather than assuming that technical qualifications or classroom experience alone demonstrate suitability."
+            ],
+            [
+              "Eligibility for applicants from outside OFPPT",
+              "External applicants must be Moroccan nationals and hold an engineering diploma giving access to scale 11 of the Moroccan civil service. They need at least four cumulative years of professional experience in public or private establishments and must have previously worked in a managerial capacity. They must be younger than 45 when taking up the position, a different reference point from the publication or submission date. The correction does not name one exclusive engineering specialty or impose a separately quantified number of management years. Neither should be invented. However, four years of unrelated employment do not automatically demonstrate managerial responsibility. Candidates should document the roles they actually held and seek an official clarification if their diploma's classification is uncertain."
+            ],
+            [
+              "A distinct route for current OFPPT employees",
+              "The recruitment notice separates external applicants from existing OFPPT staff. Internal candidates must be tenured OFPPT employees at scale 19 or higher, or qualify for the stated exception at scale 16 with at least four years of effective service in category C. This is not a general invitation to every person working at scale 16, and the special internal criteria should not be silently replaced with the external eligibility checklist. The application form is also different: F2 is for OFPPT staff, whereas F1 is for external candidates. Employees should confirm their official grade, tenure and service record before applying. If their administrative classification is disputed, the employer's human-resources service is the proper source of clarification."
+            ],
+            [
+              "Required PDF documents and a practical quality check",
+              "The application requires the relevant F1 or F2 form, an up-to-date CV detailing professional experience related to the role, a copy of the qualifying diploma and a copy of both sides of the national identity card arranged on a single PDF page. Diplomas awarded abroad must be accompanied by copies of equivalence certificates. The employer asks for PDF files, and the form is downloadable through its website. In the CV, identify employment periods, organisations, supervisory responsibilities and verifiable outcomes without embellishing achievements. Open each PDF before uploading, check that the name matches across documents and that both identity-card sides are legible. Do not attach unnecessary personal data or assume a scan is acceptable simply because its file extension reads PDF."
+            ],
+            [
+              "How to apply and what counts as a completed submission",
+              "Applicants must register or sign in on OFPPT's official recruitment platform, locate RH 132/26 and submit the requested PDF documents through that platform. The notice says incomplete applications and submissions through other channels will not be considered, and incorrect information can invalidate a file. Check the exact job title and reference before selecting the upload fields, then review the uploaded attachments and complete the final submission action. Keep any acknowledgement or application number issued by the service. Merely creating an account or uploading a document does not necessarily prove that the application has been sent. The corrected deadline is midnight on 13 November 2026; submitting well before then reduces exposure to technical outages."
+            ],
+            [
+              "Shortlisting and assessment: confirmed facts versus speculation",
+              "The official notice provides for an initial review of application files followed by evaluation tests for shortlisted candidates. Test dates and locations will be communicated later. It does not publish a confirmed written-exam date, an interview schedule or a detailed marking grid, so none should be presented as settled fact. Sensible preparation might involve explaining how to schedule a training programme, allocate scarce equipment, handle a delayed course and lead a multidisciplinary team. These are illustrative practice scenarios, not leaked or official test questions. Monitor the employer's recruitment platform for authentic invitations and verify unexpected messages before sending personal documents or paying any purported recruitment fee."
+            ],
+            [
+              "Assignments, pay and practical constraints",
+              "The three possible assignment cities are Casablanca, Laâyoune and Rabat. OFPPT states that placements will follow organisational needs and merit order; applicants should not infer that they can choose their city or that there are three vacancies in each location. The advertised total is three positions. The notice does not specify a monthly salary, benefits package or detailed working hours, and publishing a made-up pay estimate would be misleading. Before accepting any eventual offer, candidates should obtain the actual contractual and administrative terms, including location, mobility requirements and applicable benefits, from the employer. The recruitment advertisement is not itself an employment contract or a guarantee of appointment."
+            ],
+            [
+              "Final applicant checklist and why the correction matters",
+              "Match the two identifiers, RH 132/26 and C44258/26, then determine whether the external or internal conditions apply. Verify the engineering diploma or official grade, professional and management experience, age rule and appropriate F1 or F2 form. Prepare readable PDFs, submit them through the correct platform, retain proof of completion and watch for official test notices. The shift from 9 to 13 November illustrates why primary-source corrections matter more than recycled search results. Here the later date is supported by a formal corrective notice, not by editorial guesswork. Salary, the allocation of vacancies by city and examination dates remain unconfirmed in the reviewed documents; applicants should not rely on claims that fill those gaps without evidence."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "OFPPT : 3 chefs de pôle pédagogique, échéance rectifiée au 13 novembre",
+          "deck": "Analyse de l'avis rectificatif RH 132/26 : diplôme d'ingénieur, quatre ans d'expérience, management, conditions des agents internes, dossier PDF et trois villes d'affectation.",
+          "sections": [
+            [
+              "Avis rectificatif : échéance reportée du 9 au 13 novembre",
+              "Ce recrutement concerne trois postes de chef de pôle pédagogique à l'Office de la formation professionnelle et de la promotion du travail, sous la référence RH 132/26 et le code public C44258/26. L'annonce a été publiée le 23 octobre 2026. Le document officiel désormais disponible porte expressément la mention « Avis Rectificatif » et fixe la clôture des candidatures au 13 novembre 2026 à minuit. Des versions antérieures de la fiche et plusieurs reprises externes indiquent encore le 9 novembre. Le 29 octobre, nous avons comparé le PDF rectificatif, la fiche actuelle de recrutement OFPPT et la fiche mise à jour du portail national : toutes trois indiquent le 13 novembre. Conservez une copie de la rectification et surveillez les éventuelles modifications ultérieures."
+            ],
+            [
+              "Une responsabilité de pilotage pédagogique, pas seulement d'enseignement",
+              "Le poste ne correspond pas à une simple mission d'animation de cours. Le chef de pôle participe au plan de développement et au contrat-programme de son établissement, élabore le plan d'action et organise le déroulement des formations. Il doit aussi optimiser l'utilisation des ressources, suivre l'exécution pédagogique, gérer des moyens humains et matériels et contribuer aux actions de formation continue. Ces responsabilités sont détaillées dans l'avis de l'employeur, qui ne précise toutefois ni la taille de l'équipe ni les horaires ni une grille chiffrée d'indicateurs. Un candidat pertinent gagnera à présenter des situations concrètes de planification, de management, d'arbitrage des ressources et de suivi des résultats, sans transformer ses réalisations en performances inventées."
+            ],
+            [
+              "Conditions précises pour les candidats externes",
+              "Le candidat externe doit être de nationalité marocaine et posséder un diplôme d'ingénieur donnant accès à l'échelle 11 de la fonction publique. Il doit justifier d'au moins quatre années cumulées d'expérience professionnelle dans des établissements publics ou privés et avoir exercé en qualité de manager. La limite d'âge est fixée à moins de 45 ans à la date de prise de service, et non nécessairement au jour de publication de l'avis. Le texte rectificatif ne désigne pas une spécialité d'ingénierie exclusive et ne chiffre pas séparément une durée minimale de management. Il serait donc incorrect d'ajouter ces critères. En revanche, quatre années d'emploi ne prouvent pas à elles seules une responsabilité managériale effective."
+            ],
+            [
+              "Règles distinctes pour les agents déjà en poste à l'OFPPT",
+              "Le texte distingue les candidatures externes de celles des agents de l'OFPPT. Pour ces derniers, il faut être agent titulaire classé au moins à l'échelle 19, ou bénéficier de la dérogation prévue à l'échelle 16 avec au moins quatre années de service effectif dans la catégorie C. Cette dérogation ne doit pas être interprétée comme une admissibilité automatique de tous les agents de l'échelle 16. Le formulaire F2 concerne les agents OFPPT, tandis que les personnes extérieures utilisent le formulaire F1. Avant de déposer un dossier, il est prudent de vérifier le classement, la titularisation et l'ancienneté dans les pièces administratives internes. En cas de doute, seule une réponse de l'employeur permet de clarifier la situation individuelle."
+            ],
+            [
+              "Les pièces demandées et les contrôles avant téléversement",
+              "Le dossier comprend le formulaire F1 ou F2 selon le statut, un CV actualisé explicitant les expériences en lien avec la fonction, une copie du diplôme requis et une copie de la carte nationale d'identité recto verso réunie sur une seule page PDF. Pour un diplôme étranger, des copies des attestations d'équivalence doivent être jointes. Les documents sont demandés au format PDF et le formulaire est accessible depuis le site OFPPT. Le CV doit permettre de comprendre les périodes d'emploi, les responsabilités exercées, la coordination des équipes et les résultats vérifiables. Avant le dépôt, ouvrez chaque fichier, contrôlez sa lisibilité et la concordance des identités. Évitez les pièces supplémentaires non demandées contenant des données personnelles sensibles."
+            ],
+            [
+              "Dépôt en ligne : suivre toute la procédure jusqu'à confirmation",
+              "La candidature doit être déposée sur la plateforme officielle de recrutement OFPPT, après création d'un espace candidat ou connexion à un compte existant. Sélectionnez l'offre RH 132/26, puis transmettez les pièces PDF dans les champs prévus. L'avis exclut les dossiers incomplets et les envois par un autre canal; une information erronée peut entraîner l'annulation de la candidature. Vérifiez l'intitulé et la référence avant de téléverser, contrôlez les pièces enregistrées, puis terminez la procédure de soumission. Conservez l'accusé ou le numéro de candidature si le système en fournit un. Une inscription au portail ne vaut pas nécessairement dépôt effectif. La nouvelle échéance est le 13 novembre 2026 à minuit; mieux vaut éviter la dernière soirée."
+            ],
+            [
+              "Présélection et tests : ne pas inventer de calendrier",
+              "Le document prévoit une présélection sur dossier puis des tests d'évaluation pour les personnes retenues. Les dates et lieux seront annoncés ultérieurement. Aucun jour d'épreuve écrite, aucune date d'entretien oral et aucun barème détaillé ne figurent dans l'avis rectificatif. Une préparation raisonnable peut porter sur la construction d'un planning de formation, la gestion d'un manque de matériel, le suivi d'un plan d'action et l'encadrement d'une équipe pédagogique. Il s'agit d'exemples de réflexion professionnelle et non de sujets officiels. Consultez régulièrement votre espace candidat et les publications de l'employeur. Méfiez-vous des messages non vérifiés demandant des documents supplémentaires ou un paiement pour garantir la sélection."
+            ],
+            [
+              "Affectations possibles, rémunération et mobilité",
+              "Les villes d'affectation mentionnées sont Casablanca, Laâyoune et Rabat. L'OFPPT indique que les candidats retenus seront répartis selon les besoins de l'établissement et l'ordre de mérite. Il ne s'agit pas d'un droit de choisir librement sa ville et le total de trois postes ne signifie pas trois postes par destination. Le texte ne publie ni salaire mensuel, ni montant d'indemnités, ni horaires détaillés. Nous ne présentons donc aucun chiffre estimatif comme une rémunération officielle. Avant une éventuelle prise de fonction, le candidat devra demander les conditions administratives, contractuelles et de mobilité applicables. Une annonce de recrutement ne constitue ni une promesse d'embauche ni une garantie d'affectation dans une ville précise."
+            ],
+            [
+              "Contrôle final du dossier et fiabilité des dates",
+              "Commencez par rapprocher les références RH 132/26 et C44258/26. Identifiez ensuite votre catégorie de candidature, vérifiez le diplôme ou le classement, l'expérience, la fonction managériale, la limite d'âge et le formulaire correspondant. Préparez des PDF lisibles, soumettez le dossier sur le bon portail, gardez la preuve de dépôt et suivez les convocations officielles. La différence entre les dates du 9 et du 13 novembre montre l'importance de lire le rectificatif plutôt que de reproduire une ancienne fiche. Ici, la prolongation est appuyée par un document officiel, et non par une supposition. Le salaire, la répartition des trois postes par ville et les dates des tests restent non précisés dans les sources consultées."
+            ]
+          ]
+        }
+      }
     }
   }
 }
