@@ -2462,6 +2462,185 @@
           ]
         }
       }
+    },
+    "bam-assurances-2026": {
+      "id": "bam-assurances-2026",
+      "reviewedAt": "2026-10-29",
+      "verification": "Original Bank Al-Maghrib one-page vacancy PDF CSDA/DIL/191026 read in full on 29 October 2026; cross-checked with emploi-public record C44144/26 published 19 October 2026. Portal specifies 16:30, PDF only date. No salary, minimum years of experience or unsupported attachment checklist invented.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Bank Al-Maghrib — original one-page recruitment notice CSDA/DIL/191026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/d0a32a44-0138-4be0-bc53-8159712e6edc"
+        },
+        {
+          "label": "Emploi-public — official listing C44144/26, published 19 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/d0a32a44-0138-4be0-bc53-8159712e6edc"
+        },
+        {
+          "label": "Bank Al-Maghrib — official career site",
+          "url": "https://www.bkam.ma"
+        }
+      ],
+      "facts": {
+        "employer": "Bank Al-Maghrib",
+        "reference": "CSDA/DIL/191026; C44144/26",
+        "publishedAt": "2026-10-19",
+        "posts": 1,
+        "city": "Rabat",
+        "country": "Maroc",
+        "jobTitle": "Chargé de suivi dossiers d'assurances",
+        "degree": "Licence en gestion, promotions 2024 ou 2025",
+        "experience": "Première expérience dans les assurances souhaitée, stage/alternance inclus; aucune durée minimale annoncée",
+        "nationality": "Marocaine",
+        "age": "Moins de 40 ans",
+        "deadline": "2026-11-02T16:30",
+        "deadlineCaution": "PDF specifies 2 November only; public portal specifies 16:30. Submit early.",
+        "submission": "https://bkam.csod.com/ats/careersite/search.aspx?site=11&c=bkam",
+        "selection": "Présélection des dossiers puis entretien; date et lieu envoyés par email",
+        "salary": null,
+        "documents": "No definitive mandatory attachments listed in original notice; follow live application form."
+      },
+      "translations": {
+        "ar": {
+          "title": "بنك المغرب يوظف مكلفاً بتتبع ملفات التأمين في الرباط: الشروط الحقيقية وطريقة الترشيح",
+          "deck": "قراءة في الإعلان الأصلي: إجازة التسيير لفوجي 2024 و2025، خبرة تأمين مفضلة، منصب واحد بالرباط، وآخر أجل 2 نوفمبر 2026 الساعة 16:30.",
+          "sections": [
+            [
+              "المصدر الأصلي وما الذي تعنيه الوظيفة",
+              "يعلن بنك المغرب عن منصب واحد بعنوان «مكلف بتتبع ملفات التأمين» داخل مديرية العقار واللوجستيك بالرباط، وفق إعلان مرجعه CSDA/DIL/191026. راجعنا وثيقة التوظيف الأصلية المؤلفة من صفحة واحدة وقارناها ببطاقة بوابة التشغيل العمومي التي تحمل الرمز C44144/26 والمنشورة في 19 أكتوبر 2026. هذه وظيفة إدارية متخصصة في تدبير ملفات التأمين داخل مؤسسة محددة، وليست برنامجاً لتوظيف الوسطاء أو فرصة عمل عن بعد. يقتضي تقييم الأهلية قراءة شرط الشهادة وسنة التخرج قبل الاهتمام بالمسمى الوظيفي أو إعداد رسالة التحفيز."
+            ],
+            [
+              "الدبلوم وسنة التخرج شرطان حاسمان",
+              "تطلب الوثيقة الحصول على الإجازة في التسيير، وأن يكون المترشح من فوج 2024 أو 2025 تحديداً. لذلك لا يكفي امتلاك شهادة في تخصص قريب دون التحقق من تطابقها مع شرط «Licence en gestion»، كما لا يجوز افتراض أن خبرة مهنية طويلة تعوض سنة التخرج المذكورة. على صاحب إجازة في القانون أو العلوم الاقتصادية أو التأمين مثلاً أن يتحقق من قبول مؤهله عبر الجهة المشغلة قبل تقديم بيانات قد لا تطابق الإعلان. لم ينص المصدر على شرط ماستر أو دبلوم مهندس أو شهادة في الاكتوارية، فلا يصح تقديمها باعتبارها شروطاً إلزامية."
+            ],
+            [
+              "الخبرة المطلوبة: أفضلية لا حد أدنى معلن",
+              "تفضل الجهة المشغلة امتلاك تجربة أولى في مجال التأمين، وتذكر صراحة إمكان احتساب التدريب أو التكوين بالتناوب ضمن هذه الخبرة. لم تحدد الوثيقة عدداً إلزامياً من سنوات العمل، ولذلك ينبغي عدم استبعاد الخريج الذي يستوفي شرط الإجازة وسنة التخرج لمجرد أنه لم يعمل سنتين أو ثلاثاً. يمكن للمترشح إظهار مهام واقعية من تدريب موثق، مثل ترتيب ملفات الحوادث أو متابعة الوثائق أو إعداد جداول الحالات. يجب تجنب اختلاق الخبرة أو تضخيم مدة تدريب قصير، لأن لجنة الانتقاء قد تطلب شرح العمليات التي أنجزها المرشح بنفسه."
+            ],
+            [
+              "ما الذي ستنجزه في ملفات التأمين؟",
+              "تتعلق المهمة بمتابعة ملفات الحوادث والتصريحات والتعويضات، وشهادات المساعدة والاشتراكات التأمينية، بحسب ما ورد في القرار. العمل هنا لا يعني بالضرورة بيع وثائق التأمين أو تحديد أقساطها؛ بل تنظيم مسار الملف ومراقبة الوثائق ومواعيد المتابعة وتبادل المعلومات مع الأطراف المعنية. مثال توضيحي غير منقول من المؤسسة: عند تسجيل حادث يتعلق بممتلكات، يمكن إنشاء سجل بتاريخ الإبلاغ ورقم الملف والوثائق الناقصة والجهة المكلفة بالرد وتاريخ المتابعة المقبلة. هذا المثال يشرح منطق العمل ولا يدعي وصف نظام البنك الداخلي."
+            ],
+            [
+              "المراسلات والأرشفة الإلكترونية",
+              "تشمل المسؤوليات معالجة البريد الوارد والصادر، ورقمنة المراسلات عبر منصات إدارة إلكترونية للوثائق، وفهرستها بطريقة تسهل الرجوع إليها. كما يتضمن العمل المساهمة في تحويل الأرشيف وتنظيمه. يقتضي ذلك الانتباه إلى سرية الوثائق وإلى تسمية الملفات ومطابقة النسخة الممسوحة مع الأصل، وعدم إرسال وثائق حساسة إلى حسابات شخصية أو أدوات عامة غير معتمدة. في المقابلة يمكن شرح طريقة عملية: استلام المستند، التحقق من اكتماله، تسجيل مرجعه، حفظه في المكان المصرح به، ثم إحالته إلى المسؤول المختص دون تعديل غير موثق."
+            ],
+            [
+              "الدعم الإداري ومؤشرات الأداء",
+              "يذكر الإعلان تنظيم المواعيد والاستقبال الحضوري والهاتف وطلبات الشراء، والمساهمة في إعداد مؤشرات النشاط ولوحات القيادة والإحصاءات والتقارير. قد يفيد المرشح أن يشرح الفرق بين عدد الملفات المفتوحة وعدد الملفات المغلقة ومتوسط مدة المعالجة، بشرط عدم تقديم أرقام وهمية عن أداء البنك. يمكن إعداد نموذج تدريبي ببيانات افتراضية لشرح كيفية تتبع حالة كل ملف وتاريخ استلامه وتاريخ آخر إجراء. ينبغي وسم البيانات بأنها تدريبية، لأن المؤسسة لم تنشر نموذجاً رسمياً أو مؤشرات محددة يجب على جميع المرشحين اعتمادها."
+            ],
+            [
+              "المهارات المهنية والشخصية المذكورة",
+              "تشترط الوثيقة معرفة جيدة بالحماية الاجتماعية وإطارها التنظيمي، وإتقان الأدوات المكتبية، ومعرفة عامة بنظم المعلومات، ومهارات التحرير والالتزام بالمواعيد والتنظيم وحسن التواصل. وتعتبر معرفة برنامج لتدبير المراسلات ميزة إضافية، لا شرطاً قاطعاً. من المفيد مراجعة مفاهيم الحوادث والضمانات وشهادات المساعدة، وتدرب على صياغة رسالة إدارية قصيرة ودقيقة، وإعداد جدول متابعة بسيط. لا تدع هذه الاستعدادات توحي بأن البنك يشترط شهادة حاسوب بعينها أو اختباراً تقنياً محدداً؛ فالإعلان لم ينشر مثل هذه التفاصيل."
+            ],
+            [
+              "الجنسية والعمر ومكان العمل والأجر",
+              "تنص الوثيقة صراحة على الجنسية المغربية وأن يكون عمر المترشح أقل من أربعين سنة. مكان العمل المعلن هو الرباط، وليس جميع فروع بنك المغرب، ولا يذكر الإعلان إمكان العمل عن بعد أو ساعات الدوام أو طبيعة التعويضات. لم ينشر المصدر قيمة الراتب ولا مزايا مالية محددة؛ لذلك لا يجوز بناء قرار الانتقال إلى الرباط على تقدير أجور متداول في مواقع غير رسمية. من المهم احتساب تكاليف السكن والنقل بصورة شخصية عند الوصول إلى مرحلة عرض العمل الفعلي، مع طلب توضيح شروط العقد من الجهة المشغلة."
+            ],
+            [
+              "طريقة الترشيح والوثائق دون اختلاق قائمة",
+              "تشير الوثيقة إلى ضرورة ملء استمارة التوظيف الخاصة بالمنصب عبر قسم «الوظائف» في موقع بنك المغرب، وتعرض بوابة التشغيل العمومي رابط منصة الترشيح التابعة للمؤسسة. لا تتضمن الصفحة الأصلية قائمة مفصلة بملفات PDF أو نماذج إلزامية، لذلك ينبغي اتباع الحقول والتعليمات التي تظهر داخل المنصة وقت التسجيل، لا الاعتماد على قائمة عامة منشورة في مواقع أخرى. عملياً جهز نسخة واضحة من الإجازة وسيرة ذاتية دقيقة وتواريخ التخرج والتدريب، ثم تحقق من تطابق المعلومات قبل الإرسال واحتفظ بما يثبت استلام الطلب إن توفر."
+            ],
+            [
+              "آخر أجل والانتقاء والمخاطر العملية",
+              "تحدد وثيقة بنك المغرب تاريخ 2 نوفمبر 2026 آخر أجل، بينما تضيف بطاقة بوابة التشغيل العمومي الساعة 16:30. لهذا يُنصح بالتقديم قبل هذا التوقيت بهامش كاف، لا في الدقائق الأخيرة. سيُبلّغ المرشحون المقبولون بعد الفرز الأولي بموعد المقابلة ومكانها عبر البريد الإلكتروني، ولم يُعلن اختبار كتابي أو موعد مقابلة محدد. تحقق من صندوق الرسائل غير المرغوبة، ولا تدفع رسوماً لأشخاص يزعمون ضمان القبول، ولا تفسر قبول الاستمارة على أنه تعيين. راجع الرابطين الرسميين مجدداً إذا تغيرت شروط الإعلان."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Bank Al-Maghrib insurance files officer in Rabat: eligibility, duties and application",
+          "deck": "Original-notice analysis: management degree from the 2024 or 2025 class, preferred insurance experience, one Rabat vacancy and the 2 November 2026 deadline at 16:30.",
+          "sections": [
+            [
+              "Original notice and actual scope of the vacancy",
+              "Bank Al-Maghrib is recruiting one Insurance Files Monitoring Officer within its Property and Logistics Directorate, based in Rabat. The original one-page notice bears reference CSDA/DIL/191026, while the public recruitment portal lists competition C44144/26, published on 19 October 2026. We checked both records rather than inferring duties from a generic job title. This is an administrative position supporting insurance-file management inside a specific institution, not a general insurance-sales programme, remote-work offer or promise of employment. Applicants should assess the graduation-year requirement before investing time in an application."
+            ],
+            [
+              "Degree and graduation year: two decisive filters",
+              "The original announcement requires a bachelor's degree (licence) in management and explicitly specifies the 2024 or 2025 graduating classes. A degree in a neighbouring discipline should not automatically be treated as equivalent, and extensive professional experience does not erase the stated graduation-year condition. Candidates with economics, law or insurance qualifications should seek clarification from the employer where their exact diploma designation differs. The notice does not demand a master's degree, an engineering diploma or an actuarial qualification, so describing any of those as mandatory would misrepresent the employer's actual criteria. Verify your diploma title and graduation date before submitting."
+            ],
+            [
+              "Experience is preferred, not a stated minimum",
+              "The employer expresses a preference for initial insurance-sector experience and explicitly includes internships or work-study placements. It does not set a minimum of two or three years. An otherwise eligible recent graduate should therefore not self-reject simply because they lack a long employment history. A truthful internship example might cover registering claims, tracking missing documents or updating an administrative spreadsheet. Explain what you personally did, how information was checked and how deadlines were managed. Do not present a classroom exercise as professional employment or inflate the duration of a placement: the selection panel may ask for specific examples and supporting evidence."
+            ],
+            [
+              "Insurance case management in everyday terms",
+              "The stated responsibilities include monitoring claims, assistance certificates and insurance subscriptions. The role should not be confused with selling policies, setting premiums or independently deciding compensation. Its administrative value lies in organising documents, following up outstanding actions and maintaining traceable communication. For illustration only, a training register could record the incident date, file reference, documents still required, responsible contact and next follow-up date. That example is an explanatory workflow, not a claim about Bank Al-Maghrib's internal systems. Candidates should distinguish published duties from their own practical proposals during interviews."
+            ],
+            [
+              "Incoming mail, digitisation and archives",
+              "The notice assigns incoming and outgoing correspondence, digitisation through dedicated electronic document-management platforms, indexing and support for archive transfers. These tasks require accuracy, confidentiality and a consistent filing method. A useful interview scenario is to describe receiving a document, checking whether it is complete, registering its reference, storing it in an authorised location and forwarding it to the relevant colleague. Avoid sending institutional material to personal email or unapproved online services. The employer has not published the specific software used internally, so naming a particular vendor as an official requirement would be speculative."
+            ],
+            [
+              "Administrative support and reporting indicators",
+              "Other duties include scheduling, front-desk and telephone reception, purchase requests, and contributing to performance indicators, dashboards, statistics and reports. Candidates can demonstrate the difference between newly opened cases, closed cases and processing times without pretending to know the bank's actual performance figures. A practice spreadsheet with explicitly fictional records can show how to track each case's status, received date and most recent action. Explain how you would check data quality before calculating indicators. The announcement does not prescribe an exact dashboard template or a mandatory spreadsheet certificate, and such additions should not be presented as recruitment conditions."
+            ],
+            [
+              "Technical and interpersonal competencies",
+              "The official profile asks for knowledge of social protection and the related regulatory framework, strong office-software skills, general familiarity with information systems, clear writing, responsiveness, organisation and effective interpersonal communication. Experience with correspondence-management software is described as an advantage rather than an absolute condition. Preparation could include reviewing insurance terminology, drafting a concise administrative response and practising a simple follow-up table. Candidates should not mistake suggested preparation for an official written examination syllabus. The announcement does not specify a named software product, a particular certification or a published technical test."
+            ],
+            [
+              "Nationality, age, work location and compensation",
+              "Applicants must be Moroccan nationals and under 40 years old, according to the notice. The stated workplace is Rabat, not every branch of the central bank. The announcement does not specify remote-work arrangements, working hours, contract benefits or a salary amount. Salary figures circulating on unrelated recruitment websites should therefore not be treated as confirmed compensation for this position. If selected, a candidate considering relocation should request the actual contract terms and calculate housing and commuting costs against the written offer, rather than against assumptions about pay or benefits."
+            ],
+            [
+              "How to apply and what documents are actually specified",
+              "The original notice requires applicants to complete the dedicated recruitment form in the Careers section of Bank Al-Maghrib's official website. The public portal provides a direct link to the employer's recruitment platform. The one-page notice does not publish a definitive checklist of mandatory PDF attachments, so follow the fields and upload instructions displayed by the platform when applying. Preparing a readable degree copy, an accurate CV and consistent graduation and internship dates is sensible, but these suggestions are not a substitute for the live form's requirements. Review all entries before submission and retain any available receipt."
+            ],
+            [
+              "Deadline, selection steps and practical safeguards",
+              "The original notice sets 2 November 2026 as the application deadline; the public recruitment portal adds a closing time of 16:30. Submit well before that time, allowing for login problems or file-upload delays. Candidates shortlisted after the initial review will be informed by email of the interview's date and location. Neither a written examination date nor an interview timetable is published in the original notice. Monitor the email address supplied, including its spam folder. Never pay intermediaries claiming to guarantee selection, and do not confuse successful online submission with a job offer. Recheck the official pages for changes."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Bank Al-Maghrib recrute un chargé du suivi des assurances à Rabat : conditions et candidature",
+          "deck": "Analyse de l'avis original : licence en gestion, promotion 2024 ou 2025, première expérience souhaitée, un poste à Rabat et dépôt avant le 2 novembre 2026 à 16 h 30.",
+          "sections": [
+            [
+              "L'annonce originale et la nature exacte du poste",
+              "Bank Al-Maghrib recrute une personne chargée du suivi des dossiers d'assurances à la Direction Immobilier et Logistique, pour un poste basé à Rabat. L'avis original d'une page porte la référence CSDA/DIL/191026, tandis que le portail de l'emploi public affiche le code C44144/26 et une publication le 19 octobre 2026. Les deux documents ont été rapprochés pour distinguer les missions réellement annoncées des interprétations générales du métier. Il s'agit d'une fonction administrative liée à la gestion des assurances, et non d'une campagne de vente de contrats, d'une offre à distance ou d'une garantie d'embauche."
+            ],
+            [
+              "Licence en gestion et promotion de diplôme",
+              "L'avis exige une licence en gestion obtenue dans la promotion 2024 ou 2025. Ces deux critères doivent être examinés ensemble : un diplôme dans une spécialité voisine ne peut pas être considéré automatiquement comme admissible, et plusieurs années d'expérience ne remplacent pas une condition explicite de promotion. Les titulaires de diplômes en économie, droit ou assurance dont l'intitulé diffère devraient demander une clarification à l'employeur. L'annonce ne demande ni master, ni diplôme d'ingénieur, ni qualification actuarielle particulière. Il serait donc inexact de présenter ces titres comme obligatoires, même s'ils peuvent correspondre à d'autres métiers du secteur."
+            ],
+            [
+              "Une première expérience souhaitée, sans durée minimale",
+              "Le profil mentionne de préférence une première expérience dans les assurances, y compris un stage ou une alternance. Aucune durée minimale de deux ou trois ans n'est imposée dans le document. Un diplômé récent qui satisfait aux autres conditions ne doit donc pas conclure qu'il est automatiquement exclu faute d'un long parcours professionnel. Il peut présenter avec précision un stage pendant lequel il a classé des dossiers, suivi des pièces manquantes ou mis à jour des tableaux. Il convient toutefois de décrire uniquement les tâches réellement accomplies, sans transformer un exercice pédagogique en emploi salarié ni exagérer la durée d'une mission."
+            ],
+            [
+              "Le suivi concret des dossiers d'assurances",
+              "Les activités annoncées comprennent le suivi des sinistres, des attestations d'assistance et des souscriptions. Elles ne signifient pas nécessairement vendre des polices, fixer les primes ou décider seul d'une indemnisation. La valeur du poste réside notamment dans la traçabilité des documents, les relances et la coordination administrative. À titre d'exemple pédagogique, un registre pourrait contenir la date du sinistre, la référence du dossier, les justificatifs attendus, l'interlocuteur et la prochaine échéance de suivi. Ce modèle est proposé pour comprendre le travail, sans prétendre décrire les procédures internes ou le système d'information de la banque."
+            ],
+            [
+              "Courrier, numérisation et archivage documentaire",
+              "L'avis prévoit le traitement du courrier entrant et sortant, sa numérisation sur des plateformes de gestion électronique, son référencement ainsi que la contribution aux versements d'archives. La rigueur et la confidentialité sont essentielles. Lors d'un entretien, un candidat peut expliquer comment il réceptionnerait un document, vérifierait sa complétude, enregistrerait sa référence, le conserverait dans un espace autorisé puis le transmettrait au service concerné. Les documents professionnels sensibles ne devraient pas être envoyés vers une messagerie personnelle ou un service public non autorisé. Aucun nom de logiciel interne n'est précisé dans la fiche publiée."
+            ],
+            [
+              "Appui administratif et tableaux de bord",
+              "Les autres tâches citées concernent les plannings, l'accueil physique et téléphonique, les demandes d'achats et la contribution aux indicateurs de performance, statistiques et reportings. Pour se préparer, on peut construire un tableau d'exercice avec des données fictives : dossiers ouverts, dossiers clôturés, dates de réception et délais de traitement. Le candidat doit expliquer comment vérifier les doublons, les dates et la qualité des informations avant d'établir un indicateur. Il ne faut pas inventer de chiffres de performance propres à Bank Al-Maghrib ni affirmer qu'un modèle de tableau de bord particulier serait officiellement exigé pour ce recrutement."
+            ],
+            [
+              "Compétences bureautiques et qualités relationnelles",
+              "Le profil officiel cite une bonne connaissance de la protection sociale et de son cadre réglementaire, la maîtrise des outils bureautiques, une connaissance générale des systèmes d'information, des capacités rédactionnelles et un bon relationnel. La connaissance d'un outil de gestion du courrier est un atout, non une obligation absolue. Une préparation utile consiste à réviser le vocabulaire des assurances, rédiger une note administrative claire et expliquer un processus de classement fiable. Ces conseils ne doivent pas être confondus avec un programme officiel d'épreuves : le document ne précise ni logiciel obligatoire, ni certification informatique, ni examen technique détaillé."
+            ],
+            [
+              "Nationalité, âge, affectation et rémunération",
+              "L'avis exige la nationalité marocaine et un âge inférieur à quarante ans. L'affectation annoncée se situe à Rabat ; rien n'autorise à présenter le poste comme disponible dans toutes les agences. Le texte ne fournit aucun montant de salaire, aucun détail d'avantages contractuels et aucune modalité de télétravail. Les estimations trouvées sur des sites non officiels ne constituent donc pas des informations vérifiées pour cette offre. Avant de déménager, un candidat retenu devra comparer les conditions réelles du contrat aux dépenses de logement et de transport, et demander des précisions directement à l'employeur."
+            ],
+            [
+              "Candidature en ligne et pièces justificatives",
+              "La fiche originale impose de remplir le formulaire de recrutement dédié sur le site officiel de Bank Al-Maghrib, dans la rubrique « Carrières ». Le portail public fournit également l'accès à la plateforme de candidature de l'institution. L'avis d'une page ne contient pas de liste exhaustive des fichiers PDF à joindre ; il faut donc suivre les champs et consignes affichés lors de la candidature, plutôt que reprendre une liste générique non vérifiée. Préparer une copie lisible de la licence, un CV exact et les dates de formation et de stage est prudent. Conservez un accusé de dépôt s'il est délivré."
+            ],
+            [
+              "Date limite, présélection et précautions",
+              "La fiche originale indique le 2 novembre 2026 comme date limite, et le portail de l'emploi public précise 16 h 30. Il est préférable de déposer le dossier avant cette heure avec une marge de sécurité, pour éviter les difficultés de connexion ou de téléversement. Les personnes présélectionnées recevront par courrier électronique la date et le lieu de l'entretien. Aucun calendrier d'épreuve écrite ou d'entretien n'est annoncé dans le document original. Consultez régulièrement l'adresse utilisée, y compris les courriers indésirables. Ne versez aucun paiement à un intermédiaire promettant une sélection et vérifiez toute modification sur les sites officiels."
+            ]
+          ]
+        }
+      }
     }
   }
 }
