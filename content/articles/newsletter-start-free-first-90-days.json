@@ -1,0 +1,179 @@
+{
+  "slug": "newsletter-start-free-first-90-days",
+  "category": "earning",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "featured": false,
+  "related": [
+    "affiliate-marketing-ethically",
+    "adsense-ready-original-site-2026-checklist",
+    "sell-digital-products"
+  ],
+  "sources": [
+    {
+      "label": "UK Information Commissioner's Office — Guidance on direct marketing using electronic mail, updated 28 April 2026; reviewed 28 October 2026",
+      "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/"
+    },
+    {
+      "label": "US Federal Trade Commission — CAN-SPAM Act compliance guide, reviewed 28 October 2026",
+      "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+    },
+    {
+      "label": "Mailchimp — About double opt-in, reviewed 28 October 2026",
+      "url": "https://mailchimp.com/help/about-double-opt-in/"
+    },
+    {
+      "label": "Gmail Help — Email sender guidelines, requirements since February 2024, reviewed 28 October 2026",
+      "url": "https://support.google.com/mail/answer/81126?hl=en"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "إطلاق نشرة بريدية خلال 90 يوماً: خطة محتوى وموافقة وقياس دون شراء قوائم",
+      "excerpt": "دليل عملي لتأسيس نشرة بريدية مفيدة من الصفر، واختبار جمهورها خلال ثلاثة أشهر مع حماية البيانات وتوثيق الموافقة وتكاليف واضحة.",
+      "lead": "لا تحتاج النشرة البريدية إلى وعود بدخل سريع كي تكون مشروعاً مفيداً. يمكن أن تكون وسيلة لتقديم تحليل أسبوعي أو تعليم مهارة محددة أو متابعة تحديثات قطاع مهني، بشرط أن يعرف القارئ ما الذي سيصله ولماذا. في هذا الدليل خطة تحريرية مدتها تسعون يوماً يمكن تنفيذها بأدوات مجانية أو منخفضة التكلفة بحسب حدود كل مزود. راجعت إرشادات هيئة حماية البيانات البريطانية ICO المحدثة في 28 أبريل 2026، ودليل لجنة التجارة الفيدرالية الأمريكية FTC، ووثائق Mailchimp وGoogle بتاريخ 28 أكتوبر 2026. تختلف القوانين حسب بلد المرسل والمستلم، ولذلك لا تشكل هذه القراءة استشارة قانونية.",
+      "sections": [
+        {
+          "heading": "1. حدد المشكلة التي تستحق رسالة أسبوعية",
+          "paragraphs": [
+            "ابدأ بسؤال محدد لا بعنوان واسع مثل «أخبار التكنولوجيا». على سبيل المثال، قد يحتاج أصحاب المشاريع الصغيرة إلى شرح أسبوعي لمشكلة واحدة في الفواتير الإلكترونية، مع مثال قابل للتطبيق ومصدر رسمي. اكتب وصفاً من جملتين يبين الجمهور والفائدة والوتيرة: «كل خميس، تحليل قصير لتغيير تنظيمي واحد مع إجراء يمكن مراجعته». ثم حضر ثلاثة أعداد تجريبية قبل إنشاء نموذج الاشتراك. إذا عجزت عن إنتاج ثلاثة أمثلة مفيدة بلا تكرار، فالمشكلة في تعريف النشرة لا في أداة الإرسال.",
+            "لا تبدأ بجمع عناوين البريد من مجموعات التواصل أو من صفحات عامة. وجود عنوان منشور لا يعني أن صاحبه طلب رسائلك. اجمع ملاحظات أولية من مقابلات طوعية أو أسئلة منشورة دون تخزين بيانات أشخاص لم يوافقوا. قارن ثلاثة موضوعات محتملة وفق تكرار المشكلة، وتوفر مصادر يمكن الاستشهاد بها، والوقت اللازم لإنتاج عدد أصلي. اختر موضوعاً تستطيع مراجعته باستمرار حتى في أسبوع لا توجد فيه أخبار مثيرة، ولا تخلط بين نمو عدد المشتركين ونجاح الخدمة التحريرية."
+          ]
+        },
+        {
+          "heading": "2. أنشئ نموذج اشتراك واضحاً واحتفظ بإثبات الموافقة",
+          "paragraphs": [
+            "يحتاج نموذج الاشتراك إلى عنوان واضح، ووصف نوع الرسائل وتواترها، وحقل بريد إلكتروني، ورابط سياسة الخصوصية، وطريقة سهلة لإلغاء الاشتراك. لا تضع مربعات موافقة محددة مسبقاً. توضح ICO أن التسويق الإلكتروني للأفراد في المملكة المتحدة يحتاج عادة إلى موافقة محددة أو استثناء محدود للعملاء السابقين بشروطه، وأن الموافقة يجب أن تكون إيجابية وقابلة للسحب. لا تنقل الاستثناء تلقائياً إلى كل دولة، ولا تستخدم قائمة اشتريتها من وسيط بوصفها قاعدة مشتركين شرعية.",
+            "يوضح Mailchimp الفرق بين التسجيل المباشر والتأكيد المزدوج: في الثاني تصل رسالة تحقق ويصبح العنوان مشتركاً بعد الضغط على الرابط. التأكيد المزدوج ليس ضماناً قانونياً شاملاً، لكنه يساعد على الحد من التسجيلات الخاطئة وإثبات أن صاحب البريد يتحكم في العنوان. احفظ تاريخ التسجيل، ونص الموافقة الذي ظهر وقتها، ومصدر النموذج، وحالة التأكيد، مع الحد من الوصول إلى هذه البيانات. اختبر بنفسك مسار التسجيل والإلغاء على الهاتف والحاسوب، وتأكد من عدم إضافة عنوان غير مؤكد إلى الإرسال الدوري."
+          ]
+        },
+        {
+          "heading": "3. اختر أداة الإرسال بناء على الحدود لا الإعلانات",
+          "paragraphs": [
+            "قارن المنصات وفق عدد المشتركين المسموح، وحدود الرسائل الشهرية، وتكلفة الزيادة، وإمكانية تصدير البيانات، وخيارات الحذف، وسجل الموافقات، ودعم اللغات، والتحكم في النطاق. قد يكون المستوى المجاني كافياً للاختبار لكنه قد يتغير أو يمنع بعض وظائف الأتمتة. لا تفترض أن عبارة «مجاني» تعني إرسالاً بلا حدود أو احتفاظاً دائماً بالبيانات. أنشئ جدول قرار بسيطاً وسجل تاريخ فحص الأسعار والشروط، ثم اختر أبسط خدمة تتيح لك تنفيذ نموذج الاشتراك وإلغاء الاشتراك بصورة صحيحة.",
+            "إذا استخدمت نطاقاً خاصاً للإرسال، راجع توثيق SPF وDKIM وDMARC بدلاً من الاكتفاء بإدخال عنوان المرسل في لوحة التحكم. تذكر إرشادات Gmail أن المرسلين إلى حساباته الشخصية يحتاجون إلى SPF أو DKIM على الأقل، وأن مرسلي أكثر من خمسة آلاف رسالة يومياً إلى Gmail يخضعون لمتطلبات إضافية تشمل SPF وDKIM وDMARC وإلغاء الاشتراك بنقرة واحدة للرسائل التسويقية. هذا الحد ليس هدفاً ينبغي بلوغه، ولا يضمن اجتياز التوثيق وصول كل رسالة إلى صندوق الوارد."
+          ]
+        },
+        {
+          "heading": "4. الأيام 1 إلى 30: أنشئ أرشيفاً واختبر قابلية القراءة",
+          "paragraphs": [
+            "في الأسبوع الأول حدد الوعد التحريري، وافتح سجلاً للمصادر والأخطاء، واكتب نموذج عدد من ثلاث فقرات: المشكلة، ما تثبته المصادر، وخطوة عملية مع حدودها. في الأسبوع الثاني جهز صفحة تعريف ونموذج اشتراك وتأكيداً واختبار إلغاء. في الأسبوعين الثالث والرابع انشر عددين تجريبيين في مواعيد ثابتة، واحتفظ بنسخة ويب يمكن قراءتها دون التسجيل. لا تطلب الاشتراك قبل أن يرى الزائر مثالاً حقيقياً لما سيستلمه؛ فالعنوان الجذاب وحده لا يثبت جودة التحرير.",
+            "راجع عرض الرسائل على شاشة صغيرة، ونصوص الروابط الواضحة، والتباين، ووصف الصور، والنسخة النصية البسيطة. إذا أرسلت بالعربية والإنجليزية والفرنسية، فالأفضل أن يختار القارئ اللغة بدلاً من إرسال ثلاث رسائل متطابقة للجميع. تحقق من اتجاه الكتابة في العربية ومن أن علامات الترقيم والأرقام والروابط تظهر بصورة سليمة. لا تجعل الصور شرطاً لفهم الفكرة، لأن بعض برامج البريد تمنع تحميلها تلقائياً. احذف عناوين الاختبار بعد انتهائها إذا لم تعد لازمة."
+          ]
+        },
+        {
+          "heading": "5. الأيام 31 إلى 60: حسّن المحتوى بمؤشرات قابلة للفحص",
+          "paragraphs": [
+            "استمر في عدد واحد أسبوعياً، واطلب من المشتركين الرد اختيارياً بسؤال واحد محدد مثل «أي خطوة بقيت غامضة؟». صنف الملاحظات بحسب المشكلة لا بحسب هوية المرسل. يمكن أن تشير النقرات على روابط المصادر، والردود النوعية، والانسحابات، والشكاوى إلى مشكلات مختلفة؛ لا تختزلها في معدل الفتح وحده، لأن أدوات حماية الخصوصية وتحميل الصور قد تجعل هذا الرقم غير دقيق. راجع أيضاً الارتداد وعناوين البريد غير الصالحة، ولا تحاول إعادة إرسال الرسائل مراراً لمن لم يتفاعل.",
+            "مثال توضيحي لا يمثل نتائج حقيقية: إذا وصل عدد إلى 120 عنواناً مؤكداً، ونقر 18 شخصاً على رابط دليل عملي، فمعدل النقر من المشتركين المؤكدين يساوي 18 ÷ 120 = 15%. لكن هذا لا يثبت أن 15% قرؤوا العدد كاملاً أو طبقوا النصيحة، ولا يسمح باستنتاج طلب سوقي عام من عينة صغيرة اختارت الاشتراك بنفسها. اكتب مع كل مؤشر المقام المستخدم والفترة وطريقة القياس، ثم قارن أعداداً متشابهة في الموضوع والتوقيت قبل اتخاذ قرار تحريري."
+          ]
+        },
+        {
+          "heading": "6. الأيام 61 إلى 90: قرر الاستمرار أو التعديل أو التوقف",
+          "paragraphs": [
+            "في الشهر الثالث اختبر صيغة جديدة واحدة فقط: قد تكون قائمة خطوات، أو مقابلة موثقة، أو شرحاً مصوراً مرخصاً. حافظ على الوتيرة نفسها كي لا تخلط أثر الصيغة بتغير توقيت الإرسال. أنشئ سجل مراجعة لكل عدد يضم تاريخ التحقق من المصادر والتصحيحات التي أُرسلت لاحقاً. إذا كانت الرسالة تتضمن عرضاً تجارياً أو رابطاً تابعاً، افصل الإفصاح عنه بوضوح عن النص التعليمي. لا تحول المشتركين تلقائياً إلى قائمة ترويجية مختلفة عن الغرض الذي وافقوا عليه.",
+            "احسب التكلفة قبل التفكير في اشتراك مدفوع: وقت البحث والتحرير، ورسوم الأداة والنطاق، والمراجعة القانونية عند الحاجة، والدعم، والضرائب والعمولات. إذا استغرق كل عدد أربع ساعات وصدرت أربعة أعداد شهرياً، فذلك 16 ساعة عمل قبل الردود والتصحيحات؛ وهو حساب تخطيطي لا دخل متوقع. ضع قراراً صريحاً في اليوم التسعين: الاستمرار إن كانت الفائدة متكررة والعبء محتمل، تعديل الوعد إن كانت الأسئلة غير واضحة، أو التوقف مع إبلاغ المشتركين وحذف البيانات وفق الالتزامات. النجاح هنا علاقة موثوقة، لا رقم مشتركين معزول."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Launch a useful email newsletter in 90 days: consent, content and honest metrics",
+      "excerpt": "A practical three-month plan for a small newsletter, from an editorial promise and verified opt-in to deliverability checks and meaningful performance measures.",
+      "lead": "An email newsletter is not a shortcut to passive income. It can be a durable way to explain a technical subject, help readers follow regulatory changes, or teach one skill at a time, provided recipients know exactly what they signed up for. This 90-day plan is designed for a solo editor with limited time, not for a marketing department buying contact lists. It draws on the UK Information Commissioner's Office guidance updated on 28 April 2026, the US Federal Trade Commission's CAN-SPAM guidance, and Mailchimp and Gmail documentation reviewed on 28 October 2026. The applicable law depends on the sender, audience and purpose, so the examples are operational guidance rather than legal advice.",
+      "sections": [
+        {
+          "heading": "1. Choose a repeatable reader problem before choosing software",
+          "paragraphs": [
+            "Replace a vague promise such as 'weekly business insights' with a specific recurring question. A newsletter for independent shop owners might explain one invoicing mistake per issue, using a source document, a worked example and a short checklist. Write a one-sentence promise that states the audience, benefit and schedule. Then draft three sample issues before inviting anyone to subscribe. If three useful issues are difficult to produce without repeating yourself, reconsider the niche; an email platform will not solve a weak editorial proposition.",
+            "Research the reader's problem without collecting email addresses from public profiles or private groups. An address visible on a website is not an invitation to receive promotional mail. You can ask voluntary interview participants which questions they struggle with and use anonymous notes to identify patterns. Score candidate topics against how often the problem occurs, whether independent evidence is available, and how long accurate reporting takes. Prefer a subject you can cover responsibly during a quiet news week, not one that requires a dramatic headline to justify each send."
+          ]
+        },
+        {
+          "heading": "2. Build a transparent signup and consent trail",
+          "paragraphs": [
+            "A good signup page says who is sending, what the messages contain, how frequently they arrive, and how to leave. Ask only for information you need, normally an email address, and link to an understandable privacy notice. Do not preselect a marketing consent checkbox. The ICO explains that marketing to individuals in the UK normally requires specific consent or a narrow existing-customer exception with safeguards. Those rules are jurisdiction-specific; a purchased list or generic 'partners may contact you' statement should not be treated as reliable permission.",
+            "Mailchimp distinguishes single opt-in, which subscribes an address immediately, from double opt-in, which requires a confirmation link. Double opt-in helps reject mistyped addresses and creates a clearer operational record, although it does not by itself resolve every legal requirement. Keep the signup date, source form, consent wording, confirmation state and withdrawal history with appropriate access controls. Test the whole journey using your own addresses, including a failed confirmation and an unsubscribe. A request to leave must not be buried behind a login or a misleading sequence of extra screens."
+          ]
+        },
+        {
+          "heading": "3. Compare services and authenticate your sending domain",
+          "paragraphs": [
+            "Before selecting a provider, compare its current subscriber cap, monthly sending allowance, overage price, export format, deletion process, language support, complaint handling and automation limits. Free tiers can be useful for a pilot but are not permanent promises, and the advertised headline allowance may exclude features you need. Record the pricing page and the date you checked it. One manageable audience with clear segments is often easier to audit than multiple overlapping lists. Do not pay for sophisticated workflows until you can consistently publish useful issues.",
+            "Technical setup is part of editorial trust. Gmail's sender guidelines require SPF or DKIM authentication for senders to personal Gmail accounts, with additional SPF, DKIM, DMARC and one-click unsubscribe requirements for senders exceeding 5,000 messages per day to those accounts. These thresholds have applied since February 2024, and the official documentation should be rechecked before configuration. Ask your provider how its authenticated domain aligns with your From address, verify DNS records and send a small test. Passing authentication reduces some delivery problems but never guarantees inbox placement."
+          ]
+        },
+        {
+          "heading": "4. Days 1–30: publish examples and test accessibility",
+          "paragraphs": [
+            "During week one, define the promise, create a source ledger and write a sample issue with three parts: the reader's problem, what the evidence supports, and an actionable next step with limitations. During week two, build the signup page and test confirmation, consent storage and unsubscribe. During weeks three and four, send two pilot issues on a consistent day and maintain readable web archives. Showing a complete example before requesting an address helps readers make an informed choice. It also gives you a reference against which to assess whether future issues keep the original promise.",
+            "Test the message on a narrow mobile screen and with images disabled. Use descriptive link labels, sufficient contrast, readable headings and a plain-text alternative. If you publish in Arabic, English and French, offer language preferences rather than automatically sending three versions to everyone. Check right-to-left formatting, punctuation and numbers in the Arabic edition, and verify that the translated claims still match the same evidence. Remove obsolete test addresses after setup. These small details can matter more to a reader than a decorative template or a sophisticated animation."
+          ]
+        },
+        {
+          "heading": "5. Days 31–60: measure useful responses, not vanity numbers",
+          "paragraphs": [
+            "Maintain a predictable weekly schedule and ask one optional feedback question, such as which step remained unclear. Categorize replies by editorial issue without exposing the sender's identity. Track confirmed subscribers, delivery failures, relevant link clicks, meaningful replies, unsubscribes and complaints. Treat open rates cautiously: image blocking and privacy features can make them unreliable, and Google's sender guidance notes that it cannot validate third-party open-rate claims. Do not repeatedly resend to non-openers or infer that silence means consent to a different type of marketing.",
+            "Consider a hypothetical issue sent to 120 confirmed subscribers with 18 clicks on a practical guide. Dividing 18 by 120 gives a 15% click-to-subscriber ratio. It does not prove that 15% read the entire issue, completed the task or would pay for future editions. Nor can a self-selected group of 120 represent an entire market. Write down the denominator, observation period and measurement method beside every metric. Compare similar issue formats before drawing conclusions, and read qualitative corrections as carefully as any numerical trend."
+          ]
+        },
+        {
+          "heading": "6. Days 61–90: test one change and make a sustainable decision",
+          "paragraphs": [
+            "Try one deliberate format change in month three, such as a documented interview or a shorter step-by-step edition, while keeping the delivery schedule stable. Maintain a corrections log that records what changed, when and why; if an earlier claim was materially wrong, tell readers in the next issue rather than silently altering the archive. If you introduce affiliate links or sponsorship, disclose the relationship clearly and keep promotional material distinct from independent analysis. Do not silently move educational subscribers into unrelated sales campaigns; the original permission and applicable rules still matter.",
+            "Calculate the real operating burden before considering a paid tier. Research, writing, fact-checking, technical support, platform fees, domain costs and tax obligations all consume resources. Four issues requiring four hours each represent 16 hours of production in a month before reader support or corrections; that is an illustrative workload, not an earnings projection. At day 90, choose among continuing, narrowing the topic, changing frequency or ending the project responsibly. If you stop, explain what happens to subscriber data and follow your retention commitments. A smaller list that trusts your work is more meaningful than inflated growth charts."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Lancer une newsletter utile en 90 jours : consentement, contenu et mesures fiables",
+      "excerpt": "Un programme éditorial de trois mois pour créer une lettre d'information, vérifier les inscriptions, protéger les données et mesurer l'intérêt sans promesses de revenus.",
+      "lead": "Une newsletter ne constitue pas une méthode automatique de revenu passif. Elle peut cependant rendre un service régulier : expliquer une règle, accompagner l'apprentissage d'une compétence ou éclairer une décision professionnelle. La condition première est que chaque personne sache précisément ce qu'elle recevra et à quelle fréquence. Ce programme de quatre-vingt-dix jours s'adresse à un rédacteur indépendant disposant de moyens modestes. Il s'appuie sur les recommandations de l'ICO britannique actualisées le 28 avril 2026, le guide CAN-SPAM de la FTC américaine et les documentations de Mailchimp et Gmail consultées le 28 octobre 2026. Les obligations juridiques dépendent des pays concernés ; les exemples suivants ne remplacent pas un conseil juridique adapté.",
+      "sections": [
+        {
+          "heading": "1. Définir un problème récurrent avant de choisir un outil",
+          "paragraphs": [
+            "Une promesse vague comme « l'actualité des entreprises » aide peu le lecteur à décider. Préférez un besoin précis : chaque semaine, expliquer à de petites entreprises une erreur de facturation, avec un texte officiel, un exemple chiffré et une vérification possible. Formulez en une phrase le public visé, le bénéfice attendu et le rythme d'envoi. Rédigez trois numéros complets avant d'ouvrir les inscriptions. Si ces essais répètent les mêmes conseils, redéfinissez le sujet : aucun logiciel de diffusion ne peut créer une valeur éditoriale qui n'existe pas.",
+            "Pour comprendre les besoins, privilégiez des échanges volontaires et des questions anonymisées. Une adresse électronique affichée publiquement n'autorise pas son ajout à une liste promotionnelle. Comparez plusieurs thèmes selon la fréquence du problème, la qualité des sources indépendantes disponibles et le temps nécessaire à une vérification sérieuse. Choisissez un domaine dans lequel vous pouvez produire un numéro utile même lorsqu'aucune actualité spectaculaire ne survient. Le nombre d'inscriptions ne doit pas devenir le seul critère de pertinence : une petite audience spécialisée peut signaler des besoins mieux définis."
+          ]
+        },
+        {
+          "heading": "2. Obtenir un accord clair et conserver sa preuve",
+          "paragraphs": [
+            "Le formulaire doit annoncer l'identité de l'expéditeur, la nature des messages, leur fréquence, un accès à la politique de confidentialité et une possibilité de désinscription simple. Ne cochez jamais la case d'accord à la place du visiteur. L'ICO rappelle qu'au Royaume-Uni la prospection électronique auprès des particuliers nécessite généralement un consentement spécifique, sauf exception encadrée pour certains clients existants. Il serait incorrect de généraliser cette exception à tous les pays ou d'assimiler une liste achetée à des inscriptions volontaires.",
+            "Mailchimp distingue l'inscription simple de la confirmation double, dans laquelle le destinataire valide son adresse en cliquant sur un lien reçu. Cette étape réduit les erreurs de saisie et facilite la traçabilité, sans garantir à elle seule la conformité à toutes les législations. Conservez de manière sécurisée la date, la provenance du formulaire, le texte de consentement affiché et l'état de confirmation. Testez vous-même l'inscription, la non-confirmation et le retrait. Une personne qui se désinscrit ne devrait pas devoir ouvrir un compte ou franchir plusieurs écrans ambigus."
+          ]
+        },
+        {
+          "heading": "3. Comparer les coûts réels et authentifier le domaine",
+          "paragraphs": [
+            "Avant de retenir une plateforme, examinez le plafond d'abonnés, le volume mensuel d'envois, le tarif des dépassements, les possibilités d'exportation, la suppression des données, les langues et les fonctions de gestion des plaintes. Une offre gratuite peut convenir à un essai, mais ses limites et ses prix évoluent. Notez la date à laquelle vous avez vérifié chaque condition. Une seule audience organisée en segments est souvent plus facile à contrôler que plusieurs listes qui se chevauchent. Évitez de payer des automatisations avancées avant d'avoir stabilisé le contenu et le rythme.",
+            "La réputation de l'expéditeur dépend aussi de la configuration technique. Les recommandations de Gmail exigent au moins SPF ou DKIM pour envoyer vers des comptes Gmail personnels ; au-delà de 5 000 messages quotidiens vers ces comptes, des obligations supplémentaires portent notamment sur SPF, DKIM, DMARC et la désinscription en un clic pour les messages commerciaux. Ces règles sont en place depuis février 2024 et doivent être revérifiées avant une configuration. Contrôlez les enregistrements DNS avec votre prestataire, puis effectuez un petit envoi de test. Une authentification correcte n'assure jamais la réception en boîte principale."
+          ]
+        },
+        {
+          "heading": "4. Jours 1 à 30 : produire des exemples et tester la lecture",
+          "paragraphs": [
+            "La première semaine sert à formuler la promesse, ouvrir un registre des sources et préparer un numéro pilote : problème du lecteur, faits vérifiables, action réalisable et limites. La deuxième semaine, construisez la page d'inscription, la confirmation et la procédure de retrait. Pendant les deux semaines suivantes, diffusez deux numéros d'essai à date fixe et archivez une version lisible sur le Web. Montrez au public un véritable exemple avant de demander son adresse. Un titre accrocheur ne prouve pas que le contenu sera assez solide pour justifier des messages réguliers.",
+            "Vérifiez l'affichage sur téléphone, avec les images bloquées et dans une version en texte simple. Les liens doivent avoir un intitulé compréhensible et les images une description utile. Si la publication existe en arabe, en anglais et en français, laissez les lecteurs choisir leur langue au lieu de multiplier les envois. Contrôlez particulièrement le sens de lecture de l'arabe et la cohérence des chiffres et des références dans chaque traduction. Supprimez les adresses de test devenues inutiles. L'accessibilité et la clarté valent davantage qu'une maquette complexe."
+          ]
+        },
+        {
+          "heading": "5. Jours 31 à 60 : interpréter les retours avec prudence",
+          "paragraphs": [
+            "Maintenez une cadence prévisible et posez une seule question facultative, par exemple sur l'étape la moins claire du dernier numéro. Classez les remarques par problème éditorial plutôt que par identité des personnes. Suivez les inscriptions confirmées, les échecs de distribution, les clics pertinents, les réponses argumentées, les retraits et les plaintes. Méfiez-vous du taux d'ouverture : le chargement automatique ou bloqué des images fausse parfois sa mesure, et Google ne peut vérifier les chiffres d'ouverture fournis par des tiers. Le silence ne vaut pas autorisation d'envoyer des publicités différentes.",
+            "Prenons un exemple purement pédagogique : un numéro est adressé à 120 abonnés confirmés et 18 cliquent vers un guide. Le rapport 18 divisé par 120 correspond à 15 % de clics rapportés aux abonnés. Ce résultat ne prouve ni une lecture intégrale, ni une application des conseils, ni une disposition à payer. Un groupe de volontaires aussi restreint ne représente pas un marché entier. Conservez la période, le dénominateur et la méthode de calcul à côté de chaque indicateur. Comparez des numéros réellement comparables avant de modifier votre ligne éditoriale."
+          ]
+        },
+        {
+          "heading": "6. Jours 61 à 90 : décider sans promettre de rentabilité",
+          "paragraphs": [
+            "Au troisième mois, testez une seule évolution : un entretien documenté, une édition plus courte ou une liste d'actions contrôlables. Gardez le même jour d'envoi afin de mieux distinguer l'effet du format. Tenez un historique des corrections indiquant les faits rectifiés et leur date ; une erreur importante doit être signalée aux lecteurs et non seulement modifiée dans les archives. Si vous ajoutez un lien affilié ou un parrainage, identifiez clairement la relation commerciale. Une inscription à une lettre pédagogique n'autorise pas automatiquement des campagnes de vente sans rapport.",
+            "Évaluez le coût réel avant d'envisager une version payante : recherche, rédaction, vérification, assistance, abonnement technique, nom de domaine et obligations fiscales. Quatre numéros exigeant chacun quatre heures représentent seize heures de production mensuelle, avant même les réponses et corrections. Il s'agit d'une simulation de charge de travail, nullement d'une prévision de revenu. Au quatre-vingt-dixième jour, choisissez de poursuivre, de réduire le périmètre, de ralentir ou d'arrêter en informant les abonnés. Respectez alors les engagements de conservation et d'effacement des données. La confiance constitue un résultat plus durable qu'un graphique de croissance artificielle."
+          ]
+        }
+      ]
+    }
+  }
+}

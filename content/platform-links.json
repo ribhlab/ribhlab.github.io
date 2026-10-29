@@ -905,6 +905,12 @@
     "minimal-skin-routine-cleanser-moisturizer-spf": [
       "aadFaceWashing",
       "aadSunscreen"
+    ],
+    "newsletter-start-free-first-90-days": [
+      "icoEmailMarketing",
+      "ftcCanSpam",
+      "mailchimpOptin",
+      "gmailSenderRules"
     ]
   }
 }
