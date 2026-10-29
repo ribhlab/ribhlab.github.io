@@ -5039,6 +5039,189 @@
           "fr": "https://ribhlab.github.io/fr/opportunities/competitions/amdie-investment/"
         }
       }
+    },
+    "au-kenitra-data-science-ai": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Signed three-page recruitment decision dated 27 October 2026 read visually, three-page original position sheet read in text, government vacancy C44309/26 cross-checked; verified 29 October 2026. Publication and live QA pending.",
+      "state": "researched-awaiting-live-verification",
+      "sources": [
+        {
+          "label": "AUKSS — décision signée du 27 octobre 2026, 3 pages, modalités et épreuves",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/b526d274-b490-4982-833e-71d21ea20813"
+        },
+        {
+          "label": "AUKSS — fiche de poste officielle, 3 pages, missions Big Data, Data Science et IA",
+          "url": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/b526d274-b490-4982-833e-71d21ea20813/0"
+        },
+        {
+          "label": "Emploi-public — annonce officielle C44309/26, publiée le 27 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/b526d274-b490-4982-833e-71d21ea20813"
+        }
+      ],
+      "facts": {
+        "employer": "Agence urbaine de Kénitra–Sidi Kacem–Sidi Slimane",
+        "competitionCode": "C44309/26",
+        "decisionDate": "2026-10-27",
+        "publishedAt": "2026-10-27",
+        "posts": 1,
+        "jobTitle": "Ingénieur d'État en Génie Informatique — Big Data, Data Science ou Intelligence Artificielle",
+        "city": "Kénitra",
+        "jobCity": "Kénitra (siège de l'agence)",
+        "deadline": "2026-11-11",
+        "deadlineHour": "16:30",
+        "nationality": "Moroccan",
+        "age": "18 to 45 on employment date",
+        "diploma": "Diplôme d’Ingénieur d’Etat en Génie Informatique, Big Data, Data Science ou Intelligence Artificielle, ou diplôme reconnu équivalent",
+        "experience": "Expérience probante souhaitable; aucun minimum d'années imposé",
+        "startDate": "December 2026",
+        "application": "Dépôt au bureau d'ordre ou envoi postal au siège",
+        "address": "Rue Lamhaned Kacem, Bir Rami Est, B.P. 1356, Kénitra",
+        "documents": [
+          "Signed application with identity, home/email address and phone",
+          "CV",
+          "Certified copy of Moroccan national ID",
+          "Certified copies of diplomas and certificates",
+          "Equivalence certificate for foreign degrees if applicable",
+          "Authorization of employing administration for public-sector staff if applicable"
+        ],
+        "stages": [
+          "Dossier screening",
+          "Written exam: 3 hours, coefficient 1, minimum 10/20 to proceed",
+          "Oral exam: 30 minutes, coefficient 1"
+        ],
+        "examDate": null,
+        "examLocation": null,
+        "salary": null,
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مهندس بيانات وذكاء اصطناعي بالقنيطرة: منصب واحد وشروط المباراة والوثائق والاختبارات",
+          "deck": "دليل مستخرج من القرار الموقع وبطاقة الوظيفة للوكالة الحضرية للقنيطرة–سيدي قاسم–سيدي سليمان: آخر أجل 11 نوفمبر 2026 الساعة 16:30، والتعيين بالقنيطرة، وتاريخ الاختبارات لم يعلن بعد.",
+          "sections": [
+            [
+              "إعلان رسمي عن منصب هندسي واحد وليس برنامج توظيف مفتوح",
+              "أعلنت الوكالة الحضرية للقنيطرة–سيدي قاسم–سيدي سليمان عن مباراة لتوظيف مهندس دولة واحد في الهندسة المعلوماتية، بتخصص البيانات الضخمة أو علم البيانات أو الذكاء الاصطناعي. نشرت بوابة التشغيل العمومي الإعلان بتاريخ 27 أكتوبر 2026 تحت الرمز C44309/26. حدد القرار مقر التعيين في مقر الوكالة بمدينة القنيطرة، وحدد الالتحاق بالعمل خلال ديسمبر 2026. لا ينبغي الخلط بين هذا المنصب وبين إعلانات مهندس معماري أو مساعدة إدارة صادرة عن الجهة نفسها؛ لكل منها ملف وشروط مستقلة. آخر أجل محدد في 11 نوفمبر 2026، وتذكر البوابة الساعة الرابعة والنصف مساءً، وهو ما يؤكده القرار الموقع."
+            ],
+            [
+              "الجنسية والسن والشهادة والخبرة: ما هو إلزامي وما هو تفضيلي؟",
+              "ينص القرار على الجنسية المغربية، وألا يقل عمر المرشح عن 18 سنة وألا يتجاوز 45 سنة عند تاريخ التوظيف. يشترط الحصول على دبلوم مهندس دولة في الهندسة المعلوماتية ضمن التخصصات المعلنة أو شهادة معترف بمعادلتها تخول الولوج إلى الوظيفة. وردت الخبرة المهنية بعبارة تفيد الأفضلية، فلا يجوز تحويلها إلى عدد سنوات إلزامي لم يحدده القرار. ويشترط أيضاً عدم التسجيل في السجل التأديبي المركزي للإدارات العمومية. قبل إعداد الملف، قارن تسمية تخصصك المكتوبة على الدبلوم مع عبارة الإعلان، ولا تفترض أن أي تكوين قصير في الذكاء الاصطناعي يعادل شهادة مهندس دولة."
+            ],
+            [
+              "العمل الفعلي في البيانات والذكاء الاصطناعي داخل وكالة حضرية",
+              "تكشف بطاقة المنصب المرفقة بالقرار عن مهام أكثر تحديداً من عنوان «مهندس ذكاء اصطناعي». يتعين تحويل بيانات الوكالة إلى مؤشرات ولوحات قيادة وتحليلات وتقارير، والمشاركة في خطط العمل والجودة. تشمل المهام تصميم نماذج التعلم الآلي ومعالجة اللغة الطبيعية لتصنيف المعطيات العمرانية أو معالجة الإحصاءات، وتطوير تطبيقات ذكاء اصطناعي توليدي مفتوحة المصدر لخدمة الإجراءات الإدارية. ويشمل الدور نشر النماذج ومتابعة دورة حياتها على خوادم محلية أو بنية سحابية سيادية. لا يدل هذا الوصف على أن الوكالة تستخدم نموذجاً تجارياً معيناً أو أنها أعلنت مشروعاً منفصلاً بعقد خارجي."
+            ],
+            [
+              "هندسة البيانات والأنظمة والشبكات ليست مهاماً ثانوية",
+              "لا يقتصر الدور على تدريب النماذج. تتضمن بطاقة الوظيفة جمع البيانات وتنظيفها وهيكلتها من قواعد الوكالة والبيانات المفتوحة، وضمان جودة بيانات التدريب وإمكانية تتبعها. وتشمل أيضاً إدارة أنظمة المعلومات وسير اعتماد الملفات، وتبادل البيانات مع المؤسسات الشريكة، وإدارة الشبكة المحلية والخوادم والتخزين والنسخ الاحتياطي وخطط استمرارية العمل. هذا الاتساع مهم للمرشح: يمكن أن تسأله اللجنة عن معالجة قاعدة بيانات أو فشل استرجاع نسخة احتياطية بقدر ما تسأله عن نموذج تصنيف. لذلك من الأفضل إعداد أمثلة موثقة تغطي دورة البيانات كاملة لا عرض نموذج لغوي وحده."
+            ],
+            [
+              "المهارات التقنية والأمن والامتثال التي تظهر في بطاقة المنصب",
+              "تذكر البطاقة Windows Server وLinux والافتراضية وActive Directory وشبكات LAN/WAN وVLAN وVPN والجدران النارية، إلى جانب Python وSQL وJava أو C++، وDocker وKubernetes وGit وواجهات API. كما تشير إلى TensorFlow وPyTorch وScikit-learn وHugging Face وPandas، ومعالجة اللغة والرؤية الحاسوبية. في الأمن تبرز إدارة الصلاحيات والسجلات والحوادث والنسخ الاحتياطي، والامتثال للقانون المغربي 09-08 المتعلق بالمعطيات الشخصية والقانون 05-20 وتوجيهات DGSSI. هذه قائمة كفاءات منشورة، وليست وعداً بأن الاختبار سيشمل كل تقنية أو شرطاً يبرر استبعاد المرشح آلياً إذا افتقد أداة واحدة."
+            ],
+            [
+              "الوثائق المطلوبة: جهز ملفاً قابلاً للتدقيق قبل الإيداع",
+              "يسرد القرار طلب مشاركة موقعاً يتضمن الاسم الشخصي والعائلي والعنوان الشخصي والإلكتروني ورقم الهاتف، وسيرة ذاتية، ونسخة مصادقاً عليها من البطاقة الوطنية، ونسخة مصادقاً عليها من الدبلومات والشهادات. تُضاف شهادة المعادلة للشهادات الصادرة عن مؤسسات أجنبية، وموافقة الإدارة للموظفين المنتمين إلى القطاع العام، مع التنبيه إلى أن الالتحاق مقرر في ديسمبر 2026. احرص على وضوح النسخ وتطابق الاسم والتخصص، واحتفظ بنسخة من الملف الكامل وإثبات الإرسال أو الإيداع. لا تستبدل طلب المشاركة الموقع برسالة إلكترونية غير منصوص عليها، ولا تضف وثائق شخصية غير مطلوبة إلى منصات مجهولة."
+            ],
+            [
+              "طريقة الإيداع والعنوان والموعد النهائي بدقة",
+              "تنص المادة الثامنة على إيداع الملف لدى مكتب الضبط أو إرساله إلى مقر الوكالة الحضرية للقنيطرة–سيدي قاسم–سيدي سليمان: زنقة المهند قاسم، بئر الرامي الشرقية، ص.ب 1356، القنيطرة. الموعد النهائي هو 11 نوفمبر 2026 الساعة 16:30؛ ويُفهم من القرار أن الملف الذي يصل بعد الأجل لا يؤخذ بعين الاعتبار، حتى إن كان تاريخ إرساله أقدم. تعرض البوابة نوع الإيداع في صفحة الإعلان بصورة مقتضبة، لذلك يُعتمد نص القرار الأصلي في كيفية تسليم الملف. إذا اخترت البريد، فاحسب زمن النقل ولا تعتبر وصل الإرسال ضماناً لوصول الملف في الموعد."
+            ],
+            [
+              "مراحل الانتقاء والاختبار الكتابي والشفوي",
+              "يبدأ الانتقاء بفحص أولي للملفات وفق الشروط. بعد ذلك اختبار كتابي مدته ثلاث ساعات بمعامل واحد، يتصل بالتخصص وبمجال اشتغال الوكالة الحضرية، ثم اختبار شفوي مدته نصف ساعة بمعامل واحد يناقش فيه أعضاء اللجنة مواضيع مرتبطة بالمنصب ويقيمون قدرات المرشح. ينص القرار على استدعاء من حصل على 10 من 20 على الأقل في الكتابي إلى الشفوي، وعلى ترتيب القبول النهائي وفق أعلى معدل محسوب من الاختبارين. لم يُحدد القرار تاريخاً أو مكاناً ثابتاً لإجراء الاختبارات؛ وسيُعلن عنهما لاحقاً. لذلك تجنب نشر موعد مفترض وتابع الموقع الرسمي للوكالة والبوابة."
+            ],
+            [
+              "تحضير واقعي ومخاطر ينبغي ألا يغفلها المرشح",
+              "للاستعداد، اختر مشروعاً تقنياً من أعمالك تستطيع شرح مصدر بياناته وتنظيفها وتقييم نموذجها، وحدد كيف تمنع تسرب المعطيات الشخصية وكيف تختبر الاسترجاع بعد عطل. أعد مثالاً قصيراً عن لوحة قيادة للمعطيات العمرانية، وآخر عن ضبط صلاحيات مستخدمين، دون الادعاء بأنك عملت لدى الوكالة. لا ينشر الإعلان راتباً محدداً، ولا يذكر ضماناً للتوظيف بعد مجرد الإيداع؛ ويجب التمييز بين «خبرة مستحسنة» وشرط دبلوم إلزامي. احذر الوسطاء الذين يطلبون رسوماً أو يعدون بالنجاح، وتحقق من أي تعديل للموعد عبر القرار الرسمي لا عبر منشورات شبكات التواصل."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Kenitra urban agency AI and data engineer: one position, eligibility, dossier and exams",
+          "deck": "A source-based guide to competition C44309/26: one State Engineer vacancy in Kenitra, 11 November 2026 at 16:30 deadline, written and oral tests with dates still to be announced.",
+          "sections": [
+            [
+              "One engineering vacancy, not an open-ended AI hiring drive",
+              "The Urban Agency of Kenitra–Sidi Kacem–Sidi Slimane is recruiting one State Engineer in Computer Engineering, specializing in Big Data, Data Science or Artificial Intelligence. The government employment portal published competition C44309/26 on 27 October 2026. The signed notice locates the duty station at the agency headquarters in Kenitra and anticipates taking up duties in December 2026. This vacancy should not be confused with the agency's separate architect or administrative-assistant competitions, which have different criteria. The application deadline is 11 November 2026 at 16:30, as shown on the portal and reflected in the signed notice."
+            ],
+            [
+              "Nationality, age, qualification and preferred experience",
+              "Applicants must be Moroccan nationals, at least 18 and no older than 45 on the employment date. The essential qualification is a State Engineer diploma in Computer Engineering in the announced specialty, or an officially recognized equivalent permitting entry into the position. The decision describes proven professional experience as desirable rather than imposing a fixed number of mandatory years. It also requires that applicants not be recorded in the central disciplinary register for public administrations. Compare the precise wording of your diploma with the listed specialties; a short AI course alone should not be presented as equivalent to an accredited State Engineer qualification."
+            ],
+            [
+              "What the agency actually expects from AI and data work",
+              "The three-page position description goes well beyond a generic title. It calls for converting agency information into indicators, dashboards, publications and AI-assisted analysis while supporting the agency's strategy and quality policy. Tasks include developing machine-learning and natural-language-processing models for urban-planning statistics and classification, and building open-source generative-AI applications to support administrative casework. The engineer is also expected to deploy and monitor models throughout their lifecycle on local servers or sovereign cloud infrastructure. These are published responsibilities, not evidence that the agency has selected any particular commercial model or announced a separate outsourced AI contract."
+            ],
+            [
+              "Data engineering, systems and networks are part of the same role",
+              "The post covers collecting, cleaning and structuring information from internal databases and open data, as well as documenting training-data quality and traceability. It also includes administering business information systems and validation workflows, enabling exchanges with institutional partners, and operating local networks, physical or virtual servers, storage, backups and disaster recovery. Applicants should therefore prepare examples covering an entire data pipeline rather than presenting only a chatbot demo. A panel may reasonably explore a broken backup, database integrity or interoperability problem alongside a model-training exercise, because those areas appear in the actual position sheet."
+            ],
+            [
+              "Published technical stack and security obligations",
+              "The position sheet names Windows Server, Linux, virtualization, Active Directory, LAN/WAN, VLAN, VPN, firewalls, Python, SQL, Java or C++, Docker, Kubernetes, Git and APIs. It also mentions TensorFlow, PyTorch, Scikit-learn, Hugging Face, Pandas, NLP and computer vision. Security duties include permissions, logging, incident response, backup restoration and staff awareness. The document specifically cites Moroccan personal-data law 09-08, cybersecurity law 05-20 and DGSSI directives. These are skills and compliance areas stated by the employer; they are not a promise that every listed tool will be tested or an invented automatic disqualification rule for missing one framework."
+            ],
+            [
+              "Documents to prepare and verify before submission",
+              "The signed decision requests a signed application identifying the candidate, home and email addresses and telephone number, a curriculum vitae, a certified copy of the Moroccan identity card and certified copies of diplomas and qualifications. Applicants with foreign qualifications must supply the equivalence certificate. Public-sector employees must provide their administration's authorization, noting the expected December 2026 start. Make sure names, specialty wording and scans agree, and keep a copy of the complete file and delivery proof. Do not replace the signed application with an informal email or upload sensitive documents to an unverified intermediary website."
+            ],
+            [
+              "Delivery address and the meaning of the deadline",
+              "Article eight of the signed notice instructs candidates to submit the dossier to the registry office or send it to the Urban Agency of Kenitra–Sidi Kacem–Sidi Slimane, Rue Lamhaned Kacem, Bir Rami Est, BP 1356, Kenitra. The cutoff is 11 November 2026 at 16:30. The notice warns that late-arriving or incomplete applications will not be considered, so a postal receipt showing an earlier dispatch date does not establish timely receipt. The portal's short listing does not replace the decision's specific delivery instructions. Allow sufficient transport time, keep tracking details and verify any procedural changes directly with the organizing agency."
+            ],
+            [
+              "Selection, written examination and oral interview",
+              "The agency first screens submitted files for eligibility. The written examination lasts three hours, carries coefficient one and addresses the engineering specialty and the agency's field of work. The oral examination lasts thirty minutes, also carries coefficient one, and evaluates relevant professional questions and the candidate's ability to perform the role. Only candidates obtaining at least 10 out of 20 on the written examination are invited to the oral stage. Final selection is based on the highest combined score across the two examinations. Neither the exact test date nor the venue was fixed in the decision; the agency will announce them later."
+            ],
+            [
+              "Practical preparation, salary uncertainty and fraud safeguards",
+              "Prepare one project you can explain end to end: data origin, cleaning, validation, model evaluation, deployment and privacy safeguards. Add a small urban-planning dashboard example and a recovery or permissions scenario, without falsely claiming work for the agency. The published documents do not state a precise salary and do not guarantee employment merely because an application was received. Keep the distinction between preferred experience and mandatory qualification. Beware of brokers charging fees or promising a successful outcome; rely on the signed notice and official portal for changes, especially because examination dates have not yet been announced."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Ingénieur Big Data, Data Science ou IA à Kénitra : concours, dossier et épreuves",
+          "deck": "Analyse du concours C44309/26 à partir de la décision signée et de la fiche de poste : un poste à Kénitra, candidature avant le 11 novembre 2026 à 16 h 30 et examens à annoncer.",
+          "sections": [
+            [
+              "Un seul poste d'ingénieur, et non une campagne générale de recrutement IA",
+              "L'Agence urbaine de Kénitra–Sidi Kacem–Sidi Slimane recrute un ingénieur d'État en génie informatique, spécialité Big Data, Data Science ou intelligence artificielle. L'annonce officielle C44309/26 a été publiée le 27 octobre 2026 sur le portail de l'emploi public. Le texte signé situe l'affectation au siège de l'agence à Kénitra et prévoit la prise de fonction en décembre 2026. Il ne faut pas confondre ce poste avec les concours distincts d'architecte ou d'assistante de direction de la même administration. La limite de réception des dossiers est fixée au 11 novembre 2026 à 16 h 30."
+            ],
+            [
+              "Nationalité, âge, diplôme et expérience souhaitée",
+              "La décision exige la nationalité marocaine, un âge d'au moins 18 ans et de 45 ans au maximum à la date de recrutement. Le diplôme requis est celui d'ingénieur d'État en génie informatique dans l'une des spécialités indiquées, ou une qualification reconnue équivalente donnant accès à ce poste. Le texte présente une expérience professionnelle probante comme souhaitable, sans imposer un nombre minimal d'années. Le candidat ne doit pas non plus figurer au registre disciplinaire central des administrations publiques. Vérifiez la dénomination exacte de votre diplôme: une simple formation courte en IA ne remplace pas automatiquement un diplôme d'ingénieur d'État reconnu."
+            ],
+            [
+              "Les missions concrètes de science des données et d'intelligence artificielle",
+              "La fiche de poste détaille des tâches bien plus précises que l'intitulé du concours. L'ingénieur doit transformer les données de l'agence en indicateurs, tableaux de bord, publications et analyses assistées par IA, tout en participant à la stratégie et à la politique qualité. Il est appelé à modéliser des algorithmes d'apprentissage automatique et de traitement du langage pour les statistiques et données urbanistiques, ainsi qu'à développer des applications d'IA générative open source pour les procédures administratives. La mise en production et le suivi des modèles sur serveurs locaux ou cloud souverain font également partie des missions annoncées."
+            ],
+            [
+              "Ingénierie des données, systèmes et réseaux au même poste",
+              "Le travail comprend la collecte, le nettoyage et la structuration de flux issus des bases internes et de données ouvertes, ainsi que la qualité et la traçabilité des données d'entraînement. Il englobe aussi l'administration des systèmes métier, des circuits de validation et des échanges avec les partenaires institutionnels. La fiche cite encore les réseaux locaux, les serveurs physiques ou virtualisés, le stockage, les sauvegardes et la reprise d'activité. Un candidat gagnera donc à présenter un projet de bout en bout plutôt qu'une simple démonstration de chatbot. La fiabilité d'une base de données et la restauration d'une sauvegarde sont ici des sujets professionnels pertinents."
+            ],
+            [
+              "Outils techniques et obligations de cybersécurité mentionnés",
+              "La fiche énumère Windows Server, Linux, virtualisation, Active Directory, LAN/WAN, VLAN, VPN, pare-feu, Python, SQL, Java ou C++, Docker, Kubernetes, Git et architectures d'API. Elle mentionne aussi TensorFlow, PyTorch, Scikit-learn, Hugging Face, Pandas, le NLP et la vision par ordinateur. Les responsabilités de sécurité couvrent les habilitations, la journalisation, les incidents, la restauration et la sensibilisation du personnel. Les textes marocains 09-08 sur les données personnelles, 05-20 sur la cybersécurité et les directives DGSSI sont expressément cités. Cette liste décrit les compétences recherchées; elle ne prouve pas que chaque outil fera l'objet d'une épreuve séparée."
+            ],
+            [
+              "Pièces du dossier et vérifications utiles",
+              "Le dossier doit comprendre une demande de participation signée indiquant l'identité, les adresses personnelle et électronique et le téléphone, un CV, une copie certifiée conforme de la carte nationale d'identité et des copies certifiées des diplômes et attestations. Une attestation d'équivalence est requise pour les diplômes délivrés par des établissements étrangers. Les agents du secteur public doivent fournir l'accord de leur administration, compte tenu de la prise de fonction prévue en décembre 2026. Vérifiez la lisibilité des documents et la concordance des noms, puis conservez un double du dossier et une preuve de dépôt ou d'acheminement."
+            ],
+            [
+              "Dépôt au bureau d'ordre ou envoi au siège avant 16 h 30",
+              "L'article huit de la décision prévoit le dépôt au bureau d'ordre ou l'envoi à l'Agence urbaine de Kénitra–Sidi Kacem–Sidi Slimane, rue Lamhaned Kacem, Bir Rami Est, BP 1356, Kénitra. Le dernier délai est le 11 novembre 2026 à 16 h 30. Les dossiers reçus hors délai ou incomplets ne sont pas retenus; la date d'expédition d'un courrier ne garantit donc pas sa réception dans les temps. Les indications abrégées de la fiche du portail ne doivent pas supplanter les modalités de la décision signée. Prévoyez un délai postal suffisant et gardez les justificatifs."
+            ],
+            [
+              "Épreuve écrite, entretien oral et seuil de sélection",
+              "Après une présélection sur dossier, le concours comporte un écrit de trois heures, coefficient un, portant sur la spécialité et le champ d'activité de l'agence. L'entretien oral dure une demi-heure, également coefficient un, et vise à apprécier les connaissances professionnelles et la capacité du candidat à exercer les missions. Une note minimale de 10 sur 20 à l'écrit conditionne l'accès à l'oral. Le classement définitif repose sur le meilleur résultat combiné aux deux épreuves. La décision ne fixe pas encore le jour ni le lieu précis des examens; ceux-ci seront communiqués ultérieurement par l'organisateur."
+            ],
+            [
+              "Préparation concrète, rémunération inconnue et prudence",
+              "Préparez un projet technique dont vous maîtrisez la provenance des données, les contrôles de qualité, l'évaluation des modèles, la mise en production et les protections de confidentialité. Un exemple de tableau de bord urbanistique et un scénario de restauration de sauvegarde peuvent nourrir une discussion utile, sans prétendre avoir travaillé pour l'agence. Aucune rémunération précise n'est publiée dans les documents examinés, et le dépôt d'un dossier ne vaut pas promesse d'embauche. Distinguez expérience souhaitée et diplôme obligatoire. Méfiez-vous des intermédiaires qui réclament des frais ou garantissent une réussite; toute modification doit être confirmée par les canaux officiels."
+            ]
+          ]
+        }
+      }
     }
   }
 }
