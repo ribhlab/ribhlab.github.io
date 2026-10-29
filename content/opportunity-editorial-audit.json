@@ -11,9 +11,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 31,
+    "researched": 32,
     "marketEvidence": 5,
-    "pendingDetail": 59
+    "pendingDetail": 58
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -681,10 +681,14 @@
       "section": "competitions",
       "title": "Administrateur 2ème grade — Finance, comptabilité, audit, contrôle de gestion",
       "deadline": "2026-11-05",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-05",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/bea98a46-0101-4906-afd5-4bdc57b30dab"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/bea98a46-0101-4906-afd5-4bdc57b30dab",
+      "reviewedAt": "2026-10-29",
+      "evidenceId": "anapec-finance-audit-3",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/bea98a46-0101-4906-afd5-4bdc57b30dab",
+      "reviewNote": "Three-page signed ANAPEC decision 1140 of 21 October read in full; three finance/audit/control positions, 5 November 16:30 deadline and 21 November exam. Eight substantive sections in each of AR/EN/FR, salary not invented. GitHub Actions build 40897663959, deploy 40897664010, live QA 40897830364 all succeeded."
     },
     {
       "id": "anapec-management-regions-4",
