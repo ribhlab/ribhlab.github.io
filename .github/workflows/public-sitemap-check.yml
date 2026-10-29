@@ -53,6 +53,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/amdie-buyer/')
               wanted.append(f'/{lang}/opportunities/competitions/adha-civil-engineers-2026/')
               wanted.append(f'/{lang}/opportunities/competitions/srm-souss-technician/')
+              wanted.append(f'/{lang}/opportunities/competitions/civil-protection/')
               wanted.append(f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/')
           last=None
           for attempt in range(1,7):
@@ -97,6 +98,12 @@ jobs:
                       assert 'opp-guide-sources' in souss and 'target="_blank"' in souss, f'{lang}: Souss Massa official sources or external tab behavior missing'
                       assert (('تارودانت' if lang=='ar' else 'Taroudant') in souss) and '2026' in souss, f'{lang}: posting location or date missing'
                       print(f'SOUSS MASSA TECHNICIAN LIVE {lang}: eight sections, Taroudant location, original decision and official listing',flush=True)
+                      civil=bodies[f'/{lang}/opportunities/competitions/civil-protection/'].decode('utf-8')
+                      assert civil.count('class="opp-guide-section" id="part-')>=10, f'{lang}: Civil Protection guide lacks ten researched sections'
+                      assert 'C44132/26' in civil and '0bc3b58e-cfd7-466e-9023-6faf53a94738' in civil, f'{lang}: Civil Protection official contest or signed notice missing'
+                      assert 'opp-guide-sources' in civil and 'target="_blank"' in civil, f'{lang}: Civil Protection primary sources or external tab missing'
+                      assert ('31' in civil and '2026' in civil and '50' in civil), f'{lang}: Civil Protection places or deadline missing'
+                      print(f'CIVIL PROTECTION LIVE {lang}: ten sections, 50 places, 31 October closing and official notice',flush=True)
                       paella=bodies[f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/'].decode('utf-8')
                       assert paella.count('class="article-block"')>=5, f'{lang}: seafood paella has fewer than five substantive sections'
                       assert 'article-sources' in paella and 'licensed-editorial-photo' in paella, f'{lang}: seafood paella sources/photo missing'
