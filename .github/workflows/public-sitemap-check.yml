@@ -55,6 +55,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/srm-souss-technician/')
               wanted.append(f'/{lang}/opportunities/competitions/civil-protection/')
               wanted.append(f'/{lang}/opportunities/competitions/amdie-development/')
+              wanted.append(f'/{lang}/ai/english-learning-apps-pronunciation-plan/')
               wanted.append(f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/')
           last=None
           for attempt in range(1,7):
@@ -111,6 +112,10 @@ jobs:
                       assert 'opp-guide-sources' in amdie_development and 'target="_blank"' in amdie_development, f'{lang}: AMDIE development sources or external tabs missing'
                       assert '507/2026' in amdie_development and '2026' in amdie_development, f'{lang}: AMDIE development decision/date missing'
                       print(f'AMDIE DEVELOPMENT LIVE {lang}: ten original sections and signed four-page decision',flush=True)
+                      english_apps=bodies[f'/{lang}/ai/english-learning-apps-pronunciation-plan/'].decode('utf-8')
+                      assert english_apps.count('class="article-block"')>=6, f'{lang}: English-learning app article lacks six substantive sections'
+                      assert 'article-sources' in english_apps and 'licensed-editorial-photo' in english_apps, f'{lang}: English-learning app article missing sources or photo'
+                      print(f'ENGLISH LEARNING APPS LIVE {lang}: six complete editorial sections, sources and unique licensed photo',flush=True)
                       paella=bodies[f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/'].decode('utf-8')
                       assert paella.count('class="article-block"')>=5, f'{lang}: seafood paella has fewer than five substantive sections'
                       assert 'article-sources' in paella and 'licensed-editorial-photo' in paella, f'{lang}: seafood paella sources/photo missing'
