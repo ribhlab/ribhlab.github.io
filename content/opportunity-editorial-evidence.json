@@ -5441,8 +5441,8 @@
     },
     "au-kenitra-architect": {
       "reviewedAt": "2026-10-29",
-      "state": "researched-awaiting-live-verification",
-      "verification": "Original three-page signed decision and one-page job sheet read directly on 29 October 2026; public announcement C44310/26 cross-checked. Publication, build and live trilingual URLs not yet verified.",
+      "state": "published",
+      "verification": "Signed three-page recruitment decision and one-page job description read directly on 29 October 2026, government notice C44310/26 cross-checked. Build/quality 40935519405 and GitHub Pages deployment 40935519352 succeeded; live HTTPS trilingual QA 40935631328 confirmed all three pages HTTP 200, nine sections, signed decision/job sheet references, deadline and external-tab links.",
       "sources": [
         {
           "label": "AUKSS — décision officielle signée, trois pages (consultée le 29 octobre 2026)",
