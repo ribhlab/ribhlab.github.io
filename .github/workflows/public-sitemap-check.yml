@@ -177,6 +177,25 @@ jobs:
                           assert article_html.count('class="article-block"')>=min_sections, f'{language}: {slug} has too few sections'
                           assert 'article-sources' in article_html and 'licensed-editorial-photo' in article_html, f'{language}: missing source/photo for {slug}'
                           print(f'CAMPAIGN LIVE {language}: {slug}, {min_sections}+ sections, sources and licensed photo',flush=True)
+                  # Verify recently published campaign articles in all three languages before
+                  # their sprint statuses are reconciled. This catches broken article routes,
+                  # missing editorial sections, source citations, or photo provenance markup.
+                  for slug,category,min_sections in (
+                      ('gig-gallery-original-images-checklist','earning',4),
+                      ('newsletter-start-free-first-90-days','earning',4),
+                      ('fixed-versus-trailing-stop-order-frictions','trading',4),
+                      ('minimal-skin-routine-cleanser-moisturizer-spf','lifestyle',4),
+                  ):
+                      for language in ('ar','en','fr'):
+                          matches=[u for u in urls if u.endswith('/'+category+'/'+slug+'/') and '/'+language+'/' in u]
+                          assert len(matches)==1, f'{language}: missing published campaign URL for {slug}'
+                          req=urllib.request.Request(matches[0],headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
+                          with urllib.request.urlopen(req,timeout=15) as resp:
+                              page=resp.read().decode('utf-8')
+                              assert resp.status==200, f'{language}: published campaign page not live for {slug}'
+                          assert page.count('class="article-block"')>=min_sections, f'{language}: incomplete editorial sections for {slug}'
+                          assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources/photo missing for {slug}'
+                          print(f'NEW SPRINT LIVE {language}: {slug} complete and sourced',flush=True)
                   print(f'PUBLIC SITE PASSED: XML parsed; {len(urls)} URLs; robots and multilingual pages available',flush=True)
                   break
               except Exception as err:
