@@ -839,7 +839,7 @@ if(!motor||!Array.isArray(motor.sources)||motor.sources.length<3)errors.push('Mo
 for(const lang of ['ar','en','fr']){
  const guide=motor?.translations?.[lang];
  if(!guide||!Array.isArray(guide.sections)||guide.sections.length<9){errors.push('Motor racing guide missing nine sections '+lang);continue}
- const count=guide.sections.map(s=>s[1]).join(' ').trim().split(/\\s+/).length;
+ const count=guide.sections.map(s=>s[1]).join(' ').trim().split(/\s+/).length;
  if(count<950)errors.push('Motor racing guide is too short '+lang+': '+count);
  const file=path.join(dist,lang,'sports','motorsport','index.html');
  if(!fs.existsSync(file)){errors.push('Missing full motor racing route '+lang);continue}
