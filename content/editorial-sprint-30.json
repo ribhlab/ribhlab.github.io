@@ -537,8 +537,11 @@
         "aadDrySkin",
         "aadFaceWashing"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/sensitive-skin-versus-contact-reaction.json",
+      "editorialReviewDate": "2026-10-29",
+      "verification": "Original AR/EN/FR article researched against NHS, AAD and DermNet; six substantive sections and 860/960/1011 words, original free Unsplash image checked for uniqueness; awaiting scheduled publisher and live QA."
     },
     {
       "sectionId": "world-recipes",
