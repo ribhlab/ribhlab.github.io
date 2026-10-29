@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 22,
+    "researched": 23,
     "marketEvidence": 5,
-    "pendingDetail": 68
+    "pendingDetail": 67
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -330,10 +330,13 @@
       "section": "competitions",
       "title": "12 postes — génie civil, HSE, gestion et commerce",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/f2ac90c1-7561-482a-a517-17eeb1f65ac5"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/f2ac90c1-7561-482a-a517-17eeb1f65ac5",
+      "reviewedAt": "2026-10-29",
+      "evidenceId": "lpee-12",
+      "reviewNote": "Official 26 Oct 2026 one-page signed decision, public portal and LPEE individual job pages; 9 original trilingual sections, 842/976/1000 words, live QA run 40826570796."
     },
     {
       "id": "sntl-accounting",
