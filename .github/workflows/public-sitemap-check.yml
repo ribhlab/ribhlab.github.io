@@ -52,6 +52,7 @@ jobs:
               wanted.append(f'/{lang}/ai/scan-documents-phone-privacy-quality/')
               wanted.append(f'/{lang}/opportunities/competitions/amdie-buyer/')
               wanted.append(f'/{lang}/opportunities/competitions/adha-civil-engineers-2026/')
+              wanted.append(f'/{lang}/opportunities/competitions/srm-souss-technician/')
               wanted.append(f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/')
           last=None
           for attempt in range(1,7):
@@ -90,6 +91,12 @@ jobs:
                       assert 'ADHA_IE_GC_2026_Fiche_de_poste.pdf' in adha and 'opp-guide-sources' in adha, f'{lang}: ADHA job sheet or sources missing'
                       assert 'target="_blank"' in adha and re.search(r'4\s+(novembre|November|نوفمبر)',adha,re.I), f'{lang}: ADHA deadline or external links missing'
                       print(f'ADHA CIVIL ENGINEERS LIVE {lang}: nine sections, signed decision and job sheet',flush=True)
+                      souss=bodies[f'/{lang}/opportunities/competitions/srm-souss-technician/'].decode('utf-8')
+                      assert souss.count('class="opp-guide-section" id="part-')>=8, f'{lang}: Souss Massa technician guide lacks eight researched sections'
+                      assert 'C44292/26' in souss and '64194e96-bc55-4817-8ddd-c9b0e5d0d6d1' in souss, f'{lang}: original signed decision or official competition reference missing'
+                      assert 'opp-guide-sources' in souss and 'target="_blank"' in souss, f'{lang}: Souss Massa official sources or external tab behavior missing'
+                      assert 'Taroudant' in souss and '2026' in souss, f'{lang}: posting location or date missing'
+                      print(f'SOUSS MASSA TECHNICIAN LIVE {lang}: eight sections, Taroudant location, original decision and official listing',flush=True)
                       paella=bodies[f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/'].decode('utf-8')
                       assert paella.count('class="article-block"')>=5, f'{lang}: seafood paella has fewer than five substantive sections'
                       assert 'article-sources' in paella and 'licensed-editorial-photo' in paella, f'{lang}: seafood paella sources/photo missing'
