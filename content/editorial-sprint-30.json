@@ -130,10 +130,12 @@
         "googleSearch",
         "googleAdsense"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/earning/niche-educational-blog-content-audit/",
       "queuePath": "content/reviewed-queue/niche-educational-blog-content-audit.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles trilingual article verified; GitHub Actions build/deploy 40832091393/40832091286 success; public-sitemap-check 40832147232 confirmed HTTP 200, all three languages, sections, source references and licensed photo."
     },
     {
       "sectionId": "ai-automation",
@@ -327,10 +329,12 @@
         "cftc",
         "investor"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/risk-budget-drawdown-math-beginners/",
       "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/risk-budget-drawdown-math-beginners.json"
+      "queuePath": "content/reviewed-queue/risk-budget-drawdown-math-beginners.json",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles trilingual article verified; GitHub Actions build/deploy 40832091393/40832091286 success; public-sitemap-check 40832147232 confirmed HTTP 200, all three languages, sections, source references and licensed photo."
     },
     {
       "sectionId": "trading-risk",
