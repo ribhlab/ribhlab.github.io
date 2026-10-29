@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 26,
+    "researched": 27,
     "marketEvidence": 5,
-    "pendingDetail": 64
+    "pendingDetail": 63
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -419,11 +419,12 @@
       "id": "ofppt-pedagogy-3",
       "section": "competitions",
       "title": "Chef de pôle pédagogique — Casablanca, Rabat, Laâyoune (RH 132/2026)",
-      "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "deadline": "2026-11-13",
+      "status": "researched-article",
       "marketKey": null,
-      "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b94b323a-2c77-4178-bec3-db5ba3cb49e4"
+      "priority": "date:2026-11-13; official rectificatif supersedes 2026-11-09",
+      "sourceUrl": "https://recrutement.ofppt.ma/offre/3822",
+      "reviewedAt": "2026-10-29"
     },
     {
       "id": "amdie-buyer",
