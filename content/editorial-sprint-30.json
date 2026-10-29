@@ -425,8 +425,10 @@
         "coingecko",
         "ethereum"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/crypto-whitepaper-audit-without-hype.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "gold-macro",
