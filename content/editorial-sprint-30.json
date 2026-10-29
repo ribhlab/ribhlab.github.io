@@ -92,10 +92,12 @@
         "gumroad",
         "shopify"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/earning/notion-template-originality-support-guide/",
       "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/notion-template-originality-support-guide.json"
+      "queuePath": "content/reviewed-queue/notion-template-originality-support-guide.json",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "Present in content/articles with complete AR/EN/FR versions; build 40838624395 and Pages deployment 40838624342 succeeded; live public-sitemap-check 40838728302 verified all three locale pages, required sections, sources and licensed photos."
     },
     {
       "sectionId": "online-business",
@@ -169,10 +171,12 @@
         "powerquery",
         "powerbi"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/safe-excel-ai-analysis-redaction-checklist/",
       "queuePath": "content/reviewed-queue/safe-excel-ai-analysis-redaction-checklist.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "Present in content/articles with complete AR/EN/FR versions; build 40838624395 and Pages deployment 40838624342 succeeded; live public-sitemap-check 40838728302 verified all three locale pages, required sections, sources and licensed photos."
     },
     {
       "sectionId": "ai-automation",
