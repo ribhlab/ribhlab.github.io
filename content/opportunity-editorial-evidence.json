@@ -3193,6 +3193,177 @@
           ]
         }
       }
+    },
+    "ofppt-administration-10": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Official OFPPT two-page RH 129/26 notice read directly, checked against official emploi-public listing C44254/26 and employer vacancy page on 29 October 2026.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "OFPPT — avis original RH 129/26, 2 pages, consulté le 29 octobre 2026",
+          "url": "https://recrutement.ofppt.ma/files/offer/3819/avis_concours/s3_APyrlzngxsFJO9U.pdf?preview=Y"
+        },
+        {
+          "label": "OFPPT — offre RH 129/26 et candidature, consultée le 29 octobre 2026",
+          "url": "https://recrutement.ofppt.ma/offre/3819"
+        },
+        {
+          "label": "Emploi-public — fiche C44254/26 publiée le 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/08bc8f9f-fbae-488e-8de6-f5259e3ba3b7"
+        }
+      ],
+      "facts": {
+        "employer": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
+        "reference": "RH 129/26",
+        "publicReference": "C44254/26",
+        "city": "Casablanca",
+        "country": "Maroc",
+        "posts": 10,
+        "publishedAt": "2026-10-23",
+        "deadline": "2026-11-09",
+        "deadlineText": "9 novembre 2026 à minuit (formulation de l'avis OFPPT)",
+        "application": "https://recrutement.ofppt.ma/offre/3819",
+        "diploma": "Grande école de commerce, gestion (cycle normal) ou informatique; diplôme donnant accès à l'échelle 11",
+        "age": "Moins de 45 ans à la prise de fonction",
+        "nationality": "Marocaine",
+        "experience": "Atout, aucune durée minimale obligatoire précisée",
+        "salary": null,
+        "examDate": null,
+        "documents": [
+          "Formulaire F1 PDF",
+          "CV actualisé PDF",
+          "Diplôme PDF et équivalence si étranger",
+          "CNI recto-verso sur une seule page PDF"
+        ]
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة OFPPT لتوظيف 10 أطر إدارية بالدار البيضاء: الدبلوم والمهام والوثائق وطريقة الترشيح",
+          "deck": "دليل مبني على إعلان RH 129/26 الأصلي في صفحتين وبطاقة C44254/26 الرسمية: عشر وظائف إدارية، شروط المدارس العليا، مهارات البيانات واللغات، والملف الإلكتروني قبل 9 نوفمبر 2026.",
+          "sections": [
+            [
+              "من هي الجهة المشغلة وما نطاق المناصب؟",
+              "أعلن مكتب التكوين المهني وإنعاش الشغل عن توظيف عشرة أطر إدارية تحت المرجع RH 129/26، وهو إعلان مختلف عن توظيف المساعدين المحاسبين أو أطر تدبير المشاريع لدى المؤسسة نفسها. توضح الوثيقة الأصلية أن التعيين بمدينة الدار البيضاء، وأن الأطر ستوزع على مديريات مركزية بحسب الحاجات المحددة. لذلك لا يجوز تقديم المناصب العشرة بوصفها وظائف في مديرية واحدة، ولا افتراض أن جميع المرشحين سيؤدون المهمة نفسها. تؤكد بوابة التشغيل العمومي العدد والمرجع C44254/26 وتاريخ نشر الإعلان في 23 أكتوبر 2026. ينبغي مطابقة المرجعين قبل إرسال أي وثيقة حتى لا يختلط ملف هذه المباراة بملف إعلان آخر."
+            ],
+            [
+              "الشهادة المطلوبة وحدود تفسير الأهلية",
+              "يشترط الإعلان أن يكون المترشح من خريجي مدرسة عليا للتجارة أو التسيير في السلك العادي، أو من مجال المعلوميات، بشهادة تتيح الولوج إلى السلم 11 في الوظيفة العمومية. هذه صياغة محددة، وليست دعوة مفتوحة إلى كل حامل لإجازة أو دبلوم تقني في أي تخصص. ينبغي للمترشح مقارنة تسمية شهادته ومؤسسته وطبيعة السلك مع العبارة الرسمية، ثم طلب توضيح من جهة التوظيف إذا كانت المطابقة غير محسومة. لا ينص الإعلان على قاعدة عامة لقبول جميع الشهادات الأجنبية؛ لكنه يشترط إرفاق شهادة المعادلة عند تقديم دبلوم صادر عن مؤسسة أجنبية. كما تشترط الوثيقة الجنسية المغربية وأن يقل العمر عن 45 سنة عند مباشرة العمل، لا بالضرورة يوم النشر."
+            ],
+            [
+              "الخبرة: ميزة ترجيحية وليست سنوات مفروضة",
+              "تذكر الوثيقة الأصلية أن الخبرة في التدبير الإداري تمثل ميزة، وأن ممارسة تحليل البيانات وإعداد لوحات القيادة أو تتبع الأنشطة الإدارية محل تقدير، وكذلك العمل في منظمة كبيرة أو منظمة ذات هيكلة واضحة. لم تحدد الوثيقة حداً أدنى إلزامياً بعدد سنوات الخبرة؛ لذلك سيكون من الخطأ كتابة «سنتان إلزاميتان» أو استبعاد حديثي التخرج تلقائياً. في المقابل، لا يعني غياب عدد سنوات مفروض أن جميع الملفات متساوية أثناء الانتقاء. يمكن للمترشح وصف تدريب أو مشروع جامعي موثق يتضمن معالجة بيانات أو تتبع ملفات، مع توضيح ما قام به شخصياً وما تحقق فعلياً، بدلاً من ادعاء خبرة وظيفية لم يكتسبها."
+            ],
+            [
+              "ماذا سيفعل الإطار الإداري فعلياً؟",
+              "تتجاوز المهام الواردة في القرار حفظ الملفات والمراسلات. تشمل إدارة الملفات ضمن الآجال، والمساهمة في إعداد خطط العمل وتتبع تنفيذها، وجمع البيانات وتحليلها وتوظيفها في اتخاذ القرار، وإعداد لوحات قيادة وتقارير نشاط ومذكرات تركيبية. كما تشمل تنسيق الأعمال مع البنيات الداخلية والشركاء، وتحديث قواعد البيانات، وتحسين الإجراءات، ورصد الصعوبات واقتراح حلول قابلة للتطبيق. ويمكن تخيل مثال تدريبي غير منسوب للمشغّل: جدول شهري لطلبات التكوين يحتوي تاريخ الطلب والجهة المسؤولة والحالة ومدة المعالجة؛ يفيد المؤشر فقط إذا كانت القيم مكتملة ومصدرها موثوقاً. المثال توضيحي، وليس وصفاً لنظام داخلي محدد لدى المكتب."
+            ],
+            [
+              "اللغات والمهارات الرقمية المطلوبة",
+              "يطلب الإعلان إتقاناً جيداً جداً للعربية والفرنسية كتابة وتحدثاً، ومستوى جيداً في الإنجليزية، إضافة إلى مهارات متقدمة في الجداول الإلكترونية وأدوات معالجة البيانات وتحليلها. ويؤكد القدرة على ضمان جودة قواعد البيانات، وصياغة الوثائق الإدارية المهنية، وترتيب الأولويات، وتحويل المعلومات إلى تحليلات واقتراحات عملية. هذه متطلبات مهارية معلنة، لكن الإعلان لا يحدد شهادة لغة بعينها ولا يفرض استعمال برنامج تجاري محدد أو شهادة Microsoft معينة. للتحضير، يمكن إنشاء ملف تجريبي ببيانات مصطنعة، ثم اكتشاف القيم المكررة والناقصة وبناء جدول تلخيص ومخطط بسيط وشرح القيود. لا ترفع ملفات مؤسستك أو بيانات أشخاص حقيقيين إلى خدمات خارجية لهذا الغرض."
+            ],
+            [
+              "الملف المطلوب وكيفية تجهيزه دون نقص",
+              "يحدد الإعلان أربع وثائق بصيغة PDF: استمارة الترشيح F1 القابلة للتنزيل من موقع المكتب، وسيرة ذاتية محدثة توضح بالتفصيل الخبرات المرتبطة بالمنصب، ونسخة من الدبلوم المطلوب مع وثائق المعادلة للدبلومات الأجنبية، ونسخة من البطاقة الوطنية للتعريف من الوجهين في صفحة واحدة. لا ينبغي استبدال الاستمارة برسالة تحفيزية أو افتراض أن كشف النقط مطلوب إن لم يذكره الإعلان. قبل الرفع، افتح كل ملف للتحقق من وضوح النص والصفحات واتجاه المسح وظهور الوجهين في وثيقة الهوية. احفظ أسماء ملفات مفهومة، ولا تنشر نسخ البطاقة الوطنية في مجموعات عامة بحثاً عن المساعدة. يحذر القرار من إلغاء الملفات الناقصة أو المتضمنة معلومات خاطئة."
+            ],
+            [
+              "خطوات التسجيل والموعد النهائي",
+              "تُقدَّم الترشيحات حصرياً عبر بوابة التوظيف الرسمية للمكتب recrutement.ofppt.ma، بعد إنشاء حساب مرشح واختيار عرض Cadres administratifs ذي المرجع RH 129/26 ورفع ملفات PDF المطلوبة. تنص الوثيقة الأصلية على أن آخر أجل لتلقي الملفات هو 9 نوفمبر 2026 «عند منتصف الليل». هذه العبارة قد تسبب التباساً حول اللحظة الدقيقة للإغلاق؛ لذا يُنصح بالإرسال قبل اليوم الأخير، والتحقق من التوقيت الذي تعرضه البوابة أثناء التقديم، والاحتفاظ بإشعار الإيداع إن توفر. تؤكد بوابة التشغيل العمومي تاريخ 9 نوفمبر دون أن تمنح ضماناً تقنياً بقبول ملف عند آخر دقيقة. إرسال الوثائق بالبريد الإلكتروني أو عبر تعليق على شبكة اجتماعية لا يعوض قناة التسجيل المحددة."
+            ],
+            [
+              "الانتقاء والاختبارات: ما هو المؤكد وما لم يُعلن؟",
+              "تشير الوثيقة إلى انتقاء أولي على أساس الملفات، ثم دعوة المقبولين إلى اختبارات تقييم سيعلن تاريخها ومكانها لاحقاً. لا يحدد الإعلان برنامج اختبار مكتوب أو شفوي تفصيلياً، ولا عدد الأسئلة أو معامل كل مادة، ولذلك لا يصح تقديم قائمة متخيلة على أنها برنامج رسمي. التحضير المنطقي يمكن أن يشمل تحرير مذكرة إدارية قصيرة، وتنظيم بيانات في جدول، وشرح مؤشر متابعة، وتقديم عرض موجز بالعربية أو الفرنسية، والتدرب على الإنجليزية المهنية، لأن هذه المجالات مرتبطة بالمهام المعلنة. ينبغي متابعة صفحة العرض والبوابة الرسمية لمعرفة لوائح الاستدعاء والتعديلات. لا تعني أهلية الملف أو استلام إشعار التسجيل ضمان المرور إلى المرحلة التالية."
+            ],
+            [
+              "الراتب والمخاطر والبدائل العملية",
+              "لم تنشر الوثيقة الأصلية راتباً محدداً أو تعويضات مفصلة أو تاريخاً مؤكداً لمباشرة العمل. الإشارة إلى السلم 11 بوصفه معياراً للدبلوم لا تكفي وحدها لاستخراج أجر فردي صافٍ؛ لذلك لا نعرض رقماً تقديرياً على أنه وعد تعاقدي. من المخاطر العملية رفع دبلوم غير مطابق، أو نسيان وثيقة المعادلة، أو ملف هوية غير مقروء، أو اختيار عرض آخر بالخطأ، أو انتظار الساعات الأخيرة. ومن لم يستوف شروط هذه المباراة يمكنه متابعة إعلانات مستقلة في التسيير أو تحليل البيانات، مع مقارنة الشهادات المطلوبة لكل إعلان. يظل قرار التوظيف الأصلي المرجع النهائي عند اختلاف أي ملخص منشور على مواقع أخرى."
+            ]
+          ]
+        },
+        "en": {
+          "title": "OFPPT recruiting 10 administrative officers in Casablanca: eligibility, documents and application guide",
+          "deck": "A detailed guide based on the two-page RH 129/26 employer notice and the public recruitment listing C44254/26, covering diploma eligibility, data skills, application PDFs and the 9 November 2026 deadline.",
+          "sections": [
+            [
+              "The employer, ten positions and assignment location",
+              "Morocco's Office of Vocational Training and Employment Promotion, known as OFPPT, is recruiting ten administrative officers under internal reference RH 129/26. This is not the separate assistant-accountant or project-management recruitment campaign, even though those notices have similar deadlines. The employer's original two-page announcement says that successful applicants will join central directorates according to operational needs, with Casablanca as the assignment location. It does not allocate all ten places to a single named directorate or provide an individual job description for every place. The national public-employment portal independently lists ten positions, publication on 23 October 2026 and competition code C44254/26. Check both reference numbers before preparing your application to avoid attaching documents to the wrong vacancy."
+            ],
+            [
+              "Diploma rules: what the wording does and does not cover",
+              "The original notice seeks graduates of a grande école in commerce or management, on the normal course, or of an information-technology school, holding a qualification that grants access to civil-service scale 11. That is a narrower requirement than simply possessing any university degree, a technical diploma or experience in office administration. Candidates should compare the actual diploma, institution and course with the employer's wording rather than assuming equivalence from a similar title. For diplomas awarded by foreign institutions, the notice requires copies of equivalence certificates alongside the diploma. It also requires Moroccan nationality and an age below 45 at the date of taking up duties. The age reference point matters: it is not explicitly the announcement date or the online application date."
+            ],
+            [
+              "Experience is valued, but no minimum years are stated",
+              "The employer describes previous administrative-management experience as an asset. It also values work involving data processing and analysis, dashboards or monitoring administrative activities, as well as exposure to a structured or large organization. Crucially, the notice does not prescribe a mandatory minimum of two, three or five years. It would therefore be misleading to convert these preferences into an automatic eligibility bar. Conversely, applicants should not assume that every eligible CV will rank equally at screening. A documented internship, academic assignment or volunteering project can be described accurately if it involved tracking files, validating records or preparing reports. Distinguish your own contribution from the team's work, and avoid presenting a classroom exercise as paid employment or inventing measurable outcomes."
+            ],
+            [
+              "Daily responsibilities: more than routine clerical work",
+              "The listed duties cover maintaining administrative files within procedural deadlines, helping implement action plans, collecting and analyzing operational data, producing dashboards and activity reports, and drafting concise summaries. Officers may also coordinate follow-up with other internal units and partners, maintain databases, improve administrative procedures and identify problems that need corrective action. A useful practice scenario is a fictional monthly register of training requests, with a receipt date, responsible unit, current status and processing time. You can calculate delayed cases and explain why missing dates make the indicator unreliable. This is an educational example, not a claim about OFPPT's internal software or an actual dataset. The emphasis is on traceable information and sound judgment rather than attractive charts alone."
+            ],
+            [
+              "Language, spreadsheet and communication skills",
+              "The notice asks for very strong spoken and written Arabic and French, plus good spoken and written English. It also expects strong office-computing skills, particularly advanced spreadsheet functions and tools for processing and analyzing data. Administrative writing, professional presentation, prioritization, data reliability and practical process improvement are specifically mentioned. The employer does not name a required language certificate, a proprietary analytics platform or a particular Microsoft certification. For preparation, build a small fictional dataset, test duplicates and missing values, create a pivot-style summary, and explain one limitation in plain language. Then write a short administrative memo about the findings. Do not use confidential employer files, client records or real identity data in online practice tools."
+            ],
+            [
+              "The exact PDF documents to prepare",
+              "The original announcement requests four application components in PDF format: the F1 application form downloadable from the OFPPT website; an up-to-date CV that details experience relevant to the role; a copy of the required diploma, with equivalence documents for foreign diplomas; and a copy of the Moroccan national identity card, front and back together on a single PDF page. Do not silently replace F1 with a cover letter or assert that transcripts are compulsory when this notice does not list them. Open every PDF after saving it and check legibility, orientation and page order. Use clear filenames and keep sensitive identity documents out of public chats or social media. The notice warns that incomplete applications or incorrect information may lead to rejection or cancellation."
+            ],
+            [
+              "Online application and the deadline ambiguity",
+              "Applications must be submitted through the employer's official recruitment portal, recrutement.ofppt.ma. Create or access the candidate account, select the Cadres administratifs vacancy with reference RH 129/26, and upload the required PDFs in the designated application process. The original notice gives 9 November 2026 'at midnight' as the closing time. Midnight can be misunderstood when the day boundary is not made explicit, so submitting well before the final day is safer than attempting to resolve the ambiguity at the last minute. The government listing confirms the date but does not guarantee that a delayed upload will be accepted. Keep any submission confirmation the platform provides. Sending the files to an unrelated email address or posting them in a comment is not an official application."
+            ],
+            [
+              "Selection stages and sensible preparation",
+              "The notice describes an initial selection based on applications, followed by assessment tests for shortlisted candidates. It says the dates and locations of those tests will be communicated later. It does not publish a detailed written examination syllabus, interview scoring grid, fixed test date or list of questions. Avoid study guides that present guessed tests as official requirements. Preparation can nevertheless focus on tasks actually named by the employer: drafting a concise memo, explaining a monitoring indicator, validating spreadsheet data, organizing competing deadlines and discussing a process improvement. Practice clear professional communication in Arabic and French, with relevant English vocabulary. Follow the official vacancy page for calls, changes and results; a submitted application does not guarantee shortlisting."
+            ],
+            [
+              "Pay, risks and alternatives without invented promises",
+              "The announcement provides no specific salary figure, benefits package or confirmed start date. The reference to civil-service scale 11 defines the expected diploma level; it is not enough to promise an individual net salary or employment conditions. Practical risks include selecting the wrong vacancy, uploading a mismatched diploma, omitting foreign-diploma equivalence, submitting an unreadable identity PDF, or waiting until the portal closes. Applicants who do not match the specified diploma category can consider other separately advertised positions in administration, management or data analysis, each with its own eligibility criteria. This is a guide to a documented recruitment opportunity, not a guarantee of appointment. Where a third-party summary conflicts with the signed employer notice, the original notice should take precedence."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "OFPPT : recrutement de 10 cadres administratifs à Casablanca, conditions et dossier de candidature",
+          "deck": "Analyse de l'avis officiel RH 129/26 en deux pages et de la fiche publique C44254/26 : diplômes, missions, compétences linguistiques, pièces PDF et échéance du 9 novembre 2026.",
+          "sections": [
+            [
+              "L'employeur, les dix postes et le lieu d'affectation",
+              "L'Office de la Formation Professionnelle et de la Promotion du Travail recrute dix cadres administratifs sous la référence RH 129/26. Il s'agit d'une campagne distincte des recrutements d'assistants comptables et de gestionnaires de projets diffusés à la même période. L'avis original, composé de deux pages, précise que les lauréats seront affectés à différentes directions centrales en fonction des besoins identifiés, avec une affectation à Casablanca. Il ne répartit pas les dix postes entre des directions nommément désignées et ne fournit pas dix fiches de fonctions individuelles. La plateforme publique confirme le nombre de postes, une publication le 23 octobre 2026 et le code C44254/26. Vérifier ces deux références permet d'éviter de déposer un dossier sur une autre annonce de l'OFPPT."
+            ],
+            [
+              "Diplômes admissibles : lire précisément la formulation",
+              "Le profil recherché est celui d'un lauréat d'une grande école de commerce ou de gestion, en cycle normal, ou d'informatique, avec un diplôme donnant accès à l'échelle 11 de la fonction publique. Cette formulation ne signifie pas que toute licence, tout diplôme technique ou toute expérience administrative suffit. Le candidat doit comparer l'intitulé de son diplôme, son établissement et son parcours avec les termes exacts de l'avis. Pour les diplômes délivrés à l'étranger, une copie de l'attestation d'équivalence doit accompagner le diplôme. La nationalité marocaine est exigée et le candidat doit avoir moins de 45 ans à la date de prise de fonction. Il serait inexact de déplacer automatiquement cette limite d'âge à la date de publication ou de dépôt du dossier."
+            ],
+            [
+              "Expérience souhaitée, sans durée minimale obligatoire",
+              "L'avis considère l'expérience en gestion administrative comme un atout. Une pratique du traitement et de l'analyse des données, de la conception de tableaux de bord ou du suivi d'activités est appréciée, tout comme une expérience dans une grande organisation structurée. En revanche, aucune durée minimale obligatoire, exprimée en années, n'est fixée dans le texte. Présenter deux ou trois ans comme une condition éliminatoire serait donc une extrapolation. Cela ne signifie pas que l'expérience n'intervient pas dans la présélection. Un stage réel, un projet académique documenté ou une mission associative peuvent être présentés honnêtement si les tâches correspondent aux compétences attendues. Il faut distinguer sa contribution personnelle des résultats collectifs et ne jamais transformer un exercice pédagogique en emploi rémunéré fictif."
+            ],
+            [
+              "Des missions de pilotage et de fiabilisation des données",
+              "Les fonctions annoncées vont au-delà du classement des courriers. Elles comprennent la gestion de dossiers dans les délais, le suivi de plans d'action, la collecte et l'analyse de données, la réalisation de tableaux de bord, la rédaction de rapports d'activité et de notes de synthèse. S'y ajoutent la coordination avec les structures internes et les partenaires, la mise à jour de bases de données, l'amélioration des procédures et la proposition de solutions aux difficultés constatées. Pour s'entraîner, on peut créer un registre fictif de demandes de formation avec date de réception, responsable, statut et délai de traitement, puis expliquer les dossiers en retard. Cet exemple est purement pédagogique et ne décrit pas un logiciel ou des données internes réellement utilisés par l'OFPPT."
+            ],
+            [
+              "Langues, outils bureautiques et capacité d'analyse",
+              "L'employeur demande une très bonne maîtrise de l'arabe et du français, à l'écrit comme à l'oral, ainsi qu'une bonne maîtrise de l'anglais. Il attend également une aisance avec les outils bureautiques, notamment les fonctions avancées des tableurs et les outils de traitement et d'analyse des données. La rédaction administrative, la présentation professionnelle, l'organisation des priorités et la fiabilité des informations figurent parmi les compétences recherchées. L'avis ne désigne pas un certificat linguistique obligatoire, un logiciel commercial exclusif ou une certification Microsoft précise. Un exercice utile consiste à créer un tableau fictif, repérer les doublons et les données manquantes, produire une synthèse et rédiger une courte note explicitant les limites des résultats."
+            ],
+            [
+              "Les quatre éléments du dossier au format PDF",
+              "Le dossier comprend le formulaire F1 à renseigner, téléchargeable sur le site de l'OFPPT, un CV actualisé détaillant les expériences en rapport avec le poste, une copie du diplôme requis avec les attestations d'équivalence pour les diplômes étrangers, et une copie recto verso de la carte nationale d'identité sur une seule page PDF. Il ne faut pas remplacer le formulaire F1 par une lettre de motivation, ni ajouter à la liste officielle des relevés de notes prétendument obligatoires. Avant l'envoi, ouvrez les fichiers pour contrôler la lisibilité, l'orientation et la présence des deux faces de la carte. Choisissez des noms de fichiers explicites et ne diffusez jamais vos pièces d'identité sur des groupes publics. Le texte prévient qu'un dossier incomplet ou contenant des informations erronées peut être écarté."
+            ],
+            [
+              "Dépôt en ligne et prudence sur l'heure de clôture",
+              "La candidature se dépose exclusivement sur le portail officiel recrutement.ofppt.ma, en sélectionnant l'offre Cadres administratifs, référence RH 129/26, puis en transmettant les pièces PDF demandées. L'avis de l'employeur indique une clôture le 9 novembre 2026 « à minuit ». Cette expression peut prêter à confusion quant à la frontière exacte entre deux journées ; il est préférable de transmettre le dossier plusieurs jours à l'avance et de consulter l'horaire affiché par le portail au moment du dépôt. La fiche emploi-public confirme la date sans garantir l'acceptation d'un téléversement de dernière minute. Conservez le justificatif de soumission, lorsqu'il existe. Un envoi par courriel non sollicité ou par commentaire sur un réseau social ne remplace pas le dépôt prévu."
+            ],
+            [
+              "Présélection et tests : distinguer les faits des hypothèses",
+              "Le document prévoit une présélection sur dossier, puis des tests d'évaluation pour les candidats retenus. Les dates et les lieux des épreuves seront communiqués ultérieurement. L'avis ne publie ni programme détaillé d'épreuve écrite, ni grille de notation d'entretien, ni liste officielle de questions. Les préparations prétendant connaître ces éléments doivent être traitées avec prudence. Un entraînement cohérent peut porter sur la rédaction d'une note, l'explication d'un indicateur, le contrôle d'un tableau de données, la gestion de priorités et la présentation d'une amélioration de procédure. La communication professionnelle en arabe et en français, ainsi que le vocabulaire anglais du travail administratif, méritent aussi une attention particulière. Le dépôt d'une candidature ne garantit pas la convocation."
+            ],
+            [
+              "Rémunération non publiée, erreurs à éviter et solutions alternatives",
+              "L'avis ne communique ni salaire chiffré, ni avantages détaillés, ni date certaine de prise de fonction. La référence à l'échelle 11 concerne le niveau du diplôme demandé et ne permet pas, à elle seule, de promettre un salaire net individuel. Les principaux risques sont le choix d'une mauvaise annonce, un diplôme non conforme, l'absence d'équivalence pour un diplôme étranger, un PDF d'identité illisible ou un dépôt tardif. Les personnes ne remplissant pas les critères peuvent consulter d'autres concours de gestion, d'administration ou d'analyse de données, mais chaque offre doit être examinée séparément. Ce dossier vise à éclairer une candidature réelle, sans garantir l'embauche. En cas de divergence avec un résumé tiers, l'avis original de l'employeur prévaut."
+            ]
+          ]
+        }
+      }
     }
   }
 }
