@@ -406,7 +406,8 @@
       "status": "queued",
       "articleUrl": null,
       "queuePath": "content/reviewed-queue/coin-versus-token-claim-verification.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "verification": "Present in content/articles after 2026-10-29 16:49 UTC scheduled publisher; GitHub Pages build/deploy run 40915377486 succeeded. Live public three-language verification still pending, so not yet counted as published."
     },
     {
       "sectionId": "crypto-web3",
@@ -476,8 +477,11 @@
         "bls",
         "fed"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/nfp-payrolls-revisions-market-guide.json",
+      "editorialReviewDate": "2026-10-29",
+      "verification": "Verified independent BLS and St. Louis Fed sources, 6 substantial AR/EN/FR sections, 898/968/1050 words, unique verified free Unsplash photo; queued for scheduled publisher; not yet published."
     },
     {
       "sectionId": "body-care",
