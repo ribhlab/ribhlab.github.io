@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 24,
+    "researched": 25,
     "marketEvidence": 5,
-    "pendingDetail": 66
+    "pendingDetail": 65
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -407,10 +407,13 @@
       "section": "competitions",
       "title": "Cadres chargés de gestion des projets (RH 130/2026)",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e8535a3a-e31a-4465-8eba-168e8ef3fbea"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e8535a3a-e31a-4465-8eba-168e8ef3fbea",
+      "reviewedAt": "2026-10-29",
+      "evidenceId": "ofppt-project-10",
+      "verification": "Original OFPPT RH 130/26 and employer listing cross-checked; nine full trilingual sections; Pages 40838826567 and live check 40838891642 success."
     },
     {
       "id": "ofppt-pedagogy-3",
