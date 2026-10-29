@@ -249,8 +249,10 @@
         "googlePlay",
         "appleAppStore"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/english-learning-apps-pronunciation-plan.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "games-security",
