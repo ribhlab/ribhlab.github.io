@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 23,
+    "researched": 24,
     "marketEvidence": 5,
-    "pendingDetail": 67
+    "pendingDetail": 66
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -394,10 +394,13 @@
       "section": "competitions",
       "title": "Cadres administratifs (RH 129/2026)",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/08bc8f9f-fbae-488e-8de6-f5259e3ba3b7"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/08bc8f9f-fbae-488e-8de6-f5259e3ba3b7",
+      "researchFile": "content/opportunity-editorial-evidence.json",
+      "researchedAt": "2026-10-29",
+      "researchNote": "Original two-page OFPPT RH 129/26 notice, employer listing and public competition code C44254/26; 9 detailed sections AR/EN/FR. Public live check success 40832147232."
     },
     {
       "id": "ofppt-project-10",
