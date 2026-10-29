@@ -67,6 +67,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-architect/')
               wanted.append(f'/{lang}/opportunities/competitions/cnrst-administrator-2/')
               wanted.append(f'/{lang}/lifestyle/sensitive-skin-versus-contact-reaction/')
+              wanted.append(f'/{lang}/opportunities/competitions/cdg-rates-equity-supervision/')
           last=None
           for attempt in range(1,7):
               try:
@@ -325,6 +326,7 @@ jobs:
                       ('risk-budget-drawdown-math-beginners','trading',5),
                       ('notion-template-originality-support-guide','earning',6),
                       ('safe-excel-ai-analysis-redaction-checklist','ai',5),
+                      ('chicken-tikka-masala-temperature-guide','lifestyle',6),
                   ):
                       for language in ('ar','en','fr'):
                           matches=[u for u in urls if u.endswith('/'+category+'/'+slug+'/') and '/'+language+'/' in u]
@@ -366,6 +368,10 @@ jobs:
                       assert '2026' in cnrst and ('8' in cnrst and '9' in cnrst), f'{language}: CNRST Physiology conflicting deadline warning missing'
                       skin=bodies[f'/{language}/lifestyle/sensitive-skin-versus-contact-reaction/'].decode('utf-8')
                       assert skin.count('class="article-block"')>=6 and 'article-sources' in skin and 'licensed-editorial-photo' in skin, f'{language}: sensitive-skin article missing sections, sources or photo'
+                      cdg=bodies[f'/{language}/opportunities/competitions/cdg-rates-equity-supervision/'].decode('utf-8')
+                      assert cdg.count('class="opp-guide-section" id="part-')>=9, f'{language}: CDG original researched guide lacks nine sections'
+                      assert 'C44286/26' in cdg and 'opp-guide-sources' in cdg and 'target="_blank"' in cdg, f'{language}: CDG original sources or new-tab links missing'
+                      print(f'CDG SUPERVISION LIVE {language}: nine sourced sections, official notice and external-link handling',flush=True)
                       print(f'NEW VERIFIED LIVE {language}: CNRST Physiology 10 sections; sensitive-skin article 6 sections',flush=True)
                   print(f'PUBLIC SITE PASSED: XML parsed; {len(urls)} URLs; robots and multilingual pages available',flush=True)
                   break
