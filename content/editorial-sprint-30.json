@@ -403,11 +403,12 @@
         "ethereum",
         "coingecko"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/coin-versus-token-claim-verification/",
       "queuePath": "content/reviewed-queue/coin-versus-token-claim-verification.json",
       "editorialReviewDate": "2026-10-29",
-      "verification": "Present in content/articles after 2026-10-29 16:49 UTC scheduled publisher; GitHub Pages build/deploy run 40915377486 succeeded. Live public three-language verification still pending, so not yet counted as published."
+      "verification": "Scheduled publisher commit 2bbf50a9 at 16:49 UTC after >=25-minute gate; article in content/articles with 6 complete sections and sources in AR/EN/FR; GitHub Pages build/deploy 40915377486 succeeded; live HTTP 200 and six-section/source/licensed-image checks for all three languages passed public-sitemap-check 40916493186.",
+      "publishedVerifiedAt": "2026-10-29"
     },
     {
       "sectionId": "crypto-web3",
