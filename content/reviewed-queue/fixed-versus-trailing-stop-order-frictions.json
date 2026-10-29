@@ -1,0 +1,199 @@
+{
+  "sectionId": "trading-risk",
+  "article": {
+    "slug": "fixed-versus-trailing-stop-order-frictions",
+    "category": "trading",
+    "date": "2026-10-29",
+    "updated": "2026-10-29",
+    "featured": false,
+    "related": [
+      "trading-risk-management",
+      "trading-bot-backtest-spread-slippage-reality-check"
+    ],
+    "sources": [
+      {
+        "label": "US SEC Investor.gov — Stop, Stop-Limit, and Trailing Stop Orders, updated 18 August 2026; verified 29 October 2026",
+        "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-15"
+      },
+      {
+        "label": "Charles Schwab — Stock order types and conditions, published 29 January 2023; verified 29 October 2026",
+        "url": "https://international.schwab.com/content/stock-order-types-and-conditions-overview"
+      },
+      {
+        "label": "US SEC Investor.gov — Understanding Order Types, verified 29 October 2026",
+        "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "وقف الخسارة الثابت والمتحرك: لماذا يختلف سعر التنفيذ عن خطتك؟",
+        "excerpt": "مقارنة عملية بين الوقف الثابت والمتحرك ووقف الحد، مع أمثلة حسابية على الفجوات والانزلاق والتنفيذ الجزئي دون وعود بحماية مضمونة.",
+        "lead": "يمكن لخط وقف الخسارة أن يجعل قرار الخروج أكثر انضباطاً، لكنه لا يحول سوقاً متقلباً إلى عقد تأمين. السؤال الأهم ليس أين ترسم الخط، بل ما الذي يحدث عندما يصل السعر إليه: هل ينشأ أمر سوق؟ وهل توجد سيولة؟ وهل يتحرك المستوى تلقائياً؟ سنفصل هذه الأسئلة باستخدام أمثلة افتراضية قابلة لإعادة الحساب، ومصادر من هيئة الأوراق المالية الأمريكية وشرح وسيط مستقل. جميع الأسعار الواردة للتعليم وليست نتائج اختبار تاريخي أو توصيات مالية.",
+        "sections": [
+          {
+            "heading": "ما الذي يفعله أمر الوقف فعلياً؟",
+            "paragraphs": [
+              "عند امتلاك سهم وطلب بيعه إذا انخفض إلى مستوى محدد، لا يعني ذلك أن الوسيط ضمن بيع السهم بذلك السعر. في أمر وقف البيع التقليدي، يمثل المستوى المحدد شرطاً للتفعيل؛ وعند بلوغه يتحول الأمر عادة إلى أمر سوق يسعى إلى التنفيذ بالسعر المتاح. يوضح تنبيه هيئة الأوراق المالية الأمريكية، المحدّث في 18 أغسطس 2026، أن السعر النهائي قد يختلف كثيراً عن سعر التفعيل، خصوصاً عندما تكون السيولة محدودة أو يتحرك السوق بسرعة. لذلك لا يصح تقديم وقف الخسارة بوصفه تأميناً كاملاً لرأس المال.",
+              "يختلف أمر الوقف عن أمر الحد: أمر البيع المحدد لا يقبل سعراً أدنى من الحد المعين، لكنه قد يبقى دون تنفيذ. ويختلف أيضاً عن قرار الخروج اليدوي، لأن التفعيل الآلي لا يزيل المخاطر التشغيلية أو مخاطر انقطاع الاتصال. قبل اختيار أي صيغة، تحقق من أنواع الأوامر المتاحة لدى وسيطك، ومن السعر الذي يعتمد عليه للتفعيل: آخر صفقة أم عرض الشراء أو البيع. ليست هذه التفاصيل موحدة بين جميع الأسواق والوسطاء، ولا يجوز نقل مثال الأسهم الأمريكية حرفياً إلى عقود الفروقات أو الفوركس."
+            ]
+          },
+          {
+            "heading": "الوقف الثابت والمتحرك: فرق في القاعدة لا في الضمان",
+            "paragraphs": [
+              "الوقف الثابت يبقى عند المستوى الذي اخترته ما لم تعدله أو تلغِه. فإذا اشتريت سهماً افتراضياً عند 100 وحدة وحددت وقف بيع عند 95، يبقى شرط التفعيل 95 حتى لو صعد السعر إلى 110. يمكن أن يناسب هذا الأسلوب خطة تقيس بطلان فكرة الاستثمار عند مستوى معلوم، لكنه لا يتكيف تلقائياً مع ارتفاع السعر. لا يُستنتج من بساطته أنه أفضل دائماً، إذ قد يؤدي وقف ضيق إلى خروج متكرر بسبب التقلب المعتاد.",
+              "أما وقف البيع المتحرك فيربط مستوى التفعيل بأعلى سعر مناسب منذ تفعيله، وفق مبلغ أو نسبة يحددها المستخدم. في مثال تعليمي، يكون الهامش 5 وحدات، والسعر عند إدخال الأمر 100؛ يبدأ مستوى الوقف عند 95، ثم يرتفع إلى 107 إذا بلغ السعر 112، ولا يعود إلى 103 إذا تراجع السعر إلى 108. تؤكد Investor.gov أن الوقف المتحرك يتحرك في الاتجاه الملائم فقط، لكن الوصول إلى المستوى لا يضمن التنفيذ عنده. راجع إن كانت آلية التتبع تعتمد العرض أم آخر تداول."
+            ]
+          },
+          {
+            "heading": "تجربة رقمية تكشف اختلاف النتيجة",
+            "paragraphs": [
+              "افترض شراء 20 سهماً بسعر 100 وحدة للسهم، دون رافعة. في السيناريو الأول يرتفع السعر إلى 112 ثم ينخفض إلى 104. وقف ثابت عند 95 لم يتفعل، فتظل الأسهم في المحفظة بقيمة سوقية افتراضية 2,080 وحدة. وقف متحرك بمسافة 5 وحدات يرتفع نظرياً إلى 107، وقد يتفعل أثناء الهبوط. إذا نُفذ عند 106.50، تصبح حصيلة البيع 2,130 وحدة قبل الرسوم، أي ربح إجمالي قدره 130 مقارنة بتكلفة شراء 2,000. هذه أرقام مصطنعة لا تمثل صفقة حقيقية.",
+              "غير أن مساراً ثانياً قد يغير المقارنة تماماً: يصعد السهم إلى 112، يتراجع إلى 106.90 فيفعّل الوقف المتحرك، ثم يعود إلى 125. يكون صاحب الوقف المتحرك قد خرج مبكراً، بينما بقي صاحب الوقف الثابت مستثمراً. لا تكفي مقارنة سعر الدخول بسعر الإغلاق للحكم؛ يجب معرفة تسلسل الأسعار وطريقة تفعيل الوسيط. لا تدّعِ أن الوقف المتحرك يحسن الأداء بالضرورة أو أن الوقف الثابت يضاعف الخسائر؛ كلاهما قاعدة مشروطة بسلوك السوق وتكاليف التداول."
+            ]
+          },
+          {
+            "heading": "الفجوات والانزلاق والتنفيذ الجزئي",
+            "paragraphs": [
+              "قد يغلق سهم عند 101 ثم يفتح في الجلسة التالية عند 88 بعد إعلان مفاجئ. إذا كان وقف البيع عند 95، فلا يوجد التزام بأن تتم عملية البيع عند 95؛ قد ينفذ أمر السوق بسعر قريب من 88 أو أسوأ وفق أوامر الشراء المتاحة. هذه هي فجوة السعر، ويضاف إليها الانزلاق عندما تختلف الأسعار المتوقعة عن الأسعار الفعلية. تشير وثيقة Charles Schwab المؤرخة في 29 يناير 2023 إلى أن الأوامر قد تتأثر بتوقف التداول والفجوات ونقص السيولة، فلا يصح مساواة مستوى الوقف بأقصى خسارة.",
+              "التنفيذ الجزئي مسألة مستقلة. قد يطلب مستثمر بيع 1,000 سهم، لكن السوق لا يعرض سيولة كافية عند سعر واحد؛ فتُنفذ دفعات بأسعار مختلفة أو يبقى جزء غير منفذ بحسب نوع الأمر. المثال الحسابي: بيع 400 سهم عند 94 و600 عند 92 يعطي متوسط تنفيذ 92.80، وليس 95 الذي استُخدم للتفعيل. يجب إضافة العمولات وفروق الأسعار والضرائب ذات الصلة، إن وجدت، قبل حساب النتيجة الصافية. ولا تستخدم رسوم الشموع وحدها لإثبات أن التنفيذ كان متاحاً بكل الكمية."
+            ]
+          },
+          {
+            "heading": "هل يحل وقف الحد المشكلة؟",
+            "paragraphs": [
+              "يضع أمر وقف الحد شرطين: سعر تفعيل، وحداً أدنى مقبولاً للبيع أو أعلى مقبولاً للشراء. في مثال بيع افتراضي، يؤدي لمس 95 إلى تفعيل أمر بيع محدد عند 94؛ لن يقبل هذا الأمر بيعاً عند 90. لكن إذا هبط السعر مباشرة إلى 88 ولم يعد إلى 94، قد لا يُنفذ البيع مطلقاً، وتستمر الخسارة السوقية في الاتساع. هذه مفاضلة بين التحكم بالسعر واحتمال الخروج، وليست حلاً سحرياً يجمع الضمانين.",
+              "تختلف صلاحية الأوامر أيضاً بين أمر اليوم والأمر الساري حتى الإلغاء، وبين جلسة التداول المعتادة والفترات الممتدة. يوضح شرح Schwab أن بعض أوامر الوقف المتحرك تُحفظ لدى خادم الوسيط حتى التفعيل، وقد لا تتاح في كل واجهاته. لا تفترض أن أمر الحد يعمل أثناء توقف التداول أو أنه سيجد مشترين لمجرد وصول آخر سعر إلى الحد. اقرأ شروط وسيطك الخاصة بالسوق الذي تتعامل فيه، وخاصة قواعد التفعيل والإلغاء والتعديل."
+            ]
+          },
+          {
+            "heading": "اختبار قابل للتكرار قبل استخدام أموال حقيقية",
+            "paragraphs": [
+              "أنشئ ورقة اختبار فيها تاريخ الأمر والأصل والكمية وسعر الدخول والوقف الابتدائي ونوع الأمر والمسافة المتحركة وسبب الاختيار. سجّل أعلى سعر معروف في لحظة القرار، وسعر التفعيل الفعلي، وسعر التنفيذ والكمية المنفذة والعمولة. افصل بين اختبار قواعدك على بيانات سابقة وبين تنفيذها المباشر؛ فقد تخفي بيانات الإغلاق اليومية فجوات وتذبذبات داخل الجلسة. قارن النتائج في فترات صعود وهبوط وحركة عرضية، مع سيناريوهات لانقطاع السوق أو انزلاق أكبر من المعتاد.",
+              "قبل إرسال الأمر، اسأل نفسك: هل أتحمل خسارة أكبر من الفرق بين الدخول والوقف؟ وهل أتفهم احتمال عدم تنفيذ أمر وقف الحد؟ وهل يوجد إعلان أرباح أو قرار اقتصادي قد يخلق فجوة؟ لا تُضاعف حجم المركز لأن الوقف يبدو قريباً، ولا تتعامل مع أمثلة هذه المقالة باعتبارها إشارات تداول. اعتمد خطة خسارة إجمالية تراعي المراكز المرتبطة، وراجع التقارير الفعلية للوسيط بعد كل عملية. الامتناع عن الصفقة خيار مشروع عندما لا تكون قواعد التنفيذ أو المخاطر مفهومة."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Fixed versus trailing stops: why the actual fill can break your plan",
+        "excerpt": "A practical comparison of fixed stops, trailing stops and stop-limits, with worked examples of gaps, slippage and partial fills.",
+        "lead": "A stop-loss line can discipline an exit decision, but it cannot turn a volatile market into an insured contract. The useful question is what happens when the market reaches the line: does a market order appear, is there sufficient liquidity, and does the trigger move automatically? This guide separates those mechanisms through invented, reproducible arithmetic and independently checked SEC and brokerage education. Every price is illustrative rather than historical test data or investment advice.",
+        "sections": [
+          {
+            "heading": "A stop price is a trigger, not an insured exit",
+            "paragraphs": [
+              "A sell stop order is often described as a way to limit downside, but the chosen stop price is not a contractual execution price. Once the relevant market condition occurs, a conventional stop generally turns into a market order. The US Securities and Exchange Commission investor bulletin, updated on August 18, 2026, explicitly warns that available liquidity can produce an execution far from the trigger. The distinction matters most during sudden news, thin trading, and overnight gaps. A stop is a trading instruction, not insurance against losing money.",
+              "Compare this with a limit sell order, which refuses execution below the specified limit but might never trade. Manual exits introduce other risks, including delayed decisions and connectivity problems. Brokers and venues also disagree on what activates a stop: the last transaction, the bid, or another quotation. Check the actual product specification before assuming a stock-market illustration applies to foreign exchange, leveraged derivatives, or crypto. The existence of a button labelled stop loss does not establish a maximum loss for every market."
+            ]
+          },
+          {
+            "heading": "Fixed and trailing stops follow different rules",
+            "paragraphs": [
+              "A fixed stop stays at the level entered until it is cancelled or modified. Suppose an imaginary share is purchased for 100 units and a sell stop is placed at 95. If the share rises to 110, the trigger remains 95. That can express a predefined point at which the original investment thesis is considered invalid. It can also be vulnerable to ordinary short-term noise if placed too tightly. Neither the simplicity of the rule nor the distance to the entry proves that the position is safe.",
+              "A trailing sell stop follows favourable price changes by a specified amount or percentage and does not move back when the price reverses. With a five-unit trail placed when a share trades at 100, the initial reference stop is 95; if the relevant market price climbs to 112, the trailing level can rise to 107. A decline to 108 does not lower that level. Investor.gov describes this one-way adjustment, while warning that a triggered stop still may execute at a different price. The broker's definition of the tracked quote remains crucial."
+            ]
+          },
+          {
+            "heading": "Two hypothetical paths produce opposite impressions",
+            "paragraphs": [
+              "Imagine buying 20 shares at 100 each, without leverage. In one invented path the price climbs to 112 and later drops to 104. A fixed sell stop at 95 remains untouched, leaving a marked-to-market holding worth 2,080 units. A five-unit trailing stop could rise to 107 and trigger during the decline. If its market order fills at 106.50, the proceeds are 2,130 before fees, or 130 above the original 2,000 purchase cost. These numbers illustrate order mechanics; they are not historical performance or a trading recommendation.",
+              "Change only the subsequent price path: after touching 112, the share falls briefly to 106.90, activates the trailing stop, and later rallies to 125. The trailing approach has exited while the fixed-stop holder remains invested. It would be misleading to compare only the entry and closing price without recording the sequence of trades and the broker's trigger rule. The lesson is not that one stop is universally superior. A predefined exit trades flexibility for discipline, while a moving exit can sacrifice participation after temporary reversals."
+            ]
+          },
+          {
+            "heading": "Gaps, slippage, and partial fills are real frictions",
+            "paragraphs": [
+              "A share may close at 101 and reopen at 88 after unexpected news. A sell stop at 95 does not oblige the market to buy shares at 95; once activated, a market order can fill around 88 or even worse depending on liquidity. This opening discontinuity is a gap. Slippage is the difference between an assumed execution and the actual fill. Charles Schwab's order-type explanation, dated January 29, 2023, discusses gaps, halts, and limited liquidity as important execution constraints. A planned stop distance therefore is not a guaranteed maximum loss.",
+              "Execution can also be split across prices. Suppose a 1,000-share exit is filled in two pieces: 400 at 94 and 600 at 92. The volume-weighted average is 92.80, not the nominal stop of 95. Large orders and thin order books may leave some quantity unfilled or lead to several fills, depending on the order instruction. Record commissions, the bid–ask spread, financing where applicable, and taxes where relevant. A chart candle alone cannot prove that the full position could have been executed at the best price visible on the screen."
+            ]
+          },
+          {
+            "heading": "A stop-limit protects price but may prevent exit",
+            "paragraphs": [
+              "A sell stop-limit order combines a trigger with a minimum acceptable selling price. For example, a stop at 95 and limit at 94 activates a limit order once the stop condition is met; it will not deliberately sell at 90. If the market jumps directly to 88 and never recovers to 94, however, the shares can remain unsold. Losses may continue to grow while the order waits. This is a trade-off between price protection and execution probability, not a method that guarantees both at once.",
+              "Order duration and session rules add further complications. A day order may expire, while a good-until-cancelled instruction may have a broker-specific lifetime; after-hours sessions may accept different order types. Schwab explains that certain trailing instructions are held on broker systems before being released to the marketplace, and that availability differs by platform. Read the broker's current terms rather than assuming a stop-limit will work during a trading halt or find liquidity merely because the last displayed trade reached the limit."
+            ]
+          },
+          {
+            "heading": "A reproducible checklist beats hindsight",
+            "paragraphs": [
+              "Build a small audit sheet containing order date, instrument, quantity, entry price, initial stop, order type, trail distance, and the reason for choosing it. Track the highest eligible reference price known at each decision point, the trigger event, actual fill prices, filled quantity, commissions, and resulting exposure. Separate a historical simulation from real execution: daily closing prices conceal intraday reversals and gaps. Compare fixed and trailing rules across rising, falling, and sideways conditions, and include deliberately unfavourable slippage assumptions.",
+              "Before placing any order, ask whether you can afford a loss larger than the planned stop distance, whether a stop-limit could remain unfilled, and whether scheduled news could create a gap. Never increase leverage merely because the stop appears close to entry. Include correlated positions in the overall risk budget, and reconcile the broker's execution report after each trade. These are educational examples rather than buy or sell signals. When order mechanics, liquidity, or exposure cannot be understood, not opening a position is a reasonable decision."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Stops fixes ou suiveurs : pourquoi l'exécution peut contredire le plan",
+        "excerpt": "Comparaison pratique des stops fixes, suiveurs et limités, avec calculs de gaps, glissement et exécutions partielles.",
+        "lead": "Tracer un stop peut discipliner une décision de sortie, mais ne transforme pas un marché volatil en assurance. Il faut comprendre ce qui se passe lorsque le cours atteint le seuil : un ordre au marché est-il envoyé, existe-t-il une liquidité suffisante et le seuil évolue-t-il automatiquement ? Ce guide distingue ces mécanismes au moyen d'exemples fictifs et reproductibles, en s'appuyant sur des documents de la SEC et d'un intermédiaire indépendant. Aucun chiffre ne représente une performance historique ou un conseil d'investissement.",
+        "sections": [
+          {
+            "heading": "Le prix stop déclenche un ordre, il ne garantit pas la sortie",
+            "paragraphs": [
+              "Un ordre stop de vente est souvent présenté comme une protection contre la baisse, mais son seuil n'est pas un prix d'exécution contractuellement garanti. Lorsque la condition prévue est remplie, un stop classique devient généralement un ordre au marché. Le bulletin pédagogique de la SEC américaine, actualisé le 18 août 2026, précise que la liquidité disponible peut entraîner une exécution très éloignée du seuil. Cette distinction devient déterminante pendant les annonces inattendues, les marchés peu liquides et les écarts de cotation entre deux séances.",
+              "Un ordre de vente à cours limité refuse un prix inférieur à sa limite, mais peut rester inexécuté. Une sortie manuelle présente d'autres difficultés, notamment les hésitations et les problèmes de connexion. Le critère de déclenchement peut également varier selon les intermédiaires : dernière transaction, cours acheteur ou autre cotation. Vérifiez les conditions propres à l'instrument avant de transposer un exemple d'action américaine aux devises, aux dérivés à effet de levier ou aux cryptoactifs. Le bouton stop loss n'est pas une assurance contre toute perte."
+            ]
+          },
+          {
+            "heading": "Stop fixe et stop suiveur : deux règles, aucune garantie",
+            "paragraphs": [
+              "Un stop fixe reste au niveau initial tant qu'il n'est ni modifié ni annulé. Imaginons une action achetée à 100 unités avec un stop de vente à 95. Même si son cours atteint ensuite 110, le seuil demeure 95. Cette méthode peut matérialiser le point auquel une hypothèse d'investissement est invalidée, mais un seuil trop proche peut aussi provoquer des sorties sur de simples fluctuations. La clarté de la règle ne démontre ni sa rentabilité ni la sécurité de la position.",
+              "Le stop suiveur accompagne une évolution favorable du cours selon un montant ou un pourcentage prédéfini, sans reculer lorsque le marché se retourne. Avec une distance de cinq unités à partir d'un cours de 100, le seuil initial vaut 95 ; si le cours de référence atteint 112, le seuil peut monter à 107. Un repli vers 108 ne le ramène pas à 103. Investor.gov explique cet ajustement à sens unique, tout en rappelant que le prix exécuté peut différer du seuil. Il faut connaître la cotation effectivement suivie par le courtier."
+            ]
+          },
+          {
+            "heading": "Deux trajectoires fictives donnent des conclusions opposées",
+            "paragraphs": [
+              "Supposons l'achat de vingt actions à 100 unités chacune, sans levier. Dans un premier scénario inventé, le cours grimpe à 112 puis redescend à 104. Le stop fixe à 95 n'est pas activé : la position conserve une valeur de marché théorique de 2 080 unités. Un stop suiveur distant de cinq unités pourrait atteindre 107 et se déclencher pendant la baisse. S'il est exécuté à 106,50, le produit de la vente vaut 2 130 unités avant frais, soit 130 de plus que le coût initial de 2 000. Il ne s'agit pas d'une performance réelle.",
+              "Modifions seulement la suite : après 112, le cours touche brièvement 106,90, active le stop suiveur, puis remonte à 125. Le détenteur du stop suiveur est sorti, tandis que celui du stop fixe est toujours investi. Comparer uniquement les cours d'ouverture et de clôture masquerait l'ordre des événements et les règles du courtier. Aucun de ces deux outils n'est systématiquement supérieur. Un seuil prédéfini facilite la discipline, mais peut limiter la participation à une reprise après une correction temporaire."
+            ]
+          },
+          {
+            "heading": "Gaps, glissement et exécutions partielles",
+            "paragraphs": [
+              "Une action peut terminer une séance à 101 puis rouvrir à 88 après une annonce imprévue. Un stop de vente placé à 95 n'oblige personne à acheter à 95 : une fois activé, l'ordre au marché peut être exécuté près de 88, voire moins, selon la liquidité. Cet écart est un gap. Le glissement désigne la différence entre le prix anticipé et le prix réellement obtenu. L'explication des ordres publiée par Charles Schwab le 29 janvier 2023 évoque les suspensions de cotation, les gaps et les contraintes de liquidité. La distance du stop n'est donc pas une perte maximale garantie.",
+              "Une sortie importante peut être exécutée en plusieurs tranches. Si 400 actions sont vendues à 94 et 600 à 92, le prix moyen pondéré des mille actions est de 92,80, et non 95. Selon la profondeur du carnet et le type d'ordre, une partie peut même rester en attente. Ajoutez les commissions, l'écart achat-vente, les éventuels coûts de financement et la fiscalité applicable pour calculer un résultat net. Une bougie de graphique ne prouve pas que toute la quantité aurait été négociable au meilleur prix affiché."
+            ]
+          },
+          {
+            "heading": "Le stop à cours limité évite certains prix, pas l'absence de sortie",
+            "paragraphs": [
+              "Un stop à cours limité combine un seuil de déclenchement et un prix minimal accepté pour une vente. Avec un stop à 95 et une limite à 94, l'activation crée un ordre limité qui ne vendra pas volontairement à 90. Mais si le marché passe directement à 88 et ne revient jamais à 94, la position peut rester ouverte. La perte latente risque alors de continuer à augmenter. Il faut choisir entre la protection du prix et la probabilité d'exécution, sans imaginer qu'une instruction assure simultanément les deux.",
+              "Les conditions de durée et de séance compliquent encore le choix. Un ordre valable pour la journée peut expirer, alors qu'un ordre valable jusqu'à annulation obéit à une durée fixée par le courtier. Certaines séances étendues n'acceptent pas tous les types d'ordres. Schwab indique que des stops suiveurs sont conservés sur les serveurs du courtier avant leur activation, avec une disponibilité variable selon la plateforme. Consultez les conditions actuelles du prestataire plutôt que de présumer qu'un ordre fonctionnera pendant une suspension de cotation."
+            ]
+          },
+          {
+            "heading": "Un protocole reproductible plutôt qu'une impression rétrospective",
+            "paragraphs": [
+              "Préparez un tableau contenant la date, l'instrument, la quantité, le prix d'entrée, le seuil initial, le type d'ordre, la distance suiveuse et la justification du choix. Relevez le plus haut cours de référence connu à chaque décision, l'événement déclencheur, les prix réellement exécutés, les quantités et les frais. Distinguez une simulation historique de l'exécution réelle : les cours de clôture quotidiens dissimulent les mouvements intrajournaliers et les gaps. Comparez les règles sur des périodes de hausse, de baisse et de stagnation, en intégrant des scénarios défavorables.",
+              "Avant de transmettre un ordre, demandez-vous si vous pouvez supporter une perte supérieure à la distance prévue, si un stop limité pourrait ne pas être exécuté et si une publication économique risque de provoquer un gap. N'augmentez pas le levier sous prétexte que le seuil paraît proche. Évaluez les positions corrélées dans le budget de risque global, puis rapprochez les résultats des confirmations d'exécution du courtier. Les exemples sont exclusivement pédagogiques et ne constituent aucun signal d'achat ou de vente. Renoncer à une opération reste raisonnable si les risques sont mal compris."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1768055104895-e6185762f2a9",
+    "source": "https://unsplash.com/photos/trader-analyzing-stock-market-charts-on-computer-screens-with-calculator--DWqOL_d91I",
+    "photographer": "Jakub Żerdzicki",
+    "alt": "Trader viewing stock charts and calculator on multiple screens, illustrative photograph",
+    "altAr": "متداول يراجع رسوماً بيانية وحاسبة على شاشات متعددة، صورة توضيحية",
+    "altFr": "Opérateur consultant des graphiques et une calculatrice sur plusieurs écrans, photographie illustrative",
+    "license": "Unsplash License",
+    "note": "Unsplash photo by Jakub Żerdzicki, published 10 January 2026, marked Free to use under Unsplash License; unique ID verified against article-photo registry and all current queued files 29 October 2026. Editorial illustration only."
+  },
+  "resourceIds": [
+    "investor",
+    "cftc"
+  ],
+  "review": {
+    "ready": true,
+    "checkedAt": "2026-10-29",
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Independent US SEC Investor.gov bulletin (updated 2026-08-18) and Charles Schwab brokerage education (2023-01-29) reviewed 2026-10-29. Examples verified: 20×106.50=2130; 400×94+600×92=92800 / 1000=92.80. AR/EN/FR full manual editorial reviewed; no promises or actual returns. Unique free Unsplash photo and attribution verified. Word counts {\"ar\":979,\"en\":1102,\"fr\":1134}"
+  }
+}
