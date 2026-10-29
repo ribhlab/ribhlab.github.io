@@ -580,8 +580,10 @@
         "fdaDairyEggs",
         "avpnMargherita"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/chicken-tikka-masala-temperature-guide.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "world-recipes",
