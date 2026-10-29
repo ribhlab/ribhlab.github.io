@@ -666,10 +666,12 @@
       "section": "competitions",
       "title": "Ingénieur d’État — Big Data, Data Science ou IA",
       "deadline": "2026-11-11",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
-      "priority": "date:2026-11-11",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b526d274-b490-4982-833e-71d21ea20813"
+      "priority": "Source-verified 9-section trilingual report added 2026-10-29; await build and live QA",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b526d274-b490-4982-833e-71d21ea20813",
+      "researchedAt": "2026-10-29",
+      "evidenceId": "au-kenitra-data-science-ai"
     },
     {
       "id": "au-kenitra-assistante-direction",
