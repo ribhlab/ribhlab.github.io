@@ -951,6 +951,10 @@
     "support-resistance-zones-price-chart-falsifiable-test": [
       "cme",
       "schwabEducation"
+    ],
+    "english-learning-apps-pronunciation-plan": [
+      "googlePlay",
+      "appleAppStore"
     ]
   }
 }
