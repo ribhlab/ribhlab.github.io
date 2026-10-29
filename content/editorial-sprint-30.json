@@ -598,8 +598,10 @@
         "fdaDairyEggs",
         "avpnMargherita"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/pad-thai-noodles-peanut-allergy-plan.json",
+      "editorialReviewDate": "2026-10-29"
     }
   ],
   "updatedAt": "2026-10-29"
