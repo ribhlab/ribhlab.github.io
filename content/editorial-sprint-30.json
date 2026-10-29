@@ -480,11 +480,12 @@
         "bls",
         "fed"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/nfp-payrolls-revisions-market-guide/",
       "queuePath": "content/reviewed-queue/nfp-payrolls-revisions-market-guide.json",
       "editorialReviewDate": "2026-10-29",
-      "verification": "Verified independent BLS and St. Louis Fed sources, 6 substantial AR/EN/FR sections, 898/968/1050 words, unique verified free Unsplash photo; queued for scheduled publisher; not yet published."
+      "verification": "content/articles trilingual article verified; GitHub Actions quality 40935519405 and Pages deploy 40935519352 success; live public-sitemap-check 40935631328 confirmed HTTP 200, six substantive sections, official sources and licensed photo for AR/EN/FR.",
+      "publishedVerifiedAt": "2026-10-29"
     },
     {
       "sectionId": "body-care",
