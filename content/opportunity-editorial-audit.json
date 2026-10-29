@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 18,
+    "researched": 19,
     "marketEvidence": 5,
-    "pendingDetail": 72
+    "pendingDetail": 71
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -370,10 +370,14 @@
       "section": "competitions",
       "title": "Assistant comptable (RH 135/2026)",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/320ad0af-40dd-4bf2-aa17-c8257e791ac6"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/320ad0af-40dd-4bf2-aa17-c8257e791ac6",
+      "researchedAt": "2026-10-29",
+      "evidenceKey": "ofppt-accountant-10",
+      "officialNoticeUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/320ad0af-40dd-4bf2-aa17-c8257e791ac6",
+      "researchNote": "Original OFPPT one-page RH 135/26 notice visually reviewed and cross-checked with official portal; 10 posts, TS diploma, 2 years experience, under 40 at start, four PDFs, 9 November midnight ambiguity; full 10-section AR/EN/FR evidence, no invented city/pay."
     },
     {
       "id": "ofppt-administration-10",
