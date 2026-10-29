@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 25,
+    "researched": 26,
     "marketEvidence": 5,
-    "pendingDetail": 65
+    "pendingDetail": 64
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -430,10 +430,13 @@
       "section": "competitions",
       "title": "Cadre Acheteur",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/686fddc3-8355-43a1-8799-e51f36685f5f"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/686fddc3-8355-43a1-8799-e51f36685f5f",
+      "researchedAt": "2026-10-29",
+      "evidenceId": "amdie-buyer",
+      "verification": "AMDIE Decision 509/2026 (four pages) and official C44253/26 portal; live trilingual nine-section guide verified in GitHub Actions public-sitemap-check run 40845933129"
     },
     {
       "id": "amdie-development",
