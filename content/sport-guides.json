@@ -1,0 +1,165 @@
+{
+  "reviewedAt": "2026-10-29",
+  "method": "Original explanatory guide checked against FIA regulations, FIA WRC information and Formula 1 official information; not a live timing feed.",
+  "guides": {
+    "motorsport": {
+      "id": "motorsport",
+      "reviewedAt": "2026-10-29",
+      "sources": [
+        {
+          "label": "FIA — 2026 Formula 1 regulatory documents (updated August 2026)",
+          "url": "https://www.fia.com/regulation/documents",
+          "date": "2026-08-05"
+        },
+        {
+          "label": "FIA — World Rally Championship 2026",
+          "url": "https://www.fia.com/events/world-rally-championship/season-2025/fia-world-rally-championship-2026-0",
+          "date": "2026-10-29"
+        },
+        {
+          "label": "Formula 1 — 2026 race calendar",
+          "url": "https://www.formula1.com/en/racing/2026",
+          "date": "2026-10-29"
+        },
+        {
+          "label": "FIA — Head and neck restraint safety research",
+          "url": "https://www.fia.com/news/auto-medical-safety-our-hans",
+          "date": "2019-04-11"
+        },
+        {
+          "label": "Formula 1 — Beginner's guide 2026",
+          "url": "https://www.formula1.com/en/video/the-beginners-guide-to-formula-1-in-2026.1858661817555445986",
+          "date": "2026-03-03"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "سباقات السيارات: دليل شامل من الكارتينغ والراليات إلى الفورمولا 1",
+          "deck": "شرح القواعد والبطولات والاستراتيجيات والسلامة والتغييرات التقنية لعام 2026، مع خطوات عملية للمتابعة والتعلم.",
+          "sections": [
+            [
+              "ما هي سباقات السيارات، ولماذا لا تعني الفورمولا 1 وحدها؟",
+              "سباقات السيارات رياضة تنافسية منظمة تقيس قدرة السائق والفريق والآلة على قطع مسافة أو مرحلة محددة بأفضل أداء وفق قواعد معلنة. تتفرع إلى سباقات الحلبات، والراليات على طرق مغلقة، وسباقات التحمل، والكارتينغ، وغيرها. في الحلبة تنطلق سيارات عديدة في منافسة على المراكز، بينما ينطلق المتنافسون في كثير من مراحل الرالي تباعاً ويُجمع زمنهم. ولهذا لا يصح مقارنة ترتيب سائق فورمولا 1 بنتيجة طاقم رالي دون شرح نظام البطولة. يتطلب الفهم الجيد التفريق بين السباق الواحد والموسم الكامل، وبين فئة السيارة ومستوى الترخيص. وتعد الفورمولا 1 الواجهة الأكثر شهرة لسباقات المقعد الواحد، لكنها لا تختصر بقية الاختصاصات."
+            ],
+            [
+              "الجذور التاريخية وتطور المنافسة",
+              "تطورت رياضة السيارات مع انتشار المركبات ومحاولات اختبار سرعتها وقدرتها على التحمل، ثم أصبحت المنافسات تخضع لقواعد موحدة ومراقبة فنية وإجراءات سلامة. تأسست بطولة العالم للفورمولا 1 سنة 1950، لكن سباقات الجائزة الكبرى أقدم من ذلك، كما نشأت بطولات للراليات والتحمل بخصائص مختلفة. لم يكن التقدم مجرد زيادة في قوة المحركات؛ فقد أصبحت الإطارات والفرامل والهيكل وقراءة البيانات والتنسيق داخل الفريق عناصر حاسمة. تغيرت أيضاً نظرة المنظمين إلى سلامة الجمهور والسائقين بعد حوادث خطيرة، فأصبح تقييم المخاطر وتطوير الحلبات والمعدات جزءاً من الرياضة. لا يمكن اعتبار سيارة تاريخية مطابقة في قدراتها أو شروطها التنظيمية لسيارة موسم 2026."
+            ],
+            [
+              "الفرق بين الحلبة والرالي والتحمل والكارتينغ",
+              "تقوم سباقات الحلبات على مسار مغلق تُحسب فيه اللفات والمراكز والعقوبات، وقد تتغير المراكز بسبب التوقفات والإطارات. أما الرالي فيجمع مراحل خاصة مغلقة أمام المرور مع فترات انتقال تخضع لضوابط، ويحتاج السائق إلى ملاحظات الملاح والتكيف مع الأسفلت والحصى والثلج. وفي سباقات التحمل يصبح الحفاظ على السيارة وتبادل السائقين وإدارة الوقود والطقس جزءاً من الخطة، لا السرعة القصوى فقط. الكارتينغ يوفر فئة مختلفة من المركبات والمسارات ويُستخدم للتعلم والتنافس وفق تراخيص وفئات عمرية. قبل متابعة أي بطولة، اسأل: هل النتيجة زمن إجمالي أم ترتيب وصول؟ هل يتنافس الجميع على المسار في الوقت نفسه؟ وما حدود الإصلاح والمساعدة؟"
+            ],
+            [
+              "كيف يُنظم أسبوع سباق الفورمولا 1؟",
+              "تتضمن عطلة سباق الفورمولا 1 عادة حصص تدريب تساعد الفرق على اختبار إعداد السيارة وفهم الإطارات، ثم تأهيلاً يحدد ترتيب الانطلاق، ثم السباق الرئيسي. قد تتضمن بعض الجولات سباقاً قصيراً بنظام Sprint وجدولاً مختلفاً. ليست أسرع لفة في التدريب دليلاً قاطعاً على السيارة الأقوى، لأن كميات الوقود ونوعية الإطارات وبرامج الاختبار قد تختلف. تتغير النتائج أيضاً بعد انتهاء الجلسات إذا فُرضت عقوبات أو استُبعدت سيارة بسبب مخالفة فنية. لذلك يجب قراءة التصنيف الرسمي النهائي، لا الاكتفاء بصورة شاشة من البث. ويمكن متابعة جدول 2026 لدى الجهة المنظمة، مع تحويل التوقيت المحلي لكل حلبة إلى توقيت بلد المشاهد قبل نشره."
+            ],
+            [
+              "النقاط والبطولات والعقوبات: كيف تقرأ النتيجة؟",
+              "في الفورمولا 1 توجد بطولة للسائقين وأخرى للصانعين، وتُمنح نقاط وفق المركز والقواعد السارية وطول السباق المنجز في الحالات الاستثنائية. من الخطأ افتراض أن كل سباق قصير أو متوقف يمنح العدد نفسه من النقاط الذي يمنحه سباق مكتمل. قد تتسبب مخالفة حدود المسار أو الاحتكاك غير المشروع أو تجاوز سرعة منطقة الصيانة في عقوبة زمنية أو إجراء آخر. أما الرالي فيعتمد على الأزمنة المجمعة للمراحل والعقوبات المرتبطة بالتأخير أو عدم احترام التعليمات. عند إعداد جدول ترتيب، ينبغي تسجيل اسم البطولة والموسم والجولة وتاريخ تحديث النتيجة والقرارات اللاحقة. وتختلف قواعد التصنيف باختلاف البطولة، فلا تنقل نظام الفورمولا 1 إلى الرالي أو التحمل."
+            ],
+            [
+              "السيارة والإطارات والاستراتيجية: لماذا لا يفوز الأسرع دائماً؟",
+              "يحتاج الأداء إلى توازن بين قوة الدفع والتماسك والكبح والتبريد والديناميكا الهوائية. الإطار الذي يمنح تماسكاً أفضل في لحظة معينة قد يتدهور أسرع خلال سلسلة لفات، كما أن التوقف المبكر قد يكسب وقتاً على منافس لكنه يعرض السائق للازدحام. تتحكم الفرق في توقيت التوقف وفق بيانات فعلية وتوقعات غير يقينية عن الطقس وحالة الحلبة. في 2026 دخلت الفورمولا 1 دورة تقنية جديدة تتضمن اعتماداً أكبر على الطاقة الكهربائية وأجنحة متحركة في ظروف محددة؛ وقد عدلت الجهة المنظمة بعض التفاصيل أثناء الموسم. لذلك يجب تجنب إعادة نشر أرقام أول مسودة للقواعد على أنها ثابتة. التحليل المفيد يشرح سبب القرار والبدائل الممكنة، ولا يزعم معرفة إعدادات الفرق السرية."
+            ],
+            [
+              "السلامة ليست تفصيلاً: التجهيزات والحلبة والجمهور",
+              "سباقات السيارات تنطوي على مخاطر حقيقية، ولذلك لا يكفي ارتداء خوذة عادية أو قيادة سيارة شارع بسرعة عالية لمحاكاتها. تشمل منظومة الحماية تجهيزات معتمدة بحسب الفئة، مثل الخوذة والملابس المقاومة للحريق وأحزمة التثبيت ومساند الرأس والرقبة، إضافة إلى حواجز الحلبة وفرق الإنقاذ والإشارات والأعلام. ساهمت أنظمة تثبيت الرأس والرقبة في تقليل إصابات خطيرة وفق أبحاث الاتحاد الدولي للسيارات. وتختلف متطلبات الترخيص والفحص الطبي والتجهيز من مسابقة إلى أخرى. لا يجوز تجربة الانجراف أو السباق في طريق عمومي، كما يجب أن يبقى الجمهور في مناطق المشاهدة المصرح بها. والمعلومات هنا للتثقيف، وليست بديلاً عن تعليمات منظم معتمد."
+            ],
+            [
+              "كيف تبدأ التعلم أو المشاركة بصورة قانونية؟",
+              "ابدأ بمشاهدة سباق كامل مع قراءة القواعد الأساسية، ثم قارن بين التدريب والتأهيل والنتيجة النهائية. لمن يريد ممارسة الرياضة، يمكن البحث عن نادٍ معترف به أو مسار كارتينغ مرخص، والسؤال عن التدريب والتأمين ومتطلبات السن واللياقة والتجهيز. لا تشتري سيارة سباق قبل فهم فئة المشاركة وتكاليف الصيانة والنقل والإطارات ورسوم الدخول؛ فقد تكون الميزانية أكبر بكثير من ثمن المركبة. ويمكن لمحبي الجانب التقني تعلم تحليل بيانات اللفات ومفاهيم التوازن الميكانيكي دون قيادة خطرة. أما المسار المهني فيشمل الميكانيك والهندسة والإعلام والتنظيم والسلامة، وليس مقعد السائق فقط. تحقق من الجهة الوطنية المختصة واللوائح الحالية قبل أي تسجيل."
+            ],
+            [
+              "متابعة بطولات 2026 دون أخبار مضللة",
+              "للتمييز بين المعلومة والتحليل، اعتمد نتائج الجهة المنظمة والاتحاد المختص بعد تثبيت العقوبات، ثم قارنها بتغطية مستقلة عند الحاجة. يعرض الاتحاد الدولي للسيارات وثائق اللوائح، وتنشر الفورمولا 1 برنامج جولاتها، بينما يقدم ملف بطولة العالم للراليات تفاصيل الفئات والسطوح والتغييرات التنظيمية. يضم موسم رالي العالم 2026 أربع عشرة جولة وفق صفحة البطولة الرسمية، لكن هذا لا يعني أن كل سباق من الفئة نفسها أو أن مواعيده غير قابلة للتعديل. عند قراءة خبر انتقال سائق أو تغيير فريق، ابحث عن إعلان رسمي وتاريخ سريانه؛ لا تنقل الشائعات بوصفها عقوداً موقعة. راجع تاريخ الصفحة، ولا تعرض نتائج قديمة على أنها مباشرة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Motor racing explained: from karting and rally to Formula 1",
+          "deck": "A practical guide to formats, rules, strategy, safety and the 2026 technical cycle.",
+          "sections": [
+            [
+              "What motor racing covers beyond Formula 1",
+              "Motor racing is an organized contest in which drivers, teams and machines compete over a prescribed distance or timed course under published rules. Circuit racing, rallying, endurance events and karting use different formats, so they cannot be understood through a single league table. Cars may start together and race for track position, while rally crews often begin timed stages separately and add their times. Formula 1 is the most visible single-seater championship, not a synonym for every form of automobile competition. A useful introduction asks what vehicle class is permitted, who regulates the event, whether a result is based on elapsed time or finishing position, and how a season champion is decided. The distinction matters when comparing records, budgets and driver skills."
+            ],
+            [
+              "How the sport developed",
+              "Automobile competition grew alongside early car engineering and experiments in speed and endurance. The Formula 1 World Championship began in 1950, although Grand Prix racing predates the championship. Rally and long-distance racing developed their own traditions and specialized equipment. Modern success depends on much more than horsepower: braking systems, tyres, aerodynamics, reliability, telemetry and teamwork have transformed performance. Major accidents also changed the approach to driver protection, spectator areas and circuit design. It is misleading to treat historical records as though every generation used comparable machinery or race formats. When writing about a champion, name the championship, year and category. A title earned in a particular era is meaningful within its rules, not proof that the same car or driver would win under the current technical framework."
+            ],
+            [
+              "Circuit racing, rally, endurance and karting compared",
+              "A circuit event usually takes place on a closed track, with lap counts, overtaking and pit stops shaping the classification. Rallying uses closed special stages connected by road sections; drivers rely on a co-driver's pace notes and adapt to gravel, asphalt, ice or snow. In endurance racing, preserving the car, managing traffic and sharing driving duties can be more important than producing one spectacular lap. Karting is a distinct competitive discipline with its own vehicle categories and licensing requirements, often serving as an introduction to racing technique. Before comparing results, check whether crews start simultaneously, how penalties are added, when repairs are allowed and whether the classification measures stage time, race position or completed distance. Each format rewards a different combination of precision, pace and risk management."
+            ],
+            [
+              "Understanding a Formula 1 race weekend",
+              "A typical Formula 1 weekend contains practice sessions, qualifying and a Grand Prix. Some rounds use a Sprint format, which changes the timetable and adds a shorter competitive event. Practice helps teams examine tyre wear, cooling and setup, but the fastest practice lap is not a reliable prediction of race pace: fuel loads and test programs are not fully public. Qualifying determines the starting order subject to penalties, while the race brings tyre management, pit strategy and changing conditions into play. Official classifications can change after the chequered flag because of sporting or technical decisions. Readers should distinguish provisional timing screens from final results and convert local circuit times before posting a schedule for an international audience. The organizer's calendar is the starting point for event dates."
+            ],
+            [
+              "Points, standings and penalties",
+              "Formula 1 awards championships to drivers and constructors under its sporting and general regulations. Points depend on classification and, in unusual interrupted races, the proportion of scheduled distance completed. A Sprint is not simply another full Grand Prix and should not be scored as one. Penalties may arise from pit-lane speeding, infringements at the start, track-limit violations or incidents involving other competitors. Rally results instead aggregate special-stage times and applicable time penalties, while endurance categories may have separate class winners. A trustworthy standings table identifies the series, season, round and update date, and is corrected when stewards amend a classification. Avoid transferring one championship's scoring system to another. A headline saying a driver 'won the race' should be checked against the final published classification."
+            ],
+            [
+              "Engineering, tyres and strategy",
+              "Lap time emerges from a compromise between propulsion, grip, braking, cooling and aerodynamic drag. A tyre that performs strongly over one lap may degrade over a longer run. Stopping early can produce a time advantage against a rival, but may also place the car in traffic; a safety-car period can alter the entire calculation. Teams make decisions with incomplete knowledge of future weather and rivals' choices. Formula 1 entered a major technical cycle in 2026, with more electrical energy in the power unit and movable aerodynamic surfaces used under specified conditions. The FIA has refined some energy-management parameters during the year, so an old preview may not describe the current rulebook. Good analysis explains alternatives and uncertainty instead of pretending to know confidential team setups or predicting a guaranteed winner."
+            ],
+            [
+              "Safety and the limits of imitation",
+              "Motorsport involves genuine physical danger. A road car, ordinary motorcycle helmet or public highway is not a substitute for a regulated racing environment. Depending on the class, approved helmets, fire-resistant clothing, harnesses, seats and head-and-neck restraint systems form part of the protection package. Marshals, medical crews, barriers, flag procedures and controlled spectator zones are equally important. FIA safety research describes how frontal head restraints have reduced severe head and neck injuries. Rules differ between events and countries, so competitors must consult the current requirements of the relevant organizer and national authority. Spectators should never enter restricted areas to photograph cars. Street racing or drifting on open roads is not a legitimate way to practise the sport, and no online guide replaces supervised training."
+            ],
+            [
+              "A realistic route for beginners",
+              "Start by watching an entire event and following its regulations, not just a highlight reel. Compare practice, qualifying and final classification, and learn why a driver can be fast yet finish poorly. Someone interested in participating can contact an authorized karting circuit or recognized club, ask about coaching, insurance, age limits, medical requirements and safety equipment, and begin in a suitable class. Before buying a race vehicle, budget for transport, maintenance, tyres, entry fees and unexpected repairs. People drawn to engineering can study lap data, vehicle dynamics or race operations without taking unnecessary driving risks. Career paths also include mechanics, software, event management, media and safety. Local licensing rules must be checked before registration; neither talent nor enthusiasm alone grants permission to compete."
+            ],
+            [
+              "Following the 2026 season without misinformation",
+              "Use the organizer's confirmed calendar and the regulator's latest rules, then compare significant claims with independent reporting where appropriate. The FIA maintains regulatory documents; Formula 1 publishes race schedules and official classifications; the FIA World Rally Championship describes categories and event formats. Its 2026 season is listed as fourteen rounds on varied surfaces, not fourteen identical races. Dates, penalties and classifications can change, so note when a page was last reviewed. Driver-transfer rumours should not be described as signed contracts without an attributable announcement. Equally, a statistical prediction is not a result and a practice-session ranking is not a championship standing. Readers gain more from a carefully dated explanation of what is known, what remains uncertain and where to verify an update than from a dramatic but unsupported headline."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Comprendre le sport automobile : du karting au rallye et à la Formule 1",
+          "deck": "Un guide approfondi des formats, règlements, stratégies, équipements et évolutions techniques de 2026.",
+          "sections": [
+            [
+              "Les sports automobiles ne se limitent pas à la Formule 1",
+              "Le sport automobile regroupe des compétitions organisées où pilotes, équipes et véhicules parcourent une distance ou un itinéraire chronométré selon des règles publiques. Courses sur circuit, rallyes, endurance et karting suivent des formats différents : il serait trompeur de les comparer à partir d'un seul classement. Sur circuit, plusieurs voitures se disputent généralement la position en piste, tandis qu'en rallye les équipages partent souvent séparément sur des épreuves spéciales dont les temps s'additionnent. La Formule 1 est la catégorie de monoplaces la plus médiatisée, mais elle ne représente pas toute la discipline. Pour comprendre une épreuve, il faut identifier la catégorie technique, l'autorité sportive, le mode de classement et les critères d'attribution du titre sur la saison."
+            ],
+            [
+              "Repères historiques et transformations",
+              "Les compétitions automobiles se sont développées avec les premiers véhicules et les essais de vitesse et d'endurance. Le Championnat du monde de Formule 1 a débuté en 1950, alors que les Grands Prix existaient déjà. Les rallyes et les courses de longue durée ont suivi des évolutions distinctes. La performance moderne ne se résume pas à la puissance : pneumatiques, freinage, aérodynamique, fiabilité, données et coordination des équipes comptent énormément. Les accidents graves ont aussi poussé les organisateurs à renforcer les protections, les circuits et les dispositifs de secours. Un record historique ne peut être comparé directement à un chrono récent sans tenir compte des voitures, des tracés et des règlements. Il convient toujours de préciser la saison et la catégorie d'un titre."
+            ],
+            [
+              "Circuit, rallye, endurance et karting",
+              "Sur circuit, les pilotes effectuent des tours sur une piste fermée, et les dépassements, arrêts aux stands et pénalités peuvent modifier l'ordre d'arrivée. Le rallye associe des spéciales fermées à la circulation et des liaisons réglementées ; le copilote transmet des notes, et l'équipage doit s'adapter à l'asphalte, à la terre, à la neige ou à la glace. En endurance, préserver la mécanique, gérer le trafic et organiser les relais de pilotes sont des dimensions décisives. Le karting constitue une discipline à part entière, avec des catégories et des licences adaptées. Avant de commenter un résultat, demandez si les concurrents partent ensemble, comment les temps sont additionnés, quelles réparations sont autorisées et si le classement dépend de la position, du temps total ou de la distance couverte."
+            ],
+            [
+              "Le déroulement d'un week-end de Formule 1",
+              "Un Grand Prix comprend habituellement des essais libres, des qualifications puis la course principale. Certaines manches comportent un Sprint, ce qui modifie le programme et ajoute une épreuve courte. Les essais servent notamment à étudier les réglages, les pneumatiques et le refroidissement. Le meilleur temps d'une séance n'indique pas nécessairement la voiture la plus compétitive en course : charges de carburant et programmes de travail diffèrent. Les qualifications déterminent la grille sous réserve de pénalités, puis la course exige des choix stratégiques. Le classement affiché à l'arrivée peut encore évoluer après une décision sportive ou technique. Il faut donc privilégier le résultat officiel définitif et convertir correctement le fuseau horaire du circuit avant de publier un calendrier."
+            ],
+            [
+              "Points, classements et sanctions",
+              "La Formule 1 attribue des titres aux pilotes et aux constructeurs selon des dispositions sportives précises. Le barème dépend du classement et, lorsqu'une course est interrompue, de la distance effectivement parcourue dans certaines circonstances. Un Sprint ne rapporte pas les mêmes points qu'un Grand Prix complet. Excès de vitesse dans la voie des stands, manœuvres interdites, limites de piste ou incidents peuvent entraîner des sanctions. En rallye, les temps des spéciales et les pénalités sont cumulés ; en endurance, plusieurs catégories peuvent disposer de classements distincts. Un tableau fiable mentionne la compétition, la saison, la manche et la date de mise à jour. Il doit être corrigé si les commissaires modifient le résultat. Il serait erroné d'appliquer automatiquement le règlement d'une discipline à une autre."
+            ],
+            [
+              "Technique, pneumatiques et choix stratégiques",
+              "Le temps au tour résulte d'un équilibre entre motricité, adhérence, freinage, refroidissement et résistance aérodynamique. Un pneu performant sur un tour peut se dégrader plus rapidement sur une longue séquence. Un arrêt anticipé peut offrir un avantage mais aussi renvoyer la voiture dans le trafic ; l'intervention de la voiture de sécurité bouleverse parfois les calculs. Les équipes décident sans connaître parfaitement la météo future ni les stratégies adverses. La Formule 1 a introduit en 2026 une nouvelle génération technique, avec davantage d'énergie électrique et des éléments aérodynamiques mobiles dans des conditions définies. La FIA a ensuite ajusté certains paramètres : un article ancien peut donc devenir inexact. Une analyse sérieuse présente les hypothèses, les solutions possibles et leurs limites, sans prétendre connaître les réglages confidentiels."
+            ],
+            [
+              "Sécurité, équipements et comportement du public",
+              "La compétition automobile comporte des risques physiques importants. Une voiture de route et une route ouverte ne constituent pas un environnement de course approprié. Selon les catégories, casques homologués, vêtements résistants au feu, harnais, sièges et systèmes de retenue de la tête et du cou font partie de la protection. Les commissaires, équipes médicales, barrières, drapeaux et zones réservées au public jouent également un rôle essentiel. Les travaux de la FIA décrivent l'effet des dispositifs de retenue frontale sur la réduction des blessures graves. Les obligations varient selon les épreuves et les pays : il faut consulter le règlement actuel de l'organisateur. Les spectateurs doivent rester dans les zones autorisées. La conduite dangereuse sur voie publique n'est pas une initiation acceptable, et ce guide ne remplace pas une formation encadrée."
+            ],
+            [
+              "Commencer à apprendre ou à pratiquer légalement",
+              "La première étape consiste à suivre une compétition entière en consultant ses règles, plutôt qu'une simple compilation vidéo. Comparez essais, qualifications et classement final pour comprendre pourquoi un pilote rapide peut terminer loin du podium. Pour pratiquer, renseignez-vous auprès d'un circuit de karting autorisé ou d'un club reconnu : formation, assurance, âge, aptitude médicale et équipements sont à vérifier. Avant d'acheter une voiture de compétition, calculez les coûts de transport, d'entretien, de pneus, d'inscription et de réparation. L'analyse des données, la mécanique, les logiciels et l'organisation d'événements constituent aussi des voies d'apprentissage ou de carrière. Les autorisations et licences nationales doivent être vérifiées avant toute inscription. La motivation seule ne suffit pas à garantir le droit de participer."
+            ],
+            [
+              "Suivre la saison 2026 sans confondre faits et rumeurs",
+              "Consultez les calendriers confirmés par les organisateurs et les règlements les plus récents de l'autorité compétente, puis confrontez les affirmations importantes à une couverture indépendante. La FIA publie les textes réglementaires, la Formule 1 les programmes et classements, et le Championnat du monde des rallyes détaille les catégories et surfaces. Le WRC 2026 comporte quatorze manches selon sa présentation officielle, mais les parcours ne sont pas identiques. Une date ou un classement peut être modifié : indiquez toujours le jour de vérification. Une rumeur de transfert ne devient pas un contrat signé parce qu'elle circule largement. De même, un pronostic n'est pas un résultat et un temps d'essai n'est pas un classement général. Mieux vaut expliquer ce qui est établi et ce qui reste incertain."
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
