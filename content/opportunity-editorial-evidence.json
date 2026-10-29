@@ -4850,6 +4850,183 @@
           ]
         }
       }
+    },
+    "amdie-investment": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Signed four-page AMDIE decision 508/2026 (23 October 2026), including annexed investment-projects position sheet, inspected page by page; official public-employment listing C44251/26 cross-checked on 29 October 2026. Source content verified, but build and live AR/EN/FR publication are pending.",
+      "state": "researched-awaiting-live-verification",
+      "sources": [
+        {
+          "label": "AMDIE — signed decision 508/2026 of 23 October 2026, four pages including position sheet",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/e3e989b0-e4ce-49fc-bee2-78571029dfec"
+        },
+        {
+          "label": "Emploi-public — official competition C44251/26, published 23 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/e3e989b0-e4ce-49fc-bee2-78571029dfec"
+        }
+      ],
+      "facts": {
+        "employer": "Agence marocaine de développement des investissements et des exportations (AMDIE)",
+        "decision": "508/2026",
+        "decisionDate": "2026-10-23",
+        "competitionCode": "C44251/26",
+        "publishedAt": "2026-10-23",
+        "deadline": "2026-11-09",
+        "deadlineHour": null,
+        "posts": 1,
+        "jobTitle": "Cadre Analyste Projets Investissement",
+        "nationality": "Moroccan",
+        "age": "Under 45 on competition date",
+        "diploma": "Bac+5 or higher in accounting, finance, audit or management control, subject to public-degree or official equivalence requirement",
+        "applicationDocuments": [
+          "Motivation letter addressed to AMDIE Director General naming position",
+          "Legalised diploma copy",
+          "Legalised Moroccan ID copy",
+          "Updated detailed CV"
+        ],
+        "newGraduates2026": "Certificate of successful completion accepted at registration; diploma later",
+        "application": "https://depot.emploi-public.ma/",
+        "upload": "All scanned documents in one PDF",
+        "stages": [
+          "Written examination",
+          "Oral examination"
+        ],
+        "examDate": null,
+        "examLocation": null,
+        "jobCity": null,
+        "headOffice": "Rabat (not a confirmed duty station)",
+        "salary": null,
+        "minimumExperienceYears": null,
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة AMDIE لمحلل مشاريع الاستثمار 2026: منصب واحد وشروط Bac+5 وخطوات الترشيح",
+          "deck": "قراءة في القرار الرسمي 508/2026 وبطاقة الوظيفة: اختصاصات لجان الاستثمار، الشهادة المطلوبة، الوثائق، والموعد النهائي في 9 نوفمبر.",
+          "sections": [
+            [
+              "قرار 508/2026: منصب واحد لا حملة توظيف مفتوحة بلا حدود",
+              "تعلن الوكالة المغربية لتنمية الاستثمارات والصادرات عن توظيف إطار واحد بعنوان «محلل مشاريع الاستثمار» بموجب القرار رقم 508/2026 المؤرخ في 23 أكتوبر 2026. يظهر الإعلان في بوابة التشغيل العمومي تحت الرمز C44251/26، وتحدد البوابة آخر أجل للترشيح في 9 نوفمبر 2026. يتعلق الأمر بمنصب واحد محدد، لا بثلاثة مناصب محللي مشاريع التنمية التي أعلنتها الوكالة في قرار آخر، ولا بمنصبي المحاسبة والمالية. يجب على المرشح كتابة الاسم الدقيق للوظيفة في رسالة التحفيز وتجنب إرسال ملف واحد على أساس أن جميع إعلانات الوكالة متطابقة."
+            ],
+            [
+              "المهام المهنية: من الملف الاستثماري إلى اللجان",
+              "تضع البطاقة المهنية الملحقة بالقرار الوظيفة في مجال الاستثمار والصادرات، وترتبط بتتبع ملفات المشاريع الاستثمارية ضمن أعمال مديرية الاتفاقيات وتتبع الاستثمارات. وتشمل معالجة الملفات إدارياً وتقنياً، وتحضير المعلومات التي تحتاجها اللجان، وتنسيق الوثائق وتحديثها، والمساهمة في متابعة الاتفاقيات والقرارات. وتذكر البطاقة لجاناً من بينها اللجنة الوطنية للاستثمارات CNI، واللجان الجهوية الموحدة للاستثمار CRUI، واللجان التقنية التحضيرية. لا يعني ذلك أن الموظف يقرر وحده منح الامتيازات أو الموافقة على الاستثمار؛ دوره التحليلي والتنسيقي يخضع لمساطر الإدارة والهيئات المختصة."
+            ],
+            [
+              "الجنسية والسن والدبلوم: شروط لا تعوضها الخبرة وحدها",
+              "يشترط القرار الجنسية المغربية، وأن يقل عمر المترشح عن 45 سنة في تاريخ إجراء المباراة. ويطلب شهادة تعليم عالٍ من مستوى خمس سنوات بعد البكالوريا على الأقل، في المحاسبة أو المالية أو التدقيق أو مراقبة التسيير. قد يبدو هذا غير متوقع لمن يقرأ عنوان «مشاريع الاستثمار» فقط، لكنه وارد صراحة في المادة الثانية وفي سطر المؤهل بالبطاقة المهنية؛ لذا ينبغي عدم افتراض قبول تخصصات الهندسة أو القانون أو الاقتصاد العام تلقائياً. كما يميز القرار بين شهادات الجامعات والمدارس العمومية والشهادات التي تتوفر على معادلة من الوزارة المختصة."
+            ],
+            [
+              "كيف تقيّم ملاءمة خبرتك لطبيعة المنصب؟",
+              "قبل الترشح، قارن ما أنجزته فعلياً بمهام الوظيفة لا بعنوان منصبك الحالي. من الأمثلة المفيدة إعداد مذكرة تقارن تكاليف مشروعين، ومراجعة اتساق البيانات بين ميزانية وخطة استثمار، أو تنظيم جدول متابعة يبين صاحب القرار والوثيقة الناقصة والموعد التالي. هذه أمثلة للتحضير وليست خبرات مطلوبة بالنص الحرفي. لا ينص القرار على عدد أدنى محدد لسنوات الخبرة، لذلك لا يجوز نشر شرط «ثلاث سنوات» أو «خمس سنوات» على أنه رسمي. إذا كنت حديث التخرج، ركز على مشروع جامعي موثق دون الادعاء بمسؤوليات لم تمارسها."
+            ],
+            [
+              "أربع وثائق إلزامية وترتيب ملف PDF واحد",
+              "تنص المادة الثالثة على رسالة تحفيز موجهة إلى المدير العام للوكالة تذكر المنصب المرشح له، ونسخة مصادق عليها من الشهادة، ونسخة مصادق عليها من البطاقة الوطنية للتعريف، وسيرة ذاتية مفصلة ومحدثة. يطلب القرار جمع الوثائق الممسوحة ضوئياً في ملف PDF واحد وإيداعه إلكترونياً. راجع وضوح الأختام والصفحات، واسم الملف وحجمه وفق تعليمات المنصة قبل الرفع؛ لا تفترض أن إرسال رسالة بريد إلكتروني يعوض الإيداع. تقبل شهادة النجاح بالنسبة إلى خريجي فوج 2026 عند التسجيل، لكن الدبلوم يطلب في المراحل اللاحقة."
+            ],
+            [
+              "خطوات التقديم من المغرب قبل 9 نوفمبر",
+              "ابدأ بفتح الإعلان الحكومي C44251/26 والتحقق من رقم القرار والوظيفة وعدد المناصب. جهز النسخ المصادق عليها ورسالة التحفيز، ثم أنشئ ملف PDF واحداً واختبر فتحه على هاتف وحاسوب قبل تحميله على منصة الإيداع الرسمية depot.emploi-public.ma. احتفظ بإثبات الإيداع وراجع البريد الإلكتروني الذي سجلت به؛ فالاستدعاءات ستصل رقمياً إلى المرشحين الذين يجتازون الانتقاء الأولي. لم تذكر البوابة ساعة إغلاق في بطاقة هذا المنصب، لذا لا تفترض أن الإيداع سيبقى متاحاً حتى منتصف الليل؛ الإرسال المبكر أكثر أماناً من انتظار الدقائق الأخيرة."
+            ],
+            [
+              "الانتقاء والاختباران الكتابي والشفوي",
+              "يقرر النص إجراء اختبار كتابي ثم اختبار شفوي، على أن تعلن مواعيدهما وأماكنهما في رسائل استدعاء رقمية توجه بعد فحص الملفات والتحقق من مطابقة المؤهلات. لم ينشر القرار تاريخاً ثابتاً للامتحان أو مدينة نهائية لإجرائه أو معاملات تفصيلية للاختبارين؛ ومن الخطأ نقل موعد مباراة أخرى تابعة للوكالة إلى هذا الإعلان. للاستعداد، تدرب على تلخيص ملف استثمار، وشرح الفروق بين التدفق النقدي والربحية، وتقديم نتيجة تحليل في خمس دقائق مع ذكر الافتراضات والمخاطر. هذه مقترحات تدريبية تحريرية وليست برنامجاً رسمياً للأسئلة."
+            ],
+            [
+              "الراتب ومكان العمل: ما لم يُعلن يجب أن يبقى غير معلن",
+              "يظهر عنوان المقر الإداري للوكالة في الرباط أسفل القرار، لكن الوثيقة لا تحدد بصورة صريحة مدينة التعيين النهائية لهذا المنصب. كما أنها لا تورد أجراً شهرياً أو سنوياً أو تعويضات محددة. لا يجوز تحويل عنوان المقر إلى وعد بأن العمل سيكون في الرباط، ولا استخدام سلم أجور وظيفة حكومية أخرى لتقدير راتب هذا العقد. كذلك لا توجد في الصفحات المنشورة معلومة موثقة عن العمل عن بعد أو ساعات العمل الفردية. اطلب التفاصيل من الجهة المشغلة عند التواصل الرسمي أو في مرحلة المقابلة، ولا تدفع مالاً لوسيط يدعي ضمان الاختيار."
+            ],
+            [
+              "التثبت من المصادر ومخاطر الخلط بين إعلانات الوكالة",
+              "المصدر الحاسم هو القرار الموقع 508/2026 وبطاقة الوظيفة المرفقة في أربع صفحات، مع بطاقة الإعلان الحكومية C44251/26 المنشورة في 23 أكتوبر. راجع المصدرين قبل الإرسال، لأن الوكالة نشرت في الفترة نفسها قرارات أخرى بأعداد مناصب وتخصصات مختلفة. يظهر في القرار تاريخ 9 نوفمبر آخر أجل، وتؤكده البوابة، ولم أجد في هذين المصدرين تعارضاً يبرر اختيار موعد مختلف. إذا نشرت الإدارة تصحيحاً أو استدعاء جديداً فاعتمد النسخة الرسمية الأحدث، واحفظ نسخة من الإعلان الذي قدمت بناء عليه. المقال دليل لفهم الإعلان وليس ضماناً للقبول."
+            ]
+          ]
+        },
+        "en": {
+          "title": "AMDIE Investment Projects Analyst 2026: one vacancy, eligibility and application steps",
+          "deck": "A source-based guide to decision 508/2026, the actual investment-committee duties, Bac+5 requirements, four documents and the 9 November deadline.",
+          "sections": [
+            [
+              "Decision 508/2026 concerns one specific position",
+              "The Moroccan Agency for Investment and Export Development, AMDIE, opened recruitment for one Investment Projects Analyst under decision 508/2026 dated 23 October 2026. The national public-employment portal lists it as competition C44251/26, with an application deadline of 9 November 2026. This is one position, not the separate three Development Projects Analyst positions or two Accounting and Finance Analyst positions advertised by the same agency. Candidates should identify the exact job title in their motivation letter. A shared employer does not make different competition codes interchangeable, and applications should be prepared against the signed notice for this particular vacancy."
+            ],
+            [
+              "Actual responsibilities: files, investment committees and follow-up",
+              "The annexed job description places the role within investment and export activity, particularly the administrative and technical handling of investment files and follow-up of investment agreements. The analyst helps prepare information for decisions, checks the completeness and consistency of documentation, coordinates material for meetings and supports monitoring of agreed actions. The description refers to the National Investment Commission, CNI, unified regional investment commissions, CRUI, and preparatory technical work. These references describe an analytical and coordination function, not unilateral authority to approve public support or investment projects. A candidate should distinguish a decision-making body from the staff preparing its working files."
+            ],
+            [
+              "Nationality, age and degree requirements",
+              "Article 2 requires Moroccan nationality and an age below 45 on the competition date. It specifies a higher-education qualification at Bac+5 level or above in accounting, finance, audit or management control. The investment-focused job title does not mean that every degree in engineering, law or general economics automatically qualifies. The signed decision also limits accepted qualifications to degrees from public universities and schools or qualifications supported by the relevant ministry's equivalence certificate. Applicants educated at a private or foreign institution should verify the formal status of their degree before paying for document copies or assuming professional experience will override an educational condition."
+            ],
+            [
+              "Match your experience to the work rather than the title",
+              "Useful preparation means connecting verifiable work to the actual tasks. For instance, an applicant might explain how they reconciled a project budget with a funding plan, identified missing documents in a due-diligence checklist, or prepared a concise note comparing investment scenarios. These are illustrative interview exercises, not official mandatory experiences. The decision does not prescribe a minimum number of professional years, so claims that applicants need three or five years would be invented. Recent graduates can instead describe a supervised dissertation, internship or documented analytical project, making clear what they personally did. Accurate scope and traceable evidence are more valuable than an inflated title."
+            ],
+            [
+              "Four required documents in one PDF",
+              "Article 3 calls for a motivation letter addressed to AMDIE's Director General naming the position, a legalised copy of the diploma, a legalised copy of the Moroccan identity card, and an updated detailed CV. The signed notice instructs applicants to scan the required materials into a single PDF file and submit them online. Check legibility, missing pages and official seals before uploading. The notice allows members of the 2026 graduating class to provide a certificate of successful completion during registration, while requiring the diploma at a later stage. This limited exception should not be confused with a general exemption from the qualification requirement."
+            ],
+            [
+              "Online application: practical sequence and deadline",
+              "First compare competition code C44251/26, decision number 508/2026 and the position title on the official portal. Prepare the letter and certified copies, merge the scans into one PDF, open the final file to verify its contents, then submit it through the official depot.emploi-public.ma platform. Keep the acknowledgement and check the email account used for registration. The announcement gives 9 November 2026 as the deadline without displaying a precise closing hour for this competition. Do not assume the platform will accept files until midnight; uploading early leaves time to correct an unreadable scan or an interrupted connection. Emailing a recruiter is not a substitute for the prescribed submission channel."
+            ],
+            [
+              "Selection and written and oral examinations",
+              "The decision describes a written examination and an oral examination. Dates and venues will be communicated in digital invitations to candidates selected after application screening and profile verification. It does not provide a fixed examination date, individual test coefficients or a confirmed examination city. Borrowing details from a different AMDIE competition would therefore mislead readers. To prepare, practise explaining a project-finance assumption, comparing cash flow with accounting profit and summarising a decision note under time pressure. These are independent preparation suggestions, not leaked questions or an official syllabus. Candidates should rely on the eventual invitation for logistical arrangements."
+            ],
+            [
+              "No verified salary or final duty station",
+              "AMDIE's head-office address appears in Rabat on the decision, but that address alone does not establish the final posting city for this specific vacancy. Neither the signed notice nor the official competition entry states an individual salary, benefits package, remote-work arrangement or precise working schedule. Publishing a guessed amount based on another public grade would confuse different employment frameworks. Candidates can ask for these terms through an official employer channel or at the appropriate recruitment stage. No intermediary can credibly promise admission in exchange for a payment; the notice specifies a formal selection process, not a paid placement service."
+            ],
+            [
+              "Source checks and the risk of mixing similar competitions",
+              "This report is based on the four-page signed AMDIE decision 508/2026, including its position sheet, and the government competition listing C44251/26 published on 23 October. Both indicate a 9 November application deadline; no discrepancy between these two sources was identified on this point. AMDIE issued other recruitment decisions in the same period, so readers should match the exact reference before reusing any checklist. If the employer publishes an amendment, follow the latest authenticated notice and preserve a copy of the version on which you applied. This guide explains published eligibility and procedures; it cannot guarantee shortlisting, employment or a particular examination outcome."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours AMDIE 2026 : un poste d'analyste Projets d'investissement, conditions et candidature",
+          "deck": "Analyse de la décision 508/2026 et de la fiche de poste : commissions d'investissement, diplôme Bac+5, pièces requises et échéance du 9 novembre.",
+          "sections": [
+            [
+              "La décision 508/2026 concerne un seul poste précis",
+              "L'Agence marocaine de développement des investissements et des exportations, AMDIE, recrute un cadre analyste Projets d'investissement selon la décision 508/2026 du 23 octobre 2026. Le portail national de l'emploi public présente cette offre sous le code C44251/26, avec une date limite fixée au 9 novembre 2026. Il s'agit d'un seul poste, distinct des trois postes d'analystes Projets de développement et des deux postes d'analystes Comptabilité et Finance publiés séparément. La lettre de motivation doit citer l'intitulé exact du poste. Le fait que plusieurs annonces proviennent de la même agence ne rend pas leurs conditions ni leurs références interchangeables."
+            ],
+            [
+              "Missions concrètes : dossiers, commissions et suivi",
+              "La fiche de poste annexée situe la fonction dans les activités d'investissement et d'exportation, notamment le traitement administratif et technique des dossiers et le suivi des conventions d'investissement. L'analyste contribue à la préparation des informations nécessaires aux décisions, vérifie la cohérence documentaire, coordonne les supports des réunions et participe au suivi des actions décidées. La fiche mentionne notamment la Commission nationale des investissements, CNI, les commissions régionales unifiées de l'investissement, CRUI, ainsi que des travaux préparatoires techniques. Ces tâches relèvent de l'analyse et de la coordination ; elles ne confèrent pas au titulaire le pouvoir d'approuver seul un projet ou un soutien public."
+            ],
+            [
+              "Nationalité, âge et diplôme : les conditions écrites",
+              "L'article 2 exige la nationalité marocaine et un âge inférieur à 45 ans à la date du concours. Il demande un diplôme d'enseignement supérieur de niveau Bac+5 au moins en comptabilité, finance, audit ou contrôle de gestion. L'intitulé « projets d'investissement » ne signifie donc pas que tout diplôme en ingénierie, droit ou économie générale est automatiquement accepté. La décision réserve l'éligibilité aux diplômes des universités et écoles publiques ou aux diplômes disposant d'une attestation d'équivalence du ministère compétent. Les candidats issus d'un établissement privé ou étranger doivent vérifier la situation de leur diplôme avant de considérer leur expérience comme suffisante."
+            ],
+            [
+              "Évaluer son expérience sans inventer des critères",
+              "Une préparation utile consiste à relier ses réalisations vérifiables aux missions décrites. Un candidat peut expliquer comment il a rapproché un budget d'un plan de financement, identifié les pièces manquantes d'un dossier ou rédigé une note comparative entre deux scénarios d'investissement. Il s'agit d'exemples de préparation, et non d'expériences obligatoires annoncées. La décision ne fixe aucun minimum chiffré d'années d'expérience : affirmer que trois ou cinq années sont exigées serait infondé. Un jeune diplômé peut présenter un stage, un mémoire ou un projet analytique documenté en précisant sa contribution personnelle et les limites de son travail."
+            ],
+            [
+              "Les quatre pièces exigées dans un seul PDF",
+              "L'article 3 énumère une lettre de motivation adressée au Directeur général de l'AMDIE et mentionnant le poste, une copie légalisée du diplôme, une copie légalisée de la carte nationale d'identité et un CV détaillé actualisé. Le dossier numérisé doit être réuni dans un seul fichier PDF et déposé par voie électronique. Vérifiez la lisibilité des cachets, l'ordre des pages et l'absence de pièces manquantes avant l'envoi. Pour les diplômés de la promotion 2026, l'attestation de réussite peut être produite lors de l'inscription en ligne, le diplôme devant être présenté à une étape ultérieure. Cette exception ne supprime pas la condition de formation."
+            ],
+            [
+              "Dépôt en ligne et date limite du 9 novembre",
+              "Commencez par vérifier le code C44251/26, la décision 508/2026 et l'intitulé du poste sur la fiche officielle. Préparez la lettre et les copies légalisées, fusionnez les scans en un PDF, ouvrez le document final pour contrôler son contenu puis déposez-le sur la plateforme officielle depot.emploi-public.ma. Conservez l'accusé de réception et consultez régulièrement l'adresse électronique utilisée. L'annonce indique le 9 novembre 2026 sans préciser d'heure de clôture pour ce concours ; il serait imprudent de supposer une disponibilité jusqu'à minuit. Un dépôt anticipé permet de résoudre les problèmes de connexion ou de numérisation. Un simple courriel ne remplace pas la procédure indiquée."
+            ],
+            [
+              "Présélection, écrit et oral : ce qui est réellement prévu",
+              "La décision prévoit une épreuve écrite et une épreuve orale. Les dates et lieux seront communiqués par convocation numérique aux candidats présélectionnés après examen des dossiers et contrôle de l'adéquation du profil. Aucun jour d'examen fixe, coefficient détaillé ou ville d'épreuve n'est annoncé dans les pages consultées. Reprendre le calendrier d'un autre concours de l'AMDIE induirait donc les candidats en erreur. Pour se préparer, on peut s'exercer à expliquer une hypothèse financière, à distinguer trésorerie et résultat comptable et à synthétiser un dossier d'investissement en quelques minutes. Ce sont des pistes pédagogiques, pas un programme officiel."
+            ],
+            [
+              "Salaire et affectation : les informations absentes",
+              "L'adresse du siège de l'AMDIE à Rabat figure au bas de la décision, mais elle ne prouve pas que l'affectation définitive de ce poste se fera à Rabat. Ni la décision signée ni la fiche du portail ne donnent de salaire individuel, d'avantages chiffrés, de possibilité de télétravail ou d'horaires propres au poste. Il serait trompeur d'importer la grille salariale d'un autre corps administratif ou de présenter une estimation comme une rémunération annoncée. Les candidats peuvent demander ces précisions par les canaux officiels lors des étapes appropriées. Aucun intermédiaire ne peut garantir un recrutement moyennant paiement."
+            ],
+            [
+              "Vérification des références et vigilance sur les annonces proches",
+              "Cette analyse s'appuie sur les quatre pages de la décision signée 508/2026, fiche de poste comprise, et sur la fiche gouvernementale C44251/26 publiée le 23 octobre. Les deux sources indiquent le 9 novembre comme date limite, sans contradiction identifiée sur ce point. L'agence ayant publié plusieurs concours similaires durant la même période, chaque candidat doit faire correspondre sa candidature à la bonne référence avant de réutiliser une liste de pièces. En cas de rectificatif, seule la version officielle authentifiée la plus récente doit guider la démarche ; conserver une copie de l'annonce initiale reste prudent. Ce guide ne garantit ni présélection ni embauche."
+            ]
+          ]
+        }
+      }
     }
   }
 }
