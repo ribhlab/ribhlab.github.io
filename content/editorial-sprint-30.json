@@ -185,8 +185,10 @@
         "powerquery",
         "powerbi"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/power-query-ai-assisted-transformations-audit.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "mobile-apps",
@@ -556,5 +558,5 @@
       "articleUrl": null
     }
   ],
-  "updatedAt": "2026-10-28"
+  "updatedAt": "2026-10-29"
 }
