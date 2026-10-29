@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "license": "Unsplash License — free commercial use and modification, no resale of unmodified images or competing image collections; third-party rights must also be respected",
   "licenseUrl": "https://unsplash.com/license",
   "purpose": "One distinct, topic-matched, real photographic image per published article, licensed under Unsplash License; editorial illustration only.",
@@ -643,6 +643,15 @@
       "altFr": "Vue architecturale de la Réserve fédérale de San Francisco, illustration et non photographie de la réunion",
       "license": "Unsplash License",
       "note": "Authentic free image by Alex Bierwagen, published 15 November 2018; photographer, source URL and free Unsplash License verified on the source page 28 October 2026. Illustration only; not a photo of the October FOMC meeting."
+    },
+    "gig-gallery-original-images-checklist": {
+      "photoId": "photo-1758468772752-ed3da7e9b8ee",
+      "source": "https://unsplash.com/photos/laptop-camera-and-notebook-on-wooden-desk-8tItT1tfKhE",
+      "photographer": "Fujiphilm",
+      "alt": "Laptop, camera and notebook arranged on a wooden desk",
+      "altAr": "حاسوب محمول وكاميرا ودفتر ملاحظات فوق مكتب خشبي",
+      "altFr": "Ordinateur portable, appareil photo et carnet sur un bureau en bois",
+      "license": "Unsplash License"
     }
   }
 }

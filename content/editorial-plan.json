@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastReviewed": "2026-10-28",
+  "lastReviewed": "2026-10-29",
   "languages": [
     "ar",
     "en",
@@ -43,14 +43,10 @@
         "morocco-public-job-application-checklist-2026",
         "choose-freelance-niche-skills-evidence-14-day-test",
         "gig-description-client-questions-scope",
-        "freelance-basic-standard-premium-cost-model"
+        "freelance-basic-standard-premium-cost-model",
+        "gig-gallery-original-images-checklist"
       ],
       "ideas": [
-        {
-          "sequence": 9,
-          "titleAr": "تسعير Basic Standard Premium عملياً",
-          "status": "planned"
-        },
         {
           "sequence": 10,
           "titleAr": "كيفية كتابة عرض Upwork محترف",

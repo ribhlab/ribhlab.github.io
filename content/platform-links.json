@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "note": "Curated editorial directory of official provider domains. Listings are educational references, not a ranking or an endorsement. Commercial links remain separately disclosed.",
   "platforms": {
     "fiverr": {
@@ -893,6 +893,10 @@
       "fedSeptemberSep2026",
       "blsSeptemberCpi2026",
       "beaAugustPce2026"
+    ],
+    "gig-gallery-original-images-checklist": [
+      "fiverr",
+      "fiverrHelp"
     ]
   }
 }
