@@ -325,8 +325,10 @@
         "tradingview",
         "cftc"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/trend-channels-false-breakouts-risk.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "trading-risk",
