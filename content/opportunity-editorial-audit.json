@@ -11,9 +11,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 27,
+    "researched": 28,
     "marketEvidence": 5,
-    "pendingDetail": 63
+    "pendingDetail": 62
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -375,13 +375,15 @@
       "section": "competitions",
       "title": "5 Ingénieurs d’État — Génie civil",
       "deadline": "2026-11-04",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-04",
       "sourceUrl": "https://adha.gov.ma/uploads/jobs/ADHA_IE_GC_2026_Decision.pdf",
       "researchedAt": "2026-10-29",
       "evidencePath": "content/opportunity-editorial-evidence.json#adha-civil-engineers-2026",
-      "note": "Full signed 2-page ADHA decision and 1-page job sheet read 2026-10-29; 9 original sections in each of AR/EN/FR. Awaiting build, deployment and live page checks before final researched-article status."
+      "note": "Original signed ADHA two-page decision and one-page job sheet read on 29 October 2026. Nine distinct substantive sections in each of AR/EN/FR. Source build and Pages deployment 40869674175/40869674207 succeeded. Public HTTPS QA 40869779107 confirmed all three locale pages HTTP 200, nine sections, decision PDF, job sheet, deadline and new-tab sources.",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/adha-civil-engineers-2026/",
+      "publishedVerifiedAt": "2026-10-29"
     },
     {
       "id": "ofppt-accountant-10",
