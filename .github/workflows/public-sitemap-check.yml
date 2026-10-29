@@ -45,6 +45,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/companies/bam-assurances-2026/')
               wanted.append(f'/{lang}/opportunities/competitions/srm-fes-meknes-271/')
               wanted.append(f'/{lang}/opportunities/companies/ram-company/')
+              wanted.append(f'/{lang}/opportunities/competitions/lpee-12/')
           last=None
           for attempt in range(1,7):
               try:
@@ -224,6 +225,14 @@ jobs:
                           assert page.count('class="article-block"')>=min_sections, f'{language}: incomplete editorial sections for {slug}'
                           assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources/photo missing for {slug}'
                           print(f'NEW SPRINT LIVE {language}: {slug} complete and sourced',flush=True)
+                  # Verify the 26 October LPEE twelve-position primary-source notice.
+                  for language in ('ar','en','fr'):
+                      page=bodies[f'/{language}/opportunities/competitions/lpee-12/'].decode('utf-8')
+                      assert page.count('class="opp-guide-section" id="part-')>=9, f'{language}: LPEE guide lacks nine detailed sections'
+                      assert 'C44291/26' in page and 'AR/910/26/013' in page, f'{language}: LPEE decision identifiers missing'
+                      assert '2026/95' in page and '2026/91' in page, f'{language}: LPEE individual offer references missing'
+                      assert 'opp-guide-sources' in page and 'target="_blank"' in page, f'{language}: LPEE primary sources absent'
+                      print(f'LPEE 12 LIVE {language}: nine original sections, signed PDF and employer pages',flush=True)
                   print(f'PUBLIC SITE PASSED: XML parsed; {len(urls)} URLs; robots and multilingual pages available',flush=True)
                   break
               except Exception as err:
