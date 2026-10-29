@@ -41,6 +41,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/sett-engineer/')
               wanted.append(f'/{lang}/opportunities/morocco/sidi-finance/')
               wanted.append(f'/{lang}/opportunities/companies/marrakech-cash/')
+              wanted.append(f'/{lang}/opportunities/competitions/ofppt-accountant-10/')
           last=None
           for attempt in range(1,7):
               try:
@@ -97,6 +98,12 @@ jobs:
                       assert '705f6c1a-b4c6-411e-a1a7-e249a4de0781' in marrakech and 'opp-guide-sources' in marrakech, f'{lang}: Marrakech original three-page PDF/source absent'
                       assert 'target="_blank"' in marrakech, f'{lang}: Marrakech official sources should open new tab'
                       print(f'MARRAKECH CASH LIVE {lang}: nine original-source sections, official PDF and application details',flush=True)
+                      ofppt=bodies[f'/{lang}/opportunities/competitions/ofppt-accountant-10/'].decode('utf-8')
+                      assert 'RH 135/26' in ofppt and 'C44273/26' in ofppt, f'{lang}: OFPPT notice identity missing'
+                      assert ofppt.count('class="opp-guide-section" id="part-')>=10, f'{lang}: OFPPT researched guide lacks ten sections'
+                      assert '320ad0af-40dd-4bf2-aa17-c8257e791ac6' in ofppt and 'opp-guide-sources' in ofppt, f'{lang}: OFPPT original PDF/source missing'
+                      assert 'target="_blank"' in ofppt, f'{lang}: OFPPT sources must open in new tab'
+                      print(f'OFPPT ACCOUNTING LIVE {lang}: ten sections, original PDF, reference and links verified',flush=True)
                       sntl=bodies[f'/{lang}/opportunities/companies/sntl-accounting/'].decode('utf-8')
                       assert 'C44157/26' in sntl and 'SNTL/TCOMP/2026' in sntl, f'{lang}: SNTL accounting references missing'
                       assert sntl.count('class="opp-guide-section" id="part-')>=10, f'{lang}: SNTL detailed report lacks ten sections'
