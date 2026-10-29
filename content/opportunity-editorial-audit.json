@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 19,
+    "researched": 20,
     "marketEvidence": 5,
-    "pendingDetail": 71
+    "pendingDetail": 70
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -744,10 +744,13 @@
       "section": "companies",
       "title": "Chargé de suivi dossiers d'assurances",
       "deadline": "2026-11-02",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-02",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/d0a32a44-0138-4be0-bc53-8159712e6edc"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/d0a32a44-0138-4be0-bc53-8159712e6edc",
+      "reviewedAt": "2026-10-29",
+      "evidenceId": "bam-assurances-2026",
+      "reviewNote": "Bank Al-Maghrib original one-page PDF CSDA/DIL/191026 read in full; C44144/26 cross-checked. One Rabat position; licence en gestion class 2024/2025; first insurance experience preferred incl. internship; Moroccan and under 40; PDF deadline 2 November and portal 16:30; salary not published. Ten sections each AR/EN/FR, live verified by GitHub Actions public-sitemap-check 40809544367."
     },
     {
       "id": "smit-pmo-suivi-post-financement",
