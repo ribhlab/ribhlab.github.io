@@ -1,0 +1,187 @@
+{
+  "slug": "notion-template-originality-support-guide",
+  "category": "earning",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "featured": false,
+  "related": [
+    "sell-original-excel-templates-rights-pricing-quality-checklist",
+    "sell-digital-products",
+    "start-freelancing"
+  ],
+  "sources": [
+    {
+      "label": "Notion Help — Database templates (official product documentation, checked 28 October 2026)",
+      "url": "https://www.notion.com/en-us/help/database-templates"
+    },
+    {
+      "label": "Notion Help — Publishing Notion Sites and subpage visibility (official documentation, checked 28 October 2026)",
+      "url": "https://www.notion.com/help/public-pages-and-web-publishing"
+    },
+    {
+      "label": "Notion Help — Selling on Marketplace, eligibility, fees and refunds (official terms, checked 28 October 2026)",
+      "url": "https://www.notion.com/help/selling-on-marketplace"
+    },
+    {
+      "label": "Notion Help — Finding and duplicating Marketplace templates (official buyer guidance, checked 28 October 2026)",
+      "url": "https://www.notion.com/help/finding-templates-on-marketplace"
+    },
+    {
+      "label": "Gumroad Help — Fees for direct and marketplace sales (official fees, checked 28 October 2026)",
+      "url": "https://gumroad.com/help/article/66-gumroads-fees"
+    },
+    {
+      "label": "Gumroad Help — Refund policy and seller responsibilities (official guidance, checked 28 October 2026)",
+      "url": "https://gumroad.com/help/article/51-what-is-gumroads-refund-policy"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "بيع قوالب Notion الأصلية: اختبار قواعد البيانات والحقوق والدعم قبل عرضها",
+      "excerpt": "دليل عملي لإنشاء قالب Notion قابل للاستخدام، ومراجعة خصوصية الصفحات والعلاقات والتكرار، ومقارنة رسوم البيع وسياسات الاسترداد دون وعود بالأرباح.",
+      "lead": "بيع قالب رقمي لا يبدأ بإضافة غلاف جذاب، بل بإثبات أن المشتري يستطيع نسخ نظام يعمل دون الوصول إلى بيانات صاحبه أو كسر علاقات قواعد البيانات. تتيح Notion إنشاء قوالب وصفحات منشورة، وتوفر سوقاً للبيع، بينما تسمح منصات مثل Gumroad بتوزيع المنتجات الرقمية بشروط ورسوم مختلفة. يشرح هذا الدليل طريقة تصميم قالب أصلي لإدارة مشاريع صغيرة، ثم اختباره على مساحة عمل نظيفة، وحساب مثال للرسوم، وتحديد التزامات الدعم. المعلومات المتعلقة بالمنصات مستندة إلى صفحاتها الرسمية التي تمت مراجعتها في 28 أكتوبر 2026، وليست نتيجة مبيعات أو اختبار تجاري فعلي.",
+      "sections": [
+        {
+          "heading": "1. اختر مشكلة محددة يمكن اختبار حلها",
+          "paragraphs": [
+            "تخيل مصمماً مستقلاً يريد متابعة عشرة مشاريع من دون نسيان موعد التسليم أو خلط الفواتير بالمهام. بدلاً من بناء لوحة ضخمة لكل استعمال ممكن، صمم قاعدة «المشاريع» تتضمن العميل، والحالة، والموعد، ثم قاعدة «المهام» المرتبطة بكل مشروع. عرّف قبل التصميم ثلاثة اختبارات قبول: إضافة مشروع خلال دقيقتين، وإظهار المهام المتأخرة دون تعديل يدوي، وإنشاء عرض للمشاريع الجارية. الأوقات هنا أهداف تصميمية مقترحة وليست نتائج تجربة على مستخدمين. قيمة القالب تنبع من تقليل الالتباس في سير العمل، لا من كثرة الأيقونات والألوان.",
+            "ارسم مخططاً ورقياً يحدد الجداول والحقول والعلاقات ومصدر كل معلومة. لا تُنشئ خاصية «الإيراد» إذا كان المستخدم لا يحتاجها، ولا تضف أتمتة تستهلك رصيداً مدفوعاً من دون الإفصاح. يوضح دليل Notion أن قالب قاعدة البيانات قد يحتوي صفحات فرعية وخصائص متكررة، وأن علاقة مثبتة مسبقاً داخل القالب قد تُنسخ إلى جميع العناصر الجديدة. لذلك اختبر العلاقات الافتراضية بعناية. وثّق من سيستخدم القالب، وما الذي لا يفعله، وما الخطة المطلوبة لتشغيل وظائفه المتقدمة قبل التفكير في التسعير."
+          ]
+        },
+        {
+          "heading": "2. الأصالة والحقوق ليستا مجرد تغيير ألوان قالب معروف",
+          "paragraphs": [
+            "توفر Notion وظيفة نسخ الصفحات العامة إلى مساحة عمل شخصية؛ لكن القدرة التقنية على النسخ لا تمنح تلقائياً حق إعادة بيع تصميم أو نصوص أو صور أنشأها شخص آخر. أنشئ البنية والنصوص والأمثلة بنفسك، أو احتفظ بسجل ترخيص واضح لأي عنصر أجنبي تسمح شروطه بالاستخدام التجاري وإعادة التوزيع. لا تستخدم أسماء عملاء حقيقيين أو صوراً من مشروع مدفوع أو شعارات شركات في العرض التجريبي دون إذن مناسب. إذا استلهمت فكرة «لوحة متابعة» شائعة، فميّز عملك بطريقة الربط والتعليمات وحالات الاستخدام التي حللتها، لا بادعاء أنك اخترعت الفكرة.",
+            "أنشئ ملف توثيق يتضمن مصدر كل أيقونة وصورة وخط، وتاريخ الاطلاع ونطاق الترخيص، مع رابط الصفحة الأصلية. إذا تعذر التحقق من حق إعادة توزيع عنصر داخل قالب يباع للغير، فاستبدله بعنصر من إنتاجك أو احذفه. لا تضع صور Unsplash في قالب معد لإعادة البيع ثم تفترض أن كل استعمال جائز؛ راجع شروط الترخيص وطبيعة المنتج النهائي. كذلك لا تستخدم شهادة أو تقييم عميل أو أرقام تنزيلات مصطنعة لإقناع المشترين. اشرح بوضوح أن القالب نظام تنظيم، لا برنامج محاسبة معتمداً أو ضماناً بتحسن الإنتاجية."
+          ]
+        },
+        {
+          "heading": "3. اختبر التكرار والصلاحيات في مساحة منفصلة",
+          "paragraphs": [
+            "انشر نسخة عرض خالية تماماً من البيانات الحساسة. تنبه Notion إلى أن نشر صفحة على الويب قد ينشر صفحاتها الفرعية أيضاً، وأن بعض معلومات المساهمين قد تظهر في بيانات الصفحة العامة. افحص جميع الصفحات المتفرعة والعلاقات وملفات المرفقات وروابط النماذج قبل النشر. أنشئ حساب اختبار منفصلاً، وانسخ القالب إليه بالطريقة التي سيستخدمها المشتري. لا تعتمد على أن كل شيء يبدو سليماً داخل حساب المنشئ؛ فقد يرى المشتري كتل «لا يوجد وصول» أو علاقات لا تعمل بسبب اختلاف الأذونات.",
+            "ضع عشر حالات اختبار عملية: إنشاء مشروع، إضافة مهمة، تغيير موعد، تصفية حالة، نقل مهمة بين مشروعين، حذف مثال، إضافة عضو، فتح القالب من الهاتف، إعادة نسخ الصفحة، ثم الوصول إلى التعليمات دون مساعدة. سجل لكل حالة النتيجة المتوقعة والفعلية والخلل ورقم الإصدار. انتبه إلى النماذج: توضح وثائق سوق Notion أن المشتري قد يحتاج إلى إعداد نسخة مستقلة من النموذج كي لا تذهب الإجابات إلى منشئ القالب الأصلي. لا تترك قاعدة بيانات مرتبطة بحسابك الشخصي أو خدمة مدفوعة غير مذكورة في وصف المنتج."
+          ]
+        },
+        {
+          "heading": "4. اجعل التعليمات جزءاً من المنتج لا رسالة لاحقة",
+          "paragraphs": [
+            "أضف صفحة «ابدأ هنا» تشرح ما سيظهر بعد النسخ، والحقول الإلزامية، وكيفية تغيير الأسماء والحالات، وطريقة استعادة نسخة نظيفة إذا أفسد المستخدم المثال. استخدم بيانات وهمية موسومة بوضوح، مثل «عميل تجريبي أ» و«مشروع تجريبي 01»، ولا توهم القارئ أنها سجلات حقيقية. قدّم مثالاً كاملاً من طلب مشروع إلى إغلاقه، ولقطات شاشة أصلية تشرح المواضع الصعبة. تأكد أن الشرح لا يعتمد على لون وحده: سمِّ الحالات نصياً، واجعل العناوين مفهومة على الهاتف ولمن يستخدم قارئ الشاشة.",
+            "حدد في صفحة المنتج ما يتضمنه الشراء وما لا يتضمنه: عدد قواعد البيانات، أنواع العروض، الملفات المصاحبة، توافق الخطط المجانية والمدفوعة، وهل يشمل الدعم تعديل القالب لعمل خاص. قدّم أسئلة شائعة عن التكرار والأذونات والأتمتة. أنشئ نسخة احتياطية من القالب الأصلي قبل أي تحديث، وسجّل التغييرات في سجل إصدارات بتاريخ واضح. لا تعد بدعم دائم إذا لم تستطع تقديمه؛ يمكن بدلاً من ذلك الالتزام بإصلاح أخطاء النسخة الحالية خلال فترة معلنة، مع تمييز طلبات التخصيص المدفوعة."
+          ]
+        },
+        {
+          "heading": "5. قارن مسارات البيع برسوم قابلة للحساب",
+          "paragraphs": [
+            "تذكر وثائق Notion الرسمية أن البيع المباشر عبر سوقها يتطلب قبول البائع وإتمام إجراءات الدفع، وأن الرسم المعلن للمعاملة هو 8% إضافة إلى 0.40 دولار، مع رسم تحويل عملة إضافي لبعض البائعين خارج الولايات المتحدة. وتذكر Gumroad رسماً للبيع المباشر قدره 10% إضافة إلى 0.50 دولار، إلى جانب معالجة البطاقات المعلنة بنسبة 2.9% و0.30 دولار، بينما تختلف معاملة المبيعات المكتشفة عبر السوق. هذه الشروط قابلة للتعديل؛ تحقق منها قبل تحديد السعر ومن أهلية بلدك ووسيلة السحب، ولا تفترض أن إنشاء حساب يضمن قبول البائع.",
+            "لنفترض بيع قالب بسعر 20 دولاراً، من دون خصم أو ضرائب أو استرداد أو رسوم صرف: رسم Notion الأساسي = 20 × 8% + 0.40 = 2.00 دولار، فيتبقى 18.00 قبل أي تحويل عملة أو التزام ضريبي. وفي مثال البيع المباشر على Gumroad مع معالجة البطاقة المعلنة: 20 × 10% + 0.50 + 20 × 2.9% + 0.30 = 3.38 دولار، فيتبقى 16.62. الحساب مقارنة افتراضية للرسوم فقط، وليس صافي ربح؛ يجب خصم وقت التطوير والدعم والضرائب المحلية وتكاليف التسويق. لا يعني الفرق أن منصة أفضل لكل بائع."
+          ]
+        },
+        {
+          "heading": "6. اختبر الاسترداد والدعم قبل الإعلان عن المنتج",
+          "paragraphs": [
+            "وفق صفحة Notion الرسمية، يمكن لمشتري القالب المدفوع مباشرة في السوق طلب استرداد خلال 14 يوماً، وقد يؤدي الاسترداد إلى حذف نسخ القالب المشتراة ومحتواها من مساحة العمل، بما فيها تعديلات المشتري. أما Gumroad فتسمح للبائع بتحديد سياسة استرداد ضمن قواعد المنصة والقوانين المطبقة، وتحتفظ بحق التدخل في حالات معينة. لا تنقل سياسة منصة إلى أخرى ولا تكتب «لا استرداد مطلقاً» دون مراجعة حقوق المستهلك المحلية. وضّح للمشتري مسبقاً ما يحدث لبياناته عند الاسترداد وما الذي يجب نسخه احتياطياً.",
+            "قبل إطلاق المنتج، اطلب من شخص مستقل تجربة نسخة مجانية أو تجريبية خالية من البيانات الحقيقية، وسجّل الأخطاء بدلاً من طلب شهادة مديح. حدد وسيلة اتصال رسمية، ومدة رد واقعية، وطريقة استقبال بلاغات الأعطال مع لقطات شاشة لا تتضمن بيانات شخصية. إذا تغيرت واجهة Notion أو سياسة السوق، راجع القالب والوصف والرسوم قبل البيع مجدداً. النجاح المهني هنا هو منتج مفهوم وقابل للصيانة وشفاف الحقوق، لا عدد صفحات كبير أو وعد بتحقيق دخل سريع. ولا تدّع إجراء اختبار مستخدمين فعلي ما لم يحدث بالفعل."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Selling original Notion templates: database QA, rights, pricing and support",
+      "excerpt": "A practical guide to building a maintainable Notion template, testing duplication and privacy, comparing platform fees, and setting realistic customer support terms.",
+      "lead": "A digital template is not finished when its cover looks attractive. The real test is whether a buyer can duplicate a working system without inheriting the creator's private records, broken database links, or undocumented paid dependencies. Notion provides reusable database templates and a marketplace, while Gumroad offers a different route for digital distribution. This article develops an original small-project tracker as a worked design example, checks a clean-workspace test plan, compares published fee structures, and defines support obligations. Platform rules were checked against their official help pages on 28 October 2026. No actual product sale, usability study, or income outcome is claimed.",
+      "sections": [
+        {
+          "heading": "1. Define one job the template must accomplish",
+          "paragraphs": [
+            "Consider an independent designer tracking ten client projects, deadlines and outstanding tasks. Rather than adding dozens of dashboards, create a Projects database with a client, stage and due date, and a Tasks database related to the relevant project. Define three acceptance criteria before building: add a project in under two minutes, identify overdue tasks without manual tagging, and display only active projects in a filtered view. These times are proposed design targets, not observed test results. A useful template reduces ambiguity in an actual workflow; a collection of decorative widgets is not proof of value.",
+            "Sketch the tables, fields, relations and source of each value before opening the editor. Leave out revenue tracking if the target user does not need it. Disclose any automation that depends on a paid subscription. Notion's database-template documentation explains that templates can contain subpages and preset properties, and warns that a relation prefilled in a template may be copied into every new record. Test that behavior deliberately. Describe the intended user, the limits of the product, and the plan features required to run it before selecting a selling price."
+          ]
+        },
+        {
+          "heading": "2. Originality requires more than recoloring a public template",
+          "paragraphs": [
+            "Notion allows visitors to duplicate public pages into their own workspace. That technical feature does not automatically grant the right to resell someone else's layout, writing, icons or illustrations. Create the structure, instructions and example records yourself, or document a valid commercial redistribution permission for each external asset. Avoid real client names, confidential project screenshots and third-party logos unless appropriate rights exist. An idea such as a project board is common; your original contribution should be the tested workflow, clear relationships and practical instructions, not a claim to have invented the concept.",
+            "Maintain a small rights register for every icon, photograph and font, including the source link, license scope and date checked. If the permission to redistribute an asset inside a paid template is unclear, replace it with your own asset or remove it. Do not assume that a photograph offered for free download can be resold in any unmodified product; read the license and evaluate the final use. Likewise, avoid invented customer testimonials, download figures and performance claims. Explain that an organizational template is not certified accounting software or a guarantee of improved productivity."
+          ]
+        },
+        {
+          "heading": "3. Verify duplication, public visibility and broken dependencies",
+          "paragraphs": [
+            "Publish only a demonstration copy with fabricated data. Notion warns that publishing a page can also expose its subpages and that contributor details may appear in public metadata. Inspect every nested page, attachment, linked database, form destination and sharing permission before publication. Create a separate test workspace and duplicate the product exactly as a buyer would. A layout that works inside the creator's workspace can still show inaccessible blocks or broken relations to someone without the same permissions. Check the buyer's experience rather than relying on the author's preview.",
+            "Run ten documented checks: create a project, add a task, change a due date, filter by stage, move a task to another project, delete sample data, invite a collaborator, use the mobile layout, duplicate a fresh copy, and locate setup instructions. Record expected behavior, actual behavior, defects and version number for each check. Notion's marketplace guidance warns that a duplicated form may need to be recreated so responses do not flow to the original creator. Never leave a personal database or a subscription-only integration hidden inside a supposedly standalone template."
+          ]
+        },
+        {
+          "heading": "4. Package instructions, accessibility and maintenance",
+          "paragraphs": [
+            "Include a Start Here page describing what is copied, which properties are mandatory, how to customize stages, and how to recover from a mistaken edit by duplicating a clean version. Use obviously fictional records such as Sample Client A and Sample Project 01, not invented case studies presented as actual client work. Show one end-to-end example from receiving a brief to closing a project. Produce your own screenshots for difficult steps. Make status labels readable as text instead of relying only on color, and check headings and instructions on a small screen and with assistive technology in mind.",
+            "State exactly what the purchase includes: number of databases, available views, supporting files, compatibility with free and paid plans, and whether custom setup is included. Write concise answers to common questions about duplication, permissions and automations. Preserve a clean master copy before each update, and maintain a dated change log. Promise only the support you can realistically deliver; for example, you might define a period for fixing defects in the current version while charging separately for client-specific customization. Unbounded lifetime support is not a harmless marketing phrase."
+          ]
+        },
+        {
+          "heading": "5. Compare selling channels with transparent arithmetic",
+          "paragraphs": [
+            "Notion's official selling guide states that direct Marketplace payments require seller approval and payment onboarding, and publishes a transaction fee of 8% plus $0.40, with an additional foreign-exchange fee for certain sellers outside the United States. Gumroad's published direct-sale pricing is 10% plus $0.50, excluding separately listed card-processing costs of 2.9% plus $0.30; sales discovered through its marketplace follow a different fee structure. Conditions and country eligibility may change, so confirm the current checkout route and payout availability before accepting orders. Opening a profile does not guarantee seller approval.",
+            "Take a purely hypothetical $20 sale with no discounts, taxes, refunds or currency conversion. Notion's base fee is $20 × 8% + $0.40 = $2.00, leaving $18.00 before other costs. For a Gumroad direct card sale using its stated processing assumption, the total is $20 × 10% + $0.50 + $20 × 2.9% + $0.30 = $3.38, leaving $16.62. Neither figure is net business profit. Development time, customer support, advertising, local taxes and exchange costs still matter. The arithmetic illustrates a decision framework, not evidence that one platform always yields better results."
+          ]
+        },
+        {
+          "heading": "6. Design refund handling and honest customer support",
+          "paragraphs": [
+            "Notion's official marketplace policy gives direct buyers a 14-day refund request window and warns that a completed refund can remove purchased template copies and their contents from the buyer's workspace, including edits made after purchase. Gumroad lets creators establish refund policies subject to platform intervention and applicable consumer law. Do not paste one platform's refund promise into another platform's product listing, or state that refunds are impossible without checking local rules. Explain the data implications and encourage buyers to understand what may be lost before requesting a refund.",
+            "Before launch, invite an independent person to test an empty sample version and record difficulties rather than soliciting a flattering testimonial. Provide an official contact channel, a realistic response window, and a way to report defects without submitting private client data. If Notion changes an interface or marketplace rule, revisit the template, instructions, fees and support policy. The meaningful outcome is a maintainable, rights-safe product whose limits are understood. It is not a promise of quick revenue, and a proposed QA checklist must not be described as a usability study that has already taken place."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Vendre des modèles Notion originaux : qualité, droits, tarification et assistance",
+      "excerpt": "Méthode concrète pour créer un modèle Notion maintenable, vérifier la duplication et la confidentialité, comparer les frais de vente et cadrer le support.",
+      "lead": "Un modèle numérique n'est pas prêt à la vente parce que sa couverture est élégante. Le véritable critère est la capacité de l'acheteur à copier un système fonctionnel sans récupérer les données privées du créateur, des relations de bases de données rompues ou des fonctions payantes dissimulées. Notion propose des modèles réutilisables et une place de marché ; Gumroad représente une autre voie de distribution. Cet article construit un exemple original de suivi de petits projets, propose des contrôles reproductibles, compare des frais publiés et définit un service après-vente réaliste. Les règles citées ont été consultées sur les pages officielles le 28 octobre 2026. Aucune vente ni étude d'utilisateurs réelle n'est prétendue.",
+      "sections": [
+        {
+          "heading": "1. Définir un besoin précis et des critères d'acceptation",
+          "paragraphs": [
+            "Imaginons un graphiste indépendant qui suit dix projets, leurs échéances et leurs tâches en attente. Au lieu d'empiler des tableaux de bord, créons une base Projets avec client, étape et date limite, puis une base Tâches reliée au projet concerné. Fixons trois objectifs vérifiables avant de construire : créer un projet en moins de deux minutes, repérer les tâches en retard sans intervention manuelle et afficher uniquement les projets actifs. Ce sont des objectifs de conception fictifs, pas les résultats d'une étude. La valeur d'un modèle vient de la clarté du travail qu'il organise, non du nombre d'icônes décoratives.",
+            "Dessinez d'abord les tables, les champs, les relations et la provenance des informations. Supprimez les propriétés inutiles et signalez les automatisations nécessitant une formule payante. La documentation Notion précise que les modèles de bases de données peuvent intégrer des sous-pages et des propriétés préremplies ; elle avertit qu'une relation définie dans un modèle peut être reproduite sur chaque nouvelle fiche. Vérifiez donc ces paramètres. Identifiez le public visé, les tâches que le produit ne couvre pas et les fonctions de Notion indispensables à son utilisation avant de fixer un prix."
+          ]
+        },
+        {
+          "heading": "2. Respecter l'originalité et les droits de redistribution",
+          "paragraphs": [
+            "Notion permet de dupliquer des pages publiques dans son espace de travail, mais cette possibilité technique n'accorde pas automatiquement le droit de revendre les textes, illustrations ou choix graphiques d'autrui. Construisez votre propre architecture, rédigez les instructions et créez des données d'exemple fictives. Pour chaque élément externe, conservez une autorisation adaptée à une redistribution commerciale. Écartez les vrais noms de clients, les captures de dossiers confidentiels et les logos de tiers sans accord. Un tableau de suivi de projets est une idée courante ; votre apport réside dans les liens entre données, la méthode et la documentation.",
+            "Tenez un registre des images, pictogrammes et polices avec source, date et étendue de la licence. Si le droit de redistribuer un élément dans un modèle vendu reste incertain, remplacez-le par votre propre création ou retirez-le. Une image téléchargeable gratuitement ne peut pas nécessairement devenir un produit revendu sans modification : vérifiez les conditions et le contexte d'utilisation. Ne fabriquez ni avis clients ni statistiques de téléchargement. Présentez le modèle comme un outil d'organisation, et non comme un logiciel comptable certifié ou une promesse d'augmentation mesurée de la productivité."
+          ]
+        },
+        {
+          "heading": "3. Tester la duplication et les autorisations hors de son compte",
+          "paragraphs": [
+            "Préparez une copie de démonstration ne contenant que des informations inventées. Notion signale que la publication d'une page peut rendre visibles ses sous-pages et que certaines informations sur les contributeurs peuvent figurer dans les métadonnées publiques. Inspectez chaque sous-page, pièce jointe, base liée, formulaire et permission avant publication. Dans un autre espace de travail, dupliquez le modèle comme le ferait un acheteur. Le bon fonctionnement chez le créateur ne garantit pas l'accès chez le client : certains blocs peuvent afficher une erreur d'autorisation et certaines relations pointer vers des données non partagées.",
+            "Exécutez dix contrôles documentés : créer un projet, ajouter une tâche, modifier une échéance, filtrer un état, déplacer une tâche, supprimer les exemples, inviter un collaborateur, utiliser la version mobile, dupliquer une copie neuve et retrouver la documentation. Pour chacun, notez le résultat attendu, le résultat observé, le défaut et la version. Notion explique aussi qu'un formulaire dupliqué peut devoir être recréé pour éviter d'envoyer les réponses à son concepteur initial. Ne livrez jamais une base liée à votre compte personnel ou une intégration payante non annoncée."
+          ]
+        },
+        {
+          "heading": "4. Inclure des instructions accessibles et un suivi des versions",
+          "paragraphs": [
+            "Ajoutez une page Commencer ici expliquant le contenu copié, les propriétés obligatoires, la modification des statuts et la procédure permettant de repartir d'une copie propre. Utilisez des entrées explicitement fictives, par exemple Client exemple A et Projet exemple 01, sans les présenter comme des références commerciales réelles. Décrivez un parcours complet depuis la demande initiale jusqu'à la clôture du projet. Créez vos propres captures d'écran pour les manipulations complexes. Les statuts doivent être identifiables par des mots, pas uniquement par des couleurs, et les instructions rester lisibles sur un petit écran.",
+            "Indiquez précisément ce qui est inclus : nombre de bases, vues disponibles, fichiers annexes, compatibilité avec les formules gratuites ou payantes et limites du paramétrage personnalisé. Rédigez une courte foire aux questions sur la duplication, les permissions et les automatisations. Conservez une version maîtresse avant chaque modification et tenez un journal daté des corrections. Ne promettez pas une assistance illimitée si vous ne pouvez pas l'assurer. Une période définie de correction des défauts, distincte des personnalisations facturées, protège mieux les attentes des deux parties."
+          ]
+        },
+        {
+          "heading": "5. Calculer les frais sans confondre encaissement et bénéfice",
+          "paragraphs": [
+            "Le guide officiel de Notion indique que la vente directement sur Marketplace nécessite une approbation du vendeur et une inscription au système de paiement. Les frais annoncés sont de 8 % plus 0,40 dollar par transaction, auxquels peut s'ajouter une conversion de devise pour certains vendeurs hors des États-Unis. Gumroad annonce 10 % plus 0,50 dollar pour une vente directe, auxquels s'ajoutent les frais de carte affichés de 2,9 % plus 0,30 dollar ; la découverte via sa place de marché relève d'un autre tarif. Les conditions et les pays éligibles évoluent : vérifiez-les avant de choisir une solution.",
+            "Prenons une vente entièrement hypothétique à 20 dollars, sans remise, impôt, remboursement ni conversion monétaire. Les frais de base Notion valent 20 × 8 % + 0,40 = 2,00 dollars, soit 18,00 dollars restants avant autres charges. Pour une vente directe par carte chez Gumroad, avec les paramètres publiés, le calcul donne 20 × 10 % + 0,50 + 20 × 2,9 % + 0,30 = 3,38 dollars, soit 16,62 dollars restants. Il ne s'agit pas de bénéfices nets : création, assistance, publicité, fiscalité locale et change doivent encore être pris en compte. Cet exemple n'est ni une vente observée ni une prévision de revenus."
+          ]
+        },
+        {
+          "heading": "6. Préparer les remboursements et le service après-vente",
+          "paragraphs": [
+            "Selon les conditions officielles de Notion, un acheteur direct sur Marketplace peut demander un remboursement dans les quatorze jours ; après remboursement, les copies achetées et leur contenu peuvent être retirés de son espace de travail, y compris ses modifications. Gumroad autorise le créateur à définir sa politique de remboursement sous réserve des règles de la plateforme et du droit de la consommation applicable. Ne transposez pas les engagements d'un vendeur à l'autre et ne promettez pas l'absence absolue de remboursement. Informez l'acheteur des conséquences éventuelles sur ses données avant toute demande.",
+            "Avant la mise en vente, faites essayer une version d'exemple vide à une personne indépendante et consignez les difficultés, sans chercher un avis élogieux artificiel. Proposez un contact officiel, un délai de réponse réaliste et une méthode de signalement des bugs qui n'expose pas les dossiers privés des clients. Si Notion modifie ses fonctions ou ses règles commerciales, révisez le produit, la documentation et les tarifs. Un modèle utile doit rester compréhensible, légalement exploitable et maintenable ; ce n'est ni une méthode de revenu garanti ni une démonstration de performances qui n'auraient jamais été mesurées."
+          ]
+        }
+      ]
+    }
+  }
+}
