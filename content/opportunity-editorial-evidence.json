@@ -3535,6 +3535,174 @@
           ]
         }
       }
+    },
+    "amdie-buyer": {
+      "reviewedAt": "2026-10-29",
+      "verification": "AMDIE signed decision 509/2026 dated 23 October 2026 (four pages, including procurement job sheet) compared with emploi-public competition C44253/26",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Décision AMDIE n°509/2026 et fiche de poste Cadre Acheteur (4 pages)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/686fddc3-8355-43a1-8799-e51f36685f5f"
+        },
+        {
+          "label": "Emploi-public — Concours C44253/26 publié le 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/686fddc3-8355-43a1-8799-e51f36685f5f"
+        }
+      ],
+      "facts": {
+        "employer": "Agence Marocaine de Développement des Investissements et des Exportations (AMDIE)",
+        "reference": "C44253/26",
+        "decision": "509/2026",
+        "published": "2026-10-23",
+        "deadline": "2026-11-09",
+        "posts": 1,
+        "jobTitle": "Cadre Acheteur",
+        "city": null,
+        "cityNote": "The agency's Rabat headquarters address appears on the notice, but the assignment city is not expressly specified.",
+        "nationality": "Marocaine",
+        "age": "moins de 45 ans à la date du concours",
+        "degree": "Bac+5 ou plus en achats, gestion, commerce, économie, logistique, ingénierie achat, supply chain ou équivalent",
+        "experience": "0–3 ans dans la fiche de poste; aucun minimum autonome de trois ans dans la décision",
+        "documents": [
+          "Lettre de motivation adressée au Directeur général",
+          "Copie légalisée du diplôme",
+          "Copie légalisée de la CIN",
+          "CV détaillé et actualisé"
+        ],
+        "application": "Dépôt électronique sur emploi-public; documents dans un seul fichier PDF",
+        "selection": "Épreuves écrite et orale; dates et lieux communiqués par convocation numérique",
+        "salary": null,
+        "deadlineTime": null
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة إطار المشتريات لدى AMDIE: الشروط والوثائق والمهام وآخر أجل",
+          "deck": "منصب واحد بإعلان 23 أكتوبر 2026؛ دليل موثق من القرار رقم 509/2026 وبطاقة المنصب، مع توضيح الشهادة والخبرة وطريقة إيداع ملف PDF واحد قبل 9 نوفمبر.",
+          "sections": [
+            [
+              "ما الوظيفة المعلنة وما الذي تؤكده الوثائق؟",
+              "أصدرت الوكالة المغربية لتنمية الاستثمارات والصادرات قرارها رقم 509/2026 بتاريخ 23 أكتوبر 2026 لفتح باب الترشيح لمنصب واحد بعنوان «إطار مشتريات» (Cadre Acheteur). تؤكد بطاقة بوابة التشغيل العمومي المنشورة في اليوم نفسه أن الأمر يتعلق بتوظيف عادي، برمز المباراة C44253/26، وأن إيداع الترشيح إلكتروني. لا ينبغي الخلط بين هذا المنصب وإعلانات الوكالة الأخرى المتعلقة بمحللي الاستثمار أو بالمشتري الأول؛ فلكل إعلان شروطه وملفه. يقع المقر الإداري المذكور في تذييل القرار بحي الرياض في الرباط، لكن النص المعروض لا يحدد صراحة مكان التعيين النهائي للموظف، ولذلك لا نعرض الرباط بوصفها مدينة عمل مؤكدة."
+            ],
+            [
+              "الشروط القانونية والشهادة المطلوبة",
+              "يشترط القرار الجنسية المغربية وألا يبلغ المترشح 45 سنة في تاريخ المباراة. ويطلب دبلوماً من التعليم العالي بمستوى خمس سنوات بعد البكالوريا أو أكثر في المشتريات أو التدبير أو التجارة أو الاقتصاد أو اللوجستيك أو هندسة المشتريات أو إدارة سلاسل الإمداد أو ما يعادلها. ويذكر أمثلة منها الماستر والماستر المتخصص ودبلوم مهندس الدولة. لا يكفي تشابه اسم التخصص وحده لإثبات المعادلة؛ إذ يوضح القرار أن الشهادات المؤهلة هي شهادات الجامعات والمدارس العمومية أو الشهادات التي تتوفر على معادلة صادرة عن الوزارة المختصة. إذا كان الدبلوم خاصاً أو أجنبياً، يجب التحقق من وثيقة الاعتراف المناسبة قبل الترشح."
+            ],
+            [
+              "الخبرة المهنية: ماذا تعني عبارة صفر إلى ثلاث سنوات؟",
+              "تحدد بطاقة وصف الوظيفة المرفقة مستوى التكوين Bac+5 والخبرة المرجعية «0–3 سنوات». هذه الصيغة لا تفرض في قرار فتح المباراة خبرة إلزامية من ثلاث سنوات، بل تصف نطاق الخبرة المتصور لشاغل المنصب. لذلك يمكن لصاحب تجربة محدودة أو لخريج جديد أن يفحص أهليته وفق الشروط المكتوبة، من دون أن يعد ذلك ضماناً للانتقاء. ينبغي في السيرة الذاتية إبراز التدريب أو المشاريع الجامعية المتعلقة بالمشتريات، وإعداد طلبات الشراء، وتحليل عروض الموردين، ومتابعة العقود. ومن الأفضل الفصل بين مدة العمل الفعلية ومدة التدريب، وذكر المهام والنتائج القابلة للتحقق بدلاً من اختلاق خبرة في الصفقات العمومية."
+            ],
+            [
+              "المهام اليومية كما وردت في بطاقة المنصب",
+              "تشرح البطاقة الملحقة أن إطار المشتريات يشارك في إعداد البرنامج السنوي للشراء بناءً على حاجات المصالح، ويتابع الطلبات والتوريد واستلام المشتريات وتوزيعها، ويعالج أوامر الشراء والفواتير والوثائق المرتبطة بها. كما يساهم في تحديث قاعدة بيانات الموردين وإعداد دفاتر التحملات وتتبع طلبات العروض وتقييم الاستجابات من حيث الجودة والسعر والآجال. ولا ينتهي دوره باختيار المورد؛ إذ يشمل أيضاً مراقبة تنفيذ عقود الشراء إلى حين تصفيتها وفق الشروط والتنظيمات. هذه مهام مساعدة ومتابعة داخل إدارة المشتريات، وليست ترخيصاً مستقلاً باتخاذ قرارات إسناد العقود أو تجاوز المساطر القانونية."
+            ],
+            [
+              "المهارات واللغات والمؤشرات المهنية",
+              "تذكر بطاقة الوظيفة المعرفة بالإطار القانوني للمشتريات والصفقات العمومية، وإجراءات المنافسة، والقانون التجاري، وأدوات التدبير المعلوماتي، وتحليل الوظائف والمواصفات. كما تسرد العربية والفرنسية والإنجليزية ضمن المعارف المطلوبة، من دون تحديد اختبار لغة أو شهادة معيارية بعينها. وتشمل المهارات السلوكية التنظيم والتفاوض والدقة والتواصل وحل المشكلات. وتقترح البطاقة مؤشرات مثل مدة معالجة الطلبات وتواترها وآجال أداء الموردين. يمكن للمترشح تحضير مثال عملي يوضح كيف يربط طلب شراء بدفتر تحملات وعرض مورد وأمر شراء وفاتورة، مع احترام الفصل بين الوظائف والتوثيق. لكن لا يجوز اعتبار هذا المثال جزءاً معلناً من الاختبار."
+            ],
+            [
+              "ملف الترشيح: الوثائق والتجميع الإلكتروني",
+              "يطلب القرار رسالة تحفيزية موجهة إلى المدير العام للوكالة تذكر منصب إطار مشتريات صراحة، ونسخة مصادقاً عليها من الدبلوم، ونسخة مصادقاً عليها من البطاقة الوطنية، وسيرة ذاتية حديثة ومفصلة. ويؤكد أن ملفات الترشح الناقصة أو غير المطابقة للملف المطلوب تُقصى تلقائياً. تسمح الوثيقة لمرشحي دفعة 2026 بتقديم شهادة النجاح أثناء التسجيل الإلكتروني، على أن يُطلب الدبلوم في مراحل لاحقة. ويجب مسح المستندات المطلوبة وتجميعها في ملف PDF واحد عند الإيداع، بدلاً من إرسال عدة ملفات متفرقة. قبل الرفع، راجع وضوح الصفحات وترتيبها وصحة الاسم والتخصص، واحتفظ بنسخة محلية من ملفك وإثبات الإرسال."
+            ],
+            [
+              "طريقة التقديم وآخر أجل دون تخمين الساعة",
+              "تنص بطاقة بوابة التشغيل العمومي على إيداع الترشيح عبر المنصة الإلكترونية، ويحدد القرار تاريخ 9 نوفمبر 2026 آخر أجل. لا يذكر النص الذي راجعناه ساعة إغلاق محددة؛ لذا لا يصح نشر الساعة 16:30 أو منتصف الليل من دون مصدر إضافي. لا تُقبل الطلبات الورقية أو المرسلة بالبريد الإلكتروني بديلاً عن التسجيل الإلكتروني، لأن القرار يحصر معالجة الترشيحات في الإنترنت. يفتح المرشح صفحة المباراة الرسمية، ويتحقق من رقم C44253/26، ثم يتبع خطوات الحساب ورفع PDF ويتأكد من اكتمال العملية. ومن الأفضل عدم الانتظار حتى اليوم الأخير بسبب احتمالات الضغط التقني أو الحاجة إلى تصحيح ملف أو الحصول على تصديق."
+            ],
+            [
+              "الانتقاء والاختبارات والراتب",
+              "بعد فحص الملفات والتحقق من ملاءمة الشهادات والملفات، يمر المترشحون المنتقون إلى اختبار كتابي واختبار شفوي وفق المادة الرابعة من القرار. سترسل الوكالة استدعاءً رقمياً يحدد التاريخ والمكان؛ ولم يعلن القرار الذي فحصناه موعداً ثابتاً أو مركزاً للاختبارين. يمكن التحضير بمراجعة مساطر الشراء، وتحليل العروض، وتوثيق دورة الطلب والفاتورة، وقراءة حالات عملية عن المفاضلة بين السعر والجودة والآجال. لا تنشر الوثيقة مبلغ راتب أو شبكة تعويضات خاصة بهذا المنصب، لذلك لا نضع رقماً تقديرياً. ولا تعني دعوة المرشح إلى الاختبار تعيينه تلقائياً؛ فالنتائج النهائية تصدر وفق إجراءات الوكالة."
+            ],
+            [
+              "المخاطر والتنبيهات وخطوات التحقق النهائي",
+              "هناك ثلاث نقاط تستحق الانتباه: أولاً، اختلاف مستوى الخبرة في وصف الوظيفة عن شروط قرار المباراة لا يبرر تحويل الخبرة المرجعية إلى شرط إقصائي غير منصوص عليه. ثانياً، وجود عنوان مقر الوكالة في تذييل القرار لا يثبت مدينة العمل. ثالثاً، موعد 9 نوفمبر هو تاريخ نهاية الإيداع، لا تاريخ الاختبار. يمكن أن تتغير الإجراءات أو تظهر إعلانات تصحيحية، ولذلك ينبغي مراجعة الصفحة الرسمية قبل إرسال الملف ومتابعة الاستدعاءات والنتائج. هذا الدليل يشرح وثائق منشورة، ولا يمثل إعلاناً عن نجاح أي مترشح أو عرضاً لعقد مضمون. راجع النسخة الرسمية المؤرخة للقرار وبطاقة المباراة، ولا تدفع مالاً لوسطاء يزعمون تسريع الانتقاء."
+            ]
+          ]
+        },
+        "en": {
+          "title": "AMDIE Procurement Officer: eligibility, duties, documents and 9 November deadline",
+          "deck": "One position under Decision 509/2026: a sourced guide to Bac+5 eligibility, the zero-to-three-year profile, the single-PDF application and selection stages.",
+          "sections": [
+            [
+              "The exact vacancy and the official record",
+              "The Moroccan Agency for Investment and Export Development (AMDIE) issued Decision 509/2026 on 23 October 2026 to recruit one Procurement Officer, described in French as Cadre Acheteur. The government employment portal lists the same position under reference C44253/26, with regular recruitment and online application. It must not be confused with the agency's separate senior-buyer or investment-analyst competitions. The agency's headquarters address appears in the footer of the signed decision in Hay Riad, Rabat, but the decision does not explicitly establish the final work location for this position. Therefore Rabat should not be presented as a verified posting city. The recruitment is for a single opening, not an unspecified pool of jobs."
+            ],
+            [
+              "Nationality, age and academic eligibility",
+              "The opening decision requires Moroccan nationality and an age below 45 on the competition date. Applicants must hold a higher-education qualification at Bac+5 level or above in procurement, management, commerce, economics, logistics, purchasing engineering, supply-chain management or an equivalent field. The notice cites master's degrees, specialized master's degrees and state engineering diplomas as examples. Similar course titles do not automatically prove formal equivalence. The decision specifies qualifications from public universities and schools, or credentials carrying an equivalence certificate issued by the competent higher-education authority. A holder of a private or foreign diploma should check the applicable recognition documentation before applying, rather than assuming that a five-year study period alone satisfies the requirement."
+            ],
+            [
+              "Interpreting the experience range correctly",
+              "The attached job profile lists Bac+5 education and an experience range of zero to three years. This describes the position profile; the opening decision does not impose a separate mandatory minimum of three years of prior work. A recent graduate can therefore assess eligibility against the actual stated conditions without assuming either automatic acceptance or automatic rejection. The CV should identify verifiable internships, procurement projects, supplier comparisons, purchase-order workflows and contract follow-up where applicable. Distinguish paid employment from internships, and avoid inflating responsibilities. A short, precise example of checking purchase orders against invoices is more useful than claiming unsupported expertise in public tenders. Selection remains subject to file review and the employer's recruitment process."
+            ],
+            [
+              "What the procurement officer actually does",
+              "The attached job description covers planning and monitoring the annual purchasing calendar based on needs submitted by internal departments. The officer helps process purchase requests, track supplies, receive and distribute purchases, and manage purchase orders, invoices and associated documents. The role also contributes to the supplier database, tender monitoring, specifications for providers and suppliers, and assessment of offers by price, quality and delivery time. Contract follow-up continues until completion and settlement under the applicable rules. This is an operational procurement and internal-coordination role, not an unrestricted power to award contracts independently. Applicants should understand document traceability, the distinction between a request and a purchase order, and why supplier evaluation must be recorded before an award decision."
+            ],
+            [
+              "Skills, languages and practical indicators",
+              "The job sheet identifies knowledge of procurement law, public purchasing procedures, commercial law, specifications drafting, functional analysis and management software. Arabic, French and English appear among the relevant knowledge areas, but no named language certificate or standardized examination score is prescribed in the documents reviewed. Organization, negotiation, attention to detail, communication and problem solving are also emphasized. Performance indicators include purchase-order processing time, ordering frequency and supplier payment delays. To prepare, an applicant can construct a small example linking a department's need to specifications, a supplier comparison, a purchase order and an invoice. This is a suggested learning exercise, not a claim that the agency has announced a specific case study in its exam."
+            ],
+            [
+              "Application file and the single-PDF requirement",
+              "The signed decision asks for a motivation letter addressed to the AMDIE Director General that names the position, a certified copy of the degree, a certified copy of the national identity card, and a detailed up-to-date CV. Incomplete files or applications not matching the required profile may be rejected automatically. Candidates graduating in 2026 may submit a certificate of successful completion when registering, with the final diploma requested later. The documents must be scanned and combined into one PDF file for online submission. Before uploading, verify page legibility, the order of attachments, consistency of names and degree details, and the presence of required certifications. Keep a local copy and proof of successful submission; a saved draft is not necessarily a completed application."
+            ],
+            [
+              "Submission channel and deadline",
+              "The official portal and opening decision require internet-based submission through the public employment platform. The deadline is 9 November 2026. The documents inspected do not specify an exact closing hour, so inventing a 16:30 or midnight cut-off would be misleading. Applicants should locate competition C44253/26, complete the relevant account steps, upload the single PDF and confirm that the application was actually submitted. A paper dossier or an informal email is not a substitute for the prescribed online procedure. Submitting well before the deadline reduces exposure to technical congestion, missing certifications or file-format problems. Any later amendment should be checked on the original competition page, not inferred from unrelated AMDIE vacancies."
+            ],
+            [
+              "Selection stages, examination and salary limits",
+              "Article 4 of the decision provides for a written examination and an oral examination following review of submitted files and verification of profile suitability. The dates and locations will be communicated to preselected candidates by digital invitation. No fixed examination day or test center is stated in the decision reviewed. Useful preparation topics include purchasing procedures, supplier evaluation, procurement documentation, offer analysis and the trade-offs between price, quality and delivery deadlines. These are study suggestions, not confirmed examination questions. The notice does not publish a salary amount for the Procurement Officer. A salary estimate taken from another agency or grade would therefore be speculative. An invitation to an examination is not a final appointment or employment guarantee."
+            ],
+            [
+              "Verification checklist and material risks",
+              "Three misunderstandings deserve particular care. First, the zero-to-three-year experience indication on the job sheet must not be turned into an unstated three-year minimum. Second, a headquarters address in the footer does not prove the employee's final assignment location. Third, 9 November is the submission deadline, not the examination date. Corrections and invitations may appear after publication, so candidates should revisit the official page before sending documents and monitor their account for updates. This guide explains dated primary records rather than promising recruitment success. Do not pay intermediaries who claim privileged access or guaranteed selection. If a claim about pay, work city or timing is not supported by the official documents, leave it explicitly unconfirmed."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "AMDIE recrute un Cadre Acheteur : diplôme, dossier et échéance du 9 novembre",
+          "deck": "Un poste selon la décision 509/2026 : analyse des conditions Bac+5, de l'expérience 0–3 ans, du dépôt en un seul PDF et des épreuves.",
+          "sections": [
+            [
+              "Le poste exact et les documents officiels",
+              "L'Agence marocaine de développement des investissements et des exportations (AMDIE) a pris la décision n° 509/2026 le 23 octobre 2026 pour recruter un seul Cadre Acheteur. Le portail de l'emploi public confirme un recrutement régulier, sous le code C44253/26, avec dépôt électronique des candidatures. Il ne faut pas confondre ce poste avec les concours distincts d'acheteur senior ou d'analyste en investissement publiés par la même agence. L'adresse du siège à Hay Riad, Rabat, figure au bas de la décision, mais celle-ci ne précise pas expressément le lieu d'affectation définitif du titulaire. Présenter Rabat comme une ville de poste confirmée serait donc excessif. Il s'agit d'un seul poste et non d'un recrutement collectif non chiffré."
+            ],
+            [
+              "Nationalité, âge et diplôme requis",
+              "La décision impose la nationalité marocaine et un âge inférieur à 45 ans à la date du concours. Le candidat doit posséder un diplôme de l'enseignement supérieur de niveau Bac+5 ou plus, en achats, gestion, commerce, économie, logistique, ingénierie achat, supply chain management ou domaine équivalent. Master, master spécialisé et diplôme d'ingénieur d'État figurent parmi les qualifications citées. La simple proximité de deux intitulés de formation ne prouve pas leur équivalence administrative. Le texte retient les diplômes des universités et écoles publiques ou ceux bénéficiant d'une attestation d'équivalence délivrée par l'autorité compétente. Les diplômés d'établissements privés ou étrangers doivent vérifier leur situation documentaire avant de considérer leur candidature comme recevable."
+            ],
+            [
+              "Comprendre l'expérience de zéro à trois ans",
+              "La fiche de poste jointe mentionne un niveau Bac+5 et une expérience de zéro à trois ans. Cette fourchette décrit le profil visé ; la décision d'ouverture ne formule pas une obligation autonome de posséder trois années d'expérience. Un jeune diplômé peut donc examiner son admissibilité au regard des conditions écrites, sans y voir une garantie de présélection. Le CV gagnera à décrire des stages vérifiables, des projets de formation liés aux achats, des comparaisons d'offres, la gestion des bons de commande ou le suivi contractuel. Il faut distinguer les stages des emplois et éviter d'inventer des responsabilités dans les marchés publics. Une expérience modeste mais précisément décrite est plus crédible qu'une expertise non démontrable."
+            ],
+            [
+              "Les missions concrètes du Cadre Acheteur",
+              "La fiche de poste prévoit la participation à l'élaboration et au suivi du calendrier annuel des achats à partir des besoins exprimés par les services. Le titulaire contribue au traitement des demandes d'achat, à l'approvisionnement, à la réception et à la distribution des biens, ainsi qu'au suivi des bons de commande, factures et pièces associées. Il intervient aussi dans la mise à jour de la base fournisseurs, les appels d'offres, la rédaction des cahiers des charges et l'analyse des réponses selon la qualité, le prix et les délais. Le suivi des contrats se poursuit jusqu'à leur liquidation conformément aux règles applicables. Ces tâches n'autorisent pas à supposer que le cadre dispose d'un pouvoir individuel illimité d'attribution des marchés."
+            ],
+            [
+              "Compétences, langues et indicateurs de performance",
+              "Le document professionnel mentionne le cadre juridique des achats et des marchés publics, les procédures de passation, le droit commercial, les outils informatiques de gestion, l'analyse fonctionnelle et la rédaction des cahiers des charges. L'arabe, le français et l'anglais figurent parmi les connaissances attendues, sans certificat linguistique ou score standardisé explicitement imposé. Organisation, négociation, rigueur, communication et résolution de problèmes complètent le profil. Les indicateurs cités comprennent la durée de traitement des commandes, leur fréquence et les délais de paiement des fournisseurs. Pour se préparer, le candidat peut simuler une chaîne documentaire allant d'un besoin interne au cahier des charges, puis au choix du fournisseur, au bon de commande et à la facture. Il s'agit d'un exercice conseillé, non d'une épreuve annoncée."
+            ],
+            [
+              "Le dossier et l'obligation d'un seul PDF",
+              "La décision exige une lettre de motivation adressée au Directeur général de l'AMDIE en précisant le poste, une copie légalisée du diplôme, une copie légalisée de la carte nationale d'identité et un CV détaillé et actualisé. Les dossiers incomplets ou non conformes au profil peuvent être écartés automatiquement. Les candidats de la promotion 2026 peuvent fournir une attestation de réussite lors de l'inscription ; le diplôme sera exigé aux étapes ultérieures. Les pièces scannées doivent être réunies dans un seul fichier PDF pour le dépôt électronique. Avant l'envoi, vérifiez la lisibilité, les certifications, l'ordre des pages et la concordance des noms. Conservez une copie du fichier et la preuve du dépôt effectif, qui ne se confond pas avec un brouillon enregistré."
+            ],
+            [
+              "Candidature en ligne et date limite",
+              "Le dépôt s'effectue sur la plateforme de l'emploi public, conformément à la décision et à la fiche du concours C44253/26. La date limite est le 9 novembre 2026. Les documents examinés ne précisent pas d'heure de clôture : publier 16 h 30 ou minuit sans autre preuve créerait une fausse précision. Le candidat doit accéder à la bonne annonce, compléter les informations demandées, téléverser son PDF unique et vérifier la validation finale. Un courrier papier ou un message électronique informel ne remplace pas la procédure imposée. Il est préférable de déposer le dossier avant le dernier jour afin d'éviter les difficultés techniques ou un document manquant. Toute rectification doit être recherchée sur la page officielle du concours."
+            ],
+            [
+              "Épreuves, convocation et rémunération non publiée",
+              "L'article 4 prévoit une épreuve écrite et une épreuve orale après étude des dossiers et vérification de l'adéquation des profils. Les dates et lieux seront communiqués par convocation numérique aux candidats présélectionnés. La décision consultée ne fixe ni jour d'examen ni centre précis. La révision des procédures d'achat, de l'analyse des offres, du suivi des contrats et des critères de qualité, prix et délais peut constituer une préparation raisonnable, sans que ces thèmes soient des questions officiellement annoncées. Aucun montant de salaire n'est publié pour ce poste. Il serait donc inexact d'attribuer au candidat la rémunération d'un autre grade ou établissement. Une convocation ne constitue ni un contrat ni une promesse d'embauche."
+            ],
+            [
+              "Précautions et contrôle des informations",
+              "Trois erreurs doivent être évitées. Premièrement, la fourchette d'expérience figurant dans la fiche ne doit pas être transformée en minimum obligatoire de trois ans. Deuxièmement, l'adresse du siège n'établit pas le lieu d'affectation. Troisièmement, le 9 novembre est la date limite de candidature et non celle des épreuves. Les procédures et les convocations peuvent évoluer : consultez de nouveau l'annonce avant l'envoi et suivez votre espace candidat. Ce dossier est une analyse de documents datés, pas une garantie de réussite. Ne payez aucun intermédiaire prétendant accélérer la sélection. Lorsqu'un salaire, une ville ou une heure de clôture ne sont pas confirmés par les textes, il est préférable de le signaler clairement plutôt que de compléter la fiche par supposition."
+            ]
+          ]
+        }
+      }
     }
   }
 }
