@@ -943,6 +943,10 @@
     "scan-documents-phone-privacy-quality": [
       "appleScanDocuments",
       "googleDriveScanner"
+    ],
+    "seafood-paella-safe-home-preparation": [
+      "spainPaellaRecipe",
+      "foodSafetySeafood"
     ]
   }
 }
