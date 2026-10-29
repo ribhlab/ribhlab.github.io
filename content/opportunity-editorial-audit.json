@@ -454,10 +454,14 @@
       "section": "competitions",
       "title": "Cadre analyste Projets de développement",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b135e292-d476-4fe6-bbb4-e57c0f73cdf3"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b135e292-d476-4fe6-bbb4-e57c0f73cdf3",
+      "evidenceId": "amdie-development",
+      "reviewedAt": "2026-10-29",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/b135e292-d476-4fe6-bbb4-e57c0f73cdf3",
+      "reviewNote": "Four-page AMDIE decision 507/2026 and appended job sheet read 29 Oct 2026, cross-checked with C44252/26 and AMDIE official mission pages. Three posts; Bac+5; Moroccan nationality; under 45 at future exam date; one PDF online by 9 November; no published salary, posting city or exam date. Ten original sections AR/EN/FR, 919/1069/1101 words. Pending build, deployment and live verification; not yet counted researched-published."
     },
     {
       "id": "amdie-investment",
