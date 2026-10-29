@@ -5620,6 +5620,210 @@
           ]
         }
       }
+    },
+    "cnrst-administrator-2": {
+      "reviewedAt": "2026-10-29",
+      "state": "researched-pending-live-verification",
+      "verification": "Official three-page signed Arabic decision and emploi-public C44247/26 checked 29 Oct 2026. Portal deadline 8 Nov 16:30 versus original decision 9 Nov explicitly flagged; no live Pages/build confirmation yet.",
+      "sources": [
+        {
+          "label": "CNRST — signed three-page official competition decision (reviewed 29 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/c7461e57-f68d-40f0-a846-6bf8be2b8dda"
+        },
+        {
+          "label": "Emploi-public — competition C44247/26, published 23 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/c7461e57-f68d-40f0-a846-6bf8be2b8dda"
+        },
+        {
+          "label": "CNRST — institutional site for subsequent announcements",
+          "url": "https://www.cnrst.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Centre National pour la Recherche Scientifique et Technique",
+        "competitionCode": "C44247/26",
+        "publishedAt": "2026-10-23",
+        "posts": 2,
+        "grade": "Administrateur 2ème grade, échelle 11",
+        "specialty": "Physiologie",
+        "examDate": "2026-11-15",
+        "portalDeadline": "2026-11-08",
+        "portalDeadlineHour": "16:30",
+        "noticeDeadline": "2026-11-09",
+        "deadlineConflict": true,
+        "advisedSafeDeadline": "2026-11-08T16:30:00",
+        "nationality": "Moroccan",
+        "age": "18–45 on 1 January 2026, with legal exceptions",
+        "diploma": "DESA/DESS, master, master spécialisé or legally equivalent in Physiology",
+        "application": "Online at recrutement.enssup.gov.ma",
+        "documents": [
+          "Application request",
+          "CV",
+          "National identity card copy",
+          "Qualifying diploma",
+          "Equivalence/authorisation/special-status evidence when applicable"
+        ],
+        "stages": [
+          {
+            "name": "General written",
+            "duration": "3 hours",
+            "coefficient": 2
+          },
+          {
+            "name": "Specialist written",
+            "duration": "3 hours",
+            "coefficient": 3
+          },
+          {
+            "name": "Oral",
+            "duration": "15–30 minutes",
+            "coefficient": 3
+          }
+        ],
+        "salary": null,
+        "jobCity": null,
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة CNRST لتوظيف متصرفين اثنين في علم وظائف الأعضاء: الشروط وتعارض آخر أجل",
+          "deck": "قراءة للقرار الرسمي وبطاقة البوابة الحكومية مع تنبيه صريح إلى اختلاف 8 و9 نوفمبر 2026 وخطوات الترشيح والاختبارات.",
+          "sections": [
+            [
+              "ما الذي تعلنه المباراة فعلياً؟",
+              "ينظم المركز الوطني للبحث العلمي والتقني مباراة لتوظيف متصرفين اثنين من الدرجة الثانية، السلم الحادي عشر، في تخصص علم وظائف الأعضاء (Physiologie). هذه الحصة مستقلة عن إعلان المركز الآخر الذي يخص أربعة متصرفين من الدرجة الثالثة في التدبير، ولذلك لا يجوز جمع المناصب أو الخلط بين شروط الشهادتين. تحمل بطاقة البوابة الحكومية الرمز C44247/26، ونُشرت في 23 أكتوبر 2026، وتحدد 15 نوفمبر 2026 موعداً للمباراة. عدد المناصب هنا اثنان فقط، وليس تقديراً للوظائف المتاحة في قطاع البحث العلمي كله."
+            ],
+            [
+              "اختلاف آخر أجل بين القرار والبوابة",
+              "تحدد بطاقة emploi-public آخر أجل للترشيح في 8 نوفمبر 2026 عند الساعة 16:30، بينما تظهر في نهاية القرار الأصلي المرفق إشارة إلى 9 نوفمبر 2026. هذا اختلاف حقيقي في التاريخ لا يجوز إخفاؤه أو تفسيره تلقائياً على أنه تمديد. التوجيه الاحترازي هو إتمام الترشيح الإلكتروني قبل 8 نوفمبر الساعة 16:30، والاحتفاظ بإثبات الإيداع. إذا نشرت الجهة المنظمة تصحيحاً رسمياً لاحقاً فيجب تحديث هذه الدراسة، ولا يكفي الاعتماد على منشور غير رسمي في شبكات التواصل."
+            ],
+            [
+              "الشهادة والتخصص: لماذا لا تكفي عبارة Bac+5؟",
+              "يشير القرار إلى أن مترشحي الدرجة الثانية مطالبون بدبلوم الدراسات العليا المعمقة أو المتخصصة، أو الماستر أو الماستر المتخصص، أو شهادة معترف بمعادلتها وفق النصوص الجاري بها العمل، في التخصص المطلوب. وبالنسبة لهذه البطاقة تحدد البوابة التخصص في Physiologie؛ لذلك لا يعني امتلاك ماستر في أي مجال علمي القبول تلقائياً. ينبغي مقارنة اسم الشهادة ومسار الدراسة ومحتوى التكوين مع التخصص المحدد، وتجهيز قرار المعادلة عند الاقتضاء. لا يمكن الجزم بقبول تخصص قريب دون جواب مكتوب من الجهة المنظمة."
+            ],
+            [
+              "الجنسية والسن والحالات الاستثنائية",
+              "يشترط الإعلان الجنسية المغربية والسن القانوني لاجتياز المباراة. يذكر القرار قاعدة ألا يقل السن عن 18 سنة وألا يتجاوز 45 سنة في فاتح يناير من السنة الجارية، مع مراعاة الاستثناءات النظامية المنصوص عليها لبعض الموظفين أو الفئات. لا ينبغي تحويل هذا الوصف إلى إعفاء عام من السن؛ كل حالة استثنائية تحتاج إلى أساس قانوني ووثائق مناسبة. وعلى المرشح الذي يقترب من الحد العمري أن يتحقق من طريقة احتساب السن وتاريخ المرجع قبل استثمار الوقت في إعداد ملف غير مؤهل."
+            ],
+            [
+              "طريقة الترشيح من داخل المغرب",
+              "تحدد البطاقة الرسمية الإيداع الإلكتروني عبر منصة recrutement.enssup.gov.ma، وليس إرسال السيرة الذاتية إلى بريد عشوائي أو تسليمها إلى وسيط. من الأفضل إنشاء الحساب مبكراً، ثم اختيار مباراة المركز والتخصص الصحيح، وملء البيانات كما هي في بطاقة التعريف والشهادات، ورفع المستندات المقروءة قبل انتهاء المهلة. بعد الإرسال، ينبغي حفظ رقم الترشيح أو وصل التسجيل ونسخة من الملفات. ظهور زر الإرسال لا يعني أن الملف اكتمل؛ راجع رسالة التأكيد وحالة الطلب داخل المنصة."
+            ],
+            [
+              "الوثائق والتحقق قبل رفعها",
+              "يتضمن القرار لائحة الوثائق المطلوبة، ومنها طلب الترشيح والسيرة الذاتية ونسخة بطاقة التعريف الوطنية والشهادة المؤهلة، مع وثائق إضافية للحالات التي تستلزم المعادلة أو الترخيص الإداري أو إثبات وضعية خاصة. ينبغي الرجوع إلى النسخة المصورة من القرار وإلى حقول المنصة للتأكد من الصيغة والحجم والتوقيع المطلوب، لأن متطلبات كل وثيقة قد تختلف. لا تقدم شهادة نجاح مؤقتة على أنها دبلوم نهائي إذا كان النص يشترط الدبلوم نفسه. كما ينبغي تجنب إرسال وثائق الهوية عبر مجموعات عامة أو مواقع غير رسمية."
+            ],
+            [
+              "الاختبارات والمعاملات",
+              "يحدد القرار اختباراً كتابياً عاماً مدته ثلاث ساعات ومعامله 2، واختباراً كتابياً خاصاً مدته ثلاث ساعات ومعامله 3، ثم اختباراً شفوياً من 15 إلى 30 دقيقة بمعامل 3 للمؤهلين بعد الكتابي. يتناول العام قضايا قانونية أو اقتصادية أو تدبيرية أو اجتماعية أو إنسانية أو علمية، بينما يرتبط الخاص بالتخصص والمهام المطلوبة. لا يعني ذكر هذه المحاور توفر نموذج أسئلة رسمي لسنة 2026. يتوقف الانتقال إلى الشفوي على شروط النجاح والتنقيط المنصوص عليها في التنظيم، ولا تكفي مجرد المشاركة في الكتابي."
+            ],
+            [
+              "خطة تحضير واقعية دون ادعاء معرفة الأسئلة",
+              "يمكن للمرشح تقسيم التحضير إلى ثلاثة محاور: مراجعة المفاهيم الأساسية في علم وظائف الأعضاء، والتدرب على عرض إجابة علمية منظمة في وقت محدود، ثم إعداد شرح شفوي موجز لمساره الجامعي أو أعماله البحثية. من المفيد التدرب على توثيق المعلومة العلمية وبيان حدود النتائج بدل حفظ إجابات جاهزة. ويمكن إجراء اختبار ذاتي تجريبي لمدة ثلاث ساعات لقياس توزيع الوقت، لكنه ليس امتحاناً رسمياً ولا ينبئ بالأسئلة الفعلية. راجع دائماً أي برنامج إضافي أو لائحة استدعاءات ينشرها المركز."
+            ],
+            [
+              "الراتب ومقر العمل والتكاليف",
+              "الوثيقتان المتاحتان تحددان الدرجة والسلم وعدد المناصب، لكنهما لا تمنحان في هذه البطاقة راتباً صافياً فردياً أو تعييناً نهائياً في مدينة بعينها. لا يجوز استنتاج الراتب الصافي من السلم وحده دون الوضعية الإدارية والتعويضات والاقتطاعات. كذلك فإن تكاليف التنقل إلى مركز الاختبار والطباعة والتوثيق تختلف بحسب المرشح، ولا توجد رسوم توظيف مشروعة تدفع إلى وسيط لضمان النجاح. من المفيد الاحتفاظ بنسخة رقمية من كل وثيقة وعدم شراء خدمات «قبول مضمون»."
+            ],
+            [
+              "كيف تتابع النتائج وتتجنب التضليل؟",
+              "بعد الإيداع، تابع موقع المركز الوطني للبحث العلمي والتقني والبوابة الحكومية وصفحة منصة الترشيح للإعلانات المتعلقة بلوائح المقبولين والاستدعاءات والنتائج. تحقّق من الرمز C44247/26 لأن المركز نشر مسابقات أخرى في التاريخ نفسه، وقد تكون درجاتها وتخصصاتها مختلفة. إذا لاحظت اختلافاً في الموعد أو مكان الاختبار، احتفظ بالنسختين واسأل الإدارة عبر قناة رسمية. هذه الدراسة تفسير تحريري لوثائق منشورة في 29 أكتوبر 2026، وليست تأكيداً لقبول أي مرشح أو تعهداً بالتوظيف."
+            ]
+          ]
+        },
+        "en": {
+          "title": "CNRST Physiology recruitment: two second-grade administrator posts and conflicting deadlines",
+          "deck": "A source-checked guide to eligibility, documents and exams, highlighting the 8 versus 9 November 2026 deadline discrepancy.",
+          "sections": [
+            [
+              "What the competition actually offers",
+              "The National Centre for Scientific and Technical Research (CNRST) is recruiting two second-grade administrators, scale 11, in Physiology. This is separate from the centre's four third-grade Management posts, which have different qualification rules. The government listing carries competition code C44247/26 and was published on 23 October 2026. It announces an examination on 15 November 2026. The number two is the advertised number of positions in this specific competition, not an estimate of vacancies throughout Morocco's research sector. Applicants should select the exact competition code before preparing their files."
+            ],
+            [
+              "A real discrepancy in the application deadline",
+              "The government portal states that applications close on 8 November 2026 at 16:30. The final page of the attached signed notice refers instead to 9 November 2026. These dates must not be silently reconciled or interpreted as a confirmed extension. The prudent approach is to submit by 8 November at 16:30 and preserve the electronic acknowledgement. If CNRST publishes a formal correction, the published guidance must be updated. A social-media screenshot, informal recruiter message or unverified summary is not sufficient evidence that the earlier deadline has been changed."
+            ],
+            [
+              "Qualifications and the meaning of the Physiology specialty",
+              "The notice describes second-grade administrator eligibility through a postgraduate advanced or specialised studies diploma, a master's or specialised master's degree, or a legally recognised equivalent in the required specialty. The portal specifies Physiology. Consequently, having any science master's degree does not establish eligibility by itself. Candidates should compare the actual degree title, course content and research training against the advertised specialty, and prepare an equivalence decision when relevant. A closely related discipline may or may not be accepted; only an authoritative answer from the recruiting body can settle an ambiguous case."
+            ],
+            [
+              "Nationality, age and statutory exceptions",
+              "The notice requires Moroccan nationality and compliance with the statutory age conditions. Its general rule is a minimum age of 18 and a maximum of 45 on 1 January of the current year, subject to exceptions recognised by the applicable regulations. An exception should not be treated as automatic or available to every applicant. Candidates relying on public-service status or another protected category should check the legal basis and supporting documents. Anyone close to the age threshold should calculate it using the stated reference date rather than the examination date or the date they open an online account."
+            ],
+            [
+              "How to apply from Morocco",
+              "The official listing directs applicants to the electronic platform recrutement.enssup.gov.ma. The procedure is not an invitation to email a CV to an unknown address or pay an intermediary. Create an account early, choose the correct CNRST competition and Physiology specialty, enter identity and academic details consistently, and upload legible documents before the portal closes. Keep a submission receipt, reference number and local copies. A successful upload of one file is not necessarily a completed application: review the final confirmation and the application's status. Do not assume that a draft saved in the system counts as submitted."
+            ],
+            [
+              "Documents and file-quality checks",
+              "The notice lists application documentation including an application request, CV, national identity document and qualifying diploma, with further evidence where an equivalence ruling, administrative authorisation or special status applies. Candidates should consult the actual notice and platform fields for exact signature, format and size requirements rather than relying on a generic checklist. A temporary success certificate must not be represented as the final diploma if the announcement requires the latter. Before uploading, check that names and dates match across documents and that scans are readable. Never share identity documents in public chat groups."
+            ],
+            [
+              "Written and oral stages",
+              "The signed decision provides a three-hour general written examination with coefficient 2, a three-hour specialist written examination with coefficient 3, and an oral examination lasting 15–30 minutes with coefficient 3 for those who qualify after the written stages. The general paper may cover legal, economic, managerial, social, humanities or scientific topics. The specialist paper concerns the advertised field and duties. These headings do not disclose the actual 2026 questions. Progression to the oral stage depends on the relevant marking and admission rules, not simply on attendance at the written tests."
+            ],
+            [
+              "A practical preparation schedule",
+              "A realistic plan combines a structured review of physiology concepts, practice writing coherent scientific explanations under a time limit, and a short oral presentation of the candidate's academic and research work. Candidates can simulate a three-hour writing session to identify time-management weaknesses, but such a simulation is not an official paper or a predictor of the examination. It is more valuable to distinguish established evidence from hypotheses and explain experimental limitations than to memorise confident-sounding generic answers. Check for any additional syllabus, venue notice or candidate list published by CNRST."
+            ],
+            [
+              "Salary, location and financial risks",
+              "The available official records identify the grade, scale and number of posts but do not establish an individual net salary or a final duty station for each successful candidate. A scale alone cannot determine net pay without allowances, deductions and employment circumstances. Printing and travel costs vary by candidate. There is no legitimate reason to pay a third party for guaranteed admission or an inside place on a list. Retain copies of documents and receipts, and treat paid offers to accelerate recruitment as a warning sign rather than a service endorsed by the employer."
+            ],
+            [
+              "Monitoring updates without confusing competitions",
+              "Follow CNRST, the government employment portal and the application platform for eligible-candidate lists, examination summons, corrections and results. Use code C44247/26 when checking announcements because the centre has advertised other competitions with similar dates but different grades and specialisms. If a notice changes the deadline or examination venue, compare it with the signed decision and ask the administration through an official channel. This guide reflects documents checked on 29 October 2026. It is independent editorial guidance, not a confirmation of eligibility, an examination summons or a promise of employment."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours CNRST : deux administrateurs en physiologie et divergence sur la date limite",
+          "deck": "Analyse de l'arrêté et de la fiche officielle, avec alerte sur les 8 et 9 novembre 2026, conditions, pièces et épreuves.",
+          "sections": [
+            [
+              "Deux postes précis, et non une campagne générale",
+              "Le Centre national pour la recherche scientifique et technique (CNRST) organise un concours pour deux administrateurs de deuxième grade, échelle 11, en physiologie. Il ne faut pas confondre cette procédure avec le recrutement distinct de quatre administrateurs de troisième grade en management. L'annonce gouvernementale porte le code C44247/26, a été publiée le 23 octobre 2026 et indique une date de concours au 15 novembre 2026. Les deux postes correspondent uniquement à cette spécialité et à ce grade ; ils ne représentent pas l'ensemble des besoins du secteur de la recherche au Maroc."
+            ],
+            [
+              "Une contradiction à signaler sur la date limite",
+              "La fiche du portail emploi-public fixe la clôture au 8 novembre 2026 à 16 h 30, alors que la dernière page de l'arrêté joint mentionne le 9 novembre 2026. Cette divergence ne doit pas être dissimulée ni présentée comme une prolongation confirmée. Par prudence, le candidat devrait finaliser son dépôt avant le 8 novembre à 16 h 30 et conserver l'accusé de réception électronique. Si le CNRST publie un rectificatif officiel, le guide devra être actualisé. Une capture circulant sur les réseaux sociaux ne remplace pas une décision de l'organisme."
+            ],
+            [
+              "Diplômes exigés et spécialité physiologie",
+              "Pour le deuxième grade, l'arrêté vise notamment le diplôme d'études supérieures approfondies ou spécialisées, le master, le master spécialisé ou un titre légalement reconnu équivalent dans la spécialité demandée. La fiche gouvernementale précise « physiologie ». Un master scientifique quelconque ne suffit donc pas à établir automatiquement l'admissibilité. Il faut rapprocher l'intitulé exact du diplôme, les enseignements suivis et les travaux universitaires de cette discipline. Une décision d'équivalence doit être préparée lorsque la situation l'exige. Pour une spécialité voisine, seul un avis officiel peut lever une ambiguïté."
+            ],
+            [
+              "Nationalité, âge et dérogations réglementaires",
+              "L'annonce impose la nationalité marocaine et le respect des conditions légales d'âge. L'arrêté reprend la règle générale d'au moins 18 ans et d'au plus 45 ans au premier janvier de l'année en cours, sous réserve des dérogations prévues par les textes applicables. Il serait trompeur d'affirmer que ces dérogations profitent à tous les candidats. Les fonctionnaires ou personnes relevant d'une situation particulière doivent vérifier leur base juridique et les justificatifs nécessaires. Le calcul de l'âge doit se faire à la date de référence, non au jour de l'épreuve."
+            ],
+            [
+              "Dépôt électronique depuis le Maroc",
+              "La fiche officielle oriente les candidatures vers recrutement.enssup.gov.ma. Cette adresse doit être utilisée directement, sans passer par un intermédiaire promettant une sélection. Il convient de créer le compte à l'avance, de sélectionner le bon concours CNRST et la spécialité physiologie, puis de saisir les données d'identité et de formation conformément aux pièces officielles. Les documents doivent être lisibles et transmis avant l'heure limite. Après validation, conservez le numéro de candidature, l'accusé de réception et les fichiers. Une simple sauvegarde de brouillon ne prouve pas que le dossier a été déposé."
+            ],
+            [
+              "Pièces à réunir et contrôles de cohérence",
+              "L'arrêté prévoit des pièces de candidature, notamment une demande, un curriculum vitae, une copie de la carte nationale d'identité et le diplôme requis. D'autres justificatifs peuvent être nécessaires pour une équivalence, une autorisation administrative ou une situation réglementaire particulière. Les formats, signatures et limites techniques doivent être vérifiés dans l'arrêté et les champs de la plateforme. Une attestation provisoire de réussite ne doit pas être assimilée à un diplôme définitif si le texte exige ce dernier. Vérifiez l'orthographe des noms, les dates et la netteté des scans, sans diffuser vos pièces d'identité publiquement."
+            ],
+            [
+              "Épreuves, durées et coefficients",
+              "La décision prévoit une épreuve écrite générale de trois heures, coefficient 2, une épreuve écrite de spécialité de trois heures, coefficient 3, puis un oral de quinze à trente minutes, coefficient 3, pour les candidats admis après les écrits. L'épreuve générale peut porter sur des questions juridiques, économiques, de gestion, sociales, humaines ou scientifiques. L'épreuve spécifique concerne les compétences et les missions du poste. Ces indications ne constituent pas une banque de sujets officiels pour 2026. L'accès à l'oral dépend des règles de notation et d'admission applicables, pas de la seule présence aux écrits."
+            ],
+            [
+              "Préparer le concours sans inventer le sujet",
+              "Une préparation utile repose sur la révision raisonnée de la physiologie, la rédaction d'explications scientifiques structurées et l'entraînement à présenter oralement son parcours et ses travaux. Un exercice chronométré de trois heures peut révéler des difficultés de gestion du temps ; il ne s'agit toutefois ni d'un sujet officiel ni d'une garantie de réussite. Le candidat gagnera à distinguer les résultats établis des hypothèses et à expliquer les limites méthodologiques de ses analyses. Il faut aussi surveiller toute publication complémentaire du CNRST concernant les lieux, convocations ou consignes."
+            ],
+            [
+              "Rémunération, affectation et dépenses",
+              "Les sources consultées précisent le grade, l'échelle et le nombre de postes, mais ne donnent pas de salaire net individualisé ni de ville d'affectation définitive pour chacun des futurs lauréats. L'échelle seule ne permet pas de calculer le net sans connaître les indemnités, les retenues et la situation administrative. Les frais de déplacement ou de préparation varient selon les personnes. Ne payez jamais un intermédiaire pour une prétendue admission garantie. Conservez les documents et les preuves de dépôt, et considérez toute promesse d'accès privilégié aux résultats comme un risque."
+            ],
+            [
+              "Suivi des résultats et contrôle des annonces",
+              "Pour les listes d'admissibilité, les convocations, les éventuels rectificatifs et les résultats, consultez les communications du CNRST, le portail officiel de l'emploi public et la plateforme de candidature. Vérifiez toujours le code C44247/26 : plusieurs concours du même organisme sont publiés à des dates proches, avec des grades et des spécialités distincts. En cas de contradiction nouvelle, comparez les documents et demandez une clarification par un canal institutionnel. Ce dossier reflète les pièces consultées le 29 octobre 2026 et ne constitue ni une décision d'admission ni une promesse d'emploi."
+            ]
+          ]
+        }
+      }
     }
   }
 }
