@@ -3364,6 +3364,177 @@
           ]
         }
       }
+    },
+    "ofppt-project-10": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Cross-checked two-page original RH 130/26 notice, employer's RH 130/26 recruitment page and national emploi-public C44256/26 listing on 29 October 2026. No salary or assessment date invented.",
+      "state": "researched",
+      "sources": [
+        {
+          "label": "OFPPT — avis original RH 130/26, deux pages, consulté le 29 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/e8535a3a-e31a-4465-8eba-168e8ef3fbea"
+        },
+        {
+          "label": "OFPPT — offre officielle RH 130/26 et dépôt de candidature",
+          "url": "https://recrutement.ofppt.ma/offre/3820"
+        },
+        {
+          "label": "Emploi-public — annonce C44256/26, publiée le 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/e8535a3a-e31a-4465-8eba-168e8ef3fbea"
+        }
+      ],
+      "facts": {
+        "employer": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
+        "reference": "RH 130/26",
+        "publicReference": "C44256/26",
+        "city": "Casablanca",
+        "country": "Maroc",
+        "posts": 10,
+        "publishedAt": "2026-10-23",
+        "deadline": "2026-11-09",
+        "deadlineText": "9 novembre 2026 à minuit (formulation de l'avis OFPPT)",
+        "application": "https://recrutement.ofppt.ma/offre/3820",
+        "diploma": "Diplôme d'ingénieur d'État, de préférence informatique, gestion ou domaine connexe, donnant accès à l'échelle 11",
+        "age": "Moins de 45 ans à la prise de fonction",
+        "nationality": "Marocaine",
+        "experience": "Expérience en gestion, coordination ou suivi de projets souhaitable; aucune durée minimale imposée dans l'avis",
+        "salary": null,
+        "examDate": null,
+        "documents": [
+          "Formulaire F1 PDF",
+          "CV actualisé détaillé PDF",
+          "Diplôme et équivalence étrangère si applicable PDF",
+          "CNI recto-verso sur une seule page PDF"
+        ]
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة OFPPT لتوظيف 10 أطر لتدبير المشاريع: الشروط والمهام والوثائق والأجل",
+          "deck": "دليل موثق من القرار الأصلي RH 130/26: دبلوم مهندس دولة، خبرة مرغوبة، تعيين الدار البيضاء وآخر أجل 9 نوفمبر 2026.",
+          "sections": [
+            [
+              "إعلان محدد لا وعد بوظائف عامة",
+              "أعلن مكتب التكوين المهني وإنعاش الشغل عن عشرة مناصب لأطر مكلفة بتدبير المشاريع تحت المرجع RH 130/26. يذكر الإعلان أن العمل يندرج ضمن تعزيز قيادة المشاريع الهيكلية وتنفيذها، وأن التعيين سيكون في الدار البيضاء داخل مديريات مركزية بحسب حاجات المكتب. تظهر البطاقة في بوابة التشغيل العمومي تحت الرمز C44256/26، بتاريخ نشر 23 أكتوبر 2026. هذا ليس برنامج هجرة ولا تدريباً مفتوحاً، بل ترشيح محدد بعشرة مناصب. على القارئ التأكد من تطابق المرجعين قبل تحميل الوثائق، لأن المؤسسة نشرت إعلانات أخرى متقاربة في التاريخ والتسمية، ولكل واحد منها شروطه وملفه الخاص."
+            ],
+            [
+              "المؤهل العلمي المقبول وحدوده",
+              "ينص القرار الأصلي على دبلوم مهندس دولة، ويفضل أن يكون في الإعلاميات أو التسيير أو مجال ذي صلة بمهمات الوظيفة، مع ضرورة أن يكون الدبلوم من النوع الذي يتيح الولوج إلى السلم 11 بالوظيفة العمومية. عبارة «يفضل» لا تعني أن أي شهادة جامعية تكفي، كما لا يجوز اعتبار كل تخصص قريب مقبولاً تلقائياً. إذا كانت الشهادة صادرة عن مؤسسة أجنبية، يطلب الإعلان إرفاق نسخ من وثائق المعادلة. ينبغي للمرشح مطابقة الاسم الكامل للدبلوم ومستواه قبل التقديم، والاستفسار من الجهة المنظمة عن الحالات غير الواضحة بدلاً من الاعتماد على تفسيرات متداولة في شبكات التواصل."
+            ],
+            [
+              "الخبرة المهنية: ميزة لا سنوات مفروضة",
+              "يصف الإعلان الخبرة في إدارة المشاريع أو تنسيقها أو تتبعها بأنها مرغوبة، ويعتبر العمل السابق في التكوين المهني أو هندسة التكوين أو التكوين المستمر أو التعاون أو تجهيز المؤسسات ميزة إضافية. كما يثمن خبرة المشاريع العرضانية التي تجمع هياكل أو شركاء متعددين. لا تحدد الوثيقة عدداً إلزامياً من سنوات الخبرة، لذلك لا يصح تحويل «خبرة مرغوبة» إلى شرط إقصائي لسنتين أو خمس سنوات. مع ذلك، من المفيد إبراز الأدلة الدقيقة على الأعمال المنجزة: نطاق المشروع، الأهداف، الجدول الزمني، الأطراف المشاركة، المؤشرات، ومساهمة المرشح الشخصية، مع تجنب الادعاء بإدارة مشروع لم يقده فعلياً."
+            ],
+            [
+              "المهام العملية داخل المديريات المركزية",
+              "تتوزع المهمات المذكورة في القرار بين تحديد المشاريع والتخطيط لتنفيذها، والمشاركة في تطوير برامج التكوين ومساراته، وتتبع التكوين المستمر للشركات، والتنسيق مع شركاء محليين ودوليين. وتشمل أيضاً مشاريع إنشاء مؤسسات التكوين وتجهيزها وتهيئتها للخدمة. لهذا فإن المسمى لا يقتصر على إعداد عرض تقديمي أو استعمال برنامج لإدارة المهام. قد يحتاج الموظف إلى بناء خطة عمل بمسؤوليات واضحة، ومراجعة مدى تقدم الأشغال، وتفسير أسباب التأخر، واقتراح تدابير تصحيحية. لا تحدد الوثيقة التوزيع النهائي للمناصب على كل مديرية، لذا يجب عدم افتراض مجال عمل محدد قبل قرار التعيين."
+            ],
+            [
+              "المؤشرات والرقابة على تقدم المشروع",
+              "يطلب الإعلان القدرة على إعداد الجداول الزمنية ولوحات القيادة ومؤشرات الأداء والتقارير الدورية، وعلى تحليل الانحرافات وتحديد المخاطر. ويمكن للمرشح الاستعداد بمثال تعليمي من مشروع افتراضي: جدول يضم النشاط والمسؤول والتاريخ المخطط والتاريخ الفعلي وحالة الإنجاز والعائق والإجراء التصحيحي. إذا تأخر تسليم تجهيزات عشرة أيام، ينبغي بيان أثر ذلك في بقية المراحل بدلاً من الاكتفاء بوضع اللون الأحمر. هذه الطريقة مجرد اقتراح عملي للتحضير وليست اختباراً رسمياً معلناً. لا تنشر في ملف الترشيح معلومات سرية تخص مشغلاً سابقاً؛ استخدم بيانات تدريبية أو أرقاماً مجهولة المصدر مع توضيح طبيعتها."
+            ],
+            [
+              "السن والجنسية والمدينة: تحقق قبل الترشيح",
+              "تشترط الوثيقة الجنسية المغربية وأن يكون عمر المرشح أقل من 45 سنة بتاريخ مباشرة العمل، لا بتاريخ نشر الإعلان بالضرورة. لذلك ينبغي عدم اختزال الشرط في سنة ميلاد واحدة دون معرفة تاريخ الالتحاق الفعلي. مكان التعيين المحدد هو الدار البيضاء، بينما يشير وصف المهمات إلى مديريات مركزية متعددة. إذا كان المرشح يقيم في مدينة أخرى، فمن الأفضل أن يحسب مسبقاً تكاليف التنقل أو السكن دون أن يفترض وجود تعويضات غير منشورة. لم يحدد الإعلان قيمة الراتب، ولم ينشر تاريخاً للاختبار، ولا يجوز تقديم أي تقدير في هاتين النقطتين على أنه معلومة رسمية."
+            ],
+            [
+              "وثائق الملف وكيفية إعدادها بدقة",
+              "يتكون الملف المطلوب من استمارة الترشيح F1 بصيغة PDF، وسيرة ذاتية محدثة تعرض التجارب ذات الصلة بالتفصيل، ونسخة من الدبلوم مع شهادة المعادلة عند الاقتضاء، ونسخة من البطاقة الوطنية بوجهيها في صفحة PDF واحدة. يمكن إعداد قائمة تحقق قبل الإرسال: وضوح كل صفحة، تطابق الاسم والمرجع، قابلية فتح الملفات، وتسمية مفهومة للوثائق. ينبغي الانتباه خصوصاً إلى شرط وضع وجهي البطاقة في صفحة واحدة، لأنه يختلف عن إرسال صورتين منفصلتين. لا يذكر الإعلان رسالة تحفيزية ضمن الوثائق الإلزامية؛ لا تُقدمها باعتبارها شرطاً، وإن طلبتها المنصة لاحقاً فاتبع تعليماتها المباشرة."
+            ],
+            [
+              "طريقة الإيداع والأجل دون التباس",
+              "توضح الوثيقة أن التسجيل وإيداع الملف يتمان إلكترونياً عبر بوابة توظيف المكتب، وليس بالبريد الإلكتروني أو الإيداع الورقي. آخر أجل معلن هو 9 نوفمبر 2026، ويستعمل القرار عبارة «منتصف الليل» دون توضيح إضافي لآلية إغلاق المنصة؛ لهذا يُنصح بالإرسال قبل اليوم الأخير والاحتفاظ بإثبات العملية. تؤكد بوابة التشغيل العمومي التاريخ نفسه، لكنها لا تعفي المرشح من اتباع إجراءات بوابة المكتب. كل ملف ناقص أو مرسل عبر قناة مختلفة قد لا يؤخذ بعين الاعتبار، كما أن المعلومات غير الصحيحة قد تؤدي إلى إلغاء الترشيح. لا تشارك كلمة المرور أو رمز التحقق مع وسطاء يعدون بتسريع قبول الملف."
+            ],
+            [
+              "الانتقاء والمخاطر والخطوة التالية",
+              "تنص الوثيقة على انتقاء أولي بناءً على الملفات، ثم استدعاء المرشحين المنتقين إلى اختبارات تقييم يعلن تاريخها ومكانها لاحقاً. لا توجد في الإعلان قائمة موضوعات مفصلة للاختبار أو حد أدنى للنقط أو موعد مقابلة ثابت، فلا ينبغي اختلاق هذه التفاصيل. يمكن التحضير من خلال مراجعة تخطيط المشاريع وإدارة المخاطر والتواصل بين الفرق وصياغة تقرير موجز عن تقدم مشروع، مع إبقاء ذلك في خانة الإعداد العام لا المعلومات الرسمية. بعد الإرسال، راقب حساب الترشيح والقنوات الرسمية، واحتفظ بنسخة من الإعلان وملفك. إن لم تكن الشهادة مطابقة، فالبحث عن إعلان آخر أنسب قانونياً من تقديم بيانات غير دقيقة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "OFPPT recruits 10 project-management officers: qualifications, duties and application",
+          "deck": "A primary-source guide to RH 130/26: State Engineer diploma, desirable experience, Casablanca assignments and the 9 November 2026 deadline.",
+          "sections": [
+            [
+              "A specific recruitment notice, not an open programme",
+              "Morocco's Office of Vocational Training and Employment Promotion (OFPPT) is recruiting ten project-management officers under reference RH 130/26. The original notice places the positions in Casablanca, with assignments to different central directorates according to operational needs. The national public recruitment portal identifies the same recruitment under C44256/26 and records publication on 23 October 2026. This is a defined recruitment campaign, not an immigration pathway, an internship scheme, or an open-ended promise of jobs. Applicants should match both identifiers before preparing documents: OFPPT published several other vacancies in the same period, and requirements must not be transferred from one announcement to another."
+            ],
+            [
+              "The qualification threshold and its limits",
+              "The original notice calls for a State Engineer diploma, preferably in information technology, management, or a related field appropriate to the duties. The diploma must be one that provides access to scale 11 in the Moroccan public service. The word preferably does not mean that any university degree is automatically accepted. Nor can applicants assume that a vaguely similar qualification will be recognized without checking its exact level and designation. Diplomas issued abroad must be accompanied by copies of equivalence certificates. Before applying, compare the complete diploma title against the notice and seek clarification from the organizer where equivalence or field relevance is genuinely uncertain."
+            ],
+            [
+              "Experience is desirable, not a fixed-year requirement",
+              "Professional experience managing, coordinating, or monitoring projects is described as desirable. Background in vocational education, training engineering, continuing training, cooperation, or the development of training facilities is an advantage. Cross-functional projects involving several departments or external partners are also appreciated. The notice does not prescribe a minimum of two, three, or five years of experience, so such a threshold should not be invented. Applicants can still strengthen their evidence by describing project scope, milestones, deliverables, stakeholders, measurable outcomes, and their own responsibility. A supporting example should make clear whether the applicant led the project, contributed to it, or merely observed it."
+            ],
+            [
+              "What the job actually involves",
+              "The stated duties extend from identifying and planning projects to improving vocational training programmes, developing continuing training, and coordinating national or international cooperation. They also include tracking the establishment, equipment, and commissioning of training institutions. This is therefore broader than simply operating project-management software or preparing slides. A successful officer may need to assemble a delivery plan, define responsibilities, follow procurement or implementation milestones, explain delays, and recommend corrective action. The notice does not allocate the ten positions to named directorates, so it would be misleading to promise a specific specialization or team before the employer makes an assignment."
+            ],
+            [
+              "Dashboards, timelines, and risk monitoring",
+              "The notice emphasizes action plans, implementation schedules, dashboards, performance indicators, periodic reporting, and the analysis of deviations and project risks. A useful preparation exercise is to build a fictional project register containing activity, owner, planned date, actual date, completion status, constraint, and corrective action. If a supplier delivers equipment ten days late, the applicant should explain which downstream tasks are affected rather than merely colouring the cell red. This is a practical learning example, not a confirmed examination question. Use synthetic or properly anonymized data when creating portfolio examples; an employer's confidential project documents should never be uploaded or disclosed without authorization."
+            ],
+            [
+              "Nationality, age, and location requirements",
+              "Applicants must be Moroccan nationals and younger than 45 on the date they take up their duties. That reference date matters: it is not necessarily the publication date of the announcement, so a simplified birth-year rule may be inaccurate. The specified assignment location is Casablanca, while the notice refers to different central directorates. Anyone living elsewhere should consider commuting or relocation costs without assuming an allowance exists. The employer has not published a salary amount in this notice, nor a fixed assessment date. Presenting estimated compensation or a guessed test date as official would be especially unhelpful to applicants planning their finances and travel."
+            ],
+            [
+              "The required application file",
+              "The notice requires the F1 application form in PDF, an up-to-date CV detailing relevant professional experience, a copy of the qualifying diploma with foreign equivalence documentation where applicable, and a copy of both sides of the national identity card combined on a single PDF page. Check that every file opens, the text is readable, names and reference numbers agree, and documents are attached to the correct vacancy. The one-page front-and-back identity-card requirement is easy to miss. The original notice does not list a motivation letter among the mandatory attachments, so it should not be described as compulsory unless the official application platform expressly asks for it."
+            ],
+            [
+              "How to submit before the deadline",
+              "Applications must be registered and submitted through OFPPT's recruitment website. The national public recruitment listing also directs candidates to the employer's online channel. The stated deadline is 9 November 2026; the employer's notice uses the expression midnight without specifying additional technical details about portal closure. Submit well before the final day and retain an acknowledgement or screenshot of successful submission. The notice warns that incomplete files or applications sent through a different channel will not be considered, and inaccurate information can invalidate a candidacy. Avoid intermediaries who request passwords, verification codes, or payment in exchange for supposedly accelerating a public recruitment application."
+            ],
+            [
+              "Selection, preparation, and remaining uncertainty",
+              "The employer will shortlist candidates on their files and invite those selected to assessment tests; the dates and locations will be announced later. No detailed syllabus, guaranteed interview date, or minimum pass score appears in the notice. Candidates can prepare generally by practising project schedules, risk registers, concise progress reporting, and communication across departments, but those exercises should not be advertised as official test questions. After applying, monitor the recruitment account and official notices, save the announcement and submitted files, and avoid relying on forwarded messages without source verification. Where the diploma is ineligible, finding another appropriate vacancy is safer than misrepresenting qualifications."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "OFPPT : recrutement de 10 cadres en gestion de projets, conditions et candidature",
+          "deck": "Analyse de l'avis RH 130/26 : diplôme d'ingénieur d'État, expérience souhaitée, affectation à Casablanca et échéance du 9 novembre 2026.",
+          "sections": [
+            [
+              "Une campagne précise, et non une promesse générale d'emploi",
+              "L'Office de la formation professionnelle et de la promotion du travail recrute dix cadres chargés de la gestion des projets sous la référence RH 130/26. L'avis original indique une affectation à Casablanca, dans différentes directions centrales selon les besoins de l'établissement. Le portail national de l'emploi public présente le même recrutement sous le code C44256/26 et indique une publication le 23 octobre 2026. Il s'agit d'un recrutement défini, non d'un programme de migration, d'un stage ouvert ou d'une promesse permanente d'embauche. Il faut vérifier les deux références, car l'OFPPT a publié plusieurs avis proches dont les conditions ne sont pas interchangeables."
+            ],
+            [
+              "Le diplôme exigé et les limites de l'équivalence",
+              "L'avis demande un diplôme d'ingénieur d'État, de préférence en informatique, en gestion ou dans un domaine connexe cohérent avec les missions. Le diplôme doit donner accès à l'échelle 11 de la fonction publique marocaine. La mention « de préférence » ne signifie pas que toute licence ou tout master est automatiquement admissible. De même, la proximité apparente d'une spécialité ne suffit pas à garantir son acceptation. Pour les diplômes délivrés à l'étranger, le dossier doit comprendre les attestations d'équivalence. Le candidat doit comparer l'intitulé exact, le niveau et le domaine de son diplôme avec le texte officiel, puis demander une précision à l'organisateur si un doute subsiste."
+            ],
+            [
+              "L'expérience souhaitée ne fixe pas un nombre d'années",
+              "L'expérience dans la gestion, la coordination ou le suivi de projets est souhaitable. Un parcours dans la formation professionnelle, l'ingénierie de formation, la formation continue, la coopération ou le développement d'établissements de formation constitue un atout. Les projets transversaux impliquant plusieurs structures ou partenaires sont également appréciés. L'avis ne fixe pas un minimum obligatoire de deux ou cinq ans : il serait donc incorrect d'inventer un tel critère éliminatoire. Pour valoriser une expérience réelle, décrivez le périmètre du projet, les étapes, les partenaires, les livrables, les résultats vérifiables et votre contribution exacte, sans vous attribuer la direction d'un projet auquel vous avez seulement participé."
+            ],
+            [
+              "Des missions bien plus larges qu'un logiciel de planification",
+              "Les missions officielles couvrent l'identification et la planification des projets, l'amélioration des dispositifs de formation, le développement de la formation continue et la coopération nationale ou internationale. Elles incluent aussi le suivi de la création, de l'aménagement, de l'équipement et de la mise en service des établissements de formation. Le métier ne se réduit donc ni à produire des diapositives ni à utiliser un outil de gestion des tâches. Il suppose de coordonner des acteurs, d'expliquer les retards et de proposer des mesures correctives. L'avis ne répartit pas les dix postes entre des directions nommément désignées : aucune affectation spécialisée ne doit être présentée comme acquise."
+            ],
+            [
+              "Tableaux de bord, délais et maîtrise des risques",
+              "L'employeur attend la capacité à élaborer des plans d'action, des échéanciers, des indicateurs de performance, des tableaux de bord et des rapports périodiques. Le suivi des écarts et l'anticipation des risques sont également mentionnés. Pour s'entraîner, un candidat peut construire un registre fictif comportant activité, responsable, échéance prévue, date réelle, état d'avancement, difficulté et action corrective. Un retard de livraison de dix jours doit être analysé au regard de ses conséquences sur les autres étapes, pas seulement signalé en rouge. Cet exercice est une proposition pédagogique, et non un sujet officiel d'examen. Utilisez des données fictives ou anonymisées, sans divulguer les documents confidentiels d'un ancien employeur."
+            ],
+            [
+              "Nationalité, âge et lieu d'affectation",
+              "Le candidat doit être de nationalité marocaine et âgé de moins de 45 ans à la date de prise de fonction. Ce dernier point ne se confond pas nécessairement avec la date de publication de l'annonce : une règle fondée uniquement sur l'année de naissance pourrait être trompeuse. Le lieu d'affectation annoncé est Casablanca, même si les missions concernent plusieurs directions centrales. Un candidat résidant ailleurs gagnera à estimer ses frais de déplacement ou de logement, sans supposer l'existence d'une indemnité. L'avis ne publie ni montant de salaire ni date définitive des tests. Il ne faut donc pas présenter des estimations de rémunération ou de calendrier comme des informations officielles."
+            ],
+            [
+              "Préparer les pièces sans erreur de format",
+              "Le dossier comprend le formulaire F1 renseigné au format PDF, un CV actualisé détaillant les expériences liées au poste, une copie du diplôme exigé et, si nécessaire, les attestations d'équivalence, ainsi que la carte nationale d'identité recto verso sur une seule page PDF. Avant l'envoi, vérifiez la lisibilité des fichiers, la concordance du nom et de la référence, et l'ouverture correcte de chaque document. La contrainte d'une page unique pour les deux faces de la carte mérite une attention particulière. L'avis ne mentionne pas de lettre de motivation parmi les pièces obligatoires ; elle ne doit pas être inventée comme condition, sauf demande explicite de la plateforme officielle."
+            ],
+            [
+              "Dépôt électronique et prudence sur l'heure limite",
+              "L'inscription et la candidature doivent être effectuées sur le site de recrutement de l'OFPPT, et non par courrier électronique ou dépôt papier. Le dernier délai annoncé est le 9 novembre 2026. Le texte de l'employeur emploie la formule « à minuit », sans apporter de précision technique supplémentaire sur la fermeture du portail. Il est donc préférable de déposer le dossier plusieurs jours avant l'échéance et de conserver la preuve de validation. L'avis avertit qu'un dossier incomplet ou envoyé par un autre canal ne sera pas pris en compte, et que les renseignements erronés peuvent entraîner son annulation. Ne communiquez jamais vos identifiants ou codes de vérification à un intermédiaire."
+            ],
+            [
+              "Présélection, épreuves et points encore inconnus",
+              "L'avis prévoit une présélection sur dossier, puis la convocation des candidats retenus à des tests d'évaluation dont les dates et les lieux seront annoncés ultérieurement. Il ne publie ni programme détaillé des épreuves, ni date d'entretien garantie, ni seuil de réussite. Une préparation raisonnable peut porter sur la planification, les risques, les indicateurs, la coordination et la rédaction de notes de suivi, sans présenter ces thèmes comme des questions officielles. Après le dépôt, consultez régulièrement votre espace candidat et les communications de l'organisateur, et conservez les documents transmis. Si le diplôme ne correspond pas aux critères, recherchez une autre offre adaptée plutôt que de déclarer des qualifications inexactes."
+            ]
+          ]
+        }
+      }
     }
   }
 }
