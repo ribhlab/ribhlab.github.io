@@ -13,7 +13,8 @@
     "visa": 12,
     "researched": 37,
     "marketEvidence": 5,
-    "pendingDetail": 52
+    "pendingDetail": 51,
+    "pendingLiveVerification": 3
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -493,10 +494,14 @@
       "section": "competitions",
       "title": "Acheteur sénior",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/261843c9-2094-4efa-88fd-d62a90e51ce8"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/261843c9-2094-4efa-88fd-d62a90e51ce8",
+      "reviewedAt": "2026-10-29",
+      "evidenceKey": "amdie-senior-buyer",
+      "sourceDecision": "https://www.emploi-public.ma/fr/concours/download/arrete/261843c9-2094-4efa-88fd-d62a90e51ce8",
+      "reviewNote": "Decision AMDIE 498/2026 (4 pages) and official notice C44249/26 checked; 10 original sections per AR/EN/FR. PDF requires 5 years including 3 in public procurement; six documents including action-plan report; submission before 16:00 on 9 November 2026. Awaiting successful site build, deployment and live 3-language QA."
     },
     {
       "id": "srm-laayoune-responsibles",
