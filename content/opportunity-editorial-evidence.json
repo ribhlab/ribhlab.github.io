@@ -3014,6 +3014,185 @@
           ]
         }
       }
+    },
+    "lpee-12": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Read signed 1-page original decision dated 26 Oct 2026, government listing and LPEE's own offer pages 2026/95 and 2026/91 on 29 Oct 2026; reconciled 9 references / 12 positions and noted experience wording differences. No unannounced pay or examination date.",
+      "state": "source-checked-article-awaiting-live-qa",
+      "sources": [
+        {
+          "label": "LPEE — avis de recrutement AR/910/26/013, 26 octobre 2026 (PDF original)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/f2ac90c1-7561-482a-a517-17eeb1f65ac5"
+        },
+        {
+          "label": "Emploi-public — concours C44291/26, publié le 26 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/f2ac90c1-7561-482a-a517-17eeb1f65ac5"
+        },
+        {
+          "label": "LPEE — fiche officielle avant-vente, offre 2026/95",
+          "url": "https://emploi.lpee.ma/offre/691"
+        },
+        {
+          "label": "LPEE — fiche officielle géologie, offre 2026/91",
+          "url": "https://emploi.lpee.ma/offre/687"
+        }
+      ],
+      "facts": {
+        "employer": "Laboratoire Public d'Essais et d'Etudes (LPEE)",
+        "reference": "C44291/26 / AR/910/26/013",
+        "country": "Maroc",
+        "posts": 12,
+        "jobReferences": [
+          "2026/87",
+          "2026/88",
+          "2026/89",
+          "2026/90",
+          "2026/91",
+          "2026/92",
+          "2026/93",
+          "2026/94",
+          "2026/95"
+        ],
+        "locations": {
+          "Casablanca-Settat": 10,
+          "Rabat-Salé-Kénitra": 1,
+          "Marrakech-Safi": 1
+        },
+        "publishedAt": "2026-10-26",
+        "deadline": "2026-11-09T16:30",
+        "application": "https://emploi.lpee.ma/",
+        "salary": null,
+        "examDate": null,
+        "experienceWarning": "Original decision: souhaitable; employer page for 2026/95 displays 2 ans; employer page for 2026/91 displays débutant."
+      },
+      "translations": {
+        "ar": {
+          "title": "المختبر العمومي للتجارب والدراسات: دليل الترشح لـ12 منصباً في تسعة تخصصات سنة 2026",
+          "deck": "تفصيل المراجع 2026/87 إلى 2026/95، والشهادات والمدن والمهلة، مع توضيح اختلاف صياغة الخبرة بين القرار وصفحات المشغل.",
+          "sections": [
+            [
+              "القرار الرسمي ونطاق التوظيف",
+              "أعلن المختبر العمومي للتجارب والدراسات (LPEE) في الدار البيضاء بتاريخ 26 أكتوبر 2026 عن اثني عشر منصباً تحت مرجع القرار AR/910/26/013. تحمل بطاقة بوابة التشغيل العمومي الرمز C44291/26، وتحدد 9 نوفمبر 2026 الساعة 16:30 آخر أجل للترشيح. أما الإعلان الأصلي فيذكر يوم 9 نوفمبر دون ساعة، ولذلك يُفضّل اعتماد الساعة الأسبق المعلنة في البوابة وعدم انتظار اللحظات الأخيرة. يتعلق الأمر بمناصب محددة لدى مؤسسة واحدة، وليس بمسابقة عامة مفتوحة لكل التخصصات. وينبغي قراءة رقم كل عرض قبل إعداد الملف، لأن التكوين والخبرة ومكان العمل تختلف من منصب إلى آخر."
+            ],
+            [
+              "توزيع المناصب حسب المدينة والمرجع",
+              "تضم اللائحة تسعة مراجع توظيف مجموعها اثنا عشر منصباً. يوجد منصب مهندس مشروع في المواد (2026/87) بجهة مراكش–آسفي، ومنصب مسؤول النظافة والسلامة والبيئة (2026/88) بالدار البيضاء، ومنصب تقني اختبارات المواد (2026/89) بجهة الرباط–سلا–القنيطرة. وفي الدار البيضاء توجد وظائف تقني اختبارات الكهرباء (2026/90)، وتقني الصيانة (2026/92)، وأربعة تقنيين لاختبارات الكهرباء (2026/93)، وتقني اختبارات المنشآت (2026/94)، ومكلف بإدارة ما قبل البيع (2026/95). أما تقني اختبارات الجيولوجيا (2026/91) فمكانه المحدد تيط مليل. لا يجوز اختزال هذه المناصب إلى اثنتي عشرة وظيفة هندسة مدنية، لأن بينها إدارة تجارية وكهرباء وجيولوجيا."
+            ],
+            [
+              "الشهادات والتخصصات: طابق العرض بدقة",
+              "يشترط منصب مهندس المواد شهادة مهندس في الهندسة المدنية أو المواد، مع الإشارة إلى مؤسسات مثل EHTP وEMI وENSMR وENSA أو ما يعادلها. ويطلب منصب السلامة والبيئة شهادة ماستر في إدارة الجودة والصحة والسلامة والبيئة. أما عروض التقنيين 2026/89 إلى 2026/92 فتقبل بحسب المنصب DUT أو BTS أو إجازة في البناء أو الكهرباء أو الجيولوجيا أو الكهروميكانيك. وتشترط عروض 2026/93 و2026/95 شهادة تقني متخصص، بينما يطلب 2026/94 شهادة تقني في الرسم المعماري. ويؤكد القرار أن شهادات المؤسسات المغربية المعترف بها مقبولة، وإلا وجب إرفاق شهادة المعادلة. لا تعني كلمة «ما يعادلها» قبول أي شهادة دون إثبات."
+            ],
+            [
+              "الخبرة: مرغوبة في القرار وليست دائماً شرطاً إقصائياً",
+              "تستعمل الوثيقة الأصلية عبارة «خبرة مرغوبة» في غالبية المراجع، وتحدد مددًا استرشادية: سنتين إلى ثلاث لمنصب السلامة والبيئة، وسنة لتقني المواد، وسنتين لتقني المنشآت ومكلف ما قبل البيع، بينما لا تفرض مدة صريحة في بعض عروض الكهرباء والجيولوجيا والصيانة. من المهم ألا يحول المرشح كلمة «مرغوبة» إلى شرط إلزامي من عنده. في المقابل، تعرض صفحة LPEE التفصيلية لوظيفة ما قبل البيع مستوى خبرة «سنتين»، وهو تعبير أقوى من صياغة القرار؛ لذلك ينبغي الاستفسار من المشغل عند الشك، وعدم إخفاء هذا الاختلاف. وتعرض صفحة تقني الجيولوجيا مستوى «مبتدئ» رغم ذكر خبرة مرغوبة في القرار، مما يؤكد ضرورة مقارنة المصدرين."
+            ],
+            [
+              "ما الذي تفعله الوظائف فعلياً؟",
+              "لا يقدم القرار المختصر وصفاً كاملاً لكل وظيفة، ولذلك يجب الفصل بين اسم المنصب والمهام المثبتة. توضح صفحة المشغل الرسمية للعرض 2026/95 أن مكلف إدارة ما قبل البيع يتابع الفرص العمومية والخاصة، ويجمع العروض التقنية والمالية، ويفحص جداول الأسعار، ويعد وثائق طلبات العروض، ويتابع النتائج والتقارير والامتثال. هذا عمل يجمع الإدارة التجارية والتنسيق والرقابة على الوثائق، وليس مجرد استقبال زبناء. أما وظيفة الجيولوجيا 2026/91 فتذكر معرفة مواد الركام والإسمنت والملاط والمواد اللاصقة للبلاط، إلى جانب أدوات مكتبية وبرنامج CLIMEX. ولا ينبغي اختلاق مهام مماثلة لبقية الوظائف دون نشر بطاقاتها التفصيلية."
+            ],
+            [
+              "خطوات الترشيح الإلكتروني من المغرب",
+              "حددت البوابة العمومية والمختبر قناة الترشيح في الموقع الرسمي emploi.lpee.ma. يبدأ المرشح بإنشاء حساب خاص به، ثم يفتح قائمة عروض العمل ويختار المرجع المطابق لشهادته ومدينة العمل التي يقبل بها. قبل إرسال الطلب، ينبغي مطابقة الاسم والبيانات الدراسية والتخصص مع الوثائق الأصلية، وقراءة الحقول الإلزامية الظاهرة في استمارة العرض. لا يحدد القرار المقتضب قائمة موحدة ونهائية للمرفقات، لذلك لا يصح الادعاء بأن نسخة البطاقة الوطنية أو رسالة تحفيز مطلوبة حتماً لكل منصب؛ يجب اتباع ما تطلبه الاستمارة الفعلية. احتفظ بنسخة من الطلب أو رقم التتبع إن أصدره النظام، ولا ترسل بياناتك إلى وسيط غير رسمي."
+            ],
+            [
+              "الاختبارات والراتب والعقد: ما لم يرد في الإعلان",
+              "تصنف بوابة التشغيل العمومي العملية باعتبارها توظيفاً منتظماً، لكنها لا تنشر في بطاقة هذا الإعلان أجراً محدداً، ولا تاريخ اختبار كتابي أو شفوي، ولا وصفاً مؤكداً لمدة العقد لكل منصب. كذلك لا تظهر في القرار المرفق لائحة معايير تنقيط أو ترتيب المرشحين. لذلك يجب عدم تحويل معلومات عامة عن مباريات سابقة إلى شروط لهذه الحملة. إذا اتصل المشغل بالمرشح لاحقاً، يمكن طلب تأكيد نوع العقد، ومكان العمل الدقيق، وساعات العمل، والتعويضات، ومراحل الانتقاء قبل اتخاذ قرار مهني. الأجر غير المعلن لا يعني أجراً صفرياً، كما أن وجود 12 منصباً لا يضمن قبول كل من يستوفي الحد الأدنى من التكوين."
+            ],
+            [
+              "التحضير العملي للمقابلة أو الاختبار المحتمل",
+              "يمكن للمرشح التحضير دون الادعاء بمعرفة امتحان لم يُعلن عنه. على المهندس مراجعة أساسيات اختبار المواد وتوثيق النتائج، وعلى مرشح السلامة والبيئة إعداد مثال واضح لتقييم المخاطر وإجراءات التصحيح. ويمكن لتقني الكهرباء التدريب على قراءة مخطط بسيط والتعامل الآمن مع القياسات، ولتقني الجيولوجيا مراجعة تصنيف العينات ومبادئ سلامة المختبر. أما المرشح لوظيفة ما قبل البيع، فيستفيد من تمرين على تدقيق جدول أسعار وملف طلب عروض ومواعيد التسليم. هذه أمثلة تدريبية مقترحة من التحرير وليست مواضيع رسمية للاختبار. ويجب تجنب إدراج خبرات أو شهادات لم يحصل عليها المرشح فعلاً."
+            ],
+            [
+              "المخاطر والبدائل ومتى تتوقف عن التقديم",
+              "الخطر الأول هو اختيار عرض غير مناسب للشهادة، والثاني تقديم ملف ناقص، والثالث الاعتماد على إعلان معاد نشره دون التحقق من المهلة. ويجب الانتباه إلى اختلاف وصف الخبرة بين القرار وبعض صفحات المشغل، وعدم الدفع لأي شخص يعد بالتوظيف أو يطلب كلمة المرور. إذا لم يتوافق تخصصك مع أحد المراجع التسعة، فلا تصنع معادلة وهمية؛ راجع عروض المختبر الأخرى المنشورة رسمياً أو مؤسسات الاختبارات والهندسة ذات التخصص القريب. وإذا انتهت المهلة، لا تعرض الصفحة على أنها فرصة مفتوحة لمجرد بقائها مفهرسة. جرى تدقيق المعلومات في 29 أكتوبر 2026، وتظل التعديلات الرسمية اللاحقة على موقع المشغل أو بوابة التشغيل العمومي هي المرجع."
+            ]
+          ]
+        },
+        "en": {
+          "title": "LPEE Morocco: evidence-based guide to 12 jobs across nine recruitment references",
+          "deck": "Nine job references, locations, degrees and the 9 November deadline, including important differences in experience wording.",
+          "sections": [
+            [
+              "Official decision and the actual recruitment scope",
+              "The Laboratoire Public d'Essais et d'Etudes (LPEE) issued a twelve-position recruitment notice in Casablanca on 26 October 2026 under reference AR/910/26/013. The Moroccan public employment portal lists it as competition C44291/26 and specifies 9 November 2026 at 16:30 as the application deadline. The employer's one-page decision gives the same calendar date without a time, so applicants should use the earlier, precise portal cutoff rather than waiting until midnight. These are individually defined posts with distinct qualifications and locations, not twelve interchangeable openings. The offer reference is essential when comparing eligibility, expected experience and the work location before applying."
+            ],
+            [
+              "All nine references and the twelve posts",
+              "The notice contains nine offer references accounting for twelve positions. Materials project engineer 2026/87 is based in the Marrakech–Safi region; health, safety and environment correspondent 2026/88 is in Casablanca; and materials testing technician 2026/89 is in the Rabat–Salé–Kénitra region. Casablanca also has an electrical testing technician 2026/90, maintenance technician 2026/92, four electrical testing technicians 2026/93, structural testing technician 2026/94 and pre-sales administration officer 2026/95. The geology testing technician 2026/91 is specifically assigned to Tit Mellil near Casablanca. The four posts in reference 2026/93 explain why the nine references total twelve. Treating every opening as a civil-engineering role would misrepresent the actual recruitment."
+            ],
+            [
+              "Degrees, specialisms and recognition",
+              "The materials engineer role requires an engineering degree in civil engineering or materials, naming institutions such as EHTP, EMI, ENSMR and ENSA or equivalent qualifications. The HSE correspondent role calls for a master's degree in QHSE management. Depending on the specific reference, technician roles 2026/89 to 2026/92 accept DUT, BTS or a licence in construction, electrical engineering, geology or electromechanics. References 2026/93 and 2026/95 specify the specialised-technician qualification, whereas 2026/94 requests a technician diploma in building drawing. The signed notice accepts degrees issued by recognised Moroccan institutions; otherwise an equivalence certificate must accompany the application. An applicant should not interpret 'equivalent' as permission to substitute any unrelated diploma."
+            ],
+            [
+              "Desired experience is not uniformly mandatory",
+              "The signed notice generally uses the French wording 'expérience souhaitable', meaning desired rather than an automatically disqualifying requirement. It suggests two to three years for HSE, one year for materials testing, and two years for structural testing and pre-sales administration, while several electricity, geology and maintenance roles show no mandatory minimum period. There is an important nuance: LPEE's detailed page for the pre-sales role displays an experience level of two years, while the signed notice says two years are desirable. Applicants should read both documents and seek clarification if eligibility hinges on that difference. The employer's geology listing says 'beginner' even though the signed notice prefers experience; neither statement justifies inventing a strict exclusion."
+            ],
+            [
+              "Duties actually supported by the employer's descriptions",
+              "The one-page decision lists job titles and qualifications but not comprehensive duties for every role. For pre-sales administration offer 2026/95, the employer's detailed page describes identifying public and private opportunities, consolidating technical and financial proposals, checking price schedules, preparing tender documentation, monitoring results and reporting, and ensuring administrative compliance. It is therefore a commercial administration and bid-coordination function, not merely a customer reception job. For geology offer 2026/91, the employer mentions aggregates, cement, mortar and tile adhesives, together with office software and CLIMEX microscope-related knowledge. These are verified examples from two individual employer listings; comparable responsibilities should not be attributed to the other seven references without reading their own job pages."
+            ],
+            [
+              "How to apply from Morocco",
+              "Both the government listing and the signed employer notice direct candidates to the official recruitment portal at emploi.lpee.ma. The candidate should create an account, browse current openings and select the exact reference matching their diploma and acceptable work location. The information entered should agree with original education records and any equivalence certificate. The one-page notice does not publish a complete universal list of attachments, so it would be misleading to claim that a national ID scan, cover letter or other document is invariably required for all nine offers. Follow the actual form for the chosen opening and save a submission confirmation or tracking number if the system provides one. Avoid unofficial intermediaries and never share an account password."
+            ],
+            [
+              "Salary, tests and contract terms not established",
+              "The public employment portal categorises this campaign as regular recruitment, but the reviewed listing does not state a salary, written examination date, interview timetable, exact contract duration or detailed scoring rules. The employer's one-page notice likewise does not establish these conditions. Information from earlier LPEE campaigns cannot be presented as current terms. If contacted, candidates can request written clarification about the contractual arrangement, precise workplace, working hours, benefits and selection stages before making employment decisions. A missing salary figure is not evidence that the role is unpaid, and a degree match does not guarantee shortlisting. Reporting uncertainty is more useful than filling the gaps with plausible-looking numbers."
+            ],
+            [
+              "Practical preparation without inventing exam topics",
+              "Preparation can be relevant even though no official test syllabus was published in the reviewed documents. An engineering candidate may revise materials testing and reporting principles; an HSE candidate can practise explaining a hazard assessment and corrective action. Electrical technicians may revisit diagrams, measurement safety and calibration basics, while geology candidates can review sample identification and laboratory safety. A pre-sales administration applicant could rehearse reviewing a tender price sheet, checking required attachments and tracking submission deadlines. These are editorial practice suggestions, not claimed examination questions or evidence of the employer's assessment method. Candidates should prepare concise examples of genuine past work and avoid embellishing qualifications or experience."
+            ],
+            [
+              "Risks, alternatives and update policy",
+              "The main risks are choosing an incompatible reference, omitting a required form attachment, relying on a republished deadline or misunderstanding desired experience as compulsory. Applicants should also be cautious about any intermediary demanding payment, passwords or guaranteed placement. If none of the nine profiles fits, it is safer to consult other verified LPEE openings or related engineering and laboratory employers than to misstate an equivalence. Once 9 November has passed, this article should be treated as a historical recruitment guide unless an official extension appears. The facts were reviewed on 29 October 2026 using the signed employer notice, the government portal and individual employer job descriptions; later official amendments take precedence."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours LPEE 2026 : guide vérifié des 12 postes répartis sur neuf références",
+          "deck": "Les neuf références, diplômes, affectations et délai du 9 novembre, avec les nuances entre l'avis signé et les fiches du recruteur.",
+          "sections": [
+            [
+              "Décision officielle et périmètre du recrutement",
+              "Le Laboratoire Public d'Essais et d'Etudes (LPEE) a lancé à Casablanca, le 26 octobre 2026, un appel à candidatures pour douze postes sous la référence AR/910/26/013. Le portail de l'emploi public enregistre le concours C44291/26 et fixe la clôture au 9 novembre 2026 à 16 h 30. L'avis original mentionne la même date sans heure précise : il est donc prudent de respecter l'horaire le plus explicite, sans attendre la fin de la journée. Il ne s'agit pas de douze postes identiques. Chaque référence possède son niveau de formation, sa spécialité et son lieu d'affectation. La première vérification du candidat consiste à identifier la bonne référence avant de préparer son dossier."
+            ],
+            [
+              "Neuf références pour douze postes répartis par région",
+              "L'avis comporte neuf références totalisant douze recrutements. L'ingénieur chef de projet en matériaux 2026/87 est affecté à la région Marrakech–Safi, le correspondant Hygiène Sécurité Environnement 2026/88 à Casablanca et le technicien d'essais en matériaux 2026/89 à Rabat–Salé–Kénitra. Casablanca accueille aussi le technicien d'essais en électricité 2026/90, le technicien de maintenance 2026/92, quatre techniciens d'essais en électricité 2026/93, le technicien d'essais en structure 2026/94 et le chargé d'administration avant-vente 2026/95. Le technicien d'essais en géologie 2026/91 est affecté à Tit Mellil. Les quatre places de 2026/93 expliquent le total. Présenter cette campagne comme douze emplois exclusivement en génie civil serait inexact."
+            ],
+            [
+              "Diplômes et spécialités à vérifier offre par offre",
+              "Le poste d'ingénieur matériaux demande un diplôme d'ingénieur en génie civil ou matériaux, avec mention d'établissements tels que l'EHTP, l'EMI, l'ENSMR et l'ENSA ou équivalent. Le correspondant HSE doit disposer d'un master en management QHSE. Selon la référence, les techniciens 2026/89 à 2026/92 doivent posséder un DUT, un BTS ou une licence en bâtiment, électricité, géologie ou électromécanique. Les postes 2026/93 et 2026/95 ciblent des techniciens spécialisés, tandis que 2026/94 vise un technicien en dessin de bâtiment. L'avis précise que les diplômes d'établissements marocains reconnus sont recevables ; à défaut, une attestation d'équivalence doit être jointe. La mention « équivalent » ne dispense pas de justifier la reconnaissance du diplôme."
+            ],
+            [
+              "Expérience souhaitable et différences entre sources",
+              "La plupart des lignes de l'avis signé parlent d'« expérience souhaitable », ce qui ne signifie pas automatiquement une condition éliminatoire. Deux à trois ans sont souhaités pour le HSE, un an pour les essais de matériaux et deux ans pour les essais de structure et l'avant-vente. Plusieurs postes en électricité, géologie et maintenance ne comportent pas de durée impérative. Une nuance mérite une alerte : la fiche détaillée du LPEE pour l'avant-vente affiche un niveau d'expérience de deux ans, alors que l'avis officiel présente ces deux années comme souhaitables. Il convient de demander une clarification si ce point détermine l'éligibilité. Pour la géologie, la fiche employeur affiche « débutant » malgré l'expérience souhaitable de l'avis."
+            ],
+            [
+              "Missions réellement décrites par le recruteur",
+              "La décision d'une page indique les intitulés et les conditions, mais ne détaille pas toutes les tâches des neuf références. Pour l'offre avant-vente 2026/95, la fiche du LPEE précise la prospection des affaires publiques et privées, la consolidation des offres techniques et financières, le contrôle des bordereaux de prix, la préparation des dossiers d'appels d'offres, le suivi des résultats et le reporting. Il s'agit d'une fonction d'administration commerciale et de coordination des soumissions, et non d'un simple accueil. Pour la géologie 2026/91, la fiche mentionne les granulats, ciments, mortiers et colles à carrelage, ainsi que la bureautique et CLIMEX. Ces missions vérifiées ne doivent pas être extrapolées aux autres postes sans consulter leurs propres fiches."
+            ],
+            [
+              "Procédure de candidature depuis le Maroc",
+              "Le portail public et l'avis du recruteur renvoient au site officiel emploi.lpee.ma pour le dépôt des candidatures. Le candidat crée son espace personnel, consulte les offres disponibles et sélectionne la référence correspondant exactement à son diplôme et à la région où il accepte de travailler. Les informations déclarées doivent être cohérentes avec les justificatifs scolaires et l'éventuelle attestation d'équivalence. L'avis d'une page ne fournit pas une liste universelle et exhaustive des pièces à joindre : il serait donc abusif d'affirmer que la carte d'identité, la lettre de motivation ou un document particulier sont systématiquement exigés pour toutes les offres. Il faut suivre les champs du formulaire choisi et conserver une preuve de dépôt lorsqu'elle est fournie."
+            ],
+            [
+              "Salaire, épreuves et contrat : les inconnues à signaler",
+              "Le portail classe l'annonce dans le recrutement régulier, mais ni sa fiche ni l'avis d'une page ne publient un montant de salaire, un calendrier d'épreuves écrites ou orales, une durée contractuelle exacte ou un barème de sélection. Les modalités d'une campagne précédente ne peuvent pas être transférées à celle-ci sans confirmation. Si l'employeur contacte le candidat, il est utile de demander des précisions écrites sur le contrat, le lieu de travail, les horaires, les avantages et les étapes de sélection. L'absence de salaire dans l'annonce ne signifie pas que l'emploi n'est pas rémunéré. Remplir les conditions de diplôme ne garantit pas non plus la présélection ou l'embauche."
+            ],
+            [
+              "Se préparer sans inventer un programme de concours",
+              "Même sans programme officiel d'épreuve, une préparation ciblée peut être utile. L'ingénieur peut revoir les méthodes d'essais de matériaux et la traçabilité des résultats ; le candidat HSE peut préparer un exemple d'analyse de risques et d'action corrective. Les techniciens en électricité peuvent réviser la lecture de schémas et la sécurité des mesures, et les candidats en géologie l'identification des échantillons et les précautions en laboratoire. Pour l'avant-vente, un exercice de vérification d'un bordereau de prix et d'un dossier de soumission serait pertinent. Ce sont des exercices proposés par la rédaction, et non des sujets annoncés par le LPEE. Il faut pouvoir expliquer ses compétences sans inventer de stages ou de certifications."
+            ],
+            [
+              "Risques de candidature, alternatives et actualisation",
+              "Les erreurs les plus coûteuses sont le choix d'une référence incompatible, un dossier incomplet, une candidature déposée après l'heure officielle et la confusion entre expérience souhaitée et obligatoire. Aucun intermédiaire ne doit recevoir un paiement en échange d'une promesse de recrutement ou les identifiants du compte candidat. Si aucune des neuf références ne correspond au profil, mieux vaut rechercher d'autres offres officielles du LPEE ou d'employeurs du secteur plutôt que déclarer une fausse équivalence. Après le 9 novembre, l'annonce doit être présentée comme clôturée sauf prolongation officielle. Les informations ont été vérifiées le 29 octobre 2026 sur l'avis signé, le portail public et les fiches du recruteur ; toute modification officielle ultérieure prime."
+            ]
+          ]
+        }
+      }
     }
   }
 }
