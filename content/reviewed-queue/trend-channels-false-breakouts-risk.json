@@ -1,0 +1,180 @@
+{
+  "sectionId": "trading-risk",
+  "article": {
+    "slug": "trend-channels-false-breakouts-risk",
+    "category": "trading",
+    "date": "2026-10-29",
+    "updated": "2026-10-29",
+    "featured": false,
+    "related": [
+      "support-resistance-zones-price-chart-falsifiable-test",
+      "fixed-versus-trailing-stop-order-frictions",
+      "trading-bot-backtest-spread-slippage-reality-check"
+    ],
+    "sources": [
+      {
+        "label": "CME Group — Support and Resistance, technical-analysis lesson (consulted 29 October 2026)",
+        "url": "https://www.cmegroup.com/fr/education/courses/technical-analysis/support-and-resistance.html"
+      },
+      {
+        "label": "SEC Investor.gov — Stop, Stop-Limit, and Trailing Stop Orders, updated 18 August 2026",
+        "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-15"
+      },
+      {
+        "label": "CFTC — Forex Frauds and retail trading risks (consulted 29 October 2026)",
+        "url": "https://www.cftc.gov/LearnAndProtect/forexfrauds"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "القنوات السعرية والاختراقات الكاذبة: اختبار عملي وحدود المخاطرة",
+        "excerpt": "قواعد قابلة للتكرار لرسم القنوات وتصنيف الاختراقات الفاشلة وحساب مخاطر التنفيذ.",
+        "lead": "قد تبدو القناة السعرية واضحة على رسم مكتمل، لكن هذا لا يثبت أنها كانت قابلة للاستخدام لحظة تشكلها. سنبني هنا اختباراً يمكن تكراره دون معرفة المستقبل، ونفصل بين اختراق الحد واستمرار الاتجاه، ونحسب ما يحدث حين يفشل التوقع. جميع الأسعار الواردة أمثلة تعليمية افتراضية، وليست بيانات سوق أو توصيات شراء وبيع.",
+        "sections": [
+          {
+            "heading": "1. ما الذي تصفه القناة وما الذي لا تثبته؟",
+            "paragraphs": [
+              "تُرسم القناة الصاعدة بخط يصل قيعاناً متتابعة وخط موازٍ قريب من القمم، بينما تعكس القناة الهابطة هذه الفكرة. يوضح درس CME أن خطوط الاتجاه والقمم والقيعان تُستخدم لتقدير مناطق الدعم والمقاومة، لكنه ينبه إلى أن هذه مناطق تقريبية وليست أسعاراً دقيقة. لا يعني ظهور ثلاثة ارتدادات على الرسم أن الارتداد الرابع مضمون، ولا يصح اختيار نقاط الارتكاز بعد مشاهدة الحركة اللاحقة ثم وصف النتيجة بأنها توقع ناجح. ما نراه بعد الحدث قد يكون مجرد انتقاء بصري.",
+              "قبل الرسم حدد الأصل المالي ومصدر الأسعار والمنطقة الزمنية والإطار اليومي أو الساعي والفترة المدروسة. اكتب إن كنت تستخدم إغلاق الشمعة أم أعلى وأدنى سعر فيها، وهل تتضمن البيانات الفجوات السعرية. لا تغير هذه القرارات لأن النتيجة لم تعجبك. القناة على سهم لا تشبه بالضرورة القناة على الذهب أو العملات بسبب اختلاف السيولة وساعات التداول. والغاية من القناة وصف نمط يمكن اختباره، لا إصدار إشارة موثوقة بذاتها أو إثبات أن الأسعار ملزمة باحترام خط."
+            ]
+          },
+          {
+            "heading": "2. رسم القناة دون تسريب معلومات من المستقبل",
+            "paragraphs": [
+              "اكتب قاعدة قبل اختبار البيانات: مثلاً وصل قاعين مؤكدين يفصل بينهما عدد محدد من الشموع، ثم ارسم خطاً موازياً عبر أعلى قمة كانت معروفة في ذلك التاريخ. إذا احتجت إلى شمعتين لاحقتين لتأكيد قاع، فلا تسمح للاختبار باستخدام القاع قبل مرور الشمعتين. أعد رسم الحدود وفق جدول ثابت مثل نهاية كل جلسة، لا عندما يصبح الاختراق واضحاً بعد أيام. بهذه الطريقة تقلل خطأ التطلع إلى المستقبل الذي يجعل الاستراتيجيات التاريخية تبدو أفضل من إمكانية تنفيذها.",
+              "يمكن السماح بهامش حول الحد بدلاً من اشتراط ملامسة مثالية، لكن يجب تثبيت الهامش قبل رؤية النتائج، كأن يكون جزءاً محدداً من متوسط مدى الحركة. سجل طريقة الحساب ولا تعدلها حتى تتحسن نسبة النجاح على عينة واحدة. احتفظ بصورة مؤرخة أو بإحداثيات نقاط الرسم لكل قرار، بما فيها القنوات التي رفضتها لعدم كفاية القمم أو القيعان. يستطيع قارئ مستقل عندئذ إعادة بناء الخطوط من البيانات المتاحة في لحظتها، بدلاً من الثقة في لقطة مختارة من الماضي."
+            ]
+          },
+          {
+            "heading": "3. الاختراق الحقيقي والكاذب تعريفان للاختبار لا للتنبؤ",
+            "paragraphs": [
+              "ليس وصول أعلى شمعة إلى خارج القناة مساوياً لإغلاقها خارجها. حدد الإشارة سلفاً، مثل إغلاق يومي فوق الحد العلوي بمقدار يزيد على هامش نصف وحدة. ثم حدد الفشل: عودة الإغلاق داخل القناة خلال الشموع الثلاث التالية، أو بلوغ مستوى خسارة قبل هدف معلن. إذا عاد السعر بعد عشر جلسات فلا تغير نافذة الثلاث جلسات لإظهار نتيجة أفضل. عند لحظة الاختراق لا تعرف مسبقاً هل سيكون كاذباً؛ التصنيف النهائي لا يظهر إلا بعد انتهاء النافذة.",
+              "احسب جميع الاختراقات، بما فيها التي فشلت والتي استمرت والتي لم تتضح نتيجتها، ولا تنتقِ صوراً جذابة فقط. إذا كان عدد الحالات صغيراً، فاذكر أنه لا يسمح بتقدير ثابت لاحتمال النجاح. وقد يكون ارتفاع حجم التداول معلومة إضافية عندما تتوفر بيانات موثوقة، لكنه لا يضمن استمرار الاتجاه. قارن كذلك فترات الأخبار والأيام العادية، وفترات الاتجاه القوي والأسواق المتذبذبة. لا تنسب الحركة إلى الخط وحده؛ قد يكون إعلان أرباح أو قرار فائدة هو المحرك الأساسي."
+            ]
+          },
+          {
+            "heading": "4. مثال حسابي يوضح أثر الانزلاق السعري",
+            "paragraphs": [
+              "افترض قناة تعليمية حدها العلوي 110 والسفلي 100 وهامش اختراق 0.5. إغلاق الشمعة عند 110.7 يحقق شرط الاختراق، لكنه لا يفرض شراءً. يستطيع الباحث مقارنة الدخول فوراً والانتظار وعدم التداول. إذا عاد الإغلاق إلى 109.8 خلال ثلاث شموع، تُصنف الحالة فاشلة وفق التعريف السابق. هذه أرقام مصطنعة لا تمثل أصلاً حقيقياً أو عائداً متوقعاً. يجب تدوين نتيجة كل خيار، لا الاكتفاء بالخيار الذي كان سيحقق ربحاً بعد معرفة المستقبل.",
+              "افترض ميزانية خسارة تعليمية 50 وحدة نقدية ودخولاً افتراضياً عند 110.7 ووقفاً عند 108.7؛ الفرق وحدتان، فيكون الحجم النظري 50 مقسوماً على 2 أي 25 وحدة قبل الرسوم. لكن هذا لا يصلح لعقد تختلف فيه قيمة النقطة أو الحد الأدنى أو الهامش. وإذا نفذ الوقف عند 108 بدلاً من 108.7 بسبب فجوة، تصبح الخسارة 25 مضروبة في 2.7 أي 67.5 وحدة قبل الرسوم. خط الوقف لا يضمن سعر التنفيذ."
+            ]
+          },
+          {
+            "heading": "5. اختبار المخاطر والنتائج قبل المال الحقيقي",
+            "paragraphs": [
+              "توضح نشرة هيئة الأوراق المالية الأمريكية المحدثة في 18 أغسطس 2026 أن أمر الوقف العادي يتحول إلى أمر سوق بعد تفعيله، وقد ينفذ بعيداً عن السعر المحدد. أما الوقف المحدد فقد لا ينفذ أصلاً. تتناول النشرة الأسهم أساساً، وتختلف التفاصيل لدى وسطاء العقود المستقبلية والفوركس. حذرت هيئة CFTC أيضاً من الوعود بعوائد مضمونة وإشارات فوركس مدفوعة ومنصات غير مسجلة. راجع ترخيص الوسيط والسبريد والعمولات والرافعة وشروط التصفية، ولا تستخدم نفقات المعيشة للتجربة.",
+              "أنشئ دفتر اختبار يسجل وقت ظهور القناة ونقاطها المتاحة والاختراق والتكلفة والقرار والنتيجة بعد النافذة. احتفظ بالحالات الفاشلة وبالأيام التي لم تظهر فيها إشارة؛ حذفها يحسن الأداء ظاهرياً. افصل فترة تطوير القاعدة عن فترة تقييم جديدة، ثم اختبر حساسية النتيجة لزيادة السبريد أو تأخير التنفيذ شمعة واحدة. اعرض عدد الحالات ومتوسط الربح والخسارة والتراجع الأقصى إلى جانب نسبة النجاح. النتيجة المهنية المتواضعة هي فرضية قابلة للدحض، لا وصفة ربح أو إشارة مؤكدة. مراجعة 29 أكتوبر 2026."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Price channels and false breakouts: a reproducible risk test",
+        "excerpt": "A practical protocol for drawing channels without hindsight, classifying failures and estimating execution risk.",
+        "lead": "A price channel can look obvious on a finished chart, yet that neat picture does not prove it was usable while it formed. This guide builds a repeatable experiment without future information, distinguishes crossing a boundary from sustained movement, and measures what happens when the forecast fails. All numerical prices below are invented educational examples, not market quotations, forecasts or recommendations to trade.",
+        "sections": [
+          {
+            "heading": "1. What a channel describes and what it cannot prove",
+            "paragraphs": [
+              "An upward channel commonly joins successive lows with a line and places a roughly parallel line near highs; a downward channel reverses the geometry. CME Group explains how trend lines, highs and lows can suggest support and resistance zones, while warning that these are approximate areas rather than exact prices. Three attractive rebounds on a historical chart do not guarantee a fourth. Selecting pivots after observing subsequent prices can make almost any chart look predictable. A drawing that works only after the outcome is known has little practical testing value.",
+              "Before drawing, specify the instrument, data provider, time zone, candle interval and observation period. State whether the boundary uses closing prices or intraday highs and lows, and how gaps are handled. Do not change these choices merely because the result is inconvenient. A channel on a share may behave differently from one on gold futures or foreign exchange because of liquidity, trading hours and news events. Its purpose is to describe a testable pattern, not to command prices to respect a line or supply a reliable signal on its own."
+            ]
+          },
+          {
+            "heading": "2. Draw boundaries without leaking future information",
+            "paragraphs": [
+              "Write the rule before inspecting the outcome. For example, connect two confirmed swing lows separated by a minimum number of candles, then draw a parallel through the highest high that was already known at that date. If confirming a low requires two later candles, the test must wait for those candles before using that pivot. Update boundaries on a fixed schedule, perhaps at each daily close, rather than redrawing them after a dramatic move. This reduces look-ahead bias, which often makes historical strategies appear more successful than real execution permits.",
+              "A tolerance band may be more realistic than demanding perfect touches, but choose the tolerance before testing, perhaps as a stated fraction of average true range. Document the calculation and avoid optimizing it on one sample and claiming general validity. Keep timestamped images or pivot coordinates for every decision, including channels rejected for insufficient points. Another analyst should be able to reconstruct the lines using only information available at that moment. Without that audit trail, an appealing screenshot cannot distinguish a genuine rule from retrospective curve fitting."
+            ]
+          },
+          {
+            "heading": "3. A false breakout is a test label, not instant knowledge",
+            "paragraphs": [
+              "A candle's intraday high passing the boundary is not the same as a close beyond it. Define the trigger beforehand, such as a daily close above the upper edge by more than half a price unit. Define failure too: a close back inside within the following three candles, or a hypothetical protective exit before a stated target. If price returns after ten sessions, do not quietly expand a three-session window to improve the story. At the breakout close, nobody knows whether it will prove false; the final label arrives only after the evaluation period.",
+              "Count every qualifying break, including sustained moves, failures and cases whose outcome remains unclear. Do not select only striking screenshots. A small sample cannot establish a stable success probability. High trading volume can add context when volume data are reliable, but it does not guarantee continuation. Compare news days with ordinary sessions, and trending with choppy markets. A channel break may coincide with an earnings report or central-bank decision, so it is not evidence that the drawn line caused the movement. Distinguish observation, hypothesis and unknowable future events."
+            ]
+          },
+          {
+            "heading": "4. Invented arithmetic reveals slippage risk",
+            "paragraphs": [
+              "Imagine a teaching example with a channel upper edge at 110, lower edge at 100 and breakout margin of 0.5. A candle closing at 110.7 meets the trigger, but buying is optional. A researcher can compare immediate entry, waiting for another close, and no position. If a close returns to 109.8 within three candles, the event is classified as failed under this particular definition. These numbers are fabricated and refer to no live instrument or expected return. Record each alternative, not just the one that would have looked profitable with hindsight.",
+              "Suppose a hypothetical loss budget is 50 currency units, entry is 110.7 and the stop trigger is 108.7. The nominal distance is two units, yielding a simple position size of 50 divided by 2, or 25 units before fees. This does not apply automatically to contracts with different point values, lot sizes or margin. If a gap leads to execution at 108 instead of 108.7, the loss becomes 25 times 2.7, or 67.5 currency units before costs. A stop line cannot guarantee the actual execution price."
+            ]
+          },
+          {
+            "heading": "5. Test risk and outcomes before risking real money",
+            "paragraphs": [
+              "The US Securities and Exchange Commission bulletin updated on 18 August 2026 explains that an ordinary stop becomes a market order when triggered and can execute far from its trigger price. A stop-limit can remain unfilled. The bulletin mainly addresses shares, so rules for futures and forex brokers require separate checking. The CFTC also warns against guaranteed-return forex signals and unregistered platforms. Examine the broker's regulator, spread, commissions, leverage and liquidation terms. Essential living expenses are not appropriate experimental funds, and a demo account can teach mechanics without risking savings.",
+              "Keep a test log with the moment a channel became identifiable, then-known pivots, breakout, estimated costs, decision and outcome after the evaluation window. Preserve failed setups and days without a signal; deleting them inflates apparent performance. Separate rule development from a later evaluation period, then stress-test wider spreads or a one-candle execution delay. Report sample size, average gain and loss, maximum drawdown and costs alongside the win rate. A defensible conclusion is a hypothesis that might fail, not a guaranteed entry, predictable income or saleable certainty. Editorial review: 29 October 2026."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Canaux de prix et fausses cassures : un protocole reproductible de risque",
+        "excerpt": "Tracer les canaux sans connaître l'avenir, classer les échecs et mesurer les risques d'exécution.",
+        "lead": "Un canal de prix paraît souvent évident sur un graphique achevé, sans que cela prouve son utilité au moment de sa formation. Ce guide construit une expérience reproductible sans informations futures, distingue le franchissement d'une borne d'un mouvement durable et mesure le coût d'une erreur. Tous les prix numériques sont fictifs, destinés à l'apprentissage, et ne constituent ni cotations, ni prévisions, ni recommandations de négociation.",
+        "sections": [
+          {
+            "heading": "1. Ce que décrit un canal et ce qu'il ne prouve pas",
+            "paragraphs": [
+              "Un canal ascendant relie généralement plusieurs creux par une droite et place une parallèle près des sommets ; le principe s'inverse pour un canal descendant. CME Group explique que les lignes de tendance, sommets et creux peuvent servir de repères de support et de résistance, tout en rappelant qu'il s'agit de zones approximatives, non de prix exacts. Trois rebonds visibles sur un graphique historique ne garantissent pas le quatrième. Choisir les points après avoir vu les cours suivants peut donner une impression trompeuse de prévisibilité.",
+              "Avant le tracé, précisez l'instrument, le fournisseur de données, le fuseau horaire, l'unité des bougies et la période étudiée. Indiquez si les bornes reposent sur les clôtures ou sur les extrêmes intrajournaliers, et comment les écarts d'ouverture sont traités. Ne modifiez pas ces choix après une observation décevante. Un canal sur une action n'a pas nécessairement le comportement d'un canal sur l'or ou les devises : liquidité, horaires et annonces diffèrent. Il s'agit d'une description à tester, pas d'un ordre imposé au marché."
+            ]
+          },
+          {
+            "heading": "2. Construire les bornes sans utiliser le futur",
+            "paragraphs": [
+              "Écrivez la règle avant de connaître le résultat. Par exemple, reliez deux creux confirmés séparés par un nombre minimal de bougies, puis tracez une parallèle passant par le sommet le plus haut déjà connu. Si confirmer un creux exige deux bougies supplémentaires, le test doit attendre leur apparition avant d'utiliser ce point. Actualisez les lignes selon un calendrier fixe, par exemple à chaque clôture quotidienne, et non après un mouvement spectaculaire. Cette discipline réduit le biais d'anticipation qui embellit artificiellement les stratégies historiques.",
+              "Une marge autour de la ligne peut être plus réaliste qu'un contact parfait, mais elle doit être fixée avant le test, éventuellement comme fraction de l'amplitude moyenne réelle. Documentez le calcul et évitez de choisir le seuil qui améliore seulement une période. Conservez des captures datées ou les coordonnées des pivots pour chaque décision, y compris les canaux rejetés faute de points. Un autre analyste doit pouvoir reconstruire le dessin à partir des seules informations disponibles à cette date. Sans trace vérifiable, une image séduisante ne prouve rien."
+            ]
+          },
+          {
+            "heading": "3. Une fausse cassure se classe après coup",
+            "paragraphs": [
+              "Le plus haut d'une bougie franchissant la borne n'est pas équivalent à une clôture au-delà de celle-ci. Définissez le déclencheur à l'avance, par exemple une clôture quotidienne supérieure à la limite haute de plus d'une demi-unité. Définissez aussi l'échec : retour de la clôture dans le canal pendant les trois bougies suivantes, ou sortie de protection avant un objectif annoncé. Si le prix revient après dix séances, ne prolongez pas discrètement la fenêtre de trois séances. À l'instant de la cassure, son caractère faux reste inconnu.",
+              "Comptez toutes les cassures admissibles : prolongements, échecs et résultats encore indéterminés. Ne sélectionnez pas uniquement des captures spectaculaires. Un petit échantillon ne permet pas d'établir une probabilité stable de réussite. Le volume échangé peut éclairer le contexte lorsque les données sont fiables, sans garantir une continuation. Comparez les jours d'annonce aux séances ordinaires et les marchés directionnels aux périodes hésitantes. Une décision monétaire ou des résultats d'entreprise peuvent expliquer le mouvement ; le dessin n'en est pas nécessairement la cause."
+            ]
+          },
+          {
+            "heading": "4. Un calcul fictif révèle le risque de glissement",
+            "paragraphs": [
+              "Imaginons un canal pédagogique dont la borne haute vaut 110, la borne basse 100 et la marge de cassure 0,5. Une clôture à 110,7 satisfait la condition, mais l'achat n'est pas obligatoire. On peut comparer une entrée immédiate, l'attente d'une nouvelle clôture et l'absence de position. Si le cours clôture à 109,8 dans les trois bougies, l'événement est classé comme échec selon cette règle. Ces chiffres sont inventés et ne correspondent à aucun marché réel. Il faut enregistrer toutes les options, pas seulement celle qui paraît gagnante après coup.",
+              "Supposons un budget de perte théorique de 50 unités monétaires, une entrée à 110,7 et un seuil de stop à 108,7. L'écart nominal vaut deux unités ; le calcul simplifié donne 50 divisé par 2, soit 25 unités avant frais. Ce résultat ne convient pas automatiquement aux contrats dont la valeur du point, la taille minimale ou la marge diffèrent. Si un saut de prix entraîne une exécution à 108 plutôt qu'à 108,7, la perte devient 25 multiplié par 2,7, soit 67,5 unités avant frais. Le stop ne garantit pas le prix obtenu."
+            ]
+          },
+          {
+            "heading": "5. Évaluer les risques avant d'engager de l'argent",
+            "paragraphs": [
+              "Le bulletin de la Securities and Exchange Commission américaine, actualisé le 18 août 2026, précise qu'un stop ordinaire devient un ordre au marché après son déclenchement et peut être exécuté loin du seuil. Un stop à cours limité peut ne pas être exécuté. Le document traite principalement des actions ; les règles des courtiers en contrats à terme ou en devises doivent être vérifiées séparément. La CFTC met aussi en garde contre les signaux de change promettant des gains garantis et les plateformes non enregistrées. Vérifiez régulation, spread, commissions, levier et liquidation.",
+              "Tenez un journal indiquant quand le canal est devenu identifiable, les pivots alors connus, la cassure, les coûts estimés, la décision et le résultat après la fenêtre choisie. Conservez les échecs et les journées sans signal ; les supprimer embellit artificiellement le bilan. Séparez la période de conception d'une période ultérieure d'évaluation, puis simulez un spread plus large ou une entrée retardée d'une bougie. Présentez effectif, gains et pertes moyens, recul maximal et coûts avec le taux de réussite. L'objectif est une hypothèse réfutable, jamais une promesse de revenus. Relecture : 29 octobre 2026."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1748439435495-722cc1728b7e",
+    "source": "https://unsplash.com/photos/a-traders-desk-is-lit-up-with-charts-aGKspo5OIyg",
+    "photographer": "Jakub Żerdzicki",
+    "alt": "Photograph of a trading desk with charts, illustrative only and not proof of trading performance",
+    "altAr": "صورة حقيقية لمكتب تداول وشاشات رسوم بيانية؛ للتوضيح لا لإثبات ربحية استراتيجية",
+    "altFr": "Photographie d'un bureau de négociation avec graphiques, illustrative sans preuve de performance",
+    "license": "Unsplash License",
+    "note": "Original free Unsplash photograph by Jakub Żerdzicki, published 28 May 2025; original photo page, photographer, image asset ID and license verified 29 October 2026. Illustrative, not an audited chart."
+  },
+  "resourceIds": [
+    "cme",
+    "investor",
+    "cftc"
+  ],
+  "review": {
+    "ready": true,
+    "checkedAt": "2026-10-29",
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Read CME Group support/resistance, SEC bulletin updated 18 August 2026 and CFTC retail forex fraud guidance. Verified distinct AR/EN/FR full-length translations, arithmetic and stop-order limitations; no claims of trading performance. Original free Unsplash photograph published 28 May 2025, photo ID, author and license verified; compared image ID/source against published, queued, market, recipe, opportunity and sports-tech photo records. Five substantial sections per language, at least 480 whitespace-separated words."
+  }
+}
