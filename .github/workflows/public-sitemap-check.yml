@@ -144,8 +144,8 @@ jobs:
                       assert cnrst.count('class="opp-guide-section" id="part-')>=9, f'{lang}: CNRST management report lacks nine sections'
                       assert 'C44248/26' in cnrst and 'b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf' in cnrst, f'{lang}: CNRST original notice or competition reference missing'
                       assert 'opp-guide-sources' in cnrst and 'target="_blank"' in cnrst, f'{lang}: CNRST original source links missing'
-                      assert '2026' in cnrst and ('8' in cnrst and '9' in cnrst), f'{lang}: CNRST conflicting deadline warning missing'
-                      print(f'CNRST MANAGEMENT LIVE {lang}: nine source-backed sections and conflicting 8/9 November deadlines',flush=True)
+                      assert '2026' in cnrst and ('8' in cnrst and '9' in cnrst), f'{lang}: CNRST deadline wording explanation missing'
+                      print(f'CNRST MANAGEMENT LIVE {lang}: nine source-backed sections, portal 8 Nov deadline and notice wording before 9 Nov',flush=True)
                       gdevelop=bodies[f'/{lang}/ai/gdevelop-no-code-first-prototype/'].decode('utf-8')
                       assert gdevelop.count('class="article-block"')>=6, f'{lang}: GDevelop guide lacks six substantive sections'
                       assert 'article-sources' in gdevelop and 'licensed-editorial-photo' in gdevelop, f'{lang}: GDevelop guide lacks sources or licensed image'
