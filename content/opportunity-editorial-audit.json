@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 20,
+    "researched": 21,
     "marketEvidence": 5,
-    "pendingDetail": 70
+    "pendingDetail": 69
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -313,10 +313,14 @@
       "section": "competitions",
       "title": "271 postes — 25 cadres, 119 agents de maîtrise, 127 agents d'exécution",
       "deadline": "2026-10-31",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-10-31",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e25c50f3-f5dc-4570-b991-981517e9a17b"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e25c50f3-f5dc-4570-b991-981517e9a17b",
+      "researchedAt": "2026-10-29",
+      "evidenceId": "srm-fes-meknes-271",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/srm-fes-meknes-271/",
+      "verification": "Signed original eight-page decision reviewed 29 Oct 2026, checked against official government listing; 10 original sections in AR/EN/FR, 936/1095/1133 words. GitHub Pages deploy 40814951917 and live public-sitemap-check 40814993952 successful; all three pages HTTP 200, 10 sections and original decision/source links."
     },
     {
       "id": "lpee-12",
