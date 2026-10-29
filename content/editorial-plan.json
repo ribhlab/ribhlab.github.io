@@ -980,14 +980,10 @@
         "understand-price-charts",
         "elliott-wave-technical-analysis-course",
         "trading-bot-backtest-spread-slippage-reality-check",
-        "fixed-versus-trailing-stop-order-frictions"
+        "fixed-versus-trailing-stop-order-frictions",
+        "risk-budget-drawdown-math-beginners"
       ],
       "ideas": [
-        {
-          "sequence": 6,
-          "titleAr": "الترند والقنوات السعرية",
-          "status": "planned"
-        },
         {
           "sequence": 7,
           "titleAr": "إدارة رأس المال للمبتدئ",

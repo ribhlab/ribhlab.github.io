@@ -920,6 +920,10 @@
       "googlePeopleFirstContent",
       "googleGenerativeAiContent",
       "googleSearch"
+    ],
+    "risk-budget-drawdown-math-beginners": [
+      "investor",
+      "cftc"
     ]
   }
 }
