@@ -11,9 +11,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 28,
+    "researched": 29,
     "marketEvidence": 5,
-    "pendingDetail": 62
+    "pendingDetail": 61
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -514,10 +514,13 @@
       "section": "competitions",
       "title": "Technicien 3e grade",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/64194e96-bc55-4817-8ddd-c9b0e5d0d6d1"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/64194e96-bc55-4817-8ddd-c9b0e5d0d6d1",
+      "reviewedAt": "2026-10-29",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/srm-souss-technician/",
+      "verification": "Original 3-page signed decision and official C44292/26 listing checked 29 October 2026; eight original sections per language; live public HTTPS AR/EN/FR checked in GitHub Actions run 40877846918 after build 40877740227 and Pages deploy 40877740247 succeeded."
     },
     {
       "id": "cnrst-administrator-4",
