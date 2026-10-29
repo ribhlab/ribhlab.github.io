@@ -3889,6 +3889,221 @@
           ]
         }
       }
+    },
+    "civil-protection": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Reviewed all three pages of the Arabic DGPC official decision dated 16 October 2026 and cross-checked the national emploi-public card C44132/26 and the DGPC recruitment portal on 29 October 2026. The recruitment portal's cached homepage also lists older competitions, so the specific 2026 notice governs eligibility and dates. No salary, specific hour of closing, final city or guaranteed recruitment outcome inferred.",
+      "state": "researched",
+      "sources": [
+        {
+          "label": "Direction générale de la protection civile — décision originale en arabe, trois pages (consultée le 29 octobre 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/0bc3b58e-cfd7-466e-9023-6faf53a94738"
+        },
+        {
+          "label": "Portail national de l’emploi public — concours C44132/26, publié le 16 octobre 2026 (vérifié le 29 octobre)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/0bc3b58e-cfd7-466e-9023-6faf53a94738"
+        },
+        {
+          "label": "Direction générale de la protection civile — portail officiel de pré-candidature et instructions de compte (consulté le 29 octobre 2026)",
+          "url": "https://recrutement.protectioncivile.ma/accueil"
+        }
+      ],
+      "facts": {
+        "employer": "Ministère de l’Intérieur — Direction générale de la protection civile",
+        "country": "Maroc",
+        "city": null,
+        "trainingInstitution": "École nationale de la protection civile",
+        "publicReference": "C44132/26",
+        "posts": 50,
+        "grade": "Élèves officiers — échelle 10",
+        "noticePublishedAt": "2026-10-16",
+        "applicationsOpen": "2026-10-17",
+        "deadline": "2026-10-31",
+        "deadlineHour": null,
+        "examinationsBegin": "2026-11-16",
+        "externalEligibility": "Candidats externes masculins, de nationalité marocaine; 18 à 26 ans au 1er janvier 2026; taille ≥1,70 m sans chaussures; sans antécédents judiciaires; aptitude physique",
+        "diploma": "Licence, licence fondamentale, licence professionnelle ou diplôme reconnu selon le décret cité, dans une spécialité autorisée; attestation de réussite seule non acceptée",
+        "specialities": [
+          "Sciences économiques et gestion",
+          "Sciences économiques et management",
+          "Physique",
+          "Chimie",
+          "Sciences de la vie",
+          "Sciences de la Terre et de l'Univers",
+          "Études anglaises",
+          "Droit public",
+          "Droit privé"
+        ],
+        "reservedShare": "25 % pour les catégories reconnues par l'avis",
+        "internalShare": "Jusqu’à 15 % pour sous-officiers et agents de secours DGPC; au moins 8 ans de service, 35 ans au plus, diplôme admissible",
+        "application": "https://recrutement.protectioncivile.ma/accueil",
+        "medicalDocuments": [
+          "CNIE",
+          "Radiographie pulmonaire récente grand format avec nom",
+          "Glycémie à jeun et HbA1c",
+          "ECG avec interprétation",
+          "Certificat médical d'un centre relevant du ministère de la Santé"
+        ],
+        "physicalTests": [
+          "Montée de corde 12,50 m",
+          "Course chronométrée 1 000 m",
+          "Natation libre chronométrée 100 m"
+        ],
+        "writtenTests": [
+          "Sujet général: 3 heures, coefficient 3",
+          "Résumé et commentaire de texte: 1 h 30, coefficient 3",
+          "Traduction arabe-français ou inversement: 1 heure, coefficient 2"
+        ],
+        "laterStages": [
+          "Entretien oral",
+          "Test psychotechnique"
+        ],
+        "salary": null,
+        "applicationFee": null,
+        "individualPostingCity": null,
+        "contactEmail": "recrutement@protectioncivile.ma",
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة الوقاية المدنية 2026: خمسون مقعداً للتلاميذ الضباط وشروط الإجازة والفحص والاختبارات",
+          "deck": "دليل موثق من القرار الأصلي ذي الصفحات الثلاث: التخصصات المقبولة، السن والطول، التسجيل حتى 31 أكتوبر، الفحوص الطبية والرياضة والكتابي، دون اختلاق راتب أو موعد بالساعة.",
+          "sections": [
+            [
+              "ما الذي أعلنته المديرية العامة للوقاية المدنية؟",
+              "أعلنت المديرية العامة للوقاية المدنية التابعة لوزارة الداخلية عن مباراة لولوج سلك التكوين الأساسي للتلاميذ الضباط بالمدرسة الوطنية للوقاية المدنية، في حدود خمسين مقعداً، وفق الإعلان المنشور في 16 أكتوبر 2026 تحت المرجع C44132/26. يبدأ إجراء الاختبارات في 16 نوفمبر 2026، لكن هذا التاريخ لا يعني أن جميع المرشحين سيؤدون الاختبارات في اليوم نفسه أو في المكان ذاته. يتعلق الأمر بمباراة انتقاء وتكوين، لا بعرض عمل عادي ولا بعقد خاص في شركة. لا يحدد الإعلان مدينة تعيين نهائية أو راتباً فردياً؛ لذلك ينبغي عدم استنتاج أي منهما من ذكر السلم العاشر في بطاقة البوابة."
+            ],
+            [
+              "من يحق له الترشح خارجياً؟",
+              "يخاطب نص القرار المترشحين الخارجيين الذكور من الجنسية المغربية، ويحدد السن في ثماني عشرة سنة على الأقل وست وعشرين سنة على الأكثر في فاتح يناير من سنة إجراء المباراة. ويشترط طولاً لا يقل عن 1.70 متر دون حذاء، وعدم وجود سوابق عدلية، والقدرة الجسمانية على أداء المهام المرتبطة بالوقاية المدنية. هذه شروط تراكمية وليست عناصر تمنح نقاطاً إضافية؛ فاستيفاء السن وحده لا يعوض نقص الدبلوم أو عدم استيفاء شرط الطول. وينبغي للمترشح احتساب سنه في التاريخ المرجعي المذكور، لا يوم التسجيل، وقراءة النص الأصلي قبل تقديم بيانات شخصية."
+            ],
+            [
+              "الشهادات والتخصصات المقبولة بدقة",
+              "يشترط القرار الإجازة أو الإجازة في الدراسات الأساسية أو الإجازة المهنية أو شهادة أو دبلوماً مشمولاً بالنص التنظيمي المشار إليه، في أحد التخصصات المحددة. وتشمل القائمة العلوم الاقتصادية والتسيير، والعلوم الاقتصادية والتدبير، والفيزياء، والكيمياء، وعلوم الحياة، وعلوم الأرض والكون، والدراسات الإنجليزية، والقانون العام، والقانون الخاص. لا يعني امتلاك أي إجازة جامعية استيفاء شرط التخصص؛ فالتسميات المتقاربة لا تكفي إذا لم تطابق الشهادة الفعلية ما تقبله الإدارة. ويحذر القرار صراحة من أن شهادة النجاح المؤقتة ليست بديلاً عن الدبلوم المطلوب. وعلى أصحاب الشهادات المعادلة مراجعة الأساس القانوني لقبولها."
+            ],
+            [
+              "المقاعد المخصصة والفئة الداخلية",
+              "يذكر القرار احتفاظه بنسبة 25 في المائة لفئات لها صفة مقاوم أو مكفول الأمة أو عسكري قديم أو محارب قديم وفق الضوابط المعمول بها. كما يفتح التباري، في حدود 15 في المائة، أمام ضباط الصف وأعوان الإغاثة العاملين بالمديرية العامة للوقاية المدنية، بشرط ثماني سنوات على الأقل من الخدمة الفعلية وألا يتجاوز السن خمساً وثلاثين سنة، مع الشهادة والتخصص المطلوبين. هذه الاستثناءات لا توسع تلقائياً شروط الترشح الخارجي، ولا يجوز تحويل النسب إلى أعداد نهائية محسومة دون الاطلاع على طريقة توزيع المقاعد. ومن لا ينتمي إلى الفئة الداخلية لا يستفيد من سقف سنها الخاص."
+            ],
+            [
+              "التسجيل الإلكتروني بين 17 و31 أكتوبر",
+              "حدد القرار فترة التسجيل من 17 إلى 31 أكتوبر 2026 حصرياً عبر بوابة التوظيف التابعة للوقاية المدنية. تبدأ العملية بإنشاء حساب إلكتروني وتفعيل البريد الإلكتروني ثم اختيار المباراة وإتمام الاستمارة، بحسب تعليمات البوابة الرسمية. لا يكفي فتح حساب من دون التأكد من إتمام الترشح للمباراة المطلوبة. ويعتبر القرار كل تسجيل ناقص أو خارج الأجل لاغياً؛ لذا من الأفضل الاحتفاظ بإثبات الإرسال ومراجعة عنوان البريد ورقم الهوية والتخصص قبل التأكيد. لا يذكر القرار ساعة إغلاق محددة في 31 أكتوبر، فلا ينبغي اختلاق موعد بالساعة أو تأجيل التسجيل إلى اللحظات الأخيرة."
+            ],
+            [
+              "الفحص الطبي: الوثائق التي تستحق التحضير المبكر",
+              "بعد الانتقاء الأولي تبدأ الفحوص الطبية ابتداء من 16 نوفمبر 2026 في المراكز التي ستحدد لاحقاً. يطلب القرار البطاقة الوطنية الإلكترونية، وصورة أشعة صدرية حديثة تحمل اسم المرشح، ونتائج سكر الدم صائماً والهيموغلوبين السكري HbA1c، وتخطيط القلب الكهربائي مع تفسيره، وشهادة طبية من مركز صحي تابع لوزارة الصحة تثبت القدرة الصحية المطلوبة. ليست هذه قائمة عامة يمكن استبدال عناصرها بتقرير طبي واحد. وقد يستغرق الحصول على بعض الفحوص وقتاً وتكلفة؛ لذلك يُنصح بقراءة الاستدعاء بدقة والتأكد من حداثة الوثائق والاسم المكتوب عليها، دون افتراض أن شراء الفحوص يضمن النجاح."
+            ],
+            [
+              "الاختبارات الرياضية وكيفية الاستعداد دون مخاطرة",
+              "لا ينتقل إلى الاختبارات الرياضية إلا من اجتاز الفحص الطبي وفق المسطرة المعلنة. يذكر القرار تسلق حبل بعلو 12.50 متراً، وسباق 1000 متر مع التوقيت، وسباحة حرة لمسافة 100 متر مع التوقيت. لا يورد النص المعروض جداول تنقيط تفصيلية أو حدوداً زمنية للنجاح؛ ومن الخطأ نشر أرقام غير موجودة على أنها شروط رسمية. التحضير الواقعي يتطلب التدرج في الجري والسباحة وتمارين القوة تحت إشراف مناسب، خصوصاً لمن لا يجيد السباحة أو لديه مشكلات صحية. ولا ينبغي اختبار تسلق الحبل في أماكن غير مجهزة أو تجاهل رأي الطبيب بهدف اجتياز مباراة."
+            ],
+            [
+              "الاختبار الكتابي: ثلاث مواد ومعاملاتها",
+              "بعد النجاح في الاختبارات السابقة، يتضمن الامتحان الكتابي تحرير موضوع عام حول قضايا قانونية أو اقتصادية أو تدبيرية أو اجتماعية أو إنسانية أو علمية أو بيئية لمدة ثلاث ساعات بمعامل ثلاثة. وتوجد مادة تلخيص نص والتعليق عليه لمدة ساعة ونصف بمعامل ثلاثة، ثم ترجمة نص من العربية إلى الفرنسية أو بالعكس لمدة ساعة بمعامل اثنين. إعداد جيد يعني التدريب على بناء حجة واضحة، واستخراج الأفكار الرئيسية من النص، والكتابة بلغة سليمة، وإجراء ترجمة دقيقة دون إضافات. يمكن تخصيص جلسات زمنية مماثلة للامتحان ومراجعة الأخطاء، لكن لا يجوز تقديم مواضيع تدريبية افتراضية على أنها تسريبات أو أسئلة رسمية."
+            ],
+            [
+              "الشفوي والاختبار السيكوتقني والاستدعاءات",
+              "ينص الإعلان على استدعاء الناجحين في الكتابي لاختبار شفوي تناقش خلاله اللجنة موضوعات مرتبطة بالتخصص، ثم استدعاء من يجتازون الشفوي لاختبار سيكوتقني يقيّم جوانب نفسية لدى المرشحين. تنشر لوائح المقبولين للاستدعاء عبر بوابة التشغيل العمومي والبوابة الخاصة بالمديرية، ويظل البريد الإلكتروني وسيلة اتصال مهمة. لذلك يجب متابعة المصدرين الرسميين بدلاً من الاعتماد على رسائل مجموعات التواصل أو صور مجهولة المصدر. لا يقدم القرار موعداً ثابتاً لكل مرحلة بعد الانطلاق الأولي، ولا يضمن اجتياز مرحلة الوصول إلى التعيين النهائي. ويُستحسن تجهيز ملخص شخصي صادق عن الدراسة والدوافع والقدرة على العمل الميداني."
+            ],
+            [
+              "التكاليف والاحتياطات والبدائل القانونية",
+              "لم ينشر القرار أجراً شهرياً أو قيمة رسوم تسجيل، فلا يصح تقديم مبلغ محدد أو الادعاء بوجود خدمة مدفوعة تضمن القبول. قد يتحمل المرشح مصاريف فعلية للتنقل والفحوص الطبية، وهي تختلف بحسب مكان إقامته ومواعيده. لا ترسل بيانات هويتك أو صور وثائقك إلى وسطاء يزعمون حجز مقعد أو استخراج استدعاء؛ اتبع النطاق الرسمي للبوابة واحتفظ بنسخ الإشعارات. من لا يستوفي السن أو التخصص يمكنه متابعة مباريات عمومية أخرى تتوافق مع مؤهلاته بدلاً من تقديم تصريح غير صحيح. آخر أجل معلن هو 31 أكتوبر 2026، وأي تمديد لاحق يجب أن يستند إلى بلاغ رسمي جديد."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Morocco Civil Protection 2026: 50 officer-cadet places, eligibility and examinations",
+          "deck": "An original three-page-notice review of degree subjects, age and height, the 31 October application deadline, medical documents, physical tests and written papers, with no invented salary.",
+          "sections": [
+            [
+              "What the Civil Protection Directorate actually announced",
+              "Morocco’s Directorate General of Civil Protection, part of the Ministry of the Interior, announced a competitive entry examination for the basic officer-cadet training programme at the National School of Civil Protection. The announcement, published on 16 October 2026 under reference C44132/26, covers 50 places. The selection process starts on 16 November 2026, but that date should not be interpreted as a guaranteed appointment or a single examination sitting for everyone. This is a selective training route rather than a conventional private-sector vacancy. Neither a final duty city nor an individual monthly salary is specified in the three-page decision. The grade shown on the public portal must not be converted into an invented take-home salary."
+            ],
+            [
+              "External applicants: nationality, age and physical requirements",
+              "The original Arabic notice expressly addresses male external candidates holding Moroccan nationality. Applicants must be at least 18 and no older than 26 on 1 January of the competition year. The decision also requires a minimum barefoot height of 1.70 metres, no criminal record and physical fitness for the duties associated with Civil Protection. These are cumulative conditions, not optional scoring preferences. Someone who meets the age requirement but lacks the relevant degree, for example, does not become eligible through athletic ability. Candidates should calculate their age against the specified reference date, rather than the date they open the website, and read the original wording before submitting identifying information."
+            ],
+            [
+              "Accepted degrees and the exact subject list",
+              "The academic requirement is a licence degree, a fundamental-studies licence, a professional licence or another legally recognised qualification covered by the cited Moroccan regulation, in one of the listed disciplines. The Arabic decision names economics and management, economics and business administration, physics, chemistry, life sciences, earth and universe sciences, English studies, public law and private law. A university degree in an unrelated subject does not meet this requirement merely because it is at the same academic level. The notice specifically rejects a temporary certificate of successful completion as a substitute for the required diploma. Anyone relying on equivalence should verify the precise legal recognition of their qualification rather than assume acceptance."
+            ],
+            [
+              "Reserved places and a separate internal pathway",
+              "The decision reserves 25 percent of places for recognised members of the resistance, wards of the nation, former military personnel and former combatants, subject to applicable rules. It also opens up to 15 percent of places to serving non-commissioned officers and rescue agents of the Directorate. This internal pathway requires at least eight years of actual service, an age not exceeding 35 and the prescribed diploma in an accepted subject. Those rules must not be transferred to the external applicant category: a 30-year-old external applicant cannot claim the internal age ceiling simply by having professional experience elsewhere. The percentages are legal allocations; avoid publishing an exact final number of successful candidates in each group without official allocation details."
+            ],
+            [
+              "Online application: 17 to 31 October 2026",
+              "The application period runs from 17 through 31 October 2026 and submission is exclusively through the Directorate’s recruitment portal. Its published instructions describe account creation, confirmation through an email link, sign-in, selection of the relevant competition and completion of the application. Creating a login is not equivalent to submitting a valid application. The decision treats incomplete or late online records as void. Applicants should therefore check their identity details, degree and email address, complete the process early and retain any confirmation or receipt. No precise closing hour is stated in the signed notice, so an article should not fabricate one. A third-party website or social-media message is not an official application channel."
+            ],
+            [
+              "Medical screening: prepare the specified documents",
+              "Medical examinations begin from 16 November 2026 at centres to be announced subsequently. The original notice lists the national electronic identity card, a recent large-format chest radiograph bearing the applicant’s name, fasting blood glucose and HbA1c results, an electrocardiogram with interpretation, and a medical certificate issued by a Ministry of Health health centre confirming the necessary fitness. These are distinct documents, not interchangeable with a generic doctor’s note. Some examinations may require appointments and personal expense, so candidates should plan realistically while following the official summons. The decision does not promise reimbursement or success after the tests. Medical concerns should be discussed with qualified healthcare professionals rather than concealed for an examination."
+            ],
+            [
+              "Physical tests: rope, running and swimming",
+              "Candidates who pass medical screening proceed to sports tests. The decision specifies a 12.50-metre rope climb, a timed 1,000-metre run and a timed 100-metre freestyle swim. It does not provide, in the three pages reviewed, a detailed score table or passing-time thresholds. Publishing unverified target times as official cut-offs would mislead candidates. A sensible preparation plan uses gradual conditioning, supervised swimming and safe strength practice, especially for beginners. Attempting a high rope climb without protective facilities can cause injury. Applicants should not treat a training plan as medical advice or assume that a good performance in one event compensates for failing another compulsory stage."
+            ],
+            [
+              "Written papers: topics, duration and coefficients",
+              "After the preceding stages, the written examination has three papers. A general essay about legal, economic, administrative, social, humanitarian, scientific or environmental issues lasts three hours and carries coefficient three. Summarising and commenting on a text takes ninety minutes and also carries coefficient three. Translating a passage between Arabic and French, in either direction, lasts one hour and carries coefficient two. Candidates can practise with timed exercises, clear outlines, accurate summaries and translations that preserve meaning without embellishment. The notice does not supply the future questions, and no commercial provider can credibly promise authentic leaked papers. Studying the official format is more defensible than memorising unsupported predictions."
+            ],
+            [
+              "Oral interview, psychometric assessment and summons",
+              "Those who pass the written papers may be invited to an oral examination in which a panel discusses subjects related to their field. Successful oral candidates are then called to a psychometric assessment intended to evaluate psychological aspects. The authority states that lists of candidates selected for the medical stage will be made available through the public-employment portal and the Directorate’s recruitment website. Email remains an important communication channel. Check both official sources and keep contact details accessible; forwarded screenshots in messaging groups are not reliable proof of selection. Later examination dates and venues should be taken from individual official notices rather than inferred from the initial 16 November starting date."
+            ],
+            [
+              "Costs, fraud precautions and realistic alternatives",
+              "The signed announcement does not specify a monthly salary or an application fee. Applicants may nevertheless incur travel and medical-testing costs, which depend on where they live and where they are summoned. Do not pay intermediaries promising admission, guaranteed summons or privileged access, and do not upload identity documents to unofficial forms. Keep copies of the original notice and application confirmation. If your age, diploma or discipline does not qualify, seek a different officially announced public competition matching your credentials rather than falsify details. The published closing date is 31 October 2026; any extension must be established by a new official notice, not a rumour or a stale repost."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Protection civile Maroc 2026 : 50 places d’élèves officiers, conditions et épreuves",
+          "deck": "Analyse de l’avis officiel de trois pages : diplômes, âge, taille, candidature jusqu’au 31 octobre, examens médicaux, sport et écrit, sans salaire ni heure limite inventés.",
+          "sections": [
+            [
+              "Ce que la Direction générale de la protection civile a réellement annoncé",
+              "La Direction générale de la protection civile, relevant du ministère de l’Intérieur marocain, a ouvert un concours d’accès au cycle de formation fondamentale des élèves officiers de l’École nationale de la protection civile. L’annonce du 16 octobre 2026, référencée C44132/26, porte sur 50 places. Les opérations de sélection commencent le 16 novembre 2026, mais cette date ne signifie ni nomination immédiate ni convocation de tous les candidats au même endroit. Il s’agit d’un concours de formation et non d’une offre d’emploi classique dans une entreprise. L’avis de trois pages ne précise ni ville d’affectation définitive ni rémunération mensuelle individuelle. L’échelle affichée sur le portail ne justifie pas d’inventer un salaire net."
+            ],
+            [
+              "Conditions des candidats externes : âge, nationalité et aptitude",
+              "Le texte arabe officiel s’adresse aux candidats externes de sexe masculin, de nationalité marocaine. Ils doivent avoir au moins 18 ans et au plus 26 ans au 1er janvier de l’année du concours. S’ajoutent une taille minimale de 1,70 mètre sans chaussures, l’absence d’antécédents judiciaires et l’aptitude physique nécessaire aux missions de la protection civile. Ces critères sont cumulatifs : un bon niveau sportif ne compense pas l’absence du diplôme exigé. Il faut calculer l’âge à la date de référence expressément indiquée, et non au jour de la candidature. Avant de communiquer des données personnelles, le candidat devrait confronter sa situation à l’arrêté original."
+            ],
+            [
+              "Diplômes recevables et spécialités effectivement citées",
+              "Le concours exige une licence, une licence d’études fondamentales, une licence professionnelle ou un diplôme légalement reconnu par le texte réglementaire mentionné dans l’avis, dans une discipline autorisée. Le document cite les sciences économiques et la gestion, les sciences économiques et le management, la physique, la chimie, les sciences de la vie, les sciences de la Terre et de l’Univers, les études anglaises, le droit public et le droit privé. Un diplôme universitaire de même niveau dans une autre spécialité n’est pas automatiquement recevable. L’arrêté exclut expressément la simple attestation de réussite en remplacement du diplôme demandé. Une éventuelle équivalence doit être justifiée selon les règles applicables, sans présumer de son acceptation."
+            ],
+            [
+              "Places réservées et voie interne distincte",
+              "L’arrêté prévoit une réserve de 25 % au profit des personnes ayant les statuts reconnus de résistant, pupille de la nation, ancien militaire ou ancien combattant, selon les dispositions applicables. Il ouvre également jusqu’à 15 % des places aux sous-officiers et agents de secours déjà en fonction au sein de la Direction. Cette voie interne impose au moins huit années de service effectif, un âge maximal de 35 ans et un diplôme dans l’une des spécialités requises. Il serait incorrect d’appliquer cette limite de 35 ans aux candidats externes. Les pourcentages annoncés ne permettent pas, sans précisions officielles supplémentaires, de garantir le nombre définitif d’admis dans chaque catégorie."
+            ],
+            [
+              "Inscription en ligne du 17 au 31 octobre 2026",
+              "Le dépôt des candidatures s’effectue exclusivement sur le portail de recrutement de la protection civile entre le 17 et le 31 octobre 2026. Les consignes du portail présentent la création d’un compte, la validation de l’adresse électronique, la connexion, le choix du concours et la finalisation du formulaire. Posséder un compte ne prouve donc pas que l’inscription au concours est terminée. L’avis précise qu’une candidature incomplète ou hors délai est annulée. Il convient de vérifier identité, spécialité et coordonnées, puis de conserver toute confirmation disponible. Aucune heure de clôture précise n’apparaît dans l’arrêté consulté : il ne faut pas en fabriquer une ou attendre le dernier instant."
+            ],
+            [
+              "Visite médicale : pièces à réunir avec méthode",
+              "Les examens médicaux commencent à partir du 16 novembre 2026, dans des centres qui seront indiqués ultérieurement. Le candidat doit présenter sa carte nationale d’identité électronique, une radiographie pulmonaire récente grand format portant son nom, les résultats de glycémie à jeun et d’hémoglobine glyquée HbA1c, un électrocardiogramme accompagné de son interprétation et un certificat médical établi par un centre de santé relevant du ministère de la Santé. Une simple attestation médicale générale ne remplace pas nécessairement cet ensemble de documents. Les rendez-vous et analyses peuvent prendre du temps et entraîner des dépenses. Il faut suivre les instructions de convocation et ne jamais masquer un problème de santé pour franchir une étape."
+            ],
+            [
+              "Épreuves sportives : corde, course et natation",
+              "Seuls les candidats ayant réussi la visite médicale passent aux tests physiques. L’avis prévoit la montée d’une corde de 12,50 mètres, une course chronométrée de 1 000 mètres et une épreuve chronométrée de natation libre sur 100 mètres. Les trois pages examinées ne détaillent ni barème de notation ni temps éliminatoires. Présenter des seuils trouvés sur les réseaux sociaux comme des exigences officielles serait donc trompeur. Une préparation raisonnable combine progression en endurance, apprentissage de la natation et renforcement musculaire dans des installations adaptées. Une montée de corde improvisée sans sécurité comporte des risques. Le candidat doit tenir compte de son état de santé et de ses limites."
+            ],
+            [
+              "Écrit : trois matières, trois durées et coefficients",
+              "L’épreuve écrite intervient après les étapes précédentes et comprend trois matières. Une dissertation générale sur des questions juridiques, économiques, administratives, sociales, humaines, scientifiques ou environnementales dure trois heures, coefficient trois. Le résumé d’un texte assorti d’un commentaire dure une heure trente, coefficient trois. Une traduction de l’arabe vers le français ou inversement dure une heure, coefficient deux. Pour se préparer, mieux vaut s’entraîner à construire un raisonnement, distinguer idée principale et détail, rédiger avec précision et traduire sans ajouter d’informations. L’avis ne révèle pas les sujets futurs. Les prétendues fuites ou promesses de réussite vendues par des tiers ne sont pas des sources crédibles."
+            ],
+            [
+              "Oral, test psychotechnique et publication des convocations",
+              "Les candidats reçus à l’écrit sont convoqués à un entretien oral durant lequel le jury peut discuter de sujets relevant de leur spécialité. Ceux qui réussissent cette étape sont ensuite appelés à un test psychotechnique visant l’évaluation d’aspects psychologiques. Les listes des candidats retenus pour les étapes de sélection sont annoncées sur le portail national de l’emploi public et sur celui de la protection civile. Une adresse électronique active reste indispensable pour les communications. Les dates et centres des étapes ultérieures ne doivent pas être déduits automatiquement du 16 novembre. Il faut consulter les convocations officielles, plutôt que des captures d’écran non authentifiées circulant dans des groupes."
+            ],
+            [
+              "Coûts, prévention des arnaques et autres possibilités",
+              "L’arrêté ne publie ni salaire mensuel individuel ni frais d’inscription chiffrés. En revanche, les déplacements et les examens médicaux peuvent représenter un coût variable selon le lieu de résidence et le centre de convocation. Aucun intermédiaire ne peut garantir légalement l’admission ou vendre une convocation officielle. Il est prudent de conserver le PDF original, les preuves de candidature et les messages reçus par les canaux institutionnels. Si l’âge, la spécialité ou le diplôme ne correspondent pas, mieux vaut chercher un autre concours public adapté plutôt que déclarer de fausses informations. L’échéance publiée reste le 31 octobre 2026, sauf modification ultérieure dûment annoncée par l’administration."
+            ]
+          ]
+        }
+      }
     }
   }
 }
