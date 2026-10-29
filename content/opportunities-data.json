@@ -1,11 +1,26 @@
 {
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-10-29",
   "editorialNote": {
     "ar": "مراجعة 28 أكتوبر 2026: أضيفت إعلانات عمل دولية محددة من صفحات مشغلين ومنصة حكومية؛ لا يفترض قبول الأجانب ولا التكفل بالتأشيرة أو استمرار توفر الوظيفة بعد تاريخ التحقق.",
     "en": "Last updated 28 October 2026. New entries verified against the official portal; older entries retain their verification dates. Check eligibility and deadline at source.",
     "fr": "Mis à jour le 28 octobre 2026. Nouvelles offres vérifiées sur le portail officiel ; les anciennes conservent leur date de vérification. Vérifiez les conditions et délais à la source."
   },
   "items": [
+    {
+      "id": "ena-digital-engineer",
+      "section": "competitions",
+      "title": "Ingénieur d'État 1er grade — Systèmes d'information et transformation digitale — ENA Rabat",
+      "org": "École Nationale de l'Administration",
+      "place": "Rabat, Maroc",
+      "count": 1,
+      "deadline": "2026-11-05",
+      "url": "https://www.emploi-public.ma/fr/concours/details/66fcbb67-e370-4185-a72b-13bc237ff54d",
+      "kind": "official_notice",
+      "verifiedBy": "emploi-public.ma",
+      "noticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/66fcbb67-e370-4185-a72b-13bc237ff54d",
+      "deadlineBasis": "Signed 9 October 2026 decision explicitly says 5 November 2026 at 16:00; public portal displays date only.",
+      "sourceCheckedAt": "2026-10-29"
+    },
     {
       "id": "sett-administrator",
       "section": "competitions",
