@@ -2277,6 +2277,191 @@
           ]
         }
       }
+    },
+    "ofppt-accountant-10": {
+      "id": "ofppt-accountant-10",
+      "reviewedAt": "2026-10-29",
+      "verification": "Original OFPPT RH 135/26 one-page PDF visually read 29 October 2026, cross-checked with emploi-public listing dated 23 October 2026. Midnight wording explicitly cautioned. No city, salary or exam date invented.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "OFPPT — Appel à candidatures RH 135/26, original one-page notice",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/320ad0af-40dd-4bf2-aa17-c8257e791ac6"
+        },
+        {
+          "label": "Emploi-public — Assistant Comptable, C44273/26, published 23 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/320ad0af-40dd-4bf2-aa17-c8257e791ac6"
+        },
+        {
+          "label": "OFPPT — official recruitment portal",
+          "url": "https://recrutement.ofppt.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Office de la Formation Professionnelle et de la Promotion du Travail",
+        "reference": "RH 135/26; C44273/26",
+        "publishedAt": "2026-10-23",
+        "posts": 10,
+        "city": null,
+        "country": "Maroc",
+        "jobTitle": "Assistant Comptable",
+        "degree": "Diplôme de Technicien Spécialisé ou équivalent en comptabilité, gestion des entreprises ou finances (échelle 9)",
+        "experience": "2 années cumulées comme comptable dans des structures organisées",
+        "age": "Moins de 40 ans à la prise de service",
+        "nationality": "Marocaine",
+        "deadline": "2026-11-09",
+        "deadlineCaution": "Notice says 09 Novembre 2026 à minuit; submit before 9 November to avoid ambiguity",
+        "submission": "https://recrutement.ofppt.ma/",
+        "selection": "Présélection sur dossier puis tests à dates et lieux annoncés ultérieurement",
+        "salary": null,
+        "workLocation": "Selon besoin et ordre de mérite",
+        "documents": [
+          "Formulaire F1 PDF",
+          "CV détaillé PDF",
+          "Diplôme PDF et attestation d'équivalence si diplôme étranger",
+          "CNI recto verso sur une page PDF"
+        ]
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة 10 مساعدين محاسبين لدى مكتب التكوين المهني: الشروط والوثائق والخزينة وآجال الترشيح",
+          "deck": "تحليل الإعلان الأصلي RH 135/26 المنشور في أكتوبر 2026: دبلوم التقني المتخصص، سنتا الخبرة، أربع وثائق، وإشكال عبارة منتصف الليل في أجل 9 نوفمبر.",
+          "sections": [
+            [
+              "ما الذي تعرضه هذه المباراة تحديداً؟",
+              "أعلن مكتب التكوين المهني وإنعاش الشغل عن توظيف عشرة مساعدين محاسبين تحت المرجع RH 135/26، ونشرت بوابة التشغيل العمومي البطاقة يوم 23 أكتوبر 2026 بالرمز C44273/26. يتعلق الأمر بتوظيف محدد في المحاسبة والخزينة داخل مركبات التكوين، وليس برنامجاً عاماً يضمن العمل لكل حامل شهادة. راجعنا الإعلان الأصلي المؤلف من صفحة واحدة وقارناه ببيانات البوابة. لم يحدد الإعلان مدن التعيين العشر ولا قيمة الأجر ولا تاريخ مباشرة العمل. لذلك ينبغي التمييز بين المعلومات المعلنة والتوقعات الشخصية قبل إعداد الملف أو تحمل مصاريف السفر."
+            ],
+            [
+              "الشهادة المطلوبة ومعادلة الدبلومات",
+              "يشترط الإعلان دبلوم تقني متخصص أو دبلوماً معادلاً في المحاسبة أو تسيير المقاولات أو المالية، من الدبلومات التي تتيح الولوج إلى السلم التاسع في الوظيفة العمومية. لا ينبغي اعتبار أي شهادة جامعية في تخصص بعيد مقبولة تلقائياً لمجرد معرفة صاحبها ببرامج المحاسبة. وينص الإعلان صراحة على إرفاق نسخ من شهادات المعادلة بالنسبة إلى الدبلومات الصادرة عن مؤسسات أجنبية. على المترشح مطابقة اسم شهادته مع التخصصات المذكورة والتحقق من وثيقة المعادلة قبل التسجيل، بدلاً من افتراض أن مستوى دراسياً أعلى يلغي شرط التخصص أو المعادلة."
+            ],
+            [
+              "الخبرة والسن والجنسية",
+              "يشترط المكتب خبرة مهنية تراكمية لا تقل عن سنتين بصفة محاسب داخل مؤسسات منظمة. وصف الخبرة بالتراكمية مهم؛ فالنص لا يفرض قضاء السنتين لدى مشغل واحد، لكنه يقتضي أن يبين السيرة الذاتية فترات العمل والمسؤوليات المحاسبية بصورة يمكن التحقق منها. كما يشترط الجنسية المغربية وإتقان أدوات المعلوماتية وألا يبلغ المرشح أربعين سنة عند تاريخ مباشرة العمل. لم يحدد الإعلان تاريخ المباشرة، ولذلك لا يجوز تحويل شرط السن إلى تاريخ إيداع الترشيح أو اختراع استثناء غير وارد في النص الأصلي."
+            ],
+            [
+              "المهام المحاسبية اليومية",
+              "تشمل المهام مسك محاسبة مركب التكوين وتحيينها، وإدخال الوثائق المحاسبية وأرشفتها، ومعالجة الفواتير والتسويات، وتتبع ملفات الأداء ومواعيد الاستحقاق. هذه الأعمال ليست إدخال أرقام فحسب، بل تتطلب ربط العملية بمستندها والاحتفاظ بأثر مراجعة واضح. مثال تدريبي مناسب هو تتبع فاتورة مورد منذ استلام وثيقتها إلى تسجيلها ومراقبة استحقاقها وأرشفتها. لم يحدد الإعلان مخطط حسابات بعينه ولا سقوف المصادقة الداخلية ولا اسم برنامج معالجة الفواتير؛ ومن غير المهني عرض هذه التفاصيل على أنها شروط رسمية للتوظيف."
+            ],
+            [
+              "الخزينة والتسويات البنكية",
+              "يمنح الوصف الوظيفي للخزينة مكانة أساسية: المتابعة اليومية للأرصدة البنكية، والتحقق من كشوف الحساب والتوفيق بينها وبين السجلات، وإعداد الوضعية المجمعة للخزينة، وتحيين لوحة القيادة الشهرية، وإصدار أوامر الأداء والتحويل. يمكن للمرشح التدريب على مثال افتراضي يقارن كشفاً بنكياً بحساب البنك في الأستاذ العام ويعزل الشيكات أو التحويلات غير المنفذة ويشرح فروق تواريخ القيمة. كما يمكن إعداد توقع بسيط يفصل الرصيد المتاح عن الالتزامات والمدفوعات المنتظرة. هذه تمارين تحضيرية مقترحة، وليست أسئلة اختبار أعلنتها المؤسسة."
+            ],
+            [
+              "نظام المعلومات وميزة الخبرة في SAP",
+              "يشير الإعلان إلى استعمال نظام لتخطيط موارد المؤسسة، ويفضل معرفة SAP أو نظام مشابه، مع المشاركة في تنفيذ نظام ERP الداعم وتحسينه والتنسيق مع الفرق التقنية والوظيفية. عبارة «يفضل» لا تعني أن امتلاك شهادة SAP شرط إقصائي مطلق. يستطيع من عمل على نظام آخر أن يشرح كيفية مراقبة بيانات الموردين ودورة المصادقة والقيود المحاسبية والتسويات. والأفضل تقديم حالة عملية صادقة تميز ما أنجزه المترشح بنفسه عما تولاه فريق التقنية. كما يذكر الإعلان القدرة على التحليل والتنظيم والتواصل واحترام الآجال، وهي مهارات يمكن توضيحها بأمثلة قابلة للتحقق."
+            ],
+            [
+              "الوثائق الأربع المطلوبة بالضبط",
+              "حدد الإعلان استمارة الترشيح F1 التي يحملها المترشح من موقع المكتب ويملؤها بصيغة PDF، وسيرة ذاتية محينة تفصل التجارب ذات الصلة بصيغة PDF، ونسخة من الدبلوم المطلوب مع شهادات المعادلة عند الاقتضاء، ونسخة من وجهي البطاقة الوطنية للتعريف في صفحة PDF واحدة. ينبغي فحص وضوح الملفات واتجاه صفحاتها وتطابق الاسم والبيانات قبل رفعها، مع الاحتفاظ بنسخة محلية وسجل بتاريخ الإرسال. لا يذكر الإعلان رسالة تحفيزية أو سجلاً عدلياً ضمن الوثائق الإلزامية؛ فلا يصح تقديمهما للقارئ على أنهما مطلبان رسميان لهذه المباراة."
+            ],
+            [
+              "التسجيل الإلكتروني وإشكال عبارة منتصف الليل",
+              "يتم التسجيل وإيداع ملفات PDF عبر بوابة التوظيف الرسمية للمكتب، وليس عبر البريد الإلكتروني أو نموذج التواصل في بوابة التشغيل العمومي. تحدد بطاقة البوابة يوم 9 نوفمبر 2026 آخر أجل، بينما ينص الإعلان الأصلي على «09 Novembre 2026 à minuit». قد تثير عبارة منتصف الليل التباساً عند الانتقال بين يومين؛ لذلك يُنصح بإتمام الإيداع قبل التاسع من نوفمبر، ويفضل في الثامن منه، دون انتظار الساعة الأخيرة. يحذر النص من إقصاء الملفات الناقصة أو المرسلة عبر قناة أخرى ومن إلغاء الترشيح عند تقديم معلومات خاطئة. احتفظ بوصل التأكيد إن وفره النظام."
+            ],
+            [
+              "الاختبارات والتعيين والأجر غير المعلن",
+              "يوضح الإعلان أن الملفات ستخضع لانتقاء أولي، ثم يُستدعى المقبولون لاجتياز اختبارات تقييم سيعلن عن تواريخها وأماكنها لاحقاً. لا يتضمن النص قائمة رسمية بمواد الاختبار ولا شبكة التنقيط ولا مدة المقابلة، كما لا يحدد الراتب أو مدن التعيين النهائية. سيتم توزيع الناجحين وفق حاجات المؤسسة وترتيب الاستحقاق. لذلك لا ينبغي اعتبار مدينة معينة مضمونة أو الاستناد إلى أجور متداولة في مجموعات التواصل. راقب حساب الترشيح والإعلانات الرسمية، ولا تدفع لأي وسيط يدعي ضمان النجاح أو توفير موضوع الاختبار."
+            ],
+            [
+              "خطة تحضير واقعية وبدائل مناسبة",
+              "ابدأ بجدول تحقق من الشهادة والتخصص والمعادلة وسنتي الخبرة والسن والجنسية والملفات الأربع، ثم اختبر فتح كل PDF قبل إرساله. خصص جلسة تدريب لتسوية بنكية تتضمن عمليات معلقة، وأخرى لتتبع فاتورة من الإثبات إلى أمر التحويل، مع شرح كيفية منع الأداء المزدوج. استعمل أمثلة تدريبية لا بيانات سرية من مشغل سابق، ولا تدع خبرة لم تكتسبها. إذا كنت لا تستوفي شرط الخبرة أو الدبلوم، فابحث عن مباراة أخرى بشروط منشورة مختلفة بدلاً من محاولة الالتفاف على هذه الشروط. راجع المصدرين الرسميين قبيل الإيداع لأي تصحيح محتمل."
+            ]
+          ]
+        },
+        "en": {
+          "title": "OFPPT recruits 10 Assistant Accountants: eligibility, treasury duties and application deadline",
+          "deck": "A source-checked guide to RH 135/26: specialized technician diploma, two years of accounting experience, four PDF documents and the midnight deadline ambiguity.",
+          "sections": [
+            [
+              "What this recruitment actually offers",
+              "The Office of Vocational Training and Employment Promotion (OFPPT) published reference RH 135/26 for ten Assistant Accountant posts. The public employment portal lists the vacancy on 23 October 2026 under competition code C44273/26. This is a specific recruitment process, not a general promise of employment to accounting graduates. The original one-page notice describes operational accounting and treasury work in training complexes. It does not identify ten individual towns, a salary, or a fixed starting date. Applicants should assess the official conditions before paying for travel or preparing an extensive dossier."
+            ],
+            [
+              "Eligibility: diploma and equivalence",
+              "The stated qualification is a Specialized Technician diploma, or an equivalent diploma, in accounting, business management, or finance, giving access to scale 9 in the Moroccan public service. A degree from a different field should not be assumed eligible because its holder has used accounting software. The notice expressly requires an equivalence certificate for diplomas issued by foreign institutions. A candidate should compare the exact wording of the qualification with the diploma and obtain any necessary equivalence document before submission. The notice does not say that any bachelor's or master's degree automatically replaces the specialized technician qualification."
+            ],
+            [
+              "Experience, age and nationality",
+              "Applicants must show at least two cumulative years of professional experience as an accountant in organized structures. The word cumulative matters: the notice does not demand that the two years were spent with a single employer, but the submitted CV must make the relevant periods and responsibilities intelligible. Applicants must be Moroccan nationals, be proficient with computer tools, and be under forty years old on the date they take up duty. That age reference is not the application date; the employer has not published the eventual service-start date. Do not claim an age exemption that the notice does not provide."
+            ],
+            [
+              "The work: records, invoices and payments",
+              "The Assistant Accountant is expected to keep the training complex's accounts current, enter and archive supporting documents, process invoices and settlements, and monitor payment files and due dates. These are control responsibilities as well as data-entry tasks. For example, a supplier invoice should be checked against the underlying supporting document, entered consistently, followed through the payment process, and stored so an auditor can trace it. The notice does not specify a particular accounting chart, internal approval threshold, or invoice-processing software. Those operational details should be confirmed at interview rather than presented as published employment conditions."
+            ],
+            [
+              "Treasury and bank reconciliation",
+              "The job description gives treasury an unusually prominent role: daily bank cash monitoring, checking and reconciling bank statements, preparing a consolidated treasury position, maintaining a monthly treasury dashboard, and preparing payment and transfer orders. A practical preparation exercise is to reconcile a fictitious bank statement with a general-ledger bank account, isolate outstanding payments, and explain differences in value dates without altering supporting documents. A second exercise is a simple forecast that separates bank balance, committed payments and anticipated receipts. These examples illustrate useful skills; they are not disclosed examination questions."
+            ],
+            [
+              "ERP skills: SAP is preferred, not an absolute rule",
+              "The notice seeks familiarity with enterprise resource planning systems, ideally SAP or a similar solution, and involvement in deploying and improving an ERP support system. The wording 'ideally' does not make prior SAP employment a mandatory exclusion criterion. Candidates with experience in another ERP can explain how they controlled master data, approval flows, accounting entries and reconciliations. A strong example should distinguish what the applicant personally performed from what a technical team configured. Never claim SAP certification or implementation experience without evidence. The posting also values analysis, organization, communication and collaboration with technical and functional teams."
+            ],
+            [
+              "Exactly which documents to prepare",
+              "The notice lists four dossier components: the OFPPT F1 application form completed as a PDF, a current CV detailing relevant professional experience in PDF, a copy of the required diploma in PDF with equivalence evidence when applicable, and a two-sided copy of the Moroccan identity card combined on one PDF page. Applicants should inspect every PDF for legibility, correct orientation and matching personal details. Keep an original local copy and a dated list of uploaded files. The announcement does not list a cover letter or criminal record certificate as mandatory documents, so do not add those to the official checklist."
+            ],
+            [
+              "Online submission and the midnight ambiguity",
+              "Applications must be registered and uploaded through the official OFPPT recruitment website, not sent by email or through the public portal's contact form. The public listing gives 9 November 2026 as the closing date, while the signed notice says '09 Novembre 2026 à minuit'. That French expression can be read ambiguously at a date boundary, so the prudent course is to finish well before 9 November, preferably by 8 November, rather than rely on the final minute. Incomplete applications, submissions through another channel, or false information can result in rejection. Save the confirmation or submission receipt if the system provides one."
+            ],
+            [
+              "Selection, location and pay: what is not known",
+              "The official notice says that candidates shortlisted after document review will be invited to assessment tests, with the dates and locations communicated later. It does not publish the tests' subject list, scoring formula, interview duration, salary amount, or final posting cities. Successful candidates will be assigned according to operational needs and merit order. This means applicants should avoid treating a preferred city as guaranteed. Check the official recruitment account and contact information regularly after applying, but do not trust a third-party message requesting money for a place, examination paper or guaranteed appointment."
+            ],
+            [
+              "A practical preparation plan and safer alternatives",
+              "Before submitting, create a one-page eligibility matrix with diploma, equivalence, experience dates, age reference, nationality and each required PDF. Next, rehearse two accounting cases: bank reconciliation with outstanding items and a payment-cycle control from invoice to transfer order. Explain each case using traceable evidence, not invented performance claims. If you lack the two years of accounting experience or the required diploma, this announcement may not be a lawful fit; look instead for an entry-level post with different published conditions. Recheck the original notice and the public listing immediately before applying, because only an official amendment can change the requirements."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "OFPPT : 10 postes d'Assistant comptable, conditions, trésorerie et dépôt du dossier",
+          "deck": "Analyse de l'avis RH 135/26 : diplôme de technicien spécialisé, deux années d'expérience, quatre pièces PDF et précaution sur la date limite du 9 novembre.",
+          "sections": [
+            [
+              "Une offre précise de dix postes, et non une promesse générale",
+              "L'Office de la formation professionnelle et de la promotion du travail (OFPPT) recrute dix Assistants comptables sous la référence RH 135/26. Le portail national de l'emploi public a publié l'annonce le 23 octobre 2026 avec le code C44273/26. La fiche originale, longue d'une page, décrit un travail comptable et de trésorerie dans des complexes de formation. Elle ne précise ni les dix villes d'affectation, ni le montant du salaire, ni la date de prise de fonction. Il convient donc de distinguer les faits publiés des hypothèses avant de constituer un dossier ou d'engager des frais de déplacement."
+            ],
+            [
+              "Diplôme et reconnaissance des qualifications",
+              "Le profil exige un diplôme de Technicien spécialisé, ou équivalent, en comptabilité, gestion des entreprises ou finances, donnant accès à l'échelle 9 de la fonction publique marocaine. Une formation universitaire dans une discipline éloignée ne devient pas automatiquement recevable parce que son titulaire utilise un logiciel comptable. Pour les diplômes délivrés par des établissements étrangers, l'avis exige des copies des attestations d'équivalence. Il faut comparer l'intitulé exact de son diplôme aux spécialités publiées et réunir la preuve d'équivalence avant le dépôt. Le texte ne dit pas qu'un diplôme de niveau supérieur remplace systématiquement les conditions de spécialité."
+            ],
+            [
+              "Expérience, âge et nationalité",
+              "Les candidats doivent justifier d'au moins deux années d'expérience professionnelle cumulée en qualité de comptable dans des structures organisées. Le terme cumulée n'impose pas un employeur unique, mais le CV doit faire apparaître clairement les périodes et les responsabilités pertinentes. La nationalité marocaine et une parfaite maîtrise de l'outil informatique sont également demandées. La limite d'âge est formulée comme « moins de 40 ans à la date de la prise de service » et non au jour du dépôt. Aucune date de prise de service n'étant publiée, il serait trompeur d'en inventer une ou d'affirmer une dérogation non prévue."
+            ],
+            [
+              "Comptabilité quotidienne et piste d'audit",
+              "Le poste consiste notamment à tenir à jour la comptabilité du complexe, saisir et archiver les pièces, traiter les factures et règlements, et suivre les dossiers de paiement et leurs échéances. Il ne s'agit pas uniquement de saisir des chiffres : chaque écriture doit rester reliée à une pièce justificative et à un contrôle identifiable. Pour se préparer, on peut simuler le circuit d'une facture fournisseur, depuis sa réception jusqu'à son enregistrement, son règlement et son archivage. L'avis ne fixe ni plan de comptes détaillé, ni seuil d'autorisation interne, ni logiciel de facturation précis. Ces éléments ne doivent pas être présentés comme des exigences officielles."
+            ],
+            [
+              "Trésorerie et rapprochement bancaire",
+              "La trésorerie occupe une place centrale dans la fiche : suivi bancaire quotidien, vérification et rapprochement des relevés, situation consolidée, tableau de bord mensuel, ordres de paiement et de virement. Un exercice utile consiste à rapprocher un relevé fictif du compte banque du grand livre, puis à isoler les règlements non encore débités et les écarts de date de valeur. Un autre exercice consiste à construire un état prévisionnel séparant solde bancaire, paiements engagés et encaissements attendus. Ce sont des pistes de préparation professionnelle, et non des questions d'examen annoncées par l'OFPPT."
+            ],
+            [
+              "ERP : SAP souhaité, pas certification obligatoire annoncée",
+              "L'avis recherche des compétences sur un ERP, idéalement SAP ou une solution similaire, et une contribution à l'implémentation et à l'amélioration d'un système de support. Le mot « idéalement » ne transforme pas une certification SAP en condition éliminatoire explicite. Une personne ayant travaillé avec un autre ERP peut présenter des contrôles de données fournisseurs, de circuits de validation, d'écritures et de rapprochements. Il est important de distinguer ce qu'elle a réellement réalisé de ce qu'a configuré l'équipe informatique. L'analyse, l'organisation, la communication et la collaboration entre métiers et techniciens figurent aussi dans les compétences attendues."
+            ],
+            [
+              "Les quatre pièces du dossier",
+              "Le dossier comprend le formulaire F1 à renseigner en PDF et à télécharger depuis le site de l'OFPPT, un CV actualisé détaillant les expériences liées au poste en PDF, la copie du diplôme requis accompagnée d'attestations d'équivalence si nécessaire, et la copie recto verso de la carte nationale d'identité sur une seule page PDF. Vérifiez la lisibilité, l'orientation, la cohérence des noms et la présence de chaque fichier avant de valider. Conservez une copie locale et la preuve d'envoi éventuelle. L'avis ne mentionne ni lettre de motivation ni extrait de casier judiciaire parmi les pièces obligatoires : ne les présentez pas comme tels."
+            ],
+            [
+              "Dépôt en ligne et ambiguïté de minuit",
+              "L'inscription et le dépôt des fichiers PDF doivent passer par la plateforme officielle de recrutement de l'OFPPT, et non par courrier électronique ou par le formulaire de contact d'emploi-public. Le portail affiche le 9 novembre 2026 comme date limite, tandis que l'avis indique « 09 Novembre 2026 à minuit ». Cette expression peut créer une ambiguïté sur le passage d'une journée à l'autre. Pour éviter tout risque, mieux vaut déposer le dossier avant le 9 novembre, idéalement le 8, plutôt que de compter sur les dernières minutes. Un dossier incomplet, envoyé par un autre canal ou comportant des informations erronées peut être rejeté."
+            ],
+            [
+              "Sélection, affectation et rémunération : les inconnues",
+              "Après présélection sur dossier, les candidats retenus seront convoqués à des tests d'évaluation dont les dates et les lieux seront communiqués ultérieurement. Le document ne publie pas de programme détaillé d'épreuves, de barème, de durée d'entretien, de salaire ou de liste définitive des villes. L'affectation dépendra des besoins de l'établissement et de l'ordre de mérite. Il serait donc imprudent de promettre une affectation à proximité du domicile ou un revenu précis. Consultez les communications officielles après le dépôt et méfiez-vous de toute personne réclamant un paiement pour garantir une place ou fournir un sujet d'épreuve."
+            ],
+            [
+              "Préparation vérifiable et autres possibilités",
+              "Construisez d'abord une grille d'éligibilité reprenant diplôme, spécialité, équivalence, expérience cumulée, âge, nationalité et quatre PDF obligatoires. Entraînez-vous ensuite sur deux cas fictifs : un rapprochement bancaire avec opérations en suspens et un contrôle de facture jusqu'à l'ordre de virement. Présentez les contrôles effectués avec des preuves non confidentielles, sans vous attribuer des réalisations imaginaires. Si vous n'avez pas les deux ans d'expérience ou le diplôme demandé, recherchez une offre de débutant dont les conditions publiées correspondent réellement à votre profil. Revérifiez la fiche originale et le portail avant toute candidature."
+            ]
+          ]
+        }
+      }
     }
   }
 }
