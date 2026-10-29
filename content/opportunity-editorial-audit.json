@@ -375,10 +375,13 @@
       "section": "competitions",
       "title": "5 Ingénieurs d’État — Génie civil",
       "deadline": "2026-11-04",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-11-04",
-      "sourceUrl": "https://adha.gov.ma/recrutement.php?lang=fr"
+      "sourceUrl": "https://adha.gov.ma/uploads/jobs/ADHA_IE_GC_2026_Decision.pdf",
+      "researchedAt": "2026-10-29",
+      "evidencePath": "content/opportunity-editorial-evidence.json#adha-civil-engineers-2026",
+      "note": "Full signed 2-page ADHA decision and 1-page job sheet read 2026-10-29; 9 original sections in each of AR/EN/FR. Awaiting build, deployment and live page checks before final researched-article status."
     },
     {
       "id": "ofppt-accountant-10",
