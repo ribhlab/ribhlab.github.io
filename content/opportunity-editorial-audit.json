@@ -11,9 +11,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 29,
+    "researched": 31,
     "marketEvidence": 5,
-    "pendingDetail": 61
+    "pendingDetail": 59
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -54,14 +54,14 @@
       "section": "competitions",
       "title": "Élèves officiers — Protection civile",
       "deadline": "2026-10-31",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-10-31",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/0bc3b58e-cfd7-466e-9023-6faf53a94738",
       "evidenceId": "civil-protection",
       "reviewedAt": "2026-10-29",
       "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/0bc3b58e-cfd7-466e-9023-6faf53a94738",
-      "reviewNote": "Original three-page DGPC officer-cadet decision read and compared with official portal and DGPC application portal on 29 October 2026. 50 places; licence disciplines; 18–26 years for external male Moroccan applicants; 31 October closing without stated hour; 16 November medical stage; rope/run/swim, written/oral/psychometric stages. Ten original sections per AR/EN/FR, minimum >700 words and >=350 characters per section validated. GitHub commit 59c0c922065a9cab011083eb0e8da2151d507d96. NOT YET COUNTED AS PUBLISHED: build/Actions/live verification unavailable in this run."
+      "reviewNote": "Original three-page DGPC officer-cadet decision read and compared with official portal and DGPC application portal on 29 October 2026. 50 places; licence disciplines; 18–26 years for external male Moroccan applicants; 31 October closing without stated hour; 16 November medical stage; rope/run/swim, written/oral/psychometric stages. Ten original sections per AR/EN/FR, minimum >700 words and >=350 characters per section validated. GitHub commit 59c0c922065a9cab011083eb0e8da2151d507d96. NOT YET COUNTED AS PUBLISHED: build/Actions/live verification unavailable in this run.\nConfirmed live AR/EN/FR 29 October 2026 in public HTTPS GitHub Actions run 40887061800 after successful Pages deployment 40886969558: 10 original sections, signed 3-page notice, 50 positions, 31 October deadline and official source links."
     },
     {
       "id": "agriculture-admin",
@@ -454,14 +454,14 @@
       "section": "competitions",
       "title": "Cadre analyste Projets de développement",
       "deadline": "2026-11-09",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b135e292-d476-4fe6-bbb4-e57c0f73cdf3",
       "evidenceId": "amdie-development",
       "reviewedAt": "2026-10-29",
       "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/b135e292-d476-4fe6-bbb4-e57c0f73cdf3",
-      "reviewNote": "Four-page AMDIE decision 507/2026 and appended job sheet read 29 Oct 2026, cross-checked with C44252/26 and AMDIE official mission pages. Three posts; Bac+5; Moroccan nationality; under 45 at future exam date; one PDF online by 9 November; no published salary, posting city or exam date. Ten original sections AR/EN/FR, 919/1069/1101 words. Pending build, deployment and live verification; not yet counted researched-published."
+      "reviewNote": "Four-page AMDIE decision 507/2026 and appended job sheet read 29 Oct 2026, cross-checked with C44252/26 and AMDIE official mission pages. Three posts; Bac+5; Moroccan nationality; under 45 at future exam date; one PDF online by 9 November; no published salary, posting city or exam date. Ten original sections AR/EN/FR, 919/1069/1101 words. Pending build, deployment and live verification; not yet counted researched-published.\nConfirmed live AR/EN/FR 29 October 2026 in public HTTPS GitHub Actions run 40887061800 after successful Pages deployment 40886969558: 10 original sections per language, signed 4-page decision 507/2026, C44252/26, source links, 3 positions and 9 November deadline. No salary or posting city invented."
     },
     {
       "id": "amdie-investment",
