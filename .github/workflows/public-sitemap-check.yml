@@ -42,6 +42,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/morocco/sidi-finance/')
               wanted.append(f'/{lang}/opportunities/companies/marrakech-cash/')
               wanted.append(f'/{lang}/opportunities/competitions/ofppt-accountant-10/')
+              wanted.append(f'/{lang}/opportunities/companies/bam-assurances-2026/')
           last=None
           for attempt in range(1,7):
               try:
@@ -177,6 +178,15 @@ jobs:
                           assert article_html.count('class="article-block"')>=min_sections, f'{language}: {slug} has too few sections'
                           assert 'article-sources' in article_html and 'licensed-editorial-photo' in article_html, f'{language}: missing source/photo for {slug}'
                           print(f'CAMPAIGN LIVE {language}: {slug}, {min_sections}+ sections, sources and licensed photo',flush=True)
+                  # Validate the original Bank Al-Maghrib insurance recruitment guide
+                  # against live trilingual pages, not only the committed evidence JSON.
+                  for language in ('ar','en','fr'):
+                      path=f'/{language}/opportunities/companies/bam-assurances-2026/'
+                      html=bodies[path].decode('utf-8')
+                      assert html.count('class="opp-guide-section" id="part-')>=10, f'{language}: BAM guide has fewer than ten sections'
+                      assert 'CSDA/DIL/191026' in html and 'C44144/26' in html, f'{language}: BAM original reference missing'
+                      assert 'opp-guide-sources' in html, f'{language}: BAM primary sources missing'
+                      print(f'BAM INSURANCE LIVE {language}: ten researched sections and official sources',flush=True)
                   # Verify recently published campaign articles in all three languages before
                   # their sprint statuses are reconciled. This catches broken article routes,
                   # missing editorial sections, source citations, or photo provenance markup.
