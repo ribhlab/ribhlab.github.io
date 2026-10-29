@@ -237,6 +237,7 @@ jobs:
                   ads=bodies['/ads.txt'].decode('utf-8-sig').strip()
                   match=re.fullmatch(r'google\.com, pub-(\d{16}), DIRECT, f08c47fec0942fa0',ads)
                   assert match, 'Public ads.txt must contain a properly formatted real publisher entry'
+                  assert match.group(1)=='7945572016731367', 'Public ads.txt carries the wrong RibhLab AdSense publisher ID'
                   expected_meta=('name="google-adsense-account" content="ca-pub-'+match.group(1)+'"').encode()
                   assert expected_meta in bodies['/'], 'Publisher ownership meta missing from root homepage'
                   for language in ('ar','en','fr'):
