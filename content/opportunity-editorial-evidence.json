@@ -4666,6 +4666,190 @@
         }
       },
       "liveVerification": "GitHub Pages deployment run 40886969558 success; public HTTPS AR/EN/FR ten-section official source QA run 40887061800 success 2026-10-29, with matching signed decision references and sources."
+    },
+    "anapec-finance-audit-3": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Read all three pages of the ANAPEC signed Arabic decision no. 1140 dated 21 October 2026, and checked official employment portal C44235/26 published 22 October 2026. Eight detailed original sections in each of AR/EN/FR, 700+ words each, with 16:30 closing time, exam dates, documents and coefficients checked. Do not confuse 86 overall posts with 3 finance positions. No unverified salary or individual posting city. Awaiting live deployment verification.",
+      "state": "verified-awaiting-live",
+      "sources": [
+        {
+          "label": "ANAPEC — signed three-page decision 1140, 21 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/bea98a46-0101-4906-afd5-4bdc57b30dab"
+        },
+        {
+          "label": "Emploi-public — competition C44235/26, 22 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/bea98a46-0101-4906-afd5-4bdc57b30dab"
+        },
+        {
+          "label": "ANAPEC — official agency website and competition notices",
+          "url": "https://anapec.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Agence nationale de promotion de l'emploi et des compétences (ANAPEC)",
+        "decision": "1140",
+        "decisionDate": "2026-10-21",
+        "competitionCode": "C44235/26",
+        "publishedAt": "2026-10-22",
+        "deadline": "2026-11-05",
+        "deadlineHour": "16:30",
+        "examDate": "2026-11-21",
+        "broaderExamDates": [
+          "2026-11-21",
+          "2026-11-22"
+        ],
+        "broaderExamCities": [
+          "Mohammedia",
+          "Casablanca"
+        ],
+        "posts": 3,
+        "broaderRecruitmentPosts": 86,
+        "grade": "Administrateur 2e grade, échelle 11",
+        "specialities": [
+          "Finance",
+          "Comptabilité",
+          "Audit",
+          "Contrôle de gestion"
+        ],
+        "diploma": "Master ou diplôme équivalent",
+        "age": "18–45 years on application deadline, subject to legal exceptions",
+        "nationality": "Moroccan",
+        "assignment": "Direction Générale",
+        "jobCity": null,
+        "salary": null,
+        "minimumExperienceYears": null,
+        "application": "https://www.emploi-public.ma/",
+        "applicationRule": "One application and one selected specialty, PDF upload",
+        "documents": [
+          "Online application form",
+          "Updated CV with photo, phone, address and email",
+          "Certified copy of CNIE",
+          "Certified diploma copy and foreign diploma equivalence where applicable",
+          "Civil service authorisation where applicable",
+          "Disability proof or special-category procedures where applicable"
+        ],
+        "writtenTest": "QCM, 3 hours, coefficient 6; below 10/20 eliminatory",
+        "oralTest": "15–30 minutes, coefficient 4",
+        "overallThreshold": "10/20 subject to ranking and available posts",
+        "reservedCategories": "25% for specified protected categories; 7% disability, per official decision",
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة ANAPEC 2026: ثلاثة مناصب في المالية والمحاسبة والتدقيق ومراقبة التسيير",
+          "deck": "قراءة للقرار الرسمي المؤرخ في 21 أكتوبر 2026: ماستر في التخصص، ترشيح إلكتروني واحد قبل 5 نوفمبر الساعة 16:30، واختبار كتابي وشفوي يوم 21 نوفمبر.",
+          "sections": [
+            [
+              "إعلان محدد داخل مباراة أكبر تضم 86 منصباً",
+              "أعلنت الوكالة الوطنية لإنعاش التشغيل والكفاءات ANAPEC عن مباريات توظيف تشمل 86 منصباً في درجات وتخصصات مختلفة، وفق الإعلان الرسمي الموقع في الدار البيضاء يوم 21 أكتوبر 2026. لكن هذه البطاقة تتعلق حصرياً بثلاثة مناصب متصرف من الدرجة الثانية، السلم 11، في المالية والمحاسبة والتدقيق ومراقبة التسيير، تحت مرجع البوابة C44235/26. لا يصح تقديم مجموع 86 على أنه عدد مناصب هذا التخصص، كما لا يصح تقسيم المناصب الثلاثة إلى ثلاثة لكل فرع من فروع المالية. نشرت بوابة التشغيل العمومي الإعلان يوم 22 أكتوبر، وحددت التعيين في الإدارة العامة دون تحديد مكتب أو وحدة عمل بعينها."
+            ],
+            [
+              "الشهادة والتخصص والسن والجنسية",
+              "توضح الصفحة الأولى من القرار أن الترشيح مفتوح للمغاربة المستوفين لشروط الدرجة، وأن سن المتصرف من الدرجة الثانية يجب أن يتراوح بين 18 و45 سنة في تاريخ آخر أجل لإيداع الترشيحات، مع مراعاة الاستثناءات القانونية المطبقة عند الاقتضاء. ويشترط ماستر أو شهادة معادلة في التخصصات الواردة بالجدول الرسمي، وهي المالية والمحاسبة والتدقيق ومراقبة التسيير بالنسبة إلى هذه البطاقة. لا تكفي تسمية عامة مثل «تدبير» لإثبات المطابقة إذا لم يكن تخصص الشهادة مطابقاً، كما أن امتلاك خبرة طويلة لا يعوض شرط الدبلوم. بالنسبة إلى الشهادات الأجنبية، يجب إعداد قرار المعادلة المطلوب وفق نص الإعلان."
+            ],
+            [
+              "مكان التعيين وحدود معلومات الأجر",
+              "تحدد البوابة مكان التعيين بعبارة «الإدارة العامة»، بينما يذكر تذييل القرار عنوان الوكالة في سيدي معروف بالدار البيضاء. العنوان الإداري ليس في حد ذاته قرار تعيين فردياً، ولذلك ينبغي الاستفسار عن مقر العمل النهائي عند استدعاء الناجحين أو تسلم قرار التعيين. يذكر الإعلان درجة متصرف من الدرجة الثانية والسلم 11، لكنه لا يحدد مبلغ أجر فردي أو تعويضات هذا المنصب؛ لا يجوز نقل رقم راتب من حاسبة عامة أو موقع إعلانات وتقديمه باعتباره أجراً أعلنته ANAPEC لهذه المباراة. كما لم يحدد القرار سنوات خبرة دنيا مستقلة عن الشهادة. هذه حدود مهمة للتمييز بين الشرط الرسمي والتوقع الشخصي."
+            ],
+            [
+              "الوثائق المطلوبة وما الذي يجب فحصه",
+              "تحدد الصفحة الثالثة ملفاً إلكترونياً يبدأ بتعبئة طلب المشاركة على بوابة التشغيل العمومي، ثم سيرة ذاتية حديثة تتضمن صورة شخصية ورقم الهاتف والعنوان الدائم والبريد الإلكتروني. ويُرفق المرشح نسخة مطابقة للأصل من البطاقة الوطنية للتعريف، ونسخة مصادقاً عليها من الدبلوم أو الشهادة مع قرار المعادلة لحاملي الشهادات الأجنبية. يحتاج الموظف إلى ترخيص إدارته لاجتياز المباراة، ويقدم المرشح من ذوي الإعاقة وثيقة الإثبات المنصوص عليها. أما الفئات ذات الوضعيات الخاصة مثل قدماء العسكريين والمقاومين فتتبع أيضاً المسار الإداري المخصص لها. افحص وضوح الوثائق وأختامها وتطابق الاسم والتخصص قبل رفعها."
+            ],
+            [
+              "كيفية تقديم الترشيح والموعد النهائي بالدقيقة",
+              "يطلب القرار التسجيل وإيداع الوثائق عبر موقع emploi-public.ma في صيغة PDF خلال الفترة من 22 أكتوبر إلى 5 نوفمبر 2026. آخر أجل منصوص عليه صراحة هو الخميس 5 نوفمبر 2026 الساعة الرابعة والنصف بعد الزوال، أي 16:30 بالتوقيت المحلي المطبق لدى البوابة. ويؤكد الإعلان ضرورة تقديم ترشيح واحد فقط مع تحديد تخصص واحد من التخصصات الواردة في الجداول. لا يعتبر إرسال السيرة الذاتية إلى عنوان الوكالة أو استعمال نموذج «اتصل بنا» في البوابة إيداعاً صحيحاً. يرفض النظام الملفات الناقصة أو غير المعبأة بالطريقة المطلوبة تلقائياً. من الأفضل الإيداع مبكراً وحفظ إثبات التسجيل ومراجعة ملف PDF بعد رفعه."
+            ],
+            [
+              "الاختبار الكتابي والشفوي ومعاملات التنقيط",
+              "يحدد القرار اختباراً كتابياً موحداً من نوع الأسئلة متعددة الاختيارات QCM مدته ثلاث ساعات ومعامله 6، يشمل اختصاصات الوكالة والكفاءات والثقافة العامة بحسب التخصص. ويليه اختبار شفوي تتراوح مدته بين 15 و30 دقيقة ومعامله 4. كل نقطة تقل عن 10 من 20 في الكتابي إقصائية، ويعتبر المرشح مقبولاً بعد الاختبارين إذا بلغ معدله العام 10 من 20 على الأقل، ضمن حدود المقاعد المتبارى بشأنها. وتعرض البوابة تاريخ 21 نوفمبر 2026 للمباراة، بينما يذكر القرار أن المباريات المنظمة عبر جميع الدرجات ستكون يومي 21 و22 نوفمبر في مدينتي المحمدية والدار البيضاء. ينبغي الرجوع للاستدعاء لتحديد المكان والساعة الفرديين."
+            ],
+            [
+              "التحضير المهني الواقعي دون ادعاء معرفة أسئلة الامتحان",
+              "يمكن للمرشح أن يراجع مهام ANAPEC المتعلقة بالتشغيل والوساطة والكفاءات، وأن يتدرب على أسئلة متعددة الاختيارات في الثقافة العامة والمالية والمحاسبة والتدقيق ومراقبة التسيير. ومن التمارين المفيدة إعداد مثال افتراضي لموازنة برنامج تدريب، وحساب انحراف المصروفات عن الميزانية، وشرح كيفية التحقق من فاتورة قبل اعتمادها، ثم تلخيص النتائج في دقيقة. هذه تمارين مقترحة مستنبطة من تخصص الوظيفة، وليست أسئلة امتحان مسربة أو معلنة رسمياً. حضّر كذلك شرحاً موجزاً لمسارك الدراسي ومشروعك المهني باللغات التي تتقنها، ولا تنسب إلى القرار شرط شهادة لغة لم يذكره. راجع تاريخ الاستدعاء بدلاً من الاعتماد على صفحات التواصل."
+            ],
+            [
+              "الحصص القانونية والمخاطر ومصادر التحقق",
+              "يذكر الإعلان تخصيص 25% من المناصب للفئات المشمولة بصفات مقاوم أو مكفول الأمة أو عسكري قديم أو محارب قديم، و7% للأشخاص في وضعية إعاقة، وفق الأحكام التنظيمية، دون أن يعني ذلك إمكانية احتساب أجزاء من المنصب الواحد بصورة مستقلة عن إجراءات التوزيع الرسمية. أخطر الأخطاء اختيار تخصص غير مطابق أو تقديم أكثر من ترشيح أو إغفال الترخيص الإداري أو انتظار الدقائق الأخيرة. تنشر لوائح المدعوين على موقع الوكالة والبوابة الحكومية وتعد بمثابة استدعاء؛ لا تدفع مالاً لوسيط يدعي ضمان النجاح. هذه مراجعة للمصادر الرسمية بتاريخ 29 أكتوبر 2026، ولا تمثل وعداً بالتوظيف أو تصريحاً بوجود أجر محدد."
+            ]
+          ]
+        },
+        "en": {
+          "title": "ANAPEC 2026 competition: three finance, accounting, audit and management-control posts",
+          "deck": "Official decision dated 21 October 2026: relevant master's degree, one online application by 5 November at 16:30, and written/oral competition on 21 November.",
+          "sections": [
+            [
+              "Three specific positions within a larger recruitment announcement",
+              "Morocco's National Agency for the Promotion of Employment and Skills, ANAPEC, announced competitions covering 86 positions across several grades and specialisms in a decision signed in Casablanca on 21 October 2026. This guide concerns only three second-grade administrator positions, scale 11, in finance, accounting, audit and management control, identified on the public employment portal as C44235/26. The total of 86 must not be presented as the number of finance vacancies, nor should the three posts be multiplied across each listed discipline. The government portal published this particular notice on 22 October and identifies the assignment as the General Directorate, without specifying an individual office or department."
+            ],
+            [
+              "Degree, specialism, nationality and age",
+              "The first page of the signed decision opens the competition to Moroccan nationals meeting the grade conditions. For second-grade administrators, the stated age range is 18 to 45 on the closing date, subject to any applicable statutory exceptions. Applicants need a master's degree or a legally equivalent qualification in the specialisms listed for this competition: finance, accounting, audit or management control. A general management qualification should not automatically be treated as equivalent without checking the precise diploma title and the official list. Professional experience cannot simply replace the stated degree requirement. Candidates with foreign qualifications must prepare the corresponding equivalence decision where required by the official notice, rather than relying on informal assurances from a recruitment website."
+            ],
+            [
+              "Work location, salary and experience: what is actually published",
+              "The government listing identifies the place of assignment as the General Directorate. The footer of the signed decision gives the agency's administrative address in Sidi Maarouf, Casablanca, but that address alone is not an individual posting decision. Candidates should verify the actual workplace when contacted about appointment. The competition specifies the grade and scale, but neither the official listing nor the decision publishes a particular salary amount or compensation package for these three jobs. Do not import a number from a general salary calculator and label it ANAPEC's offer. The decision also does not impose a separately quantified minimum number of professional experience years. Those omissions matter when comparing this opportunity with private-sector finance positions."
+            ],
+            [
+              "The documents the decision actually requires",
+              "Page three requires completion of the online participation form, followed by an updated CV with a recent photograph, telephone number, permanent address and email. Applicants must provide a certified true copy of the national identity card and a certified copy of the diploma or qualification, together with an equivalence decision for foreign degrees where applicable. Current civil servants must obtain permission from their administration to sit the competition. Candidates with a disability must provide the relevant supporting document, and categories such as former service personnel and resistance members follow the additional official procedures applicable to them. Check scan legibility, certification marks and consistency of names and specialisms before submitting. Do not add unofficial certificates as compulsory requirements."
+            ],
+            [
+              "One application, PDF upload and the exact deadline",
+              "The decision requires registration and document submission through emploi-public.ma in PDF format between 22 October and 5 November 2026. It explicitly sets the deadline at 16:30 on Thursday, 5 November 2026, according to the portal's local operating time. Each person must submit only one application and choose one specialism from the official tables. Sending a CV to the agency's general address or using the public portal's contact form is not a valid substitute. Incomplete or incorrectly entered applications are automatically rejected under the decision. Submit early, keep confirmation if issued, and reopen the uploaded PDF to check its readability. Platform button names and file-size limits should be checked on the live form rather than invented."
+            ],
+            [
+              "Written and oral tests, coefficients and elimination threshold",
+              "The official document specifies a common written multiple-choice test lasting three hours with coefficient 6, covering ANAPEC's responsibilities, competencies, general knowledge and the candidate's specialism. An oral examination lasting 15 to 30 minutes carries coefficient 4. A written score below 10 out of 20 is eliminatory, and the combined average must reach at least 10 out of 20 for eligibility within the available positions. The government listing states 21 November 2026 as the competition date for this notice, while the broader signed decision schedules competitions across all grades on 21 and 22 November in Mohammedia and Casablanca. The candidate's official summons, not an online guess, determines the individual venue and time."
+            ],
+            [
+              "Practical preparation without claiming access to exam questions",
+              "Candidates can review ANAPEC's public employment and skills-matching mission, practise time-limited multiple-choice questions and revisit finance, accounting, audit and management-control fundamentals. One useful fictional exercise is to prepare a training-programme budget, calculate actual-versus-budget variances, explain a simple invoice-control procedure and present the conclusion in sixty seconds. These are preparation suggestions inferred from the professional field, not leaked or confirmed examination questions. Prepare a concise explanation of academic background and relevant projects, but do not invent a mandatory language certificate that the notice does not specify. Check official announcements for the summons and any changes rather than relying on screenshots circulated on social media."
+            ],
+            [
+              "Reserved categories, avoidable errors and verification",
+              "The signed decision refers to reservations of 25 percent for the legally specified resistance, Nation's ward and former military categories, and 7 percent for persons with disabilities, subject to the applicable allocation rules. This does not justify rounding a fractional share of a three-position competition into a guaranteed individual seat without official clarification. Common preventable errors include choosing the wrong specialism, submitting multiple applications, omitting civil-service authorisation and waiting until the final minutes. Lists of candidates called to the tests are published on the agency and public employment websites and serve as summons. Never pay an intermediary who promises selection. Sources were reviewed on 29 October 2026; no job, salary or successful application is guaranteed."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours ANAPEC 2026 : trois postes en finance, comptabilité, audit et contrôle de gestion",
+          "deck": "Décision officielle du 21 octobre 2026 : master adapté, candidature unique avant le 5 novembre à 16 h 30, épreuves écrite et orale prévues le 21 novembre.",
+          "sections": [
+            [
+              "Trois postes précis dans un recrutement plus large",
+              "L'Agence nationale de promotion de l'emploi et des compétences, ANAPEC, a annoncé des concours portant sur 86 postes de plusieurs grades et spécialités dans une décision signée à Casablanca le 21 octobre 2026. Cette analyse concerne uniquement trois postes d'administrateur de deuxième grade, échelle 11, en finance, comptabilité, audit et contrôle de gestion, référencés C44235/26 sur le portail de l'emploi public. Le total de 86 ne représente pas des vacances en finance et les trois postes ne doivent pas être multipliés par le nombre de disciplines citées. Le portail gouvernemental a publié cet avis le 22 octobre et indique la Direction générale comme lieu d'affectation, sans désigner un service individuel."
+            ],
+            [
+              "Diplôme, spécialité, nationalité et âge",
+              "La première page de la décision réserve le concours aux ressortissants marocains remplissant les conditions du grade. Pour les administrateurs de deuxième grade, l'âge indiqué est compris entre 18 et 45 ans à la date limite de candidature, sous réserve des exceptions légales applicables. Il faut un master ou un diplôme légalement équivalent dans les spécialités du tableau : finance, comptabilité, audit ou contrôle de gestion. Un diplôme portant seulement la mention générale « gestion » ne doit pas être déclaré admissible sans examen de son intitulé exact. L'expérience professionnelle ne remplace pas automatiquement la qualification exigée. Pour les diplômes étrangers, le dossier doit comprendre la décision d'équivalence prévue par l'avis officiel."
+            ],
+            [
+              "Affectation, rémunération et expérience : limites de l'annonce",
+              "La fiche gouvernementale mentionne la Direction générale comme lieu d'affectation. Le pied de page de la décision comporte l'adresse administrative de l'agence à Sidi Maarouf, Casablanca, mais cette adresse ne constitue pas à elle seule une décision individuelle d'affectation. Le candidat doit vérifier son futur lieu de travail auprès de l'administration. L'avis précise le grade et l'échelle, sans publier de montant salarial individuel ni de régime d'indemnités pour ces trois postes. Il serait trompeur de reprendre une estimation issue d'un simulateur général en la présentant comme un salaire annoncé par l'ANAPEC. Aucun minimum autonome d'années d'expérience n'est fixé dans le texte de ce concours."
+            ],
+            [
+              "Les pièces effectivement exigées par la décision",
+              "La troisième page impose de remplir le formulaire électronique, puis de fournir un CV actualisé comportant une photographie récente, un numéro de téléphone, une adresse permanente et un courriel. Le dossier comprend une copie certifiée conforme de la carte nationale d'identité et une copie certifiée du diplôme ou du titre, avec décision d'équivalence pour les diplômes étrangers lorsque celle-ci est requise. Les fonctionnaires doivent joindre l'autorisation de leur administration pour passer le concours. Les personnes en situation de handicap présentent le justificatif prévu ; les anciens militaires et autres catégories spéciales suivent aussi leur procédure administrative. Vérifiez la lisibilité, les cachets et la cohérence des noms avant l'envoi."
+            ],
+            [
+              "Une seule candidature et une échéance précise",
+              "La décision prévoit l'inscription et le dépôt des pièces au format PDF sur emploi-public.ma du 22 octobre au 5 novembre 2026. L'heure limite est expressément fixée au jeudi 5 novembre 2026 à 16 h 30, selon l'heure locale appliquée par le portail. Une personne ne doit présenter qu'une candidature en choisissant une seule spécialité parmi celles des tableaux officiels. L'envoi d'un CV à l'adresse générale de l'agence ou par le formulaire de contact ne vaut pas candidature. Les dossiers incomplets ou mal renseignés sont automatiquement rejetés selon la décision. Déposez le dossier suffisamment tôt, conservez l'accusé éventuel et vérifiez la qualité du PDF téléversé. Les limites techniques doivent être lues dans l'interface réelle."
+            ],
+            [
+              "Épreuves, coefficients et seuil éliminatoire",
+              "Le document signé prévoit une épreuve écrite commune sous forme de questions à choix multiples, d'une durée de trois heures et de coefficient 6, portant sur les missions de l'ANAPEC, les compétences, la culture générale et la spécialité. L'oral dure entre quinze et trente minutes et porte le coefficient 4. Une note écrite inférieure à 10 sur 20 est éliminatoire ; la moyenne générale doit atteindre au moins 10 sur 20 pour être admissible dans la limite des postes. Le portail annonce le 21 novembre 2026 pour ce concours, tandis que la décision générale prévoit des épreuves les 21 et 22 novembre à Mohammedia et Casablanca. Seule la convocation officielle fixe le lieu et l'horaire personnels."
+            ],
+            [
+              "Se préparer sans prétendre connaître les sujets",
+              "Le candidat peut étudier les missions publiques de l'ANAPEC en matière d'emploi et de compétences, s'entraîner aux QCM chronométrés et revoir les fondamentaux de la finance, de la comptabilité, de l'audit et du contrôle de gestion. Un exercice fictif utile consiste à construire le budget d'une formation, calculer les écarts entre prévision et réalisation, décrire le contrôle d'une facture et présenter une conclusion en une minute. Ce sont des propositions pédagogiques tirées du domaine professionnel, non des questions d'examen divulguées ou garanties. Préparez aussi une présentation de votre parcours et de vos projets, sans inventer un certificat de langue obligatoire absent de l'avis. Consultez régulièrement les convocations officielles."
+            ],
+            [
+              "Réservations légales, erreurs à éviter et sources",
+              "La décision prévoit des réservations de 25 % pour certaines catégories légalement définies de résistants, pupilles de la Nation et anciens militaires, ainsi que 7 % pour les personnes en situation de handicap, conformément aux modalités réglementaires. Il ne faut pas transformer mécaniquement ces pourcentages en garantie d'un siège dans un concours de trois postes sans décision officielle. Les erreurs fréquentes sont la spécialité inadéquate, les candidatures multiples, l'absence d'autorisation pour un fonctionnaire et l'envoi au dernier moment. Les listes de candidats convoqués sont publiées sur les sites de l'agence et du portail public et valent convocation. Refusez les intermédiaires promettant une admission payante. Vérification des sources le 29 octobre 2026 ; aucune embauche ni rémunération n'est garantie."
+            ]
+          ]
+        }
+      }
     }
   }
 }
