@@ -4669,8 +4669,8 @@
     },
     "anapec-finance-audit-3": {
       "reviewedAt": "2026-10-29",
-      "verification": "Read all three pages of the ANAPEC signed Arabic decision no. 1140 dated 21 October 2026, and checked official employment portal C44235/26 published 22 October 2026. Eight detailed original sections in each of AR/EN/FR, 700+ words each, with 16:30 closing time, exam dates, documents and coefficients checked. Do not confuse 86 overall posts with 3 finance positions. No unverified salary or individual posting city. Awaiting live deployment verification.",
-      "state": "verified-awaiting-live",
+      "verification": "Read all three pages of the ANAPEC signed Arabic decision no. 1140 dated 21 October 2026, and checked official employment portal C44235/26 published 22 October 2026. Eight detailed original sections in each of AR/EN/FR, 700+ words each, with 16:30 closing time, exam dates, documents and coefficients checked. Do not confuse 86 overall posts with 3 finance positions. No unverified salary or individual posting city. Verified GitHub Actions source/build 40897663959, Pages deploy 40897664010 and public HTTPS all three locales (eight sections, decision and external sources) in 40897830364.",
+      "state": "verified-live",
       "sources": [
         {
           "label": "ANAPEC — signed three-page decision 1140, 21 October 2026",
