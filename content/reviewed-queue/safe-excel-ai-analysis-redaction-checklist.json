@@ -158,14 +158,14 @@
     }
   },
   "photo": {
-    "photoId": "photo-1762558978967-709b17a00415",
-    "source": "https://unsplash.com/photos/woman-working-on-a-laptop-with-spreadsheet-data-hpbduAj7wew",
-    "photographer": "Rodrigo Rodrigues | WOLF Λ R T",
-    "alt": "Woman working on a laptop showing spreadsheet data",
-    "altAr": "امرأة تعمل على حاسوب محمول يعرض بيانات في جدول إلكتروني",
-    "altFr": "Une femme travaille sur un ordinateur affichant un tableau de données",
+    "photoId": "photo-1758876202877-30b2c505ad9d",
+    "source": "https://unsplash.com/photos/two-people-looking-at-data-on-a-laptop-screen-t3RACFVYRlk",
+    "photographer": "Vitaly Gariev",
+    "alt": "Two colleagues discussing information displayed on a laptop at an office desk",
+    "altAr": "زميلان يناقشان معلومات معروضة على حاسوب محمول داخل مكتب",
+    "altFr": "Deux collègues discutent des informations affichées sur un ordinateur portable au bureau",
     "license": "Unsplash License",
-    "note": "Free Unsplash photo by Rodrigo Rodrigues | WOLF Λ R T, published 7 November 2025. Source page and image asset photo-1762558978967-709b17a00415 verified 28 October 2026; illustrative, not an image of real client data. No match in repository search for image asset ID."
+    "note": "Photograph by Vitaly Gariev, published 26 September 2025; Unsplash source page explicitly marked Free to use under the Unsplash License, verified 29 October 2026. Image asset photo-1758876202877-30b2c505ad9d; checked against repository photo registries and other reviewed queue entries. Illustrative photo only, not real client data."
   },
   "resourceIds": [
     "powerquery",
@@ -173,10 +173,10 @@
   ],
   "review": {
     "ready": true,
-    "checkedAt": "2026-10-28",
+    "checkedAt": "2026-10-29",
     "sourcesIndependentlyChecked": true,
     "translationsReviewed": true,
     "photoProvenanceChecked": true,
-    "notes": "Microsoft Support, Microsoft Learn, ICO and NIST original pages checked 28 October 2026. Three original full editorial editions reviewed, no dialect. Arithmetic examples fictional. Free Unsplash License page and image asset ID checked; no repository search matches."
+    "notes": "Original source and three editorial editions previously reviewed; photo duplicate detected by publisher on 29 October 2026 and replaced with distinct, confirmed free Unsplash photograph by Vitaly Gariev. License, image asset and uniqueness cross-checked against photo registries; no false claim of photographing actual client data."
   }
 }
