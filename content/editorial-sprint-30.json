@@ -185,10 +185,12 @@
         "powerquery",
         "powerbi"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/power-query-ai-assisted-transformations-audit/",
       "queuePath": "content/reviewed-queue/power-query-ai-assisted-transformations-audit.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "Published in content/articles at 05:24:34 UTC after publisher 40823216844; Pages deployment 40823232110 successful; live AR/EN/FR 8-section/source/photo assertions added to public-sitemap-check and passed in run 40826410880."
     },
     {
       "sectionId": "mobile-apps",
