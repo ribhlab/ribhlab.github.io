@@ -52,10 +52,12 @@
         "fiverrHelp",
         "canva"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/earning/gig-gallery-original-images-checklist/",
       "queuePath": "content/reviewed-queue/gig-gallery-original-images-checklist.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles file present with trilingual translations; GitHub Actions build and Pages deploy 40809355100 / 40809355095 success; live public-sitemap-check 40809396943 verified all three locales, >=4 sections, sources and licensed photo."
     },
     {
       "sectionId": "freelance",
@@ -108,10 +110,12 @@
         "googleSearch",
         "googleAdsense"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/earning/newsletter-start-free-first-90-days/",
       "queuePath": "content/reviewed-queue/newsletter-start-free-first-90-days.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles file present with trilingual translations; GitHub Actions build and Pages deploy 40809355100 / 40809355095 success; live public-sitemap-check 40809396943 verified all three locales, >=4 sections, sources and licensed photo."
     },
     {
       "sectionId": "online-business",
@@ -337,10 +341,12 @@
         "investor",
         "cftc"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/fixed-versus-trailing-stop-order-frictions/",
       "queuePath": "content/reviewed-queue/fixed-versus-trailing-stop-order-frictions.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles file present with trilingual translations; GitHub Actions build and Pages deploy 40809355100 / 40809355095 success; live public-sitemap-check 40809396943 verified all three locales, >=4 sections, sources and licensed photo."
     },
     {
       "sectionId": "crypto-web3",
@@ -458,10 +464,12 @@
         "aadFaceWashing",
         "aadSunscreen"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/minimal-skin-routine-cleanser-moisturizer-spf/",
       "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/minimal-skin-routine-cleanser-moisturizer-spf.json"
+      "queuePath": "content/reviewed-queue/minimal-skin-routine-cleanser-moisturizer-spf.json",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles file present with trilingual translations; GitHub Actions build and Pages deploy 40809355100 / 40809355095 success; live public-sitemap-check 40809396943 verified all three locales, >=4 sections, sources and licensed photo."
     },
     {
       "sectionId": "body-care",
