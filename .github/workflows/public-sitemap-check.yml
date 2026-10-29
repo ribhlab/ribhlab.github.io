@@ -43,6 +43,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/companies/marrakech-cash/')
               wanted.append(f'/{lang}/opportunities/competitions/ofppt-accountant-10/')
               wanted.append(f'/{lang}/opportunities/companies/bam-assurances-2026/')
+              wanted.append(f'/{lang}/opportunities/competitions/srm-fes-meknes-271/')
           last=None
           for attempt in range(1,7):
               try:
@@ -163,6 +164,13 @@ jobs:
                           assert page.count('class="article-block"')>=4, f'{language}: sprint sections missing for {slug}'
                           assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources or photo missing for {slug}'
                           print(f'SPRINT LIVE {language}: {slug} complete and sourced',flush=True)
+                  # Verify the new source-checked 271-position SRM-FM guide in each locale.
+                  for language in ('ar','en','fr'):
+                      page=bodies[f'/{language}/opportunities/competitions/srm-fes-meknes-271/'].decode('utf-8')
+                      assert page.count('class="opp-guide-section" id="part-')>=10, f'{language}: SRM-FM guide lacks ten sections'
+                      assert 'C44141/26' in page and 'e25c50f3-f5dc-4570-b991-981517e9a17b' in page, f'{language}: SRM-FM official notice missing'
+                      assert 'opp-guide-sources' in page and 'target="_blank"' in page, f'{language}: SRM-FM official source links missing'
+                      print(f'SRM-FM 271 LIVE {language}: ten researched sections and official decision verified',flush=True)
                   # Reconcile campaign records with articles already committed by the gated publisher.
                   for slug,category,min_sections in (
                       ('freelance-basic-standard-premium-cost-model','earning',5),
