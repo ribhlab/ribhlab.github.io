@@ -965,14 +965,10 @@
         "elliott-wave-technical-analysis-course",
         "trading-bot-backtest-spread-slippage-reality-check",
         "fixed-versus-trailing-stop-order-frictions",
-        "risk-budget-drawdown-math-beginners"
+        "risk-budget-drawdown-math-beginners",
+        "support-resistance-zones-price-chart-falsifiable-test"
       ],
       "ideas": [
-        {
-          "sequence": 7,
-          "titleAr": "إدارة رأس المال للمبتدئ",
-          "status": "planned"
-        },
         {
           "sequence": 8,
           "titleAr": "الفرق بين وقف خسارة ثابت ومتغير",

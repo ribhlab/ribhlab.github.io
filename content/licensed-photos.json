@@ -762,6 +762,16 @@
       "altFr": "Paella aux fruits de mer en cours de cuisson dans une grande poêle, image illustrative et non essai de la recette",
       "license": "Unsplash License",
       "note": "Unsplash free photo by Camila Vélez, published 2025-05-20; free license and actual CDN image identifier independently inspected 2026-10-28. Image depicts a different real dish, not author cooking test."
+    },
+    "support-resistance-zones-price-chart-falsifiable-test": {
+      "photoId": "photo-1768055105681-7d2096c5165f",
+      "source": "https://unsplash.com/photos/trader-analyzing-stock-market-charts-on-multiple-screens-j_hho1mE47s",
+      "photographer": "Jakub Żerdzicki",
+      "alt": "Person reviewing trading charts on multiple screens, illustrative photograph",
+      "altAr": "شخص يراجع رسوم الأسواق على شاشات متعددة، صورة توضيحية",
+      "altFr": "Personne examinant des graphiques financiers sur plusieurs écrans, photo illustrative",
+      "license": "Unsplash License",
+      "note": "Unsplash free photo by Jakub Żerdzicki published 10 January 2026; source and license independently viewed 28 October 2026. Illustration only; not a tested strategy or live market screenshot."
     }
   }
 }
