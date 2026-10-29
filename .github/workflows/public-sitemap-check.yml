@@ -61,6 +61,7 @@ jobs:
               wanted.append(f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/')
               wanted.append(f'/{lang}/trading/coin-versus-token-claim-verification/')
               wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-data-science-ai/')
+              wanted.append(f'/{lang}/opportunities/competitions/cnrst-administrator-4/')
           last=None
           for attempt in range(1,7):
               try:
@@ -138,6 +139,12 @@ jobs:
                       assert 'opp-guide-sources' in kenitra and 'target="_blank"' in kenitra, f'{lang}: Kenitra source list or external-tab links missing'
                       assert '2026' in kenitra and ('16:30' in kenitra or '16 h 30' in kenitra), f'{lang}: Kenitra deadline time missing'
                       print(f'KENITRA AI ENGINEER LIVE {lang}: nine researched sections, signed decision, job sheet and deadline',flush=True)
+                      cnrst=bodies[f'/{lang}/opportunities/competitions/cnrst-administrator-4/'].decode('utf-8')
+                      assert cnrst.count('class="opp-guide-section" id="part-')>=9, f'{lang}: CNRST management report lacks nine sections'
+                      assert 'C44248/26' in cnrst and 'b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf' in cnrst, f'{lang}: CNRST original notice or competition reference missing'
+                      assert 'opp-guide-sources' in cnrst and 'target="_blank"' in cnrst, f'{lang}: CNRST original source links missing'
+                      assert '2026' in cnrst and ('8' in cnrst and '9' in cnrst), f'{lang}: CNRST conflicting deadline warning missing'
+                      print(f'CNRST MANAGEMENT LIVE {lang}: nine source-backed sections and conflicting 8/9 November deadlines',flush=True)
                       english_apps=bodies[f'/{lang}/ai/english-learning-apps-pronunciation-plan/'].decode('utf-8')
                       assert english_apps.count('class="article-block"')>=6, f'{lang}: English-learning app article lacks six substantive sections'
                       assert 'article-sources' in english_apps and 'licensed-editorial-photo' in english_apps, f'{lang}: English-learning app article missing sources or photo'
