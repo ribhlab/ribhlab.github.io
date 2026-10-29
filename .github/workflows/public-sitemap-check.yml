@@ -59,6 +59,8 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/amdie-investment/')
               wanted.append(f'/{lang}/ai/english-learning-apps-pronunciation-plan/')
               wanted.append(f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/')
+              wanted.append(f'/{lang}/trading/coin-versus-token-claim-verification/')
+              wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-data-science-ai/')
           last=None
           for attempt in range(1,7):
               try:
@@ -126,6 +128,16 @@ jobs:
                       assert 'e3e989b0-e4ce-49fc-bee2-78571029dfec' in investment and 'opp-guide-sources' in investment, f'{lang}: AMDIE investment signed decision/source missing'
                       assert 'target="_blank"' in investment and '2026' in investment, f'{lang}: AMDIE investment official external source links or date missing'
                       print(f'AMDIE INVESTMENT LIVE {lang}: nine source-backed sections, decision 508/2026 and one position',flush=True)
+                      coin=bodies[f'/{lang}/trading/coin-versus-token-claim-verification/'].decode('utf-8')
+                      assert coin.count('class="article-block"')>=6, f'{lang}: coin-versus-token lacks six full editorial sections'
+                      assert 'article-sources' in coin and 'licensed-editorial-photo' in coin, f'{lang}: coin-versus-token lacks sources or licensed image'
+                      print(f'COIN VERSUS TOKEN LIVE {lang}: six sections, official sources and licensed photo',flush=True)
+                      kenitra=bodies[f'/{lang}/opportunities/competitions/au-kenitra-data-science-ai/'].decode('utf-8')
+                      assert kenitra.count('class="opp-guide-section" id="part-')>=9, f'{lang}: Kenitra AI engineer report lacks nine sections'
+                      assert 'C44309/26' in kenitra and 'b526d274-b490-4982-833e-71d21ea20813' in kenitra, f'{lang}: Kenitra original decision and job sheet missing'
+                      assert 'opp-guide-sources' in kenitra and 'target="_blank"' in kenitra, f'{lang}: Kenitra source list or external-tab links missing'
+                      assert '2026' in kenitra and ('16:30' in kenitra or '16 h 30' in kenitra), f'{lang}: Kenitra deadline time missing'
+                      print(f'KENITRA AI ENGINEER LIVE {lang}: nine researched sections, signed decision, job sheet and deadline',flush=True)
                       english_apps=bodies[f'/{lang}/ai/english-learning-apps-pronunciation-plan/'].decode('utf-8')
                       assert english_apps.count('class="article-block"')>=6, f'{lang}: English-learning app article lacks six substantive sections'
                       assert 'article-sources' in english_apps and 'licensed-editorial-photo' in english_apps, f'{lang}: English-learning app article missing sources or photo'
