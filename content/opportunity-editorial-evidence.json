@@ -4466,6 +4466,204 @@
           ]
         }
       }
+    },
+    "amdie-development": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Read all four pages of AMDIE signed decision 507/2026 and appended 2023 job sheet on 29 October 2026; cross-checked official employment portal C44252/26 and AMDIE official investment/mission descriptions. Written original trilingual analysis, 10 sections per language and >700 whitespace-separated words each. Not yet live-verified. No invented salary, city of posting, examination date or minimum experience.",
+      "state": "researched-awaiting-live-verification",
+      "sources": [
+        {
+          "label": "AMDIE — décision signée 507/2026 du 23 octobre et fiche de poste, quatre pages",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/b135e292-d476-4fe6-bbb4-e57c0f73cdf3"
+        },
+        {
+          "label": "Emploi-public — annonce officielle C44252/26, publication 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/b135e292-d476-4fe6-bbb4-e57c0f73cdf3"
+        },
+        {
+          "label": "AMDIE — mission officielle de promotion des investissements et des exportations",
+          "url": "https://www.amdie.gov.ma/mission/"
+        },
+        {
+          "label": "AMDIE — accompagnement et analyse de données pour les investisseurs",
+          "url": "https://www.amdie.gov.ma/investissements/"
+        }
+      ],
+      "facts": {
+        "employer": "Agence marocaine de développement des investissements et des exportations (AMDIE)",
+        "decision": "507/2026",
+        "competitionCode": "C44252/26",
+        "publishedAt": "2026-10-23",
+        "deadline": "2026-11-09",
+        "deadlineHour": null,
+        "posts": 3,
+        "jobTitle": "Cadre analyste projets de développement",
+        "department": "Direction des investissements et des exportations (DIE)",
+        "jobLevel": "N-4",
+        "nationality": "Moroccan",
+        "age": "Under 45 on competition date",
+        "diploma": "Bac+5 or higher in international trade, international law, partnership management or public policy; public universities/schools or recognised equivalence",
+        "applicationDocuments": [
+          "Motivation letter addressed to AMDIE Director General mentioning post",
+          "Legalised diploma copy",
+          "Legalised CNIE copy",
+          "Updated detailed CV"
+        ],
+        "newGraduates2026": "Attestation de réussite accepted at online registration; diploma required later",
+        "application": "https://depot.emploi-public.ma/",
+        "upload": "All scanned documents in one PDF",
+        "stages": [
+          "Written examination",
+          "Oral examination"
+        ],
+        "examDate": null,
+        "examLocation": null,
+        "jobCity": null,
+        "headOffice": "Rabat (not a confirmed job posting)",
+        "salary": null,
+        "minimumExperienceYears": null,
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "AMDIE: توظيف ثلاثة محللين لمشاريع التنمية — شروط Bac+5 والملف والمباراة",
+          "deck": "قراءة للقرار الأصلي رقم 507/2026 وبطاقة المنصب: ثلاثة مناصب، آخر أجل 9 نوفمبر 2026، دبلومات Bac+5 محددة، وترشيح إلكتروني في ملف PDF واحد.",
+          "sections": [
+            [
+              "قرار توظيف محدد وليس إعلاناً عاماً عن فرص الاستثمار",
+              "أصدرت الوكالة المغربية لتنمية الاستثمارات والصادرات AMDIE القرار رقم 507/2026 المؤرخ في 23 أكتوبر 2026 لفتح توظيف ثلاثة أطر محللين لمشاريع التنمية. وتعرض البوابة الوطنية للتشغيل العمومي الإعلان تحت المرجع C44252/26، مع آخر أجل في 9 نوفمبر 2026. العدد ثلاثة إجمالاً، وليس ثلاثة مناصب لكل تخصص من التخصصات المقبولة. هذا توظيف لدى الوكالة، ولا يعني أن كل مشروع استثماري تدعمه الوكالة يحتاج موظفين أو أن المرشح سيحصل تلقائياً على وظيفة في شركة خاصة. ينبغي قراءة القرار الموقّع والبطاقة المهنية الملحقة به قبل إعداد الملف، لأن عنوان «محلل مشاريع» وحده لا يحدد طبيعة العمل."
+            ],
+            [
+              "المهام الفعلية: بيانات القطاعات والترويج ومتابعة المستثمرين",
+              "تضع البطاقة المهنية المنصب ضمن مديرية الاستثمارات والصادرات، في مهنة التنمية والترويج، بالمستوى التنظيمي N-4. تشمل المسؤوليات البحث عن قطاعات وسلاسل إنتاج مستهدفة، وتحليل بياناتها ودراساتها الإحصائية، وإعداد مذكرات موجزة وعروض تعريفية للقطاعات والمستثمرين، والمشاركة في خطط الترويج ومتابعة تنفيذها. كما تشمل مواكبة المستثمرين والمصدرين حتى إطلاق مشاريعهم، وإعداد جداول الإبلاغ عن الأنشطة. هذا توصيف تحليلي وتنسيقي لا وعد بمهمة ميدانية محددة أو بعمل عن بُعد. وتؤكد صفحة الوكالة الرسمية أن الترويج الاقتصادي ومساندة المستثمرين والمصدرين من مهامها المؤسسية، وهو سياق يساعد على فهم وظيفة المحلل."
+            ],
+            [
+              "الجنسية والسن والشهادة: شروط إقصائية يجب فحصها أولاً",
+              "ينص القرار على الجنسية المغربية، وعلى أن يكون عمر المترشح أقل من 45 سنة بتاريخ إجراء المباراة؛ ولم يحدد القرار المنشور تاريخ المباراة بعد، لذلك لا يجوز حساب يوم قاطع مفترض. ويشترط دبلوماً عالياً من مستوى Bac+5 فما فوق في التجارة الدولية أو القانون الدولي أو تدبير الشراكات أو السياسات العمومية. لا تكفي الإجازة Bac+3 وحدها وفق هذا النص، حتى إن وصفت بعض المواقع غير الرسمية المنصب بأنه مفتوح لحاملي الإجازة. ويشترط القرار قبول شهادات الجامعات والمدارس العمومية، أو الشهادات التي تتوفر على معادلة صادرة عن وزارة التعليم العالي. راجع مطابقة اسم التخصص في شهادتك قبل إيداعها."
+            ],
+            [
+              "المعارف واللغات: ما تطلبه البطاقة وما لا تطلبه",
+              "تذكر بطاقة المنصب التجارة الدولية والاقتصاد العالمي والاقتصاد العام والمالية والمحاسبة والتسويق الترابي، إلى جانب أدوات دعم الاستثمار وتحليل القطاعات. كما تسجل اللغات العربية والفرنسية والإنجليزية والإسبانية في جدول الكفاءات بمستوى محدد، لكنها لا تذكر شهادة لغة إلزامية مثل IELTS أو TOEFL ولا حداً رقمياً للقبول؛ لا تضف شرطاً غير مكتوب. وتشير البطاقة إلى تقنيات تمويل المشاريع والترويج للاستثمار وإعداد التقارير والتوقعات الإحصائية وتنظيم الفعاليات. من المفيد إعداد مثال عملي لتحليل قطاع تصديري، لكن هذا اقتراح للتحضير لا وثيقة إضافية مطلوبة رسمياً. لا تجعل الإلمام ببرنامج واحد بديلاً عن فهم التحليل والكتابة الدقيقة."
+            ],
+            [
+              "ملف الترشيح: أربع وثائق مع شرط التصديق",
+              "حدد القرار أربع وثائق: رسالة تحفيز موجهة إلى المدير العام للوكالة تذكر اسم المنصب المطلوب، ونسخة مصادقاً عليها من الدبلوم، ونسخة مصادقاً عليها من البطاقة الوطنية للتعريف، وسيرة ذاتية مفصلة ومحينة. لا يذكر القرار ضمن القائمة شهادة عمل إلزامية أو كشف نقاط، ولذلك لا تعرضهما على أنهما شرطان مفروضان. يُستحسن أن تتطابق التواريخ والمسميات بين السيرة والدبلوم والرسالة، وأن يظهر بوضوح التخصص المرتبط بالوظيفة. ويقبل القرار من خريجي دفعة 2026 شهادة النجاح عند التسجيل الإلكتروني، مع طلب الدبلوم في المراحل اللاحقة؛ هذا استثناء محدد لا يلغي شرط مستوى التكوين أو التخصص أو المعادلة."
+            ],
+            [
+              "كيفية الإيداع من أي مدينة بالمغرب: ملف PDF واحد",
+              "يطلب القرار تقديم الترشيح حصرياً عبر منصة Depot.emploi-public.ma، مع رفع الوثائق الممسوحة ضوئياً في ملف PDF واحد قبل 9 نوفمبر 2026. لا يعتبر إرسال الوثائق بالبريد الإلكتروني أو وضعها في صندوق تعليقات الموقع ترشيحاً صالحاً. ابدأ بإنشاء الحساب والتحقق من البريد الإلكتروني ثم اختر المرجع C44252/26 وراجع الحقول بعناية، وادمج الوثائق بالترتيب مع فحص وضوح الأختام وأرقام الهوية قبل الرفع. احتفظ بنسخة محلية وبإثبات الإيداع إذا أصدرته المنصة. هذه خطوات تنظيمية مقترحة، أما أزرار المنصة وحدود حجم الملف فتُراجع في واجهتها الفعلية وقت التسجيل ولا تُفترض مسبقاً."
+            ],
+            [
+              "المباراة: اختبار كتابي وشفوي دون موعد معلن",
+              "تنص المادة الرابعة على مرحلتين، اختبار كتابي ثم اختبار شفوي. تُرسل مواعيد ومراكز الاختبارات بواسطة استدعاء رقمي إلى المترشحين الذين تنتقيهم لجنة التوظيف بعد دراسة الملفات والتأكد من مطابقة الشروط. لا يقدم القرار تاريخاً نهائياً للاختبار أو أسماء المدن أو مواد الامتحان أو معاملاتها؛ لذلك لا يجوز استعارة برنامج مباراة أخرى ونسبته إلى هذه المباراة. بعد الإيداع راقب الحساب والبريد الوارد ومجلد الرسائل غير المرغوب فيها، وتحقق من مصدر الاستدعاء. تُنشر النتائج في مقرات الوكالة وعلى بوابة التشغيل العمومي، ولا يكفي منشور متداول على الشبكات الاجتماعية لإثبات النجاح."
+            ],
+            [
+              "التحضير المهني: مثال تحليل قطاع دون ادعاء أنه موضوع الامتحان",
+              "يمكن للمترشح أن يتمرن على مذكرة من صفحتين حول سلسلة إنتاج افتراضية: تعريف القطاع، مصادر البيانات، أسواق التصدير المحتملة، القيود التنظيمية، مخاطر التنفيذ، وخطة متابعة بثلاثة مؤشرات. إذا استعمل بيانات منشورة من وكالة رسمية، يذكر تاريخها وحدودها ولا يحول تقديراً إلى حقيقة. ويمكن إعداد جدول يقارن بين فرصتين استثماريتين باستخدام معايير واضحة مثل توفر الموردين واللوجستيك والمخاطر، ثم كتابة خلاصة قصيرة بالفرنسية أو الإنجليزية. هذه تمارين مستنبطة من وصف المهام وليست أسئلة امتحان مسربة أو مؤكدة. ينبغي كذلك مراجعة كيفية حماية البيانات التجارية وإعداد تقارير دقيقة للقرار."
+            ],
+            [
+              "الراتب ومكان العمل والخبرة: حدود ما هو معلوم",
+              "يظهر عنوان المقر الإداري للوكالة في الرباط أسفل القرار، لكن النص لا يحدد مدينة التعيين لكل منصب؛ لا تخلط بين عنوان المقر ومكان العمل النهائي. ولم يعلن القرار مبلغ الراتب أو نظام التعويضات أو مدة عقد محددة، كما لا يضع عدداً أدنى من سنوات الخبرة ضمن شروط المادة الثانية. وجود وظائف سابقة للوكالة أو تقديرات الرواتب على مواقع تجارية لا يثبت أجراً لهذه المباراة. يمكن الاستفسار من الجهة المنظمة عبر القنوات الرسمية قبل قبول عرض فعلي، مع الاحتفاظ بنسخة من شروطه المكتوبة. وصف «ثلاثة مناصب» لا يعني تعيين كل مترشح يستوفي الشروط، فهناك انتقاء واختبارات."
+            ],
+            [
+              "المخاطر والبدائل: حماية البيانات وعدم تفويت الأجل",
+              "أهم مخاطر الترشيح هي اختيار تخصص غير مطابق، أو نسيان التصديق على نسخة مطلوبة، أو رفع ملفات منفصلة بدلاً من PDF واحد، أو الاعتماد على موعد غير رسمي. لا ترسل نسخ الهوية أو الدبلوم إلى وسطاء يطلبون مقابلاً مالياً؛ البوابة الرسمية هي قناة الإيداع المذكورة في القرار، ولا توجد رسوم ترشيح محددة فيه. إذا كان مستواك Bac+3 أو تخصصك بعيداً عن المجالات الأربعة، فلا تعتمد على تأويل متساهل؛ ابحث عن مباراة أخرى بشروط مناسبة أو استفسر من الإدارة. هذه المادة مراجعة تحريرية بتاريخ 29 أكتوبر 2026 وليست ضمان قبول؛ أي تعديل رسمي لاحق على القرار أو الموعد تكون له الأولوية."
+            ]
+          ]
+        },
+        "en": {
+          "title": "AMDIE hiring three Development Project Analysts: Bac+5 eligibility and application guide",
+          "deck": "An original reading of signed Decision 507/2026 and the job profile: three posts, 9 November 2026 deadline, specified master's-level degrees and one-PDF online application.",
+          "sections": [
+            [
+              "A specific recruitment decision, not a generic investment opportunity",
+              "The Moroccan Agency for Investment and Export Development (AMDIE) issued Decision 507/2026 on 23 October 2026 to recruit three Development Project Analyst executives. The national public-employment portal lists the competition as C44252/26 and gives 9 November 2026 as the application deadline. Three is the combined number of positions, not three vacancies in each eligible academic discipline. This is employment with the agency itself, not an offer to work automatically for one of the private businesses it assists. Applicants should read the signed four-page decision and its appended job description rather than infer duties from the broad title “project analyst.”"
+            ],
+            [
+              "The actual job: sector intelligence, promotion and investor follow-up",
+              "The appended profile places the role in the Investment and Export Directorate, under development and promotion at organisational level N-4. Duties include identifying strategic target sectors and value chains, analysing statistical and sectoral studies, preparing concise briefing notes, contributing to promotion plans, following promotional activities and accompanying investors and exporters as their projects progress. It also mentions reporting dashboards and the organisation of documentary information. AMDIE's own mission pages independently explain its role in investment promotion and export support, giving context to these tasks. None of this establishes a particular remote-work arrangement, travel schedule or final duty station; those are separate employment details."
+            ],
+            [
+              "Eligibility: nationality, age and a genuine master's-level qualification",
+              "The signed decision requires Moroccan nationality and an age strictly below 45 on the date of the competition. Because the examination date has not been announced in the notice, applicants should not invent a birthday cut-off. The educational requirement is Bac+5 or higher in international trade, international law, partnership management or public policy. A Bac+3 licence on its own does not meet the stated qualification, despite misleading shorthand on some third-party job pages. The decision limits eligibility to qualifications from public universities or schools and qualifications carrying equivalence issued by the Ministry of Higher Education. Check the precise degree title and equivalence status before uploading a document."
+            ],
+            [
+              "Competencies and languages: distinguish a profile grid from a certificate rule",
+              "The job sheet covers international trade, global and general economics, finance and accounting, territorial marketing and investment-support mechanisms. Its language grid refers to Arabic, French, English and Spanish, while the technical grid includes project finance methods, investment promotion, statistical forecasting, reporting and event organisation. The decision does not impose a named IELTS, TOEFL or other language certificate or a published test-score threshold; adding one would distort the conditions. A practical portfolio example might demonstrate how you interpret a sector dataset and write an accurate recommendation, but such an example is a preparation exercise, not an additional compulsory application document. Avoid presenting familiarity with one software package as proof of all these competencies."
+            ],
+            [
+              "The four required documents and the 2026 graduate exception",
+              "The application must contain a motivation letter addressed to AMDIE's Director General identifying the role, a legalised copy of the diploma, a legalised copy of the national identity card and a detailed up-to-date CV. Employment certificates and transcripts are not listed as mandatory attachments in this particular decision, so they should not be misrepresented as universal requirements. Check consistency of names, dates and academic specialisations across the documents. The notice expressly allows graduates from the 2026 cohort to submit an attestation of successful completion when registering online, while requiring the actual diploma at later stages. This limited accommodation does not waive the required field, level or equivalence of study."
+            ],
+            [
+              "Applying online from Morocco: a single PDF and the official channel",
+              "AMDIE directs candidates to Depot.emploi-public.ma and says the required scanned attachments must be combined into one PDF by 9 November 2026. The decision states that only online applications will be processed and incomplete or non-matching files will be rejected. Create or access your official portal account, identify competition C44252/26, verify the entered information, combine readable copies in a sensible order and inspect the resulting PDF before submission. Save the confirmation if the portal provides one. These are practical quality-control steps, not a claim that the platform has a specific button or file-size limit today. Emailing a recruiter or posting documents in comments does not replace the formal online submission."
+            ],
+            [
+              "Selection: written and oral tests, with dates still to be communicated",
+              "Article 4 describes a written examination and an oral examination. The recruitment committee will first review applications and check eligibility, then send digital invitations specifying examination dates and locations to shortlisted candidates. The decision gives no fixed examination day, test city, subject list or coefficients; importing those details from another competition would be misleading. After applying, check your portal account, email and spam folder, and verify that any invitation comes through a legitimate channel. AMDIE says decisions and results will be displayed at its premises and on the national public-employment website. Neither a circulating social-media screenshot nor a recruitment coach's prediction is an official summons."
+            ],
+            [
+              "A useful preparation exercise, not a leaked examination syllabus",
+              "For practice, prepare a two-page analytical note on a hypothetical Moroccan value chain. State the question, identify dated public datasets, compare potential export markets, describe regulatory constraints, list implementation risks and propose three measurable follow-up indicators. You could also construct a transparent scoring table for two investment locations using supplier access, logistics and operating constraints, then write a short executive summary in French or English. These exercises follow the role's published responsibilities but are not official exam questions. Separate observed figures from assumptions, identify missing information and explain why a decision might change when better evidence arrives. Good analysis is as much about limits as it is about recommendations."
+            ],
+            [
+              "Salary, location and experience: what the notice does not say",
+              "The decision's footer gives AMDIE's administrative address in Rabat, but it does not specify the final workplace for each of the three positions. An office address is not proof of assignment. The decision also publishes no salary amount, allowance structure or definite contract duration, and Article 2 does not set a minimum number of years of experience. Salary estimates shown by commercial job aggregators are not AMDIE's offer for this competition. Seek written confirmation from the employer if those matters become relevant during recruitment. Meeting the basic eligibility conditions is not a guarantee of appointment: applications are screened and successful candidates must pass the announced stages."
+            ],
+            [
+              "Risks, verification and lawful alternatives",
+              "The main preventable errors are an ineligible degree, a missing legalisation, separate attachments where one PDF is required, a late submission or reliance on an unofficial examination date. Do not send identity documents to intermediaries claiming they can secure selection for a fee; the notice specifies the public portal as the application channel and does not publish an application fee. If you have only Bac+3 or a degree outside the four stated fields, do not rely on optimistic reinterpretation: seek a better-matched official competition or request clarification from the agency. This editorial review is dated 29 October 2026. Any later formally published amendment takes precedence over the details reproduced here."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "AMDIE : trois analystes projets de développement — Bac+5, dossier et sélection",
+          "deck": "Analyse de la décision signée n° 507/2026 et de la fiche de poste : trois postes, clôture le 9 novembre 2026, formations Bac+5 ciblées et dépôt en un seul PDF.",
+          "sections": [
+            [
+              "Une décision de recrutement précise, pas une annonce générale d’investissement",
+              "L’Agence marocaine de développement des investissements et des exportations (AMDIE) a signé la décision n° 507/2026 le 23 octobre 2026 pour recruter trois cadres analystes projets de développement. Le portail national de l’emploi public classe cette procédure sous la référence C44252/26 et fixe la clôture des candidatures au 9 novembre 2026. Il s’agit de trois postes au total, et non de trois places dans chacun des domaines de formation acceptés. Ce recrutement concerne l’agence elle-même, sans constituer une promesse d’embauche auprès des entreprises qu’elle accompagne. Le titre « analyste de projets » ne suffit pas à comprendre les missions : il faut consulter les quatre pages de la décision signée et sa fiche de poste."
+            ],
+            [
+              "Les missions réelles : analyse sectorielle, promotion et suivi des investisseurs",
+              "La fiche rattache le poste à la Direction des investissements et des exportations, dans le métier développement et promotion, au niveau hiérarchique N-4. Elle prévoit la prospection et la qualification de filières prioritaires, l’analyse de données statistiques et d’études sectorielles, la rédaction de notes de synthèse, la préparation de plans de promotion et le suivi des actions réalisées. Elle mentionne aussi l’accompagnement des investisseurs et exportateurs jusqu’au lancement de leurs projets ainsi que la production de tableaux de reporting. Les pages institutionnelles de l’AMDIE confirment séparément ses missions de promotion économique et d’appui aux opérateurs. Elles ne précisent toutefois ni télétravail, ni déplacements obligatoires, ni lieu définitif d’affectation pour ce recrutement."
+            ],
+            [
+              "Nationalité, âge et diplôme : les conditions à vérifier avant tout",
+              "La décision exige la nationalité marocaine et un âge strictement inférieur à 45 ans à la date du concours. Or, la date des épreuves n’est pas encore indiquée : il serait donc imprudent d’inventer un jour précis pour calculer la limite d’âge. Le niveau exigé est Bac+5 ou plus en commerce international, droit international, gestion des partenariats ou politiques publiques. Une simple licence Bac+3 ne satisfait pas à cette formulation, même si certains agrégateurs utilisent une étiquette trompeuse. Sont recevables les diplômes des universités et écoles publiques ainsi que ceux bénéficiant d’une équivalence délivrée par le ministère de l’Enseignement supérieur. Vérifiez l’intitulé exact du diplôme et la décision d’équivalence."
+            ],
+            [
+              "Connaissances et langues : lire la grille sans inventer de seuil",
+              "La fiche de poste cite le commerce international, l’économie mondiale, l’économie générale, la finance et la comptabilité, le marketing territorial et les dispositifs d’appui à l’investissement. Elle présente également une grille de langues comprenant l’arabe, le français, l’anglais et l’espagnol, ainsi que des pratiques de financement de projet, de promotion des investissements, de prévision statistique, de rédaction de rapports et d’organisation d’événements. Le texte ne prescrit aucun certificat IELTS ou TOEFL ni score linguistique chiffré pour candidater. Un exemple personnel d’analyse sectorielle peut servir à préparer un entretien, mais il ne devient pas pour autant une pièce obligatoire du dossier. Il faut distinguer compétences attendues et conditions administratives d’éligibilité."
+            ],
+            [
+              "Les quatre pièces du dossier et le cas particulier des diplômés 2026",
+              "Le dossier comporte une lettre de motivation adressée au directeur général de l’AMDIE et mentionnant le poste demandé, une copie légalisée du diplôme, une copie légalisée de la carte nationale d’identité et un CV détaillé et actualisé. Les attestations d’emploi et relevés de notes ne figurent pas dans cette liste : ne les présentez pas comme des exigences certaines de cet avis. Contrôlez la cohérence des dates, des noms et de la spécialité entre les documents. La décision autorise expressément les candidats de la promotion 2026 à présenter une attestation de réussite lors de l’inscription en ligne, le diplôme étant exigé à une étape ultérieure. Cette disposition ne dispense pas du niveau Bac+5 ni du domaine requis."
+            ],
+            [
+              "Dépôt électronique : un seul PDF et une date à respecter",
+              "Le dépôt s’effectue uniquement sur Depot.emploi-public.ma, avec les pièces numérisées regroupées dans un seul fichier PDF au plus tard le 9 novembre 2026. Le texte écarte les candidatures incomplètes, non conformes ou transmises par une autre voie. Préparez un compte sur la plateforme officielle, repérez la référence C44252/26, vérifiez les champs du formulaire et assemblez des copies lisibles, y compris les cachets de légalisation. Relisez le fichier final avant l’envoi et conservez l’accusé de réception s’il est fourni. Ces conseils constituent une méthode de contrôle, pas une description garantie de boutons ou de limites techniques de la plateforme. Un courriel isolé ne remplace pas le dépôt officiel."
+            ],
+            [
+              "Concours écrit et oral : les convocations préciseront les lieux et dates",
+              "L’article 4 annonce deux épreuves, une écrite et une orale. La commission examinera d’abord les dossiers et la conformité des profils, puis les candidats présélectionnés recevront une convocation numérique précisant la date et le lieu des épreuves. Aucune date d’examen définitive, ville, matière détaillée ou coefficient n’est fourni dans la décision consultée. Il ne faut donc pas reprendre le programme d’un autre concours comme s’il s’appliquait automatiquement. Après le dépôt, consultez le compte candidat, la boîte électronique et les courriers indésirables. Les résultats sont annoncés dans les locaux de l’AMDIE et sur le portail de l’emploi public. Une publication sur un réseau social n’a pas la même valeur qu’une convocation officielle."
+            ],
+            [
+              "Exercice de préparation : analyser une filière sans prétendre connaître le sujet",
+              "Pour s’entraîner, le candidat peut rédiger une note de deux pages sur une filière marocaine hypothétique : définition du périmètre, sources statistiques datées, marchés d’exportation envisageables, contraintes réglementaires, risques d’exécution et trois indicateurs de suivi. Un second exercice consiste à comparer deux lieux d’investissement au moyen d’une grille explicite portant sur les fournisseurs, la logistique et les contraintes d’exploitation, puis à produire un résumé de direction en français ou en anglais. Ces exercices découlent des missions publiées mais ne constituent pas des sujets officiels ou divulgués. Il convient de séparer les chiffres observés des hypothèses et de reconnaître les informations manquantes avant de conclure."
+            ],
+            [
+              "Salaire, affectation et expérience : les limites des informations disponibles",
+              "Le pied de page de la décision indique l’adresse administrative de l’AMDIE à Rabat, sans confirmer la ville d’affectation des trois recrutés. Le siège social ne doit pas être présenté comme un lieu de travail contractuellement garanti. Le document ne publie ni montant de rémunération, ni régime d’indemnités, ni durée de contrat précise; l’article 2 ne fixe pas non plus d’ancienneté professionnelle minimale. Les fourchettes salariales estimées par des sites commerciaux ne représentent pas une proposition officielle de l’AMDIE. Demandez une confirmation écrite lorsque ces éléments deviennent pertinents. Être éligible ne signifie pas être recruté : le dossier est présélectionné, puis les épreuves doivent être réussies."
+            ],
+            [
+              "Risques pratiques et alternatives légales",
+              "Les erreurs les plus faciles à éviter sont le diplôme hors spécialité, une légalisation manquante, plusieurs fichiers au lieu d’un PDF unique, un dépôt tardif et la confiance accordée à une date d’examen non officielle. Ne transmettez pas vos documents d’identité à un intermédiaire promettant une sélection contre paiement : la décision désigne la plateforme publique et n’indique pas de frais de candidature. Avec un Bac+3 seulement ou un diplôme sans lien avec les quatre domaines cités, mieux vaut chercher un concours correspondant réellement à son profil ou demander une précision à l’agence. Cette étude a été vérifiée le 29 octobre 2026; toute modification officielle ultérieure du concours prime sur cette synthèse."
+            ]
+          ]
+        }
+      }
     }
   }
 }
