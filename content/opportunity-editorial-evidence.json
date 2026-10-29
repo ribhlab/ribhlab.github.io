@@ -5438,6 +5438,188 @@
           ]
         }
       }
+    },
+    "au-kenitra-architect": {
+      "reviewedAt": "2026-10-29",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Original three-page signed decision and one-page job sheet read directly on 29 October 2026; public announcement C44310/26 cross-checked. Publication, build and live trilingual URLs not yet verified.",
+      "sources": [
+        {
+          "label": "AUKSS — décision officielle signée, trois pages (consultée le 29 octobre 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/1f9f832d-e82c-4c61-9294-1a27921af5e5"
+        },
+        {
+          "label": "AUKSS — fiche de poste architecte, une page (consultée le 29 octobre 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/1f9f832d-e82c-4c61-9294-1a27921af5e5/0"
+        },
+        {
+          "label": "Emploi-public — annonce C44310/26 publiée le 27 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/1f9f832d-e82c-4c61-9294-1a27921af5e5"
+        }
+      ],
+      "facts": {
+        "employer": "Agence urbaine de Kénitra–Sidi Kacem–Sidi Slimane",
+        "competitionCode": "C44310/26",
+        "publishedAt": "2026-10-27",
+        "posts": 1,
+        "jobTitle": "Architecte",
+        "city": "Sidi Slimane",
+        "jobCity": "Antenne de l'Agence urbaine à Sidi Slimane",
+        "deadline": "2026-11-11",
+        "deadlineHour": "16:30",
+        "nationality": "Moroccan",
+        "age": "18 to 45 on employment date",
+        "diploma": "Diplôme d'architecture ou diplôme reconnu équivalent donnant accès au poste",
+        "experience": "Expérience probante souhaitable; aucune durée minimale imposée",
+        "startDate": "December 2026",
+        "application": "Dépôt au bureau d'ordre ou envoi postal au siège de l'agence",
+        "address": "Rue Lamhaned Kacem, Bir Rami Est, BP 1356, Kénitra",
+        "documents": [
+          "Signed application with personal name, addresses and telephone",
+          "CV",
+          "Certified copy of national ID",
+          "Certified copies of diplomas and certificates",
+          "Foreign diploma equivalence where applicable",
+          "Public employer authorization for public-sector staff where applicable"
+        ],
+        "stages": [
+          "Dossier preselection",
+          "Written exam: 3 hours, coefficient 1; 10/20 minimum for oral invitation",
+          "Oral exam: 30 minutes, coefficient 1; final ranking by average"
+        ],
+        "examDate": null,
+        "examLocation": null,
+        "salary": null,
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة مهندس معماري بسيدي سليمان: منصب واحد وشروط الترشيح والاختبارات",
+          "deck": "دليل موثق من القرار الرسمي وبطاقة الوظيفة للوكالة الحضرية للقنيطرة–سيدي قاسم–سيدي سليمان؛ آخر أجل 11 نوفمبر 2026 الساعة 16:30، والإيداع لدى مكتب الضبط أو بالبريد.",
+          "sections": [
+            [
+              "منصب واحد في سيدي سليمان، وليس إعلاناً عاماً للمعماريين",
+              "تعلن الوكالة الحضرية للقنيطرة–سيدي قاسم–سيدي سليمان عن مباراة لتوظيف مهندس معماري واحد بمقر ملحقتها في سيدي سليمان. تعرض البوابة الحكومية الإعلان تحت الرمز C44310/26 بتاريخ 27 أكتوبر 2026. يحدد القرار الأصلي آخر أجل للتوصل بالملفات في 11 نوفمبر 2026، بينما تحدد البوابة الساعة 16:30. يشير القرار إلى التحاق متوقع خلال ديسمبر 2026، ويترك تاريخ الاختبارات ومكانها لإعلان لاحق بالقنيطرة. يجب عدم الخلط بين هذا المنصب ومباراة مهندس البيانات المنشورة لدى الوكالة نفسها."
+            ],
+            [
+              "الشهادة والسن والجنسية وشروط القبول",
+              "يشترط القرار الجنسية المغربية، وسناً لا يقل عن 18 سنة ولا يزيد على 45 سنة عند تاريخ التوظيف، ودبلوم مهندس معماري أو شهادة معترف بمعادلتها تخول الولوج إلى المنصب. تذكر بطاقة الوظيفة دبلوم الهندسة المعمارية صراحة. وتشير شروط المباراة إلى أفضلية الخبرة المهنية من دون تحديد حد أدنى إلزامي للسنوات، وإلى عدم التسجيل في السجل التأديبي المركزي للإدارات العمومية. لا يصح تقديم شهادة قصيرة في التصميم أو برنامج رسم على أنها بديل تلقائي لدبلوم معماري معترف به."
+            ],
+            [
+              "المهام المرتبطة بالتراخيص العمرانية",
+              "تشرح بطاقة المنصب أن المعماري يشارك في دراسة طلبات الترخيص بالبناء والتجزئة والتقسيم وإنشاء المجموعات السكنية وفق التشريعات الجاري بها العمل. وتشمل مهامه التحقق من احترام تصاميم التهيئة ومطابقة مشاريع البناء والتجزئات، والمشاركة في الدراسة القبلية للملفات. هذه مسؤوليات تتطلب قراءة الوثائق التقنية والتنظيمية معاً، وليس إنتاج رسومات ثلاثية الأبعاد فقط. من المفيد للمرشح مراجعة مثال افتراضي لملف ترخيص، وتوضيح كيف يتحقق من حدود القطعة والارتفاقات والتطابق دون اختلاق تجربة مهنية."
+            ],
+            [
+              "التخطيط والدراسات والتمثيل المؤسساتي",
+              "تضيف البطاقة إعداد وتتبع وثائق التعمير مثل SDAU وPA وPDAR، والمشاركة في دراسات عامة ومواثيق معمارية وبرامج إعادة الهيكلة. كما تذكر تمثيل الوكالة في الاجتماعات الخارجية والمساهمة في سياسة الجودة وخطط العمل. لذلك قد يكون تقييم المرشح مرتبطاً بقدرته على شرح أثر قرار عمراني على المجال والساكنة، وتنسيق الملاحظات مع متدخلين مختلفين. لا تشير البطاقة إلى تكليف حصري بتصميم المباني الخاصة أو ممارسة حرة خارج المؤسسة."
+            ],
+            [
+              "الكفاءات التقنية والبرمجيات المذكورة فعلاً",
+              "تشترط البطاقة معرفة القوانين والإجراءات المرتبطة بالتخطيط والتدبير الحضري، ومعايير البناء والتهيئة، والقدرة على استعمال أدوات المجال. تذكر على سبيل المثال AutoCAD وArchiCAD ونظم المعلومات الجغرافية SIG وInDesign وPhotoshop. لا يعني ذلك أن اللجنة أعلنت اختباراً منفصلاً لكل برنامج، ولا أن امتلاك شهادة دورة في برنامج واحد يعوض التكوين المعماري. جهز أمثلة قابلة للشرح عن قراءة مخطط أو تتبع وثيقة تعمير، مع بيان دورك الحقيقي في أي مشروع تعرضه."
+            ],
+            [
+              "الوثائق الإلزامية وملف الترشيح",
+              "يتضمن الملف طلب مشاركة موقعاً يذكر الاسم الشخصي والعائلي والعنوان ورقم الهاتف والبريد الإلكتروني، وسيرة ذاتية، ونسخة مصادقاً عليها من البطاقة الوطنية، ونسخاً مصادقاً عليها من الدبلومات والشهادات. تضاف شهادة المعادلة بالنسبة إلى الشهادات الأجنبية، وموافقة الإدارة للموظفين المنتمين إلى القطاع العام مع مراعاة الالتحاق المتوقع في ديسمبر 2026. راجع تطابق الاسم والتخصص في جميع الوثائق، واحفظ نسخة كاملة وإثباتاً للإيداع. لا يذكر القرار أداء رسوم ترشيح أو إرسال بيانات بنكية."
+            ],
+            [
+              "الإيداع الفعلي: مكتب الضبط أو البريد قبل الموعد",
+              "تنص المادة الثامنة من القرار على وضع الملف في مكتب الضبط أو إرساله إلى مقر الوكالة: زنقة المهند قاسم، بئر الرامي الشرقية، ص.ب 1356، القنيطرة. آخر أجل هو 11 نوفمبر 2026 الساعة الرابعة والنصف بعد الزوال، وتستبعد الملفات المتأخرة أو غير المستوفية. لا يكفي أن يكون الختم البريدي سابقاً للموعد إذا وصل الملف بعد الأجل. لأن صفحة البوابة لا تفصل وسيلة الإيداع، يجب الاعتماد على القرار الأصلي لا افتراض وجود استمارة إلكترونية لهذه المباراة."
+            ],
+            [
+              "الكتابي والشفوي ومعايير النجاح",
+              "يبدأ المسار بانتقاء أولي للملفات، ثم اختبار كتابي مدته ثلاث ساعات بمعامل واحد يتصل بالتخصص وبمجال عمل الوكالة، واختبار شفوي مدته نصف ساعة بمعامل واحد لتقييم المعارف والقدرة على ممارسة المهام. يستدعى للشفوي من حصل على 10 من 20 على الأقل في الكتابي. ويكون الترتيب النهائي حسب أعلى معدل ناتج عن الاختبارين. لم تعلن الوثائق تاريخ الاختبارات أو القاعة؛ لذلك يجب متابعة الموقع الرسمي والبوابة، وعدم تصديق مواعيد متداولة بلا إعلان."
+            ],
+            [
+              "التحضير الواقعي وحدود المعلومات المنشورة",
+              "ضع خطة مراجعة تشمل قراءة مقتضيات التعمير ذات الصلة، وتحليل مثال لمطابقة مشروع مع تصميم تهيئة، وصياغة جواب واضح حول التعامل مع ملف ناقص أو ملاحظة تقنية. حضر نسخة مختصرة من خبراتك ومشاريعك مع احترام السرية وعدم نسبة أعمال فريق كاملة إلى نفسك. لا تنشر الوكالة راتباً محدداً لهذا المنصب، ولا تضمن التوظيف بمجرد قبول الملف. إذا اختلفت تعليمات طرف وسيط عن القرار الموقع، فالأولوية للمصدر الرسمي وطلب توضيح من الجهة المنظمة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Sidi Slimane architect recruitment: one post, documents, deadline and exams",
+          "deck": "A source-checked guide to the urban agency's signed recruitment decision and official job sheet: applications must arrive by 11 November 2026 at 16:30.",
+          "sections": [
+            [
+              "One architect position in Sidi Slimane, not a general hiring scheme",
+              "The Urban Agency of Kénitra–Sidi Kacem–Sidi Slimane is recruiting one architect for its Sidi Slimane branch. The government portal published competition C44310/26 on 27 October 2026. The signed notice sets 11 November as the application deadline and the portal specifies 16:30. Recruitment is planned for December 2026; the written and oral examination dates and venue will be announced later in Kénitra. This competition must not be confused with the agency's separate data-science engineering recruitment."
+            ],
+            [
+              "Eligibility: architecture qualification, nationality and age",
+              "The notice requires Moroccan nationality and an age of at least 18 and no more than 45 on the date of recruitment. Candidates need an architecture diploma or a recognized equivalent granting access to the post; the job sheet explicitly names the architecture qualification. Professional experience is described as desirable, not as a compulsory number of years. Candidates must also not be recorded in the central disciplinary register of public administrations. Short software courses do not automatically replace a recognized professional architecture qualification."
+            ],
+            [
+              "Planning-permit examination is a central duty",
+              "The official job description covers examining applications for building, subdivision, land division and housing-group authorizations under applicable regulations. It also requires checking compliance with planning documents and construction projects, and participating in preliminary assessments. This combines regulatory interpretation with technical drawing review; it is not merely a position for producing attractive three-dimensional renderings. A candidate can practise explaining a hypothetical permit file, identifying missing documents and constraints, while being clear that a hypothetical example is not actual agency experience."
+            ],
+            [
+              "Urban-planning documents and institutional coordination",
+              "The job sheet also names the preparation and monitoring of urban-planning documents such as SDAU, PA and PDAR, general studies, architectural charters and restructuring plans. Participation in agency quality processes, action plans and external meetings is part of the role. Applicants should therefore be ready to explain how planning choices affect public space and how technical observations are communicated across institutions. The notice does not announce private architectural practice, a separate consultancy contract or authority to approve projects independently of the agency's procedures."
+            ],
+            [
+              "Technical skills and software mentioned in the source",
+              "The employer expects knowledge of urban-planning and architecture rules, construction and development standards, and digital tools used in the profession. The attached sheet specifically mentions AutoCAD, ArchiCAD, GIS, InDesign and Photoshop. This is a competency description, not a published promise that each program will have its own examination paper. Prepare verifiable examples of reading a plan, tracing a planning constraint or checking a file, and identify precisely what work you personally completed rather than overstating team achievements."
+            ],
+            [
+              "Application documents and common omissions",
+              "The signed application should include the candidate's name, residential and email addresses and telephone number. The file also requires a CV, certified copy of the Moroccan national identity card and certified copies of diplomas and certificates. Applicants with foreign qualifications must provide an equivalence certificate where applicable. Public-sector employees need their administration's authorization, taking account of the intended December 2026 start. Check that names and diploma titles match across documents, keep a complete copy, and do not send bank details or fees to unofficial intermediaries."
+            ],
+            [
+              "Physical or postal submission and the strict cut-off",
+              "Article eight permits filing at the agency's registry office or sending the dossier to its headquarters: Rue Lamhaned Kacem, Bir Rami Est, BP 1356, Kénitra. The deadline is 11 November 2026 at 16:30; incomplete or late files are excluded. A postal receipt dated before the cut-off does not establish that the agency received the dossier on time. The portal's summary does not replace the signed decision's detailed submission method, and applicants should not assume an online upload exists for this particular competition."
+            ],
+            [
+              "Written and oral examinations: what is actually announced",
+              "An initial dossier screening precedes a three-hour written examination, coefficient one, on the specialty and the agency's work. A thirty-minute oral examination, also coefficient one, evaluates the applicant's ability to perform the position. Only candidates scoring at least 10 out of 20 on the written test proceed to the oral stage. Final selection uses the highest average across both examinations. No fixed examination date or room appears in the decision, so candidates should monitor official announcements rather than circulate guessed schedules."
+            ],
+            [
+              "Preparation, salary transparency and practical safeguards",
+              "A focused revision plan can cover planning law, the interpretation of a development plan, and how to handle a missing item in an authorization dossier. Prepare concise examples of real projects while protecting client information and identifying your personal contribution. The official materials do not publish an individual salary, and submitting a complete dossier does not guarantee appointment. If a broker's instructions conflict with the signed notice, rely on the employer and government portal and seek clarification directly rather than paying for alleged privileged access."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours d'architecte à Sidi Slimane : un poste, dossier et épreuves",
+          "deck": "Analyse de la décision et de la fiche de poste de l'agence urbaine : dépôt ou courrier reçu au plus tard le 11 novembre 2026 à 16 h 30.",
+          "sections": [
+            [
+              "Un poste d'architecte à Sidi Slimane, pas un recrutement général",
+              "L'Agence urbaine de Kénitra–Sidi Kacem–Sidi Slimane recrute un architecte pour son antenne de Sidi Slimane. Le portail gouvernemental a publié le concours C44310/26 le 27 octobre 2026. La décision fixe la date limite au 11 novembre et le portail précise 16 h 30. L'entrée en fonction est prévue en décembre 2026; la date et le lieu des épreuves seront annoncés ultérieurement à Kénitra. Il ne faut pas confondre ce concours avec le recrutement distinct d'un ingénieur en science des données par la même agence."
+            ],
+            [
+              "Nationalité, âge, diplôme et expérience souhaitée",
+              "La décision exige la nationalité marocaine, un âge compris entre 18 et 45 ans à la date de recrutement et un diplôme d'architecture ou une équivalence reconnue donnant accès au poste. La fiche de fonction cite expressément le diplôme d'architecture. Une expérience professionnelle probante est souhaitée, sans nombre minimal d'années imposé. Le candidat ne doit pas figurer au registre disciplinaire central des administrations publiques. Une formation courte sur un logiciel de dessin ne remplace donc pas automatiquement le diplôme professionnel requis par l'employeur."
+            ],
+            [
+              "Instruction des autorisations et conformité des projets",
+              "La fiche officielle prévoit l'instruction des demandes d'autorisation de construire, de lotir, de morceler ou de créer des groupes d'habitations selon les textes applicables. Elle demande aussi de vérifier la conformité des projets aux documents d'urbanisme et de participer à leur pré-instruction. Ce travail associe analyse réglementaire et lecture technique; il ne se limite pas à produire des rendus en trois dimensions. Un candidat peut s'entraîner sur un dossier fictif, identifier les pièces manquantes et expliquer les contraintes sans présenter cet exercice comme une expérience réelle à l'agence."
+            ],
+            [
+              "Documents d'urbanisme, études et coordination",
+              "La description mentionne l'élaboration et le suivi des documents SDAU, PA et PDAR, des études générales, des chartes architecturales et des plans de restructuration. Elle prévoit également une participation aux plans d'action, à la démarche qualité et aux réunions externes. Il est donc utile de savoir expliquer l'effet d'un choix d'aménagement sur le territoire et la façon de transmettre une observation technique à plusieurs intervenants. Rien dans l'annonce ne promet une activité libérale parallèle ou un contrat de conseil indépendant."
+            ],
+            [
+              "Connaissances et logiciels réellement mentionnés",
+              "L'employeur attend une maîtrise des règles d'urbanisme et d'architecture, des normes de construction et d'aménagement ainsi que des outils numériques du métier. La fiche cite AutoCAD, ArchiCAD, les systèmes d'information géographique SIG, InDesign et Photoshop. Cette liste ne constitue pas un programme officiel d'épreuves distinctes pour chaque logiciel. Préparez des exemples vérifiables de lecture de plan, de contrôle d'une contrainte d'urbanisme ou de suivi d'un document, en précisant votre contribution personnelle à chaque réalisation."
+            ],
+            [
+              "Pièces du dossier et vérifications avant l'envoi",
+              "La demande de participation signée doit comporter le nom, les coordonnées personnelles, l'adresse électronique et le téléphone. S'ajoutent un CV, une copie certifiée de la carte nationale d'identité et des copies certifiées des diplômes et attestations. Une attestation d'équivalence est nécessaire pour les diplômes étrangers concernés. Les agents du secteur public doivent produire l'accord de leur administration en tenant compte de la prise de fonction prévue en décembre 2026. Vérifiez la cohérence des noms et intitulés et conservez une copie intégrale du dossier."
+            ],
+            [
+              "Dépôt au bureau d'ordre ou envoi postal avant 16 h 30",
+              "L'article huit de la décision autorise le dépôt au bureau d'ordre ou l'envoi au siège de l'agence, Rue Lamhaned Kacem, Bir Rami Est, BP 1356, Kénitra. Le dernier délai est le 11 novembre 2026 à 16 h 30. Un dossier incomplet ou reçu hors délai n'est pas pris en considération. Un cachet postal antérieur ne garantit pas une réception dans les temps. La fiche sommaire du portail ne doit pas faire supposer l'existence d'une candidature entièrement électronique pour ce concours précis."
+            ],
+            [
+              "Épreuves, coefficients et seuil d'admission à l'oral",
+              "Après une présélection des dossiers, les candidats passent une épreuve écrite de trois heures, coefficient un, portant sur la spécialité et le champ d'activité de l'agence. L'entretien oral dure trente minutes et a également le coefficient un. Seuls les candidats ayant obtenu au moins 10 sur 20 à l'écrit sont convoqués à l'oral. Le classement final repose sur la meilleure moyenne des deux épreuves. Les documents ne donnent pas encore de date ou de salle d'examen; il faut attendre les convocations officielles."
+            ],
+            [
+              "Révision réaliste et limites des informations disponibles",
+              "Pour se préparer, on peut revoir la réglementation de l'urbanisme, analyser un exemple de conformité à un plan d'aménagement et s'exercer à expliquer le traitement d'un dossier incomplet. Présentez des projets authentiques sans divulguer de données confidentielles ni vous attribuer tout le travail d'une équipe. Aucun salaire individuel n'est publié dans l'annonce, et un dossier recevable ne garantit pas l'embauche. En cas de contradiction avec les indications d'un intermédiaire, privilégiez la décision signée et demandez des précisions à l'administration."
+            ]
+          ]
+        }
+      }
     }
   }
 }
