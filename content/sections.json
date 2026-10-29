@@ -141,7 +141,8 @@
         "trading-risk-management",
         "understand-price-charts",
         "elliott-wave-technical-analysis-course",
-        "trading-bot-backtest-spread-slippage-reality-check"
+        "trading-bot-backtest-spread-slippage-reality-check",
+        "fixed-versus-trailing-stop-order-frictions"
       ],
       "targetArticles": 40
     },

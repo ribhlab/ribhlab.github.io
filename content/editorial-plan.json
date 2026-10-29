@@ -991,14 +991,10 @@
         "trading-risk-management",
         "understand-price-charts",
         "elliott-wave-technical-analysis-course",
-        "trading-bot-backtest-spread-slippage-reality-check"
+        "trading-bot-backtest-spread-slippage-reality-check",
+        "fixed-versus-trailing-stop-order-frictions"
       ],
       "ideas": [
-        {
-          "sequence": 5,
-          "titleAr": "فهم الدعم والمقاومة عملياً",
-          "status": "planned"
-        },
         {
           "sequence": 6,
           "titleAr": "الترند والقنوات السعرية",
