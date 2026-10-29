@@ -3017,8 +3017,8 @@
     },
     "lpee-12": {
       "reviewedAt": "2026-10-29",
-      "verification": "Read signed 1-page original decision dated 26 Oct 2026, government listing and LPEE's own offer pages 2026/95 and 2026/91 on 29 Oct 2026; reconciled 9 references / 12 positions and noted experience wording differences. No unannounced pay or examination date.",
-      "state": "source-checked-article-awaiting-live-qa",
+      "verification": "Read signed 1-page original decision dated 26 Oct 2026, government listing and LPEE's own offer pages 2026/95 and 2026/91 on 29 Oct 2026; reconciled 9 references / 12 positions and noted experience wording differences. No unannounced pay or examination date. Build and source QA 40826527577, Pages deployment 40826527594, live trilingual page/source checks 40826570796 succeeded.",
+      "state": "published-live-verified",
       "sources": [
         {
           "label": "LPEE — avis de recrutement AR/910/26/013, 26 octobre 2026 (PDF original)",
