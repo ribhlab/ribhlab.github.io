@@ -212,6 +212,7 @@ jobs:
                       ('newsletter-start-free-first-90-days','earning',4),
                       ('fixed-versus-trailing-stop-order-frictions','trading',4),
                       ('minimal-skin-routine-cleanser-moisturizer-spf','lifestyle',4),
+                      ('power-query-ai-assisted-transformations-audit','ai',8),
                   ):
                       for language in ('ar','en','fr'):
                           matches=[u for u in urls if u.endswith('/'+category+'/'+slug+'/') and '/'+language+'/' in u]
