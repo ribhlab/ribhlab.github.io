@@ -1,0 +1,220 @@
+{
+  "slug": "power-query-ai-assisted-transformations-audit",
+  "category": "ai",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "featured": false,
+  "related": [
+    "automate-excel-ai",
+    "ai-finance-automation-with-human-controls"
+  ],
+  "sources": [
+    {
+      "label": "Microsoft Learn — Merge queries overview, join kinds and key matching (checked 29 October 2026)",
+      "url": "https://learn.microsoft.com/en-us/power-query/merge-queries-overview"
+    },
+    {
+      "label": "Microsoft Learn — Privacy levels and preventing accidental data transfer (checked 29 October 2026)",
+      "url": "https://learn.microsoft.com/en-us/power-bi/desktop-privacy-levels"
+    },
+    {
+      "label": "Microsoft Learn — Query folding performance examples (checked 29 October 2026)",
+      "url": "https://learn.microsoft.com/en-us/power-query/query-folding-examples"
+    },
+    {
+      "label": "UK Government Data Quality Framework — published 3 December 2020 (checked 29 October 2026)",
+      "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "تدقيق تحويلات Power Query بمساعدة الذكاء الاصطناعي: اختبار الربط والمجاميع والتحديث",
+      "excerpt": "من خط الأساس إلى اختبار شيفرة M وحماية الخصوصية: دليل عملي للتحقق من تحويلات البيانات قبل اعتمادها.",
+      "lead": "يمكن لمساعد الذكاء الاصطناعي اقتراح خطوات Power Query بسرعة، لكن سرعة كتابة شيفرة M لا تثبت صحة النتائج. استناداً إلى وثائق Microsoft حول الدمج والخصوصية وأداء الاستعلامات، وإطار جودة البيانات الحكومي البريطاني المنشور في 3 ديسمبر 2020، يقدم هذا الدليل بروتوكولاً قابلاً لإعادة الاختبار. الأمثلة الحسابية تعليمية ومختلقة، ولا تتضمن بيانات عملاء أو نتائج تجربة ميدانية مزعومة.",
+      "sections": [
+        {
+          "heading": "ابدأ بتعريف المشكلة ومعيار القبول",
+          "paragraphs": [
+            "قبل طلب صيغة M من مساعد ذكي، حدد السؤال التجاري والجدول الذي يمثل الحقيقة المعتمدة. مثال تدريبي: ملف طلبات يحوي ألف سطر، وملف أسعار يحوي رمز الصنف والسعر. المطلوب إظهار قيمة كل طلب دون تغيير عدد الطلبات. هذا الوصف أدق من طلب عام مثل «نظف البيانات»؛ لأنه يحدد المخرجات وحدود التحويل.",
+            "أنشئ نسخة للقراءة فقط من الملف الأصلي وسجل تاريخ الاستخراج والمنطقة الزمنية وعدد الصفوف والمجموع قبل أي معالجة. ضع معيار قبول مكتوباً: لا يُحذف طلب صالح، ولا تتكرر قيمة بسبب الربط، وتُعرض السجلات التي لم تجد سعراً. يجب أن يفهم المراجع لماذا فشل الاختبار، لا أن يرى رسالة نجاح عامة."
+          ]
+        },
+        {
+          "heading": "وثق خط الأساس قبل التحويل",
+          "paragraphs": [
+            "سجل عدد الصفوف والأعمدة، وعدد القيم الفارغة في الحقول الإلزامية، وعدد المفاتيح الفريدة، ومجموع الكمية والقيمة بحسب المصدر. هذه ليست مؤشرات تجميلية؛ فهي شبكة إنذار عند تحويل نوع رقم إلى نص أو فقدان صفوف أثناء التصفية. يمكن استخراجها باستعلام منفصل لا يغير بيانات الإنتاج.",
+            "افصل بين قياسات المصدر والنتيجة. إذا كان مجموع الطلبات قبل المعالجة 250000 وحدة نقدية وبعدها 251200، فالفارق 1200 يحتاج تفسيراً موثقاً حتى لو كانت الجداول جميلة. لا تفترض أن زيادة العدد تعني تحسناً؛ فقد تنتج عن تكرار الصفوف بعد دمج جدول مرجعي يحوي مفتاحاً مكرراً."
+          ]
+        },
+        {
+          "heading": "افحص الربط قبل توسيع الأعمدة",
+          "paragraphs": [
+            "توضح وثائق Microsoft أن دمج Power Query يعتمد على ترتيب الجداول وأنواع أعمدة المفاتيح ونوع الربط المختار. عند ربط الطلبات بالأسعار استخدم مفتاحاً مستقراً، وتأكد من تطابق نوعه في الجدولين. افحص وجود سعر واحد فقط لكل صنف وتاريخ سريان، وإلا فقد يضاعف توسيع العمود المرجعي عدد الطلبات.",
+            "جرب ربطاً يسارياً يحافظ على كل صفوف الطلبات، ثم استعلاماً مضاداً يسارياً يعزل الطلبات التي لم تجد مقابلاً. لا تستخدم الربط الداخلي لمجرد أنه يجعل الجدول أنظف؛ فهو يستبعد الصفوف غير المطابقة. اكتب عدد المطابقات وغير المطابقات في تقرير المراجعة، ولا تستبدل الأسعار المفقودة بصفر دون قاعدة عمل صريحة."
+          ]
+        },
+        {
+          "heading": "راجع الأنواع والقيم الفارغة والتواريخ",
+          "paragraphs": [
+            "قد يقترح النموذج تحويل عمود تاريخ مباشرة وفق إعدادات جهازه، بينما يمثل النص 03/04/2026 الثالث من أبريل في نظام والرابع من مارس في آخر. حدد اللغة والمنطقة ونمط التاريخ قبل التحويل، ثم اختبر قيماً معروفة. كذلك راجع الفاصلة العشرية والإشارات السالبة وأكواد الأصناف التي تبدأ بصفر.",
+            "فرّق بين قيمة فارغة تعني «غير معروف» وقيمة صفر تعني «لا شيء». راجع نسبة القيم الفارغة في الحقول الحرجة قبل التحويل وبعده، وسجل سبب أي انخفاض غير متوقع. لا تجعل المساعد يخترع قيماً لإكمال الجدول؛ اطلب منه اقتراح قواعد قابلة للفحص ثم اعتمدها مع مالك البيانات."
+          ]
+        },
+        {
+          "heading": "اختبر شيفرة M بدلاً من الوثوق بشرحها",
+          "paragraphs": [
+            "اطلب من المساعد عرض خطوات التحويل واحدة واحدة، وشرح سبب كل دالة والافتراض الذي تعتمد عليه. اقرأ الشيفرة في المحرر المتقدم، ولا تنفذ استدعاءات ويب أو مصادر خارجية أضيفت دون طلب. قارن أسماء الأعمدة والمفاتيح وأنواع البيانات مع المخطط الحقيقي، لأن الشيفرة الصحيحة نحوياً قد تعطي نتيجة تجارية خاطئة.",
+            "اصنع بيانات اختبار صغيرة متعمدة: مفتاح مكرر، وتاريخ غير صالح، وقيمة فارغة، وسعر سلبي، وصف بلا مقابل. توقع النتيجة يدوياً ثم شغل الاستعلام وقارنها. احتفظ بنسخة من الشيفرة قبل وبعد التعديل، واكتب ما الذي تغير ومن وافق عليه. هذا يجعل الأخطاء قابلة لإعادة الإنتاج بدلاً من الاعتماد على الذاكرة."
+          ]
+        },
+        {
+          "heading": "احم الخصوصية وسلامة المصادر",
+          "paragraphs": [
+            "تشرح Microsoft مستويات خصوصية Power Query وكيف قد يؤثر جمع مصادر خاصة وعامة في انتقال البيانات أثناء التنفيذ. صنف ملفات الرواتب والعملاء والمعلومات التعاقدية على أنها حساسة وفق سياسة المؤسسة، ولا تعطل حماية الخصوصية فقط لتسريع التحديث. راجع مصدر كل اتصال وأذوناته ومكان تخزين بيانات الاعتماد.",
+            "إذا استعنت بمساعد سحابي، استخدم عينة اصطناعية أو مخطط أعمدة غير سري ما لم تسمح المؤسسة صراحة بإرسال البيانات الحقيقية. تغيير الأسماء وحده قد لا يمنع إعادة التعرف على الأشخاص. وثق من اطلع على الملف ومدة الاحتفاظ به. خصوصية البيانات جزء من صحة التحليل وليست خطوة اختيارية بعد الانتهاء."
+          ]
+        },
+        {
+          "heading": "اختبر التحديث والأداء في ظروف واقعية",
+          "paragraphs": [
+            "قد يعمل الاستعلام على عينة من مئة صف ثم يفشل عندما يصل ملف جديد بأسماء أعمدة مختلفة أو ترتيب مختلف. أعد التحديث على نسختين من البيانات، إحداهما تتضمن قيماً استثنائية، وتأكد من ثبات الأعداد والمجاميع. سجل زمن التحديث ورسائل الخطأ وحجم البيانات وتاريخ آخر نجاح بدلاً من الاكتفاء بصورة شاشة.",
+            "توضح Microsoft أن query folding قد ينقل بعض عمليات التحويل إلى المصدر، لكنه يعتمد على الموصل ونوع الخطوة. راقب الأداء ولا تعد بتحسن ثابت عند إعادة ترتيب الخطوات. إذا انكسر الطي أو تغيرت الصلاحيات، فاختبر التأثير قبل النشر. يجب أن يظهر فشل التحديث للمستخدم بوضوح، لا أن تُعرض بيانات قديمة كأنها حديثة."
+          ]
+        },
+        {
+          "heading": "اعتمد تقرير قبول قابل للتدقيق",
+          "paragraphs": [
+            "يقترح إطار جودة البيانات الحكومي البريطاني النظر إلى الدقة والاكتمال والتفرد والاتساق بحسب الغرض من الاستخدام. حول ذلك إلى بطاقة قبول تتضمن أعداد الصفوف، والمفاتيح المكررة، والقيم الفارغة، والفروقات المالية، وحالات الاستثناء، والاختبارات المنفذة. لا توجد نسبة جودة واحدة تصلح لكل مشروع أو تعوض حكم صاحب العملية.",
+            "أرفق بالنسخة النهائية مصدر البيانات وتاريخها وإصدار شيفرة M واسم المراجع والقيود المعروفة. مثال قرار: «مقبول للتحليل الداخلي مع خمسة أصناف دون سعر، وغير مقبول للفوترة حتى تسويتها». هذا الوصف أكثر فائدة من ادعاء أن الذكاء الاصطناعي أصلح الملف بالكامل، ويسهل مراجعة القرار لاحقاً."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Auditing AI-assisted Power Query transformations: joins, control totals and refresh tests",
+      "excerpt": "A practical acceptance protocol for generated M code, from baseline measures and join checks to privacy and repeatable refresh tests.",
+      "lead": "An AI assistant can draft Power Query steps quickly, but fluent M code is not evidence that the resulting figures are correct. This guide combines Microsoft's documentation on merges, privacy and query performance with the UK Government Data Quality Framework, published on 3 December 2020. The numeric examples are fictional exercises, not claims about real customer files or field-tested results.",
+      "sections": [
+        {
+          "heading": "Define the business question and acceptance rule",
+          "paragraphs": [
+            "Before asking an AI assistant for M code, identify the authoritative table and the decision the output must support. In a fictional exercise, an orders file has one thousand lines and a price table maps product codes to prices. The goal is to calculate each order value without changing the number of valid orders. This is more testable than a vague request to clean the data.",
+            "Keep a read-only copy of the input and record its extraction date, time zone, row count and control totals. Write explicit acceptance rules: no valid order disappears, a join cannot duplicate an order value, and unmatched product codes remain visible. A reviewer needs to understand the reason for a failed check, not merely see a green success indicator."
+          ]
+        },
+        {
+          "heading": "Establish a measurable baseline",
+          "paragraphs": [
+            "Count rows and columns, missing mandatory fields, distinct business keys and totals for quantity and value before changing any data. These controls reveal problems such as an accidental text conversion, silent filtering or a many-to-many join. Store the baseline in a separate audit query so that validation does not alter the production output.",
+            "Compare source measures with transformed measures and investigate every unexplained movement. If the starting total is 250,000 currency units and the result is 251,200, the difference of 1,200 requires an explanation even when the table looks polished. A higher total is not evidence of better data; it might be a duplicated reference match."
+          ]
+        },
+        {
+          "heading": "Test joins before expanding columns",
+          "paragraphs": [
+            "Microsoft's Power Query documentation explains that merges depend on matching data types, key order and the chosen join kind. For an orders-to-prices lookup, check that product codes have compatible types and that each product and effective date has one authoritative price. Otherwise expanding the merged column may multiply transactions and inflate revenue.",
+            "Use a left outer join when all orders must be retained, and a left anti join to list orders with no reference match. An inner join can silently discard exceptions, so do not select it just because the resulting table is smaller. Report matched and unmatched counts, and do not replace missing prices with zero unless an approved business rule requires it."
+          ]
+        },
+        {
+          "heading": "Check types, nulls and regional date formats",
+          "paragraphs": [
+            "An assistant may interpret 03/04/2026 as March fourth or April third depending on regional settings. Specify the locale and the intended date pattern before conversion, then test known records. Check decimal separators, negative values and identifiers with leading zeros as well. A syntactically valid transformation can still destroy the meaning of a business field.",
+            "Distinguish null, which may mean unknown, from zero, which usually denotes a measured absence. Compare null rates in critical fields before and after transformation. A sudden drop can signal fabricated default values rather than improved completeness. Ask the assistant to propose explicit, testable rules, and have the data owner approve them."
+          ]
+        },
+        {
+          "heading": "Review generated M code line by line",
+          "paragraphs": [
+            "Ask the assistant to explain each transformation step, its assumptions and the columns it expects. Inspect the Advanced Editor before execution and reject unexpected web calls or external connections. Compare the code against the real schema: a function can run without an error while joining the wrong keys or filtering a valid category.",
+            "Create a small adversarial fixture with a duplicate key, invalid date, null value, negative price and unmatched order. Calculate the expected output manually, run the query and compare every case. Save the before-and-after M script and a short change log naming the reviewer. Reproducible tests are stronger evidence than a persuasive AI explanation."
+          ]
+        },
+        {
+          "heading": "Protect confidential data and source boundaries",
+          "paragraphs": [
+            "Microsoft documents privacy levels in Power Query because combining private and public sources can create unintended data flows. Classify payroll, customer and contractual information under your organization's rules, and do not disable privacy safeguards merely to make a refresh faster. Inspect each connection, credential scope and destination before approving the workflow.",
+            "For cloud AI assistance, share synthetic rows or a non-sensitive schema unless your organization has authorized real-data processing under suitable controls. Replacing names alone may not eliminate re-identification risk. Document who can access the files and how long they remain stored. Data protection is part of trustworthy analysis, not an optional final polish."
+          ]
+        },
+        {
+          "heading": "Retest refresh behavior and performance",
+          "paragraphs": [
+            "A query may work on a hundred-row sample yet fail when next month's file changes column names or includes unexpected values. Refresh against at least two representative extracts, including a deliberately difficult one. Record row counts, totals, errors, refresh duration and the timestamp of the last successful run, so stale results are not presented as current.",
+            "Microsoft explains that query folding can delegate supported transformations to the source, but behavior varies by connector and step. Measure actual refresh performance instead of promising a universal speedup from rearranging steps. If folding breaks, credentials expire or the source schema changes, make the failure visible and prevent an unverified dataset from silently replacing the approved output."
+          ]
+        },
+        {
+          "heading": "Sign off with an auditable acceptance report",
+          "paragraphs": [
+            "The UK Government Data Quality Framework distinguishes accuracy, completeness, uniqueness and consistency in relation to a dataset's intended use. Turn these dimensions into an acceptance sheet listing rows, duplicates, missing fields, control-total differences and unresolved exceptions. No single percentage score can replace the process owner's judgment about whether a dataset is fit for purpose.",
+            "Attach the source date, M-code version, reviewer, test results and known limitations to the final deliverable. A useful conclusion might be: acceptable for internal trend analysis, but not for invoicing until five products without valid prices are resolved. Such a bounded decision is more credible than claiming that AI has repaired the workbook completely."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Auditer les transformations Power Query assistées par IA : jointures, totaux et actualisation",
+      "excerpt": "Une méthode de réception vérifiable pour le code M généré : mesures initiales, jointures, confidentialité et tests d'actualisation.",
+      "lead": "Un assistant IA peut proposer rapidement des étapes Power Query, mais un code M convaincant ne prouve pas la justesse des résultats. Ce guide rapproche la documentation Microsoft sur les fusions, la confidentialité et les performances du cadre britannique de qualité des données publié le 3 décembre 2020. Les exemples chiffrés sont fictifs et ne décrivent ni fichiers clients réels ni essais pratiques prétendument réalisés.",
+      "sections": [
+        {
+          "heading": "Définir la question métier et les critères de réception",
+          "paragraphs": [
+            "Avant de demander du code M à un assistant IA, identifiez la table de référence et la décision que le résultat doit éclairer. Dans un exercice fictif, un fichier contient mille lignes de commandes et un autre associe des codes articles à des prix. L'objectif est de calculer la valeur de chaque commande sans modifier le nombre de commandes valides.",
+            "Conservez une copie non modifiable de la source et notez la date d'extraction, le fuseau horaire, le nombre de lignes et les totaux de contrôle. Rédigez des critères explicites : aucune commande valide ne disparaît, une jointure ne duplique pas une valeur et les références sans prix restent visibles. Le réviseur doit comprendre chaque échec."
+          ]
+        },
+        {
+          "heading": "Établir une situation initiale mesurable",
+          "paragraphs": [
+            "Comptez les lignes, les colonnes, les champs obligatoires vides, les clés métier distinctes et les totaux de quantité et de valeur avant toute transformation. Ces contrôles révèlent une conversion incorrecte, un filtrage silencieux ou une jointure plusieurs-à-plusieurs. Stockez les mesures dans une requête d'audit séparée pour ne pas altérer la sortie de production.",
+            "Comparez systématiquement les mesures d'entrée et de sortie. Si le total initial est de 250 000 unités monétaires et le résultat de 251 200, l'écart de 1 200 exige une justification même si le tableau semble impeccable. Une hausse n'est pas une preuve de qualité : elle peut provenir de doublons dans la table de correspondance."
+          ]
+        },
+        {
+          "heading": "Contrôler les jointures avant de développer les colonnes",
+          "paragraphs": [
+            "La documentation de Microsoft rappelle que les fusions Power Query dépendent des types de données, de l'ordre des clés et du type de jointure. Pour relier commandes et tarifs, vérifiez la compatibilité des codes et l'unicité du prix applicable à chaque article et date d'effet. Sinon, développer une colonne fusionnée peut multiplier les transactions.",
+            "Une jointure externe gauche conserve les commandes, tandis qu'une jointure anti gauche isole celles sans correspondance. Une jointure interne peut masquer les anomalies en supprimant les lignes non appariées. Publiez le nombre de correspondances et d'exceptions ; n'attribuez pas arbitrairement un prix nul à une référence inconnue sans règle métier validée."
+          ]
+        },
+        {
+          "heading": "Vérifier les types, les valeurs nulles et les dates",
+          "paragraphs": [
+            "Un assistant peut lire 03/04/2026 comme le 3 avril ou le 4 mars selon la configuration régionale. Précisez la langue et le format attendu, puis testez plusieurs dates connues. Vérifiez aussi les séparateurs décimaux, les nombres négatifs et les codes commençant par zéro. Une formule correcte sur le plan syntaxique peut produire une erreur de sens.",
+            "Une valeur nulle peut signifier « inconnue », alors que zéro exprime souvent une absence mesurée. Comparez les taux de valeurs manquantes avant et après traitement. Une diminution brutale peut traduire un remplissage artificiel plutôt qu'un progrès. Demandez à l'IA de proposer des règles vérifiables, puis faites-les approuver par le responsable des données."
+          ]
+        },
+        {
+          "heading": "Examiner le code M généré étape par étape",
+          "paragraphs": [
+            "Demandez à l'assistant d'expliquer chaque étape, ses hypothèses et les noms de colonnes attendus. Relisez l'Éditeur avancé avant exécution et refusez les appels web ou connexions externes inattendus. Comparez le script au schéma réel : une fonction peut s'exécuter sans erreur tout en rapprochant les mauvaises clés ou en excluant une catégorie valide.",
+            "Construisez un petit jeu d'essai volontairement difficile : clé dupliquée, date invalide, valeur nulle, prix négatif et commande sans correspondance. Calculez manuellement les résultats attendus, exécutez la requête puis comparez les cas. Conservez les versions avant et après du script M ainsi que le nom du réviseur et le motif de chaque changement."
+          ]
+        },
+        {
+          "heading": "Protéger les données et les frontières entre sources",
+          "paragraphs": [
+            "Microsoft décrit les niveaux de confidentialité de Power Query car le croisement de sources privées et publiques peut provoquer des transferts inattendus. Classez les données salariales, clients et contractuelles selon les règles de votre organisation. Ne désactivez pas les protections uniquement pour accélérer l'actualisation ; examinez chaque connexion, ses autorisations et sa destination.",
+            "Pour solliciter une IA dans le cloud, transmettez des lignes fictives ou un schéma non sensible, sauf autorisation explicite de traiter les données réelles avec les garanties appropriées. Remplacer les noms ne supprime pas forcément le risque de réidentification. Documentez les accès et la durée de conservation. La confidentialité fait partie intégrante de la fiabilité."
+          ]
+        },
+        {
+          "heading": "Retester l'actualisation et les performances",
+          "paragraphs": [
+            "Une requête peut fonctionner sur cent lignes et échouer le mois suivant si un nom de colonne change ou si des valeurs inattendues apparaissent. Actualisez au moins deux extractions représentatives, dont une volontairement difficile. Enregistrez les lignes, les totaux, les erreurs, la durée et l'horodatage de la dernière actualisation réussie pour éviter de présenter des données périmées.",
+            "Microsoft explique que le query folding peut déléguer certaines transformations à la source, mais son comportement dépend du connecteur et des étapes. Mesurez la performance réelle sans promettre une accélération universelle. Si le pliage cesse de fonctionner, si les accès expirent ou si le schéma change, rendez l'échec visible et bloquez la validation automatique."
+          ]
+        },
+        {
+          "heading": "Formaliser une réception traçable",
+          "paragraphs": [
+            "Le cadre britannique de qualité des données distingue notamment exactitude, complétude, unicité et cohérence selon l'usage visé. Transformez ces dimensions en fiche de réception indiquant lignes, doublons, champs vides, écarts de totaux et exceptions ouvertes. Aucun score global ne remplace le jugement du responsable métier sur l'aptitude des données à leur finalité.",
+            "Joignez la date de la source, la version du code M, le nom du réviseur, les résultats des tests et les limites connues. Une conclusion utile serait : données acceptables pour analyser les tendances internes, mais impropres à la facturation tant que cinq articles sans prix valide ne sont pas régularisés. C'est plus crédible qu'une promesse de correction totale par l'IA."
+          ]
+        }
+      ]
+    }
+  }
+}

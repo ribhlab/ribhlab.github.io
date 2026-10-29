@@ -911,6 +911,10 @@
       "ftcCanSpam",
       "mailchimpOptin",
       "gmailSenderRules"
+    ],
+    "power-query-ai-assisted-transformations-audit": [
+      "powerquery",
+      "powerbi"
     ]
   }
 }
