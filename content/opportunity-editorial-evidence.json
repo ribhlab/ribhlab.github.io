@@ -2641,6 +2641,216 @@
           ]
         }
       }
+    },
+    "srm-fes-meknes-271-2026": {
+      "id": "srm-fes-meknes-271-2026",
+      "reviewedAt": "2026-10-29",
+      "state": "verified",
+      "verification": "Original eight-page decision dated 15 October 2026 visually reviewed page by page on 29 October; cross-checked with emploi-public listing published 16 October 2026 and independent reports. No salary amounts or exam dates invented. Full 10-section editorial translations.",
+      "sources": [
+        {
+          "label": "SRM-FM — signed recruitment decision dated 15 October 2026 (8 pages)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/e25c50f3-f5dc-4570-b991-981517e9a17b"
+        },
+        {
+          "label": "Emploi-public — C44141/26 listing published 16 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/e25c50f3-f5dc-4570-b991-981517e9a17b"
+        },
+        {
+          "label": "SRM Fès–Meknès — official website",
+          "url": "https://srm-fm.ma/"
+        },
+        {
+          "label": "JobHub — independently published recruitment analysis, 18 October 2026",
+          "url": "https://www.jobhub.ma/concours-srm-fes-meknes-2026-271-postes/"
+        }
+      ],
+      "facts": {
+        "employer": "Société Régionale Multiservices Fès-Meknès SA",
+        "reference": "C44141/26",
+        "decisionDate": "2026-10-15",
+        "publishedAt": "2026-10-16",
+        "posts": 271,
+        "breakdown": {
+          "cadresEngineers": 25,
+          "supervisory": 119,
+          "execution": 127
+        },
+        "assignments": {
+          "Directions centrales": 126,
+          "Meknès": 33,
+          "Ifrane": 12,
+          "El Hajeb": 10,
+          "Moulay Yacoub": 12,
+          "Taza": 22,
+          "Boulemane": 13,
+          "Taounate": 34,
+          "Sefrou": 9
+        },
+        "ageRule": "31 December 2026: 18–40 for supervisory/execution; 18–45 for cadres/engineers",
+        "nationality": "Moroccan",
+        "deadline": "2026-10-31",
+        "deadlineTime": "22:00 Morocco local time",
+        "submission": "https://econcours.brainman.ma/cmp/SRM_FM_2026",
+        "applicationLimit": "One position and one assignment",
+        "experienceExceptions": "10 years for senior commercial manager (central); 6 years for technical electricity manager (Meknès); other experience marked souhaitée not eliminatory",
+        "employment": "Statutory or ANAPEC contracts; ANAPEC 12 months renewable once without automatic integration",
+        "salary": null,
+        "examDate": null,
+        "selection": "Written and/or oral; dates and venues to be announced",
+        "documents": [
+          "Signed application identifying post and assignment",
+          "Platform-generated registration form",
+          "Recent detailed CV with photo",
+          "Both sides of national identity card",
+          "Both sides of baccalaureate certificate",
+          "Required diploma and equivalence evidence where applicable",
+          "Work certificates for declared experience",
+          "IT certificate for cashiers only",
+          "Schooling proof for certain CQP/CSP candidates",
+          "Specialty certificate when diploma omits specialty"
+        ]
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة 271 منصباً بالشركة الجهوية متعددة الخدمات فاس–مكناس: التخصصات والجهات والعقود وآخر أجل",
+          "deck": "قراءة مستقلة للقرار الأصلي المؤلف من ثماني صفحات: 271 منصباً موزعة على تسعة مقار، شروط السن والدبلوم، عقود أنابيك، والملف الإلكتروني قبل 31 أكتوبر 2026 الساعة 22:00.",
+          "sections": [
+            [
+              "ما الذي أُعلن فعلياً؟",
+              "أصدرت الشركة الجهوية متعددة الخدمات فاس–مكناس قراراً مؤرخاً في 15 أكتوبر 2026 لفتح الترشيح لشغل 271 منصباً، ونشرت بوابة التشغيل العمومي الإعلان يوم 16 أكتوبر تحت الرمز C44141/26. توزع العدد على 25 منصباً للأطر والمهندسين، و119 منصباً لأعوان التسيير، و127 منصباً لأعوان التنفيذ. هذه أعداد مناصب موزعة على تخصصات ومقار مختلفة وليست 271 وظيفة من نوع واحد. ينبغي للمرشح فتح القرار الأصلي ذي الصفحات الثماني قبل اختيار أي منصب، لأن عنوان البوابة المختصر لا يكفي لتحديد الشهادة أو المرجع أو طبيعة العقد. آخر أجل مثبت في الوثيقتين هو 31 أكتوبر 2026 الساعة العاشرة مساءً بتوقيت المغرب."
+            ],
+            [
+              "التوزيع الجغرافي: ليست جميع المناصب في فاس",
+              "خصص القرار 126 منصباً للمديريات المركزية، و33 لمكناس، و12 لإفران، و10 للحاجب، و12 لمولاي يعقوب، و22 لتازة، و13 لبولمان، و34 لتاونات، و9 لصفرو؛ والمجموع 271. فمثلاً تظهر وظائف المحاسبة والإعلاميات بالمديريات المركزية، بينما توجد وظيفة إطار مالي ومحاسبي بمكناس وأخرى بتازة. ويُذكر في القرار أن التعيينات الواردة في الجداول أولية وقابلة للتعديل وفق حاجات المصلحة داخل المجال الترابي للشركة. لذلك يجب قراءة رمز المنصب ورمز المقر معاً، وألا يبني المرشح قرار السكن أو التنقل على ضمان غير موجود. الاختيار الإلكتروني مقيد بمنصب واحد ومقر تعيين واحد."
+            ],
+            [
+              "فرص المحاسبة والمالية والبيانات",
+              "يتضمن جدول المديريات المركزية منصباً واحداً لإطار في المحاسبة والمراقبة أو التدقيق، يشترط شهادة Bac+5 معترفاً بها في المجال، و11 منصباً لتقني متخصص في التسيير والمحاسبة بشهادة Bac+2 من ISTA أو EST أو BTS أو ما يعادلها. ويوجد بمكناس منصب واحد لإطار مالي ومحاسبي Bac+5، وبـتازة منصب مماثل واحد. كما توجد وظائف للتقارير والتنسيق بشهادات Bac+3/4 في العلوم الاقتصادية والتسيير في عدة أقاليم. هذه فئات مختلفة لا ينبغي جمعها تحت مسمى «محاسب» واحد؛ تختلف شروط الدبلوم، والمرجع، والمقر، ونوع التوظيف. الخبرة الموصوفة بعبارة «مرغوبة» ليست شرطاً إقصائياً وفق ملاحظة صريحة في الصفحة السادسة."
+            ],
+            [
+              "التخصصات التقنية والتنفيذية وأمثلة الشروط",
+              "تشمل المناصب هندسة المباني والكهرباء وأنظمة المعلومات والموارد البشرية والقانون والإحصاء والتسويق، وتقنيين متخصصين في الكهرباء والشبكات والاتصالات والهيدروليك والطبوغرافيا والإعلاميات، وتقنيين في الماء والتطهير والكهرباء، وأعوان تنفيذ في الكهرباء والسباكة. ويظهر في المديريات المركزية عشرة مناصب لأمناء الصندوق تتطلب شهادة البكالوريا وإثبات المعرفة بالمعلوماتية، ومنصبان للسائقين يتطلبان رخصة من الصنف B وبطاقة مهنية. ليست كل المناصب مشروطة بشهادة جامعية: توجد مسارات بدبلومات تقنية أو مهنية محددة. بالمقابل، لا يكفي وصف الخبرة العملية وحده إذا لم تتطابق الشهادة مع المستوى والتخصص المكتوبين في السطر المعني."
+            ],
+            [
+              "العمر والجنسية والخبرة: اقرأ الاستثناءات",
+              "يشترط القرار الجنسية المغربية والتمتع بالحقوق المدنية وحسن السيرة، وأن يكون العمر في 31 ديسمبر 2026 بين 18 و40 سنة لأعوان التسيير والتنفيذ، وبين 18 و45 سنة للأطر والمهندسين. معظم الخانات تشير إلى خبرة «مرغوبة» لا تستبعد تلقائياً من لا يملكها، لكن هناك استثناءان واضحان: مسؤول تجاري أول في المديريات المركزية بخبرة عشر سنوات على الأقل، وإطار تقني في الكهرباء بمكناس بخبرة ست سنوات على الأقل. لا يجوز تعميم هذين الشرطين على جميع الوظائف، ولا تجاهلهما في المنصبين المعنيين. وينص القرار أيضاً على عدم قبول ترشيح حامل دبلوم أعلى من المستوى المطلوب للمنصب المختار؛ وهي نقطة حاسمة قبل دفع رسوم أو إعداد نسخ الوثائق."
+            ],
+            [
+              "الفرق بين التوظيف النظامي وعقد أنابيك",
+              "يفصل الجدول بين مناصب توظيف نظامي «Statutaire» ومناصب بعقود «Contrat ANAPEC». يطبق على الفئة الأولى نظام تعويضات الشركة، من دون ذكر راتب رقمي في القرار. أما عقود أنابيك فتقابلها تعويضات جزافية وفق الأحكام المعمول بها، ومدتها 12 شهراً قابلة للتجديد مرة واحدة فقط. والأهم أن نهاية العقد لا تعني إدماجاً تلقائياً في مستخدمي الشركة؛ فقد يصبح الإدماج ممكناً بحسب الحاجات ومساطر التوظيف. ينبغي للمرشح فحص خانة «نوع التوظيف» في سطره، وعدم التعامل مع 271 منصباً بوصفها كلها وظائف دائمة أو كلها عقود مؤقتة. لم ننشر أي تقدير غير رسمي للراتب أو المزايا."
+            ],
+            [
+              "ملف الترشيح: الوثائق المشتركة والإضافية",
+              "يتطلب الملف طلب عمل موقعاً موجهاً إلى المدير العام مع تحديد المنصب ومقر التعيين، والاستمارة التي تولدها منصة التسجيل، وسيرة ذاتية حديثة ومفصلة مرفقة بصورة، ونسخة من وجهي البطاقة الوطنية، ونسخة من وجهي شهادة البكالوريا، ونسخة من الدبلوم المطلوب. يلزم إرفاق وثائق المعادلة والقرار المنشور في الجريدة الرسمية للدبلومات الأجنبية أو الخاصة عند الاقتضاء، وشهادات العمل لإثبات الخبرة المصرح بها، وشهادة توضح التخصص إن لم يرد على الدبلوم. كما يطلب إثبات المعرفة بالمعلوماتية لأمناء الصندوق فقط، وشهادة مدرسية لمستوى التعليم المطلوب في بعض مسارات CQP/CSP. يجب التحقق من قابلية قراءة كل ملف قبل الإرسال."
+            ],
+            [
+              "كيفية التسجيل قبل 31 أكتوبر الساعة 22:00",
+              "يُقبل الترشيح حصرياً عبر المنصة المحددة في القرار: econcours.brainman.ma/cmp/SRM_FM_2026، وليس عبر نموذج التواصل في بوابة التشغيل العمومي ولا بإرسال بريد إلكتروني إلى الشركة. يختار المرشح منصباً واحداً وتعييناً واحداً، ويدخل بياناته ثم يستخرج الاستمارة التي تولدها المنصة ويرفق المستندات المطلوبة. ينبغي التأكد من مرجع الوظيفة والمدينة قبل الإرسال، ثم الاحتفاظ بنسخة من الاستمارة ووصل التسجيل إن توفر. يرفض القرار الملفات الناقصة أو المرسلة من قنوات أخرى أو التي تحتوي معلومات خاطئة. وبما أن الإغلاق محدد عند الساعة 22:00 يوم السبت 31 أكتوبر 2026، فالتسجيل قبل الموعد بيوم على الأقل إجراء احترازي، لا تمديد رسمي للمهلة."
+            ],
+            [
+              "الاختبارات والنتائج: ما هو معلوم وما ليس معلوماً",
+              "قد تشمل مسطرة الانتقاء اختباراً كتابياً و/أو مقابلة شفوية بحسب طبيعة المنصب وحاجات التنظيم، لكن القرار لم يحدد موعداً ثابتاً أو مواد الاختبار أو شبكة تنقيط موحدة. ستعلن القوائم والمواعيد والأماكن في بوابة التشغيل العمومي والموقع الرسمي للشركة، ويُطلب من المدعوين إلى المقابلة إحضار أصول الدبلومات والوثائق ذات الصلة. يظل التوظيف النهائي مشروطاً بالتحقق من الملفات والفحص الطبي. لا تعتمد على رسائل غير موثقة تدعي وجود تاريخ اختبار نهائي أو ضمان النجاح، ولا تقدم معلومات سرية من عملك السابق في تمارين التحضير. من المفيد إعداد مثال مهني قابل للشرح يتناسب مع المنصب دون تقديمه باعتباره سؤالاً رسمياً."
+            ],
+            [
+              "قرار عملي قبل إرسال الملف",
+              "ابدأ بمقارنة ثلاثة أسطر من القرار: رمز المنصب، ورمز مقر التعيين، والدبلوم المطابق؛ ثم تحقق من فئة العمر في 31 ديسمبر 2026 ونوع العقد والخبرة الإلزامية إن وجدت. إذا كنت حاملاً لشهادة أعلى من المطلوب، فلا تفترض أن ذلك ميزة، لأن القرار ينص على عدم قبولها في المنصب الأقل مستوى. إن كنت تستهدف وظيفة محاسبية، فافصل بين إطار Bac+5 وتقني متخصص Bac+2 ومكلف بالتقارير Bac+3/4، ولا تجمع بينها في طلب واحد. افحص المستندات والمعادلات ثم سجل مبكراً، وتابع المصادر الرسمية لأي تصحيح. الدليل تحليل مستقل للقرار وليس جهة تسجيل ولا ضماناً بالانتقاء أو التعيين."
+            ]
+          ]
+        },
+        "en": {
+          "title": "SRM Fès–Meknès recruits 271 staff: exact roles, locations, contracts and deadline",
+          "deck": "An original eight-page decision review: 271 roles across nine locations, diploma and age rules, ANAPEC contracts and online applications closing 31 October 2026 at 22:00.",
+          "sections": [
+            [
+              "What was actually announced?",
+              "The Fès–Meknès Regional Multiservice Company issued a recruitment decision dated 15 October 2026, published by Morocco’s public employment portal on 16 October under reference C44141/26. It concerns 271 positions: 25 managerial or engineering roles, 119 supervisory or intermediate positions and 127 execution-level roles. This is not one generic vacancy replicated 271 times. Each line in the eight-page signed notice has its own qualification, location code and employment arrangement. Applicants should consult the original decision before selecting a vacancy rather than relying on the portal’s compressed headline. The official deadline is 31 October 2026 at 22:00 Morocco time, as shown in both the signed decision and the government listing."
+            ],
+            [
+              "Where the positions are located",
+              "The decision allocates 126 positions to central directorates, 33 to Meknès, 12 to Ifrane, 10 to El Hajeb, 12 to Moulay Yacoub, 22 to Taza, 13 to Boulemane, 34 to Taounate and nine to Sefrou, totalling 271. Accounting, IT and many administrative jobs appear in the central directorates; Meknès and Taza also have separate finance and accounting manager positions. The indicated assignments are provisional and may be adjusted across the company’s service area according to operational needs. Do not assume that an application guarantees a permanent assignment to a particular town. The platform permits a candidate to choose only one position and one assignment, so check both reference codes carefully."
+            ],
+            [
+              "Accounting, finance and reporting vacancies",
+              "The central directorates list one accounting, control and/or audit manager role requiring a state-recognised Bac+5 qualification, plus eleven specialized technicians in management and accounting with an eligible Bac+2 qualification from ISTA, EST, BTS or an accepted equivalent. There is also one Bac+5 finance and accounting manager post in Meknès and one in Taza. Reporting and coordination jobs in several provincial directorates call for Bac+3 or Bac+4 qualifications in economics and management. These are different roles with different employment types, diploma requirements and assignment references; they should not be advertised as one undifferentiated accountant vacancy. Experience labelled desirable is explicitly non-eliminatory under the decision’s page-six clarification."
+            ],
+            [
+              "Technical roles and examples of eligibility",
+              "Other vacancies span buildings, electrical engineering, information systems, statistics, HR, public law, marketing, electricity networks, hydraulics, topography, water and sanitation, plumbing and IT support. Central directorates include ten cashier roles requiring a baccalaureate and proof of computer knowledge, while two driver posts require a category B driving licence and a professional card. Certain execution roles require qualifying secondary education plus a CQP or CSP vocational certificate rather than a university degree. A strong professional background alone does not override a stated diploma or specialization requirement. Candidates should read the precise row for their job and avoid extrapolating from a similarly named position in another directorate."
+            ],
+            [
+              "Age, nationality and the experience exceptions",
+              "Applicants must be Moroccan nationals, enjoy civic rights and meet the conduct requirement. Age is assessed on 31 December 2026: 18 to 40 inclusive for supervisory and execution staff, and 18 to 45 inclusive for managers and engineers. Most positions show experience as desirable rather than mandatory, and the notice explicitly says such experience is not an exclusion criterion. Two rows require particular attention: a senior commercial manager position in the central directorates requires at least ten years, while an electrical technical manager in Meknès requires at least six years. The notice also rejects applications based on a qualification higher than the one required for the chosen post. Check these conditions before preparing documents or paying for certificates."
+            ],
+            [
+              "Permanent-framework recruitment versus ANAPEC contracts",
+              "The tables distinguish statutory recruitment from positions under an ANAPEC contract. Statutory positions follow the company’s own compensation framework, but the decision provides no numeric salary. ANAPEC contracts carry a fixed allowance under applicable rules and last twelve months, renewable once. Their completion does not automatically confer a permanent job with the company; integration may be considered only if needs and recruitment procedures permit it. Candidates should read the employment-type column of the exact position they choose rather than assuming that all 271 posts are permanent or that all are internships. No salary, benefit package or probability of conversion should be invented from the job title."
+            ],
+            [
+              "The required application documents",
+              "The file includes a signed job request addressed to the managing director naming the position and intended assignment, the form generated after online registration, a recent detailed CV with photograph, both sides of the national identity card, both sides of the baccalaureate certificate and the diploma required for the role. Foreign or private diplomas may need the specified certified equivalence and official bulletin evidence. Work certificates must support any declared experience; a training-establishment letter is required where the diploma does not show the specialty. Cashier applicants must supply proof of computer skills, while some CQP/CSP applicants need evidence of their secondary-school level. Scan all pages legibly and verify that names, dates and reference codes match."
+            ],
+            [
+              "How and when to apply",
+              "Applications are accepted only through the recruitment platform identified in the signed notice: econcours.brainman.ma/cmp/SRM_FM_2026. The contact form on the public employment website and email sent to the company are not alternative submission channels. Select one position and one assignment, complete the online fields, obtain the generated registration form and upload all supporting documents. Check the role reference and town before confirming, and retain the registration evidence if the portal provides it. Incomplete applications, inaccurate declarations and files delivered through another channel are rejected. The closing time is 22:00 on Saturday 31 October 2026, Morocco local time; submitting early is sensible but does not change the official deadline."
+            ],
+            [
+              "Tests, interviews and results",
+              "Depending on the role, selection may include a written test and/or an oral interview. The signed decision does not publish a universal test syllabus, confirmed exam date or scoring scale. Shortlists, invitations, dates, venues and final results are to be published on the public employment portal and the company’s official website. Applicants invited to interviews may need to present original diplomas and evidence of experience. Final appointment is subject to verification of documents and medical examination. Treat purported fixed exam dates, leaked questions or paid guarantees of success as unverified. A realistic preparation exercise is to explain a lawful example from your discipline without disclosing confidential data from a previous employer."
+            ],
+            [
+              "A practical decision checklist",
+              "Before applying, match the exact job code, location code and required diploma in the original eight-page table. Then check the age category on 31 December 2026, whether the experience column says desirable or specifies a minimum, and whether the contract is statutory or ANAPEC. Applicants with a higher diploma should not assume that it qualifies them for a lower-level vacancy: the decision expressly states otherwise. For accounting careers, separate Bac+5 managers, Bac+2 specialized technicians and Bac+3/4 reporting roles. Verify diploma equivalence and attachments, submit before the deadline and monitor official corrections. This independent guide explains a real recruitment decision; it is neither an application portal nor a guarantee of employment."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "SRM Fès–Meknès : 271 recrutements, profils, affectations, contrats et date limite",
+          "deck": "Analyse de la décision originale de huit pages : 271 postes dans neuf affectations, conditions de diplôme et d’âge, contrats ANAPEC et dépôt avant le 31 octobre 2026 à 22 h.",
+          "sections": [
+            [
+              "Ce qui est réellement annoncé",
+              "La Société Régionale Multiservices Fès–Meknès a signé une décision de recrutement le 15 octobre 2026, publiée sur le portail de l’emploi public le 16 octobre sous la référence C44141/26. Elle porte sur 271 postes : 25 cadres et ingénieurs, 119 agents de maîtrise et 127 agents d’exécution. Il ne s’agit pas de 271 emplois identiques. Chaque ligne de la décision originale de huit pages précise une spécialité, un niveau de diplôme, un code d’affectation et une forme de recrutement. Il faut donc consulter le document signé avant de choisir un poste, plutôt que de se fier au seul intitulé abrégé de l’annonce. La clôture est fixée au 31 octobre 2026 à 22 h, heure marocaine."
+            ],
+            [
+              "La répartition géographique des 271 postes",
+              "Les directions centrales regroupent 126 postes ; Meknès en compte 33, Ifrane 12, El Hajeb 10, Moulay Yacoub 12, Taza 22, Boulemane 13, Taounate 34 et Sefrou neuf. Le total correspond bien aux 271 postes annoncés. Les directions centrales concentrent plusieurs fonctions comptables, informatiques et administratives, tandis que Meknès et Taza proposent aussi chacune un poste de cadre financier et comptable. La décision précise cependant que les affectations indiquées sont provisoires et susceptibles d’être adaptées aux besoins de service sur le périmètre régional. Une ville indiquée dans le tableau n’est donc pas une garantie d’affectation définitive. Une seule candidature est autorisée pour un poste et une affectation."
+            ],
+            [
+              "Comptabilité, finances et coordination",
+              "Pour les directions centrales, la décision mentionne un cadre en comptabilité, contrôle et/ou audit de niveau Bac+5, ainsi que onze techniciens spécialisés en gestion et comptabilité de niveau Bac+2, issus notamment d’ISTA, EST ou BTS, ou titulaires d’un diplôme équivalent admis. Meknès et Taza proposent chacune un cadre financier et comptable Bac+5. Plusieurs directions provinciales recrutent également des chargés de reporting et de coordination avec Bac+3 ou Bac+4 en sciences économiques et gestion. Ces intitulés ne sont pas interchangeables : le diplôme, le code du poste, l’affectation et le type de contrat changent. Une expérience simplement « souhaitée » n’est pas éliminatoire, comme le rappelle expressément la page six de la décision."
+            ],
+            [
+              "Les métiers techniques et les niveaux de formation",
+              "Le recrutement couvre aussi les bâtiments, l’électricité, les systèmes d’information, les statistiques, les ressources humaines, le droit public, le marketing, les réseaux, l’hydraulique, la topographie, l’eau, l’assainissement, la plomberie et le support informatique. Les directions centrales proposent dix postes de caissier exigeant le baccalauréat et une attestation de connaissances informatiques. Deux postes de chauffeur demandent un permis B et une carte professionnelle. Certains agents d’exécution doivent justifier d’un niveau secondaire qualifiant accompagné d’un diplôme CQP ou CSP, sans diplôme universitaire. Une expérience de terrain ne remplace pas automatiquement le diplôme exigé. Le candidat doit vérifier la ligne exacte, et non déduire son éligibilité d’un poste similaire dans une autre direction."
+            ],
+            [
+              "Nationalité, âge et exceptions d’expérience",
+              "Le candidat doit être de nationalité marocaine, jouir de ses droits civiques et répondre aux exigences de bonne conduite. L’âge est apprécié au 31 décembre 2026 : de 18 à 40 ans inclus pour les agents de maîtrise et d’exécution, et de 18 à 45 ans inclus pour les ingénieurs et cadres. La plupart des expériences sont indiquées comme souhaitées, donc non éliminatoires. Deux postes imposent néanmoins un minimum précis : dix années pour le responsable commercial senior des directions centrales, et six années pour le cadre technique en électricité à Meknès. Autre restriction souvent négligée : une candidature avec un diplôme supérieur au niveau demandé n’est pas retenue. Ces dispositions doivent être vérifiées avant de préparer ou payer des documents."
+            ],
+            [
+              "Statutaire ou contrat ANAPEC : une différence essentielle",
+              "La colonne « type de recrutement » distingue les postes statutaires des contrats ANAPEC. Les rémunérations statutaires relèvent du régime indemnitaire de la société, sans montant chiffré publié dans la décision. Pour les contrats ANAPEC, une indemnité forfaitaire est prévue selon les règles applicables. Le contrat dure douze mois et peut être renouvelé une seule fois. Surtout, son terme n’entraîne aucune intégration automatique dans les effectifs : celle-ci reste éventuelle et soumise aux besoins et aux procédures de recrutement. Il serait donc trompeur de présenter les 271 postes comme tous permanents ou tous temporaires. Aucun salaire précis ni taux d’intégration ne peut être déduit du simple intitulé du concours."
+            ],
+            [
+              "Constituer un dossier complet et cohérent",
+              "Le dossier comprend une demande d’emploi signée adressée au directeur général, avec indication du poste et de l’affectation, le formulaire généré par la plateforme après inscription, un CV récent détaillé avec photo, les deux faces de la CIN, les deux faces du baccalauréat et la copie du diplôme exigé. Les diplômes privés ou étrangers nécessitent, le cas échéant, les justificatifs d’équivalence précisés, y compris le bulletin officiel. Il faut joindre les attestations de travail correspondant à l’expérience déclarée et une attestation de spécialité si celle-ci ne figure pas sur le diplôme. Les caissiers doivent fournir la preuve de leurs connaissances informatiques ; certains profils CQP/CSP doivent justifier leur niveau d’études secondaires. Vérifiez la lisibilité et la concordance des pièces."
+            ],
+            [
+              "Dépôt exclusivement en ligne avant 22 h",
+              "Le seul canal prévu est la plateforme de recrutement indiquée dans la décision : econcours.brainman.ma/cmp/SRM_FM_2026. Le formulaire de contact du portail public et les courriels envoyés à la société ne constituent pas des dépôts valables. Le candidat sélectionne un poste et une seule affectation, remplit ses informations, récupère le formulaire généré et téléverse les justificatifs demandés. Il convient de contrôler les références du poste et de la ville, puis de conserver toute preuve d’inscription disponible. Les dossiers incomplets, les fausses déclarations et les dépôts par un autre canal sont rejetés. La date limite est le samedi 31 octobre 2026 à 22 h, heure du Maroc ; mieux vaut ne pas attendre les dernières minutes."
+            ],
+            [
+              "Épreuves, convocations et résultats",
+              "Selon le poste et les nécessités de l’organisation, le concours peut comporter une épreuve écrite et/ou un entretien oral. La décision ne fixe pas de date unique, de programme officiel des épreuves ni de barème détaillé. Les listes de candidats convoqués, les lieux, les dates et les résultats seront communiqués sur le portail de l’emploi public et le site officiel de la SRM-FM. Les candidats admis à l’entretien devront présenter les originaux des pièces justificatives, notamment les diplômes et, le cas échéant, les attestations d’expérience. Le recrutement final dépend aussi de la visite médicale et de la validation du dossier. Les promesses de réussite contre paiement ou les prétendues dates d’épreuve non officielles ne doivent pas être relayées."
+            ],
+            [
+              "Méthode de vérification avant candidature",
+              "Commencez par comparer le code exact du poste, le code d’affectation et le diplôme demandé dans le tableau original. Vérifiez ensuite votre tranche d’âge au 31 décembre 2026, la nature statutaire ou ANAPEC du poste et le caractère obligatoire ou souhaité de l’expérience. Un diplôme supérieur n’est pas automatiquement un avantage, puisque la décision exclut les candidatures au niveau supérieur à celui requis. En comptabilité, distinguez clairement cadre Bac+5, technicien spécialisé Bac+2 et chargé de reporting Bac+3/4. Préparez les équivalences, contrôlez les pièces et déposez le dossier suffisamment tôt. Surveillez les deux sites officiels pour toute rectification. Ce guide indépendant ne vaut ni inscription ni garantie de recrutement."
+            ]
+          ]
+        }
+      }
     }
   }
 }
