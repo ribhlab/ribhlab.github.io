@@ -4853,8 +4853,8 @@
     },
     "amdie-investment": {
       "reviewedAt": "2026-10-29",
-      "verification": "Signed four-page AMDIE decision 508/2026 (23 October 2026), including annexed investment-projects position sheet, inspected page by page; official public-employment listing C44251/26 cross-checked on 29 October 2026. Source content verified, but build and live AR/EN/FR publication are pending.",
-      "state": "researched-awaiting-live-verification",
+      "verification": "Signed four-page AMDIE decision 508/2026 and official portal C44251/26 verified on 29 October 2026. GitHub Actions build 40907004304 and Pages deploy 40907004282 succeeded; public HTTPS AR/EN/FR pages returned HTTP 200, each with nine original sections, official signed decision and external source links in live check 40907196052.",
+      "state": "published",
       "sources": [
         {
           "label": "AMDIE — signed decision 508/2026 of 23 October 2026, four pages including position sheet",
@@ -5025,6 +5025,18 @@
               "Cette analyse s'appuie sur les quatre pages de la décision signée 508/2026, fiche de poste comprise, et sur la fiche gouvernementale C44251/26 publiée le 23 octobre. Les deux sources indiquent le 9 novembre comme date limite, sans contradiction identifiée sur ce point. L'agence ayant publié plusieurs concours similaires durant la même période, chaque candidat doit faire correspondre sa candidature à la bonne référence avant de réutiliser une liste de pièces. En cas de rectificatif, seule la version officielle authentifiée la plus récente doit guider la démarche ; conserver une copie de l'annonce initiale reste prudent. Ce guide ne garantit ni présélection ni embauche."
             ]
           ]
+        }
+      },
+      "liveVerification": {
+        "checkedAt": "2026-10-29",
+        "status": "success",
+        "buildRun": 40907004304,
+        "deployRun": 40907004282,
+        "publicCheckRun": 40907196052,
+        "urls": {
+          "ar": "https://ribhlab.github.io/ar/opportunities/competitions/amdie-investment/",
+          "en": "https://ribhlab.github.io/en/opportunities/competitions/amdie-investment/",
+          "fr": "https://ribhlab.github.io/fr/opportunities/competitions/amdie-investment/"
         }
       }
     }

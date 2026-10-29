@@ -11,9 +11,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 32,
+    "researched": 33,
     "marketEvidence": 5,
-    "pendingDetail": 58
+    "pendingDetail": 57
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -468,10 +468,15 @@
       "section": "competitions",
       "title": "Cadre analyste Projets d’investissement",
       "deadline": "2026-11-09",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e3e989b0-e4ce-49fc-bee2-78571029dfec"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/e3e989b0-e4ce-49fc-bee2-78571029dfec",
+      "reviewedAt": "2026-10-29",
+      "evidenceId": "amdie-investment",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/e3e989b0-e4ce-49fc-bee2-78571029dfec",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/amdie-investment/",
+      "reviewNote": "Decision 508/2026 and four-page position sheet cross-checked with public portal C44251/26: one analyst, Bac+5 accounting/finance/audit/management control, 9 Nov deadline. Nine complete AR/EN/FR sections live after successful build 40907004304, deployment 40907004282 and public HTTPS verification 40907196052."
     },
     {
       "id": "amdie-senior-buyer",
