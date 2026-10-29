@@ -6316,6 +6316,178 @@
           ]
         }
       }
+    },
+    "cdg-rates-equity-supervision": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Read original two-page CDG call dated 26 October 2026 via government PDF; cross-checked government competition listing C44286/26 on 29 October 2026. CDG application portal ID 253 linked but its form returned access restriction to independent inspection; do not claim document requirements. Original wording 'environ 8 ans' retained, no invented salary, age, interview or exact deadline hour.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "CDG — Appel à candidatures externes Responsable Supervision Taux et Actions, 26 octobre 2026, deux pages",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/b5fe236e-2c63-40cc-8c74-c6f40a68d275"
+        },
+        {
+          "label": "Emploi-public.ma — concours C44286/26, publié le 26 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/b5fe236e-2c63-40cc-8c74-c6f40a68d275"
+        },
+        {
+          "label": "CDG — plateforme de recrutement, offre 253, formulaire d'inscription",
+          "url": "https://recrutement.cdg.ma/Agirhcv/PartageOffre?Id_Offre=253"
+        }
+      ],
+      "facts": {
+        "employer": "Caisse de Dépôt et de Gestion (CDG)",
+        "jobTitle": "Responsable Supervision Taux et Actions",
+        "reference": "C44286/26",
+        "published": "2026-10-26",
+        "posts": 1,
+        "contract": "Recrutement sous contrat",
+        "postingCity": "Rabat",
+        "degree": "Bac+5 grande école d'ingénieurs/commerce ou équivalent",
+        "experience": "Environ 8 ans marchés financiers, expérience significative en supervision d'activités et/ou management d'équipe",
+        "skills": [
+          "Gestion de portefeuille",
+          "Modélisation du risque",
+          "Reporting",
+          "VBA",
+          "SQL"
+        ],
+        "application": "https://recrutement.cdg.ma/Agirhcv/PartageOffre?Id_Offre=253",
+        "deadline": "2026-11-09",
+        "deadlineHour": null,
+        "documents": "Not enumerated in original two-page notice; verify live form",
+        "selection": "Not specified",
+        "salary": null,
+        "contractDuration": null
+      },
+      "translations": {
+        "ar": {
+          "title": "CDG: مسؤول الإشراف على استثمارات الفائدة والأسهم بالرباط — الخبرة والمهام وآخر أجل",
+          "deck": "منصب واحد بعقد لدى صندوق الإيداع والتدبير؛ مستوى Bac+5 وخبرة تقارب ثماني سنوات في الأسواق المالية، مع الترشح قبل 9 نوفمبر 2026. تحليل للقرار الرسمي وحدود ما أُعلن.",
+          "sections": [
+            [
+              "المنصب الحقيقي ومصدر الإعلان",
+              "أعلنت صندوق الإيداع والتدبير (CDG) بتاريخ 26 أكتوبر 2026 عن توظيف مسؤول واحد للإشراف على استثمارات أسعار الفائدة والأسهم، ضمن مديرية الإشراف على انتدابات التسيير التابعة لقطب الانتدابات المؤسساتية. يحمل الإعلان الحكومي الرمز C44286/26، ويحدد الرباط مكاناً للعمل. يتعلق الأمر بتوظيف بموجب عقد، وليس مباراة توظيف نظامية في درجة من درجات الوظيفة العمومية. تؤكد الوثيقة الأصلية المكونة من صفحتين طبيعة الوظيفة ومسؤولياتها، وتحدد 9 نوفمبر 2026 آخر أجل للترشح. لا تذكر ساعة إغلاق دقيقة، ولذلك لا يجوز نشر توقيت مفترض. ينبغي الرجوع إلى بوابة التوظيف الرسمية يوم الإيداع، وعدم الخلط بين هذا المنصب وإعلانات أخرى للصندوق."
+            ],
+            [
+              "المؤهل الدراسي والخبرة: لمن يناسب الإعلان؟",
+              "يطلب الإعلان تكويناً بمستوى بكالوريا زائد خمس سنوات من مدرسة عليا للهندسة أو التجارة أو ما يعادلها. ويشير إلى خبرة تقارب ثماني سنوات في أنشطة الأسواق المالية، تشمل تجربة معتبرة في الإشراف على الأنشطة أو إدارة فريق. عبارة «تقارب ثماني سنوات» هي الصياغة الواردة في الإعلان، ولا ينبغي تحويلها إلى شرط جامد بثماني سنوات كاملة أو الادعاء بقبول عدد أقل تلقائياً. إذا كان مسارك في المحاسبة أو المراقبة المالية دون خبرة فعلية في إدارة محافظ الأسهم والسندات، فهذه فجوة مهنية مهمة يجب تقييمها بواقعية. لا يتضمن الإعلان شرطاً رقمياً للسن أو شهادة لغة محددة."
+            ],
+            [
+              "الإشراف على المحافظ والانتدابات الاستثمارية",
+              "تتمحور المهام حول المشاركة في إعداد توزيع الأصول بالتنسيق مع الجهات المعنية، بما في ذلك بناء المؤشرات المرجعية المستخدمة للمقارنة. ويتعين تحليل فرص الاستثمار في الأسهم وأدوات أسعار الفائدة، وتقييم مدى انسجام الاستراتيجيات مع توجيهات كل انتداب تسيير مفوض، ثم متابعة تنفيذها. لا يعني الإشراف تنفيذ صفقات مضاربة شخصية أو إدارة حسابات أفراد؛ فالوثيقة تتحدث عن محافظ مؤسساتية وحوكمة ومراقبة حدود الاستثمار. مثال تحليلي مناسب للمقابلة هو شرح كيفية مقارنة أداء محفظة بمؤشر مرجعي، ثم تحديد ما إذا كان الفرق ناجماً عن توزيع الأصول أو اختيار الأوراق المالية، دون الادعاء بأن الصندوق يستعمل نموذجاً بعينه."
+            ],
+            [
+              "قياس الأداء والمخاطر وإعداد التقارير",
+              "يشمل العمل تتبع أداء المحافظ والمخاطر واحترام الحدود المعتمدة من الهيئات المختصة، وإنتاج تقارير دورية عن الأداء ومساهمات الأصول ومؤشرات المخاطر. كما يطلب الإعلان إعداد مذكرات بحث وتحليل مخاطر الائتمان، وتحليل أوضاع الشركات المصدرة وملاءتها وربحيتها ونسب تغطيتها. يستطيع المرشح الاستعداد بعرض مثال مهني موثق يشرح مصادر البيانات، وفترة القياس، ومعيار المقارنة، والافتراضات، وكيفية التعامل مع بيانات ناقصة أو متأخرة. ينبغي التفريق بين قياس خطر سعر الفائدة وخطر الأسهم وخطر الائتمان؛ فجمعها في رقم واحد دون تفسير قد يخفي طبيعة التعرضات. لا تُنسب مؤشرات كمية محددة إلى CDG ما لم يعلنها."
+            ],
+            [
+              "المهارات التقنية ومتابعة الأسواق",
+              "تذكر الوثيقة تقنيات تدبير المحافظ ونمذجة المخاطر وإعداد التقارير، وإتقان أدوات برمجية وقواعد بيانات من قبيل VBA وSQL. وتطلب أيضاً متابعة تقارير الهيئة المغربية لسوق الرساميل وبنك المغرب وبورصة الدار البيضاء وشركات التسيير، وإجراء تحليل مالي وكمي ونوعي. يمكن للمرشح مراجعة كيفية التحقق من جودة سلسلة أسعار، ومطابقة أرصدة تقريرين، وتوثيق نسخة البيانات وتاريخ استخراجها. ذكر VBA وSQL في الإعلان لا يعني اشتراط شهادة رسمية في أي منهما، ولا يبرر الادعاء باستخدام منصة تداول أو نظام داخلي معين. الأهم هو تقديم أمثلة صحيحة قابلة للشرح، مع احترام سرية المعلومات المالية السابقة."
+            ],
+            [
+              "الترشيح الإلكتروني والموعد النهائي",
+              "تحدد الوثيقة رابطاً مباشراً للترشح عبر بوابة التوظيف التابعة للصندوق، برقم العرض 253، وتذكر صراحة ضرورة تقديم الطلب قبل 9 نوفمبر 2026. تؤكد بطاقة التشغيل العمومي التاريخ نفسه وتحدد أن الإيداع إلكتروني لدى الإدارة، لكنها لا تنشر ساعة محددة للإغلاق. لذلك من الحكمة إرسال الطلب قبل اليوم الأخير والاحتفاظ بإثباته، وعدم انتظار دقائق الإغلاق أو افتراض أن الساعة 16:30 تنطبق على هذه الوظيفة لمجرد ظهورها في مباريات أخرى. يجب استعمال رابط التوظيف الرسمي والتحقق من هوية النطاق، وتجنب إرسال وثائق الهوية إلى وسطاء. إذا كانت صفحة التسجيل لا تعمل، ينبغي الاتصال بجهة التوظيف الرسمية لا اختراع مسار بديل."
+            ],
+            [
+              "ما الذي لم يُنشر عن الوثائق والانتقاء؟",
+              "لا تتضمن صفحتا الإعلان قائمة حصرية ومفصلة لوثائق الترشيح أو مراحل اختبار كتابي أو شفهي بمعاملات محددة. لذلك لا يجوز تقديم نسخة البطاقة الوطنية أو شهادات العمل أو خطاب التحفيز باعتبارها قائمة إلزامية نهائية ما لم تطلبها استمارة الصندوق عند التسجيل. يمكن تجهيز سيرة ذاتية دقيقة وشهادات الدراسة والخبرة تحسباً لطلبها، لكن ينبغي تمييز التحضير العملي عن الالتزام القانوني المنشور. كذلك لا يحدد الإعلان راتباً صافياً أو إجمالياً، ولا عدد أيام العمل أو مدة العقد أو تاريخ بدء المهام. على المرشح قراءة التعليمات الظاهرة في منصة التسجيل عند التقديم، وحفظ نسخة من الإعلان بتاريخ الاطلاع."
+            ],
+            [
+              "خطة عملية للتحضير للمقابلة دون ادعاءات",
+              "ابدأ بملخص من صفحة واحدة يربط خبرتك الفعلية بمراقبة المحافظ والحوكمة وإعداد تقارير المخاطر. جهز دراسة حالة عامة عن محفظة افتراضية تضم أسهماً وسندات، وحدد معياراً مرجعياً مناسباً وافتراضات واضحة للبيانات، ثم اشرح كيف تتغير الحساسية عند ارتفاع أسعار الفائدة أو اتساع فروق الائتمان. هذه حالة تدريبية من إعداد المرشح وليست اختباراً رسمياً معلناً. جهز أيضاً مثالاً عن كيفية توثيق قرار استثماري ومراجعته أمام لجنة، وعن كيفية التعامل مع اختلاف نتائج تقريرين. لا تذكر أرقام أرباح أو أصول سرية تخص أصحاب عمل سابقين، ولا تدع امتلاك خبرة إشرافية إذا اقتصرت تجربتك على التنفيذ."
+            ],
+            [
+              "حدود المعلومة والبدائل المهنية",
+              "يوضح الإعلان موقع العمل بالرباط وعدد المناصب، لكنه لا يضمن قبول أي مرشح، ولا يقدم وعداً بالراتب أو بترقية مستقبلية. وصف التوظيف بالعقد مهم عند مقارنة الحقوق مع الوظائف النظامية، ويجب سؤال الإدارة عن تفاصيل العقد في القنوات الرسمية. إذا لم تتوفر خبرة كافية في الأسواق المالية أو الإشراف على المحافظ، فقد تكون وظائف التحليل المالي أو مراقبة المخاطر أو التقارير الاستثمارية الأقل خبرة مساراً مهنياً أنسب، لكن ذلك ليس ضماناً بوجود شاغر محدد. راجع الإعلان الأصلي وصفحة التشغيل العمومي وأي تصحيح رسمي قبل الإرسال؛ وإذا ظهرت تواريخ متعارضة، فلا تعتمد الأجل الأحدث دون وثيقة تعديل مؤرخة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "CDG Rabat: Fixed-Income and Equity Supervision Manager — requirements and deadline",
+          "deck": "One contractual position requiring Bac+5 and approximately eight years in financial markets. Apply before 9 November 2026; the original two-page notice does not publish salary or an exact closing hour.",
+          "sections": [
+            [
+              "The actual role and the original announcement",
+              "On 26 October 2026, Morocco's Caisse de Dépôt et de Gestion (CDG) advertised one Head of Fixed-Income and Equity Supervision role in its Investment Management Mandate Supervision Directorate, within the Institutional Mandates division. The government listing identifies the position as C44286/26 and confirms Rabat as the work location. It is a contractual recruitment rather than an ordinary civil-service grade competition. The two-page original announcement describes the responsibilities and sets 9 November 2026 as the application deadline. It does not specify an exact closing hour, so one should not invent one. Applicants should check the official recruitment platform on submission day and avoid mixing this vacancy with other CDG advertisements."
+            ],
+            [
+              "Education and experience: who fits the profile?",
+              "The original notice seeks a Bac+5 qualification from a leading engineering or business school, or an equivalent qualification. It asks for approximately eight years of experience in financial-market activities, including significant experience supervising activities and/or managing a team. The word approximately matters: the notice does not state an inflexible eight-year cut-off, nor does it guarantee acceptance of candidates with less experience. An applicant whose background is exclusively general accounting or corporate controlling should carefully distinguish those skills from direct portfolio and securities-market supervision. No numerical age threshold or mandatory language certificate is specified in the source. Applicants should document real responsibilities and avoid relying on job titles alone."
+            ],
+            [
+              "Asset allocation and delegated management mandates",
+              "The responsibilities include helping define asset allocation with relevant stakeholders and establishing associated benchmarks. The successful candidate would analyse equity and fixed-income investment strategies, assess opportunities against the objectives of each delegated management mandate, and oversee implementation. This is not a personal trading signal service or an invitation to manage retail investors' money. It concerns institutional portfolios, governance and approved investment limits. A useful interview exercise is to explain how to compare a portfolio's performance with a suitable benchmark, separating asset-allocation effects from security-selection effects. Such an example is editorial preparation, not a claim that CDG uses a particular attribution model or proprietary system."
+            ],
+            [
+              "Performance monitoring, risk and reporting",
+              "The notice requires monitoring portfolio performance, investment risk and compliance with limits established by the relevant governance bodies. It also describes periodic management reports with performance contributions and risk indicators, research notes and credit-risk assessments. Financial analysis covers issuers' solvency, profitability and coverage ratios. Candidates can prepare a verifiable case explaining their data sources, valuation date, benchmark, assumptions and treatment of incomplete information. Interest-rate, equity and credit risks should be discussed separately before they are aggregated; a single number without context may obscure the exposures. The notice does not provide a required Value-at-Risk model or numerical risk limit, so neither should be presented as an official CDG requirement."
+            ],
+            [
+              "Technical tools and financial-market intelligence",
+              "CDG names portfolio-management methods, risk modelling and reporting, as well as programming and database skills including VBA and SQL. The role also calls for monitoring financial information from Morocco's capital-markets regulator, central bank, Casablanca Stock Exchange and asset managers, and performing quantitative and qualitative analysis. Applicants could rehearse a small reproducible data-quality check: validate a price series, reconcile two reports and record the source and extraction date. Mentioning VBA and SQL does not amount to a published requirement for particular certificates, and the notice does not identify a specific trading terminal or internal database. Claims about past systems, returns or automation savings should be accurate and respect former employers' confidentiality."
+            ],
+            [
+              "How to apply and what the deadline actually says",
+              "The original two-page call provides a direct application link to CDG's own recruitment platform, offer ID 253, and says to apply before 9 November 2026. The government portal confirms the date and that applications are submitted online through the recruiting institution. Neither source gives a precise hour. It is therefore prudent to submit early, retain confirmation and not assume that a 16:30 deadline from an unrelated government competition applies here. Use the official domain rather than intermediary websites or social-media messages asking for identity documents. If the platform is inaccessible, contact CDG through its published recruitment contact instead of treating an unofficial email or third-party form as an authorised substitute."
+            ],
+            [
+              "Documents, tests and salary: what remains unknown",
+              "The two-page call does not enumerate a definitive document checklist or announce a written examination, oral-test coefficients or an interview timetable. An online application form may request a CV, credentials or other evidence, but its current requirements should be checked at the point of submission rather than invented in an article. Candidates may prepare their CV, qualification records and employment certificates in advance, while distinguishing preparation from formal eligibility requirements. The notice also does not disclose gross or net remuneration, working hours, contract duration or a start date. None of those details should be inferred from public-sector pay scales or another CDG vacancy. Preserve a dated copy of the original notice and any subsequent official clarification."
+            ],
+            [
+              "A realistic preparation exercise, not a leaked assessment",
+              "Prepare a one-page evidence map connecting your genuine experience to mandate oversight, governance, portfolio analysis and risk reporting. For practice, create a clearly hypothetical portfolio containing bonds and equities, define a benchmark and document your data assumptions. Then explain what rising yields or widening credit spreads might do to valuations and how you would communicate uncertainties to a committee. This is a candidate-created exercise, not an announced CDG test. A second useful exercise is reconciling two performance reports and recording the source of discrepancies. Do not disclose confidential holdings or claim management authority you never held. Accuracy and a defensible analytical process matter more than dramatic but unverifiable performance claims."
+            ],
+            [
+              "Limits, alternatives and final checks",
+              "The notice establishes one position in Rabat and a deadline, but it guarantees neither selection nor a particular salary or future promotion. Contractual recruitment should be evaluated on its actual written terms rather than confused with appointment to a civil-service grade. If your experience does not include meaningful financial-market and supervision work, more junior financial analysis, investment reporting or risk-monitoring roles may be more realistic career paths; this does not imply any specific vacancy is currently open. Recheck the original CDG call and the government listing before submitting, and look for dated corrections. If sources later show different deadlines, do not assume the later date applies without an explicit official amendment."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "CDG Rabat : Responsable Supervision Taux et Actions — profil, missions et candidature",
+          "deck": "Un poste contractuel Bac+5 avec environ huit ans d'expérience sur les marchés financiers. Candidature avant le 9 novembre 2026 ; aucun salaire ni horaire de clôture exact n'est publié.",
+          "sections": [
+            [
+              "Le poste réel et ses sources officielles",
+              "Le 26 octobre 2026, la Caisse de Dépôt et de Gestion (CDG) a publié un appel à candidatures pour un Responsable Supervision Taux et Actions, au sein de la Direction Supervision des Mandats de Gestion du Pôle Mandats Institutionnels. L'annonce gouvernementale porte le code C44286/26 et confirme un poste basé à Rabat. Il s'agit d'un recrutement sous contrat, et non d'un concours d'accès à un grade statutaire de la fonction publique. Le document original de deux pages décrit les missions et fixe le 9 novembre 2026 comme date limite. Aucune heure précise n'y figure. Il ne faut donc ni inventer une heure de clôture ni confondre ce recrutement avec une autre offre de la CDG."
+            ],
+            [
+              "Diplôme et expérience : apprécier son éligibilité",
+              "L'appel recherche un diplôme de niveau Bac+5 issu d'une grande école d'ingénieurs ou de commerce, ou une formation équivalente. Il mentionne environ huit années d'expérience dans les activités de marchés financiers, avec une expérience significative de supervision d'activités et/ou de management d'équipe. Le terme « environ » doit être conservé : il ne permet ni d'imposer arbitrairement huit années exactement ni de promettre qu'un parcours plus court sera accepté. Une expérience uniquement comptable ou en contrôle de gestion n'équivaut pas nécessairement à la supervision de portefeuilles et d'opérations de marché. Le texte ne fixe pas d'âge maximal chiffré ni de certificat linguistique obligatoire. Les responsabilités réellement exercées doivent pouvoir être expliquées et justifiées."
+            ],
+            [
+              "Allocation d'actifs et mandats de gestion déléguée",
+              "La personne recrutée contribuera à l'élaboration de l'allocation d'actifs, en coordination avec les parties concernées, et à la définition des benchmarks associés. Elle analysera les stratégies d'investissement en actions et en produits de taux, leur cohérence avec les orientations des mandats de gestion déléguée, puis supervisera leur mise en œuvre. Il ne s'agit ni de signaux de trading destinés aux particuliers ni d'une promesse de gestion de comptes privés. Les missions concernent des portefeuilles institutionnels et des règles de gouvernance. Pour préparer un entretien, un candidat peut expliquer comment comparer une performance à un indice pertinent et distinguer les effets d'allocation de ceux de sélection, sans prétendre connaître la méthode interne exacte de la CDG."
+            ],
+            [
+              "Performance, risques et production de reporting",
+              "L'annonce prévoit le suivi de la performance, des risques des portefeuilles et du respect des limites arrêtées par les instances compétentes. Elle mentionne également des reportings périodiques détaillant performances, contributions et indicateurs de risque, ainsi que des notes de recherche et de risque de crédit. L'analyse des émetteurs porte notamment sur la solvabilité, la rentabilité et les ratios de couverture. Un exemple professionnel pertinent précisera les sources de données, la date de valorisation, le benchmark, les hypothèses et le traitement des informations manquantes. Les risques de taux, d'actions et de crédit ne doivent pas être confondus. Aucun modèle chiffré précis de Value at Risk ou seuil interne de risque n'est imposé dans le texte publié."
+            ],
+            [
+              "Compétences techniques et veille financière",
+              "La fiche recherche la maîtrise des techniques de gestion de portefeuille, de modélisation du risque et de reporting. Elle cite les langages informatiques et les bases de données, notamment VBA et SQL, ainsi que la veille sur les informations de l'AMMC, de Bank Al-Maghrib, de la Bourse de Casablanca et des sociétés de gestion. Le candidat peut s'entraîner à contrôler une série de prix, rapprocher deux reportings et documenter l'origine et la date d'extraction des données. La mention de VBA et SQL ne constitue pas une obligation publiée de détenir des certifications particulières. De même, aucun logiciel de négociation ou système interne spécifique n'est nommé. Les réalisations passées doivent être présentées sans inventer de rendements ou divulguer des données confidentielles."
+            ],
+            [
+              "Candidature en ligne et date limite exacte",
+              "Le document officiel renvoie directement à la plateforme de recrutement de la CDG, pour l'offre numéro 253, et demande de postuler avant le 9 novembre 2026. La fiche gouvernementale confirme cette date et précise un dépôt en ligne sur le site de l'administration. Elle n'indique pas d'heure de clôture. Il est donc préférable de candidater à l'avance et de conserver une preuve de transmission, sans reprendre automatiquement l'heure de 16 h 30 utilisée pour d'autres concours. Vérifiez soigneusement le domaine du site et évitez les intermédiaires réclamant des pièces d'identité sur des canaux non officiels. Si la plateforme est indisponible, utilisez les coordonnées de recrutement publiées par la CDG pour demander des instructions fiables."
+            ],
+            [
+              "Pièces, épreuves et rémunération : les inconnues",
+              "Les deux pages de l'appel ne contiennent pas de liste exhaustive et obligatoire des pièces à fournir, ni de programme d'épreuve écrite, de coefficients d'oral ou de calendrier d'entretien. Le formulaire en ligne peut demander un CV, des justificatifs de formation ou d'expérience ; seules ses instructions officielles permettent de préciser les pièces effectivement requises au moment du dépôt. Il est raisonnable de préparer ces documents, mais il serait inexact de les annoncer comme une liste réglementaire déjà publiée. L'offre ne donne pas non plus de salaire brut ou net, de durée du contrat, d'horaires de travail ou de date de prise de fonction. Ne déduisez pas ces éléments d'un barème public ou d'une autre offre."
+            ],
+            [
+              "Préparer un entretien sans inventer un examen",
+              "Construisez une synthèse d'une page reliant votre expérience réelle à la supervision des mandats, à la gouvernance, à l'analyse des portefeuilles et au suivi des risques. Pour vous exercer, imaginez un portefeuille fictif d'actions et d'obligations, choisissez un indice de référence et explicitez les hypothèses de données. Expliquez ensuite les effets possibles d'une hausse des taux ou d'un élargissement des spreads de crédit, et la manière de communiquer les incertitudes à un comité. Cet exercice est une proposition éditoriale, pas une épreuve annoncée par la CDG. Préparez aussi un rapprochement de deux reportings contradictoires. Ne divulguez pas les positions confidentielles d'un ancien employeur et n'exagérez pas vos responsabilités."
+            ],
+            [
+              "Limites de l'annonce et autres pistes",
+              "L'appel confirme un poste basé à Rabat et une échéance de candidature, mais il ne garantit ni embauche, ni salaire déterminé, ni évolution de carrière. Le statut contractuel doit être évalué à partir des conditions écrites qui seront communiquées par l'employeur, et non assimilé à un grade de fonctionnaire. Si vous n'avez pas l'expérience requise en marchés financiers et en supervision, des fonctions plus accessibles d'analyse financière, de reporting d'investissement ou de suivi des risques peuvent constituer des étapes de progression, sans qu'une offre précise soit ici promise. Avant le dépôt, consultez à nouveau l'appel original et la fiche gouvernementale ; une prolongation ne doit être retenue que si un rectificatif officiel daté la confirme."
+            ]
+          ]
+        }
+      }
     }
   }
 }
