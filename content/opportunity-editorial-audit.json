@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-28",
+  "reviewedAt": "2026-10-29",
   "scope": "All opportunity cards in this repository (jobs, employers, contests, immigration pathways and visa appointment services).",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
@@ -8,11 +8,11 @@
     "official-booking-source-only": "The country-specific official booking instructions are available; no real-time appointment slots verified"
   },
   "totals": {
-    "cards": 87,
+    "cards": 95,
     "visa": 12,
-    "researched": 17,
+    "researched": 18,
     "marketEvidence": 5,
-    "pendingDetail": 65
+    "pendingDetail": 72
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -924,6 +924,86 @@
       "marketKey": null,
       "priority": "date:2026-11-08",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/0d951947-f970-4e52-97db-2ae203fd450d"
+    },
+    {
+      "id": "ena-digital-engineer",
+      "section": "competitions",
+      "title": "Ingénieur d'État 1er grade — Systèmes d'information et transformation digitale — ENA Rabat",
+      "deadline": "2026-11-05",
+      "status": "researched-article",
+      "marketKey": null,
+      "priority": "official-pdf-reviewed-2026-10-29",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/66fcbb67-e370-4185-a72b-13bc237ff54d"
+    },
+    {
+      "id": "gdc-payroll-specialist-sa-20261027",
+      "section": "international",
+      "title": "Payroll Specialist — GDC Middle East",
+      "deadline": "2026-12-26",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-12-26",
+      "sourceUrl": "https://careers.gdcme.com/en/saudi-arabia/jobs/payroll-specialist-1100091697/"
+    },
+    {
+      "id": "gdc-staff-support-sa-20261025",
+      "section": "international",
+      "title": "General Staff Support Specialist — GDC Middle East",
+      "deadline": "2026-12-24",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-12-24",
+      "sourceUrl": "https://careers.gdcme.com/en/saudi-arabia/jobs/general-staff-support-specialist-1100091635/"
+    },
+    {
+      "id": "gdc-aircraft-powertrain-sa-20261025",
+      "section": "international",
+      "title": "Powertrain Repairman — GDC Middle East",
+      "deadline": "2026-12-24",
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "date:2026-12-24",
+      "sourceUrl": "https://careers.gdcme.com/en/saudi-arabia/jobs/powertrain-repairman-1100091640/"
+    },
+    {
+      "id": "microsoft-senior-ai-infrastructure-us-20261027",
+      "section": "international",
+      "title": "Senior Software Engineer — AI Infrastructure",
+      "deadline": null,
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "individual-source-verification-pending",
+      "sourceUrl": "https://careers.microsoft.com/v2/global/en/locations/bay-area.html"
+    },
+    {
+      "id": "ikea-digital-products-germany-20261001",
+      "section": "international",
+      "title": "Country Digital Product, Launch & Adoption Leader (f/m/d)",
+      "deadline": null,
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "individual-source-verification-pending",
+      "sourceUrl": "https://jobs.ikea.com/es/trabajo/wallau/country-digital-product-launch-and-adoption-leader-f-m-d/24107/101396467760"
+    },
+    {
+      "id": "ikea-marketing-germany-20261023",
+      "section": "international",
+      "title": "Marketing Performance Leader (f/m/d)",
+      "deadline": null,
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "individual-source-verification-pending",
+      "sourceUrl": "https://jobs.ikea.com/es/trabajo/hofheim-am-taunus/marketing-performance-leader-f-m-d/24107/102321881904"
+    },
+    {
+      "id": "kedali-maintenance-germany-20261026",
+      "section": "international",
+      "title": "Maintenance Technician (m/f/d)",
+      "deadline": null,
+      "status": "source-listing-awaiting-detailed-review",
+      "marketKey": null,
+      "priority": "individual-source-verification-pending",
+      "sourceUrl": "https://www.make-it-in-germany.com/de/arbeiten-in-deutschland/jobboerse/job/job-10001-1003886796-S"
     }
   ],
   "visaCards": [
