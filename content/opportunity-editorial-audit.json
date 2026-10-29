@@ -10,9 +10,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 21,
+    "researched": 22,
     "marketEvidence": 5,
-    "pendingDetail": 69
+    "pendingDetail": 68
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -233,10 +233,13 @@
       "section": "companies",
       "title": "Atlas On Line / Groupe RAM — téléconseillers",
       "deadline": "2026-11-06",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-06",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/75a63a0e-655b-4db8-8d4a-ffdeed8e61f9",
+      "researchedAt": "2026-10-29",
+      "evidenceKey": "ram-company",
+      "verification": "Original one-page notice and portal compared; nine sections AR/EN/FR; public GitHub Pages check 40821145187 success."
     },
     {
       "id": "srm-company",
