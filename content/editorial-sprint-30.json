@@ -249,10 +249,12 @@
         "googlePlay",
         "appleAppStore"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/english-learning-apps-pronunciation-plan/",
       "queuePath": "content/reviewed-queue/english-learning-apps-pronunciation-plan.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles/english-learning-apps-pronunciation-plan.json created by vetted publisher after 25-minute interval in GitHub Actions rerun 40862400192 (attempt 2); npm build/check succeeded; GitHub Pages deployment 40887320556 success; public HTTPS AR/EN/FR QA run 40887451558 confirmed six editorial sections, original sources and licensed unique image in all three languages."
     },
     {
       "sectionId": "games-security",
