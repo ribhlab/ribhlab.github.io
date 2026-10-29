@@ -536,10 +536,14 @@
       "section": "competitions",
       "title": "Administrateur 3e grade — CNRST",
       "deadline": "2026-11-08",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-11-08",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf",
+      "editorialEvidenceId": "cnrst-management-4-2026",
+      "sourceReviewDate": "2026-10-29",
+      "warning": "Official deadline conflict: portal 2026-11-08 16:30 vs stamped CNRST notice before 2026-11-09; advise applying by earlier date.",
+      "evidenceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf"
     },
     {
       "id": "cnrst-administrator-2",
