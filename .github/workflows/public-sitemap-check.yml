@@ -117,7 +117,7 @@ jobs:
                       assert anapec.count('class="opp-guide-section" id="part-')>=8, f'{lang}: ANAPEC finance guide missing eight sections'
                       assert 'C44235/26' in anapec and 'bea98a46-0101-4906-afd5-4bdc57b30dab' in anapec, f'{lang}: ANAPEC original decision or competition reference missing'
                       assert 'opp-guide-sources' in anapec and 'target="_blank"' in anapec, f'{lang}: ANAPEC original sources or external tabs missing'
-                      assert '16:30' in anapec and '2026' in anapec, f'{lang}: ANAPEC closing hour or date missing'
+                      assert re.search(r'16\s*(?::|h\s*)\s*30',anapec) and '2026' in anapec, f'{lang}: ANAPEC closing hour or date missing'
                       print(f'ANAPEC FINANCE LIVE {lang}: eight sections, signed decision, 3 positions, 5 November 16:30 deadline',flush=True)
                       english_apps=bodies[f'/{lang}/ai/english-learning-apps-pronunciation-plan/'].decode('utf-8')
                       assert english_apps.count('class="article-block"')>=6, f'{lang}: English-learning app article lacks six substantive sections'
