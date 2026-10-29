@@ -5982,6 +5982,156 @@
           ]
         }
       }
+    },
+    "family-technician": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Read both pages of original signed ministerial decision 55/26 dated 21 September 2026 through official emploi-public.ma PDF, compared with government listing C44127/26 dated 16 October 2026. Distinguishes exam venue from unconfirmed posting, salary not published.",
+      "state": "researched-awaiting-live-verification",
+      "sources": [
+        {
+          "label": "قرار وزيرة التضامن والإدماج الاجتماعي والأسرة رقم 55/26 بتاريخ 21 شتنبر 2026، صفحتان",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/17f2da87-11bb-4fb4-8b3c-1712f117c3ce"
+        },
+        {
+          "label": "Emploi-public.ma — Fiche officielle C44127/26 publiée le 16 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/17f2da87-11bb-4fb4-8b3c-1712f117c3ce"
+        }
+      ],
+      "facts": {
+        "city": "Rabat (examination only; final posting not stated in decision)",
+        "country": "Maroc",
+        "reference": "C44127/26",
+        "internalReference": "55/26",
+        "decisionDate": "2026-09-21",
+        "deadline": "2026-11-08T16:30",
+        "posts": 1,
+        "grade": "Technicien 3e grade, échelle 9",
+        "degree": "Diplôme de Technicien Spécialisé en Réseaux Informatiques ou équivalent réglementaire",
+        "age": "18–40 years at 1 January 2026, qualifying service extension maximum 45",
+        "experience": "No minimum professional experience specified",
+        "salary": null,
+        "channel": "depot.emploi-public.ma",
+        "examDate": "2026-11-15",
+        "examVenue": "Rabat",
+        "written": "3h coefficient 3",
+        "oralPractical": "15–30 minutes coefficient 2"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة تقني شبكات المعلوميات بوزارة التضامن: شروط الدبلوم والملف والاختبارات",
+          "deck": "منصب واحد من الدرجة الثالثة، السلم التاسع، مع آخر أجل 8 نونبر 2026 الساعة 16:30 وامتحان في الرباط يوم 15 نونبر. قراءة تفصيلية للقرار الرسمي ذي الصفحتين.",
+          "sections": [
+            [
+              "المباراة المعلنة والفرق بين مكان الامتحان ومقر العمل",
+              "ينص قرار وزيرة التضامن والإدماج الاجتماعي والأسرة رقم 55/26 المؤرخ في 21 شتنبر 2026 على تنظيم مباراة لتوظيف تقني واحد من الدرجة الثالثة، السلم التاسع، في تخصص شبكات المعلوميات. يحدد القرار يوم الأحد 15 نونبر 2026 موعداً للمباراة بمدينة الرباط، على أن تُعلن أماكن إجرائها لاحقاً. ولا يحدد نص القرار الذي راجعناه مقر التعيين النهائي بعد النجاح؛ لذلك لا ينبغي تحويل مدينة الامتحان تلقائياً إلى وعد بالتوظيف في الرباط. رقم الإعلان في البوابة الحكومية C44127/26، وتاريخ نشره 16 أكتوبر 2026."
+            ],
+            [
+              "الجنسية والسن وكيف تُحتسب الحدود القانونية",
+              "المباراة مفتوحة للمترشحات والمترشحين من الجنسية المغربية. يشترط القرار بلوغ 18 سنة على الأقل وألا يتجاوز السن 40 سنة في فاتح يناير من السنة الجارية. ويمكن تمديد الحد الأعلى بمدة الخدمات الصحيحة أو القابلة للتصحيح من أجل التقاعد، دون تجاوز 45 سنة. لا يعني ذلك أن كل شخص يبلغ 45 سنة مؤهل تلقائياً؛ فالتمديد مرتبط بوضعية خدمات سابقة قابلة للإثبات. على المترشح حساب سنه في التاريخ المحدد، ومراجعة وضعه الإداري قبل إعداد الملف، وعدم الاستناد إلى عمره يوم الامتحان وحده."
+            ],
+            [
+              "الدبلوم المطلوب وتطابق التخصص",
+              "يشترط القرار دبلوم التقني المتخصص المنصوص عليه في المادة الثامنة من المرسوم رقم 2.05.72، أو شهادة معادلة وفق القواعد الجاري بها العمل، في التخصص المطلوب: شبكات المعلوميات. ليست كل شهادة تحمل كلمة «معلوماتية» مطابقة بالضرورة لتخصص الشبكات؛ فقد تكون في البرمجة أو التصميم أو مجال آخر. إذا لم يظهر التخصص بوضوح على الدبلوم، يجب إرفاق شهادة من المؤسسة المانحة تحدده صراحة. وبالنسبة للشهادات المعادلة، يجب إرفاق قرار المعادلة، لا مجرد تصريح شخصي بأن المستوى الدراسي متقارب."
+            ],
+            [
+              "ملف الترشيح والنسخ المشهود بمطابقتها",
+              "يطلب القرار سيرة ذاتية تحمل صورة المترشح ورقم هاتفه وعنوان بريده الإلكتروني، ونسخة مشهوداً بمطابقتها لأصل البطاقة الوطنية للتعريف غير المنتهية الصلاحية، ونسخة مشهوداً بمطابقتها لأصل دبلوم التقني المتخصص أو ما يعادله، مع قرار المعادلة عند الاقتضاء. كما تُرفق شهادة توضح التخصص عندما لا يرد في الدبلوم. ويحتاج المترشح الموظف إلى ترخيص رئيس الإدارة المشغلة. من الأخطاء التي تؤدي إلى رفض الملف تحميل شهادة النجاح بدل الدبلوم، أو إغفال المصادقة المطلوبة، أو تقديم بطاقة هوية منتهية الصلاحية."
+            ],
+            [
+              "التسجيل الإلكتروني وآخر أجل دقيق",
+              "يحدد القرار إيداع الملف وجوباً وحصرياً عبر بوابة الترشيح الإلكتروني depot.emploi-public.ma، ويجعل يوم 8 نونبر 2026 على الساعة الرابعة والنصف بعد الزوال آخر أجل. تؤكد صفحة المباراة الحكومية اليوم نفسه، وإن كانت لا تعرض الساعة في خانة الملخص. ينبغي تجهيز ملفات مقروءة والتحقق من اكتمال الرفع قبل الموعد بوقت كافٍ؛ ففتح حساب دون إرسال الوثائق لا يساوي ترشيحاً مكتملاً. احتفظ بإثبات الإيداع إن توفر، ولا ترسل ملفاً إلى عنوان غير منصوص عليه في القرار على أمل تعويض الإيداع الإلكتروني."
+            ],
+            [
+              "الاختبار الكتابي والشفهي أو التطبيقي",
+              "يتكون الامتحان من اختبار كتابي مدته ثلاث ساعات، بمعامل ثلاثة، يتناول موضوعاً أو أسئلة مرتبطة بتخصص الشبكات أو بالمهام والمهارات المهنية المطلوبة. يليه اختبار شفهي أو تطبيقي مدته بين 15 و30 دقيقة، بمعامل اثنين، لتقييم القدرة على القيام بمهام الدرجة. لا يذكر القرار قائمة تقنية مغلقة أو برنامجاً مفصلاً للامتحان؛ لذا تعد مراجعة أساسيات الشبكات والتشخيص والأمن والتواصل المهني استراتيجية تحضير معقولة، لكنها ليست إعلاناً رسمياً عن الأسئلة. ستنشر اللوائح وأماكن الاختبارات على المواقع الرسمية وتعد بمثابة استدعاء."
+            ],
+            [
+              "كيفية التحضير المهني دون اختلاق تفاصيل الوظيفة",
+              "يمكن للمترشح إعداد ملف مراجعة يشرح عنوان IP وتقسيم الشبكات وDNS وDHCP ومبادئ الموجهات والمبدلات وطرق تشخيص انقطاع الاتصال، مع أمثلة عملية من بيئة مختبرية قانونية. ويستحسن التدريب على شرح مشكلة تقنية بلغة بسيطة للجنة غير متخصصة بالكامل، وتوثيق خطوات الحل قبل اقتراح تغيير إعدادات حساسة. هذه أمثلة تدريبية مستقلة وليست موضوعات أكدتها الوزارة. لم يحدد القرار جدول العمل أو راتباً صافياً أو سنوات خبرة إلزامية؛ لذلك لا يجوز استنتاجها من صفحات حساب الرواتب العامة أو إعلانات وظائف أخرى."
+            ],
+            [
+              "التحقق النهائي والمخاطر التي ينبغي تجنبها",
+              "راجع رابط القرار الأصلي وصفحة C44127/26 في البوابة الحكومية قبل إرسال الملف، ولا تعتمد على إعادة نشر مختصرة أو رسائل التواصل الاجتماعي لتغيير آخر أجل. ينص القرار على رفض الملفات الناقصة أو المتأخرة أو التي تتضمن نسخاً غير مشهود بمطابقتها، وعلى أن شهادة النجاح غير مقبولة بديلاً عن الدبلوم. قد تتغير لوائح الاستدعاء أو أماكن الاختبارات، لذلك تابع بوابة التشغيل العمومي وموقع الوزارة social.gov.ma بعد الإيداع. إذا ظهرت معلومات متعارضة مستقبلاً، أعط الأولوية لتصحيح رسمي جديد مؤرخ ولا تفترض تمديد الأجل."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Morocco social ministry: one computer-network technician competition, eligibility and application",
+          "deck": "One third-grade technician post, 8 November 2026 at 16:30 deadline and 15 November exam in Rabat. An eight-section guide based on the signed two-page notice.",
+          "sections": [
+            [
+              "The actual opening and the distinction between exam city and posting",
+              "Ministerial decision 55/26, dated 21 September 2026, opens a competition for one third-grade technician, salary scale 9, specialising in computer networks. It schedules the examination for Sunday 15 November 2026 in Rabat, with individual venues to be announced later. The signed notice does not establish the successful candidate's final work location, so Rabat should be described as the examination city rather than an unconditional posting promise. The government listing is reference C44127/26 and was published on 16 October 2026. This is one competitive vacancy, not a general recruitment programme."
+            ],
+            [
+              "Nationality, age and the limited extension rule",
+              "The competition is open to Moroccan nationals. Candidates must be at least 18 and no older than 40 on 1 January of the current year. The upper limit may be extended by a period corresponding to qualifying previous service counted or countable for retirement, but never beyond age 45. That exception does not automatically admit every 45-year-old applicant; it depends on documented qualifying service. Check your age on the legally specified reference date rather than on the examination day, and examine your administrative status before investing time in scans and forms. The notice does not create an open-ended age waiver."
+            ],
+            [
+              "The required specialist diploma and exact subject match",
+              "The signed decision requires a diplôme de technicien spécialisé under Article 8 of Decree 2.05.72, or a legally recognised equivalent, in computer networks. A diploma simply labelled information technology does not necessarily prove the required networks specialism: software development, multimedia and other programmes may have different content. Where the qualification does not explicitly name the specialism, an additional certificate from the awarding institution identifying it is mandatory. Applicants relying on equivalence must include the relevant official equivalence decision. Do not substitute an informal claim of comparable studies for the documentary requirement."
+            ],
+            [
+              "Application documents and certified copies",
+              "The required file contains a CV with the applicant's photograph, mobile telephone number and email address; a certified true copy of a valid national identity card; and a certified true copy of the specialist technician diploma or accepted equivalent, accompanied by the equivalence decision when relevant. Add the institution's specialism certificate if the diploma is ambiguous. Public employees must provide authorisation from the head of their employing administration. The decision expressly rejects incomplete files, documents lacking the required certification and mere certificates of successful completion in place of the diploma. Readability and consistency across scans are practical checks before submission."
+            ],
+            [
+              "Electronic submission and the precise deadline",
+              "Applications must be submitted exclusively through the government electronic application portal, depot.emploi-public.ma. The signed notice fixes the deadline at 8 November 2026 at 16:30 local administrative time. The official listing confirms the same calendar date, although its summary does not display the hour. Create legible scans and verify that the final submission was actually transmitted well before the deadline; merely creating an account or uploading one file is not proof of a complete application. Keep any available submission receipt. Sending documents to an unofficial address does not replace the required portal procedure."
+            ],
+            [
+              "Written examination and oral or practical assessment",
+              "The first examination is a three-hour written test, coefficient three, on the specialism or professional tasks and skills associated with the post. A second oral or practical assessment lasts between 15 and 30 minutes, coefficient two, and evaluates the candidate's ability to perform the relevant duties. The decision does not publish an exhaustive technical syllabus or specific questions. Preparing networking fundamentals and diagnostic reasoning is sensible independent advice, not a prediction of the examination. Lists of admitted candidates and examination locations will appear on the official government portal and ministry website and serve as summonses."
+            ],
+            [
+              "A useful preparation plan without invented job specifications",
+              "A candidate can practise explaining IP addressing, subnetting, DNS, DHCP, switching, routing and structured troubleshooting, preferably through authorised laboratory exercises. A short scenario could ask how to distinguish a faulty local connection from a DNS failure while recording observations before changing any production configuration. Practise communicating the reasoning in plain language as well as technical vocabulary. These are educational examples, not confirmed examination subjects. The signed decision provides no fixed take-home salary, mandatory years of experience or detailed working hours, so those figures should not be borrowed from salary calculators or unrelated vacancies."
+            ],
+            [
+              "Final verification, rejected files and later updates",
+              "Before submission, compare every requirement with the two-page signed decision and the government listing C44127/26. The decision warns that late, incomplete or improperly certified applications will be rejected, and that a certificate of completion is not accepted as a substitute for the diploma. Follow emploi-public.ma and the ministry's social.gov.ma site for examination venue and candidate lists after submission. If an unofficial summary later gives a different date, do not assume an extension without a dated official correction. This guide reports the documentary position checked on 29 October 2026 and cannot guarantee selection."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours de technicien réseaux au ministère de la Solidarité : conditions et dossier",
+          "deck": "Un poste de technicien de 3e grade, dépôt avant le 8 novembre 2026 à 16 h 30 et concours à Rabat le 15 novembre. Analyse de l'arrêté officiel de deux pages.",
+          "sections": [
+            [
+              "L'avis de concours et la différence entre ville d'examen et affectation",
+              "La décision ministérielle 55/26 du 21 septembre 2026 ouvre un concours pour un technicien de troisième grade, échelle 9, spécialisé en réseaux informatiques. Elle prévoit l'épreuve le dimanche 15 novembre 2026 à Rabat, les lieux précis devant être annoncés ultérieurement. Le document signé ne fixe pas le lieu d'affectation définitif du lauréat : Rabat doit donc être présenté comme la ville du concours et non comme une garantie d'emploi dans cette ville. La fiche officielle porte le code C44127/26 et a été publiée le 16 octobre 2026."
+            ],
+            [
+              "Nationalité, limite d'âge et exception liée aux services antérieurs",
+              "Le concours s'adresse aux candidats de nationalité marocaine âgés d'au moins 18 ans et de 40 ans au maximum au 1er janvier de l'année en cours. Une prolongation de la limite supérieure peut correspondre à des services antérieurs valables ou validables pour la retraite, sans dépasser 45 ans. Cette disposition ne rend pas automatiquement admissible toute personne de 45 ans : elle suppose des services justifiables. Calculez votre âge à la date réglementaire plutôt qu'au jour de l'épreuve et examinez votre situation administrative avant de constituer le dossier. Aucune dérogation générale n'est annoncée."
+            ],
+            [
+              "Diplôme de technicien spécialisé et correspondance exacte",
+              "La décision exige le diplôme de technicien spécialisé prévu à l'article 8 du décret 2.05.72, ou un diplôme officiellement reconnu équivalent, dans la spécialité réseaux informatiques. Une formation portant seulement l'intitulé informatique ne prouve pas nécessairement cette correspondance : développement logiciel et multimédia peuvent relever de programmes différents. Si la spécialité n'apparaît pas clairement sur le diplôme, une attestation de l'établissement délivrant le titre doit la préciser. Pour une équivalence, joignez la décision administrative correspondante, et non une simple déclaration personnelle de niveau comparable."
+            ],
+            [
+              "Pièces à fournir et copies certifiées conformes",
+              "Le dossier comprend un CV avec photographie, numéro de téléphone mobile et adresse électronique ; une copie certifiée conforme de la carte nationale d'identité en cours de validité ; ainsi qu'une copie certifiée conforme du diplôme requis ou de son équivalent, avec la décision d'équivalence si nécessaire. Ajoutez une attestation précisant la spécialité lorsque le diplôme ne l'indique pas. Les fonctionnaires doivent obtenir l'autorisation du responsable de leur administration. Le texte exclut les dossiers incomplets, les copies non certifiées conformément aux exigences et les simples attestations de réussite utilisées à la place du diplôme."
+            ],
+            [
+              "Dépôt électronique exclusif et heure de clôture",
+              "Le dépôt se fait obligatoirement et exclusivement sur le portail public depot.emploi-public.ma. La décision signée fixe la clôture au 8 novembre 2026 à 16 h 30, heure administrative locale. La fiche gouvernementale confirme la date, mais son résumé ne précise pas l'heure. Préparez des fichiers lisibles et contrôlez que toutes les pièces ont effectivement été transmises avant l'échéance ; ouvrir un compte ne suffit pas à prouver une candidature complète. Conservez une preuve de dépôt lorsqu'elle est disponible. L'envoi à une adresse officieuse ne remplace pas la procédure prévue."
+            ],
+            [
+              "Écrit, oral ou pratique et coefficients officiels",
+              "Le concours comprend une épreuve écrite de trois heures, coefficient trois, consacrée à la spécialité ou aux compétences professionnelles correspondant au poste. Elle est suivie d'un entretien oral ou d'une épreuve pratique de quinze à trente minutes, coefficient deux, pour apprécier la capacité du candidat à remplir les missions. Aucun programme technique exhaustif ni liste de questions n'est publié dans la décision. Réviser les principes des réseaux et le diagnostic d'incidents relève d'un conseil de préparation, non d'une annonce officielle des sujets. Les listes et lieux seront publiés sur les sites institutionnels et vaudront convocation."
+            ],
+            [
+              "Préparation concrète sans inventer les missions du poste",
+              "Vous pouvez préparer des exercices autorisés sur l'adressage IP, les sous-réseaux, DNS, DHCP, la commutation, le routage et la recherche méthodique d'une panne. Par exemple, expliquez comment distinguer un défaut de liaison locale d'une erreur de résolution DNS, en consignant les observations avant toute modification d'un système de production. Entraînez-vous à exposer clairement le raisonnement à un jury. Ces exemples ne sont pas des sujets confirmés. Le texte officiel ne fournit ni salaire net individuel, ni nombre d'années d'expérience obligatoire, ni horaires de travail détaillés."
+            ],
+            [
+              "Derniers contrôles, causes de rejet et modifications éventuelles",
+              "Avant l'envoi, confrontez chaque pièce à la décision officielle de deux pages et à la fiche C44127/26. Le texte prévoit le rejet des candidatures tardives, incomplètes ou accompagnées de copies non certifiées selon ses exigences ; l'attestation de réussite ne remplace pas le diplôme. Surveillez ensuite emploi-public.ma et social.gov.ma pour les convocations et les lieux exacts. Une date différente publiée par un intermédiaire ne constitue pas une prolongation : seule une rectification officielle datée doit modifier la référence. Le présent guide reflète les documents consultés le 29 octobre 2026, sans garantie de réussite."
+            ]
+          ]
+        }
+      }
     }
   }
 }
