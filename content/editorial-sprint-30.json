@@ -403,8 +403,10 @@
         "ethereum",
         "coingecko"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/coin-versus-token-claim-verification.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "crypto-web3",
