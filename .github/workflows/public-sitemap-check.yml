@@ -51,6 +51,7 @@ jobs:
               wanted.append(f'/{lang}/sports/motorsport/')
               wanted.append(f'/{lang}/ai/scan-documents-phone-privacy-quality/')
               wanted.append(f'/{lang}/opportunities/competitions/amdie-buyer/')
+              wanted.append(f'/{lang}/opportunities/competitions/adha-civil-engineers-2026/')
           last=None
           for attempt in range(1,7):
               try:
@@ -82,6 +83,12 @@ jobs:
                       buyer=bodies[f'/{lang}/opportunities/competitions/amdie-buyer/'].decode('utf-8')
                       assert 'C44253/26' in buyer and '686fddc3-8355-43a1-8799-e51f36685f5f' in buyer, f'{lang}: AMDIE buyer official decision missing'
                       assert buyer.count('class="opp-guide-section" id="part-')>=9 and 'opp-guide-sources' in buyer, f'{lang}: AMDIE buyer lacks researched sections'
+                      adha=bodies[f'/{lang}/opportunities/competitions/adha-civil-engineers-2026/'].decode('utf-8')
+                      assert adha.count('class="opp-guide-section" id="part-')>=9, f'{lang}: ADHA guide lacks nine researched sections'
+                      assert 'ADHA-IE-GC-2026-10' in adha and 'ADHA_IE_GC_2026_Decision.pdf' in adha, f'{lang}: ADHA decision/reference missing'
+                      assert 'ADHA_IE_GC_2026_Fiche_de_poste.pdf' in adha and 'opp-guide-sources' in adha, f'{lang}: ADHA job sheet or sources missing'
+                      assert 'target="_blank"' in adha and '2026-11-04' in adha, f'{lang}: ADHA deadline or external links missing'
+                      print(f'ADHA CIVIL ENGINEERS LIVE {lang}: nine sections, signed decision and job sheet',flush=True)
                       print(f'NEW GUIDES LIVE {lang}: motor racing and AMDIE procurement, nine sections and primary sources each',flush=True)
                       opp=f'/{lang}/opportunities/competitions/amdie-finance/'
                       html=bodies[opp].decode('utf-8')
