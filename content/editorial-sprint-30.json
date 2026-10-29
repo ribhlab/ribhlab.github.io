@@ -540,11 +540,12 @@
         "aadDrySkin",
         "aadFaceWashing"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/sensitive-skin-versus-contact-reaction/",
       "queuePath": "content/reviewed-queue/sensitive-skin-versus-contact-reaction.json",
       "editorialReviewDate": "2026-10-29",
-      "verification": "Original AR/EN/FR article researched against NHS, AAD and DermNet; six substantive sections and 860/960/1011 words, original free Unsplash image checked for uniqueness; awaiting scheduled publisher and live QA."
+      "verification": "Published by vetted publisher at 2026-10-29T19:01:31Z in content/articles; build 40945005462 and Pages deployment 40945005343 success; public HTTPS run 40945177284 explicitly asserted 6 sections, sources and unique licensed photo in AR/EN/FR.",
+      "publishedVerifiedAt": "2026-10-29"
     },
     {
       "sectionId": "world-recipes",
