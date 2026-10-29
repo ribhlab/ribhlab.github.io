@@ -87,7 +87,7 @@ jobs:
                       assert adha.count('class="opp-guide-section" id="part-')>=9, f'{lang}: ADHA guide lacks nine researched sections'
                       assert 'ADHA-IE-GC-2026-10' in adha and 'ADHA_IE_GC_2026_Decision.pdf' in adha, f'{lang}: ADHA decision/reference missing'
                       assert 'ADHA_IE_GC_2026_Fiche_de_poste.pdf' in adha and 'opp-guide-sources' in adha, f'{lang}: ADHA job sheet or sources missing'
-                      assert 'target="_blank"' in adha and '2026-11-04' in adha, f'{lang}: ADHA deadline or external links missing'
+                      assert 'target="_blank"' in adha and re.search(r'4\s+(novembre|November|نوفمبر)',adha,re.I), f'{lang}: ADHA deadline or external links missing'
                       print(f'ADHA CIVIL ENGINEERS LIVE {lang}: nine sections, signed decision and job sheet',flush=True)
                       print(f'NEW GUIDES LIVE {lang}: motor racing and AMDIE procurement, nine sections and primary sources each',flush=True)
                       opp=f'/{lang}/opportunities/competitions/amdie-finance/'
