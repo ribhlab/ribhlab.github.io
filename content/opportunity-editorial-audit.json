@@ -13,7 +13,7 @@
     "visa": 12,
     "researched": 37,
     "marketEvidence": 5,
-    "pendingDetail": 53
+    "pendingDetail": 52
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -588,10 +588,10 @@
       "section": "competitions",
       "title": "Technicien 3e grade — Ministère Famille",
       "deadline": "2026-11-08",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
-      "priority": "date:2026-11-08",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1"
+      "priority": "official-decision-55-26-verified-2026-10-29-awaiting-site-qa",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/17f2da87-11bb-4fb4-8b3c-1712f117c3ce"
     },
     {
       "id": "kadev-assistant",
