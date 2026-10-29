@@ -11,9 +11,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 33,
+    "researched": 34,
     "marketEvidence": 5,
-    "pendingDetail": 57
+    "pendingDetail": 56
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -666,12 +666,14 @@
       "section": "competitions",
       "title": "Ingénieur d’État — Big Data, Data Science ou IA",
       "deadline": "2026-11-11",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
-      "priority": "Source-verified 9-section trilingual report added 2026-10-29; await build and live QA",
+      "priority": "Verified original signed decision, job sheet and live trilingual report 2026-10-29",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b526d274-b490-4982-833e-71d21ea20813",
       "researchedAt": "2026-10-29",
-      "evidenceId": "au-kenitra-data-science-ai"
+      "evidenceId": "au-kenitra-data-science-ai",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/au-kenitra-data-science-ai/",
+      "verification": "Build 40916354337, deploy 40916354001, public HTTPS AR/EN/FR check 40916493186 succeeded; nine original sections per language."
     },
     {
       "id": "au-kenitra-assistante-direction",
