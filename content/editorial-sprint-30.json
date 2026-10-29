@@ -337,8 +337,10 @@
         "investor",
         "cftc"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/fixed-versus-trailing-stop-order-frictions.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "crypto-web3",
