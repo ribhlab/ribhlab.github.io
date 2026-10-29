@@ -44,6 +44,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/ofppt-accountant-10/')
               wanted.append(f'/{lang}/opportunities/companies/bam-assurances-2026/')
               wanted.append(f'/{lang}/opportunities/competitions/srm-fes-meknes-271/')
+              wanted.append(f'/{lang}/opportunities/companies/ram-company/')
           last=None
           for attempt in range(1,7):
               try:
@@ -171,6 +172,14 @@ jobs:
                       assert 'C44141/26' in page and 'e25c50f3-f5dc-4570-b991-981517e9a17b' in page, f'{language}: SRM-FM official notice missing'
                       assert 'opp-guide-sources' in page and 'target="_blank"' in page, f'{language}: SRM-FM official source links missing'
                       print(f'SRM-FM 271 LIVE {language}: ten researched sections and official decision verified',flush=True)
+                  # Verify the original Atlas On Line 30-position notice, including the
+                  # employer email versus portal submission conflict in every language.
+                  for language in ('ar','en','fr'):
+                      page=bodies[f'/{language}/opportunities/companies/ram-company/'].decode('utf-8')
+                      assert page.count('class="opp-guide-section" id="part-')>=9, f'{language}: Atlas On Line guide lacks nine sections'
+                      assert 'C44260/26' in page and '75a63a0e-655b-4db8-8d4a-ffdeed8e61f9' in page, f'{language}: original Atlas On Line reference missing'
+                      assert 'Rh_Aol' in page and 'opp-guide-sources' in page, f'{language}: employer submission channel or sources missing'
+                      print(f'ATLAS ON LINE LIVE {language}: nine original sections and both official sources verified',flush=True)
                   # Reconcile campaign records with articles already committed by the gated publisher.
                   for slug,category,min_sections in (
                       ('freelance-basic-standard-premium-cost-model','earning',5),
