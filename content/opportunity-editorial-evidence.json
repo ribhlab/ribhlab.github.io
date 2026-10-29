@@ -5623,8 +5623,8 @@
     },
     "cnrst-administrator-2": {
       "reviewedAt": "2026-10-29",
-      "state": "researched-pending-live-verification",
-      "verification": "Official three-page signed Arabic decision and emploi-public C44247/26 checked 29 Oct 2026. Portal deadline 8 Nov 16:30 versus original decision 9 Nov explicitly flagged; no live Pages/build confirmation yet.",
+      "state": "verified",
+      "verification": "Original CNRST signed 3-page decision and emploi-public listing checked 29 October 2026; date conflict 8 vs 9 November prominently explained. AR/EN/FR ten original sections (757/917/900 body words), source build 40945005462 success, Pages deploy 40945005343 success, public live HTTPS multilingual QA 40945177284 success with sources and contest code.",
       "sources": [
         {
           "label": "CNRST — signed three-page official competition decision (reviewed 29 October 2026)",
