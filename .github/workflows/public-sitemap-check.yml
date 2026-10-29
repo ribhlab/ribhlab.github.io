@@ -47,6 +47,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/companies/ram-company/')
               wanted.append(f'/{lang}/opportunities/competitions/lpee-12/')
               wanted.append(f'/{lang}/opportunities/competitions/ofppt-administration-10/')
+              wanted.append(f'/{lang}/opportunities/competitions/ofppt-project-10/')
           last=None
           for attempt in range(1,7):
               try:
@@ -245,6 +246,13 @@ jobs:
                       assert 'RH 129/26' in page and 'C44254/26' in page, f'{language}: OFPPT admin reference missing'
                       assert 'opp-guide-sources' in page and 'target="_blank"' in page, f'{language}: OFPPT admin official sources missing'
                       print(f'OFPPT ADMIN LIVE {language}: nine original sections and original PDF',flush=True)
+                  # Verify OFPPT RH 130/26 project officer guide from the original notice.
+                  for language in ('ar','en','fr'):
+                      page=bodies[f'/{language}/opportunities/competitions/ofppt-project-10/'].decode('utf-8')
+                      assert page.count('class="opp-guide-section" id="part-')>=9, f'{language}: OFPPT project guide lacks nine detailed sections'
+                      assert 'RH 130/26' in page and 'C44256/26' in page, f'{language}: OFPPT project references missing'
+                      assert 'opp-guide-sources' in page and 'target="_blank"' in page, f'{language}: OFPPT project primary sources missing'
+                      print(f'OFPPT PROJECT LIVE {language}: nine sourced sections and original notice',flush=True)
                   print(f'PUBLIC SITE PASSED: XML parsed; {len(urls)} URLs; robots and multilingual pages available',flush=True)
                   break
               except Exception as err:
