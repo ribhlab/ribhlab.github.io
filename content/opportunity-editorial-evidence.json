@@ -5042,8 +5042,8 @@
     },
     "au-kenitra-data-science-ai": {
       "reviewedAt": "2026-10-29",
-      "verification": "Signed three-page recruitment decision dated 27 October 2026 read visually, three-page original position sheet read in text, government vacancy C44309/26 cross-checked; verified 29 October 2026. Publication and live QA pending.",
-      "state": "researched-awaiting-live-verification",
+      "verification": "Signed three-page recruitment decision dated 27 October 2026, full three-page job description and official competition C44309/26 verified. GitHub Actions build 40916354337 and Pages deploy 40916354001 succeeded. Public HTTPS AR/EN/FR pages returned HTTP 200 and passed nine-section, original-source, external-tab and deadline checks in live workflow 40916493186 on 29 October 2026.",
+      "state": "published",
       "sources": [
         {
           "label": "AUKSS — décision signée du 27 octobre 2026, 3 pages, modalités et épreuves",
@@ -5220,6 +5220,18 @@
               "Préparez un projet technique dont vous maîtrisez la provenance des données, les contrôles de qualité, l'évaluation des modèles, la mise en production et les protections de confidentialité. Un exemple de tableau de bord urbanistique et un scénario de restauration de sauvegarde peuvent nourrir une discussion utile, sans prétendre avoir travaillé pour l'agence. Aucune rémunération précise n'est publiée dans les documents examinés, et le dépôt d'un dossier ne vaut pas promesse d'embauche. Distinguez expérience souhaitée et diplôme obligatoire. Méfiez-vous des intermédiaires qui réclament des frais ou garantissent une réussite; toute modification doit être confirmée par les canaux officiels."
             ]
           ]
+        }
+      },
+      "liveVerification": {
+        "checkedAt": "2026-10-29",
+        "status": "success",
+        "buildRun": 40916354337,
+        "deployRun": 40916354001,
+        "publicCheckRun": 40916493186,
+        "urls": {
+          "ar": "https://ribhlab.github.io/ar/opportunities/competitions/au-kenitra-data-science-ai/",
+          "en": "https://ribhlab.github.io/en/opportunities/competitions/au-kenitra-data-science-ai/",
+          "fr": "https://ribhlab.github.io/fr/opportunities/competitions/au-kenitra-data-science-ai/"
         }
       }
     }
