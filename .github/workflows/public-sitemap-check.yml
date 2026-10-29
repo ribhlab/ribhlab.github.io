@@ -95,7 +95,7 @@ jobs:
                       assert souss.count('class="opp-guide-section" id="part-')>=8, f'{lang}: Souss Massa technician guide lacks eight researched sections'
                       assert 'C44292/26' in souss and '64194e96-bc55-4817-8ddd-c9b0e5d0d6d1' in souss, f'{lang}: original signed decision or official competition reference missing'
                       assert 'opp-guide-sources' in souss and 'target="_blank"' in souss, f'{lang}: Souss Massa official sources or external tab behavior missing'
-                      assert 'Taroudant' in souss and '2026' in souss, f'{lang}: posting location or date missing'
+                      assert (('تارودانت' if lang=='ar' else 'Taroudant') in souss) and '2026' in souss, f'{lang}: posting location or date missing'
                       print(f'SOUSS MASSA TECHNICIAN LIVE {lang}: eight sections, Taroudant location, original decision and official listing',flush=True)
                       paella=bodies[f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/'].decode('utf-8')
                       assert paella.count('class="article-block"')>=5, f'{lang}: seafood paella has fewer than five substantive sections'
