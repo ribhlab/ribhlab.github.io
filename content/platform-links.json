@@ -939,6 +939,10 @@
       "gdcStaffSupport2026",
       "gdcPowertrain2026",
       "saudiHrsdForeignWorkerRules"
+    ],
+    "scan-documents-phone-privacy-quality": [
+      "appleScanDocuments",
+      "googleDriveScanner"
     ]
   }
 }
