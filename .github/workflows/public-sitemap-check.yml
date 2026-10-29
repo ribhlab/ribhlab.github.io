@@ -65,6 +65,8 @@ jobs:
               wanted.append(f'/{lang}/ai/gdevelop-no-code-first-prototype/')
               wanted.append(f'/{lang}/trading/nfp-payrolls-revisions-market-guide/')
               wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-architect/')
+              wanted.append(f'/{lang}/opportunities/competitions/cnrst-administrator-2/')
+              wanted.append(f'/{lang}/lifestyle/sensitive-skin-versus-contact-reaction/')
           last=None
           for attempt in range(1,7):
               try:
@@ -355,6 +357,15 @@ jobs:
                       assert 'RH 130/26' in page and 'C44256/26' in page, f'{language}: OFPPT project references missing'
                       assert 'opp-guide-sources' in page and 'target="_blank"' in page, f'{language}: OFPPT project primary sources missing'
                       print(f'OFPPT PROJECT LIVE {language}: nine sourced sections and original notice',flush=True)
+                  # Confirm the newly researched CNRST Physiology contest and the latest published skin-care sprint article.
+                  for language in ('ar','en','fr'):
+                      cnrst=bodies[f'/{language}/opportunities/competitions/cnrst-administrator-2/'].decode('utf-8')
+                      assert cnrst.count('class="opp-guide-section" id="part-')>=10, f'{language}: CNRST Physiology missing ten original sections'
+                      assert 'C44247/26' in cnrst and 'opp-guide-sources' in cnrst, f'{language}: CNRST Physiology official sources or code absent'
+                      assert '2026' in cnrst and ('8' in cnrst and '9' in cnrst), f'{language}: CNRST Physiology conflicting deadline warning missing'
+                      skin=bodies[f'/{language}/lifestyle/sensitive-skin-versus-contact-reaction/'].decode('utf-8')
+                      assert skin.count('class="article-block"')>=6 and 'article-sources' in skin and 'licensed-editorial-photo' in skin, f'{language}: sensitive-skin article missing sections, sources or photo'
+                      print(f'NEW VERIFIED LIVE {language}: CNRST Physiology 10 sections; sensitive-skin article 6 sections',flush=True)
                   print(f'PUBLIC SITE PASSED: XML parsed; {len(urls)} URLs; robots and multilingual pages available',flush=True)
                   break
               except Exception as err:
