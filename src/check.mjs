@@ -832,6 +832,29 @@ if(configuredUrl){
  if(!rootXml)errors.push('SEO: missing canonical Arabic homepage in sitemap');
 }
 
+// Deep sports guide: all three languages must contain substantive original explanations.
+const motorGuides=JSON.parse(fs.readFileSync(path.join(root,'content','sport-guides.json'),'utf8'));
+const motor=motorGuides.guides?.motorsport;
+if(!motor||!Array.isArray(motor.sources)||motor.sources.length<3)errors.push('Motor racing guide requires three primary sources');
+for(const lang of ['ar','en','fr']){
+ const guide=motor?.translations?.[lang];
+ if(!guide||!Array.isArray(guide.sections)||guide.sections.length<9){errors.push('Motor racing guide missing nine sections '+lang);continue}
+ const count=guide.sections.map(s=>s[1]).join(' ').trim().split(/\\s+/).length;
+ if(count<950)errors.push('Motor racing guide is too short '+lang+': '+count);
+ const file=path.join(dist,lang,'sports','motorsport','index.html');
+ if(!fs.existsSync(file)){errors.push('Missing full motor racing route '+lang);continue}
+ const html=fs.readFileSync(file,'utf8');
+ if((html.match(/class="media-article-section"/g)||[]).length<9||!html.includes('fia.com')||!html.includes('formula1.com'))errors.push('Incomplete motor racing guide or official references '+lang);
+ const index=fs.readFileSync(path.join(dist,lang,'sports','index.html'),'utf8');
+ if(!index.includes('/'+lang+'/sports/motorsport/'))errors.push('Sports category does not link to internal motor racing guide '+lang);
+}
+for(const lang of ['ar','en','fr']){
+ const file=path.join(dist,lang,'opportunities','competitions','amdie-buyer','index.html');
+ if(!fs.existsSync(file)){errors.push('Missing AMDIE procurement vacancy guide '+lang);continue}
+ const html=fs.readFileSync(file,'utf8');
+ if((html.match(/class="opp-guide-section" id="part-/g)||[]).length<9||!html.includes('C44253/26')||!html.includes('opp-guide-sources'))errors.push('AMDIE buyer report missing nine researched sections and original source '+lang);
+}
+
 if(errors.length){console.error(errors.slice(0,20).join('\n'));console.error(`${errors.length} errors`);process.exit(1);}
 console.log(`PASS: ${pages.length} HTML files, ${checked} internal links/assets, translated article pages, search indexes and static pages.`);
 
