@@ -303,8 +303,10 @@
         "gdevelop",
         "godot"
       ],
-      "status": "planned",
-      "articleUrl": null
+      "status": "queued",
+      "articleUrl": null,
+      "queuePath": "content/reviewed-queue/gdevelop-no-code-first-prototype.json",
+      "editorialReviewDate": "2026-10-29"
     },
     {
       "sectionId": "trading-risk",
