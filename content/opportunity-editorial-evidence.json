@@ -5234,6 +5234,209 @@
           "fr": "https://ribhlab.github.io/fr/opportunities/competitions/au-kenitra-data-science-ai/"
         }
       }
+    },
+    "cnrst-management-4-2026": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Original three-page stamped CNRST recruitment notice visually inspected on 29 October 2026, pages 1–3, compared with government competition C44248/26 dated 23 October 2026. Official sources disagree on deadline: portal 8 November 2026 16:30, signed notice before 9 November 2026. Live page verification pending.",
+      "state": "researched-awaiting-live-verification",
+      "sources": [
+        {
+          "label": "CNRST — original stamped three-page recruitment notice, reviewed 29 October 2026, notably pages 1–3",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf"
+        },
+        {
+          "label": "Emploi-public — competition C44248/26, published 23 October 2026, deadline 8 November 16:30",
+          "url": "https://www.emploi-public.ma/fr/concours/details/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf"
+        },
+        {
+          "label": "CNRST — official institutional website for candidate notices and results",
+          "url": "https://www.cnrst.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Centre National pour la Recherche Scientifique et Technique",
+        "competitionCode": "C44248/26",
+        "publishedAt": "2026-10-23",
+        "posts": 4,
+        "grade": "Administrateur 3ème grade, échelle 10",
+        "specialty": "Management",
+        "cities": [
+          "Tanger",
+          "Agadir",
+          "Oujda",
+          "Fès"
+        ],
+        "postsByCity": {
+          "Tanger": 1,
+          "Agadir": 1,
+          "Oujda": 1,
+          "Fès": 1
+        },
+        "examDate": "2026-11-15",
+        "portalDeadline": "2026-11-08",
+        "portalDeadlineHour": "16:30",
+        "noticeDeadline": "2026-11-09",
+        "deadlineConflict": true,
+        "advisedSafeDeadline": "2026-11-08T16:30:00",
+        "nationality": "Moroccan",
+        "age": "18 to 45 on 1 January 2026, subject to statutory exceptions",
+        "diploma": "Licence, licence études fondamentales or licence professionnelle in Management, or legally equivalent qualification",
+        "application": "Online only at recrutement.enssup.gov.ma",
+        "documents": [
+          "Hand-signed application addressed to acting director",
+          "CV with photo",
+          "Electronic national identity card copy",
+          "Qualifying diploma copy (not mere success certificate)",
+          "Equivalence, authorization and protected-category documentation where applicable"
+        ],
+        "stages": [
+          {
+            "name": "General written",
+            "duration": "3 hours",
+            "coefficient": 2
+          },
+          {
+            "name": "Specialist written",
+            "duration": "3 hours",
+            "coefficient": 3
+          },
+          {
+            "name": "Oral",
+            "duration": "15–30 minutes",
+            "coefficient": 3
+          }
+        ],
+        "salary": null,
+        "reviewedSourcesAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة CNRST: أربعة متصرفين في الإدارة بطنجة وأكادير ووجدة وفاس وتحذير بشأن تاريخ الإغلاق",
+          "deck": "تفاصيل مستخرجة من إعلان المركز الأصلي والبوابة الحكومية: أربعة مناصب Management، مباراة 15 نوفمبر 2026، واختلاف رسمي بين آخر أجل 8 و9 نوفمبر.",
+          "sections": [
+            [
+              "أربعة مناصب إدارية موزعة على أربع مدن",
+              "أعلن المركز الوطني للبحث العلمي والتقني عن مباراة توظيف أربعة متصرفين من الدرجة الثالثة، السلم العاشر، في تخصص Management. يبين الجدول المرفق بالإعلان الأصلي أن التعيين سيكون في وحدات الدعم التقني للبحث العلمي الجهوية، بمنصب واحد في كل من طنجة وأكادير ووجدة وفاس. لا تعني هذه الحصص أن المرشح يختار مقر التعيين دون قيود؛ ينبغي الرجوع إلى شروط الترشيح وإجراءات توزيع الناجحين. تحمل البطاقة الحكومية رمز C44248/26، ونشرت في 23 أكتوبر 2026، وحددت 15 نوفمبر موعداً للمباراة. هذه مباراة محددة بأربعة مناصب وليست دعوة عامة للعمل في المختبرات."
+            ],
+            [
+              "اختلاف جوهري بين تاريخي الإغلاق: 8 و9 نوفمبر",
+              "توجد مفارقة ينبغي إبرازها قبل أي خطوة: تعرض بوابة التشغيل العمومي آخر أجل في 8 نوفمبر 2026 عند الساعة 16:30، بينما تذكر الصفحة الثالثة من الإعلان الرسمي الممهور بخاتم المركز أن الإرسال الإلزامي عبر منصة الوزارة يجب أن يتم قبل 9 نوفمبر 2026. لا يمكن الجزم بأن الموعد المتأخر صالح لأن الوثيقتين الرسميتين مختلفتان. التصرف الأكثر احتياطاً هو إكمال الطلب قبل 8 نوفمبر الساعة 16:30، والاحتفاظ بإثبات الإيداع، وطلب توضيح رسمي من الجهة المنظمة إذا تعذر ذلك. لا ينبغي تقديم 9 نوفمبر على أنه تمديد مؤكد دون تصحيح منشور."
+            ],
+            [
+              "الشهادة المطلوبة: إجازة في الإدارة لا ماستر إلزامي",
+              "يشترط الإعلان الجنسية المغربية، والسن القانوني لاجتياز المباراة، وأن يكون المرشح بين 18 و45 سنة في فاتح يناير من السنة الجارية، مع الاستثناء النظامي للموظفين الذين لا يطبق عليهم حد السن. بالنسبة إلى متصرف الدرجة الثالثة، ينص النص على شهادة الإجازة أو الإجازة في الدراسات الأساسية أو الإجازة المهنية من مؤسسة جامعية أو معهد أو مدرسة وطنية، أو شهادة معترف بمعادلتها، في التخصص المحدد Management. لا يصح تحويل الإجازة إلى شرط ماستر، ولا اعتبار أي دورة قصيرة في الإدارة بديلاً تلقائياً للشهادة. تحقق من التخصص المكتوب في الدبلوم وقرار المعادلة عند الحاجة."
+            ],
+            [
+              "ما الذي تعنيه وظيفة Management في وحدات الدعم الجهوية؟",
+              "يحدد الإعلان التخصص والدرجة والمدن ولا يقدم بطاقة مهام فردية مفصلة. لذلك لا يجوز الجزم بأن المنصب يشمل المحاسبة حصراً أو تسيير الموارد البشرية حصراً أو إدارة مختبر علمي. يمكن للمرشح التحضير بصورة معقولة لمبادئ التنظيم الإداري، وإدارة الملفات، والتخطيط، والمتابعة، والاتصال المؤسسي، دون وصف هذه المحاور بأنها برنامج اختبار رسمي معلن. طبيعة المركز البحثية تساعد على فهم البيئة المهنية، لكنها لا تمنح دليلاً على أدوات أو برامج حاسوبية إلزامية. إذا ظهرت لاحقاً بطاقة وصف للمنصب، ينبغي تحديث الدليل استناداً إليها بدلاً من تحويل الاستنتاجات إلى حقائق."
+            ],
+            [
+              "اختباران كتابيان وشفوي: المدة والمعامل",
+              "يصف الإعلان ثلاثة اختبارات: كتابي عام مدته ثلاث ساعات ومعامله 2، يتناول قضايا قانونية أو اقتصادية أو تدبيرية أو إنسانية أو اجتماعية أو علمية؛ وكتابي خاص مدته ثلاث ساعات ومعامله 3، يرتبط باختصاصات الإدارة أو بالتخصص المطلوب أو بالمهام والوظائف المعنية؛ ثم شفوي مدته بين 15 و30 دقيقة ومعامله 3. يؤهل إلى الشفوي من قُبلوا واجتازوا الاختبارين الكتابيين وحصلوا على المعدل المطلوب وفق التنظيم الجاري. لا يحدد الإعلان موضوعاً بعينه أو عتبة رقمية مستقلة لهذا التخصص، فلا يصح اختراعها. تاريخ إجراء المباراة المعلن هو 15 نوفمبر 2026."
+            ],
+            [
+              "الوثائق التي ينبغي إعدادها كما وردت في الإعلان",
+              "يتضمن ملف الترشيح طلباً خطياً موجهاً إلى مديرة المركز بالنيابة، يحمل الاسم والعنوان والهاتف والبريد الإلكتروني ويوقعه صاحبه يدوياً مع بيان الإطار والتخصص. ترفق سيرة ذاتية تتضمن صورة، ونسخة من البطاقة الوطنية للتعريف الإلكترونية، ونسخة من الدبلوم المطلوب. لا تقبل شهادة النجاح وحدها بديلاً عن الدبلوم وفق النص. تضاف وثائق المعادلة الرسمية للشهادات الأجنبية أو الخاصة المعنية، وترخيص اجتياز المباراة للموظفين، وترخيص رئيس الحكومة لمن تجاوز حد السن إذا انطبق، ووثائق الحالات الخاصة المنصوص عليها. لا ترسل نسخاً حساسة إلى وسيط غير رسمي."
+            ],
+            [
+              "طريقة الترشيح الإلكتروني والحفاظ على إثبات الإرسال",
+              "ينص الإعلان على أن الترشيح وإرسال الطلب والوثائق يتمان وجوباً وحصرياً عبر منصة الوزارة recrutement.enssup.gov.ma. لا يكفي إرسال سيرة ذاتية إلى بريد المركز أو ملء استمارة استفسار على بوابة التشغيل العمومي. قبل الرفع، افحص وضوح كل وثيقة وتطابق الاسم والتخصص وصلاحية الملفات، ثم تأكد من إتمام عملية الإرسال لا مجرد إنشاء الحساب. احتفظ بنسخة محلية من الملف وإيصال أو لقطة شاشة لرسالة النجاح وتاريخها. إذا ظهرت مشكلة تقنية قرب الموعد، وثقها وتواصل مع الجهة المختصة؛ لا تفترض أن المشكلة تمدد الأجل تلقائياً."
+            ],
+            [
+              "خطة تحضير واقعية خلال الأيام المتبقية",
+              "يمكن تقسيم التحضير إلى ثلاثة محاور: مراجعة مبادئ الإدارة العامة والتدبير، وتدريب على كتابة إجابة منظمة خلال ثلاث ساعات، وتجهيز أمثلة مهنية صادقة للمقابلة. في الاختبار العام، ابدأ بتحديد الإشكالية وبناء مقدمة ومحاور وخاتمة؛ وفي الاختبار الخاص، اربط بين تنظيم العمل ومؤشرات المتابعة وتوثيق القرارات. للمقابلة، حضّر شرحاً موجزاً لتكوينك ومشروع جامعي حقيقي يوضح قدرتك على التخطيط أو التنسيق. هذه اقتراحات تدريبية وليست أسئلة مسربة أو وعداً بالنجاح. اترك وقتاً كافياً لمراجعة الملف الإلكتروني قبل الإرسال."
+            ],
+            [
+              "النتائج والراتب والمخاطر بعد الترشيح",
+              "يشير الإعلان إلى نشر لوائح المقبولين لاجتياز الاختبارات الكتابية والشفوية على بوابة التشغيل العمومي وموقع المركز، ويعتبر النشر استدعاءً للمترشحين. لا يقدم الإعلان راتباً فردياً صافياً، ولا يحدد موعد نشر النتائج أو مقابلة مستقلاً، ولذلك يجب تجنب الأرقام والتواريخ المتداولة بلا سند. لا تخلط بين الترشح والتوظيف النهائي، ولا تدفع مقابلاً لوسطاء يدعون ضمان النجاح. راقب أيضاً أي تعديل رسمي لتعارض 8 و9 نوفمبر، وقارن رقم المباراة والتخصص والمدينة قبل الاعتماد على إعلان معاد نشره. المصادر الأصلية أدناه تتيح التحقق المباشر."
+            ]
+          ]
+        },
+        "en": {
+          "title": "CNRST Management competition: four administrator jobs and a conflicting application deadline",
+          "deck": "A verified guide to C44248/26: four posts in Tangier, Agadir, Oujda and Fez; exam on 15 November 2026; official documents disagree on the 8/9 November deadline.",
+          "sections": [
+            [
+              "Four management posts in four regional cities",
+              "Morocco's National Centre for Scientific and Technical Research (CNRST) has announced a competition for four third-grade administrators, pay scale 10, in Management. The original notice allocates one position to each regional scientific research technical support unit in Tangier, Agadir, Oujda and Fez. That distribution does not by itself establish a candidate's freedom to choose a posting. The official government listing is identified as competition C44248/26, published on 23 October 2026, with the examination scheduled for 15 November. This is a specific public recruitment competition for four administrative posts, not a general invitation to apply for laboratory or scientific researcher vacancies."
+            ],
+            [
+              "Important deadline conflict: 8 November versus 9 November",
+              "The two official documents disagree on a material point. Morocco's public employment portal gives a closing date of 8 November 2026 at 16:30. However, page three of the CNRST's stamped original notice instructs candidates to complete the compulsory online submission before 9 November 2026. The later date must not be presented as an officially confirmed extension, and the portal date must not be concealed. A prudent applicant should complete submission before 8 November at 16:30, retain the electronic acknowledgement, and seek written clarification from the recruiting authority if needed. Only a formally published correction could settle the discrepancy reliably."
+            ],
+            [
+              "Eligibility: a relevant licence degree, not necessarily a master's",
+              "The notice requires Moroccan nationality and compliance with the statutory age requirement: at least 18 and no more than 45 years old on 1 January of the current year, subject to the legal exception for certain serving civil servants. For the third-grade administrator position, the listed qualifications are a licence, a licence in fundamental studies, or a professional licence from an eligible higher education institution, or a legally recognized equivalent, in Management. The notice does not make a master's degree universally mandatory. A short management course should not be assumed to replace the formal qualification. Applicants should compare the exact wording on their diploma with the advertised specialty and obtain equivalence documentation when applicable."
+            ],
+            [
+              "What the management role does—and does not—specify",
+              "The recruitment notice identifies the grade, specialty, number of positions and cities, but it does not publish a detailed individual job description. It would therefore be misleading to claim that each vacancy is exclusively in accounting, human resources, procurement or laboratory management. For preparation, applicants may reasonably review organizational design, administrative processes, planning, reporting and coordination. These are suggested study themes, not an official exam syllabus. The research institution's remit provides context, but it does not prove that a specific software package, accounting standard or laboratory skill is required. If the employer later releases detailed role profiles, this guide should be updated rather than treating speculation as fact."
+            ],
+            [
+              "Written papers and oral interview: actual durations and weights",
+              "The notice describes three assessments. The general written paper lasts three hours and carries coefficient 2; it may address legal, economic, managerial, humanities, social or scientific issues. A specialist written paper also lasts three hours and carries coefficient 3, covering the administration's responsibilities, the relevant specialty or job duties. The oral assessment lasts between 15 and 30 minutes and carries coefficient 3. Candidates progress to the oral stage after being accepted and passing the written papers with the average required by applicable rules. The notice does not provide a unique list of questions or a special numeric cutoff for Management. The competition date shown is 15 November 2026."
+            ],
+            [
+              "Application dossier: the documents actually requested",
+              "The required file includes a handwritten-signed application addressed to the acting director of CNRST, stating the candidate's name, address, telephone number and email, as well as the desired grade and specialty. Applicants must attach a CV containing a photograph, a copy of the Moroccan electronic identity card and a copy of the qualifying diploma. The notice explicitly excludes using a mere certificate of successful completion in place of the diploma. Additional paperwork may include official equivalence decisions for foreign or private qualifications, employer authorization for civil servants, authorization concerning the statutory age limit, and documents for applicable protected categories. Avoid sending identity documents to unverified intermediaries."
+            ],
+            [
+              "Online application is compulsory; saving a draft is not submission",
+              "The original notice requires candidates to apply and transmit the complete dossier exclusively through the ministry's recruitment portal, recrutement.enssup.gov.ma. Emailing a CV to CNRST or using the general employment portal's contact form is not an alternative application channel. Before upload, check that each document is readable, the name and specialty are consistent, and the platform accepts the file format. Complete the final submission step rather than stopping after account creation. Save a copy of the submitted materials and an acknowledgement or screenshot with its date. If technical difficulties arise, document them and contact the authority; an error message is not proof that the deadline has been extended."
+            ],
+            [
+              "A realistic short preparation plan",
+              "Use the remaining days to cover three practical areas: fundamentals of public administration and management, timed written responses, and a truthful oral presentation of your experience. For the general paper, practice turning a broad question into a clear problem statement, structured arguments and a conclusion within three hours. For the specialist paper, use examples involving task planning, reporting indicators, document control and coordination, without claiming that these examples are official questions. For the interview, prepare a concise explanation of your degree and a real academic or professional project. No preparation method guarantees success, and no legitimate source in the notice offers a list of leaked questions."
+            ],
+            [
+              "Results, compensation and fraud warnings",
+              "The notice says that lists of candidates invited to written and oral examinations will be posted on the public employment portal and CNRST website, and that such publication constitutes an invitation. It does not state an individual net salary, a separate oral examination date or a guaranteed date for final results. A pay-scale label is not a verified take-home salary offer. Do not confuse submitting an application with receiving a job offer, and do not pay anyone promising admission. Monitor the employer's official channels for any correction to the 8/9 November conflict. When checking reposted announcements, confirm the competition code, the Management specialty and the four-city allocation against the original notice."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours CNRST Management : quatre administrateurs et contradiction sur la date limite",
+          "deck": "Guide fondé sur l'avis original et la fiche officielle C44248/26 : quatre postes à Tanger, Agadir, Oujda et Fès, concours le 15 novembre 2026, dates limites contradictoires.",
+          "sections": [
+            [
+              "Quatre postes en management répartis dans quatre villes",
+              "Le Centre national pour la recherche scientifique et technique (CNRST) annonce un concours pour quatre administrateurs de troisième grade, échelle 10, spécialité Management. L'avis original attribue un poste à chacune des unités régionales d'appui technique à la recherche scientifique de Tanger, Agadir, Oujda et Fès. Cette répartition ne signifie pas que chaque candidat choisit librement son affectation. L'annonce gouvernementale porte le code C44248/26, a été publiée le 23 octobre 2026 et indique un concours le 15 novembre. Il s'agit d'un recrutement administratif précis de quatre postes, et non d'un appel permanent pour tous les métiers scientifiques du centre."
+            ],
+            [
+              "Attention : contradiction entre les dates limites du 8 et du 9 novembre",
+              "Deux documents officiels ne concordent pas. Le portail emploi-public affiche le 8 novembre 2026 à 16 h 30 comme date limite de candidature. Pourtant, la troisième page de l'avis original du CNRST, portant le cachet de l'établissement, exige le dépôt électronique avant le 9 novembre 2026. Il serait imprudent de présenter la date la plus tardive comme une prolongation officiellement confirmée. Le candidat devrait déposer son dossier avant le 8 novembre à 16 h 30, conserver l'accusé de réception et solliciter, si nécessaire, une clarification écrite de l'organisateur. Seul un rectificatif officiel peut lever définitivement cette contradiction."
+            ],
+            [
+              "Conditions d'accès : une licence pertinente, sans master systématique",
+              "L'avis exige la nationalité marocaine et le respect des conditions d'âge : au moins 18 ans et au plus 45 ans au 1er janvier de l'année en cours, sous réserve des exceptions réglementaires applicables notamment à certains fonctionnaires. Pour le grade d'administrateur de troisième grade, sont mentionnées la licence, la licence en études fondamentales ou la licence professionnelle délivrée par un établissement habilité, ou un diplôme reconnu équivalent, dans la spécialité Management. Le master n'est pas présenté comme une condition générale. Une formation courte en gestion ne remplace pas automatiquement le diplôme exigé. Il faut vérifier la dénomination exacte du diplôme et, le cas échéant, l'équivalence officielle."
+            ],
+            [
+              "Le contenu du poste : distinguer contexte et missions publiées",
+              "L'avis précise la spécialité, le grade, le nombre de postes et les villes d'affectation, mais ne fournit pas de fiche individuelle détaillée. Il serait donc inexact d'affirmer que chaque poste relève exclusivement de la comptabilité, des ressources humaines, des achats ou de la gestion de laboratoire. Pour préparer le concours, on peut raisonnablement réviser l'organisation administrative, la planification, le suivi des activités, la rédaction de comptes rendus et la coordination. Ces thèmes constituent des pistes de travail, pas un programme officiel. La mission scientifique du CNRST donne un contexte professionnel sans prouver l'exigence d'un logiciel ou d'une expérience de laboratoire particulière."
+            ],
+            [
+              "Épreuves écrites et orale : durées et coefficients exacts",
+              "Le texte prévoit trois épreuves. L'écrit général dure trois heures, coefficient 2, et porte sur des questions juridiques, économiques, de gestion, humaines, sociales ou scientifiques. L'écrit spécial dure également trois heures, coefficient 3, et concerne les attributions de l'administration, la spécialité demandée ou les fonctions du poste. L'oral dure de 15 à 30 minutes, coefficient 3. Les candidats admis aux écrits et ayant obtenu la moyenne exigée selon les règles en vigueur peuvent accéder à l'oral. L'avis ne divulgue ni sujets précis ni seuil particulier chiffré pour Management. La date annoncée pour le concours est le 15 novembre 2026."
+            ],
+            [
+              "Pièces à fournir : ce que demande réellement l'avis",
+              "Le dossier comprend une demande manuscrite signée adressée à la directrice du CNRST par intérim, indiquant l'identité, l'adresse, le téléphone, le courriel, le grade et la spécialité. Il faut joindre un CV comportant une photographie, une copie de la carte nationale d'identité électronique et une copie du diplôme requis. L'avis précise qu'une simple attestation de réussite ne remplace pas le diplôme. Selon la situation du candidat, peuvent s'ajouter la décision officielle d'équivalence d'un diplôme étranger ou privé, l'autorisation de l'administration pour les fonctionnaires, une autorisation relative à la limite d'âge ou les justificatifs des catégories particulières prévues par les textes. Ne transmettez pas vos pièces à un intermédiaire inconnu."
+            ],
+            [
+              "Dépôt obligatoire sur la plateforme ministérielle",
+              "La candidature et l'envoi des documents doivent impérativement s'effectuer sur recrutement.enssup.gov.ma, selon l'avis du centre. L'envoi d'un simple CV par courriel ou le formulaire de contact du portail emploi-public ne constitue pas une candidature valable. Vérifiez la lisibilité des pièces, la cohérence des noms et spécialités et l'acceptation des formats avant la validation définitive. La création d'un compte ou la sauvegarde d'un brouillon ne suffit pas. Conservez les fichiers transmis et la preuve horodatée du dépôt. Si un problème technique survient, documentez-le et contactez l'organisateur ; il ne vaut pas automatiquement prorogation du délai."
+            ],
+            [
+              "Préparer les épreuves sans confondre conseils et programme officiel",
+              "Répartissez la préparation entre les fondamentaux du management public, la rédaction sous contrainte de temps et l'entretien. Pour l'écrit général, entraînez-vous à dégager une problématique, construire un plan argumenté et conclure en trois heures. Pour l'écrit spécial, utilisez des exemples de planification, d'indicateurs de suivi, de contrôle documentaire et de coordination des équipes. Pour l'oral, préparez une présentation sincère du parcours et d'un projet universitaire ou professionnel que vous pouvez expliquer précisément. Ces exercices sont des recommandations méthodologiques et non des sujets annoncés ou divulgués. Aucun entraînement ne garantit la réussite du concours."
+            ],
+            [
+              "Convocations, salaire et précautions contre les fausses annonces",
+              "Les listes des candidats convoqués aux épreuves écrites et orales doivent être publiées sur le portail de l'emploi public et sur le site du CNRST ; leur publication vaut convocation. L'avis ne donne pas de salaire net individuel, de date séparée pour l'oral ou de calendrier certain des résultats finaux. L'indication « échelle 10 » ne constitue pas une promesse de rémunération nette. Méfiez-vous des personnes réclamant des frais en échange d'une admission prétendument garantie. Surveillez tout rectificatif officiel concernant les dates contradictoires des 8 et 9 novembre, et contrôlez toujours le code C44248/26 et les villes d'affectation."
+            ]
+          ]
+        }
+      }
     }
   }
 }
