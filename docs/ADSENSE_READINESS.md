@@ -1,6 +1,6 @@
 # RibhLab — Google AdSense launch checklist
 
-**Last editorial/technical audit:** 27 October 2026
+**AdSense publisher configuration updated:** 29 October 2026
 
 ## Current factual status
 
@@ -10,7 +10,7 @@
 - Public institutional employment section: https://ribhlab.github.io/ar/opportunities/competitions/. Selected and individually checked advertisements only; the government directory includes historical entries.
 - Site policy pages: About, Editorial, Contact, Privacy, Terms and Disclaimer in all three languages.
 - An editorial correction route is available at https://github.com/ribhlab/ribhlab.github.io/issues/new; no personal contact email is configured and none is invented.
-- **AdSense publisher ID is configured:** `ca-pub-7832982742727178` (provided by owner via AdSense code). The owner has added `ribhlab.github.io` in the AdSense dashboard, but its status was **Examen requis** (review required) and not **Prêt** (approved).
+- **AdSense publisher ID is configured:** `ca-pub-7945572016731367` (confirmed by owner via AdSense code on 29 October 2026). The owner has added `ribhlab.github.io` in the AdSense dashboard, but its status was **Examen requis** (review required) and not **Prêt** (approved).
 - The site appears in the owner's AdSense Sites list. **Approval is not established**; the owner must complete the site connection/review process, and Google makes the decision. A separate payment-account verification banner is visible.
 
 ## What is preconfigured
@@ -28,7 +28,7 @@
 1. Create/log in to your own AdSense account at https://www.google.com/adsense/start/.
 2. In **AdSense > Sites > + New site**, submit `ribhlab.github.io` exactly as the AdSense site UI permits. Google alone determines whether the address/domain is supported and eligible.
 3. Retrieve your real publisher ID `ca-pub-XXXXXXXXXXXXXXXX` from AdSense account settings. Never use a placeholder and never put an AdSense account password, security code or payment card details in the repo.
-4. **Already implemented:** the owner-supplied ID is in `site.config.json`, with `adsenseVerificationScript=true` and `enableAdsense=false`. Do not create extra IDs. Optionally supply a real public editorial contact email via `RIBHLAB_CONTACT_EMAIL`.
+4. **Already implemented:** the owner-confirmed ID is in `site.config.json`, with `adsenseVerificationScript=true` and `enableAdsense=false`. GitHub Pages publishing reads the publisher ID from this file (not a potentially stale `RIBHLAB_ADSENSE_PUBLISHER_ID` Actions variable). Do not create extra IDs. Optionally supply a real public editorial contact email via `RIBHLAB_CONTACT_EMAIL`.
 5. Trigger **Actions > Publish RibhLab to GitHub Pages** on main (or save a reviewed change to main). Confirm that production succeeds and:
    - `https://ribhlab.github.io/ads.txt` shows the publisher account without mistakes
    - The page HTML includes `<meta name="google-adsense-account" content="ca-pub-...">`.
