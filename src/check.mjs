@@ -666,6 +666,34 @@ for(const [id,article] of Object.entries(opportunityEditorial.articles||{})){
 }
 
 
+// Evidence-based opportunity articles must meet the same editorial depth and
+// public rendering contract as the long-form immigration guides. Source-only
+// opportunity cards are not counted as researched articles.
+const opportunityEvidence=JSON.parse(fs.readFileSync(path.join(root,'content','opportunity-editorial-evidence.json'),'utf8'));
+for(const [id,article] of Object.entries(opportunityEvidence.articles||{})){
+ const inventoryItem=(opportunityInventory.items||[]).find(item=>item.id===id);
+ if(!inventoryItem) {errors.push('Orphaned recruitment evidence '+id);continue;}
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(article.reviewedAt||''))errors.push('Recruitment evidence missing review date '+id);
+ if(!Array.isArray(article.sources)||article.sources.length<2||article.sources.some(source=>!source.label||!/^https:\/\//.test(source.url)))errors.push('Recruitment evidence missing primary sources '+id);
+ for(const lang of ['ar','en','fr']){
+  const tr=article.translations?.[lang];
+  if(!tr?.title||!tr?.deck||!Array.isArray(tr.sections)||tr.sections.length<8){errors.push('Recruitment evidence missing full translation '+id+'/'+lang);continue;}
+  if(tr.sections.some(s=>!Array.isArray(s)||s.length!==2||s[0].length<12||s[1].length<350))errors.push('Recruitment evidence thin section '+id+'/'+lang);
+  const words=[tr.deck,...tr.sections.map(s=>s[1])].join(' ').trim().split(/\s+/).length;
+  if(words<700)errors.push('Recruitment evidence below 700 words '+id+'/'+lang+' ('+words+')');
+  if(lang==='ar'&&/(?:^|[\s،؛.!؟])(واش|بغيت|دابا|هادشي|ديال|غادي|حيت)(?=$|[\s،؛.!؟])/u.test([tr.title,tr.deck,...tr.sections.flat()].join(' ')))errors.push('Recruitment evidence dialect '+id);
+  const htmlPath=path.join(dist,lang,'opportunities',inventoryItem.section,id,'index.html');
+  if(!fs.existsSync(htmlPath)){errors.push('Recruitment full page missing '+id+'/'+lang);continue;}
+  const html=fs.readFileSync(htmlPath,'utf8');
+  if(!html.includes('class="opp-guide-article"')||!html.includes('class="opp-guide-section opp-guide-sources"'))errors.push('Recruitment article or sources not visible '+id+'/'+lang);
+  if((html.match(/class="opp-guide-section" id="part-/g)||[]).length!==tr.sections.length)errors.push('Recruitment section count mismatch '+id+'/'+lang);
+  const sourcesAt=html.indexOf('class="opp-guide-section opp-guide-sources"');
+  const lastPart=html.lastIndexOf('class="opp-guide-section" id="part-');
+  if(sourcesAt<0||lastPart<0||sourcesAt<=lastPart)errors.push('Recruitment sources must follow article '+id+'/'+lang);
+  if(!html.includes('href="/'+lang+'/opportunities/'+inventoryItem.section+'/'))errors.push('Recruitment internal navigation missing '+id+'/'+lang);
+ }
+}
+
 // RibhLab administrator studio must be accessible only as a login form until
 // GitHub confirms ADMIN access; actual writes are authorized by GitHub, not JS.
 const adminPage=fs.readFileSync(path.join(dist,'admin','index.html'),'utf8');
