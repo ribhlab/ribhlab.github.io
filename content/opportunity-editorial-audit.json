@@ -11,9 +11,9 @@
   "totals": {
     "cards": 95,
     "visa": 12,
-    "researched": 36,
+    "researched": 37,
     "marketEvidence": 5,
-    "pendingDetail": 54
+    "pendingDetail": 53
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -553,10 +553,15 @@
       "section": "competitions",
       "title": "Administrateur 2e grade — CNRST",
       "deadline": "2026-11-08",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-08",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7461e57-f68d-40f0-a846-6bf8be2b8dda"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7461e57-f68d-40f0-a846-6bf8be2b8dda",
+      "evidenceId": "cnrst-administrator-2",
+      "reviewedAt": "2026-10-29",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/c7461e57-f68d-40f0-a846-6bf8be2b8dda",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/cnrst-administrator-2/",
+      "reviewNote": "Original signed three-page CNRST Physiology decision and government listing C44247/26 checked 29 October 2026. Two grade-2 posts; signed notice says 9 November, portal says 8 November 16:30; early deadline prominently advised. Ten substantive sections AR/EN/FR, 757/917/900 body words. GitHub Actions source build 40945005462, Pages deployment 40945005343, public HTTPS three-language content assertions 40945177284 succeeded."
     },
     {
       "id": "justice-secretary-15",
