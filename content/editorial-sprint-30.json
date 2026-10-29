@@ -534,10 +534,12 @@
         "fdaDairyEggs",
         "avpnMargherita"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/seafood-paella-safe-home-preparation/",
       "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/seafood-paella-safe-home-preparation.json"
+      "queuePath": "content/reviewed-queue/seafood-paella-safe-home-preparation.json",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "Existing content/articles/seafood-paella-safe-home-preparation.json confirmed (5 sections, 3 sources, complete AR/EN/FR). GitHub Actions source validation 40869923816, Pages deploy 40869923846 and public-sitemap-check 40870200770 succeeded; public HTTP 200, five sections, source references and licensed photo verified for all three locales."
     },
     {
       "sectionId": "world-recipes",
