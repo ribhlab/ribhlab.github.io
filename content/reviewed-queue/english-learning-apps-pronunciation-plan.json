@@ -1,0 +1,211 @@
+{
+  "sectionId": "mobile-apps",
+  "article": {
+    "slug": "english-learning-apps-pronunciation-plan",
+    "category": "ai",
+    "date": "2026-10-29",
+    "updated": "2026-10-29",
+    "featured": false,
+    "related": [
+      "scan-documents-phone-privacy-quality",
+      "voice-recording-transcription-mobile-accuracy"
+    ],
+    "sources": [
+      {
+        "label": "British Council — LearnEnglish Sounds Right: interactive pronunciation chart (checked 29 October 2026; page includes a 2023 Android compatibility reply)",
+        "url": "https://learnenglish.britishcouncil.org/apps/learnenglish-sounds-right"
+      },
+      {
+        "label": "Cambridge Dictionary — English pronunciation with British and American audio (checked 29 October 2026)",
+        "url": "https://dictionary.cambridge.org/pronunciation/"
+      },
+      {
+        "label": "AnkiDroid — Official user manual and spaced-repetition review process (checked 29 October 2026)",
+        "url": "https://docs.ankidroid.org/manual.html"
+      },
+      {
+        "label": "Council of Europe — CEFR self-assessment grid, spoken interaction and production (checked 29 October 2026)",
+        "url": "https://www.coe.int/fr/web/portfolio/self-assessment-grid"
+      },
+      {
+        "label": "Android — Official privacy controls for microphone and app permissions (checked 29 October 2026)",
+        "url": "https://www.android.com/safety/privacy/"
+      },
+      {
+        "label": "Apple Support — Control access to microphone and other hardware features on iPhone (checked 29 October 2026)",
+        "url": "https://support.apple.com/en-euro/guide/iphone/iph168c4bbd5/ios"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "تطبيقات تعلم الإنجليزية: خطة أربعة أسابيع لتحسين النطق وقياس التقدم",
+        "excerpt": "مقارنة عملية بين موارد النطق والتسجيل والمراجعة، مع خطة شهرية قابلة للقياس وحدود درجات الذكاء الاصطناعي وخصوصية الصوت.",
+        "lead": "لا يوجد تطبيق واحد يضمن الطلاقة في الإنجليزية خلال شهر. لكن اختيار موارد موثوقة للصوت، وتسجيل عينات قصيرة، ومراجعة العبارات في سياقها يمكن أن يحوّل الهاتف إلى أداة تدريب منظمة. يقدم هذا الدليل خطة مقترحة لأربعة أسابيع ومقارنة بين الوظائف المتاحة في أدوات مختلفة، مستندة إلى مصادر تعليمية ورسمية تمت مراجعتها في 29 أكتوبر 2026.",
+        "sections": [
+          {
+            "heading": "اختيار الأداة وفق المهارة لا وفق إعلان الاشتراك",
+            "paragraphs": [
+              "يبدأ الاختيار بتحديد العائق الفعلي: هل يصعب عليك التمييز بين صوتين، أم تتذكر الكلمة ولكنك تتوقف عند استخدامها في جملة، أم لا تفهم المتحدث عندما يتكلم بسرعة؟ هذه مشكلات مختلفة ولا يعالجها تطبيق واحد بالضرورة. يتيح جدول LearnEnglish Sounds Right التابع للمجلس الثقافي البريطاني سماع الأصوات والأمثلة، بينما يقدم قاموس Cambridge تسجيلات بريطانية وأمريكية لكلمات منفردة. لا تعني هذه الخصائص أن أيّاً منهما يقيس جودة محادثتك الكاملة.",
+              "قبل تنزيل خمسة تطبيقات، اختر مصدراً للصوت الصحيح، وأداة لتسجيل صوتك، ووسيلة قصيرة لمراجعة الكلمات. إذا كان هاتفك لا يدعم تطبيقاً معيناً، فاستخدم موقعاً يعمل في المتصفح بدلاً من تثبيت نسخة غير موثوقة. وقد أشار فريق المجلس البريطاني في رد منشور سنة 2023 إلى قيود توافق لبعض إصدارات Android؛ لذا تحقق من صفحة المتجر الحالية على جهازك، ولا تعتبر روابط التنزيل القديمة ضماناً للتوافق."
+            ]
+          },
+          {
+            "heading": "الفرق بين سماع النطق وممارسة الحديث",
+            "paragraphs": [
+              "سماع الكلمة خطوة ضرورية، لكنه ليس دليلاً على القدرة على إنتاجها في حديث طبيعي. استمع إلى مثال من Cambridge، وحدد المقطع الذي يحمل النبر، ثم سجل الكلمة ثلاث مرات داخل جملة مفيدة. مثال تدريبي: «I reviewed the monthly report» ثم «Could you explain the difference?». قارِن وضوح المقاطع والنبر، لا مجرد التشابه السطحي مع صوت واحد. يمكن الاستفادة من اختلاف النطق البريطاني والأمريكي دون افتراض أن أحدهما صحيح والآخر خطأ.",
+              "إذا كان التطبيق يمنح درجة آلية للنطق، فتعامل معها بوصفها إشارة للمراجعة لا شهادة لغوية. قد يتأثر التعرف الآلي بضجيج الغرفة والميكروفون وسرعة الكلام، كما قد يتجاهل سياق الجملة. سجّل عينة قصيرة في مكان هادئ، ثم اطلب من متحدث متمكن أو معلم التعليق على وضوح المعنى. لا تستخدم بيانات تدريبية حقيقية لعملائك أو تسجيلات لأشخاص آخرين من دون موافقتهم."
+            ]
+          },
+          {
+            "heading": "بطاقات المراجعة والتكرار المتباعد دون إغراق",
+            "paragraphs": [
+              "تشرح وثائق AnkiDroid أن البطاقات تُعرض في فترات تتغير بحسب إجابات المتعلم، وهي طريقة مفيدة لتنظيم التذكر لا بديل عن الكلام. أنشئ بطاقة فيها سؤال عملي مثل «كيف أطلب توضيح رقم في اجتماع؟» وعلى الوجه الآخر جملة قصيرة مع مثال من سياقك. من الأفضل أن تراجع عشر عبارات قابلة للاستخدام بدلاً من حفظ قائمة طويلة لا تعرف متى تقولها. لا تنس مراجعة نطق العبارات بصوت مرتفع.",
+              "تجنب تنزيل مجموعات مجهولة المصدر تحتوي أخطاء أو مواد صوتية لا تعرف حقوقها. يمكن أن تبدأ بمجموعة خاصة من عشرين بطاقة كتبتها بنفسك، وتضيف إلى كل بطاقة مصدراً للكلمة ومثالاً أصلياً. عند نسيان عبارة، أعد صياغتها ثم استخدمها في محادثة قصيرة. عدد البطاقات المنجزة يقيس نشاط المراجعة فقط؛ لا يجوز تقديمه على أنه ارتفاع مؤكد في المستوى اللغوي أو نتيجة اختبار معتمد."
+            ]
+          },
+          {
+            "heading": "خطة أربعة أسابيع قابلة للقياس",
+            "paragraphs": [
+              "في الأسبوع الأول سجل دقيقة واحدة تتحدث فيها عن عملك أو دراستك من دون قراءة، ودوّن ثلاثة أخطاء متكررة: صوت، أو نبر، أو توقف طويل. خصص خمس عشرة دقيقة يومياً: خمساً لسماع صوتين من جدول المجلس البريطاني، وخمساً لإعادة جمل من قاموس Cambridge، وخمساً لتسجيل نفسك. احتفظ بالتسجيل الأول مرجعاً خاصاً. هذه مدة مقترحة للتنظيم وليست وعداً بتحسن محدد خلال سبعة أيام.",
+              "في الأسبوع الثاني استعمل عشر عبارات في أسئلة وأجوبة قصيرة. وفي الثالث نفذ محاكاة مكالمة أو اجتماع مدته دقيقتان مع أسئلة متابعة غير محفوظة. في الرابع كرر موضوع التسجيل الأول بالمدة نفسها ثم قارن عدد التوقفات التي تمنع الفهم، وقدرتك على إكمال الفكرة، ووضوح خمس كلمات مستهدفة. إذا لم يظهر تقدم، غيّر نوع التمرين أو اطلب ملاحظة بشرية بدلاً من شراء اشتراك أعلى تلقائياً."
+            ]
+          },
+          {
+            "heading": "مقارنة عادلة بين التطبيقات قبل الدفع",
+            "paragraphs": [
+              "أنشئ جدولاً بسيطاً بأربعة أعمدة: المهمة المطلوبة، الأداة التي تؤديها، حدود النسخة المجانية، ومكان تخزين التسجيلات. قد تكفي صفحة Cambridge لسماع النطق، وSounds Right للأصوات، ومسجل الهاتف للمقارنة، وAnkiDroid لمراجعة العبارات على Android. لا تفترض أن خدمة مجانية على نظام تشغيل تعني أن النسخة المقابلة مجانية على نظام آخر؛ راجع السعر والتجديد وشروط الإلغاء في المتجر المعني بتاريخ الشراء.",
+              "اختبر كل أداة على ثلاث جمل ثابتة قبل الدفع: جملة سهلة، وأخرى تحتوي صوتاً صعباً، وثالثة في سياق عمل. راقب هل يقدم التطبيق تفسيراً مفهوماً للخطأ، وهل يسمح بتصدير النتائج أو حذفها، وهل تحتاج فعلاً إلى خاصية مدفوعة. لا تقارن أرقام الدرجات الصادرة عن تطبيقين مختلفين وكأنهما اختبار موحد؛ فقد تختلف خوارزميات التقييم والمعايير وبيئات التسجيل اختلافاً جوهرياً."
+            ]
+          },
+          {
+            "heading": "الخصوصية وحدود التقييم الذاتي",
+            "paragraphs": [
+              "توضح وثائق Android الرسمية أن المستخدم يستطيع إدارة إذن الميكروفون ومراجعة وصول التطبيقات إلى البيانات الحساسة، وتشرح Apple إمكان مراجعة إذن الميكروفون وتغييره من إعدادات الخصوصية. قبل تسجيل صوتك، افحص هل تتم المعالجة محلياً أم تُرفع الملفات إلى خادم، وهل يوجد خيار لحذف التسجيلات، وما إذا كانت سياسة الخصوصية تسمح باستخدامها لتحسين الخدمة. لا ترفع تسجيل اجتماع مهني أو معلومات مالية سرية إلى تطبيق تعلم.",
+              "تعرض شبكة CEFR التابعة لمجلس أوروبا مهارات مختلفة تشمل التفاعل والإنتاج الشفهي، ولذلك لا تختزل التقدم في سلامة نطق الكلمات وحدها. استخدم سجل تقدم بسيطاً فيه التاريخ، والمهمة، وما استطعت قوله، والملاحظة التي ستعالجها في الأسبوع التالي. لا تدّع الوصول إلى مستوى B2 أو C1 اعتماداً على أربع جلسات تدريب أو درجة ذكاء اصطناعي؛ إذا كنت تحتاج شهادة للهجرة أو الدراسة، تحقق من الاختبار المقبول لدى الجهة المعنية."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Choosing English-learning apps: a four-week pronunciation and speaking plan",
+        "excerpt": "Compare pronunciation references, recording and review tools, then measure four weeks of practice without mistaking AI scores for certificates.",
+        "lead": "No single mobile app can guarantee fluent English in a month. Reliable sound references, short voice recordings and phrase review in context can nevertheless turn a phone into a structured practice tool. This guide proposes a four-week routine and compares what different resources actually do, drawing on educational and official references checked on 29 October 2026.",
+        "sections": [
+          {
+            "heading": "Choose the tool for the skill, not the subscription advertisement",
+            "paragraphs": [
+              "Start by identifying the actual obstacle. Do you confuse two sounds, remember vocabulary but freeze when forming a sentence, or struggle to follow a fast speaker? These are different problems and no single app necessarily solves all of them. The British Council's LearnEnglish Sounds Right offers an interactive sound chart and example words. Cambridge Dictionary provides recorded British and American pronunciations of individual words. Neither feature, on its own, measures your ability to sustain a real conversation.",
+              "Instead of installing five apps, choose one dependable sound reference, a way to record yourself and a small vocabulary review system. If a particular app does not support your phone, use a trusted browser resource rather than downloading an unofficial installation file. A British Council support reply published in 2023 mentioned Android compatibility restrictions for Sounds Right on some versions. Check the current store listing on your own device: an older download link is not proof of current compatibility."
+            ]
+          },
+          {
+            "heading": "Listening to pronunciation is not the same as speaking",
+            "paragraphs": [
+              "Hearing a word is useful preparation, not proof that you can produce it naturally. Listen to a Cambridge example, identify the stressed syllable, then record the word three times inside a meaningful sentence. For a workplace exercise, try 'I reviewed the monthly report' and 'Could you explain the difference?' Compare intelligibility, syllable timing and stress rather than superficial similarity to one recording. British and American variants can both be legitimate; choose a consistent reference without treating the other as incorrect.",
+              "If an app assigns an automated pronunciation score, treat it as a prompt to investigate, not a language certificate. Background noise, microphone quality and speaking speed can affect automated recognition, while sentence meaning may receive little attention. Record a short sample in a quiet room, then ask a proficient speaker or teacher whether the intended message was clear. Do not upload real client information or recordings of other people without their permission simply to practise."
+            ]
+          },
+          {
+            "heading": "Use spaced repetition without turning learning into a numbers game",
+            "paragraphs": [
+              "The AnkiDroid documentation explains that review cards return at intervals influenced by the learner's answers. This can organize recall, but it does not replace speaking. Create a card asking, 'How do I request clarification about a figure in a meeting?' Put a short, usable answer and an original example on the reverse. Ten phrases you can use appropriately are often a better daily target than a large list you cannot apply. Say the phrases aloud during each review.",
+              "Avoid downloading unknown decks that may contain errors or audio with unclear rights. You can start with twenty cards you wrote yourself, adding a reputable pronunciation reference and a sentence from your own life. When you forget a phrase, rephrase it and then use it in a brief exchange. The number of completed cards measures review activity only. It does not demonstrate a verified improvement in overall language proficiency or a recognized examination result."
+            ]
+          },
+          {
+            "heading": "A four-week plan with observable checkpoints",
+            "paragraphs": [
+              "In week one, record yourself speaking for one minute about work or study without reading a script. Note three recurring problems: a sound, misplaced stress or a long pause. Try a fifteen-minute daily routine: five minutes with two British Council sounds, five minutes repeating Cambridge example words in sentences and five minutes recording your own voice. Keep the original recording as a private baseline. This schedule is an organizational example, not a promise of measurable improvement in seven days.",
+              "In week two, practise ten phrases through short questions and answers. In week three, simulate a two-minute call or meeting, including unscripted follow-up questions. In week four, repeat your original topic for the same duration and compare pauses that interrupt meaning, ability to complete a thought and clarity of five target words. If the comparison reveals little progress, change the exercise or seek human feedback before assuming a more expensive subscription will fix the issue."
+            ]
+          },
+          {
+            "heading": "Compare app value before paying",
+            "paragraphs": [
+              "Build a small comparison sheet with four columns: the task, the tool, the free-tier limitation and where recordings are stored. Cambridge's pronunciation pages may be enough for word audio; Sounds Right may cover phonemes; your phone's recorder can help with playback; and AnkiDroid can support phrase review on Android. A free feature on one operating system does not imply the equivalent version is free elsewhere. Verify local prices, renewals and cancellation rules at the time of purchase.",
+              "Test each candidate with three fixed sentences before subscribing: an easy sentence, one containing a difficult sound and one related to your work. Check whether the app explains errors in understandable language, lets you delete recordings and offers a feature you actually need. Do not compare scores from two unrelated pronunciation apps as if they were standardized exam marks. Their algorithms, evaluation criteria and recording environments may be substantially different."
+            ]
+          },
+          {
+            "heading": "Protect voice data and interpret self-assessment carefully",
+            "paragraphs": [
+              "Android's official privacy guidance describes controls for microphone access and a dashboard for reviewing sensitive permissions. Apple likewise explains how microphone permissions can be reviewed and changed. Before recording, determine whether processing happens on the device or on a remote server, whether deletion is available and whether the privacy policy permits recordings to be used for service improvement. Never upload a confidential business meeting or financial details to a language-learning app.",
+              "The Council of Europe's CEFR self-assessment framework separates spoken interaction from spoken production, so progress should not be reduced to accurate isolated words. Keep a dated log with the task attempted, what you could communicate and one correction to revisit. Do not claim B2 or C1 proficiency on the strength of four practice sessions or an AI-generated score. If you need a certificate for immigration, university or employment, verify which examination the relevant authority actually accepts."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Applications d'anglais : quatre semaines pour travailler la prononciation et mesurer ses progrès",
+        "excerpt": "Comparer dictionnaires audio, enregistrements et révisions avec une méthode de quatre semaines et des précautions de confidentialité.",
+        "lead": "Aucune application mobile ne garantit la maîtrise de l'anglais en un mois. Des références sonores fiables, de courts enregistrements et la révision d'expressions en contexte peuvent néanmoins transformer le téléphone en outil d'entraînement structuré. Ce guide propose un programme de quatre semaines et distingue les fonctions réelles des ressources consultées, à partir de sources pédagogiques et officielles vérifiées le 29 octobre 2026.",
+        "sections": [
+          {
+            "heading": "Choisir un outil selon la compétence, pas selon la publicité",
+            "paragraphs": [
+              "Commencez par identifier la difficulté réelle. Confondre deux sons, connaître un mot sans parvenir à l'utiliser dans une phrase ou ne pas suivre une personne qui parle vite sont trois problèmes distincts. Une seule application ne les résout pas nécessairement. LearnEnglish Sounds Right, du British Council, propose un tableau sonore interactif et des exemples. Le dictionnaire Cambridge fournit des prononciations enregistrées en anglais britannique et américain. Aucune de ces fonctions ne mesure, à elle seule, la capacité à tenir une conversation suivie.",
+              "Au lieu d'installer cinq applications, choisissez une référence fiable pour les sons, un moyen de vous enregistrer et un outil simple de révision. Si une application n'est pas compatible avec votre téléphone, préférez une ressource officielle accessible dans le navigateur à un fichier d'installation non vérifié. Une réponse du British Council publiée en 2023 signalait des restrictions de compatibilité Android pour Sounds Right. Consultez donc la fiche actuelle de votre magasin d'applications avant toute installation."
+            ]
+          },
+          {
+            "heading": "Écouter une prononciation ne suffit pas à savoir parler",
+            "paragraphs": [
+              "Entendre un mot prépare l'exercice, mais ne prouve pas que vous pouvez le produire naturellement. Écoutez un exemple Cambridge, repérez la syllabe accentuée, puis enregistrez le mot trois fois dans une phrase utile. Pour un contexte professionnel, essayez « I reviewed the monthly report » puis « Could you explain the difference? ». Comparez la compréhension possible, le rythme et l'accentuation plutôt qu'une ressemblance superficielle avec un seul enregistrement. Les variantes britanniques et américaines peuvent être toutes deux légitimes.",
+              "Si une application affiche une note automatique de prononciation, considérez-la comme une piste de travail, non comme un certificat de langue. Le bruit ambiant, le microphone et la vitesse de parole peuvent perturber la reconnaissance automatique, qui ne juge pas toujours le sens global. Enregistrez un court passage dans un endroit calme, puis demandez à un enseignant ou à une personne compétente si votre message est clair. N'utilisez jamais des données confidentielles de clients pour vous entraîner."
+            ]
+          },
+          {
+            "heading": "Réviser par intervalles sans confondre activité et progrès",
+            "paragraphs": [
+              "La documentation d'AnkiDroid explique que les cartes reviennent à des intervalles ajustés selon les réponses de l'apprenant. Cette organisation facilite les rappels, mais ne remplace pas la parole. Créez une carte portant la question « Comment demander une précision sur un chiffre en réunion ? » et inscrivez au verso une réponse brève avec un exemple personnel. Dix expressions utilisables dans une situation concrète valent souvent mieux qu'une longue liste mémorisée sans contexte. Prononcez chaque expression à voix haute.",
+              "Évitez les paquets de cartes inconnus qui peuvent contenir des erreurs ou des fichiers audio aux droits incertains. Commencez, par exemple, avec vingt cartes rédigées par vos soins, accompagnées d'une référence fiable et d'une phrase originale. Quand une expression vous échappe, reformulez-la puis réutilisez-la dans un échange bref. Le nombre de cartes révisées mesure une activité de mémorisation, pas une progression certifiée du niveau général ni un résultat à un examen reconnu."
+            ]
+          },
+          {
+            "heading": "Un programme de quatre semaines avec des repères observables",
+            "paragraphs": [
+              "La première semaine, enregistrez une minute de présentation de votre travail ou de vos études, sans lire. Notez trois difficultés récurrentes : un son, un accent mal placé ou une longue hésitation. Essayez quinze minutes quotidiennes : cinq pour deux sons du British Council, cinq pour répéter des exemples de Cambridge dans des phrases et cinq pour vous enregistrer. Conservez le premier fichier comme référence privée. Cette durée est une proposition d'organisation et non une garantie de progrès en sept jours.",
+              "La deuxième semaine, entraînez dix expressions dans de courtes questions-réponses. La troisième, simulez un appel ou une réunion de deux minutes, avec des questions de suivi imprévues. La quatrième, reprenez le thème initial pendant la même durée et comparez les pauses qui gênent la compréhension, la capacité à finir une idée et la clarté de cinq mots ciblés. Si les résultats restent limités, adaptez les exercices ou demandez un avis humain avant de payer un abonnement supérieur."
+            ]
+          },
+          {
+            "heading": "Comparer les applications avant de souscrire",
+            "paragraphs": [
+              "Créez un tableau à quatre colonnes : besoin, outil, limite de la version gratuite et lieu de stockage des enregistrements. Les pages de Cambridge peuvent suffire pour entendre des mots, Sounds Right pour explorer les phonèmes, le dictaphone du téléphone pour vous réécouter et AnkiDroid pour revoir des expressions sur Android. Une fonction gratuite sur un système ne l'est pas nécessairement sur un autre. Vérifiez les prix locaux, le renouvellement et les modalités de résiliation au moment de l'achat.",
+              "Testez chaque outil avec trois phrases fixes avant de vous abonner : une phrase simple, une autre avec un son difficile et une troisième issue de votre métier. Vérifiez si les erreurs sont expliquées clairement, si les enregistrements peuvent être supprimés et si une fonction payante répond réellement à votre besoin. Ne comparez pas les scores de deux applications distinctes comme des notes d'examen standardisées. Leurs algorithmes, critères et conditions d'enregistrement peuvent être très différents."
+            ]
+          },
+          {
+            "heading": "Protéger sa voix et interpréter les autoévaluations",
+            "paragraphs": [
+              "Les informations officielles d'Android présentent les réglages d'accès au microphone et le tableau de bord des autorisations sensibles. Apple explique également comment contrôler et modifier ces accès. Avant d'enregistrer votre voix, vérifiez si le traitement est local ou distant, si la suppression est possible et si la politique de confidentialité autorise la réutilisation des fichiers pour améliorer le service. Ne transmettez jamais une réunion confidentielle ou des informations financières à une application linguistique.",
+              "Le cadre d'autoévaluation du CECR publié par le Conseil de l'Europe distingue interaction orale et production orale : bien prononcer des mots isolés ne suffit donc pas. Tenez un journal daté indiquant l'exercice réalisé, ce que vous avez pu communiquer et un point à corriger. Ne revendiquez pas un niveau B2 ou C1 sur la seule base de quatre semaines d'exercices ou d'un score automatique. Pour un projet d'immigration, d'études ou d'emploi, vérifiez l'examen reconnu par l'organisme concerné."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1759984782065-f8c308b0142f",
+    "source": "https://unsplash.com/photos/young-woman-wearing-headphones-works-on-laptop-9UjRPaC8jD4",
+    "photographer": "Julio Lopez",
+    "alt": "Photograph of a person wearing headphones and working on a laptop at a desk; illustrative of individual listening practice, not a tested learning app",
+    "altAr": "صورة فوتوغرافية لشخص يرتدي سماعات ويعمل على حاسوب محمول؛ توضيح للتدريب الفردي على الاستماع وليست اختباراً لتطبيق",
+    "altFr": "Photographie d'une personne portant un casque et utilisant un ordinateur portable ; illustration de l'écoute individuelle, non d'une application évaluée",
+    "license": "Unsplash License",
+    "note": "Original free Unsplash photograph by Julio Lopez, published 9 October 2025. Page and image link (photo-1759984782065-f8c308b0142f) verified 29 October 2026; official Unsplash free license checked. Unique ID cross-checked against published article photo registry, all 7 queued bundles, recipe photo library, opportunity photography, market digests, market feed and sports/tech images. Illustrative only; no product endorsement."
+  },
+  "resourceIds": [
+    "googlePlay",
+    "appleAppStore"
+  ],
+  "review": {
+    "ready": true,
+    "checkedAt": "2026-10-29",
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Original AR standard, EN, FR six-section comparative guide with 12 substantial paragraphs each, word counts verified above minimum. Official British Council, Cambridge, AnkiDroid, Council of Europe, Android and Apple pages independently consulted 29 October 2026. No app performance experiments, CEFR score or subscription prices invented. Unsplash photographer, publication date, license, asset ID and cross-inventory uniqueness checked. Content is a proposed plan, not a tested outcome."
+  }
+}
