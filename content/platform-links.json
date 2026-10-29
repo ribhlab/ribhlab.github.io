@@ -968,6 +968,10 @@
       "bls",
       "fed",
       "cftc"
+    ],
+    "sensitive-skin-versus-contact-reaction": [
+      "aadDrySkin",
+      "aadFaceWashing"
     ]
   }
 }

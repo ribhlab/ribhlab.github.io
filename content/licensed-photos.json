@@ -812,6 +812,16 @@
       "altFr": "Photographie originale d'un bureau avec calculatrice, documents et outils d'analyse; illustration et non publication officielle NFP",
       "license": "Unsplash License",
       "note": "Verified original Unsplash free photo page by Berke Citak, published 25 May 2026; image asset ID from original images.unsplash.com link. Checked on 29 October 2026 against published article-photo registry, all eight queued JSON items, market digests/feed, recipe library, opportunity photography and sports/technology image records; no reused photo ID or source. Illustration only."
+    },
+    "sensitive-skin-versus-contact-reaction": {
+      "photoId": "photo-1773754723152-0a31954e3036",
+      "source": "https://unsplash.com/photos/colorful-bottles-and-a-box-of-patches-inside-a-bag-OVw9JGkhR4Q",
+      "photographer": "Tasha Kostyuk",
+      "alt": "Original photograph of colorful skincare bottles and a box of patches inside a bag; illustrative, not a medical diagnostic image",
+      "altAr": "صورة أصلية لعبوات عناية بالبشرة ملونة وعلبة لصقات داخل حقيبة؛ توضيحية وليست صورة تشخيص طبي",
+      "altFr": "Photographie originale de flacons de soins colorés et d'une boîte de patchs dans un sac ; illustration non médicale",
+      "license": "Unsplash License",
+      "note": "Free original Unsplash photograph by Tasha Kostyuk, published 17 March 2026. Original photo page explicitly says Download free and Free to use under the Unsplash License; image asset ID obtained from the original images.unsplash.com link via the Unsplash page on 29 October 2026. Checked against published article photos, all seven queued articles, market digests, market feed photos, recipe photo library, opportunity photography and sports/technology records; no identical photo ID or source found. Illustrative only, no claim of product efficacy."
     }
   }
 }

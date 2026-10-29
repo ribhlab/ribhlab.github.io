@@ -1,0 +1,187 @@
+{
+  "slug": "sensitive-skin-versus-contact-reaction",
+  "category": "lifestyle",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "featured": false,
+  "related": [
+    "minimal-skin-routine-cleanser-moisturizer-spf",
+    "dry-skin-moisturizing-body-routine",
+    "gentle-face-cleanser-choosing-washing-routine"
+  ],
+  "sources": [
+    {
+      "label": "NHS — Contact dermatitis: overview, symptoms and causes (checked 29 October 2026)",
+      "url": "https://www.nhs.uk/conditions/contact-dermatitis/"
+    },
+    {
+      "label": "NHS — Contact dermatitis: treatment and emollient safety (checked 29 October 2026)",
+      "url": "https://www.nhs.uk/conditions/contact-dermatitis/treatment/"
+    },
+    {
+      "label": "American Academy of Dermatology — How to test skin care products (checked 29 October 2026)",
+      "url": "https://www.aad.org/public/everyday-care/skin-care-secrets/prevent-skin-problems/test-skin-care-products/"
+    },
+    {
+      "label": "American Academy of Dermatology — Clues to contact dermatitis and fragrance labelling (checked 29 October 2026)",
+      "url": "https://www.aad.org/public/everyday-care/itchy-skin/rash/itchy-rash-contact-dermatitis"
+    },
+    {
+      "label": "DermNet — Irritant contact dermatitis, updated July 2021 (checked 29 October 2026)",
+      "url": "https://dermnetnz.org/topics/irritant-contact-dermatitis"
+    },
+    {
+      "label": "DermNet — Allergic contact dermatitis, clinical presentation (checked 29 October 2026)",
+      "url": "https://dermnetnz.org/topics/allergic-contact-dermatitis"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "البشرة الحساسة أم التهاب الجلد التماسي؟ دليل لفهم التهيّج والحساسية دون تشخيص ذاتي",
+      "excerpt": "كيف تميّز بين الانزعاج العابر والتهاب الجلد التماسي، وتراجع المكونات، وتختبر مستحضراً جديداً بحذر، وتعرف متى تستشير الطبيب.",
+      "lead": "ليس كل إحساس باللسع بعد استعمال كريم دليلاً على الحساسية، وليس كل منتج مكتوب عليه «للبشرة الحساسة» مناسباً لكل شخص. يوضح هذا الدليل، اعتماداً على إرشادات NHS والأكاديمية الأمريكية للأمراض الجلدية وDermNet التي روجعت في 29 أكتوبر 2026، الفروق بين التهيّج والتفاعل التحسسي وحدود الاختبار المنزلي. المعلومات تعليمية ولا تعوض التشخيص أو العلاج الفردي.",
+      "sections": [
+        {
+          "heading": "هل البشرة الحساسة تشخيص طبي؟",
+          "paragraphs": [
+            "يصف كثير من الناس بشرتهم بأنها حساسة عندما يشعرون باللسع بعد الغسل أو بالشد في الطقس البارد. هذا وصف لتجربة شخصية، وليس تشخيصاً يحدد سبباً واحداً. قد تكون المشكلة جفافاً مؤقتاً، أو اضطراباً في حاجز الجلد، أو التهاب جلد تماسي، أو حالة أخرى تتشابه أعراضها. لهذا لا ينبغي أن يتحول وصف «حساس» على عبوة مستحضر إلى وعد بأنه مناسب للجميع، ولا أن يغني عن تقييم طبي عند تكرر الطفح.",
+            "اقترح دفتر متابعة بسيطاً قبل شراء مستحضرات إضافية: اكتب موضع الانزعاج وتاريخ ظهوره والمنتجات المستخدمة وطريقة الغسل ومدة التعرض للماء أو المنظفات. سجل هل توجد حكة أم حرقان أم تشققات، وهل يتكرر الأمر بعد مادة بعينها. الهدف ليس تشخيص الحساسية بنفسك، بل إعطاء الصيدلي أو طبيب الجلد معلومات قابلة للمراجعة بدلاً من الاعتماد على انطباع عام أو صورة لا تُظهر جميع الأعراض."
+          ]
+        },
+        {
+          "heading": "التهيّج المباشر والحساسية المناعية ليسا شيئاً واحداً",
+          "paragraphs": [
+            "تشرح خدمة NHS البريطانية أن التهاب الجلد التماسي المهيّج يحدث عندما تؤذي مادة الطبقة الخارجية للجلد، مثل الصابون القاسي أو المنظفات أو كثرة التعرض للماء. وقد يبدأ سريعاً أو يتراكم مع تكرار الاحتكاك والغسل. أما التهاب الجلد التماسي التحسسي فيرتبط باستجابة مناعية لمادة مثل بعض العطور أو المعادن أو المواد الحافظة. يمكن أن يظهر بعد استخدام منتج كان مقبولاً سابقاً؛ لذلك لا يثبت الاستعمال القديم وحده سلامته مستقبلاً.",
+            "يوضح مرجع DermNet أن الإحساس بالحرقان أو الألم قد يكون أوضح في التهيّج، بينما تكون الحكة بارزة في كثير من حالات الحساسية، لكن هذه علامات متداخلة لا تكفي للفصل بينهما. كما أن الطفح قد يبدو أحمر على البشرة الفاتحة أو بنياً أو أرجوانياً أو رمادياً على البشرة الداكنة. لا تشخّص الحالة من لون الصورة أو من توقيت واحد؛ فقد تتعايش آليتان، وقد يلزم فحص متخصص عند استمرار المشكلة."
+          ]
+        },
+        {
+          "heading": "اقرأ المكونات ولا تثق في الكلمات التسويقية وحدها",
+          "paragraphs": [
+            "ابدأ بقراءة قائمة المكونات الكاملة، لا العبارة الكبيرة على مقدمة العبوة. تنصح الأكاديمية الأمريكية للأمراض الجلدية بتفضيل المنتجات الخالية من العطور عندما يُشتبه في ارتباطها بالطفح، وتوضح أن عبارة «بلا رائحة» لا تعني بالضرورة غياب مواد عطرية تخفي الروائح. وقد تثير بعض المستخلصات النباتية أو المواد الحافظة ردود فعل لدى أفراد معينين. لا توجد قائمة سوداء واحدة تنطبق على جميع الأشخاص أو تثبت أن كل مكون طبيعي آمن.",
+            "لا تستبدل روتينك كله دفعة واحدة. إذا غيرت المنظف والمرطب وواقي الشمس في اليوم نفسه، يصبح تحديد العامل المرتبط بالانزعاج أصعب. احتفظ بصور واضحة لقوائم المكونات وتاريخ فتح العبوات عند حدوث مشكلة، وتجنب مشاركة مستحضرات مفتوحة أو مجهولة المصدر. وعند الاشتباه في حساسية مؤكدة، اسأل المختص عن أسماء المواد التي يجب تجنبها ومرادفاتها على الملصقات بدلاً من إيقاف مجموعات واسعة من المنتجات بلا دليل."
+          ]
+        },
+        {
+          "heading": "اختبار منتج جديد ليس اختبار الحساسية الطبي",
+          "paragraphs": [
+            "توصي الأكاديمية الأمريكية للأمراض الجلدية بتجربة مستحضر جديد على مساحة صغيرة من الجلد مرتين يومياً لمدة سبعة إلى عشرة أيام وفق طريقة استخدامه المعتادة، مع مراعاة تعليمات المنتج. إذا ظهر احمرار أو حكة أو تورم، أوقف التجربة واغسل المنطقة بلطف. هذه تجربة تحمّل منزلية محدودة تساعد في اكتشاف بعض المشكلات قبل وضع المستحضر على الوجه كله، لكنها لا تضمن عدم حدوث تفاعل لاحق ولا تُعد اختباراً تشخيصياً لجميع مسببات الحساسية.",
+            "أما اختبار اللصقات الطبي فيُجرى بإشراف مختص للبحث عن مسببات التهاب الجلد التماسي التحسسي عندما تكون الأعراض مستمرة أو متكررة أو غير واضحة. تختلف مواده وخطوات قراءته عن وضع كريم تجميلي على الذراع. لا تجرّب مواد كيميائية مركزة على الجلد ولا تستخدم مستحضراً سبب تورماً شديداً لمجرد استكمال أيام التجربة. عند وجود تاريخ تفاعل شديد، اطلب المشورة الطبية قبل أي إعادة تعرض."
+          ]
+        },
+        {
+          "heading": "خطة محافظة لمدة أسبوعين دون ادعاء علاج",
+          "paragraphs": [
+            "في الأيام الأولى، راجع المنتجات التي أُدخلت حديثاً وقلل التعرض لما يُشتبه في أنه سبب التهيّج، مع الحفاظ على النظافة اللازمة. اختر منظفاً لطيفاً مناسباً واستعمل ماءً غير شديد السخونة، ثم جفف الجلد بالتربيت دون فرك. تشير NHS إلى أن المرطبات الملطفة تساعد في الحد من فقدان الماء؛ ويمكن للصيدلي اقتراح قوام مناسب، لأن المراهم أكثر دهنية من الكريمات والمستحضرات الخفيفة. حتى المرطب نفسه قد يسبب انزعاجاً لدى بعض الأشخاص.",
+            "خلال الأسبوع الثاني، راقب التحسن أو التدهور وسجل أي تعرض مهني متكرر للماء والمنظفات أو ارتداء القفازات. لا تعاود إدخال عدة منتجات نشطة معاً، ولا تضع أحماض تقشير قوية على جلد ملتهب. إذا احتجت إلى دواء موضعي، فلا تختَر قوة الكورتيزون ومدة استخدامه على الوجه اعتماداً على نصيحة عامة من الإنترنت؛ تختلف الملاءمة حسب الموضع والعمر والحالة، ويحددها مختص. هذه الخطة تنظيم للملاحظة وتقليل التعرض وليست علاجاً مضموناً."
+          ]
+        },
+        {
+          "heading": "متى تتوقف عن التجربة وتطلب المساعدة؟",
+          "paragraphs": [
+            "اطلب تقييماً طبياً إذا كان الطفح شديداً أو متكرراً أو مستمراً، أو ظهرت تشققات مؤلمة أو إفرازات أو ازداد الألم بسرعة أو صاحبته حرارة وشعور عام بالتوعك. تشير NHS إلى أن هذه العلامات قد تدل على عدوى تحتاج تقييماً سريعاً. وإذا حدث تورم في الوجه أو الشفتين مع صعوبة تنفس أو أعراض عامة حادة، فاطلب المساعدة الإسعافية فوراً. لا تنتظر نهاية فترة اختبار المستحضر عند ظهور علامات إنذار.",
+            "عند الزيارة، خذ قائمة المنتجات وصورها وجدول الأعراض، وحدد إن كان العمل يتضمن منظفات أو مواد لاصقة أو معادن. اسأل الطبيب هل الاحتمال الأرجح تهيّج أم حساسية، وهل يفيد اختبار اللصقات، وما خطة العناية الآمنة ومتى تراجع النتائج. لا تنشر صور طفح شخص آخر دون إذنه، ولا تقدم صور عبوات تجميلية على أنها دليل لعلاج طبي. التوصية الأهم هي تقليل التجارب العشوائية وتحسين جودة المعلومات التي تُبنى عليها القرارات."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Sensitive skin or contact dermatitis? How to separate irritation, allergy and marketing claims",
+      "excerpt": "An evidence-based guide to product labels, cautious home trials, professional patch tests and warning signs without self-diagnosis.",
+      "lead": "Stinging after a moisturizer does not automatically mean an allergy, and a sensitive-skin label is not a guarantee of universal safety. This guide draws on NHS, American Academy of Dermatology and DermNet guidance checked on 29 October 2026. It distinguishes irritation from allergic contact dermatitis, explains how to document exposures, and clarifies the limits of home product trials. The material is educational, not a diagnosis or personalized treatment plan.",
+      "sections": [
+        {
+          "heading": "Is sensitive skin a diagnosis?",
+          "paragraphs": [
+            "Many people call their skin sensitive when a cleanser stings or cold weather leaves it tight. That description records an experience, not a single medical diagnosis. Dryness, a disrupted skin barrier, contact dermatitis and other conditions can produce overlapping sensations. A bottle labelled for sensitive skin therefore cannot promise universal tolerance. Persistent or recurring inflammation deserves assessment rather than another round of products selected only by marketing claims or social-media before-and-after photographs.",
+            "Before buying anything else, keep a short exposure diary. Record where the discomfort occurs, when it began, which products touched the area, how often you wash, and whether detergents or wet work are involved. Distinguish itch, burning, pain and cracking. This is not an invitation to diagnose yourself. It gives a pharmacist or dermatologist a useful timeline and helps separate a plausible exposure pattern from a general impression that everything irritates your skin."
+          ]
+        },
+        {
+          "heading": "Irritation and allergy follow different mechanisms",
+          "paragraphs": [
+            "The UK National Health Service distinguishes irritant contact dermatitis, in which an exposure damages the outer skin layer, from allergic contact dermatitis, in which the immune system reacts to a substance. Repeated washing, detergents and solvents may contribute to irritation; fragrances, metals or preservatives can be relevant allergens for particular individuals. A reaction can develop to something previously tolerated, so a long history of using a cosmetic does not prove that it cannot be involved now.",
+            "DermNet explains that burning or pain may feature prominently in irritation while itching is common in allergic reactions, yet symptoms overlap and the two processes can coexist. Rash colour also varies with skin tone: redness may be conspicuous on lighter skin, while brown, purple or grey changes may appear on darker skin. Timing and appearance provide clues rather than a reliable home test. Another inflammatory skin condition may look similar, which is why persistent cases require clinical judgment."
+          ]
+        },
+        {
+          "heading": "Read the ingredient list, not just the front label",
+          "paragraphs": [
+            "Start with the full ingredient declaration instead of phrases such as natural, clean or gentle. The American Academy of Dermatology advises choosing fragrance-free products when fragrance is suspected. It also distinguishes fragrance-free from unscented: an unscented formula can contain masking fragrance ingredients. Botanical extracts and preservatives are not automatically harmless. Neither a long ingredient list nor a short one proves that a product will cause or prevent an allergic reaction in every user.",
+            "Avoid changing your cleanser, moisturizer and sunscreen simultaneously. If discomfort follows, three new exposures make the cause harder to investigate. Photograph ingredient labels and note when a product was opened, especially when reactions recur. Do not share unlabelled or decanted cosmetics. If a clinician identifies a specific allergen, ask about its alternate names on labels and relevant exposure sources instead of removing broad classes of otherwise tolerated products without evidence."
+          ]
+        },
+        {
+          "heading": "A home product trial is not a medical patch test",
+          "paragraphs": [
+            "The American Academy of Dermatology suggests trying a new skin-care product on a small area twice daily for seven to ten days, following its normal directions for leave-on or rinse-off use. Stop and gently wash the area if a reaction develops. This cautious trial can reveal some tolerability problems before the product is used more widely. It cannot guarantee future safety, establish the cause of an existing rash or rule out every delayed allergic reaction.",
+            "Clinical patch testing is different. A dermatologist selects and interprets standardized test materials when allergic contact dermatitis is suspected, particularly in persistent or recurring cases. Do not put concentrated chemicals on your skin or repeat exposure to a product that caused marked swelling just to complete a home trial. People with a history of severe reactions should seek professional advice before testing new exposures. A negative informal trial is not a certificate of hypoallergenic safety."
+          ]
+        },
+        {
+          "heading": "A conservative two-week observation plan",
+          "paragraphs": [
+            "During the first days, review recently introduced products and reduce plausible triggers while maintaining necessary hygiene. Wash gently with water that is not excessively hot, avoid abrasive scrubbing, and pat the skin dry. NHS guidance describes emollients as products that reduce water loss. Ointments are generally greasier than creams or lotions, and a pharmacist can help choose a suitable formulation. Even an emollient may sting or irritate certain users, so comfort and the ingredient list still matter.",
+            "In the second week, track whether symptoms change and document repeated occupational exposure to water, detergents or gloves. Do not reintroduce several strong exfoliating acids or retinoids at once onto inflamed skin. If medicine is needed, do not select the potency and duration of a topical steroid for the face from generic internet advice. Treatment varies by age, site and severity and should be guided by a qualified professional. This plan is an observation framework, not a promised cure."
+          ]
+        },
+        {
+          "heading": "Warning signs and a more useful medical visit",
+          "paragraphs": [
+            "Seek medical assessment for severe, recurrent or persistent dermatitis, painful cracks, discharge, rapidly increasing pain or feeling generally unwell. NHS guidance warns that these changes may indicate infection and need prompt evaluation. Facial or lip swelling accompanied by breathing difficulty or a severe generalized reaction warrants emergency care. Stop testing the product when warning signs appear; finishing a seven-day diary is never more important than addressing a possible medical emergency.",
+            "Bring product labels, a concise symptom timeline and details of work or household exposures to the appointment. Ask whether irritation, allergy or another condition is most likely, whether clinical patch testing would help, and what follow-up interval is appropriate. Respect other people's privacy when documenting rashes, and do not present an illustrative cosmetic photograph as clinical proof. The practical goal is to replace repeated random experiments with better evidence and safer, individualized decisions."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Peau sensible ou dermatite de contact ? Distinguer irritation, allergie et promesses marketing",
+      "excerpt": "Comprendre les étiquettes, les essais prudents, les tests médicaux et les signes d'alerte sans établir soi-même un diagnostic.",
+      "lead": "Des picotements après une crème ne prouvent pas automatiquement une allergie, et la mention « peau sensible » ne garantit pas une tolérance universelle. Ce guide s'appuie sur les recommandations du NHS, de l'American Academy of Dermatology et de DermNet consultées le 29 octobre 2026. Il distingue l'irritation de la dermatite allergique, propose une méthode de suivi des expositions et précise les limites des essais domestiques. Il ne remplace pas un diagnostic médical.",
+      "sections": [
+        {
+          "heading": "La peau sensible est-elle un diagnostic ?",
+          "paragraphs": [
+            "On parle souvent de peau sensible lorsqu'un nettoyant provoque des picotements ou que le froid donne une sensation de tiraillement. Cette expression décrit un ressenti, pas un diagnostic médical unique. Une sécheresse, une barrière cutanée fragilisée, une dermatite de contact ou d'autres affections peuvent donner des signes semblables. Une mention « peau sensible » sur un emballage ne garantit donc pas une tolérance universelle. Une inflammation répétée mérite une évaluation plutôt qu'une succession d'achats fondés sur la publicité.",
+            "Avant de changer toute la routine, tenez un journal d'exposition très simple. Notez la zone touchée, la date de début, les produits appliqués, la fréquence des lavages et les contacts éventuels avec des détergents. Distinguez démangeaisons, brûlures, douleurs et fissures. Ce relevé ne permet pas de poser un diagnostic personnel. Il fournit au pharmacien ou au dermatologue une chronologie exploitable et évite de résumer le problème à l'impression que tous les produits sont agressifs."
+          ]
+        },
+        {
+          "heading": "Irritation et allergie : deux mécanismes distincts",
+          "paragraphs": [
+            "Le service national de santé britannique, le NHS, distingue la dermatite de contact irritative, liée à une atteinte de la couche superficielle de la peau, de la dermatite allergique, qui implique une réponse immunitaire. Les lavages répétés, les détergents et certains solvants peuvent irriter; les parfums, les métaux ou des conservateurs peuvent être allergènes pour certaines personnes. Un produit longtemps bien toléré peut ensuite être associé à une réaction : l'ancienneté de son utilisation ne constitue pas une preuve de sécurité.",
+            "Selon DermNet, une sensation de brûlure ou de douleur peut être particulièrement présente lors d'une irritation, tandis que les démangeaisons sont fréquentes dans les réactions allergiques. Ces indices se recoupent toutefois et les deux mécanismes peuvent coexister. L'aspect du rash dépend aussi de la couleur de peau : les zones atteintes peuvent paraître rouges, brunes, violacées ou grises. Une photo et un délai d'apparition ne suffisent pas à trancher; d'autres maladies inflammatoires peuvent ressembler à une dermatite de contact."
+          ]
+        },
+        {
+          "heading": "Lire la composition plutôt que les slogans",
+          "paragraphs": [
+            "Commencez par la liste complète des ingrédients, et non par des mots tels que naturel, pur ou doux imprimés en gros caractères. L'American Academy of Dermatology recommande les produits sans parfum lorsqu'un parfum est suspecté. Elle distingue aussi « fragrance-free » de « unscented » : un produit sans odeur perceptible peut contenir des substances destinées à masquer une senteur. Les extraits végétaux et les conservateurs ne sont pas automatiquement inoffensifs, et aucune liste universelle d'ingrédients interdits ne convient à tous.",
+            "Évitez de remplacer le nettoyant, la crème hydratante et la protection solaire le même jour. Si une réaction survient, il devient difficile de déterminer quelle exposition est pertinente. Photographiez les étiquettes et notez la date d'ouverture des produits. Ne partagez pas des cosmétiques transvasés sans identification. Si un professionnel confirme une allergie précise, demandez les différentes dénominations de la substance et les sources possibles d'exposition, au lieu d'écarter sans preuve des familles entières de produits."
+          ]
+        },
+        {
+          "heading": "L'essai domestique ne remplace pas le patch-test médical",
+          "paragraphs": [
+            "L'American Academy of Dermatology conseille d'essayer un nouveau soin sur une petite zone deux fois par jour pendant sept à dix jours, en respectant les instructions d'utilisation normales. En cas de rougeur, de démangeaison ou de gonflement, arrêtez et rincez doucement la zone. Cette précaution peut révéler certains problèmes de tolérance avant une application plus étendue. Elle ne garantit pas l'absence de réaction future, ne diagnostique pas une allergie et ne remplace pas l'examen d'une éruption déjà présente.",
+            "Le test épicutané médical, ou patch-test, est une démarche différente : un dermatologue sélectionne des substances de référence et interprète les résultats lorsqu'une allergie de contact est suspectée, notamment dans les situations persistantes. N'appliquez pas de produits chimiques concentrés pour vous tester et ne réutilisez pas un cosmétique ayant provoqué un gonflement important afin de terminer un essai. Après une réaction sévère, demandez un avis médical avant toute nouvelle exposition. Un essai négatif n'est pas un certificat d'innocuité."
+          ]
+        },
+        {
+          "heading": "Deux semaines d'observation prudente",
+          "paragraphs": [
+            "Les premiers jours, examinez les produits récemment introduits et réduisez les contacts suspects sans négliger l'hygiène nécessaire. Privilégiez un nettoyage doux, de l'eau non brûlante et un séchage par tamponnement. Le NHS rappelle que les émollients limitent la perte d'eau de la peau. Les pommades sont généralement plus grasses que les crèmes et les lotions; un pharmacien peut aider à choisir une texture adaptée. Un émollient peut lui-même provoquer des picotements chez certaines personnes : il faut donc rester attentif à la tolérance.",
+            "La deuxième semaine, consignez l'évolution des symptômes et les contacts professionnels répétés avec l'eau, les détergents ou les gants. Ne réintroduisez pas simultanément plusieurs acides exfoliants ou rétinoïdes sur une peau déjà enflammée. Si un médicament est nécessaire, ne choisissez pas la puissance ni la durée d'un corticoïde local sur le visage à partir d'un conseil général trouvé en ligne. L'âge, la zone et la gravité comptent. Ce programme sert à observer et à limiter les expositions, pas à promettre une guérison."
+          ]
+        },
+        {
+          "heading": "Signaux d'alerte et consultation mieux préparée",
+          "paragraphs": [
+            "Consultez en cas de dermatite sévère, persistante ou récidivante, de fissures douloureuses, d'écoulement, d'aggravation rapide de la douleur ou de malaise général. Le NHS indique que certains de ces signes peuvent évoquer une infection nécessitant une évaluation rapide. Un gonflement du visage ou des lèvres accompagné d'une difficulté à respirer ou d'une réaction générale grave justifie une aide médicale urgente. Il ne faut jamais terminer un essai cosmétique lorsque des signes inquiétants apparaissent.",
+            "Apportez à la consultation les compositions des produits, une chronologie concise et les expositions domestiques ou professionnelles pertinentes. Demandez si l'irritation, l'allergie ou une autre affection semble la plus probable, si des tests épicutanés sont indiqués et quand réévaluer la situation. Respectez la confidentialité des photographies médicales d'autrui et ne présentez pas une photo de produits cosmétiques comme preuve clinique. L'objectif est de remplacer les essais aléatoires par des informations plus fiables et des décisions adaptées."
+          ]
+        }
+      ]
+    }
+  }
+}
