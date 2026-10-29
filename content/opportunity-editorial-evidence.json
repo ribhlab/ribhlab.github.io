@@ -6132,6 +6132,190 @@
           ]
         }
       }
+    },
+    "amdie-senior-buyer": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Decision AMDIE n°498/2026, signed 23 October 2026, pages 1–4 inspected including position sheet; compared with emploi-public C44249/26 listing checked 29 October 2026. Distinct from Cadre Acheteur n°509/2026.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "AMDIE — décision signée n°498/2026 et fiche de poste Acheteur Sénior, 4 pages, 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/261843c9-2094-4efa-88fd-d62a90e51ce8"
+        },
+        {
+          "label": "Portail gouvernemental emploi-public — annonce C44249/26, publiée le 23 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/261843c9-2094-4efa-88fd-d62a90e51ce8"
+        }
+      ],
+      "facts": {
+        "employer": "Agence Marocaine de Développement des Investissements et des Exportations (AMDIE)",
+        "decision": "498/2026",
+        "decisionDate": "2026-10-23",
+        "reference": "C44249/26",
+        "published": "2026-10-23",
+        "deadline": "2026-11-09T16:00",
+        "posts": 1,
+        "jobTitle": "Acheteur Sénior (agent contractuel)",
+        "nationality": "Marocaine",
+        "degree": "Bac+5 ou plus en achats, gestion, commerce, économie, logistique, ingénierie achat, supply chain management ou équivalent",
+        "experience": "5 ans minimum dont 3 ans en procédures d'achat et passation des marchés publics dans le secteur public",
+        "additionalTraining": "Certification ou formation en marchés publics souhaitable, non obligatoire",
+        "applicationDocuments": [
+          "Demande de candidature motivée",
+          "CV détaillé",
+          "Copie certifiée conforme du diplôme",
+          "Copies certifiées des justificatifs d'expérience",
+          "Copie certifiée conforme de la CIN",
+          "Rapport avec plan d'action et méthodologie de gestion et d'amélioration du poste"
+        ],
+        "application": "Dépôt PDF sur depot.emploi-public.ma ou remise au Département Capital Humain AMDIE, avenue Attine, Business n°5, Hay Riad, Rabat",
+        "selection": "Examen des dossiers et entretiens d'évaluation par commission; aucune épreuve écrite précisée",
+        "salary": null,
+        "postingCity": null,
+        "submissionAddressCity": "Rabat (adresse de dépôt, pas lieu d'affectation confirmé)",
+        "examDate": null,
+        "contractDuration": null
+      },
+      "translations": {
+        "ar": {
+          "title": "AMDIE: توظيف مشترٍ أول بخبرة خمس سنوات — شروط الصفقات العمومية والوثائق الست وآخر أجل",
+          "deck": "قرار 498/2026 يفتح منصباً واحداً لمشترٍ أول بعقد عمل، مع ثلاث سنوات مثبتة في الصفقات العمومية وتقرير خطة عمل إلزامي. آخر أجل 9 نوفمبر 2026 قبل الساعة 16:00.",
+          "sections": [
+            [
+              "الوظيفة المعلنة وطبيعة العقد",
+              "أعلنت الوكالة المغربية لتنمية الاستثمارات والصادرات عن منصب واحد لمشترٍ أول (Acheteur Sénior) بصفة عون متعاقد، وفق القرار رقم 498/2026 المؤرخ في 23 أكتوبر 2026، والإعلان الحكومي C44249/26 المنشور في اليوم نفسه. لا يتعلق الأمر بمنصب «إطار مشتريات» المعلن في قرار آخر، ولا يجوز دمج شروط المباراتين. يرتبط هذا المنصب بوظيفة المشتريات والوسائل العامة داخل مديرية الموارد، ويتضمن مسؤوليات تنظيمية وتعاقدية ولوجستية. عنوان الوكالة بالرباط وارد في تعليمات إيداع الملفات، لكنه ليس تصريحاً صريحاً بمكان التعيين النهائي؛ لذلك ينبغي طلب تأكيد مقر العمل أثناء التواصل الرسمي."
+            ],
+            [
+              "من يستطيع الترشح؟ الجنسية والشهادة",
+              "يشترط القرار الجنسية المغربية والحصول على شهادة تعليم عالٍ من مستوى بكالوريا زائد خمس سنوات على الأقل في المشتريات أو التسيير أو التجارة أو الاقتصاد أو اللوجستيك أو هندسة المشتريات أو إدارة سلاسل الإمداد، أو شهادة معادلة. يقبل النص شهادات المؤسسات العمومية أو الخاصة المعترف بها من الدولة، ويذكر الماستر والماستر المتخصص ودبلوم مهندس الدولة أو ما يعادلها. ويعد التكوين أو الاعتماد الإضافي في تدبير الصفقات العمومية ميزة مرغوبة، وليس شرطاً مستقلاً مفروضاً على الجميع. لا يذكر القرار سقفاً محدداً للعمر، فلا ينبغي نقله من إعلانات AMDIE الأخرى."
+            ],
+            [
+              "الخبرة المطلوبة: خمس سنوات منها ثلاث في الصفقات العمومية",
+              "هذا منصب خبير وليس فرصة تدريب للمبتدئين. يشترط القرار إثبات خمس سنوات خبرة مهنية على الأقل، منها ثلاث سنوات في تدبير إجراءات الشراء وإبرام الصفقات العمومية داخل إدارة عمومية أو مؤسسة أو شركة أو فرع عمومي أو جماعة ترابية. خبرة مشتريات القطاع الخاص وحدها، مهما بلغت، لا تثبت تلقائياً السنوات الثلاث المتخصصة المطلوبة. ينبغي أن توضح شهادات العمل طبيعة المهام وفتراتها والجهات المشغلة، لا أن تكتفي بعنوان «مسؤول مشتريات». إذا تداخلت فترات العمل فلا تجمعها مرتين، وإذا كانت طبيعة مؤسسة سابقة غير واضحة فاطلب منها وصفاً دقيقاً يمكن إثباته."
+            ],
+            [
+              "المهام الحقيقية: التخطيط والتعاقد والوسائل العامة",
+              "تشرح بطاقة المنصب المرفقة بالقرار مسؤولية إعداد برنامج التوريد السنوي ومتابعته، وتجميع احتياجات الإدارات، والإشراف على المخزون الاستهلاكي، وصيانة المكاتب والمعدات، ولوجستيك الفعاليات والتنقلات. وفي المشتريات يتابع شاغل المنصب التخطيط السنوي وإعداد المواصفات التقنية والوظيفية، وإطلاق طلبات العروض ومتابعتها إلى الإغلاق، والتفاوض مع الموردين، وتنفيذ العقود والضمانات والتنسيق مع المالية بشأن الاعتمادات. لذلك يحتاج المرشح إلى أمثلة واقعية عن تتبع آجال التسليم وجودة التوريدات وضبط مخاطر الموردين، لا إلى عبارات عامة عن القدرة على التفاوض."
+            ],
+            [
+              "الامتثال والمهارات واللغات",
+              "تمنح بطاقة الوظيفة أهمية للإطار القانوني للمشتريات والصفقات العمومية، وإجراءات إبرام الصفقات، وسياسات الشراء وأدوات التسيير. وتذكر العربية والفرنسية والإنجليزية ضمن المعارف المهنية المطلوبة، إلى جانب تحليل عروض الأسعار وتخطيط المشتريات وإعداد دفاتر التحملات والتقييم ومتابعة الأسواق. كما تشير إلى القيادة والتنظيم وحل المشكلات والتواصل والتقارير. هذه قائمة كفاءات في بطاقة الوظيفة وليست شهادة لغة موحدة أو حدّاً رقمياً لامتحان لغوي؛ فلا تنسب إلى القرار شرط IELTS أو TOEFL. يمكن إعداد مثال مهني موجز يبين كيف خفّض المرشح التأخير أو حسّن الامتثال، دون اختلاق نسب توفير."
+            ],
+            [
+              "الملف الإلزامي: ست وثائق لا أربع",
+              "يحدد القرار ستة مكونات: طلب ترشيح يشرح الدوافع، وسيرة ذاتية تعرض الكفاءات والمسار الدراسي والمهني والمناصب، ونسخة مطابقة للأصل من الشهادة أو الشهادات المطلوبة، ونسخ مطابقة للأصل من الوثائق المثبتة للخبرة، ونسخة مطابقة للأصل من البطاقة الوطنية للتعريف، وتقرير يعرض خطة عمل ومنهجية لتسيير الوظيفة وتطوير أدائها. هذا التقرير عنصر مستقل وأساسي، وليس مجرد رسالة تحفيزية مطولة. ينص الإعلان على رفض كل ملف ناقص. احرص على وضوح الأختام والتواريخ والصفحات، واحتفظ بنسخ قابلة للقراءة، ولا ترسل وثائق شخصية إلى وسطاء أو صفحات غير رسمية."
+            ],
+            [
+              "الإيداع من المغرب والموعد الذي يجب احترامه",
+              "يتيح القرار وصول الملف إلى قسم الرأسمال البشري في الوكالة، شارع التين، بناية Business رقم 5، حي الرياض، الرباط، أو إيداعه إلكترونياً بصيغة PDF على منصة depot.emploi-public.ma. يجب أن يصل الترشيح في موعد أقصاه 9 نوفمبر 2026 قبل الساعة الرابعة مساءً، وفق نص القرار الموقع. تعرض بطاقة البوابة التاريخ نفسه دون تفصيل الساعة، ولذلك يعتمد هذا الدليل التوقيت الأضيق الوارد في القرار. بالنسبة للإرسال الورقي، لا يعني ختم البريد وحده أن الملف وصل قبل الإغلاق؛ تحقق من وسيلة التسليم المقبولة. أما الإيداع الرقمي فاحتفظ بإثبات الإرسال وتحقق من ظهور الملفات كاملة."
+            ],
+            [
+              "كيف يجري الانتقاء؟ لا تفترض وجود امتحان كتابي",
+              "تنص المادة الخامسة على أن لجنة يعينها المدير العام تتولى فحص صحة ملفات الترشيح وإجراء مقابلات تقييم المرشحين. لا يذكر هذا القرار اختباراً كتابياً أو موعداً محدداً للمقابلة أو معاملات للمواد؛ وعليه لا يجوز استعارة هذه التفاصيل من مباراة «إطار مشتريات» مختلفة داخل الوكالة. تعلن النتائج في مقرات AMDIE وعلى بوابة التشغيل العمومي بحسب القرار. قبل المقابلة راجع دورة شراء كاملة من تحديد الحاجة إلى التعاقد والتسليم والمراقبة، وجهز مثالاً موثقاً عن معالجة خطر عدم المطابقة أو تضارب المصالح، مع احترام سرية ملفات المؤسسات السابقة."
+            ],
+            [
+              "خطة العمل المطلوبة: نموذج تفكير لا وثيقة جاهزة من الجهة",
+              "يمكن بناء التقرير الإلزامي حول تشخيص أولي للمشتريات والوسائل العامة، وخريطة للمخاطر، وجدول متابعة لاحتياجات الإدارات، وآلية لتحسين المواصفات وقياس احترام الآجال والميزانية. هذه مجرد طريقة عملية مقترحة لتنظيم تقرير المرشح، وليست قالباً رسمياً صادراً عن AMDIE. من المفيد التمييز بين مؤشرات قابلة للتحقق، مثل نسبة الطلبات المنجزة داخل الأجل، وبين أهداف افتراضية لا سند لها. لا تكشف أسماء الموردين أو الأسعار السرية من وظائفك السابقة، ولا تقدم وفورات مزعومة أو شهادات خبرة لا تستطيع إثباتها. الجودة هنا في قابلية الخطة للتنفيذ والامتثال."
+            ],
+            [
+              "الأجر والمخاطر والبدائل الواقعية",
+              "لا يحدد القرار ولا بطاقة الإعلان أجراً صافياً أو إجمالياً، ولا تاريخ مباشرة العمل ولا مدة العقد ولا مدينة التعيين بصورة صريحة؛ لذلك لا يصح تقديم أرقام أو وعود في هذه النقاط. وصف «عون متعاقد» لا يساوي تلقائياً توظيفاً نظامياً في سلك الوظيفة العمومية. إذا كنت تملك خمس سنوات خبرة دون ثلاث سنوات مثبتة في الصفقات العمومية، فافحص شروط إعلانات أخرى مناسبة بدلاً من تقديم ملف غير مطابق؛ وهناك إعلان منفصل لإطار مشتريات لدى AMDIE بشروط مختلفة. راجع دائماً الإعلان الرسمي يوم الإرسال لأن التعديلات أو الاستدعاءات قد تصدر لاحقاً."
+            ]
+          ]
+        },
+        "en": {
+          "title": "AMDIE Senior Buyer 2026: five years of experience, six documents and the precise deadline",
+          "deck": "Signed decision 498/2026 covers one contractual Senior Buyer role, requiring three years in public procurement and a separate action-plan report. Applications must arrive before 16:00 on 9 November 2026.",
+          "sections": [
+            [
+              "The actual vacancy and contract status",
+              "The Moroccan Agency for Investment and Export Development (AMDIE) is recruiting one Senior Buyer as a contractual agent under signed decision 498/2026 of 23 October 2026. The government portal published the corresponding notice, C44249/26, on the same date. This is not the separate junior Buyer Officer recruitment advertised by AMDIE, and the two sets of eligibility rules must not be combined. The role belongs to the purchasing and general-services function within the resources directorate, covering procurement, facilities and logistics. The Rabat address appears as a destination for applications, not as an explicit guarantee of the eventual duty station. Applicants should request clarification rather than treating the postal address as a confirmed workplace."
+            ],
+            [
+              "Eligibility: nationality and qualifications",
+              "The signed decision requires Moroccan nationality and a higher-education qualification at Bac+5 level or above in purchasing, management, commerce, economics, logistics, procurement engineering, supply-chain management or an equivalent discipline. It refers to qualifications awarded by public institutions or private establishments recognised by the state, including master's degrees, specialised master's degrees and state engineering diplomas or their equivalents. Additional training or certification in public procurement or purchasing management is described as desirable, not as a separate mandatory qualification for every candidate. Unlike other AMDIE recruitment decisions, this notice does not state a numerical age limit. Importing an age threshold from another competition would therefore misrepresent this vacancy."
+            ],
+            [
+              "Five years of experience, including three in public procurement",
+              "This is an experienced professional role rather than an entry-level placement. Candidates must demonstrate at least five years of professional experience, including three years handling purchasing procedures and public-contract awards within a public administration, public institution, public company or subsidiary, or territorial authority. Five years of purely private-sector purchasing does not automatically establish the three years of specialised public-procurement experience. Employment certificates should describe actual responsibilities, relevant dates and the nature of the employing organisation, rather than simply naming a job title. Overlapping employment periods should not be counted twice. Where the legal status of a former employer is unclear, seek a verifiable clarification before relying on it for eligibility."
+            ],
+            [
+              "What the Senior Buyer would actually do",
+              "The annexed job description covers annual procurement planning, consolidating internal requests, consumables inventory, building and equipment maintenance, event logistics and national or international travel support. Procurement duties include drafting technical and functional specifications, preparing and tracking tender procedures through closure, negotiating with suppliers, supervising contract execution and guarantees, and coordinating budget allocations with the finance department. The role also involves assessing supplier performance and controlling delivery times, quality and compliance. A serious application should therefore demonstrate a full procurement cycle, not only price negotiation. Practical examples might describe how a candidate resolved delayed deliveries or strengthened documentation, provided the examples are accurate and do not disclose confidential employer information."
+            ],
+            [
+              "Regulatory skills, tools and languages",
+              "The position sheet places substantial weight on the legal framework of purchasing and public contracts, procurement procedures, purchasing policy and management tools. Arabic, French and English appear in its professional knowledge requirements, together with financial analysis of bids, procurement scheduling, specification drafting, offer assessment and contract monitoring. Management skills include leadership, planning, problem-solving, reporting and communication. This list does not establish an IELTS or TOEFL requirement or a particular language-test score. Applicants can prepare concise evidence of the languages they actually use in professional procurement work, including meetings, specifications or supplier correspondence. Claims of savings, certifications or fluency should be supported rather than embellished."
+            ],
+            [
+              "Six required application components",
+              "The decision lists six components: a motivated application request; a CV describing skills, studies, work history and positions held; a certified true copy of the required degree or degrees; certified copies of documents proving the relevant experience; a certified copy of the national identity card; and a report presenting an action plan and methodology for managing, developing and improving the performance of the post. That final report is a distinct mandatory document, not simply a longer cover letter. The decision warns that incomplete applications will be rejected. Check legibility, dates and certification marks before submission. Keep your own copies, and avoid sharing identity documents with unofficial intermediaries or websites that imitate the government portal."
+            ],
+            [
+              "Where and when to submit from Morocco",
+              "The signed decision allows applications to reach AMDIE's Human Capital Department at Avenue Attine, Business Building No. 5, Hay Riad, Rabat, or to be submitted electronically in PDF format through depot.emploi-public.ma. The deadline is 9 November 2026, strictly before 16:00, as printed in the signed decision. The public listing gives the same date without a time; applicants should follow the more precise and restrictive official decision. For a physical delivery, do not assume a postmark is enough: the wording concerns receipt of the file. For an online submission, verify the uploaded PDF and preserve the confirmation or reference number. Do not wait until the final minutes, when technical or connectivity problems can prevent a valid submission."
+            ],
+            [
+              "Selection stages: do not invent a written examination",
+              "Article 5 of the decision provides for a committee appointed by AMDIE's Director General to review the validity of application files and conduct assessment interviews. It does not announce a written test, a fixed interview date or examination coefficients. Such details appear in some other AMDIE competitions, but transferring them to this one would be inaccurate. Results are to be displayed at AMDIE premises and published on the public employment portal. Interview preparation should cover a complete purchasing cycle, supplier and compliance risks, transparent evaluation and the interaction between procurement and finance. Candidates should use verifiable examples and respect confidentiality obligations towards their former employers."
+            ],
+            [
+              "A workable action-plan report, without invented employer instructions",
+              "One practical way to organise the mandatory report is to begin with an initial assessment of procurement and facilities processes, identify compliance and supplier risks, propose an internal demand-tracking system, and explain how specifications, contract follow-up and reporting could improve. This is an editorial suggestion, not an official AMDIE template. Distinguish measurable indicators, such as the share of orders completed on time, from speculative promises about cost reductions. Avoid copying confidential supplier lists, pricing schedules or proprietary procedures from a previous employer. A credible report should explain priorities, responsibilities and safeguards while acknowledging that the candidate has not yet audited AMDIE's internal systems."
+            ],
+            [
+              "Salary, uncertainties and realistic alternatives",
+              "Neither the signed decision nor the public vacancy page specifies a gross or net salary, a firm start date, the contract duration or an expressly confirmed final posting city. Those details should not be guessed. The designation contractual agent should not be confused with appointment to an ordinary civil-service grade. A candidate with five years of work experience but without the required three years in public procurement should examine other vacancies instead of assuming eligibility. AMDIE also advertised a distinct Buyer Officer post under a different decision with different experience requirements. Recheck the official notice on the submission date, since subsequent corrections, interview invitations or results may be posted there."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "AMDIE recrute un Acheteur sénior en 2026 : expérience, six pièces et échéance exacte",
+          "deck": "La décision 498/2026 porte sur un poste contractuel, avec cinq ans d’expérience dont trois en marchés publics et un rapport de plan d’action obligatoire. Dépôt avant 16 h le 9 novembre 2026.",
+          "sections": [
+            [
+              "Le poste réel et le statut contractuel",
+              "L’Agence marocaine de développement des investissements et des exportations (AMDIE) recrute un Acheteur sénior, agent contractuel, conformément à la décision signée n° 498/2026 du 23 octobre 2026. L’annonce gouvernementale C44249/26 a été publiée à la même date. Il ne s’agit pas du recrutement distinct d’un Cadre Acheteur par l’AMDIE : leurs conditions ne doivent pas être mélangées. Le poste relève des achats et moyens généraux au sein de la direction des ressources, avec des responsabilités contractuelles, logistiques et immobilières. L’adresse de Rabat figure comme lieu de réception des candidatures, mais le document ne confirme pas explicitement la ville d’affectation définitive. Il convient de demander une précision officielle."
+            ],
+            [
+              "Nationalité et diplômes recevables",
+              "La décision exige la nationalité marocaine et un diplôme supérieur Bac+5 au minimum en achats, gestion, commerce, économie, logistique, ingénierie des achats, supply chain management ou domaine équivalent. Elle mentionne les diplômes délivrés par des établissements publics ou privés reconnus par l’État, notamment master, master spécialisé et diplôme d’ingénieur d’État ou équivalent. Une formation ou certification complémentaire en marchés publics ou management des achats est souhaitable, sans constituer une obligation distincte pour tous les candidats. Aucun plafond d’âge chiffré n’est indiqué dans cette décision. Il serait donc incorrect de reprendre automatiquement la limite d’âge mentionnée dans d’autres concours de la même agence."
+            ],
+            [
+              "L’expérience : cinq années dont trois en marchés publics",
+              "Le profil vise un professionnel confirmé et non un débutant. Il faut justifier au moins cinq ans d’expérience professionnelle, dont trois ans dans la conduite des procédures d’achat et de passation des marchés publics au sein d’une administration, d’un établissement ou d’une entreprise ou filiale publique, ou d’une collectivité territoriale. Cinq années d’achats exclusivement privés ne prouvent pas, à elles seules, les trois années spécifiques exigées. Les attestations doivent préciser les missions, les périodes et l’employeur, plutôt que se limiter à un intitulé de poste. Évitez de compter deux fois des périodes qui se chevauchent et faites clarifier le statut d’un ancien organisme lorsque cela conditionne l’éligibilité."
+            ],
+            [
+              "Missions : programmation, achats et moyens généraux",
+              "La fiche de poste annexée prévoit la politique annuelle d’approvisionnement, le recensement des besoins des directions, le suivi des consommables, la maintenance des locaux et équipements, la logistique des événements et des déplacements. Pour les achats, l’Acheteur sénior participe à la planification, à la rédaction des spécifications techniques et fonctionnelles, au lancement et au suivi des appels d’offres, aux négociations fournisseurs, à l’exécution des contrats et au suivi des garanties. Il coordonne également les affectations budgétaires avec la fonction financière. Une candidature pertinente doit illustrer le cycle complet, de l’expression du besoin à la réception conforme, plutôt que de se limiter à la négociation des prix."
+            ],
+            [
+              "Conformité, outils, langues et management",
+              "La fiche insiste sur le cadre juridique des achats et marchés publics, les procédures de passation, la politique d’achat et les outils informatiques de gestion. Elle mentionne l’arabe, le français et l’anglais parmi les connaissances attendues, ainsi que l’analyse des offres, la programmation des achats, la rédaction de cahiers des charges et le suivi des marchés. Les compétences managériales concernent notamment le leadership, l’organisation, la résolution de problèmes, le reporting et la communication. Cela ne signifie pas qu’un score IELTS ou TOEFL soit exigé : aucun certificat linguistique chiffré n’est cité. Présentez des exemples authentiques d’utilisation professionnelle des langues, sans inventer des certifications ou des économies réalisées."
+            ],
+            [
+              "Un dossier de six pièces, avec un rapport obligatoire",
+              "L’article 4 énumère six éléments : une demande motivée, un CV détaillant compétences et parcours, une copie certifiée conforme du ou des diplômes requis, des copies certifiées des justificatifs d’expérience, une copie certifiée conforme de la carte nationale d’identité, et un rapport présentant un plan d’action ainsi qu’une méthodologie pour gérer, développer et améliorer la performance du poste. Le rapport constitue une pièce autonome et obligatoire, et non une simple lettre de motivation allongée. Le texte précise que tout dossier incomplet sera rejeté. Vérifiez les dates, cachets et pages des documents numérisés, conservez un exemplaire et ne transmettez pas de documents d’identité à des intermédiaires non officiels."
+            ],
+            [
+              "Dépôt et échéance : le 9 novembre avant 16 heures",
+              "La décision autorise la remise du dossier au Département Capital Humain de l’AMDIE, avenue Attine, bâtiment Business n° 5, Hay Riad, Rabat, ou le dépôt électronique au format PDF sur depot.emploi-public.ma. Le dossier doit parvenir au plus tard le 9 novembre 2026 avant 16 h 00, selon le document signé. La fiche gouvernementale affiche le même jour sans préciser l’heure : il faut donc respecter l’heure plus restrictive du texte officiel. Pour un envoi physique, ne présumez pas qu’un cachet postal prouve la réception à temps. Pour un dépôt numérique, contrôlez le PDF envoyé et conservez l’accusé de dépôt. Anticipez les éventuelles difficultés de connexion."
+            ],
+            [
+              "Sélection : étude des dossiers et entretiens",
+              "L’article 5 confie à une commission désignée par le directeur général le contrôle de validité des dossiers et les entretiens d’évaluation. Cette décision ne prévoit pas explicitement d’épreuve écrite, de date fixe d’entretien ni de coefficients. Les emprunter à un autre recrutement AMDIE serait trompeur. Les résultats des entretiens doivent être affichés dans les locaux de l’agence et publiés sur le portail de l’emploi public. Pour préparer l’entretien, entraînez-vous à expliquer un cycle d’achat, une analyse des risques fournisseurs, la conformité des marchés et la coordination avec les finances. Utilisez des situations vérifiables sans divulguer de données confidentielles d’anciens employeurs."
+            ],
+            [
+              "Construire le plan d’action demandé sans fausse promesse",
+              "Une structure possible pour le rapport obligatoire consiste à proposer un diagnostic initial des achats et moyens généraux, une cartographie des risques, un suivi des demandes internes, puis des améliorations concernant les cahiers des charges, les contrats et les indicateurs. Il s’agit d’une méthode éditoriale suggérée, et non d’un modèle officiel AMDIE. Distinguez les indicateurs mesurables, comme la proportion de commandes livrées à temps, des objectifs chiffrés imaginaires. Ne reproduisez pas de listes fournisseurs, de tarifs confidentiels ou de procédures propriétaires. Un rapport sérieux décrit les priorités, les responsabilités et les contrôles, tout en reconnaissant que le candidat ne connaît pas encore les systèmes internes de l’agence."
+            ],
+            [
+              "Salaire, limites et autres pistes",
+              "Ni la décision signée ni la fiche du concours ne donnent de rémunération brute ou nette, de date certaine de prise de fonction, de durée contractuelle ou de ville d’affectation définitive explicitement confirmée. Il serait inexact de publier une estimation comme un salaire annoncé. Le statut d’agent contractuel n’équivaut pas automatiquement à une nomination dans un grade de fonctionnaire. Si vous totalisez cinq ans d’expérience mais pas les trois années exigées en marchés publics, examinez d’autres concours plutôt que de supposer votre recevabilité. Un autre recrutement AMDIE concerne un Cadre Acheteur avec des conditions différentes. Vérifiez la fiche officielle avant de déposer votre dossier et surveillez d’éventuels rectificatifs."
+            ]
+          ]
+        }
+      }
     }
   }
 }
