@@ -62,6 +62,7 @@ jobs:
               wanted.append(f'/{lang}/trading/coin-versus-token-claim-verification/')
               wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-data-science-ai/')
               wanted.append(f'/{lang}/opportunities/competitions/cnrst-administrator-4/')
+              wanted.append(f'/{lang}/ai/gdevelop-no-code-first-prototype/')
           last=None
           for attempt in range(1,7):
               try:
@@ -145,6 +146,10 @@ jobs:
                       assert 'opp-guide-sources' in cnrst and 'target="_blank"' in cnrst, f'{lang}: CNRST original source links missing'
                       assert '2026' in cnrst and ('8' in cnrst and '9' in cnrst), f'{lang}: CNRST conflicting deadline warning missing'
                       print(f'CNRST MANAGEMENT LIVE {lang}: nine source-backed sections and conflicting 8/9 November deadlines',flush=True)
+                      gdevelop=bodies[f'/{lang}/ai/gdevelop-no-code-first-prototype/'].decode('utf-8')
+                      assert gdevelop.count('class="article-block"')>=6, f'{lang}: GDevelop guide lacks six substantive sections'
+                      assert 'article-sources' in gdevelop and 'licensed-editorial-photo' in gdevelop, f'{lang}: GDevelop guide lacks sources or licensed image'
+                      print(f'GDEVELOP LIVE {lang}: six complete sections, references and licensed image',flush=True)
                       english_apps=bodies[f'/{lang}/ai/english-learning-apps-pronunciation-plan/'].decode('utf-8')
                       assert english_apps.count('class="article-block"')>=6, f'{lang}: English-learning app article lacks six substantive sections'
                       assert 'article-sources' in english_apps and 'licensed-editorial-photo' in english_apps, f'{lang}: English-learning app article missing sources or photo'
