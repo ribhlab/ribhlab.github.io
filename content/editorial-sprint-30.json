@@ -307,10 +307,12 @@
         "gdevelop",
         "godot"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/gdevelop-no-code-first-prototype/",
       "queuePath": "content/reviewed-queue/gdevelop-no-code-first-prototype.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "content/articles/gdevelop-no-code-first-prototype.json exists with six complete AR/EN/FR sections and four sources; build 40926549048 and Pages deployment 40926549011 succeeded; public-sitemap-check 40926665196 confirmed HTTP 200, six sections, source references and licensed photo for all three locales."
     },
     {
       "sectionId": "trading-risk",
