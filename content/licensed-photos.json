@@ -822,6 +822,16 @@
       "altFr": "Photographie originale de flacons de soins colorés et d'une boîte de patchs dans un sac ; illustration non médicale",
       "license": "Unsplash License",
       "note": "Free original Unsplash photograph by Tasha Kostyuk, published 17 March 2026. Original photo page explicitly says Download free and Free to use under the Unsplash License; image asset ID obtained from the original images.unsplash.com link via the Unsplash page on 29 October 2026. Checked against published article photos, all seven queued articles, market digests, market feed photos, recipe photo library, opportunity photography and sports/technology records; no identical photo ID or source found. Illustrative only, no claim of product efficacy."
+    },
+    "chicken-tikka-masala-temperature-guide": {
+      "photoId": "photo-1762922425226-8cfe6987e7b0",
+      "source": "https://unsplash.com/photos/chicken-tikka-masala-served-with-naan-bread-PXMh2o3tO1s",
+      "photographer": "Jessie Maxwell",
+      "alt": "Real photograph of chicken tikka masala served with naan, illustrative and not the RibhLab test batch",
+      "altAr": "صورة فوتوغرافية حقيقية لدجاج تيكا ماسالا مع خبز نان؛ صورة توضيحية لا تمثل تجربة طهي للموقع",
+      "altFr": "Photographie réelle d'un poulet tikka masala avec pain naan ; illustration et non essai culinaire de RibhLab",
+      "license": "Unsplash License",
+      "note": "Original free Unsplash photo by Jessie Maxwell, published 12 November 2025. Original page explicitly states free use under Unsplash License. Image asset ID obtained from original images.unsplash.com link on 29 October 2026. Checked against published and planned photo registries and repository code search; no reused ID found. Image is illustrative."
     }
   }
 }

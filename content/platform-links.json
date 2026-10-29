@@ -972,6 +972,10 @@
     "sensitive-skin-versus-contact-reaction": [
       "aadDrySkin",
       "aadFaceWashing"
+    ],
+    "chicken-tikka-masala-temperature-guide": [
+      "foodSafety",
+      "foodSafetySeafood"
     ]
   }
 }

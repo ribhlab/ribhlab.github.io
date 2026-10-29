@@ -1707,15 +1707,11 @@
         "homemade-pizza-margherita-authentic-style-recipe",
         "grain-and-vegetable-bowl-easy-recipe",
         "homemade-shoyu-style-ramen-two-bowls-safe-broth-noodles",
-        "seafood-paella-safe-home-preparation"
+        "seafood-paella-safe-home-preparation",
+        "chicken-tikka-masala-temperature-guide"
       ],
       "targetArticles": 40,
       "ideas": [
-        {
-          "sequence": 7,
-          "titleAr": "دجاج تيكا ماسالا الهندي",
-          "status": "planned"
-        },
         {
           "sequence": 8,
           "titleAr": "باد تاي تايلاندي",
