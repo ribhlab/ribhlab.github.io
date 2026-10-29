@@ -5237,8 +5237,8 @@
     },
     "cnrst-administrator-4": {
       "reviewedAt": "2026-10-29",
-      "verification": "Original three-page stamped CNRST recruitment notice visually inspected on 29 October 2026, pages 1–3, compared with government competition C44248/26 dated 23 October 2026. Official sources disagree on deadline: portal 8 November 2026 16:30, signed notice before 9 November 2026. Live page verification pending.",
-      "state": "researched-awaiting-live-verification",
+      "verification": "Signed original CNRST notice (3 pages) and government portal C44248/26 independently checked on 29 October 2026. Official discrepancy explicitly documented: portal deadline 8 Nov 2026 16:30 versus stamped notice before 9 Nov 2026. Build and Pages deployment succeeded on commit 5c274148 (Actions 40926222758 / 40926222679). Live trilingual public-sitemap QA 40926359409 succeeded 29 October 2026: AR/EN/FR HTTP 200, nine detailed sections, source links opening in new tabs, and discrepancy notice.",
+      "state": "published",
       "sources": [
         {
           "label": "CNRST — original stamped three-page recruitment notice, reviewed 29 October 2026, notably pages 1–3",
