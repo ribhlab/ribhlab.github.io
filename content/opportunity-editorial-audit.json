@@ -5,7 +5,8 @@
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
     "source-listing-awaiting-detailed-review": "Verified source record only; full job eligibility/duties/pay not yet extracted; not a complete article",
-    "official-booking-source-only": "The country-specific official booking instructions are available; no real-time appointment slots verified"
+    "official-booking-source-only": "The country-specific official booking instructions are available; no real-time appointment slots verified",
+    "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
     "cards": 95,
@@ -53,10 +54,14 @@
       "section": "competitions",
       "title": "Élèves officiers — Protection civile",
       "deadline": "2026-10-31",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-10-31",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/0bc3b58e-cfd7-466e-9023-6faf53a94738",
+      "evidenceId": "civil-protection",
+      "reviewedAt": "2026-10-29",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/0bc3b58e-cfd7-466e-9023-6faf53a94738",
+      "reviewNote": "Original three-page DGPC officer-cadet decision read and compared with official portal and DGPC application portal on 29 October 2026. 50 places; licence disciplines; 18–26 years for external male Moroccan applicants; 31 October closing without stated hour; 16 November medical stage; rope/run/swim, written/oral/psychometric stages. Ten original sections per AR/EN/FR, minimum >700 words and >=350 characters per section validated. GitHub commit 59c0c922065a9cab011083eb0e8da2151d507d96. NOT YET COUNTED AS PUBLISHED: build/Actions/live verification unavailable in this run."
     },
     {
       "id": "agriculture-admin",
