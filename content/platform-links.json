@@ -963,6 +963,11 @@
     "gdevelop-no-code-first-prototype": [
       "gdevelop",
       "itchHtml5CreatorDocs"
+    ],
+    "nfp-payrolls-revisions-market-guide": [
+      "bls",
+      "fed",
+      "cftc"
     ]
   }
 }

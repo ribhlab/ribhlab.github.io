@@ -802,6 +802,16 @@
       "altFr": "Photographie réelle d'un ordinateur de jeu sur un bureau, illustration d'un espace de développement et de test",
       "license": "Unsplash License",
       "note": "Original free Unsplash photograph by Brad Starkey, published 16 August 2021. Original photo page and free-use Unsplash License checked 29 October 2026. The image asset ID was obtained from the image link. Cross-checked against published article photos, queued articles, market digests, market-feed photos, recipe assignments, opportunity photography and sports-technology visuals; no reuse found. Illustrative only: not a GDevelop screenshot or evidence of a built game."
+    },
+    "nfp-payrolls-revisions-market-guide": {
+      "photoId": "photo-1779729686198-117c1307894d",
+      "source": "https://unsplash.com/photos/a-desk-with-a-calculator-papers-eyeglasses-and-office-supplies-QV5VoI18Ld8",
+      "photographer": "Berke Citak",
+      "alt": "Original photograph of a desk with calculator, papers, glasses and financial analysis tools; illustrative, not a payroll release",
+      "altAr": "صورة فوتوغرافية أصلية لمكتب يضم آلة حاسبة ووثائق وأدوات تحليل مالي؛ صورة توضيحية وليست تقرير توظيف أمريكياً",
+      "altFr": "Photographie originale d'un bureau avec calculatrice, documents et outils d'analyse; illustration et non publication officielle NFP",
+      "license": "Unsplash License",
+      "note": "Verified original Unsplash free photo page by Berke Citak, published 25 May 2026; image asset ID from original images.unsplash.com link. Checked on 29 October 2026 against published article-photo registry, all eight queued JSON items, market digests/feed, recipe library, opportunity photography and sports/technology image records; no reused photo ID or source. Illustration only."
     }
   }
 }
