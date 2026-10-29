@@ -63,6 +63,8 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-data-science-ai/')
               wanted.append(f'/{lang}/opportunities/competitions/cnrst-administrator-4/')
               wanted.append(f'/{lang}/ai/gdevelop-no-code-first-prototype/')
+              wanted.append(f'/{lang}/trading/nfp-payrolls-revisions-market-guide/')
+              wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-architect/')
           last=None
           for attempt in range(1,7):
               try:
@@ -146,6 +148,16 @@ jobs:
                       assert 'opp-guide-sources' in cnrst and 'target="_blank"' in cnrst, f'{lang}: CNRST original source links missing'
                       assert '2026' in cnrst and ('8' in cnrst and '9' in cnrst), f'{lang}: CNRST deadline wording explanation missing'
                       print(f'CNRST MANAGEMENT LIVE {lang}: nine source-backed sections, portal 8 Nov deadline and notice wording before 9 Nov',flush=True)
+                      architect=bodies[f'/{lang}/opportunities/competitions/au-kenitra-architect/'].decode('utf-8')
+                      assert architect.count('class="opp-guide-section" id="part-')>=9, f'{lang}: Sidi Slimane architect report lacks nine sections'
+                      assert 'C44310/26' in architect and '1f9f832d-e82c-4c61-9294-1a27921af5e5' in architect, f'{lang}: architect decision, job sheet or code missing'
+                      assert 'opp-guide-sources' in architect and 'target="_blank"' in architect, f'{lang}: architect original references or external tabs missing'
+                      assert '2026' in architect and ('16:30' in architect or '16 h 30' in architect), f'{lang}: architect deadline time missing'
+                      print(f'SIDI SLIMANE ARCHITECT LIVE {lang}: nine sections, signed decision, job sheet, submission deadline',flush=True)
+                      nfp=bodies[f'/{lang}/trading/nfp-payrolls-revisions-market-guide/'].decode('utf-8')
+                      assert nfp.count('class="article-block"')>=6, f'{lang}: NFP article lacks six editorial sections'
+                      assert 'article-sources' in nfp and 'licensed-editorial-photo' in nfp, f'{lang}: NFP article lacks sources or unique photo'
+                      print(f'NFP PAYROLLS LIVE {lang}: six sections, references and licensed photo',flush=True)
                       gdevelop=bodies[f'/{lang}/ai/gdevelop-no-code-first-prototype/'].decode('utf-8')
                       assert gdevelop.count('class="article-block"')>=6, f'{lang}: GDevelop guide lacks six substantive sections'
                       assert 'article-sources' in gdevelop and 'licensed-editorial-photo' in gdevelop, f'{lang}: GDevelop guide lacks sources or licensed image'
