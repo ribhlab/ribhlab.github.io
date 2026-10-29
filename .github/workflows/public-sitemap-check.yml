@@ -217,6 +217,8 @@ jobs:
                       ('power-query-ai-assisted-transformations-audit','ai',8),
                       ('niche-educational-blog-content-audit','earning',6),
                       ('risk-budget-drawdown-math-beginners','trading',5),
+                      ('notion-template-originality-support-guide','earning',6),
+                      ('safe-excel-ai-analysis-redaction-checklist','ai',5),
                   ):
                       for language in ('ar','en','fr'):
                           matches=[u for u in urls if u.endswith('/'+category+'/'+slug+'/') and '/'+language+'/' in u]
