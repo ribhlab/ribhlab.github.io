@@ -663,10 +663,13 @@
       "section": "competitions",
       "title": "Architecte — antenne de Sidi Slimane",
       "deadline": "2026-11-11",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-11-11",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/1f9f832d-e82c-4c61-9294-1a27921af5e5"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/1f9f832d-e82c-4c61-9294-1a27921af5e5",
+      "researchedAt": "2026-10-29",
+      "evidenceKey": "au-kenitra-architect",
+      "verification": "Original signed three-page decision and one-page job sheet verified 29 October 2026; nine substantial sections in AR/EN/FR. Awaiting build, deployment and live-page QA before counting as researched-article."
     },
     {
       "id": "au-kenitra-data-science-ai",
