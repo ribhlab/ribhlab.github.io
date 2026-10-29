@@ -5824,6 +5824,164 @@
           ]
         }
       }
+    },
+    "cri-fes-meknes-prospection-2026": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Original signed CRI Fès-Meknès 3-page decision 118/2026/DG/DR dated 28 Oct 2026, visually reviewed page by page and cross-checked with government listing C44331/26. No salary or exam date stated; contract statutory or contractual.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "CRI Fès-Meknès — Décision signée 118/2026/DG/DR du 28 octobre 2026 (3 pages)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/5bf559b6-b482-4770-bcaf-f7dc6e056106"
+        },
+        {
+          "label": "Portail officiel emploi-public.ma — Concours C44331/26, publication 28 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/5bf559b6-b482-4770-bcaf-f7dc6e056106"
+        }
+      ],
+      "facts": {
+        "city": "Fès",
+        "country": "Maroc",
+        "reference": "C44331/26",
+        "internalReference": "118/2026/DG/DR",
+        "deadline": "2026-11-16T16:30",
+        "posts": 1,
+        "degree": "Bac+5 Marketing ou équivalent",
+        "experience": "Au moins 4 ans dans le développement territorial, l'investissement, le conseil en stratégie régionale ou le marketing territorial",
+        "languages": "Arabe, Français, Anglais",
+        "contract": "Statutaire ou Contractuel",
+        "salary": null,
+        "channel": "emploi-public.ma",
+        "examDate": null
+      },
+      "translations": {
+        "ar": {
+          "title": "المركز الجهوي للاستثمار فاس مكناس: مباراة إطار لاستقطاب المستثمرين بشروط Bac+5 وأربع سنوات خبرة",
+          "deck": "منصب واحد بمدينة فاس، وآخر أجل 16 نوفمبر 2026 الساعة 16:30. تحليل القرار الموقع رقم 118/2026 وشروط التسويق والخبرة واللغات والوثائق ومراحل الانتقاء.",
+          "sections": [
+            [
+              "الجهة المشغلة وطبيعة المنصب",
+              "أصدر المركز الجهوي للاستثمار لجهة فاس مكناس القرار رقم 118/2026/DG/DR بتاريخ 28 أكتوبر 2026 لفتح مباراة لتوظيف إطار واحد مكلف بالتنمية واستقطاب المستثمرين والمحافظة على علاقاتهم. يرتبط المنصب بمصلحة تطوير العرض الترابي، ومقر التعيين المحدد هو مدينة فاس. يذكر القرار أن التوظيف قد يكون نظامياً أو تعاقدياً، لذلك لا يصح الجزم مسبقاً بنوع العقد الذي سيعرض على الفائز. هذه مباراة لمنصب واحد، وليست برنامجاً عاماً لمنح تمويل أو وعداً بتوفير وظائف لكل المسجلين."
+            ],
+            [
+              "ماذا يفعل المسؤول عن الاستقطاب فعلياً؟",
+              "تشمل المهام تحديد المستثمرين المحتملين بحسب أولويات القطاعات والمجالات الترابية، وإعداد اتصالات وعروض تقديمية والمشاركة في مهام وملتقيات مهنية. ويُنتظر من المرشح جمع احتياجات الاستثمار وتحليلها لصياغة مقترحات مرتبطة بمزايا الجهة. ولا تنتهي المهمة عند استقطاب مستثمر جديد؛ فالقرار يذكر متابعة المستثمرين الموجودين وتطوير إجراءات للحفاظ على الشراكات وتحسين المواكبة. كما يتضمن إعداد تقارير ولوحات متابعة وتحديث قاعدة بيانات المستثمرين المحتملين. هذا توصيف إداري وتسويقي ميداني وليس وظيفة محاسبة أو إدارة إعلانات رقمية حصراً."
+            ],
+            [
+              "الجنسية والسن والدبلوم المطلوب",
+              "تشترط الوثيقة الجنسية المغربية وألا يتجاوز عمر المرشح أربعين سنة، إلى جانب شهادة من مستوى Bac+5 في التسويق أو شهادة معادلة. ينبغي التحقق من الاعتراف بالشهادات الأجنبية أو الصادرة عن مؤسسات خاصة قبل إرسال الملف؛ إذ تنص الوثيقة صراحة على المعادلة عند الاقتضاء. لا يكفي حمل إجازة Bac+3 لأن الإعلان يطلب مستوى Bac+5، ولا ينبغي تحويل أي تخصص قريب إلى مؤهل مقبول دون سند من الجهة المنظمة. كما يشترط القرار ألا يكون المرشح قد أدين بعقوبة مخلة بالشرف وألا يكون مسجلاً بالسجل التأديبي المركزي للإدارات العمومية."
+            ],
+            [
+              "أربع سنوات خبرة مثبتة وليست مجرد مهارات عامة",
+              "يشترط القرار خبرة مهنية مثبتة لا تقل عن أربع سنوات في التنمية الترابية أو الاستثمار أو الاستشارة في الاستراتيجية الجهوية أو التسويق الترابي. لذلك لا تكفي كتابة «خبرة في التسويق» داخل السيرة الذاتية إذا لم تدعمها وثائق عمل واضحة ومهام قابلة للفهم. المرشح الذي عمل في تحليل جاذبية المناطق أو متابعة المستثمرين أو مشاريع التنمية الجهوية ينبغي أن يربط خبراته بهذه المهام، مع تواريخ البداية والنهاية والجهات المشغلة. أما خبرة التجارة العامة غير المرتبطة بهذه المجالات فقد تحتاج إلى توضيح، ولا يضمن ذلك قبولها."
+            ],
+            [
+              "اللغات الثلاث ومهارات العرض والتحليل",
+              "يشترط الإعلان إتقان العربية والفرنسية والإنجليزية. لا يذكر درجات اختبار لغوي محددة، ولذلك لا يصح اختراع شرط IELTS أو TOEFL أو مستوى CEFR معين. عملياً، يمكن للمترشح الاستعداد لشرح مشروع استثماري بالعربية، وتقديم عرض مختصر بالفرنسية، والرد بالإنجليزية عن سؤال يتعلق باحتياجات مستثمر دولي. هذا تمرين تحضيري اقترحه RibhLab وليس اختباراً رسمياً معلناً. كما أن إعداد لوحة متابعة بسيطة للمستثمرين، مع مراعاة سرية المعلومات، يساعد على توضيح فهم المسؤوليات المعلنة."
+            ],
+            [
+              "الوثائق المطلوبة حسب القرار الأصلي",
+              "يتضمن الملف طلب ترشيح موجهاً إلى مدير المركز الجهوي للاستثمار لجهة فاس مكناس، وسيرة ذاتية كاملة وحديثة، ونسخ الشهادات مع وثائق المعادلة عند الحاجة، ونسخة البطاقة الوطنية الإلكترونية من الوجهين، وإثباتات الخبرة. بالنسبة للعاملين في القطاع العام تُطلب نسخ شهادات العمل، وبالنسبة للقطاع الخاص شهادات العمل وشهادات التصريح لدى الصندوق الوطني للضمان الاجتماعي CNSS. من الأفضل التأكد من تطابق التواريخ بين السيرة والشهادات وعدم إخفاء فترات الانقطاع. لا ترفع وثائق هوية إلى مواقع وسيطة أو مجموعات عامة."
+            ],
+            [
+              "الإيداع الإلكتروني والموعد النهائي",
+              "حدد القرار والبوابة الحكومية آخر أجل يوم 16 نوفمبر 2026 الساعة 16:30 بالتوقيت المحلي المغربي، عبر بوابة emploi-public.ma حصرياً، تحت المرجع C44331/26. تنص الوثيقة على استبعاد الملفات الناقصة أو المتأخرة أو غير المطابقة للشروط. افتح صفحة المباراة الرسمية، ثم راجع قائمة الوثائق المطلوبة واحتفظ بإثبات الإيداع إن وفرته البوابة. لا تعتبر إرسال بريد إلكتروني إلى المركز أو ملء نموذج الاتصال العام بديلاً عن الترشيح الإلكتروني. وإذا ظهر تصحيح رسمي للموعد لاحقاً، فالأولوية للقرار المنشور من الجهة المختصة."
+            ],
+            [
+              "الانتقاء والاختبارات دون اختلاق مواعيد",
+              "تبدأ العملية بانتقاء أولي للملفات وفق الشروط والوثائق، ثم تتولى لجنة يعينها مدير المركز دراسة الملفات وتقييم الاختبارات الكتابية وإجراء مقابلات مع المرشحين. لم يحدد القرار تاريخاً للاختبار الكتابي أو الشفوي، ولم ينشر معاملات أو مواضيع رسمية مفصلة؛ لذلك لا يجوز تقديم أي موعد متوقع على أنه مؤكد. يذكر القرار أن نشر قوائم المقبولين ومواعيد ومكان المقابلات والنتائج على البوابة الحكومية وفي مقر المركز، وأن إعلان اللوائح عبر البوابة يعد بمثابة استدعاء. ينبغي متابعة المرجع C44331/26 بانتظام."
+            ],
+            [
+              "الأجر والمخاطر وطريقة الاستعداد بموضوعية",
+              "لا يذكر القرار أجراً صافياً أو إجمالياً محدداً، فلا يصح نسب تقديرات منشورة في مواقع تجميع الوظائف إلى المشغل. قد تختلف تفاصيل التعويض وطبيعة العقد بين وضع نظامي وتعاقدي؛ اطلب المعلومات الرسمية عند التواصل أو بعد الانتقاء. حضر مثالاً واقعياً من خبرتك يشرح كيف حددت جهة استثمارية، وكيف قست نتائج التواصل من دون إفشاء بيانات العملاء. لا تختلق مؤشرات نجاح أو أسماء شركاء، ولا تدفع رسوماً لوسيط يدعي ضمان النجاح. المصدران المعتمدان هنا هما القرار الموقع والبطاقة الحكومية، وكلاهما بتاريخ 28 أكتوبر 2026."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Fès-Meknès investment centre: one investor prospecting officer, Bac+5 and four years' experience",
+          "deck": "One position in Fès, applications due 16 November 2026 at 16:30. An original guide to signed decision 118/2026, eligibility, documents, language requirements and selection.",
+          "sections": [
+            [
+              "Employer, location and precise position",
+              "On 28 October 2026 the Regional Investment Centre for Fès-Meknès issued signed decision 118/2026/DG/DR to recruit one development, investor prospecting and retention officer. The position belongs to the Territorial Offer Development service and the stated place of assignment is the city of Fès. The decision describes the recruitment type as statutory or contractual; applicants should not assume the final contractual status before receiving an official offer. This is a competition for one specific role, not a general investor grant programme or a promise that every registered candidate will find work."
+            ],
+            [
+              "Actual responsibilities beyond advertising",
+              "The job involves identifying potential investors according to sector and territorial priorities, preparing contacts and presentations, and participating in missions, exhibitions and professional forums. It also includes collecting and analysing investment needs to help formulate regional propositions. The responsibilities continue after initial outreach: monitoring established investors, maintaining relationships, proposing retention initiatives and improving support. The notice also requires communication material, follow-up notes, dashboards and updates to the prospect database. Applicants should treat this as a territorial investment-development role rather than simply digital advertising, bookkeeping or generic sales."
+            ],
+            [
+              "Nationality, age and required education",
+              "The signed decision requires Moroccan nationality, a maximum age of 40, and a Bac+5 qualification in Marketing or an equivalent recognised diploma. For qualifications awarded by foreign or private institutions, the application instructions explicitly call for an equivalence where required. A three-year undergraduate licence should not be presented as automatically meeting a Bac+5 requirement. Nor should an unrelated postgraduate degree be described as equivalent without evidence from the organiser. The decision also excludes candidates convicted of offences affecting honour or registered in the central disciplinary record of public administrations."
+            ],
+            [
+              "Four years of directly relevant professional experience",
+              "At least four years of proven professional experience are required in territorial development, investment, regional strategy consulting or territorial marketing. The notice does not treat a generic claim of being a good communicator as a substitute for experience records. Applicants should map each relevant role to its employer, start and end dates, concrete assignments and documentary proof. Work involving investor follow-up, regional competitiveness analysis or place-marketing projects may be relevant if genuinely performed and documented. Experience in unrelated commercial activity should not be assumed acceptable without clarification from the recruiting centre."
+            ],
+            [
+              "Arabic, French and English: what is actually required",
+              "The official profile calls for proficiency in Arabic, French and English but does not prescribe an IELTS, TOEFL or CEFR score. Publishing a specific test threshold would therefore be misleading. As preparation, a candidate could practise explaining a regional investment proposition in Arabic, presenting a short investor briefing in French and answering an English-language question about market-entry needs. These are RibhLab study suggestions, not leaked or announced exam questions. A small anonymised example of a prospect-tracking dashboard may also help demonstrate understanding without exposing confidential investor data."
+            ],
+            [
+              "Documents and proof of employment",
+              "The application package comprises a letter addressed to the Director of the Fès-Meknès Regional Investment Centre, a complete recent CV, copies of qualifications and any required equivalence, both sides of the electronic national identity card, and evidence of the required professional experience. Public-sector applicants are asked for employment certificates; private-sector applicants must provide employment certificates and CNSS social-security records. Review dates and job titles for consistency across documents. Avoid posting identity scans in public groups or using unofficial upload portals. The signed three-page decision, not a generic job-site checklist, determines the compulsory file."
+            ],
+            [
+              "Online application and the exact closing time",
+              "The signed decision and the official government listing agree on 16 November 2026 at 16:30 Moroccan local time as the application deadline. Applications are to be submitted through emploi-public.ma, using competition reference C44331/26. Incomplete, late or non-compliant files are excluded according to the notice. Check the official listing, follow its online submission process and retain any confirmation provided. Emailing the centre or using its general contact form is not an alternative application channel. If the institution later issues an amendment, use the updated official notice rather than an aggregator's countdown."
+            ],
+            [
+              "Selection stages and dates that are not announced",
+              "The procedure begins with a screening of files against the eligibility and documentary requirements. A selection committee appointed by the centre's director then reviews applications, assesses written tests and conducts interviews. The decision does not provide a definite date for the written examination or interview, nor official test subjects or scoring coefficients. The government portal and the centre's premises will publish candidate lists, interview time and place and final results; the decision states that publication of lists on the government portal counts as notification. Follow reference C44331/26 rather than guessing from older competitions."
+            ],
+            [
+              "Pay, preparation and safeguards against false promises",
+              "No individual gross or net salary is specified in the signed decision. Estimates on third-party vacancy sites must not be attributed to the employer, especially when the notice leaves statutory versus contractual status open. Ask for official terms if shortlisted. Prepare an honest case study describing how you identified a prospect, adapted an investment proposition and measured follow-up, without naming confidential clients or inventing performance figures. Do not pay anyone who promises admission or privileged access to a selection committee. This report is based on the signed decision and the government's listing, both published on 28 October 2026."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "CRI Fès-Meknès : un cadre de prospection et fidélisation, Bac+5 et quatre ans d'expérience",
+          "deck": "Un poste à Fès, candidatures jusqu'au 16 novembre 2026 à 16 h 30. Analyse de la décision signée 118/2026, du profil, des pièces et des étapes de sélection.",
+          "sections": [
+            [
+              "Organisme recruteur, lieu et poste exact",
+              "Le 28 octobre 2026, le Centre régional d'investissement de Fès-Meknès a signé la décision 118/2026/DG/DR ouvrant le recrutement d'un cadre chargé du développement, de la prospection et de la fidélisation des investisseurs. Le poste est rattaché au service Développement de l'offre territoriale et son lieu d'affectation est la ville de Fès. Le texte prévoit un recrutement statutaire ou contractuel : il serait donc imprudent d'affirmer à l'avance la nature définitive du contrat. Il s'agit d'un seul poste identifié, et non d'un programme général d'aide aux investisseurs."
+            ],
+            [
+              "Des missions de terrain, d'analyse et de suivi",
+              "Le cadre doit identifier les investisseurs potentiels selon les priorités sectorielles et territoriales, préparer des prises de contact et des présentations, puis participer à des missions, salons et forums. Il recueille les besoins d'investissement pour orienter les propositions d'offre territoriale. La fonction comprend également le suivi des investisseurs déjà installés, la fidélisation des partenaires et l'amélioration de leur accompagnement. Des supports de communication, notes de suivi, tableaux de bord et mises à jour de la base de prospects sont attendus. Ce profil ne se résume ni à la publicité numérique ni à la comptabilité."
+            ],
+            [
+              "Nationalité, âge et diplôme Bac+5",
+              "La décision exige la nationalité marocaine, un âge de quarante ans au plus et un diplôme Bac+5 en Marketing ou équivalent. Pour les diplômes délivrés par des établissements privés ou étrangers, une équivalence est requise selon les dispositions de l'avis. Une simple licence Bac+3 ne satisfait donc pas automatiquement le niveau demandé. De même, un diplôme supérieur dans une spécialité voisine ne doit pas être présenté comme accepté sans confirmation de l'organisme. Le texte prévoit aussi des conditions liées à l'absence de condamnation infamante et d'inscription au casier disciplinaire central des administrations publiques."
+            ],
+            [
+              "Quatre années d'expérience à démontrer",
+              "Le profil exige au moins quatre années d'expérience professionnelle probante dans le développement territorial, l'investissement, le conseil en stratégie régionale ou le marketing territorial. Une mention vague « expérience en marketing » dans un CV ne remplace pas les attestations exigées. Le candidat devrait présenter, pour chaque mission pertinente, l'employeur, les dates, le périmètre et des réalisations vérifiables. Une expérience de prospection d'investisseurs ou de promotion territoriale peut être expliquée par ses résultats réels. Une activité commerciale sans lien clair avec ces domaines ne doit pas être présumée éligible."
+            ],
+            [
+              "Arabe, français et anglais sans faux seuil officiel",
+              "La maîtrise de l'arabe, du français et de l'anglais figure explicitement dans le profil. Aucun score IELTS, TOEFL ou niveau CECR précis n'est publié ; il serait trompeur d'en inventer un. Pour se préparer, un candidat peut s'exercer à décrire l'attractivité d'un territoire en arabe, présenter un projet d'investissement en français et répondre en anglais à une question sur les besoins d'une entreprise étrangère. Ces exercices sont des propositions pédagogiques de RibhLab, non des sujets officiels. Un exemple anonymisé de tableau de suivi des prospects peut aussi illustrer la méthode de travail."
+            ],
+            [
+              "Les pièces à fournir, selon l'arrêté signé",
+              "Le dossier comprend une demande de candidature adressée au Directeur du CRI de la Région Fès-Meknès, un CV complet et récent, les copies des diplômes avec équivalence si nécessaire, la copie recto verso de la carte nationale d'identité électronique et les justificatifs de l'expérience. Les candidats du secteur public fournissent des attestations de travail. Ceux du secteur privé joignent les attestations d'emploi et les attestations CNSS. Vérifiez la concordance des dates entre les documents et n'envoyez pas de copies d'identité à des intermédiaires non autorisés. Seule la liste de la décision fait foi."
+            ],
+            [
+              "Dépôt électronique avant le 16 novembre 2026",
+              "La décision et la fiche gouvernementale indiquent toutes deux le 16 novembre 2026 à 16 h 30, heure locale marocaine, comme limite de candidature. Le dépôt s'effectue sur emploi-public.ma sous la référence C44331/26. Les dossiers incomplets, tardifs ou ne correspondant pas au profil seront écartés. Consultez l'annonce officielle, préparez des scans lisibles et conservez la preuve de dépôt si la plateforme la fournit. Un message au service d'accueil du centre ou un formulaire de contact général ne remplace pas la procédure de candidature. Surveillez les éventuels rectificatifs officiels."
+            ],
+            [
+              "Présélection, écrits et entretien : ce qui est connu",
+              "Le processus commence par une présélection des dossiers au regard des conditions et pièces prévues. Une commission désignée par le directeur examine ensuite les candidatures, évalue les épreuves écrites et conduit les entretiens. La décision ne fixe ni date précise des épreuves ni coefficients ni sujets officiels. Les listes des candidats admis, les informations sur les entretiens et les résultats seront publiés sur le portail de l'emploi public et dans les locaux du centre. L'affichage sur le portail vaut convocation selon l'arrêté. Il faut donc suivre la référence C44331/26 régulièrement."
+            ],
+            [
+              "Salaire non publié et préparation sans promesse",
+              "Aucun salaire net ou brut individuel n'est communiqué dans l'arrêté. Les estimations proposées par certains agrégateurs ne doivent pas être attribuées au CRI, d'autant que le texte mentionne un recrutement statutaire ou contractuel. En cas de présélection, demandez les conditions officielles. Préparez un cas réel montrant comment vous avez ciblé un investisseur, adapté une proposition territoriale et organisé le suivi, sans divulguer des données confidentielles ni inventer de chiffres. Méfiez-vous des intermédiaires promettant une admission. Cette analyse repose sur l'arrêté signé et la fiche gouvernementale du 28 octobre 2026."
+            ]
+          ]
+        }
+      }
     }
   }
 }
