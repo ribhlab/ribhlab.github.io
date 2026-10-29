@@ -407,14 +407,10 @@
         "ai-agents-business-security-human-checklist",
         "ai-assistant-apps-2026-iphone-android-comparison",
         "ai-writing-assistant-style-guide-versioning",
-        "power-query-ai-assisted-transformations-audit"
+        "power-query-ai-assisted-transformations-audit",
+        "safe-excel-ai-analysis-redaction-checklist"
       ],
       "ideas": [
-        {
-          "sequence": 11,
-          "titleAr": "تحليل ملفات Excel بأمان",
-          "status": "planned"
-        },
         {
           "sequence": 12,
           "titleAr": "Power Query مع الذكاء الاصطناعي",
