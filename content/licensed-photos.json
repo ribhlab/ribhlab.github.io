@@ -792,6 +792,16 @@
       "altFr": "Photographie de pièces portant des symboles de cryptomonnaies, illustration des marques et non preuve de propriété numérique",
       "license": "Unsplash License",
       "note": "Free Unsplash photo by rc.xyz NFT gallery, published 13 October 2021; original photo page and linked images.unsplash.com asset photo-1634108941345-3a6a66685563 checked 29 October 2026. Not an actual blockchain record or endorsement."
+    },
+    "gdevelop-no-code-first-prototype": {
+      "photoId": "photo-1629102981237-c44ffad32775",
+      "source": "https://unsplash.com/photos/person-using-computer-on-table-pVyaUGCuUU4",
+      "photographer": "Brad Starkey",
+      "alt": "Real photograph of a desktop computer gaming setup; illustration of a development and playtesting environment",
+      "altAr": "صورة حقيقية لحاسوب مكتبي مخصص للألعاب، لتوضيح بيئة تطوير النماذج واختبارها",
+      "altFr": "Photographie réelle d'un ordinateur de jeu sur un bureau, illustration d'un espace de développement et de test",
+      "license": "Unsplash License",
+      "note": "Original free Unsplash photograph by Brad Starkey, published 16 August 2021. Original photo page and free-use Unsplash License checked 29 October 2026. The image asset ID was obtained from the image link. Cross-checked against published article photos, queued articles, market digests, market-feed photos, recipe assignments, opportunity photography and sports-technology visuals; no reuse found. Illustrative only: not a GDevelop screenshot or evidence of a built game."
     }
   }
 }

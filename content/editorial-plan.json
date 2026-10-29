@@ -755,14 +755,10 @@
         "make-mobile-games-unity-godot-unreal-gdevelop",
         "reverse-engineering-legally-tools-ghidra",
         "ai-video-filmmaking-automation-unity-2026",
-        "godot-first-small-game-five-sessions"
+        "godot-first-small-game-five-sessions",
+        "gdevelop-no-code-first-prototype"
       ],
       "ideas": [
-        {
-          "sequence": 5,
-          "titleAr": "Godot للمبتدئين خطوة بخطوة",
-          "status": "planned"
-        },
         {
           "sequence": 6,
           "titleAr": "متى تختار Unreal Engine",

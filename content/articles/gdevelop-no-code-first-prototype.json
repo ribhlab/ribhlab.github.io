@@ -1,0 +1,178 @@
+{
+  "slug": "gdevelop-no-code-first-prototype",
+  "category": "ai",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "featured": false,
+  "related": [
+    "godot-first-small-game-five-sessions",
+    "make-mobile-games-unity-godot-unreal-gdevelop"
+  ],
+  "sources": [
+    {
+      "label": "GDevelop official documentation — Platformer Tutorial, Part 1 and collectible-coins series (checked 29 October 2026)",
+      "url": "https://wiki.gdevelop.io/gdevelop5/tutorials/platformer/"
+    },
+    {
+      "label": "GDevelop official documentation — Publishing games to the web and other platforms (checked 29 October 2026)",
+      "url": "https://wiki.gdevelop.io/gdevelop5/publishing/"
+    },
+    {
+      "label": "MDN Web Docs — Keyboard accessible, independent web-accessibility guidance (checked 29 October 2026)",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard"
+    },
+    {
+      "label": "itch.io official creator documentation — Uploading HTML5 games, ZIP and index.html requirements (checked 29 October 2026)",
+      "url": "https://itch.io/docs/creators/html5"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "بناء لعبة بسيطة بلا برمجة باستخدام GDevelop: من جمع العناصر إلى اختبار الجودة",
+      "excerpt": "خطة عملية لإنشاء نموذج ثنائي الأبعاد قابل للعب باستخدام الأحداث والتصادم والنقاط، مع اختبار لوحة المفاتيح والهاتف وحقوق الأصول قبل النشر.",
+      "lead": "ليس المطلوب من أول مشروع ألعاب أن ينافس إنتاج الاستوديوهات الكبرى. يكفي نموذج صغير يستطيع فيه اللاعب التحرك وجمع خمسة عناصر ثم رؤية رسالة إتمام واضحة. يتيح GDevelop بناء هذا النوع من التفاعل باستخدام الكائنات والسلوكيات والأحداث المرئية، كما تشرح وثائقه الرسمية في سلسلة الألعاب ثنائية الأبعاد. لكن وصف الأداة بأنها «بلا برمجة» لا يعني أن تصميم المنطق واختبار الأخطاء يتمان تلقائياً. هذا الدليل يقترح تجربة قابلة للتنفيذ والتقييم، ولا يدعي أننا أنشأنا اللعبة أو اختبرناها فعلياً.",
+      "sections": [
+        {
+          "heading": "1. حدد لعبة صغيرة لها بداية ونهاية",
+          "paragraphs": [
+            "ابدأ بورقة واحدة تحدد هدف اللاعب: التحرك داخل مساحة ثنائية الأبعاد، وجمع خمسة عناصر مرئية، والحصول على رسالة نجاح عند اكتمال العدد. اختر شاشة واحدة وخلفية بسيطة وشخصية واحدة، ولا تضف أعداء أو متجر أدوات أو نظام حسابات في النسخة الأولى. معيار القبول ليس جمال الرسومات وحده، بل أن يفهم شخص لم يشاهد المشروع سابقاً كيف يتحرك وكيف يعرف عدد العناصر التي جمعها ومتى تنتهي الجولة. اجعل النصوص قصيرة وواضحة وتجنب الاعتماد على اللون وحده لشرح الحالة.",
+            "يمكن تقسيم العمل إلى أربع جلسات تدريبية تقديرية مدة كل منها 45 دقيقة: إعداد المشهد والكائنات، ثم الحركة والتصادم، ثم عداد النقاط ورسالة النهاية، ثم الاختبار والتصدير. هذه المدة مثال لتنظيم الجهد وليست نتيجة قياس أو وعداً بأن الجميع سينجز في ثلاث ساعات. إذا لم تعمل الحركة بعد الجلسة الثانية، أوقف إضافة الخصائص الجديدة وعالج السبب. تقليل النطاق منذ البداية يترك وقتاً لاكتشاف الأخطاء بدلاً من تراكم أجزاء غير مكتملة."
+          ]
+        },
+        {
+          "heading": "2. أنشئ المشهد والكائنات والسلوكيات",
+          "paragraphs": [
+            "افتح مشروعاً جديداً في GDevelop وأنشئ مشهداً رئيسياً. أضف كائناً للشخصية، وخمسة نسخ من كائن قابل للجمع، ونصاً لعرض النقاط، ونصاً آخر للنجاح يكون مخفياً في البداية. اختر أسماء واضحة مثل Player وCollectible وScoreText وWinText حتى لا تختلط عليك العناصر عند بناء الأحداث. يمكن الاستفادة من سلوك حركة جاهز يناسب نوع اللعبة، مثل الحركة من أعلى إلى أسفل، بدلاً من كتابة تعليمات حركة منخفضة المستوى. تؤكد وثائق GDevelop الفصل بين الكائنات والأحداث والسلوكيات.",
+            "تأكد من أن العناصر الخمسة تقع في مواضع يمكن للشخصية الوصول إليها، وأن حجمها ومساحة التصادم منطقيان. لا تستخدم رسوماً أو موسيقى عثرت عليها في الإنترنت من دون فحص ترخيصها؛ يمكن البدء بأشكال بسيطة أو ملفات أنت أنشأتها. احتفظ بملف المشروع الأصلي ونسخة احتياطية قبل التجارب الكبرى، لأن ملف التصدير المخصص للعب لا يعوض بالضرورة ملف التحرير. سجّل مصدر كل أصل بصري أو صوتي في جدول صغير مع شروط نسبته إلى صاحبه."
+          ]
+        },
+        {
+          "heading": "3. صمّم أحداث التصادم والنقاط دون تكرار",
+          "paragraphs": [
+            "أنشئ متغيراً للنقاط يبدأ من الصفر عند بدء الجولة. في ورقة الأحداث أضف شرطاً يتحقق من تصادم Player مع Collectible، ثم نفذ إجراءين مرتبطين بالعنصر الذي جرى التقاطه: زيادة النقاط بمقدار واحد وحذف نسخة العنصر الملتقطة. بعد ذلك حدّث نص النقاط ليعرض القيمة الحالية. حذف النسخة الملتقطة مهم لأنه يمنع استمرار تفعيل التصادم في الإطارات التالية وإضافة نقاط متكررة من العنصر نفسه. هذه قاعدة تصميم منطقية ينبغي التحقق منها داخل معاينة اللعبة.",
+            "أضف شرطاً منفصلاً عندما تصبح النقاط مساوية لخمسة لعرض رسالة النجاح وإيقاف جمع عناصر جديدة أو تعطيل الحركة بحسب التصميم الذي اخترته. اختبر الحالة غير العادية أيضاً: ماذا يحدث إذا وصل اللاعب إلى عنصرين في اللحظة نفسها؟ وهل يمكن أن تظهر الرسالة أكثر من مرة؟ لا تفترض أن ترتيب الأحداث صحيح لمجرد أن المعاينة اشتغلت مرة واحدة. استخدم أداة معاينة المشهد بعد كل تعديل، وافصل حدث بدء الجولة عن حدث التصادم وعن حدث النهاية لتسهيل تتبع الخطأ."
+          ]
+        },
+        {
+          "heading": "4. اجعل التحكم واضحاً وقابلاً للاستخدام",
+          "paragraphs": [
+            "حدد أزرار الحركة داخل اللعبة واكتبها على الشاشة الأولى، ثم جرّبها بلوحة مفاتيح عادية. إن كان الجمهور سيستخدم الهواتف، فلا يكفي أن يفتح المشروع على شاشة صغيرة: يجب اختبار أدوات اللمس ومقاسات العناصر ومسافات الفصل بينها واتجاه الشاشة. تجنب الأزرار الدقيقة التي يصعب لمسها، وتأكد من بقاء عداد النقاط ورسالة النجاح ظاهرين عند تغيير حجم النافذة. يمكن إعداد نسخة للمتصفح أولاً ثم تقييم ما إذا كانت نسخة الهاتف تحتاج واجهة تحكم مختلفة.",
+            "توضح إرشادات MDN أن العناصر التفاعلية في الويب يجب أن تكون قابلة للتشغيل بلوحة المفاتيح وأن يكون التركيز عليها واضحاً. هذه المبادئ لا تجعل كل لعبة متاحة للجميع تلقائياً، لكنها تساعد في تصميم القوائم وأزرار البدء والإعادة. لا تجعل الإرشادات معتمدة على صوت فقط أو على لون واحد؛ أضف نصاً أو رمزاً مفهوماً. وجرّب اللعبة مع شخص لم يشارك في تصميمها، ثم اطلب منه وصف ما لم يفهمه قبل أن تشرح له طريقة اللعب."
+          ]
+        },
+        {
+          "heading": "5. أنشئ قائمة اختبار قصيرة قابلة للإعادة",
+          "paragraphs": [
+            "ضع اختباراً محدداً لكل سلوك أساسي: تبدأ النقاط بصفر، تتحرك الشخصية في الاتجاهات المطلوبة، يزيد العداد مرة واحدة عند جمع عنصر، يختفي العنصر الملتقط، تبقى العناصر الأخرى، تظهر رسالة النهاية عند خمسة، ويمكن بدء جولة جديدة من دون الاحتفاظ بنقاط الجولة السابقة. اختبر أيضاً حافة الشاشة، وإعادة التحميل، وحجم نافذة صغيراً، وتعطل الصوت أو غيابه. سجّل لكل حالة النتيجة المتوقعة والنتيجة الفعلية وحالة «نجح» أو «فشل» وتاريخ الاختبار، ولا تضع علامة النجاح قبل التجربة.",
+            "تستطيع اختيار معيار إطلاق بسيط: لا تُنشر النسخة التجريبية حتى تنجح كل الحالات الأساسية على متصفح حاسوب واحد، وتُجرّب حالات اللمس على هاتف فعلي إذا كان الهاتف ضمن الجمهور المستهدف. لا تستنتج من نجاح جهاز واحد أن جميع الأجهزة متوافقة. إذا كشف الاختبار أن اللاعب يستطيع تجاوز عنصر من دون جمعه بسبب قناع تصادم غير مناسب، أصلح القناع وأعد الاختبار نفسه. الهدف من سجل الاختبار هو أن تكون قرارات النشر قابلة للمراجعة، لا أن يبدو المشروع خالياً من الأخطاء على الورق."
+          ]
+        },
+        {
+          "heading": "6. صدّر النموذج وراجع الحقوق والمخاطر",
+          "paragraphs": [
+            "تشرح وثائق GDevelop إمكان تصدير الألعاب للويب وغيرها، كما توضح وثائق itch.io أن لعبة HTML5 متعددة الملفات تُرفع عادة في ملف ZIP يحتوي index.html والموارد اللازمة. قبل مشاركة رابط عام، جرّب نسخة التصدير نفسها لا معاينة المحرر فقط، وافحص تحميل الصور والصوت وروابط الملفات وحساسية الأحرف في أسمائها. إذا استخدمت خدمة نشر خارجية، راجع شروط الحساب والخصوصية وحقوق المواد المرفوعة؛ فإمكان التصدير لا يعني أن كل متجر يقبل المشروع تلقائياً أو أن النشر بلا قيود.",
+            "أرفق مع النسخة التجريبية وصفاً صادقاً: لعبة تعليمية صغيرة، أدوات التحكم، الأجهزة التي جرى اختبارها فعلياً، والمشكلات المعروفة. لا تنسب إلى نفسك رسوماً أو موسيقى لم تنتجها، ولا تستخدم شعار GDevelop كأنه موافقة رسمية على لعبتك. بعد تجربة عدد محدود من المستخدمين، اختر تحسيناً واحداً قابلاً للقياس، مثل تقليل وقت فهم التعليمات أو تصحيح مشكلة في اللمس، بدلاً من إضافة عشر خصائص دفعة واحدة. هكذا يصبح النموذج بداية تعلم موثقة لا وعداً بلعبة تجارية ناجحة."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Build a no-code GDevelop game prototype: collectibles, scoring and quality checks",
+      "excerpt": "A practical six-stage plan for a small playable 2D game, including events, collision logic, keyboard and touch testing, asset rights and web export.",
+      "lead": "Your first game does not need an open world, multiplayer servers or a shop. A useful prototype can let a player move around one 2D scene, collect five objects and receive an unmistakable completion message. GDevelop provides visual events, objects and ready-made behaviours for this kind of project, as its official platformer tutorial demonstrates. Yet no-code does not mean no logic, no debugging or automatic quality. The workflow below is an editorial design exercise with verifiable acceptance criteria, not a claim that we built and tested the resulting game ourselves.",
+      "sections": [
+        {
+          "heading": "1. Define a finishable loop before choosing graphics",
+          "paragraphs": [
+            "Write a one-page scope: one player, one scene, five collectible objects, a visible score and a completion state. The player should understand the objective without an explanation from the developer. Avoid enemies, an account system, an inventory and online rankings in version one. The primary acceptance test is behavioural: a new player can move, collect all five objects and recognise that the round is finished. Attractive artwork is helpful, but it cannot compensate for an unclear objective or a broken input mechanism. Use text or symbols as well as colour to communicate progress.",
+            "For planning, imagine four practice sessions of 45 minutes each: build the scene, add movement and collision, implement score and completion, then test and export. This is a hypothetical schedule, not a measured productivity claim. If movement is still unreliable after session two, stop adding new features and investigate the cause. A narrow scope leaves enough time to examine failure cases and write down what changed. Keep a short change log so a working version can be recovered after an experiment goes wrong."
+          ]
+        },
+        {
+          "heading": "2. Create the scene, objects and behaviours",
+          "paragraphs": [
+            "Start a new GDevelop project and make a main scene. Add a Player object, five instances of a Collectible object, a ScoreText display and a WinText message initially hidden from view. Meaningful object names matter because the visual event sheet will refer to them repeatedly. Choose a built-in movement behaviour suitable for the intended perspective, such as top-down movement, rather than manually assembling low-level movement rules before understanding the engine. The official GDevelop tutorial separates scenes, objects, behaviours and event logic, which is a useful mental model for beginners.",
+            "Place all five collectibles where the player can reach them, and check that collision shapes correspond reasonably to the visible artwork. Begin with original simple shapes or assets whose licence you have actually read. A free download is not automatically permission to redistribute every sound or character. Maintain a small asset ledger containing the creator, source, permitted use and attribution requirement. Save the editable project and a backup separately from any exported game files. A web build intended for players is not necessarily a safe replacement for the editable project source."
+          ]
+        },
+        {
+          "heading": "3. Make collision events count exactly once",
+          "paragraphs": [
+            "Create a score variable initialised to zero at the start of a round. Add an event whose condition checks whether Player collides with Collectible. When that condition is met, increment the score by one and delete the specific collected instance. Then update ScoreText to display the current score. Deleting the instance is important: otherwise a collision may remain true over several frames and inflate the counter. The precise event configuration should be checked in GDevelop's preview rather than assumed from a written tutorial. Keep the initialisation, collection and completion events separate for easier debugging.",
+            "A second event can show WinText when the score reaches five, and optionally stop further movement or input according to the intended design. Consider edge cases before adding polish: can two objects be touched during the same frame, and could the completion message be triggered repeatedly? Does restarting a round reset the score and restore the five objects? Test one change at a time. A prototype is only reproducible when someone else can describe the condition that triggers each visible result, not merely say that the game appeared to work once."
+          ]
+        },
+        {
+          "heading": "4. Design controls for actual players and devices",
+          "paragraphs": [
+            "State the keyboard controls on the opening screen and try them with a physical keyboard. If mobile play is in scope, loading the scene on a narrow display is not sufficient: test touch controls, hit targets, screen orientation and the location of the score. Tiny buttons can be hard to operate, while a score label hidden behind a virtual control makes feedback confusing. It may be sensible to complete a browser prototype first and then decide whether a phone version needs a different control scheme. Do not describe mobile support as verified until it has been tested on a device.",
+            "MDN's independent accessibility guidance explains why interactive web controls should be operable from a keyboard and why visible focus matters. Those recommendations are especially relevant to the game's menus, start and restart buttons, and surrounding page. They do not guarantee that the entire game is accessible to everyone. Avoid instructions conveyed by sound alone or by one colour. Ask a tester unfamiliar with the project to explain what each control does, then record the confusion before offering assistance. That feedback is more useful than the developer repeatedly playing a familiar level."
+          ]
+        },
+        {
+          "heading": "5. Test with a reproducible checklist, not intuition",
+          "paragraphs": [
+            "Write a test case for each critical rule: score starts at zero; movement responds in every intended direction; a collected object disappears; each object increases the score exactly once; untouched objects remain; the completion message appears at five; and restart clears the previous round. Add edge cases for the scene boundary, browser refresh, small windows and missing audio. For each case record expected behaviour, observed behaviour, date and pass or fail. An unchecked box is not a failure, and an untested case should never be marked as passed merely to finish the checklist.",
+            "A modest release gate might require every critical case to pass in one desktop browser and, if mobile is promised, a real phone touch test. This is a proposed quality rule, not a certification standard. A single successful browser run does not prove universal compatibility. If a collision mask lets the player overlap an object without collecting it, adjust the mask and rerun the same test. If the exported build behaves differently from the editor preview, log that discrepancy as a separate defect. The point is to make failures observable and fixes repeatable."
+          ]
+        },
+        {
+          "heading": "6. Export responsibly and improve one thing at a time",
+          "paragraphs": [
+            "GDevelop's publishing documentation describes web and other exports. The independent itch.io creator guide explains that a multi-file HTML5 game can be uploaded as a ZIP archive containing index.html and the necessary assets, with file-name case and relative paths handled correctly. Test the actual exported package before sharing a public link; the editor preview alone does not validate deployment. Check missing images, sound loading, navigation and input after the export. Review the hosting service's account, privacy and intellectual-property terms rather than assuming that every destination has identical rules or accepts every build.",
+            "Publish a candid description of what the prototype does, which devices were actually tested and what limitations remain. Attribute third-party assets according to their licences and never imply that GDevelop endorses the game. Collect a small amount of specific feedback, such as whether the completion state was clear or touch buttons were large enough, without inventing download numbers or user reviews. Choose one improvement for the next version and retest the original checklist. A small, documented prototype can teach more about game development than a large unfinished project presented as a commercial success."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Créer un petit jeu sans code avec GDevelop : objets, collisions et contrôle qualité",
+      "excerpt": "Un parcours pratique pour construire un prototype 2D jouable, vérifier les événements, le score, les commandes, les droits des ressources et l'export web.",
+      "lead": "Un premier jeu n'a pas besoin de monde ouvert, de serveurs multijoueurs ni de boutique virtuelle. Un prototype utile peut se limiter à une scène 2D dans laquelle un personnage se déplace, récupère cinq objets et reçoit un message de réussite. GDevelop permet de construire ce mécanisme avec des objets, des comportements et des événements visuels, comme l'explique son tutoriel officiel. Mais « sans code » ne signifie ni absence de logique ni absence de débogage. Ce guide propose un exercice éditorial vérifiable ; il ne prétend pas que nous avons réellement développé ou testé le jeu décrit.",
+      "sections": [
+        {
+          "heading": "1. Fixer une boucle de jeu qui possède une vraie fin",
+          "paragraphs": [
+            "Rédigez une fiche de périmètre d'une page : un personnage, une scène, cinq objets à ramasser, un compteur visible et un état de réussite. Une personne découvrant le jeu doit pouvoir comprendre son objectif sans l'aide du créateur. Écartez, pour cette première version, les ennemis, les comptes utilisateurs, l'inventaire et les classements en ligne. Le critère d'acceptation principal est observable : le joueur peut se déplacer, récupérer les cinq objets et reconnaître la fin de la partie. Les graphismes agréables ne compensent pas des commandes incompréhensibles ou une progression impossible à suivre.",
+            "Pour organiser l'effort, on peut imaginer quatre séances de 45 minutes : création de la scène, déplacements et collisions, compteur et victoire, puis tests et export. Cette durée est une hypothèse pédagogique, pas un temps de réalisation mesuré. Si les déplacements fonctionnent mal après la deuxième séance, mieux vaut corriger le problème avant d'ajouter des fonctions. Un périmètre limité laisse du temps pour observer les défauts. Conservez un journal de modifications et une version qui fonctionne afin de pouvoir revenir en arrière après une expérience infructueuse."
+          ]
+        },
+        {
+          "heading": "2. Construire la scène et nommer clairement les objets",
+          "paragraphs": [
+            "Dans un nouveau projet GDevelop, créez une scène principale. Ajoutez un objet Player, cinq instances de Collectible, un texte ScoreText pour le compteur et un texte WinText qui restera masqué au début. Des noms explicites évitent les confusions lorsque la feuille d'événements contient plusieurs conditions. Choisissez un comportement de déplacement intégré adapté à la perspective du jeu, par exemple un déplacement vu du dessus, au lieu de reconstituer immédiatement toutes les règles de mouvement. La documentation de GDevelop distingue scènes, objets, comportements et événements : cette séparation facilite la recherche des erreurs.",
+            "Placez les objets à des endroits accessibles et vérifiez que leurs zones de collision correspondent raisonnablement aux images affichées. Commencez par des formes simples originales ou par des ressources dont vous avez vérifié la licence. Un fichier gratuit à télécharger ne peut pas être réutilisé sans examiner ses conditions, notamment pour la musique et les personnages. Tenez un petit registre indiquant auteur, source, droits et attribution éventuelle. Sauvegardez le projet éditable et une copie de secours indépendamment des fichiers exportés pour les joueurs."
+          ]
+        },
+        {
+          "heading": "3. Programmer visuellement une collision sans double comptage",
+          "paragraphs": [
+            "Créez une variable de score initialisée à zéro au début de chaque partie. Dans la feuille d'événements, ajoutez une condition de collision entre Player et Collectible. Lorsque cette condition est satisfaite, augmentez le score d'une unité, supprimez l'instance de l'objet récupéré et actualisez ScoreText. La suppression de l'instance est essentielle : sans elle, la collision peut rester vraie pendant plusieurs images et augmenter le compteur plusieurs fois. Vérifiez le comportement dans l'aperçu de GDevelop plutôt que de considérer les instructions écrites comme une preuve de fonctionnement.",
+            "Un autre événement affiche WinText lorsque le score atteint cinq et peut, selon le choix de conception, désactiver certains contrôles. Testez les cas particuliers : que se passe-t-il lorsque le personnage touche deux objets presque simultanément ? Le message final peut-il s'afficher plusieurs fois ? Une nouvelle partie remet-elle le score à zéro et recrée-t-elle les objets ? Séparez les événements d'initialisation, de collecte et de fin afin de localiser plus facilement un défaut. Un résultat obtenu une seule fois ne démontre pas encore que la logique est fiable."
+          ]
+        },
+        {
+          "heading": "4. Adapter les commandes aux joueurs et aux écrans",
+          "paragraphs": [
+            "Affichez les touches de déplacement sur l'écran de départ et vérifiez-les avec un véritable clavier. Si le jeu doit fonctionner sur téléphone, une scène qui s'ouvre sur petit écran ne suffit pas : il faut essayer les commandes tactiles, la taille des zones activables, l'orientation et la position du score. Des boutons trop petits rendent le jeu pénible ; un compteur caché derrière une commande supprime un retour d'information important. Il est raisonnable de finaliser d'abord la version navigateur, puis de déterminer si une interface tactile distincte est nécessaire.",
+            "Les recommandations indépendantes de MDN soulignent que les commandes interactives du web doivent être accessibles au clavier et que l'indication de focus doit rester visible. Ces principes concernent notamment les menus, les boutons de démarrage et de redémarrage et la page qui héberge le jeu. Ils ne garantissent pas à eux seuls l'accessibilité intégrale d'un jeu. Évitez les instructions uniquement sonores ou fondées sur une seule couleur. Demandez à une personne n'ayant pas participé au projet de décrire les commandes avant de lui expliquer quoi que ce soit."
+          ]
+        },
+        {
+          "heading": "5. Transformer les impressions en scénarios de test",
+          "paragraphs": [
+            "Préparez une liste de vérifications concrètes : score initial à zéro, déplacement dans les directions prévues, disparition de l'objet ramassé, ajout d'un seul point par objet, maintien des objets non touchés, apparition du message de victoire au cinquième objet et remise à zéro lors d'un redémarrage. Ajoutez des cas portant sur les bords de l'écran, le rechargement du navigateur, une petite fenêtre et l'absence de son. Pour chaque essai, inscrivez le résultat attendu, le résultat observé, la date et l'état réussi ou échoué. Un test non effectué ne doit pas être déclaré réussi.",
+            "Un seuil de publication raisonnable pourrait exiger la réussite de tous les scénarios critiques dans un navigateur de bureau et, si le téléphone est annoncé, un essai tactile sur un appareil réel. Il s'agit d'une règle proposée pour ce projet, pas d'une certification. Une réussite sur un seul ordinateur ne prouve pas la compatibilité générale. Si une zone de collision laisse traverser un objet sans le collecter, corrigez-la et répétez le même test. Si le fichier exporté diffère de l'aperçu de l'éditeur, notez cet écart comme un défaut indépendant."
+          ]
+        },
+        {
+          "heading": "6. Exporter, respecter les droits et préparer la suite",
+          "paragraphs": [
+            "La documentation de GDevelop explique les possibilités d'export vers le web et d'autres plateformes. Le guide officiel d'itch.io précise qu'un jeu HTML5 constitué de plusieurs fichiers peut être transmis sous forme d'archive ZIP contenant index.html et les ressources nécessaires, en respectant les chemins relatifs et la casse des noms. Testez le paquet exporté lui-même avant de communiquer un lien public : l'aperçu dans l'éditeur ne valide pas l'hébergement. Vérifiez le chargement des images, du son, des commandes et des liens. Lisez les règles de confidentialité, de compte et de propriété intellectuelle du service choisi.",
+            "Présentez honnêtement le prototype : objectif, commandes, appareils réellement testés et limites connues. Attribuez les ressources tierces selon leurs licences et n'insinuez pas que GDevelop approuve officiellement votre jeu. Recueillez quelques remarques précises, par exemple sur la lisibilité du score ou la taille des boutons tactiles, sans inventer de statistiques de téléchargement ni de témoignages. Choisissez ensuite une seule amélioration mesurable et rejouez les tests initiaux. Un petit jeu documenté et corrigé constitue un apprentissage plus solide qu'un projet immense et inachevé."
+          ]
+        }
+      ]
+    }
+  }
+}

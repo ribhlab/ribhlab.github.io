@@ -959,6 +959,10 @@
     "coin-versus-token-claim-verification": [
       "ethereum",
       "coingecko"
+    ],
+    "gdevelop-no-code-first-prototype": [
+      "gdevelop",
+      "itchHtml5CreatorDocs"
     ]
   }
 }
