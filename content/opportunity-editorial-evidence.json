@@ -3893,7 +3893,7 @@
     "civil-protection": {
       "reviewedAt": "2026-10-29",
       "verification": "Reviewed all three pages of the Arabic DGPC official decision dated 16 October 2026 and cross-checked the national emploi-public card C44132/26 and the DGPC recruitment portal on 29 October 2026. The recruitment portal's cached homepage also lists older competitions, so the specific 2026 notice governs eligibility and dates. No salary, specific hour of closing, final city or guaranteed recruitment outcome inferred.",
-      "state": "researched",
+      "state": "verified",
       "sources": [
         {
           "label": "Direction générale de la protection civile — décision originale en arabe, trois pages (consultée le 29 octobre 2026)",
@@ -4103,7 +4103,8 @@
             ]
           ]
         }
-      }
+      },
+      "liveVerification": "GitHub Pages deployment run 40886969558 success; public HTTPS AR/EN/FR ten-section official source QA run 40887061800 success 2026-10-29, with matching signed decision references and sources."
     },
     "adha-civil-engineers-2026": {
       "reviewedAt": "2026-10-29",
@@ -4470,7 +4471,7 @@
     "amdie-development": {
       "reviewedAt": "2026-10-29",
       "verification": "Read all four pages of AMDIE signed decision 507/2026 and appended 2023 job sheet on 29 October 2026; cross-checked official employment portal C44252/26 and AMDIE official investment/mission descriptions. Written original trilingual analysis, 10 sections per language and >700 whitespace-separated words each. Not yet live-verified. No invented salary, city of posting, examination date or minimum experience.",
-      "state": "researched-awaiting-live-verification",
+      "state": "verified",
       "sources": [
         {
           "label": "AMDIE — décision signée 507/2026 du 23 octobre et fiche de poste, quatre pages",
@@ -4663,7 +4664,8 @@
             ]
           ]
         }
-      }
+      },
+      "liveVerification": "GitHub Pages deployment run 40886969558 success; public HTTPS AR/EN/FR ten-section official source QA run 40887061800 success 2026-10-29, with matching signed decision references and sources."
     }
   }
 }
