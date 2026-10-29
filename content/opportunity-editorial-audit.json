@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-29",
-  "scope": "All opportunity cards in this repository (jobs, employers, contests, immigration pathways and visa appointment services).",
+  "scope": "All 96 opportunity cards in this repository (jobs, employers, contests, immigration pathways and visa appointment services).",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
@@ -9,7 +9,7 @@
     "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
-    "cards": 95,
+    "cards": 96,
     "visa": 12,
     "researched": 37,
     "marketEvidence": 5,
@@ -25,6 +25,16 @@
     "Keep internal cards within RibhLab and external primary sources in new tabs"
   ],
   "cards": [
+    {
+      "id": "cri-fes-meknes-prospection-2026",
+      "section": "competitions",
+      "title": "Cadre chargé du développement, prospection et fidélisation — CRI Fès-Meknès",
+      "deadline": "2026-11-16",
+      "status": "researched-awaiting-live-verification",
+      "marketKey": null,
+      "priority": "signed-pdf-reviewed-2026-10-29; awaiting Pages QA",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/5bf559b6-b482-4770-bcaf-f7dc6e056106"
+    },
     {
       "id": "sett-administrator",
       "section": "competitions",
