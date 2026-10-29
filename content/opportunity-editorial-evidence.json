@@ -4297,6 +4297,175 @@
           ]
         }
       }
+    },
+    "srm-souss-technician": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Read all three scanned pages of the signed ORMVASM original recruitment decision via emploi-public.ma on 29 October 2026 and cross-checked the government listing C44292/26. Page 2 explicitly states Taroudant assignment, accepted water specialties, age and exams; page 3 requires BOTH Microsoft Forms submission by 16:30 and a physical mailed/hand-delivered dossier by 9 November 2026. The Forms destination itself could not be independently loaded; refer applicants to the original signed PDF. No salary, fee, extra posts or invented experience requirement.",
+      "state": "researched",
+      "sources": [
+        {
+          "label": "Office régional de mise en valeur agricole de Souss Massa — original signed 3-page competition decision, scanned on emploi-public.ma (checked 29 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/64194e96-bc55-4817-8ddd-c9b0e5d0d6d1"
+        },
+        {
+          "label": "Portail de l'emploi public — C44292/26, Technicien 3e grade, one post, published 26 October 2026 (checked 29 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/64194e96-bc55-4817-8ddd-c9b0e5d0d6d1"
+        }
+      ],
+      "facts": {
+        "employer": "Office régional de mise en valeur agricole de Souss Massa (ORMVASM)",
+        "country": "Maroc",
+        "individualPostingCity": "Taroudant (antenne)",
+        "submissionOffice": "ORMVASM, Rue des Administrations publiques, B.P. 21, Agadir",
+        "reference": "C44292/26",
+        "posts": 1,
+        "grade": "Technicien de 3ème grade — échelle 9",
+        "recruitment": "Recrutement régulier",
+        "noticePublishedAt": "2026-10-26",
+        "deadline": "2026-11-09",
+        "deadlineHour": "16:30 (online form)",
+        "examDate": "2026-11-22",
+        "nationality": "Marocaine",
+        "age": "18 à 40 ans à la date du concours",
+        "degree": "Diplôme de technicien spécialisé",
+        "specializations": [
+          "Gestion et maîtrise de l'eau",
+          "Hydraulique rurale et irrigation",
+          "Environnement et techniques de l'eau"
+        ],
+        "requiredExperienceYears": null,
+        "application": "Online Microsoft Forms referenced in original signed decision AND paper dossier hand-delivered or mailed to ORMVASM Agadir before deadline",
+        "documents": [
+          "Demande de participation",
+          "Copie du formulaire de candidature en ligne",
+          "Copie de la CNIE",
+          "Copie du diplôme ou de l'équivalence",
+          "CV avec photo, téléphone, adresse et e-mail",
+          "Attestation précisant la spécialité si elle n'est pas mentionnée sur le diplôme",
+          "Autorisation RH définitive pour fonctionnaires, le cas échéant",
+          "Justificatifs de statut réservé, le cas échéant"
+        ],
+        "stages": "Écrit général 2h coefficient 2; écrit de spécialité 3h coefficient 3; oral >=15 minutes coefficient 4. Note écrite <5/20 éliminatoire; moyenne écrite >=10/20 pour accéder à l'oral.",
+        "salary": null,
+        "applicationFee": null,
+        "sourceReviewedAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة تقني في تخصصات الماء بسوس ماسة: منصب تارودانت وشروط الترشيح المزدوج قبل 9 نوفمبر 2026",
+          "deck": "قراءة دقيقة لقرار المكتب الجهوي: دبلوم التقني المتخصص، سن 18 إلى 40 سنة، استمارة إلكترونية وملف ورقي، ومعاملات الامتحانات دون اختلاق راتب.",
+          "sections": [
+            [
+              "المنصب ومقر التعيين: قراءة القرار لا عنوان الإعلان",
+              "أعلن المكتب الجهوي للاستثمار الفلاحي لسوس ماسة عن مباراة لتوظيف تقني واحد من الدرجة الثالثة، السلم التاسع، في تخصص يرتبط بالماء والهيدروليك القروي والري. يحدد القرار المنشور على البوابة الحكومية مقر التعيين في فرع تارودانت، بينما يظهر عنوان المكتب في أكادير باعتباره عنوان إيداع الملف وليس بالضرورة مقر العمل. هذه نقطة مهمة للمرشحين الذين يقدرون مصاريف الانتقال والسكن: لا يجوز استنتاج أن المنصب في أكادير من عنوان المراسلة. تشير بطاقة البوابة إلى الرمز C44292/26 وإلى نشر الإعلان يوم 26 أكتوبر 2026. العدد المعلن منصب واحد فقط، وليس برنامج توظيف مفتوحاً لعدد غير محدد."
+            ],
+            [
+              "التخصص المطلوب وما تعنيه صياغته للمرشح",
+              "وردت في جدول القرار ثلاثة مسارات مترابطة: تدبير وإتقان الموارد المائية، أو الهيدروليك القروي والري، أو البيئة وتقنيات الماء. لا يكفي امتلاك دبلوم تقني في تخصص بعيد مع خبرة عامة في الإدارة؛ يجب مطابقة عنوان الدبلوم ومحتواه للتخصصات الواردة أو إثبات المعادلة القانونية المعترف بها. إذا اختلفت تسمية شهادتك، راجع مواد التكوين وساعاتها والقرار الخاص بالمعادلة قبل إرسال الطلب. لا يحدد الإعلان سنوات خبرة مهنية إلزامية، ولذلك لا ينبغي اختلاق شرط خبرة أو افتراض أن الخبرة تعوض الشهادة. وقد يختبر الامتحان الكتابي المعرفة التقنية المرتبطة بالماء والري أكثر من مهارات المكتب العامة."
+            ],
+            [
+              "الجنسية والسن وشروط الولوج",
+              "يشترط القرار أن يكون المترشح من الجنسية المغربية وأن يتراوح عمره بين 18 و40 سنة على الأكثر بتاريخ إجراء المباراة، أي 22 نوفمبر 2026، مع الحصول على دبلوم التقني المتخصص في المجالات المطلوبة من مؤسسة معترف بها أو شهادة معادلة طبقاً للنصوص السارية. يجب الانتباه إلى أن السن يقاس بتاريخ المباراة وليس بتاريخ رفع الاستمارة. يتضمن القرار أيضاً مقتضيات تخصيص نسبة 25% لفئات من قدماء المقاومين ومكفولي الأمة والعسكريين أو المحاربين القدامى، و7% للأشخاص في وضعية إعاقة الحاملين للبطاقة المعنية. هذه نسب قانونية ضمن شروط الإعلان وليست وظائف إضافية فوق المنصب المعلن."
+            ],
+            [
+              "وثائق الملف وكيفية التحقق من اكتماله",
+              "تتضمن لائحة الوثائق طلب المشاركة، ونسخة من استمارة الترشيح الإلكترونية، ونسخة من البطاقة الوطنية للتعريف، ونسخة من الدبلوم أو شهادة المعادلة، وسيرة ذاتية حديثة تحمل الصورة ورقم الهاتف والعنوان والبريد الإلكتروني. بالنسبة إلى الشهادات التي لا يظهر في عنوانها التخصص المطلوب، يشترط القرار إرفاق شهادة من المؤسسة المانحة تبين التخصص. ويطلب من الموظف المرشح ترخيصاً نهائياً من مصالح الموارد البشرية المختصة، بينما تقدم الفئات المستفيدة من حصص خاصة مستندات إثبات الصفة. اصنع قائمة تحقق قبل الطباعة: الاسم المطابق للبطاقة، رقم الهاتف الصحيح، وضوح نسخ الوثائق، والتوقيعات المطلوبة، مع الاحتفاظ بنسخة كاملة من الملف."
+            ],
+            [
+              "مساران يجب استكمالهما قبل 9 نوفمبر",
+              "ينص القرار على تعبئة استمارة الترشيح عبر رابط Microsoft Forms المدرج داخل ملف القرار الأصلي، وذلك في أجل أقصاه 9 نوفمبر 2026 عند الساعة الرابعة والنصف مساءً. وينص كذلك على وضع ملف ورقي داخل ظرف كبير يحمل عبارة «توظيف تقني من الدرجة الثالثة»، إما مباشرة بمكتب الضبط المركزي للمكتب الجهوي في أكادير أو بإرساله عبر البريد إلى مدير المكتب الجهوي للاستثمار الفلاحي لسوس ماسة، صندوق البريد 21، أكادير. آخر أجل لقبول الترشيحات الورقية هو 9 نوفمبر أيضاً. لذلك لا تتعامل مع ملء الاستمارة وحده باعتباره كافياً؛ احتفظ بإثبات الإرسال أو الإيداع وراجع تفاصيل العنوان في القرار قبل التحرك."
+            ],
+            [
+              "الاختبارات: الزمن والمعامل والعتبة",
+              "تحدد المادة الثالثة اختباراً كتابياً عاماً مدته ساعتان بمعامل 2، واختباراً كتابياً في مواد التخصص مدته ثلاث ساعات بمعامل 3، ثم اختباراً شفوياً مدته 15 دقيقة على الأقل بمعامل 4. تمنح النقاط من صفر إلى عشرين، وتعد النقطة الأقل من 5 على 20 إقصائية في الاختبارات الكتابية، ولا يستدعى إلى الشفوي إلا من حصل على معدل لا يقل عن 10 على 20 في الكتابي. للاستعداد العملي، خصص وقتاً لحل مسائل مائية وتقنية تحت توقيت محدد، وتدرب على شرح قرار مهني أو حالة ميدانية في دقائق قليلة. لا يورد القرار قائمة أسئلة فعلية ولا يضمن أن مادة بعينها ستظهر في الامتحان."
+            ],
+            [
+              "التواريخ ومصادر الاستدعاء والمعلومات غير المنشورة",
+              "تظهر البوابة الحكومية تاريخ إجراء المباراة في 22 نوفمبر 2026، وآخر أجل 9 نوفمبر 2026 عند 16:30، وهو ما يتوافق مع الساعة المذكورة في القرار الورقي. ينص القرار على أن لوائح المرشحين المقبولين والاستدعاءات ومكان الاختبارات تنشر في بوابة التشغيل العمومي وتعد بمثابة استدعاء. لذلك ينبغي متابعة صفحة الإعلان الرسمية حتى بعد إرسال الملف وعدم انتظار رسالة شخصية غير منصوص عليها. لا يتضمن القرار راتباً فردياً محدداً، ولا رسوماً للمشاركة، ولا وعداً بالتعيين بمجرد اجتياز الكتابي؛ لا يجوز عرض أي مبلغ على أنه راتب مؤكد لهذا المنصب."
+            ],
+            [
+              "قرار ترشح عملي ومخاطر ينبغي تجنبها",
+              "إذا كانت شهادتك في أحد تخصصات الماء المحددة وكنت مستوفياً للسن والجنسية، ابدأ بتجميع الوثائق ومراجعة استمارة الترشيح الأصلية، ثم رتب تسليم الملف الورقي قبل الموعد بوقت كافٍ لتفادي تأخر البريد. أما إذا كان الدبلوم بعيداً عن هذه التخصصات، فاستفسر من المكتب المنظم عن المعادلة بدلاً من بناء الترشيح على التخمين. لا تدفع رسوماً لوسيط يعدك بقبول الملف، ولا تضع بياناتك في رابط وصل عبر رسالة غير موثوقة؛ ارجع إلى قرار المباراة في emploi-public.ma. هذا الدليل تحليل تحريري للقرار المنشور بتاريخ مراجعة 29 أكتوبر 2026، ولا يحل محل النص الرسمي أو أي تعديل لاحق."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Souss Massa water technician competition: one Taroudant post, eligibility and dual application by 9 November 2026",
+          "deck": "An original reading of the signed three-page decision: technical diplomas, age limits, online plus paper filing, exam weights and verifiable dates.",
+          "sections": [
+            [
+              "The position and work location: read the decision, not just the headline",
+              "The Regional Office for Agricultural Development of Souss Massa announced a competitive examination for one third-grade technician, salary scale 9, in a water-related specialty. The signed decision assigns the position to the Taroudant branch, while the office's address in Agadir is used for submitting application files; the two locations must not be confused. This matters when estimating travel and housing costs. The government listing identifies competition C44292/26 and states that the notice was published on 26 October 2026. The published headcount is one position, not an open-ended recruitment drive or a promise of multiple vacancies in Agadir."
+            ],
+            [
+              "Which diplomas fit the advertised specializations?",
+              "The decision lists water-resources management and control, rural hydraulics and irrigation, or environment and water techniques. A technical diploma in an unrelated field does not automatically qualify because the candidate has general administrative experience. Compare the title and actual training content of your qualification with the stated specialties, and obtain the legally recognized equivalence decision where relevant. The notice does not prescribe a mandatory number of years of professional experience, so such a requirement should not be invented. The specialty written examination is likely to concern technical knowledge of water and irrigation, but the decision does not publish the exact questions."
+            ],
+            [
+              "Nationality, age and reserved-category provisions",
+              "Candidates must be Moroccan nationals aged at least 18 and at most 40 on the examination date, 22 November 2026. They must hold a specialized technician diploma in an advertised specialty from an eligible training institution, or a qualification recognized as equivalent under the applicable rules. Age should therefore be calculated on the examination date, not on the date the online form is submitted. The decision also refers to a 25% reserved allocation for specified veteran and national-service beneficiary categories and 7% for eligible persons with disabilities holding the relevant card. These are legal allocation provisions, not additional posts beyond the single vacancy."
+            ],
+            [
+              "Documents: build a complete application checklist",
+              "The file must include an application request, a copy of the completed online application form, a national identity-card copy, a diploma or equivalence copy, and an updated CV showing a photograph, telephone number, postal address and email. When the diploma title does not explicitly state the requested specialty, the decision calls for a certificate from the issuing institution clarifying that specialty. Public employees must provide the required final authorization from their human-resources department. Candidates claiming a reserved status must supply the relevant evidence. Before sending, check consistent names, legible scans, correct contact details, necessary signatures and a retained copy of the entire file."
+            ],
+            [
+              "Two application steps, both due by 9 November",
+              "The official decision requires candidates to complete the Microsoft Forms application linked in the original PDF no later than 9 November 2026 at 4:30 p.m. It also requires a paper file in a large envelope marked for recruitment of a third-grade technician. The envelope may be delivered directly to the central registry of the Regional Office in Agadir or sent by post to its director at P.O. Box 21, Agadir. The final date for paper applications is also 9 November. Filling the online form alone should not be treated as completing both steps. Preserve submission and delivery evidence and confirm the postal details against the original signed document."
+            ],
+            [
+              "How the examinations are structured and scored",
+              "Article three specifies a two-hour general written test with coefficient 2, a three-hour specialty written test with coefficient 3, and an oral examination lasting at least fifteen minutes with coefficient 4. Scores range from zero to twenty. A written score below 5/20 is eliminatory, and candidates must obtain a written average of at least 10/20 to qualify for the oral stage. A useful preparation method is to practise water-management problems under time limits and explain a field decision in a short spoken answer. These are preparation suggestions, not leaked questions or a guarantee about the precise examination content."
+            ],
+            [
+              "Dates, invitations and what the notice does not disclose",
+              "The official recruitment portal lists 22 November 2026 as the competition date and 9 November 2026 at 16:30 as the application deadline, consistent with the time in the decision. The decision states that lists of admitted candidates, test schedules and locations are published on the government employment portal and serve as invitations. Monitor the official listing after applying rather than assuming a private email must arrive. No individualized salary, application fee or guaranteed appointment is published in the reviewed notice. The general public-sector grade is not evidence of an exact take-home amount for this specific position."
+            ],
+            [
+              "A practical go/no-go decision and avoidable risks",
+              "If your diploma matches one of the specified water specialties and you satisfy the nationality and age conditions, prepare the documents, check the original online form and arrange paper delivery well before the deadline. If the diploma name is materially different, ask the organizing office about equivalence rather than guessing. Do not pay intermediaries promising acceptance, and do not enter identity information into an unsolicited link. Start from the decision attached to the official emploi-public.ma listing. This is an independently written interpretation of sources reviewed on 29 October 2026, not a substitute for the signed decision or any subsequent correction."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours de technicien de l'eau à Souss Massa : un poste à Taroudant et double dépôt avant le 9 novembre 2026",
+          "deck": "Analyse de l'arrêté signé : spécialités, âge, dossier en ligne et sur papier, épreuves et calendrier, sans rémunération inventée.",
+          "sections": [
+            [
+              "Le poste et le lieu d'affectation : lire l'arrêté plutôt que le titre",
+              "L'Office régional de mise en valeur agricole de Souss Massa annonce un concours pour un seul technicien de troisième grade, échelle 9, dans une spécialité liée à l'eau. L'arrêté signé affecte le poste à l'antenne de Taroudant, tandis que l'adresse du siège à Agadir sert au dépôt des dossiers. Il ne faut pas confondre lieu de candidature et lieu de travail, notamment pour évaluer les frais de déplacement et de logement. La fiche du portail gouvernemental porte la référence C44292/26 et indique une publication le 26 octobre 2026. Il s'agit d'un poste unique, non d'une campagne de recrutement sans nombre déterminé."
+            ],
+            [
+              "Les diplômes et spécialités réellement acceptés",
+              "Le tableau de l'arrêté mentionne la gestion et la maîtrise de l'eau, l'hydraulique rurale et l'irrigation, ou l'environnement et les techniques de l'eau. Un diplôme technique dans une autre branche ne devient pas automatiquement recevable grâce à une expérience administrative générale. Comparez l'intitulé et le contenu de votre formation aux spécialités citées, et vérifiez la décision d'équivalence reconnue si nécessaire. L'avis ne fixe pas un nombre obligatoire d'années d'expérience professionnelle : il serait donc inexact d'en ajouter un. L'épreuve de spécialité portera sur des matières techniques, mais les questions exactes ne sont pas publiées."
+            ],
+            [
+              "Nationalité, âge et dispositions de réservation",
+              "Le concours s'adresse aux personnes de nationalité marocaine âgées de 18 à 40 ans au plus à la date de l'examen, soit le 22 novembre 2026. Il faut détenir un diplôme de technicien spécialisé dans l'une des filières indiquées, délivré dans les conditions réglementaires, ou un diplôme reconnu équivalent. L'âge s'apprécie donc à la date du concours et non à celle du formulaire électronique. L'arrêté rappelle une réserve de 25 % pour certaines catégories d'anciens combattants, résistants et pupilles de la Nation, ainsi que 7 % pour les personnes en situation de handicap remplissant les conditions prévues. Ces pourcentages ne créent pas de postes supplémentaires."
+            ],
+            [
+              "Constituer un dossier vérifiable avant l'envoi",
+              "Le dossier comprend une demande de participation, une copie du formulaire de candidature en ligne, une copie de la carte nationale d'identité, le diplôme ou l'attestation d'équivalence, et un CV récent avec photographie, numéro de téléphone, adresse et courrier électronique. Si le diplôme ne précise pas la spécialité demandée, l'arrêté exige une attestation de l'établissement de formation mentionnant cette spécialité. Les fonctionnaires doivent produire l'autorisation définitive des ressources humaines compétentes. Les personnes invoquant une catégorie réservée joignent les justificatifs correspondants. Contrôlez la lisibilité, la cohérence des noms et les signatures, puis conservez une copie complète."
+            ],
+            [
+              "Deux démarches à achever avant le 9 novembre",
+              "L'arrêté exige de renseigner le formulaire Microsoft Forms dont le lien figure dans le PDF officiel avant le 9 novembre 2026 à 16 h 30. Il prévoit également un dossier papier dans une grande enveloppe portant la mention du recrutement d'un technicien de troisième grade. Ce dossier peut être déposé au bureau d'ordre central de l'Office à Agadir ou envoyé par courrier à son directeur, boîte postale 21, Agadir. La date limite du dépôt papier est aussi le 9 novembre. Il serait risqué de considérer la seule inscription électronique comme une candidature complète. Gardez une preuve de dépôt ou d'envoi et relisez l'adresse dans l'arrêté."
+            ],
+            [
+              "Épreuves, coefficients et seuils éliminatoires",
+              "L'article trois prévoit une épreuve écrite de culture générale de deux heures, coefficient 2, puis une épreuve écrite de spécialité de trois heures, coefficient 3. Un entretien oral d'au moins quinze minutes est affecté du coefficient 4. Chaque épreuve est notée sur vingt. Une note écrite inférieure à 5/20 est éliminatoire, et seuls les candidats obtenant au moins 10/20 de moyenne aux épreuves écrites peuvent accéder à l'oral. Pour préparer ces étapes, entraînez-vous sur des problèmes techniques liés à l'eau et sur l'explication concise d'une situation de terrain. Ce conseil n'est ni une liste de questions officielles ni une garantie de réussite."
+            ],
+            [
+              "Calendrier, convocations et informations absentes",
+              "Le portail public annonce le concours pour le 22 novembre 2026 et une clôture des candidatures le 9 novembre 2026 à 16 h 30, en accord avec l'heure indiquée dans l'arrêté. Le texte précise que les listes de candidats admis, les horaires et les lieux des épreuves sont publiés sur le portail de l'emploi public et valent convocation. Consultez donc régulièrement la fiche officielle après l'envoi. Le document examiné ne donne ni rémunération individuelle chiffrée, ni frais de participation, ni promesse d'embauche après l'écrit. L'échelle statutaire ne suffit pas à calculer un salaire net certain pour ce poste."
+            ],
+            [
+              "Décider de candidater sans tomber dans les pièges",
+              "Si votre diplôme correspond à une filière de l'eau expressément visée et que vous remplissez les conditions d'âge et de nationalité, rassemblez rapidement les pièces, consultez le formulaire original et organisez l'acheminement papier avant l'échéance. Si l'intitulé du diplôme diffère, interrogez l'Office sur sa recevabilité plutôt que de supposer une équivalence. Ne payez pas d'intermédiaire qui promettrait une admission et ne saisissez pas vos données dans un lien reçu sans vérification. Le point de départ sûr reste l'arrêté joint à la fiche emploi-public.ma. Cette analyse éditoriale, vérifiée le 29 octobre 2026, ne remplace pas le document officiel."
+            ]
+          ]
+        }
+      }
     }
   }
 }
