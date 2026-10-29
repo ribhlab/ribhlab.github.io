@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-28",
+  "reviewedAt": "2026-10-29",
   "method": "Derived from linked original official notices, not extrapolated from job titles. Never assume published salaries or eligibility.",
   "articles": {
     "mediouna-service-agent-informatique-2026": {
@@ -2093,6 +2093,186 @@
             [
               "Rémunération, points de vigilance et contrôle final",
               "L'arrêté mentionne l'échelle 5, sans publier de rémunération nette précise ni d'avantages individuels. Une estimation non sourcée ne doit donc pas être présentée comme un salaire garanti. Les principaux pièges sont la confusion entre l'intitulé juridique du grade et les spécialités automobiles, l'absence de permis C ou D, un diplôme non conforme, un dossier incomplet ou une heure limite provenant d'une source secondaire. Avant validation, comparez la décision signée de quatre pages à la fiche du portail et recherchez tout rectificatif officiel. Dernière vérification éditoriale : 28 octobre 2026."
+            ]
+          ]
+        }
+      }
+    },
+    "ena-digital-engineer": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Signed 3-page Arabic ENA decision dated 9 October 2026 and attached one-page French fiche de poste visually reviewed in full on 29 October 2026; official emploi-public entry cross-checked. Portal shows date only, decision explicitly 16:00. No salary or experience duration invented.",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "Arrêté ENA du 9 octobre 2026, 3 pages (source originale)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/66fcbb67-e370-4185-a72b-13bc237ff54d"
+        },
+        {
+          "label": "Fiche de poste ENA, 1 page (source originale)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/66fcbb67-e370-4185-a72b-13bc237ff54d/0"
+        },
+        {
+          "label": "Emploi-public, concours C44092/26, publication 13 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/66fcbb67-e370-4185-a72b-13bc237ff54d"
+        }
+      ],
+      "facts": {
+        "employer": "École Nationale de l'Administration",
+        "reference": "C44092/26",
+        "decisionDate": "2026-10-09",
+        "publishedAt": "2026-10-13",
+        "posts": 1,
+        "city": "Rabat",
+        "country": "Maroc",
+        "grade": "Ingénieur d'État 1er grade, échelle 11",
+        "specialties": [
+          "Ingénierie des systèmes d'information",
+          "Transformation digitale",
+          "Génie informatique",
+          "Management des SI",
+          "Ingénierie logicielle"
+        ],
+        "degree": "Diplôme d'ingénieur d'État ou équivalent dans la spécialité",
+        "experience": "Aucune durée minimale précisée dans l'arrêté",
+        "age": "18 à 45 ans au 1er janvier 2026",
+        "nationality": "Marocaine",
+        "deadline": "2026-11-05T16:00",
+        "examDate": "2026-11-28",
+        "submission": "https://depot.emploi-public.ma",
+        "selection": "Écrit 4 heures coefficient 4; oral 30–45 minutes coefficient 3",
+        "salary": null,
+        "documents": [
+          "CV avec photo et coordonnées",
+          "CNI électronique",
+          "Diplôme et décision d'équivalence si applicable",
+          "Justificatif handicap ou qualité spéciale si concerné",
+          "Autorisation de l'administration employeuse pour fonctionnaires"
+        ]
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة مهندس نظم المعلومات والتحول الرقمي بالمدرسة الوطنية للإدارة: منصب واحد بالرباط",
+          "deck": "قرار 9 أكتوبر 2026 يحدد شروط مهندس الدولة ومهام التحول الرقمي، مع التسجيل إلى 5 نوفمبر الساعة 16:00 واختبار 28 نوفمبر.",
+          "sections": [
+            [
+              "المشغل والقرار الأصلي",
+              "أعلنت المدرسة الوطنية للإدارة بالرباط عن مباراة لتوظيف مهندس دولة من الدرجة الأولى في تخصص نظم المعلومات والتحول الرقمي. راجعنا قرار فتح المباراة المؤرخ في 9 أكتوبر 2026، والمكون من ثلاث صفحات، وبطاقة الوظيفة الفرنسية المرفقة، ثم قارناها ببطاقة بوابة التشغيل العمومي المنشورة في 13 أكتوبر. يتعلق الأمر بمنصب واحد بمقر المدرسة الوطنية للإدارة بالرباط، وليس ببرنامج تدريب أو لائحة عامة لفرص العمل. المرجع المنشور في البوابة هو C44092/26."
+            ],
+            [
+              "التخصص والدبلوم المقبولان",
+              "يحدد جدول القرار تخصص هندسة نظم المعلومات والتحول الرقمي أو ما يعادله. وتوضح بطاقة الوظيفة الفرنسية قبول دبلوم مهندس دولة أو دبلوم معادل في الهندسة المعلوماتية أو إدارة نظم المعلومات أو التحول الرقمي أو هندسة البرمجيات. لا تكفي شهادة عامة في التسيير أو التسويق لمجرد امتلاك صاحبها خبرة في استعمال البرامج. يجب أن تتطابق تسمية الشهادة مع أحد المجالات المحددة، وأن يرفق المرشح قرار المعادلة إذا كانت شهادته تحتاج إليه وفق القواعد المغربية."
+            ],
+            [
+              "الجنسية والسن والشروط العامة",
+              "تفتح المباراة للمترشحين من الجنسية المغربية المستوفين للشروط النظامية للتوظيف العمومي. يشترط القرار بلوغ 18 سنة على الأقل وألا يتجاوز العمر 45 سنة في فاتح يناير من سنة المباراة. كما يشير إلى الحصص القانونية الخاصة ببعض فئات قدماء المقاومين والعسكريين والأشخاص في وضعية إعاقة وفق الوثائق المثبتة. هذه الأحكام لا تعني أن هناك مناصب إضافية فوق المنصب الواحد. ينبغي التحقق من الوضع القانوني الشخصي قبل التسجيل وعدم افتراض استثناء من شرط السن دون سند."
+            ],
+            [
+              "المهام التقنية الفعلية للمنصب",
+              "تتضمن بطاقة الوظيفة إعداد خارطة طريق التحول الرقمي وتحديث نظام المعلومات، وتحليل احتياجات المصالح وتحويلها إلى حلول قابلة للتطوير، وقيادة رقمنة المساطر الإدارية والتربوية. كما تشمل تنسيق التطبيقات وواجهات API وتبادل البيانات، وتدبير التغيير ومواكبة المستخدمين. وتذكر البطاقة تقنيات مثل ERP وBPMN وواجهات REST والخدمات المصغرة والحوسبة السحابية وAgile وScrum، مع متابعة أدوات الأتمتة والذكاء الاصطناعي. هذه متطلبات مهنية حقيقية وليست كلمات مفتاحية يضاف بها وصف الوظيفة."
+            ],
+            [
+              "التسجيل وآخر أجل محدد بالساعة",
+              "يتم إيداع ملف الترشيح وجوباً عبر منصة الإيداع المرتبطة ببوابة التشغيل العمومي، وليس عبر نموذج الاتصال الخاص بالإدارة. يحدد القرار آخر أجل يوم الخميس 5 نوفمبر 2026 في الساعة الرابعة بعد الزوال 16:00، بينما تكتفي بطاقة العرض المختصرة بإظهار اليوم دون الساعة. لذلك يعتمد الدليل الساعة الواردة في القرار الأصلي، وينصح بإتمام التسجيل قبلها بوقت كافٍ. احتفظ بإثبات الإيداع وتحقق من قابلية فتح الملفات المرفوعة؛ ولا تعتبر إنشاء حساب دون إرسال الطلب ترشيحاً مكتملًا."
+            ],
+            [
+              "الوثائق التي يجب إعدادها",
+              "يطلب القرار سيرة ذاتية تحمل صورة المرشح ورقم الهاتف والعنوان والبريد الإلكتروني، ونسخة إلكترونية من البطاقة الوطنية للتعريف، والدبلوم المطلوب أو الشهادة المعادلة مصحوبة بقرار المعادلة عند الاقتضاء. وتضاف الوثائق المثبتة للصفة القانونية للمستفيدين من الحصص الخاصة، وترخيص الإدارة المشغلة للمترشحين الموظفين. يجب مسح الأصول أو النسخ المشهود بمطابقتها حسب النص، وقراءة الملفات قبل رفعها للتأكد من الوضوح. لا يذكر القرار مبلغاً مالياً للتسجيل، لذا ينبغي الحذر من عروض الوسطاء."
+            ],
+            [
+              "الاختبار الكتابي والشفوي",
+              "حدد القرار السبت 28 نوفمبر 2026 موعداً للمباراة في الرباط، مع إمكانية تحديد أماكن أخرى والإعلان عنها لاحقاً. الاختبار الكتابي العام يستغرق أربع ساعات ومعامله أربعة، ويتصل بالمهام أو وظائف الإدارة أو التخصصات المطلوبة. أما الاختبار الشفوي فتتراوح مدته بين ثلاثين وخمس وأربعين دقيقة ومعامله ثلاثة، وتناقش خلاله اللجنة قضايا مهنية لتقييم قدرة المرشح على ممارسة المهام. لا توجد في القرار قائمة رسمية بأسئلة تقنية محددة، لذلك تبقى أمثلة التحضير مجرد اقتراحات تعليمية."
+            ],
+            [
+              "طريقة الاستعداد دون اختلاق خبرة مطلوبة",
+              "يمكن إعداد ملف مهني قصير يشرح مشروعاً حقيقياً شارك فيه المرشح: المشكلة، تحليل الاحتياجات، تصميم الحل، حماية البيانات، اختبار التكامل، ونتائج التنفيذ القابلة للإثبات. ومن المفيد مراجعة هندسة API وBPMN وحوكمة التغيير وإدارة المشاريع الرقمية؛ لأنها واردة في بطاقة الوظيفة. لا يفرض القرار عدداً محدداً من سنوات الخبرة، لذلك لا يجوز اختراع شرط سنتين أو خمس سنوات. يجب التمييز بين المهارات المهنية المفضلة والشروط القانونية الصريحة للدبلوم والسن والجنسية."
+            ],
+            [
+              "النتائج والراتب والتنبيهات",
+              "ينص القرار على نشر لوائح المقبولين ومواعيد الاختبارات عبر موقع المدرسة وبوابة التشغيل العمومي، ويعد النشر بمثابة استدعاء. لم ينشر القرار أو بطاقة المنصب راتباً شخصياً أو تعويضاً محدداً، فلا نذكر رقماً افتراضياً. كذلك لا ينبغي اعتبار التقديم عبر وسيط أو إرسال السيرة الذاتية بالبريد بديلاً عن التسجيل الرسمي. المعلومات راجعناها في 29 أكتوبر 2026؛ وإذا صدر تعديل موقع من الإدارة بشأن الأجل أو مكان الاختبار فيجب اعتماد النص الرسمي الجديد وتحديث المقال بتاريخ واضح."
+            ]
+          ]
+        },
+        "en": {
+          "title": "ENA Rabat digital transformation engineer competition: one position",
+          "deck": "The signed 9 October 2026 decision sets engineering qualifications, online documents, a 5 November 16:00 deadline and a 28 November exam.",
+          "sections": [
+            [
+              "Employer and original decision",
+              "Morocco's National School of Administration in Rabat has opened a competition for one first-grade State Engineer specialising in information systems and digital transformation. We checked the three-page opening decision dated 9 October 2026, its one-page French job profile, and the public employment portal entry published on 13 October. This is one specific civil-service recruitment competition at the school's Rabat headquarters, not a general training programme or a promise of multiple vacancies. The official portal reference is C44092/26."
+            ],
+            [
+              "Required engineering diploma",
+              "The signed decision names Information Systems Engineering and Digital Transformation or an equivalent specialisation. The attached job profile specifies a State Engineering diploma or recognised equivalent in Computer Engineering, Information Systems Management, Digital Transformation, or Software Engineering. A general business or marketing qualification does not automatically satisfy this requirement merely because the applicant uses software at work. Applicants should match the formal diploma wording to the authorised field and provide the relevant equivalence decision when Moroccan regulations require one."
+            ],
+            [
+              "Nationality, age, and statutory conditions",
+              "The competition is open to Moroccan nationals meeting the general public-service recruitment conditions. The signed decision sets a minimum age of 18 and a maximum of 45 as of 1 January in the competition year. It also refers to statutory arrangements for certain former service members, resistance-related categories, and applicants with disabilities, subject to documentary evidence. These provisions do not create additional posts beyond the single advertised vacancy. Candidates should check their individual legal situation rather than assuming an undocumented exemption from the age condition."
+            ],
+            [
+              "What the engineer will actually do",
+              "The official job profile calls for designing a digital transformation roadmap and modernising the school's information system, analysing business-unit requirements, and turning them into maintainable digital solutions. The role includes dematerialising administrative and educational workflows, coordinating applications and APIs, improving interoperability, and supporting organisational change. The profile explicitly mentions ERP, BPMN, REST APIs, microservices, cloud services, Agile and Scrum, as well as monitoring automation and emerging AI tools. These are documented job activities and competencies, not generic buzzwords added to the advertisement."
+            ],
+            [
+              "Application method and precise deadline",
+              "Applications must be filed electronically through the official public-employment submission service, not through the employer's general contact form. The signed decision gives Thursday 5 November 2026 at 16:00 as the closing time; the short portal listing shows the date without the hour. This guide therefore preserves the more precise time stated in the primary decision. Applicants should submit early, confirm that uploaded files open correctly, and retain the electronic acknowledgement. Creating a user account alone does not establish that an application was successfully submitted."
+            ],
+            [
+              "Documents to prepare",
+              "The decision asks for a CV with photograph, phone number, address and email; a scanned national identity card; and the relevant diploma or recognised equivalent, accompanied by an equivalence decision where required. Candidates claiming a statutory special category must attach supporting evidence, and currently employed public servants must provide authorisation from their administration. The decision refers to scans of originals or certified copies. Check legibility and file completeness before submission. No application fee is stated, so claims by intermediaries that payment secures admission should be treated with suspicion."
+            ],
+            [
+              "Written and oral examination",
+              "The competition is scheduled for Saturday 28 November 2026 in Rabat, with other venues possible if later announced. The general written examination lasts four hours and has coefficient four; it concerns the employer's functions, public administration tasks, or the relevant speciality. The oral examination lasts between 30 and 45 minutes with coefficient three, and evaluates the applicant's capacity to perform the advertised responsibilities. The decision does not provide a fixed list of technical questions, so any example questions circulated by preparation websites should not be mistaken for an official examination syllabus."
+            ],
+            [
+              "Preparing evidence of competence",
+              "A useful preparation exercise is to document a genuine project: the operational problem, requirements gathering, proposed architecture, data protection measures, integration tests, user adoption and measurable outcomes. Review API design, BPMN, workflow automation, change management and digital project governance because the official job profile mentions them. The signed decision does not prescribe a minimum number of years of professional experience. It would therefore be misleading to invent a two-year or five-year eligibility threshold. Distinguish useful professional skills from mandatory nationality, age and diploma requirements."
+            ],
+            [
+              "Results, pay, and important cautions",
+              "The decision states that lists of admitted candidates and examination arrangements will appear on the school's website and the public employment portal; publication serves as notification. Neither the signed decision nor the job profile publishes an individual salary or allowance, so no speculative pay figure is supplied here. Emailing a CV to a third party is not a substitute for official online submission. Information was checked on 29 October 2026. Any later signed amendment concerning the deadline, venue or conditions must be checked and dated before this article is revised."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours ENA Rabat : un ingénieur en systèmes d'information et transformation digitale",
+          "deck": "L'arrêté du 9 octobre 2026 précise le diplôme, les missions, les pièces, la clôture du 5 novembre à 16 h et le concours du 28 novembre.",
+          "sections": [
+            [
+              "Employeur et décision originale",
+              "L'École nationale d'administration à Rabat organise un concours pour recruter un ingénieur d'État de premier grade spécialisé dans les systèmes d'information et la transformation digitale. Nous avons examiné l'arrêté d'ouverture de trois pages daté du 9 octobre 2026, la fiche de poste française jointe et l'annonce du portail de l'emploi public publiée le 13 octobre. Il s'agit d'un seul poste au siège de l'établissement à Rabat, et non d'un programme général de formation ou de plusieurs recrutements annoncés. La référence officielle est C44092/26."
+            ],
+            [
+              "Diplôme d'ingénieur et spécialité",
+              "L'arrêté vise l'ingénierie des systèmes d'information et la transformation digitale, ou une spécialité équivalente. La fiche de poste précise le diplôme d'ingénieur d'État ou un diplôme reconnu équivalent en génie informatique, management des systèmes d'information, transformation digitale ou ingénierie logicielle. Une formation générale en gestion ou en marketing ne suffit pas automatiquement parce que le candidat utilise des logiciels. Il faut vérifier la dénomination officielle du diplôme et joindre la décision d'équivalence lorsqu'elle est exigée par la réglementation marocaine."
+            ],
+            [
+              "Nationalité, âge et conditions statutaires",
+              "Le concours s'adresse aux candidats de nationalité marocaine remplissant les conditions générales de recrutement dans la fonction publique. L'arrêté exige au moins 18 ans et au plus 45 ans au premier janvier de l'année du concours. Il mentionne également les dispositions légales relatives à certaines catégories d'anciens militaires, de résistants et de personnes en situation de handicap, sur justificatifs. Ces dispositions n'ajoutent pas de postes au seul emploi annoncé. Chaque candidat doit vérifier sa situation juridique sans présumer d'une dérogation à la limite d'âge qui ne serait pas établie."
+            ],
+            [
+              "Missions concrètes du poste",
+              "La fiche officielle prévoit la conception et le pilotage de la feuille de route de transformation digitale, la modernisation du système d'information et la traduction des besoins métiers en solutions évolutives. Le titulaire doit accompagner la dématérialisation des procédures administratives et pédagogiques, coordonner les applications et les API, favoriser l'interopérabilité et conduire le changement. Les compétences citées comprennent ERP, BPMN, API REST, microservices, cloud, Agile et Scrum, ainsi que la veille sur l'automatisation et les outils d'intelligence artificielle. Ces éléments proviennent bien de la fiche de poste."
+            ],
+            [
+              "Dépôt électronique et heure limite",
+              "Le dossier doit être transmis obligatoirement par le service électronique de candidature du portail de l'emploi public, et non par le formulaire général de contact de l'école. L'arrêté fixe la clôture au jeudi 5 novembre 2026 à 16 heures précises, alors que la fiche résumée du portail affiche uniquement le jour. Nous retenons donc l'heure indiquée dans le texte original. Il convient de déposer le dossier avant la dernière journée, de contrôler les pièces téléchargées et de conserver l'accusé de réception. La simple création d'un compte ne vaut pas candidature complète."
+            ],
+            [
+              "Pièces justificatives exigées",
+              "L'arrêté demande un curriculum vitae avec photographie, téléphone, adresse et courriel, une copie numérisée de la carte nationale d'identité et le diplôme requis, accompagné le cas échéant d'une décision d'équivalence. Les personnes invoquant un statut légal particulier doivent fournir les justificatifs correspondants; les fonctionnaires candidats doivent produire l'autorisation de leur administration. Le texte évoque la numérisation des originaux ou des copies certifiées conformes. Vérifiez la lisibilité et l'exhaustivité des fichiers avant validation. Aucun droit d'inscription payant n'est annoncé dans la décision."
+            ],
+            [
+              "Épreuves écrite et orale",
+              "Le concours est programmé le samedi 28 novembre 2026 à Rabat, avec la possibilité d'autres centres annoncés ultérieurement. L'épreuve écrite générale dure quatre heures et porte le coefficient quatre; elle concerne les missions de l'administration ou les spécialités demandées. L'entretien oral dure entre trente et quarante-cinq minutes, avec coefficient trois, et sert à apprécier l'aptitude à exercer les fonctions. L'arrêté ne publie pas une liste précise de questions techniques. Les exemples de préparation disponibles ailleurs ne doivent donc pas être présentés comme des sujets officiels."
+            ],
+            [
+              "Préparation fondée sur des compétences vérifiables",
+              "Pour se préparer, un candidat peut présenter un projet réellement mené : problème initial, recueil des besoins, architecture retenue, sécurité des données, tests d'intégration, accompagnement des utilisateurs et résultats mesurables. La révision des API, de BPMN, de l'automatisation des workflows et de la gestion du changement est pertinente puisque la fiche de poste les cite. L'arrêté n'impose pas un nombre minimal déterminé d'années d'expérience. Inventer une exigence de deux ou cinq ans serait trompeur. Il faut distinguer les compétences recherchées des conditions obligatoires de diplôme, d'âge et de nationalité."
+            ],
+            [
+              "Résultats, rémunération et précautions",
+              "Selon l'arrêté, les listes des candidats retenus et les modalités des épreuves seront publiées sur le site de l'école et le portail de l'emploi public; cette publication vaut convocation. Ni l'arrêté ni la fiche de poste n'indiquent une rémunération individuelle ou une prime précise, donc aucun montant hypothétique n'est avancé. Envoyer un CV à un intermédiaire ne remplace pas la candidature électronique officielle. Les sources ont été contrôlées le 29 octobre 2026. Toute modification ultérieure de l'échéance ou des conditions devra être fondée sur un document officiel daté."
             ]
           ]
         }
