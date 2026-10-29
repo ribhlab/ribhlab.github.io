@@ -542,7 +542,7 @@
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf",
       "editorialEvidenceId": "cnrst-administrator-4",
       "sourceReviewDate": "2026-10-29",
-      "warning": "Official deadline conflict: portal 2026-11-08 16:30 vs stamped CNRST notice before 2026-11-09; advise applying by earlier date.",
+      "warning": "Deadline wording: portal closes 2026-11-08 at 16:30; original notice says 'before 2026-11-09', which may be consistent with an 8 Nov closing day. Do not claim an extension.",
       "evidenceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/b9ccfdc6-b71d-48bb-8dd8-fff97d085dcf",
       "publishedVerifiedAt": "2026-10-29",
       "verification": "GitHub Actions 40926222758 build, 40926222679 Pages deploy, 40926359409 public trilingual HTTP 200 and nine-section source/links QA.",
