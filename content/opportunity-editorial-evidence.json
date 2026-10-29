@@ -4104,6 +4104,199 @@
           ]
         }
       }
+    },
+    "adha-civil-engineers-2026": {
+      "reviewedAt": "2026-10-29",
+      "verification": "Personally inspected the ADHA original signed two-page recruitment decision and the attached one-page job description via the official ADHA website on 29 October 2026, and cross-checked the agency's dated recruitment listing. The decision shows 04 NOV 2026 as the closing date; the agency's listing was published 21 October and updated 26 October. No salary, exact closing hour, work city, written examination, application fee or guaranteed result inferred.",
+      "state": "researched",
+      "sources": [
+        {
+          "label": "ADHA — signed original recruitment decision, 2 pages, dated 21 October 2026 (reviewed 29 October 2026)",
+          "url": "https://adha.gov.ma/uploads/jobs/ADHA_IE_GC_2026_Decision.pdf"
+        },
+        {
+          "label": "ADHA — official detailed civil-engineering job description, 1 page (reviewed 29 October 2026)",
+          "url": "https://adha.gov.ma/uploads/jobs/ADHA_IE_GC_2026_Fiche_de_poste.pdf"
+        },
+        {
+          "label": "ADHA — recruitment register, notice ADHA-IE-GC-2026-10, published 21 October 2026, updated 26 October 2026",
+          "url": "https://adha.gov.ma/recrutement.php?lang=fr"
+        }
+      ],
+      "facts": {
+        "employer": "Agence de Développement du Haut Atlas (ADHA)",
+        "country": "Maroc",
+        "agencyHeadquarters": "RN 9, Chwiter, Cercle d'Aït Ourir, Province du Haouz",
+        "individualPostingCity": null,
+        "reference": "ADHA-IE-GC-2026-10",
+        "posts": 5,
+        "recruitment": "Recrutement par voie contractuelle",
+        "grade": "Ingénieur d'État — Génie civil",
+        "noticePublishedAt": "2026-10-21",
+        "listingUpdatedAt": "2026-10-26",
+        "deadline": "2026-11-04",
+        "deadlineHour": null,
+        "eligibility": "Nationalité marocaine, candidats et candidates âgés de 18 à 45 ans, diplôme d'Ingénieur d'État en génie civil, au moins 3 ans d'expérience professionnelle",
+        "degree": "Diplôme d'Ingénieur d'État en génie civil",
+        "minimumExperienceYears": 3,
+        "competencies": [
+          "Conception, dimensionnement et suivi d'exécution de bâtiments",
+          "Structures en béton armé, maçonnerie, charpentes métalliques",
+          "RPS 2000 version 2011 et normes marocaines en vigueur",
+          "Notes de calcul, plans et rapports techniques",
+          "Planification, contrôle technique et décomptes provisoires/définitifs",
+          "AutoCAD, Robot Structural Analysis, MS Project et Excel",
+          "CCAG-T, CCAG-EMO et décret n°2-22-431"
+        ],
+        "preferred": [
+          "Expérience de reconstruction et de réhabilitation post-catastrophe",
+          "Connaissance du programme de reconstruction Al Haouz",
+          "Connaissance géographique et socioculturelle du Haut Atlas",
+          "Maîtrise d'outils de contrôle interne et d'audit comptable"
+        ],
+        "documents": [
+          "Demande manuscrite signée (avec avis favorable de la hiérarchie pour les candidats de la fonction publique ou des établissements et entreprises publics)",
+          "CV détaillé et actualisé",
+          "Copie du/des diplômes",
+          "Décision d'équivalence si applicable",
+          "Copie de la CNIE",
+          "Justificatifs de l'expérience professionnelle demandée"
+        ],
+        "application": "Dépôt du dossier sur l'espace dédié du portail officiel emploi-public.ma au plus tard le 4 novembre 2026",
+        "stages": "Examen des dossiers puis convocation des candidats retenus à un entretien oral; date, heure et lieu communiqués par courrier électronique; résultats publiés sur emploi-public.ma et adha.gov.ma",
+        "writtenExam": null,
+        "salary": null,
+        "fee": null,
+        "sourceReviewedAt": "2026-10-29"
+      },
+      "translations": {
+        "ar": {
+          "title": "وكالة تنمية الأطلس الكبير: دليل مباراة توظيف خمسة مهندسي دولة في الهندسة المدنية لعام 2026",
+          "deck": "قراءة تفصيلية للقرار الرسمي وبطاقة المنصب: شروط الجنسية والسن والخبرة، الملف الإلكتروني، طبيعة العمل، وآخر أجل في 4 نوفمبر 2026 دون افتراض راتب أو مدينة تعيين.",
+          "sections": [
+            [
+              "ما الذي أُعلن رسمياً؟",
+              "أعلنت وكالة تنمية الأطلس الكبير، في إعلان نشرته يوم 21 أكتوبر 2026 وحُدّثت صفحته يوم 26 أكتوبر، عن توظيف خمسة مهندسي دولة متخصصين في الهندسة المدنية عن طريق التعاقد. يحمل الإعلان المرجع ADHA-IE-GC-2026-10، ويُحيل إلى قرار أصلي من صفحتين وبطاقة منصب مفصلة من صفحة واحدة. آخر أجل لإيداع الملف هو 4 نوفمبر 2026، كما يظهر صراحة في القرار وصفحة الوكالة. عدد المناصب خمسة إجمالاً، ولا يتضمن النص توزيعاً مؤكداً لكل منصب على مدينة أو مشروع بعينه؛ لذلك لا ينبغي تحويل عنوان مقر الوكالة إلى مدينة تعيين مفترضة."
+            ],
+            [
+              "الجهة المشغلة وطبيعة المهام",
+              "تعمل الوكالة على برنامج إعادة البناء والتأهيل والتنمية في المناطق المتضررة من زلزال الحوز، ولذلك تتجاوز المهام مجرد إعداد رسومات هندسية. تتناول بطاقة المنصب تصميم المباني وحساب أبعادها ومتابعة التنفيذ، بما في ذلك الخرسانة المسلحة والبناء والهياكل المعدنية، والتحقق من مذكرات الحساب والمخططات والتقارير التقنية. كما تشمل تخطيط أشغال البناء أو إعادة التأهيل، ومراقبة الإنجاز، وفحص الكشوف المؤقتة والنهائية. يقع المقر الرسمي للوكالة بمنطقة الشويطر في إقليم الحوز، لكن الوثائق الثلاث التي روجعت لا تحدد موقع التعيين النهائي لكل مترشح ناجح."
+            ],
+            [
+              "شروط الأهلية التي لا يمكن تعويضها",
+              "يشترط القرار أن يكون المترشح أو المترشحة مغربي الجنسية، وأن يتراوح السن بين 18 و45 سنة، وأن يتوفر على دبلوم مهندس دولة في تخصص الهندسة المدنية، مع خبرة مهنية لا تقل عن ثلاث سنوات. لم يحدد القرار في الفقرة الخاصة بالسن تاريخاً مرجعياً مستقلاً مثل فاتح يناير؛ فلا يصح اختراع قاعدة حساب مختلفة. الخبرة المذكورة حد أدنى وليست مجرد ميزة اختيارية، ولا يكفي الحصول على دبلوم في تخصص هندسي قريب دون التحقق من مطابقته للتخصص المطلوب. على أصحاب الشهادات التي تتطلب معادلة إرفاق قرار المعادلة، عند الاقتضاء، قبل إغلاق التسجيل."
+            ],
+            [
+              "الكفاءات التقنية: ماذا ينبغي أن يثبت الملف؟",
+              "تطلب بطاقة المنصب معرفة المعايير المغربية المنظمة للبناء، بما فيها RPS 2000 بنسخة 2011 والمعايير المعمول بها، والقدرة على إعداد أو اعتماد حسابات المنشآت ومخططات التنفيذ. وتذكر أدوات مثل AutoCAD وRobot Structural Analysis وMS Project وExcel. كما تشير إلى دفتر الشروط الإدارية العامة للأشغال CCAG-T، وإلى CCAG-EMO، وإلى تنظيم الصفقات العمومية، خصوصاً المرسوم رقم 2-22-431. ينبغي للمترشح ربط كل كفاءة بمشروع حقيقي شارك فيه، مع تحديد دوره والنتائج التي يمكن توثيقها، دون إضافة شهادات أو خبرات لم يكتسبها فعلاً."
+            ],
+            [
+              "الخبرات المرجحة وكيفية قراءة المعايير",
+              "تعد خبرة تدبير مشاريع إعادة الإعمار أو التأهيل بعد الكوارث، ولا سيما في سياق زلزالي، ميزة مهمة وفق بطاقة المنصب. وتُقدّر أيضاً معرفة برنامج إعادة إعمار الحوز والسياق الجغرافي والاجتماعي للمنطقة، فضلاً عن مهارات التنظيم والتواصل وحماية سرية المعلومات والعمل الجماعي. هذه عناصر تفضيلية أو سلوكية لا تُلغي شروط الدبلوم والخبرة الدنيا. ويمكن لمترشح عمل في مشاريع بناء عادية أن يشرح كيف ستُستخدم مهاراته في بيئة إعادة التأهيل، من غير الادعاء أن الخبرة العادية تعادل تلقائياً الخبرة المتخصصة في ما بعد الكوارث."
+            ],
+            [
+              "وثائق الترشيح المطلوبة في القرار",
+              "يسرد القرار طلباً خطياً موقعاً، وسيرة ذاتية مفصلة ومحينة، ونسخة من الدبلوم أو الدبلومات، وقرار المعادلة عند الحاجة، ونسخة من البطاقة الوطنية للتعريف الإلكترونية، وكل وثيقة تثبت الخبرة المهنية المطلوبة. إذا كان المترشح يعمل في الوظيفة العمومية أو في مؤسسة أو مقاولة عمومية، فيلزم أن يحمل الطلب موافقة التسلسل الإداري كما ورد في القرار. لا يذكر القرار رسالة تحفيزية منفصلة أو شهادة طبية أو سجلاً عدلياً ضمن القائمة المحددة، فلا ينبغي تقديمها باعتبارها شروطاً مؤكدة. الأفضل تسمية الملفات بوضوح وفحص قابلية قراءتها قبل الإيداع الإلكتروني."
+            ],
+            [
+              "طريقة الإيداع والموعد الذي ينبغي احترامه",
+              "يوجه القرار المترشحين إلى إيداع ملفاتهم عبر الفضاء المخصص في البوابة الوطنية للتشغيل العمومي emploi-public.ma، قبل انقضاء يوم 4 نوفمبر 2026. لا يذكر القرار ساعة إغلاق دقيقة، ولذلك ينبغي تجنب نشر ساعة غير موثقة أو الانتظار حتى اللحظات الأخيرة. ابدأ بفتح الإعلان ذي المرجع الصحيح، وقارن البيانات مع القرار، ثم جهز النسخ الإلكترونية وارفع الوثائق المطلوبة واحتفظ بما يثبت نجاح العملية إذا أتاحته البوابة. يجب الانتباه إلى أن مراسلة الوكالة أو إرسال السيرة الذاتية إلى بريدها العام لا يحل محل مسطرة الإيداع الرسمية المحددة."
+            ],
+            [
+              "مراحل الانتقاء وما لا تعلنه الوثائق",
+              "تنص المادة السادسة من القرار على فحص ملفات المترشحين، ثم استدعاء المقبولين إلى مقابلة شفوية، مع إبلاغهم بتاريخها وساعتها ومكانها عبر البريد الإلكتروني. تُنشر النتائج على البوابة الوطنية للتشغيل العمومي وعلى موقع الوكالة. لم يحدد القرار امتحاناً كتابياً أو سلماً للنقط أو موعداً نهائياً لإعلان النتائج؛ فلا يجوز نسب هذه التفاصيل إلى المباراة. كما لم تُنشر في الوثائق المدروسة قيمة الأجر أو التعويضات أو رسوم ترشيح أو مدينة عمل نهائية. ينبغي متابعة البريد الإلكتروني، بما في ذلك مجلد الرسائل غير المرغوب فيها، والموقعين الرسميين بعد انتهاء التسجيل."
+            ],
+            [
+              "قرار عملي قبل الترشح والمخاطر المحتملة",
+              "قارن ملفك أولاً مع أربعة شروط حاسمة: الجنسية المغربية، السن المعلن، دبلوم مهندس دولة في الهندسة المدنية، وثلاث سنوات خبرة موثقة على الأقل. بعد ذلك جهز مثالين أو ثلاثة لمشاريع شاركت فيها، مع نطاق الأشغال والتقنيات والمعايير والمسؤوليات، لتستخدمها عند المقابلة إذا استُدعيت. تحقق من مطابقة الوثائق ووجود الموافقة الإدارية إذا كانت تنطبق عليك. لا تدفع لأي وسيط مقابل وعد بالقبول، ولا تعتمد على نسخ غير رسمية من الإعلان. هذه قراءة تحريرية للقرار المتاح يوم 29 أكتوبر 2026؛ وأي تعديل رسمي لاحق يجب أن يُراجع قبل الإيداع."
+            ]
+          ]
+        },
+        "en": {
+          "title": "High Atlas Development Agency: five civil-engineering State Engineer posts in 2026",
+          "deck": "A source-based application guide to the original decision and job specification: eligibility, three years of experience, documents, selection stages and the 4 November deadline.",
+          "sections": [
+            [
+              "What exactly has been announced?",
+              "The High Atlas Development Agency (ADHA) published a recruitment notice on 21 October 2026 and updated its listing on 26 October. It seeks five State Engineers specialising in civil engineering through contractual recruitment, under reference ADHA-IE-GC-2026-10. The original two-page decision and the one-page job description are available from the agency's own recruitment register. The closing date shown in the signed decision is 4 November 2026, matching the listing. Five is the total number of positions, not a promise of five posts in any named town. The documents reviewed do not allocate individual positions to specific worksites."
+            ],
+            [
+              "Employer, programme and practical responsibilities",
+              "ADHA supports the reconstruction, rehabilitation and integrated development programme for areas affected by the Al Haouz earthquake. The role is not limited to drafting construction drawings. The job sheet describes building design, structural dimensioning and execution monitoring for reinforced concrete, masonry and metal structures. Engineers may review structural calculation notes, execution drawings and technical reports, plan and track construction or rehabilitation projects, inspect work and process provisional and final payment statements. The agency's official headquarters are in Chwiter, Al Haouz Province, but a headquarters address is not evidence that every recruited engineer will work there."
+            ],
+            [
+              "Mandatory eligibility and the three-year threshold",
+              "The signed decision admits Moroccan women and men aged between 18 and 45 who hold a State Engineer diploma in civil engineering and can justify at least three years of professional experience. These requirements must be read together: relevant experience does not substitute for the specified qualification, and a degree does not remove the experience threshold. The decision does not state a separate age reference date such as 1 January, so an editor should not invent one. Candidates whose diplomas require formal equivalence must include the equivalence decision where applicable. A related engineering title should not automatically be assumed equivalent without documentary confirmation."
+            ],
+            [
+              "Technical skills the job specification actually names",
+              "The job sheet calls for competence in Moroccan construction standards, including the RPS 2000 seismic regulation in its 2011 version, together with applicable standards and structural calculations. It names AutoCAD, Robot Structural Analysis, MS Project and Excel as relevant tools. It also highlights the contractual frameworks CCAG-T and CCAG-EMO and public procurement regulation, including Decree 2-22-431. A useful application or interview example identifies a real project, the candidate's precise contribution, the checks undertaken and the outcome. Claiming proficiency in all listed software without evidence would weaken rather than strengthen the application."
+            ],
+            [
+              "Experience that may strengthen an otherwise eligible file",
+              "The agency specifically values experience with reconstruction or rehabilitation after disasters, particularly in seismic contexts. Knowledge of the Al Haouz reconstruction programme and the High Atlas geographical and social environment is also considered an advantage. The behavioural profile includes organisation, analytical reporting, initiative, confidentiality, clear communication and teamwork. These are differentiators rather than substitutes for the required diploma and three years of experience. An engineer from conventional construction may explain how site supervision and technical control skills transfer to rehabilitation, but should not present ordinary building work as post-disaster experience unless that is factually accurate."
+            ],
+            [
+              "Documents listed in the signed recruitment decision",
+              "The required file contains a signed handwritten application, a detailed and current CV, copies of the diploma or diplomas, an equivalence decision if applicable, a copy of the Moroccan electronic identity card and documents proving the professional experience requested. For applicants employed in the civil service or public establishments and enterprises, the handwritten request must bear the favourable opinion of their administrative hierarchy. The decision does not separately list a medical certificate, police record or stand-alone motivation letter. Do not turn customary paperwork from other competitions into supposedly mandatory requirements here; use the exact official list and make sure uploaded copies are legible."
+            ],
+            [
+              "Where to apply and how to manage the deadline",
+              "Article 4 of the decision requires candidates to submit the complete file through the dedicated space on Morocco's official public-employment portal, emploi-public.ma, no later than 4 November 2026. The decision does not publish a precise closing hour, so a claimed 16:30 or 23:59 deadline would be unsupported. Open the relevant notice, read the signed decision, check the diploma and experience requirements, prepare each file, upload the documents and keep any confirmation supplied by the portal. Emailing the agency's general address or handing a CV to an intermediary is not the official application procedure."
+            ],
+            [
+              "Selection process and information that is not published",
+              "The signed decision says eligible applications are reviewed and shortlisted candidates are invited to an oral interview. The date, time and venue of that interview will be communicated by email; results will be published on emploi-public.ma and the agency's own website. The documents do not specify a written examination, a scoring grid, an individual salary, an application fee or a final work location. The grade and job title cannot be used to infer a guaranteed net monthly pay. Candidates should monitor their inbox, spam folder and both official websites after submission, rather than relying on a third-party jobs listing."
+            ],
+            [
+              "A realistic decision checklist and the main risks",
+              "Before investing time in an application, check four non-negotiable points: Moroccan nationality, the stated age range, a State Engineer diploma in civil engineering and evidence of at least three years of experience. Prepare two or three verifiable project examples showing responsibilities, standards, site constraints and the outcome, to discuss if invited to interview. Confirm that the administrative endorsement applies if you are already a public-sector employee. Never pay a broker for a supposed guaranteed appointment or rely on an unverified salary estimate. This guide reflects the official documents examined on 29 October 2026; later official corrections must take precedence."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "ADHA : cinq postes d’ingénieurs d’État en génie civil, conditions et candidature 2026",
+          "deck": "Lecture du texte signé et de la fiche de poste : diplôme, trois ans d’expérience, pièces obligatoires, sélection et date limite du 4 novembre 2026.",
+          "sections": [
+            [
+              "Ce que l’Agence a réellement annoncé",
+              "L’Agence de Développement du Haut Atlas a publié le 21 octobre 2026 un avis de recrutement actualisé le 26 octobre, sous la référence ADHA-IE-GC-2026-10. Elle prévoit le recrutement par voie contractuelle de cinq ingénieurs d’État en génie civil. Le texte signé comporte deux pages et renvoie à une fiche de poste d’une page, accessibles depuis le registre officiel de l’Agence. La date limite figurant dans la décision est le 4 novembre 2026, comme dans la rubrique recrutement. Les cinq postes correspondent à un effectif total ; les documents examinés ne répartissent pas chaque poste entre des villes ou chantiers identifiés."
+            ],
+            [
+              "Employeur et contenu concret du travail",
+              "L’ADHA intervient dans le programme de reconstruction, de réhabilitation et de développement des zones touchées par le séisme d’Al Haouz. Les missions techniques dépassent la production de plans : conception et dimensionnement des bâtiments, suivi d’exécution, structures en béton armé, maçonnerie et charpentes métalliques. La fiche mentionne aussi la validation des notes de calcul, des plans d’exécution et des rapports techniques, la programmation des chantiers et le contrôle des décomptes provisoires ou définitifs. Le siège de l’Agence se trouve à Chwiter, dans la province d’Al Haouz, mais cette adresse ne constitue pas une affectation individuelle confirmée."
+            ],
+            [
+              "Conditions obligatoires et expérience minimale",
+              "La décision ouvre le concours aux candidats et candidates de nationalité marocaine, âgés de 18 à 45 ans, titulaires du diplôme d’ingénieur d’État en génie civil et justifiant d’au moins trois années d’expérience professionnelle. Les quatre conditions sont cumulatives. Un diplôme approprié ne compense pas une expérience insuffisante, pas plus qu’une longue carrière ne dispense de la qualification exigée. Le texte ne précise pas de date de référence particulière pour l’âge, comme le 1er janvier : il serait donc trompeur d’en inventer une. Lorsque le diplôme nécessite une équivalence, la décision correspondante doit figurer dans le dossier."
+            ],
+            [
+              "Compétences techniques à documenter sans exagération",
+              "La fiche de poste insiste sur la réglementation marocaine de construction, notamment le RPS 2000 version 2011, les normes en vigueur et la vérification des calculs de structures. Les outils cités comprennent AutoCAD, Robot Structural Analysis, MS Project et Excel. Elle mentionne également les cadres contractuels CCAG-T et CCAG-EMO, ainsi que la réglementation des marchés publics, dont le décret n° 2-22-431. Pour préparer un entretien, mieux vaut présenter une opération réellement conduite, son périmètre, les vérifications effectuées et les résultats documentables, plutôt que d’afficher sans preuve la maîtrise de tous les logiciels et normes énumérés."
+            ],
+            [
+              "Atouts recherchés et limites de leur portée",
+              "L’expérience en reconstruction ou réhabilitation après catastrophe, particulièrement dans un contexte sismique, constitue un atout majeur d’après la fiche. La connaissance du programme de reconstruction d’Al Haouz et des réalités géographiques et socioculturelles du Haut Atlas est également appréciée. Les qualités attendues incluent rigueur, organisation, analyse, confidentialité, communication et collaboration. Ces éléments peuvent départager des profils admissibles, mais ne remplacent pas les conditions impératives de diplôme et d’expérience. Un ingénieur issu du bâtiment classique peut valoriser ses compétences transférables, sans présenter abusivement ses missions antérieures comme des opérations de reconstruction post-sismique."
+            ],
+            [
+              "Les pièces exigées, et celles qu’il ne faut pas inventer",
+              "L’article 3 demande une candidature manuscrite signée, un CV détaillé et actualisé, une copie du ou des diplômes, la décision d’équivalence le cas échéant, une copie de la CNIE et tout document attestant l’expérience professionnelle requise. Pour les candidats relevant de la fonction publique ou d’établissements et entreprises publics, la demande doit porter l’avis favorable de la hiérarchie. Le texte ne cite pas, dans cette liste, de certificat médical, de casier judiciaire ou de lettre de motivation distincte. Les pratiques d’autres concours ne doivent pas être présentées comme des obligations spécifiques à cet avis."
+            ],
+            [
+              "Dépôt officiel et gestion prudente de l’échéance",
+              "L’article 4 impose le dépôt du dossier complet dans l’espace prévu sur le portail national de l’emploi public, emploi-public.ma, au plus tard le 4 novembre 2026. La décision ne précise pas d’heure de clôture ; il ne faut donc pas publier une heure supposée. Ouvrez la fiche officielle correspondant à la référence indiquée, lisez la décision signée, préparez des fichiers lisibles, vérifiez les pièces obligatoires et conservez toute preuve de transmission fournie par la plateforme. Un courrier adressé au contact général de l’Agence ou un CV envoyé à un intermédiaire ne remplace pas la procédure électronique prévue."
+            ],
+            [
+              "Étapes de sélection et données absentes de l’avis",
+              "L’article 6 prévoit l’examen des dossiers, puis la convocation des candidats retenus à un entretien oral. La date, l’heure et le lieu de l’entretien leur seront communiqués par courrier électronique. Les résultats seront publiés sur le portail de l’emploi public et sur le site de l’ADHA. Le texte ne décrit pas d’épreuve écrite, de barème chiffré, de salaire individuel, de frais de candidature ou de lieu d’affectation définitif. Aucune estimation de rémunération trouvée ailleurs ne doit être présentée comme une rémunération annoncée par l’employeur. Après le dépôt, consultez régulièrement votre messagerie et les deux sites officiels."
+            ],
+            [
+              "Décider de candidater et éviter les pièges",
+              "Avant de constituer le dossier, contrôlez les quatre points déterminants : nationalité marocaine, âge annoncé, diplôme d’ingénieur d’État en génie civil et au moins trois ans d’expérience justifiable. Préparez ensuite deux ou trois exemples de projets réellement suivis, avec responsabilités, contraintes de chantier, normes mobilisées et résultats vérifiables. Si vous travaillez déjà dans le secteur public, vérifiez l’obligation d’avis favorable de votre hiérarchie. Ne versez aucune somme à un intermédiaire promettant une admission et ne vous fiez pas à une ville ou à un salaire non confirmés. Cette analyse reflète les documents officiels examinés le 29 octobre 2026 ; toute rectification officielle ultérieure prime."
+            ]
+          ]
+        }
+      }
     }
   }
 }
