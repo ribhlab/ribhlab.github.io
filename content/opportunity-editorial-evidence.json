@@ -5237,7 +5237,7 @@
     },
     "cnrst-administrator-4": {
       "reviewedAt": "2026-10-29",
-      "verification": "Signed original CNRST notice (3 pages) and government portal C44248/26 independently checked on 29 October 2026. Official discrepancy explicitly documented: portal deadline 8 Nov 2026 16:30 versus stamped notice before 9 Nov 2026. Build and Pages deployment succeeded on commit 5c274148 (Actions 40926222758 / 40926222679). Live trilingual public-sitemap QA 40926359409 succeeded 29 October 2026: AR/EN/FR HTTP 200, nine detailed sections, source links opening in new tabs, and discrepancy notice.",
+      "verification": "Signed original CNRST notice (3 pages) and government portal C44248/26 independently checked on 29 October 2026. Deadline wording cross-checked: portal 8 Nov 2026 at 16:30 versus stamped notice 'before 9 Nov 2026'; these can be consistent and do not establish an extension. Build and Pages deployment succeeded on commit 5c274148 (Actions 40926222758 / 40926222679). Live trilingual public-sitemap QA 40926359409 succeeded 29 October 2026: AR/EN/FR HTTP 200, nine detailed sections, source links opening in new tabs, and discrepancy notice.",
       "state": "published",
       "sources": [
         {
@@ -5276,7 +5276,7 @@
         "portalDeadline": "2026-11-08",
         "portalDeadlineHour": "16:30",
         "noticeDeadline": "2026-11-09",
-        "deadlineConflict": true,
+        "deadlineConflict": false,
         "advisedSafeDeadline": "2026-11-08T16:30:00",
         "nationality": "Moroccan",
         "age": "18 to 45 on 1 January 2026, subject to statutory exceptions",
@@ -5307,20 +5307,21 @@
           }
         ],
         "salary": null,
-        "reviewedSourcesAt": "2026-10-29"
+        "reviewedSourcesAt": "2026-10-29",
+        "deadlineWordingDifference": true
       },
       "translations": {
         "ar": {
-          "title": "مباراة CNRST: أربعة متصرفين في الإدارة بطنجة وأكادير ووجدة وفاس وتحذير بشأن تاريخ الإغلاق",
-          "deck": "تفاصيل مستخرجة من إعلان المركز الأصلي والبوابة الحكومية: أربعة مناصب Management، مباراة 15 نوفمبر 2026، واختلاف رسمي بين آخر أجل 8 و9 نوفمبر.",
+          "title": "مباراة CNRST: أربعة متصرفين في الإدارة بطنجة وأكادير ووجدة وفاس وتوضيح موعد الإغلاق",
+          "deck": "تفاصيل مستخرجة من إعلان المركز الأصلي والبوابة الحكومية: أربعة مناصب Management، مباراة 15 نوفمبر 2026، وشرح عبارة «قبل 9 نوفمبر» مقارنة بموعد البوابة 8 نوفمبر الساعة 16:30.",
           "sections": [
             [
               "أربعة مناصب إدارية موزعة على أربع مدن",
               "أعلن المركز الوطني للبحث العلمي والتقني عن مباراة توظيف أربعة متصرفين من الدرجة الثالثة، السلم العاشر، في تخصص Management. يبين الجدول المرفق بالإعلان الأصلي أن التعيين سيكون في وحدات الدعم التقني للبحث العلمي الجهوية، بمنصب واحد في كل من طنجة وأكادير ووجدة وفاس. لا تعني هذه الحصص أن المرشح يختار مقر التعيين دون قيود؛ ينبغي الرجوع إلى شروط الترشيح وإجراءات توزيع الناجحين. تحمل البطاقة الحكومية رمز C44248/26، ونشرت في 23 أكتوبر 2026، وحددت 15 نوفمبر موعداً للمباراة. هذه مباراة محددة بأربعة مناصب وليست دعوة عامة للعمل في المختبرات."
             ],
             [
-              "اختلاف جوهري بين تاريخي الإغلاق: 8 و9 نوفمبر",
-              "توجد مفارقة ينبغي إبرازها قبل أي خطوة: تعرض بوابة التشغيل العمومي آخر أجل في 8 نوفمبر 2026 عند الساعة 16:30، بينما تذكر الصفحة الثالثة من الإعلان الرسمي الممهور بخاتم المركز أن الإرسال الإلزامي عبر منصة الوزارة يجب أن يتم قبل 9 نوفمبر 2026. لا يمكن الجزم بأن الموعد المتأخر صالح لأن الوثيقتين الرسميتين مختلفتان. التصرف الأكثر احتياطاً هو إكمال الطلب قبل 8 نوفمبر الساعة 16:30، والاحتفاظ بإثبات الإيداع، وطلب توضيح رسمي من الجهة المنظمة إذا تعذر ذلك. لا ينبغي تقديم 9 نوفمبر على أنه تمديد مؤكد دون تصحيح منشور."
+              "كيف نقرأ آخر أجل بين الإعلان الأصلي والبوابة؟",
+              "تحتاج صياغة آخر أجل إلى قراءة دقيقة: تعرض بوابة التشغيل العمومي آخر أجل في 8 نوفمبر 2026 عند الساعة 16:30، بينما تذكر الصفحة الثالثة من الإعلان الرسمي الممهور بخاتم المركز أن الإرسال الإلزامي عبر منصة الوزارة يجب أن يتم قبل 9 نوفمبر 2026. لا تعني عبارة «قبل 9 نوفمبر» السماح بالإيداع خلال يوم 9 نوفمبر؛ فقد تكون متوافقة مع إغلاق البوابة يوم 8 نوفمبر، مع أن الإعلان الأصلي لا يذكر الساعة 16:30. التصرف الأكثر احتياطاً هو إكمال الطلب قبل 8 نوفمبر الساعة 16:30، والاحتفاظ بإثبات الإيداع، وطلب توضيح رسمي من الجهة المنظمة إذا تعذر ذلك. لا ينبغي تقديم 9 نوفمبر على أنه تمديد مؤكد دون تصحيح منشور."
             ],
             [
               "الشهادة المطلوبة: إجازة في الإدارة لا ماستر إلزامي",
@@ -5348,21 +5349,21 @@
             ],
             [
               "النتائج والراتب والمخاطر بعد الترشيح",
-              "يشير الإعلان إلى نشر لوائح المقبولين لاجتياز الاختبارات الكتابية والشفوية على بوابة التشغيل العمومي وموقع المركز، ويعتبر النشر استدعاءً للمترشحين. لا يقدم الإعلان راتباً فردياً صافياً، ولا يحدد موعد نشر النتائج أو مقابلة مستقلاً، ولذلك يجب تجنب الأرقام والتواريخ المتداولة بلا سند. لا تخلط بين الترشح والتوظيف النهائي، ولا تدفع مقابلاً لوسطاء يدعون ضمان النجاح. راقب أيضاً أي تعديل رسمي لتعارض 8 و9 نوفمبر، وقارن رقم المباراة والتخصص والمدينة قبل الاعتماد على إعلان معاد نشره. المصادر الأصلية أدناه تتيح التحقق المباشر."
+              "يشير الإعلان إلى نشر لوائح المقبولين لاجتياز الاختبارات الكتابية والشفوية على بوابة التشغيل العمومي وموقع المركز، ويعتبر النشر استدعاءً للمترشحين. لا يقدم الإعلان راتباً فردياً صافياً، ولا يحدد موعد نشر النتائج أو مقابلة مستقلاً، ولذلك يجب تجنب الأرقام والتواريخ المتداولة بلا سند. لا تخلط بين الترشح والتوظيف النهائي، ولا تدفع مقابلاً لوسطاء يدعون ضمان النجاح. راقب أيضاً أي توضيح رسمي لصياغة الموعد في الإعلان والبوابة، وقارن رقم المباراة والتخصص والمدينة قبل الاعتماد على إعلان معاد نشره. المصادر الأصلية أدناه تتيح التحقق المباشر."
             ]
           ]
         },
         "en": {
-          "title": "CNRST Management competition: four administrator jobs and a conflicting application deadline",
-          "deck": "A verified guide to C44248/26: four posts in Tangier, Agadir, Oujda and Fez; exam on 15 November 2026; official documents disagree on the 8/9 November deadline.",
+          "title": "CNRST Management competition: four administrator jobs and how to read the application deadline",
+          "deck": "A verified guide to C44248/26: four posts in Tangier, Agadir, Oujda and Fez; exam on 15 November 2026; the portal closes 8 November at 16:30 while the notice says 'before 9 November'.",
           "sections": [
             [
               "Four management posts in four regional cities",
               "Morocco's National Centre for Scientific and Technical Research (CNRST) has announced a competition for four third-grade administrators, pay scale 10, in Management. The original notice allocates one position to each regional scientific research technical support unit in Tangier, Agadir, Oujda and Fez. That distribution does not by itself establish a candidate's freedom to choose a posting. The official government listing is identified as competition C44248/26, published on 23 October 2026, with the examination scheduled for 15 November. This is a specific public recruitment competition for four administrative posts, not a general invitation to apply for laboratory or scientific researcher vacancies."
             ],
             [
-              "Important deadline conflict: 8 November versus 9 November",
-              "The two official documents disagree on a material point. Morocco's public employment portal gives a closing date of 8 November 2026 at 16:30. However, page three of the CNRST's stamped original notice instructs candidates to complete the compulsory online submission before 9 November 2026. The later date must not be presented as an officially confirmed extension, and the portal date must not be concealed. A prudent applicant should complete submission before 8 November at 16:30, retain the electronic acknowledgement, and seek written clarification from the recruiting authority if needed. Only a formally published correction could settle the discrepancy reliably."
+              "Reading the deadline correctly: 8 November and 'before 9 November'",
+              "The two official documents express the deadline differently. Morocco's public employment portal gives a closing date of 8 November 2026 at 16:30. However, page three of the CNRST's stamped original notice instructs candidates to complete the compulsory online submission before 9 November 2026. The words 'before 9 November' may be consistent with a closing date on 8 November, but do not specify the portal's 16:30 cutoff. They do not create an extension. A prudent applicant should complete submission before 8 November at 16:30, retain the electronic acknowledgement, and seek written clarification from the recruiting authority if needed. Only an official clarification could resolve any remaining uncertainty about the closing hour."
             ],
             [
               "Eligibility: a relevant licence degree, not necessarily a master's",
@@ -5390,21 +5391,21 @@
             ],
             [
               "Results, compensation and fraud warnings",
-              "The notice says that lists of candidates invited to written and oral examinations will be posted on the public employment portal and CNRST website, and that such publication constitutes an invitation. It does not state an individual net salary, a separate oral examination date or a guaranteed date for final results. A pay-scale label is not a verified take-home salary offer. Do not confuse submitting an application with receiving a job offer, and do not pay anyone promising admission. Monitor the employer's official channels for any correction to the 8/9 November conflict. When checking reposted announcements, confirm the competition code, the Management specialty and the four-city allocation against the original notice."
+              "The notice says that lists of candidates invited to written and oral examinations will be posted on the public employment portal and CNRST website, and that such publication constitutes an invitation. It does not state an individual net salary, a separate oral examination date or a guaranteed date for final results. A pay-scale label is not a verified take-home salary offer. Do not confuse submitting an application with receiving a job offer, and do not pay anyone promising admission. Monitor the employer's official channels for any correction to the portal's 8 November deadline and the notice's 'before 9 November' wording. When checking reposted announcements, confirm the competition code, the Management specialty and the four-city allocation against the original notice."
             ]
           ]
         },
         "fr": {
-          "title": "Concours CNRST Management : quatre administrateurs et contradiction sur la date limite",
-          "deck": "Guide fondé sur l'avis original et la fiche officielle C44248/26 : quatre postes à Tanger, Agadir, Oujda et Fès, concours le 15 novembre 2026, dates limites contradictoires.",
+          "title": "Concours CNRST Management : quatre administrateurs et précisions sur la date limite",
+          "deck": "Guide fondé sur l'avis original et la fiche officielle C44248/26 : quatre postes à Tanger, Agadir, Oujda et Fès, concours le 15 novembre 2026, date limite du portail au 8 novembre à 16 h 30 et mention « avant le 9 novembre » dans l'avis.",
           "sections": [
             [
               "Quatre postes en management répartis dans quatre villes",
               "Le Centre national pour la recherche scientifique et technique (CNRST) annonce un concours pour quatre administrateurs de troisième grade, échelle 10, spécialité Management. L'avis original attribue un poste à chacune des unités régionales d'appui technique à la recherche scientifique de Tanger, Agadir, Oujda et Fès. Cette répartition ne signifie pas que chaque candidat choisit librement son affectation. L'annonce gouvernementale porte le code C44248/26, a été publiée le 23 octobre 2026 et indique un concours le 15 novembre. Il s'agit d'un recrutement administratif précis de quatre postes, et non d'un appel permanent pour tous les métiers scientifiques du centre."
             ],
             [
-              "Attention : contradiction entre les dates limites du 8 et du 9 novembre",
-              "Deux documents officiels ne concordent pas. Le portail emploi-public affiche le 8 novembre 2026 à 16 h 30 comme date limite de candidature. Pourtant, la troisième page de l'avis original du CNRST, portant le cachet de l'établissement, exige le dépôt électronique avant le 9 novembre 2026. Il serait imprudent de présenter la date la plus tardive comme une prolongation officiellement confirmée. Le candidat devrait déposer son dossier avant le 8 novembre à 16 h 30, conserver l'accusé de réception et solliciter, si nécessaire, une clarification écrite de l'organisateur. Seul un rectificatif officiel peut lever définitivement cette contradiction."
+              "Comment interpréter le 8 novembre et la mention « avant le 9 novembre » ?",
+              "Les deux documents officiels expriment l'échéance différemment. Le portail emploi-public affiche le 8 novembre 2026 à 16 h 30 comme date limite de candidature. Pourtant, la troisième page de l'avis original du CNRST, portant le cachet de l'établissement, exige le dépôt électronique avant le 9 novembre 2026. La formule « avant le 9 novembre » peut être compatible avec une clôture le 8 novembre ; elle ne précise toutefois pas l'heure de 16 h 30 affichée sur le portail et ne constitue pas une prolongation. Le candidat devrait déposer son dossier avant le 8 novembre à 16 h 30, conserver l'accusé de réception et solliciter, si nécessaire, une clarification écrite de l'organisateur. Une clarification officielle reste utile en cas de doute sur l'heure de clôture."
             ],
             [
               "Conditions d'accès : une licence pertinente, sans master systématique",
@@ -5432,7 +5433,7 @@
             ],
             [
               "Convocations, salaire et précautions contre les fausses annonces",
-              "Les listes des candidats convoqués aux épreuves écrites et orales doivent être publiées sur le portail de l'emploi public et sur le site du CNRST ; leur publication vaut convocation. L'avis ne donne pas de salaire net individuel, de date séparée pour l'oral ou de calendrier certain des résultats finaux. L'indication « échelle 10 » ne constitue pas une promesse de rémunération nette. Méfiez-vous des personnes réclamant des frais en échange d'une admission prétendument garantie. Surveillez tout rectificatif officiel concernant les dates contradictoires des 8 et 9 novembre, et contrôlez toujours le code C44248/26 et les villes d'affectation."
+              "Les listes des candidats convoqués aux épreuves écrites et orales doivent être publiées sur le portail de l'emploi public et sur le site du CNRST ; leur publication vaut convocation. L'avis ne donne pas de salaire net individuel, de date séparée pour l'oral ou de calendrier certain des résultats finaux. L'indication « échelle 10 » ne constitue pas une promesse de rémunération nette. Méfiez-vous des personnes réclamant des frais en échange d'une admission prétendument garantie. Surveillez tout rectificatif officiel concernant la date du 8 novembre sur le portail et la formule « avant le 9 novembre » de l'avis, et contrôlez toujours le code C44248/26 et les villes d'affectation."
             ]
           ]
         }
