@@ -174,7 +174,8 @@
         "crypto-perpetual-futures-funding-and-liquidation",
         "redotpay-card-referrals-morocco-eligibility-2026",
         "bitcoin-wallet-recovery-backup-safety-drill",
-        "ethereum-smart-contracts-wallet-permissions"
+        "ethereum-smart-contracts-wallet-permissions",
+        "coin-versus-token-claim-verification"
       ],
       "targetArticles": 40
     },

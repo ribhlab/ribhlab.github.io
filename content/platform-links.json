@@ -955,6 +955,10 @@
     "english-learning-apps-pronunciation-plan": [
       "googlePlay",
       "appleAppStore"
+    ],
+    "coin-versus-token-claim-verification": [
+      "ethereum",
+      "coingecko"
     ]
   }
 }

@@ -782,6 +782,16 @@
       "altFr": "Photographie d'une personne portant un casque et utilisant un ordinateur portable ; illustration de l'écoute individuelle, non d'une application évaluée",
       "license": "Unsplash License",
       "note": "Original free Unsplash photograph by Julio Lopez, published 9 October 2025. Page and image link (photo-1759984782065-f8c308b0142f) verified 29 October 2026; official Unsplash free license checked. Unique ID cross-checked against published article photo registry, all 7 queued bundles, recipe photo library, opportunity photography, market digests, market feed and sports/tech images. Illustrative only; no product endorsement."
+    },
+    "coin-versus-token-claim-verification": {
+      "photoId": "photo-1634108941345-3a6a66685563",
+      "source": "https://unsplash.com/photos/a-pile-of-coins-sitting-on-top-of-a-table-Bu_p48b3ZAA",
+      "photographer": "rc.xyz NFT gallery (@moneyphotos)",
+      "alt": "Real photograph of several physical cryptocurrency-themed coins on a table, illustrating token branding rather than an actual blockchain ledger",
+      "altAr": "صورة فوتوغرافية لقطع تحمل رموزاً مرتبطة بالعملات الرقمية؛ توضيح للعلامات لا دليل على ملكية أصل رقمي",
+      "altFr": "Photographie de pièces portant des symboles de cryptomonnaies, illustration des marques et non preuve de propriété numérique",
+      "license": "Unsplash License",
+      "note": "Free Unsplash photo by rc.xyz NFT gallery, published 13 October 2021; original photo page and linked images.unsplash.com asset photo-1634108941345-3a6a66685563 checked 29 October 2026. Not an actual blockchain record or endorsement."
     }
   }
 }

@@ -1146,14 +1146,10 @@
         "crypto-perpetual-futures-funding-and-liquidation",
         "redotpay-card-referrals-morocco-eligibility-2026",
         "bitcoin-wallet-recovery-backup-safety-drill",
-        "ethereum-smart-contracts-wallet-permissions"
+        "ethereum-smart-contracts-wallet-permissions",
+        "coin-versus-token-claim-verification"
       ],
       "ideas": [
-        {
-          "sequence": 6,
-          "titleAr": "الفرق بين Coin وToken",
-          "status": "planned"
-        },
         {
           "sequence": 7,
           "titleAr": "كيف تقرأ ورقة مشروع Crypto",
