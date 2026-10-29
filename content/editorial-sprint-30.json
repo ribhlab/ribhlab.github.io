@@ -211,10 +211,12 @@
         "googlePlay",
         "appleAppStore"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/scan-documents-phone-privacy-quality/",
       "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/scan-documents-phone-privacy-quality.json"
+      "queuePath": "content/reviewed-queue/scan-documents-phone-privacy-quality.json",
+      "publishedVerifiedAt": "2026-10-29",
+      "verification": "Publisher released content/articles/scan-documents-phone-privacy-quality.json at 2026-10-29T08:59:12Z; GitHub Actions quality 40846157093 and Pages deploy 40846157035 success; public-sitemap-check 40846250022 verified HTTP 200 and five complete sections, sources and licensed photo in AR/EN/FR."
     },
     {
       "sectionId": "mobile-apps",
