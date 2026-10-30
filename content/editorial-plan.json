@@ -57,7 +57,10 @@
         {
           "sequence": 13,
           "titleAr": "حماية حسابات المستقلين من التصيد",
-          "status": "planned"
+          "status": "queued",
+          "slug": "freelance-phishing-client-messages-account-safety",
+          "queuePath": "content/reviewed-queue/freelance-phishing-client-messages-account-safety.json",
+          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 14,
