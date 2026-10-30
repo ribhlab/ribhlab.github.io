@@ -11,10 +11,10 @@
   "totals": {
     "cards": 101,
     "visa": 12,
-    "researched": 39,
+    "researched": 40,
     "marketEvidence": 5,
     "pendingDetail": 46,
-    "pendingLiveVerification": 11
+    "pendingLiveVerification": 10
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -185,13 +185,15 @@
       "section": "competitions",
       "title": "84 techniciens — SRM Laâyoune (avis global de 117 agents)",
       "deadline": "2026-11-10",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-10",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c6cce0a1-1fa3-46ed-b188-adc6c7ae60db",
       "reviewedAt": "2026-10-30",
       "evidenceId": "srm-technicians",
-      "verification": "Signed five-page notice 110/2026/DA/DG/SRMLS and C44300/26 listing read 30 Oct 2026; 9 original AR/EN/FR sections, 755/902/934 words. 117 total agents in signed notice vs 84 technicians on portal. Live build and three public pages still need confirmation."
+      "verification": "Signed five-page notice 110/2026/DA/DG/SRMLS and government listing C44300/26 read 30 Oct 2026; nine original sections AR/EN/FR (755/902/934 words). Source/build 41059996954, GitHub Pages 41059996856 and public trilingual HTTP 200/content/source verification 41060195781 succeeded.",
+      "researchedAt": "2026-10-30",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/srm-technicians/"
     },
     {
       "id": "bam-cyber",
