@@ -51,7 +51,9 @@
         {
           "sequence": 11,
           "titleAr": "بناء Portfolio ببيانات تجريبية",
-          "status": "planned"
+          "status": "queued",
+          "slug": "portfolio-synthetic-data-original-samples",
+          "queuedAt": "2026-10-30"
         },
         {
           "sequence": 12,
