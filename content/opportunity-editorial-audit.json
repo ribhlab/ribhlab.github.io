@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-30",
-  "scope": "All 100 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
+  "scope": "All 101 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
@@ -9,12 +9,12 @@
     "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
-    "cards": 100,
+    "cards": 101,
     "visa": 12,
     "researched": 39,
     "marketEvidence": 5,
     "pendingDetail": 47,
-    "pendingLiveVerification": 9
+    "pendingLiveVerification": 10
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -26,6 +26,18 @@
     "Keep internal cards within RibhLab and external primary sources in new tabs"
   ],
   "cards": [
+    {
+      "id": "anapec-dg-networks-technician-c44231-2026",
+      "section": "competitions",
+      "title": "ANAPEC — Technicien systèmes et réseaux (1 poste, échelle 9)",
+      "deadline": "2026-11-05T16:30",
+      "status": "researched-awaiting-live-verification",
+      "priority": "verify-build-deploy-live-ar-en-fr",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/8b1063c1-dc54-4008-86c0-ebee8d34c856",
+      "articleEvidenceId": "anapec-dg-networks-technician-c44231-2026",
+      "reviewedAt": "2026-10-30",
+      "note": "Original three-page signed ANAPEC notice and specific government listing checked; one DG network post C44231/26; 18–40; DTS/DUT/BTS or equivalent; PDF upload by 5 Nov 16:30; QCM and oral. Exam location not individually confirmed; salary not published."
+    },
     {
       "id": "map-recruitment-officer-rabat-2026",
       "section": "competitions",
