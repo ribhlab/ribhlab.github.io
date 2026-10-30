@@ -60,6 +60,7 @@ jobs:
               wanted.append(f'/{lang}/ai/english-learning-apps-pronunciation-plan/')
               wanted.append(f'/{lang}/ai/voice-recording-transcription-mobile-accuracy/')
               wanted.append(f'/{lang}/ai/unreal-engine-when-to-choose/')
+              wanted.append(f'/{lang}/opportunities/companies/sntl-dev-logiciel-2/')
               wanted.append(f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/')
               wanted.append(f'/{lang}/trading/coin-versus-token-claim-verification/')
               wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-data-science-ai/')
@@ -97,6 +98,11 @@ jobs:
                           assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{lang}: {slug} missing references or licensed photo'
                           assert official in page, f'{lang}: {slug} missing its official source'
                           print(f'NEW EDITORIAL LIVE {lang}: {slug}, {minimum} sections, official source and licensed photo',flush=True)
+                      sntl=bodies[f'/{lang}/opportunities/companies/sntl-dev-logiciel-2/'].decode('utf-8')
+                      assert sntl.count('class="opp-guide-section" id="part-')>=10, f'{lang}: SNTL software guide lacks ten researched sections'
+                      assert 'C44159/26' in sntl and 'SNTL/TDEVDSI/2026' in sntl, f'{lang}: SNTL original recruitment reference missing'
+                      assert 'opp-guide-sources' in sntl and 'target="_blank"' in sntl, f'{lang}: SNTL official references or external tabs missing'
+                      print(f'SNTL SOFTWARE LIVE {lang}: ten original sections and two official notices',flush=True)
                       scan=bodies[f'/{lang}/ai/scan-documents-phone-privacy-quality/'].decode('utf-8')
                       assert scan.count('class="article-block"')>=5 and 'article-sources' in scan and 'licensed-editorial-photo' in scan, f'{lang}: scanned-document article lacks full text, sources or photo'
                       print(f'MOBILE SCANNING LIVE {lang}: five sections, sources and licensed image',flush=True)
