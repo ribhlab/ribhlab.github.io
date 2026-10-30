@@ -54,6 +54,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/adha-civil-engineers-2026/')
               wanted.append(f'/{lang}/opportunities/competitions/srm-souss-technician/')
               wanted.append(f'/{lang}/opportunities/competitions/srm-technicians/')
+              wanted.append(f'/{lang}/opportunities/competitions/srm-laayoune-responsibles/')
               wanted.append(f'/{lang}/opportunities/competitions/civil-protection/')
               wanted.append(f'/{lang}/opportunities/competitions/amdie-development/')
               wanted.append(f'/{lang}/opportunities/competitions/anapec-finance-audit-3/')
@@ -132,6 +133,12 @@ jobs:
                       assert 'C44300/26' in laayoune and '110/2026' in laayoune, f'{lang}: SRM Laayoune signed notice/reference missing'
                       assert 'opp-guide-sources' in laayoune and 'target="_blank"' in laayoune, f'{lang}: SRM Laayoune official sources or external tabs missing'
                       print(f'SRM LAAYOUNE LIVE {lang}: nine original sections, signed five-page notice and official listing',flush=True)
+                      srm_managers=bodies[f'/{lang}/opportunities/competitions/srm-laayoune-responsibles/'].decode('utf-8')
+                      assert srm_managers.count('class="opp-guide-section" id="part-')>=9, f'{lang}: SRM managers guide lacks nine substantive sections'
+                      assert '109/2026' in srm_managers and 'C44294/26' in srm_managers, f'{lang}: SRM managers original decision or government reference missing'
+                      assert 'opp-guide-sources' in srm_managers and 'target="_blank"' in srm_managers, f'{lang}: SRM managers official sources or external tab behavior missing'
+                      assert '10' in srm_managers and '2026' in srm_managers, f'{lang}: SRM managers deadline missing'
+                      print(f'SRM MANAGERS LIVE {lang}: nine sections, original signed notice, public portal and accounting role',flush=True)
                       civil=bodies[f'/{lang}/opportunities/competitions/civil-protection/'].decode('utf-8')
                       assert civil.count('class="opp-guide-section" id="part-')>=10, f'{lang}: Civil Protection guide lacks ten researched sections'
                       assert 'C44132/26' in civil and '0bc3b58e-cfd7-466e-9023-6faf53a94738' in civil, f'{lang}: Civil Protection official contest or signed notice missing'
