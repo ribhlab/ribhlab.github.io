@@ -428,7 +428,11 @@
       "status": "queued",
       "articleUrl": null,
       "queuePath": "content/reviewed-queue/crypto-whitepaper-audit-without-hype.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "publisherReleasedAt": "2026-10-30T00:28:06.219Z",
+      "publisherReleaseCommit": "3f6b2b126e6fbd68ac3d6d0938be284671614a6b",
+      "articleSlug": "crypto-whitepaper-audit-without-hype",
+      "editorialNote": "Publisher moved full AR/EN/FR JSON into content/articles and removed the queue item; live Pages HTTP and Actions build/deploy QA could not be independently checked in this run. Keep excluded from published count until confirmed."
     },
     {
       "sectionId": "gold-macro",
