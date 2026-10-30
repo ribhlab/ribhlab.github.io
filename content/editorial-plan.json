@@ -1507,7 +1507,10 @@
         {
           "sequence": 12,
           "titleAr": "فهم مكونات المرطبات: غليسرين وسيراميد",
-          "status": "planned"
+          "status": "queued",
+          "slug": "glycerin-ceramides-moisturizer-label-guide",
+          "queuePath": "content/reviewed-queue/glycerin-ceramides-moisturizer-label-guide.json",
+          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 13,
