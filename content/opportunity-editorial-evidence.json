@@ -6685,6 +6685,182 @@
           ]
         }
       }
+    },
+    "hcp-statistics-applied-economics-11-2026": {
+      "reviewedAt": "2026-10-30",
+      "verification": "Original two-page HCP recruitment notice visually reviewed on 30 October 2026, compared with government listing C44349/26; signed/official PDF has image-based Arabic text, verified page by page. Awaiting live RibhLab page verification; not claimed published.",
+      "state": "researched-awaiting-live-verification",
+      "sources": [
+        {
+          "label": "Haut-Commissariat au Plan — avis original de concours (2 pages), consulté le 30 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/144317d0-3827-46f6-94c3-a5fbd18b2c85"
+        },
+        {
+          "label": "Emploi-public.ma — concours C44349/26 publié le 29 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/144317d0-3827-46f6-94c3-a5fbd18b2c85"
+        },
+        {
+          "label": "Haut-Commissariat au Plan — site institutionnel, publication des convocations",
+          "url": "https://www.hcp.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Haut-Commissariat au Plan",
+        "country": "Maroc",
+        "city": "Services centraux et déconcentrés, villes non attribuées",
+        "jobTitle": "Administrateur 2ème grade, statistique et économie appliquée",
+        "reference": "C44349/26",
+        "published": "2026-10-29",
+        "posts": 11,
+        "grade": "Administrateur 2ème grade, échelle 11",
+        "nationality": "Marocaine",
+        "age": "18 à 45 ans au 1er janvier 2026",
+        "degree": "DESA/DESS/master/master spécialisé ou équivalent en statistique ou économie appliquée",
+        "deadline": "2026-11-13T16:30",
+        "examDate": "2026-11-29",
+        "application": "https://depot.emploi-public.ma/",
+        "documents": [
+          "Demande en ligne",
+          "Copie du diplôme et décision d'équivalence si applicable",
+          "Attestation de spécialité si non mentionnée sur le diplôme",
+          "Copie de la CIN",
+          "CV avec photographie",
+          "Autorisation administrative pour fonctionnaires",
+          "Justificatifs du statut réservé ou du handicap, le cas échéant"
+        ],
+        "selection": "Écrit général 3 h coefficient 2; écrit spécial 3 h coefficient 3; oral 15–30 minutes coefficient 3",
+        "salary": null,
+        "contractDuration": null,
+        "deadlineConflict": null
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة المندوبية السامية للتخطيط 2026: 11 منصباً في الإحصاء والاقتصاد التطبيقي",
+          "deck": "قراءة موثقة للقرار الرسمي: الشهادات والسن والوثائق والتسجيل والاختبارات ومواعيد 13 و29 نوفمبر، مع حدود المعلومات المعلنة.",
+          "sections": [
+            [
+              "إعلان رسمي محدد وليس وعداً بالتوظيف",
+              "أعلنت المندوبية السامية للتخطيط عن تنظيم مباراة يوم 29 نوفمبر 2026 لتوظيف أحد عشر متصرفاً من الدرجة الثانية في تخصص الإحصاء أو الاقتصاد التطبيقي. نُشر الإعلان في بوابة التشغيل العمومي يوم 29 أكتوبر 2026 تحت الرمز C44349/26. يحدد القرار التعيين في المصالح المركزية والمصالح اللاممركزة للمندوبية، لكنه لا يوزع المناصب على مدن بأسمائها. لذلك لا يصح الادعاء بأن المرشح سيعمل بالرباط حتماً أو في مدينة بعينها. هذا دليل لقراءة القرار الأصلي المكون من صفحتين وليس عرض عمل فردياً يضمن القبول."
+            ],
+            [
+              "الجنسية والسن والاستثناءات المعلنة",
+              "تفتح المباراة أمام المرشحين المغاربة الذين تتراوح أعمارهم بين ثماني عشرة وخمس وأربعين سنة في فاتح يناير 2026، وفق الصياغة الواردة في القرار. ينص الإعلان على تخصيص خمسة وعشرين في المائة من المناصب لفئات قدماء المقاومين ومكفولي الأمة وقدماء العسكريين وقدماء المحاربين، وسبعة في المائة للأشخاص في وضعية إعاقة. لا تعني هذه النسب أن كل مرشح ضمن الفئة سيقبل تلقائياً، بل تبقى شروط المباراة والإجراءات المعلنة واجبة التطبيق. يجب التحقق من الوثائق المثبتة للوضعية الخاصة قبل الإيداع، وعدم تقديم تصريح غير مدعوم."
+            ],
+            [
+              "الشهادة المطلوبة وما معنى التخصص",
+              "يقبل القرار دبلوم الدراسات العليا المعمقة أو دبلوم الدراسات العليا المتخصصة أو الماستر أو الماستر المتخصص أو شهادة معادلة طبقاً للنظام الجاري به العمل، في الإحصاء أو الاقتصاد التطبيقي. لا يكفي أن يحمل المرشح شهادة في مجال قريب مثل التدبير أو المحاسبة ثم يفترض أنها مقبولة دون إثبات التخصص أو المعادلة. إذا لم يرد التخصص صراحة في عنوان الدبلوم، يطلب القرار شهادة من المؤسسة المانحة توضح التخصص المطلوب. وتلزم معادلة صادرة عن الوزارة المختصة بالنسبة إلى الشهادات الأجنبية عند الاقتضاء؛ لا يُستعاض عنها بترجمة شخصية."
+            ],
+            [
+              "أين ومتى يودع الترشيح؟",
+              "يتم الترشيح حصرياً عبر منصة الإيداع التابعة لبوابة التشغيل العمومي، وليس بالبريد الإلكتروني أو التسليم اليدوي إلى مقر المندوبية. ينص القرار على أن 13 نوفمبر 2026 عند الساعة الرابعة والنصف بعد الزوال هو آخر أجل، وتؤكد صفحة الإعلان الحكومية التاريخ والساعة نفسيهما. يُنصح بفتح الحساب والتحقق من المرفقات قبل اليوم الأخير، لأن انقطاع الاتصال أو تعذر رفع وثيقة لا يمدد الأجل تلقائياً. احتفظ بنسخة من الملف ورقم الطلب أو وصل الإرسال إن توفر، وتحقق من أن العملية انتهت فعلاً."
+            ],
+            [
+              "قائمة الوثائق مع الفروق بين الحالات",
+              "يتضمن ملف الترشيح تعبئة طلب المشاركة عبر المنصة، ونسخة من الدبلوم أو الشهادة المطلوبة، وقرار المعادلة إذا كان ضرورياً، وشهادة تحديد التخصص عندما لا يذكره الدبلوم، ونسخة من البطاقة الوطنية للتعريف، وسيرة ذاتية تتضمن صورة المرشح. ويطلب ترخيصاً لاجتياز المباراة بالنسبة إلى الموظفين، تسلمه المصلحة المكلفة بالموارد البشرية في إدارتهم. أما المرشحون في وضعية إعاقة أو المنتمون إلى الفئات ذات الحصص المخصصة فعليهم توفير الوثائق المثبتة وفق الإعلان. لا تفترض أن مجرد رفع ملف غير مقروء يفي بالشرط."
+            ],
+            [
+              "الاختبار الكتابي العام والخاص",
+              "تتضمن المباراة اختباراً كتابياً عاماً مدته ثلاث ساعات بمعامل اثنين، يتناول قضايا قانونية أو اقتصادية أو تدبيرية أو اجتماعية أو إنسانية أو علمية. ويتبعه اختبار كتابي خاص مدته ثلاث ساعات بمعامل ثلاثة يتعلق باختصاصات الإدارة أو التخصص المطلوب أو المهام التي ستُمارس. يختلف الاختبار العام عن اختبار الإحصاء والاقتصاد التطبيقي، لذلك لا تكفي مراجعة الصيغ الإحصائية وحدها. يمكن للمرشح إعداد أوراق موجزة عن السياسة الإحصائية والاقتصاد الوطني ثم تدريب نفسه على الإجابة المنظمة في وقت محدود، من دون افتراض موضوع امتحان غير معلن."
+            ],
+            [
+              "الاختبار الشفوي ومراحل الانتقاء",
+              "يذكر القرار اختباراً شفوياً تتراوح مدته بين خمس عشرة وثلاثين دقيقة بمعامل ثلاثة، تناقش فيه لجنة المباراة مواضيع وقضايا مختلفة لتقييم قدرة المرشح على ممارسة المهام المرتبطة بالدرجة المتبارى بشأنها. لا يحدد القرار قائمة أسئلة مسبقة ولا نسبة نجاح مضمونة. ومن التحضير المفيد شرح مشروع تخرج أو تحليل بيانات حقيقي بلغة واضحة، وبيان حدود العينة ومصادر الخطأ وكيفية توصيل نتيجة إحصائية إلى مسؤول غير متخصص. ينبغي عدم تقديم خبرة أو مشروع لم ينفذه المرشح فعلاً. الإعلان الرسمي هو المرجع لمراحل الاستدعاء والنتائج."
+            ],
+            [
+              "التحقق من لوائح الاستدعاء والاعتراض",
+              "يوضح القرار أن لوائح المرشحين المقبولين لاجتياز المباراة تنشر في بوابة التشغيل العمومي والموقع الرسمي للمندوبية، وتعد بمثابة استدعاء. إذا لم يظهر اسم المرشح رغم إيداعه ملفاً صحيحاً، يذكر القرار إمكانية تقديم تظلم في غضون ثمان وأربعين ساعة من نشر اللوائح عبر البريد الإلكتروني الخاص بمديرية الموارد البشرية والشؤون العامة المنشور في القرار. لا ينبغي انتظار رسالة هاتفية فردية أو اعتبار السكوت قبولاً. تحقق من اللوائح بنفسك، واحفظ تاريخ النشر وصورة من ملفك عند الاستفسار."
+            ],
+            [
+              "الراتب والتعيين والمخاطر العملية",
+              "لا يحدد الإعلان مبلغ الراتب الصافي ولا مدينة التعيين لكل منصب من المناصب الأحد عشر؛ لذلك يمتنع هذا الدليل عن اختراع أرقام أو تعيينات. الدرجة الثانية والسلم الحادي عشر معلومتان معلنتان، لكن الأجر الفعلي يتأثر بالقواعد النظامية والوضعية الفردية. تجنب دفع مبالغ لوسطاء يدعون ضمان النجاح، وتأكد من أن روابط الإيداع تتبع الجهة الحكومية الأصلية. إذا كانت لديك شهادة أجنبية أو تخصص غير واضح، عالج مسألة المعادلة مبكراً. وفي حال صدور تعديل رسمي بعد 29 أكتوبر، تكون النسخة الأحدث الصادرة عن الجهة المنظمة هي المرجع."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Morocco HCP 2026: 11 statistics and applied economics administrator posts",
+          "deck": "Official-notice analysis covering eligibility, degrees, application documents, examination stages and deadlines, without invented salaries or locations.",
+          "sections": [
+            [
+              "What the official announcement actually offers",
+              "Morocco's High Commission for Planning announced a competitive examination on 29 November 2026 to recruit eleven second-grade administrators specializing in statistics or applied economics. The government employment portal published notice C44349/26 on 29 October 2026. The signed two-page notice says appointments may be at central or decentralized HCP services, without allocating individual vacancies to named cities. It would therefore be misleading to promise a Rabat posting or a specific regional placement. This guide reads the actual notice rather than treating a job title as evidence of guaranteed employment."
+            ],
+            [
+              "Nationality, age and reserved places",
+              "The competition is open to Moroccan nationals aged between eighteen and forty-five on 1 January 2026, as specified in the original decision. It reserves twenty-five percent of posts for the stated categories of former resistance members, wards of the nation, former military personnel and veterans, and seven percent for applicants with disabilities. These percentages are reservation rules, not automatic admission guarantees. All applicants must still follow the prescribed procedure and provide the relevant documentary proof. Candidates with a special status should verify the appropriate certificate before uploading their application rather than relying on an unsupported declaration."
+            ],
+            [
+              "Accepted degrees and specialization evidence",
+              "The notice names a postgraduate advanced studies diploma, specialized postgraduate studies diploma, master's degree, specialized master's degree or legally recognized equivalent in statistics or applied economics. A qualification in a neighboring field, such as general management or accounting, should not be assumed eligible without evidence that the awarded specialization matches the notice. Where the diploma does not clearly show the specialization, the notice requires an additional certificate from the issuing institution. Holders of foreign qualifications must attach the appropriate equivalence decision when required. A personal translation is not a substitute for official equivalence."
+            ],
+            [
+              "The application route and exact deadline",
+              "Applications must be submitted exclusively through the public employment portal's online application platform. The original notice and the government listing both give 13 November 2026 at 16:30 as the deadline. Emailing an employee or delivering a folder to HCP headquarters is not an alternative route stated by this competition. Create or check your account early, confirm the file formats accepted by the live form, and keep the submission confirmation when available. Technical trouble on the final afternoon does not automatically create a legal extension, so avoid leaving document uploads until the last minute."
+            ],
+            [
+              "Documents to prepare before logging in",
+              "The notice requires the online application, a copy of the relevant degree or diploma, an equivalence decision where applicable, proof of specialization if the diploma title is insufficient, a national identity card copy, and a CV bearing the candidate's photograph. Public employees must supply authorization to sit the competition issued through their administration's human resources service. Candidates claiming reserved status or disability provisions need the relevant supporting documents. The safest approach is to compare every uploaded file against the official list, check that scans are legible and retain a local copy. Do not assume a partial upload constitutes a complete application."
+            ],
+            [
+              "General and specialized written papers",
+              "The general written examination lasts three hours and has coefficient two. It covers a question involving legal, economic, management, social, human or scientific issues. The specialized written examination also lasts three hours, but has coefficient three, and concerns the administration's functions, the requested specialty or the duties of the position. Studying statistics alone is therefore not enough. Candidates can practice interpreting an economic indicator, explaining a statistical method and presenting a structured policy argument under timed conditions. These are preparation suggestions, not predictions of the exact examination topics or claims about a leaked paper."
+            ],
+            [
+              "Oral assessment and realistic preparation",
+              "The oral examination lasts between fifteen and thirty minutes and carries coefficient three. The panel discusses varied topics to assess the candidate's capacity to perform duties associated with the grade. The notice does not publish a list of questions, an interview pass rate or an individual ranking forecast. A sensible preparation exercise is to explain a genuine data project, the sample used, sources of uncertainty and how its findings would be communicated to a nontechnical decision-maker. Candidates should not embellish work experience or present someone else's analysis as their own. Follow official instructions on eligibility for each examination stage."
+            ],
+            [
+              "Shortlists, summons and possible objections",
+              "According to the notice, lists of candidates admitted to the examination are posted on the government employment portal and the HCP website and serve as the summons. Applicants should monitor both rather than wait for a personal telephone call. The decision describes a forty-eight-hour window after publication for an objection concerning omission from the list, directed to the human-resources contact published in the original notice. Preserve evidence of submission and note the list's publication time if a correction is needed. This does not mean that every objection succeeds or that an incomplete file will be accepted retroactively."
+            ],
+            [
+              "Pay, location and fraud warnings",
+              "The announcement identifies the grade and scale but does not state a specific take-home salary or assign each of the eleven jobs to a city. Compensation may depend on public-sector rules and the individual's situation; publishing a guessed monthly figure would be irresponsible. Applicants should use the official submission platform, distrust intermediaries selling guaranteed admission, and verify any later amendment directly with HCP. Foreign diploma equivalence and unclear specialization should be resolved as early as possible. Information in this guide reflects the official documents available on 30 October 2026 and may require updating if the organizer issues a correction."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours HCP 2026 : 11 administrateurs en statistique et économie appliquée",
+          "deck": "Analyse de l'avis officiel : diplômes, âge, dossier, dépôt électronique, épreuves et échéances, sans salaire ni affectation inventés.",
+          "sections": [
+            [
+              "Une annonce précise, pas une promesse d'embauche",
+              "Le Haut-Commissariat au Plan organise le 29 novembre 2026 un concours destiné au recrutement de onze administrateurs de deuxième grade, spécialisés en statistique ou économie appliquée. L'avis C44349/26 a été publié le 29 octobre 2026 sur le portail de l'emploi public. Le document officiel de deux pages prévoit des affectations dans les services centraux et déconcentrés, sans répartir les postes par ville. Il serait donc inexact d'affirmer que tous les lauréats travailleront à Rabat. Cette analyse repose sur l'avis original et distingue les conditions de candidature des simples conseils de préparation."
+            ],
+            [
+              "Nationalité, âge et quotas annoncés",
+              "Le concours s'adresse aux personnes de nationalité marocaine âgées de dix-huit à quarante-cinq ans au 1er janvier 2026, selon la formulation de la décision. Le texte réserve vingt-cinq pour cent des postes aux catégories prévues pour les anciens résistants, pupilles de la Nation, anciens militaires et anciens combattants, et sept pour cent aux personnes en situation de handicap. Ces proportions ne garantissent pas automatiquement la réussite des candidats concernés. Les justificatifs réglementaires restent indispensables. Avant de déposer un dossier sous un statut particulier, il faut vérifier la pièce officielle demandée et éviter toute déclaration non étayée."
+            ],
+            [
+              "Diplômes admissibles et preuve de spécialité",
+              "L'avis mentionne le diplôme d'études supérieures approfondies, le diplôme d'études supérieures spécialisées, le master, le master spécialisé ou un titre reconnu équivalent, en statistique ou économie appliquée. Un diplôme voisin en gestion ou en comptabilité ne suffit pas nécessairement à démontrer l'adéquation de la spécialité. Lorsque celle-ci n'apparaît pas clairement sur le titre, une attestation de l'établissement qui l'a délivré est requise. Pour les diplômes étrangers, la décision d'équivalence doit être jointe lorsqu'elle s'applique. Une traduction privée ne remplace pas une décision administrative d'équivalence."
+            ],
+            [
+              "Candidature exclusivement en ligne",
+              "La candidature s'effectue obligatoirement sur la plateforme de dépôt du portail de l'emploi public. La décision et la fiche gouvernementale indiquent toutes deux la date limite du 13 novembre 2026 à 16 h 30. Le texte ne propose pas d'envoi par courriel ou de dépôt papier comme solution de remplacement. Il est préférable de préparer le compte, les pièces et les fichiers avant la dernière journée, puis de conserver toute preuve de validation fournie par le système. Une panne de connexion personnelle ne prolonge pas automatiquement le délai officiel. Le formulaire en ligne doit être consulté pour vérifier les contraintes techniques effectives."
+            ],
+            [
+              "Pièces du dossier selon la situation",
+              "Le dossier comprend la demande saisie sur la plateforme, une copie du diplôme requis, la décision d'équivalence le cas échéant, une attestation précisant la spécialité lorsque nécessaire, une copie de la carte nationale d'identité et un CV comportant la photographie du candidat. Les fonctionnaires doivent produire l'autorisation de participer délivrée par le service des ressources humaines de leur administration. Les candidats concernés par les quotas ou le handicap doivent présenter les justificatifs adaptés. Il faut vérifier la lisibilité des documents numérisés, leurs pages complètes et la validation effective du dépôt. Un téléversement incomplet peut entraîner le rejet."
+            ],
+            [
+              "Deux épreuves écrites distinctes",
+              "L'épreuve écrite générale dure trois heures, avec un coefficient deux, et peut porter sur des questions juridiques, économiques, de gestion, sociales, humaines ou scientifiques. L'épreuve écrite spéciale dure également trois heures, avec un coefficient trois, et concerne les attributions de l'administration, la spécialité demandée ou les fonctions du poste. Une préparation limitée aux calculs statistiques serait donc trop étroite. Il peut être utile de s'exercer à interpréter des indicateurs, à expliquer une méthode quantitative et à rédiger une réponse argumentée dans un temps limité. Ces exercices ne préjugent pas des sujets retenus par le jury."
+            ],
+            [
+              "Épreuve orale et méthode de préparation",
+              "L'épreuve orale dure entre quinze et trente minutes et possède un coefficient trois. Elle vise à apprécier, à travers différents thèmes, la capacité du candidat à exercer les missions correspondant au grade. Aucune liste officielle de questions ni aucun taux de réussite n'est annoncé dans la décision. Pour se préparer, on peut présenter une étude statistique réellement réalisée, expliquer l'échantillonnage, les biais possibles et les limites de l'interprétation. Le jury peut apprécier la clarté de la communication, mais il ne faut pas inventer des exigences linguistiques ou professionnelles qui ne figurent pas dans l'avis. Les consignes officielles restent prioritaires."
+            ],
+            [
+              "Listes de convocation et recours",
+              "La décision précise que les listes des candidats admis à concourir seront publiées sur le portail de l'emploi public et sur le site du Haut-Commissariat au Plan. Cette publication vaut convocation; attendre un appel individuel serait imprudent. Le texte évoque un délai de quarante-huit heures après la publication des listes pour signaler une omission à la direction des ressources humaines, selon les modalités indiquées dans l'avis. Il convient de conserver le récépissé du dépôt, les pièces envoyées et la date de publication de la liste. Une réclamation ne garantit toutefois ni la régularisation d'un dossier incomplet ni l'admission."
+            ],
+            [
+              "Rémunération, affectation et précautions",
+              "L'avis précise le grade et l'échelle, mais ne publie ni salaire net individuel ni répartition des onze affectations entre des villes nommées. Une estimation de rémunération ne doit pas être présentée comme une somme promise par l'employeur. Il faut utiliser exclusivement les plateformes officielles et se méfier des intermédiaires qui prétendent vendre une place ou garantir le succès. Les questions d'équivalence de diplôme et de spécialité doivent être réglées avant le dépôt. Cette étude s'appuie sur les documents consultés le 30 octobre 2026; toute modification ultérieure doit être contrôlée auprès de l'organisateur."
+            ]
+          ]
+        }
+      }
     }
   }
 }
