@@ -13,8 +13,8 @@
     "visa": 12,
     "researched": 38,
     "marketEvidence": 5,
-    "pendingDetail": 49,
-    "pendingLiveVerification": 8
+    "pendingDetail": 48,
+    "pendingLiveVerification": 9
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -868,10 +868,11 @@
       "section": "companies",
       "title": "Technicien en Développement Logiciel",
       "deadline": "2026-11-03",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
-      "priority": "date:2026-11-03",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7a92e36-cc06-48a4-9c8d-22c4e339a716"
+      "priority": "official-two-page-notice-reviewed-2026-10-30",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7a92e36-cc06-48a4-9c8d-22c4e339a716",
+      "evidenceId": "sntl-software-development-technicians-2-2026"
     },
     {
       "id": "sntl-assistant-juriste-1",
