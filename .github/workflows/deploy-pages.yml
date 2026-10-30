@@ -38,7 +38,7 @@ jobs:
           SITE_URL: ${{ vars.RIBHLAB_SITE_URL || (github.event.repository.name == format('{0}.github.io', github.repository_owner) && format('https://{0}.github.io', github.repository_owner) || 'https://univcours.github.io/ribhlab-site') }}
           CONTACT_EMAIL: ${{ vars.RIBHLAB_CONTACT_EMAIL || '' }}
           # Publisher identity is read from site.config.json to prevent stale Actions variables overriding it.
-          ENABLE_ADSENSE: ${{ vars.RIBHLAB_ENABLE_ADSENSE || 'false' }}
+          # AdSense activation is controlled by site.config.json; do not override it with a stale environment variable.
           GOOGLE_SITE_VERIFICATION: ${{ vars.RIBHLAB_GOOGLE_SITE_VERIFICATION || '' }}
           UMAMI_WEBSITE_ID: ${{ vars.RIBHLAB_UMAMI_WEBSITE_ID || '' }}
           AUDIENCE_SHARE_URL: ${{ vars.RIBHLAB_UMAMI_SHARE_URL || '' }}
