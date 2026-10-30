@@ -1,11 +1,27 @@
 {
-  "checkedAt": "2026-10-29",
+  "checkedAt": "2026-10-30",
   "editorialNote": {
     "ar": "مراجعة 28 أكتوبر 2026: أضيفت إعلانات عمل دولية محددة من صفحات مشغلين ومنصة حكومية؛ لا يفترض قبول الأجانب ولا التكفل بالتأشيرة أو استمرار توفر الوظيفة بعد تاريخ التحقق.",
     "en": "Last updated 28 October 2026. New entries verified against the official portal; older entries retain their verification dates. Check eligibility and deadline at source.",
     "fr": "Mis à jour le 28 octobre 2026. Nouvelles offres vérifiées sur le portail officiel ; les anciennes conservent leur date de vérification. Vérifiez les conditions et délais à la source."
   },
   "items": [
+    {
+      "id": "hcp-statistics-applied-economics-11-2026",
+      "section": "competitions",
+      "title": "Administrateur 2ème grade — Statistique / Économie appliquée — HCP (11 postes)",
+      "org": "Haut-Commissariat au Plan",
+      "place": "Services centraux et déconcentrés, Maroc (villes non précisées)",
+      "count": 11,
+      "deadline": "2026-11-13",
+      "url": "https://www.emploi-public.ma/fr/concours/details/144317d0-3827-46f6-94c3-a5fbd18b2c85",
+      "kind": "official_notice",
+      "reference": "C44349/26",
+      "verifiedBy": "Avis HCP original de deux pages et fiche officielle emploi-public.ma, consultés le 30 octobre 2026",
+      "noticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/144317d0-3827-46f6-94c3-a5fbd18b2c85",
+      "deadlineBasis": "13 novembre 2026 à 16:30, même échéance dans l'avis HCP et le portail",
+      "sourceCheckedAt": "2026-10-30"
+    },
     {
       "id": "cri-fes-meknes-prospection-2026",
       "section": "competitions",
@@ -1644,7 +1660,7 @@
     }
   ],
   "editorialMethod": {
-    "ar": "قائمة المؤسسات والمقاولات العمومية رسمية؛ تحقّقنا من إعلانات 27 أكتوبر 2026 المباشرة. 7,026 نتيجة فالمنصة تشمل الأرشيف، وماشي كلها مناصب مفتوحة.",
+    "ar": "قائمة المؤسسات والمقاولات العمومية مستمدة من مصادر رسمية. وقد جرى التحقق من إعلانات منشورة في أكتوبر 2026. تشمل نتائج البحث في البوابة إعلانات مؤرشفة، ولا تعني جميعها وجود مناصب مفتوحة حالياً.",
     "en": "Official public institution and enterprise notices, verified on 27 October 2026. The portal's 7,026 search hits include historic entries, not only open vacancies.",
     "fr": "Avis officiels des établissements et entreprises publics vérifiés le 27 octobre 2026. Les 7 026 résultats du portail incluent les archives et ne correspondent pas tous à des candidatures ouvertes."
   }
