@@ -993,6 +993,11 @@
     "tinted-sunscreen-iron-oxides-guide": [
       "aadSunscreen",
       "aadFaceWashing"
+    ],
+    "trend-channels-false-breakouts-risk": [
+      "cme",
+      "investor",
+      "cftc"
     ]
   }
 }

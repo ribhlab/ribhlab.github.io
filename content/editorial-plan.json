@@ -954,14 +954,10 @@
         "trading-bot-backtest-spread-slippage-reality-check",
         "fixed-versus-trailing-stop-order-frictions",
         "risk-budget-drawdown-math-beginners",
-        "support-resistance-zones-price-chart-falsifiable-test"
+        "support-resistance-zones-price-chart-falsifiable-test",
+        "trend-channels-false-breakouts-risk"
       ],
       "ideas": [
-        {
-          "sequence": 8,
-          "titleAr": "الفرق بين وقف خسارة ثابت ومتغير",
-          "status": "planned"
-        },
         {
           "sequence": 9,
           "titleAr": "حساب حجم الصفقة دون رافعة مفرطة",
