@@ -83,10 +83,12 @@
       "deadline": "2026-11-13",
       "status": "researched-awaiting-live-verification",
       "marketKey": null,
-      "priority": "Original two-page HCP notice checked 2026-10-30; build/deploy and public trilingual page not yet confirmed",
+      "priority": "signed-two-page-HCP-notice-rechecked-2026-10-30; pending build/deploy and live trilingual QA",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/144317d0-3827-46f6-94c3-a5fbd18b2c85",
       "reviewedAt": "2026-10-30",
-      "evidenceId": "hcp-statistics-applied-economics-11-2026"
+      "evidenceId": "hcp-statistics-applied-economics-11-2026",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/144317d0-3827-46f6-94c3-a5fbd18b2c85",
+      "note": "Verified original HCP two-page Arabic recruitment notice against official emploi-public listing C44349/26, both checked 30 Oct 2026. Eleven administrators grade 2 scale 11 in Statistics / Applied Economics; assignments HCP central services and regional offices, not eleven named jobs in Rabat. Moroccan citizenship, master/specialized master or equivalent in the relevant specialty, age 18–45 on 1 January 2026; statutory reserved categories described in notice (25% and 7%). Written general paper 3h coefficient 2, specialty paper 3h coefficient 3, oral 15–30 minutes coefficient 3. Mandatory online application at depot.emploi-public.ma no later than 13 Nov 2026 at 16:30; exam 29 Nov 2026 in Rabat or another announced city. Required: application form, diploma/equivalence where relevant, specialty attestation if diploma does not state specialty, national ID, photo CV, employer authorization for civil servants and category-specific supporting documents. No exact salary stated in the notice; scale 11 is not a net-pay quotation. Candidate list published via emploi-public and HCP, appeals by email within 48h. These are primary-source facts; trilingual page live verification remains pending, so do not count as published research."
     },
     {
       "id": "cri-fes-meknes-prospection-2026",
