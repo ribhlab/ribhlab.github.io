@@ -1,0 +1,33 @@
+name: Assign verified exact dish photographs
+on:
+  push:
+    paths:
+      - "src/assign-exact-recipe-photos.mjs"
+      - ".github/workflows/assign-exact-recipe-photos.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Fetch exact dish photos and check license
+        run: node src/assign-exact-recipe-photos.mjs
+      - name: Commit only verified matches
+        run: |
+          git config user.name "RibhLab Photo Audit"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/recipes/curated-photos.json content/recipes/photo-library.json
+          if ! git diff --cached --quiet; then
+            git commit -m "content(images): exact real photos for Moroccan recipes"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
