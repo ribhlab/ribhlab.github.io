@@ -3,13 +3,6 @@
   "license": "Unsplash License",
   "usage": "Exactly one licensed illustrative photograph per uniquely assigned recipe. No photo may be reused in another recipe, article, opportunity or other content. Recipes without a verified individual photograph display their own unique locally generated SVG artwork; never reuse an unrelated photo.",
   "photos": {
-    "tagineA": {
-      "photoId": "photo-1517314626714-ac1b9a16515e",
-      "url": "https://images.unsplash.com/photo-1517314626714-ac1b9a16515e?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/food-served-on-table-_V4v7BbG338",
-      "photographer": "Annie Spratt",
-      "subject": "Moroccan tagine meal"
-    },
     "tagineB": {
       "photoId": "photo-1517314597476-e1788060b6cb",
       "url": "https://images.unsplash.com/photo-1517314597476-e1788060b6cb?auto=format&fit=crop&w=1000&h=625&q=78",
@@ -52,40 +45,12 @@
       "photographer": "Ludovic Avice",
       "subject": "Creamy hummus"
     },
-    "hummusB": {
-      "photoId": "photo-1673960854897-749f9d9ebafc",
-      "url": "https://images.unsplash.com/photo-1673960854897-749f9d9ebafc?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-bowl-of-hummus-next-to-some-garlic--ulJ5sF0NPg",
-      "photographer": "Sandie Clarke",
-      "subject": "Hummus with garlic"
-    },
-    "hummusC": {
-      "photoId": "photo-1697126248475-a537cc5cce28",
-      "url": "https://images.unsplash.com/photo-1697126248475-a537cc5cce28?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-plate-of-hummus-pita-bread-and-a-bowl-of-olive-oil-n5I4Ix008-0",
-      "photographer": "Imad 786",
-      "subject": "Hummus and pita"
-    },
     "curryA": {
       "photoId": "photo-1772730065344-4cf131b39951",
       "url": "https://images.unsplash.com/photo-1772730065344-4cf131b39951?auto=format&fit=crop&w=1000&h=625&q=78",
       "source": "https://unsplash.com/photos/creamy-chicken-curry-with-fresh-mint-and-naan-bread-vl2y3qoKq3E",
       "photographer": "Mohammad Fahim",
       "subject": "Creamy chicken curry"
-    },
-    "curryB": {
-      "photoId": "photo-1768179669433-bd9d52949c20",
-      "url": "https://images.unsplash.com/photo-1768179669433-bd9d52949c20?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/chicken-curry-with-rice-and-salad-ncXvQnrmStA",
-      "photographer": "tommao wang",
-      "subject": "Chicken curry and rice"
-    },
-    "curryC": {
-      "photoId": "photo-1455619452474-d2be8b1e70cd",
-      "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/flat-lay-photography-of-vegetable-soup-on-white-ceramic-cup-XoByiBymX20",
-      "photographer": "emy",
-      "subject": "Red curry bowl"
     },
     "soupA": {
       "photoId": "photo-1741796105489-33ea406ac1b7",
@@ -101,20 +66,6 @@
       "photographer": "Mohammad Fahim",
       "subject": "Fried rice with vegetables"
     },
-    "riceB": {
-      "photoId": "photo-1741612552052-2c5806e8a9ea",
-      "url": "https://images.unsplash.com/photo-1741612552052-2c5806e8a9ea?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/hibachi-fried-rice-and-shrimp-ds1ZAP0faGQ",
-      "photographer": "Harold Castro",
-      "subject": "Shrimp fried rice"
-    },
-    "saladA": {
-      "photoId": "photo-1670237735381-ac5c7fa72c51",
-      "url": "https://images.unsplash.com/photo-1670237735381-ac5c7fa72c51?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-bowl-of-salad-PipzrGSil-c",
-      "photographer": "amin ramezani",
-      "subject": "Salad bowl"
-    },
     "fishA": {
       "photoId": "photo-1467003909585-2f8a72700288",
       "url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1000&h=625&q=78",
@@ -128,13 +79,6 @@
       "source": "https://unsplash.com/photos/a-fish-is-being-cooked-in-a-frying-pan-1aj1sirGQAA",
       "photographer": "Collab Media",
       "subject": "Salmon in skillet"
-    },
-    "cake": {
-      "photoId": "photo-1540337706094-da10342c93d8",
-      "url": "https://images.unsplash.com/photo-1540337706094-da10342c93d8?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/chocolate-cake-gRZYR210m0U",
-      "photographer": "Jennifer Pallian",
-      "subject": "Chocolate cake"
     },
     "pancake": {
       "photoId": "photo-1723691802547-b79f65c16b5f",
@@ -173,25 +117,17 @@
     }
   },
   "assignments": {
-    "chicken-olive-tagine": "tagineA",
     "beef-prune-tagine": "tagineB",
     "seven-vegetable-couscous": "couscous",
     "mushroom-risotto": "risottoA",
     "gnocchi-tomato": "risottoB",
     "baked-falafel": "falafel",
     "hummus-with-tahini": "hummusA",
-    "baba-ghanoush": "hummusB",
-    "fattoush-salad": "hummusC",
     "chicken-tikka-masala": "curryA",
-    "chicken-biryani": "curryB",
-    "thai-green-chicken-curry": "curryC",
     "minestrone-vegetable-soup": "soupA",
     "indonesian-nasi-goreng": "riceA",
-    "pad-thai-shrimp": "riceB",
-    "greek-salad-feta": "saladA",
     "healthy-baked-salmon-quinoa": "fishA",
     "baked-salmon-sweet-potato": "fishB",
-    "chocolate-brownie": "cake",
     "banana-oat-pancakes": "pancake",
     "healthy-lentil-spinach-soup": "lentilSoupB",
     "healthy-oat-berry-breakfast": "oats",

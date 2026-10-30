@@ -289,6 +289,102 @@
       "description": "Spinach Quiche - Julien Plumart 2025-10-14.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chicken-olive-tagine": {
+      "id": "commons:6217656",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Moroccan_food-Chicken_tagine_with_preserved_lemons_and_olives-02.jpg/1280px-Moroccan_food-Chicken_tagine_with_preserved_lemons_and_olives-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMoroccan_food-Chicken_tagine_with_preserved_lemons_and_olives-02.jpg",
+      "photographer": "Foodista",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Moroccan food-Chicken tagine with preserved lemons and olives-02.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chicken-biryani": {
+      "id": "commons:49340667",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Chicken_Briyani.jpg/1280px-Chicken_Briyani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_Briyani.jpg",
+      "photographer": "TourismSchool",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Chicken Briyani.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "thai-green-chicken-curry": {
+      "id": "commons:58083328",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Chicken_Thai_Green_Curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_Thai_Green_Curry.jpg",
+      "photographer": "Sumit Surai",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Chicken Thai Green Curry.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "pad-thai-shrimp": {
+      "id": "commons:202187068",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Pad_Thai_noodles_topped_with_whole_head-on_prawns.jpg/1280px-Pad_Thai_noodles_topped_with_whole_head-on_prawns.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3APad_Thai_noodles_topped_with_whole_head-on_prawns.jpg",
+      "photographer": "Oleg Yunakov",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Pad Thai noodles topped with whole head-on prawns.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "baba-ghanoush": {
+      "id": "commons:28072715",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Baba_Ganusch.jpg/1280px-Baba_Ganusch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABaba_Ganusch.jpg",
+      "photographer": "Maikel",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Baba Ganusch.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "greek-salad-feta": {
+      "id": "commons:30083777",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Feta_Cheese_Greek_Salad.jpg/1280px-Feta_Cheese_Greek_Salad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFeta_Cheese_Greek_Salad.jpg",
+      "photographer": "Myfri9694",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Feta Cheese Greek Salad.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chocolate-brownie": {
+      "id": "commons:140828137",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Brownie_chocolate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABrownie_chocolate.jpg",
+      "photographer": "Gowrirajamanickam01",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Brownie chocolate.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "fattoush-salad": {
+      "id": "commons:15029803",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Fattoush_1.JPG/1280px-Fattoush_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFattoush_1.JPG",
+      "photographer": "Wikimedia Commons contributor",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Fattoush 1.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
