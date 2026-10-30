@@ -589,6 +589,126 @@
       "description": "Tabbouleh before adding bulgur.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "tandoori-style-chicken": {
+      "id": "commons:95296088",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Tandoori_chicken-MB41.jpg/1280px-Tandoori_chicken-MB41.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATandoori_chicken-MB41.jpg",
+      "photographer": "Rajeeb Dutta",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Tandoori chicken-MB41.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "vietnamese-beef-noodle-soup": {
+      "id": "commons:1239799",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Pho_bo.jpg/1280px-Pho_bo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3APho_bo.jpg",
+      "photographer": "Blue Lotus",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Pho bo.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "malaysian-coconut-rice": {
+      "id": "commons:103508856",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Nasi_Lemak_LHY.jpg/1280px-Nasi_Lemak_LHY.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANasi_Lemak_LHY.jpg",
+      "photographer": "LHengYee",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Nasi Lemak LHY.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "tom-yum-shrimp-soup": {
+      "id": "commons:142440747",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Tom_Yum_Koong_Soup_with_Prawn_and_Straw_Mushroom.jpg/1280px-Tom_Yum_Koong_Soup_with_Prawn_and_Straw_Mushroom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATom_Yum_Koong_Soup_with_Prawn_and_Straw_Mushroom.jpg",
+      "photographer": "Zheng Zhou",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Tom Yum Koong Soup with Prawn and Straw Mushroom.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "egg-fried-rice": {
+      "id": "commons:103632116",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Egg_Fried_rice.jpg/1280px-Egg_Fried_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEgg_Fried_rice.jpg",
+      "photographer": "Anna Ekambaram",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Egg Fried rice.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "senegalese-fish-rice": {
+      "id": "commons:36516843",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Senegalese_Thieboudienne.JPG/1280px-Senegalese_Thieboudienne.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASenegalese_Thieboudienne.JPG",
+      "photographer": "Mariel.cg",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Senegalese Thieboudienne.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "peruvian-chicken-rice": {
+      "id": "commons:115824630",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Arroz_con_pollo_peruano.jpg/1280px-Arroz_con_pollo_peruano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AArroz_con_pollo_peruano.jpg",
+      "photographer": "MiguelAlanCS",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Arroz con pollo peruano.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "rice-pudding-cinnamon": {
+      "id": "commons:2189196",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Rice_pudding_cinnamon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARice_pudding_cinnamon.jpg",
+      "photographer": "Ross Berteig",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Rice pudding cinnamon.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "beef-chili-beans": {
+      "id": "commons:103118707",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Chili_con_Carne.jpg/1280px-Chili_con_Carne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChili_con_Carne.jpg",
+      "photographer": "Geoprofi Lars",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Chili con Carne.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "sweetcorn-quesadillas": {
+      "id": "commons:144325797",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Cheese_quesadilla.jpg/1280px-Cheese_quesadilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACheese_quesadilla.jpg",
+      "photographer": "Corn cheese",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Cheese quesadilla.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
