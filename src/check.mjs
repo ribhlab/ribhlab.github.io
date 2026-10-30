@@ -724,6 +724,23 @@ const curatedRecipeFile=path.join(recipePath,'curated-photos.json');
 const curatedRecipePhotos=fs.existsSync(curatedRecipeFile)?JSON.parse(fs.readFileSync(curatedRecipeFile,'utf8')).photos:{};
 if(foodPhotoLibrary.license!=='Unsplash License')errors.push('Recipe photograph license missing');
 const recipeAssignments=foodPhotoLibrary.assignments||{},recipePhotoKeys=Object.keys(foodPhotoLibrary.photos||{});
+
+/* These subjects were explicitly photo-audited: never silently restore an image
+   of a different dish (e.g. an Ait Ben Haddou landscape for a kefta tagine). */
+const editorialDishPhotoChecks={
+ 'moroccan-harira':/Harira soup/i,
+ 'kefta-tagine-eggs':/طاجن بيض ومطيش وكرات د اللحم/u,
+ 'zaalouk-eggplant':/Zaalouk/i,
+ 'baghrir-thousand-holes':/البغرير/u,
+ 'msemen-home':/المسمن/u,
+ 'rfissa-chicken-lentils':/Rfissa/i,
+ 'harcha-semolina':/Harcha/i
+};
+for(const [slug,regex] of Object.entries(editorialDishPhotoChecks)){
+ const p=curatedRecipePhotos[slug];
+ if(!p||!regex.test(p.description||''))errors.push('Dish photo does not match the exact recipe '+slug);
+}
+
 if(new Set(Object.values(recipeAssignments)).size!==Object.keys(recipeAssignments).length||recipePhotoKeys.length!==Object.keys(recipeAssignments).length)errors.push('Each recipe photograph must be assigned once and only once');
 for(const [slug,key] of Object.entries(recipeAssignments))if(!foodPhotoLibrary.photos?.[key])errors.push('Recipe photograph assignment missing its image '+slug);
 const foodItems=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.join(recipePath,file),'utf8')).recipes);
