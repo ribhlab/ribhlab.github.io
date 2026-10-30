@@ -230,7 +230,10 @@
         {
           "sequence": 12,
           "titleAr": "الإفصاح عن الروابط التابعة أخلاقياً",
-          "status": "planned"
+          "status": "queued",
+          "slug": "affiliate-disclosure-placement-2026-multilingual-checklist",
+          "queuePath": "content/reviewed-queue/affiliate-disclosure-placement-2026-multilingual-checklist.json",
+          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 13,
