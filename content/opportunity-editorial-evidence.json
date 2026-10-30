@@ -8122,6 +8122,185 @@
           ]
         }
       }
+    },
+    "srm-laayoune-responsibles": {
+      "reviewedAt": "2026-10-30",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Original signed five-page notice 109/2026/DA/DG/SRMLS (26 October 2026) inspected page by page on official application portal mirror 30 October 2026; cross-checked C44294/26 public employment portal and official Mafoa position. Article is NOT yet live-verified; category 15 vs signed-row count 14 discrepancy flagged.",
+      "sources": [
+        {
+          "label": "SRM Laâyoune-Sakia El Hamra — original signed five-page recruitment notice no. 109/2026/DA/DG/SRMLS (26 October 2026)",
+          "url": "https://mafoamanagement.fra1.digitaloceanspaces.com/media/concour_avis/societe-regionale-multiservices-laayoune-sakia-el-hamra-responsable-comptabilite-et-fiscalite-direction-administrative-et-financiere-2544/004bdf53-eea0-4528-b262-020944648225.pdf"
+        },
+        {
+          "label": "Emploi-public.ma — official listing C44294/26, 15 manager-category positions (26 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/3f1e24f9-c263-409e-9323-c883d9008099"
+        },
+        {
+          "label": "Mafoa Management — designated employer recruitment platform, 54 posts and one-post-only rule",
+          "url": "https://www.mafoamanagement.com/e-concours/srm-ls-2026-3/"
+        },
+        {
+          "label": "Mafoa Management — individual accounting and tax manager position, 26 October 2026",
+          "url": "https://www.mafoamanagement.com/concour/societe-regionale-multiservices-laayoune-sakia-el-hamra-responsable-comptabilite-et-fiscalite-direction-administrative-et-financiere-2544/"
+        }
+      ],
+      "facts": {
+        "employer": "Société Régionale Multiservices Laâyoune–Sakia El Hamra",
+        "notice": "109/2026/DA/DG/SRMLS",
+        "noticeDate": "2026-10-26",
+        "portalCode": "C44294/26",
+        "overallPosts": 54,
+        "portalManagersCategory": 15,
+        "manuallyCountedResponsableRows": 14,
+        "classificationDiscrepancy": "Government portal category 15; 14 rows explicitly labelled Responsable in signed notice by manual count; no published reconciliation verified.",
+        "accountingTaxPositions": 1,
+        "accountingTaxQualification": "Bac+5 Finance/Comptabilité/Audit et Contrôle de Gestion ou équivalent",
+        "accountingTaxExperience": "5 à 10 ans",
+        "nationality": "Marocaine",
+        "ageRule": "40 ans maximum au 30/06/2026; 45 ans pour poste exigeant plus de 10 ans d'expérience",
+        "documents": [
+          "CV with recent photo",
+          "Baccalauréat copy",
+          "CNIE both sides",
+          "Master/Engineer diploma or equivalent",
+          "Equivalence notice if applicable",
+          "Work certificates for roles requiring experience"
+        ],
+        "deadline": "2026-11-10T23:00",
+        "application": "https://www.mafoamanagement.com/e-concours/srm-ls-2026-3/",
+        "interviews": "Dates and places to be communicated later",
+        "salary": null,
+        "notes": "No invented compensation or written-test date; one post per applicant; final recruitment conditional on medical exam and dossier validation."
+      },
+      "translations": {
+        "ar": {
+          "title": "توظيف مسؤولي الشركة الجهوية بالعيون: شروط مسؤول المحاسبة والضرائب وتنبيه اختلاف عدد المناصب",
+          "deck": "قراءة أصلية للقرار الموقع رقم 109/2026، والموعد النهائي والوثائق والمقابلات، مع تفسير الفرق بين 54 منصباً إجمالاً و15 في البطاقة الحكومية.",
+          "sections": [
+            [
+              "ماذا تعلن الوثيقة الأصلية؟",
+              "الإعلان رقم 109/2026/DA/DG/SRMLS، المؤرخ في 26 أكتوبر 2026 والموقع من المدير العام للشركة الجهوية متعددة الخدمات العيون–الساقية الحمراء، يتعلق بحملة توظيف 54 مسؤولاً وإطاراً ومهندساً. ليست هذه 54 وظيفة في المحاسبة، بل مجموع وظائف موزعة بين المديريات المركزية ومديريات بوجدور والسمارة وطرفاية. تعرض بوابة التشغيل العمومي بطاقة خاصة بفئة المسؤولين برمز C44294/26 وتذكر 15 منصباً؛ أما الجدول الموقع فيجمع الوظائف المختلفة ضمن الحملة نفسها. يجب ألا يجمع القارئ 15 مع 54 باعتبارهما إعلانين منفصلين. راجعنا الصفحات الخمس للوثيقة الموقعة، وقارنّاها بالبوابة وبمنصة إيداع الترشيحات. ولا يوجد في القرار تعيين مضمون لمجرد استيفاء المؤهل."
+            ],
+            [
+              "تنبيه حول اختلاف العدد بين البوابة والجدول",
+              "تعرض البطاقة الحكومية 15 منصباً تحت تسمية «مسؤولون في تخصصات متعددة»، بينما يعطي العد اليدوي للصفوف التي تحمل كلمة «مسؤول» في جدول القرار الموقع 14 منصباً، باحتساب منصبي مسؤول قانوني. قد ينشأ الفرق عن طريقة تصنيف منصب في البوابة، لكن الوثائق التي فحصناها لا تشرح المطابقة صراحة. لذلك لا ننشر العدد 15 بوصفه نتيجة مطابقة تفصيلية نهائية، ولا نحول الاختلاف إلى وظائف إضافية. على المترشح الرجوع إلى المسمى الدقيق في الجدول واختيار منصب واحد عبر منصة الترشيح، مع طلب توضيح من الجهة المنظمة إذا أثّر التصنيف في أهليته."
+            ],
+            [
+              "منصب المحاسبة والضرائب: الشروط الحقيقية",
+              "يتضمن جدول مديرية الشؤون الإدارية والمالية منصباً واحداً بعنوان «مسؤول المحاسبة والضرائب». يشترط دبلوماً حكومياً بمستوى Bac+5 في المالية أو المحاسبة أو التدقيق ومراقبة التسيير، أو ما يعادله وفق شروط القرار، مع خبرة مهنية من خمس إلى عشر سنوات. تعرض منصة الترشيح المعتمدة الوصف نفسه، وتؤكد أن العمل حضوري. لا يذكر القرار أجراً شهرياً محدداً ولا تفاصيل دقيقة عن البرامج المحاسبية المستعملة؛ فلا يجوز اختلاق راتب أو اشتراط Sage أو SAP. ينبغي أن تثبت شهادات العمل الخبرة في التخصص المطلوب، لا مجرد عدد السنوات في أي وظيفة."
+            ],
+            [
+              "مسارات المسؤولين الأخرى والخبرة المطلوبة",
+              "تتضمن الحملة مسؤول التدقيق الداخلي بخبرة تزيد على عشر سنوات، ومسؤول المراقبة الدائمة، ومسؤول مراقبة التسيير، ومسؤول التمويل والخزينة، ومسؤول الجودة والسلامة والبيئة، ومسؤول تطوير الأعمال، ومسؤول نظم المعلومات، ومسؤول قيادة شبكة المياه، ومسؤولي الدراسات والتخطيط والأشغال القابلة للاسترداد، ومسؤول الاستغلال بطرفاية، إضافة إلى مسؤولين قانونيين اثنين. تختلف الشهادات بين المالية والقانون الخاص والهندسة والمعلوماتية والتسويق. يحدد الجدول خبرة خمس إلى عشر سنوات لمعظم مناصب المسؤولية، وثلاث إلى خمس سنوات لمسؤول نظم المعلومات، وأكثر من عشر سنوات للتدقيق الداخلي. لا يُنقل شرط خبرة منصب إلى منصب آخر."
+            ],
+            [
+              "السن والجنسية ونوع الدبلوم",
+              "يشترط القرار الجنسية المغربية والتمتع بالحقوق الوطنية وحسن السيرة، وألا يتجاوز العمر 40 سنة بتاريخ 30 يونيو 2026، مع رفع الحد إلى 45 سنة للمنصب الذي يتطلب خبرة تزيد على عشر سنوات. هذه الاستثناءات لا تنطبق تلقائياً على جميع المسؤولين. يقبل القرار دبلومات التكوين الأساسي من مؤسسات مغربية عمومية، أو من مؤسسات خاصة أو أجنبية معادلة وفق القواعد المبينة، ولا يقبل شهادة النجاح المؤقتة بديلاً عن الدبلوم. قبل دفع أي تكلفة أو تحميل وثيقة، تحقق من نوع شهادتك وقرار معادلتها ومن مدى تطابق التخصص المكتوب فيها مع سطر المنصب المطلوب."
+            ],
+            [
+              "ملف الترشيح والوثائق المطلوبة",
+              "يلزم تقديم سيرة ذاتية كاملة ومحدثة تتضمن صورة حديثة، ونسخة من شهادة البكالوريا، ونسختين لوجهي بطاقة التعريف الوطنية، ونسخة من دبلوم الماستر أو المهندس أو ما يعادله، ونسخة من النشرة الرسمية أو شهادة المعادلة عند الحاجة، وشهادات عمل تثبت الخبرة للتخصصات التي تشترطها. لا يقبل القرار الملفات الناقصة أو المتأخرة، ولا شهادات النجاح المؤقتة. جهّز ملفات مقروءة وتحقق من اتساق التواريخ بين السيرة وشهادات العمل. لا ترسل بطاقة التعريف أو الشهادات عبر تعليقات الشبكات الاجتماعية أو إلى وسيط غير مذكور في الإعلان الرسمي."
+            ],
+            [
+              "الإيداع الإلكتروني والموعد النهائي",
+              "يتم الترشيح حصراً عبر منصة Mafoa Management المعلنة في القرار: مسار SRM-LS 2026-3. آخر أجل هو 10 نوفمبر 2026 الساعة 23:00 بالتوقيت المحلي المعلن، وليس نهاية اليوم عند منتصف الليل. ينص القرار على إمكان الترشح لمنصب واحد فقط؛ لذا لا تنشئ ملفات متعددة لمناصب مختلفة في الحملة نفسها. اقرأ وصف المنصب قبل اختيار زر الإيداع، واحتفظ بما يثبت اكتمال العملية إن وفّرته المنصة. لا يُقبل الإيداع بالبريد الإلكتروني أو في قنوات بديلة وفق الإعلان. من الأفضل إتمام التسجيل قبل الساعات الأخيرة تحسباً لأخطاء الرفع أو ازدحام الموقع."
+            ],
+            [
+              "الانتقاء والراتب وحدود المعلومة",
+              "يفيد القرار بأن المرشحين المستوفين للشروط سيُستدعون إلى مقابلات مناسبة، وأن تواريخ المقابلات وأماكنها ستعلن لاحقاً؛ فلا يوجد في الصفحات الخمس تاريخ امتحان كتابي محدد لهذا المنصب. ستنشر لوائح المستدعين والناجحين ولائحة الانتظار على بوابة التشغيل العمومي وموقع الشركة. على المقبولين إحضار أصول الدبلومات وشهادات الخبرة، ويظل التوظيف النهائي مشروطاً بفحص طبي مناسب وتدقيق ملف التوظيف. يذكر القرار خضوع الأجور لنظام التعويضات المعمول به في الشركة دون مبلغ محدد. أي راتب منشور في موقع غير رسمي يجب اعتباره تقديراً غير ملزم لا حقيقة من الإعلان."
+            ],
+            [
+              "كيف تقارن هذا المسار بالبدائل القانونية؟",
+              "إذا كان لديك Bac+5 وخبرة خمس إلى عشر سنوات في المحاسبة والضرائب، فافحص أولاً تطابق الدبلوم وشهادات العمل ثم قيّم كلفة الانتقال إلى العيون وشروط العمل الحضوري قبل الترشيح. إذا لم تتوفر الخبرة المطلوبة، فلا تُغيّر التواريخ أو توصيف مهامك لتجاوز الشرط؛ ابحث عن وظيفة إطار مالي أو تقني محاسبة بشروط مختلفة منشورة رسمياً. لا يُعد هذا الإعلان وعداً بعقد أو ترقية أو سكن. المعلومات مراجعة بتاريخ 30 أكتوبر 2026، وقد تصدر توضيحات لاحقة؛ المرجع الحاسم هو القرار الموقع وإعلانات الجهة المنظمة."
+            ]
+          ]
+        },
+        "en": {
+          "title": "SRM Laâyoune managers recruitment: accounting and tax role, eligibility and position-count warning",
+          "deck": "A source-based reading of signed notice 109/2026, the exact deadline, required documents and interviews, including an unresolved 15-versus-14 classification discrepancy.",
+          "sections": [
+            [
+              "What the signed notice actually announces",
+              "Notice 109/2026/DA/DG/SRMLS, signed and dated 26 October 2026 by the regional multiservices company serving Laâyoune–Sakia El Hamra, covers a campaign for 54 managers, professional staff and engineers. It does not advertise 54 accounting jobs. The positions are distributed across central departments and provincial offices in Boujdour, Smara and Tarfaya. The public employment portal separately lists 15 positions under the managers category, reference C44294/26. These figures describe overlapping views of the same recruitment campaign and must not be added together. We examined all five pages of the signed notice and compared the official portal with the designated application platform. Meeting the academic criteria does not guarantee employment."
+            ],
+            [
+              "A numerical discrepancy worth explaining",
+              "The government portal labels the managers category as 15 positions, while a manual count of rows explicitly called 'Responsable' in the signed 54-position table appears to yield 14, including two legal manager positions. The difference may reflect how one position is classified, but the materials examined do not provide an explicit reconciliation. We therefore do not present the portal's 15 as an independently reconciled count of named manager rows, nor claim an additional vacancy. Applicants should rely on the exact job title and department in the signed table, apply for only one position, and seek clarification from the organizer if the category discrepancy affects eligibility."
+            ],
+            [
+              "Accounting and tax manager: precise eligibility",
+              "The Administrative and Financial Department lists one 'Responsable comptabilité et fiscalité' position. The signed table requires a state-recognized Bac+5 qualification in finance, accounting, audit and management control, or an accepted equivalent, together with five to ten years of relevant professional experience. The designated application page confirms the single position and on-site work arrangement. The notice does not publish a fixed monthly salary or name any mandatory accounting software. It would be misleading to invent a net wage, a Sage requirement or a guaranteed workplace arrangement beyond what the source states. Employment certificates should substantiate relevant duties and dates rather than merely a total number of working years."
+            ],
+            [
+              "Other managerial roles are not interchangeable",
+              "The campaign includes an internal audit manager, permanent control manager, management control manager, financing and treasury manager, quality and safety manager, business development manager, information systems manager, water network operations manager, planning and reimbursable works managers, an operations manager in Tarfaya, and two legal managers. Qualifications differ across finance, private law, engineering, information systems and commercial management. Most managerial rows specify five to ten years of experience; the information systems role specifies three to five years, while internal audit requires more than ten. Applicants should not transfer the experience threshold of one job to another or treat a generic business degree as proof of eligibility for a technical engineering role."
+            ],
+            [
+              "Nationality, age and qualification recognition",
+              "The signed decision requires Moroccan nationality, civil rights and good conduct. The standard age ceiling is 40 as of 30 June 2026, with a ceiling of 45 for the position requiring more than ten years of experience. That exception does not automatically apply to every manager. The accepted qualifications are initial-training diplomas from Moroccan public institutions or eligible private and foreign institutions with the appropriate equivalence. A provisional success certificate is expressly not accepted in place of the diploma. Applicants with foreign qualifications should check the equivalence decision and exact specialization before submitting sensitive documents or incurring relocation costs."
+            ],
+            [
+              "Documents and evidence of professional experience",
+              "The mandatory application package includes a current comprehensive CV with a recent photograph, a copy of the baccalaureate certificate, both sides of the national identity card, the relevant master's or engineering diploma or equivalent, an official bulletin or equivalence certificate when applicable, and employment certificates proving the experience required for the chosen position. Incomplete or late files are rejected. Prepare readable files and reconcile the employment dates shown in the CV with those on the certificates. Do not post identity documents in public comments or send them to an intermediary that is not identified in the employer's official recruitment instructions."
+            ],
+            [
+              "One online application before the exact deadline",
+              "Applications must be submitted through the Mafoa Management SRM-LS 2026-3 route identified in the signed notice. The closing time is 10 November 2026 at 23:00, not midnight at the end of that date. The notice allows only one job choice per candidate in this recruitment campaign. Read the specific position page before submitting, and retain any confirmation made available by the platform. Email, social-media messages or other unofficial channels are not substitutes for the designated online submission. Applying early reduces exposure to last-minute upload errors and site congestion, although it cannot guarantee successful submission."
+            ],
+            [
+              "Selection, compensation and missing details",
+              "The notice says eligible applicants will be invited to appropriate interviews, with dates and locations communicated later. It does not establish a particular written-test date for this accounting position. Lists of candidates invited to interview, successful candidates and reserves will be published on the public employment portal and the company's site. Shortlisted applicants must present original diplomas and employment certificates. Final hiring remains conditional on a satisfactory medical examination and validation of the employment file. Salaries follow the company's compensation framework, but no numerical salary is provided. Third-party estimates must not be presented as official pay."
+            ],
+            [
+              "A practical decision for candidates",
+              "A person with a relevant Bac+5 and five to ten years in accounting and tax should first check diploma equivalence, job-specific evidence and the costs of an on-site role in Laâyoune. If the experience condition is not met, changing employment dates or exaggerating duties is not a legitimate workaround; other officially advertised financial officer or accounting technician positions may have different thresholds. This notice is not a promise of housing, promotion or a signed contract. Information was reviewed on 30 October 2026 and may change if the organizer issues a correction; the signed notice and subsequent official communications remain decisive."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Recrutement des responsables SRM Laâyoune : comptabilité, fiscalité et écart de décompte",
+          "deck": "Analyse de l'avis signé 109/2026, des diplômes, justificatifs, entretiens et délais, avec une alerte sur les 15 postes du portail et le comptage des intitulés.",
+          "sections": [
+            [
+              "Ce que prévoit réellement l'avis signé",
+              "L'avis 109/2026/DA/DG/SRMLS, signé et daté du 26 octobre 2026 par la Société régionale multiservices Laâyoune–Sakia El Hamra, porte sur 54 postes de responsables, cadres et ingénieurs. Il ne s'agit pas de 54 postes en comptabilité. Les affectations concernent les directions centrales ainsi que Boujdour, Smara et Tarfaya. Le portail de l'emploi public présente séparément 15 postes dans la catégorie des responsables sous la référence C44294/26. Ces chiffres correspondent à des vues différentes d'une même campagne et ne doivent pas être additionnés. Nous avons examiné les cinq pages de l'avis signé, puis comparé le portail public et la plateforme de candidature désignée. Posséder le diplôme demandé ne garantit pas un recrutement."
+            ],
+            [
+              "Un écart de décompte à ne pas dissimuler",
+              "Le portail gouvernemental annonce 15 postes de responsables, alors qu'un comptage manuel des lignes explicitement intitulées « Responsable » dans le tableau signé de 54 postes semble en donner 14, y compris les deux responsables juristes. Une différence de classement pourrait expliquer cet écart, mais les documents consultés ne fournissent pas de rapprochement explicite. Il serait donc inexact de présenter les 15 comme un total réconcilié ligne par ligne ou d'inventer un poste supplémentaire. Le candidat doit s'appuyer sur l'intitulé exact du tableau, ne sélectionner qu'un poste et demander une clarification à l'organisateur si cette divergence modifie son appréciation des conditions."
+            ],
+            [
+              "Responsable comptabilité et fiscalité : conditions exactes",
+              "La Direction administrative et financière prévoit un seul poste de responsable comptabilité et fiscalité. Le tableau exige un diplôme d'État Bac+5 en finance, comptabilité, audit et contrôle de gestion, ou un titre équivalent admis, ainsi qu'une expérience professionnelle de cinq à dix ans dans la spécialité. La fiche de la plateforme de recrutement confirme ce poste unique et le travail en présentiel. L'avis ne fixe aucun salaire mensuel chiffré et ne mentionne aucun logiciel comptable obligatoire. Il serait donc abusif d'inventer un salaire net, une exigence Sage ou un avantage contractuel. Les attestations de travail doivent justifier des fonctions pertinentes et des périodes vérifiables."
+            ],
+            [
+              "Les autres fonctions ont des critères distincts",
+              "La campagne comporte notamment des responsables de l'audit interne, du contrôle permanent, du contrôle de gestion, du financement et de la trésorerie, de la qualité et sécurité, du développement commercial, des systèmes d'information, de la conduite du réseau d'eau, des études et de la planification, des travaux remboursables, de l'exploitation à Tarfaya, ainsi que deux responsables juristes. Les spécialités vont de la finance au droit privé, en passant par l'ingénierie et les systèmes d'information. Plusieurs postes demandent cinq à dix ans d'expérience, le responsable SI trois à cinq ans, et l'audit interne plus de dix ans. Les exigences d'un poste ne se substituent pas à celles d'un autre."
+            ],
+            [
+              "Nationalité, âge et reconnaissance des diplômes",
+              "L'avis exige la nationalité marocaine, la jouissance des droits nationaux et une bonne conduite. L'âge maximal est en principe de 40 ans au 30 juin 2026, porté à 45 ans pour le poste demandant plus de dix ans d'expérience. Cette exception n'est pas une dérogation générale pour tous les responsables. Les diplômes doivent relever de la formation initiale d'établissements publics marocains ou d'établissements privés ou étrangers bénéficiant d'une équivalence conforme aux règles de l'avis. Une attestation provisoire de réussite n'est pas acceptée à la place du diplôme. Vérifiez soigneusement l'équivalence et la spécialité figurant sur votre titre avant toute démarche payante."
+            ],
+            [
+              "Les pièces obligatoires du dossier",
+              "Le dossier comprend un CV complet et actualisé avec photographie récente, une copie du baccalauréat, les deux faces de la carte nationale d'identité, le diplôme de master ou d'ingénieur correspondant, le bulletin officiel ou l'attestation d'équivalence si nécessaire, ainsi que les attestations de travail justifiant l'expérience exigée. Un dossier incomplet ou transmis après la clôture est écarté. Préparez des fichiers lisibles et rapprochez les dates des emplois figurant sur le CV et sur les justificatifs. Ne diffusez pas vos documents d'identité dans des commentaires publics et ne les adressez pas à un intermédiaire étranger aux canaux officiellement indiqués."
+            ],
+            [
+              "Candidature électronique et heure de clôture",
+              "La candidature doit être déposée exclusivement sur le parcours SRM-LS 2026-3 de Mafoa Management, indiqué dans l'avis signé. La limite est fixée au 10 novembre 2026 à 23 h 00 : il ne faut pas la confondre avec minuit. Une seule candidature à un seul poste est autorisée dans cette campagne. Examinez la fiche du poste avant de valider le formulaire et conservez la confirmation si le site en délivre une. Un courriel ou un message sur les réseaux sociaux ne remplace pas l'enregistrement officiel. Un dépôt anticipé limite les risques de surcharge et d'erreur technique, sans constituer une garantie d'acceptation."
+            ],
+            [
+              "Entretiens, rémunération et informations non publiées",
+              "L'avis prévoit la convocation des candidats remplissant les conditions à des entretiens adaptés ; leurs dates et lieux seront communiqués ultérieurement. Il ne fixe pas de date d'épreuve écrite pour le poste comptable. Les listes des personnes convoquées, des admis et des candidats en attente seront publiées sur le portail de l'emploi public et sur le site de la société. Les originaux des diplômes et attestations devront être présentés. Le recrutement définitif dépend d'une visite médicale favorable et de la validation du dossier. Les salaires relèvent du régime indemnitaire de la société, sans montant publié : les estimations de tiers ne sont pas des rémunérations officielles."
+            ],
+            [
+              "Comparer les options sans contourner les règles",
+              "Pour un candidat Bac+5 disposant de cinq à dix ans en comptabilité et fiscalité, la première étape consiste à vérifier la spécialité du diplôme, les preuves d'expérience et le coût éventuel d'une activité en présentiel à Laâyoune. Si l'expérience exigée manque, modifier les dates ou exagérer ses missions n'est pas une solution légale ; d'autres offres officielles de cadre financier ou de technicien comptable peuvent prévoir des critères différents. L'annonce ne garantit ni logement, ni promotion, ni contrat signé. Cette analyse est arrêtée au 30 octobre 2026 et devra être révisée en cas de rectificatif de l'organisateur."
+            ]
+          ]
+        }
+      }
     }
   }
 }
