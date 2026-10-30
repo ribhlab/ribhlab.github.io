@@ -1013,6 +1013,10 @@
     "unreal-engine-when-to-choose": [
       "unreal",
       "godot"
+    ],
+    "voice-recording-transcription-mobile-accuracy": [
+      "appleAppStore",
+      "googlePlay"
     ]
   }
 }
