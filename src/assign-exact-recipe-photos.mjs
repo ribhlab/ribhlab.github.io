@@ -65,11 +65,20 @@ const selected={
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
-const params=new URLSearchParams({action:'query',format:'json',formatversion:'2',prop:'imageinfo',titles:Object.values(selected).map(x=>x[0]).join('|'),iiprop:'url|size|mime|extmetadata',iiurlwidth:'1000'});
-const api='https://commons.wikimedia.org/w/api.php?'+params;
-let response=await fetch(api,{headers:{'User-Agent':'RibhLab/1.0 photo image curation (publisher audit)','Accept':'application/json'},signal:AbortSignal.timeout(30000)});
-if(!response.ok)throw Error('Commons API '+response.status);
-const result=await response.json(),pages=result.query?.pages||[];
+// Wikimedia's anonymous query endpoint has a per-request title limit. Batch rather
+// than silently dropping images beyond its first response's limit.
+const allTitles=Object.values(selected).map(x=>x[0]),pages=[];
+for(let start=0;start<allTitles.length;start+=15){
+ const titles=allTitles.slice(start,start+15);
+ const params=new URLSearchParams({action:'query',format:'json',formatversion:'2',prop:'imageinfo',titles:titles.join('|'),iiprop:'url|size|mime|extmetadata',iiurlwidth:'1000'});
+ const api='https://commons.wikimedia.org/w/api.php?'+params;
+ const response=await fetch(api,{headers:{'User-Agent':'RibhLab/1.0 photo image curation (publisher audit)','Accept':'application/json'},signal:AbortSignal.timeout(30000)});
+ if(!response.ok)throw Error('Commons API '+response.status+' on batch '+(1+Math.floor(start/15)));
+ const result=await response.json();
+ pages.push(...(result.query?.pages||[]));
+ console.log('Commons checked batch '+(1+Math.floor(start/15))+': '+titles.length+' requested, '+(result.query?.pages||[]).length+' returned');
+}
+
 const normalize=x=>String(x||'').replaceAll('_',' ').normalize('NFC').toLowerCase();
 const byTitle=new Map(pages.map(p=>[normalize(p.title),p]));
 const ids=new Set(Object.values(curated.photos).map(p=>p.id));
