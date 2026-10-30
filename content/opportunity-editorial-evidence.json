@@ -7950,6 +7950,178 @@
           ]
         }
       }
+    },
+    "srm-technicians": {
+      "reviewedAt": "2026-10-30",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Read every page of signed five-page notice 110/2026/DA/DG/SRMLS dated 26 October 2026 and official listing C44300/26. Original source distinguishes 117 total agents from portal's 84 technicians. Live page/build not yet verified.",
+      "sources": [
+        {
+          "label": "SRM Laâyoune-Sakia El Hamra — signed five-page recruitment notice no. 110/2026/DA/DG/SRMLS, 26 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/c6cce0a1-1fa3-46ed-b188-adc6c7ae60db"
+        },
+        {
+          "label": "Emploi-public.ma — C44300/26, 84 technicians category, published 26 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/c6cce0a1-1fa3-46ed-b188-adc6c7ae60db"
+        },
+        {
+          "label": "SRM Laâyoune-Sakia El Hamra — company website for results and convocations",
+          "url": "https://www.srm-ls.ma/"
+        }
+      ],
+      "facts": {
+        "employer": "Société Régionale Multiservices Laâyoune–Sakia El Hamra",
+        "reference": "C44300/26; signed notice 110/2026/DA/DG/SRMLS",
+        "noticeDate": "2026-10-26",
+        "totalSignedNoticePosts": 117,
+        "portalListedTechnicians": 84,
+        "accountingTechnicians": 4,
+        "itTechnicians": 6,
+        "accountingDiploma": "Diplôme d'État Bac+2 en comptabilité/finance ou équivalent",
+        "itDiploma": "Diplôme d'État Bac+2 en développement digital / systèmes et réseaux / infrastructure digitale ou équivalent",
+        "nationality": "Maroc",
+        "age": "18–40 as of 2026-10-30",
+        "experience": "Not specified for accounting and IT rows; some laboratory roles require 1–4 years",
+        "cities": [
+          "Laâyoune",
+          "Boujdour",
+          "Tarfaya",
+          "Smara"
+        ],
+        "deadline": "2026-11-10T23:00",
+        "submission": "http://mafoamanagement.com/e-concours/srm-ls-2026-a/",
+        "selection": "Written exam then oral interview; dates/locations to be announced later",
+        "salary": null,
+        "warning": "Do not add portal's 84 to notice's 117. One position and assignment per candidate; provisional success certificates and overqualified profiles rejected according to signed notice."
+      },
+      "translations": {
+        "ar": {
+          "title": "توظيف 117 عوناً لدى SRM العيون: أربعة تقنيين في المحاسبة وستة في الإعلاميات وشروط الترشيح",
+          "deck": "قراءة أصلية للقرار الموقع في 26 أكتوبر 2026 والبطاقة الحكومية C44300/26: اختلاف 117 و84، الشهادات، السن، الوثائق، الموعد النهائي والاختبارات غير المؤرخة.",
+          "sections": [
+            [
+              "قرار واحد يضم 117 منصباً، وبطاقة حكومية تعرض 84",
+              "أصدرت الشركة الجهوية متعددة الخدمات العيون–الساقية الحمراء الإعلان رقم 110/2026/DA/DG/SRMLS بتاريخ 26 أكتوبر 2026، ويعلن في عنوانه توظيف 117 عوناً من فئتي الإشراف والتنفيذ. أما بطاقة بوابة التشغيل العمومي ذات الرمز C44300/26 فتظهر 84 منصباً تحت وصف «تقنيون في تخصصات متعددة». لا يصح اعتبار الرقمين إعلانين مستقلين ثم جمعهما؛ فالبطاقة تحيل إلى القرار نفسه. هذا اختلاف في نطاق العرض والتصنيف، وليس دليلاً على وجود 201 منصب. قبل الترشح، اقرأ سطر التخصص في الجدول الأصلي ولا تعتمد العدد المجمل وحده."
+            ],
+            [
+              "أربعة تقنيين في المحاسبة والمالية: ما المطلوب تحديداً؟",
+              "في الصفحة الثانية من القرار الأصلي، تورد المديرية الإدارية والمالية أربعة مناصب «Technicien comptable» بشهادة دولة Bac+2 في المحاسبة أو المالية أو ما يعادلها. لا تذكر خانة الخبرة لهذا السطر حداً أدنى من السنوات، ولا يجوز استنتاج أن الخبرة ممنوعة أو أن الاختيار مضمون من دونها. لا تنطبق على هذا السطر شروط ماستر Bac+5 الخاصة بمناصب المسؤولين في إعلان آخر للشركة. يُنصح المترشح بمراجعة عنوان دبلومه ومحتواه وإثبات المعادلة إذا كانت مطلوبة، وتجهيز أمثلة صادقة عن معالجة الفواتير والتسويات البنكية والمراقبة دون اختلاق خبرة."
+            ],
+            [
+              "ستة مناصب للإعلاميات ومسارات تقنية أخرى",
+              "يحدد الجدول ستة مناصب «Technicien Informatique» في مديرية التحول الرقمي ونظم المعلومات، ويطلب دبلوم دولة Bac+2 في التطوير الرقمي أو الأنظمة والشبكات أو البنية التحتية الرقمية أو ما يعادلها. لا يحدد السطر حداً أدنى للخبرة، لكن الاختصاص المكتوب في الدبلوم مهم. ويعرض القرار أيضاً تقنيين في الكهروميكانيك والهيدروليك والمختبرات والأشغال، مع اختلاف شروط كل وظيفة. على سبيل المثال، يشترط سطر تقني المختبر في بعض المديريات خبرة من سنة إلى أربع سنوات؛ لا تعمم هذا الشرط على المحاسبة أو الإعلاميات."
+            ],
+            [
+              "التوزيع الجغرافي لا يساوي ضمان مدينة التعيين",
+              "يذكر القرار مديريات مركزية بالعيون ومديريات إقليمية ببوجدور وطرفاية والسمارة. وتضم الجداول مناصب تقنيي مختبر وكهروميكانيك وهيدروليك وأشغال موزعة على هذه المديريات الإقليمية، بينما ترد المحاسبة ضمن المديرية الإدارية والمالية، والإعلاميات ضمن مديرية التحول الرقمي. ينبغي قراءة عمود «Affectation» الخاص بالسطر المرغوب، لا افتراض حرية اختيار المدينة بعد النجاح. ويمنع الإعلان الترشح لأكثر من منصب واحد وتعيين واحد في الوقت نفسه؛ لذا قارن التخصص ومكان الإلحاق قبل إرسال الطلب النهائي."
+            ],
+            [
+              "الجنسية والسن والشهادة ومعادلة الدبلوم",
+              "تشترط الوثيقة الجنسية المغربية، والتمتع بالحقوق الوطنية وحسن السيرة، وأن يكون السن يوم 30 أكتوبر 2026 بين 18 و40 سنة. وتشترط شهادة التكوين الأولي المطلوبة لكل منصب. وتقبل شهادات المؤسسات العمومية المغربية، أو شهادات المؤسسات الخاصة أو الأجنبية التي تتوفر على المعادلة اللازمة؛ ولا تقبل شهادات النجاح المؤقتة بدلاً من الدبلوم. لا يعني وجود Bac+3 أو Bac+5 أن ملفاً يتجاوز المؤهل المطلوب سيقبل تلقائياً؛ فالقرار ينبه إلى عدم قبول الملفات ذات المستويات الأعلى من الملف المحدد للمنصب. راجع الشرط حرفياً قبل دفع أي رسوم للتصديق أو المعادلة."
+            ],
+            [
+              "ملف الترشيح: الوثائق التي يرفض نقصها الطلب",
+              "يسرد القرار سيرة ذاتية حديثة وكاملة تتضمن صورة، ونسخة من شهادة البكالوريا بوجهيها، ونسخة من البطاقة الوطنية بوجهيها، ونسخة مصادقاً عليها من الدبلوم المطلوب أو المعادل، وشهادات العمل بالنسبة للمناصب التي تشترط الخبرة. ويطلب شهادة مدرسية حديثة لا يتجاوز تاريخها ثلاثة أشهر للمستوى الثانوي عندما ينطبق ذلك، ورخصة سياقة مصادقاً عليها لمناصب السائقين. لا تُطلب رخصة السياقة لمترشح المحاسبة لمجرد ورودها في القائمة العامة. ويؤكد القرار رفض الملفات الناقصة والمتأخرة وشهادات النجاح؛ لذا سمِّ الملفات بوضوح وتأكد من قراءتها بعد المسح الضوئي."
+            ],
+            [
+              "التسجيل الإلكتروني والموعد النهائي",
+              "يحدد القرار آخر أجل يوم 10 نوفمبر 2026 الساعة 23:00، ويجعل التقديم حصرياً عبر بوابة المسابقة المحددة فيه على نطاق mafoamanagement.com ومسار srm-ls-2026-a. وتؤكد بطاقة التشغيل العمومي الإيداع الإلكتروني على موقع الجهة، وليس عبر نموذج الاتصال العام في البوابة الحكومية. افتح رابط الترشح من القرار أو البطاقة الرسمية، وتحقق من اسم الجهة ونطاق الموقع قبل رفع الوثائق. احتفظ بإثبات الإرسال ورقم الملف إن أصدرهما النظام. لا تنتظر الساعة الأخيرة؛ فتعطل الاتصال أو حجم الملفات أو نقص المعادلة لا يضمن تمديد الأجل."
+            ],
+            [
+              "الانتقاء والاختبارات وما لم يُعلن بعد",
+              "يوضح الإعلان أن المرشحين المستوفين للشروط سيُستدعون لاجتياز اختبار كتابي، ثم يستدعى الأفضل في الكتابي إلى مقابلة شفوية. ويطلب من المدعوين للشفوي تقديم الوثائق الأصلية. لم يحدد القرار تاريخاً نهائياً ولا مكاناً لكل اختبار، بل نص على إعلان القوائم والمواعيد لاحقاً في بوابة التشغيل العمومي وموقع الشركة. لذلك فإن نشر يوم امتحان محدد من دون تحديث رسمي سيكون اختلاقاً. للتحضير للمحاسبة، راجع المبادئ المحاسبية والمطابقة والفواتير والرقابة الداخلية؛ وللإعلاميات، راجع الشبكات وحل المشكلات وأمن البيانات، مع تمييز هذه المقترحات التعليمية عن برنامج اختبار رسمي غير منشور."
+            ],
+            [
+              "الراتب وحدود اليقين وخطة قرار قبل الترشح",
+              "ينص القرار على أن الأجور تخضع للنظام التعويضي للشركة، لكنه لا ينشر راتباً صافياً أو إجمالياً محدداً لهذه المناصب. لا تعتمد أرقام الرواتب التقديرية في مواقع التجميع على أنها وعد من المشغل. راجع قبل الإرسال خمسة عناصر: التخصص المطابق للدبلوم، شرط السن في التاريخ المحدد، الإلحاق الجغرافي، الوثائق المصادق عليها، وصحة رابط التقديم. وبعد الإرسال، تابع القوائم الرسمية دون اعتبار التسجيل قبولاً نهائياً؛ فالنجاح مشروط بالانتقاء والتحقق من الملف والفحص الطبي. هذا دليل مبني على القرار الأصلي ولا يمثل عرض عمل شخصياً أو ضماناً للتوظيف."
+            ]
+          ]
+        },
+        "en": {
+          "title": "SRM Laâyoune's 117-agent recruitment: four accounting and six IT technician roles explained",
+          "deck": "A close reading of the signed 26 October 2026 notice and C44300/26 listing: why 117 differs from 84, eligibility, documents, deadline and unannounced exam dates.",
+          "sections": [
+            [
+              "One signed notice covers 117 posts; the portal card shows 84",
+              "The Laâyoune–Sakia El Hamra Regional Multiservices Company issued recruitment notice 110/2026/DA/DG/SRMLS on 26 October 2026. Its heading announces 117 supervisory and operational agents. The government employment portal's specific card, C44300/26, instead displays 84 positions under the broad label 'technicians in several specialties'. These figures must not be added as though they were separate hiring rounds: the portal card links to the same signed notice. The difference concerns presentation and categorization, not proof of 201 vacancies. Applicants should identify the exact row in the signed table rather than relying on a headline count."
+            ],
+            [
+              "Four accounting technician positions: the precise qualification",
+              "Page two of the signed notice lists four 'Technicien comptable' posts under the administrative and finance directorate. The stated qualification is a state Bac+2 diploma in accounting or finance, or a recognized equivalent. The experience column for this row does not specify a minimum number of years; that does not guarantee selection without experience or prohibit an employer from assessing practical skills. Do not import Bac+5 requirements from the company's separate managerial recruitment notice. Check the precise title of your diploma and any equivalence requirements, and prepare truthful examples of invoice controls, bank reconciliations and basic accounting work without inventing past employment."
+            ],
+            [
+              "Six IT technician positions and different technical tracks",
+              "The digital transformation and information systems directorate lists six 'Technicien Informatique' posts. The notice requests a state Bac+2 diploma in digital development, systems and networks, digital infrastructure or an equivalent qualification. No fixed experience minimum appears on that specific row, although the diploma specialty still matters. Other rows cover electromechanics, hydraulics, laboratory work and construction projects, with requirements that differ by post. For example, certain laboratory technician rows request one to four years of relevant experience. Do not transfer that requirement to accounting or IT just because all positions appear in the same five-page document."
+            ],
+            [
+              "Regional assignments are not a free choice of city",
+              "The tables distinguish central directorates in Laâyoune from provincial directorates in Boujdour, Tarfaya and Smara. Provincial rows include laboratory, electromechanical, hydraulic and works technicians, while accounting belongs to the administrative and finance directorate and IT to digital transformation. Applicants should read the 'Affectation' column on their own row rather than assuming they can choose any city after selection. The notice allows an application for only one position and one assignment at a time. Comparing the location, qualification and job type before submitting is more useful than applying indiscriminately to every listed title."
+            ],
+            [
+              "Nationality, age, initial diplomas and equivalence",
+              "The notice requires Moroccan nationality, civil rights and good conduct, and an age between 18 and 40 on 30 October 2026. Applicants must hold the initial-training qualification specified for the post. Diplomas from Moroccan public institutions are accepted; private or foreign diplomas require the relevant official equivalence. Provisional certificates of success are explicitly rejected in place of the required diploma. A higher academic degree does not automatically override the announced profile: the notice warns that applications with qualifications above those requested may not be considered. Check the wording before spending money on document certification or recognition procedures."
+            ],
+            [
+              "Documents: distinguish general and position-specific requirements",
+              "The required file includes a current CV with a recent photograph, both sides of the baccalaureate certificate, both sides of the national identity card, and a certified copy of the requested diploma or recognized equivalent. Work certificates are needed for posts requiring experience. A recent school-attendance certificate applies to relevant secondary-school profiles, and a certified driving license applies to driver posts. An accounting candidate should not assume that a driver's license is mandatory merely because it appears in the general notice. The company rejects incomplete and late files and does not accept provisional success certificates. Scan legible documents and label uploads clearly."
+            ],
+            [
+              "Online application and the exact deadline",
+              "The signed notice sets the application deadline at 10 November 2026, 23:00. Applications are accepted only through the specified competition portal on the mafoamanagement.com domain, using the srm-ls-2026-a form. The government listing also describes online submission through the recruiting administration's site, not through the general contact form on the public portal. Follow the application link from the signed notice or government card, inspect the domain before uploading personal documents, and save any confirmation or reference number. A slow connection, oversized file or missing equivalence does not entitle a candidate to an automatic deadline extension."
+            ],
+            [
+              "Selection stages and dates not yet published",
+              "Eligible applicants are invited to a written competition, and the strongest written candidates proceed to an oral interview. Candidates called to the oral stage must present original supporting documents. The notice says the dates, locations and admission lists will be announced later on the government employment portal and the company's website; it does not provide a definitive exam day for every specialty. Publishing an invented date would mislead applicants. For accounting, revising reconciliations, invoice controls and basic internal control is sensible preparation; for IT, networking, troubleshooting and data security are reasonable study areas. These are editorial suggestions, not an officially published examination syllabus."
+            ],
+            [
+              "Pay, uncertainty and a five-point application decision",
+              "The notice says salaries follow the company's compensation regime but does not publish a specific gross or net salary for these jobs. Third-party estimated pay ranges should not be presented as an employer commitment. Before submitting, check five things: diploma specialty, age on the specified reference date, assignment, complete certified documents and the authentic application link. After submission, monitor official candidate lists and keep the evidence of your application. Registration does not guarantee acceptance or employment; selection, file validation and a favorable medical examination still apply. This is an analysis of an official recruitment notice, not a personal job offer."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "SRM Laâyoune : 117 agents recrutés, dont quatre techniciens comptables et six informaticiens",
+          "deck": "Analyse de l'avis signé du 26 octobre 2026 et de la fiche C44300/26 : écart 117/84, diplômes, âge, pièces, délai et calendrier des épreuves encore inconnu.",
+          "sections": [
+            [
+              "Un avis signé annonce 117 postes, la fiche publique en affiche 84",
+              "La Société régionale multiservices Laâyoune–Sakia El Hamra a publié l'avis de recrutement 110/2026/DA/DG/SRMLS le 26 octobre 2026. Son intitulé annonce 117 agents de maîtrise et d'exécution. La fiche gouvernementale C44300/26 affiche pour sa part 84 postes sous la catégorie générale « techniciens dans plusieurs spécialités ». Il ne faut pas additionner ces chiffres comme s'il s'agissait de deux campagnes distinctes : la fiche renvoie au même avis signé. L'écart relève de la présentation et de la classification, et ne prouve pas l'existence de 201 emplois. Le candidat doit examiner la ligne précise du tableau officiel."
+            ],
+            [
+              "Quatre techniciens comptables : diplôme et expérience",
+              "La deuxième page de l'avis prévoit quatre postes de « Technicien comptable » à la Direction administrative et financière. Le diplôme demandé est un diplôme d'État Bac+2 en comptabilité ou finance, ou son équivalent reconnu. La colonne expérience ne fixe pas de minimum pour cette ligne ; cela ne signifie ni une sélection garantie sans expérience ni l'interdiction d'évaluer des compétences pratiques. Il ne faut pas appliquer les exigences Bac+5 d'un autre concours destiné aux responsables de la même société. Vérifiez l'intitulé exact de votre diplôme, l'équivalence éventuelle et préparez des exemples authentiques de rapprochements bancaires, de contrôle des factures et de traitement comptable."
+            ],
+            [
+              "Six techniciens informatiques et d'autres spécialités distinctes",
+              "La Direction de la transformation digitale et du système d'information annonce six postes de « Technicien Informatique ». Elle demande un diplôme d'État Bac+2 en développement digital, systèmes et réseaux, infrastructure digitale ou équivalent. Aucun minimum fixe d'expérience n'est inscrit sur cette ligne, mais la spécialité du diplôme reste essentielle. Les autres tableaux comprennent des postes en électromécanique, hydraulique, laboratoire et travaux, avec des conditions variables. Certaines lignes de techniciens de laboratoire exigent par exemple une à quatre années d'expérience. Cette condition ne doit pas être attribuée automatiquement aux postes de comptabilité ou d'informatique."
+            ],
+            [
+              "Affectation territoriale : vérifier chaque ligne",
+              "L'avis distingue des directions centrales à Laâyoune et des directions provinciales à Boujdour, Tarfaya et Smara. Les lignes provinciales concernent notamment des techniciens de laboratoire, d'électromécanique, d'hydraulique et de travaux. La comptabilité figure à la Direction administrative et financière, tandis que l'informatique relève de la transformation digitale. Le candidat doit lire la colonne « Affectation » correspondant à son poste, sans supposer qu'il pourra choisir librement sa ville après la sélection. Le règlement limite la candidature à un seul poste et à une seule affectation à la fois. Cette restriction rend indispensable une comparaison préalable des profils et des lieux."
+            ],
+            [
+              "Nationalité, âge, diplôme initial et équivalence",
+              "L'avis exige la nationalité marocaine, la jouissance des droits nationaux, une bonne conduite et un âge compris entre 18 et 40 ans au 30 octobre 2026. Le diplôme de formation initiale doit correspondre au profil demandé. Les diplômes délivrés par les établissements publics marocains sont admis ; les diplômes privés ou étrangers doivent disposer de l'équivalence nécessaire. Les simples attestations de réussite ne sont pas acceptées. Un diplôme supérieur au niveau annoncé ne garantit pas l'admissibilité : l'avis indique que les dossiers présentant des profils supérieurs à ceux exigés ne seront pas pris en considération. Vérifiez ce point avant de financer une certification ou une équivalence."
+            ],
+            [
+              "Constituer le dossier sans confondre les pièces",
+              "Le dossier comprend un CV actualisé avec photographie récente, une copie recto verso du baccalauréat, une copie recto verso de la carte nationale d'identité et une copie légalisée du diplôme exigé ou de son équivalent. Des attestations de travail sont demandées lorsque l'expérience est requise. Une attestation de scolarité récente concerne les profils de niveau secondaire, et une copie légalisée du permis de conduire concerne les conducteurs. Il serait erroné d'imposer un permis à un candidat comptable du seul fait de sa présence dans la liste générale. Les dossiers incomplets ou tardifs et les attestations de réussite sont rejetés."
+            ],
+            [
+              "Inscription en ligne avant le 10 novembre à 23 heures",
+              "Le document signé fixe le dernier délai au 10 novembre 2026 à 23 h 00. Le dépôt se fait exclusivement sur le portail de concours indiqué, sur le domaine mafoamanagement.com, avec le formulaire srm-ls-2026-a. La fiche d'emploi public confirme le dépôt électronique sur le site de l'administration ; le formulaire général de contact du portail gouvernemental n'est pas une candidature. Ouvrez le lien depuis l'avis officiel, contrôlez le nom de domaine, téléversez des copies lisibles et conservez l'accusé de réception éventuel. Une connexion défaillante ou un document manquant n'implique pas une prolongation automatique du délai."
+            ],
+            [
+              "Épreuves annoncées, calendrier encore à confirmer",
+              "Les candidats remplissant les conditions sont convoqués à un concours écrit ; les mieux classés sont ensuite appelés à un entretien oral. Les candidats convoqués à l'oral doivent présenter leurs pièces originales. L'avis précise que les dates, lieux et listes seront publiés ultérieurement sur le portail gouvernemental et sur le site de la société. Il ne donne pas une date définitive pour chaque spécialité. En comptabilité, réviser les rapprochements, les contrôles de factures et les principes de contrôle interne peut être utile ; en informatique, les réseaux, le dépannage et la sécurité des données constituent des thèmes de préparation raisonnables. Ces suggestions ne sont pas un programme officiel d'épreuve."
+            ],
+            [
+              "Salaire non publié, risques et vérification finale",
+              "L'avis indique que les rémunérations relèvent du régime indemnitaire de la société, sans montant net ou brut individualisé. Les estimations de sites tiers ne constituent pas une promesse de l'employeur. Avant de déposer, vérifiez cinq éléments : la spécialité du diplôme, l'âge à la date de référence, l'affectation, l'exhaustivité des pièces légalisées et l'authenticité du lien. Après l'inscription, suivez les listes officielles et conservez la preuve du dépôt. La candidature ne garantit ni la présélection ni l'embauche, laquelle reste soumise aux épreuves, à la validation du dossier et à une visite médicale favorable. Ce texte analyse un avis officiel et ne constitue pas une offre individuelle."
+            ]
+          ]
+        }
+      }
     }
   }
 }
