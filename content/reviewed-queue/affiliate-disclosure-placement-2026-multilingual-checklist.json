@@ -1,0 +1,204 @@
+{
+  "sectionId": "online-business",
+  "resourceIds": [
+    "googleSearch",
+    "shopify"
+  ],
+  "article": {
+    "slug": "affiliate-disclosure-placement-2026-multilingual-checklist",
+    "category": "earning",
+    "related": [
+      "affiliate-marketing-ethically",
+      "adsense-ready-original-site-2026-checklist"
+    ],
+    "sources": [
+      {
+        "label": "US Federal Trade Commission — Endorsement Guides: What People Are Asking (updated guidance reviewed 30 October 2026)",
+        "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
+      },
+      {
+        "label": "US Federal Trade Commission — Disclosures 101 for Social Media Influencers (November 2019; reviewed 30 October 2026)",
+        "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers"
+      },
+      {
+        "label": "Google Search Central — Reminder on qualifying affiliate links (26 July 2021)",
+        "url": "https://developers.google.com/search/blog/2021/07/link-tagging-and-link-spam-update"
+      },
+      {
+        "label": "Google Search Central — Spam policies (reviewed 30 October 2026)",
+        "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+      },
+      {
+        "label": "Shopify — Affiliate Disclosure: Examples and How To Build Trust (22 May 2026)",
+        "url": "https://www.shopify.com/blog/affiliate-disclosure"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "الإفصاح عن روابط التسويق بالعمولة: أين تضع التنبيه وكيف تحافظ على استقلالية المراجعة؟",
+        "excerpt": "دليل تحريري عملي لتمييز التوصيات المستقلة عن العلاقات التجارية، وصياغة الإفصاح بالعربية والإنجليزية والفرنسية دون وعود بالأرباح.",
+        "lead": "قد يكون الرابط التجاري مفيداً للقارئ، لكنه يغيّر طريقة تقييمه للتوصية عندما يحصل الناشر على عمولة من الشراء. لا تكفي صفحة قانونية بعيدة أو عبارة مبهمة في أسفل الموقع. يشرح هذا الدليل كيفية إعداد إفصاح مفهوم بجوار المحتوى الذي قد يؤثر في قرار الشراء، وكيفية فصل الحقائق عن الإعلان. استندت المراجعة إلى إرشادات لجنة التجارة الفيدرالية الأمريكية وإرشادات بحث Google، مع التمييز بين القواعد الأمريكية والالتزامات التي تختلف بحسب البلد.",
+        "sections": [
+          {
+            "heading": "ابدأ بالعلاقة التجارية لا بنوع الرابط",
+            "paragraphs": [
+              "قبل كتابة أي توصية، حدّد هل تتلقى عمولة على عملية شراء، أو مقابلاً على التسجيل، أو منتجاً مجانياً، أو خصماً خاصاً. قد توجد علاقة مؤثرة حتى إذا لم تُدفع أموال مباشرة. في إرشادات لجنة التجارة الفيدرالية الأمريكية، المعيار هو ما إذا كانت العلاقة قد تؤثر في وزن القارئ للتوصية، وليس الاسم التقني لبرنامج التسويق. سجّل نوع العلاقة لكل منتج وتاريخ مراجعتها في جدول تحرير داخلي.",
+              "ميّز بين رابط مرجعي مجاني إلى مصدر رسمي ورابط تابع يتيح لك تعويضاً. ليس كل رابط إلى متجر إعلاناً، ولا يعني وجود عمولة أن المنتج سيئ. لكن عبارة «رابط تابع» وحدها قد لا تشرح للقارئ أنه يمكن أن تحصل على مقابل مالي. إذا كان الموقع يخاطب بلداناً مختلفة، فراجع متطلبات الإعلانات وحماية المستهلك في الأسواق المستهدفة؛ فالتوجيه الأمريكي لا يُعد بديلاً عن استشارة قانونية محلية."
+            ]
+          },
+          {
+            "heading": "ضع الإفصاح في المكان الذي يراه القارئ",
+            "paragraphs": [
+              "إذا عرضت مقارنة بين خدمتين مع زر شراء أو تسجيل، ضع قبل المقارنة أو قرب أول توصية عبارة واضحة مثل: «قد نتلقى عمولة إذا اشتريت عبر بعض الروابط في هذه الصفحة». وعندما تفصل شاشة طويلة بين الإفصاح والرابط، أعد التنبيه في موضع مناسب. تشرح أسئلة لجنة التجارة الفيدرالية أن وضوح العلاقة وقرب التنبيه من التوصية أهم من إخفائه خلف رابط «الشروط» أو «المزيد».",
+              "اختبر الصفحة على هاتف صغير قبل الحاسوب: هل يظهر التنبيه دون فتح قائمة جانبية؟ وهل يمكن تمييزه عن الأزرار والإعلانات؟ في فيديو يقدّم توصية مدفوعة، لا تفترض أن وصف الفيديو وحده كاف؛ قد يلزم إفصاح داخل الفيديو نفسه. وفي النشرات البريدية، ضع التنبيه في الرسالة التي تحتوي على التوصية، لا في صفحة منفصلة قد لا يفتحها المشترك."
+            ]
+          },
+          {
+            "heading": "اكتب باللغة التي يستعملها الجمهور",
+            "paragraphs": [
+              "في النسخة العربية استخدم صياغة مباشرة لا مصطلحات مبهمة: «تحتوي هذه المقالة على روابط تسويق بالعمولة. قد نحصل على عمولة عند إتمام شراء مؤهل عبرها». وفي النسخة الإنجليزية يمكن قول: «This article contains affiliate links; we may earn a commission from qualifying purchases». وفي الفرنسية: «Cet article contient des liens d’affiliation ; nous pouvons percevoir une commission sur certains achats».",
+              "لا تنسخ الإفصاح من الإنجليزية إلى العربية دون مراجعة دلالته. إذا كانت العمولة تُدفع على التسجيل فقط، فلا تكتب أنها مرتبطة بالشراء؛ وإذا كانت بعض الروابط غير تجارية، فلا توحِ بأن جميعها كذلك. تجنّب قول «لن تدفع أي تكلفة إضافية» إلا إذا تحقق ذلك فعلياً من شروط البرنامج والتسعير، لأن العروض والأسعار والضرائب قد تتغير بحسب بلد المشتري."
+            ]
+          },
+          {
+            "heading": "افصل التقييم المستقل عن الحافز المالي",
+            "paragraphs": [
+              "أنشئ قبل اختيار المنتجات مصفوفة تقييم تشمل حاجة المستخدم والسعر الإجمالي وسياسة الإرجاع وقيود الاستخدام ووجود بدائل غير مرتبطة بعمولة. إذا لم تختبر المنتج بنفسك، اذكر أنك اعتمدت على المواصفات الرسمية ومراجعة الوثائق، ولا تصف المحتوى بأنه «تجربة شخصية». تحذر لجنة التجارة الفيدرالية من الادعاء بتجربة منتج لم يستخدمه صاحب التوصية ومن تقديم مزاعم غير مثبتة.",
+              "مثال افتراضي: تقارن أداة مجانية لتنظيم المهام مع اشتراك مدفوع يتيح لك عمولة. يمكن أن تكون الأداة المجانية الأنسب لمستخدم لا يحتاج إلى تعاون فريق. اعرضها بوضوح ولو لم تحصل منها على أي عائد. دوّن تاريخ الأسعار والشروط، وحدد ما إذا كان رابط العمولة يعمل فعلاً. لا تنشر مراجعات أو أرقام تحويل أو شهادات مستخدمين لم تجمعها أو تتحقق منها."
+            ]
+          },
+          {
+            "heading": "افهم الفرق بين الإفصاح ووسم روابط البحث",
+            "paragraphs": [
+              "الإفصاح النصي موجه إلى الإنسان ليعرف العلاقة التجارية. أما وسم الرابط فهو إشارة تقنية لمحرك البحث. توصي Google باستخدام rel=\"sponsored\" في الروابط الإعلانية وروابط العمولة، وتقبل rel=\"nofollow\" في سياقات التأهيل. لا يغني هذا الوسم عن تنبيه واضح للقارئ، كما لا يحوّل صفحة ضعيفة إلى محتوى أصيل لمجرد إضافته.",
+              "في صفحة HTML يمكن أن يكون الرابط التجاري موسوماً بالخاصية المناسبة، بينما يبقى الرابط الداخلي إلى دليل تحريري عادياً. راجع القوالب التي تضيف الأزرار آلياً حتى لا تضيع الخاصية بعد تحديث الموقع. وتجنب الصفحات التي تكرر أوصاف المتاجر دون تحليل مستقل؛ فسياسات Google تذكر صراحة مخاطر المحتوى المنشأ بكميات كبيرة دون قيمة والروابط المصممة للتلاعب بالترتيب."
+            ]
+          },
+          {
+            "heading": "أنشئ سجل مراجعة واختبر الحالات الصعبة",
+            "paragraphs": [
+              "استخدم جدولاً من ستة أعمدة: عنوان الصفحة، الرابط التجاري، نوع التعويض، نص الإفصاح ولغته، موضع ظهوره، وتاريخ آخر مراجعة. خصص مراجعة شهرية للروابط المكسورة والعروض المنتهية والتغييرات في شروط البرنامج. عند إزالة علاقة العمولة، حدّث النص بحيث لا توحي بوجودها. وعند إضافة شريك جديد، لا تكتف بتغيير الرابط في الخلفية دون إعادة فحص الصفحة.",
+              "قبل النشر، اطلب من مراجع مستقل فتح الصفحة من هاتفه والإجابة عن ثلاثة أسئلة: هل فهم أن الناشر قد يستفيد مالياً؟ وهل عرف أي توصية تتعلق بذلك؟ وهل يستطيع الوصول إلى البدائل والقيود دون ضغط للشراء؟ هذه اختبارات تحريرية مقترحة وليست شهادة امتثال قانوني. إذا كانت الصفحة تتناول الصحة أو الاستثمار أو منتجات حساسة، طبّق مراجعة أشد للادعاءات ولا تجعل العمولة سبباً لتجاوز التحذيرات."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Affiliate-link disclosures that readers can actually see: a multilingual editorial checklist",
+        "excerpt": "Where to place commission disclosures, how to separate independent recommendations from incentives, and why search-link attributes are not a substitute for transparency.",
+        "lead": "An affiliate link can help a reader find a product, but it also creates a financial relationship that may change how the recommendation is interpreted. A remote legal page or a vague label in a footer rarely gives the reader the whole picture. This guide combines US Federal Trade Commission endorsement guidance with Google's search documentation and practical editorial checks. It explains the difference between legal disclosures, technical link attributes, and the evidence needed to make a useful recommendation. Rules in other countries may differ, so this is an editorial method rather than universal legal advice.",
+        "sections": [
+          {
+            "heading": "Map the relationship before writing the recommendation",
+            "paragraphs": [
+              "Start by identifying what the publisher might receive: a percentage of a sale, a fixed payment for a registration, a free product, or a discounted service. A material connection does not have to involve cash. Under the FTC's US guidance, the important question is whether the relationship could affect the weight a reader gives the endorsement. Keep an internal record of the arrangement, the affected products, and the date on which its terms were checked.",
+              "A normal citation to an official manufacturer page is not automatically an affiliate link. Conversely, an affiliate link is not proof that a recommendation is biased or wrong. The reader needs to understand the potential incentive in ordinary language. If the publication serves Morocco, Europe, and the United States, check the applicable consumer-protection and advertising rules for each market rather than treating one American document as a worldwide legal code."
+            ]
+          },
+          {
+            "heading": "Put the notice near the decision point",
+            "paragraphs": [
+              "For a product comparison, a clear sentence near the beginning could read: 'We may earn a commission when you buy through some links in this article.' If the article is long and a purchase button appears much farther down, consider repeating the notice near that recommendation. The FTC's endorsement questions explain why a separate disclosure link is easily missed and why proximity matters when readers evaluate a specific claim.",
+              "Review the mobile layout, not only the desktop screenshot. Can a visitor see the notice without expanding an accordion or opening a menu? Does the type size contrast with the background? For a sponsored video, an explanation buried only in the description may not reach viewers who watch the video itself. For an email recommendation, place the disclosure inside that email rather than relying on a general website policy."
+            ]
+          },
+          {
+            "heading": "Translate meaning, not just the words",
+            "paragraphs": [
+              "An Arabic article can say that it contains commission-earning links and that qualifying purchases may generate compensation. The English version should communicate the same commercial relationship, while a French version should say 'liens d’affiliation' and explain the possibility of receiving a commission. The FTC's social-media guidance specifically advises using the same language as the endorsement, which is a sound multilingual editing principle beyond that jurisdiction.",
+              "Avoid vague abbreviations such as 'collab' or a label that assumes every reader knows what an affiliate network does. Also avoid the blanket reassurance that a buyer will never pay extra unless the actual program and pricing terms support that statement. Some arrangements pay for registrations rather than purchases, and regional taxes or shipping charges can differ. The disclosure should match the real arrangement, not a generic template."
+            ]
+          },
+          {
+            "heading": "Keep editorial scoring independent of commissions",
+            "paragraphs": [
+              "Create evaluation criteria before selecting merchants: reader need, full cost, cancellation terms, compatibility, accessibility, privacy, and available alternatives. When a product has not been tested directly, say that the comparison is based on documentation and published specifications. Do not invent personal experience, conversion rates, customer feedback, or laboratory results. The FTC guidance warns against endorsers describing experiences they have not had.",
+              "Consider a hypothetical comparison between a free task manager and a subscription product that pays referral commissions. A solo user might reasonably benefit more from the free tool. Publishing that conclusion is more useful than ranking the paid product first because it has an affiliate program. Record the date of the prices and plan restrictions, distinguish marketing claims from independently checked facts, and explain who should not buy the product."
+            ]
+          },
+          {
+            "heading": "Distinguish human disclosure from search-engine markup",
+            "paragraphs": [
+              "A visible disclosure tells the person reading the article about the commercial incentive. A rel attribute tells search systems something about the link's nature. Google recommends qualifying affiliate links with rel=\"sponsored\" and also recognizes rel=\"nofollow\" for qualifying paid links. These attributes are not a substitute for a clear statement to the reader, and a statement to the reader does not replace the technical link qualification.",
+              "In the HTML template, verify that a sponsored external link retains its attribute after build and deployment. Internal editorial links should not be automatically treated as sponsored just because the page also contains advertising. Google's spam policies warn about manipulative link schemes and large quantities of unoriginal content. Adding an attribute cannot rescue a page that merely copies a merchant catalogue and offers no independent analysis."
+            ]
+          },
+          {
+            "heading": "Build a review log and test difficult cases",
+            "paragraphs": [
+              "Maintain a simple audit table with page URL, commercial destination, compensation type, exact disclosure text, language, placement, and review date. Recheck broken links, expired promotions, and changes in partner conditions at a predictable interval. If an affiliate relationship ends, update the notice rather than implying that a commission still exists. If a new merchant is added, check the page again instead of quietly swapping tracking URLs.",
+              "Before publication, ask a colleague to open the page on a small phone and answer three questions: Can they tell that the publisher might be paid? Can they identify the recommendation affected? Can they see the alternatives and limitations without being pressured to buy? This is a practical editorial test, not a legal certification. Health and financial recommendations require additional scrutiny because unsupported claims can cause more serious harm."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Déclarer les liens d’affiliation clairement : guide éditorial trilingue et contrôle qualité",
+        "excerpt": "Où placer l’avertissement commercial, comment préserver l’indépendance d’une comparaison et pourquoi l’attribut sponsored ne suffit pas à informer le lecteur.",
+        "lead": "Un lien d’affiliation peut orienter utilement vers un service, mais il crée aussi un intérêt financier susceptible d’influencer la manière dont le public interprète une recommandation. Une mention perdue dans les conditions générales ne permet pas toujours de comprendre cette relation. Ce guide confronte les recommandations de la Federal Trade Commission américaine à la documentation de Google et propose une méthode éditoriale concrète. Il distingue les obligations de transparence, les attributs techniques des liens et la qualité réelle des conseils. Les règles applicables varient selon le pays et doivent être vérifiées localement.",
+        "sections": [
+          {
+            "heading": "Identifier la relation avant de recommander",
+            "paragraphs": [
+              "Commencez par décrire la contrepartie possible : pourcentage sur une vente, somme fixe pour une inscription, produit offert ou réduction réservée au créateur. Une relation commerciale importante ne se limite pas à un paiement direct. Selon les recommandations américaines de la FTC, il faut considérer si cette relation peut modifier le poids accordé par le lecteur à l’avis. Conservez la nature de l’accord et la date de vérification dans un registre éditorial.",
+              "Un lien ordinaire vers une notice officielle n’est pas nécessairement rémunéré. À l’inverse, la présence d’une commission ne signifie pas automatiquement que le conseil est mauvais. Le problème apparaît lorsque l’incitation reste invisible ou que les arguments ne sont pas vérifiés. Pour un site lu au Maroc, en France ou ailleurs, examinez les règles nationales pertinentes : les guides américains constituent une référence documentaire, pas une règle juridique universelle."
+            ]
+          },
+          {
+            "heading": "Rendre l’avertissement visible au bon endroit",
+            "paragraphs": [
+              "Au début d’un comparatif, une formule claire peut indiquer : « Certains liens de cet article peuvent nous rapporter une commission en cas d’achat ». Lorsque le bouton de souscription apparaît beaucoup plus bas, répétez la mention à proximité si nécessaire. Les questions-réponses de la FTC expliquent pourquoi un simple renvoi vers une page « Mentions légales » peut être insuffisant : le lecteur risque de ne jamais l’ouvrir.",
+              "Vérifiez d’abord l’affichage sur un petit écran. L’avertissement est-il lisible sans ouvrir un menu ? Sa couleur et sa taille permettent-elles de le distinguer ? Pour une vidéo sponsorisée, une mention placée uniquement dans la description ne sera pas nécessairement vue par le public. Pour une lettre d’information, incluez la déclaration dans le message contenant la recommandation plutôt que de compter sur une politique générale."
+            ]
+          },
+          {
+            "heading": "Adapter la formulation à chaque langue",
+            "paragraphs": [
+              "La version française doit expliquer explicitement la possibilité d’une rémunération et ne pas se contenter du terme technique « affiliation ». En anglais, une phrase peut préciser que certains achats admissibles génèrent une commission. En arabe, utilisez une formulation en arabe standard compréhensible par les lecteurs, sans expression dialectale ou traduction littérale ambiguë. Les recommandations de la FTC soulignent l’importance d’employer la langue de la publication elle-même.",
+              "Évitez les abréviations obscures et les promesses automatiques telles que « aucun coût supplémentaire » si les conditions du programme ne permettent pas de l’établir. Une commission peut dépendre d’une inscription plutôt que d’un achat. Les taxes, les frais de livraison et les prix régionaux peuvent évoluer. Une bonne traduction ne reproduit pas simplement des mots : elle décrit correctement le mécanisme économique réellement applicable."
+            ]
+          },
+          {
+            "heading": "Protéger l’indépendance du classement",
+            "paragraphs": [
+              "Définissez des critères avant de choisir les produits : besoin du lecteur, prix total, conditions de résiliation, confidentialité, compatibilité et solutions alternatives. Si vous n’avez pas utilisé personnellement le service, précisez que l’analyse repose sur les spécifications et les documents disponibles. N’inventez ni tests, ni témoignages, ni statistiques de conversion. Les recommandations de la FTC rappellent qu’une personne ne doit pas prétendre avoir vécu une expérience qu’elle n’a pas eue.",
+              "Prenons un exemple fictif : un gestionnaire de tâches gratuit et une offre payante qui verse une commission. Pour une personne seule, la version gratuite peut être plus adaptée. Cette conclusion mérite d’être publiée même si elle ne rapporte rien. Notez la date des tarifs, les restrictions de chaque formule et les limites de votre comparaison. Un guide utile explique également les raisons de ne pas acheter."
+            ]
+          },
+          {
+            "heading": "Séparer déclaration publique et attribut HTML",
+            "paragraphs": [
+              "L’avertissement visible s’adresse au lecteur. L’attribut HTML décrit la nature du lien aux moteurs de recherche. Google recommande rel=\"sponsored\" pour les liens publicitaires et d’affiliation, et reconnaît aussi rel=\"nofollow\" dans les mécanismes de qualification. Aucun de ces attributs ne remplace une explication lisible de la relation commerciale. Inversement, une mention éditoriale ne dispense pas de vérifier le balisage technique.",
+              "Contrôlez le HTML réellement publié après la génération du site : un modèle ou un composant peut perdre un attribut lors d’une mise à jour. Les liens internes vers des analyses indépendantes n’ont pas à devenir sponsorisés automatiquement. Google avertit également contre les schémas de liens manipulateurs et les pages produites massivement sans valeur originale. Un simple balisage correct ne transforme pas une fiche commerciale copiée en véritable enquête."
+            ]
+          },
+          {
+            "heading": "Mettre en place une vérification régulière",
+            "paragraphs": [
+              "Créez un tableau comportant l’URL de l’article, la destination commerciale, le type de rémunération, le texte de déclaration, sa langue, son emplacement et la date du contrôle. Réexaminez les offres expirées, les liens cassés et les modifications des contrats de partenariat. Lorsqu’une relation prend fin, adaptez la mention ; lorsqu’un partenaire est ajouté, contrôlez de nouveau la page complète au lieu de modifier silencieusement une URL.",
+              "Avant publication, demandez à une autre personne d’ouvrir la page sur téléphone. Comprend-elle que l’éditeur peut être rémunéré ? Identifie-t-elle la recommandation concernée ? Peut-elle consulter les alternatives et les limites sans pression commerciale ? Ce test constitue une méthode de qualité éditoriale et non une certification juridique. Les sujets de santé et de finance exigent une prudence supplémentaire face aux affirmations non étayées."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1654154094424-43c2abae1478",
+    "source": "https://unsplash.com/photos/a-desk-with-a-keyboard-and-a-notebook-58xnMEFv0Zs",
+    "photographer": "Covene",
+    "alt": "Office desk with keyboard and notebook, illustrating editorial planning",
+    "altAr": "مكتب عمل يضم لوحة مفاتيح ودفتراً لتخطيط المراجعة التحريرية",
+    "altFr": "Bureau avec clavier et carnet illustrant la préparation éditoriale",
+    "license": "Unsplash License",
+    "note": "Covene photograph, published 2 June 2022. Original free Unsplash page verified 30 October 2026; images.unsplash.com/photo-1654154094424-43c2abae1478 matched original image link. Editorial illustration only, not a screenshot of an affiliate service. GitHub code search for the photo ID returned no results."
+  },
+  "review": {
+    "checkedAt": "2026-10-30",
+    "ready": true,
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "FTC endorsement questions and influencer guidance cross-checked with independent Google Search link qualification and spam policies plus Shopify 22 May 2026. Edited six substantive sections independently in formal Arabic, English and French; validated word counts, clear legal-jurisdiction boundaries, no invented tests or commissions. Free Unsplash image source, photographer, license, original image ID and non-reuse search checked 30 October 2026."
+  }
+}
