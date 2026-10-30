@@ -8304,7 +8304,7 @@
     },
     "map-infographiste-rabat-c44357-2026": {
       "reviewedAt": "2026-10-30",
-      "verification": "Signed original MAP external call 3557/DCH dated 29 Oct 2026, three pages visually reviewed; government listing C44357/26 cross-checked on 30 Oct 2026",
+      "verification": "Signed original MAP external call (notice number not independently legible) dated 29 Oct 2026, three pages visually reviewed; government listing C44357/26 cross-checked on 30 Oct 2026",
       "state": "verified",
       "sources": [
         {
@@ -8321,7 +8321,6 @@
         "city": "Rabat",
         "country": "Maroc",
         "reference": "C44357/26",
-        "noticeReference": "3557/DCH",
         "noticeDate": "2026-10-29",
         "posts": 1,
         "grade": "Statutaire échelle 10",
