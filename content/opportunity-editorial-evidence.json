@@ -7204,6 +7204,179 @@
           ]
         }
       }
+    },
+    "map-recruitment-officer-rabat-2026": {
+      "reviewedAt": "2026-10-30",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Original signed three-page MAP external call 3557/DCH visually read 30 October 2026; cross-checked against official employment portal listing C44353/26. Site build, deployment and live AR/EN/FR checks not yet confirmed.",
+      "sources": [
+        {
+          "label": "MAP — appel externe n°3557/DCH signé le 29 octobre 2026, trois pages, consulté le 30 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/e612da97-52b0-4d3d-bdda-7ceb60322301",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "label": "Emploi-public.ma — annonce C44353/26 publiée le 29 octobre 2026, consultée le 30 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/e612da97-52b0-4d3d-bdda-7ceb60322301",
+          "checkedAt": "2026-10-30"
+        }
+      ],
+      "facts": {
+        "employer": "Agence Maghreb Arabe Presse (MAP)",
+        "town": "Rabat, Morocco",
+        "competitionCode": "C44353/26",
+        "noticeReference": "3557/DCH",
+        "noticeDate": "2026-10-29",
+        "posts": 1,
+        "role": "Chargé de Recrutement",
+        "grade": "Statutaire échelle 11",
+        "nationality": "Moroccan",
+        "age": "Under 40 on 2026-11-22",
+        "diploma": "Master Bac+5 Gestion des Ressources Humaines",
+        "experience": "2 to 5 years in HR, ideally public-sector recruitment/competitions",
+        "deadline": "2026-11-12T16:30",
+        "deadlineCaveat": "Original signed call lists 12 November without time; government portal lists 16:30",
+        "examDate": "2026-11-22",
+        "application": "Online form at candidature.map.ma; upload required documents",
+        "documents": [
+          "CNIE copy",
+          "dated signed application with notice reference",
+          "recent identity photo",
+          "diploma copies since baccalaureate",
+          "detailed CV",
+          "work certificates and CNSS career statement for salaried applicants"
+        ],
+        "selection": "Initial dossier screening; written essay 2h coefficient 2; technical/general knowledge questionnaire 1h30 coefficient 3; oral interview/personality/aptitude tests 30 min coefficient 7",
+        "salaryPublished": false
+      },
+      "translations": {
+        "ar": {
+          "title": "وكالة المغرب العربي للأنباء: دليل مباراة مكلف بالتوظيف بالرباط 2026",
+          "deck": "تحليل الإعلان الأصلي رقم 3557/DCH: منصب واحد بالسلم 11، ماستر الموارد البشرية وخبرة سنتين إلى خمس سنوات، وثائق CNSS والاختبارات ومعاملاتها وآجال الترشيح.",
+          "sections": [
+            [
+              "المنصب والجهة والمكان المحدد",
+              "أعلنت وكالة المغرب العربي للأنباء، وهي مؤسسة عمومية ذات طابع استراتيجي، عن توظيف مكلف واحد بالتوظيف في منصب نظامي بالسلم 11، يكون مقر عمله بمدينة الرباط. يحمل الإعلان الأصلي المرجع 3557/DCH وتاريخ 29 أكتوبر 2026، وتعرضه بوابة التشغيل العمومي برمز C44353/26. لا يتعلق الأمر بعشرة مناصب في الموارد البشرية أو بعمل عن بعد، ولا ينبغي الخلط بينه وبين إعلانات أخرى للوكالة منشورة في اليوم نفسه. موعد المباراة المحدد هو 22 نوفمبر 2026. يقتصر هذا الدليل على الوقائع المستخرجة من الإعلان الأصلي المؤلف من ثلاث صفحات ومطابقتها مع صفحة البوابة الحكومية، ولا يمثل عرضاً من الوكالة أو ضماناً للاستدعاء."
+            ],
+            [
+              "ما العمل الذي سيؤديه المكلف بالتوظيف؟",
+              "تحدد بطاقة الوظيفة مهمة تحليل احتياجات إدارات الوكالة من الموارد البشرية، والمشاركة في إعداد خطط التوظيف متعددة السنوات وتحديثها، وتنسيق عمليات الانتقاء وفق الإجراءات الجاري بها العمل. وتشمل المهام صياغة الملفات الوظيفية والكفاءات المطلوبة ومعايير الاختيار بالتعاون مع المصالح المعنية، ثم إعداد المباريات وتتبعها منذ نشر الإعلان حتى إغلاق مراحل الانتقاء. كما تتطلب إدارة ملفات المترشحين والتأكد من قابليتها للتتبع، ومتابعة النتائج وإعداد لوحات قيادة وتقارير دورية. وتشدد الوثيقة على تكافؤ الفرص والموضوعية والشفافية والسرية؛ لذلك لا يكفي إتقان المقابلات الشخصية وحدها، بل يجب فهم الإجراءات الإدارية وضبط الوثائق."
+            ],
+            [
+              "شروط الجنسية والسن والوضعية القانونية",
+              "يشترط الإعلان أن يكون المترشح مغربي الجنسية، وألا يبلغ سن الأربعين عند تاريخ تنظيم المباراة، وأن يتمتع بحقوقه المدنية وحسن السيرة، وألا يكون موضوع حكم بعقوبة سالبة للحرية أو مخلة بالشرف وفق الصياغة الواردة في الإعلان. ويشترط أيضاً ألا يكون اسمه مسجلاً في السجل التأديبي المركزي للإدارات العمومية. لا يذكر الإعلان استثناء عاماً من شرط السن؛ لذلك ينبغي لمن يقترب من الأربعين حساب عمره في 22 نوفمبر 2026، وليس يوم إيداع الطلب. وإذا كانت وضعية قضائية أو إدارية تحتاج إلى تفسير، فالأفضل طلب جواب رسمي من الجهة المنظمة بدلاً من افتراض الأهلية أو نشر معلومات شخصية حساسة."
+            ],
+            [
+              "الشهادة والخبرة: ما هو الإلزامي وما هو المفضل؟",
+              "تشترط بطاقة المنصب شهادة ماستر بمستوى Bac+5 في تدبير الموارد البشرية. وتشترط خبرة مهنية تتراوح بين سنتين وخمس سنوات في مجال الموارد البشرية، ويفضل أن تكون في التوظيف وتدبير المباريات داخل الإدارة العمومية. كلمة «يفضل» تتعلق بطبيعة الخبرة داخل التوظيف العمومي ولا تحول أصل الخبرة المهنية المطلوبة إلى شرط اختياري. لا يجوز اعتبار شهادة قصيرة في مقابلات التوظيف بديلاً تلقائياً عن الماستر. كما لا يورد القرار قائمة مفصلة لشهادات معادلة، ولهذا ينبغي سؤال الوكالة كتابة عند وجود عنوان دبلوم مختلف أو تكوين أجنبي قبل إرسال الملف."
+            ],
+            [
+              "الملف: ست مجموعات وثائق لا ينبغي إغفالها",
+              "تطلب الوكالة نسخة من البطاقة الوطنية الإلكترونية، وطلب ترشيح مؤرخاً وموقعاً يذكر مرجع الإعلان، وصورة تعريف حديثة، ونسخ الشهادات المحصل عليها منذ البكالوريا. كما تطلب سيرة ذاتية مفصلة تبين الحالة المدنية ومسار الدراسة منذ البكالوريا والشهادات والتكوينات والمسار المهني ومجالات الكفاءة. وللمترشحين الذين يستندون إلى خبرة مهنية، يجب إرفاق شهادة عمل واحدة أو أكثر وكشف المسار المهني الصادر عن الصندوق الوطني للضمان الاجتماعي CNSS بالنسبة إلى الأجراء. من المفيد مطابقة تواريخ الشهادات والسيرة والكشف؛ وجود ملف PDF واضح لا يعوض وثيقة ناقصة منصوصاً عليها."
+            ],
+            [
+              "كيف يتم التسجيل وما الموعد الذي يجب احترامه؟",
+              "ينص الإعلان على تعبئة استمارة الترشيح في بوابة الوكالة candidature.map.ma، مع إدراج مرجع طلب الترشيحات ورفع المستندات المطلوبة. تعرض البوابة الحكومية آخر أجل في 12 نوفمبر 2026 الساعة 16:30، بينما يذكر القرار الأصلي يوم 12 نوفمبر دون ساعة إغلاق مفصلة. لذلك ينبغي احترام الساعة الأسبق المعلنة في البوابة وعدم انتظار نهاية اليوم. نموذج «اتصل بالإدارة» في emploi-public.ma مخصص للاستفسارات ولا يقبل ملفات الترشيح. من الحكمة الاحتفاظ بنسخة من الاستمارة ورسالة التأكيد أو رقم التسجيل إن توفر، والتأكد من اكتمال الرفع قبل إغلاق المنصة."
+            ],
+            [
+              "مراحل الانتقاء والاختبارات بالأوقات والمعاملات",
+              "تبدأ العملية بانتقاء أولي للملفات تقوم به لجنة يعينها المدير العام، وفق المعلومات المقدمة ومدى ملاءمتها للحاجات. يستدعى المقبولون لاختبار كتابي أول عبارة عن موضوع عام مدته ساعتان ومعامله 2، ثم استبيان في المعارف التقنية والثقافة العامة مدته ساعة ونصف ومعامله 3. وبعد النجاح في الكتابي، يجرى اختبار شفوي يتضمن مقابلة واختبارات للشخصية والكفاءات لمدة ثلاثين دقيقة ومعامل 7. هذه المعاملات مهمة في توزيع جهد التحضير، لكنها لا تسمح باختلاق عتبة نجاح لم يذكرها الإعلان. موعد المباراة هو 22 نوفمبر، أما مكان الاستدعاء فيجب التحقق منه لاحقاً."
+            ],
+            [
+              "برنامج تحضير واقعي ومثال تطبيقي",
+              "يمكن إعداد ملف تدريب من ثلاث حالات: طلب توظيف من مديرية تحتاج إلى كفاءات محددة، ولائحة مرشحين يجب فرزها بمعايير مكتوبة، ولوحة قيادة تتتبع آجال الانتقاء ومراحل كل ملف. درّب نفسك على شرح كيف تصوغ بطاقة منصب وتوثق معايير موضوعية وتمنع الاطلاع غير المصرح به على البيانات الشخصية. خصص وقتاً للكتابة المنظمة في موضوع عام خلال ساعتين، ثم لاختبار تقني من تسعين دقيقة يتناول إجراءات التوظيف ومؤشرات الأداء. هذه تمارين تحريرية مقترحة وليست أسئلة رسمية أو معلومات مسربة. تذكر أن المعامل 7 للشفوي يجعل القدرة على التواصل والأمانة المهنية محورية في التحضير."
+            ],
+            [
+              "الأجر والنتائج والمخاطر التي يجب معرفتها",
+              "يذكر الإعلان السلم 11 والطابع النظامي للمنصب، لكنه لا يحدد راتباً صافياً أو تعويضات فردية، ولذلك لا يصح نشر رقم شهري على أنه مؤكد. ستنشر الوكالة إعلانات الاستدعاء والنتائج على موقعها وعلى بوابة التشغيل العمومي. ينص القرار على رفض الملفات الناقصة أو غير المطابقة أو المتأخرة، وعلى مطالبة المقبولين نهائياً بأصول الشهادات والوثائق الإثباتية. لا ترسل أصول الوثائق إلى وسطاء، ولا تدفع رسوماً لمن يعدك بالنجاح. راجع يومياً أي تصحيح رسمي للتواريخ أو الشروط؛ وإذا لم تستوف شرط الماستر والخبرة، فابحث عن مباراة أخرى متوافقة بدلاً من الاعتماد على استثناء غير منشور."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Morocco's MAP recruitment officer vacancy in Rabat: full 2026 competition guide",
+          "deck": "Original notice 3557/DCH explained: one scale-11 post, HR master's degree, two to five years' experience, CNSS evidence, online filing and weighted assessments.",
+          "sections": [
+            [
+              "One clearly identified public-sector vacancy in Rabat",
+              "Agence Maghreb Arabe Presse (MAP), a Moroccan strategic public institution, issued external call 3557/DCH on 29 October 2026 for one statutory recruitment officer at scale 11, based in Rabat. The government employment portal identifies the same competition as C44353/26. This is not a group of ten HR vacancies, an international placement scheme or a remote-work offer. Several other MAP posts appeared around the same date, so the job title and code should accompany every application. The competition date is 22 November 2026. This guide is based on the complete three-page signed notice and the separate government listing, rather than on an aggregator's brief description."
+            ],
+            [
+              "The actual duties go beyond conducting interviews",
+              "The role involves identifying recruitment needs across MAP directorates and helping prepare and update multi-year hiring plans. The officer will help define job profiles, competency requirements and selection criteria with the relevant departments. The notice also assigns the preparation, organization and monitoring of competitions from publication to final selection, administrative management of candidate files and reliable document traceability. Recruitment indicators, dashboards and periodic reports form part of the responsibilities. Equal opportunity, transparency, objectivity and confidentiality are explicitly emphasized. Applicants should therefore demonstrate procedural discipline and analytical reporting, not merely familiarity with interviewing or advertising vacancies."
+            ],
+            [
+              "Nationality, age and administrative eligibility",
+              "Applicants must be Moroccan nationals, younger than forty on the date of the competition, enjoy their civic rights and meet the good-conduct and disciplinary requirements described in the notice. The document also excludes candidates with the disqualifying criminal convictions it specifies and those listed in the central disciplinary register of public administrations. Because the age rule is linked to the examination date, a candidate close to forty should calculate their age as of 22 November 2026, not just the filing deadline. The notice does not describe a blanket age exception. Anyone facing an ambiguous administrative situation should seek an official interpretation instead of assuming eligibility."
+            ],
+            [
+              "The master's degree and professional experience are substantive filters",
+              "The signed profile calls for a master's degree, Bac+5, in Human Resources Management. It also asks for two to five years of professional experience in human resources, ideally including recruitment and the management of competitions in public administration. The preference for public-sector recruitment experience must not be confused with a waiver of the underlying experience requirement. A short course in recruitment techniques does not automatically replace the specified master's qualification. The document does not list every possible diploma equivalence. Applicants with differently named or foreign credentials should seek written clarification from MAP before relying on an assumed equivalence."
+            ],
+            [
+              "Documents: identification, education and verifiable employment",
+              "The application dossier requires a copy of the electronic national identity card, a dated and signed application mentioning the call reference, a recent identity photograph and copies of diplomas obtained since the baccalaureate. A detailed CV must cover civil status, education from the baccalaureate onward, diplomas and certificates, employment history and areas of competence. Applicants claiming professional experience must provide one or more work certificates and, for salaried workers, a career statement issued by Morocco's CNSS social security institution. Compare dates across the CV, certificates and career statement before submission. A well-formatted file does not compensate for missing mandatory evidence."
+            ],
+            [
+              "Online application and the earlier published cutoff",
+              "The signed notice directs applicants to complete the form on MAP's candidature.map.ma portal, enter the call reference and upload the requested documents. The government listing specifies a deadline of 12 November 2026 at 16:30, whereas the signed notice gives 12 November without a detailed closing hour. Respect the portal's explicit 16:30 cutoff rather than assuming that the application remains open until midnight. The public-employment site's contact form is for enquiries and is not an application channel. Keep the confirmation or registration reference if the MAP platform provides one, and check uploaded documents before leaving the site."
+            ],
+            [
+              "Selection stages, test durations and coefficients",
+              "An initial committee appointed by the director general reviews submitted files for relevance to MAP's needs. Shortlisted candidates are invited to a two-hour general essay with coefficient 2 and a ninety-minute questionnaire on technical knowledge and general culture with coefficient 3. Candidates who pass the written stages proceed to a thirty-minute oral interview including personality and aptitude tests, coefficient 7. These published weights help candidates allocate preparation time, but the notice does not provide a numerical pass threshold that an editor may invent. The competition is scheduled for 22 November 2026; check the official summons for the exact venue and practical instructions."
+            ],
+            [
+              "A realistic preparation exercise, not a leaked test",
+              "Build three practice cases: a directorate requesting a new role, a shortlist requiring documented selection criteria, and a dashboard monitoring deadlines and candidate stages. Explain how you would draft a job profile, document impartial criteria, verify supporting evidence and restrict access to personal data. Rehearse a structured two-hour essay and a ninety-minute technical exercise involving recruitment procedures and performance indicators. These are independent educational suggestions, not official examination questions or an insider description of the test. The oral coefficient of 7 makes clear communication, ethical judgment and concise analysis especially worth practising."
+            ],
+            [
+              "Pay, publication of results and avoidable risks",
+              "The notice identifies the statutory scale 11 but does not publish an individual net salary, allowances or a personalized compensation package. No such number should be presented as verified. MAP states that calls, candidate lists and results will be posted on its website and the public employment portal. Incomplete, noncompliant or late applications will not be considered, and finally successful applicants must present original diplomas and supporting documents. Never send original credentials to an intermediary or pay someone claiming to guarantee admission. Recheck official announcements for corrections, and if your degree or experience does not meet the criteria, pursue a genuinely suitable vacancy instead of an imagined exception."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "MAP Rabat : concours 2026 pour un chargé de recrutement, conditions et dossier complet",
+          "deck": "Analyse de l'appel 3557/DCH : un poste statutaire échelle 11, master RH, expérience de deux à cinq ans, pièces CNSS, dépôt en ligne et coefficients des épreuves.",
+          "sections": [
+            [
+              "Un seul poste statutaire précisément localisé à Rabat",
+              "L'Agence Maghreb Arabe Presse (MAP), établissement public à caractère stratégique, a publié le 29 octobre 2026 l'appel externe 3557/DCH pour recruter un chargé de recrutement, statutaire échelle 11, basé à Rabat. Le portail de l'emploi public présente le même concours sous le code C44353/26. Il ne s'agit ni d'une campagne de dix recrutements RH ni d'une offre de télétravail. Plusieurs autres concours de la MAP ont été publiés à une période proche : il faut donc conserver l'intitulé exact et la référence. La date du concours est le 22 novembre 2026. Notre analyse repose sur les trois pages de l'avis signé et sur la fiche gouvernementale distincte."
+            ],
+            [
+              "Des missions qui dépassent les entretiens d'embauche",
+              "Le titulaire analysera les besoins en ressources humaines des différentes directions de la MAP et participera aux plans de recrutement pluriannuels. Il contribuera à définir les profils, les compétences attendues et les critères de sélection avec les services concernés. L'organisation des concours, depuis la publication des avis jusqu'à la finalisation des sélections, fait également partie du poste. La gestion administrative des dossiers, la traçabilité des pièces, le suivi des candidatures et la production d'indicateurs, tableaux de bord et rapports périodiques sont explicitement prévus. La fiche insiste sur l'égalité des chances, la transparence, l'objectivité et la confidentialité, au-delà de la seule technique d'entretien."
+            ],
+            [
+              "Nationalité, âge et conditions administratives",
+              "Le candidat doit être de nationalité marocaine et avoir moins de quarante ans à la date d'organisation du concours. Il doit jouir de ses droits civiques, satisfaire aux exigences de moralité et ne pas relever des condamnations disqualifiantes mentionnées par l'avis. Il ne doit pas non plus figurer au casier central disciplinaire des administrations publiques. Une personne proche de la limite d'âge doit donc raisonner au 22 novembre 2026 et non à la date du dépôt. L'avis ne prévoit pas d'exception générale à cette règle. En cas de situation administrative ou judiciaire ambiguë, une clarification écrite de l'organisateur est préférable à une interprétation personnelle."
+            ],
+            [
+              "Master RH et expérience : distinguer obligation et préférence",
+              "La fiche de poste exige un master Bac+5 en gestion des ressources humaines. Elle demande également une expérience professionnelle de deux à cinq ans dans les ressources humaines, idéalement en recrutement et en gestion des concours au sein de l'administration publique. Le terme « idéalement » concerne la nature de l'expérience recherchée, et ne rend pas facultative l'expérience professionnelle elle-même. Une courte certification en recrutement ne remplace pas automatiquement le master exigé. L'avis ne détaille pas toutes les équivalences possibles : les titulaires d'un diplôme étranger ou d'une spécialité intitulée différemment devraient solliciter une réponse écrite avant de déposer leur dossier."
+            ],
+            [
+              "Pièces justificatives et preuve de l'expérience",
+              "Le dossier doit contenir une copie de la carte nationale d'identité électronique, une demande datée et signée mentionnant la référence de l'appel, une photographie d'identité récente et les copies des diplômes obtenus depuis le baccalauréat. Un CV détaillé doit préciser l'état civil, la formation depuis le baccalauréat, les diplômes et certificats, le parcours professionnel et les domaines de compétence. Pour les candidats justifiant d'une expérience, il faut fournir une ou plusieurs attestations de travail et, pour les salariés, un relevé de carrière délivré par la CNSS. Contrôlez la cohérence des dates et la lisibilité des documents avant l'envoi."
+            ],
+            [
+              "Dépôt électronique et heure limite à ne pas confondre",
+              "La MAP demande de remplir le formulaire sur candidature.map.ma, d'indiquer la référence de l'appel et de téléverser les pièces exigées. La fiche gouvernementale précise une date limite au 12 novembre 2026 à 16 h 30, alors que l'avis signé indique le 12 novembre sans heure détaillée. Il est donc prudent de respecter l'heure explicite de 16 h 30 et de ne pas supposer une ouverture jusqu'à minuit. Le formulaire de contact d'emploi-public.ma sert à poser des questions et ne remplace pas la candidature sur le site de la MAP. Conservez l'accusé de réception ou le numéro de dossier s'il est délivré."
+            ],
+            [
+              "Présélection, épreuves écrites et entretien oral",
+              "Une commission désignée par le directeur général examine d'abord les candidatures au regard des besoins et des informations transmises. Les candidats retenus passent une dissertation sur un sujet d'ordre général, de deux heures et coefficient 2, puis un questionnaire de connaissances techniques et de culture générale, d'une heure trente et coefficient 3. Ceux qui réussissent les écrits accèdent à un entretien oral accompagné de tests de personnalité et d'aptitudes, de trente minutes et coefficient 7. Ces durées et coefficients proviennent de la troisième page de l'avis. Aucun seuil chiffré de réussite n'y est publié : il serait inexact d'en inventer un."
+            ],
+            [
+              "Préparer les compétences attendues sans prétendre connaître les sujets",
+              "Un entraînement utile consiste à construire trois cas : un besoin de recrutement exprimé par une direction, une sélection fondée sur des critères objectifs et un tableau de bord des délais et des candidatures. Exercez-vous à rédiger une fiche de poste, à documenter les décisions de sélection et à protéger les données personnelles. Une dissertation chronométrée de deux heures et un questionnaire technique de quatre-vingt-dix minutes permettent de tester votre organisation. Ces exercices sont des propositions pédagogiques, pas des sujets officiels ni des informations obtenues auprès du jury. Le coefficient 7 de l'oral justifie une préparation sérieuse de la communication et de l'éthique professionnelle."
+            ],
+            [
+              "Rémunération inconnue, résultats et précautions",
+              "L'avis précise le caractère statutaire et l'échelle 11, mais ne donne ni salaire net individuel ni détail des indemnités. Il serait donc trompeur d'annoncer un montant mensuel comme certain. La MAP prévoit la publication des convocations et des résultats sur son site et sur le portail public. Les dossiers incomplets, non conformes ou tardifs ne seront pas traités, et les candidats définitivement admis devront présenter les originaux de leurs diplômes et justificatifs. N'envoyez jamais ces originaux à un intermédiaire et ne payez personne promettant une réussite. Vérifiez les éventuels rectificatifs officiels et privilégiez un autre concours si votre profil ne remplit pas les conditions."
+            ]
+          ]
+        }
+      }
     }
   }
 }
