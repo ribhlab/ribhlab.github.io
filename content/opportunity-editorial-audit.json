@@ -13,8 +13,8 @@
     "visa": 12,
     "researched": 41,
     "marketEvidence": 5,
-    "pendingDetail": 46,
-    "pendingLiveVerification": 9
+    "pendingDetail": 45,
+    "pendingLiveVerification": 10
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -584,10 +584,15 @@
       "section": "competitions",
       "title": "Responsables dans plusieurs spécialités",
       "deadline": "2026-11-10",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-11-10",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/3f1e24f9-c263-409e-9323-c883d9008099"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/3f1e24f9-c263-409e-9323-c883d9008099",
+      "reviewedAt": "2026-10-30",
+      "researchedAt": "2026-10-30",
+      "evidenceId": "srm-laayoune-responsibles",
+      "originalNoticeUrl": "https://mafoamanagement.fra1.digitaloceanspaces.com/media/concour_avis/societe-regionale-multiservices-laayoune-sakia-el-hamra-responsable-comptabilite-et-fiscalite-direction-administrative-et-financiere-2544/004bdf53-eea0-4528-b262-020944648225.pdf",
+      "verification": "Signed five-page notice 109/2026 read 30 Oct; portal C44294/26 and employer-authorized Mafoa position checked. Nine original sections AR/EN/FR (782/917/926 words). Government category 15 managers versus 14 explicitly labelled Responsable rows in signed notice remains unresolved. Await build, Pages deployment and live three-language QA before researched-article status."
     },
     {
       "id": "srm-laayoune-managers",
