@@ -1,5 +1,5 @@
 /**
- * Curate distinct Wikimedia Commons food photography with traceable CC licenses.
+ * Discover Wikimedia Commons photo candidates for editorial review. Never publish automatically.
  * Uses verified public Wikimedia API. Normal site builds do not depend on this API.
  * The JSON can be resumed, and only distinct image file IDs and URLs are accepted.
  */
@@ -9,7 +9,7 @@ const dir=path.join(process.cwd(),'content','recipes');
 const batchFiles=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'];
 const recipes=batchFiles.flatMap(file=>JSON.parse(fs.readFileSync(path.join(dir,file),'utf8')).recipes);
 const existing=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'utf8'));
-const output=path.join(dir,'curated-photos.json');
+const output=path.join(dir,'photo-candidates.json');
 const previous=fs.existsSync(output)?JSON.parse(fs.readFileSync(output,'utf8')):{photos:{}};
 const photos={...(previous.photos||{})};
 const usedIds=new Set([...Object.values(photos).map(p=>p.id)]);
