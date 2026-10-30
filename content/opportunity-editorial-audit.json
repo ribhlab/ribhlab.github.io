@@ -11,10 +11,10 @@
   "totals": {
     "cards": 100,
     "visa": 12,
-    "researched": 38,
+    "researched": 39,
     "marketEvidence": 5,
     "pendingDetail": 48,
-    "pendingLiveVerification": 9
+    "pendingLiveVerification": 8
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -868,11 +868,13 @@
       "section": "companies",
       "title": "Technicien en Développement Logiciel",
       "deadline": "2026-11-03",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
-      "priority": "official-two-page-notice-reviewed-2026-10-30",
+      "priority": "official-source-verified-live-2026-10-30",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c7a92e36-cc06-48a4-9c8d-22c4e339a716",
-      "evidenceId": "sntl-software-development-technicians-2-2026"
+      "evidenceId": "sntl-software-development-technicians-2-2026",
+      "verifiedAt": "2026-10-30",
+      "verification": "Signed two-page SNTL notice and emploi-public listing reviewed. Existing canonical card sntl-dev-logiciel-2 now renders the evidence alias sntl-software-development-technicians-2-2026. GitHub Actions build 41029581692 and Pages deployment 41029581684 succeeded; public HTTPS run 41029666270 verified 10 sections, sources and HTTP 200 in AR/EN/FR."
     },
     {
       "id": "sntl-assistant-juriste-1",
