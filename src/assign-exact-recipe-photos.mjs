@@ -13,7 +13,11 @@ const selected={
  'baghrir-thousand-holes':['File:البغرير المغربي.jpg','Samira hiba'],
  'msemen-home':['File:المسمن أو الملوي المغربي.jpg','Samira hiba'],
  'harcha-semolina':['File:Harcha (Homemade).jpg','Tamorlan'],
- 'chicken-pastilla-home':['File:بسطيلة بالدجاج المغربية.JPG','Zouhir']
+ 'chicken-pastilla-home':['File:بسطيلة بالدجاج المغربية.JPG','Zouhir'],
+ 'nigerian-jollof-style-rice':['File:Nigerian jollof rice.jpg','Halima Waziri'],
+ 'margherita-pizza':['File:Margherita pizza on plate.jpg','Shisma'],
+ 'mujaddara-lentils-rice':['File:Mujaddara.jpg','Bazel'],
+ 'quiche-spinach':['File:Spinach Quiche - Julien Plumart 2025-10-14.jpg','Andy Li']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
