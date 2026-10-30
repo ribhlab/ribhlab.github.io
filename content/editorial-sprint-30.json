@@ -231,13 +231,14 @@
         "googlePlay",
         "appleAppStore"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/voice-recording-transcription-mobile-accuracy/",
       "queuePath": "content/reviewed-queue/voice-recording-transcription-mobile-accuracy.json",
       "editorialReviewDate": "2026-10-28",
       "publisherReleasedAt": "2026-10-30T07:42:34Z",
       "releaseCommit": "26032adccd8bd66fdb051c733ee7c5af0ac3540d",
-      "verification": "Publisher moved complete AR/EN/FR article to content/articles; awaiting successful build/deploy and live public HTTPS QA before published status."
+      "verification": "Publisher release in content/articles, trilingual npm build/check and Pages deployment succeeded in GitHub Actions 41029581692 / 41029581684; public HTTPS check 41029666270 confirmed AR/EN/FR HTTP 200, complete sections, sources and unique licensed photo. 25-minute publication interval retained.",
+      "publishedVerifiedAt": "2026-10-30"
     },
     {
       "sectionId": "mobile-apps",
@@ -292,13 +293,14 @@
         "unreal",
         "godot"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/ai/unreal-engine-when-to-choose/",
       "queuePath": "content/reviewed-queue/unreal-engine-when-to-choose.json",
       "editorialReviewDate": "2026-10-28",
       "publisherReleasedAt": "2026-10-30T07:12:35Z",
       "releaseCommit": "c361764335cae68d6c0a9025959dae4b94a04c30",
-      "verification": "Publisher moved complete AR/EN/FR article to content/articles; awaiting successful build/deploy and live public HTTPS QA before published status."
+      "verification": "Publisher release in content/articles, trilingual npm build/check and Pages deployment succeeded in GitHub Actions 41029581692 / 41029581684; public HTTPS check 41029666270 confirmed AR/EN/FR HTTP 200, complete sections, sources and unique licensed photo. 25-minute publication interval retained.",
+      "publishedVerifiedAt": "2026-10-30"
     },
     {
       "sectionId": "games-security",
