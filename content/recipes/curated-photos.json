@@ -421,6 +421,42 @@
       "description": "Salade nicoise.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "tomato-cheese-omelet": {
+      "id": "commons:57994513",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Tomato_Cheese_Omelette.jpg/1280px-Tomato_Cheese_Omelette.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATomato_Cheese_Omelette.jpg",
+      "photographer": "Sumit Surai",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Tomato Cheese Omelette.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "american-macaroni-cheese": {
+      "id": "commons:56972438",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Mac-and-cheese.jpg/1280px-Mac-and-cheese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMac-and-cheese.jpg",
+      "photographer": "Amin",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Mac-and-cheese.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-cucumber-yogurt-dip": {
+      "id": "commons:16836777",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Tzatziki_meze_or_appetizer%2C_also_used_as_a_sauce.jpg/1280px-Tzatziki_meze_or_appetizer%2C_also_used_as_a_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATzatziki_meze_or_appetizer%2C_also_used_as_a_sauce.jpg",
+      "photographer": "Nikodem Nijaki",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Tzatziki meze or appetizer, also used as a sauce.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
