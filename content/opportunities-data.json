@@ -200,14 +200,16 @@
     {
       "id": "srm-technicians",
       "section": "competitions",
-      "title": "Techniciens — SRM Laâyoune-Sakia El Hamra",
-      "org": "SRM Laâyoune-Sakia El Hamra",
-      "place": "Laâyoune, Maroc",
+      "title": "84 techniciens — SRM Laâyoune (avis global de 117 agents)",
+      "org": "Société Régionale Multiservices Laâyoune–Sakia El Hamra",
+      "place": "Laâyoune, Boujdour, Tarfaya et Smara (selon le poste)",
       "count": 84,
       "deadline": "2026-11-10",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
-      "kind": "official_notice",
-      "verifiedBy": "emploi-public.ma"
+      "url": "https://www.emploi-public.ma/fr/concours/details/c6cce0a1-1fa3-46ed-b188-adc6c7ae60db",
+      "kind": "official_recruitment_notice",
+      "verifiedBy": "Signed 5-page notice 110/2026/DA/DG/SRMLS dated 26 October 2026 and official C44300/26 listing; 117 total agents in notice versus 84 technicians on portal. Four accounting and six IT technicians detailed.",
+      "posted": "2026-10-26",
+      "reference": "C44300/26"
     },
     {
       "id": "bam-cyber",
