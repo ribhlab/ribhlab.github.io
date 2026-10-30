@@ -21,7 +21,7 @@
 .recipe-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .recipe-card{display:flex;min-width:0;flex-direction:column;overflow:hidden;border:1px solid #e2e5f1;border-radius:19px;background:#fff;text-decoration:none;box-shadow:0 9px 24px rgba(48,43,97,.06);color:#1a2d4a;transition:transform .18s,border-color .18s,box-shadow .18s}
 .recipe-card:hover,.recipe-card:focus-visible{transform:translateY(-4px);border-color:#9982f0;box-shadow:0 18px 31px #483a971c}
-.recipe-card img{display:block;max-width:100%;width:100%;aspect-ratio:8/5;object-fit:cover;background:#f2edf4}
+.recipe-card img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;object-position:center;background:#fff9ef}
 .recipe-card-content{display:flex;flex:1;flex-direction:column;padding:18px}
 .recipe-tag{align-self:flex-start;border-radius:30px;background:#f1edff;color:#6549c9;font-size:12px;padding:5px 10px;font-weight:750}
 .recipe-card h3{font-size:18px;line-height:1.45;margin:13px 0 15px;font-weight:800;color:#213456}
@@ -66,9 +66,9 @@
 
 
 /* Food photographs with readable proportions and clear attribution. */
-.recipe-card img[data-recipe-photo]{width:100%;aspect-ratio:8/5;object-fit:cover;display:block;background:#f1edeb}
+.recipe-card img[data-recipe-photo]{display:block;width:100%;aspect-ratio:8/5;object-fit:contain;object-position:center;background:#fff9ef}
 .recipe-photo-figure{min-width:0}
-.recipe-photo-figure img{width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;display:block;border-radius:22px;border:1px solid #e5e5f0;box-shadow:0 18px 34px #362f751a;background:#f1edeb}
+.recipe-photo-figure img{width:100%;height:auto;max-height:620px;aspect-ratio:auto;object-fit:contain;object-position:center;display:block;border-radius:22px;border:1px solid #e5e5f0;box-shadow:0 18px 34px #362f751a;background:#fff9ef}
 .recipe-photo-credit{font-size:12px!important;line-height:1.7!important;color:#708095!important;margin:10px 2px 0!important}
 .recipe-photo-credit a{color:#6748dd;text-decoration:underline;text-underline-offset:3px}
 
@@ -82,3 +82,12 @@
 .recipe-related-grid a{padding:13px 15px;border:1px solid #e7e9f2;border-radius:12px;background:#faf9ff;color:#5540bd;text-decoration:none;font-weight:700;line-height:1.5}
 .recipe-related-grid a:hover{background:#f0ecff;border-color:#9c8af0}
 @media(max-width:580px){.recipe-related-grid{grid-template-columns:1fr}.recipe-hub-explainer{padding:18px}}
+
+/* Full-dish imagery, never crop the food or zoom ingredients outside the frame. */
+.recipe-card:focus-visible img,.recipe-card:hover img{object-fit:contain}
+.recipe-photo-figure{width:100%;max-width:100%;overflow:visible}
+.recipe-video-suggestion{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin:21px 0 26px;padding:18px 20px;border:1px solid #e6e1f4;border-radius:16px;background:#fbf9ff}
+.recipe-video-suggestion h2{font-size:19px;margin:0;color:#273957}
+.recipe-video-suggestion p{font-size:13px;line-height:1.7;margin:0;color:#62718a}
+.recipe-video-link{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:11px;background:#6544d6;color:#fff!important;text-decoration:none;font-weight:750}
+.recipe-video-link:hover,.recipe-video-link:focus-visible{background:#492bb4;text-decoration:underline}
