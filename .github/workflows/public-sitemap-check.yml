@@ -323,6 +323,12 @@ jobs:
                           assert page.count('class="article-block"')>=min_sections, f'{language}: incomplete newly released article {slug}'
                           assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources/photo missing for {slug}'
                           print(f'RECENT CAMPAIGN LIVE {language}: {slug} with {min_sections}+ sections, sources and licensed photo',flush=True)
+                  # A signed ministerial rectificatif supersedes the Agriculture original deadline.
+                  for language,deadline in (('ar','9 نوفمبر 2026'),('en','9 November 2026'),('fr','9 novembre 2026')):
+                      agriculture=bodies[f'/{language}/opportunities/competitions/agriculture-admin/'].decode('utf-8')
+                      assert deadline in agriculture, f'{language}: Agriculture extension to 9 November missing'
+                      assert 'opp-evidence-warning' in agriculture and 'fichiers_att/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0/0' in agriculture, f'{language}: signed Agriculture deadline extension source missing'
+                      print(f'AGRICULTURE EXTENSION LIVE {language}: 9 November 2026 and signed rectificatif linked',flush=True)
                   # Validate the original Bank Al-Maghrib insurance recruitment guide
                   # against live trilingual pages, not only the committed evidence JSON.
                   for language in ('ar','en','fr'):
