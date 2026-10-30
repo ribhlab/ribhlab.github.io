@@ -224,17 +224,10 @@
         "newsletter-start-free-first-90-days",
         "niche-educational-blog-content-audit",
         "notion-template-originality-support-guide",
-        "search-console-bing-28-day-content-audit"
+        "search-console-bing-28-day-content-audit",
+        "affiliate-disclosure-placement-2026-multilingual-checklist"
       ],
       "ideas": [
-        {
-          "sequence": 12,
-          "titleAr": "الإفصاح عن الروابط التابعة أخلاقياً",
-          "status": "queued",
-          "slug": "affiliate-disclosure-placement-2026-multilingual-checklist",
-          "queuePath": "content/reviewed-queue/affiliate-disclosure-placement-2026-multilingual-checklist.json",
-          "reviewedAt": "2026-10-30"
-        },
         {
           "sequence": 13,
           "titleAr": "اختيار برنامج Affiliate مناسب",
