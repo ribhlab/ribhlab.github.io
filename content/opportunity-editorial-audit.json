@@ -13,8 +13,8 @@
     "visa": 12,
     "researched": 39,
     "marketEvidence": 5,
-    "pendingDetail": 48,
-    "pendingLiveVerification": 8
+    "pendingDetail": 47,
+    "pendingLiveVerification": 9
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -858,10 +858,14 @@
       "section": "companies",
       "title": "Cadre Supérieur Juriste",
       "deadline": "2026-11-03",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
-      "priority": "date:2026-11-03",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/22e15000-86a6-4c58-87a2-9db969a11a7a"
+      "priority": "verify-build-deploy-live-ar-en-fr",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/22e15000-86a6-4c58-87a2-9db969a11a7a",
+      "articleEvidenceId": "sntl-cadre-juriste-1",
+      "reviewedAt": "2026-10-30",
+      "officialNoticeUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/22e15000-86a6-4c58-87a2-9db969a11a7a",
+      "note": "Signed two-page notice and official government listing verified 30 October 2026. One senior jurist post; Bac+5 private law; 2 years post-degree (internships excluded); age 35 maximum on 1 January 2026; online deadline 3 November 2026 23:55. Full AR/EN/FR article merged; live verification pending."
     },
     {
       "id": "sntl-dev-logiciel-2",
