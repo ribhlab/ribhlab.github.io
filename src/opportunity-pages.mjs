@@ -10,7 +10,9 @@ const researchedArticles=JSON.parse(fs.readFileSync(path.join(project,'content/o
 const editorialEvidence=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-editorial-evidence.json'),'utf8')).articles;
 const countryDemand=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-country-demand.json'),'utf8')).markets;
 const demandFor=id=>Object.values(countryDemand).find(group=>group.ids.includes(id));
-const researchedFor=id=>researchedArticles[id]||editorialEvidence[id];
+const editorialAudit=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-editorial-audit.json'),'utf8')).cards;
+ const evidenceAliases=new Map(editorialAudit.filter(card=>card.evidenceId).map(card=>[card.id,card.evidenceId]));
+ const researchedFor=id=>researchedArticles[id]||editorialEvidence[id]||editorialEvidence[evidenceAliases.get(id)];
 const visualCatalog=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-photography.json'),'utf8'));
 const photoFor=key=>visualCatalog.items[key];
 const photoSrc=(key,width=960)=>'https://images.unsplash.com/'+photoFor(key).photoId+'?auto=format&fit=crop&w='+width+'&q=80';
