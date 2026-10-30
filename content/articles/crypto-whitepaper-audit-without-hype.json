@@ -1,0 +1,157 @@
+{
+  "slug": "crypto-whitepaper-audit-without-hype",
+  "category": "trading",
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false,
+  "related": [
+    "coin-versus-token-claim-verification",
+    "ethereum-smart-contracts-wallet-permissions"
+  ],
+  "sources": [
+    {
+      "label": "ESMA — MiCA Article 6, required contents and risk disclosures for relevant white papers (checked 29 October 2026)",
+      "url": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-6-content-and-form-crypto-asset"
+    },
+    {
+      "label": "ESMA — MiCA Article 109, register of white papers and entities (checked 29 October 2026)",
+      "url": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-109-register-crypto-asset-white"
+    },
+    {
+      "label": "SEC Investor.gov — Exercise caution with crypto asset securities, published 23 March 2023",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/crypto-asset-securities"
+    },
+    {
+      "label": "ESMA — Q&A 2552 on assets with no identifiable issuer, answer dated 18 February 2026",
+      "url": "https://www.esma.europa.eu/publications-data/questions-answers/2552"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "كيف تراجع الورقة البيضاء لمشروع عملة رقمية دون الانخداع بالدعاية؟",
+      "excerpt": "قائمة عملية للتحقق من الجهة المسؤولة والحقوق والعقد والمعروض والسيولة والمخاطر التنظيمية قبل التفكير في أي استثمار.",
+      "lead": "قراءة الورقة البيضاء خطوة بحث أولية لا شهادة اعتماد. يشرح هذا الدليل كيف تفصل الادعاءات القابلة للاختبار عن الوعود التسويقية، وكيف تسجل الشكوك وتراجع المصادر الرسمية دون افتراض نتائج مالية.",
+      "sections": [
+        {
+          "heading": "الورقة البيضاء ليست شهادة جودة",
+          "paragraphs": [
+            "قد يقدم مشروع الأصول المشفرة ملفاً يحمل عنوان «الورقة البيضاء» ويتضمن رسوماً جذابة وخريطة طريق طموحة، لكن وجود الملف لا يثبت صدق المشروع أو سلامة العقد أو إمكانية بيع الرمز لاحقاً. تبدأ المراجعة بتحديد نسخة الوثيقة وتاريخها والجهة التي أصدرتها، ثم مقارنة الادعاءات بمعلومات مستقلة. في الاتحاد الأوروبي يحدد نظام MiCA متطلبات إفصاح لأنواع معينة من الأصول، لكنه لا يحول كل ورقة منشورة إلى موافقة رقابية أو ضمان استثمار.",
+            "ابدأ بصفحة واحدة تسجل فيها اسم المشروع والرابط الأصلي وتاريخ الاطلاع ورقم الإصدار واسم الجهة المسؤولة. إن كانت الوثيقة مجرد صورة بلا روابط أو بيانات اتصال، فلا تفترض أن التفاصيل المفقودة متاحة في مكان آخر. ابحث عن النسخ القديمة لمعرفة ما تغير في الوعود والمواعيد، واحفظ الاختلافات بدلاً من الاكتفاء بالنسخة التسويقية الأحدث. هذه الخطوة لا تثبت الاحتيال وحدها، لكنها تكشف مقدار المعلومات القابلة للفحص."
+          ]
+        },
+        {
+          "heading": "من المسؤول وما الذي يملكه حامل الرمز؟",
+          "paragraphs": [
+            "افصل بين اسم العلامة التجارية والكيان القانوني والمطورين والموزعين ومنصة التداول. اطلب عنوان الجهة، ووصف مسؤولياتها، والحقوق الفعلية التي يمنحها الرمز، وآلية الشكاوى إن وجدت. هل يعطي الرمز حق استعمال خدمة، أم مطالبة مالية، أم مجرد إمكانية نقله إلى مستخدم آخر؟ لا تستنتج حقوق ملكية أو أرباحاً أو استرداداً من كلمات مثل «شراكة» و«مجتمع». يطلب إطار MiCA إفصاحات عن الأطراف والحقوق والالتزامات والمخاطر في الحالات الخاضعة له.",
+            "مثال افتراضي: يعلن مشروع عن مليون رمز وعن توزيع 20% للفريق. لا يكفي هذا لمعرفة من يسيطر على المشروع؛ ينبغي فهم صلاحيات إنشاء رموز جديدة، وجدول فتح الحصص، والمحافظ التي تملك الاحتياطي، وإمكانية تعديل القواعد. إذا كانت العقود أو العناوين غير منشورة، ضع النتيجة «غير قابل للتحقق» بدلاً من افتراض اللامركزية. ولا تنشر بيانات أشخاص عاديين أو اتهامات دون أدلة موثوقة."
+          ]
+        },
+        {
+          "heading": "افحص التقنية بدليل مستقل لا بالشعارات",
+          "paragraphs": [
+            "تحتاج الادعاءات التقنية إلى ما يتجاوز عبارة «بلوك تشين آمنة». تحقق من الشبكة التي يعمل عليها الرمز، والعنوان الصحيح للعقد، وروابط المستودع البرمجي، ونطاق أي تدقيق أمني منشور وتاريخه. تقرير تدقيق قديم يخص نسخة سابقة لا يثبت سلامة التحديثات. كذلك فإن ظهور المشروع على مستكشف سلسلة أو إدراجه في منصة بيانات لا يعني مراجعة نموذج الأعمال أو إثبات احتياطياته. افصل بين ما رأيته بنفسك وما نقله طرف آخر.",
+            "ضع جدولاً بثلاثة أعمدة: الادعاء، والدليل، والحدود. مثال: «المعروض ثابت» يحتاج إلى فحص صلاحية السكّ وإمكانية الترقية وليس مجرد رقم في الموقع؛ و«الخدمة مستخدمة» تحتاج إلى مؤشرات نشاط يمكن تفسيرها دون خلط المحافظ النشطة بالمستخدمين الفريدين. إذا عجزت عن قراءة العقد، اطلب مراجعة تقنية مستقلة مع ذكر نطاقها، ولا تحول جهل التفاصيل إلى يقين بسلامة النظام."
+          ]
+        },
+        {
+          "heading": "اختبر الاقتصاد الرمزي والسيولة بأرقام واضحة",
+          "paragraphs": [
+            "اقرأ المعروض المتداول والكلي والأقصى إن وجد، وجدول تحرير الرموز وحصص الفريق والمستثمرين، وما الذي يمول التطوير. مثال حسابي تعليمي: إذا كان المتداول مليون رمز بسعر افتراضي قدره دولاران، فقيمة التداول السوقية النظرية مليونا دولار؛ وإذا كان إجمالي المعروض عشرة ملايين، فإن التقييم المخفف نظرياً عشرون مليوناً عند السعر نفسه. هذا ليس توقعاً لسعر المستقبل، لأن تحرير الرموز والطلب والسيولة قد تغيره جذرياً.",
+            "لا تساوِ بين السعر المعروض وإمكانية بيع كمية كبيرة بذلك السعر. افحص حجم أوامر الشراء، والفارق بين العرض والطلب، والقيود على التحويل والسحب، وتركيز الملكية. يمكن أن يكون السعر مرتفعاً في سوق ضحلة جداً، كما قد يختلف السعر بين المنصات. تنبه هيئة الأوراق المالية الأمريكية إلى تقلب الأصول المشفرة ومخاطر نقص الحماية واحتمال اختفاء الأسواق؛ لا ينبغي وصف السيولة أو العائد بالمضمون."
+          ]
+        },
+        {
+          "heading": "التنظيم والاحتيال وقرار الامتناع",
+          "paragraphs": [
+            "يساعد سجل ESMA في البحث عن أوراق وكيانات ضمن نطاق MiCA، لكن ظهور ورقة لأصل مشفر عادي في السجل لا يعني أن سلطة أوروبية وافقت على محتواها. تختلف قواعد الرموز المرجعية للأصول ورموز النقود الإلكترونية، كما توجد استثناءات وحالات انتقالية؛ لذلك لا تعمم قاعدة قانونية على كل رمز أو كل دولة. ويجب على القارئ في المغرب مراجعة الوضع القانوني المحلي المستجد قبل أي تعامل، دون اعتبار النظام الأوروبي ترخيصاً للعمل محلياً.",
+            "ضع علامات توقف واضحة: وعود بعائد ثابت مرتفع، طلب تحويل الأموال إلى محفظة شخصية، رفض كشف الجهة المسؤولة، أو اشتراط دفع «ضريبة تحرير» لاسترجاع الأموال. تحذر جهات حماية المستثمرين من هذه الأساليب. بعد المراجعة، صنف كل عنصر إلى موثق أو غير مؤكد أو متناقض، واكتب ما قد يجعلك تغير الحكم. يمكن أن تكون النتيجة المهنية الأفضل هي عدم الشراء. لا يمثل هذا الدليل توصية استثمارية أو حكماً بأن مشروعاً محدداً احتيالي."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "How to audit a crypto white paper without buying the hype",
+      "excerpt": "A practical framework for checking issuers, token rights, contract evidence, supply, liquidity and regulatory caveats.",
+      "lead": "A white paper is an information source, not an endorsement. This guide provides a repeatable way to test project claims, document uncertainty and understand risk without assuming a positive investment outcome.",
+      "sections": [
+        {
+          "heading": "A white paper is not a quality certificate",
+          "paragraphs": [
+            "A crypto project can publish an impressive white paper with polished charts and an ambitious roadmap, yet the document alone cannot prove the project's honesty, contract safety or future liquidity. Begin by identifying the document version, date and responsible publisher, then compare its claims with independent evidence. In the European Union, MiCA sets disclosure rules for certain categories of crypto-assets, but publishing a document does not automatically mean regulatory approval or investment protection.",
+            "Create a one-page evidence sheet recording the project name, original document URL, access date, version and responsible entity. If the paper is only an image without references or contact information, do not assume that missing facts are available elsewhere. Compare archived versions to detect changes to promises and deadlines. A discrepancy is not proof of fraud by itself; it is a reason to request clarification and assess how much of the proposal can actually be checked."
+          ]
+        },
+        {
+          "heading": "Identify responsibility and token-holder rights",
+          "paragraphs": [
+            "Separate the brand from the legal issuer, developers, distributors and trading venue. Look for an identifiable responsible entity, a description of obligations, and the rights attached to the token. Does it grant access to a service, a financial claim, redemption rights or merely the ability to transfer it? Words such as community, partner or ecosystem do not establish ownership, dividends or repayment. Where applicable, MiCA asks for information about the parties, project, token rights, underlying technology and risks.",
+            "Consider a hypothetical project with one million tokens and a promised allocation of twenty percent to its team. That does not reveal who can create additional tokens, when locked holdings unlock, which wallets control reserves or whether the contract can be upgraded. If addresses and contracts are absent, record the finding as not independently verifiable instead of assuming decentralisation. Avoid public allegations against individuals without reliable evidence; the purpose of the checklist is disciplined assessment."
+          ]
+        },
+        {
+          "heading": "Test technical claims against independent evidence",
+          "paragraphs": [
+            "The statement 'secured by blockchain' is not a security audit. Identify the network, verify the correct contract address, inspect code repository links and read the scope and date of any published audit. An audit of an earlier contract version does not establish the safety of later upgrades. Listing on a blockchain explorer or market-data website also does not verify the business model, user base or reserves. Keep a clear distinction between first-hand observations and third-party assertions.",
+            "Build a table with claim, evidence and limitation columns. A claim that supply is fixed requires investigating mint permissions and upgradeability, not just copying a number from the homepage. A claim about active adoption requires interpretable usage evidence; wallet addresses are not necessarily unique human users. If you cannot assess the code, seek independent technical review and state its scope. Unfamiliarity with technical details should not be mistaken for proof that a system is safe."
+          ]
+        },
+        {
+          "heading": "Examine token economics and liquidity with numbers",
+          "paragraphs": [
+            "Read circulating, total and maximum supply where applicable, token-unlock schedules, team allocations and development financing. For a purely illustrative calculation, one million circulating tokens priced at two dollars imply a quoted market capitalisation of two million dollars. If total supply is ten million, the corresponding fully diluted figure is twenty million dollars at that same assumed price. Neither figure forecasts future value: new supply, demand and trading depth can change market prices substantially.",
+            "A quoted last trade is not proof that a large holding could be sold at that price. Review order-book depth, bid–ask spreads, withdrawal limits and ownership concentration. A thin market can display a striking price with very little capacity to absorb sales. The US SEC's investor guidance warns that crypto-asset investments can be highly volatile, that investor protections may be limited, and that markets may disappear. Avoid treating projected liquidity or returns as guarantees."
+          ]
+        },
+        {
+          "heading": "Regulatory checks, fraud signals and the choice not to buy",
+          "paragraphs": [
+            "ESMA's register can help identify certain MiCA white papers and entities, but an ordinary crypto-asset white paper appearing there is not equivalent to approval of its contents by an EU authority. Asset-referenced and e-money tokens follow different rules, and exceptions or transitional arrangements can apply. A reader outside the EU must also check applicable local law; EU disclosure requirements are not a licence to offer or trade a token in Morocco or elsewhere.",
+            "Stop when promoters promise unusually high risk-free returns, demand payment to a personal wallet, refuse to identify responsible parties or require an extra 'release tax' before withdrawals. Investor-protection agencies have documented such patterns. At the end of the review, label each material claim verified, uncertain or contradictory, and state what new evidence could change the assessment. Declining to purchase can be the best outcome. This is an educational risk checklist, not personalised investment advice or an accusation against any named project."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Auditer le livre blanc d'un cryptoactif sans céder aux promesses",
+      "excerpt": "Méthode pour vérifier l'émetteur, les droits, le contrat, l'offre, la liquidité et les risques réglementaires.",
+      "lead": "Un livre blanc apporte des informations, pas une garantie. Ce guide propose une vérification reproductible des affirmations, des incertitudes et des risques, sans transformer un document promotionnel en recommandation d'investissement.",
+      "sections": [
+        {
+          "heading": "Un livre blanc n'est pas un certificat de qualité",
+          "paragraphs": [
+            "Un projet de cryptoactifs peut présenter un livre blanc soigné, rempli de graphiques et d'objectifs ambitieux, sans que cela prouve sa fiabilité, la sécurité du contrat ou sa liquidité future. La première étape consiste à relever la version du document, sa date et son auteur responsable, puis à confronter les affirmations à des éléments indépendants. Dans l'Union européenne, MiCA impose certaines informations pour plusieurs catégories de cryptoactifs, mais la publication d'un document ne constitue pas automatiquement une approbation réglementaire ni une protection de l'investissement.",
+            "Préparez une fiche de preuves indiquant le nom du projet, l'adresse du document d'origine, la date de consultation, la version et l'entité responsable. Si le livre blanc est une image sans références ni coordonnées, n'inventez pas les informations absentes. Comparez les versions archivées pour identifier les changements de promesses ou de calendrier. Une divergence ne démontre pas à elle seule une fraude ; elle justifie une demande d'explication et une évaluation plus prudente."
+          ]
+        },
+        {
+          "heading": "Qui répond du projet et quels droits possède le détenteur ?",
+          "paragraphs": [
+            "Distinguez la marque commerciale, l'émetteur juridique, les développeurs, les distributeurs et la plateforme d'échange. Recherchez une entité identifiable, ses responsabilités et les droits effectivement attachés au jeton. Celui-ci donne-t-il accès à un service, à une créance, à un remboursement ou simplement à un transfert ? Les mots communauté, partenaire et écosystème ne créent pas de droit aux dividendes. Lorsque MiCA s'applique, les informations doivent notamment couvrir les parties concernées, les droits, la technologie et les risques.",
+            "Prenons un exemple fictif : un million de jetons et une allocation annoncée de vingt pour cent à l'équipe. Cela ne révèle pas les droits de création supplémentaires, le calendrier de déblocage, les portefeuilles contrôlant les réserves ou la possibilité de modifier le contrat. En l'absence d'adresses vérifiables, notez « non vérifiable indépendamment » plutôt que « décentralisé ». Évitez aussi les accusations personnelles non étayées ; la méthode vise à vérifier des affirmations, pas à désigner arbitrairement des coupables."
+          ]
+        },
+        {
+          "heading": "Confronter les promesses techniques aux preuves",
+          "paragraphs": [
+            "La formule « sécurisé par la blockchain » ne remplace pas un audit. Identifiez le réseau, l'adresse exacte du contrat, les dépôts de code et la portée ainsi que la date de tout audit publié. Un audit portant sur une ancienne version ne démontre pas la sécurité d'une mise à jour ultérieure. Une présence sur un explorateur ou un agrégateur de prix ne prouve ni la viabilité économique ni l'existence de réserves. Distinguez systématiquement vos observations des déclarations de tiers.",
+            "Construisez un tableau avec trois colonnes : affirmation, preuve et limite. Pour une offre prétendument fixe, vérifiez les droits d'émission et de modification du contrat au lieu de recopier le chiffre du site. Pour une adoption annoncée, examinez des indicateurs interprétables ; plusieurs adresses ne correspondent pas nécessairement à autant de personnes. Si vous ne savez pas analyser le code, sollicitez un avis technique indépendant et précisez son périmètre. L'incertitude ne doit pas être présentée comme une garantie."
+          ]
+        },
+        {
+          "heading": "Comprendre l'offre, la dilution et la liquidité",
+          "paragraphs": [
+            "Examinez l'offre en circulation, l'offre totale et le maximum éventuel, les déblocages futurs, les allocations aux fondateurs et le financement du développement. Dans un exemple purement pédagogique, un million de jetons circulants à deux dollars donnent une capitalisation affichée de deux millions de dollars. Avec dix millions de jetons au total, la valorisation entièrement diluée atteindrait vingt millions au même prix hypothétique. Ces calculs ne prédisent rien : émissions futures, demande et profondeur du marché peuvent modifier le cours.",
+            "Le dernier prix affiché ne garantit pas la vente d'une grosse position à ce niveau. Analysez les ordres disponibles, les écarts acheteur-vendeur, les restrictions de retrait et la concentration des détenteurs. Un marché peu profond peut afficher une valeur élevée sans absorber des ventes importantes. Les avertissements de la SEC américaine rappellent la volatilité des cryptoactifs, les protections parfois limitées et la disparition possible d'un marché. Aucune liquidité future ni aucun rendement ne doit être annoncé comme certain."
+          ]
+        },
+        {
+          "heading": "Vérifications juridiques et signaux d'arnaque",
+          "paragraphs": [
+            "Le registre de l'ESMA permet de retrouver certaines publications et entités relevant de MiCA. Toutefois, la présence d'un livre blanc ordinaire dans ce registre ne signifie pas qu'une autorité européenne a approuvé son contenu. Les jetons référencés à des actifs et les jetons de monnaie électronique obéissent à des règles distinctes ; des exceptions et dispositions transitoires existent. Hors de l'Union, il faut vérifier le droit local applicable : un cadre européen ne vaut pas autorisation d'offrir des jetons au Maroc.",
+            "Interrompez l'examen lorsque des promoteurs garantissent des profits élevés sans risque, exigent des virements vers un portefeuille personnel, refusent d'identifier les responsables ou réclament une « taxe de déblocage » avant tout retrait. Les autorités de protection des investisseurs ont décrit ces méthodes. Classez chaque affirmation importante comme vérifiée, incertaine ou contradictoire et précisez les preuves manquantes. La décision raisonnable peut être de ne rien acheter. Ce guide est éducatif, sans conseil financier personnalisé ni accusation contre un projet particulier."
+          ]
+        }
+      ]
+    }
+  }
+}

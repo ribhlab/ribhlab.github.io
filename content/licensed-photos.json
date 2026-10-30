@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "license": "Unsplash License — free commercial use and modification, no resale of unmodified images or competing image collections; third-party rights must also be respected",
   "licenseUrl": "https://unsplash.com/license",
   "purpose": "One distinct, topic-matched, real photographic image per published article, licensed under Unsplash License; editorial illustration only.",
@@ -832,6 +832,16 @@
       "altFr": "Photographie réelle d'un poulet tikka masala avec pain naan ; illustration et non essai culinaire de RibhLab",
       "license": "Unsplash License",
       "note": "Original free Unsplash photo by Jessie Maxwell, published 12 November 2025. Original page explicitly states free use under Unsplash License. Image asset ID obtained from original images.unsplash.com link on 29 October 2026. Checked against published and planned photo registries and repository code search; no reused ID found. Image is illustrative."
+    },
+    "crypto-whitepaper-audit-without-hype": {
+      "photoId": "photo-1748609700323-483a007ed311",
+      "source": "https://unsplash.com/photos/analyzing-stock-charts-with-a-stylus-kSuDK74izRk",
+      "photographer": "Jakub Żerdzicki",
+      "alt": "A person examining financial charts with a stylus, illustrative photograph and not a crypto project audit",
+      "altAr": "شخص يفحص رسوماً مالية بقلم إلكتروني، صورة توضيحية لا تمثل تدقيق مشروع محدد",
+      "altFr": "Personne examinant des graphiques financiers avec un stylet, image illustrative sans audit réel de projet",
+      "license": "Unsplash License",
+      "note": "Free Unsplash photo by Jakub Żerdzicki, published 30 May 2025. Original page, photographer, license and image asset ID checked 29 October 2026; unique across article, queue, market, recipe, opportunity and sports-tech registries."
     }
   }
 }

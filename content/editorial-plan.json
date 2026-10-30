@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastReviewed": "2026-10-29",
+  "lastReviewed": "2026-10-30",
   "languages": [
     "ar",
     "en",
@@ -1143,14 +1143,10 @@
         "redotpay-card-referrals-morocco-eligibility-2026",
         "bitcoin-wallet-recovery-backup-safety-drill",
         "ethereum-smart-contracts-wallet-permissions",
-        "coin-versus-token-claim-verification"
+        "coin-versus-token-claim-verification",
+        "crypto-whitepaper-audit-without-hype"
       ],
       "ideas": [
-        {
-          "sequence": 7,
-          "titleAr": "كيف تقرأ ورقة مشروع Crypto",
-          "status": "planned"
-        },
         {
           "sequence": 8,
           "titleAr": "التحقق من سيولة عملة جديدة",

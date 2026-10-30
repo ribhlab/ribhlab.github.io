@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "note": "Curated editorial directory of official provider domains. Listings are educational references, not a ranking or an endorsement. Commercial links remain separately disclosed.",
   "platforms": {
     "fiverr": {
@@ -976,6 +976,11 @@
     "chicken-tikka-masala-temperature-guide": [
       "foodSafety",
       "foodSafetySeafood"
+    ],
+    "crypto-whitepaper-audit-without-hype": [
+      "ethereum",
+      "investor",
+      "coingecko"
     ]
   }
 }
