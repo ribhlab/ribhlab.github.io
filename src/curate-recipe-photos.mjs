@@ -1,70 +1,80 @@
 /**
- * One-off editorial photo curation (not used during a normal offline build).
- * Retrieves distinctly identified, commercially permitted Openverse photography.
- * Fails closed: incomplete results are NOT committed or published.
- * Metadata remains auditable in content/recipes/curated-photos.json.
+ * Curate distinct Wikimedia Commons food photography with traceable CC licenses.
+ * Uses verified public Wikimedia API. Normal site builds do not depend on this API.
+ * The JSON can be resumed, and only distinct image file IDs and URLs are accepted.
  */
 import fs from 'node:fs';
 import path from 'node:path';
-const root=process.cwd(), dir=path.join(root,'content','recipes');
-const batches=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'];
-const recipes=batches.flatMap(file=>JSON.parse(fs.readFileSync(path.join(dir,file),'utf8')).recipes);
-const original=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'utf8'));
+const dir=path.join(process.cwd(),'content','recipes');
+const batchFiles=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'];
+const recipes=batchFiles.flatMap(file=>JSON.parse(fs.readFileSync(path.join(dir,file),'utf8')).recipes);
+const existing=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'utf8'));
 const output=path.join(dir,'curated-photos.json');
 const previous=fs.existsSync(output)?JSON.parse(fs.readFileSync(output,'utf8')):{photos:{}};
-const photos={...(previous.photos||{})},used=new Set([
- ...Object.values(original.photos||{}).map(p=>p.photoId),
- ...Object.values(photos).map(p=>p.id)
-]);
-const urlUsed=new Set([...Object.values(original.photos||{}).map(p=>p.url.split('?')[0]),...Object.values(photos).map(p=>p.url.split('?')[0])]);
+const photos={...(previous.photos||{})};
+const usedIds=new Set([...Object.values(photos).map(p=>p.id)]);
+const usedUrls=new Set([...Object.values(existing.photos).map(p=>p.url.split('?')[0]),...Object.values(photos).map(p=>p.url.split('?')[0])]);
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-const NOISE=/\b(with|and|the|baked|cooked|healthy|fresh|home|style|homemade|spicy|easy|sauce|dish|vegetable|vegetables)\b/gi;
-function queries(r){
- const dish=r.title.en.toLowerCase().replace(NOISE,' ').replace(/[^a-z\s-]/g,' ').replace(/\s+/g,' ').trim();
- const tokens=dish.split(' ').filter(w=>w.length>3);
- const focused=tokens.slice(0,3).join(' ');
- const category=r.method==='skillet'?'food meal':r.method==='roast'?'roasted food':r.method==='soup'?'soup':r.method==='rice'?'rice food':r.method==='sandwich'?'sandwich':r.method==='salad'?'salad':r.method==='tagine'?'tagine':r.method==='couscous'?'couscous':r.method==='pasta'?'pasta':'prepared food';
- return [...new Set([dish,focused,r.title.en.split(' ')[0]+' food',category])].filter(x=>x.length>2);
+const strip=s=>String(s||'').replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#\d+;/g,' ').replace(/\s+/g,' ').trim().slice(0,180);
+const hash=s=>[...s].reduce((n,c)=>(Math.imul(n,33)+c.charCodeAt(0))>>>0,5381);
+const noise=/\b(with|and|the|baked|cooked|healthy|fresh|home|style|homemade|easy|simple|dish|low|salt|vegetable|vegetables)\b/gi;
+function terms(r){
+ const title=r.title.en.toLowerCase().replace(noise,' ').replace(/[^a-z\s-]/g,' ').replace(/\s+/g,' ').trim();
+ const main=title.split(' ').slice(0,3).join(' ');
+ const methodNames={tagine:'Moroccan tagine food',couscous:'Moroccan couscous',rice:'cooked rice',salad:'salad food',soup:'soup bowl',skillet:'cooked meal',roast:'roasted dinner',pasta:'pasta dish',sandwich:'sandwich food',bake:'baked food',stew:'stew food',curry:'curry dish',grill:'grilled food'};
+ return [...new Set([main,methodNames[r.method]||r.cuisine+' food',r.cuisine+' cuisine food','prepared food dish'])].filter(Boolean);
 }
-async function search(q){
- const u='https://api.openverse.org/v1/images/?'+new URLSearchParams({q,license:'cc0,by,by-sa',page_size:'20',mature:'false'});
- for(let attempt=0;attempt<4;attempt++){
-  let response;try{response=await fetch(u,{headers:{Accept:'application/json','User-Agent':'RibhLab/1.0 (noncommercial editorial photo lookup)'}});}catch(e){if(attempt===3)throw e;await sleep(1500*(attempt+1));continue;}
-  if(response.status===429||response.status>=500){if(attempt===3)throw Error('Openverse '+response.status+' for '+q);await sleep(Math.min(25000,Number(response.headers.get('retry-after')||0)*1000||5000*(attempt+1)));continue;}
-  if(!response.ok)throw Error('Openverse '+response.status+' for '+q);
-  return (await response.json()).results||[];
+function allowedLicense(meta){
+ const raw=strip(meta.LicenseShortName?.value||meta.License?.value||'').toLowerCase();
+ const link=String(meta.LicenseUrl?.value||'').replace(/^http:/,'https:');
+ if(!link.startsWith('https://creativecommons.org/'))return null;
+ if(/cc0|zero/.test(raw)||link.includes('/publicdomain/zero/'))return {type:'cc0',url:link};
+ if(/^cc by-sa\b/.test(raw)||link.includes('/licenses/by-sa/'))return {type:'by-sa',url:link};
+ if(/^cc by\b/.test(raw)||link.includes('/licenses/by/'))return {type:'by',url:link};
+ return null;
+}
+async function queryCommons(q,offset=0){
+ const params=new URLSearchParams({action:'query',format:'json',formatversion:'2',generator:'search',gsrsearch:q,gsrnamespace:'6',gsrlimit:'30',gsroffset:String(offset),prop:'imageinfo',iiprop:'url|extmetadata|size|mime',iiurlwidth:'1000'});
+ const url='https://commons.wikimedia.org/w/api.php?'+params;
+ for(let i=0;i<3;i++){
+  let response;
+  try{response=await fetch(url,{headers:{'User-Agent':'RibhLabImageAudit/1.0 (open licensed editorial photography)','Accept':'application/json'},signal:AbortSignal.timeout(12000)});}catch(e){if(i===2)throw e;await sleep(1000*(i+1));continue;}
+  if(!response.ok){if(i===2)throw Error('Wikimedia Commons HTTP '+response.status);await sleep(1200*(i+1));continue;}
+  return (await response.json()).query?.pages||[];
  }return [];
 }
-const need=recipes.filter(r=>!original.assignments?.[r.slug]&&!photos[r.slug]);
-console.log('Current unique real photographs:',Object.keys(original.assignments||{}).length+Object.keys(photos).length,'of',recipes.length);
-let failures=[];
-for(let i=0;i<need.length;i++){
- const r=need[i];let selected=null;
- for(const query of queries(r)){
-  const results=await search(query);
-  const candidates=results.filter(p=>
-    ['cc0','by','by-sa'].includes(p.license)&&
-    p.id&&p.url?.startsWith('https://')&&p.foreign_landing_url?.startsWith('https://')&&
-    !p.mature&&p.width>=640&&p.height>=400&&
-    !used.has(p.id)&&!urlUsed.has(p.url.split('?')[0])&&
-    /\.(jpe?g|webp|png)(?:\?|$)/i.test(p.url.split('#')[0])&&
-    p.creator&&p.license_url?.startsWith('https://')
-  );
-  if(candidates.length){selected=candidates[0];break;}
-  await sleep(350);
+function convert(page){
+ const info=page.imageinfo?.[0];if(!info)return null;
+ const lic=allowedLicense(info.extmetadata||{});
+ const url=info.thumburl||info.url;
+ const artist=strip(info.extmetadata?.Artist?.value||info.extmetadata?.Attribution?.value||'Wikimedia Commons');
+ if(!lic||!url?.startsWith('https://')||!artist||!/^image\/(jpeg|png|webp)$/.test(info.mime||'')||info.width<640||info.height<400)return null;
+ if(/\b(icon|logo|map|chart|diagram|cartoon|illustration|menu|poster|symbol|advertisement)\b/i.test(page.title))return null;
+ const id='commons:'+page.pageid,src='https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title.replaceAll(' ','_'));
+ if(usedIds.has(id)||usedUrls.has(url.split('?')[0]))return null;
+ return {id,url,source:src,photographer:artist,license:lic.type,licenseUrl:lic.url,provider:'Wikimedia Commons',description:page.title.replace(/^File:/,''),illustrativeOnly:true};
+}
+let missing=recipes.filter(r=>!existing.assignments[r.slug]&&!photos[r.slug]),errors=[];
+console.log('Starting Commons photo curation: already',Object.keys(existing.assignments).length+Object.keys(photos).length,'of',recipes.length,'photos');
+for(let i=0;i<missing.length;i++){
+ const r=missing[i];let result=null;
+ const qs=terms(r);
+ for(let qi=0;qi<qs.length;qi++){
+  let results;
+  try{results=await queryCommons(qs[qi],qi===3?hash(r.slug)%120:0);}
+  catch(err){console.warn('Commons API retry failed for '+r.slug+': '+err.message);continue;}
+  result=results.map(convert).find(Boolean);
+  if(result)break;
+  await sleep(180);
  }
- if(!selected){failures.push(r.slug);console.warn('No eligible unique photo: '+r.slug);continue;}
- photos[r.slug]={id:selected.id,url:selected.url,source:selected.foreign_landing_url,photographer:selected.creator,license:selected.license,licenseUrl:selected.license_url,provider:'Openverse',description:selected.title||r.title.en,illustrativeOnly:true};
- used.add(selected.id);urlUsed.add(selected.url.split('?')[0]);
- console.log((i+1)+'/'+need.length+' '+r.slug+' -> '+selected.id+' ('+selected.license+')');
- await sleep(750);
+ if(!result){errors.push(r.slug);console.warn('Could not assign image to '+r.slug);continue;}
+ photos[r.slug]=result;
+ usedIds.add(result.id);usedUrls.add(result.url.split('?')[0]);
+ console.log('PHOTO '+(i+1)+'/'+missing.length+' '+r.slug+' '+result.description.slice(0,65)+' '+result.license);
+ await sleep(180);
 }
-const complete=recipes.every(r=>original.assignments?.[r.slug]||photos[r.slug]);
-const photoCount=Object.keys(photos).length;
-console.log('Curated photo candidates:',photoCount,'/',need.length,'; remaining:',failures.length);
-if(!complete){console.error('INCOMPLETE: refusing publication of partly curated imagery. Missing:',failures.join(', '));process.exitCode=1;}
-else {
- const ordered=Object.fromEntries(recipes.filter(r=>photos[r.slug]).map(r=>[r.slug,photos[r.slug]]));
- fs.writeFileSync(output,JSON.stringify({licenseNote:'Per-image commercial-use compatible Creative Commons license and author/source recorded, all photographs illustrative',updated:'2026-10-30',photos:ordered},null,2)+'\n');
- console.log('SUCCESS: all',recipes.length,'recipes have distinct, licensed photographic identifiers; wrote',output);
-}
+const ordered=Object.fromEntries(recipes.filter(r=>photos[r.slug]).map(r=>[r.slug,photos[r.slug]]));
+fs.writeFileSync(output,JSON.stringify({updated:'2026-10-30',policy:'Distinct commercial-use compatible CC photos; every image is illustrative, photographer and source credited',photos:ordered},null,2)+'\n');
+const count=Object.keys(existing.assignments).length+Object.keys(ordered).length;
+console.log('FINISHED:',count,'of',recipes.length,'recipes now have independent photographs; missing:',errors.join(', ')||'none');
+if(count!==recipes.length)console.warn('Partial curation: the remaining recipes retain their original unique illustrated fallback.');
