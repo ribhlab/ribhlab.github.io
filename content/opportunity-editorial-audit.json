@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-30",
-  "scope": "All 96 opportunity cards in this repository (jobs, employers, contests, immigration pathways and visa appointment services).",
+  "scope": "All 97 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
@@ -9,12 +9,12 @@
     "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
-    "cards": 96,
+    "cards": 97,
     "visa": 12,
     "researched": 38,
     "marketEvidence": 5,
     "pendingDetail": 49,
-    "pendingLiveVerification": 4
+    "pendingLiveVerification": 5
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -26,6 +26,18 @@
     "Keep internal cards within RibhLab and external primary sources in new tabs"
   ],
   "cards": [
+    {
+      "id": "hcp-statistics-applied-economics-11-2026",
+      "section": "competitions",
+      "title": "Administrateur 2ème grade — Statistique / Économie appliquée — HCP (11 postes)",
+      "deadline": "2026-11-13",
+      "status": "researched-awaiting-live-verification",
+      "marketKey": null,
+      "priority": "Original two-page HCP notice checked 2026-10-30; build/deploy and public trilingual page not yet confirmed",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/144317d0-3827-46f6-94c3-a5fbd18b2c85",
+      "reviewedAt": "2026-10-30",
+      "evidenceId": "hcp-statistics-applied-economics-11-2026"
+    },
     {
       "id": "cri-fes-meknes-prospection-2026",
       "section": "competitions",
