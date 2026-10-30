@@ -600,7 +600,10 @@
         {
           "sequence": 16,
           "titleAr": "تطبيقات المصادقة الثنائية",
-          "status": "planned"
+          "status": "queued",
+          "slug": "authenticator-codes-new-phone-safe-transfer",
+          "queuePath": "content/reviewed-queue/authenticator-codes-new-phone-safe-transfer.json",
+          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 17,
