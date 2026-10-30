@@ -25,7 +25,10 @@ const selected={
  'baba-ghanoush':['File:Baba Ganusch.jpg','Maikel'],
  'greek-salad-feta':['File:Feta Cheese Greek Salad.jpg','Myfri9694'],
  'chocolate-brownie':['File:Brownie chocolate.jpg','Gowrirajamanickam01'],
- 'fattoush-salad':['File:Fattoush 1.JPG','Wikimedia Commons contributor']
+ 'fattoush-salad':['File:Fattoush 1.JPG','Wikimedia Commons contributor'],
+ 'ratatouille-provencal':['File:Ratatouille 1.jpg','Schnobby'],
+ 'chicken-cacciatore':['File:Chicken cacciatore.jpg','Chris Bennett'],
+ 'nicoise-style-salad':['File:Salade nicoise.jpg','Canterel']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
