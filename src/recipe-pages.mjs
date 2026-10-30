@@ -115,6 +115,16 @@ function load(root){
  const ingredients=JSON.parse(fs.readFileSync(path.join(dir,'ingredients.json'),'utf8')).ingredients;
  const recipes=FILES.flatMap(file=>JSON.parse(fs.readFileSync(path.join(dir,file),'utf8')).recipes);
  const photoLibrary=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'utf8'));
+ // Metadata is curated separately and checked before publication. Normal builds remain offline.
+ const curatedPath=path.join(dir,'curated-photos.json');
+ const curated=fs.existsSync(curatedPath)?JSON.parse(fs.readFileSync(curatedPath,'utf8')).photos:{};
+ photoLibrary.curatedPhotos=curated||{};
+ const seenExternalIds=new Set(),seenExternalUrls=new Set();
+ for(const [slug,p] of Object.entries(photoLibrary.curatedPhotos)){
+  if(!p.id||!p.url?.startsWith('https://')||!p.source?.startsWith('https://')||!p.photographer||!['cc0','by','by-sa'].includes(p.license)||!p.licenseUrl?.startsWith('https://'))throw Error('Recipe photo lacks commercial-use license: '+slug);
+  if(seenExternalIds.has(p.id)||seenExternalUrls.has(p.url.split('?')[0]))throw Error('Recipe image reused: '+slug);
+  seenExternalIds.add(p.id);seenExternalUrls.add(p.url.split('?')[0]);
+ }
  const photos=photoLibrary.photos;
  const assignments=photoLibrary.assignments||{};
  if(new Set(Object.values(assignments)).size!==Object.keys(assignments).length||Object.keys(assignments).length!==Object.keys(photos).length)throw Error('Recipe photos must be assigned exactly once');
@@ -132,6 +142,7 @@ function load(root){
  }
  if(recipes.filter(r=>r.kind==='meal').length!==100||recipes.filter(r=>r.kind==='healthy').length!==20)throw Error('Recipe publication requires exactly 100 meals and 20 balanced dishes');
  for(const [slug,key] of Object.entries(assignments))if(!slugs.has(slug)||!photos[key])throw Error('Orphan recipe photo: '+slug);
+ for(const slug of Object.keys(photoLibrary.curatedPhotos))if(!slugs.has(slug)||assignments[slug])throw Error('Curated recipe photo is orphaned or duplicates an existing one: '+slug);
  return {ingredients,recipes,photos:photoLibrary};
 }
 function svgFor(r,dist){
@@ -174,10 +185,10 @@ function head(l,k){return TEXT[l][k]}
 
 // Use verified food photographs by matching cuisine, preparation and principal ingredients.
 // A reused stock photo is labelled illustrative; it is never presented as a tested result.
-function photoFor(recipe,library){const key=library.assignments?.[recipe.slug];return key?library.photos[key]:null;}
+function photoFor(recipe,library){const key=library.assignments?.[recipe.slug];return key?library.photos[key]:(library.curatedPhotos?.[recipe.slug]||null);}
 function recipeImage(r,l,library,esc,loading='lazy'){
  const p=photoFor(r,library),local='/assets/recipe-images/'+r.slug+'.svg';
- const alt=p?({ar:'صورة فوتوغرافية توضيحية مخصصة لهذه الوصفة وحدها: ',en:'Exclusive illustrative photograph assigned to this recipe only: ',fr:'Photographie illustrative réservée à cette seule recette : '})[l]:({ar:'رسم أصلي فريد لهذه الوصفة، وليس صورة فوتوغرافية: ',en:'Original artwork unique to this recipe, not a photograph: ',fr:'Illustration originale propre à cette recette, pas une photographie : '})[l];
+ const alt=p?({ar:'صورة فوتوغرافية توضيحية مستقلة لهذا الطبق: ',en:'Separate illustrative food photograph for this dish: ',fr:'Photographie illustrative distincte de ce plat : '})[l]:({ar:'رسم أصلي فريد لهذه الوصفة، وليس صورة فوتوغرافية: ',en:'Original artwork unique to this recipe, not a photograph: ',fr:'Illustration originale propre à cette recette, pas une photographie : '})[l];
  return '<img '+(p?'data-recipe-photo data-fallback="'+local+'" ':'')+'src="'+esc(p?.url||local)+'" alt="'+esc(alt+r.title[l])+'" width="640" height="400" loading="'+loading+'" decoding="async"'+(p?' referrerpolicy="no-referrer"':'')+'>';
 }
 function cards(rows,l,lex,esc,photos){
@@ -208,7 +219,7 @@ const SEO_COPIES={
 
 function recipePage(r,l,lex,page,esc,photos,allRecipes){
  const photo=photoFor(r,photos),featuredImage=recipeImage(r,l,photos,esc,'eager');
- const photoNote=photo?({ar:'صورة مرخّصة مخصصة حصرياً لهذه الوصفة، وقد تختلف عن التحضير المنزلي.',en:'Licensed photograph exclusively assigned to this recipe; the home preparation may differ.',fr:'Photographie sous licence réservée à cette recette ; la réalisation maison peut différer.'})[l]:({ar:'رسم توضيحي أصلي وفريد لهذه الوصفة، إلى حين توفير صورة فوتوغرافية فريدة موثقة.',en:'Unique original illustration until a verified exclusive photograph is available.',fr:'Illustration originale unique dans l’attente d’une photographie vérifiée et exclusive.'})[l];
+ const photoNote=photo?({ar:'صورة فوتوغرافية توضيحية لهذا الطبق، وقد تختلف عن التحضير المنزلي.',en:'Illustrative food photograph for this dish; the home result may differ.',fr:'Photographie illustrative du plat, pouvant différer de la réalisation maison.'})[l]:({ar:'رسم توضيحي أصلي وفريد لهذه الوصفة، إلى حين توفير صورة فوتوغرافية فريدة موثقة.',en:'Unique original illustration until a verified exclusive photograph is available.',fr:'Illustration originale unique dans l’attente d’une photographie vérifiée et exclusive.'})[l];
  const t=TEXT[l],label=r.title[l],arr=r.ingredients.map(i=>ingredientText(i,lex,l)),steps=[...ACTIONS[r.method][l],r.tip[l],safety(r,l)];
  const howTo=steps.map((s,i)=>'<li class="recipe-step"><span class="recipe-step-index">'+(i+1)+'</span><div><h3>'+esc(t.steps[i])+'</h3><p>'+esc(s)+'</p></div></li>').join('');
  const list=arr.map(i=>'<li>'+esc(i)+'</li>').join('');
@@ -220,7 +231,7 @@ function recipePage(r,l,lex,page,esc,photos,allRecipes){
  const related=allRecipes.filter(other=>other.slug!==r.slug&&(other.cuisine===r.cuisine||other.kind===r.kind)).sort((a,b)=>Number(b.cuisine===r.cuisine)-Number(a.cuisine===r.cuisine)||a.slug.localeCompare(b.slug)).slice(0,4);
  const relatedLabel=({ar:'وصفات مشابهة',en:'Related recipes',fr:'Recettes similaires'})[l];
  const relatedBlock='<section class="recipe-related"><h2>'+esc(relatedLabel)+'</h2><div class="recipe-related-grid">'+related.map(other=>'<a href="/'+l+'/recipes/'+other.slug+'/">'+esc(other.title[l])+' ↗</a>').join('')+'</div></section>';
- const content='<div class="recipe-page"><section class="recipe-detail-hero shell"><nav class="recipe-breadcrumb"><a href="/'+l+'/">'+esc(t.home)+'</a> / <a href="/'+l+'/recipes/">'+esc(t.recipes)+'</a> / '+esc(label)+'</nav><div class="recipe-detail-layout"><div><span class="recipe-kicker">RIBHLAB / KITCHEN</span><h1>'+esc(label)+'</h1><p>'+esc(r.tip[l])+'</p>'+info+'<a class="recipe-back" href="/'+l+'/recipes/'+(r.kind==='healthy'?'healthy/':'meals/')+'">'+esc(t.browse)+' ↗</a></div><div class="recipe-photo-figure">'+featuredImage+'<p class="recipe-photo-credit">'+esc(photoNote)+(photo?' <a href="'+esc(photo.source)+'" target="_blank" rel="noopener noreferrer external">'+esc(photo.photographer)+' / Unsplash ↗</a>':'')+'</p></div></div></section><main class="shell recipe-detail-content"><div class="recipe-cols"><section class="recipe-panel"><h2>'+esc(t.ingredients)+'</h2><p>'+esc(t.measure)+'</p><ul class="recipe-ingredient-list">'+list+'</ul></section><section class="recipe-panel"><h2>'+esc(t.method)+'</h2><ol class="recipe-step-list">'+howTo+'</ol></section></div><section class="recipe-alert"><h2>'+esc(t.safety)+'</h2><p>'+esc(safety(r,l))+'</p><p><strong>'+esc(SAFE[l].allergen)+':</strong> '+esc(allergens(r,l))+'</p><p>'+esc(t.legal)+'</p>'+references+'</section>'+relatedBlock+'<p><a class="recipe-back" href="/'+l+'/recipes/">← '+esc(t.head)+'</a></p></main></div>'+linked+'<script defer src="/assets/recipe-filter.js"></script>';
+ const content='<div class="recipe-page"><section class="recipe-detail-hero shell"><nav class="recipe-breadcrumb"><a href="/'+l+'/">'+esc(t.home)+'</a> / <a href="/'+l+'/recipes/">'+esc(t.recipes)+'</a> / '+esc(label)+'</nav><div class="recipe-detail-layout"><div><span class="recipe-kicker">RIBHLAB / KITCHEN</span><h1>'+esc(label)+'</h1><p>'+esc(r.tip[l])+'</p>'+info+'<a class="recipe-back" href="/'+l+'/recipes/'+(r.kind==='healthy'?'healthy/':'meals/')+'">'+esc(t.browse)+' ↗</a></div><div class="recipe-photo-figure">'+featuredImage+'<p class="recipe-photo-credit">'+esc(photoNote)+(photo?' <a href="'+esc(photo.source)+'" target="_blank" rel="noopener noreferrer external">'+esc(photo.photographer)+' / '+esc(photo.provider||'Unsplash')+' ↗</a>'+(photo.licenseUrl?' · <a href="'+esc(photo.licenseUrl)+'" target="_blank" rel="noopener noreferrer external">'+esc(photo.license)+' ↗</a>':''):'')+'</p></div></div></section><main class="shell recipe-detail-content"><div class="recipe-cols"><section class="recipe-panel"><h2>'+esc(t.ingredients)+'</h2><p>'+esc(t.measure)+'</p><ul class="recipe-ingredient-list">'+list+'</ul></section><section class="recipe-panel"><h2>'+esc(t.method)+'</h2><ol class="recipe-step-list">'+howTo+'</ol></section></div><section class="recipe-alert"><h2>'+esc(t.safety)+'</h2><p>'+esc(safety(r,l))+'</p><p><strong>'+esc(SAFE[l].allergen)+':</strong> '+esc(allergens(r,l))+'</p><p>'+esc(t.legal)+'</p>'+references+'</section>'+relatedBlock+'<p><a class="recipe-back" href="/'+l+'/recipes/">← '+esc(t.head)+'</a></p></main></div>'+linked+'<script defer src="/assets/recipe-filter.js"></script>';
  const seoTitle=({ar:'طريقة تحضير ',en:'How to make ',fr:'Recette de '})[l]+label+' | RibhLab';
  page(l,{title:seoTitle,desc:r.tip[l]+' '+t.measure,route:'/'+l+'/recipes/'+r.slug+'/',content,active:'recipes'});
 }
