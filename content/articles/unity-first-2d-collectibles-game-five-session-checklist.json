@@ -1,0 +1,178 @@
+{
+  "slug": "unity-first-2d-collectibles-game-five-session-checklist",
+  "category": "ai",
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false,
+  "related": [
+    "make-mobile-games-unity-godot-unreal-gdevelop",
+    "reverse-engineering-legally-tools-ghidra"
+  ],
+  "sources": [
+    {
+      "label": "Unity Learn — Unity Essentials pathway (checked 28 October 2026)",
+      "url": "https://learn.unity.com/pathway/unity-essentials"
+    },
+    {
+      "label": "Unity 6.2 Scripting API — Time.deltaTime (checked 28 October 2026)",
+      "url": "https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Time-deltaTime.html"
+    },
+    {
+      "label": "Unity 6.2 Manual — Web build settings (checked 28 October 2026)",
+      "url": "https://docs.unity3d.com/6000.2/Documentation/Manual/web-build-settings.html"
+    },
+    {
+      "label": "itch.io Creator documentation — Uploading HTML5 games (checked 28 October 2026)",
+      "url": "https://itch.io/docs/creators/html5"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "Unity للمبتدئين: بناء لعبة جمع عناصر ثنائية الأبعاد في خمس جلسات مع اختبار ونشر آمن",
+      "excerpt": "دليل عملي لبناء نموذج لعبة 2D صغير في Unity: مشاهد وعناصر ومكوّنات، حركة محسوبة بالزمن، نقاط واختبارات، ثم تصدير تجريبي للويب دون ادعاء أرباح.",
+      "lead": "تبدو صناعة الألعاب مهمة ضخمة عندما يبدأ المبتدئ بمحرك احترافي مثل Unity. لكن أول مشروع لا يحتاج عالماً مفتوحاً أو متجر مشتريات أو رسوماً باهظة. نقترح هنا لعبة صغيرة تجمع فيها شخصية خمس نجوم داخل ساحة واحدة. الهدف التعليمي ليس بيع اللعبة، بل فهم علاقة المشهد والعناصر والمكوّنات والبرمجة والاختبار. هذا تصميم تدريبي أصلي يختلف عن الدروس الرسمية، مع الاستناد إلى وثائق Unity واشتراطات النشر في itch.io.",
+      "sections": [
+        {
+          "heading": "1. حدد نتيجة قابلة للقياس قبل فتح المحرر",
+          "paragraphs": [
+            "اكتب ورقة متطلبات لا تتجاوز صفحة واحدة: شخصية تتحرك في أربعة اتجاهات، خمس قطع قابلة للجمع، عدّاد يبدأ من الصفر، ورسالة نجاح عند جمع القطعة الخامسة. اعتبر المشروع مكتملاً عندما يستطيع شخص آخر تشغيله وفهم التحكم وإنهاء الجولة دون شرح شفهي. استبعد الإعلانات والحسابات وتعدد المستويات والمشتريات من النسخة الأولى؛ فكل إضافة تخلق اختبارات وأخطاء جديدة قبل التأكد من أن الحلقة الأساسية ممتعة.",
+            "اقسم العمل إلى خمس جلسات تقديرية: 35 دقيقة لإعداد المشروع، 50 دقيقة لبناء الساحة، 60 دقيقة للحركة والتفاعل، 45 دقيقة للنقاط والواجهة، و40 دقيقة للاختبار والتصدير. المجموع 230 دقيقة، أي ثلاث ساعات وخمسون دقيقة من العمل المخطط، وليس وعداً بأن كل مبتدئ سينتهي في هذه المدة. احتفظ بدفتر أخطاء يضم المشكلة، وخطوات إعادة إنتاجها، والتعديل، ونتيجة إعادة الاختبار."
+          ]
+        },
+        {
+          "heading": "2. ابن المشهد من عناصر بسيطة ومرخصة",
+          "paragraphs": [
+            "ثبت Unity Hub والمحرر من المصدر الرسمي، ثم أنشئ مشروعاً ثنائي الأبعاد باسم واضح مثل StarCollectorPractice. في المشهد الرئيسي أضف أرضية بلون هادئ، وشخصية Player، وخمس قطع Star، وكاميرا، ولوحة نصية للنتيجة. تتكون الكائنات في Unity من GameObjects تحمل Components مثل Transform وSprite Renderer وCollider2D. سمّ العناصر بوضوح ولا تترك نسخاً كثيرة باسم متشابه؛ فهذا يوفر وقت البحث عند ظهور خطأ في الربط.",
+            "يمكن رسم المربعات والدوائر بنفسك لتجنب البحث المبكر عن حزم فنية. إذا استعملت ملفاً خارجياً، سجّل مصدره وترخيصه وإمكانية إعادة توزيعه مع اللعبة، لأن ترخيص محرك Unity لا يمنحك تلقائياً حقوق الصور والموسيقى والخطوط. أنشئ مجلدات Scenes وScripts وArt وAudio، واحفظ نسخة من المشروع قبل تغيير إعدادات الفيزياء. وجود أصول مؤقتة ليس عيباً؛ المهم أن تتأكد من منطق اللعب أولاً."
+          ]
+        },
+        {
+          "heading": "3. اجعل الحركة مستقلة عن سرعة الجهاز",
+          "paragraphs": [
+            "أضف سكربت C# إلى Player ينفذ الحركة عبر قراءة الإدخال وتحديث الموقع. تشرح وثائق Unity أن الدالة Update تستدعى مع كل إطار، ولذلك فإن زيادة موضع الشخصية بمقدار ثابت في كل إطار قد تجعلها أسرع على جهاز ذي معدل إطارات مرتفع. عند استخدام حركة غير فيزيائية، احسب الإزاحة بضرب السرعة بالثواني في Time.deltaTime، وطبّق اتجاه حركة موحداً حتى لا تصبح الحركة القطرية أسرع من الأفقية. إذا اخترت Rigidbody2D فاحترم مسار الحركة الفيزيائية المناسب بدلاً من خلط الطريقتين.",
+            "مثال حسابي يمكن تدقيقه: سرعة افتراضية قدرها 4 وحدات في الثانية تعني انتقالاً نظرياً قدره وحدتان خلال نصف ثانية، سواء قُسمت المدة إلى 30 إطاراً أو 60 إطاراً. لا يعني ذلك تطابق السلوك الفعلي تماماً عند التصادم أو فقدان الإطارات. اختبر الحركة على جهازين أو بإعدادين مختلفين لمعدل الإطارات، وسجّل إن كانت الشخصية تتجاوز الحدود أو تعلق في الحواف. لا تستخدم واجهة إدخال قديمة أو جديدة دون التأكد من إعداد Active Input Handling في إصدار المشروع."
+          ]
+        },
+        {
+          "heading": "4. اربط جمع القطع بالنقاط دون تكرار احتسابها",
+          "paragraphs": [
+            "أعطِ كل قطعة Collider2D مضبوطاً كمنطقة Trigger، وتأكد من وجود إعدادات التصادم والمكوّنات الفيزيائية اللازمة لاستقبال الحدث. عند دخول Player إلى المنطقة، تحقق من هوية الكائن ثم زد العداد مرة واحدة وأزل القطعة أو عطّل تصادمها فوراً. اربط عدّاد الشاشة بمتغير واحد يمثل المصدر الحقيقي للنقاط؛ لا تجعل النص المعروض هو قاعدة البيانات. يجب ألا تُحتسب القطعة مرتين إذا ظل اللاعب متداخلاً معها عدة إطارات.",
+            "صمم نهاية الجولة على قاعدة بسيطة: يبدأ score من صفر، وكل قطعة صحيحة تزيده بمقدار واحد، وعندما يصبح score مساوياً لخمسة تظهر رسالة انتهت الجولة ويتوقف الجمع. جرّب حالات مخالفة: اصطدام قطعة بقطعة أخرى، إعادة تشغيل المستوى، الدخول إلى نفس القطعة بسرعة، وفقدان المرجع النصي في Inspector. هذه الاختبارات أقوى من الاكتفاء بمشاهدة لعبة تعمل مرة واحدة أمام المطور. اكتب نتائجها في جدول نجاح أو فشل مع سبب الإصلاح."
+          ]
+        },
+        {
+          "heading": "5. اختبر بأدلة صغيرة قبل إرسال اللعبة للآخرين",
+          "paragraphs": [
+            "ضع مصفوفة قبول من خمس حالات: بدء الجولة يعرض صفر، كل نجمة تضيف نقطة واحدة، الحركة لا تتجاوز حدود الساحة، الفوز يظهر عند خمس نقاط، وزر إعادة التشغيل يعيد العناصر والعداد إلى حالتهما الأصلية. خصص لكل حالة ثلاث محاولات متتابعة، فيصبح لديك 15 تجربة مخططة. هذا ليس اختبار جودة شاملاً ولا إثباتاً لخلو اللعبة من العيوب؛ لكنه يمنحك سجلاً يمكن مراجعته عند تغيير السكربت أو الرسومات.",
+            "إذا فشلت حالتان من أصل 15 تجربة، فإن نسبة النجاح التجريبية هي 13 ÷ 15 = 86.7% بعد التقريب، وهي نسبة لعينتك الصغيرة فقط ولا تتنبأ برضا اللاعبين. ابدأ بإصلاح أخطاء تمنع إكمال الجولة قبل تحسين المؤثرات. اطلب من شخص لم يشاهد التطوير أن يجرب اللعبة، وراقب موضع ارتباكه دون توجيهه. لا تجمع بياناته الشخصية أو تسجل صوته أو شاشته دون موافقة واضحة."
+          ]
+        },
+        {
+          "heading": "6. صدّر نسخة ويب تجريبية واحترم القيود",
+          "paragraphs": [
+            "بعد نجاح الاختبارات، راجع Build Profiles في إصدار Unity المستخدم واختر منصة Web إن كانت وحدة البناء اللازمة مثبتة. جرّب النسخة المصدرة محلياً بالطريقة التي توصي بها الوثائق قبل رفعها. تشرح itch.io أن لعبة HTML تعمل داخل المتصفح تحتاج حزمة ZIP تضم index.html وبقية الملفات، وأن المسارات الحساسة لحالة الأحرف قد تسبب فشلاً بعد الرفع. لا ترفع ملف المشروع الأصلي أو مفاتيح API أو بيانات شخصية ضمن حزمة الجمهور.",
+            "أرفق صفحة وصف قصيرة تتضمن طريقة اللعب، عناصر التحكم، الأجهزة التي اختبرتها، وبيان حقوق الرسومات والصوت. لا تَعِد بأن اللعبة تعمل على كل هاتف لم تختبره؛ فقد تختلف الذاكرة والأداء والتحكم باللمس. تحقق من شروط ترخيص Unity السارية عند استخدامه تجارياً ومن شروط المتجر إن قررت البيع لاحقاً. النجاح في هذا التمرين هو مشروع يمكن تشغيله وإصلاحه وإعادة بنائه، وليس توقع إيراد أو عدد تنزيلات."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Unity for beginners: build a tiny 2D collectible game in five sessions",
+      "excerpt": "A practical first Unity project with scene structure, frame-rate-aware movement, collectible scoring, acceptance tests and a cautious browser release.",
+      "lead": "Starting with a professional game engine can make a first project feel unmanageably large. Instead of attempting an open world, advertisements or a marketplace, this tutorial proposes one small 2D arena where a character collects five stars. The educational objective is to understand scenes, GameObjects, components, scripts, tests and distribution. The exercise is an original practice design, not a copy of an official tutorial. Unity's learning materials and itch.io's creator documentation provide the factual foundation for the workflow.",
+      "sections": [
+        {
+          "heading": "1. Define a finish line before opening the editor",
+          "paragraphs": [
+            "Write a one-page specification with only four capabilities: a character moves in four directions, five objects can be collected, a visible counter begins at zero, and a completion message appears after the fifth item. The prototype is finished when another person can start, understand and complete a round without verbal instructions. Leave accounts, monetization, extra levels and online features outside the first milestone. Each new feature introduces additional states and failures before the basic game loop has been tested.",
+            "Use five planning sessions rather than an unrealistic promise of instant success: 35 minutes for setup, 50 for the arena, 60 for movement and interaction, 45 for scoring and interface, and 40 for testing and export. The sum is 230 minutes, or three hours and fifty minutes of planned work, not a guaranteed completion time for every learner. Maintain a simple defect log with the observed symptom, steps to reproduce it, proposed change and the result of retesting."
+          ]
+        },
+        {
+          "heading": "2. Build a clean scene using modest assets",
+          "paragraphs": [
+            "Install Unity Hub and the editor from the official provider, then create a 2D project named something descriptive such as StarCollectorPractice. In its main scene, add a plain background, a Player object, five Star objects, a camera and a score display. Unity GameObjects acquire behavior through components including Transform, Sprite Renderer and Collider2D. Give each object a meaningful name and inspect the hierarchy before adding scripts. A tidy structure makes it much easier to locate a missing reference or incorrect collision component.",
+            "Draw temporary circles and squares yourself if that is faster than finding polished artwork. If you import a third-party sprite, sound or font, record the creator, license and redistribution conditions in a small asset register. Permission to use the Unity engine is not permission to copy any image found online. Create separate Scenes, Scripts, Art and Audio folders, and keep a recoverable project copy before making major physics changes. Temporary art is a useful constraint when the core mechanics still need validation."
+          ]
+        },
+        {
+          "heading": "3. Make movement behave consistently across frame rates",
+          "paragraphs": [
+            "Attach a C# behavior to Player that reads movement input and changes its position. Unity documents that Update is called once per rendered frame when the behavior is enabled. A fixed distance added on every frame would therefore make a character travel faster on a high-refresh device. For non-physics movement, multiply a speed expressed in units per second by Time.deltaTime, and normalize the input direction so diagonal travel is not unintentionally faster. If using Rigidbody2D, follow a consistent physics movement approach rather than mixing transform edits with physics control.",
+            "Consider a transparent arithmetic example: a hypothetical speed of four units per second gives two units of intended displacement in half a second, whether that period contains thirty or sixty frames. Collisions and extreme frame delays can still change the observed outcome, so the example is not a guarantee of identical simulation behavior. Test at two frame-rate settings and watch for wall clipping or unexpected diagonal speed. Check the project's Active Input Handling configuration before assuming that a tutorial's input API matches the installed editor."
+          ]
+        },
+        {
+          "heading": "4. Count a collectible once and keep one source of truth",
+          "paragraphs": [
+            "Give each Star a Collider2D configured as a trigger, and configure the relevant collision components so the trigger event is actually received. When Player enters, verify which object arrived, increment the score once, then immediately disable or remove the collected star. Keep the score in one variable owned by a suitable game controller; the on-screen text should merely display that value. Otherwise a star might accidentally award multiple points while the player remains inside its trigger for successive updates.",
+            "Set a precise completion rule: score starts at zero, each valid collection adds one, and a score of five shows a completed-round message and prevents further collection. Test unexpected states too, including a star overlapping another star, restarting the scene, touching the same star twice quickly and disconnecting the score label reference in the Inspector. These checks expose wiring errors that are easy to miss when the developer watches one successful playthrough. Record the failure and the specific correction rather than rewriting several systems at once."
+          ]
+        },
+        {
+          "heading": "5. Create a small acceptance test, not a success story",
+          "paragraphs": [
+            "Use five acceptance cases: the round opens at zero, every star adds exactly one, the player stays within the arena, victory appears at five, and restarting restores both objects and score. Run each case three times for fifteen planned observations. That is a deliberately small smoke test, not a complete quality assurance program. Keep screenshots or notes for failures, and repeat the full matrix after changing movement or collision logic. A playable build is not automatically a usable or accessible game.",
+            "If two out of fifteen checks fail, the observed pass rate is thirteen divided by fifteen, or about 86.7 percent. This number describes only that tiny test sample; it does not forecast player satisfaction or future reliability. Fix bugs that block the game loop before polishing visual effects. Ask a newcomer to try the game without coaching and note where the instructions are unclear. Do not record the tester's screen, voice or personal details without informed permission."
+          ]
+        },
+        {
+          "heading": "6. Export a browser demo with realistic limitations",
+          "paragraphs": [
+            "Once the prototype passes its tests, open Build Profiles for the installed Unity version and select the Web platform if its required module is available. Verify the exported build using the testing procedure recommended for that version. itch.io's creator guide says an HTML game distributed as multiple files should be uploaded as a ZIP archive containing index.html and its supporting assets. Case-sensitive file paths can work locally and fail after hosting. Never include private credentials, source project backups or personal files in a public upload.",
+            "Publish a short description explaining controls, objective, devices actually tested and licenses for any external art or sound. Do not claim mobile compatibility without testing touch controls, memory use and loading time on representative devices. Review the current Unity license tier terms before any commercial project, and the platform's rules before charging players. The useful outcome of this exercise is a small game that can be reproduced, tested and improved, not a fabricated download count or a promise of revenue."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Débuter sur Unity : créer un mini-jeu 2D de collecte en cinq séances",
+      "excerpt": "Un premier projet Unity concret : scène claire, déplacements indépendants des images par seconde, score, tests de réception et publication web prudente.",
+      "lead": "Un moteur de jeu professionnel peut impressionner lorsqu'on commence. Plutôt que de construire un monde ouvert ou d'ajouter des achats intégrés, cet atelier propose une seule arène en deux dimensions : un personnage y ramasse cinq étoiles. L'objectif pédagogique est de comprendre les scènes, les GameObjects, les composants, les scripts et les vérifications avant toute diffusion. Il s'agit d'un exercice original, différent des démonstrations officielles, appuyé sur la documentation de Unity et les consignes destinées aux créateurs sur itch.io.",
+      "sections": [
+        {
+          "heading": "1. Définir une réussite vérifiable avant de coder",
+          "paragraphs": [
+            "Rédigez un cahier des charges d'une page avec quatre fonctions : déplacer le personnage dans quatre directions, ramasser cinq objets, afficher un compteur initialement à zéro et montrer un message après la cinquième collecte. Le prototype sera considéré comme terminé lorsqu'une autre personne pourra lancer et finir une partie sans explication orale. Écartez pour l'instant les comptes, les publicités, les niveaux supplémentaires et les achats. Chaque fonctionnalité ajoutée multiplie les états à tester avant même que le principe du jeu soit validé.",
+            "Prévoyez cinq séances indicatives : 35 minutes pour installer et créer le projet, 50 pour la scène, 60 pour le déplacement et les interactions, 45 pour le score et l'interface, puis 40 pour les tests et l'export. Cela représente 230 minutes, soit trois heures et cinquante minutes de travail prévu, et non un délai garanti. Tenez un registre des anomalies indiquant le symptôme, les étapes permettant de le reproduire, la correction choisie et le résultat d'un nouvel essai."
+          ]
+        },
+        {
+          "heading": "2. Construire une scène propre avec des ressources modestes",
+          "paragraphs": [
+            "Installez Unity Hub et l'éditeur depuis la source officielle, puis créez un projet 2D nommé par exemple StarCollectorPractice. Dans la scène principale, placez un fond simple, un objet Player, cinq objets Star, une caméra et un texte pour le score. Les GameObjects de Unity reçoivent leurs capacités par des composants tels que Transform, Sprite Renderer et Collider2D. Utilisez des noms explicites et vérifiez la hiérarchie avant d'écrire le code. Cette organisation simplifie la recherche d'une référence manquante ou d'une collision mal configurée.",
+            "Des carrés et des cercles dessinés par vos soins suffisent pour cette première version. Si vous importez une image, un son ou une police, consignez l'auteur, la licence et les conditions de redistribution dans un registre. Le droit d'utiliser le moteur Unity ne donne pas automatiquement le droit de copier des illustrations trouvées sur Internet. Séparez les dossiers Scenes, Scripts, Art et Audio et conservez une sauvegarde récupérable avant de modifier la physique. Des graphismes temporaires permettent de consacrer l'effort à la mécanique essentielle."
+          ]
+        },
+        {
+          "heading": "3. Garder un déplacement cohérent malgré la fréquence d'affichage",
+          "paragraphs": [
+            "Ajoutez au Player un script C# qui lit les commandes et met à jour sa position. La documentation de Unity explique que Update est exécutée à chaque image lorsque le comportement est actif. Ajouter une distance fixe à chaque appel rendrait donc le personnage plus rapide sur un écran affichant davantage d'images par seconde. Pour un déplacement non physique, multipliez une vitesse exprimée en unités par seconde par Time.deltaTime et normalisez la direction pour éviter une accélération en diagonale. Avec Rigidbody2D, choisissez une méthode de déplacement physique cohérente.",
+            "Prenons un exemple calculable : à une vitesse théorique de quatre unités par seconde, le personnage doit parcourir deux unités en une demi-seconde, que cette durée comporte trente ou soixante images. Les collisions et les ralentissements importants peuvent modifier le résultat réel ; ce calcul ne garantit donc pas une simulation identique. Comparez deux réglages de fréquence et vérifiez les limites de l'arène ainsi que la vitesse diagonale. Contrôlez également le paramètre Active Input Handling avant de reprendre une méthode d'entrée vue dans un ancien tutoriel."
+          ]
+        },
+        {
+          "heading": "4. Compter chaque étoile une seule fois",
+          "paragraphs": [
+            "Attribuez à chaque Star un Collider2D configuré en déclencheur, puis vérifiez que les composants de collision nécessaires permettent de recevoir l'événement. Lorsque Player entre dans la zone, identifiez l'objet entrant, ajoutez un point et désactivez immédiatement la collecte ou supprimez l'étoile. Conservez la valeur du score dans une seule variable, gérée par un contrôleur de partie ; le texte affiché ne fait que refléter cette valeur. Sans cette règle, une étoile pourrait compter plusieurs fois pendant que le personnage reste dans son déclencheur.",
+            "Écrivez une condition de fin simple : le score commence à zéro, chaque collecte valide ajoute une unité et, lorsqu'il atteint cinq, un message de victoire apparaît et la collecte s'arrête. Testez aussi les situations inattendues : deux étoiles superposées, un redémarrage, un second contact très rapide et une référence au texte du score supprimée dans l'Inspector. Ces essais révèlent des erreurs de connexion invisibles lors d'une démonstration réussie. Notez précisément l'anomalie avant de modifier plusieurs scripts à la fois."
+          ]
+        },
+        {
+          "heading": "5. Mesurer la qualité avec une petite matrice de réception",
+          "paragraphs": [
+            "Préparez cinq cas de réception : le score initial vaut zéro, chaque étoile ajoute exactement un point, le personnage reste dans l'arène, la victoire apparaît à cinq et le redémarrage restaure les étoiles ainsi que le compteur. Répétez chaque cas trois fois : vous obtenez quinze observations prévues. Il s'agit d'un contrôle de base, pas d'une certification complète de qualité. Conservez une capture ou une note pour les échecs et recommencez toute la matrice après un changement du mouvement ou des collisions.",
+            "Si deux contrôles sur quinze échouent, treize réussissent ; le taux observé est donc 13 divisé par 15, soit environ 86,7 %. Ce pourcentage décrit uniquement le petit échantillon de tests, sans prédire la satisfaction des joueurs. Corrigez d'abord les défauts empêchant de terminer une partie, puis seulement les détails visuels. Faites essayer le jeu à une personne qui n'a pas suivi sa création et observez les consignes ambiguës. N'enregistrez ni son écran ni sa voix ni ses données personnelles sans accord explicite."
+          ]
+        },
+        {
+          "heading": "6. Exporter une démonstration web sans promesses excessives",
+          "paragraphs": [
+            "Après validation, ouvrez Build Profiles dans la version de Unity installée et choisissez la plateforme Web si le module requis est présent. Vérifiez la version exportée selon la procédure de test recommandée par l'éditeur. La documentation des créateurs itch.io précise qu'un jeu HTML composé de plusieurs fichiers doit être fourni dans une archive ZIP contenant index.html et toutes ses dépendances. Les différences de majuscules dans les chemins peuvent provoquer des erreurs après hébergement. N'incluez jamais de secrets, de sauvegardes privées ou de fichiers personnels.",
+            "Publiez une courte présentation décrivant les commandes, l'objectif, les appareils réellement testés et les licences des illustrations ou sons externes. Ne promettez pas une compatibilité avec tous les téléphones sans avoir vérifié le tactile, la mémoire et le chargement. Relisez les conditions de licence Unity applicables avant toute exploitation commerciale et les règles de la plateforme avant de facturer l'accès. Le résultat utile est un petit jeu reproductible, vérifiable et améliorable, et non une prévision de ventes ou de téléchargements."
+          ]
+        }
+      ]
+    }
+  }
+}

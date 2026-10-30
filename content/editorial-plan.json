@@ -752,14 +752,10 @@
         "reverse-engineering-legally-tools-ghidra",
         "ai-video-filmmaking-automation-unity-2026",
         "godot-first-small-game-five-sessions",
-        "gdevelop-no-code-first-prototype"
+        "gdevelop-no-code-first-prototype",
+        "unity-first-2d-collectibles-game-five-session-checklist"
       ],
       "ideas": [
-        {
-          "sequence": 6,
-          "titleAr": "متى تختار Unreal Engine",
-          "status": "planned"
-        },
         {
           "sequence": 7,
           "titleAr": "GDevelop ألعاب بلا برمجة",
