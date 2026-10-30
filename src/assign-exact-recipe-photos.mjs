@@ -33,7 +33,18 @@ const selected={
  'american-macaroni-cheese':['File:Mac-and-cheese.jpg','Amin'],
  'healthy-cucumber-yogurt-dip':['File:Tzatziki meze or appetizer, also used as a sauce.jpg','Nikodem Nijaki'],
  'vegetable-biryani':['File:Vegetable Biryani.JPG','Miansari66'],
- 'palak-paneer-style':['File:Palak Paneer.JPG','Miansari66']
+ 'palak-paneer-style':['File:Palak Paneer.JPG','Miansari66'],
+ 'kefta-tagine-eggs':['File:20151121 Morocco 2645+7 Aït Ben Haddou sRGB (24483612775).jpg','Dan Lundberg'],
+ 'taktouka-peppers':['File:Moroccan Taktouka تكتوكة.jpg','Wikimedia Commons'],
+ 'lentil-moroccan-stew':['File:Lentille à la marocaine, Moroccan lentil.webp','Wikimedia Commons'],
+ 'berkoukes-vegetables':['File:Berkoukes.jpg','Indif'],
+ 'vegetable-tagine':['File:Vegetable Tagine.jpg','Turajski'],
+ 'spaghetti-tomato-basil':['File:Spaghetti al Pomodoro.JPG','Benreis'],
+ 'pesto-pasta':['File:Pesto pasta.jpg','Erika Herzog'],
+ 'eggplant-parmesan-bake':['File:2026-09-12 20 08 05 A portion of eggplant parmesan from ShopRite in Ewing Township, Mercer County, New Jersey.jpg','Famartin'],
+ 'chicken-shawarma-bowl':['File:Chicken Shwarama plate.jpeg','CrunchySkies'],
+ 'raita-cucumber':['File:Cucumber Raita.JPG','Zeel Patel'],
+ 'tabbouleh-bulgur':['File:Tabbouleh before adding bulgur.jpg','Fructibus']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
