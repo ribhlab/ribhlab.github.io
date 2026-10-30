@@ -11,10 +11,10 @@
   "totals": {
     "cards": 103,
     "visa": 12,
-    "researched": 45,
+    "researched": 46,
     "marketEvidence": 5,
     "pendingDetail": 45,
-    "pendingLiveVerification": 8
+    "pendingLiveVerification": 7
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -31,12 +31,19 @@
       "section": "competitions",
       "title": "ACAPS Rabat — Contrôleur LBC-FT (1 poste)",
       "deadline": "2026-11-12",
-      "status": "researched-awaiting-live-verification",
-      "priority": "primary-PDF-and-trilingual-evidence-reviewed-2026-10-30-awaiting-build-and-live-qa",
+      "status": "researched-article",
+      "priority": "published-and-live-verified-2026-10-30",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/a71d95c6-0698-4969-b7ca-0b1b0f8dbec2",
       "articleEvidenceId": "acaps-controleur-lbc-ft-rabat-c44073-2026",
       "reviewedAt": "2026-10-30",
-      "note": "Employer ACAPS, Rabat, one post, Bac+5 finance/audit/risk/law or equivalent, minimum 2 years qualifying experience, insurance-sector knowledge. Government listing C44073/26, employer careers page, original 2-page PDF and delegated application portal checked 30 Oct. Apply by 12 Nov 2026; no exact cutoff hour, salary or exam stages published. Original nine-section AR/EN/FR study stored in opportunity-editorial-evidence; live page not yet verified."
+      "note": "Employer ACAPS, Rabat, one post, Bac+5 finance/audit/risk/law or equivalent, minimum 2 years qualifying experience, insurance-sector knowledge. Government listing C44073/26, employer careers page, original 2-page PDF and delegated application portal checked 30 Oct. Apply by 12 Nov 2026; no exact cutoff hour, salary or exam stages published. Original nine-section AR/EN/FR study stored in opportunity-editorial-evidence; live page not yet verified. Live HTTPS QA on 30 Oct verified 10 complete sections, primary sources and external new-tab links in all three languages.",
+      "liveVerifiedAt": "2026-10-30",
+      "liveVerificationRun": "https://github.com/ribhlab/ribhlab.github.io/actions/runs/41134768312",
+      "liveUrls": {
+        "ar": "https://ribhlab.github.io/ar/opportunities/competitions/acaps-controleur-lbc-ft-rabat-c44073-2026/",
+        "en": "https://ribhlab.github.io/en/opportunities/competitions/acaps-controleur-lbc-ft-rabat-c44073-2026/",
+        "fr": "https://ribhlab.github.io/fr/opportunities/competitions/acaps-controleur-lbc-ft-rabat-c44073-2026/"
+      }
     },
     {
       "id": "map-infographiste-rabat-c44357-2026",
