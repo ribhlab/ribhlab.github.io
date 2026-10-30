@@ -432,7 +432,7 @@
       "publisherReleasedAt": "2026-10-30T00:28:06.219Z",
       "publisherReleaseCommit": "3f6b2b126e6fbd68ac3d6d0938be284671614a6b",
       "articleSlug": "crypto-whitepaper-audit-without-hype",
-      "editorialNote": "Publisher moved full AR/EN/FR JSON into content/articles and removed the queue item; live Pages HTTP and Actions build/deploy QA could not be independently checked in this run. Keep excluded from published count until confirmed."
+      "editorialNote": "Reviewed publisher transferred the complete AR/EN/FR article to content/articles and removed the queue file. GitHub Actions build/deploy and independent live three-language verification remain unconfirmed. Keep status queued until both checks succeed; do not count as published."
     },
     {
       "sectionId": "gold-macro",
@@ -529,7 +529,11 @@
       "status": "queued",
       "articleUrl": null,
       "queuePath": "content/reviewed-queue/tinted-sunscreen-iron-oxides-guide.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publisherReleasedAt": "2026-10-30T02:41:52.551Z",
+      "publisherReleaseCommit": "dead7150cbe3c3dd54d1ffd9c64cef49aee31e24",
+      "articleSlug": "tinted-sunscreen-iron-oxides-guide",
+      "editorialNote": "Reviewed publisher transferred the complete AR/EN/FR article to content/articles and removed the queue file. GitHub Actions build/deploy and independent live three-language verification remain unconfirmed. Keep status queued until both checks succeed; do not count as published."
     },
     {
       "sectionId": "body-care",
