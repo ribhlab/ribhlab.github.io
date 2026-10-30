@@ -781,6 +781,42 @@
       "description": "Apple Goodie crisp.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "spinach-fatayer": {
+      "id": "commons:87282032",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Fatayer_aux_%C3%A9pinards.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFatayer_aux_%C3%A9pinards.jpg",
+      "photographer": "Thomon",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Fatayer aux épinards.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "mexican-bean-tacos": {
+      "id": "commons:70625458",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Black_bean_corn_tacos_at_Down_The_Rabbit_Hole_2018.jpg/1280px-Black_bean_corn_tacos_at_Down_The_Rabbit_Hole_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABlack_bean_corn_tacos_at_Down_The_Rabbit_Hole_2018.jpg",
+      "photographer": "FakirNL",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Black bean corn tacos at Down The Rabbit Hole 2018.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-lentil-vegetable-patties": {
+      "id": "commons:4967983",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vegan_patties_with_potatoes_and_salad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVegan_patties_with_potatoes_and_salad.jpg",
+      "photographer": "rusvaplauke",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Vegan patties with potatoes and salad.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
