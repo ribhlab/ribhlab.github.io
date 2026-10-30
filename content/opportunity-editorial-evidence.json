@@ -7953,8 +7953,8 @@
     },
     "srm-technicians": {
       "reviewedAt": "2026-10-30",
-      "state": "researched-awaiting-live-verification",
-      "verification": "Read every page of signed five-page notice 110/2026/DA/DG/SRMLS dated 26 October 2026 and official listing C44300/26. Original source distinguishes 117 total agents from portal's 84 technicians. Live page/build not yet verified.",
+      "state": "researched-article",
+      "verification": "Signed five-page SRM notice 110/2026/DA/DG/SRMLS and government C44300/26 checked 30 October 2026. Nine original sections AR/EN/FR (755/902/934 words). Build run 41059996954, Pages deploy 41059996856, public live check 41060195781 all succeeded at commit b3af65d92933766bbde1e33a4e82715239cb9470; HTTP 200 for AR/EN/FR with nine sections and official source links.",
       "sources": [
         {
           "label": "SRM Laâyoune-Sakia El Hamra — signed five-page recruitment notice no. 110/2026/DA/DG/SRMLS, 26 October 2026",
