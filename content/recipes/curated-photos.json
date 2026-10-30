@@ -481,6 +481,114 @@
       "description": "Palak Paneer.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "kefta-tagine-eggs": {
+      "id": "commons:73939494",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/20151121_Morocco_2645%2B7_A%C3%AFt_Ben_Haddou_sRGB_%2824483612775%29.jpg/1280px-20151121_Morocco_2645%2B7_A%C3%AFt_Ben_Haddou_sRGB_%2824483612775%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3A20151121_Morocco_2645%2B7_A%C3%AFt_Ben_Haddou_sRGB_(24483612775).jpg",
+      "photographer": "Dan Lundberg",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "20151121 Morocco 2645+7 Aït Ben Haddou sRGB (24483612775).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "berkoukes-vegetables": {
+      "id": "commons:22673845",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Berkoukes.jpg/1280px-Berkoukes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABerkoukes.jpg",
+      "photographer": "Indif",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Berkoukes.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "vegetable-tagine": {
+      "id": "commons:36238629",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Vegetable_Tagine.jpg/1280px-Vegetable_Tagine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVegetable_Tagine.jpg",
+      "photographer": "Turajski",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Vegetable Tagine.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "spaghetti-tomato-basil": {
+      "id": "commons:36935396",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Spaghetti_al_Pomodoro.JPG/1280px-Spaghetti_al_Pomodoro.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASpaghetti_al_Pomodoro.JPG",
+      "photographer": "Benreis",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Spaghetti al Pomodoro.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "pesto-pasta": {
+      "id": "commons:75422620",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Pesto_pasta.jpg/1280px-Pesto_pasta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3APesto_pasta.jpg",
+      "photographer": "Erika Herzog",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Pesto pasta.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "eggplant-parmesan-bake": {
+      "id": "commons:199385271",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/2026-09-12_20_08_05_A_portion_of_eggplant_parmesan_from_ShopRite_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg/1280px-2026-09-12_20_08_05_A_portion_of_eggplant_parmesan_from_ShopRite_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3A2026-09-12_20_08_05_A_portion_of_eggplant_parmesan_from_ShopRite_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg",
+      "photographer": "Famartin",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "2026-09-12 20 08 05 A portion of eggplant parmesan from ShopRite in Ewing Township, Mercer County, New Jersey.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chicken-shawarma-bowl": {
+      "id": "commons:32259862",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Chicken_Shwarama_plate.jpeg/1280px-Chicken_Shwarama_plate.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_Shwarama_plate.jpeg",
+      "photographer": "CrunchySkies",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Chicken Shwarama plate.jpeg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "raita-cucumber": {
+      "id": "commons:40958435",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Cucumber_Raita.JPG/1280px-Cucumber_Raita.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACucumber_Raita.JPG",
+      "photographer": "Zeel Patel",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Cucumber Raita.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "tabbouleh-bulgur": {
+      "id": "commons:59148985",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Tabbouleh_before_adding_bulgur.jpg/1280px-Tabbouleh_before_adding_bulgur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATabbouleh_before_adding_bulgur.jpg",
+      "photographer": "Fructibus",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Tabbouleh before adding bulgur.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
