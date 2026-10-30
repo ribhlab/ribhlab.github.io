@@ -1470,7 +1470,10 @@
         {
           "sequence": 8,
           "titleAr": "استعمال الكريم بعد غسل اليدين",
-          "status": "planned"
+          "status": "queued",
+          "slug": "handwashing-dry-hands-moisturizer-hygiene-routine",
+          "queuePath": "content/reviewed-queue/handwashing-dry-hands-moisturizer-hygiene-routine.json",
+          "editorialReviewDate": "2026-10-30"
         },
         {
           "sequence": 9,
