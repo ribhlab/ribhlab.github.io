@@ -7568,6 +7568,209 @@
           ]
         }
       }
+    },
+    "sntl-cadre-juriste-1": {
+      "reviewedAt": "2026-10-30",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Signed two-page SNTL notice visually checked on 2026-10-30; official Emploi-public listing C44160/26 checked the same day; third-party 22 Oct summary cross-checked. Full trilingual article prepared but live publication unverified.",
+      "sources": [
+        {
+          "label": "SNTL — signed original two-page vacancy SNTL/CSJUR/2026 (consulted 30 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/22e15000-86a6-4c58-87a2-9db969a11a7a"
+        },
+        {
+          "label": "Emploi-public.ma — competition C44160/26, published 20 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/22e15000-86a6-4c58-87a2-9db969a11a7a"
+        },
+        {
+          "label": "SNTL — employer's official recruitment application portal",
+          "url": "https://www.sntl.ma/recrutement"
+        },
+        {
+          "label": "Ijob.ma — independent overview dated 22 October 2026 (corroboration only; official notice prevails)",
+          "url": "https://ijob.ma/emploi/concours-de-recrutement-sntl-2026-8-postes/"
+        }
+      ],
+      "facts": {
+        "employer": "Société Nationale des Transports et de la Logistique (SNTL)",
+        "reference": "C44160/26",
+        "internalReference": "SNTL/CSJUR/2026",
+        "posts": 1,
+        "title": "Cadre Supérieur Juriste",
+        "directorate": "Direction de Gouvernance et Affaires Juridiques",
+        "city": null,
+        "locationCaveat": "Headquarters in Rabat, but geographical mobility required; placement may be with SNTL or subsidiary",
+        "nationality": "Moroccan",
+        "age": "35 years maximum as at 2026-01-01",
+        "degree": "Master Bac+5 in private law (business law or litigation law), recognised institution; foreign qualifications require equivalence",
+        "experience": "At least two cumulative years as jurist after required degree; internships excluded",
+        "applicationDocuments": [
+          "Official SNTL electronically completed application form",
+          "Updated CV",
+          "Motivation letter",
+          "Copy of qualifying degree",
+          "Employment certificates proving experience duration and field",
+          "Copy of national identity card"
+        ],
+        "selection": "File screening, written examination, oral interview, possible psychometric test",
+        "submission": "https://www.sntl.ma/recrutement",
+        "deadline": "2026-11-03T23:55",
+        "publishedAt": "2026-10-20",
+        "salary": null,
+        "examDate": null
+      },
+      "translations": {
+        "ar": {
+          "title": "SNTL 2026: دليل مباراة إطار قانوني عالٍ واحد وشروط الترشح",
+          "deck": "قراءة موثقة للإعلان الأصلي C44160/26: ماستر القانون الخاص، سنتان بعد الدبلوم، شرط السن، الوثائق وآخر أجل 3 نوفمبر 2026.",
+          "sections": [
+            [
+              "القرار الذي يجب الاعتماد عليه",
+              "نشرت الشركة الوطنية للنقل والوسائل اللوجستيكية SNTL إعلاناً لتوظيف إطار قانوني عالٍ واحد، تحت المرجع الداخلي SNTL/CSJUR/2026، في مديرية الحكامة والشؤون القانونية. يحمل التسجيل الحكومي الرمز C44160/26، وتاريخ نشره 20 أكتوبر 2026. يوضح الإعلان الأصلي المكون من صفحتين أن هذا منصب واحد، لا مجموعة وظائف قانونية قابلة للجمع مع إعلان المساعد القانوني المنفصل. يبدأ التحقق السليم بمقارنة اسم الوظيفة والرمز وعدد المناصب في القرار وبوابة التشغيل العمومي، ثم تنزيل نسخة الإعلان قبل إعداد الملف. ليس وجود مقر الشركة بالرباط دليلاً على أن التعيين النهائي سيكون بالرباط."
+            ],
+            [
+              "الشروط الشخصية وحد السن",
+              "يشترط القرار الجنسية المغربية وألا يتجاوز عمر المترشح 35 سنة في 1 يناير 2026. هذا تاريخ مرجعي محدد، فلا يصح حساب السن يوم إيداع الطلب أو يوم الاختبار ثم افتراض الأهلية. على المترشح أن يقارن تاريخ ميلاده بهذا المرجع، وأن يتأكد من مطابقة بيانات بطاقة التعريف للبيانات التي سيدخلها في الاستمارة. لا يذكر القرار استثناءً عاماً من شرط السن، لذلك لا يجوز تقديم إعفاء افتراضي بوصفه حقاً مكتسباً. إذا كانت هناك وضعية خاصة أو وثيقة تحتاج إلى توضيح، ينبغي طلب جواب مكتوب من الجهة المنظمة قبل الموعد النهائي."
+            ],
+            [
+              "الشهادة المقبولة ومعادلة الدبلومات",
+              "المؤهل المطلوب ماستر Bac+5 في القانون الخاص، وبخاصة قانون الأعمال أو المنازعات، صادر عن مؤسسة عمومية أو خاصة معترف بها من الدولة. لا تكفي عبارة عامة مثل «درست القانون» إذا كان الدبلوم لا يطابق المستوى والتخصص المعلن عنهما. ويؤكد القرار أن الشهادات الأجنبية تحتاج إلى معادلة للشهادة الوطنية؛ لذلك يجب فحص وثيقة المعادلة قبل إرسال الطلب، لا بعد النجاح في الاختبار. ينبغي قراءة التسمية الدقيقة على الدبلوم ومقارنتها بالنص الرسمي، مع الاحتفاظ بنسخة واضحة ومقروءة. لا يعني امتلاك شهادة أعلى تلقائياً تجاوز شرط التخصص."
+            ],
+            [
+              "الخبرة المهنية: سنتان بعد الشهادة",
+              "يشترط الإعلان خبرة مهنية تراكمية لا تقل عن سنتين في وظيفة قانونية بعد الحصول على الدبلوم المطلوب، ويستبعد فترات التدريب من احتساب الخبرة. يمكن جمع فترات عمل متعددة إذا أمكن إثبات طبيعة الوظيفة ومدتها، لكن لا ينبغي إدراج تدريب التخرج أو خبرة سابقة للحصول على الماستر ضمن السنتين. يفضل إعداد جدول شخصي يربط كل شهادة عمل بتاريخ البداية والنهاية، والمسمى الوظيفي، والمهام القانونية المنجزة. إذا كانت شهادة العمل تذكر «إداري» فقط ولا تثبت العمل القانوني، فالأفضل طلب توضيح من المشغل السابق بدلاً من تغيير الوقائع أو المبالغة في السيرة الذاتية."
+            ],
+            [
+              "المهام الحقيقية في المنازعات والتحصيل",
+              "تتمحور الوظيفة حول إدارة ملفات النزاعات الخاصة بالشركة وفروعها من فتح الملف إلى إغلاقه، وتحليل المخاطر القانونية، وتنسيق المراسلات مع المحامين والخبراء والمصالح الداخلية. وتشمل أيضاً دعم تحصيل الديون، وإعداد الوثائق اللازمة للدفاع، وتتبع الآجال والقرارات وطرق الطعن، واقتراح تسويات ودية عندما تسمح الوقائع بذلك. هذه ليست وظيفة استشارات نظرية فقط: الدقة في تسجيل المواعيد وحفظ الأدلة وإعداد التقارير جزء من العمل اليومي. مثال عملي للتحضير هو إنشاء جدول افتراضي لنزاع تجاري يبين موضوعه، والوثائق الناقصة، وآخر أجل للإجراء، والمسؤول المكلف، دون استخدام بيانات عملاء حقيقيين."
+            ],
+            [
+              "العقود والحكامة والوقاية من المخاطر",
+              "يطلب الإعلان مراجعة مشاريع العقود والاتفاقيات والوثائق القانونية لاكتشاف مصادر النزاع قبل التوقيع، والمساهمة في صياغة مذكرات وآراء قانونية وتحديث النماذج المعتمدة. كما يذكر اليقظة القانونية والتنظيمية والحكامة المؤسسية وتقنيات التحصيل والمنازعات. يمكن للمترشح أن يتدرب على قراءة عقد خدمة لوجستي افتراضي وتحديد بنود الاختصاص القضائي، والتأخر في التنفيذ، والإثبات، والفسخ، وحماية الوثائق. لا يصح افتراض أن جميع نزاعات الشركة تتعلق بالنقل فقط؛ النص يذكر الشركة وفروعها وخدماتها المختلفة. التحليل الجيد يميز بين نص القانون، وبنود العقد، والوقائع المثبتة، والخيارات التي تحتاج إلى رأي محام."
+            ],
+            [
+              "ملف الترشيح: ست وثائق لا ينبغي نسيانها",
+              "تطلب SNTL استمارة الترشيح الرسمية التي تُنزّل من بوابة الشركة وتُملأ إلكترونياً، وسيرة ذاتية حديثة، ورسالة تحفيز، ونسخة من الدبلوم المطلوب، وشهادات عمل تثبت مدة الخبرة ومجالها، ونسخة من البطاقة الوطنية للتعريف. ينبغي أن تكون الملفات مقروءة ومتسقة في الاسم والتواريخ، وأن تتطابق السيرة مع شهادات العمل. لا يستبدل ملء الاستمارة إلكترونياً إرفاقها بالملف كما ينص القرار. ويستحسن الاحتفاظ بنسخة من كل ملف ومن إشعار الإرسال، وعدم إدراج بيانات حساسة إضافية لم تطلبها الجهة المنظمة. الطلب الناقص أو التصريح غير الصحيح قد يؤدي إلى الاستبعاد التلقائي."
+            ],
+            [
+              "كيفية الإيداع وآخر أجل مثبت",
+              "تحدد بوابة التشغيل العمومي آخر أجل يوم 3 نوفمبر 2026 عند الساعة 23:55، وتؤكد أن الإيداع يتم عبر منصة التوظيف الخاصة بالشركة، وليس عبر نموذج الاستفسارات الحكومي. تظهر ساعة الموعد في البوابة الحكومية بوضوح، بينما قد تكون الكتابة داخل النسخة المصورة من الإعلان أقل وضوحاً؛ لذلك يجب اعتماد التوقيت المعلن في السجل الرسمي مع محاولة الإرسال مبكراً. افتح صفحة التوظيف بنفسك، تحقق من المرجع SNTL/CSJUR/2026، ارفع المستندات، ثم راجع ملخص الطلب واحفظ إثبات الإرسال. إذا تعذر فتح المنصة أو ظهرت رسالة خطأ، لا تفترض تمديد الأجل؛ وثق المشكلة واطلب توجيهاً رسمياً فوراً."
+            ],
+            [
+              "مراحل الانتقاء وما لم يُعلن",
+              "تبدأ العملية بانتقاء أولي للملفات. يُبلّغ المقبولون بتاريخ ومكان الاختبار الكتابي عبر البريد الإلكتروني، ثم ينتقل الناجحون في الكتابي إلى المقابلة الشفوية. يجيز الإعلان إجراء اختبار سيكوتقني بعد المقابلة، لكنه لا يؤكد أنه سيجرى لكل مترشح. لا يقدم القرار تاريخاً ثابتاً للاختبار الكتابي أو سلماً تفصيلياً للنقط، ولا يعلن راتباً صافياً أو عقداً بمبلغ محدد. ينبغي مراجعة البريد بما فيه الرسائل غير المرغوب فيها، والاعتماد على الاستدعاء الرسمي فقط. لا يجوز شراء «مواضيع مسربة» أو دفع رسوم لوسيط يدعي ضمان النجاح."
+            ],
+            [
+              "التحضير العملي للاختبار والمقابلة",
+              "من المفيد مراجعة مبادئ القانون المدني والتجاري والإجراءات المتعلقة بالمنازعات والعقود والتحصيل، مع التدريب على صياغة مذكرة قانونية قصيرة انطلاقاً من وقائع مفترضة. جهز مثالاً يوضح كيف تفصل بين المستندات المؤكدة والادعاءات غير المثبتة، وكيف تتابع أجل الطعن، وكيف تنسق مع المحامي دون تجاوز الصلاحيات. في المقابلة، اشرح تجربة حقيقية في متابعة ملف أو تحليل عقد مع إخفاء أسرار المشغل السابق. لا تحول التدريب إلى حفظ إجابات جاهزة: المطلوب إظهار التفكير المنظم والأمانة المهنية وإدارة الأولويات. لا توجد في الإعلان قائمة رسمية بموضوعات الاختبار، وهذه أمثلة تحضيرية وليست أسئلة متوقعة مؤكدة."
+            ],
+            [
+              "مكان التعيين والمخاطر والبدائل",
+              "رغم أن المقر الاجتماعي للشركة في الرباط، ينص الإعلان على ضرورة الاستعداد للتنقل الجغرافي، وعلى احتمال التعيين لدى SNTL أو إحدى فروعها حسب الحاجة؛ لذلك لا ينبغي تقديم الرباط بوصفها مدينة العمل المضمونة. كما يشير إلى إمكان تعديل عدد المناصب بحسب احتياجات التوظيف. إذا لم تستوفِ شرط الماستر أو السن أو سنتي الخبرة بعد التخرج، فلا تقدم طلباً مبنياً على بيانات غير صحيحة؛ قارن بدلاً من ذلك إعلان المساعد القانوني المنفصل C44158/26 الذي تختلف شروطه، أو ابحث عن عروض قانونية أخرى. تحقق من كل إعلان مستقلاً، فالتشابه في اسم المشغل لا يجعل شروط الأهلية قابلة للتبادل."
+            ]
+          ]
+        },
+        "en": {
+          "title": "SNTL Senior Legal Officer 2026: eligibility, documents and deadline",
+          "deck": "A source-checked guide to vacancy C44160/26: private-law Master's degree, two post-degree years, age rules, evidence and the 3 November 2026 deadline.",
+          "sections": [
+            [
+              "The exact vacancy and source trail",
+              "The Société Nationale des Transports et de la Logistique (SNTL) is recruiting one Senior Legal Officer under internal reference SNTL/CSJUR/2026 for its Governance and Legal Affairs Directorate. The Moroccan public employment portal lists the vacancy as C44160/26, published on 20 October 2026. Its signed two-page notice identifies a single post, not a pooled legal recruitment campaign. Candidates should match the internal reference, title and headcount across the notice and government listing before assembling an application. The separate Assistant Jurist vacancy is a different competition with different eligibility. SNTL's registered headquarters are in Rabat, but that address does not establish a guaranteed final workplace."
+            ],
+            [
+              "Nationality and the precise age cut-off",
+              "The signed notice requires Moroccan nationality and an age of no more than 35 on 1 January 2026. This is a reference-date test, not an age limit to calculate on the submission day or the eventual examination date. Check the birth date recorded on the national identity card against that exact reference date and use consistent personal details throughout the application. The notice does not announce a general waiver of the age condition. Applicants with an exceptional situation should seek written clarification from the recruiting organisation rather than rely on online speculation. Eligibility should be established before spending time preparing extensive supporting documents."
+            ],
+            [
+              "Degree requirements and foreign equivalence",
+              "The academic requirement is a Master's degree, Bac+5, in private law, especially business law or litigation law, awarded by a public institution or a private institution recognised by the Moroccan state. A generic law-related qualification is not automatically interchangeable with the specified degree and specialisation. The notice explicitly requires equivalence for qualifications awarded abroad, so foreign graduates should check their formal equivalence evidence before submission. Compare the exact wording printed on the diploma with the official vacancy, and prepare a legible copy. Possessing a more advanced degree does not by itself remove the need to meet the advertised field and qualification requirements."
+            ],
+            [
+              "Two years of relevant post-degree experience",
+              "Applicants must demonstrate at least two cumulative years in a jurist position after obtaining the required degree. Internships are expressly excluded from professional experience. Several employment periods may contribute to the total if the certificates establish the dates and the relevant legal work. Create a timeline for each employer with start and end dates, job title, principal responsibilities and the matching employment certificate. Do not count a university placement or a job performed before graduation merely because it involved legal documents. Where a certificate describes only a broad administrative position, request an accurate clarification from the former employer rather than invent legal duties on a CV."
+            ],
+            [
+              "Litigation, collections and case management",
+              "The role manages litigation files for SNTL and its subsidiaries from opening to closure, coordinates with external lawyers and experts, and helps reduce legal risk and protect debt recovery. The original notice also names preparation of defence materials, monitoring deadlines, decisions, appeals and next actions, and considering amicable resolution where appropriate. This is not solely an advisory position: accurate case registers, evidence management and reporting are core operational skills. A useful practice exercise is a fictional commercial dispute tracker containing case status, missing documents, procedural deadlines, responsible team and next action. Use fictional records rather than disclosing actual clients or privileged information."
+            ],
+            [
+              "Contract review and legal risk prevention",
+              "Candidates should expect contract and agreement review, legal drafting, regulatory monitoring, governance support and the maintenance of legal templates. An effective analysis distinguishes the contractual wording, verified facts, applicable legal rules and points requiring external counsel. For practice, examine a fictional logistics services agreement and identify clauses on late performance, evidence, termination, dispute jurisdiction and document retention. The notice covers the company and its subsidiaries, so it would be misleading to reduce all legal work to one type of transport dispute. The skills section expressly mentions institutional governance, legal drafting and litigation or debt-recovery techniques. Treat these as duties to understand, not as a promise that every topic will appear in the exam."
+            ],
+            [
+              "Six mandatory application components",
+              "The published application file includes the SNTL application form downloaded from its recruitment portal and completed electronically, an updated CV, a motivation letter, a copy of the required degree, employment certificates showing both duration and area of experience, and a copy of the Moroccan national identity card. Cross-check names and dates across all files, especially where employment certificates overlap. The electronic form must still be attached to the application file as instructed. Keep a personal copy of every document and any confirmation of submission. Do not upload unrelated sensitive information. The notice warns that incomplete applications, profiles that do not match the requirements, and false declarations lead to automatic rejection."
+            ],
+            [
+              "Online submission and the 3 November deadline",
+              "The public portal specifies 3 November 2026 at 23:55 as the application deadline and identifies SNTL's own recruitment site as the submission channel. The contact form on the government listing is for enquiries, not applications. The scan of the employer notice is less legible around the handwritten date, so the portal's explicit deadline should be used while submitting well ahead of the final hour. Open the official recruitment page directly, find reference SNTL/CSJUR/2026, attach the documents, review the submission summary and retain proof. A website error is not an announced extension; record the issue and contact the employer promptly through an official channel."
+            ],
+            [
+              "Selection stages and undisclosed conditions",
+              "SNTL first screens applications, then informs shortlisted candidates by email of the written examination date and venue. Candidates selected after the written test may proceed to an oral interview. A psychometric test may follow the interview, but the notice does not say it is compulsory for everyone. No confirmed written-exam date, detailed scoring grid, net salary or precise individual posting city appears in the two-page notice. Check email, including spam folders, and trust the employer's formal invitation rather than unofficial timetables. Do not pay intermediaries for a supposed guaranteed shortlist or alleged leaked examination questions."
+            ],
+            [
+              "How to prepare without inventing an exam syllabus",
+              "A sound preparation plan reviews private-law fundamentals, contracts, commercial disputes, recovery procedures, legal writing and the discipline of tracking deadlines. Draft a short fictional legal memorandum that separates facts from allegations, lists missing evidence and proposes proportionate next steps. Practise explaining how you would coordinate with external counsel while protecting confidentiality and respecting decision-making authority. At interview, describe genuine prior casework or contract review experience without exposing a former employer's confidential data. The notice does not publish a binding syllabus or sample questions; these are relevant preparation exercises, not predictions about the exact examination content."
+            ],
+            [
+              "Mobility, uncertainty and alternative routes",
+              "Although SNTL's registered office is in Rabat, the notice requires geographical mobility and states that selected candidates may be assigned to SNTL or one of its subsidiaries according to recruitment needs. It also reserves the possibility of adjusting the number of posts. Do not represent Rabat as a guaranteed duty station or attach a salary estimate to an advertisement that gives none. If the Master's, age or post-degree experience criteria are not met, do not submit misleading documents. Review the separate Assistant Jurist competition C44158/26 only if its own requirements fit, or seek another properly documented legal opening. Each vacancy must be assessed on its own terms."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "SNTL 2026 : cadre supérieur juriste, conditions et dossier de candidature",
+          "deck": "Analyse vérifiée de l'avis C44160/26 : Master en droit privé, deux ans d'expérience après diplôme, limite d'âge et clôture du 3 novembre 2026.",
+          "sections": [
+            [
+              "L'avis exact et les références à vérifier",
+              "La Société Nationale des Transports et de la Logistique (SNTL) recrute un seul cadre supérieur juriste, sous la référence interne SNTL/CSJUR/2026, pour la Direction de la gouvernance et des affaires juridiques. Le portail marocain de l'emploi public enregistre cette annonce sous le code C44160/26, avec une publication le 20 octobre 2026. L'avis original signé comporte deux pages et ne doit pas être confondu avec le concours distinct d'assistant juriste. Avant de constituer un dossier, comparez l'intitulé, la référence et le nombre de postes sur les deux supports. Le siège de la SNTL se situe à Rabat, mais cela ne garantit pas une affectation définitive dans cette ville."
+            ],
+            [
+              "Nationalité et calcul correct de l'âge",
+              "L'annonce exige la nationalité marocaine et un âge de 35 ans au maximum au 1er janvier 2026. Cette date de référence est déterminante : il serait erroné de calculer la condition à la date d'envoi du dossier ou au jour de l'épreuve. Vérifiez votre date de naissance sur la carte nationale d'identité et utilisez des informations identiques dans le formulaire, le CV et les pièces jointes. Le document ne prévoit pas de dérogation générale explicite à cette limite. En cas de situation particulière, sollicitez une réponse écrite de l'organisme recruteur plutôt que de supposer qu'une exception s'applique. L'éligibilité doit être vérifiée avant de préparer le dossier."
+            ],
+            [
+              "Master exigé et équivalence des diplômes",
+              "Le diplôme requis est un Master Bac+5 en droit privé, notamment en droit des affaires ou en droit du contentieux, délivré par un établissement public ou privé reconnu par l'État. Une formation juridique voisine ne remplace pas automatiquement la spécialité mentionnée dans l'avis. Pour un diplôme étranger, l'annonce précise que l'équivalence avec le diplôme national est nécessaire. Il convient donc de vérifier la décision d'équivalence et de préparer une copie lisible avant l'envoi. Comparez la dénomination exacte figurant sur votre diplôme à celle du recrutement. Un niveau d'études supérieur ne dispense pas, à lui seul, de respecter les conditions de spécialité et de reconnaissance."
+            ],
+            [
+              "Deux années d'expérience après le diplôme",
+              "Le candidat doit justifier d'au moins deux années cumulées d'expérience dans un poste de juriste après l'obtention du diplôme exigé. Les stages ne sont pas pris en compte. Plusieurs périodes d'emploi peuvent contribuer à ce total si les attestations permettent de vérifier les dates et la nature des missions. Préparez un tableau personnel avec l'employeur, les dates, la fonction et le document justificatif correspondant. Ne comptabilisez pas un stage de fin d'études ni une expérience antérieure au Master pour atteindre artificiellement le seuil. Si une attestation mentionne uniquement une fonction administrative générale, demandez une précision exacte à l'ancien employeur plutôt que de modifier la réalité de votre parcours."
+            ],
+            [
+              "Contentieux, recouvrement et suivi des dossiers",
+              "La mission centrale consiste à gérer le portefeuille de litiges de la SNTL et de ses filiales, depuis l'ouverture jusqu'à la clôture, en lien avec les avocats, experts et services internes. L'avis cite la préparation des éléments de défense, le suivi des échéances, des décisions, des recours et des suites à donner, ainsi que la prévention des risques et la sécurisation du recouvrement. Il s'agit donc d'une fonction opérationnelle de traçabilité et de reporting, pas seulement de conseil théorique. Un exercice utile consiste à bâtir un tableau fictif de contentieux indiquant les pièces manquantes, les délais, le responsable et la prochaine action, sans utiliser de données réelles confidentielles."
+            ],
+            [
+              "Contrats, gouvernance et prévention juridique",
+              "Le cadre supérieur juriste contribue à la revue des contrats, conventions et actes, à la rédaction de notes et avis juridiques, à la veille réglementaire et à la mise à jour des modèles documentaires. Les compétences mentionnées comprennent la gouvernance institutionnelle, la rédaction juridique et les techniques de recouvrement et de contentieux. Pour vous entraîner, analysez un contrat fictif de prestation logistique : clauses de retard, preuve de l'exécution, résiliation, juridiction compétente et conservation des pièces. Distinguez toujours les faits établis, les obligations contractuelles, les règles applicables et les points à soumettre à un avocat. L'avis concerne aussi les filiales; il ne faut donc pas réduire la fonction à un seul type de litige de transport."
+            ],
+            [
+              "Les six éléments du dossier de candidature",
+              "Le dossier comprend le formulaire officiel SNTL téléchargé sur le site de recrutement et rempli électroniquement, un CV actualisé, une lettre de motivation, une copie du diplôme exigé, des attestations de travail établissant la durée et le domaine de l'expérience, et une copie de la carte nationale d'identité. Vérifiez la cohérence des noms et des dates entre ces pièces. Le formulaire rempli électroniquement doit être joint au dossier, conformément à l'avis; le simple fait de le compléter ne suffit pas. Conservez des copies des fichiers et de la preuve de dépôt. N'ajoutez pas de données personnelles inutiles. L'annonce précise qu'un dossier incomplet, non conforme au profil ou contenant une fausse déclaration entraîne un rejet automatique."
+            ],
+            [
+              "Dépôt en ligne et date limite du 3 novembre",
+              "Le portail de l'emploi public fixe la clôture au 3 novembre 2026 à 23 h 55. Le dépôt s'effectue sur la plateforme de recrutement de la SNTL, et non dans le formulaire de contact du portail gouvernemental. La date manuscrite figurant sur la copie numérisée de l'avis est moins lisible; la date et l'heure explicites de la fiche gouvernementale constituent donc le repère pratique, sans attendre les dernières minutes. Accédez directement au site officiel, sélectionnez la référence SNTL/CSJUR/2026, joignez les documents, contrôlez le récapitulatif et sauvegardez l'accusé de réception. Une panne du site ne constitue pas une prorogation officielle; documentez l'incident et contactez rapidement le recruteur."
+            ],
+            [
+              "Présélection, épreuves et informations absentes",
+              "Une présélection des dossiers précède l'épreuve écrite. Les candidats retenus reçoivent par courriel la date et le lieu de l'écrit, puis les admissibles peuvent passer un entretien oral. Un test psychotechnique peut être prévu après l'oral, sans caractère systématique annoncé. L'avis ne fournit ni date certaine de l'écrit, ni barème détaillé, ni rémunération nette, ni ville individuelle d'affectation garantie. Consultez régulièrement votre messagerie, y compris les courriers indésirables, et fiez-vous aux convocations officielles. Méfiez-vous des intermédiaires qui vendent de prétendus sujets d'examen ou promettent une sélection en échange d'argent."
+            ],
+            [
+              "Préparer une épreuve sans inventer son programme",
+              "Une préparation cohérente couvre les fondements du droit privé, les contrats, les litiges commerciaux, le recouvrement, la rédaction juridique et le contrôle des délais de procédure. Entraînez-vous à rédiger une courte note à partir d'un cas fictif : faits prouvés, pièces manquantes, risques, options de résolution et actions prioritaires. Préparez un exemple réel de travail juridique accompli en respectant la confidentialité des anciens employeurs. À l'oral, expliquez votre méthode de coordination avec les conseils externes et votre manière de signaler une échéance critique. Aucun programme officiel détaillé n'étant publié dans l'avis, ces exercices sont des pistes raisonnables et non une annonce de questions certaines."
+            ],
+            [
+              "Mobilité géographique et solutions de rechange",
+              "La SNTL possède son siège à Rabat, mais l'avis demande une mobilité géographique et prévoit une affectation possible au sein de la société ou de ses filiales selon les besoins. Il mentionne également que le nombre de postes peut être ajusté. Il serait donc trompeur de promettre Rabat comme lieu de travail ou de publier un salaire qui ne figure pas dans l'annonce. Si vous ne remplissez pas les conditions du Master, de l'âge ou de l'expérience post-diplôme, ne présentez pas de documents inexacts. Examinez séparément le concours d'assistant juriste C44158/26, dont les critères diffèrent, ou recherchez d'autres offres juridiques authentifiées."
+            ]
+          ]
+        }
+      }
     }
   }
 }
