@@ -1,6 +1,9 @@
 {
   "sectionId": "body-care",
-  "resourceIds": [],
+  "resourceIds": [
+    "aadDrySkin",
+    "aadFaceWashing"
+  ],
   "article": {
     "slug": "glycerin-ceramides-moisturizer-label-guide",
     "category": "lifestyle",
