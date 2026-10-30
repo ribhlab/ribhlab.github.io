@@ -7020,6 +7020,190 @@
           ]
         }
       }
+    },
+    "imouzzer-marmoucha-four-technicians-2026": {
+      "reviewedAt": "2026-10-30",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Signed original three-page communal decision visually reviewed on 30 October 2026; independently cross-checked against the government listing. Content is researched but publication/build/live AR-EN-FR verification is not yet complete.",
+      "sources": [
+        {
+          "label": "Commune d'Imouzzer Marmoucha — décision n°76 signée le 21 octobre 2026 (3 pages), vérifiée le 30 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/d565309c-3507-4e51-8e97-51382c5c8f37",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "label": "Portail emploi-public.ma — annonce C44293/26 du 29 octobre 2026, vérifiée le 30 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/d565309c-3507-4e51-8e97-51382c5c8f37",
+          "checkedAt": "2026-10-30"
+        }
+      ],
+      "facts": {
+        "employer": "Commune d'Imouzzer Marmoucha, province de Boulemane",
+        "town": "Imouzzer Marmoucha, Boulemane, Morocco",
+        "competitionCode": "C44293/26",
+        "decisionNumber": "76",
+        "decisionDate": "2026-10-21",
+        "noticeDate": "2026-10-29",
+        "posts": 4,
+        "grade": "Technicien 4ème grade, échelle 8",
+        "specialisms": {
+          "civil_engineering_public_works": 1,
+          "urbanism_architecture": 1,
+          "information_technology_development_networks": 1,
+          "vehicle_mechanics": 1
+        },
+        "nationality": "Moroccan",
+        "age": "18 to 40 at exam, possible legal service-based extension to 45",
+        "diploma": "Technician diploma in the specified discipline or legally equivalent",
+        "mechanicsDrivingLicense": "C or D",
+        "deadline": "2026-11-30T16:30",
+        "examDate": "2026-12-20",
+        "examStart": "10:00",
+        "application": "Direct submission with receipt at commune registry, or post to president of Imouzzer Marmoucha communal council, Boulemane province; postmark considered",
+        "selection": "Written 3 hours coefficient 4, oral/practical 15–45 minutes coefficient 3; 12/20 written minimum for oral",
+        "salaryPublished": false,
+        "confusionWarning": "Separate El Mers competition C44339/26 has four IT posts and closes 2026-11-16, not 2026-11-30"
+      },
+      "translations": {
+        "ar": {
+          "title": "إيموزار مرموشة: دليل مباراة أربعة تقنيين من الدرجة الرابعة في 2026",
+          "deck": "تحليل القرار رقم 76: تخصص واحد لكل منصب، شروط الدبلوم ورخصة السياقة، ملف الترشيح الورقي، وآجال 30 نوفمبر والاختبارات.",
+          "sections": [
+            [
+              "إعلانان في إقليم واحد لا يعنيان مباراة واحدة",
+              "تعلن جماعة إيموزار مرموشة بإقليم بولمان عن أربعة مناصب لتقنيين من الدرجة الرابعة، السلم الثامن، بموجب قرار رئيس المجلس الجماعي رقم 76 بتاريخ 21 أكتوبر 2026. نُشر الإعلان على بوابة التشغيل العمومي يوم 29 أكتوبر برمز C44293/26. هذه المباراة مستقلة تماماً عن مباراة جماعة المرس داخل الإقليم نفسه، رغم تشابه عدد المناصب ودرجة التوظيف ويوم الامتحان. لذلك ينبغي تدوين اسم الجماعة ورمز المباراة على ملف الترشيح، وعدم نقل تاريخ الإغلاق أو التخصصات من إعلان المرس إلى إعلان إيموزار مرموشة. مصدر هذه التفاصيل هو القرار الأصلي المؤلف من ثلاث صفحات وبطاقة الإعلان الحكومية."
+            ],
+            [
+              "أربعة مناصب موزعة على تخصصات مختلفة",
+              "يوزع القرار المناصب الأربعة بالتساوي: منصب للهندسة المدنية أو الأشغال الكبرى أو العمومية، ومنصب للتعمير والهندسة المعمارية، ومنصب للإعلاميات بما فيها التنمية المعلوماتية والشبكات، ومنصب للميكانيك. لا تعني عبارة أربعة مناصب وجود أربعة مقاعد في كل تخصص؛ فالمنافسة تكون على المقعد المخصص للتخصص المعني. يجب أن يطابق الدبلوم المسار المطلوب في الجدول، وأن يكون صادراً عن مؤسسة تكوين مهني مؤهلة أو معادلاً قانونياً. بالنسبة إلى الميكانيك يضيف القرار شرط رخصة سياقة من الصنف C أو D، وهو شرط لا يجوز تجاهله عند إعداد الملف."
+            ],
+            [
+              "الجنسية والسن والقيود القانونية",
+              "تفتح المباراة أمام المترشحين من الجنسية المغربية ممن بلغوا 18 سنة على الأقل ولم يتجاوزوا 40 سنة في تاريخ إجراء المباراة، مع إمكان تمديد الحد الأعلى وفق سنوات الخدمة المحتسبة للتقاعد إلى سقف 45 سنة حسب ما يوضحه القرار. ويشير القرار إلى تخصيص نسب قانونية لبعض فئات المقاومين ومكفولي الأمة والعسكريين والمحاربين القدامى والأشخاص في وضعية إعاقة. هذه النسب لا تعفي من شروط الشهادة والتخصص والوثائق، ولا تعني أن مقعداً بعينه مضمون لأي مترشح. من الأفضل مراجعة النص القانوني الأصلي والوثائق المثبتة للحالة الخاصة قبل تقديم الطلب."
+            ],
+            [
+              "ملف الترشيح العادي خطوة بخطوة",
+              "يتضمن الملف طلباً خطياً موجهاً إلى رئيس المجلس الجماعي يذكر الاسم والعنوان ورقم الهاتف والمنصب والتخصص المختار والبريد الإلكتروني، ونسخة من الدبلوم المطلوب أو قرار المعادلة عند الاقتضاء، وسيرة ذاتية بصورة فوتوغرافية ورقم الهاتف والبريد الإلكتروني، ونسخة من البطاقة الوطنية للتعريف، وظرفين يحملان الطابع البريدي والعنوان الشخصي. ينبغي أن تكون المعلومات متطابقة في جميع الوثائق، وأن يذكر الطلب التخصص الواحد بوضوح. تصوير الملف قبل إيداعه والاحتفاظ بقائمة الوثائق إجراء عملي مفيد، لكنه لا يحل محل المستندات المطلوبة رسمياً."
+            ],
+            [
+              "وثائق إضافية بحسب وضع المترشح",
+              "على الموظف العمومي إرفاق ترخيص كتابي من إدارته لاجتياز المباراة. ويجب على مرشح تخصص الميكانيك إضافة نسخة من رخصة السياقة C أو D، وعلى من يستفيد من وضعية قانونية خاصة إرفاق شهادة الإثبات المناسبة. بالنسبة إلى وضعية الإعاقة، يذكر القرار شهادة التسجيل في اللوائح ذات الصلة ونسخة مصادقاً عليها من بطاقة الشخص المعاق. لا يُفترض أن شهادة خبرة أو دورة تدريبية غير منصوص عليها يمكنها تعويض الدبلوم. إذا كانت الشهادة غير واضحة في تخصصها، فالأنسب طلب تأكيد كتابي من الجماعة قبل انتهاء الأجل."
+            ],
+            [
+              "مكان الإيداع وآخر أجل حاسم",
+              "تنص المادة الخامسة على إيداع الملف مباشرة مقابل وصل بمكتب ضبط جماعة إيموزار مرموشة خلال أوقات العمل الإدارية، أو إرساله بالبريد إلى رئيس المجلس الجماعي لإيموزار مرموشة بإقليم بولمان. يبدأ استقبال الملفات من تاريخ نشر القرار، وينتهي يوم 30 نوفمبر 2026 عند الساعة الرابعة والنصف مساءً. ويؤخذ تاريخ ختم مصالح البريد بعين الاعتبار في الملفات المرسلة. لا يعد نموذج «اتصل بالإدارة» على البوابة الحكومية منصة لترشيح إلكتروني. عند استعمال البريد المضمون ينبغي ترك هامش زمني للتأخير والاحتفاظ بوصل الإرسال وتتبعه."
+            ],
+            [
+              "الاختبار الكتابي وطبيعة الأسئلة",
+              "حدد القرار موعد المباراة يوم الأحد 20 ديسمبر 2026 ابتداء من الساعة العاشرة صباحاً، في المكان الذي ستعلن عنه الجماعة عند نشر الاستدعاءات. الاختبار الكتابي مدته ثلاث ساعات ومعامله أربعة، ويكون موضوعاً عاماً أو أسئلة متعددة الاختيارات مرتبطة بالمهام واختصاصات الجماعات الترابية. لذلك من المفيد مراجعة أساسيات التنظيم الجماعي وتطبيقات التخصص: الشبكات للإعلاميات، قراءة المخططات للهندسة، قواعد التعمير، أو سلامة الصيانة الميكانيكية. هذه أمثلة للمراجعة وليست أسئلة مسربة أو برنامجاً رسمياً تفصيلياً للاختبار."
+            ],
+            [
+              "الاختبار الشفوي أو التطبيقي والانتقاء",
+              "يلي الكتابي اختبار شفوي أو تطبيقي أو كلاهما، بمدة تتراوح بين 15 و45 دقيقة ومعامل ثلاثة. ينص القرار على أن نقاط الاختبار الكتابي تمنح من صفر إلى عشرين، وأن التأهل للشفوي يتطلب الحصول على معدل لا يقل عن 12 من 20. ويجري ترتيب الناجحين في حدود المناصب المتاحة، مع لائحة انتظار وفق الشروط المعلنة. لا تكفي عتبة 12 نقطة لضمان التوظيف؛ فالترتيب النهائي والمقاعد المتاحة والوثائق الإدارية النهائية كلها عوامل مؤثرة. يجب متابعة لوائح المقبولين ونتائج الامتحانات في المصادر الرسمية فقط."
+            ],
+            [
+              "خطة تحضير عملية دون ادعاء معرفة الأسئلة",
+              "يمكن تقسيم التحضير إلى ثلاث مراحل: قراءة القرار وتحديد التخصص بدقة، ثم مراجعة الجانب التقني الأساسي مع أمثلة تطبيقية، وأخيراً محاكاة اختبار كتابي من ثلاث ساعات وتقديم شرح شفوي لمشروع أو مشكلة مهنية. في تخصص الشبكات مثلاً، يمكن التدرب على تفسير عنوان IP وعزل عطل اتصال مع مراعاة الأمن المعلوماتي. وفي الهندسة المدنية يمكن مراجعة تسلسل متابعة ورش ومخاطر السلامة. هذه تمارين توضيحية من إعدادنا، وليست وصفاً لأسئلة ستطرحها اللجنة. لا ينبغي شراء «ضمان نجاح» أو دفع مبالغ لوسطاء."
+            ],
+            [
+              "المخاطر والبدائل والتحديثات الواجب مراقبتها",
+              "لا يذكر القرار راتباً صافياً أو تعييناً في مصلحة محددة داخل الجماعة، لذلك لا يصح اختلاقهما. كما أن تاريخ المباراة أو مكانها قد يخضع لإعلان لاحق؛ ينبغي مراجعة بوابة التشغيل العمومي والبوابة الوطنية للجماعات الترابية ولوحات الجماعة قبل السفر. إذا لم يطابق دبلومك تخصصاً من الأربعة فلا ترسل طلباً على أمل قبول استثنائي غير معلن، بل ابحث عن مباراة تقنية مناسبة أخرى. والأهم التمييز بين إيموزار مرموشة، التي ينتهي أجلها في 30 نوفمبر، وجماعة المرس، التي ينتهي أجلها في 16 نوفمبر 2026."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Imouzzer Marmoucha: four grade-four technician posts, full 2026 application guide",
+          "deck": "Decision 76 explained: one vacancy per specialism, diplomas and driving licence, physical application, 30 November deadline and assessments.",
+          "sections": [
+            [
+              "Two competitions in one province are not the same recruitment",
+              "Imouzzer Marmoucha commune in Boulemane province has announced four fourth-grade technician posts, pay scale eight, under the communal council president's decision 76 dated 21 October 2026. The government employment portal published the notice on 29 October as competition C44293/26. A separate El Mers commune competition in the same province also offers four technician posts and happens to share the examination date. These are not interchangeable notices. Record the commune, competition code and application deadline before preparing documents. This guide draws on the signed three-page decision and its government listing, not on a generic jobs aggregator."
+            ],
+            [
+              "Four positions, four distinct professional specialisms",
+              "The decision assigns one position each to civil engineering or major/public works, urban planning and architecture, information technology including development and computer networks, and vehicle mechanics. Four total vacancies do not mean four openings in each field. Applicants should check the precise wording on their technical diploma against the listed specialism. The decision requires a technician diploma from an authorized vocational training institution or a legally recognized equivalent. For the mechanics position, it additionally requires a category C or D driving licence. A short training course or unrelated certificate cannot simply be assumed to satisfy the formal diploma requirement."
+            ],
+            [
+              "Nationality, age and legally reserved categories",
+              "Candidates must be Moroccan nationals and generally between 18 and 40 years old on the competition date. The decision provides for an extension of the upper age limit based on eligible service counted for retirement, with an overall ceiling of 45. It also describes statutory reserved shares for specified categories including certain veterans, wards of the nation and people with disabilities. Such provisions are governed by their own evidence requirements and do not cancel the qualification or application rules. Candidates relying on an exception should verify the original legal wording and supporting certificate rather than assume an automatic place or an exemption from assessment."
+            ],
+            [
+              "Assemble the standard application dossier",
+              "The standard dossier contains a signed written application addressed to the president of the communal council, stating the applicant's name, postal address, telephone number, selected post and specialism, and email address. Add a copy of the required diploma or formal equivalence decision, a CV carrying a photograph and contact details, a copy of the national identity card, and two stamped envelopes bearing the applicant's address. Make the selected specialism unambiguous and ensure the same spelling and identification details appear throughout the documents. Keep a complete scanned copy and a checklist for your records, but submit the physical documents required by the decision."
+            ],
+            [
+              "Additional evidence for specific applicants",
+              "Public-sector employees need written authorization from their employing administration to sit the competition. Mechanics applicants must add a copy of their category C or D driving licence. Candidates applying under a protected or reserved legal status must provide the relevant proof; the decision also refers to registration evidence and a certified disability card for applicants invoking the disability provisions. Do not substitute work experience, a professional profile or a certificate of attendance for a required diploma. If your credential title is ambiguous, contact the commune early and ask for a written clarification before spending money on travel or mailing."
+            ],
+            [
+              "Where and when to file the application",
+              "Article five permits physical submission against a receipt at the Imouzzer Marmoucha commune registry during administrative working hours, or postal delivery addressed to the president of the communal council in Imouzzer Marmoucha, Boulemane province. Applications close on 30 November 2026 at 16:30. The decision says the postal service stamp date is taken into account for mailed dossiers. Allow for postal delays, retain the tracking record and avoid relying on the last afternoon. The government portal's contact form is explicitly for questions, not for filing an application. An online profile alone therefore does not complete this particular recruitment procedure."
+            ],
+            [
+              "Written examination and realistic preparation",
+              "The competition is scheduled for Sunday 20 December 2026, beginning at 10:00, at premises to be announced to admitted candidates. The written paper lasts three hours and carries coefficient four. According to the decision, it can cover a general subject or multiple-choice questions related to the role and the responsibilities of local authorities. Candidates can revise local government fundamentals alongside discipline-specific skills: basic network troubleshooting, reading engineering drawings, urban planning procedures or safe mechanical maintenance. These are illustrative revision ideas, not leaked questions, a confirmed syllabus or a promise about what the examination committee will select."
+            ],
+            [
+              "Oral or practical assessment and ranking",
+              "A subsequent oral test, practical test or combination lasts between 15 and 45 minutes and carries coefficient three. Written marks are scored on a 20-point scale, and the decision sets a minimum of 12 out of 20 to qualify for the oral stage. Final selection is limited by the available positions and the official ranking rules, with a waiting list where applicable. Reaching the qualifying threshold is not a job offer. Candidates should monitor official admission lists, practical-test instructions and final results, and remain prepared to provide original credentials or additional administrative documents if eventually selected."
+            ],
+            [
+              "A focused study plan without fabricated outcomes",
+              "Begin by reading the decision and mapping each document to the chosen position. Next, revise core technical principles and practise explaining one realistic workplace problem. Finally, simulate a three-hour written assessment and rehearse a concise oral explanation of how you would diagnose, document and safely resolve a technical issue. For the IT track, a practice case might involve IP addressing, a network outage and access controls. For civil works, it might involve worksite sequencing and safety observations. These are our educational examples only. No candidate should pay an intermediary for purported guaranteed access or alleged examination questions."
+            ],
+            [
+              "Salary uncertainty, competing notices and safer alternatives",
+              "Neither the signed decision nor the government listing states a take-home salary or an exact future department assignment. Do not confuse the official grade and scale with a personalized net-pay quotation. The examination venue and any later changes should be checked through the public employment portal, territorial-authority announcements and the commune itself. If your qualification does not match one of the four specialisms, consider another appropriately defined competition rather than relying on an unwritten exception. Crucially, El Mers closes on 16 November 2026, whereas Imouzzer Marmoucha closes on 30 November; both are in Boulemane province but have separate applications."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Imouzzer Marmoucha : quatre postes de techniciens de 4e grade, guide du concours 2026",
+          "deck": "Décryptage de la décision 76 : spécialités, diplômes, permis, dépôt papier avant le 30 novembre et modalités des épreuves.",
+          "sections": [
+            [
+              "Deux concours dans la même province ne sont pas interchangeables",
+              "La commune d'Imouzzer Marmoucha, province de Boulemane, recrute quatre techniciens de quatrième grade, échelle 8, selon la décision numéro 76 du président du conseil communal datée du 21 octobre 2026. L'annonce a été publiée le 29 octobre sur le portail public sous le code C44293/26. La commune d'El Mers organise un autre concours de quatre techniciens dans la même province, avec une date d'épreuve similaire. Il ne faut pas fusionner ces deux recrutements. Notez le nom exact de la commune, le code du concours et la date limite avant de constituer le dossier. Notre analyse repose sur la décision signée de trois pages et la fiche gouvernementale."
+            ],
+            [
+              "Quatre postes répartis entre quatre spécialités",
+              "La décision prévoit un poste en génie civil ou grands travaux et travaux publics, un en urbanisme et architecture, un en informatique, notamment développement et réseaux, et un en mécanique des véhicules. Le total de quatre postes ne signifie pas quatre places par spécialité. Le diplôme doit correspondre au domaine choisi et provenir d'un établissement de formation professionnelle habilité ou bénéficier d'une équivalence légale. Pour la mécanique, la décision exige en plus un permis de conduire de catégorie C ou D. Une simple formation courte ou une expérience professionnelle ne remplace pas automatiquement le diplôme technique demandé. Il faut vérifier le libellé officiel avant de postuler."
+            ],
+            [
+              "Nationalité, âge et situations légalement réservées",
+              "Le concours s'adresse aux candidats de nationalité marocaine âgés d'au moins 18 ans et, en principe, de 40 ans au plus à la date de l'épreuve. La décision prévoit une prolongation du plafond selon certaines années de service prises en compte pour la retraite, sans dépasser 45 ans. Elle mentionne aussi des quotas légaux pour plusieurs catégories protégées, notamment certains anciens combattants, pupilles de la Nation et personnes en situation de handicap. Ces dispositions n'annulent ni les conditions de diplôme ni les justificatifs exigés. Si vous invoquez un statut particulier, vérifiez les textes et les attestations officielles plutôt que de présumer une admission automatique."
+            ],
+            [
+              "Préparer le dossier ordinaire sans omission",
+              "Le dossier comprend une demande manuscrite ou écrite signée, adressée au président du conseil communal, indiquant identité, adresse, téléphone, poste, spécialité et adresse électronique. Ajoutez la copie du diplôme exigé ou de la décision d'équivalence, un curriculum vitae avec photographie et coordonnées, une copie de la carte nationale d'identité et deux enveloppes timbrées portant votre adresse personnelle. L'intitulé de la spécialité doit être clair et cohérent avec le diplôme. Vérifiez l'orthographe des noms et la lisibilité des copies avant l'envoi. Conserver un dossier numérisé est utile pour votre suivi, mais ne remplace pas le dépôt physique prescrit."
+            ],
+            [
+              "Pièces complémentaires selon le profil",
+              "Les fonctionnaires doivent fournir une autorisation écrite de leur administration pour participer au concours. Les candidats à la spécialité mécanique doivent joindre leur permis de catégorie C ou D. Ceux qui invoquent une situation juridique réservée doivent présenter les attestations correspondantes. Pour le handicap, la décision évoque notamment l'inscription sur les listes appropriées et une copie certifiée de la carte de personne handicapée. Il serait imprudent de considérer qu'une expérience, une formation en ligne ou une attestation non prévue remplace le diplôme demandé. En cas de doute sur l'équivalence, sollicitez une réponse écrite de la commune suffisamment tôt."
+            ],
+            [
+              "Dépôt au bureau d'ordre ou envoi postal",
+              "L'article cinq autorise le dépôt direct contre récépissé au bureau d'ordre de la commune d'Imouzzer Marmoucha pendant les heures administratives, ou l'envoi postal au président du conseil communal d'Imouzzer Marmoucha, province de Boulemane. La date limite est fixée au 30 novembre 2026 à 16 h 30. La décision précise que le cachet des services postaux est pris en considération pour les dossiers envoyés. Il est prudent d'expédier tôt, de conserver le justificatif d'envoi et de contrôler le suivi. Le formulaire de contact du portail gouvernemental sert à demander des renseignements, pas à déposer une candidature."
+            ],
+            [
+              "Épreuve écrite et méthode de révision",
+              "Le concours est prévu le dimanche 20 décembre 2026 à partir de 10 heures, dans les locaux qui seront communiqués aux candidats convoqués. L'épreuve écrite dure trois heures et possède un coefficient quatre. Selon la décision, elle peut porter sur un sujet général ou des questions à choix multiples relatives aux fonctions et aux compétences des collectivités territoriales. Une préparation raisonnable combine les bases de l'organisation communale avec les compétences du métier : diagnostic de réseau, lecture de plans, règles d'urbanisme ou sécurité en mécanique. Ces pistes pédagogiques ne sont ni un programme officiel exhaustif ni des questions obtenues auprès du jury."
+            ],
+            [
+              "Oral, pratique et seuil de qualification",
+              "La deuxième étape comprend une épreuve orale, pratique ou les deux, d'une durée comprise entre 15 et 45 minutes et de coefficient trois. Les notes écrites sont attribuées sur vingt et la décision exige au moins 12 sur 20 pour accéder à l'oral. Le classement final dépend des notes, des règles de sélection et du nombre de places, avec une liste d'attente lorsque les conditions sont réunies. Obtenir 12 sur 20 ne garantit donc pas un recrutement. Il faut suivre les convocations, les listes d'admission et les résultats officiels, puis être prêt à produire les originaux ou pièces complémentaires demandés en cas de réussite."
+            ],
+            [
+              "Plan de préparation concret sans promesse de succès",
+              "Commencez par relire la décision et associer chaque pièce justificative au poste choisi. Consacrez ensuite plusieurs séances à la révision technique et à la résolution de problèmes réalistes, puis simulez un écrit de trois heures et une présentation orale concise. En informatique, un exercice peut consister à isoler une panne réseau et expliquer la sécurité des accès. En génie civil, il peut s'agir de décrire la surveillance d'un chantier et ses risques. Ce sont des exemples que nous proposons, pas des sujets officiels ni des résultats d'essais. Évitez les intermédiaires qui prétendent garantir une place contre paiement."
+            ],
+            [
+              "Salaire non publié et différence avec El Mers",
+              "La décision ne précise ni salaire net ni affectation définitive dans un service particulier de la commune. Le grade et l'échelle ne suffisent pas à calculer une rémunération personnelle exacte. Le lieu précis des épreuves et les éventuels changements doivent être vérifiés auprès du portail public, des collectivités territoriales et de la commune. Si votre diplôme ne correspond pas à l'une des quatre spécialités, recherchez plutôt un concours compatible avec votre profil. Surtout, le délai d'El Mers est le 16 novembre 2026, tandis que celui d'Imouzzer Marmoucha est le 30 novembre : deux communes, deux décisions et deux dossiers distincts."
+            ]
+          ]
+        }
+      }
     }
   }
 }
