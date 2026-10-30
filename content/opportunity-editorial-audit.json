@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-30",
-  "scope": "All 97 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
+  "scope": "All 99 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
@@ -9,12 +9,12 @@
     "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
-    "cards": 98,
+    "cards": 99,
     "visa": 12,
     "researched": 38,
     "marketEvidence": 5,
     "pendingDetail": 49,
-    "pendingLiveVerification": 6
+    "pendingLiveVerification": 7
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -26,6 +26,19 @@
     "Keep internal cards within RibhLab and external primary sources in new tabs"
   ],
   "cards": [
+    {
+      "id": "imouzzer-marmoucha-four-technicians-2026",
+      "section": "competitions",
+      "title": "Technicien 4ème grade — 4 spécialités — Imouzzer Marmoucha (4 postes)",
+      "deadline": "2026-11-30",
+      "status": "researched-awaiting-live-verification",
+      "marketKey": null,
+      "priority": "Decision 76 (3 pages) and official listing reviewed 2026-10-30; awaiting build/deploy and live trilingual QA",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/d565309c-3507-4e51-8e97-51382c5c8f37",
+      "reviewedAt": "2026-10-30",
+      "evidenceId": "imouzzer-marmoucha-four-technicians-2026",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/d565309c-3507-4e51-8e97-51382c5c8f37"
+    },
     {
       "id": "el-mers-information-systems-technicians-2026",
       "section": "competitions",
