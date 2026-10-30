@@ -1,0 +1,161 @@
+{
+  "slug": "freelance-phishing-client-messages-account-safety",
+  "category": "earning",
+  "related": [
+    "gig-description-client-questions-scope",
+    "gig-gallery-original-images-checklist"
+  ],
+  "sources": [
+    {
+      "label": "Fiverr Help Center — Stay protected: off-platform policy (reviewed 30 October 2026)",
+      "url": "https://help.fiverr.com/hc/en-us/articles/37554769759633-Stay-protected-Fiverr-s-off-platform-policy"
+    },
+    {
+      "label": "Fiverr Help Center — Avoid spam and stay safe on Fiverr (reviewed 30 October 2026)",
+      "url": "https://help.fiverr.com/hc/en-us/articles/37333200572049-Avoiding-spam-and-staying-safe-on-Fiverr"
+    },
+    {
+      "label": "NIST — Phishing guidance for small businesses (updated 16 October 2026)",
+      "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing"
+    },
+    {
+      "label": "NIST SP 800-63B-4 — Authentication and authenticator management (published 1 August 2025)",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"
+    },
+    {
+      "label": "CISA — Secure Our World phishing tip sheet (as of 14 August 2023)",
+      "url": "https://www.cisa.gov/sites/default/files/2024-09/Secure-Our-World-Phishing-Tip-Sheet.pdf"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "حماية حساب المستقل من التصيد: فحص رسائل العملاء والروابط والمدفوعات",
+      "excerpt": "دليل عملي لفحص طلبات العمل المشبوهة وتأمين الحساب والبريد والتعامل مع حادث محتمل دون تعطيل التواصل المهني.",
+      "lead": "حماية الحساب المهني تبدأ من التحقق المستقل من الطلب، لا من الثقة في شعار الرسالة أو مبلغ المشروع. يشرح هذا الدليل كيف يفحص المستقل الروابط والملفات وطلبات الدفع، ومتى يوقف التواصل، وما الإجراءات المعقولة بعد وقوع خطأ، مع الاعتماد على إرشادات المنصة والجهات المختصة بالأمن الرقمي.",
+      "sections": [
+        {
+          "heading": "لماذا تستهدف رسائل التصيد المستقلين؟",
+          "paragraphs": [
+            "قد يتلقى المستقل رسالة تبدو كطلب عاجل لخدمة تصميم أو تنظيف بيانات، ثم يكتشف أن المرسل يريد منه فتح رابط «تأكيد الدفع» أو تنزيل ملف تنفيذي قبل إنشاء الطلب. هنا لا يكون الخطر في ضياع مشروع واحد فقط، بل في احتمال سرقة حساب المنصة أو البريد أو بيانات العملاء. الرسالة المريبة لا تصبح موثوقة لمجرد أنها تتضمن شعاراً معروفاً أو اسماً حقيقياً أو مبلغاً جذاباً. ينبغي الفصل بين تقييم المشروع تجارياً والتحقق من هوية الطرف الذي يطلب إجراءً حساساً.",
+            "توضح إرشادات Fiverr أن محاولات الاحتيال قد تستعمل طلبات الانتقال إلى وسائل تواصل خارج المنصة أو مشاركة بيانات الدفع، بينما تنصح وكالة CISA بعدم استخدام الرابط الوارد في الرسالة للتحقق من صحتها. لا يعني ذلك أن كل عميل جديد محتال؛ بل إن الإجراء الصحيح هو الرجوع إلى حسابك عبر العنوان الذي تكتبه بنفسك ومراجعة الطلبات والإشعارات هناك. في هذا الدليل نستخدم سيناريوهات افتراضية للتدريب، لا وقائع نزعم أنها حدثت لحساب بعينه."
+          ]
+        },
+        {
+          "heading": "افحص الطلب قبل فتح الرابط أو الملف",
+          "paragraphs": [
+            "ابدأ بسؤال عملي: هل توجد معاملة حقيقية داخل لوحة الطلبات، أم أن الرسالة تطلب منك إثبات امتلاك بطاقة مصرفية لتلقي دفعة؟ افحص اسم النطاق كاملاً لا الاسم الظاهر في الزر، وانتبه إلى الصفحات التي تقلد نموذج تسجيل الدخول أو تدفعك إلى مسح رمز QR. وجود HTTPS وحده لا يثبت أن الجهة صاحبة الموقع هي المنصة الأصلية؛ فالمواقع الاحتيالية قد تستخدم تشفيراً صحيحاً أيضاً. لا تُدخل كلمة المرور أو رمز التحقق في صفحة وصلت إليها عبر رسالة مشكوك فيها.",
+            "مثال تدريبي: يعرض شخص مشروع Excel مقابل 150 دولاراً، لكنه يشترط تنزيل «ملف متطلبات» من موقع مجهول وتشغيل برنامج لتفعيل الوصول. اطلب وصفاً نصياً ونموذج بيانات غير حساس داخل المحادثة الرسمية، ولا تشغّل ملفات تنفيذية أو إضافات متصفح لمجرد الاطلاع على نطاق العمل. إذا احتجت إلى ملف مشروع، فافحص امتداده ومصدره واستعمل أدوات الحماية المحدثة؛ وتذكّر أن الفحص الآلي لا يضمن سلامة كل ملف. عند الشك، أوقف التفاعل وأبلغ فريق السلامة في المنصة."
+          ]
+        },
+        {
+          "heading": "احمِ الدخول والبريد ووسائل استرداد الحساب",
+          "paragraphs": [
+            "استعمل كلمة مرور طويلة وفريدة لكل خدمة، واحفظها في مدير كلمات مرور موثوق بدلاً من تكرارها في البريد والمنصة والحساب المصرفي. فعّل المصادقة متعددة العوامل عندما تتاح، واختر وسيلة مقاومة للتصيد مثل مفتاح أمني أو مفتاح مرور إذا دعمتها الخدمة. يوضح معيار NIST SP 800-63B-4 أن رموز التحقق التي تُدخل يدوياً لا تحقق وحدها مقاومة التصيد، لأن المهاجم قد يعيد تمريرها إلى الموقع الحقيقي أثناء الهجوم. هذا فرق مهم بين إضافة طبقة حماية وبين منع نوع محدد من الخداع.",
+            "أمّن البريد الإلكتروني أولاً لأنه قد يُستخدم لإعادة تعيين كلمات مرور الحسابات الأخرى. راجع وسائل الاسترداد والأجهزة المتصلة، واحتفظ برموز الاسترداد في مكان منفصل وآمن، ولا ترسلها إلى عميل أو موظف دعم مزعوم. إذا استعملت جهازاً مشتركاً، فلا تحفظ جلسات الدخول عليه، واحرص على تحديث نظام التشغيل والمتصفح. لا تجعل الحماية معقدة إلى درجة تضطر معها إلى تعطيلها؛ اكتب إجراء استرداد بسيطاً يمكنك تنفيذه عند فقدان الهاتف أو المفتاح."
+          ]
+        },
+        {
+          "heading": "احفظ مسار الدفع والتواصل داخل القنوات المسموح بها",
+          "paragraphs": [
+            "قد يقترح العميل دفع العربون عبر تحويل مباشر لتجنب رسوم المنصة، أو يطلب محادثة خاصة بحجة سرعة التنفيذ. تنص سياسة Fiverr على ضرورة إجراء المعاملات داخل خدماتها، وتوضح أن الخروج منها يضعف الحماية المتاحة في النزاعات ويعرّض الحساب لمخالفة السياسة. ليست كل منصة عمل حر متطابقة في القواعد، ولذلك يجب قراءة شروط الخدمة المستخدمة قبل اختيار وسيلة التواصل أو تسليم الملفات. لا تشارك رقم البطاقة أو بيانات الدخول أو وثائق الهوية إلا عندما تكون هناك ضرورة رسمية مؤكدة داخل إجراء مشروع.",
+            "يمكن الرد مهنياً بأن نطاق العمل والتسعير والتسليم سيُوثق داخل الطلب الرسمي، وأن أي طلب دفع أو تحقق سيُراجع من صفحة الحساب مباشرة. مثال: إذا طلب شخص «رسوم تفعيل» لاستلام مستحقات مشروع لم يبدأ، فلا تحول المال قبل التحقق من قواعد المنصة والطلب الفعلي. احتفظ بنسخة من المتطلبات والموافقات والتعديلات داخل السجل المسموح به؛ فالهدف ليس إثارة الشك في كل عميل، بل بناء أثر مكتوب يحمي الطرفين ويحد من سوء الفهم."
+          ]
+        },
+        {
+          "heading": "خطة استجابة إذا نقرت أو كشفت معلومات",
+          "paragraphs": [
+            "إذا فتحت رابطاً مشبوهاً دون إدخال معلومات، أغلق الصفحة وتحقق من الجهاز ولا تفترض تلقائياً وقوع اختراق. أما إذا أدخلت كلمة مرور، فانتقل من جهاز موثوق إلى الموقع الرسمي وغير كلمة المرور فوراً، ثم أنهِ الجلسات غير المعروفة وراجع إعدادات الاسترداد والمصادقة. إذا حمّلت ملفاً وشغّلته، فافصل الجهاز عن الشبكة عند الاشتباه بإصابة، واستعن بدعم تقني موثوق قبل استعادة العمل. لا تُرسل إلى أي شخص صوراً لرموز المصادقة أو بيانات العملاء أثناء طلب المساعدة.",
+            "إذا كانت معلومات دفع أو بيانات عميل قد تسربت، تواصل مع مزود الدفع والجهات المتأثرة عبر قنوات موثوقة، واحفظ التوقيتات والرسائل دون نشر البيانات الحساسة. قد تفرض قوانين حماية البيانات أو عقود العملاء التزامات إضافية بالإبلاغ؛ لذلك لا تعد بإصلاح كامل قبل تقييم الضرر. أنشئ بعد الحادث قائمة قصيرة: ما الحسابات التي فُحصت، وما كلمات المرور التي غُيرت، وما الأجهزة التي نُظفت، وما الملفات التي استُعيدت. هذه خطوات لتقليل الضرر وليست ضماناً بعدم تكرار الهجوم."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Protecting freelance accounts from phishing: client messages, links and payments",
+      "excerpt": "A practical, evidence-based workflow for checking suspicious client requests, protecting account access and responding to mistakes.",
+      "lead": "Freelance security begins with independent verification of the order, not trust in a message logo or promised budget. This guide explains how to assess links, attachments and payment requests, when to stop communicating, and what to do after a possible mistake, using marketplace policy and public cybersecurity guidance.",
+      "sections": [
+        {
+          "heading": "Why freelance accounts attract phishing attempts",
+          "paragraphs": [
+            "A freelancer may receive what looks like an urgent design or spreadsheet-cleaning request, only to be told to open a payment-verification link or run a downloaded program before an order exists. The potential loss extends beyond one project: marketplace credentials, email access and confidential client files may all be exposed. A familiar logo, convincing profile picture or attractive budget does not establish the sender's authority. Evaluate the commercial opportunity separately from the request to perform a security-sensitive action.",
+            "Fiverr's safety guidance describes attempts to move users off the platform or extract payment details, while CISA recommends independently reaching a company rather than following an unexpected message link. This does not make every unfamiliar buyer suspicious. It means opening your marketplace account through a saved address, then checking whether the order or notification actually exists. The examples below are hypothetical exercises rather than claims about a particular buyer, account or measured fraud rate."
+          ]
+        },
+        {
+          "heading": "Check the request before opening links or attachments",
+          "paragraphs": [
+            "Ask whether there is a genuine order in your dashboard or only a message claiming that you must confirm a bank card to receive money. Inspect the complete domain rather than trusting the text on a button, and treat unexpected login screens and QR-code requests as warning signs. HTTPS indicates an encrypted connection, not that the site belongs to the company it imitates. Never enter a password or one-time code on a login page reached through an unverified message.",
+            "Consider a fictional $150 spreadsheet project whose sender insists that you run an unknown application to view the requirements. Request a written scope and a non-sensitive sample inside the approved conversation instead. Do not install executables or browser extensions merely to quote a job. If a file is genuinely necessary, check its origin, extension and security warnings; scanning tools reduce risk but cannot guarantee safety. When the evidence remains unclear, stop, preserve the message and use the platform's reporting channel."
+          ]
+        },
+        {
+          "heading": "Protect authentication, email and recovery options",
+          "paragraphs": [
+            "Use a unique, long password for each important account and store it in a reputable password manager. Enable multifactor authentication where available, prioritizing a passkey or security key when the service supports one. NIST SP 800-63B-4 explains that manually entered one-time codes are not phishing-resistant by themselves because an attacker can relay them during a live impersonation. That distinction matters: an additional factor improves protection, but not every factor prevents every form of phishing.",
+            "Secure your email account first because password resets for other services may arrive there. Review recovery addresses, connected devices and active sessions, and store recovery codes securely away from the device you normally use. Never send those codes to a supposed support employee or client. Keep browsers and operating systems updated, and avoid persistent sign-ins on shared computers. Write down a recovery plan you can follow if your phone or security key is lost; security should remain workable during a real emergency."
+          ]
+        },
+        {
+          "heading": "Keep payments and project records in permitted channels",
+          "paragraphs": [
+            "A buyer might propose a direct transfer to avoid fees, or insist on a private chat for convenience. Fiverr's off-platform policy requires transactions to stay within its platform and warns that external payments remove important dispute protections and can breach its rules. Other marketplaces may have different conditions, so read the policy governing the service you actually use. Do not disclose card numbers, passwords or identity documents because someone claims that an unofficial verification step is necessary.",
+            "A practical response is to say that scope, pricing, revisions and delivery will be documented in the official order, and that any payment verification will be checked from the account dashboard. If a stranger requests an activation fee to release earnings from a project that has not started, verify the actual order and platform rules before paying anything. Preserve project requirements and approvals in the permitted conversation history. A written record protects both parties and helps distinguish normal negotiation from pressure tactics."
+          ]
+        },
+        {
+          "heading": "Respond methodically if something goes wrong",
+          "paragraphs": [
+            "If you merely opened a suspicious page without submitting information, close it and check your device rather than assuming a compromise occurred. If you entered a password, navigate to the legitimate site from a trusted device, change it promptly, revoke unfamiliar sessions and review account recovery settings. If you executed a questionable file, isolate the device when infection is suspected and seek reliable technical assistance before resuming work. Never share authentication screenshots or client data while requesting help.",
+            "If payment details or customer information may have leaked, contact the payment provider and affected parties through verified channels and retain a dated incident record without publicly exposing sensitive information. Applicable privacy laws and client contracts may impose notification duties; avoid promising that every trace has been removed before the incident is assessed. Keep a concise checklist of accounts reviewed, credentials rotated, devices examined and files restored. These actions can limit harm, but they are not a guarantee against future attacks."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Protéger son compte freelance contre l'hameçonnage : messages, liens et paiements",
+      "excerpt": "Méthode pratique pour vérifier les demandes suspectes, sécuriser les accès et réagir sans interrompre inutilement son activité.",
+      "lead": "La sécurité d'un indépendant repose sur la vérification indépendante de la commande, et non sur la confiance accordée à un logo ou à un budget annoncé. Ce guide explique comment examiner les liens, les pièces jointes et les demandes de paiement, quand interrompre l'échange et comment réagir après une erreur possible, en s'appuyant sur les règles de la plateforme et des références publiques.",
+      "sections": [
+        {
+          "heading": "Pourquoi les comptes des indépendants attirent l'hameçonnage",
+          "paragraphs": [
+            "Un indépendant peut recevoir une demande urgente de conception ou de nettoyage d'un tableau Excel, puis découvrir que l'expéditeur exige l'ouverture d'un lien de « validation du paiement » ou l'exécution d'un programme avant même la création d'une commande. Le risque dépasse la perte d'une mission : les identifiants de la plateforme, la messagerie et les documents confidentiels des clients peuvent être compromis. Un logo familier, une photo convaincante ou un budget élevé ne prouvent pas l'identité de l'interlocuteur.",
+            "Les recommandations de Fiverr décrivent les sollicitations visant à déplacer les échanges hors plateforme ou à obtenir des données bancaires. De son côté, la CISA recommande de contacter une organisation par un canal retrouvé indépendamment plutôt que par le lien reçu. Cela ne signifie pas que chaque nouveau client est frauduleux : il faut simplement ouvrir son compte depuis une adresse connue et vérifier l'existence de la commande. Les situations présentées ici sont des exercices fictifs, et non des incidents prétendument observés."
+          ]
+        },
+        {
+          "heading": "Examiner la demande avant d'ouvrir un lien ou une pièce jointe",
+          "paragraphs": [
+            "Commencez par vérifier si une commande réelle apparaît dans votre tableau de bord ou si un simple message prétend qu'une carte bancaire doit être confirmée pour recevoir un règlement. Contrôlez le domaine complet, pas seulement le texte affiché sur un bouton. Méfiez-vous des pages de connexion inattendues et des codes QR imposés. Le protocole HTTPS protège le transport des données, mais ne prouve pas qu'un site appartient à l'entreprise imitée. Ne saisissez jamais un mot de passe ou un code temporaire sur une page douteuse.",
+            "Imaginez un projet fictif de tableau Excel à 150 dollars dont l'expéditeur exige l'installation d'un logiciel inconnu pour consulter les consignes. Demandez plutôt un périmètre écrit et un exemple de données non sensibles dans la conversation autorisée. N'installez pas d'exécutables ou d'extensions pour établir un devis. Si un fichier est réellement nécessaire, examinez sa provenance, son extension et les alertes de sécurité ; un antivirus ne garantit pas l'absence de risque. En cas de doute persistant, interrompez l'échange et signalez le message."
+          ]
+        },
+        {
+          "heading": "Sécuriser l'authentification, la messagerie et la récupération",
+          "paragraphs": [
+            "Utilisez un mot de passe long et distinct pour chaque compte important, conservé dans un gestionnaire reconnu. Activez l'authentification multifacteur lorsque le service la propose, en privilégiant une clé de sécurité ou une clé d'accès lorsque ces méthodes sont disponibles. La norme NIST SP 800-63B-4 rappelle que les codes temporaires saisis manuellement ne résistent pas, à eux seuls, à l'hameçonnage : un attaquant peut les retransmettre pendant une usurpation en direct. Une protection supplémentaire n'est donc pas automatiquement invulnérable.",
+            "Protégez d'abord votre boîte de messagerie, car elle sert souvent à réinitialiser les accès aux autres services. Vérifiez les moyens de récupération, les appareils connectés et les sessions actives. Conservez les codes de secours dans un endroit distinct et sûr, sans jamais les transmettre à un prétendu agent d'assistance. Maintenez le navigateur et le système à jour et évitez les connexions persistantes sur un ordinateur partagé. Préparez une procédure simple pour retrouver l'accès si vous perdez votre téléphone ou votre clé de sécurité."
+          ]
+        },
+        {
+          "heading": "Conserver paiements et preuves dans les canaux autorisés",
+          "paragraphs": [
+            "Un client peut proposer un virement direct pour éviter les commissions ou demander une conversation privée au nom de la rapidité. La politique de Fiverr impose de conserver les transactions dans sa plateforme et souligne que les paiements externes réduisent les protections en cas de litige, tout en pouvant enfreindre ses règles. Les conditions diffèrent d'une place de marché à l'autre : il faut donc consulter celles du service utilisé. Ne transmettez ni numéro de carte, ni mot de passe, ni document d'identité à la suite d'une demande de vérification non confirmée.",
+            "Une réponse professionnelle consiste à préciser que le périmètre, le prix, les corrections et la livraison seront documentés dans la commande officielle. Toute prétendue vérification financière doit être contrôlée depuis le tableau de bord du compte. Si un inconnu réclame des frais d'activation pour libérer le paiement d'une mission inexistante, vérifiez les règles et la commande avant de verser quoi que ce soit. Conservez les accords et modifications dans l'historique autorisé : cette traçabilité protège les deux parties sans transformer chaque négociation en soupçon."
+          ]
+        },
+        {
+          "heading": "Réagir avec méthode après une erreur",
+          "paragraphs": [
+            "Si vous avez seulement ouvert une page suspecte sans transmettre de données, fermez-la et contrôlez l'appareil sans conclure automatiquement à un piratage. Si vous avez saisi un mot de passe, rejoignez le site officiel depuis un appareil fiable, modifiez-le rapidement, fermez les sessions inconnues et vérifiez les options de récupération. Après l'exécution d'un fichier douteux, isolez l'appareil si une infection est suspectée et demandez une assistance technique compétente avant de reprendre le travail. Ne partagez jamais des captures de codes d'authentification ou des données clients pour obtenir de l'aide.",
+            "Si des informations bancaires ou des données de clients ont pu être exposées, contactez les prestataires concernés par des canaux vérifiés et conservez une chronologie datée sans divulguer publiquement de données sensibles. Les contrats et les lois applicables peuvent imposer des notifications particulières ; ne promettez pas une résolution totale avant l'évaluation de l'incident. Tenez une liste des comptes vérifiés, des identifiants renouvelés, des appareils examinés et des fichiers restaurés. Cette démarche limite les conséquences possibles, mais ne garantit pas l'absence de nouvelles attaques."
+          ]
+        }
+      ]
+    }
+  },
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false
+}

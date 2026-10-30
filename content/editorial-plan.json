@@ -46,21 +46,14 @@
         "freelance-basic-standard-premium-cost-model",
         "gig-gallery-original-images-checklist",
         "saudi-job-offers-payroll-staff-aviation-october-2026",
-        "portfolio-synthetic-data-original-samples"
+        "portfolio-synthetic-data-original-samples",
+        "freelance-phishing-client-messages-account-safety"
       ],
       "ideas": [
         {
           "sequence": 12,
           "titleAr": "أخطاء المبتدئين في Fiverr وكيف تتجنبها",
           "status": "planned"
-        },
-        {
-          "sequence": 13,
-          "titleAr": "حماية حسابات المستقلين من التصيد",
-          "status": "queued",
-          "slug": "freelance-phishing-client-messages-account-safety",
-          "queuePath": "content/reviewed-queue/freelance-phishing-client-messages-account-safety.json",
-          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 14,
