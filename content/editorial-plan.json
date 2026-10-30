@@ -753,14 +753,10 @@
         "ai-video-filmmaking-automation-unity-2026",
         "godot-first-small-game-five-sessions",
         "gdevelop-no-code-first-prototype",
-        "unity-first-2d-collectibles-game-five-session-checklist"
+        "unity-first-2d-collectibles-game-five-session-checklist",
+        "unreal-engine-when-to-choose"
       ],
       "ideas": [
-        {
-          "sequence": 7,
-          "titleAr": "GDevelop ألعاب بلا برمجة",
-          "status": "planned"
-        },
         {
           "sequence": 8,
           "titleAr": "تصميم لعبة ألغاز قصيرة",

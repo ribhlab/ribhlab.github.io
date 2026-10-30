@@ -1009,6 +1009,10 @@
       "blsCpiMethodology",
       "beaCpiPceDifferences",
       "fedPceInflationTarget"
+    ],
+    "unreal-engine-when-to-choose": [
+      "unreal",
+      "godot"
     ]
   }
 }

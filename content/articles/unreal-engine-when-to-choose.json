@@ -1,0 +1,183 @@
+{
+  "slug": "unreal-engine-when-to-choose",
+  "category": "ai",
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false,
+  "related": [
+    "make-mobile-games-unity-godot-unreal-gdevelop",
+    "godot-first-small-game-five-sessions",
+    "reverse-engineering-legally-tools-ghidra"
+  ],
+  "sources": [
+    {
+      "label": "Epic Games — Unreal Engine licensing options (checked 28 October 2026)",
+      "url": "https://www.unrealengine.com/license"
+    },
+    {
+      "label": "Epic Developer Community — Unreal Engine 5 hardware and software specifications (checked 28 October 2026)",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/hardware-and-software-specifications-for-unreal-engine"
+    },
+    {
+      "label": "Epic Developer Community — Introduction to Blueprints Visual Scripting (checked 28 October 2026)",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/introduction-to-blueprints-visual-scripting-in-unreal-engine"
+    },
+    {
+      "label": "Godot Engine — MIT license and attribution obligations (checked 28 October 2026)",
+      "url": "https://godotengine.org/license/"
+    },
+    {
+      "label": "Godot Engine — Stable editor and export system requirements (checked 28 October 2026)",
+      "url": "https://docs.godotengine.org/en/stable/about/system_requirements.html"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "متى تختار Unreal Engine؟ قرار عملي وفق العتاد والترخيص ونطاق اللعبة",
+      "excerpt": "دليل لاختيار Unreal أو Godot بناء على نوع المشروع ومواصفات الحاسوب والترخيص والتجربة العملية، مع حساب افتراضي للرسوم دون وعود مبيعات.",
+      "lead": "قبل تثبيت محرك ألعاب كبير، اسأل عن نوع اللعبة والوقت المتاح والعتاد الذي يملكه الفريق. يقدم هذا الدليل إطار قرار قابل للاختبار، مع مراجعة وثائق Epic وGodot الرسمية بتاريخ 28 أكتوبر 2026. لا يتضمن اختبارات أداء أجرتها هيئة التحرير ولا يَعِد بعائد تجاري.",
+      "sections": [
+        {
+          "heading": "1. ابدأ من اللعبة المستهدفة لا من شهرة المحرك",
+          "paragraphs": [
+            "اختيار محرك الألعاب قرار إنتاجي يتعلق بنوع اللعبة وأجهزتها المستهدفة ومهارات الفريق، وليس مسابقة في جودة الصور المعروضة على الإنترنت. إذا كان مشروعك لعبة ألغاز ثنائية الأبعاد تعمل في المتصفح، فإن السؤال الأول هو حجم الملف وسرعة التشغيل وإمكان إنهاء نموذج أولي خلال أسبوعين. أما إذا كان مشروعك تجربة ثلاثية الأبعاد تعتمد على الإضاءة الواقعية والمشاهد الواسعة، فقد يصبح Unreal Engine مرشحاً منطقياً يستحق التجربة. حدد أولاً ثلاثة معايير قبول قابلة للفحص: زمن بدء اللعبة على جهاز محدد، وثبات معدل الإطارات، وقدرة شخص آخر على إنهاء مستوى تجريبي دون مساعدتك.",
+            "لا يثبت توفر ميزة متقدمة أن المشروع يحتاج إليها. مثال ذلك لعبة تعليمية تدور حول اختيار الإجابة الصحيحة: قد تحتاج واجهة واضحة وتخزين تقدم محلي أكثر من حاجتها إلى إضاءة Lumen. وفي المقابل، يمكن لمشهد تدريب صناعي تفاعلي أن يستفيد من أدوات عرض ثلاثي الأبعاد أكثر تعقيداً. ضع ورقة نطاق من صفحة واحدة تتضمن المنصة والجمهور والرسوم والوقت والميزانية، ثم قارن Unreal مع Godot على هذا الأساس. هذه طريقة لاتخاذ القرار وليست حكماً عاماً بأن أحد المحركين أفضل في كل الألعاب."
+          ]
+        },
+        {
+          "heading": "2. اختبر العتاد قبل الاستثمار في الأصول",
+          "paragraphs": [
+            "توضح وثائق Epic الرسمية لمتطلبات Unreal Engine 5 أن مواصفات التطوير الموصى بها على Windows تشمل معالجاً رباعي النوى بسرعة 2.5 غيغاهرتز أو أكثر، وذاكرة RAM بحجم 32 غيغابايت، وذاكرة رسوميات 8 غيغابايت أو أكثر، وبطاقة متوافقة مع DirectX 12. هذه مواصفات موصى بها وليست ضماناً بأن كل مشروع سيعمل بسلاسة، كما أن بعض مزايا Nanite وLumen تتطلب شروطاً إضافية. إذا كان حاسوبك أقل قدرة، فقد يعمل المحرر مع مشروع بسيط، لكن عليك اختبار زمن الاستيراد وتجميع التظليل وحجم المشروع بدلاً من الاعتماد على مقاطع دعائية.",
+            "للمقارنة، تعرض وثائق Godot المستقرة متطلبات أخف للمحرر في المشاريع البسيطة، وتذكر أن الأداء الفعلي يعتمد على نطاق اللعبة وطريقة التصيير ودقة الشاشة. لا تعني هذه المقارنة أن لعبة Godot المعقدة ستكون دائماً أسرع من لعبة Unreal بسيطة؛ فالأصول والبرمجة والتحسين عوامل حاسمة. اختبر مشهداً واحداً على الجهاز الذي تملكه فعلاً، وسجل استهلاك الذاكرة ووقت التشغيل بعد التصدير. إن استغرق فتح المشروع أو تعديله وقتاً يبتلع ساعات التعلم، فقد يكون اختيار محرك أخف خطوة اقتصادية أكثر من شراء معدات قبل إثبات الفكرة."
+          ]
+        },
+        {
+          "heading": "3. افهم الفرق بين Blueprints والبرمجة الكاملة",
+          "paragraphs": [
+            "توثق Epic نظام Blueprints باعتباره برمجة مرئية قائمة على العقد والأحداث والمتغيرات، ويمكن من خلاله إنشاء عناصر تفاعلية مثل الأبواب والأزرار وسلوك الشخصيات. لا يعني وصفه بأنه مرئي أنه يلغي التفكير البرمجي: ما زلت بحاجة إلى فهم الحالة والشرط والتكرار وتدفق التنفيذ وإدارة الأخطاء. ابدأ بنموذج صغير: زر يفتح باباً عندما يمتلك اللاعب مفتاحاً، ثم اختبر ماذا يحدث عند الضغط المتكرر أو عند غياب المفتاح. بهذه التجربة تقيس سهولة صيانة المنطق، لا مجرد نجاح العرض الأول.",
+            "إذا توسع المشروع إلى أنظمة متعددة أو فريق كبير، ضع قواعد لتسمية الملفات وتنظيم الرسوم البيانية وتوثيق المدخلات والمخرجات. قد تحتاج إلى C++ أو مكونات جاهزة بحسب التعقيد ومتطلبات الأداء؛ ولا ينبغي أن يصبح اختيار Blueprints ذريعة لنسخ شبكات عقد ضخمة يصعب اختبارها. قارن ذلك بنموذج Godot صغير يستخدم مشاهد وإشارات وشيفرة محدودة، ثم اطلب من مطور ثانٍ قراءة المشروعين. المحرك الذي يسمح لفريقك بتصحيح الخطأ وتسليم تحديث آمن قد يكون أنسب من المحرك الذي أعطى لقطة شاشة أجمل."
+          ]
+        },
+        {
+          "heading": "4. اقرأ الترخيص باعتباره تكلفة محتملة لا وعداً بالربح",
+          "paragraphs": [
+            "بحسب صفحة ترخيص Unreal Engine الرسمية التي روجعت في 28 أكتوبر 2026، يمكن لمطوري الألعاب البدء دون رسوم ترخيص مقدمة في حالات محددة، مع تطبيق إتاوة معيارية بنسبة 5% على الإيرادات الإجمالية للمنتج التي تتجاوز أول مليون دولار أمريكي من إجمالي إيرادات ذلك المنتج طوال عمره، مع استثناءات وشروط خاصة. وتذكر Epic أن مبيعات متجر Epic Games Store معفاة من إتاوة المحرك، كما أن هناك مسار ترخيص بالمقاعد لبعض الاستخدامات التجارية غير القائمة على توزيع لعبة للمستخدمين. لا تحول هذه القواعد إلى عبارة «المحرك مجاني دائماً» أو «تدفع 5% من الربح الصافي».",
+            "مثال حسابي توضيحي لا يمثل توقع مبيعات: إذا حقق منتج خاضع للنسبة القياسية 1.2 مليون دولار من الإيرادات الإجمالية المؤهلة طوال عمره، فالفارق فوق المليون هو 200 ألف دولار، وتساوي 5% منه 10 آلاف دولار قبل مراعاة الاستثناءات والتخفيضات والتعريفات القانونية. أما Godot فيعمل بترخيص MIT مفتوح المصدر دون إتاوة محرك على إيرادات اللعبة، مع التزام إشعار الحقوق والترخيص عند توزيع المحرك المضمن. افصل رسوم المنصات والضرائب وأتعاب الفريق عن رسوم المحرك، واستشر النص القانوني الأحدث قبل إصدار منتج تجاري."
+          ]
+        },
+        {
+          "heading": "5. اختبر قرارك بنموذجين صغيرين ومقياس واضح",
+          "paragraphs": [
+            "أنشئ خلال مرحلة الاستكشاف مشهداً واحداً متكافئ الوظائف في المحركين: شخصية تتحرك، وباب يفتح بمفتاح، وعدّاد يوضح عدد المحاولات، وقائمة لإعادة البدء. لا تستورد حزمة أصول كبيرة قبل نجاح هذا الحد الأدنى. سجّل وقت إعداد المشروع، وعدد الأعطال التي أمكن إعادة إنتاجها، وحجم التصدير، ومدة تحميل اللعبة على جهاز الهدف. هذه المقاييس لا تجعل الاختبار علمياً بالكامل، لكنها أكثر صدقاً من اختيار المحرك بناء على فيديو استعراضي أو تصويت عام.",
+            "ضع مثالاً رقمياً افتراضياً للقرار: لديك 20 ساعة للتعلم ونموذج أولي مدته دقيقتان. خصص ساعتين لفهم التثبيت والتصدير، وست ساعات لبناء الحلقة الأساسية، وأربع ساعات للواجهة، وأربعاً للاختبار، وأربعاً للتصحيح والتوثيق؛ المجموع 20 ساعة. إذا تعذر الوصول إلى نسخة قابلة للعب ضمن الميزانية الزمنية، خفّض النطاق قبل تبديل المحرك عشوائياً. لا تدّع أن نتائج الاختبار الافتراضي تمثل أداء Unreal أو Godot في السوق؛ سجل النتائج الفعلية عند تنفيذ التجربة على أجهزتك."
+          ]
+        },
+        {
+          "heading": "6. متى يكون Unreal خياراً جيداً ومتى تتراجع عنه؟",
+          "paragraphs": [
+            "يميل القرار لصالح Unreal عندما يكون الهدف إنتاج تجربة ثلاثية الأبعاد تحتاج أدوات عرض متقدمة، ويتوفر عتاد مناسب، ويستطيع الفريق تحمل وقت التعلم وإدارة الأصول واختبار الأداء. يمكن أن يكون Blueprints مدخلاً عملياً لتجربة السلوكيات قبل التوسع. لكن إن كان المطلوب لعبة تعليمية ثنائية الأبعاد أو مشروعاً خفيفاً للويب أو تجربة أولى على حاسوب محدود، فقد تكون بساطة Godot وتكلفة ترخيصه الواضحة أكثر ملاءمة. هذه توصية مرتبطة بسيناريو محدد، وليست ترتيباً دائماً للمحركات أو حكماً على جودة المطورين.",
+            "قبل الالتزام النهائي، تحقق من شروط تصدير المنصة المستهدفة، وحقوق الصور والأصوات والحزم التي ستستخدمها، وتوافق أجهزة اللاعبين الفعليين. احتفظ بملف قرار يوضح سبب اختيار المحرك وما الذي سيجعلك تعيد التقييم: تجاوز حجم التصدير سقفاً محدداً، أو انخفاض الأداء عن هدفك، أو صعوبة صيانة المنطق. لا تنشر لعبة على أساس أن القوالب الجاهزة خالية من حقوق الغير. الخيار الجيد هو الذي يتيح لك إنهاء منتج قابل للاختبار والتحديث مع معرفة تكلفته ومخاطره."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "When should you choose Unreal Engine? A hardware, licensing and project-scope decision guide",
+      "excerpt": "Compare Unreal and Godot for a specific game using official hardware and licensing rules, prototype tests and a hypothetical royalty calculation.",
+      "lead": "Before installing a large game engine, define the game, available time and actual hardware. This decision framework draws on Epic and Godot documentation reviewed on 28 October 2026. It does not claim independent benchmark testing or predict commercial sales.",
+      "sections": [
+        {
+          "heading": "1. Start with the game, not the engine's reputation",
+          "paragraphs": [
+            "Choosing a game engine is a production decision about genre, target devices, team skills and delivery constraints. It is not a contest between impressive promotional screenshots. For a small two-dimensional browser puzzle, the important questions may be download size, startup time and whether a playable prototype can be finished in two weeks. For a three-dimensional experience built around detailed lighting and large environments, Unreal Engine may deserve serious evaluation. Write three measurable acceptance criteria before installing anything: launch time on a named device, an acceptable frame-rate target, and whether a new player can finish the prototype without the developer explaining the controls.",
+            "Advanced rendering features are valuable only when the design requires them. A vocabulary quiz might benefit more from accessible text, readable buttons and reliable local progress than from sophisticated global illumination. An interactive industrial training scene may have different priorities. Define the audience, distribution platform, visual requirements, schedule and budget on one page. Then compare Unreal with a plausible alternative such as Godot against those requirements. This method avoids claiming that one engine is universally superior or that a feature list is the same as a completed game."
+          ]
+        },
+        {
+          "heading": "2. Check your development hardware before buying assets",
+          "paragraphs": [
+            "Epic's official Unreal Engine 5 hardware guidance recommends, for Windows development, a quad-core processor at 2.5 GHz or faster, 32 GB of system RAM, at least 8 GB of graphics memory and a DirectX 12 compatible graphics card. These are recommended specifications, not a guarantee that every game will run smoothly. Particular features such as Lumen and Nanite have additional requirements. A smaller machine may still open a basic project, but slow shader compilation, import times and editor responsiveness can consume a beginner's limited learning hours. Test one small scene rather than inferring performance from a showcase video.",
+            "Godot's stable documentation describes a lighter baseline for the editor on simple projects while warning that real requirements vary with the renderer, resolution and project scope. This does not prove that every Godot game outperforms every Unreal game. Asset complexity, scripting and optimization matter in both engines. Measure startup, memory use and the exported build on your actual target hardware. If the editor becomes the main obstacle to iteration, selecting a lighter tool may be more rational than buying an expensive computer before the gameplay idea has survived a basic user test."
+          ]
+        },
+        {
+          "heading": "3. Understand what Blueprint visual scripting does and does not do",
+          "paragraphs": [
+            "Epic describes Blueprints as a node-based visual programming system using events, variables and connected execution paths. It can implement interactive objects, character actions and interface behavior without writing every feature in C++. Visual scripting does not remove the need to reason about state, conditions, errors and maintainability. A useful starter test is a locked door that opens only when a player has collected a key. Check the behavior when the key is absent, when the button is pressed repeatedly and when the level restarts. This reveals more about engineering quality than a successful first animation.",
+            "As the prototype grows, document variable names, inputs and expected outputs, and break large graphs into understandable units. Depending on performance and architecture, some projects may benefit from C++ or reusable components. Avoid treating enormous copied Blueprint graphs as a shortcut to a maintainable product. Build the same limited interaction in Godot using scenes, signals and a short script, then ask another developer to understand both implementations. The better engine for your team may be the one in which bugs are easier to reproduce and updates are safer, not the one that generated the prettier still image."
+          ]
+        },
+        {
+          "heading": "4. Read the license as a possible cost, not a revenue promise",
+          "paragraphs": [
+            "Epic's licensing page, reviewed on 28 October 2026, describes a standard royalty-based route for games: a 5% royalty on eligible lifetime gross product revenue above the first US$1 million, subject to exclusions and special terms. It says revenue generated through the Epic Games Store is royalty-free under the engine arrangement. Some commercial uses outside the distribution of a runtime game fall under a separate seat-based licensing route. These distinctions matter. Saying simply that Unreal is always free, or that Epic takes 5% of net profit, would misrepresent the published terms. Read the current agreement before releasing a commercial product.",
+            "Consider a hypothetical illustration, not a sales forecast: a royalty product earns US$1.2 million in eligible lifetime gross revenue under the standard 5% arrangement. The portion above US$1 million is US$200,000, and 5% of that portion is US$10,000 before checking contractual exclusions and any special rates. Godot, by contrast, is distributed under the MIT open-source license and does not impose an engine royalty on game sales, although the embedded engine's copyright and license notices must be respected. Keep platform fees, taxes, contractors and asset licenses separate from engine royalties in a realistic cost worksheet."
+          ]
+        },
+        {
+          "heading": "5. Compare two prototypes using the same acceptance test",
+          "paragraphs": [
+            "Build the smallest equivalent interaction in each candidate engine: a controllable character, a key, a door, a visible attempt counter and a restart control. Avoid importing a giant marketplace asset pack before the core loop works. Record setup time, reproducible defects, export size, startup delay and whether the game remains responsive on a named low-end device. The exercise is not a controlled scientific benchmark, but it is much more informative for your project than forum rankings. Document which features you deliberately left out so that a larger demo does not gain an unfair advantage simply by looking more polished.",
+            "A sample time budget can make the trade-off concrete. Suppose you have 20 learning hours for a two-minute prototype: allocate two hours to installation and export, six to the core interaction, four to interface work, four to testing and four to debugging and documentation. That totals 20 hours, but it is a planning example rather than a promise of completion. If the project cannot reach a playable state within the available time, reduce its scope before switching tools at random. Do not present imagined timing or frame-rate numbers as measurements of either Unreal or Godot."
+          ]
+        },
+        {
+          "heading": "6. When Unreal is justified and when to choose a smaller tool",
+          "paragraphs": [
+            "Unreal becomes a reasonable choice when the game truly benefits from sophisticated three-dimensional production, the team has adequate hardware, and the schedule allows learning, asset management and performance testing. Blueprints can help prototype interactions while the architecture is still changing. For a first two-dimensional educational game, a compact browser project or a developer with constrained hardware, Godot may offer a simpler path and clearer engine-licensing obligations. Neither conclusion is an absolute ranking. A capable team can build excellent or poor games with either engine; execution, design and user testing determine whether the product succeeds.",
+            "Before committing, check export support for the target platform, ownership and permitted use of sound and art assets, and real-device compatibility. Keep a short decision record: why the engine was chosen, what was tested, and what evidence would trigger a reassessment, such as a build exceeding the download-size budget or performance falling below an agreed threshold. Templates and sample assets do not automatically grant rights to every external component. The best choice is the one that lets you finish, test and maintain a product within known constraints, without inventing revenue expectations or benchmark results."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Quand choisir Unreal Engine ? Décider selon le matériel, la licence et le projet",
+      "excerpt": "Comparer Unreal et Godot selon les besoins réels du jeu, les exigences matérielles, les licences et un prototype mesurable, sans promesse de ventes.",
+      "lead": "Avant d'installer un moteur de jeu complexe, définissez le genre, le temps disponible et le matériel réel. Ce cadre de décision s'appuie sur les documents officiels d'Epic et de Godot consultés le 28 octobre 2026. Il ne prétend pas présenter des tests de performance indépendants ni prévoir des ventes.",
+      "sections": [
+        {
+          "heading": "1. Partir du jeu à produire, pas de la réputation du moteur",
+          "paragraphs": [
+            "Le choix d'un moteur de jeu est une décision de production liée au genre, aux appareils visés, aux compétences de l'équipe et aux contraintes de livraison. Ce n'est pas un concours de captures d'écran spectaculaires. Pour un petit jeu de réflexion en deux dimensions accessible dans le navigateur, les questions principales peuvent être le poids du téléchargement, le temps de démarrage et la possibilité de terminer un prototype jouable en deux semaines. Pour une expérience tridimensionnelle fondée sur des éclairages détaillés et de grands environnements, Unreal Engine mérite davantage d'attention. Fixez trois critères mesurables avant toute installation : temps de lancement sur un appareil défini, fluidité attendue et compréhension du prototype par un nouveau joueur sans explication.",
+            "Une fonction graphique avancée n'est utile que si le concept l'exige. Un quiz de vocabulaire a probablement davantage besoin de boutons accessibles, de textes lisibles et d'une progression locale fiable que d'un éclairage global sophistiqué. Une simulation de formation industrielle interactive peut avoir d'autres priorités. Définissez sur une page le public, la plateforme, le niveau visuel, le calendrier et le budget. Comparez ensuite Unreal à une solution plausible comme Godot selon ces critères. Cette démarche évite d'affirmer qu'un moteur serait supérieur dans tous les cas ou qu'une liste de fonctions équivaut à un jeu terminé."
+          ]
+        },
+        {
+          "heading": "2. Vérifier le matériel avant d'acheter des ressources",
+          "paragraphs": [
+            "Les recommandations matérielles officielles d'Epic pour Unreal Engine 5 sur Windows comprennent un processeur à quatre cœurs cadencé à 2,5 GHz ou davantage, 32 Go de mémoire vive, au moins 8 Go de mémoire graphique et une carte compatible DirectX 12. Il s'agit de recommandations, pas d'une garantie de fluidité pour tous les projets. Certaines fonctions, notamment Lumen et Nanite, imposent des exigences supplémentaires. Une machine moins puissante peut ouvrir un projet élémentaire, mais l'importation de ressources, la compilation des shaders et la réactivité de l'éditeur peuvent absorber les heures d'apprentissage disponibles. Testez une scène simple au lieu d'extrapoler les performances d'une démonstration promotionnelle.",
+            "La documentation stable de Godot décrit une base matérielle plus légère pour l'éditeur sur des projets simples, tout en précisant que les besoins réels varient selon le rendu, la résolution et la complexité. Cela ne prouve pas que tous les jeux Godot seront plus rapides que tous les jeux Unreal. La conception des ressources, les scripts et l'optimisation comptent dans les deux cas. Mesurez le démarrage, la mémoire utilisée et le comportement du programme exporté sur votre matériel réel. Si l'éditeur ralentit constamment les itérations, choisir un outil plus léger peut être plus rationnel qu'acheter un ordinateur coûteux avant de valider l'idée de jeu."
+          ]
+        },
+        {
+          "heading": "3. Ce que Blueprints permet et ce qu'il ne remplace pas",
+          "paragraphs": [
+            "Epic présente Blueprints comme un système de programmation visuelle fondé sur des nœuds, des événements, des variables et des chemins d'exécution. Il permet de créer des objets interactifs, des comportements de personnage et des éléments d'interface sans écrire systématiquement chaque fonctionnalité en C++. Cette approche ne dispense pas de raisonner sur les états, les conditions, les erreurs et la maintenance. Un premier test utile consiste à construire une porte qui ne s'ouvre que si le joueur possède une clé. Vérifiez les cas où la clé manque, où l'action est répétée et où le niveau redémarre. Ces scénarios renseignent davantage sur la robustesse qu'une animation réussie une seule fois.",
+            "Lorsque le prototype grandit, documentez les variables, les entrées et les résultats attendus, puis découpez les graphes trop volumineux en unités compréhensibles. Selon les besoins d'architecture et de performance, le C++ ou des composants réutilisables peuvent être pertinents. Copier d'immenses réseaux de nœuds ne garantit pas un produit maintenable. Réalisez la même interaction limitée dans Godot à l'aide de scènes, de signaux et d'un script court, puis demandez à une autre personne de comprendre les deux réalisations. Pour votre équipe, le meilleur moteur peut être celui qui facilite la reproduction des défauts et la livraison de corrections sûres."
+          ]
+        },
+        {
+          "heading": "4. Comprendre la licence sans inventer de revenus",
+          "paragraphs": [
+            "La page officielle de licence d'Epic, consultée le 28 octobre 2026, décrit pour les jeux une formule standard de redevance de 5 % sur les recettes brutes admissibles d'un produit au-delà du premier million de dollars américains cumulé sur sa durée de vie, sous réserve d'exclusions et de dispositions particulières. Les ventes réalisées sur l'Epic Games Store bénéficient d'une exemption de redevance du moteur dans le cadre annoncé. Certains usages commerciaux ne consistant pas à distribuer un jeu exécutable aux utilisateurs relèvent d'un système distinct de licences par siège. Il serait trompeur de dire simplement qu'Unreal est toujours gratuit ou qu'Epic prélève 5 % du bénéfice net.",
+            "Prenons un exemple fictif qui n'est pas une prévision commerciale : un produit soumis au taux standard réalise 1,2 million de dollars de recettes brutes admissibles sur sa durée de vie. La tranche dépassant le million atteint 200 000 dollars, et 5 % de cette tranche représentent 10 000 dollars avant examen des exclusions contractuelles et des taux particuliers. Godot est distribué sous licence libre MIT et n'impose pas de redevance du moteur sur les ventes du jeu ; il faut toutefois respecter les mentions de droit d'auteur et de licence lorsque le moteur est redistribué. Séparez les frais des plateformes, les impôts, les prestataires et les licences d'actifs du coût du moteur."
+          ]
+        },
+        {
+          "heading": "5. Comparer deux prototypes avec le même test",
+          "paragraphs": [
+            "Créez dans chaque moteur une interaction minimale équivalente : personnage contrôlable, clé à ramasser, porte à ouvrir, compteur d'essais visible et commande de redémarrage. N'importez pas une immense collection d'éléments graphiques avant de faire fonctionner cette boucle. Notez le temps de préparation, les défauts reproductibles, la taille du fichier exporté, le délai de lancement et la réactivité sur un appareil modeste précisément identifié. Ce n'est pas un essai scientifique parfaitement contrôlé, mais il renseigne mieux sur votre projet qu'un classement de forums. Précisez les fonctions volontairement exclues pour qu'une démonstration plus spectaculaire ne paraisse pas meilleure uniquement grâce à sa présentation.",
+            "Un budget horaire fictif permet d'illustrer le choix. Supposons 20 heures pour apprendre et produire un prototype de deux minutes : deux heures pour l'installation et l'export, six pour l'interaction principale, quatre pour l'interface, quatre pour les essais et quatre pour la correction et la documentation. Le total est bien de 20 heures, sans constituer une promesse de résultat. Si aucune version jouable n'émerge dans le temps disponible, réduisez d'abord le périmètre avant de changer de moteur sans méthode. Ne présentez jamais des chiffres de performance imaginaires comme des mesures réalisées sur Unreal ou Godot."
+          ]
+        },
+        {
+          "heading": "6. Quand Unreal se justifie et quand préférer un outil léger",
+          "paragraphs": [
+            "Unreal devient un choix raisonnable si le jeu exige réellement une production tridimensionnelle sophistiquée, si le matériel est adapté et si l'équipe dispose du temps nécessaire pour apprendre, gérer les ressources et tester les performances. Blueprints peut accélérer l'exploration des interactions avant de stabiliser l'architecture. Pour un premier jeu éducatif en deux dimensions, un petit projet Web ou un créateur disposant d'un ordinateur limité, Godot peut offrir un parcours plus simple et des obligations de licence plus lisibles. Il ne s'agit pas d'un classement universel. La qualité du jeu dépend surtout de la conception, de l'exécution et des retours des utilisateurs.",
+            "Avant de choisir définitivement, vérifiez l'export vers la plateforme cible, les droits d'utilisation des images, sons et ressources, ainsi que la compatibilité avec les appareils des joueurs. Conservez une note de décision : raisons du choix, essais effectués et preuves qui imposeraient une nouvelle évaluation, par exemple un fichier dépassant la taille autorisée ou une fluidité inférieure au seuil retenu. Les modèles prêts à l'emploi ne donnent pas automatiquement tous les droits sur les composants externes. Le choix pertinent est celui qui permet de terminer, de tester et de maintenir un produit dans des contraintes connues, sans inventer de recettes commerciales ni de résultats techniques."
+          ]
+        }
+      ]
+    }
+  }
+}
