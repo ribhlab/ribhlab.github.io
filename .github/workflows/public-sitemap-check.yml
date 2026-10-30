@@ -53,6 +53,7 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/amdie-buyer/')
               wanted.append(f'/{lang}/opportunities/competitions/adha-civil-engineers-2026/')
               wanted.append(f'/{lang}/opportunities/competitions/srm-souss-technician/')
+              wanted.append(f'/{lang}/opportunities/competitions/srm-technicians/')
               wanted.append(f'/{lang}/opportunities/competitions/civil-protection/')
               wanted.append(f'/{lang}/opportunities/competitions/amdie-development/')
               wanted.append(f'/{lang}/opportunities/competitions/anapec-finance-audit-3/')
@@ -125,6 +126,11 @@ jobs:
                       assert 'opp-guide-sources' in souss and 'target="_blank"' in souss, f'{lang}: Souss Massa official sources or external tab behavior missing'
                       assert (('تارودانت' if lang=='ar' else 'Taroudant') in souss) and '2026' in souss, f'{lang}: posting location or date missing'
                       print(f'SOUSS MASSA TECHNICIAN LIVE {lang}: eight sections, Taroudant location, original decision and official listing',flush=True)
+                      laayoune=bodies[f'/{lang}/opportunities/competitions/srm-technicians/'].decode('utf-8')
+                      assert laayoune.count('class="opp-guide-section" id="part-')>=9, f'{lang}: SRM Laayoune lacks nine researched sections'
+                      assert 'C44300/26' in laayoune and '110/2026' in laayoune, f'{lang}: SRM Laayoune signed notice/reference missing'
+                      assert 'opp-guide-sources' in laayoune and 'target="_blank"' in laayoune, f'{lang}: SRM Laayoune official sources or external tabs missing'
+                      print(f'SRM LAAYOUNE LIVE {lang}: nine original sections, signed five-page notice and official listing',flush=True)
                       civil=bodies[f'/{lang}/opportunities/competitions/civil-protection/'].decode('utf-8')
                       assert civil.count('class="opp-guide-section" id="part-')>=10, f'{lang}: Civil Protection guide lacks ten researched sections'
                       assert 'C44132/26' in civil and '0bc3b58e-cfd7-466e-9023-6faf53a94738' in civil, f'{lang}: Civil Protection official contest or signed notice missing'
