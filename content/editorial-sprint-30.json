@@ -327,10 +327,13 @@
         "tradingview",
         "cftc"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/trend-channels-false-breakouts-risk/",
       "queuePath": "content/reviewed-queue/trend-channels-false-breakouts-risk.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "articleSlug": "trend-channels-false-breakouts-risk",
+      "publishedVerifiedAt": "2026-10-30",
+      "verification": "Complete AR/EN/FR article present in content/articles; GitHub Actions source validation 41016971367 and Pages deployment 41016971416 succeeded; public HTTPS sitemap check 41017051355 verified each of three locale pages HTTP 200, required editorial sections, sources and licensed image."
     },
     {
       "sectionId": "trading-risk",
@@ -425,14 +428,15 @@
         "coingecko",
         "ethereum"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/crypto-whitepaper-audit-without-hype/",
       "queuePath": "content/reviewed-queue/crypto-whitepaper-audit-without-hype.json",
       "editorialReviewDate": "2026-10-29",
       "publisherReleasedAt": "2026-10-30T00:28:06.219Z",
       "publisherReleaseCommit": "3f6b2b126e6fbd68ac3d6d0938be284671614a6b",
       "articleSlug": "crypto-whitepaper-audit-without-hype",
-      "editorialNote": "Reviewed publisher transferred the complete AR/EN/FR article to content/articles and removed the queue file. GitHub Actions build/deploy and independent live three-language verification remain unconfirmed. Keep status queued until both checks succeed; do not count as published."
+      "publishedVerifiedAt": "2026-10-30",
+      "verification": "Complete AR/EN/FR article present in content/articles; GitHub Actions source validation 41016971367 and Pages deployment 41016971416 succeeded; public HTTPS sitemap check 41017051355 verified each of three locale pages HTTP 200, required editorial sections, sources and licensed image."
     },
     {
       "sectionId": "gold-macro",
@@ -466,12 +470,13 @@
         "bls",
         "fed"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/trading/us-cpi-vs-pce-inflation-index-practical-reading-checklist/",
       "queuePath": "content/reviewed-queue/us-cpi-vs-pce-inflation-index-practical-reading-checklist.json",
       "articleSlug": "us-cpi-vs-pce-inflation-index-practical-reading-checklist",
       "editorialReviewDate": "2026-10-28",
-      "editorialNote": "A fully sourced reviewed-queue article covers the same CPI-versus-PCE editorial brief under a different published slug. Reuse this one rather than create a duplicate. Only mark published after build, deploy and trilingual live checks."
+      "publishedVerifiedAt": "2026-10-30",
+      "verification": "Complete AR/EN/FR article present in content/articles; GitHub Actions source validation 41016971367 and Pages deployment 41016971416 succeeded; public HTTPS sitemap check 41017051355 verified each of three locale pages HTTP 200, required editorial sections, sources and licensed image."
     },
     {
       "sectionId": "gold-macro",
@@ -526,14 +531,15 @@
         "aadSunscreen",
         "aadDrySkin"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/tinted-sunscreen-iron-oxides-guide/",
       "queuePath": "content/reviewed-queue/tinted-sunscreen-iron-oxides-guide.json",
       "editorialReviewDate": "2026-10-28",
       "publisherReleasedAt": "2026-10-30T02:41:52.551Z",
       "publisherReleaseCommit": "dead7150cbe3c3dd54d1ffd9c64cef49aee31e24",
       "articleSlug": "tinted-sunscreen-iron-oxides-guide",
-      "editorialNote": "Reviewed publisher transferred the complete AR/EN/FR article to content/articles and removed the queue file. GitHub Actions build/deploy and independent live three-language verification remain unconfirmed. Keep status queued until both checks succeed; do not count as published."
+      "publishedVerifiedAt": "2026-10-30",
+      "verification": "Complete AR/EN/FR article present in content/articles; GitHub Actions source validation 41016971367 and Pages deployment 41016971416 succeeded; public HTTPS sitemap check 41017051355 verified each of three locale pages HTTP 200, required editorial sections, sources and licensed image."
     },
     {
       "sectionId": "body-care",
@@ -608,14 +614,15 @@
         "fdaDairyEggs",
         "avpnMargherita"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/pad-thai-noodles-peanut-allergy-plan/",
       "queuePath": "content/reviewed-queue/pad-thai-noodles-peanut-allergy-plan.json",
       "editorialReviewDate": "2026-10-29",
       "publisherReleasedAt": "2026-10-30T01:05:38.744Z",
       "publisherReleaseCommit": "647272deaec9c0f83fe81affbc2ee588347fc056",
       "articleSlug": "pad-thai-noodles-peanut-allergy-plan",
-      "editorialNote": "Publisher transferred complete trilingual article to content/articles and removed the queue file; independent live AR/EN/FR Pages and successful build/deploy verification are still outstanding. Do not count as published until verified."
+      "publishedVerifiedAt": "2026-10-30",
+      "verification": "Complete AR/EN/FR article present in content/articles; GitHub Actions source validation 41016971367 and Pages deployment 41016971416 succeeded; public HTTPS sitemap check 41017051355 verified each of three locale pages HTTP 200, required editorial sections, sources and licensed image."
     }
   ],
   "updatedAt": "2026-10-30"
