@@ -125,7 +125,8 @@ if(resourceIds.some(id=>!/^https:\/\//.test(resources.platforms[id].url)))fail('
 const finalArticle={...article,date:today,updated:today,featured:false};
 target.publishedSlugs.push(article.slug);
 planned.publishedSlugs.push(article.slug);
-if(planned.ideas.length)planned.ideas.shift();
+const matchedIdeaIndex=planned.ideas.findIndex(idea=>idea.slug===article.slug);
+if(matchedIdeaIndex>=0)planned.ideas.splice(matchedIdeaIndex,1);
 plan.lastReviewed=today;
 photos.articlePhotos[article.slug]=photo;
 photos.updated=today;
