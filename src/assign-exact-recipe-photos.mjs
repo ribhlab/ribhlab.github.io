@@ -44,7 +44,18 @@ const selected={
  'eggplant-parmesan-bake':['File:2026-09-12 20 08 05 A portion of eggplant parmesan from ShopRite in Ewing Township, Mercer County, New Jersey.jpg','Famartin'],
  'chicken-shawarma-bowl':['File:Chicken Shwarama plate.jpeg','CrunchySkies'],
  'raita-cucumber':['File:Cucumber Raita.JPG','Zeel Patel'],
- 'tabbouleh-bulgur':['File:Tabbouleh before adding bulgur.jpg','Fructibus']
+ 'tabbouleh-bulgur':['File:Tabbouleh before adding bulgur.jpg','Fructibus'],
+ 'tandoori-style-chicken':['File:Tandoori chicken-MB41.jpg','Rajeeb Dutta'],
+ 'vietnamese-beef-noodle-soup':['File:Pho bo.jpg','Blue Lotus'],
+ 'malaysian-coconut-rice':['File:Nasi Lemak LHY.jpg','LHengYee'],
+ 'tom-yum-shrimp-soup':['File:Tom Yum Koong Soup with Prawn and Straw Mushroom.jpg','Zheng Zhou'],
+ 'egg-fried-rice':['File:Egg Fried rice.jpg','Anna Ekambaram'],
+ 'senegalese-fish-rice':['File:Senegalese Thieboudienne.JPG','Mariel.cg'],
+ 'peruvian-chicken-rice':['File:Arroz con pollo peruano.jpg','MiguelAlanCS'],
+ 'rice-pudding-cinnamon':['File:Rice pudding cinnamon.jpg','Ross Berteig'],
+ 'beef-chili-beans':['File:Chili con Carne.jpg','Geoprofi Lars'],
+ 'sweetcorn-quesadillas':['File:Cheese quesadilla.jpg','Corn cheese'],
+ 'red-lentil-soup':['File:Red lentil soup.jpg','Gilabrand']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
