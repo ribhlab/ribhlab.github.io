@@ -1107,17 +1107,10 @@
         "bitcoin-wallet-recovery-backup-safety-drill",
         "ethereum-smart-contracts-wallet-permissions",
         "coin-versus-token-claim-verification",
-        "crypto-whitepaper-audit-without-hype"
+        "crypto-whitepaper-audit-without-hype",
+        "crypto-token-pool-liquidity-sellability-check-2026"
       ],
       "ideas": [
-        {
-          "sequence": 8,
-          "titleAr": "التحقق من سيولة عملة جديدة",
-          "status": "queued",
-          "slug": "crypto-token-pool-liquidity-sellability-check-2026",
-          "queuePath": "content/reviewed-queue/crypto-token-pool-liquidity-sellability-check-2026.json",
-          "reviewedAt": "2026-10-30"
-        },
         {
           "sequence": 9,
           "titleAr": "مخاطر Rug Pull في المشاريع الناشئة",

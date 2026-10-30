@@ -1050,6 +1050,11 @@
       "googleAuthenticatorHelp",
       "microsoftAuthenticatorBackup",
       "applePasswordsCodes"
+    ],
+    "crypto-token-pool-liquidity-sellability-check-2026": [
+      "ethereum",
+      "investor",
+      "coingecko"
     ]
   }
 }
