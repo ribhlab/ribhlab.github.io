@@ -670,8 +670,9 @@ for(const [id,article] of Object.entries(opportunityEditorial.articles||{})){
 // public rendering contract as the long-form immigration guides. Source-only
 // opportunity cards are not counted as researched articles.
 const opportunityEvidence=JSON.parse(fs.readFileSync(path.join(root,'content','opportunity-editorial-evidence.json'),'utf8'));
+const opportunityEvidenceAliases=new Map(JSON.parse(fs.readFileSync(path.join(root,'content','opportunity-editorial-audit.json'),'utf8')).cards.filter(card=>card.evidenceId).map(card=>[card.id,card.evidenceId]));
 for(const [id,article] of Object.entries(opportunityEvidence.articles||{})){
- const inventoryItem=(opportunityInventory.items||[]).find(item=>item.id===id);
+ const inventoryItem=(opportunityInventory.items||[]).find(item=>item.id===id||opportunityEvidenceAliases.get(item.id)===id);
  if(!inventoryItem) {errors.push('Orphaned recruitment evidence '+id);continue;}
  if(!/^\d{4}-\d{2}-\d{2}$/.test(article.reviewedAt||''))errors.push('Recruitment evidence missing review date '+id);
  if(!Array.isArray(article.sources)||article.sources.length<2||article.sources.some(source=>!source.label||!/^https:\/\//.test(source.url)))errors.push('Recruitment evidence missing primary sources '+id);
@@ -682,7 +683,7 @@ for(const [id,article] of Object.entries(opportunityEvidence.articles||{})){
   const words=[tr.deck,...tr.sections.map(s=>s[1])].join(' ').trim().split(/\s+/).length;
   if(words<700)errors.push('Recruitment evidence below 700 words '+id+'/'+lang+' ('+words+')');
   if(lang==='ar'&&/(?:^|[\s،؛.!؟])(واش|بغيت|دابا|هادشي|ديال|غادي|حيت)(?=$|[\s،؛.!؟])/u.test([tr.title,tr.deck,...tr.sections.flat()].join(' ')))errors.push('Recruitment evidence dialect '+id);
-  const htmlPath=path.join(dist,lang,'opportunities',inventoryItem.section,id,'index.html');
+  const htmlPath=path.join(dist,lang,'opportunities',inventoryItem.section,inventoryItem.id,'index.html');
   if(!fs.existsSync(htmlPath)){errors.push('Recruitment full page missing '+id+'/'+lang);continue;}
   const html=fs.readFileSync(htmlPath,'utf8');
   if(!html.includes('class="opp-guide-article"')||!html.includes('class="opp-guide-section opp-guide-sources"'))errors.push('Recruitment article or sources not visible '+id+'/'+lang);
