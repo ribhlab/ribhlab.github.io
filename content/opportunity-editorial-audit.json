@@ -11,10 +11,10 @@
   "totals": {
     "cards": 101,
     "visa": 12,
-    "researched": 41,
+    "researched": 42,
     "marketEvidence": 5,
     "pendingDetail": 45,
-    "pendingLiveVerification": 10
+    "pendingLiveVerification": 9
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -584,7 +584,7 @@
       "section": "competitions",
       "title": "Responsables dans plusieurs spécialités",
       "deadline": "2026-11-10",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-10",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/3f1e24f9-c263-409e-9323-c883d9008099",
@@ -592,7 +592,8 @@
       "researchedAt": "2026-10-30",
       "evidenceId": "srm-laayoune-responsibles",
       "originalNoticeUrl": "https://mafoamanagement.fra1.digitaloceanspaces.com/media/concour_avis/societe-regionale-multiservices-laayoune-sakia-el-hamra-responsable-comptabilite-et-fiscalite-direction-administrative-et-financiere-2544/004bdf53-eea0-4528-b262-020944648225.pdf",
-      "verification": "Signed five-page notice 109/2026 read 30 Oct; portal C44294/26 and employer-authorized Mafoa position checked. Nine original sections AR/EN/FR (782/917/926 words). Government category 15 managers versus 14 explicitly labelled Responsable rows in signed notice remains unresolved. Await build, Pages deployment and live three-language QA before researched-article status."
+      "verification": "Signed five-page SRM notice 109/2026 inspected 30 Oct 2026, matched with C44294/26 and employer application portal. Nine substantive sections AR/EN/FR (782/917/926 words). Explicit caution: 15 portal-category posts versus 14 rows explicitly labelled Responsable in signed notice. Source validation 41085613026, GitHub Pages deployment 41085612692, live HTTPS public-sitemap check 41085739927 all succeeded; all three language pages confirmed HTTP 200, >=9 sections, signed decision reference and external sources.",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/srm-laayoune-responsibles/"
     },
     {
       "id": "srm-laayoune-managers",
