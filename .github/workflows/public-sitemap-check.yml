@@ -74,6 +74,7 @@ jobs:
               wanted.append(f'/{lang}/lifestyle/sensitive-skin-versus-contact-reaction/')
               wanted.append(f'/{lang}/opportunities/competitions/cdg-rates-equity-supervision/')
               wanted.append(f'/{lang}/opportunities/morocco/sett-network/')
+              wanted.append(f'/{lang}/opportunities/competitions/map-infographiste-rabat-c44357-2026/')
           last=None
           for attempt in range(1,7):
               try:
@@ -421,6 +422,13 @@ jobs:
                       assert 'opp-guide-sources' in page and 'bdfb5402-a6de-47c6-8493-1b22d8ea83bb' in page, f'{language}: Settat signed notice or sources missing'
                       assert 'target="_blank"' in page, f'{language}: Settat external sources must open in a new tab'
                       print(f'SETTAT NETWORK LIVE {language}: ten researched sections and original signed notice',flush=True)
+                  # Verify MAP's October 2026 Infographiste notice against live trilingual pages.
+                  for language in ('ar','en','fr'):
+                      page=bodies[f'/{language}/opportunities/competitions/map-infographiste-rabat-c44357-2026/'].decode('utf-8')
+                      assert page.count('class="opp-guide-section" id="part-')>=9, f'{language}: MAP infographiste guide lacks nine substantive sections'
+                      assert 'C44357/26' in page and '0a78b284-d7a6-4527-9a25-90998b4842d3' in page, f'{language}: MAP official notice identifiers absent'
+                      assert 'opp-guide-sources' in page and 'target="_blank"' in page, f'{language}: MAP official sources or external tab handling missing'
+                      print(f'MAP INFOGRAPHISTE LIVE {language}: nine sections and original official notice',flush=True)
                   # Confirm the newly researched CNRST Physiology contest and the latest published skin-care sprint article.
                   for language in ('ar','en','fr'):
                       cnrst=bodies[f'/{language}/opportunities/competitions/cnrst-administrator-2/'].decode('utf-8')
