@@ -13,8 +13,8 @@
     "visa": 12,
     "researched": 38,
     "marketEvidence": 5,
-    "pendingDetail": 50,
-    "pendingLiveVerification": 3
+    "pendingDetail": 49,
+    "pendingLiveVerification": 4
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -156,10 +156,14 @@
       "section": "morocco",
       "title": "Technicien systèmes et réseaux",
       "deadline": "2026-11-16",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
-      "priority": "date:2026-11-16",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics"
+      "priority": "official-signed-decision-reviewed-2026-10-30; pending live QA",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/bdfb5402-a6de-47c6-8493-1b22d8ea83bb",
+      "evidenceId": "sett-network",
+      "reviewedAt": "2026-10-30",
+      "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/bdfb5402-a6de-47c6-8493-1b22d8ea83bb",
+      "reviewNote": "Signed 2-page decision 204/26 and attached 3-page job description reviewed 30 October 2026. One network technician, Bac+2, paper submission at Settat Urban Agency, decision deadline 16 Nov 16:30 versus job-sheet wording 'avant le 16 novembre'. Full 10-section AR/EN/FR evidence stored; awaiting site build/deploy/live QA. Salary and exam date not announced."
     },
     {
       "id": "sidi-finance",
