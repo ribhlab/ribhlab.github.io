@@ -580,10 +580,12 @@
         "fdaDairyEggs",
         "avpnMargherita"
       ],
-      "status": "queued",
-      "articleUrl": null,
+      "status": "published",
+      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/chicken-tikka-masala-temperature-guide/",
       "queuePath": "content/reviewed-queue/chicken-tikka-masala-temperature-guide.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "publishedVerifiedAt": "2026-10-30",
+      "verification": "content/articles JSON committed by reviewed publisher after >=25 min; build and Pages deployment succeeded (40976563501, 40976804122); public-sitemap-check 40976861492 verified HTTP 200 and >=6 sections, sources and licensed photo in AR/EN/FR."
     },
     {
       "sectionId": "world-recipes",
@@ -604,5 +606,5 @@
       "editorialReviewDate": "2026-10-29"
     }
   ],
-  "updatedAt": "2026-10-29"
+  "updatedAt": "2026-10-30"
 }
