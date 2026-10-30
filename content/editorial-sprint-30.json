@@ -468,9 +468,9 @@
       ],
       "status": "queued",
       "articleUrl": null,
-      "queuePath": "content/reviewed-queue/us-cpi-vs-pce-inflation-index-practical-reading-checklist.json",
+      "queuePath": "content/reviewed-queue/cpi-versus-pce-prices-fed.json",
       "articleSlug": "us-cpi-vs-pce-inflation-index-practical-reading-checklist",
-      "editorialReviewDate": "2026-10-28",
+      "editorialReviewDate": "2026-10-30",
       "editorialNote": "A fully sourced reviewed-queue article covers the same CPI-versus-PCE editorial brief under a different published slug. Reuse this one rather than create a duplicate. Only mark published after build, deploy and trilingual live checks."
     },
     {
