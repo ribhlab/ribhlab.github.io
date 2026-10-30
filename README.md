@@ -142,3 +142,7 @@ npm run dev
 ## Sharing and Google Search
 
 Every article has share links for WhatsApp, Facebook, X, LinkedIn, Telegram, Pinterest, Reddit and email. Native device sharing and copy-link also support Instagram/TikTok/Snapchat manually (they do not offer universal web prefilled sharing links). Metadata includes Open Graph image, Twitter/X card, canonical, hreflang and Article JSON-LD. Sitemap and robots.txt are produced from `SITE_URL` during builds. After deployment, submit `https://ribhlab.github.io/sitemap.xml` to Google Search Console and verify ownership. Indexation is determined by search engines, not guaranteed.
+
+### RibhLab Kitchen photo verification (30 October 2026)
+
+Recipe cards and recipe pages use uncropped full-dish framing (`object-fit: contain`), with a language-specific YouTube cooking search on each of the 120 recipes. The photo library uses per-recipe unique IDs and documented sources/licenses; only dish-matched curated photos are published, with unique per-recipe SVG illustrations retained where no safely verified photo is available. Publishing is guarded by automated tests in `src/check.mjs`.
