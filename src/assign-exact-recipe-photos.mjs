@@ -55,7 +55,13 @@ const selected={
  'rice-pudding-cinnamon':['File:Rice pudding cinnamon.jpg','Ross Berteig'],
  'beef-chili-beans':['File:Chili con Carne.jpg','Geoprofi Lars'],
  'sweetcorn-quesadillas':['File:Cheese quesadilla.jpg','Corn cheese'],
- 'red-lentil-soup':['File:Red lentil soup.jpg','Gilabrand']
+ 'red-lentil-soup':['File:Red lentil soup.jpg','Gilabrand'],
+ 'healthy-quinoa-stuffed-peppers':['File:Quinoa stuffed peppers.jpg','Mark Bonica'],
+ 'healthy-bulgur-tabouleh':['File:Liat Portal for Foodie Disorder - Bulgur salad.jpg','Liat Portal'],
+ 'healthy-vegetable-frittata':['File:Фритата со спанаќ (02).jpg','Deodora333'],
+ 'spinach-ricotta-lasagna':['File:Food 菠菜&瑞可達起司千層麵, Spinach & Ricotta Lasagna, LONGTABLE, 台北 (15708119113).jpg','bryan...'],
+ 'baked-apple-walnuts':['File:Baked apples.jpg','Berser25'],
+ 'healthy-baked-apple-oats':['File:Apple Goodie crisp.JPG','JamieS93']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
