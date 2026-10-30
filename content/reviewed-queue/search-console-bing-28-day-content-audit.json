@@ -1,0 +1,200 @@
+{
+  "sectionId": "online-business",
+  "resourceIds": [
+    "googleSearch",
+    "googlePeopleFirstContent"
+  ],
+  "article": {
+    "slug": "search-console-bing-28-day-content-audit",
+    "category": "earning",
+    "related": [
+      "adsense-ready-original-site-2026-checklist",
+      "niche-educational-blog-content-audit"
+    ],
+    "sources": [
+      {
+        "label": "Google Search Console Help — Performance report: overview and basic setup (verified 30 October 2026)",
+        "url": "https://support.google.com/webmasters/answer/7576553?hl=en"
+      },
+      {
+        "label": "Google Search Central — Performance report filtering and comparison (published 7 April 2021; verified 30 October 2026)",
+        "url": "https://developers.google.com/search/blog/2021/04/performance-report-data-filtering"
+      },
+      {
+        "label": "Microsoft Bing Webmaster Tools — Search Performance documentation (verified 30 October 2026)",
+        "url": "https://www.bing.com/webmasters/help/search-performance-c680da36"
+      },
+      {
+        "label": "Bing Webmaster Blog — Comparison features in Search Performance (published 18 March 2025)",
+        "url": "https://blogs.bing.com/webmaster/2025/3/Supercharge-Your-Search-Performance-with-Bing-Webmaster-Tools"
+      }
+    ],
+    "translations": {
+      "ar": {
+        "title": "قراءة بيانات Search Console وBing: تدقيق تحريري عملي خلال 28 يوماً",
+        "excerpt": "طريقة موثقة لقراءة النقرات والظهور والفهرسة، ومقارنة الصفحات واللغات دون وعود بالزيارات أو استنتاجات مضللة.",
+        "lead": "لا تكفي مشاهدة منحنى صاعد في لوحة إحصاءات البحث للحكم على جودة موقع. يقدم هذا الدليل تجربة تحريرية قابلة للتكرار لمدة أربعة أسابيع، بالاعتماد على توثيق Google Search Console وBing Webmaster Tools، مع أمثلة حسابية افتراضية وتنبيهات تتعلق بالفهرسة والخصوصية واختلاف طرق القياس.",
+        "sections": [
+          {
+            "heading": "ابدأ بخط أساس قابل للمقارنة لا بوعد زيادة الزيارات",
+            "paragraphs": [
+              "قبل تعديل العناوين أو نشر عشرات الصفحات، افتح تقرير الأداء في Google Search Console وحدد نوع البحث «الويب» وفترة مكتملة من ثمانية وعشرين يوماً. قارنها بفترة مساوية سابقة، وسجل تاريخ التصدير والمنطقة الزمنية ونطاق الملكية. لا تجمع زيارات البحث مع زيارات الشبكات الاجتماعية أو الإعلانات؛ فكل مصدر يقيس سلوكاً مختلفاً. إذا كان الموقع جديداً، فقد يكون الصفر نقصاً في البيانات أو الفهرسة، لا حكماً على جودة المقال.",
+              "أنشئ ورقة متابعة بأعمدة: رابط الصفحة، اللغة، النقرات، مرات الظهور، نسبة النقر، متوسط الموضع، الفترة السابقة، قرار التحرير، وتاريخ المراجعة المقبلة. ضع رابط الصفحة الكامل لا عنوانها فقط؛ فقد تظهر النسخ العربية والإنجليزية والفرنسية منفصلة. اكتب بوضوح أن الأرقام مثال افتراضي عندما تشرح الطريقة، ولا تنسب أرقاماً مختلقة إلى موقعك. الهدف من خط الأساس هو اختبار أثر تعديل محدد بعد مرور وقت كاف، وليس ضمان نمو تلقائي."
+            ]
+          },
+          {
+            "heading": "افهم المقاييس قبل تفسير انخفاضها أو ارتفاعها",
+            "paragraphs": [
+              "النقرة في تقرير الأداء تعني انتقالاً من نتيجة بحث Google إلى الموقع وفق قواعد احتساب Google، بينما الظهور يعني عرض نتيجة في سياق بحث مؤهل. نسبة النقر تساوي النقرات مقسومة على مرات الظهور، أما متوسط الموضع فهو متوسط إحصائي لا يثبت أن كل مستخدم رأى الصفحة في المرتبة نفسها. تتغير النتائج بحسب البلد والجهاز والسياق، ولذلك لا يجوز تحويل موضع متوسط إلى وعد بالترتيب أو توقع إيراد.",
+              "لنفترض مثالاً تعليمياً لا يمثل بيانات حقيقية: صفحة حصلت على 120 نقرة من 6,000 ظهور، فتكون نسبة النقر 2%. إذا ارتفعت مرات الظهور إلى 9,000 مع ثبات النقرات، تنخفض النسبة إلى نحو 1.33% رغم عدم خسارة أي نقرة. ربما ظهرت الصفحة لاستعلامات أوسع أو في مواقع مختلفة؛ افحص الاستعلامات والبلدان والأجهزة قبل تعديل العنوان. كذلك قد تختلف مجاميع الرسم عن جدول الصفحات بسبب طريقة التجميع وحماية خصوصية بعض الاستعلامات."
+            ]
+          },
+          {
+            "heading": "فرّق بين مشكلة الفهرسة ومشكلة ملاءمة المحتوى",
+            "paragraphs": [
+              "إذا لم تظهر صفحة جديدة في تقرير الأداء، لا تستنتج فوراً أنها معاقبة أو أن الكلمات المفتاحية ضعيفة. افحص أولاً عنوان URL المحدد في أداة فحص العنوان، وإمكانية الزحف، ووسم canonical، وتوجيهات noindex، ووجود الصفحة في خريطة الموقع. ثم افتحها من متصفح مستقل وتحقق من الاستجابة والمحتوى الفعلي. إرسال خريطة الموقع يساعد محرك البحث على الاكتشاف، لكنه لا يضمن الفهرسة أو ترتيباً معيناً.",
+              "أما الصفحة المفهرسة ذات مرات الظهور المرتفعة والنقرات المحدودة، فتحتاج قراءة مختلفة: هل يجيب عنوانها عن السؤال الذي يطرحه الباحث؟ هل يظهر تاريخ قديم في مقتطف حساس زمنياً؟ هل المقال أصلي ويشرح الخطوات والقيود؟ راجع أفضل الاستعلامات ذات الصلة، ثم حسّن العنوان والمقدمة والروابط الداخلية دون حشو الكلمات أو تغيير موضوع المقال لملاحقة عبارة رائجة. سجّل نسخة العنوان القديمة وتاريخ التعديل حتى لا تختلط أسباب التغير."
+            ]
+          },
+          {
+            "heading": "افصل اللغات والبلدان والأجهزة في الموقع متعدد اللغات",
+            "paragraphs": [
+              "عند إدارة موقع بالعربية والإنجليزية والفرنسية، استخدم مرشح الصفحات لكل مسار لغوي ثم قارن الأداء داخل اللغة نفسها. ارتفاع نقرات صفحة إنجليزية لا يثبت أن النسخة العربية نجحت أو فشلت. راجع وسوم hreflang وcanonical وروابط تبديل اللغة، وتأكد أن الروابط الداخلية تنقل القارئ إلى النسخة المقصودة. عند وجود صفحات مترجمة، يجب أن يكون النص كاملاً ومناسباً لسياق الجمهور، لا مجرد تغيير عنوان أو وصف.",
+              "قسّم التقرير كذلك بحسب البلد والجهاز عندما يكون حجم البيانات كافياً. قد يختلف قصد الباحث عن تأشيرة أو تطبيق هاتف بين المغرب وفرنسا وكندا، لكن انخفاض النقرات في بلد صغير العينة لا يبرر حذف محتوى مفيد. استخدم فترة أطول للمجموعات الصغيرة، ودوّن احتمال الموسمية وتغير الاهتمام. لا تنشر بيانات استعلامات قد تكشف أسماء أشخاص أو معلومات حساسة؛ يكفي عرض الاتجاهات المجمعة دون تصوير لوحة الحساب الخاصة."
+            ]
+          },
+          {
+            "heading": "قارن Bing دون جمع مؤشرات غير متجانسة",
+            "paragraphs": [
+              "تقدم Bing Webmaster Tools تقريراً مستقلاً للأداء يضم النقرات والظهور والاستعلامات والصفحات، كما يعرض مصادر بحث متعددة قد تشمل الويب والصور والأخبار وإجابات المحادثة. لذلك لا تجمع أرقام Bing مباشرة مع أرقام Google على أنها قياس واحد متطابق. اختر مصدر «Web» عند مقارنة البحث التقليدي، ثم وثق الفترة والمرشحات المستخدمة. الاختلاف بين محركين ليس دليلاً بحد ذاته على خطأ أحدهما.",
+              "إذا ظهرت صفحة في Google ولم تظهر في Bing، راجع فهرسة Bing وأخطاء الزحف وإعدادات الموقع قبل كتابة مقال بديل. وإذا كان تقرير Bing يجمع الويب والمحادثة، فافصل المصدر حيث تسمح الواجهة بذلك؛ بعض الجداول تعرض بيانات الاستعلامات للويب فقط. لا تعتمد على لقطات شاشة قديمة لتحديد مدة الاحتفاظ بالبيانات أو خصائص الواجهة، لأن المنصات تغير تقاريرها. المصدر الرسمي الأحدث داخل كل أداة هو المرجع التشغيلي."
+            ]
+          },
+          {
+            "heading": "نفّذ دورة تحرير من أربعة أسابيع مع سجل للقرارات",
+            "paragraphs": [
+              "في الأسبوع الأول، صدّر البيانات وحدد ثلاث صفحات فقط: صفحة مفهرسة قليلة النقرات، وأخرى ذات معلومات تحتاج تحديثاً، وثالثة بها خلل تقني واضح. في الأسبوع الثاني، أصلح الخطأ التقني أولاً، ثم حسّن مثالاً أو فقرة أو عنواناً حيث تدعم الاستعلامات ذلك. لا تغير عشرين عنصراً في الوقت نفسه، لأنك لن تستطيع معرفة أي تغيير أحدث الفرق. احتفظ بنسخة سابقة وسجل مصدر كل معلومة جديدة وتاريخ مراجعتها.",
+              "في الأسبوعين الثالث والرابع، راقب الفهرسة والتغيرات دون إعلان نجاح مبكر. قارن فترتين متساويتين بعد استبعاد الأيام غير المكتملة، وأضف ملاحظة عن العطلات أو الأخبار أو تغيرات محركات البحث. النتيجة المقبولة قد تكون تصحيح رابط مكسور أو تحسين فهم القارئ حتى لو لم ترتفع النقرات. إذا بقيت البيانات قليلة، اكتب «لا توجد عينة كافية للحكم» بدلاً من اختلاق استنتاج. المراجعة التحريرية الجيدة تجعل قرار النشر قابلاً للتفسير والتراجع."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "A 28-day Search Console and Bing content audit without misleading SEO claims",
+        "excerpt": "A practical method for reading clicks, impressions, indexing and multilingual page trends without promising rankings.",
+        "lead": "A rising chart is not enough to judge whether a website helps its readers. This guide sets out a repeatable four-week editorial audit using official Google Search Console and Bing Webmaster Tools documentation, with explicitly hypothetical calculations and safeguards against misleading comparisons, privacy leaks and premature conclusions.",
+        "sections": [
+          {
+            "heading": "Build a comparable baseline before promising traffic growth",
+            "paragraphs": [
+              "Before rewriting titles or publishing dozens of pages, open the Google Search Console Performance report, select Web search, and choose a completed 28-day period. Compare it with an equally long preceding period and record the export date, property scope, and applied filters. Do not mix organic search clicks with social referrals or paid advertising sessions: they describe different user journeys. For a new website, zero clicks may reflect missing data or indexing delays rather than a verdict on editorial quality.",
+              "Create a tracking sheet with full page URL, language, clicks, impressions, click-through rate, average position, previous-period figures, editorial decision, and next review date. Keep full URLs because Arabic, English, and French versions are distinct pages. When teaching the method, label all illustrative figures as hypothetical; never present invented statistics as results from a real property. A baseline helps you test a specific change after enough time, not promise an automatic increase in visits."
+            ]
+          },
+          {
+            "heading": "Read the metrics before interpreting a rise or fall",
+            "paragraphs": [
+              "A click in Google's report represents a click from an eligible search result under Google's counting rules; an impression records an eligible result appearance. CTR is clicks divided by impressions. Average position is a statistical summary, not proof that every visitor saw the same ranking. Country, device, query, and search context can all affect results, so a position figure should never be converted into a guaranteed rank or revenue forecast.",
+              "Consider a clearly fictional example: 120 clicks from 6,000 impressions give a 2% CTR. If impressions rise to 9,000 while clicks stay at 120, CTR drops to about 1.33% even though no clicks were lost. The page may have appeared for broader queries or in different positions. Examine query, country, and device breakdowns before changing the headline. Chart totals may also differ from page tables because Google aggregates some dimensions differently and omits certain queries for privacy."
+            ]
+          },
+          {
+            "heading": "Distinguish an indexing problem from a content-fit problem",
+            "paragraphs": [
+              "When a new page does not appear in performance data, do not immediately conclude that it has been penalized or that its keywords are weak. Inspect its exact URL, crawl accessibility, canonical choice, noindex directives, and sitemap inclusion. Then load the public page independently and verify the actual response and visible text. A sitemap can help discovery, but submission does not guarantee indexing, ranking, or any particular volume of search traffic.",
+              "An indexed page with substantial impressions and few clicks calls for a different review. Does the title accurately answer the user's question? Is a date-sensitive statement now stale? Does the body offer original explanation, examples, and limitations? Read relevant queries and improve the introduction or internal navigation without stuffing keywords or switching topics simply to chase a trending phrase. Preserve the old headline and change date so later analysis remains interpretable."
+            ]
+          },
+          {
+            "heading": "Separate languages, countries, and devices",
+            "paragraphs": [
+              "For an Arabic-English-French site, filter URLs by language path and compare each language against its own previous period. English traffic growth does not establish that the Arabic version succeeded or failed. Check hreflang, canonical references, and language-switch links so readers land on the intended edition. A translated page should provide a complete, context-aware explanation, not merely a localized headline and description attached to a thin body.",
+              "Where sample sizes permit, segment by country and device as well. Search intent around visas or mobile apps can differ across Morocco, France, and Canada, but a small country's low click count is not sufficient reason to delete useful material. Extend the measurement window for small segments and note seasonality. Avoid publishing query rows that could expose personal names or sensitive information; aggregated trends normally communicate the editorial lesson without exposing account screenshots."
+            ]
+          },
+          {
+            "heading": "Use Bing as an independent signal, not a number to add blindly",
+            "paragraphs": [
+              "Bing Webmaster Tools provides a separate Search Performance report covering clicks, impressions, queries, and pages. It also distinguishes sources that may include web results, images, news, and conversational answers. Do not add Bing and Google totals as though they were identical measurements. When comparing conventional search visibility, select Bing's Web source where available, then document dates and filters. A difference between engines is not, by itself, evidence that either dashboard is broken.",
+              "If a page appears in Google but not Bing, investigate Bing indexing, crawl errors, and configuration before producing a replacement article. When Bing combines web and chat in an overview, separate traffic sources if the interface permits; some query and page tables apply only to web traffic. Avoid relying on old screenshots for current data-retention limits or filters because products change. The latest official help inside each platform is the operational reference."
+            ]
+          },
+          {
+            "heading": "Run a four-week editorial experiment with a decision log",
+            "paragraphs": [
+              "In week one, export the baseline and select only three pages: an indexed page with low clicks, a useful page needing factual updates, and a page with a clear technical fault. In week two, repair the technical issue first, then improve one explanation, example, or headline where query evidence supports it. Changing twenty elements simultaneously makes attribution impossible. Save the previous version and record the source and verification date of every newly added claim.",
+              "In weeks three and four, monitor indexing and performance without declaring success too early. Compare equivalent completed periods and annotate holidays, news events, or search-engine changes. Fixing a broken internal link or making a tutorial easier to understand is a valid outcome even when clicks do not rise. If the dataset remains tiny, report that there is insufficient evidence rather than manufacture a trend. Good editorial measurement keeps each decision explainable, reversible, and useful to readers."
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Auditer son contenu en 28 jours avec Search Console et Bing sans promesses SEO",
+        "excerpt": "Une méthode pour analyser clics, impressions, indexation et pages multilingues sans promettre de classement.",
+        "lead": "Une courbe ascendante ne suffit pas à juger la qualité d'un site. Ce guide propose un audit éditorial reproductible sur quatre semaines, fondé sur les documentations officielles de Google Search Console et Bing Webmaster Tools, avec des calculs explicitement fictifs et des précautions contre les comparaisons trompeuses, les atteintes à la confidentialité et les conclusions hâtives.",
+        "sections": [
+          {
+            "heading": "Établir une référence comparable avant de promettre du trafic",
+            "paragraphs": [
+              "Avant de modifier les titres ou de publier des dizaines de pages, ouvrez le rapport Performances de Google Search Console, sélectionnez la recherche Web et une période complète de vingt-huit jours. Comparez-la à une période précédente de même durée, en conservant la date d'exportation, la propriété et les filtres. Ne mélangez pas les clics organiques avec les visites provenant des réseaux sociaux ou de la publicité : ces canaux ne mesurent pas le même parcours. Sur un site récent, zéro clic peut signaler un retard d'indexation ou un manque de données.",
+              "Préparez un tableau avec l'URL complète, la langue, les clics, les impressions, le taux de clics, la position moyenne, les chiffres précédents, la décision éditoriale et la prochaine date de contrôle. Les éditions arabe, anglaise et française constituent des pages distinctes. Dans un exemple pédagogique, indiquez explicitement que les chiffres sont fictifs; ne les attribuez jamais à une propriété réelle. Cette référence permet de tester un changement précis après un délai raisonnable, pas de garantir une croissance automatique."
+            ]
+          },
+          {
+            "heading": "Comprendre les indicateurs avant d'interpréter leurs variations",
+            "paragraphs": [
+              "Dans le rapport Google, un clic correspond à une visite depuis un résultat éligible selon les règles de comptage de la plateforme; une impression correspond à l'affichage d'un résultat éligible. Le CTR représente les clics divisés par les impressions. La position moyenne reste une synthèse statistique, et non la preuve que chaque internaute a vu la même place. Le pays, l'appareil, la requête et le contexte modifient les résultats; une moyenne ne permet donc ni de garantir un rang ni de prévoir des revenus.",
+              "Prenons un exemple expressément fictif : 120 clics pour 6 000 impressions donnent un CTR de 2 %. Si les impressions passent à 9 000 avec toujours 120 clics, le taux descend à environ 1,33 %, sans perte de clics. La page a peut-être été montrée sur des requêtes plus larges. Examinez les requêtes, les pays et les appareils avant de changer le titre. Les totaux du graphique et du tableau peuvent aussi diverger à cause des regroupements statistiques et des exclusions liées à la confidentialité."
+            ]
+          },
+          {
+            "heading": "Distinguer un défaut d'indexation d'un problème de pertinence",
+            "paragraphs": [
+              "Lorsqu'une nouvelle page n'apparaît pas dans les performances, ne concluez pas immédiatement à une pénalité ou à de mauvais mots-clés. Inspectez son URL exacte, l'accès des robots, la balise canonical, les directives noindex et la présence dans le sitemap. Ouvrez ensuite la page publique depuis un navigateur indépendant pour vérifier sa réponse et son contenu visible. Un sitemap facilite la découverte, mais son envoi ne garantit ni l'indexation, ni une position, ni un volume de trafic.",
+              "Une page indexée qui reçoit beaucoup d'impressions et peu de clics nécessite une autre analyse. Son titre répond-il réellement à la question posée ? Une information datée est-elle devenue obsolète ? Le texte fournit-il une explication originale, des exemples et des limites ? Examinez les requêtes pertinentes, puis améliorez l'introduction ou les liens internes sans bourrage de mots-clés. Conservez l'ancien titre et la date de modification afin de pouvoir interpréter les résultats ultérieurs."
+            ]
+          },
+          {
+            "heading": "Séparer les langues, les pays et les appareils",
+            "paragraphs": [
+              "Pour un site en arabe, anglais et français, filtrez les URL selon le répertoire linguistique et comparez chaque langue à sa propre période antérieure. Une progression de la version anglaise ne prouve rien, à elle seule, sur la qualité de la version arabe. Vérifiez les balises hreflang et canonical ainsi que les liens de changement de langue. Chaque traduction doit offrir une explication complète et adaptée au lecteur, et non un simple titre localisé avec quelques phrases génériques.",
+              "Lorsque le volume le permet, segmentez aussi par pays et par appareil. L'intention de recherche concernant un visa ou une application mobile peut différer au Maroc, en France et au Canada. Cependant, un faible nombre de clics sur un petit segment ne justifie pas la suppression d'un article utile. Allongez la période d'observation et notez les effets saisonniers. Évitez de publier des requêtes révélant des noms ou des informations sensibles; les tendances agrégées suffisent généralement."
+            ]
+          },
+          {
+            "heading": "Consulter Bing comme source indépendante, sans addition trompeuse",
+            "paragraphs": [
+              "Bing Webmaster Tools dispose d'un rapport Search Performance distinct, avec clics, impressions, requêtes et pages. Ses sources peuvent inclure le Web, les images, les actualités et les réponses conversationnelles. N'additionnez pas les chiffres de Bing et de Google comme s'ils suivaient une définition strictement identique. Pour comparer la recherche classique, choisissez la source Web de Bing lorsqu'elle est disponible, puis consignez la période et les filtres. Une différence entre moteurs ne prouve pas qu'un tableau de bord est défectueux.",
+              "Si une page est visible sur Google mais pas sur Bing, contrôlez d'abord l'indexation, les erreurs d'exploration et la configuration de Bing. Lorsque le tableau général réunit Web et conversation, distinguez les sources si l'interface le permet; certains tableaux de requêtes ne concernent que le Web. Ne vous fiez pas à une ancienne capture d'écran pour connaître la durée de conservation ou les options actuelles : les outils évoluent. La documentation officielle récente de chaque plateforme reste prioritaire."
+            ]
+          },
+          {
+            "heading": "Conduire une expérience éditoriale de quatre semaines",
+            "paragraphs": [
+              "La première semaine, exportez les données et retenez seulement trois pages : une page indexée peu cliquée, une page dont les faits doivent être actualisés et une page présentant une anomalie technique. La deuxième semaine, corrigez d'abord le défaut technique, puis améliorez un exemple, une explication ou un titre lorsque les requêtes le justifient. Modifier vingt éléments à la fois empêche d'identifier la cause d'une variation. Archivez l'ancienne version et la date de vérification de chaque source ajoutée.",
+              "Durant les troisième et quatrième semaines, surveillez l'indexation sans annoncer prématurément une réussite. Comparez des périodes complètes de même longueur et signalez les vacances, les actualités ou les changements des moteurs. Réparer un lien interne ou clarifier un tutoriel constitue déjà un progrès, même sans hausse des clics. Si l'échantillon demeure trop réduit, écrivez que les données ne permettent pas de conclure au lieu d'inventer une tendance. Une bonne mesure éditoriale rend les décisions explicables et réversibles."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "photo": {
+    "photoId": "photo-1625296276703-3fbc924f07b5",
+    "source": "https://unsplash.com/photos/a-computer-screen-with-a-bunch-of-data-on-it-VxLhYXuLQN8",
+    "photographer": "Justin Morgan",
+    "alt": "Photograph of a computer displaying Google Search Console statistics for a blog",
+    "altAr": "صورة حقيقية لشاشة حاسوب تعرض إحصاءات Google Search Console لمدونة",
+    "altFr": "Photographie d'un écran affichant des statistiques Google Search Console pour un blog",
+    "license": "Unsplash License",
+    "note": "Justin Morgan, published 3 July 2021 on Unsplash; verified 30 October 2026. Illustrative photograph of another blog, not RibhLab data; photo unique across project media registries."
+  },
+  "review": {
+    "checkedAt": "2026-10-30",
+    "ready": true,
+    "sourcesIndependentlyChecked": true,
+    "translationsReviewed": true,
+    "photoProvenanceChecked": true,
+    "notes": "Google and Microsoft official documentation independently checked; trilingual content manually reviewed for specificity, calculations and language; source/photo rights and uniqueness verified. No real traffic measurements asserted."
+  }
+}
