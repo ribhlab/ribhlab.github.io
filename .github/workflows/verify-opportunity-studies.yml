@@ -25,6 +25,7 @@ jobs:
           studies={
             'anapec-dg-networks-technician-c44231-2026': ('competitions', 8, ('C44231/26','emploi-public.ma')),
             'hcp-statistics-applied-economics-11-2026': ('competitions', 8, ('C44349/26','emploi-public.ma')),
+            'acaps-controleur-lbc-ft-rabat-c44073-2026': ('competitions', 10, ('C44073/26','acaps.ma')),
           }
           for attempt in range(1,7):
               failures=[]
@@ -46,7 +47,7 @@ jobs:
                       except Exception as e:
                           failures.append(f'{path}: {e}')
               if not failures:
-                  print('PASS: both official studies verified in Arabic, English and French.')
+                  print('PASS: all listed official studies verified in Arabic, English and French.')
                   break
               print(f'Attempt {attempt}/6: {len(failures)} missing checks',flush=True)
               for failure in failures: print(failure,flush=True)
