@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-30",
-  "policy": "Only visually relevant food photographs are published; CC licenses, author and source retained; no repeated image across distinct recipes. SVG fallback remains for unverified subjects.",
+  "policy": "Only verified dish-specific Wikimedia Commons photos. No approximate substitution. Unverified recipes retain their unique local illustration until an exact-match photo is confirmed.",
   "photos": {
     "lamb-vegetable-couscous": {
       "id": "commons:6214147",
@@ -38,18 +38,6 @@
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     },
-    "ratatouille-provencal": {
-      "id": "commons:915209",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Espadon_Ratatouille.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "source": "https://commons.wikimedia.org/wiki/File%3AEspadon_Ratatouille.JPG",
-      "photographer": "Arnaud 25",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "provider": "Wikimedia Commons",
-      "description": "Espadon Ratatouille.JPG",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
     "shakshuka-pepper-eggs": {
       "id": "commons:3108140",
       "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Shakshoka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -62,18 +50,6 @@
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     },
-    "tuna-pasta-salad": {
-      "id": "commons:129150837",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Tuna_on_whole_wheat_linguine%2C_with_pesto%2C_olive_oil%2C_and_black_pepper_-_Massachusetts.jpg/1280px-Tuna_on_whole_wheat_linguine%2C_with_pesto%2C_olive_oil%2C_and_black_pepper_-_Massachusetts.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ATuna_on_whole_wheat_linguine%2C_with_pesto%2C_olive_oil%2C_and_black_pepper_-_Massachusetts.jpg",
-      "photographer": "Daderot",
-      "license": "cc0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "provider": "Wikimedia Commons",
-      "description": "Tuna on whole wheat linguine, with pesto, olive oil, and black pepper - Massachusetts.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
     "french-onion-soup": {
       "id": "commons:1454804",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Plate_french_onion_soup.jpg/1280px-Plate_french_onion_soup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -83,18 +59,6 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
       "provider": "Wikimedia Commons",
       "description": "Plate french onion soup.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "potato-leek-gratin": {
-      "id": "commons:188209790",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Leek_%26_Dauphinoise_Potato_Pastry_-_The_Flour_Pot_Bakery_2026-04-06.jpg/1280px-Leek_%26_Dauphinoise_Potato_Pastry_-_The_Flour_Pot_Bakery_2026-04-06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ALeek_%26_Dauphinoise_Potato_Pastry_-_The_Flour_Pot_Bakery_2026-04-06.jpg",
-      "photographer": "Andy Li",
-      "license": "cc0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "provider": "Wikimedia Commons",
-      "description": "Leek & Dauphinoise Potato Pastry - The Flour Pot Bakery 2026-04-06.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     },
@@ -134,30 +98,6 @@
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     },
-    "coconut-shrimp-curry": {
-      "id": "commons:40586794",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Prawn_and_okra_curry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "source": "https://commons.wikimedia.org/wiki/File%3APrawn_and_okra_curry.jpg",
-      "photographer": "DreamyFlutura11",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Prawn and okra curry.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "korean-beef-rice-bowl": {
-      "id": "commons:23234309",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Korean_bbq_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "source": "https://commons.wikimedia.org/wiki/File%3AKorean_bbq_2.jpg",
-      "photographer": "Janine from Mililani, Hawaii, United States",
-      "license": "by",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "provider": "Wikimedia Commons",
-      "description": "Korean bbq 2.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
     "japanese-chicken-teriyaki": {
       "id": "commons:3475377",
       "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Chicken_teriyaki_with_rice_by_abex_in_Akasaka%2C_Tokyo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -167,18 +107,6 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "provider": "Wikimedia Commons",
       "description": "Chicken teriyaki with rice by abex in Akasaka, Tokyo.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "sweetcorn-quesadillas": {
-      "id": "commons:27909317",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Tortillasconquesillo.JPG/1280px-Tortillasconquesillo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ATortillasconquesillo.JPG",
-      "photographer": "Thelmadatter",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "provider": "Wikimedia Commons",
-      "description": "Tortillasconquesillo.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     },
@@ -206,18 +134,6 @@
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     },
-    "semolina-orange-cake": {
-      "id": "commons:92213303",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Revane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "source": "https://commons.wikimedia.org/wiki/File%3ARevane.jpg",
-      "photographer": "Biser Todorov",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Revane.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
     "fruit-yogurt-parfait": {
       "id": "commons:85861140",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/-2020-01-13_Fruit_and_Yogurt_Breakfast_Parfait%2C_Trimingham.JPG/1280px--2020-01-13_Fruit_and_Yogurt_Breakfast_Parfait%2C_Trimingham.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -230,18 +146,6 @@
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     },
-    "healthy-turkey-vegetable-soup": {
-      "id": "commons:360479",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Turkey_Soup_Stew_With_Rice.jpg/1280px-Turkey_Soup_Stew_With_Rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ATurkey_Soup_Stew_With_Rice.jpg",
-      "photographer": "James from Boulder, USA",
-      "license": "by",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "provider": "Wikimedia Commons",
-      "description": "Turkey Soup Stew With Rice.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
     "healthy-cauliflower-chickpea-curry": {
       "id": "commons:45570577",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Curried_cauliflower_and_chickpea_stew.jpg/1280px-Curried_cauliflower_and_chickpea_stew.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -251,66 +155,6 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
       "provider": "Wikimedia Commons",
       "description": "Curried cauliflower and chickpea stew.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "healthy-lentil-vegetable-patties": {
-      "id": "commons:4967983",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vegan_patties_with_potatoes_and_salad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "source": "https://commons.wikimedia.org/wiki/File%3AVegan_patties_with_potatoes_and_salad.jpg",
-      "photographer": "https://www.flickr.com/photos/rusvaplauke/",
-      "license": "by",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "provider": "Wikimedia Commons",
-      "description": "Vegan patties with potatoes and salad.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "moroccan-white-beans": {
-      "id": "commons:182400678",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Liat_Portal_for_Foodie_Disorder_-_Moroccan_Chamin.jpg/1280px-Liat_Portal_for_Foodie_Disorder_-_Moroccan_Chamin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ALiat_Portal_for_Foodie_Disorder_-_Moroccan_Chamin.jpg",
-      "photographer": "HaJunkiyada",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Liat Portal for Foodie Disorder - Moroccan Chamin.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "chicken-cacciatore": {
-      "id": "commons:9971737",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Cacciatore_Raisa20081127_27.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "source": "https://commons.wikimedia.org/wiki/File%3ACacciatore_Raisa20081127_27.jpg",
-      "photographer": "Bff",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "provider": "Wikimedia Commons",
-      "description": "Cacciatore Raisa20081127 27.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "palak-paneer-style": {
-      "id": "commons:83134244",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Butter_Chicken%2C_Lamb_Rogan_Josh%2C_Saag_Paneer_-_Bollywood_2_Go%2C_QV_Food_Court_Medium_Thali_AUD8.90_%282554594775%29.jpg/1280px-Butter_Chicken%2C_Lamb_Rogan_Josh%2C_Saag_Paneer_-_Bollywood_2_Go%2C_QV_Food_Court_Medium_Thali_AUD8.90_%282554594775%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3AButter_Chicken%2C_Lamb_Rogan_Josh%2C_Saag_Paneer_-_Bollywood_2_Go%2C_QV_Food_Court_Medium_Thali_AUD8.90_(2554594775).jpg",
-      "photographer": "Alpha from Melbourne, Australia",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "provider": "Wikimedia Commons",
-      "description": "Butter Chicken, Lamb Rogan Josh, Saag Paneer - Bollywood 2 Go, QV Food Court Medium Thali AUD8.90 (2554594775).jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
-    },
-    "healthy-sweetpotato-bean-chili": {
-      "id": "commons:91133887",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Rice_and_kontonmire_stew_2.jpg/1280px-Rice_and_kontonmire_stew_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ARice_and_kontonmire_stew_2.jpg",
-      "photographer": "daSupremo",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Rice and kontonmire stew 2.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
     }
