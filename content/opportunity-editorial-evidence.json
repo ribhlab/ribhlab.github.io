@@ -7377,6 +7377,197 @@
           ]
         }
       }
+    },
+    "sntl-software-development-technicians-2-2026": {
+      "reviewedAt": "2026-10-30",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Original two-page SNTL recruitment notice and government listing checked 2026-10-30; pending site build and live trilingual QA.",
+      "sources": [
+        {
+          "label": "SNTL — original signed two-page recruitment notice SNTL/TDEVDSI/2026, checked 30 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/c7a92e36-cc06-48a4-9c8d-22c4e339a716",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "label": "Government employment portal — C44159/26, published 20 October 2026, checked 30 October 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/c7a92e36-cc06-48a4-9c8d-22c4e339a716",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "label": "SNTL — official recruitment submission site, checked 30 October 2026",
+          "url": "https://www.sntl.ma/recrutement",
+          "checkedAt": "2026-10-30"
+        }
+      ],
+      "facts": {
+        "employer": "Société Nationale des Transports et de la Logistique (SNTL)",
+        "competitionCode": "C44159/26",
+        "noticeReference": "SNTL/TDEVDSI/2026",
+        "noticeDate": "2026-10-20",
+        "posts": 2,
+        "role": "Technicien en Développement Logiciel",
+        "department": "Direction des Systèmes d'Information",
+        "nationality": "Moroccan",
+        "age": "Maximum 35 as of 2026-01-01",
+        "diploma": "Recognized specialized technician Bac+2 in IT",
+        "bonus": "Full Stack .Net certification or training is an asset",
+        "experience": "At least two cumulative years in similar work after diploma; internships excluded",
+        "deadline": "2026-11-03T23:55",
+        "deadlineCaveat": "Original employer PDF lists 3 November without an hour; government portal specifies 23:55",
+        "application": "SNTL recruitment website",
+        "documents": [
+          "SNTL application form",
+          "Updated CV",
+          "Motivation letter",
+          "Required diploma copy",
+          "Employment certificates proving relevant duration and field",
+          "Moroccan national identity card copy"
+        ],
+        "selection": "Dossier preselection, written test, oral interview; psychometric test possible",
+        "assignment": "SNTL or subsidiaries; geographic mobility required",
+        "salaryPublished": false,
+        "examDatePublished": false
+      },
+      "translations": {
+        "ar": {
+          "title": "توظيف تقنيين في تطوير البرمجيات لدى SNTL: الدبلوم والخبرة والملف وآخر أجل",
+          "deck": "تحليل إعلان SNTL الأصلي لمنصبين في تطوير البرمجيات: سنتان من الخبرة بعد الدبلوم، شروط السن، الاختبارات والتقديم قبل 3 نوفمبر 2026.",
+          "sections": [
+            [
+              "المؤسسة والوظيفتان والمرجع الصحيح",
+              "أعلنت الشركة الوطنية للنقل والوسائل اللوجيستيكية SNTL عن توظيف تقنيين اثنين في تطوير البرمجيات، داخل مديرية نظم المعلومات، تحت المرجع SNTL/TDEVDSI/2026. وتعرض بوابة التشغيل العمومي الإعلان برمز C44159/26 وتاريخ 20 أكتوبر 2026. لا يتعلق الإعلان بوظيفتين مستقلتين لكل منهما شروط مختلفة، ولا يثبت أن مكان التعيين النهائي هو الرباط لمجرد وجود المقر الاجتماعي للشركة هناك. توضح الوثيقة أن الناجحين قد يلتحقون بالشركة أو بإحدى فروعها وفق الحاجة، وأن التنقل الجغرافي مطلوب. لذلك ينبغي فهم طبيعة الوظيفة وموقع العمل المحتمل قبل إعداد ملف الترشيح أو اتخاذ قرار الانتقال."
+            ],
+            [
+              "طبيعة العمل الفعلية في مديرية نظم المعلومات",
+              "يشارك التقني في تطوير التطبيقات وضبط إعداداتها ونشرها، ثم متابعة تشغيلها وصيانتها بما يتوافق مع حاجات المستخدمين. ويشمل العمل كتابة شيفرة موثوقة انطلاقاً من المواصفات التقنية، وتطوير وظائف وبرامج لاستخراج البيانات وتحويلها وتحميلها ETL، وإعداد البرمجيات وفق دفاتر التحملات. لا يكفي تقديم تطبيق تجريبي جذاب بصرياً؛ فالمؤسسة تبحث أيضاً عن شخص قادر على تفسير الأعطال، ومراجعة السجلات، وتوثيق التغييرات، والتواصل مع فرق الدعم والمستخدمين. كما تتضمن المهام المساعدة في التحديثات والإصدارات والتعامل مع المشكلات التشغيلية من المستوى الأول والثاني."
+            ],
+            [
+              "الجنسية والسن: تاريخ مرجعي يجب احترامه",
+              "ينص الإعلان الأصلي على الجنسية المغربية، وعلى ألا يتجاوز عمر المترشح 35 سنة بتاريخ 1 يناير 2026. هذا التاريخ المرجعي يختلف عن يوم إيداع الملف ويوم إجراء الاختبارات؛ ومن الخطأ حساب السن اعتماداً على نوفمبر 2026 تلقائياً. على المترشح مقارنة تاريخ ميلاده بالصياغة الرسمية، وعدم افتراض استثناء غير منصوص عليه. كذلك لا تذكر الوثيقة إمكانية تعويض شرط السن بخبرة أطول. إذا ظهرت حالة حدودية في احتساب العمر، ينبغي الاستفسار من المؤسسة عبر قنواتها الرسمية قبل تقديم معلومات غير دقيقة. فمطابقة السن شرط أهلية، وليست نقطة إضافية في التقييم."
+            ],
+            [
+              "الدبلوم والخبرة المهنية: ما الذي يُقبل؟",
+              "تشترط SNTL دبلوم تقني متخصص Bac+2 في الإعلاميات، صادراً عن مؤسسة عمومية أو خاصة معترف بها من الدولة. وتذكر شهادة أو تكويناً موثقاً في تطوير Full Stack .Net باعتباره ميزة إضافية، لا بديلاً عن الدبلوم المطلوب. كما تشترط خبرة مهنية تراكمية لا تقل عن سنتين في منصب مشابه، محسوبة بعد الحصول على الدبلوم. وتنبه الوثيقة صراحة إلى أن فترات التدريب لا تعد خبرة مهنية لهذا الغرض. لهذا ينبغي مطابقة تواريخ الشهادة وشهادات العمل، وشرح طبيعة المهام المنجزة فعلاً؛ فلا يكفي ذكر تقنيات برمجية في السيرة دون إثبات المدة والمجال."
+            ],
+            [
+              "الملف المطلوب والوثائق التي يسهل نسيانها",
+              "يتكون الملف الإلزامي من استمارة الترشيح الخاصة بالمؤسسة، والسيرة الذاتية المحدثة، ورسالة التحفيز، ونسخة الدبلوم، وشهادات العمل التي تثبت المدة والمجال المطلوبين، ونسخة بطاقة التعريف الوطنية. يجب تنزيل الاستمارة من صفحة التوظيف وتعبئتها وإرفاقها؛ فمجرد إدخال البيانات في المنصة لا يغني عن الوثيقة المطلوبة إذا كان النظام يطلب رفعها. ينبغي مراجعة وضوح النسخ ومطابقة الاسم وتواريخ العمل، والتأكد من وجود كل المرفقات قبل الإرسال. وبالنسبة إلى الشهادات الأجنبية، تشير الوثيقة إلى ضرورة المعادلة القانونية للشهادات الوطنية المعترف بها، فلا تُعامل الشهادة الأجنبية باعتبارها معادلة تلقائياً."
+            ],
+            [
+              "التقديم الإلكتروني والأجل النهائي بدقة",
+              "يتم الترشيح عبر صفحة التوظيف الرسمية للشركة، وليس عبر نموذج الاستفسارات الموجود في بوابة التشغيل العمومي. تحدد صفحة البوابة آخر أجل في 3 نوفمبر 2026 الساعة 23:55، بينما يذكر الإعلان الأصلي يوم 3 نوفمبر دون ساعة ظاهرة. من الأسلم اعتماد الساعة المحددة في البوابة، مع إرسال الملف قبلها بوقت كاف وعدم الانتظار حتى الدقائق الأخيرة. بعد الرفع ينبغي حفظ رسالة التأكيد أو رقم الترشيح إن ظهر، ومراجعة الملفات المرسلة. لا يُعد حفظ مسودة غير مرسلة ترشيحاً مكتملاً، ولا ينبغي افتراض تمديد الأجل إذا تعذر فتح الموقع مؤقتاً."
+            ],
+            [
+              "المهارات التقنية التي يمكن الاستعداد لإثباتها",
+              "تذكر بطاقة الوظيفة أدوات قواعد البيانات وتكامل الأنظمة والاختبارات والتطوير والدعم، إضافة إلى الانضباط في إدارة الإصدارات. ويمكن للمترشح الاستعداد بمثال مشروع يشرح فيه تصميم قاعدة بيانات صغيرة، وبرمجة واجهة أو وظيفة قابلة للاختبار، وتحويل بيانات مع توثيق المدخلات والمخرجات، ثم اختبار حالات الفشل. يجب التفريق بين ما تطلبه الوثيقة صراحة وبين الأمثلة المقترحة للتحضير: لم تفرض الشركة لغة برمجة محددة في اختبار معلن، وإن كانت تشير إلى Full Stack .Net كميزة. من المفيد أيضاً شرح طريقة إصلاح عطل دون تعطيل بيانات الإنتاج أو تجاوز صلاحيات المستخدمين."
+            ],
+            [
+              "الاختبارات والانتقاء دون اختلاق تفاصيل",
+              "تبدأ العملية بانتقاء الملفات وفق الشروط والوثائق. ثم تُبلغ الشركة المترشحين المقبولين بتاريخ ومكان اختبار كتابي عبر البريد الإلكتروني، ويصبح الناجحون فيه مؤهلين للمقابلة الشفوية. وتشير الوثيقة إلى احتمال إجراء اختبار سيكوتقني بعد المقابلة، لكنها لا تجعله مرحلة مؤكدة لكل مترشح. لم تُنشر مدة الاختبار الكتابي أو معامله أو موضوعه الدقيق أو تاريخ إجرائه؛ لذلك لا يصح نقل تفاصيل مباراة أخرى واعتبارها جزءاً من هذا الإعلان. ينبغي متابعة البريد الوارد والرسائل غير المرغوبة والموقع الرسمي، مع الاحتفاظ بالوثائق الأصلية عند الاستدعاء."
+            ],
+            [
+              "الأمن البرمجي والدعم: كيف تُعرض الخبرة بصدق؟",
+              "تتحدث الوثيقة عن الالتزام بمقتضيات الأمن الرقمي والضوابط القانونية أثناء التطوير، وعن الاختبارات الوحدوية والتكاملية وعدم الرجوع، وتوثيق العيوب في أداة التتبع. يمكن للمترشح إعداد حالة عملية قصيرة: خطأ في استخراج البيانات، وخطوات إعادة إنتاجه، واختبار يثبت إصلاحه، وآلية مراجعة الشيفرة قبل النشر. من المهم توضيح حدود الصلاحيات وإخفاء بيانات العملاء وعدم نسخ شيفرة صاحب عمل سابق إلى ملف الأعمال. أما ذكر توجيهات DNSSI الواردة في الإعلان فلا يعني أن المترشح يحمل اعتماداً أمنياً أو أن الشركة أعلنت اختباراً مستقلاً في الأمن السيبراني."
+            ],
+            [
+              "الأجر والمكان والمخاطر والبدائل",
+              "لم يحدد الإعلان راتباً صافياً أو مزايا مالية، كما لم يضمن تعيين الناجحين جميعاً في مدينة واحدة. وذكر إمكانية تغير عدد المناصب بحسب حاجات التوظيف، ما يقتضي عدم اعتبار العدد وعداً تعاقدياً فردياً. كذلك يؤدي نقص الوثائق أو التصريح الخاطئ أو عدم مطابقة الدبلوم والخبرة إلى الاستبعاد. إذا كان شرط السنتين بعد الدبلوم أو شرط السن غير متحقق، فالأفضل البحث عن إعلان آخر يناسب المستوى الفعلي بدلاً من تعديل التواريخ أو احتساب التدريب خبرة. هذا الدليل تحليل لإعلان رسمي، وليس قناة ترشيح أو ضماناً للتوظيف، ويجب إعادة مراجعة المصدر قبل الإرسال."
+            ]
+          ]
+        },
+        "en": {
+          "title": "SNTL recruiting two software development technicians: diploma, experience and application",
+          "deck": "A source-checked guide to SNTL's two software development positions, post-diploma experience, documents and 3 November 2026 deadline.",
+          "sections": [
+            [
+              "The employer, the two vacancies and the correct reference",
+              "Société Nationale des Transports et de la Logistique (SNTL) is recruiting two software development technicians for its Information Systems Directorate. The employer's original notice carries reference SNTL/TDEVDSI/2026; the government employment portal identifies the same opportunity as C44159/26, published on 20 October 2026. These are two positions under one recruitment notice, not two separate competitions with different requirements. The company has a registered office in Rabat, but that does not establish the final workplace. The notice explicitly requires geographical mobility and says successful candidates may be assigned to SNTL or a subsidiary depending on operational needs. Applicants should evaluate that uncertainty before committing to relocation."
+            ],
+            [
+              "What the job actually involves",
+              "The technician will participate in application development, configuration and deployment, then support maintenance and day-to-day reliability. Responsibilities include translating technical specifications into dependable code, developing data extraction, transformation and loading routines, configuring software against functional requirements and helping users adopt deployed systems. The role also involves incident diagnosis, bug correction, security updates and level-one or level-two application support. This is therefore not a pure front-end design position or a short freelance coding contract. Candidates should be ready to discuss the complete application lifecycle: understanding a request, building a feature, testing it, releasing it safely, documenting it and responding when it fails in production."
+            ],
+            [
+              "Nationality and age: check the reference date",
+              "The original notice requires Moroccan nationality and a maximum age of 35 as of 1 January 2026. This reference date matters: calculating age on the application deadline or the interview date could give the wrong answer. Applicants near the threshold should compare their date of birth with the exact wording and seek clarification from SNTL if necessary. The notice does not state that extra experience waives the age requirement. Nor should a general public-sector rule be imported into this specific employer's call without an applicable official amendment. Accurate eligibility information is essential because an otherwise strong technical portfolio does not compensate for a mandatory condition that has not been met."
+            ],
+            [
+              "The required diploma and post-diploma experience",
+              "Candidates must hold a recognized specialized technician diploma, Bac+2, in information technology from a public or state-recognized private institution. The notice describes a Full Stack .Net certificate or training attestation as an advantage, not as a replacement for the diploma. It also requires at least two cumulative years of professional experience in a comparable position, acquired after obtaining the required diploma. Internships are expressly excluded from this experience calculation. Applicants should therefore build a dated timeline of graduation, contracts and work certificates. A list of frameworks on a CV does not establish either the length of employment or the similarity of the actual responsibilities performed."
+            ],
+            [
+              "Documents that must be included",
+              "The application package must contain SNTL's downloaded application form, an up-to-date CV, a motivation letter, a copy of the required diploma, employment certificates proving the duration and area of experience, and a copy of the Moroccan national identity card. The employer explicitly says that the form must be downloaded, completed and attached to the application. Completing fields in an online interface is not necessarily a substitute for that attachment. Scan documents legibly and check that names, diploma dates and employment periods agree. Foreign qualifications require the relevant legal equivalence where applicable; an overseas certificate is not automatically interchangeable with a recognized Moroccan specialized technician diploma."
+            ],
+            [
+              "Where to apply and the precise closing time",
+              "Applications are submitted through the employer's recruitment website, not through the contact form on the government listing. The government portal specifies a closing time of 23:55 on 3 November 2026, whereas the signed employer notice gives 3 November without a visible hour. Use the earlier operational precaution of submitting well before the portal's published time rather than relying on a last-minute upload. Keep any receipt, confirmation email or application number issued by the platform, and verify that every attachment was transmitted. A saved but unsubmitted draft is not a completed application. Website congestion or temporary errors should not be treated as an automatic extension."
+            ],
+            [
+              "Technical preparation without inventing a test syllabus",
+              "The position description mentions databases, system integration, software testing, version control, ETL routines and user support. A useful preparation exercise is to demonstrate a small application with a database, a documented data import, validation checks, unit tests and a simple release checklist. Explain what you would do if imported rows were duplicated or a software update broke an existing feature. These are preparation examples, not a claim that SNTL has announced a particular programming examination or mandatory framework. The notice mentions Full Stack .Net as a plus, but it does not publish a detailed language-by-language test syllabus. Candidates should separate demonstrable skills from unverified predictions."
+            ],
+            [
+              "Selection stages and what remains unspecified",
+              "SNTL will first review submitted files. Candidates retained after preselection will be informed by email of the date and location of a written test. Those selected following the written test become eligible for an oral interview. A psychometric assessment may also take place after the interview, but the wording does not guarantee that it will be used for every applicant. The notice does not give the written test's duration, weighting, exact questions or examination date. Copying those details from a different public competition would mislead readers. Applicants should monitor their inbox and spam folder, check official updates and prepare original supporting documents if invited."
+            ],
+            [
+              "Security, debugging and evidence of experience",
+              "The duties expressly refer to secure development, regulatory compliance, unit and integration testing, non-regression checks, issue tracking and software maintenance. A strong but truthful example might describe a data-processing defect: how it was reproduced, the test that exposed it, the corrective code, the review process and the release verification. Candidates should anonymize any work examples and avoid exposing a former employer's source code, production data or credentials. References to national digital-security directives in the notice are requirements for disciplined practice, not evidence that applicants must hold an unlisted cybersecurity certification. Good operational judgment matters alongside coding ability."
+            ],
+            [
+              "Pay, location uncertainty and sensible alternatives",
+              "No net salary, guaranteed benefit package or final assignment city is published in the reviewed documents. The employer notes that the number of positions may change with recruitment needs and that selected people may join SNTL or its subsidiaries. Incomplete applications, inaccurate declarations and mismatched diplomas or experience can lead to automatic rejection. If the two years of post-diploma experience or the age rule is not met, applying for a more suitable junior vacancy is preferable to counting internships as employment or altering dates. This report explains a real recruitment notice; it is neither a job offer from the publisher nor a promise of selection."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "SNTL recrute deux techniciens en développement logiciel : conditions et candidature",
+          "deck": "Analyse de l'avis officiel SNTL : diplôme Bac+2, expérience après diplôme, pièces à fournir et clôture du 3 novembre 2026.",
+          "sections": [
+            [
+              "L'employeur, les deux postes et les références à conserver",
+              "La Société Nationale des Transports et de la Logistique (SNTL) recrute deux techniciens en développement logiciel pour sa Direction des Systèmes d'Information. L'avis original porte la référence SNTL/TDEVDSI/2026 et le portail public le code C44159/26, avec une publication datée du 20 octobre 2026. Il s'agit de deux postes au sein d'un même recrutement, et non de deux concours indépendants. Le siège social se trouve à Rabat, mais cela ne garantit pas le lieu d'affectation. L'avis exige une mobilité géographique et envisage une affectation à la SNTL ou dans une filiale selon les besoins. Ce point mérite une vérification avant toute décision de déménagement."
+            ],
+            [
+              "Les missions concrètes du technicien",
+              "Le poste associe développement, paramétrage, déploiement et maintenance des applications métiers. Le technicien produit du code conforme aux spécifications, développe des scripts d'extraction, transformation et chargement de données, configure les progiciels et contribue à leur fonctionnement quotidien. Il doit également diagnostiquer les incidents applicatifs, corriger les anomalies, appliquer les mises à jour de sécurité et assurer le support de niveaux un et deux. Il ne s'agit donc pas seulement de créer des interfaces graphiques ou de livrer une démonstration isolée. Il faut pouvoir expliquer le cycle complet d'une fonctionnalité, depuis le besoin utilisateur jusqu'aux tests, à la mise en production et au suivi des incidents."
+            ],
+            [
+              "Nationalité et âge : une date de référence précise",
+              "L'avis exige la nationalité marocaine et un âge maximal de 35 ans au 1er janvier 2026. Ce repère ne doit pas être remplacé par la date limite de dépôt ou par une hypothétique date d'entretien. Les candidats proches du seuil doivent comparer leur date de naissance au texte officiel et demander une précision à la SNTL en cas de doute. Le document ne prévoit pas explicitement de dérogation fondée sur une expérience professionnelle plus longue. Il serait également imprudent d'appliquer automatiquement une règle d'un autre concours public à cet employeur. Une candidature techniquement convaincante reste irrecevable si une condition obligatoire n'est pas satisfaite."
+            ],
+            [
+              "Diplôme reconnu et deux années d'expérience après le diplôme",
+              "Le profil requis est un technicien spécialisé Bac+2 en informatique, diplômé d'un établissement public ou privé reconnu par l'État. Une certification ou attestation en développement Full Stack .Net constitue un atout supplémentaire, et non une dispense de diplôme. L'avis demande au moins deux ans d'expérience professionnelle cumulée dans une fonction similaire, obtenue après le diplôme exigé. Les stages ne sont pas considérés comme de l'expérience professionnelle pour ce calcul. Il convient donc de reconstituer une chronologie exacte des études et emplois, avec les attestations correspondantes. Mentionner des technologies sur un CV ne démontre ni la durée d'activité ni la proximité réelle des missions exercées."
+            ],
+            [
+              "Les six catégories de pièces à joindre",
+              "Le dossier comprend obligatoirement le formulaire de candidature SNTL, un CV actualisé, une lettre de motivation, la copie du diplôme requis, des attestations de travail justifiant la durée et le domaine de l'expérience, ainsi qu'une copie de la carte nationale d'identité. Le formulaire doit être téléchargé depuis le site de recrutement, renseigné puis joint au dossier électronique. Les champs saisis dans une plateforme ne remplacent pas nécessairement cette pièce. Vérifiez la lisibilité des scans, l'identité figurant sur les documents et la cohérence des périodes professionnelles. Un diplôme étranger doit disposer de l'équivalence réglementaire applicable; une qualification étrangère ne devient pas automatiquement un diplôme reconnu au Maroc."
+            ],
+            [
+              "Dépôt en ligne et heure limite à ne pas confondre",
+              "Le dépôt s'effectue sur le site de recrutement de la SNTL, et non dans le formulaire de contact de la fiche gouvernementale. Le portail emploi-public fixe la limite au 3 novembre 2026 à 23 h 55; l'avis original indique le 3 novembre sans préciser visiblement l'heure. La précaution raisonnable consiste à transmettre le dossier bien avant cette échéance et à conserver tout accusé de réception, courriel ou numéro de candidature. Vérifiez que les pièces sont réellement téléversées et que l'envoi final a été confirmé. Un brouillon enregistré ne constitue pas nécessairement une candidature déposée. Une panne momentanée du site ne vaut pas prolongation officielle."
+            ],
+            [
+              "Se préparer techniquement sans inventer le contenu de l'épreuve",
+              "La fiche de poste mentionne les bases de données, l'intégration des systèmes, les tests, le versionnement, les traitements ETL et l'assistance aux utilisateurs. Pour préparer un entretien, on peut documenter une petite application comprenant une base de données, une importation contrôlée, des tests unitaires et une procédure de livraison. Il est utile d'expliquer comment détecter des doublons, reproduire un incident et vérifier qu'un correctif ne casse pas une fonctionnalité existante. Ces exercices sont des propositions pédagogiques et non un programme officiel d'examen. La SNTL cite Full Stack .Net comme avantage, mais ne publie pas de liste exhaustive des langages qui seraient évalués."
+            ],
+            [
+              "Présélection, écrit, oral et éventuel test psychotechnique",
+              "L'entreprise procède d'abord à la sélection des dossiers conformes. Les candidats retenus reçoivent par courriel les informations sur la date et le lieu de l'épreuve écrite. Les personnes sélectionnées après cette étape peuvent accéder à l'entretien oral. Un test psychotechnique pourrait être organisé à l'issue de l'oral, sans être annoncé comme systématique. La durée de l'épreuve écrite, son coefficient, ses questions précises et sa date ne sont pas communiqués dans les documents examinés. Il serait trompeur de reprendre les modalités d'un autre concours. Il faut suivre sa messagerie, vérifier les courriels indésirables et consulter les publications officielles avant de se déplacer."
+            ],
+            [
+              "Sécurité logicielle et preuves honnêtes des compétences",
+              "Les activités prévoient le respect des exigences de sécurité et des directives applicables, les tests unitaires, d'intégration et de non-régression, le suivi des anomalies et la maintenance corrective. Un exemple professionnel pertinent peut décrire un défaut de traitement de données, sa reproduction, le test de correction, la revue du code et la vérification après déploiement. Il faut anonymiser les exemples et ne jamais publier les données, identifiants ou codes propriétaires d'un ancien employeur. La référence aux directives de sécurité numérique dans l'annonce ne signifie pas qu'une certification cyber particulière, non mentionnée, est exigée. L'organisation et la traçabilité sont aussi importantes que la programmation."
+            ],
+            [
+              "Salaire non publié, mobilité et solutions de rechange",
+              "Aucun salaire net, avantage financier garanti ou lieu définitif d'affectation n'est précisé. L'avis signale que le nombre de postes peut évoluer selon les besoins et que les personnes retenues pourront travailler pour la SNTL ou une filiale. Un dossier incomplet, une déclaration erronée ou une expérience insuffisante peut provoquer le rejet automatique. Si les deux années après diplôme ou la condition d'âge ne sont pas remplies, mieux vaut chercher une offre junior adaptée que transformer un stage en emploi ou modifier des dates. Cette analyse est un guide indépendant fondé sur des documents officiels, pas une promesse d'embauche ni un service de candidature."
+            ]
+          ]
+        }
+      }
     }
   }
 }
