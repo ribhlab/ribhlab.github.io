@@ -573,6 +573,14 @@
     "applePasswordsCodes": {
       "name": "Apple Support — Verification codes in Passwords",
       "url": "https://support.apple.com/en-ie/guide/iphone/ipha6173c19f/27/ios/27"
+    },
+    "microsoftDocumentOCR": {
+      "name": "Microsoft Learn — Document Intelligence Read OCR",
+      "url": "https://learn.microsoft.com/en-gb/azure/ai-services/document-intelligence/concept-read"
+    },
+    "googleDocumentOCR": {
+      "name": "Google Cloud — Enterprise Document OCR",
+      "url": "https://docs.cloud.google.com/document-ai/docs/enterprise-document-ocr"
     }
   },
   "articleLinks": {
