@@ -19,14 +19,23 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const p=JSON.parse(fs.readFileSync('content/recipes/curated-photos.json','utf8')).photos;
-          const ids=['moroccan-harira','kefta-tagine-eggs','vietnamese-rice-paper-rolls','brazilian-black-bean-stew'];
-          for (const slug of ids) {
-            const url=p[slug]?.url;
-            if(!url)throw Error('Missing curated photo '+slug);
-            const res=await fetch(url,{method:'GET',signal:AbortSignal.timeout(12000),headers:{'User-Agent':'RibhLab photo audit (https://ribhlab.github.io)'}});
-            const ct=res.headers.get('content-type')||'';
-            console.log(slug+' PHOTO HTTP '+res.status+' '+ct+' '+url.slice(0,115));
-            if(!res.ok||!ct.startsWith('image/'))throw Error('Failed live image delivery for '+slug);
-            await res.body?.cancel();
+          const entries=Object.entries(p),problems=[];
+          let nextIndex=0,done=0;
+          async function worker(){
+            while(nextIndex<entries.length){
+              const [slug,pic]=entries[nextIndex++];
+              const url=pic?.url;
+              if(!url){problems.push(slug+': missing URL');continue;}
+              try {
+                const res=await fetch(url,{method:'GET',signal:AbortSignal.timeout(15000),headers:{'User-Agent':'RibhLab photo audit (https://ribhlab.github.io)'}});
+                const ct=res.headers.get('content-type')||'';
+                if(!res.ok||!ct.startsWith('image/'))problems.push(slug+': HTTP '+res.status+' '+ct);
+                await res.body?.cancel();
+              }catch(e){problems.push(slug+': '+e.message);}
+              done++;
+            }
           }
+          await Promise.all(Array.from({length:5},()=>worker()));
+          console.log('CHECKED',done,'curated recipe photos; broken',problems.length);
+          if(problems.length)throw Error('Failed live images: '+problems.join('; '));
           NODE
