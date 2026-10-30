@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-29",
+  "reviewedAt": "2026-10-30",
   "method": "Derived from linked original official notices, not extrapolated from job titles. Never assume published salaries or eligibility.",
   "articles": {
     "mediouna-service-agent-informatique-2026": {
@@ -6484,6 +6484,203 @@
             [
               "Limites de l'annonce et autres pistes",
               "L'appel confirme un poste basé à Rabat et une échéance de candidature, mais il ne garantit ni embauche, ni salaire déterminé, ni évolution de carrière. Le statut contractuel doit être évalué à partir des conditions écrites qui seront communiquées par l'employeur, et non assimilé à un grade de fonctionnaire. Si vous n'avez pas l'expérience requise en marchés financiers et en supervision, des fonctions plus accessibles d'analyse financière, de reporting d'investissement ou de suivi des risques peuvent constituer des étapes de progression, sans qu'une offre précise soit ici promise. Avant le dépôt, consultez à nouveau l'appel original et la fiche gouvernementale ; une prolongation ne doit être retenue que si un rectificatif officiel daté la confirme."
+            ]
+          ]
+        }
+      }
+    },
+    "sett-network": {
+      "reviewedAt": "2026-10-30",
+      "verification": "Official signed two-page decision 204/26 dated 27 October 2026 and three-page position sheet visually checked page by page on 30 October 2026; government portal C44308/26 independently cross-checked. Warning: decision says 16 November 2026 16:30, attached French job sheet says 'avant le 16 novembre 2026'. No salary, exam date or exam coefficients published.",
+      "state": "researched-awaiting-live-verification",
+      "sources": [
+        {
+          "label": "Agence urbaine de Settat — décision administrative 204/26 du 27 octobre 2026, 2 pages",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/bdfb5402-a6de-47c6-8493-1b22d8ea83bb"
+        },
+        {
+          "label": "Agence urbaine de Settat — fiche de poste Agent de haute maîtrise, 3 pages",
+          "url": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/bdfb5402-a6de-47c6-8493-1b22d8ea83bb/0"
+        },
+        {
+          "label": "Emploi-public.ma — avis C44308/26 publié le 27 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/bdfb5402-a6de-47c6-8493-1b22d8ea83bb"
+        }
+      ],
+      "facts": {
+        "employer": "Agence urbaine de Settat",
+        "city": "Settat",
+        "country": "Maroc",
+        "jobTitle": "Technicien ou équivalent en informatique, option systèmes réseaux informatiques",
+        "decision": "204/26",
+        "decisionDate": "2026-10-27",
+        "reference": "C44308/26",
+        "published": "2026-10-27",
+        "posts": 1,
+        "grade": "Agent de haute maîtrise selon la fiche, sans grade de fonction publique annoncé",
+        "nationality": "Marocaine",
+        "age": "18 à 45 ans à la date du recrutement",
+        "degree": "Diplôme de technicien en informatique, option réseaux, Bac+2 ou équivalent administratif",
+        "experience": "Souhaitable, aucun nombre minimal d'années précisé",
+        "salary": null,
+        "examDate": null,
+        "examDuration": null,
+        "examCoefficients": null,
+        "selection": "Épreuve écrite puis épreuve orale pour les candidats admis",
+        "deadline": "2026-11-16T16:30",
+        "deadlineConflict": "La décision indique le 16 novembre 2026 à 16 h 30; la fiche française indique 'avant le 16 novembre 2026'. Faire confirmer et déposer plus tôt.",
+        "application": "Dépôt au bureau d'ordre ou pli fermé à Monsieur le Directeur, Agence urbaine de Settat, 11 boulevard Hassan II, BP 532, Settat",
+        "documents": [
+          "Demande de candidature (fiche : manuscrite)",
+          "CV",
+          "Copie certifiée conforme de la CIN",
+          "Copies certifiées conformes des diplômes",
+          "Équivalence administrative selon situation",
+          "Autorisation de participation pour les fonctionnaires"
+        ],
+        "skills": [
+          "TCP/IP, LAN/WAN, VLAN, DNS, DHCP, VPN, Wi-Fi",
+          "Windows Server, Active Directory, GPO; Linux atout",
+          "VMware/Hyper-V, NAS, supervision, sauvegarde, cybersécurité",
+          "PowerShell ou Bash, confidentialité"
+        ]
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة تقني أنظمة وشبكات المعلومات بالوكالة الحضرية لسطات: الشروط والملف وتعارض صياغة الأجل",
+          "deck": "دليل موثق من القرار 204/26 وبطاقة الوظيفة: منصب واحد، دبلوم تقني في الشبكات، إيداع ورقي، اختبار كتابي وشفوي، وتنبيه بشأن تاريخ 16 نوفمبر 2026.",
+          "sections": [
+            [
+              "القرار الرسمي وحدود الإعلان",
+              "أعلنت الوكالة الحضرية لسطات عن منصب واحد لتقني أو ما يعادله في الإعلاميات، خيار أنظمة وشبكات المعلومات، وفق القرار الإداري رقم 204/26 المؤرخ في 27 أكتوبر 2026. تعرض بوابة التشغيل العمومي الإعلان بالرمز C44308/26، وتؤكد أنه توظيف عادي وليس قائمة عامة لعروض متعددة. تصف بطاقة المنصب الوظيفة بأنها «عون عالي التحكم»؛ ولا يجوز تحويل هذا الوصف إلى درجة من درجات الوظيفة العمومية لم يذكرها القرار. يتناول هذا الدليل الوثيقتين الأصليتين، لا مجرد عنوان الإعلان، ويفصل بين شروط الإقصاء والمهارات المهنية المستحسنة. آخر موعد منشور في البوابة هو 16 نوفمبر 2026 الساعة الرابعة والنصف بعد الزوال، مع تنبيه مهم لصياغة أخرى في بطاقة المنصب."
+            ],
+            [
+              "الجنسية والسن والوضعية القانونية",
+              "ينص القرار على أن يكون المرشح مغربي الجنسية، وألا يقل عمره عن ثماني عشرة سنة وألا يتجاوز خمساً وأربعين سنة عند تاريخ التوظيف. كما يشترط ألا يكون من ذوي السوابق العدلية وألا يكون مسجلاً في السجل التأديبي المركزي للإدارات العمومية. لا تخلط هذه الشروط بتاريخ إيداع الملف أو بسن محدد في فاتح يناير، لأن النص هنا يربط السن بتاريخ التوظيف. إذا كانت لديك وضعية إدارية خاصة، فاستفسر من الوكالة قبل تقديم وثائق ناقصة. ليست هناك في القرار نسبة نجاح معلنة أو إعفاء تلقائي من أي شرط، ولا ينبغي اعتبار مجرد قبول الظرف البريدي دليلاً على استيفاء الأهلية."
+            ],
+            [
+              "الشهادة المقبولة ومعنى المعادلة",
+              "يشترط القرار دبلوم تقني في الإعلاميات، تخصص شبكات المعلومات، أو ما يعادله. وتوضح بطاقة المنصب المستوى الدراسي بأنه بكالوريا زائد سنتين، مع تخصص أنظمة وشبكات المعلومات. ينبغي مطابقة اسم الدبلوم والتخصص في الشهادة وكشف الوحدات مع الصياغة الأصلية؛ فدبلوم في البرمجة العامة أو الدعم التجاري لا يثبت تلقائياً معادلة تخصص الشبكات. تذكر الوثائق ضرورة المعادلة الإدارية للشهادات المعنية، وتطلب البطاقة شهادة المعادلة للدبلومات الصادرة عن مؤسسات أجنبية. إذا كانت شهادتك مختلفة الاسم، لا تخترع مطابقة؛ اطلب رأياً مكتوباً من الإدارة بشأن قبولها، وجهز وثيقة المعادلة قبل نهاية الأجل."
+            ],
+            [
+              "الخبرة: ميزة وليست شرط سنوات",
+              "تنص بطاقة الوظيفة على أن وجود تجربة مهنية أمر مستحسن، ولا تفرض حداً أدنى من سنوات الخبرة. لهذا لا يصح تقديم المنصب على أنه يتطلب سنتين أو خمس سنوات من العمل. يستطيع حديث التخرج إبراز مشاريع تدريب حقيقية في إعداد الموجهات أو إدارة مستخدمي Windows أو توثيق شبكة صغيرة، مع توضيح أنها مشاريع تدريب لا خبرة مأجورة. أما صاحب الخبرة فيستفيد من ذكر البيئة التي اشتغل فيها، وطبيعة الأعطال التي عالجها، والأدوات التي استعملها، دون كشف كلمات مرور أو معلومات سرية. ركز على الأدلة القابلة للتفسير في مقابلة تقنية، لا على قائمة طويلة من أسماء البرامج بلا تطبيق."
+            ],
+            [
+              "المهارات الشبكية والأنظمة المطلوبة",
+              "تذكر البطاقة بروتوكولات TCP/IP وشبكات LAN وWAN وتقسيم VLAN والعنونة والتوجيه والتبديل وVPN وWi-Fi والكابلات. وتطلب معرفة Windows للخوادم ومحطات العمل وActive Directory وسياسات المجموعة GPO وخدمات DNS وDHCP، مع اعتبار Linux إضافة مفيدة. كما تشمل المعدات الموجهات والمبدلات والجدران النارية ووسائط NAS والطابعات. لا يعني ذكر كل تقنية أن هناك شهادة مهنية إلزامية لكل منها؛ المقصود نطاق الكفايات المطلوب للوظيفة. يمكن للمرشح التحضير بسيناريو مبسط: جهاز لا يحصل على عنوان IP، فيفحص الكابل والاتصال وDHCP وDNS بالتسلسل قبل اقتراح تغيير إعدادات الشبكة."
+            ],
+            [
+              "الأمن والنسخ الاحتياطي والاستمرارية",
+              "تتجاوز المهام إصلاح الحواسيب إلى حماية الوصول، وتتبع التحديثات الأمنية، ومراقبة التنبيهات، والتحقق من النسخ الاحتياطية واختبار الاستعادة والمشاركة في خطة استئناف النشاط. هذه مسؤوليات مذكورة في بطاقة المنصب، ولا ينبغي اختزالها في تثبيت مضاد فيروسات. على المرشح فهم الفرق بين نجاح مهمة النسخ الاحتياطي وإمكان استعادة ملف فعلاً، وأن صلاحيات المستخدمين يجب أن تستند إلى تفويض معتمد. تذكر البطاقة VMware أو Hyper-V للمحاكاة الافتراضية، وأساسيات PowerShell أو Bash للأتمتة، واستخدام أدوات الذكاء الاصطناعي مع احترام السرية والأمن. المثال المناسب في المقابلة هو وصف إجراء مراقب وقابل للتوثيق، لا ادعاء تشغيل أدوات على بيانات حقيقية دون إذن."
+            ],
+            [
+              "المهام اليومية والسلوك المهني",
+              "تشمل المهام تركيب معدات الشبكة ومراقبة الأداء والألياف البصرية، وإدارة حسابات المستخدمين وحقوقهم، وتحديث الخوادم ومحطات العمل، وصيانة الطابعات، والاستجابة لطلبات المساعدة وتوثيق الحوادث. كما تشمل جرد العتاد ومخططات الشبكة والمشاركة في تطوير البنية التحتية. تشدد البطاقة على التنظيم والقدرة على ترتيب الأولويات والسرية والتواصل الواضح مع المستخدمين. عند إعداد السيرة الذاتية، اربط كل مهارة بمهمة محددة: توثيق تدخل أو اختبار استعادة أو إعداد قائمة جرد، مع تحديد دورك الحقيقي. لا تقدم مثالاً افتراضياً على أنه مشروع أنجزته داخل الوكالة، ولا تدعِ معرفة بنيتها التقنية الداخلية؛ الوثائق لا تنشر هذه التفاصيل."
+            ],
+            [
+              "ملف الترشيح والوثائق التي يجب مطابقتها",
+              "ينص القرار على طلب ترشيح وسيرة ذاتية ونسخة مصادق عليها من البطاقة الوطنية ونسخ مصادق عليها من الشهادات والدبلومات ووثيقة المعادلة الإدارية عند الاقتضاء. وتضيف بطاقة المنصب صياغة أكثر تحديداً لطلب خطي بخط اليد مصحوب بسيرة ذاتية، ونسخة مطابقة للأصل من الدبلوم، وشهادة المعادلة للشهادات الأجنبية، وترخيص المشاركة بالنسبة للموظفين. عملياً، اتبع القائمة الأكثر تفصيلاً لتجنب نقص الملف، مع الاستفسار عن المصادقة المطلوبة لكل نسخة. افحص تطابق الاسم ورقم البطاقة والعنوان، واحتفظ بنسخة كاملة من الملف ووصل الإيداع إن توفر. لا ترسل أصول الشهادات إلا إذا طلبتها الإدارة صراحة وفق مسطرة معلنة."
+            ],
+            [
+              "الإيداع وآخر أجل: اختلاف يستدعي الحذر",
+              "يوجه القرار الملفات داخل ظرف مغلق باسم مدير الوكالة الحضرية لسطات، إلى العنوان: 11 شارع الحسن الثاني، ص.ب 532، سطات، أو تودع مباشرة بمكتب الضبط في العنوان نفسه. يحدد القرار آخر أجل في 16 نوفمبر 2026 الساعة 16:30، بينما تكتب بطاقة المنصب بالفرنسية «قبل 16 نوفمبر 2026» وتذكر في موضع آخر الساعة 16:30. هذا اختلاف في الصياغة قد يؤثر في يوم الإيداع؛ لا تعتمد اليوم الأخير دون تأكيد مكتوب من الوكالة، والأكثر أماناً الإيداع قبله. احتفظ بإثبات التسلم، ولا تعتبر إرسال رسالة إلكترونية أو ملء استمارة الاستفسار في البوابة بديلاً عن الإيداع الذي ينص عليه القرار."
+            ],
+            [
+              "الانتقاء والراتب والتحضير المسؤول",
+              "يشير القرار إلى استدعاء المرشحين المستوفين للشروط لاختبار كتابي، ثم استدعاء الناجحين فيه إلى اختبار شفوي أمام لجنة مختصة. لم يحدد القرار المنشور تاريخ الاختبارات أو مدتها أو معاملاتها أو راتباً صافياً، لذلك لا ننشر أرقاماً مفترضة. حضّر مراجعة عملية لمشكلات DHCP وDNS وVLAN والنسخ الاحتياطي وحقوق الوصول، وتمرن على شرح خطوات تشخيص عطل بلغة واضحة. تابع الموقع الرسمي للوكالة وبوابة التشغيل العمومي لمعرفة لوائح الاستدعاء وأي تعديل في الأجل. هذه مسابقة على منصب واحد وليست ضمان توظيف، ويظل القرار الأصلي والبطاقة المرفقة المرجع عند التعارض مع أي تلخيص منشور."
+            ]
+          ]
+        },
+        "en": {
+          "title": "Settat Urban Agency IT network technician: eligibility, documents and deadline wording warning",
+          "deck": "A document-based guide to decision 204/26: one Bac+2 network technician position, paper application, written and oral selection, and a deadline ambiguity.",
+          "sections": [
+            [
+              "The original decision and the precise vacancy",
+              "Settat Urban Agency is recruiting one IT technician or equivalent, specializing in computer systems and networks, under administrative decision 204/26 dated 27 October 2026. The government employment portal lists the announcement as C44308/26 and describes a regular recruitment procedure, not a collection of unrelated vacancies. The attached position sheet calls the role an agent de haute maîtrise; that label should not be converted into an unannounced civil-service grade. This guide reads the signed decision alongside the three-page job description rather than extrapolating from a headline. The portal gives 16 November 2026 at 16:30 as the deadline, but the job sheet uses a potentially stricter expression discussed below."
+            ],
+            [
+              "Nationality, age and legal eligibility",
+              "The decision requires Moroccan nationality and an age of at least 18 and no more than 45 on the recruitment date. It also excludes applicants with a criminal record and those registered in the central disciplinary register of public administrations. Do not silently substitute a different reference date such as 1 January, since this decision expressly refers to the date of recruitment. An applicant with an unusual administrative situation should ask the agency for written clarification before spending time and money preparing the file. Acceptance of an envelope does not establish eligibility, and the published decision provides neither a success probability nor a discretionary exemption from the stated conditions. Check these basic rules before comparing technical qualifications."
+            ],
+            [
+              "Diploma requirements and equivalence",
+              "The signed decision asks for a technician diploma in information technology, specifically computer networks, or a legally equivalent qualification. The job description clarifies the expected training level as two years after the baccalaureate in computer systems and networks. Compare the exact wording on your diploma and transcript with this specialization; a generic programming or business-support diploma is not automatically an accepted equivalent. The decision refers to administrative equivalence where relevant, while the job sheet expressly asks for equivalence documentation for qualifications issued by foreign institutions. If your diploma has a different title, seek clarification from the agency rather than asserting equivalence yourself. Gather any formal recognition document before the submission deadline."
+            ],
+            [
+              "Professional experience is desirable, not mandatory",
+              "The position sheet says that professional experience is desirable. It does not impose a numerical minimum of two, three or five years, so a guide must not invent one. Recent graduates can describe genuine laboratory assignments, internships or training projects involving routers, Windows accounts or network documentation, while identifying those projects accurately as learning experience. Experienced applicants should describe the environment, the types of incidents resolved and the tools actually used without exposing employer secrets, credentials or personal information. In an interview, a modest but verifiable account of a real troubleshooting process is stronger than a long catalogue of product names. Avoid claiming that internship work was paid employment if it was not."
+            ],
+            [
+              "Networks, Windows services and infrastructure",
+              "The official sheet names TCP/IP, LAN and WAN networks, VLAN segmentation, IP addressing, routing, switching, VPNs, Wi-Fi and structured cabling. It also expects familiarity with Windows workstations and servers, Active Directory, Group Policy, DNS and DHCP. Linux knowledge is presented as an additional advantage, not an explicit universal prerequisite. The infrastructure scope includes servers, switches, routers, firewalls, network-attached storage, printers and peripherals. Listing these technologies does not mean that every associated commercial certification is compulsory. A useful practice case is a workstation failing to obtain an IP address: verify physical connectivity, interface status, DHCP configuration and DNS behavior in a documented sequence before changing network settings."
+            ],
+            [
+              "Cybersecurity, backup and continuity",
+              "The duties go beyond fixing laptops. They cover access security, validated patching, incident alerts, monitoring backups, checking restoration procedures and contributing to business-continuity and disaster-recovery tests. A completed backup job is not the same as a proven successful restoration, and user permissions should follow approved authorization. The sheet also refers to VMware or Hyper-V virtualization, basic PowerShell or Bash automation, and using artificial-intelligence tools within confidentiality and security rules. Applicants should be ready to explain why they would obtain permission before changing production configurations and why sensitive data must not be pasted into external tools. These are practical examples of the listed responsibilities, not claims about the agency's internal architecture or exam questions."
+            ],
+            [
+              "Daily work and professional conduct",
+              "The role involves installing and maintaining network equipment, monitoring connectivity and fiber links, managing user accounts and approved access rights, deploying software and updates, maintaining printers and answering support requests. It also requires incident documentation, asset inventories, network diagrams and assistance with infrastructure improvements. The employer values organization, prioritization, autonomy, confidentiality and clear communication with nontechnical colleagues. When adapting a CV, connect each skill to a genuine task: a documented incident, a backup restoration test or an equipment inventory. Distinguish personal projects from employer assignments. The public documents do not reveal the agency's actual server brands, network topology or internal security controls, so applicants should not pretend to know them."
+            ],
+            [
+              "Application documents and administrative checks",
+              "The signed decision lists an application request, CV, certified copy of the national identity card, certified copies of qualifications and administrative equivalence documentation when applicable. The attached job sheet is more specific: it requests a handwritten application with the CV, a certified diploma copy, a foreign-diploma equivalence certificate when relevant, and authorization to participate for candidates already employed in public service. The safest preparation is to satisfy the more detailed list while confirming copy-certification requirements with the agency. Check that names and identity numbers match across documents. Keep a complete personal copy and a dated filing receipt when one is issued. Do not send original diplomas unless the authority explicitly requests them through an official procedure."
+            ],
+            [
+              "Where to apply and the deadline wording conflict",
+              "Applications must be delivered to the registry office of Settat Urban Agency or sent in a sealed envelope addressed to its director at 11 Boulevard Hassan II, BP 532, Settat. The decision gives 16 November 2026 at 16:30 as the cutoff, whereas the French job sheet says 'before 16 November 2026' while also mentioning 16:30. These formulations are not perfectly aligned. An applicant should seek written clarification and, when possible, deliver before 16 November instead of relying on a last-day interpretation. Retain proof of delivery; a message through the portal's contact form is not an application. Postal delays are the candidate's risk, and dispatching an envelope does not prove that it arrived before the applicable cutoff."
+            ],
+            [
+              "Selection stages, salary and realistic preparation",
+              "The decision provides for a written examination for eligible shortlisted applicants, followed by an oral interview for those who pass. It does not publish an examination date, duration, coefficients or a net salary; inserting such figures would mislead readers. Review DNS and DHCP troubleshooting, VLAN configuration concepts, backup verification, access controls and the communication of incidents. Practice explaining why you would isolate a fault before changing production settings, and prepare to discuss a genuine project without inventing results. Watch the agency website and the government employment portal for summons and corrections. One advertised position does not imply a guaranteed appointment, and the signed documents take precedence over any secondary summary."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Agence urbaine de Settat : technicien systèmes et réseaux, dossier et alerte sur la date limite",
+          "deck": "Analyse de la décision 204/26 et de la fiche de poste : un poste Bac+2, dépôt papier, épreuves écrite et orale et ambiguïté sur le 16 novembre 2026.",
+          "sections": [
+            [
+              "Le concours exact et ses documents officiels",
+              "L’Agence urbaine de Settat recrute un technicien ou équivalent en informatique, option systèmes et réseaux informatiques, pour un seul poste. La décision administrative 204/26 est datée du 27 octobre 2026 et le portail de l’emploi public classe l’annonce sous le code C44308/26. Il s’agit d’un recrutement régulier, et non d’une liste de postes ouverts dans plusieurs villes. La fiche décrit la fonction comme un poste d’agent de haute maîtrise, sans annoncer un grade de fonctionnaire qu’il serait légitime d’inventer. Cette analyse s’appuie sur la décision signée et la fiche de poste de trois pages. La date limite affichée est le 16 novembre 2026 à 16 h 30, avec une réserve importante exposée plus loin."
+            ],
+            [
+              "Nationalité, âge et situation administrative",
+              "La décision exige la nationalité marocaine, un âge d’au moins dix-huit ans et de quarante-cinq ans au plus à la date du recrutement. Elle impose également l’absence d’antécédents judiciaires et d’inscription au registre disciplinaire central des administrations publiques. Il faut conserver la date de référence réellement écrite : le texte ne parle pas d’un âge calculé automatiquement au premier janvier. Un candidat dont la situation administrative présente une particularité devrait demander une clarification écrite à l’Agence avant d’engager des frais de dossier. Le dépôt d’une enveloppe ne constitue pas une confirmation d’éligibilité. Aucune dérogation générale ni probabilité d’admission n’est annoncée dans les documents consultés."
+            ],
+            [
+              "Diplôme Bac+2 et reconnaissance des équivalences",
+              "Le texte exige un diplôme de technicien en informatique, spécialité réseaux informatiques, ou une qualification reconnue équivalente. La fiche de poste précise un niveau baccalauréat plus deux années et une formation en systèmes et réseaux informatiques. Il est prudent de comparer l’intitulé exact du diplôme, les unités étudiées et les compétences attestées avec ce domaine précis. Un diplôme de développement logiciel généraliste ne devient pas automatiquement équivalent à une formation réseaux. La décision évoque l’équivalence administrative et la fiche réclame une attestation d’équivalence pour les diplômes délivrés par des institutions étrangères. En cas de doute, interrogez l’administration avant l’échéance et ne présentez pas une équivalence supposée comme acquise."
+            ],
+            [
+              "Expérience professionnelle : un avantage, pas un seuil",
+              "La fiche précise qu’une expérience professionnelle est souhaitable, sans fixer un minimum obligatoire de plusieurs années. Transformer cette préférence en condition de deux ou cinq ans serait inexact. Un jeune diplômé peut donc présenter ses véritables stages, travaux pratiques ou projets personnels de configuration réseau, à condition de distinguer clairement formation et emploi salarié. Un candidat expérimenté peut documenter les types d’incidents traités, les procédures de maintenance suivies et les outils utilisés, sans divulguer de mots de passe ni de données confidentielles. L’entretien doit permettre d’expliquer une démarche concrète plutôt que de réciter des marques de logiciels. Toute réalisation mentionnée dans le CV doit pouvoir être décrite avec précision."
+            ],
+            [
+              "Réseaux, Windows et équipements attendus",
+              "La fiche cite les protocoles TCP/IP, les réseaux LAN et WAN, les VLAN, l’adressage IP, le routage, la commutation, les VPN, le Wi-Fi et le câblage. Elle mentionne également Windows pour les postes et serveurs, Active Directory, les stratégies de groupe GPO et les services DNS et DHCP. Les connaissances Linux constituent un atout complémentaire. Les équipements concernés incluent serveurs, commutateurs, routeurs, pare-feu, NAS, imprimantes et périphériques. La présence de ces notions dans la fiche ne signifie pas que toutes les certifications commerciales correspondantes soient obligatoires. Pour se préparer, on peut décrire le diagnostic d’un poste sans adresse IP : liaison physique, interface, DHCP, puis résolution DNS, avec traçabilité des interventions."
+            ],
+            [
+              "Cybersécurité, sauvegardes et reprise d’activité",
+              "La mission ne se limite pas à réparer des ordinateurs. Le document prévoit la sécurisation des accès, le suivi des correctifs validés, la détection des alertes, la surveillance des sauvegardes et la participation aux tests de restauration et de reprise d’activité. Une sauvegarde exécutée sans erreur n’apporte pas, à elle seule, la preuve qu’une restauration fonctionnera. La fiche évoque aussi la virtualisation avec VMware ou Hyper-V, des notions de PowerShell ou Bash et l’usage d’outils d’intelligence artificielle dans le respect de la confidentialité. Un candidat devrait expliquer comment obtenir une autorisation avant une modification en production et pourquoi les données internes ne doivent pas être transmises à un outil externe non approuvé."
+            ],
+            [
+              "Activités quotidiennes et qualités attendues",
+              "Les activités comprennent l’installation et la maintenance du réseau, le suivi du câblage et des liaisons fibre optique, la gestion des comptes utilisateurs et des habilitations, les mises à jour des systèmes et l’assistance sur les imprimantes. Elles incluent aussi le traitement des incidents, leur documentation, la tenue de l’inventaire du parc et la mise à jour des schémas techniques. L’Agence recherche rigueur, organisation, autonomie, réactivité, discrétion et communication avec les utilisateurs. Dans le CV, il vaut mieux associer chaque compétence à une tâche réelle et expliquer le résultat sans inventer de chiffres. Les documents publics ne décrivent ni la topologie du réseau interne ni les marques exactes de l’infrastructure de l’Agence."
+            ],
+            [
+              "Pièces du dossier et contrôle avant dépôt",
+              "La décision demande une candidature, un CV, une copie certifiée de la carte nationale d’identité, des copies certifiées des diplômes et l’équivalence administrative lorsqu’elle s’applique. La fiche ajoute la précision d’une demande manuscrite accompagnée du CV, d’une copie conforme du diplôme, de l’attestation d’équivalence pour les diplômes étrangers et de l’autorisation de participer pour les fonctionnaires. Préparez donc la liste la plus complète tout en vérifiant les formalités exactes de certification auprès de l’Agence. Comparez l’orthographe du nom et les références d’identité sur toutes les pièces. Conservez une copie intégrale et un récépissé daté si le bureau d’ordre en délivre un. N’envoyez pas les originaux sans instruction officielle expresse."
+            ],
+            [
+              "Adresse de dépôt et ambiguïté sur le dernier jour",
+              "Le dossier est à déposer au bureau d’ordre de l’Agence urbaine de Settat ou à envoyer sous pli fermé à son directeur, au 11 boulevard Hassan II, BP 532, Settat. La décision fixe l’échéance au 16 novembre 2026 à 16 h 30, tandis que la fiche indique « avant le 16 novembre 2026 », tout en rappelant 16 h 30 dans son paragraphe sur l’envoi. Cette différence de formulation mérite une vérification auprès de l’administration, plutôt qu’une interprétation avantageuse. Pour réduire le risque, privilégiez un dépôt avant le 16 novembre et gardez une preuve de réception. Le formulaire de contact du portail ne remplace pas le dépôt du dossier. Un courrier expédié à temps peut arriver trop tard."
+            ],
+            [
+              "Épreuves, rémunération et préparation réaliste",
+              "La décision prévoit une épreuve écrite pour les candidats remplissant les conditions, puis une épreuve orale pour ceux qui réussissent l’écrit. Elle ne fixe pas publiquement la date des épreuves, leur durée, leurs coefficients ou un salaire net ; aucune estimation ne doit être présentée comme officielle. Révisez la résolution d’incidents DHCP et DNS, les principes VLAN, les sauvegardes, les droits d’accès et la documentation des interventions. Entraînez-vous à expliquer un diagnostic étape par étape et à présenter une expérience authentique sans embellissement. Consultez régulièrement le portail gouvernemental et le site de l’Agence pour les convocations et éventuels rectificatifs. Le concours concerne un seul poste et ne garantit aucun recrutement individuel."
             ]
           ]
         }
