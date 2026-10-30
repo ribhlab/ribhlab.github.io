@@ -709,6 +709,78 @@
       "description": "Cheese quesadilla.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-quinoa-stuffed-peppers": {
+      "id": "commons:87890071",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Quinoa_stuffed_peppers.jpg/1280px-Quinoa_stuffed_peppers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AQuinoa_stuffed_peppers.jpg",
+      "photographer": "Mark Bonica",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Quinoa stuffed peppers.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-bulgur-tabouleh": {
+      "id": "commons:181796556",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Liat_Portal_for_Foodie_Disorder_-_Bulgur_salad.jpg/1280px-Liat_Portal_for_Foodie_Disorder_-_Bulgur_salad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALiat_Portal_for_Foodie_Disorder_-_Bulgur_salad.jpg",
+      "photographer": "Liat Portal",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Liat Portal for Foodie Disorder - Bulgur salad.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-vegetable-frittata": {
+      "id": "commons:178958502",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/%D0%A4%D1%80%D0%B8%D1%82%D0%B0%D1%82%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D0%B0%D0%BD%D0%B0%D1%9C_%2802%29.jpg/1280px-%D0%A4%D1%80%D0%B8%D1%82%D0%B0%D1%82%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D0%B0%D0%BD%D0%B0%D1%9C_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%D0%A4%D1%80%D0%B8%D1%82%D0%B0%D1%82%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D0%B0%D0%BD%D0%B0%D1%9C_(02).jpg",
+      "photographer": "Deodora333",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Фритата со спанаќ (02).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "spinach-ricotta-lasagna": {
+      "id": "commons:77846608",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Food_%E8%8F%A0%E8%8F%9C%26%E7%91%9E%E5%8F%AF%E9%81%94%E8%B5%B7%E5%8F%B8%E5%8D%83%E5%B1%A4%E9%BA%B5%2C_Spinach_%26_Ricotta_Lasagna%2C_LONGTABLE%2C_%E5%8F%B0%E5%8C%97_%2815708119113%29.jpg/1280px-Food_%E8%8F%A0%E8%8F%9C%26%E7%91%9E%E5%8F%AF%E9%81%94%E8%B5%B7%E5%8F%B8%E5%8D%83%E5%B1%A4%E9%BA%B5%2C_Spinach_%26_Ricotta_Lasagna%2C_LONGTABLE%2C_%E5%8F%B0%E5%8C%97_%2815708119113%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFood_%E8%8F%A0%E8%8F%9C%26%E7%91%9E%E5%8F%AF%E9%81%94%E8%B5%B7%E5%8F%B8%E5%8D%83%E5%B1%A4%E9%BA%B5%2C_Spinach_%26_Ricotta_Lasagna%2C_LONGTABLE%2C_%E5%8F%B0%E5%8C%97_(15708119113).jpg",
+      "photographer": "bryan...",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Food 菠菜&瑞可達起司千層麵, Spinach & Ricotta Lasagna, LONGTABLE, 台北 (15708119113).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "baked-apple-walnuts": {
+      "id": "commons:161211149",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Baked_apples.jpg/1280px-Baked_apples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABaked_apples.jpg",
+      "photographer": "Berser25",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Baked apples.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-baked-apple-oats": {
+      "id": "commons:5065253",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Apple_Goodie_crisp.JPG/1280px-Apple_Goodie_crisp.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AApple_Goodie_crisp.JPG",
+      "photographer": "JamieS93",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Apple Goodie crisp.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
