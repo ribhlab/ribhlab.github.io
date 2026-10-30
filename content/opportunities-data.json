@@ -243,9 +243,10 @@
       "place": "Settat, Maroc",
       "count": 1,
       "deadline": "2026-11-16",
-      "url": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics",
+      "url": "https://www.emploi-public.ma/fr/concours/details/bdfb5402-a6de-47c6-8493-1b22d8ea83bb",
       "kind": "official_notice",
-      "verifiedBy": "emploi-public.ma"
+      "verifiedBy": "Agence urbaine de Settat decision 204/26 (27 Oct 2026), job sheet and emploi-public C44308/26",
+      "sourceReviewedAt": "2026-10-30"
     },
     {
       "id": "sidi-finance",
