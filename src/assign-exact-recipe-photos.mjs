@@ -31,7 +31,9 @@ const selected={
  'nicoise-style-salad':['File:Salade nicoise.jpg','Canterel'],
  'tomato-cheese-omelet':['File:Tomato Cheese Omelette.jpg','Sumit Surai'],
  'american-macaroni-cheese':['File:Mac-and-cheese.jpg','Amin'],
- 'healthy-cucumber-yogurt-dip':['File:Tzatziki meze or appetizer, also used as a sauce.jpg','Nikodem Nijaki']
+ 'healthy-cucumber-yogurt-dip':['File:Tzatziki meze or appetizer, also used as a sauce.jpg','Nikodem Nijaki'],
+ 'vegetable-biryani':['File:Vegetable Biryani.JPG','Miansari66'],
+ 'palak-paneer-style':['File:Palak Paneer.JPG','Miansari66']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
