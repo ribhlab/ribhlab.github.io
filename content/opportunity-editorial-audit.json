@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-29",
+  "reviewedAt": "2026-10-30",
   "scope": "All 96 opportunity cards in this repository (jobs, employers, contests, immigration pathways and visa appointment services).",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
@@ -11,10 +11,10 @@
   "totals": {
     "cards": 96,
     "visa": 12,
-    "researched": 37,
+    "researched": 38,
     "marketEvidence": 5,
     "pendingDetail": 50,
-    "pendingLiveVerification": 4
+    "pendingLiveVerification": 3
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -643,13 +643,15 @@
       "section": "competitions",
       "title": "Responsable Supervision Taux et Actions",
       "deadline": "2026-11-09",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
       "priority": "date:2026-11-09",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/b5fe236e-2c63-40cc-8c74-c6f40a68d275",
       "reviewedAt": "2026-10-29",
       "evidenceKey": "cdg-rates-equity-supervision",
-      "note": "Original 2-page CDG announcement dated 26 Oct 2026 and government C44286/26 independently checked. Nine substantial AR/EN/FR sections; awaiting full site build and direct live verification."
+      "note": "Original CDG two-page notice and government C44286/26 verified; nine substantive sections per AR/EN/FR. GitHub Pages build/deploy 40976804122 and public-sitemap-check 40976861492 confirmed live HTTP 200, nine sections, source links and external new-tab handling in three locales.",
+      "liveVerifiedAt": "2026-10-30",
+      "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/cdg-rates-equity-supervision/"
     },
     {
       "id": "uh2c-medecine-professors-12",
