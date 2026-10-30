@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-30",
-  "scope": "All 101 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
+  "scope": "All 102 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
@@ -9,12 +9,12 @@
     "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
-    "cards": 101,
+    "cards": 102,
     "visa": 12,
     "researched": 42,
     "marketEvidence": 5,
     "pendingDetail": 45,
-    "pendingLiveVerification": 9
+    "pendingLiveVerification": 10
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -26,6 +26,18 @@
     "Keep internal cards within RibhLab and external primary sources in new tabs"
   ],
   "cards": [
+    {
+      "id": "map-infographiste-rabat-c44357-2026",
+      "section": "competitions",
+      "title": "MAP Rabat — Infographiste (1 poste, échelle 10)",
+      "deadline": "2026-11-12T16:30",
+      "status": "researched-awaiting-live-verification",
+      "priority": "verify-build-deploy-live-ar-en-fr",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/0a78b284-d7a6-4527-9a25-90998b4842d3",
+      "articleEvidenceId": "map-infographiste-rabat-c44357-2026",
+      "reviewedAt": "2026-10-30",
+      "note": "Signed 3-page MAP notice 3557/DCH of 29 Oct 2026 and official C44357/26 listing read 30 Oct. One Rabat role; Bac+3, Moroccan, under 40 on exam day; one-year experience desirable only. Application 12 Nov 16:30; written 2h coeff 2 + 1h30 coeff 2, oral 30min coeff 7. No salary published. AR/EN/FR nine-section source-based study written; live site pending."
+    },
     {
       "id": "anapec-dg-networks-technician-c44231-2026",
       "section": "competitions",
