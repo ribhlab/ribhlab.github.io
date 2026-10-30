@@ -754,7 +754,10 @@
         {
           "sequence": 8,
           "titleAr": "تصميم لعبة ألغاز قصيرة",
-          "status": "planned"
+          "status": "queued",
+          "slug": "accessible-puzzle-game-prototype-input-difficulty-test",
+          "queuePath": "content/reviewed-queue/accessible-puzzle-game-prototype-input-difficulty-test.json",
+          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 9,
