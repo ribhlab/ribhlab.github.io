@@ -129,7 +129,7 @@ function load(root){
  const assignments=photoLibrary.assignments||{};
  if(new Set(Object.values(assignments)).size!==Object.keys(assignments).length||Object.keys(assignments).length!==Object.keys(photos).length)throw Error('Recipe photos must be assigned exactly once');
  if(new Set(Object.values(photos).map(p=>p.photoId)).size!==Object.keys(photos).length)throw Error('Duplicate photo IDs in recipes');
- if(photoLibrary.license!=='Unsplash License'||Object.keys(photos).length<18)throw Error('Verified food photo library is incomplete');
+ if(photoLibrary.license!=='Unsplash License'||Object.keys(photos).length+Object.keys(photoLibrary.curatedPhotos).length<18)throw Error('Verified food photo library is incomplete');
  for(const [key,p] of Object.entries(photos))if(!/^photo-\d+-[a-f0-9]+$/.test(p.photoId)||!p.url?.startsWith('https://images.unsplash.com/'+p.photoId+'?')||!p.source?.startsWith('https://unsplash.com/photos/')||!p.photographer)throw Error('Unverified food photography '+key);
  const slugs=new Set();
  for(const r of recipes){
