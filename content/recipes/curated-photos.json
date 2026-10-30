@@ -853,6 +853,18 @@
       "description": "Fajitas Wraps.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "brazilian-black-bean-stew": {
+      "id": "commons:53127765",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Feijoada_vegana.jpg/1280px-Feijoada_vegana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFeijoada_vegana.jpg",
+      "photographer": "NMaia",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Feijoada vegana.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
