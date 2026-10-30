@@ -34,7 +34,7 @@ const selected={
  'healthy-cucumber-yogurt-dip':['File:Tzatziki meze or appetizer, also used as a sauce.jpg','Nikodem Nijaki'],
  'vegetable-biryani':['File:Vegetable Biryani.JPG','Miansari66'],
  'palak-paneer-style':['File:Palak Paneer.JPG','Miansari66'],
- 'kefta-tagine-eggs':['File:20151121 Morocco 2645+7 Aït Ben Haddou sRGB (24483612775).jpg','Dan Lundberg'],
+ 'kefta-tagine-eggs':['File:طاجن بيض ومطيش وكرات د اللحم.jpg','إيان'],
  'taktouka-peppers':['File:Moroccan Taktouka تكتوكة.jpg','Wikimedia Commons'],
  'lentil-moroccan-stew':['File:Lentille à la marocaine, Moroccan lentil.webp','Wikimedia Commons'],
  'berkoukes-vegetables':['File:Berkoukes.jpg','Indif'],
