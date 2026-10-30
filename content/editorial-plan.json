@@ -1685,7 +1685,9 @@
         {
           "sequence": 13,
           "titleAr": "برغر كلاسيكي وكيفية التسوية الآمنة",
-          "status": "planned"
+          "status": "queued",
+          "slug": "classic-homemade-beef-burger-safe-temperature-guide",
+          "queuedAt": "2026-10-30"
         },
         {
           "sequence": 14,
