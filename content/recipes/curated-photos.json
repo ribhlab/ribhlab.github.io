@@ -385,6 +385,42 @@
       "description": "Fattoush 1.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "ratatouille-provencal": {
+      "id": "commons:104264671",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Ratatouille_1.jpg/1280px-Ratatouille_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARatatouille_1.jpg",
+      "photographer": "Schnobby",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Ratatouille 1.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chicken-cacciatore": {
+      "id": "commons:35127951",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Chicken_cacciatore.jpg/1280px-Chicken_cacciatore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChicken_cacciatore.jpg",
+      "photographer": "Chris Bennett",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Chicken cacciatore.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "nicoise-style-salad": {
+      "id": "commons:3486441",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Salade_nicoise.jpg/1280px-Salade_nicoise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASalade_nicoise.jpg",
+      "photographer": "Canterel",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Salade nicoise.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
