@@ -1704,15 +1704,11 @@
         "grain-and-vegetable-bowl-easy-recipe",
         "homemade-shoyu-style-ramen-two-bowls-safe-broth-noodles",
         "seafood-paella-safe-home-preparation",
-        "chicken-tikka-masala-temperature-guide"
+        "chicken-tikka-masala-temperature-guide",
+        "pad-thai-noodles-peanut-allergy-plan"
       ],
       "targetArticles": 40,
       "ideas": [
-        {
-          "sequence": 8,
-          "titleAr": "باد تاي تايلاندي",
-          "status": "planned"
-        },
         {
           "sequence": 9,
           "titleAr": "تاكو مكسيكي تقليدي",
