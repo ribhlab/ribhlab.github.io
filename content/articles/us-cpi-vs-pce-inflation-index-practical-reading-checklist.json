@@ -1,0 +1,175 @@
+{
+  "slug": "us-cpi-vs-pce-inflation-index-practical-reading-checklist",
+  "category": "trading",
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false,
+  "related": [
+    "macro-calendar-us-europe-japan-china",
+    "how-to-read-fomc-decision-2026",
+    "energy-inflation-us-euro-area-october-2026"
+  ],
+  "sources": [
+    {
+      "label": "U.S. Bureau of Labor Statistics — Consumer Price Index Frequently Asked Questions (official CPI scope, rates and seasonal-adjustment explanations; checked 28 October 2026)",
+      "url": "https://www.bls.gov/cpi/questions-and-answers.htm"
+    },
+    {
+      "label": "U.S. Bureau of Economic Analysis — What accounts for differences between the PCE price index and CPI? (official four-effect reconciliation; checked 28 October 2026)",
+      "url": "https://www.bea.gov/help/faq/555"
+    },
+    {
+      "label": "Federal Reserve Board — Inflation (PCE), official two-percent target and index comparison (checked 28 October 2026)",
+      "url": "https://www.federalreserve.gov/economy-at-a-glance-inflation-pce.htm"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "CPI وPCE الأمريكيان: كيف تقرأ التضخم وتحسب الفروق دون خلط المؤشرين؟",
+      "excerpt": "مقارنة موثقة بين مؤشر أسعار المستهلك ونفقات الاستهلاك الشخصي، مع حسابات مبسطة وخطوات لقراءة البيانات الرسمية دون تحويلها إلى توقعات تداول.",
+      "lead": "تقرأ عنواناً يقول إن التضخم الأمريكي بلغ نسبة معينة، ثم تسمع أن الاحتياطي الفدرالي يراقب رقماً آخر. ليس بالضرورة أن أحد الرقمين خطأ؛ فقد يكون الأول مؤشر أسعار المستهلك CPI الصادر عن مكتب إحصاءات العمل BLS، والثاني مؤشر أسعار نفقات الاستهلاك الشخصي PCE الذي يصدره مكتب التحليل الاقتصادي BEA. يختلفان في نطاق الإنفاق والأوزان وطريقة الحساب. هذا الدليل يشرح كيف تفصل بينهما، وتراجع تاريخ الفترة والتعديل الموسمي، وتعيد حساب النسبة من مستويات افتراضية واضحة. لا نورد فيه رقماً راهناً للتضخم في أكتوبر 2026 ولا نتوقع قرار فائدة أو حركة الذهب.",
+      "sections": [
+        {
+          "heading": "1. ابدأ بالسؤال: أي أسعار، وأي مستهلكين، وأي جهة إحصائية؟",
+          "paragraphs": [
+            "يعرّف BLS مؤشر CPI بأنه متوسط تغير أسعار سلة ممثلة من السلع والخدمات التي يشتريها المستهلكون. المؤشر الأشهر في الأخبار هو CPI-U للمستهلكين الحضريين، ولا يمثل بالضرورة تجربة أسرة بعينها. يتضمن فئات مثل الغذاء والسكن والنقل والعلاج، لكنه لا يعامل شراء الأسهم والسندات كإنفاق استهلاكي. لا تخلط مستوى المؤشر، مثل 113.3 نقطة في مثال افتراضي، مع نسبة تضخم 113.3%؛ فالمستوى عدد قياسي مرتبط بفترة مرجعية، أما التضخم فهو نسبة التغير بين فترتين.",
+            "أما PCE فيصدر عن BEA ويقيس أسعار نفقات الاستهلاك الشخصي التي تتم بواسطة الأسر أو نيابة عنها، بما يشمل بعض الخدمات التي يدفع ثمنها طرف آخر، مثل جهات التأمين أو برامج عامة، ضمن قواعد الحسابات القومية. يشرح BEA أن اختلاف النطاق واحد من أربعة مصادر لفارق CPI وPCE. لذلك لا يصح القول إن المؤشرين يقيسان الفاتورة نفسها ثم يختلفان بلا سبب؛ إنهما نافذتان متداخلتان لكن غير متطابقتين على الأسعار. اكتب في جدول المتابعة الاسم الكامل والجهة المصدرة قبل نسخ أي رقم."
+          ]
+        },
+        {
+          "heading": "2. افهم أثر السلة والأوزان والمعادلة دون تبسيط مخل",
+          "paragraphs": [
+            "تستخدم مؤشرات CPI العامة أوزان إنفاق مأخوذة من مسوح المستهلكين، مع منهج معدل من لاسبير، بينما يستخدم PCE صيغة فيشر المتسلسلة التي تراعي تغير نمط الإنفاق عبر فترات متجاورة. هذا الوصف وارد في توضيح BEA الرسمي، لكنه لا يعني أن سلة CPI جامدة إلى الأبد: تُحدَّث أوزانها دورياً وتستخدم بعض مستوياتها الدنيا متوسطات هندسية تسمح بقدر من الإحلال بين السلع. كما أن أوزان PCE تستند إلى بيانات إنفاق ضمن الحسابات القومية، لا إلى الاستبيان نفسه المستخدم في CPI.",
+            "عندما يرتفع سعر خدمة لها وزن كبير في مؤشر، قد يكون أثرها على الرقم الإجمالي أكبر من خدمة ارتفع سعرها بالنسبة نفسها ولكن وزنها أصغر. وبحسب BEA، تنقسم أسباب الاختلاف بين المؤشرين إلى أثر المعادلة، وأثر الأوزان، وأثر النطاق، وآثار أخرى مثل التعديل الموسمي واختلاف مصادر الأسعار. لا تنسب الفرق دائماً إلى السكن وحده، ولا تفترض أن PCE أقل من CPI في كل شهر. المقارنة الصحيحة تحتاج إلى الفترة نفسها، ونوع التغير نفسه، والنسخة المنشورة من البيانات."
+          ]
+        },
+        {
+          "heading": "3. ميّز بين التضخم العام والأساسي وهدف الفدرالي",
+          "paragraphs": [
+            "يشمل المؤشر العام Headline فئات الغذاء والطاقة مع بقية الإنفاق، أما المؤشر الأساسي Core فيستبعد الغذاء والطاقة في الاستخدام الشائع لهذه السلاسل. الاستبعاد يساعد المحللين على دراسة حركة أبطأ نسبياً في بعض الأسعار، لكنه لا يعني أن الغذاء والطاقة غير مهمين لميزانية الأسرة أو أن التضخم الأساسي يساوي تكلفة معيشتك. يمكن أن يرتفع العام أكثر من الأساسي عند صدمة طاقة، أو يحدث العكس عندما تنخفض أسعار الوقود بينما تستمر ضغوط خدمات أخرى. لا تقارن Core PCE مع Headline CPI ثم تصف الفرق بأنه تغير اقتصادي مفاجئ.",
+            "يؤكد موقع مجلس الاحتياطي الفدرالي أن هدف التضخم البالغ 2% على المدى الأطول يُقاس بالتغير السنوي في مؤشر PCE العام. ويتابع المسؤولون مؤشرات أخرى، منها الأساسي وCPI، لفهم اتجاهات الأسعار؛ لكن الهدف المعلن ليس «2% من CPI الأساسي». لا تعني قراءة شهر واحد أعلى أو أدنى من 2% قراراً آلياً بشأن الفائدة. السياسة النقدية تنظر أيضاً إلى العمل والتوقعات والمخاطر والاتجاه عبر الزمن. استخدم صياغة دقيقة: «هذا قياس للتضخم» وليس «هذه تعليمات لشراء الذهب أو بيع الدولار»."
+          ]
+        },
+        {
+          "heading": "4. أعد حساب النسب بنفسك من مستوى المؤشر",
+          "paragraphs": [
+            "للتغير السنوي بين الشهر نفسه من سنتين، استعمل: (المؤشر الحالي ÷ مؤشر الشهر المقابل قبل سنة − 1) × 100. في مثال اصطناعي بالكامل، كان المؤشر 110.0 قبل عام وأصبح 113.3، فتكون النسبة (113.3 ÷ 110.0 − 1) × 100 = 3.00%. وإذا كان مستوى الشهر السابق 112.7، فالتغير الشهري (113.3 ÷ 112.7 − 1) × 100 ≈ 0.53%. هذه قيم مختلقة للتعليم وليست بيانات منشورة عن الولايات المتحدة. انتبه إلى التقريب: قد تنشر جهة رسمية نسبة 0.5% عند التقريب إلى منزلة عشرية واحدة.",
+            "لا تخلط بين التغير الشهري والتغير السنوي، ولا تضرب تغير شهر واحد في 12 وتقدمه بوصفه تضخماً سنوياً تحقق بالفعل. إذا أردت معدل شهر سنوياً مفترضاً، فالصيغة المركبة (1 + المعدل الشهري)^12 − 1، مع بيان أنه إسقاط حسابي لا مشاهدة فعلية. كذلك إذا ارتفع مؤشر 2% ثم 2% مرة ثانية، فالزيادة التراكمية 1.02 × 1.02 − 1 = 4.04% وليست 4% بالضبط. سجّل إن كانت السلسلة معدلة موسمياً عند حساب الشهر، وغير معدلة عادةً عند مقارنة 12 شهراً، ولا تخلط نسختين مختلفتين."
+          ]
+        },
+        {
+          "heading": "5. جرّب أثر الأوزان بمثال مبسط لا يدّعي إعادة إنتاج CPI أو PCE",
+          "paragraphs": [
+            "افترض اقتصاداً خيالياً لا يضم إلا مجموعتين: السكن ارتفع 6%، وبقية الخدمات والسلع ارتفعت 2%. إذا كانت حصة السكن في سلة افتراضية أولى 40% والبقية 60%، فالمتوسط الوزني المبسط يساوي 0.40 × 6% + 0.60 × 2% = 3.6%. وفي سلة ثانية بحصة سكن 20% وبقية 80%، تصبح النتيجة 0.20 × 6% + 0.80 × 2% = 2.8%. الفرق 0.8 نقطة مئوية رغم ثبات تغير أسعار المجموعتين. هذه الأوزان ليست أوزاناً رسمية لـCPI أو PCE، والمعادلة المبسطة ليست صيغة فيشر المستخدمة في PCE.",
+            "يمكنك تنفيذ التمرين في جدول بأربعة أعمدة: الفئة، تغير السعر، وزن السلة الأولى، وزن السلة الثانية. تحقق أن مجموع أوزان كل سلة يساوي 100%، ثم احسب مجموع حاصل ضرب كل وزن في تغير سعر فئته. بعد ذلك غيّر وزناً واحداً وأعد توزيع الباقي لتفهم حساسية النتيجة. إذا كنت تريد قياس تضخمك الشخصي، استخدم فئات إنفاقك الحقيقية مع مراعاة أن تغير كميات المشتريات والعروض والضرائب والجودة يجعل هذا التقدير مختلفاً عن مؤشر رسمي. لا تستنتج من المثال أن جهة إحصائية «تخفي» التضخم."
+          ]
+        },
+        {
+          "heading": "6. اقرأ الخبر كمدقق بيانات لا كمتنبئ بالسوق",
+          "paragraphs": [
+            "قبل إعادة نشر خبر تضخم، افحص ست خانات: اسم السلسلة (CPI-U أو PCE)، عام أم أساسي، الفترة المرجعية، شهري أم سنوي، حالة التعديل الموسمي، وتاريخ الإصدار أو المراجعة. اقرأ الجدول الأصلي من BLS أو BEA، لا رقماً في صورة متداولة. وقد تخضع تقديرات PCE للمراجعات مع تحديث البيانات الاقتصادية، بينما تميّز BLS بين مراجعات العوامل الموسمية والسلاسل غير المعدلة؛ لهذا احتفظ بنسخة المصدر وتاريخ الاطلاع عندما تقارن تقارير قديمة. لا تقارن رقم سبتمبر السنوي مع رقم أغسطس الشهري لمجرد ظهورهما في اليوم نفسه.",
+            "حتى إذا كانت قراءة التضخم أعلى من توقعات محللين، لا يمكن استنتاج حركة الذهب أو الأسهم أو الدولار من الرقم وحده. قد تكون المفاجأة مسعّرة جزئياً، وقد تؤثر تفاصيل الخدمات والأجور والعوائد الحقيقية وتوقعات السياسة أكثر من العنوان. للمراجعة العملية أنشئ سجلّاً يحفظ الرابط الرسمي، القيمتين المستخدمتين في الحساب، الصيغة، النتيجة، والقيود. قارِن تفسيرك مع جدول BEA الذي يفكك الفرق بين CPI وPCE بدلاً من اختيار المؤشر الذي يدعم رأيك. هذه مادة تعليمية عامة وليست توصية مالية أو تقريراً عن أحدث قراءة."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "US CPI versus PCE: a practical guide to reading inflation without mixing the measures",
+      "excerpt": "Compare the official US consumer-price measures, calculate illustrative monthly and yearly changes, and use a documented release checklist instead of market predictions.",
+      "lead": "A headline may report one US inflation rate while a Federal Reserve discussion cites another. That does not automatically mean one figure is wrong. The Bureau of Labor Statistics produces the Consumer Price Index, or CPI, while the Bureau of Economic Analysis produces the Personal Consumption Expenditures price index, or PCE. Their spending coverage, weights and index formulas differ. This article shows how to identify the series, read its time period and seasonal adjustment, and reproduce simple percentage calculations from explicitly invented index values. It does not present a current October 2026 inflation print, a prediction of the next interest-rate decision or a trading signal.",
+      "sections": [
+        {
+          "heading": "1. Start with the population, spending concept and statistical agency",
+          "paragraphs": [
+            "The BLS defines CPI as the average change in prices paid for a representative basket of consumer goods and services. The frequently reported CPI-U covers urban consumers, rather than every individual's personal spending pattern. It spans categories such as food, housing, transport and medical care. Buying stocks or bonds is not treated as ordinary consumer spending. An index level, say 113.3 in a fictional classroom example, is not an inflation rate of 113.3 percent. The level is a number relative to an index reference period; inflation is the percentage change between two index levels at specified dates.",
+            "BEA's PCE price index measures the prices of consumption expenditures made by households or on their behalf, including certain services financed by third parties under national-accounting conventions. BEA identifies differences in coverage as one of four major reasons why CPI and PCE can diverge. The two measures overlap substantially but are not simply two labels attached to the same shopping receipt. When collecting data for a report, write the agency, the exact index name and its coverage in separate columns. That habit prevents a misleading comparison before any mathematics begins."
+          ]
+        },
+        {
+          "heading": "2. Understand weighting and formulas without claiming CPI is permanently fixed",
+          "paragraphs": [
+            "Headline CPI aggregates prices using expenditure information from consumer surveys and a modified Laspeyres-type framework. PCE uses a chained Fisher formula that reflects expenditure patterns in adjacent periods, drawing heavily on national-accounts spending data. This is the distinction described in BEA's official reconciliation. But it would be inaccurate to call the CPI basket permanently frozen: weights are updated periodically, and geometric means at many lower levels allow some within-category substitution. Conversely, PCE does not instantly capture every new purchase; the underlying estimates have their own collection, modeling and revision processes.",
+            "If a category has a larger expenditure weight, the same percentage change in its prices can contribute more to the overall index. BEA groups CPI-PCE differences into four components: formula, weights, scope and other effects, including seasonal adjustment and source-price differences. Housing may matter greatly in a given period, but it is not a universal explanation for every gap. Neither is there a mathematical rule that PCE must always be below CPI. An honest comparison holds the reference period, headline-versus-core definition and type of reported change constant before interpreting the difference."
+          ]
+        },
+        {
+          "heading": "3. Separate headline from core and identify the Fed's actual target",
+          "paragraphs": [
+            "Headline inflation includes food and energy alongside other consumption categories. The commonly reported core CPI and core PCE series exclude food and energy to help analysts study a less directly volatile portion of price movements. That exclusion does not make groceries or fuel irrelevant to households. An energy shock can push headline inflation above core, while declining fuel prices can produce the opposite ordering. Core measures can also remain elevated when certain service prices are persistent. Comparing headline CPI with core PCE and then calling the gap a sudden change in economic conditions mixes two different definitions.",
+            "The Federal Reserve's own explanation states that its longer-run two-percent inflation goal is measured by the twelve-month change in the overall PCE price index. Policymakers also follow core measures, CPI, employment, expectations and financial conditions. The target is not formally 'two percent core CPI,' and a single monthly observation above or below two percent does not mechanically dictate a rate increase or cut. For an educational report, distinguish an inflation measurement from a forecast of central-bank action. This is especially important when discussing gold, currencies and equities, where market prices incorporate many expectations."
+          ]
+        },
+        {
+          "heading": "4. Calculate monthly and annual rates from index levels",
+          "paragraphs": [
+            "To calculate a twelve-month rate, use (current index divided by the index for the same month a year earlier minus one) times 100. Suppose a wholly fictional series was 110.0 a year ago and is 113.3 today. The change is (113.3 / 110.0 − 1) × 100 = 3.00 percent. If the preceding month was 112.7, the month-on-month rate is (113.3 / 112.7 − 1) × 100, approximately 0.53 percent. These are fabricated teaching values, not an official US release. A news table might display the monthly result as 0.5 percent after rounding to one decimal place.",
+            "Never confuse a monthly percentage with a twelve-month percentage. Multiplying one monthly observation by twelve is not the same as measuring an actual year's inflation. A hypothetical annualized one-month pace uses (1 + monthly decimal rate)^12 − 1, and should be labeled an extrapolation rather than an observed annual outcome. Similarly, two successive two-percent increases compound to 1.02 × 1.02 − 1 = 4.04 percent, not exactly four percent. Note whether a monthly series is seasonally adjusted and whether a twelve-month comparison uses an unadjusted series; mixing those versions can create spurious discrepancies."
+          ]
+        },
+        {
+          "heading": "5. Use a transparent weighting exercise, not a fake official CPI-PCE calculation",
+          "paragraphs": [
+            "Imagine an artificial economy with just two categories. Housing prices rise six percent and all other prices rise two percent. In a first imaginary basket, housing has a forty-percent weight and everything else sixty percent, giving 0.40 × 6% + 0.60 × 2% = 3.6%. In a second imaginary basket, housing weighs twenty percent and other items eighty percent, producing 0.20 × 6% + 0.80 × 2% = 2.8%. The difference is 0.8 percentage point even though the two category price changes are identical. These are invented weights, not actual CPI or PCE weights, and a simple weighted average is not BEA's Fisher calculation.",
+            "Build a small spreadsheet with category, price change, basket-one weight and basket-two weight. Check that the weights in each basket total one hundred percent, then multiply each price change by its corresponding weight and add the contributions. Move one weight and rebalance the remainder to see why headline rates can differ. A personal budget can be analyzed with the same teaching device, but personal inflation also depends on quantities purchased, taxes, discounts and quality changes. An illustrative discrepancy is not evidence that a statistical agency is concealing a 'true' inflation number."
+          ]
+        },
+        {
+          "heading": "6. Read the release like a data auditor rather than a market forecaster",
+          "paragraphs": [
+            "Before sharing a headline, record six items: exact series (CPI-U or PCE), headline or core, reference month, month-on-month or twelve-month comparison, seasonal-adjustment status, and release or revision date. Follow the primary BLS or BEA tables instead of an unattributed screenshot. PCE estimates may be revised as national-account data improve; BLS distinguishes adjustments to seasonal factors from unadjusted CPI series. When comparing archived reports, preserve the source URL, access date and data vintage. Do not put a September twelve-month reading beside an August monthly reading and present the numbers as directly comparable.",
+            "A higher-than-expected inflation release is not sufficient to predict the direction of gold, the dollar, bonds or shares. Expectations may already be embedded in prices, and the details of services, real yields, employment and monetary-policy communication may matter more than the headline. For a reproducible review, maintain a worksheet containing the official link, the two index levels, the formula, your calculated rate and any comparability caveat. BEA's published reconciliation categories provide a better starting point than choosing whichever index supports a preferred narrative. This is general economic education, not personalized investment advice or a live market report."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Inflation américaine : comprendre CPI et PCE avec des calculs et une méthode de lecture",
+      "excerpt": "Comparer les indices officiels des prix américains, calculer des variations fictives et vérifier les publications sans confondre les périodes ni prédire les marchés.",
+      "lead": "Un article annonce un taux d'inflation américain et une analyse de la Réserve fédérale en cite un autre. Cette différence ne signifie pas nécessairement qu'une source est erronée. Le Bureau of Labor Statistics produit l'indice des prix à la consommation CPI, tandis que le Bureau of Economic Analysis calcule l'indice des prix des dépenses de consommation personnelle PCE. Leur champ, leurs pondérations et leurs formules ne sont pas identiques. Ce guide propose une méthode pour identifier les séries, vérifier les périodes et refaire les calculs à partir de nombres explicitement fictifs. Il ne présente pas de chiffre d'inflation courant pour octobre 2026, ne prévoit aucune décision de taux et ne donne pas de signal de négociation.",
+      "sections": [
+        {
+          "heading": "1. Identifier la population étudiée et l'organisme producteur",
+          "paragraphs": [
+            "Selon le BLS, le CPI mesure la variation moyenne des prix payés pour un panier représentatif de biens et services consommés. Le CPI-U, souvent cité dans les médias, concerne les consommateurs urbains et ne reflète pas exactement le budget de chaque ménage. Il couvre notamment l'alimentation, le logement, les transports et les soins. L'achat d'actions ou d'obligations n'entre pas dans les dépenses de consommation courantes de cet indice. Un niveau d'indice fictif de 113,3 points ne signifie pas 113,3 % d'inflation : le niveau se rapporte à une base statistique, tandis que l'inflation compare deux niveaux datés.",
+            "Le PCE du BEA suit les prix des dépenses de consommation réalisées par les ménages ou pour leur compte, y compris certaines prestations financées par des tiers dans le cadre de la comptabilité nationale. Le BEA cite ce décalage de périmètre parmi les quatre causes principales des écarts avec le CPI. Les deux mesures se recoupent largement, mais ne sont pas deux noms différents pour le même ticket de caisse. Dans un tableau de veille, inscrivez séparément l'organisme, l'intitulé exact de la série et le champ couvert. Cela évite de comparer des objets différents avant même de vérifier les pourcentages."
+          ]
+        },
+        {
+          "heading": "2. Comprendre les pondérations et les formules sans caricaturer les indices",
+          "paragraphs": [
+            "Le CPI général s'appuie sur des enquêtes de dépenses des consommateurs et sur une méthode de type Laspeyres modifié. Le PCE utilise une formule de Fisher chaînée, qui tient compte des dépenses de périodes voisines, à partir notamment de données de comptabilité nationale. Le BEA explique cette différence dans sa documentation de rapprochement. Il serait toutefois inexact de présenter le panier du CPI comme figé pour toujours : ses pondérations sont actualisées périodiquement et des moyennes géométriques sont utilisées à plusieurs niveaux élémentaires. Le PCE, lui aussi, dépend de données révisables et de choix méthodologiques.",
+            "À hausse de prix identique, une catégorie fortement pondérée contribue davantage à la variation de l'indice global qu'une catégorie marginale. Le BEA distingue quatre familles d'écarts entre CPI et PCE : la formule, les pondérations, le périmètre et d'autres facteurs comme la correction saisonnière ou les données de prix. Le logement peut jouer un rôle important sans expliquer toutes les différences à lui seul. Rien n'impose non plus que le PCE soit inférieur au CPI chaque mois. Avant toute interprétation, harmonisez la période, le caractère général ou sous-jacent et le type de variation publié."
+          ]
+        },
+        {
+          "heading": "3. Distinguer inflation totale, inflation sous-jacente et objectif monétaire",
+          "paragraphs": [
+            "L'indice général, souvent appelé headline, comprend l'alimentation et l'énergie. Les mesures dites core du CPI et du PCE excluent habituellement ces deux catégories pour aider à suivre une dynamique moins directement exposée à leurs fluctuations. Cela ne rend pas les courses alimentaires ou le carburant secondaires pour un ménage. Une hausse de l'énergie peut faire dépasser le taux général au taux sous-jacent ; une baisse du carburant peut produire l'inverse. Les prix de certains services peuvent rester élevés même lorsque l'énergie recule. Comparer le CPI général au PCE sous-jacent sans le préciser constitue donc une erreur de définition.",
+            "Le site officiel de la Réserve fédérale précise que son objectif d'inflation de deux pour cent à plus long terme porte sur la variation sur douze mois de l'indice PCE général. Les responsables observent également les mesures sous-jacentes, le CPI, l'emploi, les anticipations et les conditions financières. L'objectif n'est pas « deux pour cent de CPI sous-jacent », et un mois au-dessus de la cible ne déclenche pas automatiquement une hausse des taux. Dans un article pédagogique, séparez une mesure constatée d'une hypothèse sur la politique monétaire, notamment lorsqu'il est question d'or, de devises ou d'actions."
+          ]
+        },
+        {
+          "heading": "4. Refaire les calculs mensuels et annuels à partir des indices",
+          "paragraphs": [
+            "Pour une variation sur douze mois, utilisez (indice actuel divisé par l'indice du même mois un an plus tôt moins un) multiplié par cent. Dans un exemple entièrement inventé, l'indice passe de 110,0 à 113,3 : (113,3 / 110,0 − 1) × 100 = 3,00 %. Si le mois précédent affichait 112,7, la variation mensuelle est (113,3 / 112,7 − 1) × 100, soit environ 0,53 %. Ces niveaux sont fictifs et ne correspondent à aucune publication américaine. Un communiqué peut arrondir la variation mensuelle à 0,5 % lorsqu'il n'affiche qu'une décimale.",
+            "Ne confondez pas la variation mensuelle avec le taux sur douze mois. Multiplier un seul mois par douze ne constitue pas une observation annuelle. Une annualisation théorique utilise la formule (1 + taux mensuel décimal)^12 − 1, mais doit être présentée comme une projection arithmétique. Deux hausses successives de deux pour cent donnent 1,02 × 1,02 − 1 = 4,04 % au total, et non exactement quatre pour cent. Vérifiez également si la série mensuelle est corrigée des variations saisonnières et si la comparaison annuelle porte sur une série brute ; mélanger les versions fausse la lecture."
+          ]
+        },
+        {
+          "heading": "5. Illustrer l'effet des poids sans prétendre reconstruire les statistiques officielles",
+          "paragraphs": [
+            "Imaginons une économie fictive réduite à deux catégories : le logement augmente de six pour cent et les autres biens et services de deux pour cent. Dans un premier panier imaginaire, le logement représente quarante pour cent et le reste soixante pour cent. La moyenne simplifiée vaut 0,40 × 6 % + 0,60 × 2 % = 3,6 %. Dans un second panier, les parts sont respectivement de vingt et quatre-vingts pour cent : 0,20 × 6 % + 0,80 × 2 % = 2,8 %. L'écart est de 0,8 point de pourcentage, sans changement des hausses par catégorie. Ces poids ne sont pas ceux du CPI ou du PCE et ce calcul n'est pas la formule de Fisher du BEA.",
+            "Reproduisez l'exercice dans un tableur avec quatre colonnes : catégorie, variation du prix, poids du premier panier et poids du second. Assurez-vous que les poids totalisent cent pour cent dans chaque panier, multipliez les variations par les poids et additionnez les contributions. Modifiez une pondération en compensant la différence ailleurs pour voir comment le résultat évolue. On peut aussi analyser son propre budget, mais les quantités achetées, les promotions, les taxes et la qualité compliquent la comparaison. Une différence entre deux moyennes n'établit aucune manipulation statistique."
+          ]
+        },
+        {
+          "heading": "6. Construire une fiche de contrôle avant de commenter les marchés",
+          "paragraphs": [
+            "Avant de relayer un chiffre, renseignez six éléments : série exacte (CPI-U ou PCE), générale ou sous-jacente, mois de référence, variation mensuelle ou annuelle, correction saisonnière et date de publication ou de révision. Consultez les tableaux originaux du BLS ou du BEA plutôt qu'une capture sans source. Les estimations du PCE peuvent être révisées avec de nouvelles données de comptabilité nationale ; le BLS distingue les ajustements saisonniers des séries brutes. Pour des comparaisons historiques, conservez le lien, la date de consultation et la version utilisée. Une hausse mensuelle d'août et un taux annuel de septembre ne sont pas directement comparables.",
+            "Un chiffre supérieur aux prévisions des analystes ne suffit pas à annoncer la direction de l'or, du dollar ou des obligations. Les anticipations peuvent déjà être intégrées dans les prix, et les détails des services, des rendements réels, de l'emploi et de la communication monétaire peuvent modifier les réactions. Dans votre feuille de suivi, conservez les deux niveaux d'indice, la formule, le résultat, les sources et les réserves de comparabilité. Les quatre familles d'écarts expliquées par le BEA sont un meilleur point de départ que le choix du seul indice confortant une opinion. Il s'agit d'une formation économique générale, pas d'un conseil d'investissement."
+          ]
+        }
+      ]
+    }
+  }
+}

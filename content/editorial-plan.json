@@ -1327,14 +1327,10 @@
         "cpi-release-basket-how-read",
         "diesel-gasoline-fuel-outlook-2027-morocco-refining-shipping",
         "fed-october-28-2026-decision-december-rate-scenarios",
-        "nfp-payrolls-revisions-market-guide"
+        "nfp-payrolls-revisions-market-guide",
+        "us-cpi-vs-pce-inflation-index-practical-reading-checklist"
       ],
       "ideas": [
-        {
-          "sequence": 12,
-          "titleAr": "كيف نقرأ تقرير NFP",
-          "status": "planned"
-        },
         {
           "sequence": 13,
           "titleAr": "مؤشر ISM وتأثيره على السوق",

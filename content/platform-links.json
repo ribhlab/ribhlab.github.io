@@ -1004,6 +1004,11 @@
       "unityDeltaTimeDocs",
       "unityWebBuildDocs",
       "itchHtml5CreatorDocs"
+    ],
+    "us-cpi-vs-pce-inflation-index-practical-reading-checklist": [
+      "blsCpiMethodology",
+      "beaCpiPceDifferences",
+      "fedPceInflationTarget"
     ]
   }
 }
