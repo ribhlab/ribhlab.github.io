@@ -985,6 +985,10 @@
     "pad-thai-noodles-peanut-allergy-plan": [
       "foodSafety",
       "foodSafetySeafood"
+    ],
+    "test-ai-hallucinations-with-evidence-ledger-2026": [
+      "nistGenAi",
+      "openaiEvalGuide"
     ]
   }
 }

@@ -1,0 +1,154 @@
+{
+  "slug": "test-ai-hallucinations-with-evidence-ledger-2026",
+  "category": "ai",
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false,
+  "related": [
+    "ai-prompts-at-work",
+    "ai-agents-business-security-human-checklist",
+    "ai-assistant-vs-ai-agent-workflows-practical-guide"
+  ],
+  "sources": [
+    {
+      "label": "NIST — AI Risk Management Framework: Generative AI Profile (published 26 July 2024; checked 28 October 2026)",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    },
+    {
+      "label": "OpenAI Developers — Evaluation best practices (checked 28 October 2026)",
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices"
+    },
+    {
+      "label": "NIST AI Resource Center — Testing, evaluation, verification and validation resources (checked 28 October 2026)",
+      "url": "https://airc.nist.gov/airmf-resources/"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "كيف تختبر هلوسة الذكاء الاصطناعي؟ دفتر أدلة وتجربة من 20 سؤالاً",
+      "excerpt": "دليل عملي لاكتشاف الإجابات المختلقة في النماذج اللغوية: مجموعة أسئلة، سجل مصادر، مقياس أخطاء، اختبار رفض التخمين وحدود التقييم.",
+      "lead": "قد يجيب مساعد الذكاء الاصطناعي بثقة عن رقم أو تاريخ أو مرجع لا وجود له. لا يكفي أن تبدو الفقرة سليمة لغوياً كي تكون صحيحة. يسمي إطار NIST للذكاء الاصطناعي التوليدي هذا النوع من المخاطر «الاختلاق» أو الهلوسة، وتوصي إرشادات تقييم النماذج باختبارات مخصصة للمهمة تجمع بين القياس والمراجعة البشرية. هنا نبني اختباراً صغيراً قابلاً لإعادة التنفيذ لمحتوى تعليمي أو إداري، من دون الادعاء بأن نتيجته تقيس كل قدرات النموذج.",
+      "sections": [
+        {
+          "heading": "1. عرّف الخطأ الذي تريد قياسه",
+          "paragraphs": [
+            "افصل بين ثلاثة أمور: حقيقة قابلة للتحقق وردت خطأ، واستنتاج محتمل لكنه غير مثبت، وصياغة غير دقيقة لسؤال غامض. مثلاً إذا طلبت تلخيص عقد محدد وذكر المساعد تاريخاً لا يظهر في النص، فهذا ادعاء غير مسند حتى لو صادف أنه صحيح خارج العقد. وإذا سألته عن قرار إداري مستقبلي، فالجواب الجازم غير مبرر أصلاً. لا تجمع هذه الحالات كلها في خانة «هلوسة» واحدة ثم تتعامل مع النسبة كحقيقة علمية.",
+            "ضع قواعد قبول قبل تشغيل النموذج: يجب أن يقتبس الأرقام من الوثيقة، ويفصل الرأي عن المعلومة، ويقول «لا أملك دليلاً» حين يغيب المصدر. في مهام الحساب اطلب إظهار المدخلات والوحدات والنتيجة، ثم أعد الحساب بنفسك. في مهام الاستشهاد افحص أن الرابط موجود وأن الصفحة تسند الجملة فعلاً؛ وجود رابط حقيقي بجانب ادعاء خاطئ ليس توثيقاً. هذه المعايير تختلف باختلاف المهمة ولا يصح نقلها تلقائياً إلى الطب أو القانون."
+          ]
+        },
+        {
+          "heading": "2. ابنِ مجموعة اختبار صغيرة ومتوازنة",
+          "paragraphs": [
+            "ابدأ بعشرين سؤالاً موزعة على أربع مجموعات متساوية: خمسة أسئلة عن حقائق ثابتة من وثائق رسمية، وخمسة عن استخراج قيم من نص تمنحه للمساعد، وخمسة مسائل حسابية بمدخلات صريحة، وخمسة أسئلة لا تتوفر لها معلومات كافية ويكون الامتناع المنضبط هو الإجابة المناسبة. اختر أمثلة قريبة من استخدامك الفعلي بدلاً من ألغاز عامة. احتفظ بالإجابة المرجعية ومكانها الدقيق وتاريخ مراجعتها في جدول مستقل قبل اختبار النموذج.",
+            "لإنشاء مثال حسابي واضح، افترض أن فاتورة تدريبية تتضمن ثلاث وحدات بسعر 80 ووحدتين بسعر 45، من دون ضرائب أو خصم. المجموع المرجعي هو 3×80 + 2×45 = 330 وحدة نقدية. اجعل سؤالاً آخر يتعمد إخفاء سعر الوحدة الثانية: الإجابة السليمة يجب أن تطلب السعر المفقود بدلاً من اختراعه. لا تستخدم بيانات عملاء حقيقيين أو أرقام حساباتهم في الاختبار، ولا تخلط الأمثلة الاصطناعية بوقائع منشورة."
+          ]
+        },
+        {
+          "heading": "3. نفّذ الاختبار بسجل أدلة قابل للتدقيق",
+          "paragraphs": [
+            "أنشئ أعمدة: معرف السؤال، نوع المهمة، نص السؤال، الجواب المرجعي، رابط المصدر أو موضعه، جواب النموذج، الادعاءات الأساسية، الحكم، وسبب الحكم. ثبت نسخة النموذج والإعدادات والتعليمات وتاريخ التشغيل قدر الإمكان؛ فالنماذج قد تنتج إجابات مختلفة للمدخل نفسه. نفذ الجولة الأولى من دون تغذية النموذج بالإجابات المرجعية، ثم أعد الأسئلة الصعبة مرة ثانية لمعرفة هل الخطأ ثابت أم متغير. لا تغير صياغة السؤال أثناء المقارنة من دون تسجيل ذلك.",
+            "استخدم ثلاث علامات واضحة: صحيح ومدعوم، خاطئ أو مختلق، وغير قابل للحسم. إذا أعطى النموذج أربعة ادعاءات وكان أحدها غير موثق، فسجل الادعاء المختلف بدلاً من منح الإجابة كلها علامة نجاح لمجرد جودة أسلوبها. يمكن لمراجع ثان فحص عينة من النتائج من دون معرفة اسم النموذج لتقليل التحيز. إرشادات OpenAI للتقييم تنصح باختبارات واقعية محددة المهمة وبالاستفادة من أحكام البشر إلى جانب المقاييس الآلية."
+          ]
+        },
+        {
+          "heading": "4. احسب النتيجة من دون تضليل إحصائي",
+          "paragraphs": [
+            "مثال توضيحي لمجموعة العشرين: 14 إجابة صحيحة ومدعومة، و4 إجابات خاطئة أو مختلقة، وإجابتان غير قابلتين للحسم. نسبة الإجابات الخاطئة ضمن جميع الأسئلة هي 4÷20 = 20%، ونسبة الصحيح 14÷20 = 70%، والباقي 10%. هذه أرقام مفترضة لتعليم طريقة الحساب، وليست نتيجة اختبار فعلي لأي منتج. لا تسمِّ 20% «معدل هلوسة النموذج» على إطلاقه، لأن اختيار الأسئلة وصياغتها يؤثران كثيراً على الرقم.",
+            "احسب أيضاً الأخطاء حسب الفئة: إذا وقعت الأخطاء الأربعة كلها في أسئلة المراجع، فهذا أخطر على محرر مقالات من توزيعها بالتساوي. راقب كذلك «الامتناع السليم» في الأسئلة الخمسة الناقصة المعلومات، ولا تعتبر كل رفض فشلاً. عند المقارنة بين نسختين استخدم المجموعة نفسها والتعليمات نفسها وراجع التغير في المصادر والتواريخ. العينة الصغيرة تكشف مشاكل عملية لكنها لا تعطي ترتيباً عاماً موثوقاً بين النماذج."
+          ]
+        },
+        {
+          "heading": "5. حوّل النتائج إلى ضوابط نشر ومراجعة",
+          "paragraphs": [
+            "في تحرير المقالات، استعمل دفتر ادعاءات: كل تاريخ أو رقم أو خاصية منتج أو قاعدة قانونية يقابله مصدر أولي وتاريخ تحقق. إذا لم تجد دليلاً مستقلاً، احذف الجملة أو حوّلها إلى فرضية معلنة بوضوح. لا تعتمد على «المصدر الذي يقترحه النموذج» قبل فتحه ومراجعة نصه. عند تلخيص وثائق الشركة، اسمح للمساعد بتحديد مواضع تحتاج مراجعة لكن احتفظ باعتماد النتيجة النهائية لدى شخص مخول يفهم الوثيقة.",
+            "راجع الاختبار عندما تتغير نسخة النموذج أو تتبدل الوثائق أو تتوسع المهام. لا ترفع بيانات سرية إلى خدمة خارجية دون أساس قانوني وموافقة وضوابط ملائمة. ولا تستخدم نتيجة اختبار من عشرين سؤالاً لتقرير أهلية نظام لاتخاذ قرارات طبية أو مالية أو قانونية؛ تلك المجالات تحتاج تقييم مخاطر وخبراء وضمانات أقوى. الهدف العملي ليس التخلص نهائياً من كل خطأ، بل جعل الادعاءات قابلة للتتبع، والأخطاء مرئية، والتصحيح ممكناً قبل أن تصل إلى القارئ."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "How to test AI hallucinations with a 20-question evidence ledger",
+      "excerpt": "A practical evaluation method for fabricated AI answers: reference questions, traceable evidence, abstention checks, scoring and review safeguards.",
+      "lead": "A fluent AI answer can still invent a date, number or reference. The US National Institute of Standards and Technology identifies confabulation, often called hallucination, among generative-AI risks. OpenAI's evaluation guidance emphasizes tests tailored to a real task and calibrated with human judgment. This article builds a modest twenty-question test for editorial or office work. It is a reproducible quality-control exercise, not a scientific ranking of models or proof that any assistant is safe for every use.",
+      "sections": [
+        {
+          "heading": "1. Define the failure before measuring it",
+          "paragraphs": [
+            "Distinguish a demonstrably false factual claim from an unsupported inference and from an ambiguous question that cannot be answered reliably. Suppose an assistant summarizes a supplied contract and inserts a renewal date absent from the document. That is an unsupported claim even if the same date happens to appear somewhere else. A confident prediction about a future regulatory decision is a different problem. Put these outcomes in separate categories rather than reporting every questionable sentence as one universal hallucination statistic.",
+            "Write acceptance criteria before running the test. Numerical values must match the supplied source, opinions must be labeled as interpretation, and missing information must trigger a clear request for clarification or an explicit statement of uncertainty. For calculations, record the inputs and units and recompute the result independently. For citations, open the link and check whether the cited passage actually supports the specific claim. A genuine URL attached to an unrelated assertion is not evidence."
+          ]
+        },
+        {
+          "heading": "2. Assemble twenty questions with known answers",
+          "paragraphs": [
+            "Use four groups of five questions each: stable facts from primary documents, extraction from a passage you provide, arithmetic with complete inputs, and intentionally unanswerable questions. The last group tests whether the assistant can resist guessing. Choose cases that resemble your actual work, not only entertaining riddles. Before sending anything to a model, record the reference answer, its exact location in the source, the date checked and what a correct refusal would look like.",
+            "For a transparent arithmetic case, invent an invoice with three units at 80 currency units and two at 45, with no tax or discount. The correct total is 3×80 + 2×45 = 330 currency units. A companion question can omit the second unit price; the expected response then asks for the missing value instead of making one up. Mark both scenarios as synthetic. Never paste a real customer's identity, confidential invoice or bank details into a public evaluation prompt."
+          ]
+        },
+        {
+          "heading": "3. Keep a claim-by-claim evidence ledger",
+          "paragraphs": [
+            "Create columns for case ID, task type, prompt, reference answer, source location, model response, individual claims, decision and reviewer notes. Record the model version, available settings, prompt instructions and run date wherever possible. Generative systems may vary their answers across runs, so repeat a few difficult cases without silently changing the prompt. If you modify a question, treat it as a new test case. Preserve raw responses so another reviewer can reconstruct what was evaluated.",
+            "Score each factual claim as supported and correct, incorrect or invented, or unresolved. A polished response containing four claims should not receive full credit when one claim lacks a source. Consider asking a second reviewer to inspect a small blinded sample, particularly where the distinction between inference and fact is subtle. OpenAI's evaluation guidance recommends task-specific datasets, clear success criteria, automated checks where appropriate and human calibration rather than relying on an impression that a system feels reliable."
+          ]
+        },
+        {
+          "heading": "4. Show the denominator and the uncertainty",
+          "paragraphs": [
+            "Imagine a hypothetical outcome of fourteen supported answers, four incorrect or invented answers and two unresolved answers among twenty questions. The incorrect share is 4÷20 = 20%, the supported share is 14÷20 = 70%, and the unresolved share is 2÷20 = 10%. These figures demonstrate arithmetic only; they are not measurements of any named AI product. Calling the first number the model's overall hallucination rate would overstate what a small, selected question set can establish.",
+            "Break results down by task. Four citation failures may matter more to a newsroom than four formatting mistakes, even if the total counts are identical. Track correct abstentions on the five intentionally incomplete cases separately; refusing to invent a missing figure is often a success, not a failure. To compare two model versions, hold the prompts and scoring rubric constant and revisit references that may have changed. A twenty-item sample is useful for debugging workflows but weak for broad model comparisons."
+          ]
+        },
+        {
+          "heading": "5. Turn findings into an editorial control",
+          "paragraphs": [
+            "For each date, statistic, product specification or legal requirement in a draft article, keep a corresponding primary source and verification date. If the evidence cannot be found, remove the assertion or explicitly present it as an assumption. Do not trust a citation simply because the assistant generated it. Open the original page and inspect the relevant passage yourself. For internal documents, the assistant can flag missing references, but an authorized person who understands the record should approve the final interpretation.",
+            "Repeat the evaluation after material model updates, changed source documents or new use cases. Protect confidential information and verify the data-handling terms of any service used for testing. Twenty editorial questions cannot establish that a system is safe for medical diagnosis, legal advice or financial decisions; those domains require domain specialists and stronger risk controls. The practical goal is not a promise of zero errors. It is a workflow where assertions are traceable, mistakes are detectable and corrections happen before publication."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Tester les hallucinations de l’IA : un registre de preuves en 20 questions",
+      "excerpt": "Une méthode concrète pour repérer les réponses inventées : questions de référence, sources vérifiables, refus de deviner, calcul des erreurs et validation humaine.",
+      "lead": "Une réponse fluide produite par une IA peut contenir une date, un chiffre ou une référence inventés. Le NIST classe la confabulation, souvent appelée hallucination, parmi les risques de l'IA générative. Les recommandations d'évaluation d'OpenAI invitent à construire des tests adaptés à la tâche et à confronter les mesures au jugement humain. Voici une procédure de vingt questions pour le travail éditorial ou administratif. Il s'agit d'un contrôle de qualité reproductible, pas d'un classement scientifique des modèles.",
+      "sections": [
+        {
+          "heading": "1. Définir précisément ce qui constitue une erreur",
+          "paragraphs": [
+            "Distinguez une affirmation factuelle fausse, une interprétation sans preuve et une question ambiguë à laquelle aucune réponse certaine n'est possible. Si un assistant résume un contrat fourni et invente une date de renouvellement absente du document, l'affirmation est non étayée même si cette date existe ailleurs. Une prédiction catégorique sur une future décision réglementaire relève d'un autre problème. Ne réunissez pas automatiquement toutes ces situations dans un prétendu taux universel d'hallucination.",
+            "Établissez les critères de réussite avant de lancer le test. Les chiffres doivent correspondre au document, les interprétations doivent être signalées, et les données manquantes doivent conduire à demander une précision ou à reconnaître l'incertitude. Pour un calcul, conservez les entrées, les unités et refaites l'opération. Pour une citation, ouvrez le lien et vérifiez que le passage soutient réellement l'affirmation. Une adresse web authentique ne rend pas vraie une phrase sans rapport."
+          ]
+        },
+        {
+          "heading": "2. Constituer vingt questions proches de vos usages",
+          "paragraphs": [
+            "Préparez quatre groupes de cinq questions : des faits stables tirés de documents officiels, des valeurs à extraire d'un texte fourni, des calculs avec toutes leurs données et des questions volontairement impossibles à résoudre faute d'informations. Le dernier groupe mesure la capacité à ne pas inventer. Privilégiez les situations qui ressemblent à votre travail quotidien. Avant l'essai, notez la réponse attendue, son emplacement exact dans la source, la date de vérification et les conditions d'un refus correct.",
+            "Prenons une facture fictive de trois unités à 80 et deux unités à 45, sans taxe ni remise. Le total de référence vaut 3×80 + 2×45 = 330 unités monétaires. Dans une seconde question, retirez le prix des deux dernières unités : une réponse prudente demande ce prix au lieu de le fabriquer. Indiquez clairement qu'il s'agit de données de démonstration. N'utilisez jamais les noms de clients réels, des coordonnées bancaires ou des documents confidentiels dans un essai public."
+          ]
+        },
+        {
+          "heading": "3. Tenir un registre de preuves consultable",
+          "paragraphs": [
+            "Créez un tableau avec l'identifiant du cas, le type de tâche, la question, la réponse de référence, l'emplacement de la preuve, la réponse du modèle, les affirmations à contrôler, la décision et les remarques du relecteur. Notez si possible la version du modèle, les réglages, les consignes et la date. Les réponses d'une IA peuvent varier d'une exécution à l'autre : répétez quelques cas difficiles sans modifier discrètement les questions. Conservez les sorties brutes pour permettre un audit.",
+            "Attribuez à chaque affirmation l'une de trois étiquettes : correcte et étayée, incorrecte ou inventée, ou indécidable avec les éléments disponibles. Une réponse élégante contenant quatre affirmations ne mérite pas une validation complète si l'une n'a pas de preuve. Faites examiner un petit échantillon par un deuxième lecteur, éventuellement sans lui révéler le nom du modèle. Les recommandations d'OpenAI soulignent l'intérêt de jeux de tests ciblés, de critères explicites et d'un calibrage des mesures automatiques par des jugements humains."
+          ]
+        },
+        {
+          "heading": "4. Calculer des proportions sans exagérer leur portée",
+          "paragraphs": [
+            "Imaginons un résultat purement illustratif : quatorze réponses correctes et étayées, quatre fausses ou inventées et deux indécidables sur vingt questions. La part des erreurs est de 4÷20 = 20 %, celle des réponses étayées de 14÷20 = 70 %, et la part restante de 2÷20 = 10 %. Ces nombres ne proviennent d'aucun test réel d'un produit. Présenter 20 % comme le taux général d'hallucination du modèle serait trompeur, car la sélection et la formulation des questions influencent le résultat.",
+            "Analysez ensuite les catégories. Quatre citations erronées peuvent être particulièrement graves pour un média, même si un autre usage tolère certaines erreurs de mise en forme. Comptez séparément les refus justifiés parmi les cinq questions incomplètes : ne pas inventer une donnée est souvent une réussite. Pour comparer deux versions, gardez les mêmes questions et la même grille de notation, puis actualisez les références périmées. Un échantillon de vingt cas aide à corriger un processus, pas à établir un palmarès général."
+          ]
+        },
+        {
+          "heading": "5. Transformer le test en procédure de publication",
+          "paragraphs": [
+            "Dans un article, associez chaque date, statistique, caractéristique de produit ou règle juridique à une source primaire et à une date de consultation. Si la preuve est introuvable, supprimez la phrase ou présentez explicitement l'hypothèse. Ne validez pas une citation uniquement parce que l'assistant l'a fournie : consultez la page originale et son passage pertinent. Pour les documents internes, l'outil peut repérer des zones à contrôler, mais la validation finale revient à une personne autorisée connaissant le dossier.",
+            "Relancez les tests après un changement important de modèle, de documents ou de cas d'usage. Protégez les informations confidentielles et vérifiez les conditions de traitement des données de l'outil utilisé. Vingt questions éditoriales ne prouvent pas qu'un système convient au diagnostic médical, au conseil juridique ou aux décisions financières : ces domaines exigent des spécialistes et des contrôles plus solides. L'objectif réaliste n'est pas de promettre zéro erreur, mais de rendre les affirmations traçables et les corrections possibles avant publication."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -852,6 +852,16 @@
       "altFr": "Photographie réelle de pad thaï aux cacahuètes et pousses ; illustration, non un essai culinaire de RibhLab",
       "license": "Unsplash License",
       "note": "Dmitry Spravko, Unsplash free photo published 7 August 2025; original Unsplash page and linked images.unsplash.com photo asset verified 29 October 2026. Distinct from site photos in licensed-photos, recipe photo-library, opportunity-photography, market-digests, market-feed-photos, sports-technology-editorials and code search; photo depicts peanuts and is not an allergen-free variant."
+    },
+    "test-ai-hallucinations-with-evidence-ledger-2026": {
+      "photoId": "photo-1768055104910-8c8d213835fb",
+      "source": "https://unsplash.com/photos/hand-writing-a-checklist-in-a-notebook-TB7aNN4blTQ",
+      "photographer": "Jakub Żerdzicki",
+      "alt": "Hand marking a checklist in a notebook, illustrating a structured evaluation process",
+      "altAr": "يد تضع علامة على قائمة تحقق في دفتر لتوضيح مراجعة إجابات الذكاء الاصطناعي",
+      "altFr": "Main cochant une liste de contrôle dans un carnet, illustration d'une évaluation structurée",
+      "license": "Unsplash License",
+      "note": "Verified on Unsplash page 2026-10-28 as free Unsplash License photo; illustrative, not a screenshot of an actual model evaluation."
     }
   }
 }

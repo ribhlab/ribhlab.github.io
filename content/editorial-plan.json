@@ -404,14 +404,10 @@
         "ai-assistant-apps-2026-iphone-android-comparison",
         "ai-writing-assistant-style-guide-versioning",
         "power-query-ai-assisted-transformations-audit",
-        "safe-excel-ai-analysis-redaction-checklist"
+        "safe-excel-ai-analysis-redaction-checklist",
+        "test-ai-hallucinations-with-evidence-ledger-2026"
       ],
       "ideas": [
-        {
-          "sequence": 12,
-          "titleAr": "Power Query مع الذكاء الاصطناعي",
-          "status": "planned"
-        },
         {
           "sequence": 13,
           "titleAr": "Power BI Insights دون تسريب البيانات",
