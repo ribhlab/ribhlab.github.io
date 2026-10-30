@@ -589,6 +589,14 @@
     "fdaFoodSafetyHome": {
       "name": "FDA — Food Safety at Home",
       "url": "https://www.fda.gov/consumers/womens-health-topics/food-safety-home"
+    },
+    "nhsEmollients": {
+      "name": "NHS — Emollients and safe use",
+      "url": "https://www.nhs.uk/tests-and-treatments/emollients/"
+    },
+    "cdcCleanHands": {
+      "name": "CDC — Hand Hygiene Frequently Asked Questions",
+      "url": "https://www.cdc.gov/clean-hands/faq/index.html"
     }
   },
   "articleLinks": {
