@@ -58,21 +58,21 @@ const byTitle=new Map(pages.map(p=>[normalize(p.title),p]));
 const ids=new Set(Object.values(curated.photos).map(p=>p.id));
 for(const [slug,[title,author]] of Object.entries(selected)){
  const p=byTitle.get(normalize(title)),i=p?.imageinfo?.[0];
- if(!p||!i)throw Error('Exact image title not found: '+title);
+ if(!p||!i){console.warn('SKIPPED: exact image not found '+slug+' => '+title);continue;}
  const metadata=i.extmetadata||{},raw=(metadata.LicenseShortName?.value||'').toLowerCase();
  const url=String(metadata.LicenseUrl?.value||'').replace(/^http:/,'https:');
  const license=(url.includes('/publicdomain/zero/')||/cc0/.test(raw))?'cc0':url.includes('/licenses/by-sa/')?'by-sa':url.includes('/licenses/by/')?'by':null;
- if(!license||!url.startsWith('https://creativecommons.org/')||!['image/jpeg','image/png','image/webp'].includes(i.mime)||i.width<640||i.height<400)throw Error('License or resolution not validated for '+title);
+ if(!license||!url.startsWith('https://creativecommons.org/')||!['image/jpeg','image/png','image/webp'].includes(i.mime)||i.width<640||i.height<400){console.warn('SKIPPED: license/dimensions '+slug+' => '+title);continue;}
  const id='commons:'+p.pageid,src=i.thumburl||i.url;
- if(!src?.startsWith('https://')||(ids.has(id)&&curated.photos[slug]?.id!==id))throw Error('Invalid/duplicate exact photo for '+slug);
+ if(!src?.startsWith('https://')||(ids.has(id)&&curated.photos[slug]?.id!==id)){console.warn('SKIPPED: invalid/duplicate '+slug);continue;}
  curated.photos[slug]={id,url:src,source:'https://commons.wikimedia.org/wiki/'+encodeURIComponent(p.title.replaceAll(' ','_')),photographer:author,license,licenseUrl:url,provider:'Wikimedia Commons',description:p.title.replace(/^File:/,''),illustrativeOnly:true,editorialReview:'2026-10-30; exact named dish confirmed by Wikimedia Commons description'};
  ids.add(id);
  console.log('VERIFIED '+slug+' <= '+title+' ('+license+')');
 }
-for(const slug of Object.keys(selected)){
+for(const slug of Object.keys(selected).filter(slug=>curated.photos[slug])){
  const prior=library.assignments[slug];
  if(prior){delete library.assignments[slug];delete library.photos[prior];}
 }
 fs.writeFileSync(libraryPath,JSON.stringify(library,null,2)+'\n');
 fs.writeFileSync(curatedPath,JSON.stringify(curated,null,2)+'\n');
-console.log('PUBLISHED',Object.keys(selected).length,'exact-match food photos, retired old generic harira soup');
+console.log('CURATED',Object.keys(curated.photos).length,'unique photos; valid titles persisted, invalid titles skipped');
