@@ -714,6 +714,9 @@ if(!adminPage.includes('Content-Security-Policy')||!adminPage.includes('connect-
 
 
 // Independent food and lifestyle navigation / recipe integrity contract.
+const recipeFullImagesCss=fs.readFileSync(path.join(root,'public/assets/recipe-pages.css'),'utf8');
+if(/\.recipe-card img(?:\[data-recipe-photo\])?\{[^}]*object-fit:cover/.test(recipeFullImagesCss)||/\.recipe-photo-figure img\{[^}]*object-fit:cover/.test(recipeFullImagesCss))errors.push('Recipe dish photography must not be cropped');
+if(!recipeFullImagesCss.includes('object-fit:contain'))errors.push('Recipe pictures must show the entire dish');
 const recipePath=path.join(root,'content','recipes');
 const foodLex=JSON.parse(fs.readFileSync(path.join(recipePath,'ingredients.json'),'utf8')).ingredients;
 const foodPhotoLibrary=JSON.parse(fs.readFileSync(path.join(recipePath,'photo-library.json'),'utf8'));
@@ -739,6 +742,7 @@ for(const food of foodItems){
   const html=fs.readFileSync(file,'utf8');
   if(!html.includes('class="recipe-ingredient-list"')||!html.includes('class="recipe-step-list"')||!html.includes('https://www.foodsafety.gov/'))errors.push('Recipe missing quantities, method, or food-safety source '+l+'/'+food.slug);
   if(!html.includes('"@type":"Recipe"'))errors.push('Missing Recipe schema '+l+'/'+food.slug);
+  if(!html.includes('class="recipe-video-suggestion"')||!html.includes('https://www.youtube.com/results?search_query='))errors.push('Recipe missing language-matched YouTube video search '+l+'/'+food.slug);
   const imageKey=recipeAssignments[food.slug],picture=(imageKey&&foodPhotoLibrary.photos[imageKey])||curatedRecipePhotos[food.slug];
   const expectedImage=picture?(picture.photoId?'images.unsplash.com/'+picture.photoId:picture.url.split('?')[0]):'/assets/recipe-images/'+food.slug+'.svg';
   if(!html.includes(expectedImage)||!html.includes('recipe-photo-credit'))errors.push('Recipe must show its own unique assigned image '+l+'/'+food.slug);
