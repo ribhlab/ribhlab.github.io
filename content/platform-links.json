@@ -561,6 +561,18 @@
     "saudiHrsdForeignWorkerRules": {
       "name": "Saudi Ministry HRSD — Employment of non-Saudis, official labor-law requirements",
       "url": "https://www.hrsd.gov.sa/en/%D8%AA%D9%88%D8%B8%D9%8A%D9%81-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D9%8A%D9%86"
+    },
+    "googleAuthenticatorHelp": {
+      "name": "Google Account Help — Google Authenticator code transfer",
+      "url": "https://support.google.com/accounts/answer/1066447?hl=en"
+    },
+    "microsoftAuthenticatorBackup": {
+      "name": "Microsoft Support — Authenticator backup and restore",
+      "url": "https://support.microsoft.com/en-us/authenticator/back-up-your-accounts-in-microsoft-authenticator"
+    },
+    "applePasswordsCodes": {
+      "name": "Apple Support — Verification codes in Passwords",
+      "url": "https://support.apple.com/en-ie/guide/iphone/ipha6173c19f/27/ios/27"
     }
   },
   "articleLinks": {
