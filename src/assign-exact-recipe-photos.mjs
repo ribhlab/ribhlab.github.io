@@ -17,7 +17,15 @@ const selected={
  'nigerian-jollof-style-rice':['File:Nigerian jollof rice.jpg','Halima Waziri'],
  'margherita-pizza':['File:Margherita pizza on plate.jpg','Shisma'],
  'mujaddara-lentils-rice':['File:Mujaddara.jpg','Bazel'],
- 'quiche-spinach':['File:Spinach Quiche - Julien Plumart 2025-10-14.jpg','Andy Li']
+ 'quiche-spinach':['File:Spinach Quiche - Julien Plumart 2025-10-14.jpg','Andy Li'],
+ 'chicken-olive-tagine':['File:Moroccan food-Chicken tagine with preserved lemons and olives-02.jpg','Foodista'],
+ 'chicken-biryani':['File:Chicken Briyani.jpg','TourismSchool'],
+ 'thai-green-chicken-curry':['File:Chicken Thai Green Curry.jpg','Sumit Surai'],
+ 'pad-thai-shrimp':['File:Pad Thai noodles topped with whole head-on prawns.jpg','Oleg Yunakov'],
+ 'baba-ghanoush':['File:Baba Ganusch.jpg','Maikel'],
+ 'greek-salad-feta':['File:Feta Cheese Greek Salad.jpg','Myfri9694'],
+ 'chocolate-brownie':['File:Brownie chocolate.jpg','Gowrirajamanickam01'],
+ 'fattoush-salad':['File:Fattoush 1.JPG','Wikimedia Commons contributor']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
@@ -42,8 +50,10 @@ for(const [slug,[title,author]] of Object.entries(selected)){
  ids.add(id);
  console.log('VERIFIED '+slug+' <= '+title+' ('+license+')');
 }
-const replaced=library.assignments['moroccan-harira'];
-if(replaced){delete library.assignments['moroccan-harira'];delete library.photos[replaced];}
+for(const slug of Object.keys(selected)){
+ const prior=library.assignments[slug];
+ if(prior){delete library.assignments[slug];delete library.photos[prior];}
+}
 fs.writeFileSync(libraryPath,JSON.stringify(library,null,2)+'\n');
 fs.writeFileSync(curatedPath,JSON.stringify(curated,null,2)+'\n');
 console.log('PUBLISHED',Object.keys(selected).length,'exact-match food photos, retired old generic harira soup');
