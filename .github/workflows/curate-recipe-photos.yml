@@ -27,5 +27,8 @@ jobs:
           git add content/recipes/curated-photos.json
           if ! git diff --cached --quiet; then
             git commit -m "content(images): curate unique licensed food photographs"
+            # Repository may have advanced while photo sourcing was running.
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
