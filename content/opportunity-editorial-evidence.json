@@ -8491,8 +8491,8 @@
     },
     "acaps-controleur-lbc-ft-rabat-c44073-2026": {
       "reviewedAt": "2026-10-30",
-      "state": "researched-awaiting-live-verification",
-      "verification": "Official ACAPS employer page, public government C44073/26 listing, original 2-page PDF and employer-linked application platform checked 30 Oct 2026; editorial translations completed. Not yet integrated into a public RibhLab opportunity card or live-verified.",
+      "state": "published-live-verified",
+      "verification": "GitHub Actions build and Pages deploy 41134699137/41134698931 successful; independent public HTTPS QA run 41134768312 confirmed 10 full editorial sections, primary sources, official C44073/26 and external new-tab links on AR/EN/FR pages, 30 Oct 2026.",
       "sources": [
         {
           "label": "ACAPS — Offre officielle Contrôleur LBC-FT, publiée le 12 octobre 2026",
@@ -8671,6 +8671,12 @@
             ]
           ]
         }
+      },
+      "liveVerifiedAt": "2026-10-30",
+      "liveUrls": {
+        "ar": "https://ribhlab.github.io/ar/opportunities/competitions/acaps-controleur-lbc-ft-rabat-c44073-2026/",
+        "en": "https://ribhlab.github.io/en/opportunities/competitions/acaps-controleur-lbc-ft-rabat-c44073-2026/",
+        "fr": "https://ribhlab.github.io/fr/opportunities/competitions/acaps-controleur-lbc-ft-rabat-c44073-2026/"
       }
     }
   }
