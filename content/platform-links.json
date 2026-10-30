@@ -1045,6 +1045,11 @@
     "affiliate-disclosure-placement-2026-multilingual-checklist": [
       "googleSearch",
       "shopify"
+    ],
+    "authenticator-codes-new-phone-safe-transfer": [
+      "googleAuthenticatorHelp",
+      "microsoftAuthenticatorBackup",
+      "applePasswordsCodes"
     ]
   }
 }

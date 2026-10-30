@@ -962,6 +962,16 @@
       "altFr": "Bureau avec clavier et carnet illustrant la préparation éditoriale",
       "license": "Unsplash License",
       "note": "Covene photograph, published 2 June 2022. Original free Unsplash page verified 30 October 2026; images.unsplash.com/photo-1654154094424-43c2abae1478 matched original image link. Editorial illustration only, not a screenshot of an affiliate service. GitHub code search for the photo ID returned no results."
+    },
+    "authenticator-codes-new-phone-safe-transfer": {
+      "photoId": "photo-1722487993019-71bfb8b5671f",
+      "source": "https://unsplash.com/photos/a-person-holding-a-cell-phone-next-to-a-cup-of-coffee-ToGO4FxkwHI",
+      "photographer": "Jakub Żerdzicki",
+      "alt": "Hand entering a passcode on a smartphone beside a glass of coffee",
+      "altAr": "يد تُدخل رمز فتح على هاتف ذكي بجوار كوب قهوة",
+      "altFr": "Main saisissant un code de déverrouillage sur un smartphone près d'un café",
+      "license": "Unsplash License",
+      "note": "Jakub Żerdzicki, 1 August 2024, original free Unsplash License page and matching images.unsplash.com/photo-1722487993019-71bfb8b5671f visually checked on 30 October 2026. Illustrates device security, not a screenshot of an authenticator application; no reuse found in repository code search or article-photo registry."
     }
   }
 }

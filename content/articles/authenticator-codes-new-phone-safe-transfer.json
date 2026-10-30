@@ -1,0 +1,182 @@
+{
+  "slug": "authenticator-codes-new-phone-safe-transfer",
+  "category": "ai",
+  "related": [
+    "phone-photo-backup-icloud-google-photos-onedrive-safe-restore-guide",
+    "scan-documents-phone-privacy-quality"
+  ],
+  "sources": [
+    {
+      "label": "Google Account Help — Get verification codes with Google Authenticator (checked 30 October 2026)",
+      "url": "https://support.google.com/accounts/answer/1066447?hl=en"
+    },
+    {
+      "label": "Microsoft Support — Back up one-time password codes in Microsoft Authenticator (checked 30 October 2026)",
+      "url": "https://support.microsoft.com/en-us/authenticator/back-up-your-accounts-in-microsoft-authenticator"
+    },
+    {
+      "label": "Microsoft Support — Restore one-time password codes (checked 30 October 2026)",
+      "url": "https://support.microsoft.com/en-us/authenticator/restore-account-credentials-from-microsoft-authenticator"
+    },
+    {
+      "label": "Apple Support — Automatically fill in one-time verification codes on iPhone (checked 30 October 2026)",
+      "url": "https://support.apple.com/en-ie/guide/iphone/ipha6173c19f/27/ios/27"
+    },
+    {
+      "label": "Apple Support — Passwords and verification codes across Apple devices (checked 30 October 2026)",
+      "url": "https://support.apple.com/en-ie/guide/iphone/iphd18e98624/ios"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "نقل رموز المصادقة إلى هاتف جديد دون فقدان الحسابات: خطة تحقق واستعادة",
+      "excerpt": "خطوات عملية لنقل Google Authenticator وMicrosoft Authenticator ورموز iPhone، مع حدود النسخ الاحتياطي واختبار الدخول قبل مسح الهاتف القديم.",
+      "lead": "تغيير الهاتف ليس مجرد نقل الصور وجهات الاتصال. إذا كانت حسابات البريد والعمل والبنوك تعتمد على رموز تحقق مؤقتة، فقد يؤدي حذف التطبيق القديم قبل اختبار البديل إلى فقدان الوصول. يقدم هذا الدليل خطة انتقال قابلة للتنفيذ، ويفصل بين المزامنة والنقل اليدوي وإعادة تسجيل حسابات المؤسسات، استناداً إلى إرشادات Google وMicrosoft وApple التي روجعت في 30 أكتوبر 2026.",
+      "sections": [
+        {
+          "heading": "افهم ما الذي تنقله قبل أن تبدأ",
+          "paragraphs": [
+            "رمز المصادقة المؤقت ليس كلمة المرور، ولا يمثل نسخة من حسابك على الخدمة. يعتمد كثير من التطبيقات على سر مشترك يولد رمزاً يتغير عادة كل ثلاثين ثانية، بينما تستخدم بعض حسابات العمل إشعارات موافقة أو تسجيل دخول دون كلمة مرور أو مفتاح مرور. لذلك لا تعني رؤية اسم الحساب داخل التطبيق الجديد أن وسيلة الدخول أصبحت تعمل. اختبر نوع التحقق الفعلي لكل خدمة بدلاً من الاكتفاء بعدد العناصر الظاهرة في القائمة.",
+            "تختلف عملية نقل الرموز عن نقل مفتاح مرور مرتبط بجهاز أو استعادة تسجيل مؤسسي. كما أن النسخ الاحتياطي لهاتفك بالكامل لا يضمن نقل كل أسرار المصادقة. اكتب قائمة بأسماء الخدمات التي تستخدم التطبيق، وصنفها إلى حسابات شخصية وحسابات عمل وحسابات مالية، دون تدوين الرموز المؤقتة أو مفاتيح الإعداد السرية في ملف عادي. احتفظ بالهاتف القديم مشحوناً ومتصلًا حتى تنتهي جميع الاختبارات."
+          ]
+        },
+        {
+          "heading": "جهز وسائل الاسترداد وقائمة فحص قبل الانتقال",
+          "paragraphs": [
+            "ابدأ بتسجيل الدخول إلى كل حساب مهم من متصفح موثوق، وافتح إعدادات الأمان لمعرفة وسائل التحقق المفعلة. تأكد من صحة بريد الاسترداد ورقم الهاتف إذا كانت الخدمة تدعمهما، واحفظ رموز الاسترداد الاحتياطية التي تصدرها الخدمة في مكان آمن منفصل عن الهاتف. ليست جميع الخدمات تقدم هذه الرموز، وقد يكون بعضها صالحاً للاستخدام مرة واحدة. لا ترسلها إلى بريدك أو إلى شخص يدعي أنه يقدم دعماً فنياً.",
+            "ضع جدولاً بسيطاً بأربعة أعمدة: اسم الخدمة، وطريقة التحقق الحالية، وطريقة النقل المقترحة، ونتيجة تجربة الدخول على الجهاز الجديد. ابدأ بحساب منخفض المخاطر ثم انتقل إلى البريد الأساسي الذي تعتمد عليه بقية الحسابات. قبل تغيير الهاتف تحقق من إمكانية فتح حسابك في Google أو Microsoft أو Apple، لأن النسخ السحابي نفسه قد يتطلب الدخول إلى ذلك الحساب. لا تُعد ضبط المصنع للهاتف القديم لمجرد أن الصور انتقلت بنجاح."
+          ]
+        },
+        {
+          "heading": "Google Authenticator: المزامنة ليست هي تصدير QR",
+          "paragraphs": [
+            "توضح Google أن تسجيل الدخول إلى حساب Google داخل تطبيق Authenticator يمكن أن يزامن رموز التحقق مع الأجهزة الأخرى. أما إذا اخترت استخدام التطبيق دون حساب Google، فتحتاج إلى نقل يدوي من الهاتف القديم: افتح قائمة نقل الحسابات، ثم تصدير الحسابات، وحدد العناصر المطلوبة. يظهر رمز QR واحد أو أكثر، وتمسحه من خيار الاستيراد في التطبيق على الهاتف الجديد. قد تختلف أسماء القوائم قليلاً حسب النظام والإصدار؛ اتبع الشاشة الرسمية الفعلية.",
+            "عامل رمز QR الخاص بالتصدير كمعلومة سرية، لأنه قد يتيح إعادة إنشاء رموز الدخول لمن يصوره. لا ترسله عبر تطبيقات المحادثة، ولا تضعه في لقطة شاشة محفوظة سحابياً، ولا تنفذ العملية في مكان يستطيع الآخرون تصوير الشاشة فيه. بعد النقل افتح حساباً حقيقياً من متصفح جديد وأكمل التحقق باستخدام الهاتف الجديد. إذا كانت الرموز غير متطابقة، افحص الوقت التلقائي للهاتف والنظام قبل افتراض وجود اختراق؛ ولا تحذف الرمز القديم حتى تنجح التجربة."
+          ]
+        },
+        {
+          "heading": "Microsoft Authenticator: انتبه للحسابات المهنية واختلاف النظام",
+          "paragraphs": [
+            "تشرح Microsoft أن النسخ الاحتياطي قد يعيد الرموز المؤقتة للحسابات الشخصية المؤهلة وحسابات الخدمات الخارجية، لكن بيانات اعتماد حسابات العمل أو الدراسة لا تُستعاد بالكامل؛ فقد يظهر اسم الحساب فقط وتحتاج إلى تسجيله من جديد. وتشترط وثائق الاستعادة أن يكون النسخ والاسترجاع ضمن نوع الجهاز نفسه: نسخة iOS لا تستعاد على Android والعكس. لذلك لا تعتبر ظهور النسخة الاحتياطية دليلاً على أن جميع خدمات الشركة أصبحت جاهزة.",
+            "على Android راجع إعدادات النسخ الاحتياطي داخل التطبيق والحساب المخصص للاسترداد، وعلى iPhone راجع متطلبات iCloud المذكورة في دليل Microsoft. ثم استعد الحسابات المؤهلة على الهاتف الجديد واختبرها واحدة واحدة. إذا كانت مؤسستك تستخدم موافقات دفعية أو سياسة أجهزة موثوقة، اطلب من قسم تقنية المعلومات إعادة تسجيل الجهاز الجديد عبر القنوات الرسمية. لا توافق على إشعارات تسجيل دخول لم تطلبها، ولا تحاول تجاوز سياسة المؤسسة بإعادة استخدام رمز قديم."
+          ]
+        },
+        {
+          "heading": "iPhone وتبديل Android وiOS: افصل بين المزامنة وإعادة الإعداد",
+          "paragraphs": [
+            "تتيح Apple في تطبيق كلمات السر حفظ رموز التحقق الخاصة بالمواقع التي تدعم هذا الأسلوب، ويمكن إعدادها عبر مسح رمز QR أو إدخال مفتاح الإعداد من موقع الخدمة. وتوضح Apple أن كلمات المرور والرموز يمكن إتاحتها على أجهزة Apple المرتبطة بالحساب نفسه عند تشغيل إعدادات كلمات السر وسلسلة مفاتيح iCloud المناسبة. لكن هذا لا يضمن انتقال رموز تطبيقات أخرى تلقائياً، ولا يلغي الحاجة إلى اختبار الدخول إلى كل موقع.",
+            "إذا كنت تنتقل من Android إلى iPhone أو العكس، فأنشئ خطة مستقلة لكل تطبيق. قد تنجح طريقة تصدير Google Authenticator، لكن استعادة نسخة Microsoft Authenticator السحابية بين النظامين غير مدعومة وفق توثيق Microsoft الحالي. عند غياب طريقة نقل موثوقة، استخدم إعدادات الأمان داخل الخدمة لإلغاء ربط الوسيلة القديمة وإضافة وسيلة جديدة بعد التحقق من هويتك. لا تعتمد على فيديو قديم يفترض أن كل التطبيقات تتصرف بالطريقة نفسها."
+          ]
+        },
+        {
+          "heading": "اختبر الوصول، ثم امسح الجهاز القديم بأمان",
+          "paragraphs": [
+            "بعد الإعداد افتح نافذة خاصة في متصفح على جهاز آخر، وسجل الدخول إلى الخدمات المهمة باستخدام وسيلة التحقق الجديدة. تحقق من البريد الأساسي والحساب المالي والعمل والخدمات التي قد تحتاجها في حالة الطوارئ، وسجل نتيجة كل اختبار دون تخزين أي رمز سري. احتفظ برموز الاسترداد الاحتياطية في مكان محمي، وحدّث قائمة الأجهزة الموثوقة لدى كل خدمة. إذا فشل حساب واحد، أوقف عملية مسح الهاتف القديم حتى تصلح السبب عبر صفحة الاسترداد الرسمية.",
+            "لا تعطي رموز التحقق أو رموز QR أو مفاتيح الاسترداد لأي شخص يتصل مدعياً أنه من الدعم، حتى لو عرف اسمك أو أرسل شعاراً مقنعاً. رموز التطبيقات التقليدية لا تمنع جميع هجمات التصيد، لذلك فضّل مفاتيح المرور أو وسائل المصادقة المقاومة للتصيد حيث تدعمها الخدمة. بعد اختبار جميع الحسابات وإلغاء ارتباط الجهاز القديم عند الحاجة، انسخ البيانات الشخصية المسموح بها ثم امسح الجهاز بالطريقة الرسمية. هذه خطة تقليل مخاطر، وليست ضماناً بعدم حدوث انقطاع."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Move authenticator codes to a new phone without losing account access",
+      "excerpt": "A tested migration checklist for Google Authenticator, Microsoft Authenticator and iPhone verification codes, including recovery limitations and safe device retirement.",
+      "lead": "A phone upgrade can become an account lockout if you erase your old authenticator before testing the new one. Temporary codes, push approvals and passkeys are different credentials, and their backup rules are not interchangeable. This practical guide compares Google, Microsoft and Apple documentation checked on 30 October 2026 and shows how to transfer access without exposing recovery secrets.",
+      "sections": [
+        {
+          "heading": "Know which credentials you are moving",
+          "paragraphs": [
+            "A time-based authenticator code is not your account password. Many apps derive a short-lived code from a secret configured by the service, while corporate accounts may require push approvals, passwordless registration or a device-bound passkey. Seeing an account name on a restored screen does not prove that its sign-in method works. Identify the actual factor used by each important service before attempting a transfer.",
+            "Do not assume a complete phone backup includes every authenticator credential. Create a private inventory of your email, financial, social and work accounts, noting whether they use rotating codes, prompts or passkeys. Record service names and the planned transfer method, never the shared secret or a current code in an ordinary spreadsheet. Keep the old phone charged and accessible until all essential accounts pass a real sign-in test."
+          ]
+        },
+        {
+          "heading": "Prepare recovery routes before changing phones",
+          "paragraphs": [
+            "From a trusted browser, open each important account's security settings and confirm which recovery methods are still available. Update a recovery email or phone number if appropriate, and securely store any one-use backup codes issued by the service away from the device being replaced. Not every provider issues such codes. Never forward them to a person offering to help, even if the request appears to come from a support representative.",
+            "A useful checklist has four columns: service, current factor, migration method and successful test. Begin with a lower-risk account, then secure the main email account used to recover others. Verify that you can still access the Google, Microsoft or Apple account on which a cloud backup depends. Photo migration and cloud storage success do not establish authenticator readiness, so postpone a factory reset of the old phone."
+          ]
+        },
+        {
+          "heading": "Google Authenticator: sync and QR export are different paths",
+          "paragraphs": [
+            "Google says codes can sync across devices when you sign in to a Google Account inside Authenticator. If you use the app without that account, Google documents a manual transfer: on the old phone choose the account-transfer and export options, select the entries, and display one or more QR codes. On the new phone, open the import option and scan them. Menu labels can change with the operating system and app release.",
+            "Treat the export QR as sensitive authentication material. Anyone able to copy it may be able to reproduce codes, so do not send screenshots through chat or store them in an unprotected photo library. After importing, sign in to an actual service from a fresh browser session and use the new phone to finish the challenge. If a code fails, check the device's automatic time setting before making assumptions. Keep the old setup until testing succeeds."
+          ]
+        },
+        {
+          "heading": "Microsoft Authenticator: workplace accounts need special care",
+          "paragraphs": [
+            "Microsoft documents cloud backup for eligible personal and third-party one-time codes, but work and school credentials are not fully restored: their account names may return while registration must be repeated. Its current recovery guidance also restricts restore to the same device type. An iOS backup cannot simply be restored on Android, or the reverse. These limitations matter more than the reassuring presence of an account tile after recovery.",
+            "On Android, inspect Authenticator's backup settings and recovery account; on iPhone, follow Microsoft's current iCloud prerequisites. Restore supported personal codes and verify them individually. For a company account using push approvals or device compliance, contact your organization's IT administrator through a known channel to register the replacement phone. Do not approve unexpected sign-in requests, and do not bypass corporate device policy by reusing an old enrollment."
+          ]
+        },
+        {
+          "heading": "Apple Passwords and switching operating systems",
+          "paragraphs": [
+            "Apple's Passwords app can generate website verification codes after scanning a setup QR or entering a key supplied by the website. Apple also documents availability across devices using the same Apple Account with the appropriate iCloud Passwords and Keychain settings. This is a useful integrated option, but it does not imply that every independent authenticator app will transfer automatically or that all providers support the same setup process.",
+            "Moving between Android and iOS deserves a separate plan for each app. Google Authenticator's documented export method may help where supported, whereas Microsoft's cloud restore is not cross-platform under its current rules. If a reliable migration path is unavailable, use the service's authenticated security settings to register a new factor and retire the old one. Avoid relying on a dated tutorial that treats all authentication methods as identical."
+          ]
+        },
+        {
+          "heading": "Test every account before retiring the old device",
+          "paragraphs": [
+            "Once configured, open a private browser window on another trusted device and sign in to your important services using the replacement factor. Check primary email, finance, work and emergency accounts; mark each result without recording codes. Store backup codes separately, review trusted-device lists and remove obsolete entries only after confirming the new device works. One failed login is a reason to stop the old-phone wipe, not to try random recovery links.",
+            "Never share a verification code, QR export or recovery key with someone claiming to be support. Traditional app-generated codes can still be phished, so use phishing-resistant passkeys or security keys when the service supports them. After all sign-in tests pass and any old device enrollment is revoked, follow the manufacturer's official erase procedure. This checklist reduces lockout and exposure risk; it cannot guarantee that a service will never require additional identity verification."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Changer de téléphone sans perdre ses codes d'authentification : méthode sûre",
+      "excerpt": "Une procédure de transfert et de vérification pour Google Authenticator, Microsoft Authenticator et les codes sur iPhone, avec les limites des sauvegardes.",
+      "lead": "Changer de téléphone peut bloquer l'accès à ses comptes si l'ancien authentificateur est effacé trop tôt. Les codes temporaires, les notifications d'approbation et les clés d'accès ne se sauvegardent pas nécessairement de la même façon. Ce guide compare les documents officiels de Google, Microsoft et Apple consultés le 30 octobre 2026 et propose une migration contrôlée, sans exposer les secrets de récupération.",
+      "sections": [
+        {
+          "heading": "Identifier les moyens d'authentification à transférer",
+          "paragraphs": [
+            "Un code temporaire généré par une application n'est pas le mot de passe du compte. Certains services utilisent un secret partagé pour produire un code qui change périodiquement, tandis que des comptes professionnels imposent une notification, une inscription sans mot de passe ou une clé d'accès liée à un appareil. Voir le nom du compte dans une application restaurée ne prouve donc pas que la connexion fonctionne. Il faut identifier le mécanisme réellement demandé par chaque service.",
+            "Une sauvegarde complète du téléphone ne transporte pas automatiquement tous les identifiants d'authentification. Préparez un inventaire privé des comptes de messagerie, de travail, financiers et personnels, en indiquant la méthode utilisée et la procédure prévue. N'inscrivez jamais les clés secrètes ou les codes temporaires dans un tableau ordinaire. Conservez l'ancien téléphone chargé et disponible jusqu'à la réussite des tests sur le nouveau."
+          ]
+        },
+        {
+          "heading": "Préparer la récupération avant tout changement",
+          "paragraphs": [
+            "Depuis un navigateur fiable, ouvrez les paramètres de sécurité de chaque compte important. Vérifiez l'adresse de récupération, le numéro de téléphone éventuellement accepté et les codes de secours fournis par le service. Ces derniers peuvent être à usage unique et ne sont pas proposés partout. Conservez-les dans un espace protégé distinct du téléphone remplacé. Ne les envoyez jamais à un prétendu conseiller, même si son message reprend l'identité visuelle de la plateforme.",
+            "Créez une grille de suivi avec quatre colonnes : service, facteur actuel, méthode de transfert et résultat de connexion. Commencez par un compte peu sensible, puis sécurisez la messagerie principale qui sert à récupérer les autres. Vérifiez également l'accès au compte Google, Microsoft ou Apple dont dépend la sauvegarde. La migration réussie des photos ou des contacts ne suffit pas : ne réinitialisez pas encore l'ancien appareil."
+          ]
+        },
+        {
+          "heading": "Google Authenticator : distinguer synchronisation et export QR",
+          "paragraphs": [
+            "Selon Google, les codes peuvent se synchroniser entre appareils lorsque l'utilisateur se connecte à son compte Google dans Authenticator. Si l'application est utilisée sans compte Google, un transfert manuel est documenté : sur l'ancien appareil, ouvrez le menu de transfert, exportez les comptes choisis et affichez un ou plusieurs codes QR. Sur le nouveau, choisissez l'importation et scannez-les. Les intitulés exacts peuvent varier selon la version et le système.",
+            "Un QR d'exportation est une donnée sensible : une personne qui le copie peut potentiellement reproduire les codes. Évitez les captures partagées dans une messagerie ou enregistrées dans une photothèque non protégée. Après l'importation, ouvrez une nouvelle session sur un vrai service et terminez l'authentification avec le nouveau téléphone. Si le code est refusé, vérifiez d'abord l'heure automatique du système. Gardez l'ancienne configuration tant que le test n'est pas concluant."
+          ]
+        },
+        {
+          "heading": "Microsoft Authenticator : limites pour les comptes professionnels",
+          "paragraphs": [
+            "Microsoft explique que la sauvegarde peut restaurer les codes temporaires de comptes personnels et de certains services tiers. En revanche, les identifiants professionnels ou scolaires ne sont pas intégralement restaurés : le nom peut réapparaître, mais l'inscription doit être refaite. La restauration est en outre limitée au même type d'appareil. Une sauvegarde iOS ne se restaure pas directement sur Android, ni l'inverse. L'affichage d'un compte ne suffit donc pas à valider la migration.",
+            "Sur Android, vérifiez les réglages de sauvegarde et le compte de récupération ; sur iPhone, suivez les conditions iCloud indiquées par Microsoft. Restaurez les codes compatibles et testez-les séparément. Pour un compte d'entreprise avec approbations ou exigences de conformité, demandez au service informatique, par un canal connu, d'enregistrer le nouvel appareil. Refusez toute notification de connexion inattendue et respectez les règles de sécurité de l'employeur."
+          ]
+        },
+        {
+          "heading": "Codes de l'iPhone et passage entre Android et iOS",
+          "paragraphs": [
+            "L'application Mots de passe d'Apple peut générer des codes de vérification pour les sites compatibles après lecture d'un QR de configuration ou saisie d'une clé fournie par le site. Apple décrit également la disponibilité des identifiants sur les appareils connectés au même compte Apple lorsque les réglages iCloud appropriés sont activés. Cette fonction intégrée ne garantit pas le transfert automatique des données détenues par une autre application d'authentification.",
+            "Pour passer d'Android à iPhone, ou inversement, examinez chaque application indépendamment. L'exportation documentée par Google Authenticator peut convenir à certains cas, alors que la restauration cloud de Microsoft n'est pas interopérable entre les deux systèmes selon ses règles actuelles. En l'absence de méthode fiable, connectez-vous au service par une voie autorisée, ajoutez un nouveau facteur dans ses paramètres de sécurité puis retirez l'ancien. Méfiez-vous des tutoriels obsolètes."
+          ]
+        },
+        {
+          "heading": "Vérifier les connexions puis effacer l'ancien téléphone",
+          "paragraphs": [
+            "Après la configuration, ouvrez une fenêtre privée sur un autre appareil fiable et connectez-vous aux services essentiels avec le nouveau facteur. Contrôlez la messagerie principale, les comptes financiers, professionnels et ceux nécessaires en urgence. Notez seulement le résultat du test, jamais les codes. Conservez les codes de secours séparément et mettez à jour les appareils de confiance. Si un compte échoue, suspendez l'effacement de l'ancien téléphone jusqu'à la résolution officielle du problème.",
+            "Ne communiquez jamais un code de validation, un QR d'exportation ou une clé de récupération à un interlocuteur se présentant comme une assistance. Les codes temporaires classiques restent vulnérables à certaines formes d'hameçonnage ; privilégiez des clés d'accès ou des clés de sécurité résistantes à l'hameçonnage lorsque le service les propose. Une fois les tests réussis et les anciens accès révoqués si nécessaire, utilisez la procédure officielle d'effacement. Cette méthode limite les risques sans garantir l'absence de vérification supplémentaire."
+          ]
+        }
+      ]
+    }
+  },
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false
+}

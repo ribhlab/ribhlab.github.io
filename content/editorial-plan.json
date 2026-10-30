@@ -565,7 +565,8 @@
         "phone-photo-backup-icloud-google-photos-onedrive-safe-restore-guide",
         "scan-documents-phone-privacy-quality",
         "english-learning-apps-pronunciation-plan",
-        "voice-recording-transcription-mobile-accuracy"
+        "voice-recording-transcription-mobile-accuracy",
+        "authenticator-codes-new-phone-safe-transfer"
       ],
       "ideas": [
         {
@@ -592,14 +593,6 @@
           "sequence": 15,
           "titleAr": "اختيار مدير كلمات المرور",
           "status": "planned"
-        },
-        {
-          "sequence": 16,
-          "titleAr": "تطبيقات المصادقة الثنائية",
-          "status": "queued",
-          "slug": "authenticator-codes-new-phone-safe-transfer",
-          "queuePath": "content/reviewed-queue/authenticator-codes-new-phone-safe-transfer.json",
-          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 17,
