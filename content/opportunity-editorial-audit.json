@@ -136,10 +136,11 @@
       "researchedAt": "2026-10-28",
       "evidencePath": "content/opportunity-editorial-evidence.json",
       "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/agriculture-admin/",
-      "verification": "Signed original 2-page ministerial notice and official government listing reviewed 28 Oct 2026; build 40740825050 and Pages deployment 40740824945 succeeded; live AR/EN/FR pages with eight sections and original PDF checked in public-sitemap-check 40740922162.",
+      "verification": "Signed original 2-page ministerial notice and official government listing reviewed 28 Oct 2026; build 40740825050 and Pages deployment 40740824945 succeeded; live AR/EN/FR pages with eight sections and original PDF checked in public-sitemap-check 40740922162. Official 9 Nov 2026 extension rendered in AR/EN/FR after source build 41016971367, Pages deployment 41016971416 and public HTTPS QA 41017051355 (30 Oct 2026).",
       "lastOfficialUpdateAt": "2026-10-30",
       "officialExtensionPdfUrl": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0/0",
-      "officialUpdateNote": "The signed ministry notice extends applications for 38 second-grade administrators from 30 Oct to 9 Nov 2026 at 16:30 due to a technical registration outage. Exam remains 6 Dec 2026. Trilingual update banner and source links supplied through content/opportunity-official-updates.json; live verification pending."
+      "officialUpdateNote": "The signed ministry notice extends applications for 38 second-grade administrators from 30 Oct to 9 Nov 2026 at 16:30 due to a technical registration outage. Exam remains 6 Dec 2026. Trilingual update banner and source links supplied through content/opportunity-official-updates.json; live verification pending.",
+      "officialUpdateVerifiedAt": "2026-10-30"
     },
     {
       "id": "oncf-bac5",
