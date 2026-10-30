@@ -7771,6 +7771,185 @@
           ]
         }
       }
+    },
+    "anapec-dg-networks-technician-c44231-2026": {
+      "reviewedAt": "2026-10-30",
+      "state": "researched-awaiting-live-verification",
+      "verification": "Signed three-page ANAPEC general notice and individual official C44231/26 listing checked 30 October 2026; awaiting source build, Pages deployment and live AR/EN/FR page verification.",
+      "sources": [
+        {
+          "label": "ANAPEC — signed three-page general recruitment notice dated 21 October 2026 (primary)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/8b1063c1-dc54-4008-86c0-ebee8d34c856"
+        },
+        {
+          "label": "Emploi-public.ma — specific C44231/26 listing, published 22 October 2026 (primary)",
+          "url": "https://www.emploi-public.ma/fr/concours/details/8b1063c1-dc54-4008-86c0-ebee8d34c856"
+        },
+        {
+          "label": "ANAPEC — official employer site",
+          "url": "https://anapec.ma/"
+        },
+        {
+          "label": "KounKour — independent listing summary, checked 30 October 2026; original notice controls",
+          "url": "https://kounkour.com/concours/technicien-de-3eme-grade-echelle-9-agence-nationale-de-promotion-8b1063"
+        }
+      ],
+      "facts": {
+        "employer": "Agence Nationale de Promotion de l'Emploi et des Compétences (ANAPEC)",
+        "reference": "C44231/26",
+        "originalNoticeDate": "2026-10-21",
+        "publishedAt": "2026-10-22",
+        "posts": 1,
+        "title": "Technicien de 3ème grade — systèmes et réseaux informatiques, infrastructure digitale, télécommunications",
+        "grade": "3ème grade, échelle 9",
+        "assignment": "Direction générale (ANAPEC headquarters in Casablanca; exact unit not specified)",
+        "nationality": "Moroccan",
+        "age": "18–40 inclusive by deadline for 3rd-grade technician",
+        "degree": "Diplôme de technicien spécialisé, DUT, BTS or legally recognized equivalent in listed specialty; foreign diploma equivalence where applicable",
+        "experience": "No fixed minimum professional experience in signed notice",
+        "applicationDocuments": [
+          "Online application on emploi-public.ma, one specialty only",
+          "Updated CV with photograph, phone, address and email",
+          "Certified copy of national identity card",
+          "Certified copy of diploma and equivalence where relevant",
+          "Administrative authorization for civil servants",
+          "Applicable disability/reserved-category documents"
+        ],
+        "submission": "https://www.emploi-public.ma/",
+        "deadline": "2026-11-05T16:30",
+        "examDate": "2026-11-22",
+        "examPlace": "Individual convocations to confirm; general notice mentions Casablanca and Mohammedia",
+        "selection": "Written QCM 3h coefficient 6; <10/20 eliminatory; oral 15–30 minutes coefficient 4; overall >=10/20 subject to ranking",
+        "salary": null
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة ANAPEC لتقني الأنظمة والشبكات 2026: منصب واحد بالإدارة العامة وشروط التسجيل",
+          "deck": "قراءة أصلية للقرار الرسمي المؤرخ في 21 أكتوبر وبطاقة C44231/26: الشهادة والسن والوثائق والاختبارات وآخر أجل 5 نوفمبر، دون راتب مختلق.",
+          "sections": [
+            [
+              "ما الذي يثبته القرار الأصلي وما الذي لا يثبته؟",
+              "نشرت الوكالة الوطنية لإنعاش التشغيل والكفاءات إعلاناً عاماً مؤرخاً في 21 أكتوبر 2026، يخص 86 منصباً موزعة بين مهندسين ومتصرفين وتقنيين. لا تعني هذه الحصيلة وجود 86 منصباً في الشبكات المعلوماتية. البطاقة الحكومية C44231/26، المنشورة في 22 أكتوبر، تخص منصباً واحداً لتقني من الدرجة الثالثة، السلم التاسع. يجب قراءة الصفحات الثلاث للقرار مع البطاقة الخاصة بالرمز نفسه، لا الاكتفاء بعناوين المواقع التي تجمع جميع مباريات الوكالة. الوثيقة الرسمية تثبت وجود مسطرة ترشيح، لكنها لا تثبت قبول ملف شخص بعينه أو نجاحه أو وجود راتب صافٍ محدد."
+            ],
+            [
+              "المنصب والتخصص ومكان التعيين",
+              "تتعلق هذه البطاقة بتخصص الأنظمة والشبكات المعلوماتية والبنية التحتية الرقمية والاتصالات، ومكان التعيين المعلن هو الإدارة العامة. يوجد مقر الوكالة بالدار البيضاء بحسب ترويسة القرار، لكن لا ينبغي اختلاق عنوان مكتب أو فريق عمل لم يحدده الإعلان. كما توجد مباراة أخرى للوكالة برمز C44228/26 تشمل ثمانية مناصب موزعة جهوياً؛ ليست هي هذه المباراة ذات المنصب الواحد. على المترشح كتابة الرمز والتخصص والدرجة في ورقة متابعة شخصية، حتى لا يرفع ملفاً مناسباً لإعلان مختلف أو يظن أن الأعداد قابلة للجمع."
+            ],
+            [
+              "الأهلية والشهادات والسن",
+              "يشترط القرار الجنسية المغربية وسناً لا يقل عن ثماني عشرة سنة ولا يتجاوز أربعين سنة بالنسبة إلى تقني الدرجة الثالثة عند انتهاء أجل الإيداع. ويقبل، وفق التخصص المعلن، دبلوم التقني المتخصص أو الدبلوم الجامعي للتكنولوجيا أو شهادة التقني العالي أو ما يعادلها قانوناً. لا تكفي تسمية شهادة عامة في الإعلاميات إن لم تكن مطابقة للتخصص المطلوب. أصحاب الشهادات الأجنبية مطالبون بوثيقة المعادلة الرسمية عند انطباق الشرط. لا يفرض القرار المنشور سنوات خبرة مهنية محددة لهذا المنصب؛ لذلك لا يجوز تحويل خبرة مستحسنة إلى شرط إقصائي مختلق."
+            ],
+            [
+              "الملف الإلكتروني ووثائق الإثبات",
+              "يتكون الملف الإلكتروني من طلب المشاركة عبر منصة التشغيل العمومي، وسيرة ذاتية حديثة تتضمن صورة ورقم هاتف وعنواناً وبريداً إلكترونياً، ونسخة مطابقة للأصل من بطاقة التعريف الوطنية، ونسخة مصادق عليها من الشهادة أو الدبلوم مع المعادلة عند اللزوم. ويحتاج الموظف إلى ترخيص من إدارته لاجتياز المباراة. توجد وثائق إضافية للفئات ذات الوضعيات الخاصة، مثل شهادة إثبات الإعاقة عند الاقتضاء، ومسار إداري خاص لبعض المستفيدين من المناصب المحجوزة. هذه قائمة مستخرجة من القرار وليست نموذجاً عاماً؛ اقرأ النسخة الأصلية قبل رفع أي ملف."
+            ],
+            [
+              "خطوات الترشيح من المغرب قبل 5 نوفمبر",
+              "تفتح فترة الإيداع من 22 أكتوبر إلى 5 نوفمبر 2026، وآخر أجل محدد في القرار هو الساعة 16:30 من يوم الخميس 5 نوفمبر. ينص الإعلان على ترشيح واحد مع اختيار تخصص واحد من التخصصات المعروضة، وعلى تحميل الوثائق بصيغة PDF داخل المنصة الحكومية. أنشئ الحساب أو ادخل إليه، وحدد الرمز C44231/26، ثم راجع التخصص والدرجة قبل إرسال الطلب. افحص قابلية قراءة الوثائق وأسماء الملفات، واحتفظ بإثبات الإيداع. نموذج الاتصال بالجهة في صفحة الإعلان مخصص للاستفسارات ولا يحل محل التسجيل الإلكتروني."
+            ],
+            [
+              "الاختبار الكتابي والشفوي وطريقة احتساب النتائج",
+              "ينص القرار على اختبار كتابي موحد من نوع الأسئلة متعددة الاختيارات حول اختصاصات الوكالة والثقافة العامة، مدته ثلاث ساعات ومعامله ستة، يليه اختبار شفوي حسب التخصص مدته بين خمس عشرة وثلاثين دقيقة ومعامله أربعة. كل نقطة كتابية أقل من 10/20 إقصائية، ويشترط معدل عام لا يقل عن 10/20 للقبول في حدود المناصب. مثال حسابي تعليمي: نقطة كتابية 12 وشفوية 14 تعطي (12×6 + 14×4) ÷ 10 = 12.8، لكن ذلك لا يضمن الترتيب النهائي. لا تنسب هذا المثال إلى نتيجة حقيقية أو قائمة نجاح."
+            ],
+            [
+              "كيف يستعد المرشح تقنياً دون افتراض أسئلة رسمية؟",
+              "للتحضير، أنشئ ورقة مراجعة للعنونة IP وتقسيم الشبكات وDNS وDHCP وتوثيق الأعطال والصلاحيات الأساسية، ثم راجع المفاهيم العامة لدور الوكالة في الوساطة والتشغيل. هذه موضوعات تدريب مقترحة وليست لائحة أسئلة منشورة من لجنة المباراة. جرّب شرح عطل افتراضي: جهاز يتصل بالشبكة المحلية ولا يصل إلى موقع خارجي؛ ابدأ باختبار الاتصال بالبوابة ثم DNS قبل تغيير الإعدادات عشوائياً. في الشفوي، اعرض طريقة التفكير والتوثيق وحماية بيانات المستفيدين بدلاً من ادعاء خبرة أو شهادات لا تملكها."
+            ],
+            [
+              "المواعيد والالتباسات والمخاطر العملية",
+              "تذكر البطاقة الحكومية 22 نوفمبر 2026 موعداً للمباراة، بينما يذكر القرار أن مباريات الوكالة ككل تنظم يومي 21 و22 نوفمبر في مدينتي الدار البيضاء والمحمدية. هذا ليس تناقضاً يلزم حسمه باختيار المدينة الأقرب: المرجع الخاص برمز C44231/26 يحدد 22 نوفمبر، لكن مكان وساعة حضور كل مترشح يحددان عبر لوائح الاستدعاء المنشورة لاحقاً. راقب موقع الوكالة والبوابة الحكومية؛ نشر اللوائح يعد استدعاءً بحسب القرار. لا تدفع لوسيط يدعي امتلاك مكان مضمون أو موعداً غير منشور."
+            ],
+            [
+              "الراتب والبدائل والتحقق النهائي",
+              "لا يتضمن القرار الأصلي أجراً صافياً أو تعويضات فردية لهذا المنصب. السلم التاسع وصف إداري لا يساوي تلقائياً رقماً صافياً ثابتاً، لأن الوضعية والاقتطاعات والتعويضات تختلف. لا تستخدم تقديرات مواقع التوظيف كراتب رسمي. إذا لم تتطابق شهادتك أو فات الأجل، ابحث عن مباراة أخرى منشورة ومفتوحة تناسب تكوينك، بدلاً من إرسال ملف غير مستوفٍ. احتفظ بنسخة من القرار والرمز وإثبات الإيداع، وراجع أي تصحيح رسمي لاحق قبل السفر إلى مركز الامتحان. هذا دليل للمساعدة وليس قرار قبول أو عرض عمل."
+            ]
+          ]
+        },
+        "en": {
+          "title": "ANAPEC 2026 network technician competition: one headquarters post and how to apply",
+          "deck": "An evidence-led guide to the 21 October signed notice and C44231/26: qualification, age, documents, exams and the 5 November deadline, without invented pay.",
+          "sections": [
+            [
+              "What the signed notice proves—and what it does not",
+              "ANAPEC issued a signed general recruitment notice dated 21 October 2026 covering 86 positions across engineering, administrative and technical grades. That overall number does not mean there are 86 computer-networking vacancies. The government listing C44231/26, published on 22 October, concerns exactly one third-grade technician position at scale 9. Read the three-page signed notice alongside the listing carrying the same code rather than relying on aggregated headlines. The documents establish a recruitment procedure, not an individual applicant's eligibility, selection, guaranteed placement or precise net salary."
+            ],
+            [
+              "The single vacancy, specialty and assignment",
+              "This particular listing covers computer systems and networks, digital infrastructure and telecommunications, with the General Directorate identified as the assignment. ANAPEC's Casablanca address appears on the official letterhead, but the notice does not identify a particular team or desk. A separate ANAPEC competition, C44228/26, concerns eight technical posts distributed across regions; it is not the single-position competition discussed here. Record the exact competition code, grade and specialty before preparing documents. Combining post counts from different announcements can lead to a false impression of the number of openings for this specialty."
+            ],
+            [
+              "Eligibility, qualifications and age",
+              "Applicants must be Moroccan nationals and, for the third-grade technician competition, at least 18 and no older than 40 by the application deadline. The qualification must match the listed specialty: a specialized technician diploma, a university technology diploma, a higher technician certificate or a legally recognized equivalent. A broadly titled computing qualification is not automatically proof of specialty equivalence. Foreign diplomas require the appropriate official equivalence decision when applicable. The signed notice does not prescribe a fixed number of years of work experience for this specific post, so an editor must not invent a mandatory experience threshold."
+            ],
+            [
+              "The electronic dossier and supporting evidence",
+              "The electronic dossier includes the application entered through the public employment portal, an updated CV with photograph, telephone number, postal address and email, a certified identity-card copy, and a certified copy of the qualifying diploma with equivalence documentation when necessary. Civil servants need permission from their employing administration to sit the examination. Specific reserved-category applicants may need disability evidence or documentation routed through their competent administration. These requirements come from the actual notice; do not replace them with a generic recruitment checklist. Read the original Arabic document before uploading scans."
+            ],
+            [
+              "How to apply in Morocco before 5 November",
+              "Applications are accepted from 22 October through Thursday 5 November 2026, with the signed notice specifying a closing time of 16:30 on 5 November. The applicant must select only one specialty and submit one candidacy through emploi-public.ma, uploading the supporting files as PDFs. Create or access your account, choose code C44231/26, and verify the specialty and grade before final submission. Check that scans are legible and that no required page is missing. Save the acknowledgement of submission. The contact form on the listing page is for questions, not for submitting a valid application."
+            ],
+            [
+              "Written and oral examinations and scoring",
+              "The notice specifies a common multiple-choice written test on ANAPEC's remit and general knowledge, lasting three hours with coefficient 6. An oral assessment tailored to the specialty lasts between 15 and 30 minutes with coefficient 4. A written score below 10/20 eliminates the candidate, while overall admission requires at least 10/20 and depends on ranking within the available positions. As a hypothetical calculation, written 12 and oral 14 produce (12×6 + 14×4)/10 = 12.8. This arithmetic is not a prediction of selection and does not represent a real candidate's result."
+            ],
+            [
+              "Technical preparation without pretending to know the questions",
+              "For preparation, revise IP addressing, subnetting, DNS, DHCP, incident documentation and basic access controls, while also reading about ANAPEC's employment-intermediation mission. These are reasonable study themes, not leaked or officially announced examination questions. Practice explaining a fictional troubleshooting case: a computer can reach its local gateway but not a website. Test connectivity and name resolution systematically before changing settings. For the oral assessment, demonstrate how you document incidents, protect applicant information and communicate uncertainty. Never claim credentials, prior projects or practical experience you cannot substantiate."
+            ],
+            [
+              "Deadlines, inconsistencies and operational risks",
+              "The government listing identifies 22 November 2026 as the competition date. The broader signed notice says ANAPEC's competitions take place on 21 and 22 November in Casablanca and Mohammedia. These statements need not conflict: the listing is specific to C44231/26, while the notice covers many grades and specialties. The exact reporting location and time must come from later official candidate lists and instructions. Monitor both ANAPEC and emploi-public.ma; the notice treats publication of the lists as an invitation to attend. Do not pay intermediaries promising a seat or an unpublished venue."
+            ],
+            [
+              "Salary, alternatives and final verification",
+              "Neither the signed notice nor the specific government listing publishes an individual net salary or allowance package. Scale 9 describes the grade, not a universal take-home figure: deductions and personal circumstances may vary. Do not reproduce salary estimates from third-party websites as an employer commitment. If your diploma does not fit or the deadline has passed, search for a separate verified opening rather than submit a misleading dossier. Retain the official PDF, competition code and submission receipt, and check for amendments before traveling. This guide explains the process; it is not a job offer or acceptance decision."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours ANAPEC 2026 : un poste de technicien systèmes et réseaux à la Direction générale",
+          "deck": "Analyse de l'avis signé du 21 octobre et de C44231/26 : diplôme, âge, dossier, épreuves et clôture du 5 novembre, sans rémunération inventée.",
+          "sections": [
+            [
+              "Ce que prouve l'avis signé et ce qu'il ne prouve pas",
+              "L'ANAPEC a publié un avis général signé le 21 octobre 2026 portant sur 86 postes répartis entre ingénieurs, administrateurs et techniciens. Ce total ne signifie pas que 86 postes concernent les réseaux informatiques. La fiche gouvernementale C44231/26, publiée le 22 octobre, vise exactement un poste de technicien de troisième grade, échelle 9. Il faut lire les trois pages de l'avis original et la fiche portant le même code, plutôt que de se fier à un titre global. Ces documents attestent l'ouverture d'une procédure, non l'admissibilité d'une personne, sa réussite ou un salaire net garanti."
+            ],
+            [
+              "Le poste unique, la spécialité et l'affectation",
+              "Le poste étudié relève des systèmes et réseaux informatiques, de l'infrastructure numérique et des télécommunications. L'affectation annoncée est la Direction générale. L'en-tête du document comporte une adresse de l'ANAPEC à Casablanca, sans préciser le service exact ni un bureau individuel. Une autre compétition, C44228/26, concerne huit postes techniques répartis entre plusieurs régions; elle ne doit pas être confondue avec cette place unique. Notez le code, le grade et la spécialité dans votre dossier. Additionner les effectifs de plusieurs annonces produirait une présentation trompeuse des possibilités réelles."
+            ],
+            [
+              "Conditions, diplômes et âge",
+              "Le candidat doit posséder la nationalité marocaine et, pour le grade de technicien concerné, avoir au moins 18 ans et au plus 40 ans à la clôture des inscriptions. Le diplôme doit correspondre à la spécialité : diplôme de technicien spécialisé, diplôme universitaire de technologie, brevet de technicien supérieur ou équivalent légalement reconnu. Une formation informatique au titre très général n'établit pas automatiquement cette correspondance. Pour un diplôme étranger, la décision officielle d'équivalence est nécessaire lorsqu'elle s'applique. L'avis signé ne fixe pas un nombre d'années d'expérience obligatoire pour ce poste précis; il serait incorrect d'en inventer un."
+            ],
+            [
+              "Le dossier électronique et les justificatifs",
+              "Le dossier électronique comprend le formulaire de candidature sur le portail public, un CV actualisé avec photographie, téléphone, adresse et courrier électronique, une copie certifiée de la carte nationale d'identité ainsi qu'une copie certifiée du diplôme requis et, si nécessaire, de son équivalence. Les fonctionnaires doivent joindre l'autorisation de leur administration. Certaines catégories réservées fournissent également une attestation de handicap ou passent par leur administration de tutelle. Cette liste provient de l'avis officiel et ne doit pas être remplacée par une liste générique trouvée sur un blog. Vérifiez chaque pièce dans le PDF original."
+            ],
+            [
+              "Déposer sa candidature avant le 5 novembre",
+              "Les candidatures sont ouvertes du 22 octobre au jeudi 5 novembre 2026. L'avis signé fixe précisément la clôture au 5 novembre à 16 h 30. Il prévoit une seule candidature, avec choix d'une seule spécialité, et le téléversement des justificatifs en PDF sur emploi-public.ma. Connectez-vous au portail, sélectionnez C44231/26 et contrôlez le grade et la spécialité avant validation. Vérifiez la lisibilité des scans et l'absence de pages manquantes, puis conservez l'accusé de dépôt. Le formulaire de contact présent sur la page de l'annonce sert aux questions et ne remplace pas la candidature électronique."
+            ],
+            [
+              "Épreuves écrites et orales et calcul des résultats",
+              "L'avis prévoit une épreuve écrite commune sous forme de QCM sur les missions de l'ANAPEC et la culture générale, d'une durée de trois heures et de coefficient 6. L'entretien oral selon la spécialité dure entre quinze et trente minutes, coefficient 4. Toute note écrite inférieure à 10/20 est éliminatoire; l'admission suppose une moyenne générale d'au moins 10/20 et un classement compatible avec le nombre de postes. Exemple purement pédagogique : 12 à l'écrit et 14 à l'oral donnent (12×6 + 14×4)/10 = 12,8. Ce calcul n'est ni un résultat réel ni une garantie d'admission."
+            ],
+            [
+              "Préparer la technique sans inventer les questions",
+              "Pour se préparer, on peut réviser l'adressage IP, les sous-réseaux, DNS, DHCP, la documentation des incidents et les droits d'accès, puis étudier le rôle de l'ANAPEC dans l'intermédiation de l'emploi. Ce sont des pistes de révision, pas des questions officielles publiées par le jury. Entraînez-vous sur un incident fictif : un poste atteint sa passerelle locale, mais pas un site Web. Vérifiez méthodiquement la connectivité et la résolution DNS avant de modifier la configuration. À l'oral, expliquez votre démarche, la protection des données des usagers et les limites de vos connaissances, sans inventer de certifications."
+            ],
+            [
+              "Délais, ambiguïtés et risques pratiques",
+              "La fiche gouvernementale indique le 22 novembre 2026 pour cette compétition, tandis que l'avis général situe l'ensemble des épreuves les 21 et 22 novembre à Casablanca et Mohammedia. Il ne faut pas choisir arbitrairement une ville : la fiche C44231/26 est spécifique, et les listes officielles préciseront la convocation individuelle, le lieu et l'heure. Consultez régulièrement les sites de l'ANAPEC et d'emploi-public.ma; l'avis prévoit que la publication des listes tient lieu de convocation. Méfiez-vous des intermédiaires qui promettent une place garantie ou communiquent un centre non publié."
+            ],
+            [
+              "Rémunération, alternatives et vérification finale",
+              "Ni l'avis signé ni la fiche propre à C44231/26 ne publient un salaire net individuel ou un montant précis de primes. L'échelle 9 désigne un grade administratif, pas un montant net universel, car les retenues et situations personnelles diffèrent. Ne présentez pas l'estimation d'un site tiers comme un engagement de l'employeur. Si le diplôme ne correspond pas ou si le délai est dépassé, cherchez une autre annonce officielle réellement ouverte au lieu de déposer un dossier trompeur. Conservez le PDF, le code du concours et la preuve d'inscription; vérifiez les éventuels rectificatifs avant tout déplacement. Ce guide ne constitue pas une promesse d'embauche."
+            ]
+          ]
+        }
+      }
     }
   }
 }
