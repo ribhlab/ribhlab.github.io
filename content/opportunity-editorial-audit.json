@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-30",
-  "scope": "All 99 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
+  "scope": "All 100 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
@@ -9,12 +9,12 @@
     "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
-    "cards": 99,
+    "cards": 100,
     "visa": 12,
     "researched": 38,
     "marketEvidence": 5,
     "pendingDetail": 49,
-    "pendingLiveVerification": 7
+    "pendingLiveVerification": 8
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -26,6 +26,18 @@
     "Keep internal cards within RibhLab and external primary sources in new tabs"
   ],
   "cards": [
+    {
+      "id": "map-recruitment-officer-rabat-2026",
+      "section": "competitions",
+      "title": "Chargé de Recrutement — MAP Rabat",
+      "deadline": "2026-11-12T16:30",
+      "status": "researched-awaiting-live-verification",
+      "priority": "verify-build-deploy-live-ar-en-fr",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/e612da97-52b0-4d3d-bdda-7ceb60322301",
+      "articleEvidenceId": "map-recruitment-officer-rabat-2026",
+      "reviewedAt": "2026-10-30",
+      "note": "Three-page original call and portal checked. One scale-11 Rabat post; master HR; 2–5 years experience; written coefficients 2 and 3, oral coefficient 7. Live deployment unverified."
+    },
     {
       "id": "imouzzer-marmoucha-four-technicians-2026",
       "section": "competitions",
