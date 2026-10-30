@@ -58,6 +58,8 @@ jobs:
               wanted.append(f'/{lang}/opportunities/competitions/anapec-finance-audit-3/')
               wanted.append(f'/{lang}/opportunities/competitions/amdie-investment/')
               wanted.append(f'/{lang}/ai/english-learning-apps-pronunciation-plan/')
+              wanted.append(f'/{lang}/ai/voice-recording-transcription-mobile-accuracy/')
+              wanted.append(f'/{lang}/ai/unreal-engine-when-to-choose/')
               wanted.append(f'/{lang}/lifestyle/seafood-paella-safe-home-preparation/')
               wanted.append(f'/{lang}/trading/coin-versus-token-claim-verification/')
               wanted.append(f'/{lang}/opportunities/competitions/au-kenitra-data-science-ai/')
@@ -89,6 +91,12 @@ jobs:
                       assert 'opp-guide-sources' in html, f'{lang}: official sources missing'
                       print(f'GERMAN OPPORTUNITY LIVE {lang}: detailed article and sources present',flush=True)
                   for lang in ('ar','en','fr'):
+                      for slug, minimum, official in (('voice-recording-transcription-mobile-accuracy',5,'support.apple.com'),('unreal-engine-when-to-choose',6,'unrealengine.com')):
+                          page=bodies[f'/{lang}/ai/{slug}/'].decode('utf-8')
+                          assert page.count('class="article-block"')>=minimum, f'{lang}: {slug} missing full sections'
+                          assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{lang}: {slug} missing references or licensed photo'
+                          assert official in page, f'{lang}: {slug} missing its official source'
+                          print(f'NEW EDITORIAL LIVE {lang}: {slug}, {minimum} sections, official source and licensed photo',flush=True)
                       scan=bodies[f'/{lang}/ai/scan-documents-phone-privacy-quality/'].decode('utf-8')
                       assert scan.count('class="article-block"')>=5 and 'article-sources' in scan and 'licensed-editorial-photo' in scan, f'{lang}: scanned-document article lacks full text, sources or photo'
                       print(f'MOBILE SCANNING LIVE {lang}: five sections, sources and licensed image',flush=True)
