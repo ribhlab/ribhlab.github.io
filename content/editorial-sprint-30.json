@@ -234,7 +234,10 @@
       "status": "queued",
       "articleUrl": null,
       "queuePath": "content/reviewed-queue/voice-recording-transcription-mobile-accuracy.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publisherReleasedAt": "2026-10-30T07:42:34Z",
+      "releaseCommit": "26032adccd8bd66fdb051c733ee7c5af0ac3540d",
+      "verification": "Publisher moved complete AR/EN/FR article to content/articles; awaiting successful build/deploy and live public HTTPS QA before published status."
     },
     {
       "sectionId": "mobile-apps",
@@ -292,7 +295,10 @@
       "status": "queued",
       "articleUrl": null,
       "queuePath": "content/reviewed-queue/unreal-engine-when-to-choose.json",
-      "editorialReviewDate": "2026-10-28"
+      "editorialReviewDate": "2026-10-28",
+      "publisherReleasedAt": "2026-10-30T07:12:35Z",
+      "releaseCommit": "c361764335cae68d6c0a9025959dae4b94a04c30",
+      "verification": "Publisher moved complete AR/EN/FR article to content/articles; awaiting successful build/deploy and live public HTTPS QA before published status."
     },
     {
       "sectionId": "games-security",
