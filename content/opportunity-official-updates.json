@@ -1,0 +1,36 @@
+{
+  "reviewedAt": "2026-10-30",
+  "description": "Official source updates that supersede older dates in researched recruitment articles; used by opportunity page renderer without rewriting archived original decisions.",
+  "items": {
+    "agriculture-admin": {
+      "reviewedAt": "2026-10-30",
+      "deadline": "2026-11-09",
+      "previousDeadline": "2026-10-30",
+      "sourceBasis": "One-page signed ministry extension notice and current government listing checked on 30 October 2026; online application closes 9 November 2026 at 16:30 Morocco time.",
+      "sources": [
+        {
+          "label": "Ministry of Agriculture — signed extension announcement (PDF, reviewed 30 October 2026)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0/0"
+        },
+        {
+          "label": "Moroccan public employment portal — competition C44077/26, updated deadline",
+          "url": "https://www.emploi-public.ma/fr/concours/details/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0"
+        }
+      ],
+      "translations": {
+        "ar": {
+          "title": "تحديث رسمي: تمديد آخر أجل للترشيح",
+          "body": "أعلنت وزارة الفلاحة والصيد البحري والسيادة الغذائية، بسبب عطل تقني طارئ في نظامها المعلوماتي منع بعض المترشحين من التسجيل، تمديد إيداع ملفات مباراة توظيف 38 متصرفاً من الدرجة الثانية إلى يوم الاثنين 9 نوفمبر 2026 الساعة 16:30 عبر بوابة الترشيح الرسمية. هذا الإعلان اللاحق يحل محل أجل 30 أكتوبر الوارد في الدراسة الأصلية. تاريخ المباراة المعلن: 6 ديسمبر 2026. راجع وثيقة التمديد الموقعة والرابط الحكومي في المصادر أسفل الصفحة."
+        },
+        "en": {
+          "title": "Official update: application deadline extended",
+          "body": "The Ministry of Agriculture, Maritime Fisheries and Food Sovereignty announced an exceptional extension because a technical outage prevented some candidates from registering. Applications for the 38 second-grade administrator positions now close on Monday, 9 November 2026 at 16:30 through the official application portal, superseding the original 30 October deadline discussed in the article. The announced exam date remains 6 December 2026. Read the signed extension and updated government listing in the sources below."
+        },
+        "fr": {
+          "title": "Mise à jour officielle : prolongation du délai de candidature",
+          "body": "Le ministère de l’Agriculture, de la Pêche maritime et de la Souveraineté alimentaire a prolongé exceptionnellement le dépôt des candidatures à la suite d’un incident technique ayant empêché certaines inscriptions. Pour les 38 postes d’administrateur de 2e grade, la nouvelle échéance est le lundi 9 novembre 2026 à 16 h 30 sur le portail officiel, en remplacement du 30 octobre mentionné dans l’étude initiale. Le concours reste annoncé pour le 6 décembre 2026. Consultez le communiqué signé et la fiche gouvernementale actualisée dans les sources ci-dessous."
+        }
+      }
+    }
+  }
+}
