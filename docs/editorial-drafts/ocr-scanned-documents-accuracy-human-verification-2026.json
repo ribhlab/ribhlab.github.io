@@ -2,13 +2,13 @@
   "slug": "ocr-scanned-documents-accuracy-human-verification-2026",
   "sectionId": "ai-automation",
   "category": "ai",
-  "editorialStatus": "research-complete-awaiting-unique-licensed-photo-and-final-review",
+  "editorialStatus": "promoted-to-reviewed-queue",
   "notForPublication": true,
   "checkedAt": "2026-10-30",
   "photo": null,
   "review": {
     "ready": false,
-    "reason": "Unique Unsplash CDN photo ID and provenance not independently verified; draft deliberately excluded from content/reviewed-queue."
+    "reason": "This is the archival research draft, not the publishable queue bundle. Source, translation and photo QA completed in the reviewed-queue file on 2026-10-30; do not submit this draft separately."
   },
   "sources": [
     {
@@ -151,5 +151,6 @@
         }
       ]
     }
-  }
+  },
+  "queuePath": "content/reviewed-queue/ocr-scanned-documents-accuracy-human-verification-2026.json"
 }
