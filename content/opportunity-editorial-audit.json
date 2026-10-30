@@ -11,10 +11,10 @@
   "totals": {
     "cards": 102,
     "visa": 12,
-    "researched": 43,
+    "researched": 45,
     "marketEvidence": 5,
     "pendingDetail": 45,
-    "pendingLiveVerification": 9
+    "pendingLiveVerification": 7
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -49,12 +49,14 @@
       "section": "competitions",
       "title": "ANAPEC — Technicien systèmes et réseaux (1 poste, échelle 9)",
       "deadline": "2026-11-05T16:30",
-      "status": "researched-awaiting-live-verification",
-      "priority": "official-signed-decision-rechecked-2026-10-30; verify-build-deploy-live-ar-en-fr",
+      "status": "researched-article",
+      "priority": "signed-original-notice-and-trilingual-public-HTTPS-QA-confirmed-2026-10-30",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/8b1063c1-dc54-4008-86c0-ebee8d34c856",
       "articleEvidenceId": "anapec-dg-networks-technician-c44231-2026",
       "reviewedAt": "2026-10-30",
-      "note": "Original signed ANAPEC decision 1140 dated 21 Oct 2026, three pages, re-read 30 Oct 2026 and compared with emploi-public C44231/26 (posted 22 Oct). The overall ANAPEC recruitment decision covers 86 posts, including 11 third-grade technicians, but this individual listing concerns ONLY ONE systems/networks technician assigned to Direction générale. Moroccan nationality; age 18–40 for technicians; relevant specialized technical diploma or accepted equivalent. Online submission with CV, ID, diploma/equivalence, applicable disability/veteran and authorization documents, PDFs by 5 Nov 2026 16:30. Written QCM 3h coefficient 6, oral 15–30 min coefficient 4; below 10/20 in written is eliminatory. Exams announced for 21–22 Nov across Casablanca/Mohammedia; listing gives 22 Nov for this post. Net salary not stated. Live AR/EN/FR page and CI not independently confirmed in this review, so do not promote to researched-article yet."
+      "note": "Original signed ANAPEC decision 1140 dated 21 Oct 2026, three pages, re-read 30 Oct 2026 and compared with emploi-public C44231/26 (posted 22 Oct). The overall ANAPEC recruitment decision covers 86 posts, including 11 third-grade technicians, but this individual listing concerns ONLY ONE systems/networks technician assigned to Direction générale. Moroccan nationality; age 18–40 for technicians; relevant specialized technical diploma or accepted equivalent. Online submission with CV, ID, diploma/equivalence, applicable disability/veteran and authorization documents, PDFs by 5 Nov 2026 16:30. Written QCM 3h coefficient 6, oral 15–30 min coefficient 4; below 10/20 in written is eliminatory. Exams announced for 21–22 Nov across Casablanca/Mohammedia; listing gives 22 Nov for this post. Net salary not stated. Live AR/EN/FR full study, official source references and external tabs verified by public HTTPS QA on 30 October 2026.",
+      "liveVerifiedAt": "2026-10-30",
+      "liveVerificationRun": "https://github.com/ribhlab/ribhlab.github.io/actions/runs/41128203830"
     },
     {
       "id": "map-recruitment-officer-rabat-2026",
@@ -99,14 +101,16 @@
       "section": "competitions",
       "title": "Administrateur 2ème grade — Statistique / Économie appliquée — HCP (11 postes)",
       "deadline": "2026-11-13",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
-      "priority": "signed-two-page-HCP-notice-rechecked-2026-10-30; pending build/deploy and live trilingual QA",
+      "priority": "signed-original-notice-and-trilingual-public-HTTPS-QA-confirmed-2026-10-30",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/144317d0-3827-46f6-94c3-a5fbd18b2c85",
       "reviewedAt": "2026-10-30",
       "evidenceId": "hcp-statistics-applied-economics-11-2026",
       "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/144317d0-3827-46f6-94c3-a5fbd18b2c85",
-      "note": "Verified original HCP two-page Arabic recruitment notice against official emploi-public listing C44349/26, both checked 30 Oct 2026. Eleven administrators grade 2 scale 11 in Statistics / Applied Economics; assignments HCP central services and regional offices, not eleven named jobs in Rabat. Moroccan citizenship, master/specialized master or equivalent in the relevant specialty, age 18–45 on 1 January 2026; statutory reserved categories described in notice (25% and 7%). Written general paper 3h coefficient 2, specialty paper 3h coefficient 3, oral 15–30 minutes coefficient 3. Mandatory online application at depot.emploi-public.ma no later than 13 Nov 2026 at 16:30; exam 29 Nov 2026 in Rabat or another announced city. Required: application form, diploma/equivalence where relevant, specialty attestation if diploma does not state specialty, national ID, photo CV, employer authorization for civil servants and category-specific supporting documents. No exact salary stated in the notice; scale 11 is not a net-pay quotation. Candidate list published via emploi-public and HCP, appeals by email within 48h. These are primary-source facts; trilingual page live verification remains pending, so do not count as published research."
+      "note": "Verified original HCP two-page Arabic recruitment notice against official emploi-public listing C44349/26, both checked 30 Oct 2026. Eleven administrators grade 2 scale 11 in Statistics / Applied Economics; assignments HCP central services and regional offices, not eleven named jobs in Rabat. Moroccan citizenship, master/specialized master or equivalent in the relevant specialty, age 18–45 on 1 January 2026; statutory reserved categories described in notice (25% and 7%). Written general paper 3h coefficient 2, specialty paper 3h coefficient 3, oral 15–30 minutes coefficient 3. Mandatory online application at depot.emploi-public.ma no later than 13 Nov 2026 at 16:30; exam 29 Nov 2026 in Rabat or another announced city. Required: application form, diploma/equivalence where relevant, specialty attestation if diploma does not state specialty, national ID, photo CV, employer authorization for civil servants and category-specific supporting documents. No exact salary stated in the notice; scale 11 is not a net-pay quotation. Candidate list published via emploi-public and HCP, appeals by email within 48h. These are primary-source facts; trilingual full study and official references verified by public HTTPS QA on 30 October 2026.",
+      "liveVerifiedAt": "2026-10-30",
+      "liveVerificationRun": "https://github.com/ribhlab/ribhlab.github.io/actions/runs/41128203830"
     },
     {
       "id": "cri-fes-meknes-prospection-2026",
