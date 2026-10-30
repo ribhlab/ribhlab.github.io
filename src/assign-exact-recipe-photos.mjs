@@ -64,7 +64,10 @@ const selected={
  'healthy-baked-apple-oats':['File:Apple Goodie crisp.JPG','JamieS93'],
  'spinach-fatayer':['File:Fatayer aux épinards.jpg','Thomon'],
  'mexican-bean-tacos':['File:Black bean corn tacos at Down The Rabbit Hole 2018.jpg','FakirNL'],
- 'healthy-lentil-vegetable-patties':['File:Vegan patties with potatoes and salad.jpg','rusvaplauke']
+ 'healthy-lentil-vegetable-patties':['File:Vegan patties with potatoes and salad.jpg','rusvaplauke'],
+ 'red-lentil-soup':['File:Red lentil soup from Turkey.jpg','E4024'],
+ 'korean-beef-rice-bowl':['File:Korean Beef Bulgogi Rice Bowl (34817154336).jpg','A Healthier Michigan'],
+ 'chicken-fajita-wraps':['File:Fajitas Wraps.JPG','Miansari66']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
