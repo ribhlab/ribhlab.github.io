@@ -11,10 +11,10 @@
   "totals": {
     "cards": 101,
     "visa": 12,
-    "researched": 40,
+    "researched": 41,
     "marketEvidence": 5,
     "pendingDetail": 46,
-    "pendingLiveVerification": 10
+    "pendingLiveVerification": 9
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -227,14 +227,15 @@
       "section": "morocco",
       "title": "Technicien systèmes et réseaux",
       "deadline": "2026-11-16",
-      "status": "researched-awaiting-live-verification",
+      "status": "researched-article",
       "marketKey": null,
-      "priority": "official-signed-decision-reviewed-2026-10-30; pending live QA",
+      "priority": "verified-live-2026-10-30",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/bdfb5402-a6de-47c6-8493-1b22d8ea83bb",
       "evidenceId": "sett-network",
       "reviewedAt": "2026-10-30",
       "officialNoticePdfUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/bdfb5402-a6de-47c6-8493-1b22d8ea83bb",
-      "reviewNote": "Signed 2-page decision 204/26 and attached 3-page job description reviewed 30 October 2026. One network technician, Bac+2, paper submission at Settat Urban Agency, decision deadline 16 Nov 16:30 versus job-sheet wording 'avant le 16 novembre'. Full 10-section AR/EN/FR evidence stored; awaiting site build/deploy/live QA. Salary and exam date not announced."
+      "reviewNote": "Signed 2-page decision 204/26 and attached 3-page job description reviewed 30 October 2026. One network technician, Bac+2, paper submission at Settat Urban Agency, decision deadline 16 Nov 16:30 versus job-sheet wording 'avant le 16 novembre'. Full 10-section AR/EN/FR evidence stored; awaiting site build/deploy/live QA. Salary and exam date not announced. Source validation 41067924006, Pages deploy 41067924022, public-sitemap-check 41068065261 succeeded on commit 89fa11f2; AR/EN/FR page checked for 10 sections, signed decision 204/26, C44308/26 and official links.",
+      "liveVerifiedAt": "2026-10-30"
     },
     {
       "id": "sidi-finance",
