@@ -989,6 +989,10 @@
     "test-ai-hallucinations-with-evidence-ledger-2026": [
       "nistGenAi",
       "openaiEvalGuide"
+    ],
+    "tinted-sunscreen-iron-oxides-guide": [
+      "aadSunscreen",
+      "aadFaceWashing"
     ]
   }
 }
