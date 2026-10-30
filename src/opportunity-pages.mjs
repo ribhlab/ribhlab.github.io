@@ -4,6 +4,8 @@ import {fileURLToPath} from 'node:url';
 
 const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const db=JSON.parse(fs.readFileSync(path.join(project,'content/opportunities-data.json'),'utf8'));
+const officialUpdates=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-official-updates.json'),'utf8')).items;
+for(const item of db.items){const update=officialUpdates[item.id];if(update?.deadline)item.deadline=update.deadline;}
 const researchedArticles=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-articles.json'),'utf8')).articles;
 const editorialEvidence=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-editorial-evidence.json'),'utf8')).articles;
 const countryDemand=JSON.parse(fs.readFileSync(path.join(project,'content/opportunity-country-demand.json'),'utf8')).markets;
@@ -112,6 +114,7 @@ export function renderOpportunityPages(lang,page,esc){
   // An unreviewed official notice gets an honest evidence status instead of fabricated duties.
   for(const item of db.items){
    const verified=researchedFor(item.id);
+   const officialUpdate=officialUpdates[item.id];
    const manuscript=verified?.translations?.[lang];
    const demand=demandFor(item.id);
    const demandText=demand?.translations?.[lang];
@@ -133,6 +136,8 @@ export function renderOpportunityPages(lang,page,esc){
    const facts='<section class="opp-guide-section opp-fact-sheet"><h2>'+esc(label.facts)+'</h2><dl class="opp-fact-grid">'+factRows.map(([k,v])=>'<div><dt>'+esc(k)+'</dt><dd>'+esc(String(v))+'</dd></div>').join('')+'</dl></section>';
    const conflict=verified?.facts?.deadlineConflicts;
    const conflictBlock=conflict?.length?'<aside class="opp-evidence-warning"><strong>'+esc(({ar:'تنبيه مهم: تضارب تاريخ الإغلاق بين وثيقتين رسميتين',en:'Important: conflicting official application deadlines',fr:'Alerte : dates limites contradictoires dans deux documents officiels'})[lang])+'</strong><p>'+esc(conflict.join(' / '))+'</p><p>'+esc(({ar:'احتياطياً، قدم الطلب قبل التاريخ الأسبق، واطلب تأكيداً أو قراراً تصحيحياً من الجهة المنظمة.',en:'Submit before the earlier date as a precaution, and seek an official correction or written confirmation.',fr:'Par précaution, déposez avant la première date et recherchez un rectificatif officiel.'})[lang])+'</p></aside>':'';
+   const officialUpdateText=officialUpdate?.translations?.[lang];
+   const officialUpdateBlock=officialUpdateText?'<aside class="opp-evidence-warning" role="note"><strong>'+esc(officialUpdateText.title)+'</strong><p>'+esc(officialUpdateText.body)+'</p></aside>':'';
    const headcountConflict=verified?.facts?.positionCountConflicts;
    const headcountWarning=headcountConflict?.length?'<aside class="opp-evidence-warning"><strong>'+esc(({ar:'تنبيه: اختلاف عدد المناصب بين القرار والبوابة',en:'Warning: the signed decision and portal disagree on position count',fr:'Alerte : nombre de postes contradictoire entre arrêté et portail'})[lang])+'</strong><p>'+esc(headcountConflict.join(' / '))+'</p></aside>':'';
    const articleSections=isDetailed&&Array.isArray(manuscript.sections)?manuscript.sections.map(([h,t],i)=>'<section class="opp-guide-section" id="part-'+(i+1)+'"><h2>'+esc(h)+'</h2><p>'+esc(t)+'</p></section>').join(''):'';
@@ -141,16 +146,16 @@ export function renderOpportunityPages(lang,page,esc){
     ?({ar:'هذه بطاقة بوابة رسمية تتغير إعلاناتها باستمرار. لا ننسب إليها عدد فرص أو مدينة أو أجراً محدداً دون إعلان فردي موثق ومؤرخ.',en:'This is a changing government job directory. We do not assign specific city, wages or open positions without a verified individual posting.',fr:'Ce portail évolue ; aucun emploi, salaire ou ville n’est attribué sans annonce individuelle datée et vérifiée.'})[lang]
     :({ar:'تأكدنا من بيانات البطاقة المنشورة، لكننا لم نستخرج بعد شروط الأهلية والوثائق والراتب من القرار الكامل لهذا الإعلان. لا نعوّض ذلك بنص مكرر أو تخمينات؛ راجع الوثيقة الحكومية من الرابط أسفله قبل التقديم.',en:'The listing metadata is recorded, but detailed diploma, documents and pay conditions have not yet been independently extracted from this notice. We will not invent them. Read the signed employer document via the official link below.',fr:'Les métadonnées de l’annonce sont identifiées, mais les conditions détaillées, pièces et salaires n’ont pas encore été extraits et contrôlés. Nous ne les inventons pas ; consultez la pièce officielle ci-dessous.'})[lang];
    const missing=!isDetailed&&!demandText?'<section class="opp-guide-section opp-unverified"><h2>'+esc(label.unknown)+'</h2><p>'+esc(missingText)+'</p></section>':'';
-   const refs=[...(verified?.sources||[]),...(demand?.sources||[])].filter(x=>x?.url);
+   const refs=[...(verified?.sources||[]),...(demand?.sources||[]),...(officialUpdate?.sources||[])].filter(x=>x?.url);
    const uniqueRefs=refs.filter((s,i)=>refs.findIndex(y=>y.url===s.url)===i);
    const links=uniqueRefs.length?'<ul class="opp-primary-sources">'+uniqueRefs.map(a=>'<li><a href="'+esc(safeHref(a.url))+'" rel="noopener noreferrer external" target="_blank">'+esc(a.label)+' ↗</a></li>').join('')+'</ul>':'';
    const origin='<a class="opp-action" rel="noopener noreferrer external" target="_blank" href="'+esc(safeHref(item.url))+'">'+esc(label.apply)+' ↗</a>';
    const sources='<section class="opp-guide-section opp-guide-sources"><h2>'+esc(label.source)+'</h2><p>'+esc(item.org)+' · '+esc(item.place)+'</p>'+links+'<p>'+origin+'</p></section>';
    const introductory=isDetailed?manuscript.deck:demandText?demandText.title:({ar:'سجل معلومات للإعلان الأصلي، وليس مقالاً بحثياً مكتمل التحقق. سننشر تفاصيل الشروط حين تثبتها الوثائق.',en:'A verified record of the listed source, not a fully researched job guide. Specific conditions will only appear after source verification.',fr:'Fiche descriptive de la source, pas encore un dossier intégralement analysé. Les conditions seront ajoutées après vérification.'})[lang];
    const editorialNote=verified?({ar:'استُخرجت تفاصيل هذه المادة من المصدر الأصلي وتمت مراجعتها تحريرياً.',en:'This report was independently checked against the original notice.',fr:'Cette analyse a été contrôlée avec l’avis d’origine.'})[lang]:demand?({ar:'هذا تحليل سوق العمل، ويجب التمييز بين الإحصاء وإعلان العمل الفردي.',en:'This labour-market analysis does not replace an individual job posting.',fr:'Cette analyse de marché ne remplace pas une offre individuelle.'})[lang]:({ar:'لا نسمي هذه الصفحة «مقالاً كاملاً» قبل استخراج التفاصيل المطلوبة.',en:'This entry is not represented as a full report until its individual notice is analyzed.',fr:'Cette fiche n’est pas présentée comme un dossier complet avant vérification des détails.'})[lang];
-   const articleDate=verified?.reviewedAt||demand&&'2026-10-28'||db.checkedAt;
+   const articleDate=officialUpdate?.reviewedAt||verified?.reviewedAt||demand&&'2026-10-28'||db.checkedAt;
    const title=manuscript?.title||item.title;
-   const body='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><div class="opp-guide-header">'+uniqueOpportunityVisual(item.id,item.section,esc)+'<h1>'+esc(title)+'</h1><p>'+esc(introductory)+'</p><p class="opp-guide-meta">'+esc(c.updated)+' : <time datetime="'+esc(articleDate)+'">'+esc(articleDate)+'</time></p></div></div></section><main class="section shell opp-guide-layout"><div class="opp-advisory" role="note"><p>'+esc(editorialNote)+'</p></div><article class="opp-guide-article">'+conflictBlock+headcountWarning+facts+articleSections+marketSection+missing+sources+'</article></main></div>';
+   const body='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><div class="opp-guide-header">'+uniqueOpportunityVisual(item.id,item.section,esc)+'<h1>'+esc(title)+'</h1><p>'+esc(introductory)+'</p><p class="opp-guide-meta">'+esc(c.updated)+' : <time datetime="'+esc(articleDate)+'">'+esc(articleDate)+'</time></p></div></div></section><main class="section shell opp-guide-layout"><div class="opp-advisory" role="note"><p>'+esc(editorialNote)+'</p></div><article class="opp-guide-article">'+officialUpdateBlock+conflictBlock+headcountWarning+facts+articleSections+marketSection+missing+sources+'</article></main></div>';
    const url=base+item.section+'/'+encodeURIComponent(item.id)+'/';
    page(lang,{title:title+' | RibhLab',desc:introductory,route:url,content:body,active:'opportunities',noindex:!isDetailed&&!demandText});
    if(item.id==='uk-visa')page(lang,{title:title+' | RibhLab',desc:introductory,route:base+'immigration/uk/',content:body,active:'opportunities',noindex:true});
