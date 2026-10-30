@@ -865,6 +865,18 @@
       "description": "Feijoada vegana.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "vietnamese-rice-paper-rolls": {
+      "id": "commons:102130618",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Vietnamese_Rice_Paper_Rolls_%2845485647192%29.jpg/1280px-Vietnamese_Rice_Paper_Rolls_%2845485647192%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVietnamese_Rice_Paper_Rolls_(45485647192).jpg",
+      "photographer": "Raita Futo",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Vietnamese Rice Paper Rolls (45485647192).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
