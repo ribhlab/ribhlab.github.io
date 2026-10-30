@@ -8301,6 +8301,194 @@
           ]
         }
       }
+    },
+    "map-infographiste-rabat-c44357-2026": {
+      "reviewedAt": "2026-10-30",
+      "verification": "Signed original MAP external call 3557/DCH dated 29 Oct 2026, three pages visually reviewed; government listing C44357/26 cross-checked on 30 Oct 2026",
+      "state": "verified",
+      "sources": [
+        {
+          "label": "MAP — appel externe Infographiste, 29 octobre 2026 (3 pages, signé)",
+          "url": "https://www.emploi-public.ma/fr/concours/download/arrete/0a78b284-d7a6-4527-9a25-90998b4842d3"
+        },
+        {
+          "label": "Emploi-public — concours C44357/26, publié le 29 octobre 2026",
+          "url": "https://www.emploi-public.ma/fr/concours/details/0a78b284-d7a6-4527-9a25-90998b4842d3"
+        }
+      ],
+      "facts": {
+        "employer": "Agence Maghreb Arabe Presse (MAP)",
+        "city": "Rabat",
+        "country": "Maroc",
+        "reference": "C44357/26",
+        "noticeReference": "3557/DCH",
+        "noticeDate": "2026-10-29",
+        "posts": 1,
+        "grade": "Statutaire échelle 10",
+        "diploma": "Bac+3 infographie/design graphique/communication digitale ou visuelle/design digital",
+        "experience": "Un an souhaitable, non présenté comme condition éliminatoire",
+        "age": "Moins de 40 ans à la date du concours (22 novembre 2026)",
+        "nationality": "Marocaine",
+        "deadline": "2026-11-12T16:30",
+        "examDate": "2026-11-22",
+        "application": "http://candidature.map.ma",
+        "documents": [
+          "CNIE",
+          "Demande datée et signée avec référence",
+          "Photo récente",
+          "Diplômes depuis le bac",
+          "CV détaillé",
+          "Attestations de travail si expérience",
+          "Relevé de carrière CNSS pour salariés"
+        ],
+        "writtenTests": [
+          {
+            "name": "Dissertation générale",
+            "duration": "2h",
+            "coefficient": 2
+          },
+          {
+            "name": "Questionnaire technique",
+            "duration": "1h30",
+            "coefficient": 2
+          }
+        ],
+        "oral": {
+          "name": "Entretien et tests de personnalité/profil",
+          "duration": "30 min",
+          "coefficient": 7
+        },
+        "salary": null,
+        "applicationFee": null
+      },
+      "translations": {
+        "ar": {
+          "title": "مباراة مصمم المعلومات بوكالة المغرب العربي للأنباء: منصب واحد بالرباط وشروط الترشيح والاختبارات",
+          "deck": "دراسة للقرار الموقع في 29 أكتوبر 2026: Bac+3، أقل من 40 سنة، سنة خبرة مرغوب فيها، وإيداع إلكتروني قبل 12 نوفمبر الساعة 16:30.",
+          "sections": [
+            [
+              "المنصب الفعلي ومكان العمل",
+              "أعلنت وكالة المغرب العربي للأنباء في الرباط يوم 29 أكتوبر 2026 عن مباراة خارجية لتوظيف مصمم معلومات واحد بصفة مستخدم نظامي في السلم العاشر. يحدد القرار الأصلي مكان العمل في الرباط، وليس وظيفة عن بُعد أو مجموعة من المناصب في مختلف الجهات. تحمل البطاقة الحكومية الرمز C44357/26، وتؤكد أن المباراة مقررة في 22 نوفمبر 2026. يجب عدم جمع هذا المنصب مع عروض أخرى للوكالة في التاريخ نفسه أو اعتبار عدد مناصب حملة توظيف كاملة عدداً خاصاً بالمصممين. لا يتضمن الإعلان مبلغ الأجر الصافي أو تعويضات محددة، ولذلك لا يمكن تقديم تقدير شخصي بوصفه راتباً معلناً."
+            ],
+            [
+              "ما الذي سينجزه المصمم داخل غرفة الأخبار؟",
+              "المهمة الأساسية هي تحويل المعلومات الصحفية إلى رسوم مفهومة ومقروءة، مع احترام المعايير التحريرية والهوية البصرية للوكالة. يذكر القرار تحليل النصوص، والتحقق من البيانات وترتيبها، وإنتاج رسوم ثابتة ومتحركة ومقاطع فيديو قصيرة، وبناء سرد بصري مناسب للويب والشبكات الاجتماعية والهاتف. كما يشمل العمل المونتاج وإضافة العناوين والمؤثرات، وتحديث النسخ بعد المراجعة، وتقديم الأعمال للمصادقة ضمن آجال محددة. هذه مسؤولية تحريرية بقدر ما هي مهارة تقنية: قد يكون رسم جميل مضللاً إذا حذف وحدة القياس أو تاريخ البيانات أو مصدرها."
+            ],
+            [
+              "التقنيات المطلوبة وحدود كل مهارة",
+              "يشترط الوصف إتقان أسس التصميم الغرافيكي والطباعة والتنسيق، وفهم مبادئ تصور البيانات والسرد البصري، مع التعامل مع Photoshop وIllustrator وInDesign وAfter Effects وPremiere Pro. ويذكر أيضاً المونتاج والتحريك والتصوير ومعالجة الصور وتكييف الملفات مع شاشات مختلفة. لا يعني ذكر هذه الأدوات أن المرشح ملزم بشراء تراخيصها قبل التقديم؛ لكنه مطالب بإثبات قدرته الحقيقية على إنجاز المخرجات المطلوبة. من الأفضل عرض أمثلة شخصية متنوعة تشرح اختيار المخطط والألوان وحجم الخط، بدل سرد قائمة طويلة من البرامج دون دليل على الاستخدام."
+            ],
+            [
+              "الأهلية: الجنسية والعمر والدبلوم والخبرة",
+              "يشترط الإعلان الجنسية المغربية، والتمتع بالحقوق المدنية وحسن السيرة، وعدم صدور حكم بعقوبة شائنة، وعدم الإدراج في السجل التأديبي المركزي للإدارات العمومية. يجب أن يكون العمر أقل من أربعين سنة في تاريخ المباراة، لا في يوم نشر الإعلان. يشترط دبلوم بمستوى Bac+3 في الإنفوغرافيا أو التصميم الغرافيكي أو التواصل الرقمي أو البصري أو التصميم الرقمي. وترد خبرة أولى لمدة سنة في وظيفة مشابهة بصيغة مرغوب فيها، ويفضل أن تكون في بيئة مؤسساتية أو إعلامية؛ فلا يصح تحويل هذه الأفضلية إلى شرط إقصائي قطعي. لا يفترض قبول أي معادلة غير منصوص عليها دون سؤال الجهة."
+            ],
+            [
+              "الوثائق وكيفية إعداد ملف يمكن تدقيقه",
+              "يطلب القرار نسخة البطاقة الوطنية، وطلب ترشيح مؤرخاً وموقعاً يذكر مرجع الدعوة، وصورة حديثة، ونسخ الدبلومات ابتداءً من البكالوريا، وسيرة ذاتية تتضمن الحالة المدنية والمسار الدراسي والشهادات والخبرة ومجالات الكفاءة. إذا ادعى المرشح خبرة مهنية فعليه تقديم شهادات العمل، وكشف المسار المهني الصادر عن الصندوق الوطني للضمان الاجتماعي بالنسبة إلى الأجراء. راجع تطابق أسماء الملفات وتواريخ الخبرة، واحتفظ بنسخة من طلب الترشيح وإثبات الإرسال. لا تنشر بيانات شخصية حقيقية في ملف أعمال عام، ولا تنسب إلى نفسك تصميمات نفذها فريق أو وكالة أخرى."
+            ],
+            [
+              "الإيداع الإلكتروني والموعد الذي لا ينبغي تجاوزه",
+              "يتم الترشيح حصرياً عبر استمارة وكالة المغرب العربي للأنباء على بوابة candidature.map.ma، مع تحديد مرجع الدعوة ورفع الوثائق المطلوبة. الموعد النهائي هو 12 نوفمبر 2026 الساعة 16:30 وفق القرار والبطاقة الحكومية؛ والانتظار إلى الدقيقة الأخيرة يعرض المرشح لفشل الرفع أو انتهاء الجلسة. ينص القرار على استبعاد الملفات الناقصة أو غير المطابقة أو المتأخرة. افحص امتدادات الملفات وحجمها كما تحدده الاستمارة الفعلية، ثم راجع الحقول قبل الإرسال. لا يعد إرسال رسالة إلى بريد المؤسسة أو كتابة تعليق على إعلان بديلاً عن التسجيل الإلكتروني الرسمي."
+            ],
+            [
+              "الانتقاء الكتابي: موضوع عام واختبار تقني",
+              "تبدأ العملية بانتقاء أولي للملفات من لجنة يعينها المدير العام بناء على تطابق المؤهلات مع الحاجات المعلنة. يدعى المقبولون إلى اختبار كتابي أول يتمثل في موضوع عام مدته ساعتان بمعامل اثنين، واختبار ثان في المعارف التقنية مدته ساعة ونصف بمعامل اثنين. لا يحدد القرار أسئلة الامتحان مسبقاً؛ لذلك ينبغي مراجعة قراءة الأخبار والتحقق من الأرقام، ومبادئ التسلسل البصري، ودقة البيانات، والطباعة والملفات المخصصة للنشر الرقمي. يمكن التدرب على تحويل بيان إحصائي علني إلى رسم مع عنوان ووحدة قياس ومصدر، مع توضيح أن هذا مجرد تمرين مقترح لا نموذج امتحان رسمي."
+            ],
+            [
+              "الشفوي وكيفية تقديم ملف أعمال صادق",
+              "يجتاز الناجحون في الكتابي مقابلة شفهية مع اختبارات للشخصية والملف المهني مدتها ثلاثون دقيقة، بمعامل سبعة. هذا المعامل أكبر من معامل أي اختبار كتابي منفرد، لكنه لا يلغي ضرورة النجاح في مراحل الانتقاء السابقة. من المفيد تحضير ملف أعمال صغير يضم رسماً إخبارياً ثابتاً، وتحريكاً قصيراً، ومثالاً على تكييف المحتوى للهاتف، مع توثيق مصادر البيانات وشرح دور المرشح في كل عمل. قد تسأل اللجنة عن التعامل مع معلومة متناقضة أو تصحيح رسم بعد النشر؛ لا تزعم أن هذه أسئلة معلنة، بل استعملها للاستعداد الأخلاقي والمهني."
+            ],
+            [
+              "مخاطر التواريخ والأجر والتكاليف والبدائل",
+              "نص القرار المؤرخ في 29 أكتوبر 2026 والبطاقة الحكومية متطابقان في آخر أجل 12 نوفمبر الساعة 16:30 وموعد المباراة 22 نوفمبر؛ ومع ذلك يجب متابعة أي تعديل رسمي أو لائحة استدعاء لاحقة على موقع الوكالة وبوابة التشغيل العمومي. لم يُنشر راتب صافٍ أو رسوم ترشيح، ولا ينبغي تحويل رقم السلم العاشر إلى وعد بأجر معين. احسب تكلفة التنقل إلى الرباط إن استدعيت، واحتفظ بأصول الدبلومات لإبرازها بعد النجاح النهائي. إذا لم تستوفِ شرط السن أو الدبلوم، فابحث عن إعلانات تصميم أخرى بشروط مختلفة بدل إرسال ملف غير مطابق. هذه دراسة للقرار وليست ضماناً بالقبول."
+            ]
+          ]
+        },
+        "en": {
+          "title": "MAP Rabat infographics designer competition: one post, eligibility, documents and tests",
+          "deck": "A source-checked guide to the 29 October 2026 signed call: Bac+3, under 40, desirable experience, online deadline 12 November at 16:30.",
+          "sections": [
+            [
+              "The exact job and workplace",
+              "On 29 October 2026, Morocco's Maghreb Arabe Presse (MAP) issued an external call for one permanent-statutory infographics designer at scale 10, based in Rabat. The official government listing identifies competition C44357/26 and gives 22 November 2026 as the examination date. This is a single Rabat position, not a remote contract or a promise of several regional vacancies. Other MAP announcements published on the same day cover different professions and must not be added to this specific vacancy count. Neither the signed three-page notice nor the government listing gives a take-home salary figure, so a quoted monthly amount would be speculation."
+            ],
+            [
+              "What the newsroom role actually entails",
+              "The main assignment is to turn verified editorial material into clear, readable visual explanations while following MAP's editorial and graphic standards. The signed notice lists interpreting articles, collecting and checking supporting data, building static and animated infographics, producing short informational videos, and adapting output to websites, social networks and mobile screens. It also includes video editing, titles, visual effects, updating previously published material and submitting work for approval under deadlines. Visual polish alone is not enough: an attractive chart can mislead readers when its units, date, comparison base or underlying source are missing. The applicant should demonstrate both design judgment and editorial discipline."
+            ],
+            [
+              "Software and practical capabilities",
+              "The job description names graphic design, typography, page layout, data visualisation and visual storytelling. It specifically mentions Photoshop, Illustrator, InDesign, After Effects and Premiere Pro, alongside motion design, basic shooting and image treatment. The candidate should understand the practical differences between a print layout, a phone-friendly card and a short social video. Mentioning a tool in the notice does not prove that applicants must purchase a licence before applying; it does mean that they should accurately describe their own proficiency. A compact portfolio showing how a chart was planned, checked and adapted is stronger evidence than an unsupported list of software logos."
+            ],
+            [
+              "Nationality, age, qualification and experience",
+              "The signed notice requires Moroccan nationality, civil rights and good standing, no disqualifying criminal sentence and no listing in the central disciplinary register of public administrations. Candidates must be under 40 on the competition date, rather than merely on the date the advert was posted. The diploma is a Bac+3 qualification oriented towards infographics, graphic design, digital or visual communication, or digital design. One year of experience in a comparable role is described as desirable, ideally in a media or institutional setting. This distinction matters: a preference should not be reported as an absolute one-year eligibility barrier. Applicants with unusual qualifications should request official clarification rather than assuming equivalence."
+            ],
+            [
+              "The required application dossier",
+              "The notice asks for a national identity card, a dated and signed application naming the call reference, a recent photograph, copies of diplomas from the baccalaureate onward, and a CV describing personal details, studies, certificates, employment history and competencies. Applicants relying on employment experience should attach work certificates; employees should also provide their CNSS career record. Make sure the dates on the CV and supporting documents match and that scanned pages are readable. Keep your own copy of the submitted form and confirmation. A portfolio should contain only work you are entitled to show; avoid presenting team projects as solo work or exposing client information without permission."
+            ],
+            [
+              "Submission route and binding deadline",
+              "Applications are submitted online through MAP's candidature.map.ma portal, with the call reference and requested files uploaded through the form. The signed notice and the government competition page both set the deadline at 12 November 2026, 16:30. A last-minute attempt can fail because of a session timeout or upload problem, and the notice explicitly excludes late, incomplete or non-compliant files. Check the current portal's accepted file types and size limits rather than guessing them from another recruitment campaign. Sending an email or commenting on a social-media post is not an alternative application route. Save the confirmation after reviewing all form fields."
+            ],
+            [
+              "Written examination and preparation",
+              "A committee appointed by MAP's director general first screens applications against the stated needs. Shortlisted candidates are invited to two written tests: a general-topic dissertation lasting two hours with coefficient 2, and a technical-knowledge questionnaire lasting 90 minutes with coefficient 2. The notice does not disclose the actual questions. A sensible preparation exercise is to read a public statistical bulletin, identify its date and measurement units, then build a graphic with a traceable source and accessible labels. Review typography, visual hierarchy, file formats and editorial accuracy. This exercise is RibhLab's training suggestion, not a leaked examination paper or a claim about the committee's plans."
+            ],
+            [
+              "Oral stage and a credible portfolio",
+              "Candidates who pass the written stage proceed to a 30-minute oral interview with personality and profile tests, carrying coefficient 7. This higher coefficient makes the interview consequential, but it does not waive any earlier eligibility or selection requirement. Prepare a small set of original samples: a static news chart, a short motion graphic and a mobile adaptation, each with the source of the data and a clear description of your own contribution. Be ready to explain how you would correct a misleading graphic or respond when two sources disagree. These are useful practice scenarios, not questions announced by MAP. Avoid invented performance metrics or unlicensed third-party artwork."
+            ],
+            [
+              "Salary, timetable changes and practical risks",
+              "The notice was signed on 29 October 2026 and the government page confirms the 12 November 16:30 deadline and 22 November examination date. Candidates should nevertheless check both official sites for later amendments, invitations and results; a screenshot from an intermediary is not a substitute. No net salary or application fee is stated, and scale 10 must not be converted into a guaranteed payslip amount. If invited, plan the cost of travelling to Rabat and keep original diplomas available, as successful candidates must present original supporting documents. If the age or diploma requirement does not fit, seek a different legitimate design vacancy rather than submitting inaccurate evidence."
+            ]
+          ]
+        },
+        "fr": {
+          "title": "Concours infographiste MAP à Rabat : un poste, conditions, dossier et épreuves",
+          "deck": "Analyse de l'avis signé du 29 octobre 2026 : Bac+3, moins de 40 ans, expérience souhaitable, candidature avant le 12 novembre à 16 h 30.",
+          "sections": [
+            [
+              "Un poste précis, situé à Rabat",
+              "Le 29 octobre 2026, l'Agence Maghreb Arabe Presse a publié un appel externe pour un seul infographiste statutaire à l'échelle 10, affecté à Rabat. La fiche gouvernementale porte la référence C44357/26 et annonce le concours pour le 22 novembre 2026. Il ne s'agit ni d'un contrat à distance ni de plusieurs postes régionaux. D'autres appels de la MAP publiés le même jour concernent des métiers distincts et ne doivent pas être ajoutés à ce poste. Ni l'avis signé de trois pages ni la fiche officielle ne précisent de salaire net. Il serait donc trompeur d'annoncer une rémunération mensuelle déterminée."
+            ],
+            [
+              "Une mission éditoriale autant que graphique",
+              "La mission consiste à transformer des informations journalistiques vérifiées en supports visuels compréhensibles, conformément aux orientations éditoriales et à la charte graphique de la MAP. L'avis prévoit l'analyse des contenus, la collecte et la vérification des données, la réalisation d'infographies fixes ou animées et de courtes vidéos, puis leur adaptation au web, aux réseaux sociaux et aux écrans mobiles. Il mentionne également le montage vidéo, l'habillage, les mises à jour et la validation des productions dans les délais. Un visuel séduisant reste problématique si son unité, sa période, sa base de comparaison ou sa source sont absentes. La rigueur documentaire compte autant que la créativité."
+            ],
+            [
+              "Outils, mise en page et visualisation",
+              "Le profil demande une maîtrise des techniques d'infographie, de typographie et de mise en page, ainsi qu'une bonne compréhension de la datavisualisation et de la narration visuelle. L'avis cite Photoshop, Illustrator, InDesign, After Effects et Premiere Pro, mais aussi le motion design, les bases du cadrage et le traitement d'image. Le candidat doit savoir distinguer les contraintes d'une illustration pour article, d'une carte lisible sur téléphone et d'une courte animation informative. La mention de logiciels ne signifie pas qu'il faille acheter des licences avant de candidater. En revanche, il faut décrire honnêtement son niveau et montrer des réalisations pertinentes, plutôt qu'une liste d'outils sans preuves."
+            ],
+            [
+              "Nationalité, âge, diplôme et expérience",
+              "Le texte exige la nationalité marocaine, la jouissance des droits civiques, une bonne moralité, l'absence de condamnation infamante et l'absence d'inscription au casier central disciplinaire des administrations publiques. Le candidat doit avoir moins de quarante ans à la date du concours, et non simplement au jour de publication. Le diplôme requis est un Bac+3 orienté vers l'infographie, le design graphique, la communication digitale ou visuelle, ou le design digital. Une première expérience d'un an dans une fonction similaire est présentée comme souhaitable, idéalement dans un environnement médiatique ou institutionnel. Cette préférence ne doit pas être transformée en condition éliminatoire absolue. Toute équivalence incertaine doit être confirmée auprès de l'organisateur."
+            ],
+            [
+              "Les pièces à réunir sans improvisation",
+              "Le dossier comprend la carte nationale d'identité, une demande de candidature datée et signée portant la référence de l'appel, une photographie récente, les copies des diplômes depuis le baccalauréat et un CV détaillant état civil, formation, certificats, parcours professionnel et compétences. Les candidats faisant valoir une expérience doivent fournir des attestations de travail; les salariés joignent également un relevé de carrière CNSS. Vérifiez la concordance des périodes, la lisibilité des scans et les intitulés des pièces. Conservez une copie du formulaire et la preuve de dépôt. Un portfolio public ne doit pas exposer de données confidentielles ni attribuer à une seule personne une création collective."
+            ],
+            [
+              "Dépôt en ligne et heure de clôture",
+              "Le dépôt s'effectue exclusivement sur candidature.map.ma, en indiquant la référence de l'appel et en téléversant les justificatifs. L'avis signé et la fiche gouvernementale fixent tous deux la clôture au 12 novembre 2026 à 16 h 30. Attendre les dernières minutes augmente le risque d'expiration de session ou d'échec d'envoi. L'organisateur écarte les dossiers incomplets, non conformes ou arrivés hors délai. Contrôlez les formats et limites de taille affichés dans le formulaire actuel, sans reprendre les consignes d'un autre concours. Un courriel adressé à l'agence ne remplace pas l'inscription officielle. Relisez chaque champ et sauvegardez la confirmation."
+            ],
+            [
+              "Deux épreuves écrites distinctes",
+              "Une commission désignée par le directeur général procède d'abord à la présélection des dossiers selon les besoins exprimés. Les candidats retenus passent une dissertation sur un sujet d'ordre général, d'une durée de deux heures et de coefficient 2, puis un questionnaire de connaissances techniques de 1 h 30, également de coefficient 2. L'avis ne révèle aucun sujet précis. Pour s'entraîner, on peut transformer une publication statistique publique en graphique en conservant la date, l'unité, la source et une légende compréhensible. Il est également utile de revoir la hiérarchie visuelle, la typographie et les formats numériques. Cet exercice est une proposition pédagogique de RibhLab, pas un sujet officiel."
+            ],
+            [
+              "Entretien oral et portfolio vérifiable",
+              "Après réussite aux épreuves écrites, les candidats passent un entretien oral accompagné de tests de personnalité et de profil, d'une durée de trente minutes et de coefficient 7. Ce poids important ne supprime pas les conditions d'accès ni la présélection. Préparez quelques créations originales: une infographie d'actualité statique, une courte animation et une déclinaison pour téléphone, avec la source des données et une explication de votre contribution personnelle. Entraînez-vous à expliquer comment corriger une erreur de représentation ou arbitrer entre deux chiffres contradictoires. Ce sont des situations de préparation, non des questions annoncées par le jury. Évitez les réalisations empruntées ou les résultats inventés."
+            ],
+            [
+              "Salaire non publié, convocations et alternatives",
+              "L'appel daté du 29 octobre et la fiche officielle concordent sur la date limite du 12 novembre à 16 h 30 et sur le concours du 22 novembre. Il faut néanmoins surveiller les éventuels rectificatifs, les convocations et les résultats sur les deux sites officiels. Aucun salaire net ni frais de candidature ne sont indiqués; l'échelle 10 ne suffit pas à promettre un montant. Prévoyez les frais de déplacement vers Rabat si vous êtes convoqué et conservez les originaux des diplômes, exigibles pour les admis définitifs. Si votre âge ou votre diplôme ne correspond pas, privilégiez une autre offre légale plutôt qu'une déclaration inexacte."
+            ]
+          ]
+        }
+      }
     }
   }
 }
