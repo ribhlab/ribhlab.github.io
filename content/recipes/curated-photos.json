@@ -817,6 +817,42 @@
       "description": "Vegan patties with potatoes and salad.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "red-lentil-soup": {
+      "id": "commons:44533379",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Red_lentil_soup_from_Turkey.jpg/1280px-Red_lentil_soup_from_Turkey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARed_lentil_soup_from_Turkey.jpg",
+      "photographer": "E4024",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Red lentil soup from Turkey.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "korean-beef-rice-bowl": {
+      "id": "commons:101187447",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Korean_Beef_Bulgogi_Rice_Bowl_%2834817154336%29.jpg/1280px-Korean_Beef_Bulgogi_Rice_Bowl_%2834817154336%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AKorean_Beef_Bulgogi_Rice_Bowl_(34817154336).jpg",
+      "photographer": "A Healthier Michigan",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Korean Beef Bulgogi Rice Bowl (34817154336).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chicken-fajita-wraps": {
+      "id": "commons:45015656",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Fajitas_Wraps.JPG/1280px-Fajitas_Wraps.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFajitas_Wraps.JPG",
+      "photographer": "Miansari66",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Fajitas Wraps.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
