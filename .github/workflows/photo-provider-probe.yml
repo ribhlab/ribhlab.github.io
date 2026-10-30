@@ -1,0 +1,20 @@
+name: Check food photo source connectivity
+on:
+  push:
+    paths: [".github/workflows/photo-provider-probe.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Openverse public API
+        run: |
+          curl --max-time 10 --silent --show-error -L -o /tmp/openverse.json -w "OPENVERSE HTTP %{http_code}, bytes %{size_download}\n" 'https://api.openverse.org/v1/images/?q=chicken%20tagine&license=cc0&page_size=2' || true
+          head -c 220 /tmp/openverse.json || true
+      - name: Wikimedia Commons API
+        run: |
+          curl --max-time 10 --silent --show-error -L -o /tmp/commons.json -w "COMMONS HTTP %{http_code}, bytes %{size_download}\n" 'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=couscous&gsrnamespace=6&gsrlimit=2&prop=imageinfo&iiprop=url' || true
+          head -c 220 /tmp/commons.json || true
