@@ -13,8 +13,8 @@
     "visa": 12,
     "researched": 39,
     "marketEvidence": 5,
-    "pendingDetail": 47,
-    "pendingLiveVerification": 10
+    "pendingDetail": 46,
+    "pendingLiveVerification": 11
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -183,12 +183,15 @@
     {
       "id": "srm-technicians",
       "section": "competitions",
-      "title": "Techniciens — SRM Laâyoune-Sakia El Hamra",
+      "title": "84 techniciens — SRM Laâyoune (avis global de 117 agents)",
       "deadline": "2026-11-10",
-      "status": "source-listing-awaiting-detailed-review",
+      "status": "researched-awaiting-live-verification",
       "marketKey": null,
       "priority": "date:2026-11-10",
-      "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?corps=0&page=1&stat=etab_publics"
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/c6cce0a1-1fa3-46ed-b188-adc6c7ae60db",
+      "reviewedAt": "2026-10-30",
+      "evidenceId": "srm-technicians",
+      "verification": "Signed five-page notice 110/2026/DA/DG/SRMLS and C44300/26 listing read 30 Oct 2026; 9 original AR/EN/FR sections, 755/902/934 words. 117 total agents in signed notice vs 84 technicians on portal. Live build and three public pages still need confirmation."
     },
     {
       "id": "bam-cyber",
