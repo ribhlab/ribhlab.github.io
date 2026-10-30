@@ -1037,6 +1037,10 @@
     "search-console-bing-28-day-content-audit": [
       "googleSearch",
       "googlePeopleFirstContent"
+    ],
+    "accessible-puzzle-game-prototype-input-difficulty-test": [
+      "godot",
+      "unityLearnEssentials"
     ]
   }
 }

@@ -1,0 +1,157 @@
+{
+  "slug": "accessible-puzzle-game-prototype-input-difficulty-test",
+  "category": "ai",
+  "related": [
+    "godot-first-small-game-five-sessions",
+    "gdevelop-no-code-first-prototype"
+  ],
+  "sources": [
+    {
+      "label": "Microsoft Game Dev — Xbox Accessibility Guideline 107: Input (reviewed 30 October 2026)",
+      "url": "https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/107"
+    },
+    {
+      "label": "Microsoft Game Dev — Xbox Accessibility Guideline 108: Game difficulty options (reviewed 30 October 2026)",
+      "url": "https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108"
+    },
+    {
+      "label": "W3C WAI — Understanding WCAG 2.2, including use of color, keyboard and timing (reviewed 30 October 2026)",
+      "url": "https://www.w3.org/WAI/WCAG22/understanding/"
+    },
+    {
+      "label": "Godot Engine — Using InputEvent and Input Map, version 4.4 documentation (reviewed 30 October 2026)",
+      "url": "https://docs.godotengine.org/en/4.4/tutorials/inputs/inputevent.html"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "تصميم لعبة ألغاز قصيرة قابلة للوصول: نموذج عملي للتحكم والتلميحات واختبار الصعوبة",
+      "excerpt": "دليل لبناء نموذج ألغاز ثنائي الأبعاد صغير مع تحكم بديل، وتلميحات اختيارية، واختبارات قابلية استخدام موثقة دون ادعاء اختبار لعبة لم تُطوّر بعد.",
+      "lead": "لا يحتاج النموذج الأول للعبة ألغاز إلى عالم ضخم أو مؤثرات مكلفة؛ يحتاج إلى قاعدة مفهومة، واستجابة واضحة، ومسار يتيح لأشخاص مختلفين تجربة التحدي. يقترح هذا الدليل لعبة شبكية افتراضية من تسع خانات، ينقل اللاعب فيها رمزاً إلى هدف باستخدام خطوات محدودة. المثال خطة تصميم قابلة للتنفيذ، وليس منتجاً اختبرناه أو لعبة منشورة. استندنا إلى إرشادات إمكانية الوصول من مايكروسوفت، ومعايير W3C للواجهات، ووثائق Godot، مع التمييز بين التوصيات العامة والقرارات الخاصة بهذا النموذج.",
+      "sections": [
+        {
+          "heading": "قاعدة واحدة وهدف قابل للقياس",
+          "paragraphs": [
+            "ابدأ بشبكة من ثلاثة صفوف وثلاثة أعمدة، فيها نقطة بداية وهدف وحاجز واحد يمكن نقله. يفوز اللاعب عندما يصل الرمز إلى الهدف بعد إزاحة الحاجز بالترتيب الصحيح. اكتب القاعدة في جملة واحدة قبل البرمجة، ثم ارسم الحالات الممكنة على الورق: بداية، حركة صحيحة، حركة غير صالحة، نجاح، وإعادة محاولة. إذا احتاج شرح الفوز إلى فقرة طويلة، فالنموذج الأول أعقد مما ينبغي.",
+            "لا تساوِ بين عدد الحركات والصعوبة تلقائياً. قد تكون شبكة صغيرة مربكة إذا كانت العلامات غامضة، وقد تكون شبكة أكبر سهلة عندما تكون قواعدها واضحة. أنشئ ثلاثة مستويات تجريبية: مستوى يشرح الحركة دون عقوبة، وثانٍ يضيف الحاجز، وثالث يطلب التخطيط لحركتين متتاليتين. سجّل لكل مستوى الهدف والخطوات المتوقعة وحالات التعثر التي ينبغي أن يشرحها النظام، دون اختلاق معدلات نجاح أو أرقام مستخدمين."
+          ]
+        },
+        {
+          "heading": "التحكم: لوحة المفاتيح والفأرة واللمس",
+          "paragraphs": [
+            "توصي إرشادات Xbox Accessibility Guideline 107 بألا يقتصر التفاعل على وسيلة إدخال واحدة، وبإتاحة بدائل للتحكم الذي يتطلب سرعة أو ضغطاً مطولاً. في النموذج المقترح، اجعل الأسهم تحرك التركيز بين الخانات، وزر الإدخال يؤكد الحركة، مع إمكان النقر أو اللمس على الخانة نفسها. لا تجعل السحب الدقيق شرطاً وحيداً للفوز، ولا تفرض الضغط على زرين في الوقت نفسه لتنفيذ حركة عادية.",
+            "في Godot يمكن تعريف أفعال مجردة مثل move_left وconfirm وundo داخل Input Map ثم ربط أكثر من مفتاح بالفعل الواحد؛ وهذه طريقة عملية لفصل قواعد اللغز عن جهاز الإدخال. اختبر الانتقال بين الخانات، وعودة التركيز بعد إغلاق نافذة التلميح، وإمكانية التراجع عن حركة. لا تفترض أن دعم لوحة المفاتيح يعني تلقائياً توافقاً كاملاً مع قارئات الشاشة أو جميع الأجهزة المساعدة؛ يحتاج ذلك إلى اختبار منفصل مع مستخدمين حقيقيين."
+          ]
+        },
+        {
+          "heading": "تلميحات تدريجية دون إفساد اللغز",
+          "paragraphs": [
+            "قدّم التلميحات على ثلاث درجات: الأولى تذكّر بالهدف، والثانية تشير إلى علاقة بين الحاجز والمسار، والثالثة تعرض الحركة التالية فقط. ينبغي أن يطلب اللاعب كل تلميح بنفسه، وأن يستطيع إخفاءه والعودة إلى اللعبة. لا تستخدم اللون وحده لتمييز الحركة المسموح بها؛ أضف رمزاً أو نصاً قصيراً أو نمطاً بصرياً ثابتاً. تنسجم هذه الفكرة مع مبدأ W3C القائل بعدم الاعتماد على اللون وحده لنقل المعنى.",
+            "اكتب رسائل فشل قابلة للفهم، مثل «لا يمكن الانتقال لأن الخانة مشغولة»، بدلاً من صوت خطأ مبهم أو اهتزاز فقط. أضف خيار إيقاف المؤقت، أو استغنِ عنه في النسخة الأولى، لأن السرعة ليست جوهر هذا اللغز. توصي إرشادات مايكروسوفت بفصل جوانب الصعوبة وتوفير خيارات تقلل الحواجز أمام التقدم؛ ويمكن هنا تغيير عدد التلميحات وإتاحة التراجع من دون تعديل الحل المنطقي نفسه."
+          ]
+        },
+        {
+          "heading": "خطة بناء واختبار صغيرة قابلة للتكرار",
+          "paragraphs": [
+            "قسّم العمل إلى أربع جلسات مقترحة، لا إلى وعود بإنجاز مضمون: في الأولى صمّم الحالات والقواعد؛ وفي الثانية نفّذ حركة الرمز واكتشاف النجاح؛ وفي الثالثة أضف التحكم البديل والتلميحات؛ وفي الرابعة راجع الأخطاء والنصوص والتباين البصري. استخدم صوراً وأصواتاً أصلية أو أصولاً ذات تراخيص تسمح بالاستخدام المطلوب، وسجّل مصدر كل أصل. لا تنسخ واجهة لعبة معروفة أو موسيقاها لمجرد أن النموذج تعليمي.",
+            "أنشئ جدول اختبار يضم الإجراء والنتيجة المتوقعة والنتيجة الفعلية وملاحظة الإصلاح. من أمثلته: محاولة حركة خارج الشبكة، وإعادة تشغيل المستوى بعد الفوز، وإغلاق التلميح باستخدام لوحة المفاتيح، وتجربة اللعبة على شاشة صغيرة، وتعطيل الصوت. إذا لم تُجر الاختبار فعلاً، اترك خانة النتيجة الفعلية فارغة. ولا تصف النموذج بأنه «متاح للجميع» لمجرد اجتياز قائمة فحص داخلية؛ فاختبار أشخاص ذوي احتياجات وصول مختلفة يظل خطوة مستقلة."
+          ]
+        },
+        {
+          "heading": "كيف تقيس الجودة وتعرف حدود هذا الدليل؟",
+          "paragraphs": [
+            "راقب ما إذا كان اللاعب يفهم الهدف دون شرح شفهي، وما إذا كان يجد زر التراجع، وما إذا كانت رسالة الخطأ تحدد سبب التعثر. استخدم ملاحظات المشاركين بموافقتهم، ولا تجمع أسماء أو تسجيلات شاشة إلا عند الحاجة وبإذن واضح. يمكن مقارنة نسخة بلا تلميحات بنسخة ذات تلميحات تدريجية، لكن عدد المحاولات القليل لا يثبت تفوق تصميم إحصائياً. اذكر حجم العينة وظروف التجربة بدلاً من نشر نسبة نجاح مضللة.",
+            "تستند هذه الخطوات إلى إرشادات منشورة، وليست شهادة مطابقة رسمية لمعايير الوصول. لا تنطبق جميع بنود WCAG على كل محرك ألعاب بالطريقة نفسها، لكن مبادئ التحكم الواضح، والوقت الكافي، وعدم الاعتماد على اللون مفيدة لتصميم الواجهات. راجع إصدارات المحرك وإرشادات المنصة قبل الإصدار التجاري، وخصص ميزانية لاختبار الأداء والأجهزة والحقوق. النجاح هنا ليس عدد المزايا، بل لغز واضح يمكن تحسينه بناءً على أدلة حقيقية."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Designing an accessible short puzzle game: a practical prototype and testing plan",
+      "excerpt": "Build a small 2D puzzle prototype with alternative controls, optional hints, and honest usability checks, without claiming that an unbuilt game has been tested.",
+      "lead": "A first puzzle game does not need a vast world or expensive effects. It needs one understandable rule, reliable feedback, and a route through the challenge for people with different abilities. This guide proposes a hypothetical nine-cell grid in which a player moves a token toward a goal while repositioning an obstacle. It is a design exercise, not a released game or a playtest we conducted. The recommendations draw on Microsoft's Xbox Accessibility Guidelines, W3C interface guidance, and Godot documentation; decisions specific to the prototype are identified as suggestions rather than universal requirements.",
+      "sections": [
+        {
+          "heading": "Start with one rule and a testable goal",
+          "paragraphs": [
+            "Sketch a three-by-three board with a start cell, a destination, and one movable block. The player wins by moving the token to the destination after repositioning the block in the correct sequence. Describe the rule in a single sentence before writing code. Then list the states your software must distinguish: initial board, legal move, illegal move, completion, and restart. If explaining the win condition requires a page of instructions, the first prototype probably contains too many interacting rules.",
+            "Do not assume that more moves automatically create more difficulty. A tiny grid can be confusing when symbols are ambiguous, while a larger board can be straightforward when feedback is consistent. Plan three draft levels: one that teaches movement without penalties, one introducing the block, and one requiring two linked decisions. Record the intended solution, expected transitions, and points where feedback is needed. These are design hypotheses, not fabricated completion rates or observations from actual players."
+          ]
+        },
+        {
+          "heading": "Offer keyboard, pointer, and touch routes",
+          "paragraphs": [
+            "Xbox Accessibility Guideline 107 recommends considering alternative input methods and avoiding reliance on rapid repeated presses, prolonged holds, or simultaneous button combinations. For this prototype, arrow keys can move focus between cells and Enter can confirm a move; mouse clicks and touch taps should offer the same action. Dragging a tiny object should not be the only way to win. The selected cell must remain visually identifiable, and keyboard users should be able to dismiss a hint panel without losing their place.",
+            "Godot's Input Map lets developers define actions such as move_left, confirm, and undo independently from physical keys or buttons. Multiple inputs can then trigger one action without rewriting the puzzle rules. Test focus order, restart behavior, the undo command, and what happens when a device is disconnected. Keyboard support alone does not establish full screen-reader compatibility or accessibility with every assistive device. Those outcomes require additional implementation and testing with relevant users."
+          ]
+        },
+        {
+          "heading": "Give hints in stages, not instant answers",
+          "paragraphs": [
+            "Offer three optional hint levels: a reminder of the objective, a clue about how the block affects the route, and finally the next single move. Let players request and close hints themselves rather than displaying the solution automatically after a short delay. Do not rely on color alone to mark legal moves. Pair color with a distinct symbol, outline, or short label, following the W3C principle that color should not be the sole means of conveying information.",
+            "An invalid action should produce an actionable explanation such as 'That cell is occupied,' rather than an unexplained beep. Avoid a countdown timer in the initial version, or provide a way to disable it, because speed is not the core skill being explored. Microsoft's difficulty guidance encourages adjusting separate barriers rather than treating difficulty as a single universal setting. In this example, hints and undo can be configurable while the underlying logical solution remains unchanged."
+          ]
+        },
+        {
+          "heading": "Build and verify in a small sequence",
+          "paragraphs": [
+            "Use four suggested work sessions rather than promising a fixed delivery time. First, document rules and state transitions. Second, implement token movement and the win condition. Third, add alternative input and the hint interface. Fourth, check text, visual contrast, edge cases, and restart behavior. Keep a record of the license for every illustration, sound, or font you include. Educational intent does not grant permission to copy the art, soundtrack, or user interface of a commercial game.",
+            "Create a test sheet with action, expected result, observed result, and corrective note. Useful cases include attempting to move beyond the board, restarting after success, closing hints by keyboard, playing on a narrow screen, and turning audio off. Leave observed results blank until someone has actually run the case. An internal checklist is not enough to claim a game is accessible to everyone. Meaningful evaluation includes players who use different input methods and have different accessibility needs."
+          ]
+        },
+        {
+          "heading": "Measure learning without manufacturing evidence",
+          "paragraphs": [
+            "During a real test, look for whether a participant understands the goal without spoken coaching, discovers Undo, and understands why an attempted move failed. Obtain consent before recording sessions or collecting personal information; anonymous task notes may be sufficient. You can compare a hint-free version with progressive hints, but a handful of attempts cannot establish statistical superiority. Report the number of participants and test conditions rather than presenting invented percentages or promising engagement improvements.",
+            "These recommendations are an editorial synthesis of public guidance, not an accessibility certification or proof that a finished product passes a formal standard. WCAG criteria cannot be transplanted mechanically into every game engine, but principles such as clear controls, sufficient time, and redundant cues can inform interface decisions. Before commercial release, review platform requirements, engine versions, performance, rights, and real device behavior. A useful first milestone is a coherent puzzle that can be improved using genuine feedback."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Créer un petit jeu de réflexion accessible : prototype, commandes et protocole de test",
+      "excerpt": "Concevoir un puzzle 2D limité avec commandes alternatives, indices facultatifs et contrôles d'utilisabilité, sans prétendre avoir testé un jeu inexistant.",
+      "lead": "Un premier jeu de réflexion n'exige ni monde immense ni effets coûteux. Il lui faut une règle compréhensible, des retours fiables et plusieurs manières d'affronter le défi. Ce guide propose une grille fictive de neuf cases : le joueur déplace un pion vers une cible en réorganisant un obstacle. Il s'agit d'un exercice de conception, pas d'un jeu commercialisé ni d'un essai que nous aurions réalisé. L'analyse rapproche les recommandations d'accessibilité de Microsoft, les principes du W3C et la documentation de Godot, tout en distinguant les conseils généraux des choix propres à cet exemple.",
+      "sections": [
+        {
+          "heading": "Une règle simple et un objectif vérifiable",
+          "paragraphs": [
+            "Dessinez une grille de trois lignes et trois colonnes avec une case de départ, une arrivée et un bloc mobile. Le joueur gagne lorsqu'il conduit le pion à l'arrivée après avoir déplacé le bloc dans le bon ordre. Formulez la règle en une phrase avant de programmer. Décrivez ensuite les états que le logiciel doit reconnaître : situation initiale, mouvement autorisé, mouvement impossible, victoire et recommencement. Si la condition de victoire demande une longue notice, le prototype contient probablement trop de règles.",
+            "Le nombre de déplacements ne suffit pas à mesurer la difficulté. Une petite grille peut dérouter lorsque les symboles sont ambigus, tandis qu'un plateau plus vaste peut rester simple si les retours sont cohérents. Prévoyez trois niveaux sur papier : apprentissage des mouvements, introduction du bloc, puis deux décisions liées. Notez la solution prévue, les transitions et les moments où une explication sera nécessaire. Ce sont des hypothèses de conception, non des statistiques de réussite inventées."
+          ]
+        },
+        {
+          "heading": "Plusieurs modes de commande pour la même action",
+          "paragraphs": [
+            "La recommandation Xbox Accessibility Guideline 107 invite à proposer des modes d'entrée alternatifs et à ne pas imposer des pressions rapides, répétées, prolongées ou simultanées. Ici, les flèches du clavier déplacent la sélection et Entrée confirme l'action ; un clic ou un toucher réalise la même opération. Faire glisser avec précision un petit objet ne doit pas constituer l'unique chemin vers la victoire. La case sélectionnée reste identifiable, même après l'ouverture et la fermeture d'un panneau d'aide.",
+            "Dans Godot, Input Map permet de définir des actions telles que move_left, confirm et undo sans les confondre avec une touche physique particulière. Plusieurs commandes peuvent ainsi déclencher la même fonction, sans modifier la logique du puzzle. Vérifiez l'ordre de navigation, le retour du focus, l'annulation et le comportement après déconnexion d'un périphérique. La prise en charge du clavier ne garantit pas, à elle seule, la compatibilité avec un lecteur d'écran ou toutes les technologies d'assistance."
+          ]
+        },
+        {
+          "heading": "Des indices progressifs plutôt qu'une solution imposée",
+          "paragraphs": [
+            "Proposez trois degrés d'aide facultative : rappeler l'objectif, signaler le lien entre l'obstacle et le trajet, puis montrer uniquement le prochain mouvement. Le joueur choisit quand afficher ou masquer un indice. Ne signalez pas les mouvements possibles par la couleur seule : ajoutez un contour, un pictogramme ou un court libellé. Cette précaution rejoint le principe du W3C selon lequel la couleur ne doit pas être l'unique moyen de transmettre une information.",
+            "Un mouvement impossible mérite un message explicite, par exemple « Cette case est occupée », plutôt qu'un simple son d'erreur. Supprimez le chronomètre dans la première version ou rendez-le désactivable, puisque la vitesse ne constitue pas la compétence centrale de ce puzzle. Les recommandations de Microsoft encouragent à régler séparément les obstacles rencontrés par les joueurs. Les indices et l'annulation peuvent donc être configurables sans changer la solution logique du niveau."
+          ]
+        },
+        {
+          "heading": "Un calendrier de construction et des cas de test",
+          "paragraphs": [
+            "Répartissez le travail en quatre séances indicatives, sans promettre une durée universelle. La première définit les règles et les états ; la deuxième réalise les déplacements et la détection de victoire ; la troisième ajoute les commandes alternatives et les indices ; la quatrième vérifie les messages, le contraste, les erreurs et le redémarrage. Consignez la provenance et la licence de chaque image, police ou son. Un projet pédagogique n'autorise pas la reproduction libre de graphismes ou de musiques commerciales.",
+            "Préparez un tableau avec l'action, le résultat attendu, le résultat observé et la correction envisagée. Essayez notamment de sortir de la grille, de relancer une partie gagnée, de fermer l'aide au clavier, d'utiliser un petit écran et de couper le son. Laissez la colonne des résultats observés vide tant que les essais n'ont pas eu lieu. Une liste interne de vérification ne permet pas d'affirmer que le jeu convient à tout le monde ; des utilisateurs aux besoins variés doivent aussi être associés."
+          ]
+        },
+        {
+          "heading": "Évaluer la compréhension sans inventer de résultats",
+          "paragraphs": [
+            "Lors d'un véritable essai, observez si la personne comprend le but sans explication orale, trouve la commande d'annulation et interprète correctement un message d'erreur. Demandez l'accord des participants avant toute capture ou collecte de données ; des notes anonymisées peuvent suffire. Une comparaison entre version sans indice et version avec indices progressifs est possible, mais quelques essais ne démontrent pas une supériorité statistique. Indiquez les conditions et la taille de l'échantillon plutôt que de publier des pourcentages imaginaires.",
+            "Ce guide constitue une synthèse éditoriale de recommandations publiques, et non une certification d'accessibilité ou le compte rendu d'un produit achevé. Les critères WCAG ne s'appliquent pas mécaniquement de la même façon à tous les moteurs, mais la clarté des commandes, le temps disponible et les indices redondants restent utiles. Avant une diffusion commerciale, vérifiez les versions du moteur, les exigences des plateformes, les performances et les droits. Le premier succès est un puzzle cohérent, améliorable grâce à des observations réelles."
+          ]
+        }
+      ]
+    }
+  },
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false
+}
