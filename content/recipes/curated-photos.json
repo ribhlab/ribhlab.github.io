@@ -457,6 +457,30 @@
       "description": "Tzatziki meze or appetizer, also used as a sauce.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "vegetable-biryani": {
+      "id": "commons:29951842",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Vegetable_Biryani.JPG/1280px-Vegetable_Biryani.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AVegetable_Biryani.JPG",
+      "photographer": "Miansari66",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Vegetable Biryani.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "palak-paneer-style": {
+      "id": "commons:16477079",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Palak_Paneer.JPG/1280px-Palak_Paneer.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3APalak_Paneer.JPG",
+      "photographer": "Miansari66",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Palak Paneer.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
