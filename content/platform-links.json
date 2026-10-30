@@ -1017,6 +1017,10 @@
     "voice-recording-transcription-mobile-accuracy": [
       "appleAppStore",
       "googlePlay"
+    ],
+    "portfolio-synthetic-data-original-samples": [
+      "fiverrHelp",
+      "powerbi"
     ]
   }
 }

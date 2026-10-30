@@ -1,0 +1,179 @@
+{
+  "slug": "portfolio-synthetic-data-original-samples",
+  "category": "earning",
+  "related": [
+    "gig-gallery-original-images-checklist",
+    "gig-description-client-questions-scope",
+    "excel-powerbi-freelance-client-project-guide-2026"
+  ],
+  "sources": [
+    {
+      "label": "Fiverr Help Center — Using your Fiverr Portfolio (checked 30 October 2026)",
+      "url": "https://help.fiverr.com/hc/en-us/articles/4413134063633-Using-your-Fiverr-Portfolio"
+    },
+    {
+      "label": "Fiverr Help Center — Community Standards, original work and consent (checked 30 October 2026)",
+      "url": "https://help.fiverr.com/hc/en-us/articles/37554441398929-Our-Community-Standards"
+    },
+    {
+      "label": "Microsoft Learn — Financial Sample Excel workbook for Power BI (updated 9 September 2025)",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/sample-financial-download"
+    },
+    {
+      "label": "Unsplash — image license and commercial use",
+      "url": "https://unsplash.com/license"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "title": "بناء ملف أعمال مستقل ببيانات تجريبية: نموذج Excel يمكن التحقق منه",
+      "excerpt": "كيف تنشئ Portfolio أصلياً دون اختلاق عملاء أو كشف بيانات حقيقية، مع مثال لفواتير افتراضية واختبارات قبول وحقوق النشر.",
+      "lead": "ملف الأعمال الجيد لا يساوي مجموعة صور جذابة. يستطيع المستقل المبتدئ إظهار طريقة عمله عبر بيانات تجريبية منشأة بوضوح، بشرط ألا يقدمها على أنها مشروع مدفوع أو تجربة مع عميل حقيقي. يشرح هذا الدليل مثالاً عملياً يمكن فحصه، اعتماداً على تعليمات Fiverr الرسمية ومصادر Microsoft التعليمية، مع فصل حقوق التعلم عن حقوق إعادة النشر.",
+      "sections": [
+        {
+          "heading": "1. ابدأ بمشكلة عميل يمكن قياسها",
+          "paragraphs": [
+            "لا يحتاج ملف الأعمال الأول إلى عميل سابق، لكنه يحتاج إلى دليل صادق على مهارة محددة. اختر مشكلة صغيرة تشبه ما يشتريه الناس فعلاً، مثل تنظيف جدول مبيعات متكرر أو إعداد لوحة متابعة للمصروفات. اكتب في سطر واحد ما الذي كان غير صالح في البيانات، وما النتيجة المطلوبة، وكيف ستختبرها. لا تضع عشر خدمات متباعدة في نموذج واحد، لأن المشاهد لن يعرف أي قدرة تقصد إثباتها. في المثال التعليمي هنا سننشئ ملفاً تجريبياً لفواتير متجر افتراضي، دون أسماء عملاء أو أرقام حسابات حقيقية.",
+            "حدد معايير قبول واضحة قبل العمل: لا توجد فواتير مكررة بعد التنظيف، مجموع الفواتير يطابق مجموع جدول المصدر بعد تفسير الاستثناءات، ويمكن تحديث التقرير بإضافة شهر جديد. هذه المعايير أكثر إقناعاً من عبارة «لوحة احترافية». إذا كانت الأرقام اصطناعية فضع وسم «بيانات تجريبية منشأة لأغراض العرض» على الصورة والملف والوصف. لا تنسب المشروع إلى شركة حقيقية، ولا تضع شعار عميل لم يعمل معك. يمكن لمثال بسيط ومفهوم أن يشرح قدرتك أكثر من رسم معقد لا تستطيع الدفاع عن حساباته."
+          ]
+        },
+        {
+          "heading": "2. صمم بيانات تجريبية لا تكشف أشخاصاً",
+          "paragraphs": [
+            "أنشئ جدولاً اصطناعياً بأعمدة رقم الفاتورة والتاريخ والفئة والكمية والسعر وحالة السداد. استخدم معرفات مثل INV-001 وأسماء فئات عامة، ولا تشتق بياناتك من قاعدة عملاء سرية مع تغيير الأسماء فقط. حذف الاسم لا يزيل دائماً خطر التعرف على الشخص إذا بقيت التواريخ والمبالغ والمواقع الدقيقة. أنشئ الوقائع من الصفر أو استخدم بيانات تدريبية تسمح شروطها بذلك، واحتفظ بمذكرة قصيرة عن مصدرها. إذا استعنت بمثال مالي من Microsoft لتعلم Power BI، فميّز بين حق التعلم من المثال وحق إعادة توزيعه أو بيعه؛ لا تفترض أن وجود زر تنزيل يمنح كل حقوق النشر.",
+            "اختبر البيانات قبل بناء الرسوم: هل توجد تواريخ غير منطقية، أو أسعار سالبة، أو فواتير مكررة؟ أدخل عمداً ثلاثة أخطاء في نسخة «قبل» ثم صححها في نسخة «بعد»، مع توثيق القاعدة التي استخدمتها. احتفظ بالنسخة الخام والنسخة المعالجة في مجلدين منفصلين، حتى يمكن للمشتري المحتمل فهم خطوات العمل. لا تُنشئ أرقام نجاح مختلقة مثل «خفضت تكاليف شركة بنسبة 40%»؛ تستطيع بدلاً من ذلك القول إنك اكتشفت ثلاث سجلات مكررة داخل المثال المصطنع. هذا ادعاء محدود يمكن لأي شخص التحقق منه في الملف."
+          ]
+        },
+        {
+          "heading": "3. حوّل المثال إلى مشروع يمكن فحصه",
+          "paragraphs": [
+            "اجعل التسليم ثلاثة أجزاء: ملف بيانات صغير، ونتيجة نهائية مثل تقرير Excel أو Power BI، وملف تعليمات يوضح خطوات التحديث. التقط صورة شاشة تُظهر الحقول المهمة ومؤشراً واحداً ذا معنى، ولا تعرض شاشة ممتلئة بمقاييس لا علاقة لها بمشكلة العميل. اشرح الصيغ أو خطوات Power Query الأساسية، واذكر ما يحدث عند إضافة صفوف جديدة أو عند فقدان عمود مطلوب. وثّق قيود الحل: العملة المفترضة، طريقة التعامل مع المرتجعات، والفترة الزمنية المغطاة. لا تدّع أن التقرير يربط أنظمة محاسبية حقيقية إذا كان يعمل على جدول تدريب فقط.",
+            "أضف اختبار قبول يمكن تكراره: أدخل فاتورة جديدة بقيمة محددة، حدّث البيانات، ثم قارن مجموع المبيعات قبل التحديث وبعده. إذا لم تتطابق النتائج، أصلح المنطق قبل تصوير المعرض. احتفظ بصورتي «قبل» و«بعد» واضبطهما بالمقاس نفسه حتى لا يبدو التحسن ناتجاً عن تغيير طريقة العرض. تجنب استخدام بيانات حساسة في لقطات الشاشة أو خصائص الملف. وتذكر أن المظهر البصري لا يثبت صحة الحسابات؛ لذلك فإن ملاحظة اختبار قصيرة وأمثلة على حالات الخطأ تضيف قيمة حقيقية إلى ملف الأعمال."
+          ]
+        },
+        {
+          "heading": "4. انشر في Fiverr دون ادعاء تجربة لم تحدث",
+          "paragraphs": [
+            "يوضح مركز مساعدة Fiverr أن ملف الأعمال يمكن أن يضم مشروعات أضافها البائع يدوياً، بما فيها أعمال من خارج المنصة، وأنه يُعرض للمشترين ضمن صفحات الملف والخدمة. لا يعني هذا السماح بتقديم مشروع تدريبي على أنه طلب مدفوع من عميل. اكتب عنواناً صريحاً مثل «نموذج تدريبي لتنظيف بيانات فواتير افتراضية»، ثم صف المشكلة والأدوات والنتيجة والقيود. لا ترفع مراجعات مزيفة ولا تضع اسم عميل أو شهادته دون إذن. وتؤكد معايير مجتمع Fiverr ضرورة عدم عرض عمل الآخرين بوصفه عملك، والحصول على موافقة العميل عند استخدام تصميم من طلب حقيقي.",
+            "اختر صورتين أو ثلاثاً تخدم كل واحدة غرضاً مختلفاً: الأولى تُظهر النتيجة، والثانية تشرح التحويل، والثالثة تلخص حدود التسليم. لا تجعل صورة حاسوب عامة بديلاً عن لقطة مشروعك الأصلية. الصورة الفوتوغرافية المرخصة في هذا المقال مجرد توضيح لبيئة عمل، وليست إثباتاً لمشروع نفذه الموقع. اكتب وصفاً بعبارات قابلة للتحقق، ولا تعد بترتيب أعلى في نتائج المنصة أو بعدد معين من الطلبات. اقرأ تعليمات المنصة مجدداً قبل الرفع لأن خيارات العرض والقيود قد تتغير."
+          ]
+        },
+        {
+          "heading": "5. احمِ الملفات والحقوق قبل المشاركة",
+          "paragraphs": [
+            "قبل النشر، افحص خصائص الملفات بحثاً عن اسم مستخدم الجهاز أو مسار مجلد شخصي أو تعليق داخلي. احذف الاتصالات الخارجية والروابط إلى قواعد بيانات خاصة، ولا تنشر كلمة مرور أو مفتاح وصول أو صيغة تكشف بيانات حقيقية. إذا استخدمت خطوطاً أو صوراً أو أيقونات من طرف ثالث، تحقق من الترخيص لكل عنصر واحتفظ برابط المصدر. لا تضع علامة تجارية معروفة في نموذجك بطريقة توحي بأنها زبون أو شريك. عند استخدام عمل عميل حقيقي، اطلب موافقة واضحة على ما يمكن عرضه، أو أعد بناء مثال مستقل ببيانات اصطناعية دون نقل معلوماته.",
+            "احفظ نسخة قابلة للتحرير ونسخة عرض لا تتطلب برامج مدفوعة لفتحها، إن أمكن. قدّم تعليمات قصيرة عن المتطلبات التقنية وحدود الصيغ، ولا توزع ملفاً يحتوي على وحدات ماكرو غير ضرورية. اكتب تاريخ إنشاء النموذج وتاريخ آخر مراجعة، واحتفظ بسجل يوضح ما أنشأته بنفسك وما استعنت فيه بمصادر خارجية. هذا السجل يفيد عند سؤال المشتري عن ملكية العمل، كما يمنع الخلط بين التدريب والمشروع التجاري. إن لم تكن متأكداً من حق إعادة نشر مادة ما، فلا تضعها في ملف الأعمال حتى تتحقق."
+          ]
+        },
+        {
+          "heading": "6. خطة سبعة أيام وقياس صادق للنتيجة",
+          "paragraphs": [
+            "في اليوم الأول اختر خدمة واحدة ومعيار قبول. في اليومين الثاني والثالث أنشئ البيانات التجريبية ونظفها، ثم ابنِ التقرير في اليوم الرابع. خصص اليوم الخامس للاختبارات، والسادس للصور والوصف والحقوق، والسابع لمراجعة العمل من منظور مشتري لا يعرفك. اطلب من شخص موثوق أن يشرح خلال دقيقة ما المشكلة التي يحلها النموذج؛ إذا عجز، بسّط العرض. لا تحتاج إلى شراء تقييمات أو اختلاق عملاء لإكمال هذه الخطة. النجاح الأول المقصود هنا هو نموذج يمكن فحصه، وليس الحصول على طلب مضمون خلال أسبوع.",
+            "تابع مؤشرين مختلفين بعد النشر: جودة النموذج نفسه، ومدى فهم الزوار للخدمة. قد تكون الصور واضحة لكن عرض السعر أو نطاق العمل غير محدد، وقد يكون العمل ممتازاً لكن لا يصل إلى الفئة المناسبة. راجع الوصف وأسئلة العميل ومتطلبات التسليم بناءً على ملاحظات حقيقية، وغيّر عنصراً واحداً في كل تجربة حتى تعرف ما الذي تحسن. احتفظ بسجل للتعديلات ولا تستنتج من مشاهدة واحدة أن المنصة فضّلت مشروعك. ملف الأعمال الجيد يثبت ما تستطيع إنجازه اليوم ويترك حدود ما لم تنجزه واضحة."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "title": "Build an honest freelance portfolio with synthetic Excel data",
+      "excerpt": "A testable spreadsheet sample without fake clients, private records or unclear reuse rights: from acceptance criteria to Fiverr portfolio images.",
+      "lead": "A useful freelance portfolio is evidence of a repeatable process, not a collection of attractive claims. Beginners can demonstrate Excel and reporting skills with clearly labelled synthetic data, provided they never present the exercise as a paid customer project. This guide combines official Fiverr portfolio rules with Microsoft's learning resources and a practical acceptance-test workflow.",
+      "sections": [
+        {
+          "heading": "1. Start with a measurable buyer problem",
+          "paragraphs": [
+            "A first portfolio does not require a past client, but it does need truthful evidence of a specific skill. Choose a small task someone might actually purchase: cleaning repeated sales rows, preparing a basic expense dashboard, or documenting an Excel automation. State what was wrong with the initial data, what the output should achieve, and how you will test it. Do not combine ten unrelated services into one showcase. For this tutorial, imagine a fictional shop invoice table created from scratch, without real customer names, account numbers or business transactions. The point is to demonstrate a process, not to simulate a prestigious client relationship.",
+            "Write acceptance criteria before opening your spreadsheet: duplicate invoices should be identified, totals should reconcile after documented exclusions, and a new month should be refreshable without rebuilding every formula. These are more informative than calling a dashboard 'professional'. Label every image and deliverable 'synthetic demonstration data' where a viewer could mistake it for real work. Never attach a real company logo or invented testimonial. A simple, reproducible example often proves more than a visually impressive dashboard whose calculations cannot be explained."
+          ]
+        },
+        {
+          "heading": "2. Create synthetic data without privacy shortcuts",
+          "paragraphs": [
+            "Build an invented dataset with invoice ID, date, category, quantity, unit price and payment status. Use fictional identifiers such as INV-001. Do not copy a confidential customer database and merely replace the names: detailed dates, unusual amounts and locations may still identify people. Create observations from scratch or use a learning dataset only after checking its reuse conditions. Microsoft's published Financial Sample workbook is useful for learning Power BI, but a public download does not automatically grant permission to resell the workbook as your own product. Distinguish learning from redistribution and describe the data provenance accurately.",
+            "Check the sample before charting it. Include a few deliberately wrong entries in a 'before' version, such as a duplicate invoice, an invalid date and an inconsistent amount. Explain the correction rule and keep both the raw and cleaned files. If you remove three duplicates from a synthetic table, you may state that measurable result for the demonstration. Do not transform it into a fabricated claim that you saved an actual company 40 percent of its costs. Keeping the example small makes it easier for a buyer to inspect the transformation and understand your decisions."
+          ]
+        },
+        {
+          "heading": "3. Make the demonstration independently testable",
+          "paragraphs": [
+            "Package three elements: a small data file, a finished Excel or Power BI result, and a short readme describing refresh steps. Show one meaningful indicator rather than a crowded wall of unrelated charts. Explain important formulas or Power Query transformations and describe what happens when a required column is missing. Document the assumptions behind currencies, returns, date ranges and categories. If the solution only reads a local training table, do not claim integration with a live accounting system. The most persuasive evidence is a clear relationship between the buyer's problem, the method and a result that can be reproduced.",
+            "Create an acceptance test: add one new invoice with a known amount, refresh the report and verify the resulting total against the original sum. Fix discrepancies before taking screenshots. Keep before-and-after views at the same scale so the improvement is not a trick of presentation. Remove sensitive metadata from files and screenshots. Attractive visuals are not proof of correct calculations, which is why a brief test note and an example of an error case add more credibility than another decorative chart."
+          ]
+        },
+        {
+          "heading": "4. Use Fiverr's portfolio without inventing clients",
+          "paragraphs": [
+            "Fiverr's official help documentation explains that sellers may add portfolio projects manually, including work completed outside Fiverr, and that projects can appear on their profile and Gig pages. That does not make it acceptable to describe a training exercise as a paid customer order. Title the sample 'Synthetic invoice-cleaning demonstration' and describe the problem, tools, deliverables and limitations. Do not attach a fake review, invent a customer name or imply that a recognisable brand hired you. Fiverr's community standards also prohibit presenting another person's work as your own and require client consent when reusing work from a real order.",
+            "Use two or three complementary images: one shows the result, another shows the transformation, and a third explains what is included or excluded. A generic laptop photo cannot substitute for a screenshot of the actual sample. The licensed photograph accompanying this article illustrates a workspace; it is not evidence of work performed by RibhLab. Keep portfolio descriptions factual and avoid promises of ranking, sales or a particular number of inquiries. Review the platform's current requirements before uploading because interface options and presentation limits can change."
+          ]
+        },
+        {
+          "heading": "5. Protect files, licenses and confidential information",
+          "paragraphs": [
+            "Inspect file properties for computer usernames, private folder paths, hidden sheets and internal comments. Remove external database connections, API keys, passwords and links to customer systems. Check the license of every third-party icon, photograph, font and template. Avoid using brand marks in ways that imply an endorsement. If you want to show a real client's work, obtain explicit permission about the material and level of detail that may be published. Otherwise build a new example with independently generated data rather than transferring confidential records into a 'sanitised' presentation.",
+            "Where possible, retain both an editable source and an accessible preview that does not require paid software. State technical requirements, known limitations and the absence of live data connections. Do not distribute unnecessary macros or executable components. Record the creation date, revision date, original components and licensed external assets. This small provenance log makes it easier to answer ownership questions and prevents a demonstration from being mistaken for a completed commercial engagement. If reuse rights are uncertain, leave the questionable material out until they are established."
+          ]
+        },
+        {
+          "heading": "6. A seven-day production and review plan",
+          "paragraphs": [
+            "On day one, select one service and its acceptance criteria. Use days two and three to create and clean the fictional dataset, and day four to build the report. Reserve day five for independent tests, day six for images, descriptions and license checks, and day seven for a buyer-perspective review. Ask someone unfamiliar with the work to explain its purpose after a minute of viewing. If they cannot, simplify the presentation. No purchased reviews, invented customers or unrealistic income claims are needed. The first success is a demonstrable skill sample, not a guaranteed order within a week.",
+            "After publishing, track two separate questions: does the sample work correctly, and can prospective buyers understand the offer? A technically excellent example can still have an unclear scope or price, while a polished image may hide a weak process. Update the description, buyer questions and delivery requirements using real feedback. Change one variable at a time when experimenting, and avoid drawing strong conclusions from a single view or inquiry. A credible portfolio shows what you can do now and openly states what you have not done."
+          ]
+        }
+      ]
+    },
+    "fr": {
+      "title": "Créer un portfolio freelance honnête avec des données Excel fictives",
+      "excerpt": "Un exemple de tableur vérifiable sans faux clients ni données privées : critères d'acceptation, images Fiverr et droits de réutilisation.",
+      "lead": "Un portfolio utile prouve une méthode reproductible au lieu d'accumuler des promesses. Un débutant peut démontrer ses compétences Excel avec des données fictives clairement identifiées, à condition de ne jamais présenter l'exercice comme une commande payée. Ce guide relie les règles officielles de Fiverr aux ressources pédagogiques de Microsoft et à des tests d'acceptation concrets.",
+      "sections": [
+        {
+          "heading": "1. Partir d'un problème client mesurable",
+          "paragraphs": [
+            "Un premier portfolio n'exige pas d'avoir déjà travaillé pour un client, mais il doit prouver honnêtement une compétence précise. Choisissez une tâche concrète : nettoyer un tableau de ventes, créer un suivi des dépenses ou documenter une automatisation Excel. Décrivez le défaut initial des données, le résultat attendu et la méthode de vérification. Ne rassemblez pas dix prestations sans rapport dans une seule démonstration. Pour cet exemple, imaginez les factures d'une boutique entièrement fictive, sans noms de clients, numéros bancaires ou transactions réelles. L'objectif est de montrer une méthode, non de fabriquer une relation commerciale prestigieuse.",
+            "Définissez des critères d'acceptation avant de commencer : repérer les factures en double, rapprocher les totaux après traitement des exceptions et pouvoir ajouter un mois sans reconstruire toutes les formules. Ces critères sont plus parlants qu'un tableau de bord qualifié de « professionnel ». Identifiez clairement les données synthétiques dans les images et les fichiers. N'ajoutez ni logo d'entreprise cliente ni témoignage inventé. Un exemple simple et vérifiable peut démontrer davantage de savoir-faire qu'un graphique complexe dont les calculs restent inexplicables."
+          ]
+        },
+        {
+          "heading": "2. Produire des données fictives sans exposer des personnes",
+          "paragraphs": [
+            "Créez un jeu de données inventé comprenant numéro de facture, date, catégorie, quantité, prix unitaire et état de paiement. Utilisez des identifiants comme INV-001. Ne copiez pas un fichier clients confidentiel en changeant simplement les noms : les dates, montants et lieux précis peuvent permettre une réidentification. Produisez les observations vous-même ou vérifiez les droits de réutilisation d'un jeu pédagogique. Le classeur Financial Sample proposé par Microsoft sert à découvrir Power BI, mais la possibilité de le télécharger ne signifie pas automatiquement qu'on peut le revendre sous son propre nom. Distinguez apprentissage, modification et redistribution.",
+            "Contrôlez les données avant de créer les visuels. Insérez volontairement quelques anomalies dans une version « avant » : facture en double, date impossible ou montant incohérent. Documentez la règle de correction et conservez les fichiers brut et nettoyé. Vous pouvez indiquer avoir corrigé trois doublons dans votre démonstration si le résultat est vérifiable. Vous ne pouvez pas transformer cette observation en affirmation inventée selon laquelle une vraie entreprise aurait économisé 40 % de ses dépenses. Un petit jeu de données facilite la compréhension et la vérification de votre méthode."
+          ]
+        },
+        {
+          "heading": "3. Rendre la démonstration testable",
+          "paragraphs": [
+            "Préparez trois livrables : un fichier de données limité, un rapport Excel ou Power BI terminé et une notice expliquant l'actualisation. Montrez un indicateur utile plutôt qu'une page saturée de graphiques. Décrivez les principales formules ou transformations Power Query, ainsi que le comportement du rapport lorsqu'une colonne manque. Indiquez les hypothèses sur la monnaie, les retours, les catégories et la période analysée. Si la solution fonctionne uniquement avec un fichier pédagogique local, ne prétendez pas qu'elle est connectée à un système comptable en production. La crédibilité repose sur un lien visible entre le problème, la méthode et un résultat reproductible.",
+            "Ajoutez un test d'acceptation : insérez une facture d'un montant connu, actualisez le rapport et rapprochez le nouveau total de la source. Corrigez les écarts avant de produire les captures d'écran. Présentez les versions avant et après à la même échelle pour éviter une amélioration visuelle artificielle. Supprimez les métadonnées sensibles des fichiers. L'esthétique ne démontre pas l'exactitude des calculs; une courte note de test et un exemple de traitement d'erreur apportent donc plus de valeur qu'un graphique décoratif supplémentaire."
+          ]
+        },
+        {
+          "heading": "4. Publier sur Fiverr sans inventer de commandes",
+          "paragraphs": [
+            "Le centre d'aide officiel de Fiverr explique que le vendeur peut ajouter manuellement des projets à son portfolio, y compris des réalisations extérieures à la plateforme, et que ces exemples peuvent apparaître sur son profil et ses pages de service. Cette fonctionnalité n'autorise pas à présenter un exercice pédagogique comme une commande rémunérée. Utilisez un titre transparent, par exemple « Démonstration de nettoyage de factures fictives », puis précisez le problème, les outils, les livrables et les limites. N'inventez pas d'avis client et n'attribuez pas votre travail à une marque connue. Les règles communautaires interdisent également de présenter le travail d'autrui comme le sien et exigent l'accord du client pour réutiliser une création issue d'une vraie commande.",
+            "Choisissez deux ou trois visuels complémentaires : le résultat final, une étape de transformation et les limites de la prestation. Une photographie générique d'ordinateur ne remplace pas une capture de votre propre projet. La photo sous licence qui illustre cet article représente simplement un espace de travail; elle ne prouve pas que RibhLab a réalisé une prestation client. Rédigez des descriptions factuelles et ne promettez ni classement dans les recherches ni volume de ventes. Vérifiez les consignes actuelles de la plateforme avant de téléverser les images, car ses options peuvent évoluer."
+          ]
+        },
+        {
+          "heading": "5. Protéger les fichiers, les droits et la confidentialité",
+          "paragraphs": [
+            "Examinez les propriétés des fichiers : nom d'utilisateur de l'ordinateur, chemin privé, feuilles masquées ou commentaires internes. Retirez les connexions à des bases externes, clés API, mots de passe et liens vers des systèmes clients. Vérifiez les licences de chaque icône, photographie, police et modèle provenant d'un tiers. N'utilisez pas de marque de façon à suggérer un partenariat inexistant. Pour montrer un travail réellement réalisé pour un client, obtenez son autorisation explicite sur les éléments publiables. À défaut, reconstruisez un exemple autonome avec des données inventées, sans transférer des enregistrements confidentiels vers une présentation simplement « anonymisée ».",
+            "Conservez si possible une version modifiable et un aperçu consultable sans logiciel payant. Indiquez les prérequis techniques, les limites connues et l'absence de connexion à des données réelles. Évitez les macros et composants exécutables inutiles. Notez la date de création, la dernière révision, les éléments originaux et les ressources externes sous licence. Ce petit registre de provenance permet de répondre aux questions sur les droits et empêche de confondre une démonstration avec une prestation commerciale accomplie. En cas de doute sur un droit de réutilisation, écartez le contenu concerné jusqu'à vérification."
+          ]
+        },
+        {
+          "heading": "6. Un programme de réalisation en sept jours",
+          "paragraphs": [
+            "Le premier jour, choisissez une prestation et ses critères d'acceptation. Consacrez les deuxième et troisième jours aux données fictives et à leur nettoyage, puis le quatrième au rapport. Réservez le cinquième aux tests, le sixième aux images, descriptions et licences, et le septième à une relecture du point de vue d'un acheteur. Demandez à une personne extérieure d'expliquer l'utilité du projet après une minute d'observation. Si elle n'y parvient pas, simplifiez la présentation. Il n'est pas nécessaire d'acheter des avis ou d'inventer des clients. Le premier objectif est une démonstration vérifiable, pas une commande garantie en une semaine.",
+            "Après publication, suivez deux aspects distincts : la fiabilité du modèle et la compréhension de l'offre par les visiteurs. Un exemple techniquement réussi peut avoir un périmètre ou un prix flou, tandis qu'une belle image peut masquer une méthode fragile. Améliorez la description, les questions au client et les conditions de livraison à partir de retours réels. Modifiez un élément à la fois lors des essais et évitez de tirer une conclusion générale d'une seule visite. Un portfolio crédible montre ce que vous savez faire aujourd'hui et expose clairement ce que vous n'avez pas encore réalisé."
+          ]
+        }
+      ]
+    }
+  },
+  "date": "2026-10-30",
+  "updated": "2026-10-30",
+  "featured": false
+}

@@ -45,16 +45,10 @@
         "gig-description-client-questions-scope",
         "freelance-basic-standard-premium-cost-model",
         "gig-gallery-original-images-checklist",
-        "saudi-job-offers-payroll-staff-aviation-october-2026"
+        "saudi-job-offers-payroll-staff-aviation-october-2026",
+        "portfolio-synthetic-data-original-samples"
       ],
       "ideas": [
-        {
-          "sequence": 11,
-          "titleAr": "بناء Portfolio ببيانات تجريبية",
-          "status": "queued",
-          "slug": "portfolio-synthetic-data-original-samples",
-          "queuedAt": "2026-10-30"
-        },
         {
           "sequence": 12,
           "titleAr": "أخطاء المبتدئين في Fiverr وكيف تتجنبها",

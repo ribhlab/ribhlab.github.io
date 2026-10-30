@@ -922,6 +922,16 @@
       "altFr": "Photo réelle d'un smartphone, d'un ordinateur et d'un microphone sur un bureau",
       "license": "Unsplash License",
       "note": "Free photo by Cabri Caldwell, published 3 July 2026. Unsplash page, image asset ID and license verified 28 October 2026; illustrative only, no actual app test. Checked against 58 published photos, market photos and 14 queued article photos: unique."
+    },
+    "portfolio-synthetic-data-original-samples": {
+      "photoId": "photo-1635427194796-f9fc252bbb7d",
+      "source": "https://unsplash.com/photos/a-desk-with-a-computer-and-a-laptop-on-it-ZOWxCWfltzU",
+      "photographer": "Giang duong",
+      "alt": "A desk with a computer and a laptop, illustrative workspace photograph",
+      "altAr": "مكتب يضم حاسوباً وشاشة في صورة توضيحية لبيئة العمل",
+      "altFr": "Bureau avec ordinateur et portable, photographie illustrative",
+      "license": "Unsplash License",
+      "note": "Real photo published 28 October 2021 by Giang duong; Unsplash page explicitly identifies free licensed use. Illustrative only; not a client project."
     }
   }
 }
