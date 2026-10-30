@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-30",
-  "scope": "All 102 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
+  "scope": "All 103 opportunity cards currently in the repository, plus visa appointment services tracked separately.",
   "statusDefinitions": {
     "researched-article": "Multi-section original trilingual content checked against official primary source(s)",
     "official-labour-evidence": "Country/region official labour market reporting, not evidence of individual job offers",
@@ -9,12 +9,12 @@
     "researched-awaiting-live-verification": "Original signed notice and trilingual article researched; site build, deployment and live URL still require explicit verification before counting as published"
   },
   "totals": {
-    "cards": 102,
+    "cards": 103,
     "visa": 12,
     "researched": 45,
     "marketEvidence": 5,
     "pendingDetail": 45,
-    "pendingLiveVerification": 7
+    "pendingLiveVerification": 8
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -26,6 +26,18 @@
     "Keep internal cards within RibhLab and external primary sources in new tabs"
   ],
   "cards": [
+    {
+      "id": "acaps-controleur-lbc-ft-rabat-c44073-2026",
+      "section": "competitions",
+      "title": "ACAPS Rabat — Contrôleur LBC-FT (1 poste)",
+      "deadline": "2026-11-12",
+      "status": "researched-awaiting-live-verification",
+      "priority": "primary-PDF-and-trilingual-evidence-reviewed-2026-10-30-awaiting-build-and-live-qa",
+      "sourceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/a71d95c6-0698-4969-b7ca-0b1b0f8dbec2",
+      "articleEvidenceId": "acaps-controleur-lbc-ft-rabat-c44073-2026",
+      "reviewedAt": "2026-10-30",
+      "note": "Employer ACAPS, Rabat, one post, Bac+5 finance/audit/risk/law or equivalent, minimum 2 years qualifying experience, insurance-sector knowledge. Government listing C44073/26, employer careers page, original 2-page PDF and delegated application portal checked 30 Oct. Apply by 12 Nov 2026; no exact cutoff hour, salary or exam stages published. Original nine-section AR/EN/FR study stored in opportunity-editorial-evidence; live page not yet verified."
+    },
     {
       "id": "map-infographiste-rabat-c44357-2026",
       "section": "competitions",
