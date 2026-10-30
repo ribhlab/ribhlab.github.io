@@ -157,6 +157,90 @@
       "description": "Curried cauliflower and chickpea stew.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; broadly depicts the prepared dish or close food subject"
+    },
+    "moroccan-harira": {
+      "id": "commons:181496321",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Liat_Portal_for_Foodie_Disorder_-_Harira_soup.jpg/1280px-Liat_Portal_for_Foodie_Disorder_-_Harira_soup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALiat_Portal_for_Foodie_Disorder_-_Harira_soup.jpg",
+      "photographer": "HaJunkiyada",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Liat Portal for Foodie Disorder - Harira soup.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "zaalouk-eggplant": {
+      "id": "commons:11817140",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Zaalouk-01.JPG/1280px-Zaalouk-01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AZaalouk-01.JPG",
+      "photographer": "Tamorlan",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Zaalouk-01.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "rfissa-chicken-lentils": {
+      "id": "commons:130042329",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Rfissa_de_poulet_marocaine.jpg/1280px-Rfissa_de_poulet_marocaine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARfissa_de_poulet_marocaine.jpg",
+      "photographer": "Solima arizo",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Rfissa de poulet marocaine.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "baghrir-thousand-holes": {
+      "id": "commons:185454474",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/%D8%A7%D9%84%D8%A8%D8%BA%D8%B1%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%D8%A7%D9%84%D8%A8%D8%BA%D8%B1%D9%8A%D8%B1_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A.jpg",
+      "photographer": "Samira hiba",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "البغرير المغربي.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "msemen-home": {
+      "id": "commons:185454401",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/%D8%A7%D9%84%D9%85%D8%B3%D9%85%D9%86_%D8%A3%D9%88_%D8%A7%D9%84%D9%85%D9%84%D9%88%D9%8A_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%D8%A7%D9%84%D9%85%D8%B3%D9%85%D9%86_%D8%A3%D9%88_%D8%A7%D9%84%D9%85%D9%84%D9%88%D9%8A_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A.jpg",
+      "photographer": "Samira hiba",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "المسمن أو الملوي المغربي.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "harcha-semolina": {
+      "id": "commons:10111358",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Harcha_%28Homemade%29.jpg/1280px-Harcha_%28Homemade%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHarcha_(Homemade).jpg",
+      "photographer": "Tamorlan",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Harcha (Homemade).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chicken-pastilla-home": {
+      "id": "commons:36035731",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/%D8%A8%D8%B3%D8%B7%D9%8A%D9%84%D8%A9_%D8%A8%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A%D8%A9.JPG/1280px-%D8%A8%D8%B3%D8%B7%D9%8A%D9%84%D8%A9_%D8%A8%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A%D8%A9.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3A%D8%A8%D8%B3%D8%B7%D9%8A%D9%84%D8%A9_%D8%A8%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A%D8%A9.JPG",
+      "photographer": "Zouhir",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "بسطيلة بالدجاج المغربية.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }

@@ -143,13 +143,6 @@
       "photographer": "Hanxiao Xu",
       "subject": "Pancakes cooking"
     },
-    "lentilSoupA": {
-      "photoId": "photo-1712334619829-831fa0625a0f",
-      "url": "https://images.unsplash.com/photo-1712334619829-831fa0625a0f?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-bowl-of-soup-next-to-a-glass-of-orange-juice-CJxPligcG8s",
-      "photographer": "Clay Banks",
-      "subject": "Lentil soup"
-    },
     "lentilSoupB": {
       "photoId": "photo-1734772682896-2db9bf254596",
       "url": "https://images.unsplash.com/photo-1734772682896-2db9bf254596?auto=format&fit=crop&w=1000&h=625&q=78",
@@ -200,7 +193,6 @@
     "baked-salmon-sweet-potato": "fishB",
     "chocolate-brownie": "cake",
     "banana-oat-pancakes": "pancake",
-    "moroccan-harira": "lentilSoupA",
     "healthy-lentil-spinach-soup": "lentilSoupB",
     "healthy-oat-berry-breakfast": "oats",
     "healthy-chickpea-avocado-wrap": "avocado",
