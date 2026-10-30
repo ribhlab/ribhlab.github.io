@@ -241,6 +241,54 @@
       "description": "بسطيلة بالدجاج المغربية.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "nigerian-jollof-style-rice": {
+      "id": "commons:163409340",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Nigerian_jollof_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANigerian_jollof_rice.jpg",
+      "photographer": "Halima Waziri",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Nigerian jollof rice.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "margherita-pizza": {
+      "id": "commons:100303227",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Margherita_pizza_on_plate.jpg/1280px-Margherita_pizza_on_plate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMargherita_pizza_on_plate.jpg",
+      "photographer": "Shisma",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Margherita pizza on plate.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "mujaddara-lentils-rice": {
+      "id": "commons:2579758",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Mujaddara.jpg/1280px-Mujaddara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMujaddara.jpg",
+      "photographer": "Bazel",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "provider": "Wikimedia Commons",
+      "description": "Mujaddara.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "quiche-spinach": {
+      "id": "commons:176793476",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Spinach_Quiche_-_Julien_Plumart_2025-10-14.jpg/1280px-Spinach_Quiche_-_Julien_Plumart_2025-10-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ASpinach_Quiche_-_Julien_Plumart_2025-10-14.jpg",
+      "photographer": "Andy Li",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Spinach Quiche - Julien Plumart 2025-10-14.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
