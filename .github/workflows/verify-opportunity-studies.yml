@@ -1,0 +1,55 @@
+name: Verify pending public recruitment studies in three languages
+on:
+  workflow_run:
+    workflows: ["Publish RibhLab to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-studies:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check official-source study pages over public HTTPS
+        run: |
+          python3 - <<'PY'
+          import time, urllib.request
+          from html import unescape
+
+          base='https://ribhlab.github.io'
+          # These are distinct government competitions, not aggregate job-market estimates.
+          studies={
+            'anapec-dg-networks-technician-c44231-2026': ('competitions', 8, ('C44231/26','emploi-public.ma')),
+            'hcp-statistics-applied-economics-11-2026': ('competitions', 8, ('C44349/26','emploi-public.ma')),
+          }
+          for attempt in range(1,7):
+              failures=[]
+              for lang in ('ar','en','fr'):
+                  for slug,(section,minimum,markers) in studies.items():
+                      path=f'/{lang}/opportunities/{section}/{slug}/'
+                      try:
+                          req=urllib.request.Request(base+path,headers={'User-Agent':'RibhLab-Editorial-Live-QA/1.0'})
+                          with urllib.request.urlopen(req,timeout=15) as response:
+                              html=unescape(response.read().decode('utf-8'))
+                              assert response.status==200
+                          count=html.count('class="opp-guide-section" id="part-')
+                          assert count>=minimum, f'{count} substantive sections, need {minimum}'
+                          assert 'opp-guide-sources' in html, 'no official source block'
+                          assert 'target="_blank"' in html, 'external source links should open a new tab'
+                          assert all(m in html for m in markers), 'missing official reference markers'
+                          assert 'opp-unverified' not in html, 'fallback listing instead of researched article'
+                          print(f'LIVE OK {path}: {count} sections and primary references',flush=True)
+                      except Exception as e:
+                          failures.append(f'{path}: {e}')
+              if not failures:
+                  print('PASS: both official studies verified in Arabic, English and French.')
+                  break
+              print(f'Attempt {attempt}/6: {len(failures)} missing checks',flush=True)
+              for failure in failures: print(failure,flush=True)
+              if attempt==6: raise SystemExit('Public editorial study verification failed')
+              time.sleep(20)
+          PY
