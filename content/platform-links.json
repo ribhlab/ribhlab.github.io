@@ -1021,6 +1021,10 @@
     "portfolio-synthetic-data-original-samples": [
       "fiverrHelp",
       "powerbi"
+    ],
+    "search-console-bing-28-day-content-audit": [
+      "googleSearch",
+      "googlePeopleFirstContent"
     ]
   }
 }

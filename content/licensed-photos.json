@@ -932,6 +932,16 @@
       "altFr": "Bureau avec ordinateur et portable, photographie illustrative",
       "license": "Unsplash License",
       "note": "Real photo published 28 October 2021 by Giang duong; Unsplash page explicitly identifies free licensed use. Illustrative only; not a client project."
+    },
+    "search-console-bing-28-day-content-audit": {
+      "photoId": "photo-1625296276703-3fbc924f07b5",
+      "source": "https://unsplash.com/photos/a-computer-screen-with-a-bunch-of-data-on-it-VxLhYXuLQN8",
+      "photographer": "Justin Morgan",
+      "alt": "Photograph of a computer displaying Google Search Console statistics for a blog",
+      "altAr": "صورة حقيقية لشاشة حاسوب تعرض إحصاءات Google Search Console لمدونة",
+      "altFr": "Photographie d'un écran affichant des statistiques Google Search Console pour un blog",
+      "license": "Unsplash License",
+      "note": "Justin Morgan, published 3 July 2021 on Unsplash; verified 30 October 2026. Illustrative photograph of another blog, not RibhLab data; photo unique across project media registries."
     }
   }
 }
