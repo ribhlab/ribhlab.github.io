@@ -581,6 +581,14 @@
     "googleDocumentOCR": {
       "name": "Google Cloud — Enterprise Document OCR",
       "url": "https://docs.cloud.google.com/document-ai/docs/enterprise-document-ocr"
+    },
+    "cdcGroundBeefSafety": {
+      "name": "CDC — Ground Beef Preparation and Food Safety",
+      "url": "https://www.cdc.gov/restaurant-food-safety/php/practices/ground-beef-preparation.html"
+    },
+    "fdaFoodSafetyHome": {
+      "name": "FDA — Food Safety at Home",
+      "url": "https://www.fda.gov/consumers/womens-health-topics/food-safety-home"
     }
   },
   "articleLinks": {
