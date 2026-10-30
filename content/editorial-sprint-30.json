@@ -607,7 +607,11 @@
       "status": "queued",
       "articleUrl": null,
       "queuePath": "content/reviewed-queue/pad-thai-noodles-peanut-allergy-plan.json",
-      "editorialReviewDate": "2026-10-29"
+      "editorialReviewDate": "2026-10-29",
+      "publisherReleasedAt": "2026-10-30T01:05:38.744Z",
+      "publisherReleaseCommit": "647272deaec9c0f83fe81affbc2ee588347fc056",
+      "articleSlug": "pad-thai-noodles-peanut-allergy-plan",
+      "editorialNote": "Publisher transferred complete trilingual article to content/articles and removed the queue file; independent live AR/EN/FR Pages and successful build/deploy verification are still outstanding. Do not count as published until verified."
     }
   ],
   "updatedAt": "2026-10-30"
