@@ -1324,7 +1324,10 @@
         {
           "sequence": 13,
           "titleAr": "مؤشر ISM وتأثيره على السوق",
-          "status": "planned"
+          "status": "queued",
+          "slug": "ism-manufacturing-pmi-september-2026-market-reading-checklist",
+          "queuePath": "content/reviewed-queue/ism-manufacturing-pmi-september-2026-market-reading-checklist.json",
+          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 14,
