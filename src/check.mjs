@@ -717,6 +717,8 @@ if(!adminPage.includes('Content-Security-Policy')||!adminPage.includes('connect-
 const recipePath=path.join(root,'content','recipes');
 const foodLex=JSON.parse(fs.readFileSync(path.join(recipePath,'ingredients.json'),'utf8')).ingredients;
 const foodPhotoLibrary=JSON.parse(fs.readFileSync(path.join(recipePath,'photo-library.json'),'utf8'));
+const curatedRecipeFile=path.join(recipePath,'curated-photos.json');
+const curatedRecipePhotos=fs.existsSync(curatedRecipeFile)?JSON.parse(fs.readFileSync(curatedRecipeFile,'utf8')).photos:{};
 if(foodPhotoLibrary.license!=='Unsplash License')errors.push('Recipe photograph license missing');
 const recipeAssignments=foodPhotoLibrary.assignments||{},recipePhotoKeys=Object.keys(foodPhotoLibrary.photos||{});
 if(new Set(Object.values(recipeAssignments)).size!==Object.keys(recipeAssignments).length||recipePhotoKeys.length!==Object.keys(recipeAssignments).length)errors.push('Each recipe photograph must be assigned once and only once');
@@ -737,10 +739,10 @@ for(const food of foodItems){
   const html=fs.readFileSync(file,'utf8');
   if(!html.includes('class="recipe-ingredient-list"')||!html.includes('class="recipe-step-list"')||!html.includes('https://www.foodsafety.gov/'))errors.push('Recipe missing quantities, method, or food-safety source '+l+'/'+food.slug);
   if(!html.includes('"@type":"Recipe"'))errors.push('Missing Recipe schema '+l+'/'+food.slug);
-  const imageKey=recipeAssignments[food.slug],picture=imageKey&&foodPhotoLibrary.photos[imageKey];
-  const expectedImage=picture?'images.unsplash.com/'+picture.photoId:'/assets/recipe-images/'+food.slug+'.svg';
+  const imageKey=recipeAssignments[food.slug],picture=(imageKey&&foodPhotoLibrary.photos[imageKey])||curatedRecipePhotos[food.slug];
+  const expectedImage=picture?(picture.photoId?'images.unsplash.com/'+picture.photoId:picture.url.split('?')[0]):'/assets/recipe-images/'+food.slug+'.svg';
   if(!html.includes(expectedImage)||!html.includes('recipe-photo-credit'))errors.push('Recipe must show its own unique assigned image '+l+'/'+food.slug);
-  if(picture&&(!html.includes('data-fallback="/assets/recipe-images/'+food.slug+'.svg"')||!html.includes(picture.photographer+' / Unsplash')))errors.push('Exclusive photo missing fallback or credit '+l+'/'+food.slug);
+  if(picture&&(!html.includes('data-fallback="/assets/recipe-images/'+food.slug+'.svg"')||!html.includes(picture.photographer+' / '+(picture.provider||'Unsplash'))))errors.push('Photo missing fallback or attribution '+l+'/'+food.slug);
  }
 }
 for(const l of ['ar','en','fr']){
@@ -749,16 +751,16 @@ for(const l of ['ar','en','fr']){
  }
  const landing=fs.readFileSync(path.join(dist,l,'recipes','index.html'),'utf8');
  if((landing.match(/class="recipe-card"/g)||[]).length!==120)errors.push('Kitchen landing must show 120 individually linked recipes '+l);
- if((landing.match(/<img[^>]+src="(?:https:\/\/images\.unsplash\.com\/photo-|\/assets\/recipe-images\/)/g)||[]).length!==120)errors.push('Each of 120 recipe cards needs its own exclusive image '+l);
+ if((landing.match(/<img[^>]+src="(?:https:\/\/|\/assets\/recipe-images\/)/g)||[]).length!==120)errors.push('Each of 120 recipe cards needs its own exclusive image '+l);
  const uniqueImageAssets=new Set();
  for(const r of foodItems){
-  const p=foodPhotoLibrary.photos[recipeAssignments[r.slug]];
-  const img=p?p.photoId:'recipe-art:'+r.slug;
+  const p=foodPhotoLibrary.photos[recipeAssignments[r.slug]]||curatedRecipePhotos[r.slug];
+  const img=p?(p.photoId||p.id):'recipe-art:'+r.slug;
   if(uniqueImageAssets.has(img))errors.push('Recipe image repeated '+r.slug);
   uniqueImageAssets.add(img);
  }
  const healthyPhotoHtml=fs.readFileSync(path.join(dist,l,'recipes','healthy','index.html'),'utf8');
- if((healthyPhotoHtml.match(/<img[^>]+src="(?:https:\/\/images\.unsplash\.com\/photo-|\/assets\/recipe-images\/)/g)||[]).length!==20)errors.push('Twenty healthy recipes each require an exclusive image '+l);
+ if((healthyPhotoHtml.match(/<img[^>]+src="(?:https:\/\/|\/assets\/recipe-images\/)/g)||[]).length!==20)errors.push('Twenty healthy recipes each require an exclusive image '+l);
  const index=fs.readFileSync(path.join(dist,l,'index.html'),'utf8');
  if(!index.includes('/'+l+'/care/')||!index.includes('/'+l+'/recipes/'))errors.push('Homepage must link care and cooking separately '+l);
 }
@@ -780,7 +782,8 @@ function registerVisual(id,owner,source){
 }
 for(const [slug,p] of Object.entries(photos.articlePhotos||{}))registerVisual(p.photoId,'article:'+slug,p.source);
 for(const [slug,key] of Object.entries(recipeAssignments)){const p=foodPhotoLibrary.photos[key];if(p)registerVisual(p.photoId,'recipe:'+slug,p.source);}
-for(const rec of foodItems)if(!recipeAssignments[rec.slug])registerVisual('unique-svg:'+rec.slug,'recipe:'+rec.slug);
+for(const [slug,p] of Object.entries(curatedRecipePhotos||{}))registerVisual(p.id,'recipe:'+slug,p.url.split('?')[0]);
+for(const rec of foodItems)if(!recipeAssignments[rec.slug]&&!curatedRecipePhotos[rec.slug])registerVisual('unique-svg:'+rec.slug,'recipe:'+rec.slug);
 const oppVisuals=JSON.parse(fs.readFileSync(path.join(root,'content','opportunity-photography.json'),'utf8')).items;
 for(const [key,p] of Object.entries(oppVisuals))registerVisual(p.photoId,'opportunity-category:'+key);
 const opportunityData=JSON.parse(fs.readFileSync(path.join(root,'content','opportunities-data.json'),'utf8'));
