@@ -11,10 +11,10 @@
   "totals": {
     "cards": 102,
     "visa": 12,
-    "researched": 42,
+    "researched": 43,
     "marketEvidence": 5,
     "pendingDetail": 45,
-    "pendingLiveVerification": 10
+    "pendingLiveVerification": 9
   },
   "requirements": [
     "Read each individual recruitment PDF or government page, NOT only the listing title",
@@ -31,12 +31,18 @@
       "section": "competitions",
       "title": "MAP Rabat — Infographiste (1 poste, échelle 10)",
       "deadline": "2026-11-12T16:30",
-      "status": "researched-awaiting-live-verification",
-      "priority": "verify-build-deploy-live-ar-en-fr",
+      "status": "researched-article",
+      "priority": "published-and-live-verified-2026-10-30",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/download/arrete/0a78b284-d7a6-4527-9a25-90998b4842d3",
       "articleEvidenceId": "map-infographiste-rabat-c44357-2026",
       "reviewedAt": "2026-10-30",
-      "note": "Signed 3-page MAP notice dated 29 October 2026 of 29 Oct 2026 and official C44357/26 listing read 30 Oct. One Rabat role; Bac+3, Moroccan, under 40 on exam day; one-year experience desirable only. Application 12 Nov 16:30; written 2h coeff 2 + 1h30 coeff 2, oral 30min coeff 7. No salary published. AR/EN/FR nine-section source-based study written; live site pending."
+      "note": "Signed three-page MAP notice dated 29 October 2026 and official C44357/26 listing reviewed 30 October. One Rabat position; Bac+3 in visual/graphic design, Moroccan nationality, under 40 on examination day; one year of experience desirable, not mandatory. Apply by 12 November 2026 at 16:30. Written exams: 2h coefficient 2 and 1h30 coefficient 2; oral 30 minutes coefficient 7. No salary published. Complete original nine-section AR/EN/FR report confirmed live HTTP 200 with official notice identifiers, sources and new-tab external links by GitHub Actions public-sitemap run 41119781594 on 30 October 2026.",
+      "liveVerifiedAt": "2026-10-30",
+      "liveUrls": {
+        "ar": "https://ribhlab.github.io/ar/opportunities/competitions/map-infographiste-rabat-c44357-2026/",
+        "en": "https://ribhlab.github.io/en/opportunities/competitions/map-infographiste-rabat-c44357-2026/",
+        "fr": "https://ribhlab.github.io/fr/opportunities/competitions/map-infographiste-rabat-c44357-2026/"
+      }
     },
     {
       "id": "anapec-dg-networks-technician-c44231-2026",
