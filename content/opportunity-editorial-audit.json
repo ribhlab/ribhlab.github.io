@@ -128,15 +128,18 @@
       "id": "agriculture-admin",
       "section": "competitions",
       "title": "Administrateur 2ème grade — Agriculture",
-      "deadline": "2026-10-30",
+      "deadline": "2026-11-09",
       "status": "researched-article",
       "marketKey": null,
-      "priority": "date:2026-10-30",
+      "priority": "official-extension:2026-11-09T16:30; original deadline 2026-10-30 superseded",
       "sourceUrl": "https://www.emploi-public.ma/fr/concours/details/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0",
       "researchedAt": "2026-10-28",
       "evidencePath": "content/opportunity-editorial-evidence.json",
       "articleUrl": "https://ribhlab.github.io/ar/opportunities/competitions/agriculture-admin/",
-      "verification": "Signed original 2-page ministerial notice and official government listing reviewed 28 Oct 2026; build 40740825050 and Pages deployment 40740824945 succeeded; live AR/EN/FR pages with eight sections and original PDF checked in public-sitemap-check 40740922162."
+      "verification": "Signed original 2-page ministerial notice and official government listing reviewed 28 Oct 2026; build 40740825050 and Pages deployment 40740824945 succeeded; live AR/EN/FR pages with eight sections and original PDF checked in public-sitemap-check 40740922162.",
+      "lastOfficialUpdateAt": "2026-10-30",
+      "officialExtensionPdfUrl": "https://www.emploi-public.ma/fr/concours/download/fichiers_att/7c571fa5-42a7-46a6-8021-aed9ed9ec5f0/0",
+      "officialUpdateNote": "The signed ministry notice extends applications for 38 second-grade administrators from 30 Oct to 9 Nov 2026 at 16:30 due to a technical registration outage. Exam remains 6 Dec 2026. Trilingual update banner and source links supplied through content/opportunity-official-updates.json; live verification pending."
     },
     {
       "id": "oncf-bac5",
