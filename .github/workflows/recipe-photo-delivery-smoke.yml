@@ -1,0 +1,32 @@
+name: Check published recipe photo delivery
+on:
+  push:
+    paths: [".github/workflows/recipe-photo-delivery-smoke.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check sample photo image endpoints
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p=JSON.parse(fs.readFileSync('content/recipes/curated-photos.json','utf8')).photos;
+          const ids=['moroccan-harira','kefta-tagine-eggs','vietnamese-rice-paper-rolls','brazilian-black-bean-stew'];
+          for (const slug of ids) {
+            const url=p[slug]?.url;
+            if(!url)throw Error('Missing curated photo '+slug);
+            const res=await fetch(url,{method:'GET',signal:AbortSignal.timeout(12000),headers:{'User-Agent':'RibhLab photo audit (https://ribhlab.github.io)'}});
+            const ct=res.headers.get('content-type')||'';
+            console.log(slug+' PHOTO HTTP '+res.status+' '+ct+' '+url.slice(0,115));
+            if(!res.ok||!ct.startsWith('image/'))throw Error('Failed live image delivery for '+slug);
+            await res.body?.cancel();
+          }
+          NODE
