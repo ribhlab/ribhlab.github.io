@@ -1,6 +1,12 @@
-name: Curate unique food photography
+name: Daily RibhLab recipe photo research
 on:
   workflow_dispatch:
+  # Revisit missing cards each morning; keep suggestions in a review-only queue.
+  schedule:
+    - cron: '25 7 * * *'
+concurrency:
+  group: ribhlab-daily-photo-research
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
@@ -16,7 +22,7 @@ jobs:
           node-version: "22"
       - name: Find uniquely identifiable commercially reusable food photos
         run: node src/curate-recipe-photos.mjs
-      - name: Save verified photo metadata
+      - name: Save unreviewed image suggestions (never auto-publish)
         run: |
           git config user.name "RibhLab Photo Audit"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
