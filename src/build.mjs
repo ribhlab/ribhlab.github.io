@@ -549,7 +549,23 @@ fs.writeFileSync(path.join(dist,'index.html'),`<!doctype html><html lang="ar" di
 fs.writeFileSync(path.join(dist,'404.html'),'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>404 | RibhLab</title><link rel="stylesheet" href="/assets/style.css"></head><body class="error-page"><h1>404</h1><p>Page not found · الصفحة غير موجودة · Page introuvable</p><a class="btn btn-primary" href="/ar/">Return home</a></body></html>');
 const allRoutes=routes.map(x=>x.route);
 fs.writeFileSync(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /admin/\n${domain?'Sitemap: '+domain+'/sitemap.xml\n':''}`);
-if(domain){fs.writeFileSync(path.join(dist,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+routes.map(x=>{const translations=locales.map(l=>`<xhtml:link rel="alternate" hreflang="${l}" href="${esc(domain+x.route.replace(/^\/[a-z]{2}\//,`/${l}/`))}"/>`).join('');return `<url><loc>${esc(domain+x.route)}</loc>${x.lastmod?`<lastmod>${esc(x.lastmod)}</lastmod>`:''}${translations}</url>`;}).join('')+'</urlset>');}
+// Keep /sitemap.xml stable. The canonical pages already publish hreflang
+// alternates in their HTML heads, so duplicating them inside every <url>
+// adds crawler transfer size without improving basic URL discovery.
+if(domain){
+ const entries=routes.map(({route,lastmod})=>{
+  const validLastmod=lastmod&&/^20\d{2}-\d{2}-\d{2}$/.test(lastmod);
+  return '  <url><loc>'+esc(domain+route)+'</loc>'+(validLastmod?'<lastmod>'+esc(lastmod)+'</lastmod>':'')+'</url>';
+ });
+ const xml=[
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ...entries,
+  '</urlset>',
+  ''
+ ].join('\n');
+ fs.writeFileSync(path.join(dist,'sitemap.xml'),xml,'utf8');
+}
 if(/^ca-pub-(\d{16})$/.test(publisher))fs.writeFileSync(path.join(dist,'ads.txt'),`google.com, pub-${publisher.slice(7)}, DIRECT, f08c47fec0942fa0\n`);
 console.log(`Built ${routes.length} content pages from ${articles.length} tri-lingual articles. Domain ${domain||'not configured (set SITE_URL before deployment)'}. Ads ${adsEnabled?'enabled':'disabled'}.`);
 
