@@ -877,6 +877,42 @@
       "description": "Vietnamese Rice Paper Rolls (45485647192).jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "coconut-shrimp-curry": {
+      "id": "commons:80185464",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Shrimp_curry_made_with_coconut_milk.jpg/1280px-Shrimp_curry_made_with_coconut_milk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AShrimp_curry_made_with_coconut_milk.jpg",
+      "photographer": "Ferdous",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Shrimp curry made with coconut milk.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "vegetable-fried-noodles": {
+      "id": "commons:33418593",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Chinese_vegetable_stir_fry_noodles.jpg/1280px-Chinese_vegetable_stir_fry_noodles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AChinese_vegetable_stir_fry_noodles.jpg",
+      "photographer": "tednmiki",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Chinese vegetable stir fry noodles.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "chicken-mushroom-cream": {
+      "id": "commons:102422624",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Creamy_mushroom_chicken_served_with_herb_rice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "source": "https://commons.wikimedia.org/wiki/File%3ACreamy_mushroom_chicken_served_with_herb_rice.jpg",
+      "photographer": "Arkapriya Das",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Creamy mushroom chicken served with herb rice.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
