@@ -389,7 +389,8 @@
         "ai-writing-assistant-style-guide-versioning",
         "power-query-ai-assisted-transformations-audit",
         "safe-excel-ai-analysis-redaction-checklist",
-        "test-ai-hallucinations-with-evidence-ledger-2026"
+        "test-ai-hallucinations-with-evidence-ledger-2026",
+        "ocr-scanned-documents-accuracy-human-verification-2026"
       ],
       "ideas": [
         {
@@ -401,14 +402,6 @@
           "sequence": 14,
           "titleAr": "أتمتة تقارير مالية دورية",
           "status": "planned"
-        },
-        {
-          "sequence": 15,
-          "titleAr": "OCR وحدود دقة قراءة المستندات",
-          "status": "queued",
-          "slug": "ocr-scanned-documents-accuracy-human-verification-2026",
-          "editorialReviewDate": "2026-10-30",
-          "queuePath": "content/reviewed-queue/ocr-scanned-documents-accuracy-human-verification-2026.json"
         },
         {
           "sequence": 16,

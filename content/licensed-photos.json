@@ -1032,6 +1032,16 @@
       "altFr": "Personne tenant un tube de lotion entre ses mains, photographie illustrative des soins des mains",
       "license": "Unsplash License",
       "note": "Original free Unsplash photograph by PLANTADEA published 12 July 2023; image CDN photo-1689167015088-3d7527bbb811 verified from the photo page 30 October 2026. No duplicate photo ID or Unsplash page found in repository search."
+    },
+    "ocr-scanned-documents-accuracy-human-verification-2026": {
+      "photoId": "photo-1583521214690-73421a1829a9",
+      "source": "https://unsplash.com/photos/stacks-of-paper-documents-and-file-folders-snNHKZ-mGfE",
+      "photographer": "Wesley Tingey",
+      "alt": "Stacks of paper documents and file folders awaiting archiving; illustrative photograph",
+      "altAr": "رزم من المستندات الورقية والملفات تنتظر الأرشفة؛ صورة توضيحية",
+      "altFr": "Piles de documents papier et de dossiers à archiver, photographie illustrative",
+      "license": "Unsplash License",
+      "note": "Wesley Tingey, original Unsplash photograph published 6 March 2020; page explicitly states free under Unsplash License. CDN photo ID verified from the original image link on 30 October 2026. Not a photograph of a real OCR test or customer documents. Uniqueness checked against six repository photo registries and code search."
     }
   }
 }

@@ -1102,6 +1102,10 @@
       "aadDrySkin",
       "nhsEmollients",
       "cdcCleanHands"
+    ],
+    "ocr-scanned-documents-accuracy-human-verification-2026": [
+      "microsoftDocumentOCR",
+      "googleDocumentOCR"
     ]
   }
 }

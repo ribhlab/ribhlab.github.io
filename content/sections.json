@@ -85,7 +85,8 @@
         "ai-writing-assistant-style-guide-versioning",
         "power-query-ai-assisted-transformations-audit",
         "safe-excel-ai-analysis-redaction-checklist",
-        "test-ai-hallucinations-with-evidence-ledger-2026"
+        "test-ai-hallucinations-with-evidence-ledger-2026",
+        "ocr-scanned-documents-accuracy-human-verification-2026"
       ],
       "targetArticles": 40
     },
