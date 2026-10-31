@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "note": "Curated editorial directory of official provider domains. Listings are educational references, not a ranking or an endorsement. Commercial links remain separately disclosed.",
   "platforms": {
     "fiverr": {
@@ -1088,6 +1088,10 @@
       "foodSafety",
       "cdcGroundBeefSafety",
       "fdaFoodSafetyHome"
+    ],
+    "glycerin-ceramides-moisturizer-label-guide": [
+      "aadDrySkin",
+      "aadFaceWashing"
     ]
   }
 }

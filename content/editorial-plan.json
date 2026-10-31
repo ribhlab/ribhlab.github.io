@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastReviewed": "2026-10-30",
+  "lastReviewed": "2026-10-31",
   "languages": [
     "ar",
     "en",
@@ -1463,7 +1463,8 @@
         "chapped-lips-balm-spf-irritants-14-day-care-plan",
         "minimal-skin-routine-cleanser-moisturizer-spf",
         "sensitive-skin-versus-contact-reaction",
-        "tinted-sunscreen-iron-oxides-guide"
+        "tinted-sunscreen-iron-oxides-guide",
+        "glycerin-ceramides-moisturizer-label-guide"
       ],
       "targetArticles": 40,
       "ideas": [
@@ -1489,14 +1490,6 @@
           "sequence": 11,
           "titleAr": "العناية بالقدمين والجلد الجاف",
           "status": "planned"
-        },
-        {
-          "sequence": 12,
-          "titleAr": "فهم مكونات المرطبات: غليسرين وسيراميد",
-          "status": "queued",
-          "slug": "glycerin-ceramides-moisturizer-label-guide",
-          "queuePath": "content/reviewed-queue/glycerin-ceramides-moisturizer-label-guide.json",
-          "reviewedAt": "2026-10-30"
         },
         {
           "sequence": 13,

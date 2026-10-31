@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "license": "Unsplash License — free commercial use and modification, no resale of unmodified images or competing image collections; third-party rights must also be respected",
   "licenseUrl": "https://unsplash.com/license",
   "purpose": "One distinct, topic-matched, real photographic image per published article, licensed under Unsplash License; editorial illustration only.",
@@ -1002,6 +1002,16 @@
       "altFr": "Cheeseburger et frites sur une planche en bois, photographie culinaire illustrative",
       "license": "Unsplash License",
       "note": "Original Nima Naseri Unsplash photograph, published 15 February 2023; page labels it Download free and Free to use under Unsplash License. Image CDN ID verified from original photo link on 30 October 2026. Illustrative finished burger, not a photograph of a thermometer test. No duplicate image ID found in repository search or licensed-photo registry."
+    },
+    "glycerin-ceramides-moisturizer-label-guide": {
+      "photoId": "photo-1619451427882-6aaaded0cc61",
+      "source": "https://unsplash.com/photos/hands-applying-lotion-from-white-pump-dFBhXJHKNeo",
+      "photographer": "Nataliya Melnychuk",
+      "alt": "Hands applying lotion from a white pump, illustrative skincare photograph",
+      "altAr": "يدان تضعان مستحضراً مرطباً من عبوة بيضاء، صورة توضيحية للعناية بالبشرة",
+      "altFr": "Mains appliquant une lotion issue d'un flacon blanc, photographie illustrative",
+      "license": "Unsplash License",
+      "note": "Nataliya Melnychuk, Unsplash photograph published 26 April 2021; original page explicitly says free under Unsplash License. Verified 30 October 2026. Illustrative photograph; does not identify ingredients or endorse a product. Unique image ID checked in repository code search."
     }
   }
 }
