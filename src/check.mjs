@@ -92,6 +92,11 @@ if(configuredUrl){
  if(!fs.existsSync(sitemapPath)) errors.push('Search Console: sitemap.xml missing');
  else {
   const sitemap=fs.readFileSync(sitemapPath,'utf8');
+  // Keep the Google-submitted XML lean and prevent future accidental regression.
+  if(!sitemap.startsWith('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'))errors.push('Search Console: wrong XML sitemap header');
+  if(sitemap.includes('xmlns:xhtml=')||sitemap.includes('<xhtml:link'))errors.push('Search Console: redundant sitemap hreflang inflated crawler download');
+  if(Buffer.byteLength(sitemap,'utf8')>=250000)errors.push('Search Console: XML sitemap unexpectedly large');
+  if(!fs.readFileSync(path.join(dist,'robots.txt'),'utf8').includes('Sitemap: '+url+'/sitemap.xml'))errors.push('Search Console: robots.txt missing the sitemap URL');
   const urls=[...sitemap.matchAll(new RegExp('<loc>([^<]*)</loc>','g'))].map(m=>m[1]);
   if(urls.length<30)errors.push('Search Console: sitemap unexpectedly short ('+urls.length+' URLs)');
   if(new Set(urls).size!==urls.length)errors.push('Search Console: duplicate canonical URLs in sitemap');
