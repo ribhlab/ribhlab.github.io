@@ -913,6 +913,18 @@
       "description": "Creamy mushroom chicken served with herb rice.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "kofta-kebab": {
+      "id": "commons:131253656",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Beef_kofta_kebab_at_the_Folklife_Festival.jpg/1280px-Beef_kofta_kebab_at_the_Folklife_Festival.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABeef_kofta_kebab_at_the_Folklife_Festival.jpg",
+      "photographer": "Ser Amantio di Nicolao",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Beef kofta kebab at the Folklife Festival.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
