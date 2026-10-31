@@ -72,7 +72,8 @@ const selected={
  'vietnamese-rice-paper-rolls':['File:Vietnamese Rice Paper Rolls (45485647192).jpg','Raita Futo'],
  'coconut-shrimp-curry':['File:Shrimp curry made with coconut milk.jpg','Ferdous'],
  'vegetable-fried-noodles':['File:Chinese vegetable stir fry noodles.jpg','tednmiki'],
- 'chicken-mushroom-cream':['File:Creamy mushroom chicken served with herb rice.jpg','Arkapriya Das']
+ 'chicken-mushroom-cream':['File:Creamy mushroom chicken served with herb rice.jpg','Arkapriya Das'],
+ 'kofta-kebab':['File:Beef kofta kebab at the Folklife Festival.jpg','Ser Amantio di Nicolao']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
