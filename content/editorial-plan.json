@@ -1295,17 +1295,10 @@
         "diesel-gasoline-fuel-outlook-2027-morocco-refining-shipping",
         "fed-october-28-2026-decision-december-rate-scenarios",
         "nfp-payrolls-revisions-market-guide",
-        "us-cpi-vs-pce-inflation-index-practical-reading-checklist"
+        "us-cpi-vs-pce-inflation-index-practical-reading-checklist",
+        "ism-manufacturing-pmi-september-2026-market-reading-checklist"
       ],
       "ideas": [
-        {
-          "sequence": 13,
-          "titleAr": "مؤشر ISM وتأثيره على السوق",
-          "status": "queued",
-          "slug": "ism-manufacturing-pmi-september-2026-market-reading-checklist",
-          "queuePath": "content/reviewed-queue/ism-manufacturing-pmi-september-2026-market-reading-checklist.json",
-          "reviewedAt": "2026-10-30"
-        },
         {
           "sequence": 14,
           "titleAr": "جدول نشر بيانات BLS الرسمية",
