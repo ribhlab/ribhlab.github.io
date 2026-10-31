@@ -1097,6 +1097,11 @@
       "fed",
       "bls",
       "goldcouncil"
+    ],
+    "handwashing-dry-hands-moisturizer-hygiene-routine": [
+      "aadDrySkin",
+      "nhsEmollients",
+      "cdcCleanHands"
     ]
   }
 }

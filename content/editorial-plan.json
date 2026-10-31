@@ -1457,18 +1457,11 @@
         "minimal-skin-routine-cleanser-moisturizer-spf",
         "sensitive-skin-versus-contact-reaction",
         "tinted-sunscreen-iron-oxides-guide",
-        "glycerin-ceramides-moisturizer-label-guide"
+        "glycerin-ceramides-moisturizer-label-guide",
+        "handwashing-dry-hands-moisturizer-hygiene-routine"
       ],
       "targetArticles": 40,
       "ideas": [
-        {
-          "sequence": 8,
-          "titleAr": "استعمال الكريم بعد غسل اليدين",
-          "status": "queued",
-          "slug": "handwashing-dry-hands-moisturizer-hygiene-routine",
-          "queuePath": "content/reviewed-queue/handwashing-dry-hands-moisturizer-hygiene-routine.json",
-          "editorialReviewDate": "2026-10-30"
-        },
         {
           "sequence": 9,
           "titleAr": "العناية بالجسم في الشتاء",
