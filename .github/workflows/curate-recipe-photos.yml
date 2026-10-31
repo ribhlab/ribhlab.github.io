@@ -1,6 +1,10 @@
 name: Daily RibhLab recipe photo research
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "src/curate-recipe-photos.mjs"
+      - ".github/workflows/curate-recipe-photos.yml"
   # Revisit missing cards each morning; keep suggestions in a review-only queue.
   schedule:
     - cron: '25 7 * * *'
