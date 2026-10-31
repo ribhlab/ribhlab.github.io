@@ -69,7 +69,10 @@ const selected={
  'korean-beef-rice-bowl':['File:Korean Beef Bulgogi Rice Bowl (34817154336).jpg','A Healthier Michigan'],
  'chicken-fajita-wraps':['File:Fajitas Wraps.JPG','Miansari66'],
  'brazilian-black-bean-stew':['File:Feijoada vegana.jpg','NMaia'],
- 'vietnamese-rice-paper-rolls':['File:Vietnamese Rice Paper Rolls (45485647192).jpg','Raita Futo']
+ 'vietnamese-rice-paper-rolls':['File:Vietnamese Rice Paper Rolls (45485647192).jpg','Raita Futo'],
+ 'coconut-shrimp-curry':['File:Shrimp curry made with coconut milk.jpg','Ferdous'],
+ 'vegetable-fried-noodles':['File:Chinese vegetable stir fry noodles.jpg','tednmiki'],
+ 'chicken-mushroom-cream':['File:Creamy mushroom chicken served with herb rice.jpg','Arkapriya Das']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
