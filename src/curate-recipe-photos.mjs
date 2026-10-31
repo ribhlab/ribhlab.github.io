@@ -9,11 +9,12 @@ const dir=path.join(process.cwd(),'content','recipes');
 const batchFiles=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'];
 const recipes=batchFiles.flatMap(file=>JSON.parse(fs.readFileSync(path.join(dir,file),'utf8')).recipes);
 const existing=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'utf8'));
+const curated=JSON.parse(fs.readFileSync(path.join(dir,'curated-photos.json'),'utf8')).photos;
 const output=path.join(dir,'photo-candidates.json');
 const previous=fs.existsSync(output)?JSON.parse(fs.readFileSync(output,'utf8')):{photos:{}};
 const photos={...(previous.photos||{})};
-const usedIds=new Set([...Object.values(photos).map(p=>p.id)]);
-const usedUrls=new Set([...Object.values(existing.photos).map(p=>p.url.split('?')[0]),...Object.values(photos).map(p=>p.url.split('?')[0])]);
+const usedIds=new Set([...Object.values(photos).map(p=>p.id),...Object.values(curated).map(p=>p.id)]);
+const usedUrls=new Set([...Object.values(existing.photos).map(p=>p.url.split('?')[0]),...Object.values(photos).map(p=>p.url.split('?')[0]),...Object.values(curated).map(p=>p.url.split('?')[0])]);
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const strip=s=>String(s||'').replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#\d+;/g,' ').replace(/\s+/g,' ').trim().slice(0,180);
 const hash=s=>[...s].reduce((n,c)=>(Math.imul(n,33)+c.charCodeAt(0))>>>0,5381);
@@ -54,8 +55,8 @@ function convert(page){
  if(usedIds.has(id)||usedUrls.has(url.split('?')[0]))return null;
  return {id,url,source:src,photographer:artist,license:lic.type,licenseUrl:lic.url,provider:'Wikimedia Commons',description:page.title.replace(/^File:/,''),illustrativeOnly:true};
 }
-let missing=recipes.filter(r=>!existing.assignments[r.slug]&&!photos[r.slug]),errors=[];
-console.log('Starting Commons photo curation: already',Object.keys(existing.assignments).length+Object.keys(photos).length,'of',recipes.length,'photos');
+let missing=recipes.filter(r=>!existing.assignments[r.slug]&&!curated[r.slug]&&!photos[r.slug]),errors=[];
+console.log('Starting editorial photo candidates; verified published',Object.keys(existing.assignments).length+Object.keys(curated).length,'of',recipes.length,'photos, available candidate backlog',Object.keys(photos).length);
 for(let i=0;i<missing.length;i++){
  const r=missing[i];let result=null;
  const qs=terms(r);
@@ -73,8 +74,8 @@ for(let i=0;i<missing.length;i++){
  console.log('PHOTO '+(i+1)+'/'+missing.length+' '+r.slug+' '+result.description.slice(0,65)+' '+result.license);
  await sleep(180);
 }
-const ordered=Object.fromEntries(recipes.filter(r=>photos[r.slug]).map(r=>[r.slug,photos[r.slug]]));
-fs.writeFileSync(output,JSON.stringify({updated:'2026-10-30',policy:'Distinct commercial-use compatible CC photos; every image is illustrative, photographer and source credited',photos:ordered},null,2)+'\n');
-const count=Object.keys(existing.assignments).length+Object.keys(ordered).length;
-console.log('FINISHED:',count,'of',recipes.length,'recipes now have independent photographs; missing:',errors.join(', ')||'none');
-if(count!==recipes.length)console.warn('Partial curation: the remaining recipes retain their original unique illustrated fallback.');
+const ordered=Object.fromEntries(recipes.filter(r=>photos[r.slug]&&!existing.assignments[r.slug]&&!curated[r.slug]).map(r=>[r.slug,photos[r.slug]]));
+fs.writeFileSync(output,JSON.stringify({policy:'UNREVIEWED CANDIDATES ONLY; do not publish without matching actual dish, ingredients, view, license and source. Distinct commercially reusable images proposed by search.',photos:ordered},null,2)+'\n');
+const count=Object.keys(existing.assignments).length+Object.keys(curated).length;
+console.log('FINISHED: published',count,'of',recipes.length,'photo-backed recipes; candidates for editorial review',Object.keys(ordered).length,'; no search result is published without manual verification; missing candidates:',errors.join(', ')||'none');
+if(count!==recipes.length)console.warn('Remaining illustrated recipes: '+(recipes.length-count)+'; candidacy is not approval.');
