@@ -43,7 +43,8 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const p=JSON.parse(fs.readFileSync('content/recipes/curated-photos.json','utf8')).photos;
-          const entries=Object.entries(p),problems=[],rateLimited=[];
+          const lib=JSON.parse(fs.readFileSync('content/recipes/photo-library.json','utf8'));
+          const entries=[...Object.entries(p),...Object.entries(lib.assignments).map(([slug,id])=>[slug,lib.photos[id]])],problems=[],rateLimited=[];
           let nextIndex=0,done=0;
           const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
           async function worker(){
@@ -71,6 +72,6 @@ jobs:
             }
           }
           await Promise.all(Array.from({length:2},()=>worker()));
-          console.log('CHECKED',done,'curated recipe photos; confirmed broken',problems.length,'; rate-limited and unverified',rateLimited.length,rateLimited.join(', '));
+          console.log('CHECKED',done,'all assigned recipe photos; confirmed broken',problems.length,'; rate-limited and unverified',rateLimited.length,rateLimited.join(', '));
           if(problems.length)throw Error('Failed live images: '+problems.join('; '));
           NODE
