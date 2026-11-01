@@ -1,0 +1,34 @@
+name: Etsy — Create Debt Freedom Pro v3 DRAFT
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-debt-freedom-v3-draft.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: etsy-debt-freedom-v3-draft
+  cancel-in-progress: false
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify credentials and create or reuse a DRAFT (never activate)
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/etsy-publisher/scripts/check_connection.py tools/etsy-publisher/scripts/create_debt_freedom_draft.py
+          python tools/etsy-publisher/scripts/create_debt_freedom_draft.py
