@@ -4,6 +4,9 @@ on:
     paths:
       - 'api/etsy-oauth-token.js'
       - 'tools/etsy-web-bridge/**'
+      - 'public/ar/etsy-bridge-*.js'
+      - 'public/ar/etsy-connect.html'
+      - 'public/ar/etsy-oauth-callback.html'
       - '.github/workflows/etsy-web-bridge-tests.yml'
   workflow_dispatch:
 permissions:
@@ -19,4 +22,6 @@ jobs:
       - name: Check syntax and run OAuth bridge tests
         run: |
           node --check api/etsy-oauth-token.js
+          node --check public/ar/etsy-bridge-connect.js
+          node --check public/ar/etsy-bridge-callback.js
           node --test tools/etsy-web-bridge/tests/oauth.test.mjs
