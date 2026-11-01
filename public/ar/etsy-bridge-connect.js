@@ -2,7 +2,7 @@
 "use strict";
 // Replace this ONLY with your own deployed Vercel project origin, never a public CORS proxy.
 // Example after deployment: https://ribhlab-etsy-bridge.vercel.app
-const BRIDGE_ORIGIN = "";
+const BRIDGE_ORIGIN = "https://ribhlab-etsy-oauth-bridge.vercel.app";
 const REDIRECT = "https://ribhlab.github.io/ar/etsy-oauth-callback.html";
 const key = document.getElementById("etsy-client-id");
 const submit = document.getElementById("start-oauth");
@@ -12,6 +12,22 @@ if(!BRIDGE_ORIGIN || !/^https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(BRIDGE_ORIGIN)
   status.textContent = "خادم الربط الآمن باقي ما تنشرش. ما تعاودش الموافقة حتى نربطو الخادم مع الصفحة.";
   return;
 }
+status.textContent = "كنفحص الاتصال الآمن بـ Vercel…";
+(async()=>{
+  try {
+    const response = await fetch(BRIDGE_ORIGIN + "/api/etsy-oauth-status", {
+      method:"GET", mode:"cors", credentials:"omit", cache:"no-store"
+    });
+    if(!response.ok)throw new Error("health check failed");
+    const data = await response.json();
+    if(data.status!=="ready" || data.protocol!=="etsy-oauth-bridge-v1")throw new Error("wrong backend");
+    submit.disabled = false;
+    status.textContent = "✅ الاتصال آمن والخادم جاهز. لسق Keystring واضغط ربط حساب Etsy.";
+  } catch {
+    submit.disabled = true;
+    status.textContent = "الخادم ما تجاوبش. ما تعاودش ترخيص Etsy دابا؛ عاود فتح الصفحة من Chrome.";
+  }
+})();
 submit.addEventListener("click", async()=> {
   const clientId = key.value.trim();
   if(!/^[A-Za-z0-9_-]{12,128}$/.test(clientId)) {
