@@ -12,18 +12,35 @@ const existing=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'u
 const curated=JSON.parse(fs.readFileSync(path.join(dir,'curated-photos.json'),'utf8')).photos;
 const output=path.join(dir,'photo-candidates.json');
 const previous=fs.existsSync(output)?JSON.parse(fs.readFileSync(output,'utf8')):{photos:{}};
-const photos={...(previous.photos||{})};
+// Old search results were often unrelated (for example roast beef for fish).
+// Keep only candidates whose actual file title names multiple recipe components.
+const photos=Object.fromEntries(Object.entries(previous.photos||{}).filter(([slug,p])=>{
+ const recipe=recipes.find(r=>r.slug===slug);
+ return recipe&&matchesRecipe(recipe,p.description);
+}));
 const usedIds=new Set([...Object.values(photos).map(p=>p.id),...Object.values(curated).map(p=>p.id)]);
 const usedUrls=new Set([...Object.values(existing.photos).map(p=>p.url.split('?')[0]),...Object.values(photos).map(p=>p.url.split('?')[0]),...Object.values(curated).map(p=>p.url.split('?')[0])]);
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const strip=s=>String(s||'').replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#\d+;/g,' ').replace(/\s+/g,' ').trim().slice(0,180);
-const hash=s=>[...s].reduce((n,c)=>(Math.imul(n,33)+c.charCodeAt(0))>>>0,5381);
+
 const noise=/\b(with|and|the|baked|cooked|healthy|fresh|home|style|homemade|easy|simple|dish|low|salt|vegetable|vegetables)\b/gi;
+function words(s){
+ return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').split(' ')
+  .filter(x=>x.length>=3&&!/^(with|and|the|healthy|style|inspired|home|fresh|moroccan|north|african|mediterranean|asian|whole|grain)$/.test(x))
+  .map(x=>x.endsWith('s')&&x.length>4?x.slice(0,-1):x);
+}
+function matchesRecipe(r,fileTitle){
+ const recipeTerms=[...new Set(words(r.title.en))],fileTerms=new Set(words(fileTitle));
+ const matched=recipeTerms.filter(x=>fileTerms.has(x));
+ // Require multiple matching recipe-specific words. Generic cuisine, method or
+ // a single "soup"/"salad" word never qualifies as evidence of a matching dish.
+ return matched.length>=2 && matched.some(x=>!['salad','soup','stew','rice','noodle','bowl','cake','grilled','roasted','baked','fish','beef','chicken'].includes(x));
+}
 function terms(r){
  const title=r.title.en.toLowerCase().replace(noise,' ').replace(/[^a-z\s-]/g,' ').replace(/\s+/g,' ').trim();
  const main=title.split(' ').slice(0,3).join(' ');
- const methodNames={tagine:'Moroccan tagine food',couscous:'Moroccan couscous',rice:'cooked rice',salad:'salad food',soup:'soup bowl',skillet:'cooked meal',roast:'roasted dinner',pasta:'pasta dish',sandwich:'sandwich food',bake:'baked food',stew:'stew food',curry:'curry dish',grill:'grilled food'};
- return [...new Set([main,methodNames[r.method]||r.cuisine+' food',r.cuisine+' cuisine food','prepared food dish'])].filter(Boolean);
+ // Specific dish words only; generic "prepared food dish" queries produced unrelated photos.
+ return [...new Set([r.title.en.replace(/\b(healthy|style|inspired|whole-grain)\b/gi,'').trim(),title,main])].filter(x=>x&&x.split(' ').length>=2);
 }
 function allowedLicense(meta){
  const raw=strip(meta.LicenseShortName?.value||meta.License?.value||'').toLowerCase();
@@ -44,13 +61,14 @@ async function queryCommons(q,offset=0){
   return (await response.json()).query?.pages||[];
  }return [];
 }
-function convert(page){
+function convert(page,r){
  const info=page.imageinfo?.[0];if(!info)return null;
  const lic=allowedLicense(info.extmetadata||{});
  const url=info.thumburl||info.url;
  const artist=strip(info.extmetadata?.Artist?.value||info.extmetadata?.Attribution?.value||'Wikimedia Commons');
  if(!lic||!url?.startsWith('https://')||!artist||!/^image\/(jpeg|png|webp)$/.test(info.mime||'')||info.width<640||info.height<400)return null;
  if(/\b(icon|logo|map|chart|diagram|cartoon|illustration|menu|poster|symbol|advertisement)\b/i.test(page.title))return null;
+ if(!matchesRecipe(r,page.title.replace(/^File:/,'')))return null;
  const id='commons:'+page.pageid,src='https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title.replaceAll(' ','_'));
  if(usedIds.has(id)||usedUrls.has(url.split('?')[0]))return null;
  return {id,url,source:src,photographer:artist,license:lic.type,licenseUrl:lic.url,provider:'Wikimedia Commons',description:page.title.replace(/^File:/,''),illustrativeOnly:true};
@@ -62,9 +80,9 @@ for(let i=0;i<missing.length;i++){
  const qs=terms(r);
  for(let qi=0;qi<qs.length;qi++){
   let results;
-  try{results=await queryCommons(qs[qi],qi===3?hash(r.slug)%120:0);}
+  try{results=await queryCommons(qs[qi],0);}
   catch(err){console.warn('Commons API retry failed for '+r.slug+': '+err.message);continue;}
-  result=results.map(convert).find(Boolean);
+  result=results.map(p=>convert(p,r)).find(Boolean);
   if(result)break;
   await sleep(180);
  }
@@ -74,7 +92,7 @@ for(let i=0;i<missing.length;i++){
  console.log('PHOTO '+(i+1)+'/'+missing.length+' '+r.slug+' '+result.description.slice(0,65)+' '+result.license);
  await sleep(180);
 }
-const ordered=Object.fromEntries(recipes.filter(r=>photos[r.slug]&&!existing.assignments[r.slug]&&!curated[r.slug]).map(r=>[r.slug,photos[r.slug]]));
+const ordered=Object.fromEntries(recipes.filter(r=>photos[r.slug]&&!existing.assignments[r.slug]&&!curated[r.slug]&&matchesRecipe(r,photos[r.slug].description)).map(r=>[r.slug,photos[r.slug]]));
 fs.writeFileSync(output,JSON.stringify({policy:'UNREVIEWED CANDIDATES ONLY; do not publish without matching actual dish, ingredients, view, license and source. Distinct commercially reusable images proposed by search.',photos:ordered},null,2)+'\n');
 const count=Object.keys(existing.assignments).length+Object.keys(curated).length;
 console.log('FINISHED: published',count,'of',recipes.length,'photo-backed recipes; candidates for editorial review',Object.keys(ordered).length,'; no search result is published without manual verification; missing candidates:',errors.join(', ')||'none');
