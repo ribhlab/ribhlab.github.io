@@ -1,0 +1,13 @@
+{
+  "title": "Undated Digital Weekly Planner PDF - Printable Minimal Planner",
+  "description": "Undated digital weekly planner in PDF format. Instant download. Includes a clean weekly planning page for printing or digital annotation. No physical product will be shipped. Replace this demo text with precise details about your real product before publication.",
+  "price": "4.99",
+  "taxonomy_id": 1,
+  "quantity": 999,
+  "who_made": "i_did",
+  "when_made": "2020_2026",
+  "type": "download",
+  "tags": ["digital planner", "weekly planner", "printable planner", "undated planner"],
+  "images": ["images/cover.png"],
+  "digital_files": ["files/planner.pdf"]
+}

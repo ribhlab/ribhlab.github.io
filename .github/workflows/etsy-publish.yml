@@ -1,0 +1,73 @@
+name: Etsy Publisher — manual approval
+on:
+  workflow_dispatch:
+    inputs:
+      product_folder:
+        description: 'Product slug in tools/etsy-publisher/products/'
+        required: true
+        type: string
+      publish_live:
+        description: 'Publish listing LIVE (may incur Etsy listing fees)'
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: etsy-publisher-single-writer
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact revision
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate product folder
+        env:
+          PRODUCT_FOLDER: ${{ inputs.product_folder }}
+        run: |
+          if [[ ! "$PRODUCT_FOLDER" =~ ^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$ ]]; then
+            echo 'Invalid product slug'; exit 1
+          fi
+          test -f "tools/etsy-publisher/products/$PRODUCT_FOLDER/listing.json" || { echo 'Product manifest missing'; exit 1; }
+      - name: Install dependencies
+        working-directory: tools/etsy-publisher
+        run: pip install -r requirements.txt
+      - name: Publish selected digital product (or prepare draft)
+        working-directory: tools/etsy-publisher
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+          PRODUCT_FOLDER: ${{ inputs.product_folder }}
+          PUBLISH_LIVE: ${{ inputs.publish_live }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for key in ETSY_KEYSTRING ETSY_SHARED_SECRET ETSY_SHOP_ID ETSY_REFRESH_TOKEN; do
+            if [[ -z "${!key:-}" ]]; then echo "Missing Actions secret: $key"; exit 1; fi
+          done
+          python -m etsy_publisher validate --product "products/$PRODUCT_FOLDER"
+          if [[ "$PUBLISH_LIVE" == 'true' ]]; then
+            python -m etsy_publisher publish --product "products/$PRODUCT_FOLDER" --registry publication_registry.json --activate
+          else
+            python -m etsy_publisher publish --product "products/$PRODUCT_FOLDER" --registry publication_registry.json
+          fi
+      - name: Preserve publication registry even if Etsy upload failed
+        if: always()
+        working-directory: tools/etsy-publisher
+        run: |
+          if [[ -f publication_registry.json ]]; then
+            git config user.name 'ribhlab-etsy-publisher[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add publication_registry.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'Track Etsy listing IDs [skip ci]'
+              git push origin "HEAD:${GITHUB_REF_NAME}"
+            fi
+          fi
