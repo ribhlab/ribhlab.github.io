@@ -2,17 +2,29 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="صفحة الرجوع الخاصة بترخيص RibhLab Etsy Publisher دون تخزين أو إرسال رموز الدخول.">
-<meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; form-action 'none'; base-uri 'none'">
+<meta name="description" content="صفحة رجوع ترخيص Etsy لبرنامج RibhLab Etsy Publisher.">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'">
 <title>RibhLab Etsy OAuth — رجوع الترخيص</title>
-<style>body{margin:0;background:#f8f8f7;color:#222;font:18px/1.7 system-ui,-apple-system,sans-serif;display:grid;min-height:100vh;place-items:center}.box{box-sizing:border-box;max-width:630px;margin:20px;padding:30px;background:#fff;border:1px solid #ddd;border-radius:15px}h1{font-size:26px;margin-top:0}</style>
-</head>
-<body><main id="main" class="box">
-<h1>صفحة الرجوع من Etsy ✅</h1>
-<p>إذا وافقت على ترخيص تطبيق <strong>RibhLab Etsy Publisher</strong> فهذه صفحة الرجوع فقط. لم يتم حفظ أي رمز دخول أو ملف من هنا.</p>
-<p>أكمل ربط OAuth داخل أداة Etsy Publisher على جهازك باستعمال رابط الصفحة الكامل من شريط العنوان، إن طلبته منك الأداة.</p>
-<p><strong>مهم:</strong> الرابط بعد الترخيص يمكن أن يحتوي على رمز مؤقت وحساس. لا ترسله إلى ChatGPT، ولا تنشره على GitHub، ولا تشاركه.</p>
-<p>يمكنك الآن العودة إلى برنامج الربط.</p>
-</main></body></html>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#faf7f2;color:#24211e;font:16px/1.8 system-ui,sans-serif}.box{box-sizing:border-box;margin:20px;padding:30px;max-width:650px;background:white;border:1px solid #e4dcd2;border-radius:16px;box-shadow:0 5px 24px #0001}h1{font-size:24px;margin:0 0 10px}.btn{border:0;background:#cc5b28;color:white;border-radius:8px;padding:13px 20px;font:inherit;cursor:pointer}.btn[hidden]{display:none}.note{font-size:14px;color:#685c51}#status{font-weight:650}</style>
+</head><body><main id="main" class="box">
+<h1>ربط RibhLab Etsy Publisher</h1>
+<p id="status">هذه صفحة رجوع ترخيص Etsy.</p>
+<button id="copy" class="btn" hidden>نسخ رابط العودة بشكل خاص</button>
+<p class="note">ما كنجمعوش ولا كنرسلو بيانات الترخيص لأي سيرفر. إذا ظهر زر النسخ، استعمل الرابط فقط داخل أداة الربط على جهازك. ما تشاركوش في ChatGPT أو GitHub.</p>
+</main>
+<script>
+(() => {
+'use strict';
+const params=new URLSearchParams(location.search);
+const status=document.getElementById('status');
+const btn=document.getElementById('copy');
+if(params.has('error')){status.textContent='Etsy رفضات الترخيص أو وقع خطأ. عاود العملية من أداة الربط.';history.replaceState({},'',location.pathname);return;}
+if(!params.has('code')||!params.has('state')){status.textContent='الصفحة جاهزة. خاص تبدأ الربط من برنامج Etsy Publisher قبل ما ترجع لها.';return;}
+const callback=location.href;
+status.textContent='Etsy رجعات برمز ترخيص مؤقت. نسخو مباشرة إلى أداة الربط على جهازك، ماشي للشات.';
+btn.hidden=false;
+btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(callback);history.replaceState({},'',location.pathname);btn.hidden=true;status.textContent='تنسخ الرابط. كمّل به داخل أداة الربط على جهازك، وما تشاركوش.';}catch{status.textContent='تعذر النسخ تلقائياً. استعمل نسخ رابط الصفحة من شريط عنوان المتصفح، وخليه خاص.';}});
+})();
+</script></body></html>
