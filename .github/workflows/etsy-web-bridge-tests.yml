@@ -1,0 +1,22 @@
+name: Verify browser-only Etsy OAuth bridge
+on:
+  push:
+    paths:
+      - 'api/etsy-oauth-token.js'
+      - 'tools/etsy-web-bridge/**'
+      - '.github/workflows/etsy-web-bridge-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check syntax and run OAuth bridge tests
+        run: |
+          node --check api/etsy-oauth-token.js
+          node --test tools/etsy-web-bridge/tests/oauth.test.mjs
