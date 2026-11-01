@@ -1,5 +1,5 @@
 {
-  "policy": "Unreviewed suggestions ONLY, title-token filtered. A filename match is not visual approval or publication permission; verify exact ingredients, visual match and commercial license before assigning.",
+  "policy": "UNREVIEWED CANDIDATES ONLY; do not publish without matching actual dish, ingredients, view, license and source. Distinct commercially reusable images proposed by search.",
   "photos": {
     "tuna-pasta-salad": {
       "id": "commons:129150837",
@@ -21,6 +21,72 @@
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "provider": "Wikimedia Commons",
       "description": "Leek & Dauphinoise Potato Pastry - The Flour Pot Bakery 2026-04-06.jpg",
+      "illustrativeOnly": true
+    },
+    "chinese-ginger-fish": {
+      "id": "commons:65767560",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Op_Reinforce_-_Chinese_Garlic_%288261019628%29.jpg/1280px-Op_Reinforce_-_Chinese_Garlic_%288261019628%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOp_Reinforce_-_Chinese_Garlic_(8261019628).jpg",
+      "photographer": "HM Revenue & Customs",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Op Reinforce - Chinese Garlic (8261019628).jpg",
+      "illustrativeOnly": true
+    },
+    "west-african-peanut-stew": {
+      "id": "commons:35886172",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Peanut_stew.jpg/1280px-Peanut_stew.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3APeanut_stew.jpg",
+      "photographer": "Atimukoh",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Peanut stew.jpg",
+      "illustrativeOnly": true
+    },
+    "healthy-chicken-brown-rice": {
+      "id": "commons:3315679",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Halibut_with_mango_salsa_on_coconut_brown_rice_%28434662467%29.jpg/1280px-Halibut_with_mango_salsa_on_coconut_brown_rice_%28434662467%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHalibut_with_mango_salsa_on_coconut_brown_rice_(434662467).jpg",
+      "photographer": "Taz from Vancouver, Canada",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Halibut with mango salsa on coconut brown rice (434662467).jpg",
+      "illustrativeOnly": true
+    },
+    "healthy-vegetable-egg-muffins": {
+      "id": "commons:23101730",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Ham%2C_egg_and_cheese_muffin.jpg/1280px-Ham%2C_egg_and_cheese_muffin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHam%2C_egg_and_cheese_muffin.jpg",
+      "photographer": "jeffreyw",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Ham, egg and cheese muffin.jpg",
+      "illustrativeOnly": true
+    },
+    "healthy-bean-corn-salad": {
+      "id": "commons:195989329",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/DZ3_0607_A_colorful_salad_bar_lined_with_fresh_toppings_-_cherry_tomatoes_shredded_carrots_corn_croutons_lettuce_and_an_array_of_vibrant_garnishes_ready_to_build_the_perfect_bowl.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADZ3_0607_A_colorful_salad_bar_lined_with_fresh_toppings_-_cherry_tomatoes_shredded_carrots_corn_croutons_lettuce_and_an_array_of_vibrant_garnishes_ready_to_build_the_perfect_bowl.jpg",
+      "photographer": "PattayaPatrol",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "DZ3 0607 A colorful salad bar lined with fresh toppings - cherry tomatoes shredded carrots corn croutons lettuce and an array of vibrant garnishes ready to build the perfect bowl.jpg",
+      "illustrativeOnly": true
+    },
+    "healthy-tomato-bean-pasta": {
+      "id": "commons:198551767",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pasta_Barilla_2026-08-26_with_vegetables.jpg/1280px-Pasta_Barilla_2026-08-26_with_vegetables.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3APasta_Barilla_2026-08-26_with_vegetables.jpg",
+      "photographer": "P1898",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Pasta Barilla 2026-08-26 with vegetables.jpg",
       "illustrativeOnly": true
     },
     "healthy-sweetpotato-bean-chili": {
