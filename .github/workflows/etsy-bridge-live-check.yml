@@ -1,0 +1,47 @@
+name: Etsy OAuth bridge live connectivity check
+
+on:
+  push:
+    paths:
+      - '.github/workflows/etsy-bridge-live-check.yml'
+      - 'public/ar/etsy-connect.html'
+      - 'public/ar/etsy-bridge-connect.js'
+      - 'api/etsy-oauth-token.js'
+      - 'api/etsy-oauth-status.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm public API health from the internet
+        shell: bash
+        env:
+          API_URL: https://ribhlab-etsy-oauth-bridge.vercel.app/api/etsy-oauth-status
+        run: |
+          set -euo pipefail
+          status=$(curl -sSL --retry 3 --max-time 20 -w "%{http_code}" -o /tmp/etsy-status.json \
+            -H "Origin: https://ribhlab.github.io" "$API_URL")
+          echo "HTTP status: $status"
+          test "$status" = "200"
+          node -e '
+          const fs = require("node:fs");
+          const data = JSON.parse(fs.readFileSync("/tmp/etsy-status.json", "utf8"));
+          if (data.status !== "ready" || data.protocol !== "etsy-oauth-bridge-v1") process.exit(1);
+          console.log("Serverless Etsy OAuth bridge is reachable and responds correctly.");
+          '
+      - name: Confirm CORS preflight on token exchange route
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSL --max-time 20 -D /tmp/etsy-headers -o /dev/null \
+            -X OPTIONS "https://ribhlab-etsy-oauth-bridge.vercel.app/api/etsy-oauth-token" \
+            -H 'Origin: https://ribhlab.github.io' \
+            -H 'Access-Control-Request-Method: POST' \
+            -H 'Access-Control-Request-Headers: content-type'
+          grep -i '^access-control-allow-origin: https://ribhlab.github.io' /tmp/etsy-headers
+          grep -i '^access-control-allow-methods: POST, OPTIONS' /tmp/etsy-headers
+          echo 'CORS preflight headers verified.'
