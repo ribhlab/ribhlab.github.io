@@ -1,0 +1,56 @@
+name: Etsy — Complete Debt Freedom Pro v3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-complete-debt-v3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: etsy-complete-debt-v3-4607819043
+  cancel-in-progress: false
+
+jobs:
+  complete-existing-listing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify scripts before accessing secrets
+        run: |
+          python -m py_compile tools/etsy-publisher/scripts/complete_debt_v3.py
+          python -m pip install --disable-pip-version-check requests
+      - name: Download private buyer package with short-lived GitHub OIDC (never publish artifact)
+        shell: bash
+        run: |
+          set -euo pipefail
+          RESPONSE="$(curl --retry 2 -fsS -H "Authorization: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=ribhlab-etsy-secure-zip-v1")"
+          JWT="$(python -c 'import json,sys; print(json.load(sys.stdin)["value"])' <<< "$RESPONSE")"
+          echo "::add-mask::$JWT"
+          curl -fsS --retry 2 --max-time 60 \
+            -H "Authorization: Bearer $JWT" \
+            "https://ribhlab-etsy-secure-transfer.vercel.app/api/bundle" \
+            -o /tmp/debt-freedom-v3.zip
+          echo "68216d67bcabc4e7cb627b4774d0544ec2eb4e9fa8bc12bae4c45796e5b160a8  /tmp/debt-freedom-v3.zip" | sha256sum -c -
+          unset JWT RESPONSE
+      - name: Upload 8 Etsy preview images and the buyer ZIP; activate existing listing only
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python tools/etsy-publisher/scripts/complete_debt_v3.py
+      - name: Remove local working copy
+        if: always()
+        run: rm -f /tmp/debt-freedom-v3.zip
