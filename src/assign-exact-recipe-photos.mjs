@@ -44,7 +44,7 @@ const selected={
  'eggplant-parmesan-bake':['File:2026-09-12 20 08 05 A portion of eggplant parmesan from ShopRite in Ewing Township, Mercer County, New Jersey.jpg','Famartin'],
  'chicken-shawarma-bowl':['File:Chicken Shwarama plate.jpeg','CrunchySkies'],
  'raita-cucumber':['File:Cucumber Raita.JPG','Zeel Patel'],
- 'tabbouleh-bulgur':['File:Tabbouleh before adding bulgur.jpg','Fructibus'],
+ 'tabbouleh-bulgur':['File:Tabouleh 1.JPG','Miansari66'],
  'tandoori-style-chicken':['File:Tandoori chicken-MB41.jpg','Rajeeb Dutta'],
  'vietnamese-beef-noodle-soup':['File:Pho bo.jpg','Blue Lotus'],
  'malaysian-coconut-rice':['File:Nasi Lemak LHY.jpg','LHengYee'],
