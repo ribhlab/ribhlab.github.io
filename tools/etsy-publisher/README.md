@@ -50,7 +50,7 @@ You can also run `python scripts/create_listing.py --help` to create validated m
 
 ## GitHub Actions (after moving to a private repository)
 
-A template is at `.github/workflows/etsy-publish.yml`. Put it at the root `.github/workflows/` in the private repository; if the publisher is at repository root, adjust `tools/etsy-publisher` prefixes in that workflow. Run Actions → Etsy Publisher → Run workflow → slug → `publish_live=false`. Confirm draft first; set true only after reviewing. It is **not an automatic ChatGPT integration** until the repository is linked and can be operated through a tool with write/run permissions.
+A template is at `.github/workflows/etsy-publish.yml`. Put it at the root `.github/workflows/` in the private repository; if the publisher is at repository root, adjust `tools/etsy-publisher` prefixes in that workflow. In a **private** repository, remove the two `products/*/images/` and `products/*/files/` ignore rules before adding digital assets; those rules protect against accidentally publishing files in the current public site. Run Actions → Etsy Publisher → Run workflow → slug → `publish_live=false`. Confirm draft first; set true only after reviewing. It is **not an automatic ChatGPT integration** until the repository is linked and can be operated through a tool with write/run permissions.
 
 ## Validation
 
