@@ -1,7 +1,11 @@
 name: Check published recipe photo delivery
 on:
   push:
-    paths: [".github/workflows/recipe-photo-delivery-smoke.yml"]
+    paths:
+      - ".github/workflows/recipe-photo-delivery-smoke.yml"
+      - "content/recipes/curated-photos.json"
+      - "content/recipes/photo-library.json"
+      - "public/assets/recipe-pages.css"
   workflow_dispatch:
 permissions:
   contents: read
@@ -14,7 +18,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Check sample photo image endpoints
+      - name: Verify full images and recipe video links
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const css=fs.readFileSync('public/assets/recipe-pages.css','utf8');
+          const code=fs.readFileSync('src/recipe-pages.mjs','utf8');
+          if(!/\.recipe-card img\[data-recipe-photo\][^{]*\{[^}]*object-fit:contain/.test(css))throw Error('Card photographs can be cropped');
+          if(!/\.recipe-photo-figure img\{[^}]*object-fit:contain/.test(css))throw Error('Full recipe photographs can be cropped');
+          if(!code.includes('youtube.com/results?search_query=')||!code.includes('recipe-video-link'))throw Error('Recipe YouTube suggestions missing');
+          const curated=JSON.parse(fs.readFileSync('content/recipes/curated-photos.json','utf8')).photos;
+          const library=JSON.parse(fs.readFileSync('content/recipes/photo-library.json','utf8'));
+          const ids=new Set(),urls=new Set();
+          for(const [slug,p] of [...Object.entries(curated),...Object.entries(library.assignments).map(([slug,id])=>[slug,library.photos[id]])]){
+            if(!p?.url||!p?.source)throw Error('Missing image metadata '+slug);
+            const key=p.id||p.photoId;
+            if(ids.has(key)||urls.has(p.url.split('?')[0]))throw Error('Duplicate photo '+slug);
+            ids.add(key);urls.add(p.url.split('?')[0]);
+          }
+          console.log('Unique photos',ids.size,'of 120; missing',120-ids.size,'; CSS full-photo containment and YouTube search links verified');
+          NODE
+      - name: Check all curated photo image endpoints
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
