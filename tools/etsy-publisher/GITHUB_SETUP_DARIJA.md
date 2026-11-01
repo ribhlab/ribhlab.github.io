@@ -15,10 +15,10 @@
 
 داخل **المستودع الخاص الجديد**: Settings → Secrets and variables → Actions → New repository secret.
 
-الأسماء المطلوبة: `ETSY_KEYSTRING`, `ETSY_SHARED_SECRET`, `ETSY_SHOP_ID`, `ETSY_REFRESH_TOKEN`.
+الأسماء المطلوبة دابا: `ETSY_KEYSTRING`, `ETSY_SHARED_SECRET`, `ETSY_REFRESH_TOKEN`. رقم المتجر `ETSY_SHOP_ID` كيتجلب تلقائياً من Etsy قبل النشر.
 
 - `ETSY_KEYSTRING` و `ETSY_SHARED_SECRET`: من Seller App approved عند Etsy.
-- `ETSY_SHOP_ID`: رقم المتجر Etsy، يتحدد أثناء OAuth إذا أمكن.
+- `ETSY_SHOP_ID`: ما بقاتش ضرورية كـ Secret في GitHub، حيث Workflow الجديد كيجيبها تلقائياً وبطريقة read-only.
 - `ETSY_REFRESH_TOKEN`: يتم استخراجه بعد موافقتك على OAuth من أداة Python محلية (هاتف عبر Termux أو كمبيوتر). **لا يمكن توليده من API key وحده**.
 - Redirect URI اللي سبق تسجّل في Etsy: `https://ribhlab.github.io/ar/etsy-oauth-callback.html`.
 
@@ -36,3 +36,6 @@ python -m pytest -q
 ```
 
 اختبارات البرنامج ما كتثبتش أن OAuth أو Etsy Live Publishing خدامين، وهذا مازال معلق بالربط الحقيقي.
+## تقدم الربط الفعلي (2026-11-01)
+
+نجح GitHub Actions `Etsy Connection — read-only check`: تم اختبار Refresh Token الحقيقي وقراءة المتجر. ما تمش إنشاء حتى Listing. مازال خاص مستودع Private قبل رفع ملفات البيع الرقمية، ونختبر نشر Draft عند توفر منتج.
