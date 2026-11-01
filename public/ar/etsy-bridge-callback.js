@@ -7,6 +7,17 @@ const params=new URLSearchParams(location.search);
 const code=params.get("code");
 const state=params.get("state");
 const error=params.get("error");
+// RibhLab Etsy Web Publisher: preserve Etsy's registered callback but
+// hand the short-lived authorization code to the authenticated browser app.
+if(state?.startsWith("rvp_")) {
+  const callback=new URL("https://ribhlab-etsy-oauth-bridge.vercel.app/api/connect-callback");
+  if(code)callback.searchParams.set("code",code);
+  if(state)callback.searchParams.set("state",state);
+  if(error)callback.searchParams.set("error",error);
+  history.replaceState(null,"",location.pathname);
+  location.replace(callback.toString());
+  return;
+}
 history.replaceState(null,"",location.pathname);
 if(error){status.textContent="Etsy رفضات الترخيص أو وقع خطأ. عاود من رابط البداية.";return;}
 if(!code){status.textContent="صفحة الرجوع خدامة. خاصك تبدا من صفحة ربط Etsy أولاً.";return;}
