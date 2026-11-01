@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090d24">
+<meta name="robots" content="index,follow">
+<meta name="description" content="NovaGrid is a cosmic block puzzle game for Android. Explore Classic, Daily Challenge, Blockfall and 14,000 stages across seven galaxy sectors.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NovaGrid — A universe of puzzles">
+<meta property="og:description" content="Four puzzle modes, seven cosmic sectors and 14,000 stages. Your next challenge starts here.">
+<meta property="og:image" content="https://ribhlab.github.io/novagrid/logo.webp">
+<meta property="og:url" content="https://ribhlab.github.io/novagrid/">
+<link rel="canonical" href="https://ribhlab.github.io/novagrid/">
+<link rel="icon" type="image/webp" href="logo.webp">
+<title>NovaGrid — Cosmic Puzzle Game for Android</title>
+<style>
+:root{color-scheme:dark;--bg:#070c20;--ink:#f0f5ff;--muted:#a5b4d6;--cyan:#51d9ff;--purple:#ac73ff;--pink:#ff60d4;--edge:rgba(153,177,255,.19)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse 80% 65% at 96% 4%,#42206e55 0,transparent 65%),radial-gradient(ellipse 60% 55% at 2% 30%,#0d6b9b2f,transparent 75%),var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden}
+body::before{content:"";position:absolute;inset:0 0 auto;height:1050px;pointer-events:none;opacity:.36;background-image:radial-gradient(#cce7ff 1px,transparent 1px),radial-gradient(#c18eff 1px,transparent 1px);background-size:99px 121px,157px 197px;background-position:12px 16px,60px 83px;mask-image:linear-gradient(#000,transparent)}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.container{width:min(1160px,calc(100% - 40px));margin:auto;position:relative}
+.skip{position:absolute;top:-50px;left:10px;background:#fff;color:#000;padding:8px;z-index:50}.skip:focus{top:10px}
+.nav-wrap{position:relative;z-index:5;border-bottom:1px solid var(--edge);background:#080e21aa;backdrop-filter:blur(16px)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:850;letter-spacing:.01em}
+.brand img{width:48px;height:48px;border-radius:13px;border:1px solid #459fff66;box-shadow:0 0 28px #009dff44;object-fit:cover}
+.brand span{background:linear-gradient(95deg,#4be1ff,#b68dff,#ff6edf);background-clip:text;color:transparent}
+.navlinks{display:flex;align-items:center;gap:26px;color:#ccd7ee;font-size:14px}
+.navlinks a:hover,.navlinks a:focus-visible{color:#79e8ff}
+.langs{display:flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--edge);border-radius:99px;background:#18234691}
+.langs button{background:none;border:0;color:#c0cfea;cursor:pointer;border-radius:30px;padding:6px 10px;font-weight:750;font-size:12px}
+.langs button[aria-pressed=true]{background:#273f79;color:#f4ffff}
+.hero{padding:96px 0 104px;display:grid;grid-template-columns:1fr .91fr;align-items:center;gap:64px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #74ccff45;color:#8ee8ff;background:#123e683b;border-radius:99px;padding:7px 15px;font-size:12px;letter-spacing:.15em;font-weight:750;text-transform:uppercase}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#4af0c3;box-shadow:0 0 12px #4af0c3}
+h1{font-size:clamp(49px,6.5vw,91px);line-height:1.04;letter-spacing:-.065em;margin:24px 0 24px;font-weight:850}
+h1 .gradient{background:linear-gradient(100deg,#5cddff 4%,#847fff 55%,#ff68d6 99%);background-clip:text;color:transparent}
+.lead{max-width:550px;font-size:19px;color:#bdc9e3;line-height:1.75;margin:0 0 30px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:14px;gap:11px;font-weight:750;font-size:14px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(110deg,#0caedc,#7156f6 62%,#bc50ce);box-shadow:0 12px 34px #445dff48;border:1px solid #89c8ff66}
+.btn.secondary{border:1px solid #8097d466;background:#151d3a}
+.status{display:flex;gap:10px;margin-top:24px;color:#a3b8da;font-size:13px;align-items:center}
+.status span{height:7px;width:7px;background:#f3bc5e;border-radius:50%;box-shadow:0 0 12px #f3bc5e}
+.hero-art{position:relative;max-width:475px;width:100%;margin:auto}
+.orb{position:absolute;inset:7% -9%;filter:blur(48px);background:conic-gradient(from 40deg,#b943c465,#0055df6b,#24a9f35d,#b943c465);border-radius:50%}
+.device{position:relative;border:1px solid #6d8df388;background:linear-gradient(130deg,#151f46f3,#0b1431 65%,#22163f);box-shadow:0 20px 75px #050819,0 0 45px #3e70f438;border-radius:34px;padding:20px 20px 25px;transform:rotate(3deg)}
+.device-top{display:flex;justify-content:space-between;align-items:center;color:#bfcdec;font-size:12px;font-weight:750;letter-spacing:.08em;padding:3px 3px 16px}
+.device-top b{font-size:15px;color:#5de5ff}
+.mode-line{display:flex;gap:8px;margin-bottom:13px}.mode-line span{flex:1;background:#1b2957;color:#a9d4fc;border:1px solid #384a90;border-radius:10px;text-align:center;padding:8px 3px;font-size:11px;font-weight:700}.mode-line .active{background:linear-gradient(90deg,#086ba0,#59328c);border-color:#43b8fa}
+.board{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;padding:9px;background:#0b1636;border:2px solid #438cf4;border-radius:17px;box-shadow:inset 0 0 30px #163fa06b,0 0 20px #2675ff56;aspect-ratio:1}
+.cell{border:1px solid #274c86;background:linear-gradient(140deg,#0c1b3b,#101a39);border-radius:5px;aspect-ratio:1}
+.cell.c{background:linear-gradient(135deg,#62f3ff,#0876f4 72%);border-color:#8ce9ff;box-shadow:inset 0 0 9px #fff7,0 0 9px #00c8ff75}
+.cell.p{background:linear-gradient(135deg,#fe7af4,#8934e3 70%);border-color:#f6a9fb;box-shadow:inset 0 0 10px #fff7,0 0 10px #b54cff65}
+.cell.v{background:linear-gradient(135deg,#a0a4ff,#4f50f4 70%);border-color:#cccaff;box-shadow:0 0 9px #7773ff60}
+.preview-caption{text-align:center;color:#92a3c4;font-size:11px;letter-spacing:.04em;margin-top:16px}
+.section{padding:80px 0}
+.heading{text-align:center;max-width:740px;margin:0 auto 40px}
+.kicker{color:#6edaff;letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:800}
+h2{font-size:clamp(31px,4.2vw,49px);line-height:1.18;letter-spacing:-.04em;margin:12px 0 15px}
+.heading p{color:var(--muted);margin:0;font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat,.tile{border:1px solid var(--edge);background:linear-gradient(145deg,#142149c9,#0d1432de);border-radius:20px}
+.stat{padding:28px;text-align:center}.stat b{font-size:40px;line-height:1.3;letter-spacing:-.035em;color:#85dcff}.stat span{display:block;color:#a9badf;font-size:14px;margin-top:4px}
+.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.tile{padding:26px 22px;min-height:232px;transition:border-color .2s,transform .2s}.tile:hover{border-color:#6a98fb;transform:translateY(-3px)}
+.symbol{width:55px;height:55px;border:1px solid #6caafc65;border-radius:16px;display:grid;place-items:center;font-size:28px;background:linear-gradient(135deg,#103b63,#442568);box-shadow:0 0 27px #2754bb33;margin-bottom:21px}
+.tile h3{font-size:20px;margin:0 0 8px}.tile p{font-size:14px;color:var(--muted);margin:0}
+.sectors{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.sector{padding:17px 18px;border:1px solid var(--edge);border-radius:15px;background:#121a39;display:flex;align-items:center;gap:12px;color:#cfdbf2;font-weight:650;font-size:14px}
+.sector i{font-style:normal;color:#91d8ff;font-size:22px;width:28px;text-align:center}
+.video-section{margin:72px 0 48px;border:1px solid #8b71e659;background:linear-gradient(110deg,#102548,#281944);padding:42px 48px;border-radius:26px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.video-section h2{font-size:32px}.video-section p{color:var(--muted);margin-bottom:0}
+footer{border-top:1px solid var(--edge);padding:32px 0 40px;color:#99abd0;font-size:13px}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footlinks{display:flex;gap:22px;flex-wrap:wrap}.footlinks a:hover{color:var(--cyan)}
+[dir=rtl] .eyebrow{letter-spacing:0}[dir=rtl] .tile,[dir=rtl] .video-section{text-align:right}[dir=rtl] .board,[dir=rtl] .device{direction:ltr}
+@media(max-width:1040px){.hero{gap:30px}.modes{grid-template-columns:repeat(2,1fr)}.sectors{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:740px){.container{width:min(100% - 32px,560px)}.nav{height:72px}.brand{font-size:21px}.brand img{width:43px;height:43px}.navlinks{display:none}.hero{grid-template-columns:1fr;padding:58px 0 70px;gap:47px;text-align:center}.hero .lead{font-size:16px}.hero .buttons,.hero .status{justify-content:center}.hero-art{max-width:400px}.device{transform:rotate(1deg)}h1{font-size:clamp(44px,13vw,67px)}.section{padding:57px 0}.stats{gap:8px}.stat{padding:21px 7px}.stat b{font-size:28px}.stat span{font-size:12px}.sectors{grid-template-columns:repeat(2,1fr)}.video-section{padding:27px 24px;flex-direction:column;align-items:flex-start;margin-top:48px}.video-section h2{font-size:29px}}
+@media(max-width:440px){.modes{grid-template-columns:1fr}.tile{min-height:0;padding:24px}.sectors{grid-template-columns:1fr 1fr}.sector{font-size:12px;padding:12px 9px}.symbol{margin-bottom:12px}.board{gap:3px;padding:7px}.device{padding:14px}.btn{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.tile{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav-wrap">
+<div class="container nav">
+<a class="brand" href="/novagrid/" aria-label="NovaGrid home"><img src="logo.webp" alt="NovaGrid N icon" width="48" height="48"><span>NovaGrid</span></a>
+<nav class="navlinks" aria-label="Site navigation"><a href="#modes" data-t="navModes">Game modes</a><a href="#galaxies" data-t="navWorlds">Galaxies</a><a href="#video" data-t="navVideo">Video</a><a href="/novagrid/privacy/" data-t="privacy">Privacy</a></nav>
+<div class="langs" role="group" aria-label="Language">
+<button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="fr" aria-pressed="false">FR</button><button type="button" data-language="ar" aria-pressed="false">AR</button>
+</div>
+</div></div>
+<main id="main">
+<div class="container hero">
+<div>
+<div class="eyebrow" data-t="eyebrow">✦ A NEW COSMIC CHALLENGE</div>
+<h1><span data-t="heroFirst">Think beyond</span><br><span class="gradient" data-t="heroSecond">the grid.</span></h1>
+<p class="lead" data-t="lead">A universe of clever block puzzles awaits. Clear lines, master falling shapes and unlock new worlds in NovaGrid, a cosmic puzzle game for Android.</p>
+<div class="buttons"><a class="btn primary" href="#modes"><span>✦</span><span data-t="explore">Explore the game</span></a><a class="btn secondary" href="https://www.youtube.com/watch?v=xv_gvle_rZw" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span><span data-t="watch">Watch video</span></a></div>
+<div class="status"><span aria-hidden="true"></span><span data-t="testing">Google Play launch in preparation · Internal testing active</span></div>
+</div>
+<div class="hero-art" aria-label="Stylized illustration of NovaGrid gameplay"><div class="orb" aria-hidden="true"></div>
+<div class="device"><div class="device-top"><span>NOVAGRID / COSMIC PUZZLE</span><b>✦ 2,540</b></div>
+<div class="mode-line"><span class="active">∞ CLASSIC</span><span>✦ DAILY</span><span>▥ BLOCKFALL</span></div>
+<div class="board" id="previewBoard" aria-hidden="true"></div>
+<div class="preview-caption" data-t="illustration">Illustrative puzzle board · Actual gameplay may differ</div>
+</div></div>
+</div>
+<section class="container stats" aria-label="Game highlights">
+<div class="stat"><b>4</b><span data-t="statModes">Ways to play</span></div>
+<div class="stat"><b>7</b><span data-t="statSectors">Galaxy sectors</span></div>
+<div class="stat"><b>14,000</b><span data-t="statLevels">Stages to master</span></div>
+</section>
+<section class="section container" id="modes">
+<div class="heading"><span class="kicker" data-t="modesKicker">CHOOSE YOUR CHALLENGE</span><h2 data-t="modesHeading">Four ways to play. Endless possibilities.</h2><p data-t="modesDesc">From calm strategy to fast-paced falling blocks, find your favorite way to think.</p></div>
+<div class="modes">
+<article class="tile"><div class="symbol" aria-hidden="true">∞</div><h3>Classic</h3><p data-t="classic">Place shapes on a 9×9 grid. Complete rows, columns and squares to keep the board clear.</p></article>
+<article class="tile"><div class="symbol" aria-hidden="true">✦</div><h3 data-t="dailyName">Daily Challenge</h3><p data-t="daily">Take on a fresh daily puzzle and test your planning, one move at a time.</p></article>
+<article class="tile"><div class="symbol" aria-hidden="true">▥</div><h3>Blockfall</h3><p data-t="blockfall">Move and rotate falling shapes with touch controls. Clear lines and beat your best score.</p></article>
+<article class="tile"><div class="symbol" aria-hidden="true">✧</div><h3 data-t="stagesName">Galaxy Stages</h3><p data-t="stages">Earn stars, unlock challenges with in-game points and progress across cosmic worlds.</p></article>
+</div></section>
+<section class="section container" id="galaxies">
+<div class="heading"><span class="kicker" data-t="galaxyKicker">SEVEN SECTORS</span><h2 data-t="galaxyHeading">A whole galaxy of puzzles.</h2><p data-t="galaxyDesc">Explore 140 worlds across seven sectors, each with its own gameplay twists and challenges.</p></div>
+<div class="sectors">
+<div class="sector"><i>✦</i><span>Cosmic Explorer</span></div><div class="sector"><i>☄</i><span>Meteor Storm</span></div><div class="sector"><i>⬇</i><span>Gravity Forge</span></div><div class="sector"><i>◈</i><span>Prism Temple</span></div><div class="sector"><i>⚡</i><span>Chain Reactor</span></div><div class="sector"><i>◉</i><span>Void Trials</span></div><div class="sector"><i>▥</i><span>Blockfall Arena</span></div>
+</div></section>
+<div class="container" id="video">
+<div class="video-section"><div><span class="kicker" data-t="videoKicker">TAKE A LOOK</span><h2 data-t="videoTitle">See NovaGrid in motion.</h2><p data-t="videoDesc">Get a glimpse of the cosmic puzzle universe.</p></div><a class="btn primary" href="https://www.youtube.com/watch?v=xv_gvle_rZw" target="_blank" rel="noopener noreferrer"><span>▶</span><span data-t="watchVideo">Watch on YouTube</span></a></div></div>
+</main>
+<footer><div class="container foot"><span>© 2026 NovaGrid · <span data-t="footLine">Designed for Android · Currently in testing</span></span>
+<div class="footlinks"><a href="/novagrid/privacy/" data-t="privacy">Privacy Policy</a><a href="mailto:rachid022note4@gmail.com" data-t="support">Contact support</a></div></div></footer>
+<script>
+(function(){
+ const grid=document.getElementById("previewBoard");
+ const cyan=new Set([10,11,19,28,37,38,39,46,47,48,49,57,66,67]),purple=new Set([6,7,15,16,24,25,33,34,42,43,51,52,60,61]),violet=new Set([3,12,21,30,31,32,40]);
+ for(let i=0;i<81;i++){const n=document.createElement("span");n.className="cell"+(cyan.has(i)?" c":purple.has(i)?" p":violet.has(i)?" v":"");grid.appendChild(n)}
+ const dict={
+ fr:{navModes:"Modes de jeu",navWorlds:"Galaxies",navVideo:"Vidéo",privacy:"Confidentialité",eyebrow:"✦ UN NOUVEAU DÉFI COSMIQUE",heroFirst:"Voyez au-delà",heroSecond:"de la grille.",lead:"Un univers de puzzles vous attend. Effacez les lignes, maîtrisez les blocs qui tombent et débloquez de nouveaux mondes dans NovaGrid, un jeu de réflexion pour Android.",explore:"Découvrir le jeu",watch:"Voir la vidéo",testing:"Sortie Google Play en préparation · Test interne actif",illustration:"Grille illustrative · Le jeu réel peut différer",statModes:"Modes de jeu",statSectors:"Secteurs galactiques",statLevels:"Niveaux à relever",modesKicker:"CHOISISSEZ VOTRE DÉFI",modesHeading:"Quatre façons de jouer.",modesDesc:"De la stratégie tranquille aux blocs qui tombent, trouvez votre rythme.",classic:"Placez les formes sur une grille de 9×9. Complétez lignes, colonnes et carrés.",dailyName:"Défi quotidien",daily:"Relevez chaque jour un nouveau défi de réflexion.",blockfall:"Déplacez et faites pivoter les blocs au toucher. Complétez des lignes.",stagesName:"Niveaux galactiques",stages:"Gagnez des étoiles et débloquez des défis avec les points du jeu.",galaxyKicker:"SEPT SECTEURS",galaxyHeading:"Une galaxie de puzzles.",galaxyDesc:"Explorez 140 mondes dans sept secteurs aux mécaniques variées.",videoKicker:"APERÇU",videoTitle:"Découvrez NovaGrid en action.",videoDesc:"Un aperçu de l'univers cosmique du jeu.",watchVideo:"Voir sur YouTube",footLine:"Conçu pour Android · En cours de test",support:"Contacter le support"},
+ ar:{navModes:"أنماط اللعب",navWorlds:"المجرات",navVideo:"الفيديو",privacy:"الخصوصية",eyebrow:"✦ تحدٍ كوني جديد",heroFirst:"فكّر خارج",heroSecond:"حدود الشبكة.",lead:"عالم من ألغاز المكعبات في انتظارك. امسح الصفوف، تحكّم في القطع المتساقطة وافتح عوالم جديدة في NovaGrid، لعبة ألغاز لأندرويد.",explore:"اكتشف اللعبة",watch:"شاهد الفيديو",testing:"النشر على Google Play قيد الإعداد · الاختبار الداخلي مفعّل",illustration:"شبكة توضيحية · قد تختلف طريقة اللعب الفعلية",statModes:"أنماط لعب",statSectors:"قطاعات كونية",statLevels:"مرحلة للتحدي",modesKicker:"اختر تحدّيك",modesHeading:"أربع طرق للعب.",modesDesc:"من التفكير الهادئ إلى المكعبات المتساقطة، اختر النمط اللي كيعجبك.",classic:"ضع الأشكال داخل شبكة 9×9، وأكمل الصفوف والأعمدة والمربعات.",dailyName:"التحدي اليومي",daily:"جرّب لغزاً متجدداً كل يوم واختبر مهاراتك في التخطيط.",blockfall:"حرّك القطع المتساقطة ودوّرها بالسحب واللمس لمسح الصفوف.",stagesName:"مراحل المجرة",stages:"اربح النجوم وافتح تحديات جديدة باستعمال نقاط اللعب.",galaxyKicker:"سبعة قطاعات",galaxyHeading:"مجرة كاملة من الألغاز.",galaxyDesc:"استكشف 140 عالماً داخل سبعة قطاعات لكل منها تحديات مختلفة.",videoKicker:"شاهد اللعبة",videoTitle:"اكتشف NovaGrid بالفيديو.",videoDesc:"نظرة على عالم الألغاز الكونية.",watchVideo:"شاهد على يوتيوب",footLine:"مصممة لأندرويد · مرحلة الاختبار",support:"تواصل مع الدعم"}};
+ const english=Object.fromEntries([...document.querySelectorAll("[data-t]")].map(el=>[el.dataset.t,el.textContent]));
+ function apply(lang){const d=lang==="en"?english:dict[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.querySelectorAll("[data-t]").forEach(el=>{if(d[el.dataset.t])el.textContent=d[el.dataset.t]});document.querySelectorAll("[data-language]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.language===lang)));try{localStorage.setItem("novagrid-site-language",lang)}catch{}}
+ document.querySelectorAll("[data-language]").forEach(b=>b.addEventListener("click",()=>apply(b.dataset.language)));
+ let initial="en";try{const saved=localStorage.getItem("novagrid-site-language");if(["en","fr","ar"].includes(saved))initial=saved;else if(/^ar/i.test(navigator.language))initial="ar";else if(/^fr/i.test(navigator.language))initial="fr"}catch{}apply(initial);
+})();
+</script>
+</body></html>
