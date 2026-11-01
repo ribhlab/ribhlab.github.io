@@ -37,12 +37,19 @@ jobs:
       - name: Install dependencies
         working-directory: tools/etsy-publisher
         run: pip install -r requirements.txt
+      - name: Resolve Etsy shop ID from approved seller account (read-only)
+        working-directory: tools/etsy-publisher
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/check_connection.py
       - name: Publish selected digital product (or prepare draft)
         working-directory: tools/etsy-publisher
         env:
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
-          ETSY_SHOP_ID: ${{ secrets.ETSY_SHOP_ID }}
+          ETSY_SHOP_ID: ${{ env.ETSY_RESOLVED_SHOP_ID }}
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
           PRODUCT_FOLDER: ${{ inputs.product_folder }}
           PUBLISH_LIVE: ${{ inputs.publish_live }}
