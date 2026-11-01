@@ -54,7 +54,6 @@ const selected={
  'peruvian-chicken-rice':['File:Arroz con pollo peruano.jpg','MiguelAlanCS'],
  'rice-pudding-cinnamon':['File:Rice pudding cinnamon.jpg','Ross Berteig'],
  'beef-chili-beans':['File:Chili con Carne.jpg','Geoprofi Lars'],
- 'sweetcorn-quesadillas':['File:Cheese quesadilla.jpg','Corn cheese'],
  'red-lentil-soup':['File:Red lentil soup.jpg','Gilabrand'],
  'healthy-quinoa-stuffed-peppers':['File:Quinoa stuffed peppers.jpg','Mark Bonica'],
  'healthy-bulgur-tabouleh':['File:Liat Portal for Foodie Disorder - Bulgur salad.jpg','Liat Portal'],
