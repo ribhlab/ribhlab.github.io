@@ -73,7 +73,10 @@ const selected={
  'coconut-shrimp-curry':['File:Shrimp curry made with coconut milk.jpg','Ferdous'],
  'vegetable-fried-noodles':['File:Chinese vegetable stir fry noodles.jpg','tednmiki'],
  'chicken-mushroom-cream':['File:Creamy mushroom chicken served with herb rice.jpg','Arkapriya Das'],
- 'kofta-kebab':['File:Beef kofta kebab at the Folklife Festival.jpg','Ser Amantio di Nicolao']
+ 'kofta-kebab':['File:Beef kofta kebab at the Folklife Festival.jpg','Ser Amantio di Nicolao'],
+ 'thai-basil-beef':['File:Nuea phat bai yira.jpg','Takeaway'],
+ 'miso-mushroom-noodles':['File:Mushroom with chinese noodles in home.jpg','Geoffreyrabbit'],
+ 'healthy-grilled-fish-salad':['File:Levrek Izgara Beykoz Koru Sosyal Tesisleri.JPG','Benreis']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
