@@ -925,6 +925,42 @@
       "description": "Beef kofta kebab at the Folklife Festival.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "thai-basil-beef": {
+      "id": "commons:10239105",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Nuea_phat_bai_yira.jpg/1280px-Nuea_phat_bai_yira.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANuea_phat_bai_yira.jpg",
+      "photographer": "Takeaway",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Nuea phat bai yira.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "miso-mushroom-noodles": {
+      "id": "commons:86693249",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Mushroom_with_chinese_noodles_in_home.jpg/1280px-Mushroom_with_chinese_noodles_in_home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMushroom_with_chinese_noodles_in_home.jpg",
+      "photographer": "Geoffreyrabbit",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Mushroom with chinese noodles in home.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-grilled-fish-salad": {
+      "id": "commons:48230184",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Levrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG/1280px-Levrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALevrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG",
+      "photographer": "Benreis",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Levrek Izgara Beykoz Koru Sosyal Tesisleri.JPG",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
