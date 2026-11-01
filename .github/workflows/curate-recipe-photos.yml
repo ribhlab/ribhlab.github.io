@@ -35,6 +35,9 @@ jobs:
             git commit -m "content(images): save photo candidates for editorial review"
             # Repository may have advanced while photo sourcing was running.
             git fetch origin main
-            git rebase origin/main
+            # When an editor updated the candidate queue meanwhile, keep the
+            # current main-branch review decisions rather than overwriting them.
+            # During rebase, 'ours' means the upstream (origin/main) version.
+            git rebase -X ours origin/main
             git push origin HEAD:main
           fi
