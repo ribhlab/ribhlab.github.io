@@ -1,30 +1,22 @@
-# RibhLab Etsy Publisher — الخطوات الباقية ديال الربط
+# RibhLab Etsy Publisher — الحالة الحالية (1 نوفمبر 2026)
 
-✅ تطبيق Etsy ديالك **ribhlab-etsy-publisher** Approved. الصفحة ديال OAuth موجودة فموقعك على GitHub Pages.
+✅ تطبيق Etsy Seller App تمت الموافقة عليه.
 
-## دابا شنو خاص يتدار؟
+✅ ربط Etsy OAuth نجح: GitHub Actions `Etsy Connection — read-only check` تأكد مباشرة من قبول `ETSY_REFRESH_TOKEN` والوصول للمتجر، بلا إنشاء ولا تعديل أي إعلان.
 
-1. دخل لـ https://www.etsy.com/developers/your-apps وفتح التطبيق ديالك، ومن إعدادات **Redirect URIs** زيد هاد الرابط بالحرف:
+✅ 3 Secrets موجودة في GitHub Actions: `ETSY_KEYSTRING` و `ETSY_SHARED_SECRET` و `ETSY_REFRESH_TOKEN`.
 
-   `https://ribhlab.github.io/ar/etsy-oauth-callback.html`
+✅ Workflow النشر كيجيب `ETSY_SHOP_ID` تلقائياً من Etsy، ما محتاجش المستخدم يدخل رقم المتجر ولا Secret إضافي.
 
-2. **مهم: ما ترسل حتى API Key أو Shared Secret أو Token أو URL فيه `code` فالشات.** احتافظ بها عندك.
+⚠️ المستودع الحالي `ribhlab/ribhlab.github.io` عمومي. ممنوع نحطو فيه ملفات PDF/صور أصلية مدفوعة باش ما تصبحش قابلة للتحميل من أي شخص. خاص مستودع Private مستقل قبل رفع محتوى المنتجات الفعلي.
 
-3. خاصنا **مستودع GitHub خاص Private** ومفصول على موقع RibhLab العمومي. المنتجات الرقمية المدفوعة خاصها ما تكونش فمستودع Public حيث أي واحد يقدر يحملها مجانا. الرابط لإنشاء المستودع: https://github.com/new . سمّيه مثلا `ribhlab-etsy-publisher` واختار **Private**.
+⚠️ مازال ما تجرّبش إنشاء Draft حقيقي أو النشر Live. أي نشر قد يفرض رسوم Etsy ويحتاج مراجعة المنتج والتصنيف والصور والملفات.
 
-4. نزّل هاد الحزمة، حمّل ملفاتها للمستودع الخاص (تقدر تبدأ من PC). ثبّت Python 3.12 واكتب `pip install -r requirements.txt`، ثم نسخ `.env.example` لملف `.env` وعمر `ETSY_KEYSTRING` و`ETSY_SHARED_SECRET` و`ETSY_REDIRECT_URI` فيه عندك.
+## الخطوة الجاية
 
-5. شغل `python -m etsy_publisher auth-start` وفتح رابط Etsy اللي كيطلع. وافق على الترخيص. من صفحة الرجوع ديال RibhLab اضغط على زر **نسخ رابط العودة بشكل خاص** (ما تشاركوش). رجع لـ Terminal وشغل `python -m etsy_publisher auth-finish` ولسق الرابط في الطلب الخاص. التوكن كيتحفظ محلياً في `.state/oauth_tokens.json`، والمشروع كيحاول يجيب `shop_id` تلقائياً.
+1. صاحب المتجر يرسل المنتج وصور المعاينة والملفات الرقمية لداخل المحادثة.
+2. نحضّرو بيانات الإعلان والعنوان والوصف والوسوم والتصنيف والثمن؛ نتحقق من صلاحية الملفات.
+3. نحفظ المحتوى الرقمي في مستودع خاص قبل أي نشر.
+4. ننشئ Draft أولاً، ونعمل مراجعة، ثم نفعّل النشر بعد موافقة المستخدم حسب رغبته.
 
-6. على GitHub الخاص فقط، دخل **Settings → Secrets and variables → Actions** وزيد 4 secrets: `ETSY_KEYSTRING`, `ETSY_SHARED_SECRET`, `ETSY_SHOP_ID`, `ETSY_REFRESH_TOKEN`. `ETSY_REFRESH_TOKEN` تقدر تجيبو من الملف المحلي؛ ما تحطوش فشي ملف وسط GitHub.
-
-7. كل منتج: حط `products/SKU/listing.json` مع صور معاينة وPDF/ZIP ديال الزبون (حتى 5 ملفات × 20MB للواحد). النشر الافتراضي Draft، إلا إذا طلبتي تفعيل `auto_publish` أو Workflow `publish_live`.
-
-## شنو وجدت دابا؟
-
-- الكود الكامل لرفع المنتجات الرقمية والصور والنشر عبر Etsy API.
-- GitHub Actions للنشر من المستودع الخاص وحفظ معرف كل إعلان لتفادي التكرار.
-- صفحة Redirect HTTPS على RibhLab للنسخ المحلي ديال رمز الرجوع.
-- اختبارات محلية بدون استعمال الحساب الحقيقي.
-
-⚠️ Seller App Approved ماشي معناها الربط OAuth كمل. مازال ما كاين حتى إعلان تنشر من الأداة حتى تكتمل الخطوات الشخصية 1 و3 و5 و6.
+ممنوع إرسال أي Token أو Shared Secret أو رابط فيه `code` داخل الشات، وممنوع كتابتها في ملفات المستودع.
