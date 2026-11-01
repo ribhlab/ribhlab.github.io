@@ -1,47 +1,21 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="بداية ربط حساب Etsy بتطبيق RibhLab Etsy Publisher عبر OAuth2 وPKCE.">
-<meta name="robots" content="noindex,nofollow,noarchive">
-<meta name="referrer" content="no-referrer">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ربط متجر Etsy بـ RibhLab Publisher عبر تفويض OAuth 2.0 آمن داخل Chrome.">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer">
 <meta http-equiv="Cache-Control" content="no-store">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; form-action 'none'; connect-src 'none'; img-src 'none'; base-uri 'none'; frame-ancestors 'none'">
-<title>ربط Etsy — RibhLab Publisher</title>
-<style>body{background:#faf7f2;color:#24211e;min-height:100vh;display:grid;place-items:center;margin:0;font:16px/1.8 system-ui,-apple-system,sans-serif}.box{background:#fff;max-width:610px;width:calc(100% - 32px);box-sizing:border-box;margin:16px;padding:28px;border-radius:16px;border:1px solid #e5dbd1;box-shadow:0 6px 30px #0001}h1{font-size:25px;margin:0 0 12px}label{display:block;font-weight:600;margin-top:22px}input{box-sizing:border-box;direction:ltr;text-align:left;width:100%;padding:12px;border:1px solid #b9b0a8;border-radius:9px;font:inherit}button{border:0;border-radius:9px;background:#cc5b28;color:white;padding:12px 22px;margin-top:16px;font:inherit;font-weight:600;cursor:pointer;width:100%}.note{font-size:14px;color:#66594e}#status{color:#a03320;font-weight:600}a{color:#9a451e}</style>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'">
+<title>ربط Etsy — RibhLab</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#faf7f2;color:#24211e;font:16px/1.7 system-ui,-apple-system,sans-serif}.box{box-sizing:border-box;margin:16px;padding:28px;max-width:610px;width:100%;background:white;border:1px solid #e4dcd2;border-radius:16px}h1{font-size:24px;margin:0 0 10px}label{display:block;font-weight:bold;margin-top:17px}input{box-sizing:border-box;padding:13px;width:100%;border:1px solid #bbb;border-radius:9px;direction:ltr;text-align:left;font:inherit}button{background:#cc5b28;border:0;color:white;padding:14px;border-radius:9px;width:100%;font:inherit;font-weight:bold;margin-top:12px}button:disabled{background:#b3a9a2}.note{font-size:14px;color:#5c554d}#status{font-weight:600;color:#8b3f21}a{color:#943f1f}</style>
 </head>
 <body><main class="box" id="main">
-<h1>ربط حساب Etsy مع RibhLab</h1>
-<p>هاد الصفحة غادي توجهك لـ Etsy باش توافق على صلاحيات إنشاء إعلانات منتجاتك. <strong>الربط مازال ما تكملش</strong> حتى نحصلو على Refresh Token ونحفظوه في GitHub Secrets.</p>
-<p>جيب Keystring من <a href="https://www.etsy.com/developers/your-apps" rel="noreferrer">تطبيقك المعتمد في Etsy</a>. ما تدخلش Shared Secret ولا كلمة السر هنا.</p>
-<label for="key">Keystring / API Key</label>
-<input id="key" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="لسّق Keystring هنا" required>
-<button id="start">الانتقال إلى Etsy للموافقة</button>
+<h1>RibhLab Etsy Publisher</h1>
+<p>غادي نربطو متجرك بـ Etsy من المتصفح، بلا تثبيت تطبيق. الصفحة ما كتجمعش كلمة السر ولا Shared Secret.</p>
+<p>جيب Keystring من <a href="https://www.etsy.com/developers/your-apps" rel="noreferrer">Etsy Developer Apps</a>.</p>
+<label for="etsy-client-id">Keystring / API Key</label>
+<input id="etsy-client-id" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="لسق Keystring">
+<button id="start-oauth" disabled>ربط حساب Etsy</button>
 <p id="status" role="status"></p>
-<p class="note">Keystring ما كيتخزنش في خادم RibhLab. قيم PKCE المؤقتة كتتحفظ في جلسة المتصفح ديالك فقط. ما تشاركش رابط العودة فيه code مع أي واحد.</p>
-</main>
-<script>
-(() => {
-'use strict';
-const redirect='https://ribhlab.github.io/ar/etsy-oauth-callback.html';
-const key=document.getElementById('key');
-const status=document.getElementById('status');
-const start=document.getElementById('start');
-const enc=(buffer)=>btoa(String.fromCharCode(...new Uint8Array(buffer))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
-start.addEventListener('click', async()=>{
- const id=key.value.trim();
- if(!/^[A-Za-z0-9_-]{12,128}$/.test(id)){status.textContent='لسّق Keystring الصحيح من Etsy بلا مسافات.';return;}
- start.disabled=true;status.textContent='كنوجد رابط الترخيص…';
- try{
-  const verifier=enc(crypto.getRandomValues(new Uint8Array(32)));
-  const state=enc(crypto.getRandomValues(new Uint8Array(24)));
-  const challenge=enc(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(verifier)));
-  sessionStorage.setItem('ribhlab_etsy_oauth',JSON.stringify({clientId:id,verifier,state,at:Date.now()}));
-  const u=new URL('https://www.etsy.com/oauth/connect');
-  for(const [k,v] of Object.entries({response_type:'code',redirect_uri:redirect,scope:'listings_r listings_w shops_r',client_id:id,state,code_challenge:challenge,code_challenge_method:'S256'}))u.searchParams.set(k,v);
-  location.assign(u.href);
- }catch(e){status.textContent='وقع خطأ فبدء الربط، جرّب Chrome من جديد.';start.disabled=false;}
-});
-})();
-</script></body></html>
+<p class="note">خاص أولاً نشر الخادم الآمن المسؤول على تبديل رمز OAuth. الربط كيبدأ فقط من بعد ما تكون الخدمة جاهزة؛ ما تشارك حتى code أو token.</p>
+</main><script src="/ar/etsy-bridge-connect.js" defer></script></body></html>
