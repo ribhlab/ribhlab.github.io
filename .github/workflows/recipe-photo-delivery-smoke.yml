@@ -43,23 +43,34 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const p=JSON.parse(fs.readFileSync('content/recipes/curated-photos.json','utf8')).photos;
-          const entries=Object.entries(p),problems=[];
+          const entries=Object.entries(p),problems=[],rateLimited=[];
           let nextIndex=0,done=0;
+          const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
           async function worker(){
             while(nextIndex<entries.length){
               const [slug,pic]=entries[nextIndex++];
               const url=pic?.url;
               if(!url){problems.push(slug+': missing URL');continue;}
               try {
-                const res=await fetch(url,{method:'GET',signal:AbortSignal.timeout(15000),headers:{'User-Agent':'RibhLab photo audit (https://ribhlab.github.io)'}});
-                const ct=res.headers.get('content-type')||'';
-                if(!res.ok||!ct.startsWith('image/'))problems.push(slug+': HTTP '+res.status+' '+ct);
-                await res.body?.cancel();
+                let checked=false;
+                for(let attempt=0;attempt<3;attempt++){
+                  const res=await fetch(url,{method:'GET',signal:AbortSignal.timeout(15000),headers:{'User-Agent':'RibhLab photo audit (https://ribhlab.github.io)'}});
+                  const ct=res.headers.get('content-type')||'';
+                  await res.body?.cancel();
+                  if(res.status===429){
+                    if(attempt===2){rateLimited.push(slug);checked=true;}
+                    else await sleep(1200*(attempt+1));
+                    continue;
+                  }
+                  if(!res.ok||!ct.startsWith('image/'))problems.push(slug+': HTTP '+res.status+' '+ct);
+                  checked=true;break;
+                }
+                if(!checked)problems.push(slug+': not checked');
               }catch(e){problems.push(slug+': '+e.message);}
-              done++;
+              done++;await sleep(250);
             }
           }
-          await Promise.all(Array.from({length:5},()=>worker()));
-          console.log('CHECKED',done,'curated recipe photos; broken',problems.length);
+          await Promise.all(Array.from({length:2},()=>worker()));
+          console.log('CHECKED',done,'curated recipe photos; confirmed broken',problems.length,'; rate-limited and unverified',rateLimited.length,rateLimited.join(', '));
           if(problems.length)throw Error('Failed live images: '+problems.join('; '));
           NODE
