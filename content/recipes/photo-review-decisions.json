@@ -122,6 +122,24 @@
       "status": "rejected",
       "reviewedAt": "2026-11-02",
       "source": "https://commons.wikimedia.org/wiki/File:Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg"
+    },
+    "west-african-peanut-stew-candidate-commons-82990123": {
+      "recipeSlug": "west-african-peanut-stew",
+      "id": "commons:82990123",
+      "title": "African Chicken Peanut Stew (37673757141).jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "Contains chicken; the published recipe is a sweet potato, spinach and peanut vegetable stew.",
+      "source": "https://commons.wikimedia.org/wiki/File:African_Chicken_Peanut_Stew_(37673757141).jpg"
+    },
+    "healthy-vegetable-egg-muffins-candidate-commons-23108808": {
+      "recipeSlug": "healthy-vegetable-egg-muffins",
+      "id": "commons:23108808",
+      "title": "Mmm... sausage egg and cheese muffin (7774589076).jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "Contains sausage, not spinach, pepper and tomato baked egg cups.",
+      "source": "https://commons.wikimedia.org/wiki/File:Mmm..._sausage_egg_and_cheese_muffin_(7774589076).jpg"
     }
   }
 }
