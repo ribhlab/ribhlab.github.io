@@ -1,27 +1,4 @@
 {
   "policy": "UNREVIEWED CANDIDATES ONLY; do not publish without matching actual dish, ingredients, view, license and source. Distinct commercially reusable images proposed by search.",
-  "photos": {
-    "west-african-peanut-stew": {
-      "id": "commons:160854486",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Baganda_peanut_stew_%28Ekinyeebwa%29_01.jpg/1280px-Baganda_peanut_stew_%28Ekinyeebwa%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ABaganda_peanut_stew_(Ekinyeebwa)_01.jpg",
-      "photographer": "Ssemmanda will",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Baganda peanut stew (Ekinyeebwa) 01.jpg",
-      "illustrativeOnly": true
-    },
-    "healthy-vegetable-egg-muffins": {
-      "id": "commons:81835524",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/-2019-09-03_Fried_egg_on_toasted_muffin%2C_Cromer.JPG/1280px--2019-09-03_Fried_egg_on_toasted_muffin%2C_Cromer.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3A-2019-09-03_Fried_egg_on_toasted_muffin%2C_Cromer.JPG",
-      "photographer": "Kolforn ( Kolforn ) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Crea",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "-2019-09-03 Fried egg on toasted muffin, Cromer.JPG",
-      "illustrativeOnly": true
-    }
-  }
+  "photos": {}
 }
