@@ -1,38 +1,4 @@
 {
   "policy": "UNREVIEWED CANDIDATES ONLY; do not publish without matching actual dish, ingredients, view, license and source. Distinct commercially reusable images proposed by search.",
-  "photos": {
-    "chinese-ginger-fish": {
-      "id": "commons:143005115",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg/1280px-Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3AWok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg",
-      "photographer": "Zheng Zhou",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Wok-Fried Prawns with Scallion-Ginger-Garlic Sauce.jpg",
-      "illustrativeOnly": true
-    },
-    "west-african-peanut-stew": {
-      "id": "commons:82990123",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/African_Chicken_Peanut_Stew_%2837673757141%29.jpg/1280px-African_Chicken_Peanut_Stew_%2837673757141%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3AAfrican_Chicken_Peanut_Stew_(37673757141).jpg",
-      "photographer": "A Healthier Michigan from Detroit, United States",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "provider": "Wikimedia Commons",
-      "description": "African Chicken Peanut Stew (37673757141).jpg",
-      "illustrativeOnly": true
-    },
-    "healthy-vegetable-egg-muffins": {
-      "id": "commons:23108808",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Mmm..._sausage_egg_and_cheese_muffin_%287774589076%29.jpg/1280px-Mmm..._sausage_egg_and_cheese_muffin_%287774589076%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3AMmm..._sausage_egg_and_cheese_muffin_(7774589076).jpg",
-      "photographer": "jeffreyw",
-      "license": "by",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "provider": "Wikimedia Commons",
-      "description": "Mmm... sausage egg and cheese muffin (7774589076).jpg",
-      "illustrativeOnly": true
-    }
-  }
+  "photos": {}
 }
