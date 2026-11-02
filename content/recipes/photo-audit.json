@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T11:58:11.056Z",
+  "checkedAt": "2026-11-02T17:17:05.565Z",
   "policy": "Counts refer to uniquely assigned photographs in source data, not a complete visual audit of every ingredient or a live browser image test.",
   "totalRecipes": 120,
   "photoBackedRecipes": 100,
@@ -121,7 +121,7 @@
       "slug": "healthy-turkey-vegetable-soup",
       "title": "Turkey and vegetable soup",
       "kind": "healthy",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "healthy-baked-apple-oats",
@@ -130,7 +130,7 @@
       "hasUnreviewedCandidate": false
     }
   ],
-  "unreviewedCandidates": 0,
+  "unreviewedCandidates": 1,
   "rejectedCandidateMatches": 19,
   "photoContainmentCSS": true,
   "youtubeRecipeLinks": "YouTube search links exist as fallback; specific videos are not individually verified.",
