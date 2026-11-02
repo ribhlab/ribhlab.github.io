@@ -1,0 +1,39 @@
+name: Etsy — Finalize CashFlow Pro v2.2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-cashflow-finalize.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: etsy-cashflow-v22-finalize
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Etsy HTTP client
+        run: python -m pip install 'requests>=2.32,<3'
+      - name: Privately download CashFlow files and publish on Etsy
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/etsy-publisher/scripts/finalize_cashflow_v22.py
+          python tools/etsy-publisher/scripts/finalize_cashflow_v22.py
