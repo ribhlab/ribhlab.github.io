@@ -1,0 +1,167 @@
+{
+  "checkedAt": "2026-11-02",
+  "policy": "Source-file assignment audit only; visual ingredient matching for all photos and individual YouTube video links have not been fully verified.",
+  "totalRecipes": 120,
+  "photoBackedRecipes": 95,
+  "commonsPhotos": 79,
+  "unsplashPhotos": 16,
+  "temporaryIllustrations": 25,
+  "uniquePhotoIds": 95,
+  "uniquePhotoUrls": 95,
+  "missing": [
+    {
+      "slug": "taktouka-peppers",
+      "title": "Moroccan roasted pepper taktouka",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "lentil-moroccan-stew",
+      "title": "Moroccan tomato-cumin lentils",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "moroccan-white-beans",
+      "title": "Moroccan white beans in tomato sauce",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "briouats-spinach-cheese",
+      "title": "Spinach and cheese briouats",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "moroccan-beef-peas",
+      "title": "Moroccan beef and pea tagine",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "mediterranean-fish-lemon",
+      "title": "Mediterranean lemon-herb fish",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "tuna-pasta-salad",
+      "title": "Tuna and olive pasta salad",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "potato-leek-gratin",
+      "title": "Potato and leek gratin",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "chinese-ginger-fish",
+      "title": "Chinese-style ginger garlic fish",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "tofu-vegetable-stirfry",
+      "title": "Tofu and broccoli stir-fry",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "ethiopian-lentil-stew",
+      "title": "Ethiopian-inspired spiced lentil stew",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "west-african-peanut-stew",
+      "title": "West African-inspired peanut stew",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "north-african-chickpea-soup",
+      "title": "North African chickpea vegetable soup",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "sweetcorn-quesadillas",
+      "title": "Corn and cheese quesadillas",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "overnight-oats-apple",
+      "title": "Apple cinnamon overnight oats",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "lemon-yogurt-cake",
+      "title": "Lemon yogurt cake",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "semolina-orange-cake",
+      "title": "Orange semolina cake",
+      "kind": "meal",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-quinoa-chickpea-bowl",
+      "title": "Quinoa chickpea vegetable bowl",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-chicken-brown-rice",
+      "title": "Chicken vegetable brown-rice bowl",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-roasted-vegetable-tray",
+      "title": "Roasted vegetables and chickpeas tray",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-vegetable-egg-muffins",
+      "title": "Baked vegetable egg muffins",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-bean-corn-salad",
+      "title": "Kidney bean and corn salad",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-tomato-bean-pasta",
+      "title": "Whole-grain pasta with beans and vegetables",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-sweetpotato-bean-chili",
+      "title": "Sweet potato and bean chili",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-turkey-vegetable-soup",
+      "title": "Turkey and vegetable soup",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    }
+  ],
+  "unreviewedCandidates": 0,
+  "rejectedCandidateMatches": 10,
+  "photoContainmentCSS": true,
+  "youtubeRecipeLinks": "YouTube search fallback exists for each recipe; individual video links not verified."
+}
