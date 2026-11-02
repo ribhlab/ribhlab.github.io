@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/etsy-cashflow-photo-cover.yml'
+      - 'tools/etsy-publisher/scripts/cashflow_cover_first.py'
   workflow_dispatch:
 
 permissions:
