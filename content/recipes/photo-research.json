@@ -1,0 +1,515 @@
+{
+  "generatedAt": "2026-11-02T11:40:08.539Z",
+  "policy": "RESEARCH ONLY: titles and CC metadata are not visual proof. An editor must confirm all visible ingredients, dish type, rights and non-duplication.",
+  "recipes": {
+    "taktouka-peppers": {
+      "title": "Moroccan roasted pepper taktouka",
+      "requiredIngredients": [
+        "pepper",
+        "tomato",
+        "garlic",
+        "oliveoil",
+        "paprika",
+        "cumin"
+      ],
+      "matches": []
+    },
+    "briouats-spinach-cheese": {
+      "title": "Spinach and cheese briouats",
+      "requiredIngredients": [
+        "flour",
+        "spinach",
+        "feta",
+        "onion",
+        "oliveoil",
+        "eggs"
+      ],
+      "matches": []
+    },
+    "moroccan-beef-peas": {
+      "title": "Moroccan beef and pea tagine",
+      "requiredIngredients": [
+        "beef",
+        "peas",
+        "onion",
+        "tomato",
+        "oliveoil",
+        "ginger",
+        "water"
+      ],
+      "matches": []
+    },
+    "mediterranean-fish-lemon": {
+      "title": "Mediterranean lemon-herb fish",
+      "requiredIngredients": [
+        "fish",
+        "lemon",
+        "oliveoil",
+        "garlic",
+        "parsley",
+        "potato"
+      ],
+      "matches": []
+    },
+    "tuna-pasta-salad": {
+      "title": "Tuna and olive pasta salad",
+      "requiredIngredients": [
+        "pasta",
+        "tuna",
+        "tomato",
+        "olives",
+        "cucumber",
+        "lemon",
+        "oliveoil"
+      ],
+      "matches": []
+    },
+    "potato-leek-gratin": {
+      "title": "Potato and leek gratin",
+      "requiredIngredients": [
+        "potato",
+        "leek",
+        "cream",
+        "milk",
+        "cheese",
+        "garlic"
+      ],
+      "matches": []
+    },
+    "miso-mushroom-noodles": {
+      "title": "Asian mushroom noodle broth",
+      "requiredIngredients": [
+        "mushroom",
+        "noodles",
+        "stock",
+        "ginger",
+        "soysauce",
+        "spinach"
+      ],
+      "matches": []
+    },
+    "chinese-ginger-fish": {
+      "title": "Chinese-style ginger garlic fish",
+      "requiredIngredients": [
+        "fish",
+        "ginger",
+        "garlic",
+        "soysauce",
+        "leek",
+        "sesame"
+      ],
+      "matches": []
+    },
+    "tofu-vegetable-stirfry": {
+      "title": "Tofu and broccoli stir-fry",
+      "requiredIngredients": [
+        "tofu",
+        "broccoli",
+        "carrot",
+        "pepper",
+        "soysauce",
+        "ginger",
+        "oil"
+      ],
+      "matches": []
+    },
+    "ethiopian-lentil-stew": {
+      "title": "Ethiopian-inspired spiced lentil stew",
+      "requiredIngredients": [
+        "redlentils",
+        "onion",
+        "tomato",
+        "garlic",
+        "ginger",
+        "paprika",
+        "stock",
+        "oliveoil"
+      ],
+      "matches": []
+    },
+    "west-african-peanut-stew": {
+      "title": "West African-inspired peanut stew",
+      "requiredIngredients": [
+        "sweetpotato",
+        "peanutbutter",
+        "tomato",
+        "onion",
+        "spinach",
+        "stock",
+        "ginger"
+      ],
+      "matches": []
+    },
+    "north-african-chickpea-soup": {
+      "title": "North African chickpea vegetable soup",
+      "requiredIngredients": [
+        "chickpeas",
+        "tomato",
+        "carrot",
+        "zucchini",
+        "onion",
+        "cumin",
+        "stock"
+      ],
+      "matches": [
+        {
+          "id": "commons:183587463",
+          "title": "Liat Portal for Foodie Disorder - Harira soup prepared at home.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Liat_Portal_for_Foodie_Disorder_-_Harira_soup_prepared_at_home.jpg/1280px-Liat_Portal_for_Foodie_Disorder_-_Harira_soup_prepared_at_home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3ALiat_Portal_for_Foodie_Disorder_-_Harira_soup_prepared_at_home.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "HaJunkiyada",
+          "description": "High-quality photograph by Liat Portal showing a bowl of homemade harira soup with visible chickpeas, lentils, vegetables, herbs, and noodles in broth. This image documents everyday home cooking, cultural food ",
+          "mime": "image/jpeg",
+          "width": 3024,
+          "height": 4032,
+          "query": "moroccan chickpea vegetable soup"
+        }
+      ]
+    },
+    "sweetcorn-quesadillas": {
+      "title": "Corn and cheese quesadillas",
+      "requiredIngredients": [
+        "tortilla",
+        "corn",
+        "cheese",
+        "pepper",
+        "tomato"
+      ],
+      "matches": [
+        {
+          "id": "commons:27909317",
+          "title": "Tortillasconquesillo.JPG",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Tortillasconquesillo.JPG/1280px-Tortillasconquesillo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3ATortillasconquesillo.JPG",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Thelmadatter",
+          "description": "Dish called tortillas con quesillo, similar to a gordita, a thick fried corn tortillas split and stuffed with Oaxaca cheese or quesillo and smothered with a red bean sauce and a semi hard white cheese",
+          "mime": "image/jpeg",
+          "width": 3872,
+          "height": 2592,
+          "query": "corn cheese quesadilla"
+        },
+        {
+          "id": "commons:82134842",
+          "title": "Mulitas al pastor.JPG",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Mulitas_al_pastor.JPG/1280px-Mulitas_al_pastor.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3AMulitas_al_pastor.JPG",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Jeffrey Beall",
+          "description": "Two mulitas al pastor, from a food truck in southern Colorado. Mulitas are a type of quesadilla (or taco) made with two corn tortillas and then heated on a grill (this is southern Colorado style) to melt the ch",
+          "mime": "image/jpeg",
+          "width": 2912,
+          "height": 2857,
+          "query": "corn cheese quesadilla"
+        },
+        {
+          "id": "commons:83542585",
+          "title": "Quesadillas of Coyoacán.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Quesadillas_of_Coyoac%C3%A1n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "source": "https://commons.wikimedia.org/wiki/File%3AQuesadillas_of_Coyoac%C3%A1n.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "SincoHR",
+          "description": "Typical Mexican food called Quesadillas which are made with a corn tortilla filled with many stews and cheese.",
+          "mime": "image/jpeg",
+          "width": 1280,
+          "height": 960,
+          "query": "corn cheese quesadilla"
+        },
+        {
+          "id": "commons:83545002",
+          "title": "Typical Mexican dish.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Typical_Mexican_dish.jpg/1280px-Typical_Mexican_dish.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3ATypical_Mexican_dish.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Marianahdzm",
+          "description": "The “quesadillas” are typical Mexican dish that consists in a corn tortilla folded in half. It can be filled with cheese or other ingredients such as chicken, meat, potato or huitlacoche. It is eaten hot, eithe",
+          "mime": "image/jpeg",
+          "width": 3024,
+          "height": 4032,
+          "query": "corn cheese quesadilla"
+        },
+        {
+          "id": "commons:103534669",
+          "title": "Southwestern-style potato cakes (3344097487).jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Southwestern-style_potato_cakes_%283344097487%29.jpg/1280px-Southwestern-style_potato_cakes_%283344097487%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3ASouthwestern-style_potato_cakes_(3344097487).jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Karen and Brad Emerson",
+          "description": "Southwestern-style potato cakes filled with cheese, corn, and chiles served with salad, quesadillas, and roasted tomato chile soup",
+          "mime": "image/jpeg",
+          "width": 2272,
+          "height": 1704,
+          "query": "corn cheese quesadilla"
+        },
+        {
+          "id": "commons:103594824",
+          "title": "Veg Quesadilla a Mexican dish - Gujarat - SHAILI 009.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Veg_Quesadilla_a_Mexican_dish_-_Gujarat_-_SHAILI_009.jpg/1280px-Veg_Quesadilla_a_Mexican_dish_-_Gujarat_-_SHAILI_009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3AVeg_Quesadilla_a_Mexican_dish_-_Gujarat_-_SHAILI_009.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Shaili Sharma",
+          "description": "A quesadilla is a Mexican cuisine dish, consisting of a tortilla that is filled primarily with cheese, and sometimes meats, spices, and other fillings, and then cooked on a griddle or stove. Traditionally, a co",
+          "mime": "image/jpeg",
+          "width": 4096,
+          "height": 3072,
+          "query": "corn cheese quesadilla"
+        },
+        {
+          "id": "commons:144325797",
+          "title": "Cheese quesadilla.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Cheese_quesadilla.jpg/1280px-Cheese_quesadilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3ACheese_quesadilla.jpg",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Corn cheese",
+          "description": "A cheese quesadilla.",
+          "mime": "image/jpeg",
+          "width": 3264,
+          "height": 2448,
+          "query": "corn cheese quesadilla"
+        },
+        {
+          "id": "commons:164458349",
+          "title": "Tequila Jalapeno Quesadillas with Ocean Trout and Corn - Bluecorn Mexican Restaurant.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Tequila_Jalapeno_Quesadillas_with_Ocean_Trout_and_Corn_-_Bluecorn_Mexican_Restaurant.jpg/1280px-Tequila_Jalapeno_Quesadillas_with_Ocean_Trout_and_Corn_-_Bluecorn_Mexican_Restaurant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3ATequila_Jalapeno_Quesadillas_with_Ocean_Trout_and_Corn_-_Bluecorn_Mexican_Restaurant.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "avlxyz",
+          "description": "Tequila Jalapeno Quesadillas with Ocean Trout and Corn - Bluecorn Mexican Restaurant AUD13.50 Fresh flavours and great value! The slabs of fresh corn kernels were tender and juicy, so was the fish. --- After do",
+          "mime": "image/jpeg",
+          "width": 2048,
+          "height": 1536,
+          "query": "corn cheese quesadilla"
+        }
+      ]
+    },
+    "overnight-oats-apple": {
+      "title": "Apple cinnamon overnight oats",
+      "requiredIngredients": [
+        "oats",
+        "milk",
+        "apple",
+        "yogurt",
+        "cinnamon",
+        "walnuts"
+      ],
+      "matches": []
+    },
+    "lemon-yogurt-cake": {
+      "title": "Lemon yogurt cake",
+      "requiredIngredients": [
+        "flour",
+        "yogurt",
+        "eggs",
+        "sugar",
+        "oliveoil",
+        "lemon",
+        "bakingpowder"
+      ],
+      "matches": [
+        {
+          "id": "commons:29756271",
+          "title": "In suite breakfast experience (3119861609).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/In_suite_breakfast_experience_%283119861609%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "source": "https://commons.wikimedia.org/wiki/File%3AIn_suite_breakfast_experience_(3119861609).jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Matt @ PEK from Taipei, Taiwan",
+          "description": "St. Regis Bali Resort in Bali , Indonesia selections from breakfast menu: Freshly Squeezed vitamin Drinks -apple and celery -tomato and sweet basil -carrot -star fruit with lime syrup -mango -orange -pineapple ",
+          "mime": "image/jpeg",
+          "width": 800,
+          "height": 600,
+          "query": "lemon yogurt cake"
+        },
+        {
+          "id": "commons:59118316",
+          "title": "Kendall-Jackson May Farm-To-Table Dinner - Stierch 21.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Kendall-Jackson_May_Farm-To-Table_Dinner_-_Stierch_21.jpg/1280px-Kendall-Jackson_May_Farm-To-Table_Dinner_-_Stierch_21.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3AKendall-Jackson_May_Farm-To-Table_Dinner_-_Stierch_21.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "author": "Sarah Stierch",
+          "description": "Honey Cake, Fennel Pollen Crème Brûlée, Yogurt Mousse, Honey Gel, Candied Granola, Lemon Crémeux at the Farm-to-Table Dinner at Kendall-Jackson Wine Estate Garden",
+          "mime": "image/jpeg",
+          "width": 5472,
+          "height": 3648,
+          "query": "lemon yogurt cake"
+        }
+      ]
+    },
+    "semolina-orange-cake": {
+      "title": "Orange semolina cake",
+      "requiredIngredients": [
+        "semolina",
+        "yogurt",
+        "orange",
+        "sugar",
+        "butter",
+        "bakingpowder"
+      ],
+      "matches": [
+        {
+          "id": "commons:92213303",
+          "title": "Revane.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Revane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "source": "https://commons.wikimedia.org/wiki/File%3ARevane.jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Biser Todorov",
+          "description": "Revani (also namoura, basbousa, hareseh and other names) is a traditional Middle Eastern sweet cake that originated in Egypt, though also popular in other countries. It is made from a semolina batter in a pan, ",
+          "mime": "image/jpeg",
+          "width": 647,
+          "height": 863,
+          "query": "orange semolina cake"
+        }
+      ]
+    },
+    "healthy-quinoa-chickpea-bowl": {
+      "title": "Quinoa chickpea vegetable bowl",
+      "requiredIngredients": [
+        "quinoa",
+        "chickpeas",
+        "cucumber",
+        "tomato",
+        "parsley",
+        "oliveoil",
+        "lemon"
+      ],
+      "matches": []
+    },
+    "healthy-chicken-brown-rice": {
+      "title": "Chicken vegetable brown-rice bowl",
+      "requiredIngredients": [
+        "chickenbreast",
+        "brownrice",
+        "carrot",
+        "broccoli",
+        "oliveoil",
+        "lemon"
+      ],
+      "matches": []
+    },
+    "healthy-roasted-vegetable-tray": {
+      "title": "Roasted vegetables and chickpeas tray",
+      "requiredIngredients": [
+        "sweetpotato",
+        "cauliflower",
+        "carrot",
+        "chickpeas",
+        "oliveoil",
+        "paprika"
+      ],
+      "matches": []
+    },
+    "healthy-vegetable-egg-muffins": {
+      "title": "Baked vegetable egg muffins",
+      "requiredIngredients": [
+        "eggs",
+        "spinach",
+        "pepper",
+        "tomato",
+        "milk",
+        "oliveoil"
+      ],
+      "matches": []
+    },
+    "healthy-tomato-bean-pasta": {
+      "title": "Whole-grain pasta with beans and vegetables",
+      "requiredIngredients": [
+        "pasta",
+        "beans",
+        "tomato",
+        "spinach",
+        "garlic",
+        "oliveoil"
+      ],
+      "matches": []
+    },
+    "healthy-sweetpotato-bean-chili": {
+      "title": "Sweet potato and bean chili",
+      "requiredIngredients": [
+        "sweetpotato",
+        "kidneybeans",
+        "tomato",
+        "onion",
+        "pepper",
+        "cumin",
+        "stock"
+      ],
+      "matches": []
+    },
+    "healthy-grilled-fish-salad": {
+      "title": "Grilled fish and lemon salad",
+      "requiredIngredients": [
+        "fish",
+        "lettuce",
+        "cucumber",
+        "tomato",
+        "lemon",
+        "oliveoil"
+      ],
+      "matches": []
+    },
+    "healthy-turkey-vegetable-soup": {
+      "title": "Turkey and vegetable soup",
+      "requiredIngredients": [
+        "turkey",
+        "carrot",
+        "celery",
+        "zucchini",
+        "onion",
+        "stock",
+        "parsley"
+      ],
+      "matches": []
+    },
+    "healthy-baked-apple-oats": {
+      "title": "Baked apple oat cups",
+      "requiredIngredients": [
+        "apple",
+        "oats",
+        "cinnamon",
+        "yogurt",
+        "walnuts"
+      ],
+      "matches": [
+        {
+          "id": "commons:29756271",
+          "title": "In suite breakfast experience (3119861609).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/In_suite_breakfast_experience_%283119861609%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "source": "https://commons.wikimedia.org/wiki/File%3AIn_suite_breakfast_experience_(3119861609).jpg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Matt @ PEK from Taipei, Taiwan",
+          "description": "St. Regis Bali Resort in Bali , Indonesia selections from breakfast menu: Freshly Squeezed vitamin Drinks -apple and celery -tomato and sweet basil -carrot -star fruit with lime syrup -mango -orange -pineapple ",
+          "mime": "image/jpeg",
+          "width": 800,
+          "height": 600,
+          "query": "baked apples oats cinnamon"
+        },
+        {
+          "id": "commons:88494704",
+          "title": "Apple cake with vanilla ice cream 2.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Apple_cake_with_vanilla_ice_cream_2.jpg/1280px-Apple_cake_with_vanilla_ice_cream_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3AApple_cake_with_vanilla_ice_cream_2.jpg",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "W.carter",
+          "description": "Simple and easy apple pie served with vanilla ice cream, on a gingham tablecloth in Lysekil, Sweden. Image focus stacked from five photos using Photoshop. Recipe : Ingredients : 150 g butter, 1 dl sugar, 3 dl a",
+          "mime": "image/jpeg",
+          "width": 4333,
+          "height": 2888,
+          "query": "baked apples oats cinnamon"
+        },
+        {
+          "id": "commons:88494705",
+          "title": "Apple cake with vanilla ice cream 1.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Apple_cake_with_vanilla_ice_cream_1.jpg/1280px-Apple_cake_with_vanilla_ice_cream_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source": "https://commons.wikimedia.org/wiki/File%3AApple_cake_with_vanilla_ice_cream_1.jpg",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "W.carter",
+          "description": "Simple and easy apple cake served with vanilla ice cream, on a checkered tablecloth in Lysekil, Sweden. Image focus stacked from five photos using Photoshop. Recipe : Ingredients : 150 g butter, 1 dl sugar, 3 d",
+          "mime": "image/jpeg",
+          "width": 4762,
+          "height": 2679,
+          "query": "baked apples oats cinnamon"
+        }
+      ]
+    }
+  }
+}
