@@ -140,6 +140,24 @@
       "reviewedAt": "2026-11-02",
       "reason": "Contains sausage, not spinach, pepper and tomato baked egg cups.",
       "source": "https://commons.wikimedia.org/wiki/File:Mmm..._sausage_egg_and_cheese_muffin_(7774589076).jpg"
+    },
+    "west-african-peanut-stew-candidate-commons-160854486": {
+      "id": "commons:160854486",
+      "title": "Baganda peanut stew (Ekinyeebwa) 01.jpg",
+      "recipeSlug": "west-african-peanut-stew",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "Regional peanut stew title does not confirm sweet potato and spinach in the user's vegetarian recipe.",
+      "source": "https://commons.wikimedia.org/wiki/File:Baganda_peanut_stew_(Ekinyeebwa)_01.jpg"
+    },
+    "healthy-vegetable-egg-muffins-candidate-commons-81835524": {
+      "id": "commons:81835524",
+      "title": "-2019-09-03 Fried egg on toasted muffin, Cromer.JPG",
+      "recipeSlug": "healthy-vegetable-egg-muffins",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "Depicts fried egg on toast, not baked vegetable egg cups.",
+      "source": "https://commons.wikimedia.org/wiki/File:-2019-09-03_Fried_egg_on_toasted_muffin%2C_Cromer.JPG"
     }
   }
 }
