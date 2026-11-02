@@ -29,6 +29,7 @@ for(const [slug,p] of assigned){
  const url=p.url?.split('?')[0];
  if(!id||!url?.startsWith('https://')||!p.source?.startsWith('https://'))throw Error('Incomplete photo source '+slug);
  if(ids.has(id)||urls.has(url))throw Error('Reused photo '+slug);
+ if(decisions[slug]?.id===id)throw Error('Published photo was explicitly rejected as mismatched: '+slug);
  ids.add(id);urls.add(url);
  if(p.provider==='Wikimedia Commons'&&(!['cc0','by','by-sa'].includes(p.license)||!p.licenseUrl?.startsWith('https://creativecommons.org/')))throw Error('Commons photo missing compatible license '+slug);
 }
