@@ -60,7 +60,6 @@ const selected={
  'healthy-vegetable-frittata':['File:Фритата со спанаќ (02).jpg','Deodora333'],
  'spinach-ricotta-lasagna':['File:Food 菠菜&瑞可達起司千層麵, Spinach & Ricotta Lasagna, LONGTABLE, 台北 (15708119113).jpg','bryan...'],
  'baked-apple-walnuts':['File:Baked apples.jpg','Berser25'],
- 'healthy-baked-apple-oats':['File:Apple Goodie crisp.JPG','JamieS93'],
  'spinach-fatayer':['File:Fatayer aux épinards.jpg','Thomon'],
  'mexican-bean-tacos':['File:Black bean corn tacos at Down The Rabbit Hole 2018.jpg','FakirNL'],
  'healthy-lentil-vegetable-patties':['File:Vegan patties with potatoes and salad.jpg','rusvaplauke'],
@@ -74,8 +73,6 @@ const selected={
  'chicken-mushroom-cream':['File:Creamy mushroom chicken served with herb rice.jpg','Arkapriya Das'],
  'kofta-kebab':['File:Beef kofta kebab at the Folklife Festival.jpg','Ser Amantio di Nicolao'],
  'thai-basil-beef':['File:Nuea phat bai yira.jpg','Takeaway'],
- 'miso-mushroom-noodles':['File:Mushroom with chinese noodles in home.jpg','Geoffreyrabbit'],
- 'healthy-grilled-fish-salad':['File:Levrek Izgara Beykoz Koru Sosyal Tesisleri.JPG','Benreis'],
  'lentil-moroccan-stew':['File:Moroccan Lentil Soup.jpg','Emna Mizouni'],
  'moroccan-white-beans':['File:Baked beans in tomato sauce.jpg','Mk2010'],
  'healthy-bean-corn-salad':['File:Bean and corn salad, with peppers etc. - San Francisco.jpg','Daderot']
