@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-11-02T11:48:25.029Z",
+  "checkedAt": "2026-11-02T11:52:32.865Z",
   "policy": "Counts refer to uniquely assigned photographs in source data, not a complete visual audit of every ingredient or a live browser image test.",
   "totalRecipes": 120,
-  "photoBackedRecipes": 95,
-  "commonsPhotos": 82,
+  "photoBackedRecipes": 100,
+  "commonsPhotos": 87,
   "unsplashPhotos": 13,
-  "temporaryIllustrations": 25,
-  "uniquePhotoIds": 95,
-  "uniquePhotoUrls": 95,
+  "temporaryIllustrations": 20,
+  "uniquePhotoIds": 100,
+  "uniquePhotoUrls": 100,
   "missing": [
     {
       "slug": "taktouka-peppers",
@@ -58,12 +58,6 @@
       "hasUnreviewedCandidate": false
     },
     {
-      "slug": "tofu-vegetable-stirfry",
-      "title": "Tofu and broccoli stir-fry",
-      "kind": "meal",
-      "hasUnreviewedCandidate": false
-    },
-    {
       "slug": "ethiopian-lentil-stew",
       "title": "Ethiopian-inspired spiced lentil stew",
       "kind": "meal",
@@ -73,23 +67,11 @@
       "slug": "west-african-peanut-stew",
       "title": "West African-inspired peanut stew",
       "kind": "meal",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "north-african-chickpea-soup",
       "title": "North African chickpea vegetable soup",
-      "kind": "meal",
-      "hasUnreviewedCandidate": false
-    },
-    {
-      "slug": "sweetcorn-quesadillas",
-      "title": "Corn and cheese quesadillas",
-      "kind": "meal",
-      "hasUnreviewedCandidate": true
-    },
-    {
-      "slug": "overnight-oats-apple",
-      "title": "Apple cinnamon overnight oats",
       "kind": "meal",
       "hasUnreviewedCandidate": false
     },
@@ -103,12 +85,6 @@
       "slug": "semolina-orange-cake",
       "title": "Orange semolina cake",
       "kind": "meal",
-      "hasUnreviewedCandidate": false
-    },
-    {
-      "slug": "healthy-quinoa-chickpea-bowl",
-      "title": "Quinoa chickpea vegetable bowl",
-      "kind": "healthy",
       "hasUnreviewedCandidate": false
     },
     {
@@ -127,7 +103,7 @@
       "slug": "healthy-vegetable-egg-muffins",
       "title": "Baked vegetable egg muffins",
       "kind": "healthy",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "healthy-tomato-bean-pasta",
@@ -139,13 +115,7 @@
       "slug": "healthy-sweetpotato-bean-chili",
       "title": "Sweet potato and bean chili",
       "kind": "healthy",
-      "hasUnreviewedCandidate": true
-    },
-    {
-      "slug": "healthy-grilled-fish-salad",
-      "title": "Grilled fish and lemon salad",
-      "kind": "healthy",
-      "hasUnreviewedCandidate": true
+      "hasUnreviewedCandidate": false
     },
     {
       "slug": "healthy-turkey-vegetable-soup",
@@ -160,7 +130,7 @@
       "hasUnreviewedCandidate": false
     }
   ],
-  "unreviewedCandidates": 3,
+  "unreviewedCandidates": 2,
   "rejectedCandidateMatches": 17,
   "photoContainmentCSS": true,
   "youtubeRecipeLinks": "YouTube search links exist as fallback; specific videos are not individually verified.",
