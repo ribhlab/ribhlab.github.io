@@ -86,7 +86,25 @@ def main():
         sess=requests.Session()
         sess.headers.update({"x-api-key":keys["ETSY_KEYSTRING"]+":"+keys["ETSY_SHARED_SECRET"],"Authorization":"Bearer "+access})
         path=f"/application/shops/{shop}/listings/{TARGET}"
-        listing=api(sess,path)
+        # Owner draft listings are discoverable through the shop collection.
+        # Avoid single-listing GET paths that can return 404 for drafts.
+        listing=None
+        for state in ("draft","active"):
+            offset=0
+            while offset<500:
+                query=f"/application/shops/{shop}/listings?state={state}&limit=100&offset={offset}"
+                rows=api(sess,query).get("results",[])
+                for row in rows:
+                    if int(row.get("listing_id",0))==TARGET:
+                        listing=row
+                        break
+                if listing or len(rows)<100:
+                    break
+                offset+=len(rows)
+            if listing:
+                break
+        if not listing:
+            raise ConnectionErrorSafe("CashFlow listing was not returned by Etsy's shop listing collection.")
         if int(listing.get("listing_id",-1))!=TARGET or int(listing.get("shop_id",-1))!=int(shop) or listing.get("title")!=TITLE:
             raise ConnectionErrorSafe("Listing identity/title/shop verification failed.")
         if listing.get("state")=="active":
@@ -131,7 +149,8 @@ def main():
         print("VERIFIED_BUYER_FILES:",len(files))
         activated=api(sess,path,"PATCH",data={"state":"active"})
         if activated.get("state")!="active":
-            activated=api(sess,path)
+            active_rows=api(sess,f"/application/shops/{shop}/listings?state=active&limit=100&offset=0").get("results",[])
+            activated=next((x for x in active_rows if int(x.get("listing_id",0))==TARGET),activated)
         if activated.get("state")!="active":
             raise ConnectionErrorSafe("Etsy did not confirm Active state.")
         print("CONFIRMED_ACTIVE_LISTING:",TARGET)
