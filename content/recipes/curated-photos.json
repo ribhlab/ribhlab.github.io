@@ -997,6 +997,18 @@
       "description": "Grilled corn-and-cheese quesadilla on a plate; photo also includes beans, an illustrative recipe variation.",
       "illustrativeOnly": true,
       "editorialReview": "2026-11-02: source photo description explicitly verifies a grilled quesadilla filled with corn and cheese; additional beans disclosed, not presented as the exact recipe."
+    },
+    "tofu-vegetable-stirfry": {
+      "id": "pexels:6120233",
+      "url": "https://images.pexels.com/photos/6120233/pexels-photo-6120233.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "source": "https://www.pexels.com/photo/cooked-food-on-white-ceramic-bowl-6120233/",
+      "photographer": "Alesia Kozik",
+      "license": "pexels",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "provider": "Pexels",
+      "description": "Prepared bowl of tofu and broccoli with other vegetables; photo illustrates the cooked tofu-and-broccoli dish.",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-11-02: Pexels source identifies tofu and broccoli meal; extra recipe vegetables and exact stir-fry technique cannot be inferred from a photo."
     }
   }
 }
