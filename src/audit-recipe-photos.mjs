@@ -13,6 +13,7 @@ const curated=read('curated-photos.json').photos;
 const library=read('photo-library.json');
 const candidates=read('photo-candidates.json').photos;
 const decisions=read('photo-review-decisions.json').rejected;
+const rejectedPairs=new Set(Object.entries(decisions).map(([key,p])=>(p.recipeSlug||key)+'|'+p.id));
 const css=fs.readFileSync(path.join(root,'public/assets/recipe-pages.css'),'utf8');
 const renderer=fs.readFileSync(path.join(root,'src/recipe-pages.mjs'),'utf8');
 const slugs=new Set(recipes.map(r=>r.slug));
@@ -29,13 +30,13 @@ for(const [slug,p] of assigned){
  const url=p.url?.split('?')[0];
  if(!id||!url?.startsWith('https://')||!p.source?.startsWith('https://'))throw Error('Incomplete photo source '+slug);
  if(ids.has(id)||urls.has(url))throw Error('Reused photo '+slug);
- if(decisions[slug]?.id===id)throw Error('Published photo was explicitly rejected as mismatched: '+slug);
+ if(rejectedPairs.has(slug+'|'+id))throw Error('Published photo was explicitly rejected as mismatched: '+slug);
  ids.add(id);urls.add(url);
  if(p.provider==='Wikimedia Commons'&&(!['cc0','by','by-sa'].includes(p.license)||!p.licenseUrl?.startsWith('https://creativecommons.org/')))throw Error('Commons photo missing compatible license '+slug);
 }
 for(const [slug,p] of Object.entries(candidates)){
  if(!slugs.has(slug)||seenSlugs.has(slug)||!p?.id)throw Error('Invalid candidate '+slug);
- if(decisions[slug]?.id===p.id)throw Error('Rejected candidate reappeared '+slug);
+ if(rejectedPairs.has(slug+'|'+p.id))throw Error('Rejected candidate reappeared '+slug);
  if(ids.has(p.id)||urls.has(p.url?.split('?')[0]))throw Error('Candidate reuses published image '+slug);
 }
 const missing=recipes.filter(r=>!seenSlugs.has(r.slug)).map(r=>({slug:r.slug,title:r.title.en,kind:r.kind,hasUnreviewedCandidate:!!candidates[r.slug]}));
