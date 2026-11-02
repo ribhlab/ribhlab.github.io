@@ -32,6 +32,14 @@ function words(s){
   .map(x=>x.endsWith('s')&&x.length>4?x.slice(0,-1):x);
 }
 function matchesRecipe(r,fileTitle){
+ // A dish title sharing words is not enough when its actual protein or prep conflicts.
+ const conflict={
+  'chinese-ginger-fish': /\b(prawn|prawns|shrimp|shrimps|chicken|beef|scallop|scallops)\b/i,
+  'miso-mushroom-noodles': /\b(prawn|prawns|shrimp|shrimps|chicken|beef)\b/i,
+  'healthy-vegetable-egg-muffins': /\b(ham|sausage|bacon|pork|beef|chicken)\b/i,
+  'west-african-peanut-stew': /\b(chicken|beef|pork|lamb|goat|meat)\b/i
+ };
+ if(conflict[r.slug]?.test(fileTitle))return false;
  const recipeTerms=[...new Set(words(r.title.en))],fileTerms=new Set(words(fileTitle));
  const matched=recipeTerms.filter(x=>fileTerms.has(x));
  // Require multiple matching recipe-specific words. Generic cuisine, method or
