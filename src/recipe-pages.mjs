@@ -121,7 +121,7 @@ function load(root){
  photoLibrary.curatedPhotos=curated||{};
  const seenExternalIds=new Set(),seenExternalUrls=new Set();
  for(const [slug,p] of Object.entries(photoLibrary.curatedPhotos)){
-  if(!p.id||!p.url?.startsWith('https://')||!p.source?.startsWith('https://')||!p.photographer||!['cc0','by','by-sa'].includes(p.license)||!p.licenseUrl?.startsWith('https://'))throw Error('Recipe photo lacks commercial-use license: '+slug);
+  if(!p.id||!p.url?.startsWith('https://')||!p.source?.startsWith('https://')||!p.photographer||!['cc0','by','by-sa','pexels'].includes(p.license)||!p.licenseUrl?.startsWith('https://')|| (p.license==='pexels'&&(p.provider!=='Pexels'||p.licenseUrl!=='https://www.pexels.com/license/'||!p.source.startsWith('https://www.pexels.com/photo/'))))throw Error('Recipe photo lacks commercial-use license: '+slug);
   if(seenExternalIds.has(p.id)||seenExternalUrls.has(p.url.split('?')[0]))throw Error('Recipe image reused: '+slug);
   seenExternalIds.add(p.id);seenExternalUrls.add(p.url.split('?')[0]);
  }
