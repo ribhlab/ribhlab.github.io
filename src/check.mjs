@@ -739,7 +739,10 @@ const editorialDishPhotoChecks={
  'baghrir-thousand-holes':/البغرير/u,
  'msemen-home':/المسمن/u,
  'rfissa-chicken-lentils':/Rfissa/i,
- 'harcha-semolina':/Harcha/i
+ 'harcha-semolina':/Harcha/i,
+ 'gnocchi-tomato':/Gnocchi al Pomodoro/i,
+ 'baked-falafel':/Baked Falafel/i,
+ 'french-toast-cinnamon':/French toast with cinnamon/i
 };
 for(const [slug,regex] of Object.entries(editorialDishPhotoChecks)){
  const p=curatedRecipePhotos[slug];
