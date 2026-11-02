@@ -985,6 +985,18 @@
       "description": "French toast with cinnamon and coconut flakes.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "sweetcorn-quesadillas": {
+      "id": "pexels:5848697",
+      "url": "https://images.pexels.com/photos/5848697/pexels-photo-5848697.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "source": "https://www.pexels.com/photo/close-up-photo-of-delicious-quesadilla-on-a-plate-5848697/",
+      "photographer": "Polina Tankilevitch",
+      "license": "pexels",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "provider": "Pexels",
+      "description": "Grilled corn-and-cheese quesadilla on a plate; photo also includes beans, an illustrative recipe variation.",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-11-02: source photo description explicitly verifies a grilled quesadilla filled with corn and cheese; additional beans disclosed, not presented as the exact recipe."
     }
   }
 }
