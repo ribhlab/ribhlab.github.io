@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T11:06:03.878Z",
+  "checkedAt": "2026-11-02T11:11:05.784Z",
   "policy": "Counts refer to uniquely assigned photographs in source data, not a complete visual audit of every ingredient or a live browser image test.",
   "totalRecipes": 120,
   "photoBackedRecipes": 95,
@@ -49,13 +49,13 @@
       "slug": "miso-mushroom-noodles",
       "title": "Asian mushroom noodle broth",
       "kind": "meal",
-      "hasUnreviewedCandidate": true
+      "hasUnreviewedCandidate": false
     },
     {
       "slug": "chinese-ginger-fish",
       "title": "Chinese-style ginger garlic fish",
       "kind": "meal",
-      "hasUnreviewedCandidate": true
+      "hasUnreviewedCandidate": false
     },
     {
       "slug": "tofu-vegetable-stirfry",
@@ -85,7 +85,7 @@
       "slug": "sweetcorn-quesadillas",
       "title": "Corn and cheese quesadillas",
       "kind": "meal",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "overnight-oats-apple",
@@ -145,13 +145,13 @@
       "slug": "healthy-grilled-fish-salad",
       "title": "Grilled fish and lemon salad",
       "kind": "healthy",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "healthy-turkey-vegetable-soup",
       "title": "Turkey and vegetable soup",
       "kind": "healthy",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "healthy-baked-apple-oats",
@@ -160,8 +160,8 @@
       "hasUnreviewedCandidate": false
     }
   ],
-  "unreviewedCandidates": 2,
-  "rejectedCandidateMatches": 13,
+  "unreviewedCandidates": 3,
+  "rejectedCandidateMatches": 15,
   "photoContainmentCSS": true,
   "youtubeRecipeLinks": "YouTube search links exist as fallback; specific videos are not individually verified.",
   "imageEndpointChecks": "See Check published recipe photo delivery workflow for HTTP checks."
