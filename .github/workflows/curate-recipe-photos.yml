@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "src/curate-recipe-photos.mjs"
+      - "src/audit-recipe-photos.mjs"
+      - "content/recipes/photo-review-decisions.json"
       - ".github/workflows/curate-recipe-photos.yml"
   # Revisit missing cards each morning; keep suggestions in a review-only queue.
   schedule:
@@ -26,11 +28,13 @@ jobs:
           node-version: "22"
       - name: Find uniquely identifiable commercially reusable food photos
         run: node src/curate-recipe-photos.mjs
-      - name: Save unreviewed image suggestions (never auto-publish)
+      - name: Audit coverage, photo uniqueness, display and video links
+        run: node src/audit-recipe-photos.mjs
+      - name: Save unreviewed image suggestions and audit report (never auto-publish)
         run: |
           git config user.name "RibhLab Photo Audit"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/recipes/photo-candidates.json
+          git add content/recipes/photo-candidates.json content/recipes/photo-audit.json
           if ! git diff --cached --quiet; then
             git commit -m "content(images): save photo candidates for editorial review"
             # Repository may have advanced while photo sourcing was running.
