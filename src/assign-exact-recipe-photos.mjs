@@ -75,7 +75,8 @@ const selected={
  'thai-basil-beef':['File:Nuea phat bai yira.jpg','Takeaway'],
  'lentil-moroccan-stew':['File:Moroccan Lentil Soup.jpg','Emna Mizouni'],
  'moroccan-white-beans':['File:Baked beans in tomato sauce.jpg','Mk2010'],
- 'healthy-bean-corn-salad':['File:Bean and corn salad, with peppers etc. - San Francisco.jpg','Daderot']
+ 'healthy-bean-corn-salad':['File:Bean and corn salad, with peppers etc. - San Francisco.jpg','Daderot'],
+ 'bbq-chicken-oven':['File:Barbeque chicken.jpg','JAYASHREESATHIYAMOORTHY']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
 const curated=JSON.parse(fs.readFileSync(curatedPath,'utf8')),library=JSON.parse(fs.readFileSync(libraryPath,'utf8'));
