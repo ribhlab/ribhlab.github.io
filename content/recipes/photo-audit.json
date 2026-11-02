@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T11:52:32.865Z",
+  "checkedAt": "2026-11-02T11:58:11.056Z",
   "policy": "Counts refer to uniquely assigned photographs in source data, not a complete visual audit of every ingredient or a live browser image test.",
   "totalRecipes": 120,
   "photoBackedRecipes": 100,
@@ -67,7 +67,7 @@
       "slug": "west-african-peanut-stew",
       "title": "West African-inspired peanut stew",
       "kind": "meal",
-      "hasUnreviewedCandidate": true
+      "hasUnreviewedCandidate": false
     },
     {
       "slug": "north-african-chickpea-soup",
@@ -103,7 +103,7 @@
       "slug": "healthy-vegetable-egg-muffins",
       "title": "Baked vegetable egg muffins",
       "kind": "healthy",
-      "hasUnreviewedCandidate": true
+      "hasUnreviewedCandidate": false
     },
     {
       "slug": "healthy-tomato-bean-pasta",
@@ -130,8 +130,8 @@
       "hasUnreviewedCandidate": false
     }
   ],
-  "unreviewedCandidates": 2,
-  "rejectedCandidateMatches": 17,
+  "unreviewedCandidates": 0,
+  "rejectedCandidateMatches": 19,
   "photoContainmentCSS": true,
   "youtubeRecipeLinks": "YouTube search links exist as fallback; specific videos are not individually verified.",
   "imageEndpointChecks": "See Check published recipe photo delivery workflow for HTTP checks."
