@@ -1,5 +1,5 @@
 {
-  "policy": "Do not republish these exact Wikimedia files for these recipe slugs. Rejection is based on file description vs required dish and ingredients; no claim of visual verification.",
+  "policy": "Reject imagery that depicts a different dish, a missing main ingredient, or a different preparation; review metadata and visual presentation separately before reinstating.",
   "rejected": {
     "tuna-pasta-salad": {
       "id": "commons:129150837",
@@ -80,6 +80,30 @@
       "status": "rejected",
       "reviewedAt": "2026-11-02",
       "reason": "File includes rice and does not establish the recipe's zucchini, celery and turkey vegetable soup."
+    },
+    "healthy-grilled-fish-salad": {
+      "id": "",
+      "title": "Levrek Izgara Beykoz Koru Sosyal Tesisleri.JPG",
+      "reason": "The original photo presents grilled sea bass, not a salad with vegetables and lemon.",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "source": "https://commons.wikimedia.org/wiki/File:Levrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG"
+    },
+    "healthy-baked-apple-oats": {
+      "id": "",
+      "title": "Apple Goodie crisp.JPG",
+      "reason": "Apple crisp dessert is not baked oatmeal with apple and oats.",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "source": "https://commons.wikimedia.org/wiki/File:Apple_Goodie_crisp.JPG"
+    },
+    "miso-mushroom-noodles": {
+      "id": "",
+      "title": "Mushroom with chinese noodles in home.jpg",
+      "reason": "The photograph depicts mushroom noodles, but does not depict the broth-based mushroom noodle recipe.",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "source": "https://commons.wikimedia.org/wiki/File:Mushroom_with_chinese_noodles_in_home.jpg"
     }
   }
 }
