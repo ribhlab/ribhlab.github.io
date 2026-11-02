@@ -12,11 +12,13 @@ const existing=JSON.parse(fs.readFileSync(path.join(dir,'photo-library.json'),'u
 const curated=JSON.parse(fs.readFileSync(path.join(dir,'curated-photos.json'),'utf8')).photos;
 const output=path.join(dir,'photo-candidates.json');
 const previous=fs.existsSync(output)?JSON.parse(fs.readFileSync(output,'utf8')):{photos:{}};
+const reviewDecisions=JSON.parse(fs.readFileSync(path.join(dir,'photo-review-decisions.json'),'utf8')).rejected;
+const rejectedPairs=new Set(Object.entries(reviewDecisions).map(([slug,p])=>slug+'|'+p.id));
 // Old search results were often unrelated (for example roast beef for fish).
 // Keep only candidates whose actual file title names multiple recipe components.
 const photos=Object.fromEntries(Object.entries(previous.photos||{}).filter(([slug,p])=>{
  const recipe=recipes.find(r=>r.slug===slug);
- return recipe&&matchesRecipe(recipe,p.description);
+ return recipe&&!rejectedPairs.has(slug+'|'+p.id)&&matchesRecipe(recipe,p.description);
 }));
 const usedIds=new Set([...Object.values(photos).map(p=>p.id),...Object.values(curated).map(p=>p.id)]);
 const usedUrls=new Set([...Object.values(existing.photos).map(p=>p.url.split('?')[0]),...Object.values(photos).map(p=>p.url.split('?')[0]),...Object.values(curated).map(p=>p.url.split('?')[0])]);
@@ -70,11 +72,11 @@ function convert(page,r){
  if(/\b(icon|logo|map|chart|diagram|cartoon|illustration|menu|poster|symbol|advertisement)\b/i.test(page.title))return null;
  if(!matchesRecipe(r,page.title.replace(/^File:/,'')))return null;
  const id='commons:'+page.pageid,src='https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title.replaceAll(' ','_'));
- if(usedIds.has(id)||usedUrls.has(url.split('?')[0]))return null;
+ if(usedIds.has(id)||usedUrls.has(url.split('?')[0])||rejectedPairs.has(r.slug+'|'+id))return null;
  return {id,url,source:src,photographer:artist,license:lic.type,licenseUrl:lic.url,provider:'Wikimedia Commons',description:page.title.replace(/^File:/,''),illustrativeOnly:true};
 }
 let missing=recipes.filter(r=>!existing.assignments[r.slug]&&!curated[r.slug]&&!photos[r.slug]),errors=[];
-console.log('Starting editorial photo candidates; verified published',Object.keys(existing.assignments).length+Object.keys(curated).length,'of',recipes.length,'photos, available candidate backlog',Object.keys(photos).length);
+console.log('Starting editorial photo candidates; verified published',Object.keys(existing.assignments).length+Object.keys(curated).length,'of',recipes.length,'photos, available candidate backlog',Object.keys(photos).length,'explicitly rejected',rejectedPairs.size);
 for(let i=0;i<missing.length;i++){
  const r=missing[i];let result=null;
  const qs=terms(r);
