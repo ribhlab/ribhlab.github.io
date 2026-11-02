@@ -949,6 +949,42 @@
       "description": "Levrek Izgara Beykoz Koru Sosyal Tesisleri.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "lentil-moroccan-stew": {
+      "id": "commons:41382732",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Moroccan_Lentil_Soup.jpg/1280px-Moroccan_Lentil_Soup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AMoroccan_Lentil_Soup.jpg",
+      "photographer": "Emna Mizouni",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "Moroccan Lentil Soup.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "moroccan-white-beans": {
+      "id": "commons:16051479",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Baked_beans_in_tomato_sauce.jpg/1280px-Baked_beans_in_tomato_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABaked_beans_in_tomato_sauce.jpg",
+      "photographer": "Mk2010",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provider": "Wikimedia Commons",
+      "description": "Baked beans in tomato sauce.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "healthy-bean-corn-salad": {
+      "id": "commons:136384628",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bean_and_corn_salad%2C_with_peppers_etc._-_San_Francisco.jpg/1280px-Bean_and_corn_salad%2C_with_peppers_etc._-_San_Francisco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABean_and_corn_salad%2C_with_peppers_etc._-_San_Francisco.jpg",
+      "photographer": "Daderot",
+      "license": "cc0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "provider": "Wikimedia Commons",
+      "description": "Bean and corn salad, with peppers etc. - San Francisco.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
