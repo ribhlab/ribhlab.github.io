@@ -1,27 +1,4 @@
 {
   "policy": "UNREVIEWED CANDIDATES ONLY; do not publish without matching actual dish, ingredients, view, license and source. Distinct commercially reusable images proposed by search.",
-  "photos": {
-    "miso-mushroom-noodles": {
-      "id": "commons:41315704",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Rice_noodles_with_shrimp%2C_chicken%2C_mushrooms%2C_and_red_peppers_%284409968980%29.jpg/1280px-Rice_noodles_with_shrimp%2C_chicken%2C_mushrooms%2C_and_red_peppers_%284409968980%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ARice_noodles_with_shrimp%2C_chicken%2C_mushrooms%2C_and_red_peppers_(4409968980).jpg",
-      "photographer": "jeffreyw",
-      "license": "by",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "provider": "Wikimedia Commons",
-      "description": "Rice noodles with shrimp, chicken, mushrooms, and red peppers (4409968980).jpg",
-      "illustrativeOnly": true
-    },
-    "chinese-ginger-fish": {
-      "id": "commons:143005115",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg/1280px-Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3AWok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg",
-      "photographer": "Zheng Zhou",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Wok-Fried Prawns with Scallion-Ginger-Garlic Sauce.jpg",
-      "illustrativeOnly": true
-    }
-  }
+  "photos": {}
 }
