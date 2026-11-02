@@ -13,7 +13,7 @@ const curated=JSON.parse(fs.readFileSync(path.join(dir,'curated-photos.json'),'u
 const output=path.join(dir,'photo-candidates.json');
 const previous=fs.existsSync(output)?JSON.parse(fs.readFileSync(output,'utf8')):{photos:{}};
 const reviewDecisions=JSON.parse(fs.readFileSync(path.join(dir,'photo-review-decisions.json'),'utf8')).rejected;
-const rejectedPairs=new Set(Object.entries(reviewDecisions).map(([slug,p])=>slug+'|'+p.id));
+const rejectedPairs=new Set(Object.entries(reviewDecisions).map(([key,p])=>(p.recipeSlug||key)+'|'+p.id));
 // Old search results were often unrelated (for example roast beef for fish).
 // Keep only candidates whose actual file title names multiple recipe components.
 const photos=Object.fromEntries(Object.entries(previous.photos||{}).filter(([slug,p])=>{
