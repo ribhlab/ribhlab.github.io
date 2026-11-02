@@ -8,6 +8,7 @@ on:
       - "public/assets/recipe-pages.css"
       - "src/audit-recipe-photos.mjs"
       - "content/recipes/photo-review-decisions.json"
+      - "content/recipes/photo-candidates.json"
   workflow_dispatch:
 permissions:
   contents: read
