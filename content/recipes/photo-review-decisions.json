@@ -1,0 +1,85 @@
+{
+  "policy": "Do not republish these exact Wikimedia files for these recipe slugs. Rejection is based on file description vs required dish and ingredients; no claim of visual verification.",
+  "rejected": {
+    "tuna-pasta-salad": {
+      "id": "commons:129150837",
+      "title": "Tuna on whole wheat linguine, with pesto, olive oil, and black pepper - Massachusetts.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATuna_on_whole_wheat_linguine%2C_with_pesto%2C_olive_oil%2C_and_black_pepper_-_Massachusetts.jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File describes pesto tuna linguine, not a cold pasta salad with olives, tomato and cucumber."
+    },
+    "potato-leek-gratin": {
+      "id": "commons:188209790",
+      "title": "Leek & Dauphinoise Potato Pastry - The Flour Pot Bakery 2026-04-06.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ALeek_%26_Dauphinoise_Potato_Pastry_-_The_Flour_Pot_Bakery_2026-04-06.jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File describes a leek and potato pastry, not a baked cream-and-cheese potato-leek gratin."
+    },
+    "chinese-ginger-fish": {
+      "id": "commons:65767560",
+      "title": "Op Reinforce - Chinese Garlic (8261019628).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AOp_Reinforce_-_Chinese_Garlic_(8261019628).jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File is titled Chinese garlic in an enforcement context; not a cooked ginger-garlic fish dish."
+    },
+    "west-african-peanut-stew": {
+      "id": "commons:35886172",
+      "title": "Peanut stew.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APeanut_stew.jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "Photo documents generic peanut stew; the sweet potato and spinach ingredients of this recipe are not established."
+    },
+    "healthy-chicken-brown-rice": {
+      "id": "commons:3315679",
+      "title": "Halibut with mango salsa on coconut brown rice (434662467).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHalibut_with_mango_salsa_on_coconut_brown_rice_(434662467).jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File depicts halibut on brown rice, not chicken with broccoli and carrots."
+    },
+    "healthy-vegetable-egg-muffins": {
+      "id": "commons:23101730",
+      "title": "Ham, egg and cheese muffin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHam%2C_egg_and_cheese_muffin.jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File depicts a ham, egg and cheese breakfast muffin, not baked vegetable egg cups."
+    },
+    "healthy-bean-corn-salad": {
+      "id": "commons:195989329",
+      "title": "DZ3 0607 A colorful salad bar lined with fresh toppings - cherry tomatoes shredded carrots corn croutons lettuce and an array of vibrant garnishes ready to build the perfect bowl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ADZ3_0607_A_colorful_salad_bar_lined_with_fresh_toppings_-_cherry_tomatoes_shredded_carrots_corn_croutons_lettuce_and_an_array_of_vibrant_garnishes_ready_to_build_the_perfect_bowl.jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File depicts a salad bar, not a finished kidney bean and corn salad."
+    },
+    "healthy-tomato-bean-pasta": {
+      "id": "commons:198551767",
+      "title": "Pasta Barilla 2026-08-26 with vegetables.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3APasta_Barilla_2026-08-26_with_vegetables.jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File describes vegetable pasta but does not establish beans, spinach or tomato sauce."
+    },
+    "healthy-sweetpotato-bean-chili": {
+      "id": "commons:18357205",
+      "title": "Beans and sweet potato.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABeans_and_sweet_potato.JPG",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File names beans and sweet potato but does not establish a tomato-based chili dish."
+    },
+    "healthy-turkey-vegetable-soup": {
+      "id": "commons:360479",
+      "title": "Turkey Soup Stew With Rice.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File%3ATurkey_Soup_Stew_With_Rice.jpg",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "reason": "File includes rice and does not establish the recipe's zucchini, celery and turkey vegetable soup."
+    }
+  }
+}
