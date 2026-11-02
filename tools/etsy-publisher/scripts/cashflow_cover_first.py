@@ -15,6 +15,7 @@ from check_connection import verify, ConnectionErrorSafe
 
 BASE="https://api.etsy.com/v3"
 LISTING="4608157428"
+TARGET_TOP=0x20081443440016600918162039181630e4b00218324e020c135e02264430021024a60b0004a70901c0000100000001032412010b74d300092928243926c2144b
 FINGERPRINTS={
  "01-CFO-COCKPIT": 0x303274656501514b,
  "02-DECISION-LAB": 0x5d7d574541696957,
@@ -53,7 +54,15 @@ def identify(item):
     if len(raw)>5*1024*1024: raise ConnectionErrorSafe("Image preview exceeds safe size.")
     actual=fingerprint(raw)
     ranked=sorted(((actual^expected).bit_count(),name) for name,expected in FINGERPRINTS.items())
-    return ranked[0],ranked[1]
+    with Image.open(io.BytesIO(raw)) as rawimg:
+        im=ImageOps.exif_transpose(rawimg).convert("L")
+        w,h=im.size
+        crop=im.crop((0,int(h*0.07),w,int(h*0.34)))
+        crop=crop.resize((33,16),Image.Resampling.LANCZOS)
+        p=list(crop.getdata())
+    bits="".join("1" if p[y*33+x]>p[y*33+x+1] else "0" for y in range(16) for x in range(32))
+    top_distance=(int(bits,2)^TARGET_TOP).bit_count()
+    return ranked[0],top_distance
 
 def main():
     shop=verify()
@@ -70,15 +79,16 @@ def main():
     listing=fetch_json(list_url,headers)
     images=listing.get("results",[])
     if len(images)!=6: raise ConnectionErrorSafe(f"Expected six CashFlow images, found {len(images)}. No change made.")
-    matched={}
+    candidates=[]
     for item in images:
-        best,nextbest=identify(item)
-        print("IMAGE",item.get("listing_image_id"),"CURRENT_RANK",item.get("rank"),"CANDIDATE",best[1],"DISTANCE",best[0])
-        if best[0]>8 or nextbest[0]-best[0]<3 or best[1] in matched:
-            raise ConnectionErrorSafe("One or more listing images could not be identified confidently; no change made.")
-        matched[best[1]]=item
-    if len(matched)!=6: raise ConnectionErrorSafe("Missing one or more images. No change made.")
-    cover=matched["01-CFO-COCKPIT"]
+        best,top_distance=identify(item)
+        print("IMAGE",item.get("listing_image_id"),"CURRENT_RANK",item.get("rank"),
+              "NEAREST",best[1],"DIFF",best[0],"CFO_COCKPIT_HEADER_DIFF",top_distance)
+        candidates.append((top_distance,item))
+    candidates.sort(key=lambda pair:pair[0])
+    if candidates[0][0]>42 or candidates[1][0]-candidates[0][0]<15:
+        raise ConnectionErrorSafe("The precise CFO Cockpit cover could not be verified. No changes were made.")
+    cover=candidates[0][1]
     if cover["rank"]==1:
         print("SUCCESS: The CFO Cockpit image is already the Etsy cover (rank 1); nothing changed.")
         return
