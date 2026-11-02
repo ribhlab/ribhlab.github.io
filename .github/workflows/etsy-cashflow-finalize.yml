@@ -37,3 +37,4 @@ jobs:
           set -euo pipefail
           python -m py_compile tools/etsy-publisher/scripts/finalize_cashflow_v22.py
           python tools/etsy-publisher/scripts/finalize_cashflow_v22.py
+# Retry after corrected Etsy draft read path 2026-11-02
