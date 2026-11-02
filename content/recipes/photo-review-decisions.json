@@ -82,7 +82,7 @@
       "reason": "File includes rice and does not establish the recipe's zucchini, celery and turkey vegetable soup."
     },
     "healthy-grilled-fish-salad": {
-      "id": "",
+      "id": "commons:48230184",
       "title": "Levrek Izgara Beykoz Koru Sosyal Tesisleri.JPG",
       "reason": "The original photo presents grilled sea bass, not a salad with vegetables and lemon.",
       "status": "rejected",
@@ -90,7 +90,7 @@
       "source": "https://commons.wikimedia.org/wiki/File:Levrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG"
     },
     "healthy-baked-apple-oats": {
-      "id": "",
+      "id": "commons:5065253",
       "title": "Apple Goodie crisp.JPG",
       "reason": "Apple crisp dessert is not baked oatmeal with apple and oats.",
       "status": "rejected",
@@ -98,7 +98,7 @@
       "source": "https://commons.wikimedia.org/wiki/File:Apple_Goodie_crisp.JPG"
     },
     "miso-mushroom-noodles": {
-      "id": "",
+      "id": "commons:86693249",
       "title": "Mushroom with chinese noodles in home.jpg",
       "reason": "The photograph depicts mushroom noodles, but does not depict the broth-based mushroom noodle recipe.",
       "status": "rejected",
