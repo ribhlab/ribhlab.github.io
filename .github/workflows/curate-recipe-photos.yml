@@ -5,6 +5,7 @@ on:
     paths:
       - "src/curate-recipe-photos.mjs"
       - "src/audit-recipe-photos.mjs"
+      - "src/prune-recipe-photo-candidates.mjs"
       - "content/recipes/photo-review-decisions.json"
       - ".github/workflows/curate-recipe-photos.yml"
   # Revisit missing cards each morning; keep suggestions in a review-only queue.
@@ -43,5 +44,13 @@ jobs:
             # current main-branch review decisions rather than overwriting them.
             # During rebase, 'ours' means the upstream (origin/main) version.
             git rebase -X ours origin/main
+            # The main branch may now contain new photo assignments or a manual
+            # rejection. Filter against the latest main state before pushing.
+            node src/prune-recipe-photo-candidates.mjs
+            node src/audit-recipe-photos.mjs
+            git add content/recipes/photo-candidates.json content/recipes/photo-audit.json
+            if ! git diff --cached --quiet; then
+              git commit --amend --no-edit
+            fi
             git push origin HEAD:main
           fi
