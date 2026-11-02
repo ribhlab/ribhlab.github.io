@@ -76,6 +76,9 @@ const selected={
  'lentil-moroccan-stew':['File:Moroccan Lentil Soup.jpg','Emna Mizouni'],
  'moroccan-white-beans':['File:Baked beans in tomato sauce.jpg','Mk2010'],
  'healthy-bean-corn-salad':['File:Bean and corn salad, with peppers etc. - San Francisco.jpg','Daderot'],
+ 'gnocchi-tomato':['File:Gnocchi al Pomodoro (2920979155).jpg','Chi King'],
+ 'baked-falafel':['File:Baked Falafel (37624379346).jpg','A Healthier Michigan'],
+ 'french-toast-cinnamon':['File:French toast with cinnamon and coconut flakes.jpg','W.carter'],
  'bbq-chicken-oven':['File:Barbeque chicken.jpg','JAYASHREESATHIYAMOORTHY']
 };
 const curatedPath=path.join(dir,'curated-photos.json'),libraryPath=path.join(dir,'photo-library.json');
