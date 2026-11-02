@@ -1021,6 +1021,30 @@
       "description": "Grilled fish resting on a bed of leafy green salad, with fresh vegetables and lemon; supports grilled-fish salad rather than plated fish alone.",
       "illustrativeOnly": true,
       "editorialReview": "2026-11-02; image description verifies grilled fish served on lettuce and metadata includes tomatoes and citrus; precise salad mix may vary."
+    },
+    "overnight-oats-apple": {
+      "id": "pexels:10165864",
+      "url": "https://images.pexels.com/photos/10165864/pexels-photo-10165864.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "source": "https://www.pexels.com/photo/a-meal-on-a-plastic-container-with-apple-slices-on-top-10165864/",
+      "photographer": "Vladimír Sládek",
+      "license": "pexels",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "provider": "Pexels",
+      "description": "Overnight oatmeal topped with sliced apples and nuts, in a clear food container; representative of apple walnut oats.",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-11-02; source identifies oatmeal, apples and nuts. Exact yogurt/cinnamon quantity is not observable."
+    },
+    "healthy-quinoa-chickpea-bowl": {
+      "id": "pexels:17597408",
+      "url": "https://images.pexels.com/photos/17597408/pexels-photo-17597408.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "source": "https://www.pexels.com/photo/a-bowl-with-a-healthy-salad-17597408/",
+      "photographer": "Rasul Yarichev",
+      "license": "pexels",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "provider": "Pexels",
+      "description": "Buddha bowl featuring quinoa, chickpeas, tomatoes, leafy vegetables and lemon, with additional avocado and sweet potato.",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-11-02; source explicitly identifies quinoa and chickpeas plus vegetables. Other pictured ingredients differ from recipe; image is representative, not a claim of exact formulation."
     }
   }
 }
