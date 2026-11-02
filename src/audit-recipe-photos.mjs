@@ -33,6 +33,7 @@ for(const [slug,p] of assigned){
  if(rejectedPairs.has(slug+'|'+id))throw Error('Published photo was explicitly rejected as mismatched: '+slug);
  ids.add(id);urls.add(url);
  if(p.provider==='Wikimedia Commons'&&(!['cc0','by','by-sa'].includes(p.license)||!p.licenseUrl?.startsWith('https://creativecommons.org/')))throw Error('Commons photo missing compatible license '+slug);
+ if(p.provider==='Pexels'&&(p.license!=='pexels'||p.licenseUrl!=='https://www.pexels.com/license/'||!p.source.startsWith('https://www.pexels.com/photo/')||!p.photographer))throw Error('Pexels photo missing verifiable source or license '+slug);
 }
 for(const [slug,p] of Object.entries(candidates)){
  if(!slugs.has(slug)||seenSlugs.has(slug)||!p?.id)throw Error('Invalid candidate '+slug);
