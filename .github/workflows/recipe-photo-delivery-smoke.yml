@@ -6,6 +6,8 @@ on:
       - "content/recipes/curated-photos.json"
       - "content/recipes/photo-library.json"
       - "public/assets/recipe-pages.css"
+      - "src/audit-recipe-photos.mjs"
+      - "content/recipes/photo-review-decisions.json"
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Audit all 120 recipes, duplicates, crop styling and video search fallback
+        run: node src/audit-recipe-photos.mjs
       - name: Verify full images and recipe video links
         run: |
           node --input-type=module <<'NODE'
