@@ -104,6 +104,24 @@
       "status": "rejected",
       "reviewedAt": "2026-11-02",
       "source": "https://commons.wikimedia.org/wiki/File:Mushroom_with_chinese_noodles_in_home.jpg"
+    },
+    "miso-mushroom-noodles-candidate-commons-41315704": {
+      "id": "commons:41315704",
+      "title": "Rice noodles with shrimp, chicken, mushrooms, and red peppers (4409968980).jpg",
+      "reason": "Includes shrimp and chicken and is a dry noodle preparation, not a mushroom broth.",
+      "recipeSlug": "miso-mushroom-noodles",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "source": "https://commons.wikimedia.org/wiki/File:Rice_noodles_with_shrimp%2C_chicken%2C_mushrooms%2C_and_red_peppers_(4409968980).jpg"
+    },
+    "chinese-ginger-fish-candidate-commons-143005115": {
+      "id": "commons:143005115",
+      "title": "Wok-Fried Prawns with Scallion-Ginger-Garlic Sauce.jpg",
+      "reason": "Contains prawns, not ginger-garlic fish.",
+      "recipeSlug": "chinese-ginger-fish",
+      "status": "rejected",
+      "reviewedAt": "2026-11-02",
+      "source": "https://commons.wikimedia.org/wiki/File:Wok-Fried_Prawns_with_Scallion-Ginger-Garlic_Sauce.jpg"
     }
   }
 }
