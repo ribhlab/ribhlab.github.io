@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-02",
-  "policy": "Source-file assignment audit only; visual ingredient matching for all photos and individual YouTube video links have not been fully verified.",
+  "checkedAt": "2026-11-02T11:06:03.878Z",
+  "policy": "Counts refer to uniquely assigned photographs in source data, not a complete visual audit of every ingredient or a live browser image test.",
   "totalRecipes": 120,
   "photoBackedRecipes": 95,
   "commonsPhotos": 79,
@@ -12,18 +12,6 @@
     {
       "slug": "taktouka-peppers",
       "title": "Moroccan roasted pepper taktouka",
-      "kind": "meal",
-      "hasUnreviewedCandidate": false
-    },
-    {
-      "slug": "lentil-moroccan-stew",
-      "title": "Moroccan tomato-cumin lentils",
-      "kind": "meal",
-      "hasUnreviewedCandidate": false
-    },
-    {
-      "slug": "moroccan-white-beans",
-      "title": "Moroccan white beans in tomato sauce",
       "kind": "meal",
       "hasUnreviewedCandidate": false
     },
@@ -58,10 +46,16 @@
       "hasUnreviewedCandidate": false
     },
     {
+      "slug": "miso-mushroom-noodles",
+      "title": "Asian mushroom noodle broth",
+      "kind": "meal",
+      "hasUnreviewedCandidate": true
+    },
+    {
       "slug": "chinese-ginger-fish",
       "title": "Chinese-style ginger garlic fish",
       "kind": "meal",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "tofu-vegetable-stirfry",
@@ -136,12 +130,6 @@
       "hasUnreviewedCandidate": false
     },
     {
-      "slug": "healthy-bean-corn-salad",
-      "title": "Kidney bean and corn salad",
-      "kind": "healthy",
-      "hasUnreviewedCandidate": false
-    },
-    {
       "slug": "healthy-tomato-bean-pasta",
       "title": "Whole-grain pasta with beans and vegetables",
       "kind": "healthy",
@@ -154,14 +142,27 @@
       "hasUnreviewedCandidate": false
     },
     {
+      "slug": "healthy-grilled-fish-salad",
+      "title": "Grilled fish and lemon salad",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
+    },
+    {
       "slug": "healthy-turkey-vegetable-soup",
       "title": "Turkey and vegetable soup",
       "kind": "healthy",
       "hasUnreviewedCandidate": false
+    },
+    {
+      "slug": "healthy-baked-apple-oats",
+      "title": "Baked apple oat cups",
+      "kind": "healthy",
+      "hasUnreviewedCandidate": false
     }
   ],
-  "unreviewedCandidates": 0,
-  "rejectedCandidateMatches": 10,
+  "unreviewedCandidates": 2,
+  "rejectedCandidateMatches": 13,
   "photoContainmentCSS": true,
-  "youtubeRecipeLinks": "YouTube search fallback exists for each recipe; individual video links not verified."
+  "youtubeRecipeLinks": "YouTube search links exist as fallback; specific videos are not individually verified.",
+  "imageEndpointChecks": "See Check published recipe photo delivery workflow for HTTP checks."
 }
