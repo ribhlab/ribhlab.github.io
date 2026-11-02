@@ -1,38 +1,4 @@
 {
   "policy": "UNREVIEWED CANDIDATES ONLY; do not publish without matching actual dish, ingredients, view, license and source. Distinct commercially reusable images proposed by search.",
-  "photos": {
-    "sweetcorn-quesadillas": {
-      "id": "commons:144325797",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Cheese_quesadilla.jpg/1280px-Cheese_quesadilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ACheese_quesadilla.jpg",
-      "photographer": "Corn cheese",
-      "license": "cc0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "provider": "Wikimedia Commons",
-      "description": "Cheese quesadilla.jpg",
-      "illustrativeOnly": true
-    },
-    "healthy-sweetpotato-bean-chili": {
-      "id": "commons:36176020",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Boiled_pumpkin_with_roasted_sweet_potato_and_vegetables.jpg/1280px-Boiled_pumpkin_with_roasted_sweet_potato_and_vegetables.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ABoiled_pumpkin_with_roasted_sweet_potato_and_vegetables.jpg",
-      "photographer": "Suleiman213",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Boiled pumpkin with roasted sweet potato and vegetables.jpg",
-      "illustrativeOnly": true
-    },
-    "healthy-grilled-fish-salad": {
-      "id": "commons:37019025",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Grilled_fish_with_Lemon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "source": "https://commons.wikimedia.org/wiki/File%3AGrilled_fish_with_Lemon.jpg",
-      "photographer": "Mohamed kamal 1984",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Grilled fish with Lemon.jpg",
-      "illustrativeOnly": true
-    }
-  }
+  "photos": {}
 }
