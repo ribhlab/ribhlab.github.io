@@ -1011,16 +1011,16 @@
       "editorialReview": "2026-11-02: Pexels source identifies tofu and broccoli meal; extra recipe vegetables and exact stir-fry technique cannot be inferred from a photo."
     },
     "healthy-grilled-fish-salad": {
-      "id": "pexels:18907098",
-      "url": "https://images.pexels.com/photos/18907098/pexels-photo-18907098.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      "source": "https://www.pexels.com/photo/fish-with-lettuce-18907098/",
-      "photographer": "Denize Manalo",
+      "id": "pexels:19725446",
+      "url": "https://images.pexels.com/photos/19725446/pexels-photo-19725446.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "source": "https://www.pexels.com/photo/fish-on-tray-19725446/",
+      "photographer": "Roken Manases",
       "license": "pexels",
       "licenseUrl": "https://www.pexels.com/license/",
       "provider": "Pexels",
-      "description": "Grilled fish resting on a bed of leafy green salad, with fresh vegetables and lemon; supports grilled-fish salad rather than plated fish alone.",
+      "description": "Grilled fish served on fresh salad greens with tomato and other vegetables; bread is present as an optional accompaniment.",
       "illustrativeOnly": true,
-      "editorialReview": "2026-11-02; image description verifies grilled fish served on lettuce and metadata includes tomatoes and citrus; precise salad mix may vary."
+      "editorialReview": "2026-11-02; alternative licensed fish-and-salad scene selected after first Pexels photo endpoint returned 404."
     },
     "overnight-oats-apple": {
       "id": "pexels:10165864",
