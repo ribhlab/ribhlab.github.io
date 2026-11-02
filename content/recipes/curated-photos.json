@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-30",
-  "policy": "Only verified dish-specific Wikimedia Commons photos. No approximate substitution. Unverified recipes retain their unique local illustration until an exact-match photo is confirmed.",
+  "policy": "Distinct licensed dish photos only. Unmatched food photographs are removed, returning the recipe to its unique illustration until a visually accurate verified photograph is found.",
   "photos": {
     "lamb-vegetable-couscous": {
       "id": "commons:6214147",
@@ -758,18 +758,6 @@
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     },
-    "healthy-baked-apple-oats": {
-      "id": "commons:5065253",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Apple_Goodie_crisp.JPG/1280px-Apple_Goodie_crisp.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3AApple_Goodie_crisp.JPG",
-      "photographer": "JamieS93",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "provider": "Wikimedia Commons",
-      "description": "Apple Goodie crisp.JPG",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
-    },
     "spinach-fatayer": {
       "id": "commons:87282032",
       "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Fatayer_aux_%C3%A9pinards.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -923,30 +911,6 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "provider": "Wikimedia Commons",
       "description": "Nuea phat bai yira.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
-    },
-    "miso-mushroom-noodles": {
-      "id": "commons:86693249",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Mushroom_with_chinese_noodles_in_home.jpg/1280px-Mushroom_with_chinese_noodles_in_home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3AMushroom_with_chinese_noodles_in_home.jpg",
-      "photographer": "Geoffreyrabbit",
-      "license": "by-sa",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "provider": "Wikimedia Commons",
-      "description": "Mushroom with chinese noodles in home.jpg",
-      "illustrativeOnly": true,
-      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
-    },
-    "healthy-grilled-fish-salad": {
-      "id": "commons:48230184",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Levrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG/1280px-Levrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "source": "https://commons.wikimedia.org/wiki/File%3ALevrek_Izgara_Beykoz_Koru_Sosyal_Tesisleri.JPG",
-      "photographer": "Benreis",
-      "license": "by",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "provider": "Wikimedia Commons",
-      "description": "Levrek Izgara Beykoz Koru Sosyal Tesisleri.JPG",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     },
