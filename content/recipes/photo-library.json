@@ -24,20 +24,6 @@
       "photographer": "Rob Wicks",
       "subject": "Mushroom risotto"
     },
-    "risottoB": {
-      "photoId": "photo-1584946763546-5db5e2468fbf",
-      "url": "https://images.unsplash.com/photo-1584946763546-5db5e2468fbf?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/black-cooking-pan-with-cooked-food-X0vTYDNL6XI",
-      "photographer": "The Fry Family Food Co.",
-      "subject": "Mushroom risotto in pan"
-    },
-    "falafel": {
-      "photoId": "photo-1701688596783-231b3764ef67",
-      "url": "https://images.unsplash.com/photo-1701688596783-231b3764ef67?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/a-plate-of-food-that-includes-rice-meatballs-and-salad-FIZm4yokxo8",
-      "photographer": "Burak B",
-      "subject": "Falafel bowl"
-    },
     "hummusA": {
       "photoId": "photo-1637949385162-e416fb15b2ce",
       "url": "https://images.unsplash.com/photo-1637949385162-e416fb15b2ce?auto=format&fit=crop&w=1000&h=625&q=78",
@@ -107,21 +93,12 @@
       "source": "https://unsplash.com/photos/cooked-food-Hb5OfGzeKNk",
       "photographer": "Ellen Bordal",
       "subject": "Avocado toast and egg"
-    },
-    "eggToast": {
-      "photoId": "photo-1580641825459-2293b0e9ad72",
-      "url": "https://images.unsplash.com/photo-1580641825459-2293b0e9ad72?auto=format&fit=crop&w=1000&h=625&q=78",
-      "source": "https://unsplash.com/photos/fried-egg-with-avocado-toast-breakfast-orMrxgkA4EA",
-      "photographer": "Olya P",
-      "subject": "Fried egg and avocado toast"
     }
   },
   "assignments": {
     "beef-prune-tagine": "tagineB",
     "seven-vegetable-couscous": "couscous",
     "mushroom-risotto": "risottoA",
-    "gnocchi-tomato": "risottoB",
-    "baked-falafel": "falafel",
     "hummus-with-tahini": "hummusA",
     "chicken-tikka-masala": "curryA",
     "minestrone-vegetable-soup": "soupA",
@@ -131,7 +108,6 @@
     "banana-oat-pancakes": "pancake",
     "healthy-lentil-spinach-soup": "lentilSoupB",
     "healthy-oat-berry-breakfast": "oats",
-    "healthy-chickpea-avocado-wrap": "avocado",
-    "french-toast-cinnamon": "eggToast"
+    "healthy-chickpea-avocado-wrap": "avocado"
   }
 }

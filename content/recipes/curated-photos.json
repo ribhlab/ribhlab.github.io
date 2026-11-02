@@ -949,6 +949,42 @@
       "description": "Bean and corn salad, with peppers etc. - San Francisco.jpg",
       "illustrativeOnly": true,
       "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "gnocchi-tomato": {
+      "id": "commons:33950923",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Gnocchi_al_Pomodoro_%282920979155%29.jpg/1280px-Gnocchi_al_Pomodoro_%282920979155%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGnocchi_al_Pomodoro_(2920979155).jpg",
+      "photographer": "Chi King",
+      "license": "by",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Gnocchi al Pomodoro (2920979155).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "baked-falafel": {
+      "id": "commons:82990122",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Baked_Falafel_%2837624379346%29.jpg/1280px-Baked_Falafel_%2837624379346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3ABaked_Falafel_(37624379346).jpg",
+      "photographer": "A Healthier Michigan",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "provider": "Wikimedia Commons",
+      "description": "Baked Falafel (37624379346).jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
+    },
+    "french-toast-cinnamon": {
+      "id": "commons:103058398",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/French_toast_with_cinnamon_and_coconut_flakes.jpg/1280px-French_toast_with_cinnamon_and_coconut_flakes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File%3AFrench_toast_with_cinnamon_and_coconut_flakes.jpg",
+      "photographer": "W.carter",
+      "license": "by-sa",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provider": "Wikimedia Commons",
+      "description": "French toast with cinnamon and coconut flakes.jpg",
+      "illustrativeOnly": true,
+      "editorialReview": "2026-10-30; exact named dish confirmed by Wikimedia Commons description"
     }
   }
 }
