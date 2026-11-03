@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T17:17:05.565Z",
+  "checkedAt": "2026-11-03T15:22:07.064Z",
   "policy": "Counts refer to uniquely assigned photographs in source data, not a complete visual audit of every ingredient or a live browser image test.",
   "totalRecipes": 120,
   "photoBackedRecipes": 100,
@@ -67,7 +67,7 @@
       "slug": "west-african-peanut-stew",
       "title": "West African-inspired peanut stew",
       "kind": "meal",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "north-african-chickpea-soup",
@@ -115,7 +115,7 @@
       "slug": "healthy-sweetpotato-bean-chili",
       "title": "Sweet potato and bean chili",
       "kind": "healthy",
-      "hasUnreviewedCandidate": false
+      "hasUnreviewedCandidate": true
     },
     {
       "slug": "healthy-turkey-vegetable-soup",
@@ -130,7 +130,7 @@
       "hasUnreviewedCandidate": false
     }
   ],
-  "unreviewedCandidates": 1,
+  "unreviewedCandidates": 3,
   "rejectedCandidateMatches": 19,
   "photoContainmentCSS": true,
   "youtubeRecipeLinks": "YouTube search links exist as fallback; specific videos are not individually verified.",
