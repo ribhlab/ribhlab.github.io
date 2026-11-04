@@ -1,4 +1,3 @@
-@import url();
 :root{--blue:#197df0;--dark:#153b84;--yellow:#ffe44d;--pink:#ff56a8;--white:#fff;--shadow:0 10px 0 #06559f,0 14px 25px #1242a566}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#60c9f9;font-family:ui-rounded,'Trebuchet MS',Verdana,sans-serif;touch-action:manipulation;color:#17386a}
