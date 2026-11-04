@@ -11,7 +11,7 @@ permissions:
 jobs:
   validate-godot:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - name: Download pinned Godot 4.7.2 (standard, not .NET)
@@ -43,3 +43,59 @@ jobs:
             echo "Runtime script errors detected!"
             exit 1
           fi
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android SDK tools for Godot
+        run: |
+          export ANDROID_SDK_ROOT=/usr/local/lib/android/sdk
+          export ANDROID_HOME="$ANDROID_SDK_ROOT"
+          SDKMANAGER="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager"
+          test -x "$SDKMANAGER"
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+          "$SDKMANAGER" --install "platform-tools" "build-tools;35.0.1" "platforms;android-35"
+      - name: Download official matching Android export templates
+        run: |
+          curl -fL --retry 3 --connect-timeout 30 \
+            https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz \
+            -o /tmp/godot-templates.tpz
+          DEST="$HOME/.local/share/godot/export_templates/4.7.2.stable"
+          mkdir -p "$DEST"
+          unzip -p /tmp/godot-templates.tpz templates/android_debug.apk > "$DEST/android_debug.apk"
+          unzip -p /tmp/godot-templates.tpz templates/android_release.apk > "$DEST/android_release.apk"
+          printf '4.7.2.stable\n' > "$DEST/version.txt"
+          test -s "$DEST/android_debug.apk"
+      - name: Configure Android SDK and debug signing
+        shell: bash
+        run: |
+          export ANDROID_SDK_ROOT=/usr/local/lib/android/sdk
+          export ANDROID_HOME="$ANDROID_SDK_ROOT"
+          mkdir -p "$HOME/.android"
+          keytool -genkeypair -v -keystore "$HOME/.android/debug.keystore" \
+            -alias androiddebugkey -storepass android -keypass android \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Tiny Turbo Dev, OU=Debug, O=RibhLab, C=MA"
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless --editor \
+            --path games/tiny-turbo-racers-godot \
+            --script res://ci/configure_android.gd
+      - name: Build Godot 3D Android debug APK
+        shell: bash
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: /home/runner/.android/debug.keystore
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
+        run: |
+          mkdir -p games/tiny-turbo-racers-godot/build
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless \
+            --path games/tiny-turbo-racers-godot \
+            --export-debug Android build/TinyTurboRacers3D-debug.apk 2>&1 | tee /tmp/godot-android-export.log
+          test -s games/tiny-turbo-racers-godot/build/TinyTurboRacers3D-debug.apk
+          ls -lh games/tiny-turbo-racers-godot/build/TinyTurboRacers3D-debug.apk
+      - name: Share Godot 3D APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiny-turbo-godot3d-debug-apk
+          path: games/tiny-turbo-racers-godot/build/TinyTurboRacers3D-debug.apk
+          if-no-files-found: error
