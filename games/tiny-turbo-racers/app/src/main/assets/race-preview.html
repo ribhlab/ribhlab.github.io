@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tiny Turbo Racers — 3D visual QA preview</title>
+<style>html,body{margin:0;background:#78d9ff;height:100%;overflow:hidden}
+canvas{display:block;width:100vw;height:100vh}
+#badge{position:fixed;top:14px;left:18px;background:#ffffffea;border:3px solid white;
+border-radius:20px;padding:8px 15px;color:#135398;font:900 18px sans-serif}
+</style></head><body>
+<canvas id="screen"></canvas>
+<div id="badge">🏁 Tiny Turbo Racers — 3D race preview</div>
+<script src="race3d.js"></script>
+<script>
+let t=0;
+const canvas=document.getElementById("screen");
+const params=new URLSearchParams(location.search);
+const world=Math.max(0,Math.min(3,Number(params.get("world"))||0));
+const state={world,progress:0,t:0,lane:0,car:0,color:"#ff4650",nextStar:0,boost:0,turn:0};
+function draw(now){
+ t=now/1000;state.t=t;state.progress=t*5;
+ state.lane=Math.sin(t*.3)*.2;state.turn=Math.cos(t*.3)*.2;
+ state.nextStar=Math.max(0,Math.ceil((state.progress-80)/112));
+ state.boost=t%9<3?1:0;
+ if(!window.TinyTurbo3D.race(canvas,state))document.getElementById("badge").textContent="⚠️ WebGL unavailable";
+ requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+</script>
+</body></html>
