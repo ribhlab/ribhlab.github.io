@@ -75,3 +75,19 @@ h1 em{font-style:normal;color:#ffe238;display:block;text-shadow:-3px -3px #d65c0
 #toast{position:fixed;z-index:20;bottom:14px;left:50%;transform:translateX(-50%);background:#164d95ee;color:#fff;padding:10px 25px;border-radius:30px;font-weight:1000;font-size:16px;opacity:0;pointer-events:none;transition:opacity .25s}#toast.show{opacity:1}
 @media(max-height:540px){.topbar{height:38px}.screen{height:calc(100% - 38px)}.home-actions{min-height:50px}.hero-wrap{max-height:none}.hero-copy{top:5%}.mini-worlds{display:none}.screen-head{height:47px}.garage-right{padding:5px}.garage-right h3{display:none}.car-choice{padding:5px 0}.section-actions{margin:5px}.results-wrap{padding:8px 25px}.trophy{font-size:44px}}
 @media(max-width:660px){.brand{font-size:12px}.wallet{font-size:14px}.home-actions button{padding:6px}.hero-copy{left:2%}.screen-head .small-note{display:none}.paint-dot{width:24px;height:24px}.section-actions button{padding:8px}}
+
+
+/* v0.2: 3D racing cockpit HUD, safe-area aware, touch-friendly on small phones. */
+.race-hud{top:max(9px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));flex-wrap:nowrap}
+.hud-pill{font-size:clamp(11px,1.55vw,18px);padding:5px 11px;border-width:3px;white-space:nowrap}
+.world-pill{background:#fff2ba;max-width:24vw;overflow:hidden;text-overflow:ellipsis}
+.speed-pill{background:#ffffd9;color:#e57823;font-variant-numeric:tabular-nums}
+.hud-pause{padding:5px 13px;border-width:3px}
+.race-meter{position:absolute;top:73px;left:50%;transform:translateX(-50%);width:min(52%,560px);height:15px;border:3px solid #fff;border-radius:30px;box-shadow:0 4px 6px #125fa65e;background:#1250896b;overflow:visible;z-index:2}
+.race-meter>div{height:100%;width:0%;background:linear-gradient(90deg,#75ff77,#fff855);border-radius:30px;transition:width .12s linear}
+.race-meter>span{position:absolute;right:-68px;top:-6px;color:#fff;font-size:12px;font-weight:1000;text-shadow:0 2px 2px #245a9b}
+#raceCanvas{background:linear-gradient(180deg,#62d3ff,#d2faff 55%,#91e99c)}
+.control,.boost{box-shadow:inset 0 4px 5px #ffffff50,0 8px 0 #085eaf,0 13px 18px #062e7860}
+.boost{box-shadow:inset 0 4px 5px #ffffff90,0 8px 0 #a76314,0 13px 18px #783b0060}
+@media(max-width:800px){.world-pill{display:none}.hud-pill{padding:4px 8px}.race-meter{top:60px;width:46%}.race-meter>span{font-size:10px;right:-60px}.race-hud{gap:4px}}
+@media(max-height:420px){.race-meter{top:48px}.race-controls{bottom:max(5px,env(safe-area-inset-bottom))}.control,.boost{height:70px;width:70px}.hud-pill{font-size:12px}}
