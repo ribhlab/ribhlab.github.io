@@ -12,7 +12,7 @@ func road_position(angle: float, offset: float = 0.0) -> Vector3:
 
 func road_yaw(angle: float) -> float:
 	# The cars face local -Z; along increasing track angle.
-	return -angle - PI / 2.0
+	return PI - angle
 
 func build_world() -> void:
 	_build_lighting()
