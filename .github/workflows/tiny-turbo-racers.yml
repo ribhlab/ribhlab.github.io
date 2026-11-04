@@ -22,8 +22,12 @@ jobs:
           gradle-version: '8.13'
       - name: Install Android SDK 36 (hosted runner SDK)
         run: |
-          yes | sdkmanager --licenses >/dev/null || true
-          sdkmanager --install "platforms;android-36" "build-tools;36.0.0"
+          export ANDROID_HOME=/usr/local/lib/android/sdk
+          export ANDROID_SDK_ROOT="$ANDROID_HOME"
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          test -x "$SDKMANAGER"
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+          "$SDKMANAGER" --install "platforms;android-36" "build-tools;36.0.0"
       - name: Generate official Gradle wrapper
         run: gradle -p games/tiny-turbo-racers wrapper --gradle-version 8.13
       - name: Build APK
