@@ -24,22 +24,19 @@ let carPaint=stored("tiny_paints",cars.map(c=>c.color)),wallet=stored("tiny_wall
 if(!Array.isArray(carPaint)||carPaint.length!==4)carPaint=cars.map(c=>c.color);
 chosenWorld=Math.max(0,Math.min(3,Number(chosenWorld)||0));
 chosenCar=Math.max(0,Math.min(3,Number(chosenCar)||0));
-let current="home",race=null,heldLeft=false,heldRight=false,soundEnabled=true,audio=null;
+let current="home",race=null,heldLeft=false,heldRight=false,soundEnabled=true;
 let toastTimer=0;
 function coins(){ $("#balance").textContent=wallet }
 function toast(message){const el=$("#toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2200)}
 function beep(freq=660,duration=.085,type="sine"){
- if(!soundEnabled)return;
- try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();const o=audio.createOscillator(),g=audio.createGain();
- o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(.055,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+duration);
- o.connect(g);g.connect(audio.destination);o.start();o.stop(audio.currentTime+duration)}catch(e){}
+ if(soundEnabled && window.TurboSound)window.TurboSound.menu(freq,duration,type);
 }
 function show(id){
  if(id==="race")document.body.classList.add("in-race");else document.body.classList.remove("in-race");
  $$(".screen").forEach(e=>e.classList.toggle("active",e.id===id));current=id;heldLeft=heldRight=false;
  if(id==="garage")renderGarageUi();
  if(id==="worlds")renderWorlds();
- if(id!=="race" && race)race.paused=true;
+ if(id!=="race" && race){race.paused=true;if(window.TurboSound)window.TurboSound.stop();}
  coins();beep(600,.05);
 }
 function renderWorlds(){
@@ -69,12 +66,15 @@ function renderGarageUi(){
 }
 $$("[data-screen]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.screen)));
 $("#homeHow").onclick=()=>toast("❮ ❯ to steer • ⚡ for TURBO • collect ⭐");
-$("#soundBtn").onclick=()=>{soundEnabled=!soundEnabled;$("#soundBtn").textContent=soundEnabled?"🔊":"🔇";if(soundEnabled)beep(880)};
+$("#soundBtn").onclick=()=>{soundEnabled=!soundEnabled;$("#soundBtn").textContent=soundEnabled?"🔊":"🔇";
+ if(window.TurboSound){window.TurboSound.setEnabled(soundEnabled);if(soundEnabled&&current==="race"&&race&&!race.paused)window.TurboSound.raceStart();}
+ if(soundEnabled)beep(880);
+};
 $("#raceFromWorlds").onclick=startRace;
 $("#againBtn").onclick=startRace;
-$("#pauseBtn").onclick=()=>{if(!race)return;race.paused=true;$("#pausePanel").classList.remove("hidden");beep(420)};
-$("#resumeBtn").onclick=()=>{if(!race)return;race.paused=false;$("#pausePanel").classList.add("hidden");beep(600)};
-$("#quitRace").onclick=()=>{race=null;$("#pausePanel").classList.add("hidden");show("home")};
+$("#pauseBtn").onclick=()=>{if(!race)return;race.paused=true;$("#pausePanel").classList.remove("hidden");if(window.TurboSound)window.TurboSound.pause()};
+$("#resumeBtn").onclick=()=>{if(!race)return;race.paused=false;$("#pausePanel").classList.add("hidden");if(window.TurboSound)window.TurboSound.resume()};
+$("#quitRace").onclick=()=>{if(window.TurboSound)window.TurboSound.stop();race=null;$("#pausePanel").classList.add("hidden");show("home")};
 function holdButton(selector,side){
  const el=$(selector);
  el.addEventListener("pointerdown",e=>{e.preventDefault();el.setPointerCapture(e.pointerId);if(side==="left")heldLeft=true;else heldRight=true});
@@ -84,7 +84,7 @@ function holdButton(selector,side){
 holdButton("#leftBtn","left");holdButton("#rightBtn","right");
 $("#boostBtn").onclick=()=>{
  if(!race||race.paused||race.countdown>0||race.cooldown>0)return;
- race.boost=3.3;race.cooldown=10;beep(1050,.22,"sawtooth");$("#boostBtn").classList.add("cooldown");
+ race.boost=3.3;race.cooldown=10;if(window.TurboSound)window.TurboSound.turbo();$("#boostBtn").classList.add("cooldown");
 };
 document.addEventListener("keydown",e=>{
  if(["ArrowLeft","ArrowRight"," ","Escape"].includes(e.key))e.preventDefault();
@@ -96,10 +96,12 @@ document.addEventListener("keyup",e=>{if(e.key==="ArrowLeft")heldLeft=false;if(e
 window.kidsBack=()=>{if(current==="race"&&race&&!race.paused)$("#pauseBtn").click();else if(current==="race"&&race&&race.paused)$("#resumeBtn").click();else show("home")};
 function startRace(){
  race={t:0,progress:0,lane:0,stars:0,boost:0,cooldown:0,paused:false,countdown:3.4,
- nextStar:0,missed:0,car:chosenCar,world:chosenWorld,shake:0,lastPlace:4};
+ nextStar:0,missed:0,car:chosenCar,world:chosenWorld,shake:0,lastPlace:4,lastLap:1,turn:0};
  $("#pausePanel").classList.add("hidden");$("#countdown").classList.remove("hidden");$("#boostBtn").classList.remove("cooldown");
  $("#hudStars").textContent="⭐ 0";$("#hudPlace").textContent="🏆 4 / 4";$("#hudLap").textContent="🏁 LAP 1 / 3";
- show("race");
+ $("#hudWorld").textContent=worlds[chosenWorld].emoji+" "+worlds[chosenWorld].name;
+ $("#hudSpeed").textContent="0 KM/H";$("#raceFill").style.width="0%";
+ show("race");if(window.TurboSound)window.TurboSound.raceStart();
 }
 const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
 const ease=(a,b,t)=>a+(b-a)*t;
@@ -110,11 +112,11 @@ function updateRace(dt){
    const old=Math.ceil(Math.max(0,race.countdown));race.countdown-=dt;
    const newCount=Math.ceil(Math.max(0,race.countdown));
    $("#countdown").textContent=newCount>0?String(newCount):"GO!";
-   if(old!==newCount)beep(newCount>0?440+newCount*100:880,.13);
+   if(old!==newCount&&window.TurboSound)window.TurboSound.countdown(newCount);
    if(race.countdown<=-.6)$("#countdown").classList.add("hidden");
    return;
  }
- let turn=(heldRight?1:0)-(heldLeft?1:0);
+ let turn=(heldRight?1:0)-(heldLeft?1:0);race.turn=turn;
  race.lane=clamp(race.lane+turn*dt*1.3,-.96,.96);
  if(race.boost>0)race.boost=Math.max(0,race.boost-dt);
  race.cooldown=Math.max(0,race.cooldown-dt);
@@ -123,7 +125,7 @@ function updateRace(dt){
  const pickupAt=80+race.nextStar*112;
  if(race.progress>=pickupAt){
    const target=Math.sin(race.nextStar*2.6)*.65;
-   if(Math.abs(race.lane-target)<.52){race.stars++;beep(800+race.stars*65,.08);race.shake=.11}
+   if(Math.abs(race.lane-target)<.52){race.stars++;if(window.TurboSound)window.TurboSound.star();race.shake=.11}
    else race.missed++;
    race.nextStar++;$("#hudStars").textContent="⭐ "+race.stars;
  }
@@ -131,7 +133,10 @@ function updateRace(dt){
  const place=1+rivals.filter(v=>v>race.progress).length;race.lastPlace=place;
  $("#hudPlace").textContent="🏆 "+place+" / 4";
  const lap=Math.min(3,Math.floor(race.progress/400)+1);
+ if(lap!==race.lastLap){race.lastLap=lap;if(window.TurboSound)window.TurboSound.lap();}
  $("#hudLap").textContent="🏁 LAP "+lap+" / 3";
+ $("#hudSpeed").textContent=Math.round(speed*4.15)+" KM/H";
+ $("#raceFill").style.width=Math.min(100,race.progress/12).toFixed(1)+"%";
  $("#boostBtn").classList.toggle("cooldown",race.cooldown>0);
  if(race.progress>=1200)finish();
 }
@@ -143,7 +148,7 @@ function finish(){
  $("#resultPlace").textContent=tags[clamp(race.lastPlace-1,0,3)];
  $("#resultHeading").textContent=race.lastPlace===1?"🏆 Super star champion!":"🎉 Wonderful racing!";
  $("#resultSubheading").textContent="You finished all 3 laps in "+Math.floor(race.t)+" seconds!";
- beepsSuccess();race=null;show("results");
+ if(window.TurboSound)window.TurboSound.victory();race=null;show("results");
 }
 function beepsSuccess(){beep(740,.16);setTimeout(()=>beep(900,.17),110);setTimeout(()=>beep(1080,.2),230)}
 function rr(ctx,x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
@@ -234,6 +239,8 @@ function drawHero(){
  for(let i=0;i<14;i++){const x=560+i*52+(Math.sin(i*3.1)*12),y=245+i%3*74;star(c,x,y,6+(i%3)*3,["#fff","#ffda4b","#ff9ed9"][i%3],"#fff")}
 }
 function drawGarage(){
+ if(window.TinyTurbo3D&&window.TinyTurbo3D.garage($("#garageCanvas"),
+   {world:chosenWorld,car:chosenCar,color:carPaint[chosenCar],t:performance.now()/1000}))return;
  const c=$("#garageCanvas").getContext("2d"),W=750,H=430;c.clearRect(0,0,W,H);
  const g=grad(c,0,0,W,H,"#8ce6ff","#ffe6a1");c.fillStyle=g;c.fillRect(0,0,W,H);
  for(let i=0;i<9;i++)star(c,45+i*79,70+(i%4)*56,8+(i%3)*4);
@@ -241,7 +248,10 @@ function drawGarage(){
  car(c,375,257,1.9,carPaint[chosenCar],Math.sin(performance.now()/850)*.04,chosenCar);
 }
 function drawRace(){
- if(!race)return;const c=$("#raceCanvas").getContext("2d"),W=1200,H=640,w=worlds[race.world],p=race.progress,t=race.t;
+ if(!race)return;
+ if(window.TinyTurbo3D&&window.TinyTurbo3D.race($("#raceCanvas"),
+   Object.assign({},race,{color:carPaint[race.car]})))return;
+ const c=$("#raceCanvas").getContext("2d"),W=1200,H=640,w=worlds[race.world],p=race.progress,t=race.t;
  c.clearRect(0,0,W,H);c.fillStyle=grad(c,0,0,W,H,w.sky,"#f1ffff");c.fillRect(0,0,W,H);
  scenery(c,W,H,w,p*.9);road(c,W,H,w,p,Math.sin(p/200)*.55);
  // edge trees, flags, stars
@@ -282,7 +292,8 @@ let last=0;
 function loop(ts){
  const dt=clamp((ts-last)/1000||.016,0,.06);last=ts;
  if(current==="home")drawHero();else if(current==="garage")drawGarage();
- else if(current==="race"){updateRace(dt);drawRace()}
+ else if(current==="race"){updateRace(dt);if(window.TurboSound)window.TurboSound.frame(race,race?race.turn:0);drawRace()}
  requestAnimationFrame(loop);
 }
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&current==="race"&&race&&!race.paused)$("#pauseBtn").click()});
 coins();renderWorlds();renderGarageUi();requestAnimationFrame(loop);
