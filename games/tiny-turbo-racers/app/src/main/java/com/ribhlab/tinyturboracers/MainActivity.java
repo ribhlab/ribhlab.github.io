@@ -1,6 +1,7 @@
 package com.ribhlab.tinyturboracers;
 
-import android.app.Activity;
+import androidx.activity.ComponentActivity;
+import androidx.activity.OnBackPressedCallback;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -8,7 +9,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public final class MainActivity extends Activity {
+public final class MainActivity extends ComponentActivity {
     private WebView game;
 
     @Override public void onCreate(Bundle savedInstanceState) {
@@ -39,12 +40,26 @@ public final class MainActivity extends Activity {
             }
         });
         setContentView(game);
+        registerGameBackHandler();
         game.loadUrl("file:///android_asset/index.html");
     }
 
-    @Override public void onBackPressed() {
-        if (game != null) game.evaluateJavascript("window.kidsBack && window.kidsBack()", null);
-        else super.onBackPressed();
+    // Intercept both system Back buttons and predictive back gestures.
+    // Keeping the handler lifecycle-aware prevents callbacks leaking on rotation/exit.
+    // Our HTML5 game owns its internal navigation (race pause / resume / menus).
+    private void registerGameBackHandler() {
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override public void handleOnBackPressed() {
+                if (game != null) {
+                    game.evaluateJavascript(
+                        "if (typeof window.kidsBack === 'function') window.kidsBack();",
+                        null);
+                } else {
+                    setEnabled(false);
+                    getOnBackPressedDispatcher().onBackPressed();
+                }
+            }
+        });
     }
 
     @Override protected void onDestroy() {
