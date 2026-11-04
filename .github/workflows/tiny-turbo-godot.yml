@@ -1,0 +1,45 @@
+name: Tiny Turbo Racers Godot 3D Validation
+on:
+  push:
+    branches: [tiny-turbo-racers-godot-v1]
+    paths:
+      - "games/tiny-turbo-racers-godot/**"
+      - ".github/workflows/tiny-turbo-godot.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-godot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download pinned Godot 4.7.2 (standard, not .NET)
+        run: |
+          curl -fL --retry 3 --connect-timeout 20 \
+            https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip \
+            -o /tmp/godot-linux.zip
+          unzip -q /tmp/godot-linux.zip -d /tmp
+          chmod +x /tmp/Godot_v4.7.2-stable_linux.x86_64
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless --version
+      - name: Import and parse every Godot script and scene
+        shell: bash
+        run: |
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless --editor \
+            --path games/tiny-turbo-racers-godot --import --quit 2>&1 | tee /tmp/godot-import.log
+          if grep -E 'SCRIPT ERROR|Parse Error|Parser Error|Failed to load script' /tmp/godot-import.log; then
+            echo "GDScript parse errors detected!"
+            exit 1
+          fi
+      - name: Native project startup smoke test
+        shell: bash
+        run: |
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless \
+            --path games/tiny-turbo-racers-godot --quit-after 90 \
+            2>&1 | tee /tmp/godot-run.log
+          if grep -E 'SCRIPT ERROR|Parse Error|Parser Error|Failed to load script' /tmp/godot-run.log; then
+            echo "Runtime script errors detected!"
+            exit 1
+          fi
