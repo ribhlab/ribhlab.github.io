@@ -1,0 +1,78 @@
+@import url();
+:root{--blue:#197df0;--dark:#153b84;--yellow:#ffe44d;--pink:#ff56a8;--white:#fff;--shadow:0 10px 0 #06559f,0 14px 25px #1242a566}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#60c9f9;font-family:ui-rounded,'Trebuchet MS',Verdana,sans-serif;touch-action:manipulation;color:#17386a}
+button{font:inherit;cursor:pointer;border:0;user-select:none;white-space:nowrap;transition:transform .11s,filter .11s}
+button:active{transform:translateY(4px) scale(.98)!important;filter:brightness(.97)}
+#app{position:relative;height:100dvh;width:100%;overflow:hidden;background:linear-gradient(180deg,#55c8ff 0%,#c5f1ff 52%,#7fdb65 100%);padding:8px 12px 12px}
+#app:before{content:'☁️';position:absolute;top:5%;left:9%;font-size:47px;opacity:.3}
+#app:after{content:'☁️';position:absolute;top:10%;right:10%;font-size:65px;opacity:.26}
+.topbar{height:47px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:3}
+.brand{display:flex;align-items:center;gap:8px;color:white;text-shadow:0 3px #2469bc,0 5px #14469c;font-size:clamp(13px,2vw,23px);font-weight:1000;letter-spacing:.4px}
+.brand b{color:#ffe345}.brand-star{font-size:31px;color:#ffd72c;text-shadow:0 3px #da8c03}
+.top-actions{display:flex;gap:10px;align-items:center}
+.wallet{padding:6px 14px;border-radius:50px;background:#ffffffed;box-shadow:0 4px 0 #88b4d8;font-size:20px;font-weight:900}
+.round{background:#fff;border:3px solid #83d9fc;border-radius:50%;font-size:20px;color:#1654a1;box-shadow:0 5px 0 #2c8bbb}.round.small{height:38px;width:42px}
+.screen{display:none;position:relative;z-index:2;height:calc(100% - 47px)}.screen.active{display:flex;flex-direction:column}
+#home{gap:9px}.hero-wrap{flex:1;min-height:0;max-height:70vh;position:relative;border-radius:32px;border:6px solid #fff;overflow:hidden;box-shadow:0 10px 0 #5eadd4,0 14px 25px #0871a84c;background:linear-gradient(#59d9ff,#cefcff)}
+#heroCanvas{width:100%;height:100%;display:block}
+.hero-copy{position:absolute;z-index:1;left:5%;top:9%;text-align:center;filter:drop-shadow(0 3px 1px #174c7b2c)}
+.hero-copy .ribbon{display:inline-block;background:#ff5079;color:white;padding:6px 17px;border:3px solid white;border-radius:30px;font-weight:1000;box-shadow:0 5px 0 #d52767;font-size:clamp(9px,1.15vw,14px)}
+h1{font-size:clamp(27px,5.8vw,77px);line-height:.99;color:white;letter-spacing:-2px;text-shadow:-3px -3px #1650a3,3px -3px #1650a3,-3px 3px #1650a3,3px 3px #1650a3,0 9px #073f9c,0 13px #063976;margin:10px 0}
+h1 em{font-style:normal;color:#ffe238;display:block;text-shadow:-3px -3px #d65c00,3px -3px #d65c00,-3px 3px #d65c00,3px 3px #d65c00,0 8px #b52a00,0 12px #7a2900}
+.hero-copy p{color:#fff;font-size:clamp(10px,1.6vw,20px);font-weight:900;text-shadow:0 2px #0875bb,0 3px #0875bb;margin:10px}
+.primary,.secondary,.back{font-weight:1000;border-radius:21px;padding:12px 22px;letter-spacing:.4px;border:4px solid #fff}
+.primary{background:linear-gradient(#a9ff46,#24cc42);color:white;box-shadow:0 7px 0 #138f3f,0 10px 15px #157a6444;text-shadow:0 2px #0a8b36}
+.primary.big{font-size:clamp(15px,2.5vw,25px);padding:13px 32px;border-radius:30px;margin-top:6px}
+.secondary{background:linear-gradient(#4fd8ff,#147ddd);color:white;box-shadow:0 6px 0 #0659a2;text-shadow:0 2px #0659a2}
+.back{background:#fff;color:#136acc;box-shadow:0 5px 0 #85b7ef;padding:8px 16px;border:3px solid #56bbfd}
+.home-actions{display:flex;gap:10px;justify-content:center;min-height:64px}
+.home-actions button{border-radius:23px;border:4px solid white;background:linear-gradient(#69c7ff,#1683ed);box-shadow:0 7px 0 #1465b8;color:white;font-weight:1000;text-shadow:0 2px #1265a2;font-size:clamp(12px,1.6vw,20px);padding:9px 26px}
+.home-actions span{font-size:20px;margin-right:8px}
+.mini-worlds{display:flex;justify-content:space-around;gap:8px;padding:0 8px 1px;font-size:clamp(10px,1.3vw,15px);font-weight:900}
+.mini-worlds div{background:#ffffffdd;border-radius:30px;border:2px solid #fff;flex:1;text-align:center;padding:4px 0;color:#2454a1}
+.floating-star{position:absolute;font-size:30px;animation:float 2.2s ease-in-out infinite alternate;pointer-events:none}.st1{right:6%;top:10%}.st2{right:18%;top:25%;animation-delay:.8s}
+@keyframes float{to{transform:translateY(-14px) rotate(12deg)}}
+.screen-head{height:58px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex:none}.screen-head h2{color:white;font-size:clamp(19px,3vw,36px);text-shadow:0 4px #1476ca;white-space:nowrap}.small-note{background:#ffffffd9;border-radius:25px;padding:8px 13px;font-weight:900}
+.world-grid{flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;min-height:0;align-items:stretch;margin:10px 5px}
+.world-card{border:5px solid #fff;border-radius:27px;min-height:0;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:0 8px 0 #3194c9,0 12px 16px #0b56a348;background:linear-gradient(var(--sky),var(--ground));position:relative;text-align:center}
+.world-card.chosen{outline:5px solid #ffe038;box-shadow:0 7px 0 #e99113,0 0 35px #ffed6999;transform:translateY(-2px)}
+.world-card .world-art{flex:1;display:flex;align-items:center;justify-content:center;font-size:clamp(45px,8vw,118px);text-shadow:0 10px #0068a126}
+.world-card h3{margin:0;background:#ffffffdd;font-size:clamp(12px,1.65vw,25px);padding:9px 0;color:#144c9d}
+.world-card .world-check{position:absolute;right:9px;top:8px;background:#41cd4d;border-radius:50%;border:3px solid #fff;color:white;padding:4px}
+.section-actions{display:flex;justify-content:center;gap:16px;margin:12px auto 5px;flex:none}
+#garage .garage-layout{display:flex;gap:15px;flex:1;min-height:0;padding:3px 6px 10px}
+.car-stage{flex:1.25;border:6px solid #fff;border-radius:30px;background:radial-gradient(ellipse at 45% 48%,#ffeb8e,#a7eaff 63%,#4a99eb);box-shadow:0 9px 0 #5ba4d7;min-width:0;position:relative;overflow:hidden;display:flex;flex-direction:column}
+#garageCanvas{width:100%;height:100%;min-height:0;flex:1}.car-title{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:#ffffffe8;border:4px solid #fff;border-radius:30px;padding:4px 20px;color:#1866c4;font-size:clamp(15px,2vw,28px);font-weight:1000;white-space:nowrap}
+.garage-right{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:space-around;align-items:center;background:#ffffffd9;border:5px solid white;border-radius:25px;padding:10px;box-shadow:0 8px 0 #9accdc}
+.garage-right h3{color:#1b65b1;font-size:clamp(14px,2.3vw,30px);margin:0}
+.car-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;width:100%}
+.car-choice{border-radius:17px;border:4px solid #fff;background:linear-gradient(#d8f3ff,#a2d6ff);box-shadow:0 5px 0 #569ad8;font-size:clamp(8px,1.1vw,15px);font-weight:1000;padding:9px 0;color:#2455a7;overflow:hidden}
+.car-choice .car-emoji{font-size:clamp(22px,3.4vw,45px);display:block}
+.car-choice.chosen{background:linear-gradient(#fff9bb,#ffe452);outline:3px solid #ffae10}
+.paint-row{display:flex;align-items:center;gap:12px;font-weight:1000;font-size:16px}
+#paintColors{display:flex;gap:7px}
+.paint-dot{height:32px;width:32px;border-radius:50%;border:4px solid white;box-shadow:0 3px 0 #6fa6d0}
+.paint-dot.chosen{outline:3px solid #ffae18}
+#race{height:100dvh;width:100vw;position:fixed;inset:0;background:#8de9fb;z-index:10}.topbar:has(~ #race.active){display:none}
+#raceCanvas{width:100%;height:100%;display:block}
+.race-hud{position:absolute;top:14px;left:14px;right:14px;display:flex;align-items:center;gap:8px;z-index:2}
+.hud-pill{background:#ffffffec;border:4px solid #fff;border-radius:30px;box-shadow:0 5px 0 #1888beaa;padding:5px 17px;font-size:clamp(13px,2vw,22px);font-weight:1000;color:#1e63b8}
+.hud-pause{margin-left:auto;background:#fff;border:4px solid #fff;border-radius:14px;box-shadow:0 4px 0 #1888beaa;padding:7px 18px;color:#1365bd;font-size:20px;font-weight:1000}
+.race-controls{position:absolute;bottom:14px;left:25px;right:25px;display:flex;align-items:end;justify-content:space-between;z-index:2;pointer-events:none}
+.steer-controls{display:flex;gap:14px}
+.control,.boost{pointer-events:auto;border:5px solid white;background:linear-gradient(#70deff,#107be2);border-radius:50%;height:clamp(65px,10vw,115px);width:clamp(65px,10vw,115px);box-shadow:0 9px 0 #0755ab;color:#fff;font-size:clamp(24px,4vw,52px);font-weight:1000;text-shadow:0 4px #0756a2;touch-action:none}
+.boost{background:linear-gradient(#fff8b2,#ff9d0c);box-shadow:0 9px 0 #b96b13;text-shadow:0 3px #b87a00}
+.boost span{display:block;font-size:clamp(9px,1.4vw,15px)}.boost.cooldown{filter:grayscale(.75);opacity:.75}
+.center-message{position:absolute;top:35%;left:50%;transform:translateX(-50%);font-size:clamp(80px,14vw,170px);font-weight:1000;color:#fff;text-shadow:0 9px #0e7ad4,0 14px #1951a0;pointer-events:none}
+.center-message.hidden{display:none}.pop-shade{position:absolute;inset:0;background:#0b3e80aa;display:flex;justify-content:center;align-items:center;z-index:5}
+.hidden{display:none!important}.pop-card{background:linear-gradient(#f8fdff,#acefff);border:7px solid #fff;border-radius:35px;box-shadow:0 16px 0 #145da9;padding:24px 45px;text-align:center;display:flex;flex-direction:column;gap:16px;min-width:320px}
+.pop-card h2{font-size:40px;margin:0;color:#1475c0}.pop-card p{margin:0;font-size:18px}
+#results{align-items:center;justify-content:center;text-align:center}.results-wrap{background:linear-gradient(#fffef2,#ffe8a0);border:8px solid white;box-shadow:0 15px 0 #d69e31,0 20px 25px #8f6c2b66;border-radius:35px;min-width:55%;padding:18px 45px}
+.trophy{font-size:clamp(50px,7vw,95px);animation:float 1.5s infinite alternate}
+#results h2{font-size:clamp(28px,4vw,48px);color:#ff8a00;margin:8px;text-shadow:0 3px #fff}
+#results p{font-size:clamp(14px,2vw,23px);font-weight:800;margin:6px}
+.result-stars{background:#fff;border-radius:20px;padding:9px;font-size:24px;font-weight:1000;color:#e9a10b}.result-place{font-size:24px;font-weight:1000;color:#1688ce;margin-top:10px}
+#toast{position:fixed;z-index:20;bottom:14px;left:50%;transform:translateX(-50%);background:#164d95ee;color:#fff;padding:10px 25px;border-radius:30px;font-weight:1000;font-size:16px;opacity:0;pointer-events:none;transition:opacity .25s}#toast.show{opacity:1}
+@media(max-height:540px){.topbar{height:38px}.screen{height:calc(100% - 38px)}.home-actions{min-height:50px}.hero-wrap{max-height:none}.hero-copy{top:5%}.mini-worlds{display:none}.screen-head{height:47px}.garage-right{padding:5px}.garage-right h3{display:none}.car-choice{padding:5px 0}.section-actions{margin:5px}.results-wrap{padding:8px 25px}.trophy{font-size:44px}}
+@media(max-width:660px){.brand{font-size:12px}.wallet{font-size:14px}.home-actions button{padding:6px}.hero-copy{left:2%}.screen-head .small-note{display:none}.paint-dot{width:24px;height:24px}.section-actions button{padding:8px}}
