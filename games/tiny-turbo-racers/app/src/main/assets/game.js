@@ -106,13 +106,12 @@ const ease=(a,b,t)=>a+(b-a)*t;
 function updateRace(dt){
  if(!race||race.paused)return;
  race.t+=dt;
- if(race.countdown>0){
-   const old=Math.ceil(race.countdown);race.countdown-=dt;
-   const newCount=Math.ceil(race.countdown);
+ if(race.countdown>-.6){
+   const old=Math.ceil(Math.max(0,race.countdown));race.countdown-=dt;
+   const newCount=Math.ceil(Math.max(0,race.countdown));
    $("#countdown").textContent=newCount>0?String(newCount):"GO!";
    if(old!==newCount)beep(newCount>0?440+newCount*100:880,.13);
-   if(race.countdown<-.7){race.countdown=0;$("#countdown").classList.add("hidden")}
-   else if(race.countdown<=0)race.countdown=-.71;
+   if(race.countdown<=-.6)$("#countdown").classList.add("hidden");
    return;
  }
  let turn=(heldRight?1:0)-(heldLeft?1:0);
