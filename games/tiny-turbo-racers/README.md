@@ -4,8 +4,6 @@
 
 Four smiling cartoon cars, four themed worlds, 3-lap races, 3 AI opponents, star pickups, turbo boost, cute garage, paint colors, stored scores, and simple kid-sized left/right touch controls.
 
-![Playful racing game - gameplay designed to be cheerful and kid-friendly](https://placehold.co/1200x20/ffffff/ffffff.png)
-
 ## Where is the source?
 
 The full Android Studio project lives in this folder:
