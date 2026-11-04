@@ -16,3 +16,8 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 }
+
+// Lifecycle-aware system Back and predictive back gesture support.
+dependencies {
+    implementation 'androidx.activity:activity:1.13.0'
+}
