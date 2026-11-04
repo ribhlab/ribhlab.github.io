@@ -1,6 +1,6 @@
 # 🏎️ Tiny Turbo Racers — Android Studio Edition
 
-**Original children's racing game • RibhLab • v0.1 prototype (November 2026).**
+**Original children's racing game • RibhLab • v0.2 3D + Sound (November 2026).**
 
 Four smiling cartoon cars, four themed worlds, 3-lap races, 3 AI opponents, star pickups, turbo boost, cute garage, paint colors, stored scores, and simple kid-sized left/right touch controls.
 
@@ -9,7 +9,9 @@ Four smiling cartoon cars, four themed worlds, 3-lap races, 3 AI opponents, star
 The full Android Studio project lives in this folder:
 `games/tiny-turbo-racers`.
 
-The Android Activity loads the **offline HTML5 Canvas engine** from `app/src/main/assets`. No game engine download, ads, permissions, remote APIs, or paid assets needed. Racing visuals are **procedurally drawn 2.5D**, not the full 3D models shown in the earlier concept art; that concept is the visual target for future iterations.
+The Android Activity loads an **offline WebGL 3D racing engine** with procedural 3D car meshes, 3D wheels, perspective driving camera, animated roadside scenery, and four distinct racing landscapes. A 2D Canvas fallback remains for devices without WebGL. The 3D graphics use original code without downloading any 3D libraries, textures, sounds, or paid assets.
+
+Audio uses **Web Audio** synthesis (no downloaded or copyrighted audio files): engine RPM/wind, race start/countdown, turbo, skid, star pickup, lap and victory fanfare with a quiet original race tune. Sound can be muted from the app's main menu. This is a **stylized low-poly 3D implementation**, not yet the same high-detail, sculpted production 3D quality as the concept artwork.
 
 ### Windows + Android Studio
 
@@ -27,7 +29,7 @@ If Android Studio is installed elsewhere, open it via Start Menu > **File > Open
 - Android Studio > Build > Build APK(s) for a debug installer.
 - Android Studio > Build > Generate Signed App Bundle / APK for Play Store; use **AAB**, release signing and Play App Signing.
 
-A GitHub Actions workflow at `.github/workflows/tiny-turbo-racers.yml` builds `app-debug.apk` and uploads it as the `tiny-turbo-racers-debug-apk` artifact. Its wrapper-generation step can also populate the missing wrapper scripts/JAR in this branch when repository workflow write permissions are enabled.
+A GitHub Actions workflow at `.github/workflows/tiny-turbo-racers.yml` validates JS, builds `app-debug.apk` and uploads it as the `tiny-turbo-racers-debug-apk` artifact, alongside browser preview assets. Its wrapper-generation step can also populate the missing wrapper scripts/JAR in this branch when repository workflow write permissions are enabled.
 
 ### Gameplay
 
@@ -47,6 +49,9 @@ app/
   src/main/assets/index.html
   src/main/assets/style.css
   src/main/assets/game.js
+  src/main/assets/race3d.js   # Native offline WebGL 3D scene
+  src/main/assets/sound.js    # Original generated race audio
+  src/main/assets/race-preview.html # QA scene
 app/build.gradle
 build.gradle
 settings.gradle
@@ -56,7 +61,7 @@ gradle/wrapper/gradle-wrapper.properties
 
 ### Shipping notes
 
-- This is a **playable first prototype**; polish, mobile performance testing and 3D assets remain future development.
+- This is a **playable v0.2 build** with real WebGL 3D meshes and synthesised racing sounds; still requires real-device testing, stronger car art/animation, optimizations and accessibility QA before store launch.
 - There is **no AdMob integrated yet**: child-directed Google Play apps must comply with Families policy and approved SDK rules before monetization. See `PRIVACY.md`.
 - Change the app name/package only if needed, and create your own signing keystore.
 - Full Google Play listing, content rating, privacy policy URL, app signing, screenshots and store review remain outstanding.
