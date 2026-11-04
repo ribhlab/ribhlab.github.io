@@ -63,8 +63,11 @@
       <span class="hud-pill" id="hudPlace">🏆 1 / 4</span>
       <span class="hud-pill" id="hudLap">🏁 LAP 1 / 3</span>
       <span class="hud-pill" id="hudStars">⭐ 0</span>
+      <span class="hud-pill world-pill" id="hudWorld">🏙️ Toy City</span>
+      <span class="hud-pill speed-pill" id="hudSpeed">0 KM/H</span>
       <button id="pauseBtn" class="hud-pause" aria-label="Pause race">Ⅱ</button>
     </div>
+    <div class="race-meter"><div id="raceFill"></div><span>🏁 FINISH</span></div>
     <div class="race-controls">
       <div class="steer-controls"><button id="leftBtn" class="control" aria-label="Steer left">❮</button><button id="rightBtn" class="control" aria-label="Steer right">❯</button></div>
       <button id="boostBtn" class="boost" aria-label="Turbo boost">⚡<span>TURBO</span></button>
@@ -85,6 +88,8 @@
   </section>
 </div>
 <div id="toast" role="status" aria-live="polite"></div>
+<script src="sound.js"></script>
+<script src="race3d.js"></script>
 <script src="game.js"></script>
 </body>
 </html>
