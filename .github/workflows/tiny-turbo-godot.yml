@@ -1,7 +1,7 @@
-name: Tiny Turbo Racers Godot 3D + Real GT Assets
+name: RibhLab Midnight Rush 3D - Android and gameplay QA
 on:
   push:
-    branches: [tiny-turbo-racers-godot-v1, tiny-turbo-real-racing-v05]
+    branches: [tiny-turbo-racers-godot-v1, tiny-turbo-real-racing-v05, tiny-turbo-midnight-rush-v06]
     paths:
       - "games/tiny-turbo-racers-godot/**"
       - ".github/workflows/tiny-turbo-godot.yml"
@@ -83,7 +83,7 @@ jobs:
       - name: Upload real circuit screenshot
         uses: actions/upload-artifact@v4
         with:
-          name: tiny-turbo-v05-real-circuit-screenshot
+          name: tiny-turbo-v06-midnight-real-gameplay
           path: games/tiny-turbo-racers-godot/build/real_circuit_frame.png
           if-no-files-found: ignore
       - uses: actions/setup-java@v4
