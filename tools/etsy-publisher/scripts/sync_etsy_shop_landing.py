@@ -18,6 +18,11 @@ from check_connection import verify, ConnectionErrorSafe
 BASE="https://api.etsy.com/v3"
 PAGE=Path("public/en/etsy-shop.html")
 CURATED={
+  4610734598: {
+    "headline":"Self-Hosted Team Finance Dashboard",
+    "summary":"ProfitLens Team 3.6 runs from a Python server in your own environment, with browser access for authorized staff. It provides team roles including Admin, Manager, Analyst and Viewer, alongside profitability, invoice aging, expenses and budget reporting. This is a self-hosted product, unlike the offline single-user version.",
+    "badges":["SELF-HOSTED","PYTHON SERVER","TEAM ROLES"]
+  },
   4610490076: {
     "headline":"Offline HTML Finance Dashboard",
     "summary":"ProfitLens Offline v3.6 is an HTML finance dashboard for desktop browsers. Review profitability, expenses, overdue invoices and KPIs; import CSV and save JSON backups. It is not an Excel workbook or a subscription service.",
