@@ -77,7 +77,7 @@ func _setup_world() -> void:
 	camera = Camera3D.new()
 	camera.name = "ChaseCamera"
 	camera.current = true
-	camera.fov = 67.0
+	camera.fov = 61.0
 	camera.near = .08
 	camera.far = 400.0
 	add_child(camera)
@@ -214,7 +214,7 @@ func _setup_ui() -> void:
 	stars_label = _label(top_hud,"STARS 0",Rect2(340,16,220,52),23,Color("#fff0a7"))
 	_panel(top_hud,Rect2(976,10,290,68),Color("#1b6dccdf"))
 	speed_label = _label(top_hud,"0 km/h",Rect2(981,14,274,55),30,Color("#fff2a2"))
-	_label(top_hud,"RIBHLAB GRAND PRIX • GT RACING",Rect2(540,14,415,56),21)
+	_label(top_hud,"RIBHLAB GT CUP",Rect2(565,14,317,56),22)
 	_button(top_hud,"II",Rect2(897,16,75,55),Color("#2789e2"),func(): _pause_race())
 	_panel(ui_root,Rect2(439,677,400,28),Color("#167cbeae"))
 	boost_label = _label(ui_root,"TURBO READY",Rect2(454,675,370,31),18,Color("#ffffff"))
@@ -272,7 +272,7 @@ func _setup_ui() -> void:
 	finish_stats = _label(finish_overlay,"",Rect2(401,269,490,113),29)
 	_button(finish_overlay,"▶ RACE AGAIN",Rect2(453,417,371,74),Color("#37ce59"),func(): _start_race())
 	_button(finish_overlay,"⌂ HOME",Rect2(483,512,314,63),Color("#2ca4e8"),func(): _go_menu())
-	world_label = _label(ui_root,"RIBHLAB INTERNATIONAL CIRCUIT • GT CUP",Rect2(348,82,585,45),18)
+	world_label = _label(ui_root,"RIBHLAB INTERNATIONAL RACEWAY",Rect2(425,82,430,45),18)
 	world_label.visible = false
 
 func _apply_ui() -> void:
@@ -454,15 +454,15 @@ func _place_car() -> void:
 func _update_camera(delta: float) -> void:
 	var a: float = progress
 	var tangent: Vector3 = world.road_tangent(a)
-	var eye: Vector3 = player.global_position - tangent*15.0 + Vector3(0,7.9,0)
-	var look: Vector3 = player.global_position + tangent*12.0 + Vector3(0,2.1,0)
+	var eye: Vector3 = player.global_position - tangent*9.5 + Vector3(0,4.7,0)
+	var look: Vector3 = player.global_position + tangent*13.0 + Vector3(0,1.30,0)
 	if state == "menu" or state == "garage":
 		var spin: float = elapsed*.27
 		eye = player.global_position + Vector3(cos(spin)*10.0,5.1,sin(spin)*10.0)
 		look = player.global_position + Vector3(0,1.10,0)
 	camera.global_position = camera.global_position.lerp(eye,clampf(delta*3.8,0.0,1.0))
 	camera.look_at(look,Vector3.UP)
-	var target_fov: float = 81.0 if boost_remaining>0.0 and state=="racing" else 67.0
+	var target_fov: float = 76.0 if boost_remaining>0.0 and state=="racing" else 61.0
 	camera.fov = lerpf(camera.fov,target_fov,clampf(delta*3.0,0.0,1.0))
 
 func _animate_pickups(delta: float) -> void:
