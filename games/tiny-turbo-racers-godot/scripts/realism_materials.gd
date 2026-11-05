@@ -79,3 +79,23 @@ static func asphalt() -> StandardMaterial3D:
 	m.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
 	m.cull_mode = BaseMaterial3D.CULL_DISABLED
 	return m
+
+static func terrain_grass() -> StandardMaterial3D:
+	# Free procedural grass roughness with soft brown/green ground variation.
+	var noise := FastNoiseLite.new()
+	noise.seed = 9087
+	noise.frequency = 0.09
+	noise.fractal_octaves = 3
+	var image := Image.create(128,128,false,Image.FORMAT_RGBA8)
+	for y in range(128):
+		for x in range(128):
+			var n: float = noise.get_noise_2d(float(x),float(y))
+			var k: float = clampf(.5+n*.30,.20,.78)
+			image.set_pixel(x,y,Color(.32+k*.20,.55+k*.24,.24+k*.15,1))
+	image.generate_mipmaps()
+	var m := StandardMaterial3D.new()
+	m.albedo_texture = ImageTexture.create_from_image(image)
+	m.roughness = .97
+	m.uv1_scale = Vector3(50,50,1)
+	m.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
+	return m
