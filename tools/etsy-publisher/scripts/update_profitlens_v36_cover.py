@@ -17,10 +17,10 @@ from check_connection import verify, ConnectionErrorSafe
 LISTING_ID = 4610490076
 TITLE = "ProfitLens Offline Finance Dashboard, Profit and Expense Tracker for Small Business"
 BASE = "https://api.etsy.com/v3"
-COVER_URL = "https://ribhlab.wordpress.com/wp-content/uploads/2026/11/ribhlab-profitlens-offline-v36-etsy-cover.jpg"
-COVER_SHA256 = "4ab003fe8c8a26290ec18f6f52cb22eeebd0bc1a6f7420da93c68378ab6d8ebd"
-COVER_FILENAME = "ribhlab-profitlens-offline-v36-etsy-cover.jpg"
-ALT = "ProfitLens Offline 3.6 — RibhLab executive finance dashboard cover showing the real HTML app interface with profit margin, overdue invoices, budget versus actual, decision scenarios, seven languages and local CSV/JSON tools. Fictional sample data."
+COVER_URL = "https://ribhlab.wordpress.com/wp-content/uploads/2026/11/profitlens-offline-v36-updated-etsy-hero.png"
+COVER_SHA256 = "f7746707251db492741a9ff962e3bea9312da1f90d3fa7cd69815d8ed9161721"
+COVER_FILENAME = "profitlens-offline-v36-updated-etsy-hero.png"
+ALT = "ProfitLens Offline 3.6 — HTML finance dashboard promotional cover showing browser-based offline operation, CSV import, JSON backup, and instant digital download."
 
 class PublishError(Exception):
     pass
@@ -84,7 +84,7 @@ def main():
     must(1<=len(images)<=11, "Unexpected image count, no changes made")
     images=sorted(images,key=lambda im:int(im.get("rank",100)))
     cover=images[0]
-    if "ProfitLens Offline 3.6 — RibhLab executive finance dashboard cover" in str(cover.get("alt_text","")):
+    if "ProfitLens Offline 3.6 — HTML finance dashboard promotional cover" in str(cover.get("alt_text","")):
         print("COVER_ALREADY_PRIMARY",cover.get("listing_image_id"))
         print("STATE: active, no edits needed.")
         return
@@ -100,11 +100,11 @@ def main():
     raw=image_resp.content
     must(0<len(raw)<=5*1024*1024,"Hero image size is unexpected")
     must(hashlib.sha256(raw).hexdigest()==COVER_SHA256,"Hero image SHA-256 mismatch")
-    must(raw[:3]==b"\xff\xd8\xff","Hero is not a JPEG")
-    print("PASS: authentic ProfitLens cover verified, bytes:",len(raw))
+    must(raw[:8]==b"\x89PNG\r\n\x1a\n","Hero is not a PNG")
+    print("PASS: exact approved ProfitLens promotional cover verified, bytes:",len(raw))
     result=api(sess,"POST",listing_path+"/images",
         data={"rank":"1","overwrite":"true","alt_text":ALT},
-        files={"image":(COVER_FILENAME,io.BytesIO(raw),"image/jpeg")})
+        files={"image":(COVER_FILENAME,io.BytesIO(raw),"image/png")})
     uploaded_id=result.get("listing_image_id")
     must(uploaded_id,"Etsy did not return the new image identifier")
     print("IMAGE_UPLOAD_SUCCESS_ID:",uploaded_id)
