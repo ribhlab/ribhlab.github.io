@@ -1,3 +1,46 @@
+# Tiny Turbo Racers 3D — v0.6 Famous Cars (Developer Showcase)
+
+**Six actual 3D sports-car models in the native Godot garage, not six color variations.**
+
+| Selectable car | License for 3D author's mesh | 3D model artist |
+|---|---|---|
+| BMW M4 CSL | CC BY 4.0 | Black Snow |
+| Mercedes-AMG GT | CC BY 4.0 | Yan Carvalho |
+| Porsche 911 GT3 | CC BY 4.0 | ChevroletSS |
+| Lamborghini Aventador SVJ | CC BY 4.0 | SDC PERFORMANCE |
+| Ferrari F40 | CC BY 4.0 | Black Snow |
+| Audi R8 | CC BY 4.0 | wallon |
+
+The models are real, distinct imported .glb files. They are sourced from [pedrosoandre/carros](https://github.com/pedrosoandre/carros), whose catalog preserves individual Sketchfab author credits and source URLs. The meshes were decompressed and dequantized before Godot import (Godot 4.7.2 does not accept KHR_mesh_quantization).
+
+**Rights warning for a commercial Play Store release:** These model licenses authorize reuse of the contributors' 3D *artwork*, not manufacturer trademarks, emblems, trade dress, names or car designs. This build is a **non-official development prototype**. Get an appropriate rights review and manufacturer permission when necessary before commercial distribution with actual brand assets. Do not advertise the app as an official racing game or imply brand sponsorship. In-game **CREDITS** lists the artists and source links; see [BRANDED_MODEL_CREDITS.md](assets/BRANDED_MODEL_CREDITS.md) for full details. Some source models may contain manufacturer marks; no separate manufacturer permission was obtained by this project.
+
+## Update in Windows PowerShell (from inside your existing Git checkout)
+
+First close Godot. Then paste everything:
+
+\`\`\`powershell
+$ErrorActionPreference = "Stop"
+$repo = (git rev-parse --show-toplevel).Trim()
+Set-Location $repo
+git stash push -u -m "Backup TinyTurbo local edits before v0.6" -- games/tiny-turbo-racers-godot
+git fetch origin
+if (git branch --list tiny-turbo-famous-brands-v06) {
+    git switch tiny-turbo-famous-brands-v06
+} else {
+    git switch --track origin/tiny-turbo-famous-brands-v06
+}
+git pull --ff-only origin tiny-turbo-famous-brands-v06
+Set-Location (Join-Path $repo "games\tiny-turbo-racers-godot")
+powershell -ExecutionPolicy Bypass -File .\SETUP_WINDOWS.ps1
+\`\`\`
+
+Run **F5**, choose **GARAGE**, select any of the six sports cars, then **RACE!**. If the editor scene remained open during a Git pull, close/reopen \`scenes/main.tscn\`.
+
+The v0.5 original unbranded sports car is safely preserved on branch \`tiny-turbo-real-racing-v05\`.
+
+---
+
 # Tiny Turbo Racers — Real GT Racing v0.5 (Godot 4.7.2)
 
 This branch replaces the toy-ring race and primitive-looking cars with a **licensed detailed external sports-car model** and a **realistic original motorsport circuit**.
