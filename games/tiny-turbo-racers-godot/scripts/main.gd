@@ -43,6 +43,9 @@ var player_stars: int = 0
 var total_stars: int = 0
 var selected_paint: int = 0
 var selected_car: int = 0
+var quality_level: int = 1
+var quality_label: Label
+var settings_overlay: Control
 var garage_credit_label: Label
 var credits_overlay: Control
 var held_left: bool = false
@@ -76,6 +79,7 @@ func _ready() -> void:
 	_setup_pickups()
 	_setup_audio()
 	_setup_ui()
+	_apply_quality()
 	_place_car()
 	_apply_ui()
 	set_process(true)
@@ -283,8 +287,9 @@ func _setup_ui() -> void:
 	_label(menu_overlay,"A street racing experience by RibhLab",Rect2(385,296,510,42),22,Color("#a3d8ff"))
 	_button(menu_overlay,"START NIGHT RACE",Rect2(465,359,351,80),Color("#e44588"),func(): _start_race())
 	_button(menu_overlay,"TUNE YOUR CAR",Rect2(465,463,351,72),Color("#15698d"),func(): _open_garage())
+	_button(menu_overlay,"⚙ SETTINGS",Rect2(465,548,351,52),Color("#284d76"),func(): _open_settings())
 	_label(menu_overlay,"A/D STEER | S BRAKE | SHIFT DRIFT | SPACE NITRO",
-		Rect2(367,562,543,43),16,Color("#b6dfff"))
+		Rect2(367,605,543,31),15,Color("#b6dfff"))
 
 	garage_overlay = _overlay()
 	_panel(garage_overlay,Rect2(313,108,650,505),Color("#0e1931eb"),Color("#6ccbe9"))
@@ -329,6 +334,21 @@ func _setup_ui() -> void:
 	_button(credits_overlay,"BACK TO GARAGE",Rect2(445,602,384,58),
 		Color("#267baa"),func(): _return_garage())
 
+	settings_overlay = _overlay()
+	_panel(settings_overlay,Rect2(365,135,550,447),Color("#0c1832f2"),Color("#54d5ef"))
+	_label(settings_overlay,"GRAPHICS SETTINGS",Rect2(392,163,493,75),39,Color("#8ee9ff"))
+	quality_label = _label(settings_overlay,"QUALITY: MEDIUM",Rect2(407,253,465,48),25,Color("#fff1b7"))
+	for i in range(3):
+		var selected_quality: int = i
+		_button(settings_overlay,["LOW","MEDIUM","HIGH"][i],
+			Rect2(394.0+float(i)*170.0,333,158,70),
+			[Color("#34638a"),Color("#297c95"),Color("#bf4e9a")][i],
+			func(): _select_quality(selected_quality))
+	_label(settings_overlay,"Low reduces lights, shadows and distant city detail.",
+		Rect2(399,420,487,48),17,Color("#c9e7f7"))
+	_button(settings_overlay,"BACK",Rect2(503,497,280,59),
+		Color("#2c83b6"),func(): _go_menu())
+
 	pause_overlay = _overlay()
 	_panel(pause_overlay,Rect2(396,155,490,401),Color("#0c1633f4"),Color("#75d5f2"))
 	_label(pause_overlay,"RACE PAUSED",Rect2(424,190,427,79),45,Color("#ffe878"))
@@ -348,6 +368,7 @@ func _apply_ui() -> void:
 	menu_overlay.visible = state == "menu"
 	garage_overlay.visible = state == "garage"
 	credits_overlay.visible = state == "credits"
+	settings_overlay.visible = state == "settings"
 	pause_overlay.visible = state == "paused"
 	finish_overlay.visible = state == "finished"
 	var active: bool = state == "racing" or state == "countdown"
@@ -368,6 +389,45 @@ func _go_menu() -> void:
 	touch.reset()
 	audio.stop_engines()
 	_apply_ui()
+
+func _open_settings() -> void:
+	state = "settings"
+	quality_label.text = "QUALITY: "+["LOW","MEDIUM","HIGH"][quality_level]
+	audio.cue("click")
+	_apply_ui()
+
+func _select_quality(index: int) -> void:
+	quality_level=clampi(index,0,2)
+	_apply_quality()
+	quality_label.text="QUALITY: "+["LOW","MEDIUM","HIGH"][quality_level]
+	audio.cue("click")
+	_save_progress()
+
+func _apply_quality() -> void:
+	# This controls draw calls/light count, not just text or tint.
+	var world_env := world.get_node_or_null("MidnightSkyAndAtmosphere") as WorldEnvironment
+	if world_env != null and world_env.environment != null:
+		world_env.environment.glow_enabled = quality_level>=1
+		world_env.environment.fog_enabled = quality_level>=1
+	for node in world.get_children():
+		if node is OmniLight3D:
+			var light_id: String=str(node.name)
+			node.visible = quality_level==2 or (quality_level==1 and (not light_id.ends_with("00") or light_id.ends_with("04"))) or light_id.ends_with("00")
+		elif node is DirectionalLight3D:
+			(node as DirectionalLight3D).shadow_enabled = quality_level>=1
+		elif node is MultiMeshInstance3D:
+			if node.name.begins_with("InstancedStreetTrees_"):
+				node.visible = quality_level>=1
+		elif node.name.begins_with("DowntownTower_"):
+			if quality_level==0:
+				var parts: PackedStringArray = str(node.name).split("_")
+				var num: int=int(parts[parts.size()-1])
+				node.visible = (num%3==0)
+			else:
+				node.visible = true
+	for car in traffic.vehicles:
+		var vehicle: Node3D=car["node"]
+		vehicle.visible = quality_level>=1
 
 func _open_garage() -> void:
 	state = "garage"
@@ -485,7 +545,7 @@ func _notification(what: int) -> void:
 	if what == 1007:
 		if state == "racing":
 			_pause_race()
-		elif state in ["paused","garage","finished"]:
+		elif state in ["paused","garage","finished","settings","credits"]:
 			_go_menu()
 	elif what == 2015 or what == 2018:
 		if state == "racing":
@@ -706,10 +766,12 @@ func _load_progress() -> void:
 		total_stars = int(cfg.get_value("player","stars",0))
 		selected_paint = clampi(int(cfg.get_value("player","paint",0)),0,CAR_COLORS.size()-1)
 		selected_car = clampi(int(cfg.get_value("player","brand",0)),0,BrandCatalog.CARS.size()-1)
+		quality_level = clampi(int(cfg.get_value("player","quality",1)),0,2)
 
 func _save_progress() -> void:
 	var cfg := ConfigFile.new()
 	cfg.set_value("player","stars",total_stars)
 	cfg.set_value("player","paint",selected_paint)
 	cfg.set_value("player","brand",selected_car)
+	cfg.set_value("player","quality",quality_level)
 	cfg.save("user://tiny-turbo-save.cfg")
