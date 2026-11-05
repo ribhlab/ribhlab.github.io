@@ -48,7 +48,7 @@ submit.addEventListener("click", async()=> {
     const url = new URL("https://www.etsy.com/oauth/connect");
     const vals = {
       response_type:"code",redirect_uri:REDIRECT,
-      scope:"listings_r listings_w shops_r",client_id:clientId,
+      scope:"listings_r listings_w shops_r shops_w",client_id:clientId,
       state,code_challenge:challenge,code_challenge_method:"S256"
     };
     for(const [name,value] of Object.entries(vals))url.searchParams.set(name,value);
