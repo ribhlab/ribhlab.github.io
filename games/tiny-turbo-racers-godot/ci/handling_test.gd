@@ -51,25 +51,33 @@ func _run_tests() -> void:
 		return
 
 	var touch=Touch.new()
-	touch.configure(Rect2(0,0,90,90),Rect2(100,0,90,90),
-		Rect2(200,0,90,90),Rect2(300,0,90,90),Rect2(400,0,90,90))
+	touch.configure(Rect2(0,0,220,220),Rect2(260,0,120,160),
+		Rect2(420,0,120,160),Rect2(580,0,120,160),Rect2(740,0,120,160))
 	for id in range(5):
 		var e:=InputEventScreenTouch.new()
 		e.index=id
 		e.pressed=true
-		e.position=Vector2(float(id)*100.0+20,20)
+		e.position=[Vector2(185,100),Vector2(300,100),Vector2(460,100),
+			Vector2(620,100),Vector2(780,100)][id]
 		touch.handle(e)
-	if touch.pointer_count()!=5 or not (touch.held("left") and touch.held("right")
-			and touch.held("brake") and touch.held("drift") and touch.held("nitro")):
-		_fail("Five simultaneous touch zones not independent",36)
+	if touch.pointer_count()!=5 or touch.steer()<.2 or not (
+			touch.held("gas") and touch.held("brake") and touch.held("drift") and touch.held("nitro")):
+		_fail("Five simultaneous wheel and pedal fingers not independent",36)
+		return
+	var drag:=InputEventScreenDrag.new()
+	drag.index=0
+	drag.position=Vector2(25,100)
+	touch.handle(drag)
+	if touch.steer()>-.3:
+		_fail("Analog wheel did not steer smoothly left and right",38)
 		return
 	var up:=InputEventScreenTouch.new()
 	up.index=2
-	up.position=Vector2(220,20)
+	up.position=Vector2(460,100)
 	up.pressed=false
 	touch.handle(up)
-	if touch.held("brake") or not (touch.held("drift") and touch.held("nitro")):
-		_fail("Releasing one finger erroneously cleared other presses",37)
+	if touch.held("brake") or not (touch.held("gas") and touch.held("nitro")):
+		_fail("Releasing brake erroneously cleared other fingers",37)
 		return
 
 	var game = GameScene.instantiate()
@@ -83,6 +91,7 @@ func _run_tests() -> void:
 		_fail("Branded garage selection not retained",39)
 		return
 	game._start_race()
+	game.held_accel=true
 	for i in range(175):
 		game._physics_process(.033)
 	if game.state!="racing":
