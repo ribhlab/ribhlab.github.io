@@ -36,7 +36,7 @@ def main():
     print("SHOP_ANNOUNCEMENT_PRESENT:",bool(shop_details.get("announcement","")))
     print("SHOP_POLICY_PRESENT:",bool(shop_details.get("policy_welcome","") or shop_details.get("policy_seller_info","")))
     all_listings=[]
-    for state in ("active","draft"):
+    for state in ("active","draft","inactive","expired","sold_out"):
         offset=0
         while offset<500:
             query=urllib.parse.urlencode({"state":state,"limit":100,"offset":offset})
@@ -55,6 +55,7 @@ def main():
                   "taxonomy_id":item.get("taxonomy_id"),
                   "type":item.get("type"),
                   "image_count":len(imgs),
+                  "cover_url":next((x.get("url_570xN") or x.get("url_fullxfull") for x in imgs if x.get("rank")==1),""),
                   "file_count":len(files),
                   "cover_alt":next((x.get("alt_text","") for x in imgs if x.get("rank")==1),""),
                   "url":f"https://www.etsy.com/listing/{lid}"
