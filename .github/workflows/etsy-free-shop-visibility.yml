@@ -6,6 +6,8 @@ on:
       - '.github/workflows/etsy-free-shop-visibility.yml'
       - 'tools/etsy-publisher/scripts/etsy_free_shop_visibility.py'
   workflow_dispatch:
+  schedule:
+    - cron: '17 10 * * *'
 
 permissions:
   contents: read
