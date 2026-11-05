@@ -125,9 +125,11 @@ def main():
             continue
         if current_section not in (None,0):
             raise ConnectionErrorSafe(f"Listing {lid} moved by a seller during this task, stopping")
-        patched=call(f"/application/shops/{shop}/listings/{lid}",headers,"PATCH",{"section_id":sid})
+        patched=call(f"/application/shops/{shop}/listings/{lid}",headers,"PATCH",{"shop_section_id":sid})
         if int(patched.get("listing_id") or 0)!=lid:
             raise ConnectionErrorSafe("Etsy listing section update lacked confirmation")
+        if int(patched.get("shop_section_id") or 0)!=sid:
+            raise ConnectionErrorSafe("Etsy accepted listing update without assigning shop_section_id")
         print("LISTING_SECTION_ASSIGNED:",lid,label)
     final=call(f"/application/shops/{shop}/listings?state=active&limit=100",headers).get("results",[])
     latest={int(x["listing_id"]):x for x in final}
