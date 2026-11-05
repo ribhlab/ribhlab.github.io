@@ -440,7 +440,7 @@ func _drive(delta: float) -> void:
 		steer -= 1.0
 	if held_right or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D):
 		steer += 1.0
-var drifting: bool = held_drift or Input.is_key_pressed(KEY_SHIFT)
+	var drifting: bool = held_drift or Input.is_key_pressed(KEY_SHIFT)
 	var physics: Dictionary = handling.simulate(delta, steer, boost, absf(lane_offset)>7.1)
 	speed = float(physics["speed"])
 	if drifting and absf(steer)>.05 and speed>12.0:
