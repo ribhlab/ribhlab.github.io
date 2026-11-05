@@ -43,8 +43,15 @@ try{
   if(!response.ok)throw new Error("Token exchange rejected");
   const data=await response.json();
   if(typeof data.refresh_token!=="string"||!data.refresh_token)throw new Error("Missing refresh token");
+  // Etsy may grant a subset of requested OAuth scopes. Verify the actual grant
+  // before asking the seller to replace the working GitHub Actions credential.
+  if(data.shops_write_granted!==true || !Array.isArray(data.granted_scopes) ||
+      !data.granted_scopes.includes("shops_w")) {
+    status.textContent="⚠️ Etsy ما عطاش الصلاحية shops_w لهاد الربط. ما تبدلش الرمز القديم فـGitHub. رجع لصفحة الربط ووافق على صلاحية تعديل المتجر، بلا مشاركة أي Token.";
+    return;
+  }
   let token=data.refresh_token;
-  status.textContent="✅ الربط تم! ضغط على النسخ وحفظ Refresh Token فقط داخل GitHub Secrets.";
+  status.textContent="✅ Etsy منحات shops_w بالفعل. نسخ Refresh Token الجديد وخزنو مكان القديم داخل GitHub Secrets، ثم اضغط Update secret.";
   copy.hidden=false;
   next.hidden=false;
   copy.addEventListener("click",async()=>{
