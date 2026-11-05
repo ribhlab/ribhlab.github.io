@@ -56,6 +56,13 @@ def main():
     exchange=call("/public/oauth/token",{},"POST",
              {"grant_type":"refresh_token","client_id":key,"refresh_token":os.environ["ETSY_REFRESH_TOKEN"]})
     token=exchange["access_token"]
+    granted=set(str(exchange.get("scope") or "").split())
+    safe_scopes=sorted(granted.intersection({"listings_r","listings_w","shops_r","shops_w"}))
+    print("ETSY_GRANTED_SCOPES:",",".join(safe_scopes) if granted else "not_reported")
+    if granted and "shops_w" not in granted:
+        print("ETSY_TOKEN_LACKS_SHOPS_W: update ETSY_REFRESH_TOKEN with the newly reauthorized token")
+        print("NO_CHANGES_MADE")
+        return
     headers={"x-api-key":key+":"+secret,"Authorization":"Bearer "+token}
     details=call("/application/shops/"+shop,headers)
     if details.get("shop_name")!="RibhLabDigital":
