@@ -11,15 +11,18 @@ func _verify() -> void:
 		push_error("Minimap must contain sampled real track geometry")
 		quit(91)
 		return
-	var course0:float=game.minimap.limits.size.x
+	var previous_line:PackedVector2Array=game.minimap.line.duplicate()
 	game.track_index=2
 	game._rebuild_world_for_track()
 	if game.minimap.track!=game.world or game.minimap.line.size()!=129:
 		push_error("Minimap did not reload after track selection")
 		quit(92)
 		return
-	if absf(game.minimap.limits.size.x-course0)<9.0:
-		push_error("Minimap still showing first course on different map")
+	var shape_difference:float=0.0
+	for i in range(0,previous_line.size(),8):
+		shape_difference+=previous_line[i].distance_to(game.minimap.line[i])
+	if shape_difference<120.0:
+		push_error("Minimap did not redraw the actual different road spline")
 		quit(93)
 		return
 	game.race_mode=0
