@@ -3,8 +3,8 @@ extends Node3D
 ## EDITOR-ONLY preview of the EXACT procedural world and car constructors.
 ## Important: never save generated meshes into main.tscn: they are rebuilt at runtime.
 ## This script is inert in exported Android games.
-const WorldBuilder = preload("res://scripts/world_builder.gd")
-const CarVisual = preload("res://scripts/car_visual.gd")
+const WorldBuilder = preload("res://scripts/real_track.gd")
+const CarVisual = preload("res://scripts/real_car.gd")
 
 var preview_loaded: bool = false
 
@@ -40,13 +40,15 @@ func _build_editor_preview() -> void:
 		add_child(toy)
 		var angle: float = 0.08+float(i)*0.034
 		var lane: float = [-1.5,-5.4,3.6,6.4][i]
-		toy.position = world.road_position(angle,lane) + Vector3(0,.5,0)
+		toy.position = world.road_position(angle,lane) + Vector3(0,.10,0)
 		toy.rotation.y = world.road_yaw(angle)
 	# Camera node is in the saved scene tree: select it, enable Preview.
 	var camera := get_node_or_null("ShowcaseCamera") as Camera3D
 	if camera != null:
-		camera.position = Vector3(106,13,-24)
-		camera.look_at(Vector3(84,1.3,15),Vector3.UP)
+		var first: Vector3 = world.road_position(0)
+		var tangent: Vector3 = world.road_tangent(0)
+		camera.position = first - tangent*32.0 + Vector3(0,14,0)
+		camera.look_at(first + tangent*22.0 + Vector3(0,1.4,0),Vector3.UP)
 	# Focus the scene-editor viewport on the start line, rather than origin
 	# (which is inside the empty central lawn of the circular racetrack).
 	call_deferred("_focus_editor_camera")
@@ -62,5 +64,10 @@ func _focus_editor_camera() -> void:
 	var editor_cam := viewport.get_camera_3d()
 	if editor_cam == null:
 		return
-	editor_cam.global_position = Vector3(106,13,-24)
-	editor_cam.look_at(Vector3(84,1.3,15),Vector3.UP)
+	var world = get_node_or_null("LiveWorldPreview")
+	if world == null:
+		return
+	var start: Vector3 = world.road_position(0)
+	var tangent: Vector3 = world.road_tangent(0)
+	editor_cam.global_position = start - tangent*32.0 + Vector3(0,14,0)
+	editor_cam.look_at(start+tangent*22.0 + Vector3(0,1.4,0),Vector3.UP)
