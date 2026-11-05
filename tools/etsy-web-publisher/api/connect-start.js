@@ -12,7 +12,7 @@ export default async function handler(req,res){
  const challenge=crypto.createHash('sha256').update(verifier).digest('base64url');
  const state='rvp_'+crypto.randomBytes(24).toString('base64url');
  const url=new URL('https://www.etsy.com/oauth/connect');
- for(const [k,v] of Object.entries({response_type:'code',client_id:key,redirect_uri:REDIRECT,scope:'listings_r listings_w shops_r',state,code_challenge:challenge,code_challenge_method:'S256'}))url.searchParams.set(k,v);
+ for(const [k,v] of Object.entries({response_type:'code',client_id:key,redirect_uri:REDIRECT,scope:'listings_r listings_w shops_r shops_w',state,code_challenge:challenge,code_challenge_method:'S256'}))url.searchParams.set(k,v);
  const oauth={key,shared,verifier,state,exp:Date.now()+12*60000};
  return json(res,200,{url:url.toString()},[cookie('oauth',oauth,720)]);
 }
