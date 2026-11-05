@@ -7,6 +7,7 @@ const ArcadeAudio = preload("res://scripts/arcade_audio.gd")
 const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
 const TrafficSystem = preload("res://scripts/traffic_system.gd")
 const TouchControls = preload("res://scripts/touch_controls.gd")
+const BrandCatalog = preload("res://scripts/brand_catalog.gd")
 const MAX_LAPS: int = 3
 const TRACK_RADIUS: float = 84.0
 const CAR_COLORS: Array[Color] = [
@@ -41,6 +42,9 @@ var race_seconds: float = 0.0
 var player_stars: int = 0
 var total_stars: int = 0
 var selected_paint: int = 0
+var selected_car: int = 0
+var garage_credit_label: Label
+var credits_overlay: Control
 var held_left: bool = false
 var held_right: bool = false
 var ui_root: Control
@@ -83,6 +87,7 @@ func _setup_world() -> void:
 	add_child(world)
 	world.build_world()
 	player = CarVisual.new()
+	player.set_model_file(str(BrandCatalog.get_car(selected_car)["file"]))
 	player.configure(CAR_COLORS[selected_paint], 0)
 	player.name = "Speedy"
 	add_child(player)
@@ -99,6 +104,7 @@ func _setup_world() -> void:
 func _setup_rivals() -> void:
 	for i in range(3):
 		var car = CarVisual.new()
+		car.set_model_file(str(BrandCatalog.get_car((selected_car+i+1)%BrandCatalog.CARS.size())["file"]))
 		car.configure(CAR_COLORS[i+1],i+1)
 		car.name = "Rival" + str(i+1)
 		add_child(car)
@@ -282,15 +288,46 @@ func _setup_ui() -> void:
 
 	garage_overlay = _overlay()
 	_panel(garage_overlay,Rect2(313,108,650,505),Color("#0e1931eb"),Color("#6ccbe9"))
-	_label(garage_overlay,"GT STREET GARAGE",Rect2(359,134,566,73),43,Color("#ff84bd"))
-	garage_car_label = _label(garage_overlay,"SPEEDY • RED",Rect2(356,219,565,58),29)
-	_label(garage_overlay,"Pick your favorite color!",Rect2(360,296,560,42),23)
+	_label(garage_overlay,"REAL 3D GT GARAGE",Rect2(359,134,566,69),42,Color("#ff84bd"))
+	garage_car_label = _label(garage_overlay,"BMW M4 CSL",Rect2(346,209,588,49),27)
+	garage_credit_label = _label(garage_overlay,"Models by independent 3D artists • CC BY",Rect2(353,253,573,33),16)
+	for i in range(BrandCatalog.CARS.size()):
+		var selected_index: int = i
+		var info: Dictionary = BrandCatalog.get_car(i)
+		var gx: float = 335.0+float(i%3)*208.0
+		var gy: float = 298.0+float(i/3)*65.0
+		var choice: Button = _button(garage_overlay,str(info["name"]),
+			Rect2(gx,gy,198,56),CAR_COLORS[i],func(): _select_brand(selected_index))
+		choice.add_theme_font_size_override("font_size",16)
+		choice.disabled = not BrandCatalog.available(i)
+	_label(garage_overlay,"EXPERIMENTAL PAINT",Rect2(354,431,566,32),17,Color("#cae6ff"))
 	for i in range(CAR_COLORS.size()):
 		var color_index: int = i
-		_button(garage_overlay,"★",Rect2(377+float(i)*86.0,366,77,70),CAR_COLORS[i],
+		_button(garage_overlay,"●",Rect2(392+float(i)*82.0,470,72,42),CAR_COLORS[i],
 			func(): _select_paint(color_index))
-	_button(garage_overlay,"▶ RACE!",Rect2(501,475,288,80),Color("#42ce54"),func(): _start_race())
-	_button(garage_overlay,"BACK",Rect2(333,121,110,52),Color("#348ae3"),func(): _go_menu())
+	_button(garage_overlay,"RACE!",Rect2(514,540,256,63),Color("#e94087"),func(): _start_race())
+	_button(garage_overlay,"BACK",Rect2(326,119,100,50),Color("#348ae3"),func(): _go_menu())
+	_button(garage_overlay,"CREDITS",Rect2(817,119,136,50),Color("#35649e"),func(): _open_credits())
+
+	credits_overlay = _overlay()
+	_panel(credits_overlay,Rect2(164,62,946,612),Color("#121f3af3"),Color("#52cbe1"))
+	_label(credits_overlay,"MODEL ARTISTS & LICENSING",Rect2(220,85,841,73),39,Color("#fff2ac"))
+	var text_area := RichTextLabel.new()
+	text_area.position=Vector2(219,161)
+	text_area.size=Vector2(841,434)
+	text_area.add_theme_font_size_override("normal_font_size",18)
+	text_area.add_theme_color_override("default_color",Color.WHITE)
+	var artist_text: String = "DEVELOPMENT PROTOTYPE ONLY. NOT AN OFFICIAL AUTOMAKER GAME.\n\n"
+	for i in range(BrandCatalog.CARS.size()):
+		var info: Dictionary=BrandCatalog.get_car(i)
+		artist_text += "%s — 3D art: %s — CC BY 4.0\n%s\n\n" % [
+			str(info["name"]),str(info["artist"]),str(info["source"])]
+	artist_text += "Mesh licenses: https://creativecommons.org/licenses/by/4.0/\n"
+	artist_text += "Manufacturer trademarks and logos are NOT licensed by this project."
+	text_area.text = artist_text
+	credits_overlay.add_child(text_area)
+	_button(credits_overlay,"BACK TO GARAGE",Rect2(445,602,384,58),
+		Color("#267baa"),func(): _return_garage())
 
 	pause_overlay = _overlay()
 	_panel(pause_overlay,Rect2(396,155,490,401),Color("#0c1633f4"),Color("#75d5f2"))
@@ -310,6 +347,7 @@ func _setup_ui() -> void:
 func _apply_ui() -> void:
 	menu_overlay.visible = state == "menu"
 	garage_overlay.visible = state == "garage"
+	credits_overlay.visible = state == "credits"
 	pause_overlay.visible = state == "paused"
 	finish_overlay.visible = state == "finished"
 	var active: bool = state == "racing" or state == "countdown"
@@ -333,14 +371,43 @@ func _go_menu() -> void:
 
 func _open_garage() -> void:
 	state = "garage"
+	var info: Dictionary = BrandCatalog.get_car(selected_car)
+	garage_car_label.text = str(info["name"])
+	garage_credit_label.text = "3D art by "+str(info["artist"])+" • CC BY • unofficial"
 	audio.cue("click")
 	_apply_ui()
+
+func _open_credits() -> void:
+	state = "credits"
+	audio.cue("click")
+	_apply_ui()
+
+func _return_garage() -> void:
+	_open_garage()
+
+func _select_brand(index: int) -> void:
+	if not BrandCatalog.available(index):
+		return
+	selected_car = clampi(index,0,BrandCatalog.CARS.size()-1)
+	var info: Dictionary=BrandCatalog.get_car(selected_car)
+	if is_instance_valid(player):
+		remove_child(player)
+		player.queue_free()
+	player=CarVisual.new()
+	player.set_model_file(str(info["file"]))
+	player.configure(CAR_COLORS[selected_paint],0)
+	player.name="GTPlayer"
+	add_child(player)
+	_place_car()
+	garage_car_label.text=str(info["name"])
+	garage_credit_label.text="3D art by "+str(info["artist"])+" • CC BY • unofficial"
+	audio.cue("click")
+	_save_progress()
 
 func _select_paint(index: int) -> void:
 	selected_paint = clampi(index,0,CAR_COLORS.size()-1)
 	player.set_paint(CAR_COLORS[selected_paint])
-	garage_car_label.text = ["SPEEDY RED","BUDDY BLUE","SUNNY YELLOW",
-		"RANGER GREEN","PURPLE POWER","PINK ROCKET"][selected_paint]
+	garage_car_label.text = str(BrandCatalog.get_car(selected_car)["name"])
 	audio.cue("click")
 	_save_progress()
 
@@ -638,9 +705,11 @@ func _load_progress() -> void:
 	if cfg.load("user://tiny-turbo-save.cfg")==OK:
 		total_stars = int(cfg.get_value("player","stars",0))
 		selected_paint = clampi(int(cfg.get_value("player","paint",0)),0,CAR_COLORS.size()-1)
+		selected_car = clampi(int(cfg.get_value("player","brand",0)),0,BrandCatalog.CARS.size()-1)
 
 func _save_progress() -> void:
 	var cfg := ConfigFile.new()
 	cfg.set_value("player","stars",total_stars)
 	cfg.set_value("player","paint",selected_paint)
+	cfg.set_value("player","brand",selected_car)
 	cfg.save("user://tiny-turbo-save.cfg")
