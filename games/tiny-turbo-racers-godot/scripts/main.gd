@@ -1,10 +1,11 @@
 extends Node3D
 ## Tiny Turbo Racers 3D: self-contained, native Godot arcade racing vertical slice.
 ## Race a three-lap toy island circuit with chase camera, AI, stars and boost.
-const WorldBuilder = preload("res://scripts/real_track.gd")
+const WorldBuilder = preload("res://scripts/street_track.gd")
 const CarVisual = preload("res://scripts/real_car.gd")
 const ArcadeAudio = preload("res://scripts/arcade_audio.gd")
 const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
+const TrafficSystem = preload("res://scripts/traffic_system.gd")
 const MAX_LAPS: int = 3
 const TRACK_RADIUS: float = 84.0
 const CAR_COLORS: Array[Color] = [
@@ -13,6 +14,7 @@ const CAR_COLORS: Array[Color] = [
 ]
 
 var world
+var traffic
 var player
 var camera: Camera3D
 var audio
@@ -26,6 +28,10 @@ var handling = VehicleDynamics.new()
 var last_skid_sound: float = 0.0
 var boost_remaining: float = 0.0
 var boost_cooldown: float = 0.0
+var nitro_charge: float = 100.0
+var drift_points: int = 0
+var near_miss_count: int = 0
+var held_drift: bool = false
 var countdown: float = 3.75
 var race_seconds: float = 0.0
 var player_stars: int = 0
@@ -57,6 +63,7 @@ func _ready() -> void:
 	_load_progress()
 	_setup_world()
 	_setup_rivals()
+	_setup_traffic()
 	_setup_pickups()
 	_setup_audio()
 	_setup_ui()
@@ -96,6 +103,12 @@ func _setup_rivals() -> void:
 			"speed": 28.5 + float(i)*2.45,
 			"lane": [-5.1,0.0,5.15][i]
 		})
+
+func _setup_traffic() -> void:
+	traffic = TrafficSystem.new()
+	traffic.name = "MidnightCityTraffic"
+	add_child(traffic)
+	traffic.setup(world)
 
 func _setup_pickups() -> void:
 	for i in range(25):
@@ -141,13 +154,13 @@ func _setup_audio() -> void:
 	for i in range(rivals.size()):
 		audio.attach_rival(rivals[i]["node"],i)
 
-func _style(bg: Color, stroke: Color = Color("#f7faff"), radius: int = 23, border: int = 4) -> StyleBoxFlat:
+func _style(bg: Color, stroke: Color = Color("#b35dfe"), radius: int = 17, border: int = 2) -> StyleBoxFlat:
 	var sty := StyleBoxFlat.new()
 	sty.bg_color = bg
 	sty.border_color = stroke
 	sty.set_border_width_all(border)
 	sty.set_corner_radius_all(radius)
-	sty.shadow_color = Color(0,.20,.48,.25)
+	sty.shadow_color = Color(0,.86,.98,.20)
 	sty.shadow_size = 6
 	return sty
 
@@ -205,27 +218,33 @@ func _setup_ui() -> void:
 	ui_root = Control.new()
 	ui_root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	layer.add_child(ui_root)
-	_panel(ui_root,Rect2(13,10,570,68),Color("#247fd9e9"))
+	_panel(ui_root,Rect2(13,10,570,68),Color("#0c1630e9"),Color("#54c5eb"))
 	top_hud = Control.new()
 	top_hud.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	ui_root.add_child(top_hud)
 	lap_label = _label(top_hud,"LAP 1 / 3",Rect2(25,16,160,52),24)
 	position_label = _label(top_hud,"4th",Rect2(202,16,120,52),27,Color("#ffe36e"))
 	stars_label = _label(top_hud,"STARS 0",Rect2(340,16,220,52),23,Color("#fff0a7"))
-	_panel(top_hud,Rect2(976,10,290,68),Color("#1b6dccdf"))
+	_panel(top_hud,Rect2(976,10,290,68),Color("#0d1936df"),Color("#b665e4"))
 	speed_label = _label(top_hud,"0 km/h",Rect2(981,14,274,55),30,Color("#fff2a2"))
-	_label(top_hud,"RIBHLAB GT CUP",Rect2(565,14,317,56),22)
-	_button(top_hud,"II",Rect2(897,16,75,55),Color("#2789e2"),func(): _pause_race())
-	_panel(ui_root,Rect2(439,677,400,28),Color("#167cbeae"))
-	boost_label = _label(ui_root,"TURBO READY",Rect2(454,675,370,31),18,Color("#ffffff"))
+	_label(top_hud,"MIDNIGHT RUSH",Rect2(555,14,331,56),22,Color("#81eeff"))
+	_button(top_hud,"II",Rect2(897,16,75,55),Color("#3d3d76"),func(): _pause_race())
+	_panel(ui_root,Rect2(407,676,480,32),Color("#0e1d3dcf"),Color("#46cbf9"))
+	boost_label = _label(ui_root,"NITRO 100% | DRIFT 0",Rect2(418,675,457,31),18,Color("#a3f2ff"))
 	
-	var left := _button(ui_root,"◀",Rect2(28,573,122,117),Color("#247ce6"),func(): pass)
-	var right := _button(ui_root,"▶",Rect2(171,573,122,117),Color("#247ce6"),func(): pass)
+	var left := _button(ui_root,"◀",Rect2(28,573,122,117),Color("#136487"),func(): pass)
+	var right := _button(ui_root,"▶",Rect2(171,573,122,117),Color("#136487"),func(): pass)
 	left.button_down.connect(func(): held_left = true)
 	left.button_up.connect(func(): held_left = false)
 	right.button_down.connect(func(): held_right = true)
 	right.button_up.connect(func(): held_right = false)
-	var turbo := _button(ui_root,"⚡ TURBO",Rect2(1033,574,210,113),Color("#f9a924"),func(): _activate_boost())
+	var drift_btn := _button(ui_root,"DRIFT",Rect2(868,586,150,101),
+		Color("#8b3e96"),func(): pass)
+	drift_btn.button_down.connect(func(): held_drift=true)
+	drift_btn.button_up.connect(func(): held_drift=false)
+	drift_btn.set_meta("race_only",true)
+	var turbo := _button(ui_root,"NITRO",Rect2(1033,574,210,113),
+		Color("#ef4d85"),func(): _activate_boost())
 	turbo.add_theme_font_size_override("font_size",27)
 	# Race-only controls remain reachable while other overlays block touch.
 	top_hud.visible = false
@@ -240,17 +259,18 @@ func _setup_ui() -> void:
 	big_countdown.visible = false
 
 	menu_overlay = _overlay()
-	_panel(menu_overlay,Rect2(354,83,574,565),Color("#2f83e9f1"),Color("#dffaff"))
-	_label(menu_overlay,"TINY TURBO",Rect2(377,113,529,83),57,Color("#fff6c6"))
-	_label(menu_overlay,"RACERS 3D",Rect2(377,188,529,80),56,Color("#ffe05e"))
-	_label(menu_overlay,"Real sports cars • RibhLab Grand Prix Circuit",Rect2(390,288,500,44),22)
-	_button(menu_overlay,"🏁 START RACE",Rect2(465,360,351,78),Color("#36cf54"),func(): _start_race())
-	_button(menu_overlay,"🚗 GARAGE",Rect2(465,462,351,72),Color("#20a8e5"),func(): _open_garage())
-	_label(menu_overlay,"ARROWS or A/D • SPACE = TURBO",Rect2(400,563,477,40),19,Color("#dfffff"))
+	_panel(menu_overlay,Rect2(354,83,574,565),Color("#0a1125ed"),Color("#6ac3f6"))
+	_label(menu_overlay,"MIDNIGHT",Rect2(377,118,529,83),62,Color("#e8f9ff"))
+	_label(menu_overlay,"RUSH GT",Rect2(377,193,529,83),68,Color("#fd69b2"))
+	_label(menu_overlay,"A street racing experience by RibhLab",Rect2(385,296,510,42),22,Color("#a3d8ff"))
+	_button(menu_overlay,"START NIGHT RACE",Rect2(465,359,351,80),Color("#e44588"),func(): _start_race())
+	_button(menu_overlay,"TUNE YOUR CAR",Rect2(465,463,351,72),Color("#15698d"),func(): _open_garage())
+	_label(menu_overlay,"A / D = STEER  |  SPACE = NITRO  |  SHIFT = DRIFT",
+		Rect2(378,562,526,43),17,Color("#b6dfff"))
 
 	garage_overlay = _overlay()
-	_panel(garage_overlay,Rect2(313,108,650,505),Color("#1e80cde9"))
-	_label(garage_overlay,"YOUR RACING CAR",Rect2(359,134,566,73),43,Color("#ffe36c"))
+	_panel(garage_overlay,Rect2(313,108,650,505),Color("#0e1931eb"),Color("#6ccbe9"))
+	_label(garage_overlay,"GT STREET GARAGE",Rect2(359,134,566,73),43,Color("#ff84bd"))
 	garage_car_label = _label(garage_overlay,"SPEEDY • RED",Rect2(356,219,565,58),29)
 	_label(garage_overlay,"Pick your favorite color!",Rect2(360,296,560,42),23)
 	for i in range(CAR_COLORS.size()):
@@ -261,18 +281,18 @@ func _setup_ui() -> void:
 	_button(garage_overlay,"BACK",Rect2(333,121,110,52),Color("#348ae3"),func(): _go_menu())
 
 	pause_overlay = _overlay()
-	_panel(pause_overlay,Rect2(396,155,490,401),Color("#217bc6f4"))
-	_label(pause_overlay,"PIT STOP!",Rect2(424,190,427,79),55,Color("#ffe878"))
+	_panel(pause_overlay,Rect2(396,155,490,401),Color("#0c1633f4"),Color("#75d5f2"))
+	_label(pause_overlay,"RACE PAUSED",Rect2(424,190,427,79),45,Color("#ffe878"))
 	_button(pause_overlay,"▶ RESUME",Rect2(494,312,295,72),Color("#38c95b"),func(): _resume_race())
 	_button(pause_overlay,"⌂ MAIN MENU",Rect2(494,416,295,71),Color("#2691e5"),func(): _go_menu())
 
 	finish_overlay = _overlay()
-	_panel(finish_overlay,Rect2(368,112,545,501),Color("#2474d5f6"))
+	_panel(finish_overlay,Rect2(368,112,545,501),Color("#0b1834f6"),Color("#fe6db3"))
 	finish_title = _label(finish_overlay,"SUPER STAR RACER!",Rect2(390,150,500,90),44,Color("#ffe66a"))
 	finish_stats = _label(finish_overlay,"",Rect2(401,269,490,113),29)
 	_button(finish_overlay,"▶ RACE AGAIN",Rect2(453,417,371,74),Color("#37ce59"),func(): _start_race())
 	_button(finish_overlay,"⌂ HOME",Rect2(483,512,314,63),Color("#2ca4e8"),func(): _go_menu())
-	world_label = _label(ui_root,"RIBHLAB INTERNATIONAL RACEWAY",Rect2(425,82,430,45),18)
+	world_label = _label(ui_root,"MIDNIGHT HARBOR • CITY SPRINT",Rect2(425,82,430,45),18,Color("#d4d9ff"))
 	world_label.visible = false
 
 func _apply_ui() -> void:
@@ -293,6 +313,7 @@ func _go_menu() -> void:
 	state = "menu"
 	held_left = false
 	held_right = false
+	held_drift = false
 	audio.stop_engines()
 	_apply_ui()
 
@@ -321,6 +342,11 @@ func _start_race() -> void:
 	countdown = 3.8
 	boost_remaining = 0.0
 	boost_cooldown = 0.0
+	nitro_charge = 100.0
+	drift_points = 0
+	near_miss_count = 0
+	held_drift = false
+	traffic.reset()
 	player_stars = 0
 	collision_lock = 0.0
 	last_lap = 1
@@ -348,10 +374,11 @@ func _resume_race() -> void:
 	_apply_ui()
 
 func _activate_boost() -> void:
-	if state != "racing" or boost_cooldown > 0.0:
+	if state != "racing" or boost_cooldown > 0.0 or nitro_charge < 35.0:
 		return
-	boost_remaining = 2.8
-	boost_cooldown = 8.0
+	nitro_charge -= 35.0
+	boost_remaining = 3.0
+	boost_cooldown = 3.6
 	audio.cue("boost")
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -360,6 +387,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	match event.keycode:
 		KEY_SPACE:
 			_activate_boost()
+		KEY_SHIFT:
+			held_drift=true
 		KEY_ESCAPE:
 			if state == "racing":
 				_pause_race()
@@ -411,10 +440,20 @@ func _drive(delta: float) -> void:
 		steer -= 1.0
 	if held_right or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D):
 		steer += 1.0
+var drifting: bool = held_drift or Input.is_key_pressed(KEY_SHIFT)
 	var physics: Dictionary = handling.simulate(delta, steer, boost, absf(lane_offset)>7.1)
 	speed = float(physics["speed"])
-	lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta,-7.5,7.5)
-	if float(physics["slip"])>.45 and race_seconds-last_skid_sound>2.1:
+	if drifting and absf(steer)>.05 and speed>12.0:
+		handling.drift_intensity = maxf(handling.drift_intensity,.70)
+		lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta*1.38,-7.5,7.5)
+		speed *= (1.0-.02*delta)
+		handling.velocity = speed
+		drift_points += maxi(1,int(speed*delta*2.0))
+		nitro_charge = minf(100.0,nitro_charge+delta*3.2)
+	else:
+		lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta,-7.5,7.5)
+		nitro_charge = minf(100.0,nitro_charge+delta*.45)
+	if handling.drift_intensity>.45 and race_seconds-last_skid_sound>2.1:
 		audio.cue("skid")
 		last_skid_sound = race_seconds
 	progress += speed*delta/world.road_meters_per_radian()
@@ -424,7 +463,17 @@ func _drive(delta: float) -> void:
 		audio.cue("lap")
 	_check_pickups()
 	_check_collisions()
-	audio.set_motor_speed(speed/59.0,boost)
+	var traffic_event: Dictionary = traffic.tick(delta,progress,lane_offset,speed)
+	if bool(traffic_event["collision"]) and collision_lock<=0.0:
+		speed *= .53
+		handling.velocity=speed
+		collision_lock=1.15
+		audio.cue("skid")
+	var misses: int=int(traffic_event["near_misses"])
+	if misses>0:
+		near_miss_count += misses
+		nitro_charge = minf(100.0,nitro_charge+float(misses)*8.0)
+	audio.set_motor_speed(speed/72.0,boost)
 	if progress>=float(MAX_LAPS)*TAU:
 		_finish_race()
 
@@ -435,7 +484,7 @@ func _animate_cars(delta: float) -> void:
 		steering -= 1.0
 	if held_right or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D):
 		steering += 1.0
-	player.animate_car(delta,speed,steering,boost_remaining>0.0)
+	player.animate_car(delta,speed,steering*(1.32 if held_drift else 1.0),boost_remaining>0.0)
 	for i in range(rivals.size()):
 		var car_data: Dictionary = rivals[i]
 		if state == "racing":
@@ -462,7 +511,7 @@ func _update_camera(delta: float) -> void:
 		look = player.global_position + Vector3(0,1.10,0)
 	camera.global_position = camera.global_position.lerp(eye,clampf(delta*3.8,0.0,1.0))
 	camera.look_at(look,Vector3.UP)
-	var target_fov: float = 76.0 if boost_remaining>0.0 and state=="racing" else 61.0
+	var target_fov: float = 77.0 if boost_remaining>0.0 and state=="racing" else 63.0
 	camera.fov = lerpf(camera.fov,target_fov,clampf(delta*3.0,0.0,1.0))
 
 func _animate_pickups(delta: float) -> void:
@@ -511,7 +560,8 @@ func _update_hud() -> void:
 	position_label.text = ["1st","2nd","3rd","4th"][_race_position()-1]
 	stars_label.text = "★ STARS " + str(player_stars)
 	speed_label.text = str(int(speed*3.6))+" km/h"
-	boost_label.text = "⚡ TURBO " + ("READY!" if boost_cooldown<=0.0 else str(ceili(boost_cooldown))+"s")
+	boost_label.text = "NITRO "+str(int(nitro_charge))+"%   |   DRIFT "+str(drift_points)+
+		"   |   NEAR MISS "+str(near_miss_count)
 
 func _finish_race() -> void:
 	if state != "racing":
@@ -523,8 +573,10 @@ func _finish_race() -> void:
 	var bonus: int = maxi(2,5-rank)*4
 	total_stars += player_stars + bonus
 	_save_progress()
-	finish_title.text = "🏆 CHAMPION!" if rank==1 else "⭐ GREAT RACING!"
-	finish_stats.text = ["1st","2nd","3rd","4th"][rank-1] + " PLACE  •  3 LAPS\n" + str(player_stars) + " STARS + "+str(bonus)+" BONUS\nTOTAL: "+str(total_stars)+" STARS"
+	finish_title.text = "MIDNIGHT CHAMPION" if rank==1 else "FINISH LINE"
+	finish_stats.text = ["1st","2nd","3rd","4th"][rank-1]+" PLACE  /  3 LAPS"+
+		"\nDRIFT "+str(drift_points)+"  •  NEAR MISSES "+str(near_miss_count)+
+		"\nSTREET CREDITS "+str(player_stars+bonus)
 	_apply_ui()
 
 func _load_progress() -> void:
