@@ -7,6 +7,7 @@ var paint: Color = Color("#f83f53")
 var character_id: int = 0
 var wheels: Array[Node3D] = []
 var flames: Array[MeshInstance3D] = []
+var dust_emitters: Array[CPUParticles3D] = []
 var glow_material: StandardMaterial3D
 var body_material: StandardMaterial3D
 var elapsed: float = 0.0
@@ -31,6 +32,8 @@ func animate_car(delta: float, speed: float, steering: float, turbo: bool) -> vo
 		# The front axle (local -Z) gently points toward the turn.
 		wheel.rotation.y = lerpf(wheel.rotation.y, steering * 0.19 if i%2==0 else 0.0,
 			clampf(delta*9.0,0,1))
+	for dust in dust_emitters:
+		dust.emitting = (speed>11.0 and absf(steering)>.62) or turbo
 	for flame in flames:
 		flame.visible = turbo
 		if turbo:
@@ -178,8 +181,42 @@ func _build() -> void:
 		add_child(inst)
 		flames.append(inst)
 	
+	if character_id == 0:
+		_build_dust_fx()
 	if character_id == 2:
 		_sphere(Vector3(0.66, 2.03, 0.40), Vector3(0.28, 0.20, 0.32), pink)
 		_sphere(Vector3(0.86, 2.09, 0.42), Vector3(0.16, 0.19, 0.18), pink)
 	if character_id == 3:
 		_box(Vector3(0, 1.94, 0.18), Vector3(0.81, 0.11, 0.29), golden)
+
+func _build_dust_fx() -> void:
+	# Godot's native CPUParticles3D: gentle tyre smoke / road dust.
+	# CPU particles also work on devices where GPU particle support is limited.
+	var smoke_mat := _mat(Color("#d6e6f1"),.95)
+	smoke_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	smoke_mat.albedo_color.a = .45
+	for side in [-1,1]:
+		var emitter := CPUParticles3D.new()
+		emitter.name = "SkidDust" + str(side)
+		emitter.position = Vector3(float(side)*1.08,.30,1.19)
+		emitter.amount = 20
+		emitter.lifetime = .65
+		emitter.lifetime_randomness = .40
+		emitter.emitting = false
+		emitter.local_coords = false
+		emitter.direction = Vector3(0,1,1)
+		emitter.spread = 45.0
+		emitter.gravity = Vector3(0,.36,0)
+		emitter.initial_velocity_min = .6
+		emitter.initial_velocity_max = 2.2
+		emitter.scale_amount_min = .42
+		emitter.scale_amount_max = 1.30
+		var blob := SphereMesh.new()
+		blob.radius = .20
+		blob.height = .40
+		blob.radial_segments = 6
+		blob.rings = 3
+		blob.material = smoke_mat
+		emitter.mesh = blob
+		add_child(emitter)
+		dust_emitters.append(emitter)
