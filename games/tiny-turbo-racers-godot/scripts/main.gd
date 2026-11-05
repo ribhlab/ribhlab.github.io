@@ -1,8 +1,8 @@
 extends Node3D
 ## Tiny Turbo Racers 3D: self-contained, native Godot arcade racing vertical slice.
 ## Race a three-lap toy island circuit with chase camera, AI, stars and boost.
-const WorldBuilder = preload("res://scripts/world_builder.gd")
-const CarVisual = preload("res://scripts/car_visual.gd")
+const WorldBuilder = preload("res://scripts/real_track.gd")
+const CarVisual = preload("res://scripts/real_car.gd")
 const ArcadeAudio = preload("res://scripts/arcade_audio.gd")
 const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
 const MAX_LAPS: int = 3
@@ -214,7 +214,7 @@ func _setup_ui() -> void:
 	stars_label = _label(top_hud,"STARS 0",Rect2(340,16,220,52),23,Color("#fff0a7"))
 	_panel(top_hud,Rect2(976,10,290,68),Color("#1b6dccdf"))
 	speed_label = _label(top_hud,"0 km/h",Rect2(981,14,274,55),30,Color("#fff2a2"))
-	_label(top_hud,"TINY TURBO RACERS • 3D",Rect2(540,14,415,56),22)
+	_label(top_hud,"RIBHLAB GRAND PRIX • GT RACING",Rect2(540,14,415,56),21)
 	_button(top_hud,"II",Rect2(897,16,75,55),Color("#2789e2"),func(): _pause_race())
 	_panel(ui_root,Rect2(439,677,400,28),Color("#167cbeae"))
 	boost_label = _label(ui_root,"TURBO READY",Rect2(454,675,370,31),18,Color("#ffffff"))
@@ -243,7 +243,7 @@ func _setup_ui() -> void:
 	_panel(menu_overlay,Rect2(354,83,574,565),Color("#2f83e9f1"),Color("#dffaff"))
 	_label(menu_overlay,"TINY TURBO",Rect2(377,113,529,83),57,Color("#fff6c6"))
 	_label(menu_overlay,"RACERS 3D",Rect2(377,188,529,80),56,Color("#ffe05e"))
-	_label(menu_overlay,"Race through a magical toy island!",Rect2(390,288,500,44),24)
+	_label(menu_overlay,"Real sports cars • RibhLab Grand Prix Circuit",Rect2(390,288,500,44),22)
 	_button(menu_overlay,"🏁 START RACE",Rect2(465,360,351,78),Color("#36cf54"),func(): _start_race())
 	_button(menu_overlay,"🚗 GARAGE",Rect2(465,462,351,72),Color("#20a8e5"),func(): _open_garage())
 	_label(menu_overlay,"ARROWS or A/D • SPACE = TURBO",Rect2(400,563,477,40),19,Color("#dfffff"))
@@ -272,7 +272,7 @@ func _setup_ui() -> void:
 	finish_stats = _label(finish_overlay,"",Rect2(401,269,490,113),29)
 	_button(finish_overlay,"▶ RACE AGAIN",Rect2(453,417,371,74),Color("#37ce59"),func(): _start_race())
 	_button(finish_overlay,"⌂ HOME",Rect2(483,512,314,63),Color("#2ca4e8"),func(): _go_menu())
-	world_label = _label(ui_root,"4 WORLD TOUR • TOY CITY • BEACH • CANDY • DINO",Rect2(348,82,585,45),18)
+	world_label = _label(ui_root,"RIBHLAB INTERNATIONAL CIRCUIT • GT CUP",Rect2(348,82,585,45),18)
 	world_label.visible = false
 
 func _apply_ui() -> void:
@@ -417,7 +417,7 @@ func _drive(delta: float) -> void:
 	if float(physics["slip"])>.45 and race_seconds-last_skid_sound>2.1:
 		audio.cue("skid")
 		last_skid_sound = race_seconds
-	progress += speed*delta/(TRACK_RADIUS+lane_offset)
+	progress += speed*delta/world.road_meters_per_radian()
 	var new_lap: int = mini(MAX_LAPS,int(progress/TAU)+1)
 	if new_lap > last_lap:
 		last_lap = new_lap
@@ -439,21 +439,21 @@ func _animate_cars(delta: float) -> void:
 	for i in range(rivals.size()):
 		var car_data: Dictionary = rivals[i]
 		if state == "racing":
-			car_data["progress"] += (float(car_data["speed"])+sin(elapsed*.7+float(i)*3.0)*3.0)*delta / TRACK_RADIUS
+			car_data["progress"] += (float(car_data["speed"])+sin(elapsed*.7+float(i)*3.0)*3.0)*delta / world.road_meters_per_radian()
 		var a: float = float(car_data["progress"])
 		var offset: float = float(car_data["lane"])
 		var car_node = car_data["node"]
-		car_node.position = world.road_position(a,offset) + Vector3(0,.5,0)
+		car_node.position = world.road_position(a,offset) + Vector3(0,.10,0)
 		car_node.rotation.y = world.road_yaw(a)
 		car_node.animate_car(delta,float(car_data["speed"]),sin(elapsed+float(i))*.3,false)
 
 func _place_car() -> void:
-	player.position = world.road_position(progress,lane_offset) + Vector3(0,.50,0)
+	player.position = world.road_position(progress,lane_offset) + Vector3(0,.10,0)
 	player.rotation.y = world.road_yaw(progress)
 
 func _update_camera(delta: float) -> void:
 	var a: float = progress
-	var tangent := Vector3(-sin(a),0.0,cos(a))
+	var tangent: Vector3 = world.road_tangent(a)
 	var eye: Vector3 = player.global_position - tangent*15.0 + Vector3(0,7.9,0)
 	var look: Vector3 = player.global_position + tangent*12.0 + Vector3(0,2.1,0)
 	if state == "menu" or state == "garage":
