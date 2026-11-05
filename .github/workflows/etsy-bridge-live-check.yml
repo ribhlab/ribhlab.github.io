@@ -20,7 +20,7 @@ jobs:
       - name: Confirm public API health from the internet
         shell: bash
         env:
-          API_URL: https://ribhlab-etsy-oauth-bridge.vercel.app/api/etsy-oauth-status
+          API_URL: https://ribhlab-etsy-oauth-helper.vercel.app/api/etsy-oauth-status
         run: |
           set -euo pipefail
           status=$(curl -sSL --retry 3 --max-time 20 -w "%{http_code}" -o /tmp/etsy-status.json \
@@ -38,7 +38,7 @@ jobs:
         run: |
           set -euo pipefail
           curl -sSL --max-time 20 -D /tmp/etsy-headers -o /dev/null \
-            -X OPTIONS "https://ribhlab-etsy-oauth-bridge.vercel.app/api/etsy-oauth-token" \
+            -X OPTIONS "https://ribhlab-etsy-oauth-helper.vercel.app/api/etsy-oauth-token" \
             -H 'Origin: https://ribhlab.github.io' \
             -H 'Access-Control-Request-Method: POST' \
             -H 'Access-Control-Request-Headers: content-type'
