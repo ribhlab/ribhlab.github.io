@@ -4,6 +4,7 @@ extends "res://scripts/real_track.gd"
 ## Full spline route is reused from GP v0.5; streets, skyline, lighting and
 ## city props are wholly new. This is NOT a reproduction of Need for Speed.
 const PBR = preload("res://scripts/realism_materials.gd")
+const TreeScenery = preload("res://scripts/tree_scenery.gd")
 const NIGHT_BLUE := Color("#071529")
 const CITY_STONE := Color("#14223a")
 const WINDOW_TONES: Array[Color] = [
@@ -52,15 +53,15 @@ func _build_lighting() -> void:
 	env.background_mode = Environment.BG_SKY
 	var sky := Sky.new()
 	var atmosphere := ProceduralSkyMaterial.new()
-	atmosphere.sky_top_color = Color("#030717")
-	atmosphere.sky_horizon_color = Color("#101a38")
+	atmosphere.sky_top_color = Color("#21465f") if circuit_variant==1 else Color("#030717")
+	atmosphere.sky_horizon_color = Color("#e5a775") if circuit_variant==1 else Color("#101a38")
 	atmosphere.ground_bottom_color = Color("#10151e")
 	atmosphere.ground_horizon_color = Color("#13233c")
 	sky.sky_material = atmosphere
 	env.sky = sky
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 	env.ambient_light_color = Color("#9db7dc")
-	env.ambient_light_energy = 0.35
+	env.ambient_light_energy = .62 if circuit_variant==1 else .32 if circuit_variant==2 else .35
 	env.reflected_light_source = Environment.REFLECTION_SOURCE_BG
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	env.glow_enabled = true
@@ -231,6 +232,9 @@ void fragment() {
 	return material
 
 func _build_city() -> void:
+	if circuit_variant!=0:
+		_build_rural_facilities()
+		return
 	# About a hundred original high-rise buildings, no downloaded copyrighted city model.
 	# Realistic windows are pooled into a handful of MultiMesh batches.
 	var lit_windows: Array[Array] = [[],[],[],[]]
@@ -325,6 +329,8 @@ func _add_neon_sign(parent:Node3D,at:Vector3,span:float,i:int) -> void:
 		Vector3(span*.67,.14,.09),sign_col,.13,true)
 
 func _build_beach() -> void:
+	if circuit_variant != 0:
+		return
 	# Industrial waterfront by the south-east street segment.
 	var docks:=Node3D.new()
 	docks.name="HarborContainersAndCranes"
@@ -359,11 +365,51 @@ func _build_candy() -> void:
 			Color("#6ad0e7") if i%2==0 else Color("#fc548d"),.16,true)
 
 func _build_dino() -> void:
-	# Urban parks are small lighting accents; trees don't obstruct the circuit.
-	for i in range(25):
-		var a:float=TAU*(float(i)+.65)/25
-		var offset:float=-25.0 if i%2 else 26.0
-		_make_tree(road_position(a,offset),.60+float(i%3)*.15)
+	if circuit_variant!=0:
+		var forest=TreeScenery.new()
+		forest.name="ImportedRealTreeScenery"
+		add_child(forest)
+		forest.setup(self,circuit_variant)
+		return
+	var trees=TreeScenery.new()
+	trees.name="ImportedRealTreeScenery"
+	add_child(trees)
+	trees.setup(self,circuit_variant)
+
+
+
+func _build_rural_facilities() -> void:
+	# Coastal houses and mountain lodges rather than downtown neon skyscrapers.
+	var is_coast: bool=circuit_variant==1
+	var structures:int=38 if is_coast else 19
+	for i in range(structures):
+		var angle:float=TAU*(float(i)+.5)/float(structures)
+		var side:float=-1.0 if i%3==0 else 1.0
+		var pos:Vector3=road_position(angle,side*(47.0+float(i%4)*9.0))
+		var outpost:=Node3D.new()
+		outpost.name="CoastVilla_%02d" % i if is_coast else "MountainLodge_%02d" % i
+		outpost.position=Vector3(pos.x,0,pos.z)
+		outpost.rotation.y=road_yaw(angle)
+		add_child(outpost)
+		var h:float=7.0+float(i%3)*3.0
+		var facade:Color=Color("#e8d1b2") if is_coast else Color("#66594f")
+		make_box(outpost,Vector3(0,h*.5,0),Vector3(11,h,9),facade,.81)
+		make_box(outpost,Vector3(0,h+.5,0),Vector3(13.5,1.2,11.5),
+			Color("#bf8569") if is_coast else Color("#343c43"),.67)
+		for k in range(2):
+			make_box(outpost,Vector3(-3+float(k)*6.0,h*.6,-4.6),
+				Vector3(2.1,2.3,.13),Color("#a6d5dd") if is_coast else Color("#83a2ba"),.23)
+	# A distinct racing banner for every route.
+	var gateway:=Node3D.new()
+	gateway.name="RouteStartBanner"
+	gateway.position=road_position(.04)
+	gateway.rotation.y=road_yaw(.04)
+	add_child(gateway)
+	for side in [-1,1]:
+		make_box(gateway,Vector3(float(side)*11.0,6.5,0),
+			Vector3(.52,12,.52),Color("#bfc7ca"),.45)
+	make_box(gateway,Vector3(0,12.0,0),Vector3(23,1.5,2.0),
+		Color("#e28e61") if is_coast else Color("#70a26d"),.30)
 
 func _build_ferris_wheel() -> void:
 	pass
