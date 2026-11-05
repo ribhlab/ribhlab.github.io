@@ -6,6 +6,9 @@ on:
       - "games/tiny-turbo-racers-godot/**"
       - ".github/workflows/tiny-turbo-godot.yml"
   workflow_dispatch:
+concurrency:
+  group: "tiny-turbo-dev-${{ github.ref_name }}"
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -67,6 +70,14 @@ jobs:
             --path games/tiny-turbo-racers-godot \
             --script res://ci/handling_test.gd 2>&1 | tee /tmp/godot-handling-test.log
           grep 'TINY_TURBO_HANDLING_TOUCH_REPLAY_PASS' /tmp/godot-handling-test.log
+      - name: Verify real Low Medium High graphics settings and restore
+        shell: bash
+        run: |
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless \
+            --path games/tiny-turbo-racers-godot \
+            --script res://ci/graphics_test.gd 2>&1 | tee /tmp/godot-graphics-test.log
+          grep 'TINY_TURBO_GRAPHICS_PRESET_PASS' /tmp/godot-graphics-test.log
       - name: Validate six real GT car models and garage switching
         shell: bash
         run: |
