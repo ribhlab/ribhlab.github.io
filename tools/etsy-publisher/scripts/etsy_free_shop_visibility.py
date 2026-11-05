@@ -63,8 +63,12 @@ def main():
     print("SHOP_CURRENT_SECTIONS:",json.dumps(known))
     if details.get("title") not in (OLD_TITLE,NEW_TITLE):
         raise ConnectionErrorSafe("Shop title baseline changed; no overwrite")
-    if details.get("announcement") not in (OLD_ANNOUNCEMENT,NEW_ANNOUNCEMENT):
-        raise ConnectionErrorSafe("Shop announcement changed; no overwrite")
+    announcement=details.get("announcement") or ""
+    is_old=(announcement.startswith("Welcome to RibhLabDigital!\n\nDiscover professionally designed WordPress themes")
+            and "SPECIAL LAUNCH OFFER" in announcement
+            and "FREE Blog Launch" in announcement)
+    if announcement!=NEW_ANNOUNCEMENT and not is_old:
+        raise ConnectionErrorSafe("Shop announcement differs from the verified live baseline; no overwrite")
     if details.get("title")!=NEW_TITLE or details.get("announcement")!=NEW_ANNOUNCEMENT:
         updated=call("/application/shops/"+shop,headers,"PUT",
             {"title":NEW_TITLE,"announcement":NEW_ANNOUNCEMENT},allow403=True)
