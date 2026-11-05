@@ -1,3 +1,21 @@
+## 2026-11-05 — v0.9 free-position steering and live race map
+
+**Cumulative branch:** `tiny-turbo-racing-dev-v09`. The original v0.8 (trees, 3 tracks, 4 modes, analog wheel, CC0 recorded motor sound) is unchanged.
+
+- Reviewed passing v0.8 CI (run `42006031964`).
+- Added independent `road_kinematics.gd` with an actual world-space position, yaw angle and spline projection.
+- Modified `main.gd` to move the imported 3D car through world-space kinematic driving and correct its chase camera, checkpoint progress and collision knockback.
+- Added real-track `race_minimap.gd` mapping player/opponents at their actual world coordinates.
+- Updated CI to require new handling, road-edge and minimap regression tests; existing 3-lap, 4 race modes, CC0 tree/photo asset, recorded engine samples and Android build remain gated.
+- Initial v0.9 CI revealed that a **legacy drift QA** pressed full steering+handbrake for the entire lap; with correct free steering this does not finish. Replaced the test with a short controlled drift followed by steering recovery and required scoring.
+- Android metadata v0.9.0 / versionCode 9.
+
+**Current release proof:** Use the latest complete green GitHub Actions run on this exact branch, and match its `head_sha` with APK artifact. If CI is failing or incomplete, report failure rather than an APK as verified.
+
+**Outstanding:** This is an accessible arcade kinematic car, not Godot VehicleBody3D suspension or a realistic tire-contact simulator. 60/30 FPS on mobile and physical Android screen/touch test remain pending.
+
+---
+
 ## 2026-11-05 — v0.8: controls / nature / race content
 
 **Branch:** \`tiny-turbo-racing-dev-v08\` with original \`tiny-turbo-racing-dev-v07\` retained.
