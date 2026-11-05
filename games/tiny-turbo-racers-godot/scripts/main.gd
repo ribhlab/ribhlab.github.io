@@ -8,6 +8,7 @@ const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
 const TrafficSystem = preload("res://scripts/traffic_system.gd")
 const TouchControls = preload("res://scripts/touch_controls.gd")
 const BrandCatalog = preload("res://scripts/brand_catalog.gd")
+const SteeringWheelUI = preload("res://scripts/steering_wheel_ui.gd")
 const MAX_LAPS: int = 3
 const TRACK_RADIUS: float = 84.0
 const CAR_COLORS: Array[Color] = [
@@ -35,6 +36,18 @@ var drift_points: int = 0
 var near_miss_count: int = 0
 var held_drift: bool = false
 var held_brake: bool = false
+var held_accel: bool = false
+var wheel_display: Control
+var track_index: int = 0
+var race_mode: int = 0
+var race_laps: int = 3
+var race_target: float = 3.0*TAU
+var checkpoints_passed: int = 0
+var checkpoints_total: int = 24
+var checkpoint_label: Label
+var race_select_overlay: Control
+var race_selection_label: Label
+var personal_best: float = 0.0
 var touch = TouchControls.new()
 var collision_feedback: float = 0.0
 var countdown: float = 3.75
@@ -87,6 +100,7 @@ func _ready() -> void:
 
 func _setup_world() -> void:
 	world = WorldBuilder.new()
+	world.set_circuit(track_index)
 	world.name = "FourWorldsRaceCircuit"
 	add_child(world)
 	world.build_world()
@@ -247,35 +261,36 @@ func _setup_ui() -> void:
 	_panel(ui_root,Rect2(370,133,540,35),Color("#0e1d3dcf"),Color("#46cbf9"))
 	boost_label = _label(ui_root,"NITRO 100% | DRIFT 0",Rect2(381,134,517,32),18,Color("#a3f2ff"))
 	
-	var left := _button(ui_root,"◀",Rect2(28,573,122,117),Color("#136487"),func(): pass)
-	var right := _button(ui_root,"▶",Rect2(171,573,122,117),Color("#136487"),func(): pass)
-	left.button_down.connect(func(): held_left = true)
-	left.button_up.connect(func(): held_left = false)
-	right.button_down.connect(func(): held_right = true)
-	right.button_up.connect(func(): held_right = false)
-	var brake_btn := _button(ui_root,"BRAKE",Rect2(698,586,154,101),
-		Color("#344d69"),func(): pass)
+	# Manual race-car controls: wheel / gas / brake / drift / nitro.
+	# Native mobile touch is routed by finger ID in touch_controls.gd.
+	wheel_display = SteeringWheelUI.new()
+	wheel_display.name="AnalogSteeringWheel"
+	wheel_display.position=Vector2(18,464)
+	wheel_display.size=Vector2(229,229)
+	wheel_display.set_meta("race_only",true)
+	ui_root.add_child(wheel_display)
+	var brake_btn := _button(ui_root,"BRAKE",Rect2(796,563,180,128),
+		Color("#a73553"),func(): pass)
 	brake_btn.button_down.connect(func(): held_brake=true)
 	brake_btn.button_up.connect(func(): held_brake=false)
 	brake_btn.set_meta("race_only",true)
-	var drift_btn := _button(ui_root,"DRIFT",Rect2(868,586,150,101),
-		Color("#8b3e96"),func(): pass)
+	var gas_btn := _button(ui_root,"GAS",Rect2(1046,551,194,140),
+		Color("#21b877"),func(): pass)
+	gas_btn.button_down.connect(func(): held_accel=true)
+	gas_btn.button_up.connect(func(): held_accel=false)
+	gas_btn.set_meta("race_only",true)
+	var drift_btn := _button(ui_root,"HANDBRAKE",Rect2(782,470,192,74),
+		Color("#873a9c"),func(): pass)
+	drift_btn.add_theme_font_size_override("font_size",17)
 	drift_btn.button_down.connect(func(): held_drift=true)
 	drift_btn.button_up.connect(func(): held_drift=false)
 	drift_btn.set_meta("race_only",true)
-	var turbo := _button(ui_root,"NITRO",Rect2(1033,574,210,113),
-		Color("#ef4d85"),func(): _activate_boost())
-	turbo.add_theme_font_size_override("font_size",27)
-	touch.configure(left.get_global_rect(),right.get_global_rect(),
-		brake_btn.get_global_rect(),drift_btn.get_global_rect(),turbo.get_global_rect())
-	# Race-only controls remain reachable while other overlays block touch.
-	top_hud.visible = false
-	left.visible = false
-	right.visible = false
-	turbo.visible = false
-	left.set_meta("race_only",true)
-	right.set_meta("race_only",true)
+	var turbo := _button(ui_root,"NITRO",Rect2(1046,455,194,78),
+		Color("#e84092"),func(): _activate_boost())
+	turbo.add_theme_font_size_override("font_size",24)
 	turbo.set_meta("race_only",true)
+	touch.configure(wheel_display.get_global_rect(),gas_btn.get_global_rect(),
+		brake_btn.get_global_rect(),drift_btn.get_global_rect(),turbo.get_global_rect())
 
 	big_countdown = _label(ui_root,"3",Rect2(480,230,320,230),116,Color("#ffed6f"))
 	big_countdown.visible = false
@@ -285,11 +300,36 @@ func _setup_ui() -> void:
 	_label(menu_overlay,"MIDNIGHT",Rect2(377,118,529,83),62,Color("#e8f9ff"))
 	_label(menu_overlay,"RUSH GT",Rect2(377,193,529,83),68,Color("#fd69b2"))
 	_label(menu_overlay,"A street racing experience by RibhLab",Rect2(385,296,510,42),22,Color("#a3d8ff"))
-	_button(menu_overlay,"START NIGHT RACE",Rect2(465,359,351,80),Color("#e44588"),func(): _start_race())
+	_button(menu_overlay,"CHOOSE RACE",Rect2(465,359,351,80),Color("#e44588"),func(): _open_race_select())
 	_button(menu_overlay,"TUNE YOUR CAR",Rect2(465,463,351,72),Color("#15698d"),func(): _open_garage())
 	_button(menu_overlay,"⚙ SETTINGS",Rect2(465,548,351,52),Color("#284d76"),func(): _open_settings())
-	_label(menu_overlay,"A/D STEER | S BRAKE | SHIFT DRIFT | SPACE NITRO",
+	_label(menu_overlay,"W GAS | A/D STEER | S BRAKE | SHIFT DRIFT | SPACE NITRO",
 		Rect2(367,605,543,31),15,Color("#b6dfff"))
+
+	race_select_overlay = _overlay()
+	_panel(race_select_overlay,Rect2(238,75,802,588),Color("#0a1830f2"),Color("#6bc6ee"))
+	_label(race_select_overlay,"RACE SELECT",Rect2(303,102,674,80),55,Color("#ff6ea9"))
+	_label(race_select_overlay,"CHOOSE TRACK",Rect2(280,192,710,43),24,Color("#bdeefa"))
+	for i in range(3):
+		var idx:int=i
+		_button(race_select_overlay,["HARBOR NIGHT","SUNSET COAST","PINE MOUNTAIN"][i],
+			Rect2(280.0+float(i)*241.0,243,224,70),
+			[Color("#176aa0"),Color("#d18657"),Color("#3b8765")][i],
+			func(): _choose_track(idx)).add_theme_font_size_override("font_size",17)
+	_label(race_select_overlay,"RACE TYPE",Rect2(280,337,710,39),23,Color("#bdeefa"))
+	for i in range(4):
+		var mode_idx:int=i
+		var x:float=283.0+float(i%2)*365.0
+		var y:float=382.0+float(i/2)*65.0
+		_button(race_select_overlay,["CIRCUIT • 3 LAPS","SPRINT • POINT TO POINT",
+			"TIME TRIAL • BEST LAP","DRIFT • SCORE CHALLENGE"][i],
+			Rect2(x,y,345,55),Color("#375877"),func(): _choose_mode(mode_idx)).add_theme_font_size_override("font_size",17)
+	race_selection_label = _label(race_select_overlay,
+		"MIDNIGHT HARBOR • CIRCUIT",Rect2(285,522,705,43),20,Color("#fceca2"))
+	_button(race_select_overlay,"RACE NOW",Rect2(445,567,395,69),
+		Color("#db3881"),func(): _start_race())
+	_button(race_select_overlay,"BACK",Rect2(260,100,97,49),
+		Color("#304b72"),func(): _go_menu())
 
 	garage_overlay = _overlay()
 	_panel(garage_overlay,Rect2(313,108,650,505),Color("#0e1931eb"),Color("#6ccbe9"))
@@ -362,16 +402,19 @@ func _setup_ui() -> void:
 	_button(finish_overlay,"▶ RACE AGAIN",Rect2(453,417,371,74),Color("#37ce59"),func(): _start_race())
 	_button(finish_overlay,"⌂ HOME",Rect2(483,512,314,63),Color("#2ca4e8"),func(): _go_menu())
 	world_label = _label(ui_root,"MIDNIGHT HARBOR • CITY SPRINT",Rect2(425,82,430,45),18,Color("#d4d9ff"))
+	checkpoint_label = _label(ui_root,"CHECKPOINTS 0 / 24",Rect2(440,183,406,37),19,Color("#fff6b8"))
 	world_label.visible = false
 
 func _apply_ui() -> void:
 	menu_overlay.visible = state == "menu"
 	garage_overlay.visible = state == "garage"
+	race_select_overlay.visible = state == "race_select"
 	credits_overlay.visible = state == "credits"
 	settings_overlay.visible = state == "settings"
 	pause_overlay.visible = state == "paused"
 	finish_overlay.visible = state == "finished"
 	var active: bool = state == "racing" or state == "countdown"
+	wheel_display.visible = active
 	top_hud.visible = active
 	big_countdown.visible = state == "countdown"
 	world_label.visible = active
@@ -379,6 +422,60 @@ func _apply_ui() -> void:
 		if child.has_meta("race_only"):
 			child.visible = active
 	boost_label.visible = active
+	checkpoint_label.visible = active
+
+func _open_race_select() -> void:
+	state="race_select"
+	_update_race_selection_text()
+	audio.cue("click")
+	_apply_ui()
+
+func _update_race_selection_text() -> void:
+	if race_selection_label != null:
+		race_selection_label.text = ["HARBOR NIGHT","SUNSET COAST","PINE MOUNTAIN"][track_index] + " • " + [
+			"CIRCUIT","SPRINT","TIME TRIAL","DRIFT CHALLENGE"][race_mode]
+
+func _choose_track(index: int) -> void:
+	track_index=clampi(index,0,2)
+	_update_race_selection_text()
+	audio.cue("click")
+
+func _choose_mode(index: int) -> void:
+	race_mode=clampi(index,0,3)
+	_update_race_selection_text()
+	audio.cue("click")
+
+func _rebuild_world_for_track() -> void:
+	# Reload geometry, traffic and audio for the selected route without
+	# touching saved garage/credits/settings UI.
+	audio.stop_engines()
+	remove_child(audio)
+	audio.free()
+	for p in pickups:
+		var node:Node=p["node"]
+		if is_instance_valid(node):
+			remove_child(node)
+			node.free()
+	pickups.clear()
+	remove_child(traffic)
+	traffic.free()
+	for r in rivals:
+		var car:Node=r["node"]
+		remove_child(car)
+		car.free()
+	rivals.clear()
+	remove_child(camera)
+	camera.free()
+	remove_child(player)
+	player.free()
+	remove_child(world)
+	world.free()
+	_setup_world()
+	_setup_rivals()
+	_setup_traffic()
+	_setup_pickups()
+	_setup_audio()
+	_apply_quality()
 
 func _go_menu() -> void:
 	state = "menu"
@@ -386,6 +483,7 @@ func _go_menu() -> void:
 	held_right = false
 	held_drift = false
 	held_brake = false
+	held_accel = false
 	touch.reset()
 	audio.stop_engines()
 	_apply_ui()
@@ -474,6 +572,8 @@ func _select_paint(index: int) -> void:
 	_save_progress()
 
 func _start_race() -> void:
+	if world.circuit_variant != track_index:
+		_rebuild_world_for_track()
 	audio.stop_engines()
 	audio.cue("click")
 	state = "countdown"
@@ -482,6 +582,10 @@ func _start_race() -> void:
 	handling.reset()
 	lane_offset = 0.0
 	race_seconds = 0.0
+	race_laps = 3 if race_mode==0 else 1
+	race_target = float(race_laps)*TAU if race_mode!=1 else .83*TAU
+	checkpoints_total = int(ceil(race_target/TAU*8.0))
+	checkpoints_passed=0
 	countdown = 3.8
 	boost_remaining = 0.0
 	boost_cooldown = 0.0
@@ -490,6 +594,7 @@ func _start_race() -> void:
 	near_miss_count = 0
 	held_drift = false
 	held_brake = false
+	held_accel = false
 	collision_feedback = 0.0
 	touch.reset()
 	traffic.reset()
@@ -509,6 +614,7 @@ func _pause_race() -> void:
 		return
 	state = "paused"
 	held_brake = false
+	held_accel = false
 	held_drift = false
 	touch.reset()
 	audio.stop_engines()
@@ -554,9 +660,12 @@ func _notification(what: int) -> void:
 			_pause_race()
 
 func _steer_input() -> float:
-	var left_pressed: bool = held_left or touch.held("left") or Input.is_key_pressed(KEY_LEFT) or Input.is_key_pressed(KEY_A)
-	var right_pressed: bool = held_right or touch.held("right") or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D)
-	return float(int(right_pressed)-int(left_pressed))
+	var keyboard:float=float(int(held_right or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D)) -
+		int(held_left or Input.is_key_pressed(KEY_LEFT) or Input.is_key_pressed(KEY_A)))
+	return clampf(keyboard + touch.steer(),-1.0,1.0)
+
+func _gas_input() -> float:
+	return 1.0 if held_accel or touch.held("gas") or Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP) else 0.0
 
 func _brake_input() -> bool:
 	return held_brake or touch.held("brake") or Input.is_key_pressed(KEY_DOWN) or Input.is_key_pressed(KEY_S)
@@ -622,7 +731,7 @@ func _drive(delta: float) -> void:
 	var braking: bool = _brake_input()
 	var drifting: bool = _drift_input()
 	var physics: Dictionary = handling.simulate(delta,steer,boost,
-		absf(lane_offset)>7.1,braking,drifting)
+		absf(lane_offset)>7.1,braking,drifting,{},_gas_input())
 	speed = float(physics["speed"])
 	lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta,-7.5,7.5)
 	last_slip = float(physics["slip"])
@@ -635,7 +744,11 @@ func _drive(delta: float) -> void:
 		audio.cue("skid")
 		last_skid_sound = race_seconds
 	progress += speed*delta/world.road_meters_per_radian()
-	var new_lap: int = mini(MAX_LAPS,int(progress/TAU)+1)
+	while checkpoints_passed<checkpoints_total and progress >= float(checkpoints_passed+1)*TAU/8.0:
+		checkpoints_passed+=1
+		if checkpoints_passed%4==0:
+			audio.cue("lap")
+	var new_lap: int = mini(race_laps,int(progress/TAU)+1)
 	if new_lap > last_lap:
 		last_lap = new_lap
 		audio.cue("lap")
@@ -655,13 +768,14 @@ func _drive(delta: float) -> void:
 	audio.set_motor_speed(speed/72.0,boost)
 	if braking and speed>5.0 and last_slip>.25:
 		collision_feedback=maxf(collision_feedback,.10)
-	if progress>=float(MAX_LAPS)*TAU:
+	if progress>=race_target:
 		_finish_race()
 
 func _animate_cars(delta: float) -> void:
 	_place_car()
 	var steering: float = _steer_input()
 	player.animate_car(delta,speed,steering*(1.32 if _drift_input() else 1.0),boost_remaining>0.0)
+	wheel_display.set_steering(steering)
 	for i in range(rivals.size()):
 		var car_data: Dictionary = rivals[i]
 		if state == "racing":
@@ -675,7 +789,7 @@ func _animate_cars(delta: float) -> void:
 
 func _place_car() -> void:
 	player.position = world.road_position(progress,lane_offset) + Vector3(0,.10,0)
-	player.rotation.y = world.road_yaw(progress)
+	player.rotation.y = world.road_yaw(progress)-handling.steer_angle*.31
 
 func _update_camera(delta: float) -> void:
 	var a: float = progress
@@ -738,11 +852,14 @@ func _race_position() -> int:
 	return position
 
 func _update_hud() -> void:
-	var lap: int = mini(MAX_LAPS,int(progress/TAU)+1)
-	lap_label.text = "LAP " + str(lap) + " / " + str(MAX_LAPS)
+	var lap: int = mini(race_laps,int(progress/TAU)+1)
+	lap_label.text = "LAP "+str(lap)+" / "+str(race_laps) if race_mode==0 else [
+		"CIRCUIT", "SPRINT", "TIME TRIAL", "DRIFT"][race_mode]
 	position_label.text = ["1st","2nd","3rd","4th"][_race_position()-1]
 	stars_label.text = "★ STARS " + str(player_stars)
 	speed_label.text = str(int(speed*3.6))+" km/h"
+	checkpoint_label.text="CHECKPOINTS "+str(checkpoints_passed)+" / "+str(checkpoints_total)
+	world_label.text=world.circuit_title()+" • "+["CIRCUIT","SPRINT","TIME TRIAL","DRIFT"][race_mode]
 	boost_label.text = ("NITRO "+str(int(nitro_charge))+"%  |  DRIFT "+str(drift_points)
 		+ "  |  NEAR MISS "+str(near_miss_count)+ ("  |  BRAKING" if _brake_input() else ""))
 
@@ -754,12 +871,18 @@ func _finish_race() -> void:
 	audio.cue("win")
 	var rank: int = _race_position()
 	var bonus: int = maxi(2,5-rank)*4
+	if race_mode==2:
+		bonus=12 if race_seconds<90.0 else 8
+		if personal_best<=0.0 or race_seconds<personal_best:
+			personal_best=race_seconds
+	elif race_mode==3:
+		bonus=16 if drift_points>=700 else 4
 	total_stars += player_stars + bonus
 	_save_progress()
 	finish_title.text = "MIDNIGHT CHAMPION" if rank==1 else "FINISH LINE"
-	finish_stats.text = (["1st","2nd","3rd","4th"][rank-1]+" PLACE  /  3 LAPS"
+	finish_stats.text = (["1st","2nd","3rd","4th"][rank-1]+" PLACE  /  "+["3 LAPS","SPRINT","BEST LAP","DRIFT CHALLENGE"][race_mode]
 		+ "\nDRIFT "+str(drift_points)+"  •  NEAR MISSES "+str(near_miss_count)
-		+ "\nSTREET CREDITS "+str(player_stars+bonus))
+		+ "\nTIME "+str(snappedf(race_seconds,.1))+"s  •  REWARD "+str(player_stars+bonus))
 	_apply_ui()
 
 func _load_progress() -> void:
@@ -769,6 +892,9 @@ func _load_progress() -> void:
 		selected_paint = clampi(int(cfg.get_value("player","paint",0)),0,CAR_COLORS.size()-1)
 		selected_car = clampi(int(cfg.get_value("player","brand",0)),0,BrandCatalog.CARS.size()-1)
 		quality_level = clampi(int(cfg.get_value("player","quality",1)),0,2)
+		track_index = clampi(int(cfg.get_value("player","track",0)),0,2)
+		race_mode = clampi(int(cfg.get_value("player","mode",0)),0,3)
+		personal_best = float(cfg.get_value("player","personal_best",0.0))
 
 func _save_progress() -> void:
 	var cfg := ConfigFile.new()
@@ -776,4 +902,7 @@ func _save_progress() -> void:
 	cfg.set_value("player","paint",selected_paint)
 	cfg.set_value("player","brand",selected_car)
 	cfg.set_value("player","quality",quality_level)
+	cfg.set_value("player","track",track_index)
+	cfg.set_value("player","mode",race_mode)
+	cfg.set_value("player","personal_best",personal_best)
 	cfg.save("user://tiny-turbo-save.cfg")
