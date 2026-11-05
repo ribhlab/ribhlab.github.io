@@ -1,3 +1,28 @@
+# Iteration v0.9 — Actual Free-Steering and Navigation (2026-11-05)
+
+**Branch:** `tiny-turbo-racing-dev-v09`, based on passing `tiny-turbo-racing-dev-v08` build `d0677a27e73a04c4f2c17292a4553472fb0f7ed8`.
+
+## Completed / in validation
+- **Actual manual car movement** — `road_kinematics.gd` integrates continuous x/z world position and yaw. This replaces `road_position(progress,lane_offset)` snapping in `main.gd`. Steering now changes travel heading, not only an artificial lane offset.
+- **Mobile-friendly arcade steering assist** — pure-pursuit lookahead with assist reduced by strong player input and handbrake to keep touch driving accessible. Full independent rigid-body suspension is NOT claimed.
+- **Road projection/checkpoints** — project the actual car onto local 3D spline samples and count distance only from local movement. Reverse and distant jumps do not grant laps.
+- **Physical boundary feedback** — car touches the safety rail at a measured offroad distance, gets repositioned and decelerated; visual collision shake and skid remain.
+- **True circuit minimap** — redraws all three actual road splines and displays player's true world coordinate and visible opponent positions rather than static artwork.
+- **QA** — earlier v0.8 full race, touch, audio, trees, credits and Android build remain mandatory. New `road_kinematics_test.gd` asserts wheel direction changes world trajectory and edge contact resolves correctly. `minimap_test.gd` asserts live positions and track switching. `v08_racing_test.gd` now drives a *brief handbrake slide then releases* because holding full-right drift for minutes cannot finish with genuine steering.
+
+## Next roadmap (not claimed implemented)
+1. On-device vehicle steering calibration at 30/60 FPS; avoid abrupt wall auto-correction and support calibrated handling assist as a settings choice.
+2. Native mobile safe-area and phone button hit testing; real Samsung Galaxy S22 Ultra + midrange profiling with measured FPS, memory and thermal load.
+3. Visual wheel rotation on imported GLB manufacturer-reference models using per-model wheel-node remapping; authentic suspension animations and licensed tire/brake/crash clips.
+4. Better checkpoints, race AI that overtakes and brakes for corners; local lap split timing; pause and results transitions.
+5. Integrate higher-detail collision meshes/physics for vehicles and environment, LOD for the most expensive imported meshes, wet road PBR and tunnels.
+6. Legally review manufacturer trademark and 3D asset rights before any commercial release; existing CC BY asset credits are not brand authorizations.
+
+## Reporting integrity
+Automated Godot script and gameplay tests do **not** constitute Android device tests. Actual Godot CI screenshots are not Android performance measurements. Google Play signing and manufacturer rights are still unverified.
+
+---
+
 # DEVELOPMENT_PLAN — v0.8 Real Racing Controls, Tracks and Nature
 
 **Branch:** \`tiny-turbo-racing-dev-v08\`. Based on validated \`tiny-turbo-racing-dev-v07\`; keep prior branches intact.
