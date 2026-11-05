@@ -78,7 +78,7 @@ def require(ok,message):
  if not ok: raise Failed(message)
 
 def checked_get(url, **kwargs):
- try: response=requests.get(url,timeout=55,allow_redirects=False,**kwargs)
+ try: response=requests.get(url,timeout=kwargs.pop("timeout",55),allow_redirects=False,**kwargs)
  except requests.RequestException: raise Failed("Secure transfer network failed") from None
  require(response.ok, "Secure resource unavailable (HTTP "+str(response.status_code)+")")
  return response
