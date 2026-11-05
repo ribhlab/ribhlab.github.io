@@ -18,6 +18,11 @@ from check_connection import verify, ConnectionErrorSafe
 BASE="https://api.etsy.com/v3"
 PAGE=Path("public/en/etsy-shop.html")
 CURATED={
+  4610758074: {
+    "headline":"ProfitLens 3.6 — Offline + Team Finance Bundle",
+    "summary":"Get two separate finance applications in one download: an offline browser-based HTML dashboard for individuals, plus a self-hosted Python/SQLite team workspace with user roles and shared reporting. CSV import is supported. No Excel workbook, hosted subscription or automatic data syncing between editions.",
+    "badges":["2-IN-1 BUNDLE","OFFLINE HTML","SELF-HOSTED TEAM"]
+  },
   4610734598: {
     "headline":"Self-Hosted Team Finance Dashboard",
     "summary":"ProfitLens Team 3.6 runs from a Python server in your own environment, with browser access for authorized staff. It provides team roles including Admin, Manager, Analyst and Viewer, alongside profitability, invoice aging, expenses and budget reporting. This is a self-hosted product, unlike the offline single-user version.",
