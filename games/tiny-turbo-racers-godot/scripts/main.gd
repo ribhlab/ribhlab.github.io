@@ -48,6 +48,7 @@ var big_countdown: Label
 var menu_overlay: Control
 var pause_overlay: Control
 var garage_overlay: Control
+var credits_overlay: Control
 var finish_overlay: Control
 var finish_title: Label
 var finish_stats: Label
@@ -274,6 +275,31 @@ func _setup_ui() -> void:
 			func(): _select_paint(color_index))
 	_button(garage_overlay,"▶ RACE!",Rect2(501,554,288,52),Color("#42ce54"),func(): _start_race())
 	_button(garage_overlay,"BACK",Rect2(333,121,110,52),Color("#348ae3"),func(): _go_menu())
+	_button(garage_overlay,"CREDITS",Rect2(824,123,122,48),Color("#317ce0"),func(): _open_credits())
+
+	credits_overlay = _overlay()
+	_panel(credits_overlay,Rect2(175,63,929,612),Color("#1a477feF"))
+	_label(credits_overlay,"MODEL ARTISTS & LICENSING",Rect2(241,90,810,75),40,Color("#fff2ac"))
+	var text_area := RichTextLabel.new()
+	text_area.position = Vector2(231,177)
+	text_area.size = Vector2(817,407)
+	text_area.add_theme_color_override("default_color",Color.WHITE)
+	text_area.add_theme_font_size_override("normal_font_size",19)
+	text_area.scroll_active = true
+	text_area.bbcode_enabled = false
+	var artist_text: String = "DEVELOPMENT SHOWCASE ONLY — NOT AN OFFICIAL AUTOMAKER GAME\n\n"
+	for i in range(BrandCatalog.CARS.size()):
+		var info: Dictionary = BrandCatalog.get_car(i)
+		artist_text += str(info["name"])+" — 3D art: "+str(info["artist"])+
+			" — CC BY 4.0\n"+str(info["source"])+"\n\n"
+	artist_text += "Model licenses: https://creativecommons.org/licenses/by/4.0/\n"
+	artist_text += "The mesh copyright license is NOT a manufacturer logo/trademark license.\n"
+	artist_text += "Before commercial release, review manufacturer rights and store policy."
+	text_area.text = artist_text
+	credits_overlay.add_child(text_area)
+	_button(credits_overlay,"BACK TO GARAGE",Rect2(467,598,346,60),Color("#1e9ade"),
+		func(): _return_garage())
+
 
 	pause_overlay = _overlay()
 	_panel(pause_overlay,Rect2(396,155,490,401),Color("#217bc6f4"))
@@ -293,6 +319,7 @@ func _setup_ui() -> void:
 func _apply_ui() -> void:
 	menu_overlay.visible = state == "menu"
 	garage_overlay.visible = state == "garage"
+	credits_overlay.visible = state == "credits"
 	pause_overlay.visible = state == "paused"
 	finish_overlay.visible = state == "finished"
 	var active: bool = state == "racing" or state == "countdown"
@@ -309,6 +336,16 @@ func _go_menu() -> void:
 	held_left = false
 	held_right = false
 	audio.stop_engines()
+	_apply_ui()
+
+func _open_credits() -> void:
+	state = "credits"
+	audio.cue("click")
+	_apply_ui()
+
+func _return_garage() -> void:
+	state = "garage"
+	audio.cue("click")
 	_apply_ui()
 
 func _open_garage() -> void:
