@@ -33,6 +33,17 @@ def main():
     shop_details=get("/application/shops/"+shop,headers)
     print("SHOP_NAME:",shop_details.get("shop_name",""))
     print("SHOP_TITLE:",shop_details.get("title",""))
+    print("SHOP_ANNOUNCEMENT_EXCERPT:",str(shop_details.get("announcement") or "")[:350])
+    print("SHOP_ICON_PRESENT:",bool(shop_details.get("icon_url_fullxfull")))
+    print("SHOP_BANNER_PRESENT:",bool(shop_details.get("image_url_760x100")))
+    try:
+        sections=get("/application/shops/"+shop+"/sections",headers).get("results",[])
+        print("SHOP_SECTIONS:",json.dumps([{ "id":x.get("shop_section_id"),"title":x.get("title"),"active_listing_count":x.get("active_listing_count")} for x in sections],ensure_ascii=False))
+    except ConnectionErrorSafe as error: print("SHOP_SECTIONS_UNAVAILABLE:",str(error))
+    try:
+        featured=get("/application/shops/"+shop+"/listings/featured",headers).get("results",[])
+        print("FEATURED_LISTINGS:",json.dumps([{"id":x.get("listing_id"),"rank":x.get("featured_rank")} for x in featured]))
+    except ConnectionErrorSafe as error: print("FEATURED_LISTINGS_UNAVAILABLE:",str(error))
     print("SHOP_ANNOUNCEMENT_PRESENT:",bool(shop_details.get("announcement","")))
     print("SHOP_POLICY_STATUS: not provided by getShop; review in Etsy Search Visibility.")
     all_listings=[]
@@ -65,6 +76,10 @@ def main():
                   "description_start":item.get("description","")[:2300],
                   "description_length":len(item.get("description","")),
                   "taxonomy_id":item.get("taxonomy_id"),
+                  "section_id":item.get("shop_section_id"),
+                  "featured_rank":item.get("featured_rank"),
+                  "quantity":item.get("quantity"),
+                  "should_auto_renew":item.get("should_auto_renew"),
                   "materials":item.get("materials"),
                   "attributes":item.get("attribute_values"),
                   "type":item.get("type"),
