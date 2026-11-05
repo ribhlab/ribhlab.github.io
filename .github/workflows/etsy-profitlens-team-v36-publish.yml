@@ -1,0 +1,39 @@
+name: Etsy — Publish ProfitLens Team Server v3.6
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-profitlens-team-v36-publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: etsy-profitlens-team-v36
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verified Etsy HTTP client
+        run: python -m pip install --disable-pip-version-check 'requests>=2.32,<3'
+      - name: Verify connected shop and publish Team product only with buyer ZIP
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/etsy-publisher/scripts/check_connection.py tools/etsy-publisher/scripts/publish_profitlens_team_v36.py
+          python tools/etsy-publisher/scripts/publish_profitlens_team_v36.py
