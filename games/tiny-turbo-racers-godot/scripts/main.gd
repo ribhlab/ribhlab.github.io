@@ -6,6 +6,7 @@ const CarVisual = preload("res://scripts/real_car.gd")
 const ArcadeAudio = preload("res://scripts/arcade_audio.gd")
 const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
 const RoadKinematics = preload("res://scripts/road_kinematics.gd")
+const RaceMinimap = preload("res://scripts/race_minimap.gd")
 const TrafficSystem = preload("res://scripts/traffic_system.gd")
 const TouchControls = preload("res://scripts/touch_controls.gd")
 const BrandCatalog = preload("res://scripts/brand_catalog.gd")
@@ -21,6 +22,7 @@ var world
 var traffic
 var player
 var camera: Camera3D
+var minimap: Control
 var audio
 var rivals: Array = []
 var pickups: Array = []
@@ -263,6 +265,12 @@ func _setup_ui() -> void:
 	_button(top_hud,"II",Rect2(897,16,75,55),Color("#3d3d76"),func(): _pause_race())
 	_panel(ui_root,Rect2(370,133,540,35),Color("#0e1d3dcf"),Color("#46cbf9"))
 	boost_label = _label(ui_root,"NITRO 100% | DRIFT 0",Rect2(381,134,517,32),18,Color("#a3f2ff"))
+	minimap=RaceMinimap.new()
+	minimap.name="TrueTrackMinimap"
+	minimap.position=Vector2(1070,122)
+	minimap.size=Vector2(186,166)
+	top_hud.add_child(minimap)
+	minimap.configure_world(world)
 	
 	# Manual race-car controls: wheel / gas / brake / drift / nitro.
 	# Native mobile touch is routed by finger ID in touch_controls.gd.
@@ -478,6 +486,7 @@ func _rebuild_world_for_track() -> void:
 	_setup_traffic()
 	_setup_pickups()
 	_setup_audio()
+	minimap.configure_world(world)
 	_apply_quality()
 
 func _go_menu() -> void:
@@ -881,6 +890,11 @@ func _update_hud() -> void:
 	position_label.text = ["1st","2nd","3rd","4th"][_race_position()-1]
 	stars_label.text = "★ STARS " + str(player_stars)
 	speed_label.text = str(int(speed*3.6))+" km/h"
+	var active_rivals: Array[Vector3]=[]
+	if race_mode!=2:
+		for r in rivals:
+			active_rivals.append((r["node"] as Node3D).global_position)
+	minimap.set_positions(car_motion.position,active_rivals)
 	checkpoint_label.text="CHECKPOINTS "+str(checkpoints_passed)+" / "+str(checkpoints_total)
 	world_label.text=world.circuit_title()+" • "+["CIRCUIT","SPRINT","TIME TRIAL","DRIFT"][race_mode]
 	boost_label.text = ("NITRO "+str(int(nitro_charge))+"%  |  DRIFT "+str(drift_points)
