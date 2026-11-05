@@ -13,7 +13,7 @@ func _ready() -> void:
 		visible = false
 		return
 	# Godot's headless import/build tools do not need the full editor visualization.
-	if DisplayServer.get_name() == "headless":
+	if DisplayServer.get_name() == "headless" and not OS.has_environment("TINY_TURBO_EDITOR_PREVIEW_TEST"):
 		return
 	call_deferred("_build_editor_preview")
 
