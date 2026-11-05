@@ -6,6 +6,7 @@ const CarVisual = preload("res://scripts/real_car.gd")
 const ArcadeAudio = preload("res://scripts/arcade_audio.gd")
 const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
 const TrafficSystem = preload("res://scripts/traffic_system.gd")
+const TouchControls = preload("res://scripts/touch_controls.gd")
 const MAX_LAPS: int = 3
 const TRACK_RADIUS: float = 84.0
 const CAR_COLORS: Array[Color] = [
@@ -32,6 +33,9 @@ var nitro_charge: float = 100.0
 var drift_points: int = 0
 var near_miss_count: int = 0
 var held_drift: bool = false
+var held_brake: bool = false
+var touch = TouchControls.new()
+var collision_feedback: float = 0.0
 var countdown: float = 3.75
 var race_seconds: float = 0.0
 var player_stars: int = 0
@@ -58,6 +62,7 @@ var garage_car_label: Label
 var elapsed: float = 0.0
 var collision_lock: float = 0.0
 var last_lap: int = 1
+var last_slip: float = 0.0
 
 func _ready() -> void:
 	_load_progress()
@@ -238,6 +243,11 @@ func _setup_ui() -> void:
 	left.button_up.connect(func(): held_left = false)
 	right.button_down.connect(func(): held_right = true)
 	right.button_up.connect(func(): held_right = false)
+	var brake_btn := _button(ui_root,"BRAKE",Rect2(698,586,154,101),
+		Color("#344d69"),func(): pass)
+	brake_btn.button_down.connect(func(): held_brake=true)
+	brake_btn.button_up.connect(func(): held_brake=false)
+	brake_btn.set_meta("race_only",true)
 	var drift_btn := _button(ui_root,"DRIFT",Rect2(868,586,150,101),
 		Color("#8b3e96"),func(): pass)
 	drift_btn.button_down.connect(func(): held_drift=true)
@@ -246,6 +256,8 @@ func _setup_ui() -> void:
 	var turbo := _button(ui_root,"NITRO",Rect2(1033,574,210,113),
 		Color("#ef4d85"),func(): _activate_boost())
 	turbo.add_theme_font_size_override("font_size",27)
+	touch.configure(left.get_global_rect(),right.get_global_rect(),
+		brake_btn.get_global_rect(),drift_btn.get_global_rect(),turbo.get_global_rect())
 	# Race-only controls remain reachable while other overlays block touch.
 	top_hud.visible = false
 	left.visible = false
@@ -265,8 +277,8 @@ func _setup_ui() -> void:
 	_label(menu_overlay,"A street racing experience by RibhLab",Rect2(385,296,510,42),22,Color("#a3d8ff"))
 	_button(menu_overlay,"START NIGHT RACE",Rect2(465,359,351,80),Color("#e44588"),func(): _start_race())
 	_button(menu_overlay,"TUNE YOUR CAR",Rect2(465,463,351,72),Color("#15698d"),func(): _open_garage())
-	_label(menu_overlay,"A / D = STEER  |  SPACE = NITRO  |  SHIFT = DRIFT",
-		Rect2(378,562,526,43),17,Color("#b6dfff"))
+	_label(menu_overlay,"A/D STEER | S BRAKE | SHIFT DRIFT | SPACE NITRO",
+		Rect2(367,562,543,43),16,Color("#b6dfff"))
 
 	garage_overlay = _overlay()
 	_panel(garage_overlay,Rect2(313,108,650,505),Color("#0e1931eb"),Color("#6ccbe9"))
@@ -314,6 +326,8 @@ func _go_menu() -> void:
 	held_left = false
 	held_right = false
 	held_drift = false
+	held_brake = false
+	touch.reset()
 	audio.stop_engines()
 	_apply_ui()
 
@@ -346,6 +360,9 @@ func _start_race() -> void:
 	drift_points = 0
 	near_miss_count = 0
 	held_drift = false
+	held_brake = false
+	collision_feedback = 0.0
+	touch.reset()
 	traffic.reset()
 	player_stars = 0
 	collision_lock = 0.0
@@ -362,6 +379,9 @@ func _pause_race() -> void:
 	if state != "racing":
 		return
 	state = "paused"
+	held_brake = false
+	held_drift = false
+	touch.reset()
 	audio.stop_engines()
 	audio.cue("click")
 	_apply_ui()
@@ -380,6 +400,40 @@ func _activate_boost() -> void:
 	boost_remaining = 3.0
 	boost_cooldown = 3.6
 	audio.cue("boost")
+
+func _input(event: InputEvent) -> void:
+	if not (event is InputEventScreenTouch or event is InputEventScreenDrag):
+		return
+	if state != "countdown" and state != "racing":
+		return
+	var action: String = touch.handle(event)
+	if action == "nitro" and state == "racing":
+		_activate_boost()
+	# Keep each finger's original touch sequence separate from Godot UI Buttons.
+	# Mouse callbacks remain enabled for desktop / editor testing.
+	get_viewport().set_input_as_handled()
+
+func _notification(what: int) -> void:
+	# Godot WM_GO_BACK_REQUEST=1007; app pause=2015; focus out=2018.
+	if what == 1007:
+		if state == "racing":
+			_pause_race()
+		elif state in ["paused","garage","finished"]:
+			_go_menu()
+	elif what == 2015 or what == 2018:
+		if state == "racing":
+			_pause_race()
+
+func _steer_input() -> float:
+	var left_pressed: bool = held_left or touch.held("left") or Input.is_key_pressed(KEY_LEFT) or Input.is_key_pressed(KEY_A)
+	var right_pressed: bool = held_right or touch.held("right") or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D)
+	return float(int(right_pressed)-int(left_pressed))
+
+func _brake_input() -> bool:
+	return held_brake or touch.held("brake") or Input.is_key_pressed(KEY_DOWN) or Input.is_key_pressed(KEY_S)
+
+func _drift_input() -> bool:
+	return held_drift or touch.held("drift") or Input.is_key_pressed(KEY_SHIFT)
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
@@ -435,23 +489,18 @@ func _drive(delta: float) -> void:
 	boost_remaining = maxf(0.0,boost_remaining-delta)
 	collision_lock = maxf(0.0,collision_lock-delta)
 	var boost: bool = boost_remaining > 0.0
-	var steer: float = 0.0
-	if held_left or Input.is_key_pressed(KEY_LEFT) or Input.is_key_pressed(KEY_A):
-		steer -= 1.0
-	if held_right or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D):
-		steer += 1.0
-	var drifting: bool = held_drift or Input.is_key_pressed(KEY_SHIFT)
-	var physics: Dictionary = handling.simulate(delta, steer, boost, absf(lane_offset)>7.1)
+	var steer: float = _steer_input()
+	var braking: bool = _brake_input()
+	var drifting: bool = _drift_input()
+	var physics: Dictionary = handling.simulate(delta,steer,boost,
+		absf(lane_offset)>7.1,braking,drifting)
 	speed = float(physics["speed"])
-	if drifting and absf(steer)>.05 and speed>12.0:
-		handling.drift_intensity = maxf(handling.drift_intensity,.70)
-		lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta*1.38,-7.5,7.5)
-		speed *= (1.0-.02*delta)
-		handling.velocity = speed
-		drift_points += maxi(1,int(speed*delta*2.0))
+	lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta,-7.5,7.5)
+	last_slip = float(physics["slip"])
+	if drifting and absf(steer)>.14 and speed>14.0 and last_slip>.30:
+		drift_points += maxi(1,int(speed*delta*(1.0+last_slip*2.8)))
 		nitro_charge = minf(100.0,nitro_charge+delta*3.2)
 	else:
-		lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta,-7.5,7.5)
 		nitro_charge = minf(100.0,nitro_charge+delta*.45)
 	if handling.drift_intensity>.45 and race_seconds-last_skid_sound>2.1:
 		audio.cue("skid")
@@ -467,6 +516,7 @@ func _drive(delta: float) -> void:
 	if bool(traffic_event["collision"]) and collision_lock<=0.0:
 		speed *= .53
 		handling.velocity=speed
+		collision_feedback = 1.0
 		collision_lock=1.15
 		audio.cue("skid")
 	var misses: int=int(traffic_event["near_misses"])
@@ -474,17 +524,15 @@ func _drive(delta: float) -> void:
 		near_miss_count += misses
 		nitro_charge = minf(100.0,nitro_charge+float(misses)*8.0)
 	audio.set_motor_speed(speed/72.0,boost)
+	if braking and speed>5.0 and last_slip>.25:
+		collision_feedback=maxf(collision_feedback,.10)
 	if progress>=float(MAX_LAPS)*TAU:
 		_finish_race()
 
 func _animate_cars(delta: float) -> void:
 	_place_car()
-	var steering: float = 0.0
-	if held_left or Input.is_key_pressed(KEY_LEFT) or Input.is_key_pressed(KEY_A):
-		steering -= 1.0
-	if held_right or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D):
-		steering += 1.0
-	player.animate_car(delta,speed,steering*(1.32 if held_drift else 1.0),boost_remaining>0.0)
+	var steering: float = _steer_input()
+	player.animate_car(delta,speed,steering*(1.32 if _drift_input() else 1.0),boost_remaining>0.0)
 	for i in range(rivals.size()):
 		var car_data: Dictionary = rivals[i]
 		if state == "racing":
@@ -503,15 +551,20 @@ func _place_car() -> void:
 func _update_camera(delta: float) -> void:
 	var a: float = progress
 	var tangent: Vector3 = world.road_tangent(a)
-	var eye: Vector3 = player.global_position - tangent*9.5 + Vector3(0,4.7,0)
-	var look: Vector3 = player.global_position + tangent*13.0 + Vector3(0,1.30,0)
+	var sideways: Vector3 = Vector3(tangent.z,0.0,-tangent.x)
+	var eye: Vector3 = player.global_position - tangent*(9.2+speed*.020) + sideways*handling.steer_angle*.60 + Vector3(0,4.45,0)
+	var look: Vector3 = player.global_position + tangent*(13.3+speed*.035) - sideways*handling.steer_angle*1.35 + Vector3(0,1.35,0)
+	# Controlled speed shake and drift look-ahead; never obscure road.
+	collision_feedback = move_toward(collision_feedback,0.0,delta*2.6)
+	eye += sideways*sin(elapsed*36.0)*.21*collision_feedback
+	eye += Vector3.UP*cos(elapsed*43.0)*.17*collision_feedback
 	if state == "menu" or state == "garage":
 		var spin: float = elapsed*.27
 		eye = player.global_position + Vector3(cos(spin)*10.0,5.1,sin(spin)*10.0)
 		look = player.global_position + Vector3(0,1.10,0)
 	camera.global_position = camera.global_position.lerp(eye,clampf(delta*3.8,0.0,1.0))
 	camera.look_at(look,Vector3.UP)
-	var target_fov: float = 77.0 if boost_remaining>0.0 and state=="racing" else 63.0
+	var target_fov: float = 77.0 if boost_remaining>0.0 and state=="racing" else 61.0 + clampf(speed/65.0,0.0,1.0)*6.5
 	camera.fov = lerpf(camera.fov,target_fov,clampf(delta*3.0,0.0,1.0))
 
 func _animate_pickups(delta: float) -> void:
@@ -544,6 +597,7 @@ func _check_collisions() -> void:
 			handling.velocity = speed
 			lane_offset = clampf(lane_offset+(2.0 if lane_offset >= 0.0 else -2.0),-7.5,7.5)
 			collision_lock = 1.3
+			collision_feedback = 1.0
 			audio.cue("skid")
 			return
 
@@ -560,8 +614,8 @@ func _update_hud() -> void:
 	position_label.text = ["1st","2nd","3rd","4th"][_race_position()-1]
 	stars_label.text = "★ STARS " + str(player_stars)
 	speed_label.text = str(int(speed*3.6))+" km/h"
-	boost_label.text = ("NITRO "+str(int(nitro_charge))+"%   |   DRIFT "+str(drift_points)
-		+ "   |   NEAR MISS "+str(near_miss_count))
+	boost_label.text = ("NITRO "+str(int(nitro_charge))+"%  |  DRIFT "+str(drift_points)
+		+ "  |  NEAR MISS "+str(near_miss_count)+ ("  |  BRAKING" if _brake_input() else ""))
 
 func _finish_race() -> void:
 	if state != "racing":
