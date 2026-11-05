@@ -259,7 +259,6 @@ func _setup_ui() -> void:
 	_label(garage_overlay,"REAL CAR GARAGE",Rect2(359,134,566,64),43,Color("#ffe36c"))
 	garage_car_label = _label(garage_overlay,"SELECT A 3D SPORTS CAR",Rect2(350,209,580,51),29)
 	garage_credit_label = _label(garage_overlay,"3D art licensed CC BY • manufacturers not affiliated",Rect2(347,257,590,30),15)
-	_label(garage_overlay,"Paint color (supported vehicles)",Rect2(355,459,563,28),17)
 	for i in range(BrandCatalog.CARS.size()):
 		var brand_index: int = i
 		var car_info: Dictionary = BrandCatalog.get_car(i)
@@ -269,10 +268,8 @@ func _setup_ui() -> void:
 			CAR_COLORS[i],func(): _select_brand(brand_index))
 		entry.add_theme_font_size_override("font_size",16)
 		entry.disabled = not BrandCatalog.available(i)
-	for i in range(CAR_COLORS.size()):
-		var color_index: int = i
-		_button(garage_overlay,"●",Rect2(400+float(i)*80.0,491,65,42),CAR_COLORS[i],
-			func(): _select_paint(color_index))
+	_label(garage_overlay,"Each car keeps its source-model paint and details.",Rect2(347,480,590,35),19)
+	_label(garage_overlay,"Independent prototype • not officially endorsed.",Rect2(347,515,590,30),17,Color("#fff2ad"))
 	_button(garage_overlay,"▶ RACE!",Rect2(501,554,288,52),Color("#42ce54"),func(): _start_race())
 	_button(garage_overlay,"BACK",Rect2(333,121,110,52),Color("#348ae3"),func(): _go_menu())
 	_button(garage_overlay,"CREDITS",Rect2(824,123,122,48),Color("#317ce0"),func(): _open_credits())
