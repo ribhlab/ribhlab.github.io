@@ -1,3 +1,4 @@
+@tool
 extends Node3D
 const RealismMaterials = preload("res://scripts/realism_materials.gd")
 ## Original procedural glossy cartoon racer, compatible with mobile OpenGL.
