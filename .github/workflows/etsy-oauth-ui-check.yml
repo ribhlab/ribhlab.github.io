@@ -1,0 +1,44 @@
+name: Etsy — OAuth connect button and CORS smoke tests
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/ar/etsy-connect.html'
+      - 'public/ar/etsy-bridge-connect.js'
+      - 'src/etsy-oauth-connect.test.mjs'
+      - '.github/workflows/etsy-oauth-ui-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-connect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check browser script syntax and interactive connect flow
+        run: |
+          node --check public/ar/etsy-bridge-connect.js
+          node --test src/etsy-oauth-connect.test.mjs
+      - name: Verify live OAuth helper HTTP and CORS
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          const origin='https://ribhlab.github.io';
+          const res=await fetch('https://ribhlab-etsy-oauth-helper.vercel.app/api/etsy-oauth-status', {
+            headers:{Origin:origin}, signal:AbortSignal.timeout(16000)
+          });
+          assert.equal(res.status,200);
+          assert.equal(res.headers.get('access-control-allow-origin'),origin);
+          const body=await res.json();
+          assert.equal(body.status,'ready');
+          assert.equal(body.protocol,'etsy-oauth-bridge-v1');
+          console.log('OAuth helper reachable with correct cross-origin permissions.');
+          NODE
