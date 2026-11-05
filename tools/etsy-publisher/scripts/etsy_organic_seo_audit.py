@@ -45,7 +45,12 @@ def main():
                 lid=item.get("listing_id")
                 if not lid:continue
                 imgs=get(f"/application/listings/{lid}/images",headers).get("results",[])
-                files=get(f"/application/shops/{shop}/listings/{lid}/files",headers).get("results",[]) if item.get("type")=="download" else []
+                # Etsy list endpoints may omit `type`; check buyer files read-only regardless.
+                try:
+                    files=get(f"/application/shops/{shop}/listings/{lid}/files",headers).get("results",[])
+                    count=len(files)
+                except ConnectionErrorSafe:
+                    count=None
                 obj={
                   "id":lid,
                   "state":state,
@@ -56,7 +61,9 @@ def main():
                   "type":item.get("type"),
                   "image_count":len(imgs),
                   "cover_url":next((x.get("url_570xN") or x.get("url_fullxfull") for x in imgs if x.get("rank")==1),""),
-                  "file_count":len(files),
+                  "file_count":count,
+                  "price":item.get("price"),
+                  "created_timestamp":item.get("created_timestamp") or item.get("original_creation_timestamp"),
                   "cover_alt":next((x.get("alt_text","") for x in imgs if x.get("rank")==1),""),
                   "url":f"https://www.etsy.com/listing/{lid}"
                 }
@@ -64,7 +71,7 @@ def main():
                 all_listings.append(obj)
             if len(batch)<100:break
             offset+=len(batch)
-    print("AUDIT_COMPLETE",len(all_listings),"listings (active+draft); NO CHANGES MADE.")
+    print("AUDIT_COMPLETE",len(all_listings),"listings across states; NO CHANGES MADE.")
     with open(os.environ.get("GITHUB_STEP_SUMMARY","/dev/null"),"a",encoding="utf-8") as f:
         f.write("### Read-only Etsy organic SEO audit\n\n")
         f.write("| Listing | Status | Photos | Buyer files | Tags | Title |\n|---|---|---:|---:|---:|---|\n")
