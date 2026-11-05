@@ -1,7 +1,7 @@
 name: Tiny Turbo Racers Godot 3D + Real GT Assets
 on:
   push:
-    branches: [tiny-turbo-racers-godot-v1, tiny-turbo-real-racing-v05]
+    branches: [tiny-turbo-racers-godot-v1, tiny-turbo-real-racing-v05, tiny-turbo-famous-brands-v06]
     paths:
       - "games/tiny-turbo-racers-godot/**"
       - ".github/workflows/tiny-turbo-godot.yml"
@@ -59,6 +59,15 @@ jobs:
             --path games/tiny-turbo-racers-godot \
             --script res://ci/realism_test.gd 2>&1 | tee /tmp/godot-quality.log
           grep 'TINY_TURBO_REALISM_TEST_PASS' /tmp/godot-quality.log
+      - name: Verify SIX imported manufacturer-reference GT cars and garage switching
+        if: github.ref_name == 'tiny-turbo-famous-brands-v06'
+        shell: bash
+        run: |
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless \
+            --path games/tiny-turbo-racers-godot \
+            --script res://ci/brand_test.gd 2>&1 | tee /tmp/godot-brand-test.log
+          grep 'TINY_TURBO_SIX_BRAND_GARAGE_PASS' /tmp/godot-brand-test.log
       - name: Verify editor has actual 3D track and visible cars
         shell: bash
         env:
@@ -83,7 +92,7 @@ jobs:
       - name: Upload real circuit screenshot
         uses: actions/upload-artifact@v4
         with:
-          name: tiny-turbo-v05-real-circuit-screenshot
+          name: tiny-turbo-gt-real-circuit-screenshot
           path: games/tiny-turbo-racers-godot/build/real_circuit_frame.png
           if-no-files-found: ignore
       - uses: actions/setup-java@v4
