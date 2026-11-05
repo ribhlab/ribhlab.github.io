@@ -1,0 +1,39 @@
+name: Etsy — Publish ProfitLens v3.6 Bundle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-profitlens-v36-bundle.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: etsy-profitlens-v36-2in1-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTTPS, ZIP, PDF, and AES verification libraries
+        run: python -m pip install --disable-pip-version-check 'requests>=2.32,<3' 'cryptography>=44,<47' 'pypdf>=5,<7'
+      - name: Verify encrypted buyer bundle, upload imagery and customer file, activate only after checks
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/etsy-publisher/scripts/publish_profitlens_v36_bundle.py
+          python tools/etsy-publisher/scripts/publish_profitlens_v36_bundle.py
