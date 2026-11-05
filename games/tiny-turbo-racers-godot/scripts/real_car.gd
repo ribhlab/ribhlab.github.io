@@ -41,6 +41,9 @@ func _ready() -> void:
 	# Imported Sketchfab models vary between X-forward and Z-forward coordinate conventions.
 	# Match the largest body dimension; users can adjust orientation in the catalog later.
 	holder.rotation.y = PI*.5 if bounds.size.x > bounds.size.z else 0.0
+	# Brand-reference assets initially faced the chase camera: flip their local front.
+	if asset_path.begins_with("res://assets/brands/"):
+		holder.rotation.y += PI
 	var k: float = clampf(4.65/long_axis,.12,6.0)
 	holder.scale = Vector3.ONE*k
 	model.position = Vector3(
