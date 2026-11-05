@@ -4,9 +4,9 @@ config_version=5
 
 [application]
 
-config/name="Tiny Turbo Racers 3D"
+config/name="RibhLab Midnight Rush 3D"
 run/main_scene="res://scenes/main.tscn"
-config/description="A colorful offline arcade racer for families, built with Godot 4."
+config/description="An original high-speed 3D nighttime street racing game on Android."
 config/features=PackedStringArray("4.7", "Mobile")
 
 [display]
