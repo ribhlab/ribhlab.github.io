@@ -26,8 +26,8 @@ jobs:
             -o "$ROOT/vehicles/spectral_gt_rs_game_ready.glb"
           for map in diff nor_gl rough; do
             curl --fail --location --retry 4 --retry-all-errors \
-              "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/asphalt_02/asphalt_02_\${map}_1k.png" \
-              -o "$ROOT/textures/asphalt_02_\${map}_1k.png"
+              "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/asphalt_02/asphalt_02_${map}_1k.png" \
+              -o "$ROOT/textures/asphalt_02_${map}_1k.png"
           done
           python3 - <<'PY'
           import struct,json,pathlib
