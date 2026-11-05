@@ -168,10 +168,39 @@ func _building_palette(i:int) -> Color:
 		Color("#31384b"),Color("#23334a"),Color("#2c3442")]
 	return palette[i%palette.size()]
 
+func _city_facade() -> ShaderMaterial:
+	# Procedural skyscraper glazing: true lit window grid on all box faces.
+	# Shared material avoids hundreds of large external building textures.
+	var shader := Shader.new()
+	shader.code = """
+shader_type spatial;
+render_mode cull_back, diffuse_burley, specular_schlick_ggx;
+uniform vec4 exterior_tint : source_color = vec4(0.035,0.07,0.12,1.0);
+void fragment() {
+	vec2 block = UV * vec2(13.0,24.0);
+	vec2 cell = floor(block);
+	vec2 tile = fract(block);
+	float margin = step(0.18,tile.x)*step(0.15,tile.y)*step(tile.x,0.84)*step(tile.y,0.83);
+	float random_light = fract(sin(dot(cell,vec2(12.9898,78.233)))*43758.5453);
+	float shimmer = fract(sin(dot(cell,vec2(66.2,4.2)))*19213.3);
+	float bright = step(0.37,random_light)*margin;
+	vec3 light_tint = mix(vec3(0.1,0.56,0.85),vec3(1.0,0.72,0.43),step(0.51,shimmer));
+	vec3 panel = exterior_tint.rgb*mix(0.70,1.32,fract(cell.x*0.34));
+	ALBEDO = mix(panel,light_tint*0.65,bright);
+	EMISSION = bright*light_tint*1.65;
+	METALLIC = 0.22;
+	ROUGHNESS = 0.26;
+}
+"""
+	var material := ShaderMaterial.new()
+	material.shader = shader
+	return material
+
 func _build_city() -> void:
 	# About a hundred original high-rise buildings, no downloaded copyrighted city model.
 	# Realistic windows are pooled into a handful of MultiMesh batches.
 	var lit_windows: Array[Array] = [[],[],[],[]]
+	var facade: ShaderMaterial = _city_facade()
 	for i in range(112):
 		var a:float=TAU*(float(i)+.32)/112.0
 		var side:float=1.0 if i%2==0 else -1.0
@@ -186,7 +215,8 @@ func _build_city() -> void:
 		building.position=pos
 		building.rotation.y=road_yaw(a)
 		add_child(building)
-		make_box(building,Vector3(0,h*.5,0),Vector3(w,h,d),_building_palette(i),.61)
+		var tower := make_box(building,Vector3(0,h*.5,0),Vector3(w,h,d),_building_palette(i),.61)
+		tower.material_override = facade
 		make_box(building,Vector3(0,h+.42,0),Vector3(w+.5,.85,d+.5),
 			Color("#111d2e"),.38)
 		# Hotel glow and glass curtain walls.
@@ -221,8 +251,9 @@ func _build_city() -> void:
 		var rad:float=38.0+float(k%4)*7.0
 		var tall:float=42.0+float((k*13)%17)*3.2
 		var p:=Vector3(cos(ang)*rad,tall*.5,sin(ang)*rad)
-		make_box(self,p,Vector3(11+float(k%3)*3,tall,14.0),
+		var skyline := make_box(self,p,Vector3(11+float(k%3)*3,tall,14.0),
 			_building_palette(k+3),.3)
+		skyline.material_override = facade
 
 func _flush_windows(groups: Array[Array]) -> void:
 	for k in range(groups.size()):
