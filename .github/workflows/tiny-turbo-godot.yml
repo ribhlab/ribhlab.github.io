@@ -1,7 +1,7 @@
-name: RibhLab Midnight Rush 3D - Android and gameplay QA
+name: RibhLab Midnight Rush GT v0.7 — Driving and Android QA
 on:
   push:
-    branches: [tiny-turbo-racers-godot-v1, tiny-turbo-real-racing-v05, tiny-turbo-midnight-rush-v06]
+    branches: [tiny-turbo-racers-godot-v1, tiny-turbo-real-racing-v05, tiny-turbo-midnight-rush-v06, tiny-turbo-racing-dev-v07]
     paths:
       - "games/tiny-turbo-racers-godot/**"
       - ".github/workflows/tiny-turbo-godot.yml"
@@ -28,7 +28,7 @@ jobs:
           set -o pipefail
           /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless --editor \
             --path games/tiny-turbo-racers-godot --import --quit 2>&1 | tee /tmp/godot-import.log
-          if grep -E 'SCRIPT ERROR|Parse Error|Parser Error|Failed to load script' /tmp/godot-import.log; then
+          if grep -E 'SCRIPT ERROR|Parse Error|Parser Error|Failed to load script|ERROR: Error importing' /tmp/godot-import.log; then
             echo "GDScript parse errors detected!"
             exit 1
           fi
@@ -59,6 +59,22 @@ jobs:
             --path games/tiny-turbo-racers-godot \
             --script res://ci/midnight_test.gd 2>&1 | tee /tmp/midnight-test.log
           grep 'MIDNIGHT_RUSH_PLAYTEST_PASS' /tmp/midnight-test.log
+      - name: Simulate car braking, real drift, 5-finger touch, background pause, garage and replay
+        shell: bash
+        run: |
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless \
+            --path games/tiny-turbo-racers-godot \
+            --script res://ci/handling_test.gd 2>&1 | tee /tmp/godot-handling-test.log
+          grep 'TINY_TURBO_HANDLING_TOUCH_REPLAY_PASS' /tmp/godot-handling-test.log
+      - name: Validate six real GT car models and garage switching
+        shell: bash
+        run: |
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless \
+            --path games/tiny-turbo-racers-godot \
+            --script res://ci/brand_test.gd 2>&1 | tee /tmp/godot-brand-test.log
+          grep 'TINY_TURBO_BRANDS_PASS' /tmp/godot-brand-test.log
       - name: Verify Jolt, PBR road, clearcoat, dust, and native vegetation instancing
         shell: bash
         run: |
@@ -91,7 +107,7 @@ jobs:
       - name: Upload real circuit screenshot
         uses: actions/upload-artifact@v4
         with:
-          name: tiny-turbo-v06-midnight-real-gameplay
+          name: tiny-turbo-v07-night-racing-actual-frame
           path: games/tiny-turbo-racers-godot/build/real_circuit_frame.png
           if-no-files-found: ignore
       - uses: actions/setup-java@v4
