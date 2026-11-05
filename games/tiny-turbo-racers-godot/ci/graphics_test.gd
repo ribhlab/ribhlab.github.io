@@ -29,6 +29,12 @@ func _test() -> void:
 		push_error("LOW quality doesn't reduce render detail. hidden="+str(low_hidden))
 		quit(52)
 		return
+	# Reduced graphics must never make collidable traffic invisible.
+	for car in game.traffic.vehicles:
+		if not (car["node"] as Node3D).visible:
+			push_error("Low graphics generated an invisible traffic collision hazard")
+			quit(56)
+			return
 	game._select_quality(2)
 	var high_visible:int=0
 	for child in game.world.get_children():
