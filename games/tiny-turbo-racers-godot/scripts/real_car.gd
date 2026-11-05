@@ -78,7 +78,7 @@ func _repaint_shells(root: Node) -> void:
 		var n: Node = stack.pop_back()
 		if n is MeshInstance3D:
 			var nm: String = n.name
-			if nm.contains("BODY_Shell") or nm.contains("Fender_Lip") or nm.contains("Mirror_Shell"):
+			if nm.contains("BODY_Shell") or nm.contains("CABIN_Roof") or nm.contains("Hood_Center") or nm.contains("Door_Skin") or nm.contains("Fender_Lip") or nm.contains("Mirror_Shell"):
 				(n as MeshInstance3D).material_override = body_material
 		for child in n.get_children():
 			stack.push_back(child)
