@@ -111,7 +111,22 @@ func _build_lighting() -> void:
 	add_child(sun)
 
 func _build_ground() -> void:
-	make_box(self, Vector3(0,-1.55,0), Vector3(400,2.5,400), Color("#78d36e"))
+	var ground := make_box(self, Vector3(0,-1.55,0), Vector3(400,2.5,400), Color.WHITE)
+	ground.material_override = RealismMaterials.terrain_grass()
+	# Jolt StaticBody3D ground contact for future rigid-body race mechanics.
+	var ground_body := StaticBody3D.new()
+	ground_body.name = "JoltTerrainCollision"
+	ground_body.position = Vector3(0,-.45,0)
+	var ground_shape := CollisionShape3D.new()
+	var box_shape := BoxShape3D.new()
+	box_shape.size = Vector3(400,1,400)
+	ground_shape.shape = box_shape
+	ground_body.add_child(ground_shape)
+	var ground_friction := PhysicsMaterial.new()
+	ground_friction.friction = .9
+	ground_friction.bounce = .0
+	ground_body.physics_material_override = ground_friction
+	add_child(ground_body)
 	make_cylinder(self, Vector3(0,-0.11,0), RADIUS - HALF_WIDTH - 0.55, 0.23, Color("#87dd78"), 60)
 	# Hills and ocean beyond the outside of the circular course.
 	make_box(self, Vector3(150,-.45,0), Vector3(90,.4,240), Color("#50d7ec"),.24)
