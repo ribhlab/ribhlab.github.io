@@ -1,0 +1,31 @@
+name: Etsy — ProfitLens Bundle organic SEO
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-profitlens-bundle-seo.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: etsy-profitlens-bundle-seo
+  cancel-in-progress: false
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify active bundle and update title, tags, description only
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          python -m py_compile tools/etsy-publisher/scripts/etsy_profitlens_bundle_seo.py
+          python tools/etsy-publisher/scripts/etsy_profitlens_bundle_seo.py
