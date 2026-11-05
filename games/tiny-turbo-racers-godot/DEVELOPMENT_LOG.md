@@ -1,3 +1,25 @@
+## 2026-11-05 — v0.8: controls / nature / race content
+
+**Branch:** \`tiny-turbo-racing-dev-v08\` with original \`tiny-turbo-racing-dev-v07\` retained.
+
+**Code changes delivered:**
+- \`touch_controls.gd\` is now a continuous steering wheel position/drag input, with concurrent GAS, BRAKE, HANDBRAKE, NITRO by individual finger ID. \`steering_wheel_ui.gd\` renders an original responsive 3-spoke wheel HUD instead of two arrows.
+- \`vehicle_dynamics.gd\`: added optional throttle-controlled force, so no acceleration without GAS/W/up. Existing real braking/steering/drift physics retained. Updated all driving tests to press gas explicitly.
+- \`real_track.gd\`: distinct control points and spline lengths for Harbor, Coast and Mountain, with extra elevation on mountain track. \`street_track.gd\` provides coastal sunset colors, coastal houses, mountain lodges and distinct tree layouts.
+- \`main.gd\`: RACE SELECT, 4 competition modes with individual goals and reward handling, checkpoints, solo Time Trial + personal best, full track swapping rebuilding environment/traffic/opponents, independent gas/brake UI.
+- Real trees imported from **Kenney Nature Kit CC0** and a 1k photo-textured **Poly Haven Pine Sapling Small CC0** optimized with glTF Transform to 6,522,804 bytes and placed sparingly for close scenery.
+- Six WAV recordings downloaded from OpenGameArt/BordeRun mirror (CC0). \`arcade_audio.gd\` crossfades multiple actual sampled engine RPM sources and retains original synthesized effects as fallbacks.
+- \`ci/v08_racing_test.gd\` asserts real tree nodes/photo mesh use, recorded audio, unique route lengths, Sprint, Time Trial, Drift and replay; updated \`ci/handling_test.gd\` for continuous five-finger controls.
+- Asset import pipelines and source credit references are in the repository.
+
+**Verified:** Original v0.8 test run #42004630497 passed all CI steps and Android debug export, before the additional phototextured high-detail pine enhancement. The Poly Haven tree optimization workflow #42005391061 succeeded. Later CI validates the combined final commit; always use its exact SHA in a public build report.
+
+**Not verified:** On-device Android gaming FPS, gamepad hardware, actual phone multi-touch latency, Play Store release signing, automobile manufacturer usage rights. Do not claim photoreal AAA world quality.
+
+**Next:** precise on-phone steering/braking calibration and checkpoint visualization; further route variety and FPS profiling.
+
+---
+
 # RibhLab Midnight Rush GT — DEVELOPMENT_LOG
 
 ## 2026-11-05 — v0.7 cumulative development iteration
