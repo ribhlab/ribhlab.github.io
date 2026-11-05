@@ -1,3 +1,4 @@
+@tool
 extends Node3D
 const RealismMaterials = preload("res://scripts/realism_materials.gd")
 ## One full circular 3D toy-racing course built without downloaded models.
