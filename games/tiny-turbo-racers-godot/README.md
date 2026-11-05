@@ -1,3 +1,57 @@
+# RibhLab Midnight Rush GT v0.6 — Original street racing game
+
+This is the **night street-racing branch** of the Godot 4.7.2 prototype. It aims for the *genre* of premium arcade street racers (night racing, custom cars, Nitro, drift, traffic), **not a copy of Need for Speed**. There are no Need for Speed logos, music, game files or licensed real-world car manufacturer marks in this project.
+
+## Playable in v0.6
+
+- Actual native **3D neon harbor metropolis**: 112 deterministic roadside towers, 30 skyline buildings, 4 overpasses, illuminated windows and neon billboards, 164 lampposts, 12 actual lamps, port containers, pedestrians-free closed racing route.
+- **Spectral GT RS** sports car, 258-mesh imported Blender glTF, CC0. Player and three rivals have full-size detailed PBR body and brake/glass parts. Runtime 5 traffic vehicles are lighter simplified LOD 3D meshes to protect Android performance.
+- Curving 3D street circuit, asphalt photographic PBR, four traffic lanes, sidewalks, guardrails, checkpoints and a starting light gantry.
+- Driving controls: **A/D or left/right = steering**, **Space = Nitro**, **Shift = Drift**. Touch buttons added for left/right, DRIFT and NITRO. Position, lap, speed, near misses and drift points in neon HUD.
+- Nitro charges slowly by driving and faster through deliberate drifting or safe near misses. Traffic contact slows you down; finished races reward your accumulated credits.
+- Original procedural/synthesized audio already used in v0.5. Offline only, no ads, traffic logs, API calls or tracking.
+- **Godot test** `ci/midnight_test.gd` checks actual city meshes, 5 traffic vehicles, moving traffic, drift points and rechargeable Nitro.
+
+## What this is not yet
+
+A vertical slice, **not yet an AAA photorealistic open-world game**. The current course is one closed track, not a full navigable city map. The street traffic cars are lightweight LOD meshes; cars have stylized arcade drivetrain, not individual 4-wheel suspension or licensed manufacturer sounds. Pursuit AI, destructible environments, cinematic menus, upgrade economy, online multiplayer, mobile performance tuning and store preparation still need development.
+
+## Download / build
+
+- [Source branch on GitHub](https://github.com/ribhlab/ribhlab.github.io/tree/tiny-turbo-midnight-rush-v06/games/tiny-turbo-racers-godot)
+- [Android CI workflow](https://github.com/ribhlab/ribhlab.github.io/actions/workflows/tiny-turbo-godot.yml) — open the newest successful run and download `tiny-turbo-godot3d-debug-apk`.
+- Open `scenes/main.tscn` in **Godot 4.7.2**, select `EditorPreview > ShowcaseCamera`, activate the camera preview, press F5 to play.
+
+### PowerShell — update from any folder inside the existing repository
+
+```powershell
+$ErrorActionPreference = "Stop"
+$repo = (git rev-parse --show-toplevel).Trim()
+Set-Location $repo
+
+# Back up locally modified Godot files before branch switch
+git stash push -u -m "Backup before Midnight Rush v0.6" -- games/tiny-turbo-racers-godot
+
+git fetch origin
+if (git branch --list tiny-turbo-midnight-rush-v06) {
+    git switch tiny-turbo-midnight-rush-v06
+} else {
+    git switch --track origin/tiny-turbo-midnight-rush-v06
+}
+git pull --ff-only origin tiny-turbo-midnight-rush-v06
+
+Set-Location (Join-Path $repo "games\tiny-turbo-racers-godot")
+powershell -ExecutionPolicy Bypass -File .\SETUP_WINDOWS.ps1
+```
+
+Do **not** run `git stash pop` immediately or it may restore old version settings over these files. A real phone test is required for performance, clipping, touchscreen behavior and thermals before publishing.
+
+### Licenses
+
+Third-party 3D sports car and photographed road textures are **CC0**. See [assets/ASSET_LICENSES.md](assets/ASSET_LICENSES.md). Godot Engine is MIT. The neon-city code and game logic in this branch are original. The game is not associated with Electronic Arts or Criterion Games.
+
+---
+
 # Tiny Turbo Racers — Real GT Racing v0.5 (Godot 4.7.2)
 
 This branch replaces the toy-ring race and primitive-looking cars with a **licensed detailed external sports-car model** and a **realistic original motorsport circuit**.
