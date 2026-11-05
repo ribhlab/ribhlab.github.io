@@ -55,7 +55,7 @@ func _prepare_spline() -> void:
 		var local: float = t-float(idx)
 		var v: Vector3 = _catmull(idx,local)
 		# Mild smooth elevation changes, including one raised outer turn.
-		v.y = .32 + 1.45*pow(maxf(sinf(t*TAU/float(CONTROL.size())+.20),0.0),4.0)
+		v.y = .32 + 1.45*pow(maxf(sin(t*TAU/float(CONTROL.size())+.20),0.0),4.0)
 		if i>0:
 			track_length += centerline[i-1].distance_to(v)
 		centerline.push_back(v)
