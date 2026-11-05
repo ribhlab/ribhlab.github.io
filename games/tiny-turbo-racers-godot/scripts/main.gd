@@ -516,6 +516,9 @@ func _apply_quality() -> void:
 		elif node is MultiMeshInstance3D:
 			if node.name.begins_with("InstancedStreetTrees_"):
 				node.visible = quality_level>=1
+		elif node.name=="ImportedRealTreeScenery":
+			for idx in range(node.get_child_count()):
+				node.get_child(idx).visible = quality_level>=1 or idx%3==0
 		elif node.name.begins_with("DowntownTower_"):
 			if quality_level==0:
 				var parts: PackedStringArray = str(node.name).split("_")
@@ -584,7 +587,7 @@ func _start_race() -> void:
 	race_seconds = 0.0
 	race_laps = 3 if race_mode==0 else 1
 	race_target = float(race_laps)*TAU if race_mode!=1 else .83*TAU
-	checkpoints_total = int(ceil(race_target/TAU*8.0))
+	checkpoints_total = maxi(1,int(floor(race_target/TAU*8.0)))
 	checkpoints_passed=0
 	countdown = 3.8
 	boost_remaining = 0.0
@@ -603,6 +606,9 @@ func _start_race() -> void:
 	last_lap = 1
 	for i in range(rivals.size()):
 		rivals[i]["progress"] = .03*float(i+1)
+		rivals[i]["node"].visible = race_mode!=2
+	for v in traffic.vehicles:
+		v["node"].visible = race_mode!=2
 	for item in pickups:
 		item["collected"] = false
 		item["node"].visible = true
@@ -754,7 +760,7 @@ func _drive(delta: float) -> void:
 		audio.cue("lap")
 	_check_pickups()
 	_check_collisions()
-	var traffic_event: Dictionary = traffic.tick(delta,progress,lane_offset,speed)
+	var traffic_event: Dictionary = traffic.tick(delta,progress,lane_offset,speed) if race_mode!=2 else {"collision":false,"near_misses":0}
 	if bool(traffic_event["collision"]) and collision_lock<=0.0:
 		speed *= .53
 		handling.velocity=speed
@@ -778,7 +784,7 @@ func _animate_cars(delta: float) -> void:
 	wheel_display.set_steering(steering)
 	for i in range(rivals.size()):
 		var car_data: Dictionary = rivals[i]
-		if state == "racing":
+		if state == "racing" and race_mode!=2:
 			car_data["progress"] += (float(car_data["speed"])+sin(elapsed*.7+float(i)*3.0)*3.0)*delta / world.road_meters_per_radian()
 		var a: float = float(car_data["progress"])
 		var offset: float = float(car_data["lane"])
@@ -801,7 +807,7 @@ func _update_camera(delta: float) -> void:
 	collision_feedback = move_toward(collision_feedback,0.0,delta*2.6)
 	eye += sideways*sin(elapsed*36.0)*.21*collision_feedback
 	eye += Vector3.UP*cos(elapsed*43.0)*.17*collision_feedback
-	if state == "menu" or state == "garage":
+	if state == "menu" or state == "garage" or state=="race_select":
 		var spin: float = elapsed*.27
 		eye = player.global_position + Vector3(cos(spin)*10.0,5.1,sin(spin)*10.0)
 		look = player.global_position + Vector3(0,1.10,0)
@@ -831,7 +837,7 @@ func _check_pickups() -> void:
 			audio.cue("coin")
 
 func _check_collisions() -> void:
-	if collision_lock > 0.0:
+	if race_mode==2 or collision_lock > 0.0:
 		return
 	for rival in rivals:
 		var delta_angle: float = absf(wrapf(progress-float(rival["progress"]),-PI,PI))
