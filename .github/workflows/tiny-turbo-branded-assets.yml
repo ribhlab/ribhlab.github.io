@@ -1,0 +1,63 @@
+name: Tiny Turbo v0.6 Import 6 CC BY Brand-reference Car Meshes
+on:
+  push:
+    branches: [tiny-turbo-famous-brands-v06]
+    paths: [".github/workflows/tiny-turbo-branded-assets.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import_models:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tiny-turbo-famous-brands-v06
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install glTF Transform meshopt decoder CLI
+        run: npm install --no-save --no-package-lock @gltf-transform/cli@4.5.1
+      - name: Download CC BY author-licensed models and convert meshopt to Godot-compatible GLB
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST="games/tiny-turbo-racers-godot/assets/brands"
+          mkdir -p "$DEST"
+          for name in bmw-m4-csl mercedes-benz-amg-gt porsche-911-gt3 lamborghini-aventador-svj ferrari-f40 audi-r8; do
+            curl --fail --location --retry 4 --retry-all-errors \
+              "https://raw.githubusercontent.com/pedrosoandre/carros/main/assets/$name.glb" \
+              -o "/tmp/$name.meshopt.glb"
+            npx gltf-transform copy "/tmp/$name.meshopt.glb" "$DEST/$name.glb"
+            GLB="$DEST/$name.glb" node - <<'NODE'
+          const fs=require('fs');
+          const b=fs.readFileSync(process.env.GLB);
+          if(b.toString('ascii',0,4)!=='glTF')throw Error('Invalid glTF '+process.env.GLB);
+          const len=b.readUInt32LE(12);
+          const gltf=JSON.parse(b.subarray(20,20+len));
+          const ex=gltf.extensionsRequired||[];
+          if(ex.includes('EXT_meshopt_compression')||ex.includes('KHR_draco_mesh_compression'))throw Error('Godot unsupported mesh-compression extension in '+process.env.GLB+': '+ex);
+          console.log('GODOT_READY_BRAND_GLB',process.env.GLB,'bytes',b.length,'meshes',gltf.meshes?.length||0,'nodes',gltf.nodes?.length||0,'extensionsRequired',ex);
+          if((gltf.meshes?.length||0)<1)throw Error('No meshes '+process.env.GLB);
+          NODE
+          done
+      - name: Commit model files and preserve source credits
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games/tiny-turbo-racers-godot/assets/brands/
+          if ! git diff --cached --quiet; then
+            git commit -m "Import six CC BY sports-car models for non-official GT garage"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin tiny-turbo-famous-brands-v06
+              if git rebase origin/tiny-turbo-famous-brands-v06 && git push origin HEAD:tiny-turbo-famous-brands-v06; then
+                echo "BRAND_MODELS_PUSHED"
+                exit 0
+              fi
+              sleep 2
+            done
+            exit 1
+          fi
