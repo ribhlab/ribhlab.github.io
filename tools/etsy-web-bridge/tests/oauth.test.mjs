@@ -41,11 +41,11 @@ test("exchanges valid code without leaking into logs",async()=>{
       assert.equal(fields.get("grant_type"),"authorization_code");
       assert.equal(fields.get("redirect_uri"),"https://ribhlab.github.io/ar/etsy-oauth-callback.html");
       assert.equal(fields.get("code_verifier"),input.code_verifier);
-      return {ok:true,json:async()=>({access_token:"hidden-access",refresh_token:"test-refresh-token"})};
+      return {ok:true,json:async()=>({access_token:"hidden-access",refresh_token:"test-refresh-token",scope:"listings_r listings_w shops_r shops_w"})};
     };
     const r=response();await handler(request(),r);
     assert.equal(r.statusCode,200);
-    assert.deepEqual(r.payload,{refresh_token:"test-refresh-token"});
+    assert.deepEqual(r.payload,{refresh_token:"test-refresh-token",granted_scopes:["listings_r","listings_w","shops_r","shops_w"],shops_write_granted:true});
     assert.equal(r.headers["Cache-Control"],"no-store, private");
   } finally {globalThis.fetch=original;if(originalEnv!==undefined)process.env.ETSY_ALLOWED_KEYSTRING=originalEnv;}
 });
@@ -56,4 +56,18 @@ test("Etsy denial does not echo API error body or secrets",async()=>{
     assert.equal(r.statusCode,400);
     assert.deepEqual(r.payload,{error:"etsy_rejected_or_expired_authorization"});
   }finally{globalThis.fetch=orig;}
+});
+
+test("does not falsely claim shops_w was granted when Etsy left it out",async()=>{
+  const orig=globalThis.fetch;
+  try {
+    globalThis.fetch=async()=>({ok:true,json:async()=>({
+      access_token:"hidden-access",refresh_token:"older-scope-refresh",
+      scope:"listings_r listings_w shops_r"
+    })});
+    const r=response();await handler(request(),r);
+    assert.equal(r.statusCode,200);
+    assert.equal(r.payload.shops_write_granted,false);
+    assert.deepEqual(r.payload.granted_scopes,["listings_r","listings_w","shops_r"]);
+  } finally {globalThis.fetch=orig;}
 });
