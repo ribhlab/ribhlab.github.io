@@ -32,6 +32,16 @@ def call(path,headers,method="GET",form=None,allow403=False):
             return json.load(response)
     except urllib.error.HTTPError as exc:
         if allow403 and exc.code in (401,403):
+            # Never output tokens, HTTP headers, or raw untrusted API error messages.
+            try:
+                raw=exc.read(2048).decode("utf-8","replace").lower()
+            except Exception:
+                raw=""
+            diagnostic=("scope" if "scope" in raw else
+                        "permission" if "permission" in raw or "forbidden" in raw else
+                        "access" if "access" in raw else
+                        "other_http_"+str(exc.code))
+            print("ETSY_WRITE_ERROR_CATEGORY:",diagnostic)
             return {"_insufficient_shop_scopes":exc.code}
         raise ConnectionErrorSafe(f"Etsy {method} refused (HTTP {exc.code}) on supported shop endpoint") from None
     except urllib.error.URLError:
@@ -105,7 +115,7 @@ def main():
             continue
         if current_section not in (None,0):
             raise ConnectionErrorSafe(f"Listing {lid} moved by a seller during this task, stopping")
-        patched=call(f"/application/shops/{shop}/listings/{lid}",headers,"PATCH",{"section_id":sid})
+        patched=call(f"/application/shops/{shop}/listings/{lid}",headers,"PUT",{"section_id":sid})
         if int(patched.get("listing_id") or 0)!=lid:
             raise ConnectionErrorSafe("Etsy listing section update lacked confirmation")
         print("LISTING_SECTION_ASSIGNED:",lid,label)
