@@ -7,6 +7,10 @@ func _initialize() -> void:
 func _verify() -> void:
 	var game=load("res://scenes/main.tscn").instantiate()
 	root.add_child(game)
+	# Previous CI tests may have saved route 2 to shared user://, so force a
+	# deterministic original map before comparing two different courses.
+	game.track_index=0
+	game._rebuild_world_for_track()
 	if game.minimap==null or game.minimap.line.size()!=129:
 		push_error("Minimap must contain sampled real track geometry")
 		quit(91)
