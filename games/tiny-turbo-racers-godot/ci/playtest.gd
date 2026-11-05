@@ -16,6 +16,7 @@ func _test() -> void:
 		quit(3)
 		return
 	game._start_race()
+	game.held_accel=true
 	var used_turbo: bool = false
 	for step in range(7200):
 		game._physics_process(0.033)
