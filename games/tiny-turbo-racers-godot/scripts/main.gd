@@ -560,8 +560,8 @@ func _update_hud() -> void:
 	position_label.text = ["1st","2nd","3rd","4th"][_race_position()-1]
 	stars_label.text = "★ STARS " + str(player_stars)
 	speed_label.text = str(int(speed*3.6))+" km/h"
-	boost_label.text = "NITRO "+str(int(nitro_charge))+"%   |   DRIFT "+str(drift_points)+
-		"   |   NEAR MISS "+str(near_miss_count)
+	boost_label.text = ("NITRO "+str(int(nitro_charge))+"%   |   DRIFT "+str(drift_points)
+		+ "   |   NEAR MISS "+str(near_miss_count))
 
 func _finish_race() -> void:
 	if state != "racing":
@@ -574,9 +574,9 @@ func _finish_race() -> void:
 	total_stars += player_stars + bonus
 	_save_progress()
 	finish_title.text = "MIDNIGHT CHAMPION" if rank==1 else "FINISH LINE"
-	finish_stats.text = ["1st","2nd","3rd","4th"][rank-1]+" PLACE  /  3 LAPS"+
-		"\nDRIFT "+str(drift_points)+"  •  NEAR MISSES "+str(near_miss_count)+
-		"\nSTREET CREDITS "+str(player_stars+bonus)
+	finish_stats.text = (["1st","2nd","3rd","4th"][rank-1]+" PLACE  /  3 LAPS"
+		+ "\nDRIFT "+str(drift_points)+"  •  NEAR MISSES "+str(near_miss_count)
+		+ "\nSTREET CREDITS "+str(player_stars+bonus))
 	_apply_ui()
 
 func _load_progress() -> void:
