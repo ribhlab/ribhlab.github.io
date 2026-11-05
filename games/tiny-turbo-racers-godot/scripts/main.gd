@@ -287,8 +287,7 @@ func _setup_ui() -> void:
 	var artist_text: String = "DEVELOPMENT SHOWCASE ONLY — NOT AN OFFICIAL AUTOMAKER GAME\n\n"
 	for i in range(BrandCatalog.CARS.size()):
 		var info: Dictionary = BrandCatalog.get_car(i)
-		artist_text += str(info["name"])+" — 3D art: "+str(info["artist"])+
-			" — CC BY 4.0\n"+str(info["source"])+"\n\n"
+		artist_text += "%s — 3D art: %s — CC BY 4.0\n%s\n\n" % [str(info["name"]),str(info["artist"]),str(info["source"])]
 	artist_text += "Model licenses: https://creativecommons.org/licenses/by/4.0/\n"
 	artist_text += "The mesh copyright license is NOT a manufacturer logo/trademark license.\n"
 	artist_text += "Before commercial release, review manufacturer rights and store policy."
