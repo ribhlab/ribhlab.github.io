@@ -1,0 +1,90 @@
+name: Tiny Turbo v0.8 Photo-Textured Pine LOD (Poly Haven CC0)
+on:
+  push:
+    branches: [tiny-turbo-racing-dev-v08]
+    paths: [".github/workflows/tiny-turbo-ph-trees.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: tiny-turbo-v08-ph-tree-import
+  cancel-in-progress: false
+jobs:
+  model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tiny-turbo-racing-dev-v08
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install open-source glTF conversion & mesh simplification
+        run: npm install --no-save --no-package-lock @gltf-transform/cli@4.5.1
+      - name: Download CC0 photographic sapling glTF and dependencies
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request,pathlib
+          asset="pine_sapling_small"
+          headers={"User-Agent":"RibhLab-Mobile-Game/1.0"}
+          req=urllib.request.Request(f"https://api.polyhaven.com/files/{asset}",headers=headers)
+          data=json.load(urllib.request.urlopen(req,timeout=45))
+          item=data['gltf']['1k']['gltf']
+          out=pathlib.Path("/tmp/poly-tree")
+          out.mkdir(exist_ok=True)
+          def get(url,path):
+              path.parent.mkdir(parents=True,exist_ok=True)
+              req=urllib.request.Request(url,headers=headers)
+              with urllib.request.urlopen(req,timeout=100) as stream, path.open("wb") as f:
+                  import shutil; shutil.copyfileobj(stream,f)
+          file=out/(asset+"_1k.gltf")
+          get(item["url"],file)
+          print("PHOTO_TREE_SOURCE",file,file.stat().st_size)
+          for name,entry in item.get("include",{}).items():
+              target=out/name
+              get(entry["url"],target)
+              print("PHOTO_TREE_DEPENDENCY",name,target.stat().st_size)
+          gltf=json.loads(file.read_text())
+          assert gltf.get("meshes")
+          print("PHOTO_TREE_MESHES",len(gltf["meshes"]))
+          PY
+      - name: Optimize realistic tree for Android
+        run: |
+          set -euo pipefail
+          mkdir -p games/tiny-turbo-racers-godot/assets/nature
+          npx gltf-transform simplify \
+            /tmp/poly-tree/pine_sapling_small_1k.gltf \
+            games/tiny-turbo-racers-godot/assets/nature/pine_sapling_ph_1k_lod.glb \
+            --ratio 0.10 --error 0.02
+          python3 - <<'PY'
+          import struct,json,pathlib
+          p=pathlib.Path("games/tiny-turbo-racers-godot/assets/nature/pine_sapling_ph_1k_lod.glb")
+          b=p.read_bytes()
+          assert b[:4]==b'glTF'
+          n,typ=struct.unpack_from('<II',b,12)
+          assert typ==0x4e4f534a
+          doc=json.loads(b[20:20+n])
+          print("PHOTO_TREE_GLTF_OK",p.stat().st_size,"meshes",len(doc.get("meshes",[])))
+          assert len(b)<20_000_000,"Tree too heavy for Android after LOD simplification"
+          assert "KHR_draco_mesh_compression" not in doc.get("extensionsRequired",[])
+          assert "EXT_meshopt_compression" not in doc.get("extensionsRequired",[])
+          PY
+      - name: Commit optimized phototextured model
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games/tiny-turbo-racers-godot/assets/nature/pine_sapling_ph_1k_lod.glb
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Add Poly Haven CC0 photo-textured pine tree optimized to mobile LOD"
+          for n in 1 2 3 4; do
+            git fetch origin tiny-turbo-racing-dev-v08
+            git rebase origin/tiny-turbo-racing-dev-v08
+            if git push origin HEAD:tiny-turbo-racing-dev-v08; then exit 0; fi
+            sleep 2
+          done
+          exit 1
