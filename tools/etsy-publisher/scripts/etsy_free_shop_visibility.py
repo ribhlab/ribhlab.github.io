@@ -2,6 +2,7 @@
 Runs against only the authorized RibhLabDigital shop, never ad/fees/inventory.
 Requires shops_w: if absent, exits safely with an explicit permissions report.
 Revalidated after the seller confirmed completing the Etsy OAuth reauthorization.
+Fresh seller confirmation: re-check granted shops_w and execute guarded updates.
 """
 import os,sys,json,urllib.error,urllib.parse,urllib.request
 from check_connection import verify,ConnectionErrorSafe
@@ -122,7 +123,7 @@ def main():
             continue
         if current_section not in (None,0):
             raise ConnectionErrorSafe(f"Listing {lid} moved by a seller during this task, stopping")
-        patched=call(f"/application/shops/{shop}/listings/{lid}",headers,"PUT",{"section_id":sid})
+        patched=call(f"/application/shops/{shop}/listings/{lid}",headers,"PATCH",{"section_id":sid})
         if int(patched.get("listing_id") or 0)!=lid:
             raise ConnectionErrorSafe("Etsy listing section update lacked confirmation")
         print("LISTING_SECTION_ASSIGNED:",lid,label)
