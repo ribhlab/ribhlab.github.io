@@ -5,6 +5,7 @@ const WorldBuilder = preload("res://scripts/street_track.gd")
 const CarVisual = preload("res://scripts/real_car.gd")
 const ArcadeAudio = preload("res://scripts/arcade_audio.gd")
 const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
+const RoadKinematics = preload("res://scripts/road_kinematics.gd")
 const TrafficSystem = preload("res://scripts/traffic_system.gd")
 const TouchControls = preload("res://scripts/touch_controls.gd")
 const BrandCatalog = preload("res://scripts/brand_catalog.gd")
@@ -28,6 +29,7 @@ var progress: float = 0.0
 var lane_offset: float = 0.0
 var speed: float = 0.0
 var handling = VehicleDynamics.new()
+var car_motion = RoadKinematics.new()
 var last_skid_sound: float = 0.0
 var boost_remaining: float = 0.0
 var boost_cooldown: float = 0.0
@@ -104,6 +106,7 @@ func _setup_world() -> void:
 	world.name = "FourWorldsRaceCircuit"
 	add_child(world)
 	world.build_world()
+	car_motion.reset(world)
 	player = CarVisual.new()
 	player.set_model_file(str(BrandCatalog.get_car(selected_car)["file"]))
 	player.configure(CAR_COLORS[selected_paint], 0)
@@ -583,6 +586,7 @@ func _start_race() -> void:
 	progress = 0.0
 	speed = 0.0
 	handling.reset()
+	car_motion.reset(world)
 	lane_offset = 0.0
 	race_seconds = 0.0
 	race_laps = 3 if race_mode==0 else 1
@@ -737,9 +741,18 @@ func _drive(delta: float) -> void:
 	var braking: bool = _brake_input()
 	var drifting: bool = _drift_input()
 	var physics: Dictionary = handling.simulate(delta,steer,boost,
-		absf(lane_offset)>7.1,braking,drifting,{},_gas_input())
+		car_motion.offroad,braking,drifting,{},_gas_input())
 	speed = float(physics["speed"])
-	lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta,-7.5,7.5)
+	var pose:Dictionary = car_motion.advance(world,delta,speed,steer,
+		handling.steer_angle,float(physics["lateral_velocity"]),drifting)
+	progress=float(pose["angle"])
+	lane_offset=float(pose["offset"])
+	if bool(pose["wall"]) and collision_lock<=0.0:
+		speed*=.56
+		handling.velocity=speed
+		collision_feedback=.85
+		collision_lock=.7
+		audio.cue("skid")
 	last_slip = float(physics["slip"])
 	if drifting and absf(steer)>.14 and speed>14.0 and last_slip>.30:
 		drift_points += maxi(1,int(speed*delta*(1.0+last_slip*2.8)))
@@ -749,7 +762,6 @@ func _drive(delta: float) -> void:
 	if handling.drift_intensity>.45 and race_seconds-last_skid_sound>2.1:
 		audio.cue("skid")
 		last_skid_sound = race_seconds
-	progress += speed*delta/world.road_meters_per_radian()
 	while checkpoints_passed<checkpoints_total and progress >= float(checkpoints_passed+1)*TAU/8.0:
 		checkpoints_passed+=1
 		if checkpoints_passed%4==0:
@@ -794,12 +806,13 @@ func _animate_cars(delta: float) -> void:
 		car_node.animate_car(delta,float(car_data["speed"]),sin(elapsed+float(i))*.3,false)
 
 func _place_car() -> void:
-	player.position = world.road_position(progress,lane_offset) + Vector3(0,.10,0)
-	player.rotation.y = world.road_yaw(progress)-handling.steer_angle*.31
+	# Real vehicle pose is integrated by RoadKinematics, not snapped to a spline.
+	player.position=car_motion.position
+	player.rotation.y=car_motion.heading
 
 func _update_camera(delta: float) -> void:
 	var a: float = progress
-	var tangent: Vector3 = world.road_tangent(a)
+	var tangent: Vector3 = Vector3(-sin(car_motion.heading),0.0,-cos(car_motion.heading))
 	var sideways: Vector3 = Vector3(tangent.z,0.0,-tangent.x)
 	var eye: Vector3 = player.global_position - tangent*(9.2+speed*.020) + sideways*handling.steer_angle*.60 + Vector3(0,4.45,0)
 	var look: Vector3 = player.global_position + tangent*(13.3+speed*.035) - sideways*handling.steer_angle*1.35 + Vector3(0,1.35,0)
@@ -844,7 +857,11 @@ func _check_collisions() -> void:
 		if delta_angle < .036 and absf(lane_offset-float(rival["lane"])) < 2.0:
 			speed *= .65
 			handling.velocity = speed
-			lane_offset = clampf(lane_offset+(2.0 if lane_offset >= 0.0 else -2.0),-7.5,7.5)
+			# Real physical nudge in world space; old lane_offset-only knockback
+			# would be overwritten by the next frame's geometric projection.
+			var left: Vector3 = Vector3(world.road_tangent(progress).z,0,
+				-world.road_tangent(progress).x)
+			car_motion.position += left*signf(lane_offset if absf(lane_offset)>.01 else 1.0)*1.2
 			collision_lock = 1.3
 			collision_feedback = 1.0
 			audio.cue("skid")
