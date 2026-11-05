@@ -34,7 +34,7 @@ def main():
     print("SHOP_NAME:",shop_details.get("shop_name",""))
     print("SHOP_TITLE:",shop_details.get("title",""))
     print("SHOP_ANNOUNCEMENT_PRESENT:",bool(shop_details.get("announcement","")))
-    print("SHOP_POLICY_PRESENT:",bool(shop_details.get("policy_welcome","") or shop_details.get("policy_seller_info","")))
+    print("SHOP_POLICY_STATUS: not provided by getShop; review in Etsy Search Visibility.")
     all_listings=[]
     for state in ("active","draft","inactive","expired","sold_out"):
         offset=0
@@ -51,6 +51,12 @@ def main():
                     count=len(files)
                 except ConnectionErrorSafe:
                     count=None
+                try:
+                    videos=get(f"/application/listings/{lid}/videos",headers).get("results",[])
+                    video_count=sum(1 for v in videos if v.get("video_state")=="active")
+                except ConnectionErrorSafe:
+                    video_count=None
+                cover=next((x for x in imgs if x.get("rank")==1),{})
                 obj={
                   "id":lid,
                   "state":state,
@@ -60,6 +66,9 @@ def main():
                   "taxonomy_id":item.get("taxonomy_id"),
                   "type":item.get("type"),
                   "image_count":len(imgs),
+                  "video_count":video_count,
+                  "cover_width":cover.get("full_width"),
+                  "cover_height":cover.get("full_height"),
                   "cover_url":next((x.get("url_570xN") or x.get("url_fullxfull") for x in imgs if x.get("rank")==1),""),
                   "file_count":count,
                   "price":item.get("price"),
