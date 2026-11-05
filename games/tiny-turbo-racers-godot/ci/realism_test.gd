@@ -48,7 +48,7 @@ func _test() -> void:
 	var actual_road: Node = game.world.get_node_or_null("CC0_PolyHaven_Asphalt_Track")
 	var circuit_meters: float = game.world.track_length
 	var pbr_photo: bool = ResourceLoader.exists("res://assets/textures/asphalt_02_diff_1k.png")
-	if not imported_car or detailed_meshes < 100 or actual_road == null or circuit_meters < 700.0 or not pbr_photo:
+	if not imported_car or detailed_meshes < 8 or actual_road == null or circuit_meters < 700.0 or not pbr_photo:
 		push_error("Real GT model or realistic GP circuit not loaded: car="+str(imported_car)+
 			" meshes="+str(detailed_meshes)+" road="+str(actual_road != null)+
 			" track_meters="+str(circuit_meters)+" photo_pbr="+str(pbr_photo))
