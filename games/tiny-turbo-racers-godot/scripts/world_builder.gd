@@ -93,19 +93,19 @@ func _build_lighting() -> void:
 	sky.sky_material = atmosphere
 	env.sky = sky
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-	env.ambient_light_energy = 0.95
+	env.ambient_light_energy = 0.55
 	env.reflected_light_source = Environment.REFLECTION_SOURCE_BG
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
-	env.glow_enabled = true
+	env.glow_enabled = false
 	env.fog_enabled = true
 	env.fog_light_color = Color("#b5def5")
-	env.fog_density = .0028
+	env.fog_density = .0011
 	world_env.environment = env
 	add_child(world_env)
 	var sun := DirectionalLight3D.new()
 	sun.rotation_degrees = Vector3(-48, -38, 0)
 	sun.light_color = Color("#fff1ce")
-	sun.light_energy = 1.65
+	sun.light_energy = 1.05
 	# One shadow caster is affordable on recent Vulkan phones; distant scenery is unshadowed.
 	sun.shadow_enabled = true
 	sun.directional_shadow_max_distance = 100.0
