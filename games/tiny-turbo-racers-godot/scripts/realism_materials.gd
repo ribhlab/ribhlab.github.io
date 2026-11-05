@@ -1,3 +1,4 @@
+@tool
 extends RefCounted
 ## Native Godot 4 PBR materials and procedural, seamless-ish surface maps.
 ## No imported models, third-party textures, licensing risks or network downloads.
