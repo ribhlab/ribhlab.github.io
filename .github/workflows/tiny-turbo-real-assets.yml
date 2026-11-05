@@ -1,0 +1,62 @@
+name: Tiny Turbo V05 - Retrieve licensed real 3D car and road textures
+on:
+  push:
+    branches: [tiny-turbo-real-racing-v05]
+    paths: [".github/workflows/tiny-turbo-real-assets.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import_cc0_assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tiny-turbo-real-racing-v05
+          persist-credentials: true
+      - name: Fetch commercially reusable CC0 assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=games/tiny-turbo-racers-godot/assets
+          mkdir -p "$ROOT/vehicles" "$ROOT/textures"
+          curl --fail --location --retry 4 --retry-all-errors \
+            'https://raw.githubusercontent.com/JaronKBragg7337/spectral-gt-rs/main/spectral_gt_rs_game_ready.glb' \
+            -o "$ROOT/vehicles/spectral_gt_rs_game_ready.glb"
+          for map in diff nor_gl rough; do
+            curl --fail --location --retry 4 --retry-all-errors \
+              "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/asphalt_02/asphalt_02_\${map}_1k.png" \
+              -o "$ROOT/textures/asphalt_02_\${map}_1k.png"
+          done
+          python3 - <<'PY'
+          import struct,json,pathlib
+          path=pathlib.Path('games/tiny-turbo-racers-godot/assets/vehicles/spectral_gt_rs_game_ready.glb')
+          raw=path.read_bytes()
+          assert raw[:4] == b'glTF' and len(raw)>100_000, 'GLB invalid'
+          length,typ=struct.unpack_from('<II',raw,12)
+          assert typ==0x4e4f534a
+          data=json.loads(raw[20:20+length])
+          print('REAL_CAR_GLB_OK size=',len(raw),'meshes=',len(data.get('meshes',[])),
+                'scenes=',len(data.get('scenes',[])),'materials=',len(data.get('materials',[])))
+          print('CAR_NODES:', [(v.get('name','')[:35]) for v in data.get('nodes',[])[:30]])
+          for img in pathlib.Path('games/tiny-turbo-racers-godot/assets/textures').glob('*.png'):
+              assert img.stat().st_size>10_000 and img.read_bytes()[:8]==b'\x89PNG\r\n\x1a\n', f'invalid image: {img}'
+              print('PBR_TEXTURE_OK',img.name,img.stat().st_size)
+          PY
+      - name: Commit imported CC0 model and PBR textures
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games/tiny-turbo-racers-godot/assets/
+          if ! git diff --cached --quiet; then
+            git commit -m "Add CC0 Spectral GT RS real sports car and Poly Haven photographed asphalt PBR"
+            for n in 1 2 3 4; do
+              git fetch origin tiny-turbo-real-racing-v05
+              if git rebase origin/tiny-turbo-real-racing-v05 && git push origin HEAD:tiny-turbo-real-racing-v05; then exit 0; fi
+              sleep 2
+            done
+            echo 'Failed to push binary assets after 4 attempts' >&2
+            exit 1
+          fi
