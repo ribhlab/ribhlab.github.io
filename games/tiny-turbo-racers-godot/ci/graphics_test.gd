@@ -8,6 +8,11 @@ func _test() -> void:
 	root.add_child(game)
 	var environment=game.world.get_node_or_null("MidnightSkyAndAtmosphere") as WorldEnvironment
 	var moon=game.world.get_node_or_null("Moonlight") as DirectionalLight3D
+	var studs=game.world.get_node_or_null("InstancedRoadReflectors") as MultiMeshInstance3D
+	if studs==null or studs.multimesh==null or studs.multimesh.instance_count!=256:
+		push_error("Night street reflectors missing or not GPU-instanced")
+		quit(55)
+		return
 	if environment==null or moon==null:
 		push_error("Quality test missing night environment")
 		quit(51)
