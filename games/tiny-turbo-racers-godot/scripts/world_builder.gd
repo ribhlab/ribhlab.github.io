@@ -1,4 +1,5 @@
 extends Node3D
+const RealismMaterials = preload("res://scripts/realism_materials.gd")
 ## One full circular 3D toy-racing course built without downloaded models.
 ## Four scenic biomes sit around one playable circuit.
 const RADIUS: float = 84.0
@@ -26,6 +27,7 @@ func build_world() -> void:
 	_build_ferris_wheel()
 	_build_finish_gate()
 	_build_clouds()
+	_build_instanced_vegetation()
 
 func material(color: Color, roughness: float = 0.46, glow: bool = false) -> StandardMaterial3D:
 	var key: String = color.to_html(true) + "-" + str(roughness) + "-" + str(glow)
@@ -80,19 +82,32 @@ func make_cylinder(parent: Node3D, position: Vector3, radius: float, height: flo
 func _build_lighting() -> void:
 	var world_env := WorldEnvironment.new()
 	var env := Environment.new()
-	env.background_mode = Environment.BG_COLOR
-	env.background_color = Color("#71d5fa")
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color("#edfaff")
-	env.ambient_light_energy = 0.86
+	env.background_mode = Environment.BG_SKY
+	var sky := Sky.new()
+	var atmosphere := ProceduralSkyMaterial.new()
+	atmosphere.sky_top_color = Color("#3989d7")
+	atmosphere.sky_horizon_color = Color("#b6eaff")
+	atmosphere.ground_bottom_color = Color("#88b989")
+	atmosphere.ground_horizon_color = Color("#c3dbe2")
+	sky.sky_material = atmosphere
+	env.sky = sky
+	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
+	env.ambient_light_energy = 0.95
+	env.reflected_light_source = Environment.REFLECTION_SOURCE_BG
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
+	env.glow_enabled = true
+	env.fog_enabled = true
+	env.fog_light_color = Color("#b5def5")
+	env.fog_density = .0028
 	world_env.environment = env
 	add_child(world_env)
 	var sun := DirectionalLight3D.new()
 	sun.rotation_degrees = Vector3(-48, -38, 0)
 	sun.light_color = Color("#fff1ce")
 	sun.light_energy = 1.65
-	sun.shadow_enabled = false # Mobile battery-friendly
+	# One shadow caster is affordable on recent Vulkan phones; distant scenery is unshadowed.
+	sun.shadow_enabled = true
+	sun.directional_shadow_max_distance = 100.0
 	add_child(sun)
 
 func _build_ground() -> void:
@@ -108,10 +123,13 @@ func _build_ground() -> void:
 
 func _triangle(st: SurfaceTool, p1: Vector3, p2: Vector3, p3: Vector3, color: Color) -> void:
 	st.set_color(color)
+	st.set_uv(Vector2(p1.x*.11,p1.z*.11))
 	st.add_vertex(p1)
 	st.set_color(color)
+	st.set_uv(Vector2(p2.x*.11,p2.z*.11))
 	st.add_vertex(p2)
 	st.set_color(color)
+	st.set_uv(Vector2(p3.x*.11,p3.z*.11))
 	st.add_vertex(p3)
 
 func _band(st: SurfaceTool, inner: float, outer: float, a: float, b: float, y: float, color: Color) -> void:
@@ -145,10 +163,7 @@ func _build_racetrack() -> void:
 				if (tile+i)%2==0:
 					_band(st,r0,r1,a,b,.15,white)
 	st.generate_normals()
-	var road_material := StandardMaterial3D.new()
-	road_material.vertex_color_use_as_albedo = true
-	road_material.roughness = 0.79
-	road_material.cull_mode = BaseMaterial3D.CULL_DISABLED
+	var road_material: StandardMaterial3D = RealismMaterials.asphalt()
 	var mesh := st.commit()
 	var instance := MeshInstance3D.new()
 	instance.mesh = mesh
@@ -288,3 +303,31 @@ func _build_clouds() -> void:
 		var h: float = 18.0+float(i%3)*6.0
 		make_sphere(self,Vector3(p.x,h,p.z),Vector3(5.6,2.0,2.7),Color("#f7fcff"),.9)
 		make_sphere(self,Vector3(p.x+2.4,h+1.1,p.z),Vector3(3.1,2.1,2.7),Color("#ffffff"),.9)
+
+func _build_instanced_vegetation() -> void:
+	# Draw 580 clumps in only two render batches using Godot's native MultiMesh.
+	# No third-party terrain dependency and no per-grass draw-call explosion.
+	var foliage_material := material(Color("#4dc865"),.92)
+	var bloom_material := material(Color("#8ee67c"),.93)
+	for variant in range(2):
+		var stem := SphereMesh.new()
+		stem.radial_segments = 5
+		stem.rings = 3
+		stem.material = foliage_material if variant==0 else bloom_material
+		var mm := MultiMesh.new()
+		mm.transform_format = MultiMesh.TRANSFORM_3D
+		mm.mesh = stem
+		mm.instance_count = 290
+		var rng := RandomNumberGenerator.new()
+		rng.seed = 44280 + variant*31
+		for i in range(mm.instance_count):
+			var a: float = rng.randf_range(0.0,TAU)
+			var r: float = rng.randf_range(8.0,67.0) if i%2==0 else rng.randf_range(103.0,175.0)
+			var position := Vector3(cos(a)*r, .30, sin(a)*r)
+			var k: float = rng.randf_range(0.4,1.3)
+			var b := Basis().scaled(Vector3(k,.45*k,k))
+			mm.set_instance_transform(i,Transform3D(b,position))
+		var instance := MultiMeshInstance3D.new()
+		instance.multimesh = mm
+		instance.name = "InstancedGrass" + str(variant)
+		add_child(instance)
