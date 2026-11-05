@@ -1,6 +1,7 @@
 """Free Etsy shop optimization: storefront title, message, and browse sections.
 Runs against only the authorized RibhLabDigital shop, never ad/fees/inventory.
 Requires shops_w: if absent, exits safely with an explicit permissions report.
+Revalidated after the seller confirmed completing the Etsy OAuth reauthorization.
 """
 import os,sys,json,urllib.error,urllib.parse,urllib.request
 from check_connection import verify,ConnectionErrorSafe
