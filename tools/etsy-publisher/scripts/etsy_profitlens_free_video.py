@@ -31,6 +31,20 @@ PANELS=[
 FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 BOLD="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
+def font(size, bold=False):
+    options=[
+        BOLD if bold else FONT,
+        "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf" if bold
+        else "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
+        "/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf" if bold
+        else "/usr/share/fonts/truetype/ubuntu/Ubuntu-R.ttf"
+    ]
+    for candidate in options:
+        try: return ImageFont.truetype(candidate, size)
+        except OSError: continue
+    return ImageFont.load_default(size=size)
+
+
 def require(condition,msg):
     if not condition: raise ConnectionErrorSafe(msg)
 
@@ -70,25 +84,25 @@ def draw_slide(image, heading, detail):
     x=1300
     d.rounded_rectangle((x,105,1800,147),radius=21,fill=(26,96,92))
     d.text((x+22,114),"RIBHLAB DIGITAL  •  DIGITAL DOWNLOAD",
-           font=ImageFont.truetype(BOLD,17),fill=(174,239,225))
+           font=font(17,True),fill=(174,239,225))
     y=205
     for wordline in [heading[i:i+19] for i in range(0,len(heading),19)]:
-        d.text((x,y),wordline,font=ImageFont.truetype(BOLD,48),fill=(255,255,255))
+        d.text((x,y),wordline,font=font(48,True),fill=(255,255,255))
         y+=75
     y=max(380,y+18)
     import textwrap
     for line in textwrap.wrap(detail,24):
-        d.text((x,y),line,font=ImageFont.truetype(BOLD,28),fill=(117,226,203))
+        d.text((x,y),line,font=font(28,True),fill=(117,226,203))
         y+=46
     d.line((x,688,1830,688),fill=(56,128,123),width=2)
     for i,feature in enumerate(("Browser-based HTML app","Works offline after download",
                                 "No Excel file required")):
         y=730+i*51
         d.ellipse((x,y+4,x+14,y+18),fill=(88,217,175))
-        d.text((x+28,y-1),feature,font=ImageFont.truetype(FONT,22),
+        d.text((x+28,y-1),feature,font=font(22),
                fill=(228,244,237))
     d.text((80,916),"REAL PRODUCT SCREENSHOTS   •   FICTIONAL DEMO DATA",
-           font=ImageFont.truetype(BOLD,17),fill=(177,203,204))
+           font=font(17,True),fill=(177,203,204))
     return bg
 
 def main():
@@ -200,4 +214,4 @@ if __name__=="__main__":
     try:main()
     except ConnectionErrorSafe as err: print("VIDEO_JOB_FAILED:",err,file=sys.stderr);sys.exit(1)
     except Exception as err:
-        print("VIDEO_JOB_FAILED: Unexpected "+type(err).__name__,file=sys.stderr);sys.exit(1)
+        print("VIDEO_JOB_FAILED: Unexpected "+type(err).__name__+" at "+str(getattr(err,"filename",""))[:160],file=sys.stderr);sys.exit(1)
