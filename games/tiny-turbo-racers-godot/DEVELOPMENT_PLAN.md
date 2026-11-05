@@ -1,3 +1,31 @@
+# DEVELOPMENT_PLAN — v0.8 Real Racing Controls, Tracks and Nature
+
+**Branch:** \`tiny-turbo-racing-dev-v08\`. Based on validated \`tiny-turbo-racing-dev-v07\`; keep prior branches intact.
+
+## Completed in this iteration
+1. **Gamepad-style touch controls**: On-screen steering wheel with continuous analogue angle and independently held gas, brake, handbrake and nitro. Finger-ID routing supports multi-touch; keyboard W/A/S/D and SHIFT/SPACE remain for desktop. Disabled automatic acceleration in gameplay, throttle now controls torque.
+2. **Three physically different tracks**: \`Midnight Harbor\` (original city night circuit), \`Sunset Coast\` (coastal spline and villas, sunset environment), \`Pine Mountain\` (technical spline with elevation, mountain lodges and more trees). Swapping routes reloads world/traffic/AI rather than changing a label.
+3. **Four real competition objectives**: Circuit 3 laps + opponents, Sprint 83% of selected circuit, Time Trial 1 lap solo with persistent best time, Drift Challenge one lap with independent drift scoring. Each mode has correct end conditions and checkpoints.
+4. **Mode and track selection UI** and updated telemetry.
+5. **Actual scene-imported nature**: seven original Kenney CC0 3D tree meshes in vegetation zones; additional **photo-textured Poly Haven CC0 Pine Sapling Small** simplified to an Android LOD (6.5 MB), sparsely placed near road while keeping original optimized distant trees.
+6. **Recorded sound**: six existing CC0 racing engine WAV loops crossfaded for virtual RPM, plus existing synthesized beeps / cues. Does not require network at runtime.
+7. **Compatibility and performance**: supports Low/Medium/High city lighting, shadows and trees; vehicle traffic remains visible in Low (no invisible collision risk). Prior six CC BY artist car meshes and original night environment preserved.
+8. **Automated regression**: legacy 3-lap run, Midnight Rush, physics/5-finger controls, source car imports, graphics presets, real foliage + audio + layouts + competition types and Android APK debug export.
+
+## Next iterations (NOT implemented yet)
+- Genuine VehicleBody3D independent wheel dynamics, textured wet roads and tunnels with lighting quality settings and LOD, AI line changes and overtaking; checkpoints with speed traps and lap timing display.
+- Steering assist calibration with real Android touchscreen latency; controller haptics and native gamepad support; camera alternatives.
+- Higher-detail photorealistic forests/rock layers optimized for mobile, far-field geometry instancing, camera-visible culling.
+- Real race audio design (tyre, shifts, crash, music) with additional licensed recordings and full volume settings.
+- Distinct time-trial leaderboards/local ghost, split times, track minimap, interactive garage upgrades.
+- Measurements from **Galaxy S22 Ultra** and **a medium device**. 60 FPS / 30 FPS remain targets, not confirmed.
+- Legal audit of famous automotive brand trademarks, genuine vehicle design and logo rights. Model artist CC BY is **not** manufacturer brand authorization. No official collaboration claimed.
+
+## CI truth-in-reporting
+GitHub Actions Godot headless tests validate logic; graphical CI screenshots are actual Godot frames but not phone screenshots. A successful debug APK export does not prove device FPS, Google Play compliance or brand rights.
+
+---
+
 # RibhLab Midnight Rush GT — DEVELOPMENT_PLAN
 
 **Last updated:** 2026-11-05 | **Work branch:** \`tiny-turbo-racing-dev-v07\` | **Source branch:** \`tiny-turbo-midnight-rush-v06\`
