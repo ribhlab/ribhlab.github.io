@@ -30,32 +30,66 @@ const CONTROL: Array[Vector3] = [
 	Vector3(-170,0,-58),
 	Vector3(-155,0,-91),
 ]
+## Three actual layouts, each separately sampled into an arc-length spline.
+## 0 Midnight Harbor, 1 Sunset Coast, 2 Pine Mountain.
+var circuit_variant: int = 0
+var alternate_control: Array[Vector3] = []
+const COAST_ROAD: Array[Vector3] = [
+	Vector3(-150,0,-85), Vector3(-55,0,-104), Vector3(38,0,-99),
+	Vector3(129,0,-83), Vector3(207,0,-40), Vector3(239,0,19),
+	Vector3(211,0,101), Vector3(150,0,154), Vector3(62,0,168),
+	Vector3(-11,0,133), Vector3(-63,0,104), Vector3(-108,0,145),
+	Vector3(-187,0,168), Vector3(-232,0,102), Vector3(-230,0,29),
+	Vector3(-194,0,-37)
+]
+const MOUNTAIN_ROAD: Array[Vector3] = [
+	Vector3(-130,0,-112), Vector3(-54,0,-113), Vector3(28,0,-102),
+	Vector3(116,0,-127), Vector3(190,0,-119), Vector3(230,0,-72),
+	Vector3(208,0,-12), Vector3(149,0,31), Vector3(75,0,15),
+	Vector3(28,0,58), Vector3(66,0,114), Vector3(150,0,127),
+	Vector3(172,0,187), Vector3(99,0,219), Vector3(23,0,191),
+	Vector3(-38,0,153), Vector3(-110,0,197), Vector3(-187,0,166),
+	Vector3(-237,0,101), Vector3(-195,0,37), Vector3(-146,0,-25)
+]
+
+func set_circuit(index: int) -> void:
+	circuit_variant = clampi(index,0,2)
+	match circuit_variant:
+		1: alternate_control=COAST_ROAD.duplicate()
+		2: alternate_control=MOUNTAIN_ROAD.duplicate()
+		_: alternate_control=[]
+
+func circuit_title() -> String:
+	return ["MIDNIGHT HARBOR", "SUNSET COAST", "PINE MOUNTAIN"][circuit_variant]
+
 var centerline: PackedVector3Array = PackedVector3Array()
 var accumulated: PackedFloat32Array = PackedFloat32Array()
 var track_length: float = 0.0
 
 func _catmull(index: int, u: float) -> Vector3:
-	var n: int = CONTROL.size()
-	var a: Vector3 = CONTROL[posmod(index-1,n)]
-	var b: Vector3 = CONTROL[posmod(index,n)]
-	var c: Vector3 = CONTROL[posmod(index+1,n)]
-	var d: Vector3 = CONTROL[posmod(index+2,n)]
+	var points: Array[Vector3] = alternate_control if alternate_control.size()>3 else CONTROL
+	var n: int = points.size()
+	var a: Vector3 = points[posmod(index-1,n)]
+	var b: Vector3 = points[posmod(index,n)]
+	var c: Vector3 = points[posmod(index+1,n)]
+	var d: Vector3 = points[posmod(index+2,n)]
 	var u2: float = u*u
 	var u3: float = u2*u
 	return .5*(2.0*b+(-a+c)*u+(2.0*a-5.0*b+4.0*c-d)*u2+
 		(-a+3.0*b-3.0*c+d)*u3)
 
 func _prepare_spline() -> void:
+	var point_count: int = alternate_control.size() if alternate_control.size()>3 else CONTROL.size()
 	centerline.clear()
 	accumulated.clear()
 	track_length = 0.0
 	for i in range(TRACK_SAMPLES+1):
-		var t: float = float(i) / float(TRACK_SAMPLES) * float(CONTROL.size())
-		var idx: int = mini(int(floor(t)),CONTROL.size()-1)
+		var t: float = float(i) / float(TRACK_SAMPLES) * float(point_count)
+		var idx: int = mini(int(floor(t)),point_count-1)
 		var local: float = t-float(idx)
 		var v: Vector3 = _catmull(idx,local)
 		# Mild smooth elevation changes, including one raised outer turn.
-		v.y = .32 + 1.45*pow(maxf(sin(t*TAU/float(CONTROL.size())+.20),0.0),4.0)
+		v.y = .32 + (7.3 if circuit_variant==2 else 1.4 if circuit_variant==1 else 1.45) * pow(maxf(sin(t*TAU/float(point_count)+.20),0.0),4.0)
 		if i>0:
 			track_length += centerline[i-1].distance_to(v)
 		centerline.push_back(v)
