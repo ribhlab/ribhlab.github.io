@@ -1,0 +1,45 @@
+name: Tiny Turbo High-Fidelity CC0 Trees - Asset Sizing
+on:
+  push:
+    branches: [tiny-turbo-racing-dev-v08]
+    paths: [".github/workflows/tiny-turbo-tree-probe.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Find licensed foliage models and mobile-resolution dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fLsS --retry 3 -H 'User-Agent: RibhLab-Godot-Assets/1.0' \
+            'https://api.polyhaven.com/assets?type=models&category=nature/trees' -o /tmp/trees.json
+          python3 - <<'PY'
+          import json
+          a=json.load(open("/tmp/trees.json"))
+          print("POLYHAVEN_TREE_ASSETS",len(a))
+          for key,v in a.items():
+              print("TREE_ID",key,"NAME",v.get("name"))
+          open("/tmp/treeids","w").write("\n".join(k for k,v in a.items()
+              if any(w in str(v.get("name","")).lower()
+                  for w in ("pine","fir","small","sapling","island"))))
+          PY
+          while IFS= read -r id; do
+            [ -n "$id" ] || continue
+            curl -fLsS --retry 3 -H 'User-Agent: RibhLab-Godot-Assets/1.0' \
+              "https://api.polyhaven.com/files/${id}" -o "/tmp/tree-${id}.json"
+            ID="$id" python3 - <<'PY'
+          import os,json
+          k=os.environ["ID"]
+          d=json.load(open("/tmp/tree-"+k+".json"))
+          def walk(o,path=""):
+              if isinstance(o,dict):
+                  if isinstance(o.get("url"),str):
+                      print("FILE",k,path,"size",o.get("size"),"url",o["url"][:170])
+                  for a,b in o.items(): walk(b,path+"/"+str(a))
+          walk(d)
+          PY
+          done < /tmp/treeids
