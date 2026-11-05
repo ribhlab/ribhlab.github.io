@@ -425,9 +425,11 @@ func _apply_quality() -> void:
 				node.visible = (num%3==0)
 			else:
 				node.visible = true
+	# Traffic must remain visible at every quality level: hiding active cars
+	# while leaving collision checks enabled causes unfair invisible crashes.
 	for car in traffic.vehicles:
 		var vehicle: Node3D=car["node"]
-		vehicle.visible = quality_level>=1
+		vehicle.visible = true
 
 func _open_garage() -> void:
 	state = "garage"
