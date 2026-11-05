@@ -1,0 +1,38 @@
+name: Etsy — ProfitLens Bundle Seven Photo Refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-profitlens-bundle-seven-photos.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: etsy-profitlens-bundle-seven-photos
+  cancel-in-progress: false
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Etsy HTTPS client
+        run: python -m pip install --disable-pip-version-check 'requests>=2.32,<3'
+      - name: Verify buyer digital ZIP, replace all seven photos, keep bundle Active
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/etsy-publisher/scripts/profitlens_bundle_replace_seven_photos.py
+          python tools/etsy-publisher/scripts/profitlens_bundle_replace_seven_photos.py
