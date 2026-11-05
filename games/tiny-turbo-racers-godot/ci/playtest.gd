@@ -17,7 +17,7 @@ func _test() -> void:
 		return
 	game._start_race()
 	var used_turbo: bool = false
-	for step in range(2700):
+	for step in range(7200):
 		game._physics_process(0.033)
 		if game.state == "racing" and not used_turbo:
 			game._activate_boost()
