@@ -122,6 +122,12 @@ def private_bundle():
   resp=requests.get(url+p+"audience="+OIDC_AUD,headers={"Authorization":"Bearer "+token},timeout=20)
   require(resp.ok,"GitHub OIDC token issue")
   jwt=resp.json()["value"]
+  # Temporary diagnostics reveal only non-secret workflow identity fields.
+  import base64
+  payload=jwt.split(".")[1]
+  claims=json.loads(base64.urlsafe_b64decode(payload+"="*(-len(payload)%4)))
+  for field in ("repository","ref","workflow_ref","event_name","sub"):
+   print("OIDC_CLAIM_"+field.upper()+":",str(claims.get(field,""))[:200])
   response=requests.get(PACKAGE_URL,headers={"Authorization":"Bearer "+jwt},timeout=90)
   require(response.ok,"Private product archive not available (HTTP "+str(response.status_code)+")")
   raw=response.content
