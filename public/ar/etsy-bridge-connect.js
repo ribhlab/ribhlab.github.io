@@ -2,7 +2,7 @@
 "use strict";
 // Replace this ONLY with your own deployed Vercel project origin, never a public CORS proxy.
 // Example after deployment: https://ribhlab-etsy-bridge.vercel.app
-const BRIDGE_ORIGIN = "https://ribhlab-etsy-oauth-bridge.vercel.app";
+const BRIDGE_ORIGIN = "https://ribhlab-etsy-oauth-helper.vercel.app";
 const REDIRECT = "https://ribhlab.github.io/ar/etsy-oauth-callback.html";
 const key = document.getElementById("etsy-client-id");
 const submit = document.getElementById("start-oauth");
