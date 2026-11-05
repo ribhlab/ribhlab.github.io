@@ -1,0 +1,47 @@
+name: Etsy — Automatically promote new active products on RibhLab
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 9 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/etsy-publisher/scripts/sync_etsy_shop_landing.py'
+      - '.github/workflows/etsy-shop-auto-promote.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: etsy-organic-shop-auto-promote
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify active Etsy items and generate free product cards
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          python -m py_compile tools/etsy-publisher/scripts/sync_etsy_shop_landing.py
+          python tools/etsy-publisher/scripts/sync_etsy_shop_landing.py
+      - name: Commit public storefront updates if any (without secrets)
+        run: |
+          set -euo pipefail
+          git add public/en/etsy-shop.html
+          if git diff --cached --quiet; then
+            echo 'No Etsy storefront changes detected.'
+          else
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Auto-promote new verified active Etsy listings on RibhLab'
+            git push
+          fi
