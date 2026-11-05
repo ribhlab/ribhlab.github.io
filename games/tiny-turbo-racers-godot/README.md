@@ -26,6 +26,20 @@ The prototype creates assets at runtime without any externally licensed 3D meshe
 - Start, pause, garage color selection and restart. A single polished circuit is intentionally built before more tracks.
 - Completely offline, no tracking, no advertising or network access. No proprietary art or sound assets.
 
+## See the 3D scene inside Godot's editor
+
+Previous versions showed only the empty Node3D and axes when `main.tscn` was open, because all track and car geometry was created by `main.gd::_ready()` at runtime.
+
+**Fixed:** `scenes/main.tscn` now includes a saved `EditorPreview` node with an `@tool` script. In the graphical Godot editor it generates the **same world builder and the same four procedural 3D car designs** without starting the race or downloading assets.
+
+1. Update the project branch and reopen `scenes/main.tscn` (close/reopen the scene if it was already open when source files were updated).
+2. Open the **3D** tab. You should see the track, scenery, and four toy cars in the scene viewport.
+3. For a guaranteed angle, expand `EditorPreview`, select `ShowcaseCamera`, and activate the camera's **Preview** toggle in the 3D viewport.
+4. Alternatively, select `FocusTrackStart` under `EditorPreview`, then press `F` to focus the track.
+5. Press `F5` to launch the **playable** game. The editor preview is disabled in the Android build, so it does not duplicate meshes at runtime.
+
+The preview meshes are **temporary editor-only generated nodes** and intentionally do not appear individually in the Scene tree dock or get saved into `main.tscn` (this avoids serializing hundreds of meshes and duplicating them at runtime). Do not manually save generated preview meshes into the playable scene.
+
 ## Open in Godot (recommended)
 
 Install **Godot 4.7.2 standard edition** (not .NET), then in the project manager use **Import** and pick this folder's `project.godot`. Press **F6/F5** (Run Project). The GitHub Actions validator tests the project in headless Godot.
