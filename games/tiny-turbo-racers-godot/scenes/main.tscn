@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/editor_preview.gd" id="2_editor"]
 
 [node name="TinyTurboRacers3D" type="Node3D"]
 script = ExtResource("1_main")
+
+[node name="EditorPreview" type="Node3D" parent="."]
+script = ExtResource("2_editor")
+
+[node name="ShowcaseCamera" type="Camera3D" parent="EditorPreview"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106, 13, -24)
+current = false
+fov = 66.0
+far = 400.0
+
+[node name="FocusTrackStart" type="Marker3D" parent="EditorPreview"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 1, 12)
