@@ -102,6 +102,14 @@ jobs:
             --path games/tiny-turbo-racers-godot \
             --script res://ci/road_kinematics_test.gd 2>&1 | tee /tmp/godot-kinematics.log
           grep 'TINY_TURBO_REAL_STEERING_PASS' /tmp/godot-kinematics.log
+      - name: Verify true minimap geometry, real player and rival world positions
+        shell: bash
+        run: |
+          set -o pipefail
+          /tmp/Godot_v4.7.2-stable_linux.x86_64 --headless \
+            --path games/tiny-turbo-racers-godot \
+            --script res://ci/minimap_test.gd 2>&1 | tee /tmp/godot-minimap.log
+          grep 'TINY_TURBO_MINIMAP_WORLD_POSITION_PASS' /tmp/godot-minimap.log
       - name: Verify Jolt, PBR road, clearcoat, dust, and native vegetation instancing
         shell: bash
         run: |
