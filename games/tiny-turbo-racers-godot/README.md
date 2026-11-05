@@ -1,3 +1,38 @@
+# RibhLab Midnight Rush GT v0.8 — Nature, Racing Modes, Manual Wheel and Recorded Engines
+
+This is the **actual playable Godot Android racing project**, not image mockups. The v0.8 branch inherits the v0.7 driving and night racing project.
+
+**What's new:** seven authentic 3D Kenney tree models (CC0) and one mobile-decimated photo-textured Pine Sapling Small from Poly Haven (CC0); three actual spline road layouts (Midnight Harbor, Sunset Coast and Pine Mountain); four playable game modes (Circuit, Sprint, Time Trial solo with local personal best, Drift Challenge); a **live analog steering wheel** + GAS/BRAKE/HANDBRAKE/NITRO controls with independent finger input; and **six original recorded CC0 engine WAV loops** crossfaded with virtual RPM. The photo tree is used sparingly to protect Android frame rates. All textures/samples are packed offline.
+
+**How to play:** Start the game (F5), choose **CHOOSE RACE** → your preferred road and race objective → **RACE NOW**. On desktop: W/UP accelerates, A/D or arrow keys steer, S/DOWN brakes, SHIFT drifts, SPACE uses Nitro. On Android use the steering wheel at bottom left and the separate pedals on the right; multiple fingers can be held simultaneously. Drive through checkpoints to the finish; Sprint is a point-to-point portion, Time Trial is solo, Drift rewards sideways slides. Open **TUNE YOUR CAR** to select the six existing independently imported artist models.
+
+### Windows PowerShell update (run from any location inside the existing cloned repository)
+
+First close Godot to prevent local \`project.godot\` and \`main.tscn\` edits from blocking Git pull:
+
+\`\`\`powershell
+$ErrorActionPreference = "Stop"
+$repo = (git rev-parse --show-toplevel).Trim()
+Set-Location $repo
+git stash push -u -m "Backup before TinyTurbo v0.8" -- games/tiny-turbo-racers-godot
+git fetch origin
+if (git branch --list tiny-turbo-racing-dev-v08) {
+    git switch tiny-turbo-racing-dev-v08
+} else {
+    git switch --track origin/tiny-turbo-racing-dev-v08
+}
+git pull --ff-only origin tiny-turbo-racing-dev-v08
+if ($LASTEXITCODE -ne 0) { throw "Git update failed" }
+Set-Location (Join-Path $repo "games\tiny-turbo-racers-godot")
+powershell -ExecutionPolicy Bypass -File .\SETUP_WINDOWS.ps1
+\`\`\`
+
+**Dev documentation:** [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md), [DEVELOPMENT_LOG.md](DEVELOPMENT_LOG.md), [NATURE_AUDIO_CREDITS.md](assets/NATURE_AUDIO_CREDITS.md). The v0.8 GitHub Actions workflow checks assets, real sound mode, independent road layouts, race transitions and Android export.
+
+**Limitations:** Trees mix optimized low-poly real meshes with a sparse photo-textured species, not a dense photoreal AAA forest. The racing model remains physics-inspired, assisted spline steering rather than independent wheel/body dynamics. Actual Android FPS on Galaxy S22 Ultra or mid-range devices has NOT been benchmarked. Six CC BY car meshes are from artists; automobile branding/trademark rights must be resolved before distributing as a commercial branded title.
+
+---
+
 # RibhLab Midnight Rush GT v0.6 — Original street racing game
 
 This is the **night street-racing branch** of the Godot 4.7.2 prototype. It aims for the *genre* of premium arcade street racers (night racing, custom cars, Nitro, drift, traffic), **not a copy of Need for Speed**. There are no Need for Speed logos, music, game files or licensed real-world car manufacturer marks in this project.
