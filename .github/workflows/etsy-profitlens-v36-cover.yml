@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/etsy-profitlens-v36-cover.yml'
+      - 'tools/etsy-publisher/scripts/update_profitlens_v36_cover.py'
   workflow_dispatch:
 permissions:
   contents: read
