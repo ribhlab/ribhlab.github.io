@@ -1,0 +1,88 @@
+name: Tiny Turbo v0.8 Import Kenney 3D Trees and OpenGameArt Engine Recordings
+on:
+  push:
+    branches: [tiny-turbo-racing-dev-v08]
+    paths: [".github/workflows/tiny-turbo-v08-assets.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: tiny-turbo-v08-import-nature-audio
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tiny-turbo-racing-dev-v08
+          persist-credentials: true
+      - name: Import seven original Kenney CC0 modeled trees
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=games/tiny-turbo-racers-godot/assets/nature
+          mkdir -p "$ROOT"
+          for name in tree-detailed tree-oak tree-pinetalla-detailed tree-pinetallb-detailed tree-palmdetailedtall tree-default tree-cone; do
+            curl -fL --retry 5 --retry-all-errors \
+              "https://raw.githubusercontent.com/Hidencod/tge-assets/main/packs/nature-kit/${name}.glb" \
+              -o "$ROOT/${name}.glb"
+          done
+          python3 - <<'PY'
+          import pathlib,struct,json
+          root=pathlib.Path("games/tiny-turbo-racers-godot/assets/nature")
+          paths=list(root.glob("*.glb"))
+          assert len(paths)==7
+          for p in paths:
+              b=p.read_bytes()
+              assert len(b)>4500 and b[:4]==b'glTF'
+              length,typ=struct.unpack_from("<II",b,12)
+              assert typ==0x4e4f534a
+              gltf=json.loads(b[20:20+length])
+              assert len(gltf.get("meshes",[]))>=1
+              print("KENNEY_CC0_REAL_TREE_IMPORT",p.name,len(b),len(gltf.get("meshes",[])))
+          PY
+      - name: Import actual recorded CC0 motor RPM WAV loops
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=games/tiny-turbo-racers-godot/assets/audio/engine
+          mkdir -p "$ROOT"
+          for name in loop_0 loop_1_0 loop_2_0 loop_3_0 loop_4_0 loop_5_0; do
+            curl -fL --retry 5 --retry-all-errors \
+              "https://raw.githubusercontent.com/yashimosh/border-run/main/public/sfx/engine/${name}.wav" \
+              -o "$ROOT/${name}.wav"
+          done
+          python3 - <<'PY'
+          import pathlib,wave
+          root=pathlib.Path("games/tiny-turbo-racers-godot/assets/audio/engine")
+          paths=list(root.glob("*.wav"))
+          assert len(paths)==6
+          for p in paths:
+              with wave.open(str(p),'rb') as w:
+                  assert w.getnframes()>1000 and w.getframerate()>=8000
+                  print("REAL_RECORDED_CC0_ENGINE",p.name,w.getnframes(),w.getframerate())
+          PY
+      - name: Push CC0 binary assets to this dedicated development branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games/tiny-turbo-racers-godot/assets/nature/ games/tiny-turbo-racers-godot/assets/audio/engine/
+          if git diff --cached --quiet; then
+            echo "Assets already committed."
+            exit 0
+          fi
+          git commit -m "Import CC0 real 3D tree meshes and six recorded car engine RPM loops"
+          for n in 1 2 3 4 5; do
+            git fetch origin tiny-turbo-racing-dev-v08
+            git rebase origin/tiny-turbo-racing-dev-v08
+            if git push origin HEAD:tiny-turbo-racing-dev-v08; then
+              echo "TINY_TURBO_V08_ASSETS_IMPORTED"
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
