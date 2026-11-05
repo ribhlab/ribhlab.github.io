@@ -69,6 +69,23 @@ jobs:
             --path games/tiny-turbo-racers-godot \
             --script res://ci/editor_preview_test.gd 2>&1 | tee /tmp/godot-editor-preview.log
           grep 'TINY_TURBO_EDITOR_PREVIEW_PASS' /tmp/godot-editor-preview.log
+      - name: Render a real 3D screenshot of the new circuit (best effort)
+        shell: bash
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          command -v xvfb-run || exit 0
+          xvfb-run -a -s "-screen 0 1280x720x24" \
+            /tmp/Godot_v4.7.2-stable_linux.x86_64 \
+            --rendering-method gl_compatibility \
+            --path games/tiny-turbo-racers-godot \
+            --script res://ci/capture_real_scene.gd 2>&1 | tee /tmp/godot-real-screenshot.log
+      - name: Upload real circuit screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiny-turbo-v05-real-circuit-screenshot
+          path: games/tiny-turbo-racers-godot/build/real_circuit_frame.png
+          if-no-files-found: ignore
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
