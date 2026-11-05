@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/etsy-profitlens-team-v36-publish.yml'
+      - 'tools/etsy-publisher/scripts/publish_profitlens_team_v36.py'
   workflow_dispatch:
 
 permissions:
