@@ -42,6 +42,26 @@ static func chrome(color: Color = Color("#d4e7ff")) -> StandardMaterial3D:
 	return m
 
 static func asphalt() -> StandardMaterial3D:
+	# Prioritize ACTUAL PHOTOGRAPHIC CC0 asphalt by Poly Haven / Rob Tuytel.
+	# Fallback remains the fully local procedural bitmap if assets aren't ready.
+	const DIFF = "res://assets/textures/asphalt_02_diff_1k.png"
+	const NOR = "res://assets/textures/asphalt_02_nor_gl_1k.png"
+	const ROUGH = "res://assets/textures/asphalt_02_rough_1k.png"
+	if ResourceLoader.exists(DIFF) and ResourceLoader.exists(NOR):
+		var authentic := StandardMaterial3D.new()
+		authentic.albedo_color = Color.WHITE
+		authentic.albedo_texture = load(DIFF) as Texture2D
+		authentic.normal_enabled = true
+		authentic.normal_texture = load(NOR) as Texture2D
+		authentic.normal_scale = 0.68
+		authentic.roughness = 0.94
+		if ResourceLoader.exists(ROUGH):
+			authentic.roughness_texture = load(ROUGH) as Texture2D
+		authentic.metallic = 0.02
+		authentic.vertex_color_use_as_albedo = true
+		authentic.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
+		authentic.cull_mode = BaseMaterial3D.CULL_DISABLED
+		return authentic
 	var noise := FastNoiseLite.new()
 	noise.seed = 87331
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
