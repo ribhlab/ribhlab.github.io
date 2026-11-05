@@ -1,3 +1,35 @@
+# RibhLab Midnight Rush GT v0.9 — Free Steering and Live Minimap
+
+**New gameplay improvement:** The car now has a real world-space 3D position and heading. The analog wheel changes the car's direction, while progressive arcade steering assistance helps follow curving circuits. A track-edge impact reduces speed. A minimap follows the actual x/z position of the player's car and AI competitors. Three route layouts, four race modes, original CC0 foliage, recorded engine RPM loops and the six existing separately licensed sports cars are retained.
+
+**Development prototype only.** Famous manufacturer vehicle names, designs and trademarks are **not officially licensed** by this game. Artist CC BY 4.0 credit does not itself grant any car manufacturer's trademark or design rights. The project is not ready for public commercial Play Store distribution without appropriate review. Physically based PBR cars/terrain do not mean it is photorealistic. Device FPS numbers remain targets until tested on real hardware.
+
+## Update an existing Windows checkout
+
+Close Godot, open Windows PowerShell **inside any directory of the existing Git repo**, and paste:
+
+```powershell
+$ErrorActionPreference = "Stop"
+$repo = (git rev-parse --show-toplevel).Trim()
+Set-Location $repo
+git stash push -u -m "Backup before real driving v0.9" -- games/tiny-turbo-racers-godot
+git fetch origin
+if (git branch --list tiny-turbo-racing-dev-v09) {
+    git switch tiny-turbo-racing-dev-v09
+} else {
+    git switch --track origin/tiny-turbo-racing-dev-v09
+}
+git pull --ff-only origin tiny-turbo-racing-dev-v09
+Set-Location (Join-Path $repo "games\tiny-turbo-racers-godot")
+powershell -ExecutionPolicy Bypass -File .\SETUP_WINDOWS.ps1
+```
+
+Then open `scenes/main.tscn`, press **F5**, select a track and mode, and try the steering wheel with simultaneous GAS/BRAKE/DRIFT/NITRO touch zones. Use keyboard A/D/W/S and SHIFT/SPACE in the editor.
+
+**Build evidence:** [GitHub Actions racing APK workflow](https://github.com/ribhlab/ribhlab.github.io/actions/workflows/tiny-turbo-godot.yml). Download the artifact from the latest **successful** run for branch `tiny-turbo-racing-dev-v09`, checking the commit SHA.
+
+---
+
 # RibhLab Midnight Rush GT v0.8 — Nature, Racing Modes, Manual Wheel and Recorded Engines
 
 This is the **actual playable Godot Android racing project**, not image mockups. The v0.8 branch inherits the v0.7 driving and night racing project.
