@@ -8,6 +8,7 @@ config/name="RibhLab Midnight Rush 3D"
 run/main_scene="res://scenes/main.tscn"
 config/description="An original high-speed 3D nighttime street racing game on Android."
 config/features=PackedStringArray("4.7", "Mobile")
+config/quit_on_go_back=false
 
 [display]
 
