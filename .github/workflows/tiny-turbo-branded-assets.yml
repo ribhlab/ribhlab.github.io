@@ -30,7 +30,7 @@ jobs:
             curl --fail --location --retry 4 --retry-all-errors \
               "https://raw.githubusercontent.com/pedrosoandre/carros/main/assets/$name.glb" \
               -o "/tmp/$name.meshopt.glb"
-            npx gltf-transform copy "/tmp/$name.meshopt.glb" "$DEST/$name.glb"
+            npx gltf-transform dequantize "/tmp/$name.meshopt.glb" "$DEST/$name.glb"
             GLB="$DEST/$name.glb" node - <<'NODE'
           const fs=require('fs');
           const b=fs.readFileSync(process.env.GLB);
@@ -38,7 +38,7 @@ jobs:
           const len=b.readUInt32LE(12);
           const gltf=JSON.parse(b.subarray(20,20+len));
           const ex=gltf.extensionsRequired||[];
-          if(ex.includes('EXT_meshopt_compression')||ex.includes('KHR_draco_mesh_compression'))throw Error('Godot unsupported mesh-compression extension in '+process.env.GLB+': '+ex);
+          if(ex.includes('EXT_meshopt_compression')||ex.includes('KHR_draco_mesh_compression')||ex.includes('KHR_mesh_quantization'))throw Error('Godot unsupported mesh-compression extension in '+process.env.GLB+': '+ex);
           console.log('GODOT_READY_BRAND_GLB',process.env.GLB,'bytes',b.length,'meshes',gltf.meshes?.length||0,'nodes',gltf.nodes?.length||0,'extensionsRequired',ex);
           if((gltf.meshes?.length||0)<1)throw Error('No meshes '+process.env.GLB);
           NODE
