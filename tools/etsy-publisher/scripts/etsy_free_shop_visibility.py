@@ -3,6 +3,7 @@ Runs against only the authorized RibhLabDigital shop, never ad/fees/inventory.
 Requires shops_w: if absent, exits safely with an explicit permissions report.
 Revalidated after the seller confirmed completing the Etsy OAuth reauthorization.
 Fresh seller confirmation: re-check granted shops_w and execute guarded updates.
+Verify current GitHub Actions credential after seller supplied existing approved Etsy Keystring.
 """
 import os,sys,json,urllib.error,urllib.parse,urllib.request
 from check_connection import verify,ConnectionErrorSafe
