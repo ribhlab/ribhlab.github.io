@@ -11,6 +11,40 @@ const WINDOW_TONES: Array[Color] = [
 ]
 var neon_brightness: float = 1.0
 
+func build_world() -> void:
+	super.build_world()
+	_build_retroreflective_studs()
+
+func _build_retroreflective_studs() -> void:
+	# Native Godot MultiMesh: high-visibility night road edges in 1 draw batch.
+	# These retroreflective paint markers follow the ACTUAL spline course.
+	var marker := BoxMesh.new()
+	marker.size=Vector3(.17,.055,.34)
+	var coating := StandardMaterial3D.new()
+	coating.albedo_color=Color("#dcefff")
+	coating.emission_enabled=true
+	coating.emission=Color("#8bbfff")
+	coating.emission_energy_multiplier=.75
+	coating.roughness=.28
+	marker.material=coating
+	var mm := MultiMesh.new()
+	mm.transform_format=MultiMesh.TRANSFORM_3D
+	mm.mesh=marker
+	mm.instance_count=256
+	for i in range(128):
+		var a:float=TAU*(float(i)+.5)/128.0
+		var yaw:float=road_yaw(a)
+		for side in range(2):
+			var offset:float=-8.92 if side==0 else 8.92
+			var p:Vector3=road_position(a,offset)+Vector3(0,.23,0)
+			mm.set_instance_transform(i*2+side,
+				Transform3D(Basis(Vector3.UP,yaw),p))
+	var details := MultiMeshInstance3D.new()
+	details.name="InstancedRoadReflectors"
+	details.multimesh=mm
+	add_child(details)
+
+
 func _build_lighting() -> void:
 	var world_env := WorldEnvironment.new()
 	world_env.name = "MidnightSkyAndAtmosphere"
