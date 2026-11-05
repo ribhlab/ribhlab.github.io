@@ -4,7 +4,10 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/etsy-organic-seo-audit.yml'
+      - 'tools/etsy-publisher/scripts/etsy_organic_seo_audit.py'
   workflow_dispatch:
+  schedule:
+    - cron: '15 9 * * 1'
 
 permissions:
   contents: read
