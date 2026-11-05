@@ -3,7 +3,7 @@ extends Node3D
 ## EDITOR-ONLY preview of the EXACT procedural world and car constructors.
 ## Important: never save generated meshes into main.tscn: they are rebuilt at runtime.
 ## This script is inert in exported Android games.
-const WorldBuilder = preload("res://scripts/real_track.gd")
+const WorldBuilder = preload("res://scripts/street_track.gd")
 const CarVisual = preload("res://scripts/real_car.gd")
 
 var preview_loaded: bool = false
