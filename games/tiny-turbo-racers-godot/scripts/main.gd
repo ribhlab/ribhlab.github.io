@@ -4,6 +4,7 @@ extends Node3D
 const WorldBuilder = preload("res://scripts/world_builder.gd")
 const CarVisual = preload("res://scripts/car_visual.gd")
 const ArcadeAudio = preload("res://scripts/arcade_audio.gd")
+const VehicleDynamics = preload("res://scripts/vehicle_dynamics.gd")
 const MAX_LAPS: int = 3
 const TRACK_RADIUS: float = 84.0
 const CAR_COLORS: Array[Color] = [
@@ -21,6 +22,8 @@ var state: String = "menu"
 var progress: float = 0.0
 var lane_offset: float = 0.0
 var speed: float = 0.0
+var handling = VehicleDynamics.new()
+var last_skid_sound: float = 0.0
 var boost_remaining: float = 0.0
 var boost_cooldown: float = 0.0
 var countdown: float = 3.75
@@ -312,6 +315,7 @@ func _start_race() -> void:
 	state = "countdown"
 	progress = 0.0
 	speed = 0.0
+	handling.reset()
 	lane_offset = 0.0
 	race_seconds = 0.0
 	countdown = 3.8
@@ -402,16 +406,17 @@ func _drive(delta: float) -> void:
 	boost_remaining = maxf(0.0,boost_remaining-delta)
 	collision_lock = maxf(0.0,collision_lock-delta)
 	var boost: bool = boost_remaining > 0.0
-	var target_speed: float = 59.0 if boost else 38.0
-	speed = move_toward(speed,target_speed,23.0*delta)
 	var steer: float = 0.0
 	if held_left or Input.is_key_pressed(KEY_LEFT) or Input.is_key_pressed(KEY_A):
 		steer -= 1.0
 	if held_right or Input.is_key_pressed(KEY_RIGHT) or Input.is_key_pressed(KEY_D):
 		steer += 1.0
-	lane_offset = clampf(lane_offset+steer*delta*10.5,-7.5,7.5)
-	# Soft safety bumper that keeps young drivers on the track.
-	speed *= 1.0-0.12*delta if absf(lane_offset)>7.1 else 1.0
+	var physics: Dictionary = handling.simulate(delta, steer, boost, absf(lane_offset)>7.1)
+	speed = float(physics["speed"])
+	lane_offset = clampf(lane_offset+float(physics["lateral_velocity"])*delta,-7.5,7.5)
+	if float(physics["slip"])>.45 and race_seconds-last_skid_sound>2.1:
+		audio.cue("skid")
+		last_skid_sound = race_seconds
 	progress += speed*delta/(TRACK_RADIUS+lane_offset)
 	var new_lap: int = mini(MAX_LAPS,int(progress/TAU)+1)
 	if new_lap > last_lap:
@@ -487,6 +492,7 @@ func _check_collisions() -> void:
 		var delta_angle: float = absf(wrapf(progress-float(rival["progress"]),-PI,PI))
 		if delta_angle < .036 and absf(lane_offset-float(rival["lane"])) < 2.0:
 			speed *= .65
+			handling.velocity = speed
 			lane_offset = clampf(lane_offset+(2.0 if lane_offset >= 0.0 else -2.0),-7.5,7.5)
 			collision_lock = 1.3
 			audio.cue("skid")
