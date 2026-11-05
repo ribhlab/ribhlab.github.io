@@ -1,7 +1,7 @@
-name: Tiny Turbo Racers Godot 3D Validation
+name: Tiny Turbo Racers Godot 3D + Real GT Assets
 on:
   push:
-    branches: [tiny-turbo-racers-godot-v1]
+    branches: [tiny-turbo-racers-godot-v1, tiny-turbo-real-racing-v05]
     paths:
       - "games/tiny-turbo-racers-godot/**"
       - ".github/workflows/tiny-turbo-godot.yml"
@@ -11,7 +11,7 @@ permissions:
 jobs:
   validate-godot:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - name: Download pinned Godot 4.7.2 (standard, not .NET)
