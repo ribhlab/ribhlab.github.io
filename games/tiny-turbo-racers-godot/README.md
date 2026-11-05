@@ -1,4 +1,51 @@
-# Tiny Turbo Racers — Godot 4.7.2 / Realism v0.4
+# Tiny Turbo Racers — Real GT Racing v0.5 (Godot 4.7.2)
+
+This branch replaces the toy-ring race and primitive-looking cars with a **licensed detailed external sports-car model** and a **realistic original motorsport circuit**.
+
+## What is truly new in v0.5?
+
+- **Imported sports car, not cubes:** `assets/vehicles/spectral_gt_rs_game_ready.glb`, a 4.69 MB sports car designed in Blender and exported as GLB; **258 independent mesh objects**, 23 base materials, wheels, brakes, glass, clearcoat body panels and cockpit. Four instances are used for the player and AI opponents; body panels receive selectable racing colors. CC0 source: https://github.com/JaronKBragg7337/spectral-gt-rs
+- **Actual racing course layout:** `scripts/real_track.gd` creates a closed arc-length-sampled Catmull-Rom GP circuit with a proper main straight, elevation variations, S bends and a hairpin sequence. No longer a plain 84-meter-radius circle.
+- **Motorsport architecture:** full pit lane, garages, control tower, four grandstands, welded metal safety barriers, red/white corner kerbs, racing lines, brake-distance boards, gantry and start lights, trackside marshals.
+- **Photographic road PBR:** authentic CC0 Poly Haven Asphalt 02 1K diffuse, normal, roughness maps by Rob Tuytel. The road genuinely uses photo textures, not hand-painted fake gravel. https://polyhaven.com/a/asphalt_02
+- **Mobile-first native Godot:** built-in Jolt physics, physically inspired lateral grip and drive torque, native Vulkan Mobile renderer, clearcoat metals, long camera chase and original offline audio.
+
+### Asset provenance
+
+See [ASSET_LICENSES.md](assets/ASSET_LICENSES.md). All externally sourced 3D model and texture files have verified CC0 licensing permitting commercial use. No proprietary real-brand logos or licensed motor-racing track layouts are included.
+
+### Quality verification
+
+The GitHub Actions workflow validates scene/script import, a complete 3-lap simulation, car mesh import, photo PBR track, Jolt colliders, editor preview, and debug Android APK export. Optional graphical QA produces a real screenshot from Godot under software rendering on CI when available.
+
+### Exact PowerShell command after each update (from your existing Git checkout)
+
+```powershell
+$ErrorActionPreference = "Stop"
+$repo = (git rev-parse --show-toplevel).Trim()
+Set-Location $repo
+
+# Safely preserve locally edited project files before changing branches
+git stash push -u -m "TinyTurbo backup before real GT v0.5" -- games/tiny-turbo-racers-godot
+
+git fetch origin
+if (git branch --list tiny-turbo-real-racing-v05) {
+    git switch tiny-turbo-real-racing-v05
+} else {
+    git switch --track origin/tiny-turbo-real-racing-v05
+}
+git pull --ff-only origin tiny-turbo-real-racing-v05
+$project = Join-Path $repo "games\tiny-turbo-racers-godot"
+Set-Location $project
+powershell -ExecutionPolicy Bypass -File .\SETUP_WINDOWS.ps1
+```
+
+The game is authored in Godot, not the old WebView Android Studio project. Open **scenes/main.tscn**, select **EditorPreview → ShowcaseCamera**, then enable Camera Preview. Press **F5** to play.
+
+**Limitations:** This is an actual licensed detailed sports-car model and a proper motorsport circuit with photographic road textures, but it is **not** an official FIA circuit, exact licensed Ferrari/Lamborghini model or photorealistic AAA engine. AI vehicles reuse the same base model with paint variations; tire/contact physics is still assisted arcade driving rather than independent-wheel rigid-body simulation. Test on your actual Android phone for FPS/heat. For Google Play, complete Families compliance and release signing.
+
+---
+
 
 **A separate next-generation playable prototype, upgraded to native Jolt physics + PBR rendering.** The existing WebView Android Studio v0.2 game remains untouched at `../tiny-turbo-racers`.
 
