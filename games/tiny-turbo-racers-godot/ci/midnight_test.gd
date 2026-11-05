@@ -32,6 +32,7 @@ func _test() -> void:
 		quit(14)
 		return
 	game._start_race()
+	game.held_accel=true
 	# Countdown until the race controls are active.
 	for i in range(170):
 		game._physics_process(.033)
