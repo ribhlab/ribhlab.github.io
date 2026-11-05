@@ -65,7 +65,15 @@ export default async function handler(req, res) {
       return respond(res, 502, { error: "missing_refresh_token" });
     }
     // Return the minimum data to the user's browser, never log or persist tokens.
-    return respond(res, 200, { refresh_token: data.refresh_token });
+    const granted_scopes = typeof data.scope === "string"
+      ? data.scope.split(/\s+/).filter(scope =>
+          ["listings_r","listings_w","shops_r","shops_w"].includes(scope))
+      : [];
+    return respond(res, 200, {
+      refresh_token: data.refresh_token,
+      granted_scopes,
+      shops_write_granted: granted_scopes.includes("shops_w")
+    });
   } catch {
     return respond(res, 502, { error: "etsy_unreachable" });
   }
