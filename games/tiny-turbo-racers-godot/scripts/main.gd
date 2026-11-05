@@ -244,8 +244,8 @@ func _setup_ui() -> void:
 	speed_label = _label(top_hud,"0 km/h",Rect2(981,14,274,55),30,Color("#fff2a2"))
 	_label(top_hud,"MIDNIGHT RUSH",Rect2(555,14,331,56),22,Color("#81eeff"))
 	_button(top_hud,"II",Rect2(897,16,75,55),Color("#3d3d76"),func(): _pause_race())
-	_panel(ui_root,Rect2(407,676,480,32),Color("#0e1d3dcf"),Color("#46cbf9"))
-	boost_label = _label(ui_root,"NITRO 100% | DRIFT 0",Rect2(418,675,457,31),18,Color("#a3f2ff"))
+	_panel(ui_root,Rect2(370,133,540,35),Color("#0e1d3dcf"),Color("#46cbf9"))
+	boost_label = _label(ui_root,"NITRO 100% | DRIFT 0",Rect2(381,134,517,32),18,Color("#a3f2ff"))
 	
 	var left := _button(ui_root,"◀",Rect2(28,573,122,117),Color("#136487"),func(): pass)
 	var right := _button(ui_root,"▶",Rect2(171,573,122,117),Color("#136487"),func(): pass)
