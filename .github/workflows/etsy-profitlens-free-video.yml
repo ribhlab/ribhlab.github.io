@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/etsy-profitlens-free-video.yml'
+      - 'tools/etsy-publisher/scripts/etsy_profitlens_free_video.py'
   workflow_dispatch:
 
 permissions:
