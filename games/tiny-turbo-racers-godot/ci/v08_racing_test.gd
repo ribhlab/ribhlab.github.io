@@ -85,10 +85,29 @@ func _verify() -> void:
 	# Drift is a separate 1-lap finish with score target and result screen.
 	game.race_mode=3
 	game._start_race()
-	game.held_drift=true
-	game.held_right=true
-	if not _simulate_to_finish(game):
-		_die("Drift challenge not finishable",73)
+	game.held_accel=true
+	var initiated:bool=false
+	var drift_start:int=-1
+	var finished:bool=false
+	for step in range(4900):
+		if game.state=="racing" and game.speed>18.0 and not initiated:
+			initiated=true
+			drift_start=step
+			game.held_drift=true
+			game.held_right=true
+		# Release handbrake after one controlled slide so the vehicle can
+		# recenter itself on the track. Holding full lock for 3 minutes is
+		# naturally impossible with true free-position steering.
+		if drift_start>=0 and step-drift_start>=23:
+			game.held_drift=false
+			game.held_right=false
+			drift_start=-1
+		game._physics_process(.033)
+		if game.state=="finished":
+			finished=true
+			break
+	if not finished:
+		_die("Drift challenge not finishable with released handbrake",73)
 		return
 	if game.drift_points<1 or game.finish_stats.text.is_empty():
 		_die("Drift challenge didn't score or show results",74)
