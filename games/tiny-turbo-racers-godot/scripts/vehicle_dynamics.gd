@@ -35,14 +35,14 @@ func reset() -> void:
 
 func simulate(delta: float, steering_input: float, boosting: bool,
 		outside_edge: bool = false, braking: bool = false,
-		handbrake: bool = false, upgrades: Dictionary = {}) -> Dictionary:
+		handbrake: bool = false, upgrades: Dictionary = {}, throttle: float = 1.0) -> Dictionary:
 	var dt: float = clampf(delta,0.0,.05)
 	var steering: float = clampf(steering_input,-1.0,1.0)
 	var speed_level: int = clampi(int(upgrades.get("speed",0)),0,5)
 	var accel_level: int = clampi(int(upgrades.get("accel",0)),0,5)
 	var grip_level: int = clampi(int(upgrades.get("grip",0)),0,5)
 	var max_speed: float = (63.0 if boosting else 39.0)*(1.0+.055*float(speed_level))
-	var motor_force: float = (BOOST_FORCE if boosting else MOTOR_FORCE)*(1.0+.105*float(accel_level))
+	var motor_force: float = (BOOST_FORCE if boosting else MOTOR_FORCE)*(1.0+.105*float(accel_level))*clampf(throttle,0.0,1.0)
 	# Braking is a real force; there is no instantaneous artificial speed multiplier.
 	brake_intensity = move_toward(brake_intensity,1.0 if braking else 0.0,7.5*dt)
 	var torque_falloff: float = clampf((max_speed-velocity)/13.5,0.0,1.0)
