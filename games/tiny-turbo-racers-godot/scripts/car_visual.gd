@@ -1,4 +1,5 @@
 extends Node3D
+const RealismMaterials = preload("res://scripts/realism_materials.gd")
 ## Original procedural glossy cartoon racer, compatible with mobile OpenGL.
 ## Model faces local -Z; attach a rotating camera behind it.
 
@@ -24,8 +25,12 @@ func set_paint(color: Color) -> void:
 
 func animate_car(delta: float, speed: float, steering: float, turbo: bool) -> void:
 	elapsed += delta
-	for wheel in wheels:
-		wheel.rotation.x -= delta * speed * 0.19
+	for i in range(wheels.size()):
+		var wheel: Node3D = wheels[i]
+		wheel.rotation.x -= delta * speed / 0.43
+		# The front axle (local -Z) gently points toward the turn.
+		wheel.rotation.y = lerpf(wheel.rotation.y, steering * 0.19 if i%2==0 else 0.0,
+			clampf(delta*9.0,0,1))
 	for flame in flames:
 		flame.visible = turbo
 		if turbo:
@@ -68,11 +73,11 @@ func _sphere(pos: Vector3, scale3: Vector3, material: Material) -> MeshInstance3
 	return mi
 
 func _build() -> void:
-	body_material = _mat(paint, 0.18, 0.2)
+	body_material = RealismMaterials.car_paint(paint)
 	var dark := _mat(Color("#172d53"), 0.72)
-	var tire := _mat(Color("#212a39"), 0.86)
-	var rim := _mat(Color("#d4edff"), 0.19, 0.5)
-	var window := _mat(Color("#87d8fd"), 0.14, 0.16)
+	var tire := RealismMaterials.rubber()
+	var rim := RealismMaterials.chrome()
+	var window := RealismMaterials.polished_glass()
 	var white := _mat(Color("#fff8ec"), 0.24)
 	var blue := _mat(Color("#183f81"), 0.32)
 	var pink := _mat(Color("#fc7fac"), 0.3)
@@ -130,6 +135,31 @@ func _build() -> void:
 			hub.material_override = rim
 			hub.rotation.z = PI / 2.0
 			pivot.add_child(hub)
+			# Five angular alloy wheel spokes, visible as the wheels rotate.
+			for k in range(5):
+				var spoke := MeshInstance3D.new()
+				var bar := BoxMesh.new()
+				bar.size = Vector3(.10,.41,.035)
+				spoke.mesh = bar
+				spoke.material_override = rim
+				spoke.rotation.x = TAU*float(k)/5.0
+				spoke.position.x = float(side)*.19
+				pivot.add_child(spoke)
+	
+	# Mirror caps, chrome door handles, brake light clusters and diffusers.
+	for side in [-1,1]:
+		var x: float = float(side)
+		_sphere(Vector3(x*1.04,1.48,-.44),Vector3(.27,.16,.22),body_material)
+		_box(Vector3(x*1.08,.99,.25),Vector3(.03,.07,.40),rim)
+		_box(Vector3(x*.79,.85,1.635),Vector3(.40,.16,.07),_mat(Color("#ff405e"),.22,0.0,true))
+		_box(Vector3(x*.70,.55,-1.62),Vector3(.26,.09,.07),rim)
+	# Scalloped ventilated bumper and lower side trim.
+	_box(Vector3(0,.55,-1.66),Vector3(1.48,.20,.08),dark)
+	for i in range(5):
+		_box(Vector3((float(i)-2.0)*.25,.56,-1.72),Vector3(.10,.17,.04),rim)
+	_box(Vector3(0,.41,1.64),Vector3(1.40,.18,.11),dark)
+	# A single white highlight on the windshield makes clearcoat readable.
+	_box(Vector3(-.54,1.69,-.777),Vector3(.10,.24,.02),_mat(Color("#d9fcff"),.10))
 	
 	# Turbo exhaust jets glow blue while the boost control is held.
 	for x in [-0.53, 0.53]:
