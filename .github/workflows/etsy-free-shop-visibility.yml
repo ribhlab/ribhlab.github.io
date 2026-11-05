@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/etsy-free-shop-visibility.yml'
+      - 'tools/etsy-publisher/scripts/etsy_free_shop_visibility.py'
   workflow_dispatch:
 
 permissions:
