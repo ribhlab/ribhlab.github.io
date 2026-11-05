@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: etsy-organic-shop-auto-promote
@@ -44,4 +45,6 @@ jobs:
           else
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Auto-promote new verified active Etsy listings on RibhLab'
             git push
+            GH_TOKEN="${{ github.token }}" gh workflow run deploy-pages.yml --ref main
+            echo 'Triggered GitHub Pages publication for updated product cards.'
           fi
