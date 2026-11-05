@@ -12,6 +12,8 @@ const TREE_NAMES: Array[String] = [
 ]
 var tree_count: int = 0
 var loaded_variants: int = 0
+var photo_tree_count: int = 0
+const PHOTO_PINE: String = "res://assets/nature/pine_sapling_ph_1k_lod.glb"
 
 func setup(track: Node3D, route: int) -> void:
 	var available: Array[PackedScene] = []
@@ -22,6 +24,7 @@ func setup(track: Node3D, route: int) -> void:
 			if scene is PackedScene:
 				available.append(scene as PackedScene)
 	loaded_variants=available.size()
+	var photogrammetry: PackedScene = load(PHOTO_PINE) as PackedScene if ResourceLoader.exists(PHOTO_PINE) else null
 	if available.is_empty():
 		push_warning("Kenney CC0 tree GLBs not imported. Enable nature asset workflow.")
 		return
@@ -35,12 +38,15 @@ func setup(track: Node3D, route: int) -> void:
 			index=4
 		if route==2 and i%3!=0 and available.size()>3:
 			index=2+(i%2)
-		var model: Node3D=available[index].instantiate() as Node3D
+		var use_photo: bool=photogrammetry!=null and ((route==2 and i%13==0) or (route==1 and i%21==0) or (route==0 and i%16==0))
+		var model: Node3D=photogrammetry.instantiate() as Node3D if use_photo else available[index].instantiate() as Node3D
 		if model==null:
 			continue
 		model.name="RealTree%03d" % i
 		model.rotation.y=rng.randf_range(-PI,PI)
-		var scale_factor: float=rng.randf_range(4.5,7.1)
+		var scale_factor: float=rng.randf_range(1.4,2.2) if use_photo else rng.randf_range(4.5,7.1)
+		if use_photo:
+			photo_tree_count+=1
 		model.scale=Vector3.ONE*scale_factor
 		var angle: float=TAU*(float(i)+rng.randf_range(.2,.8))/float(count)
 		var distance: float=rng.randf_range(23.0,53.0)
