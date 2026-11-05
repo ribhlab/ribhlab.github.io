@@ -39,6 +39,9 @@ func _verify() -> void:
 		if nature==null or nature.tree_count<25 or nature.loaded_variants!=7:
 			_die("Missing 7 licensed real 3D tree meshes on track "+str(map_id),64)
 			return
+		if ResourceLoader.exists("res://assets/nature/pine_sapling_ph_1k_lod.glb") and nature.photo_tree_count<2:
+			_die("Imported Poly Haven photo-textured pine exists but was not instanced",76)
+			return
 		if not game.audio.using_recorded or game.audio.recorded_engines.size()!=6:
 			_die("Six real recorded CC0 engine WAV samples not being played",65)
 			return
