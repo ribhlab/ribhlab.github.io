@@ -5,6 +5,7 @@ extends Node3D
 ## This script is inert in exported Android games.
 const WorldBuilder = preload("res://scripts/real_track.gd")
 const CarVisual = preload("res://scripts/real_car.gd")
+const BrandCatalog = preload("res://scripts/brand_catalog.gd")
 
 var preview_loaded: bool = false
 
@@ -35,7 +36,8 @@ func _build_editor_preview() -> void:
 	]
 	for i in range(colors.size()):
 		var toy = CarVisual.new()
-		toy.name = ["SpeedyPreview","BuddyPreview","SunnyPreview","RangerPreview"][i]
+		toy.name = ["BMW_M4_Preview","Mercedes_AMG_Preview","Porsche_911_Preview","Lamborghini_SVJ_Preview"][i]
+		toy.set_model_file(str(BrandCatalog.get_car(i)["file"]))
 		toy.configure(colors[i],i)
 		add_child(toy)
 		var angle: float = 0.08+float(i)*0.034
