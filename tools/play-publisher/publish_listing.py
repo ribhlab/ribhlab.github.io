@@ -11,6 +11,7 @@ import json
 import re
 import struct
 import sys
+import tempfile
 from pathlib import Path
 from publish import get_credentials
 
@@ -77,10 +78,15 @@ def apply_listings(doc: dict) -> dict:
             packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
         ).execute().get("images", [])
         if not current_icons:
-            edits.images().upload(
-                packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
-                media_body=MediaFileUpload(str(icon), mimetype="image/png"),
-            ).execute()
+            from PIL import Image
+            with tempfile.TemporaryDirectory() as directory:
+                rgba_icon = Path(directory) / "rivoscan-play-icon-32bit.png"
+                with Image.open(icon) as image:
+                    image.convert("RGBA").save(rgba_icon)
+                edits.images().upload(
+                    packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
+                    media_body=MediaFileUpload(str(rgba_icon), mimetype="image/png"),
+                ).execute()
         # No screenshots are uploaded without genuine, checked UI captures.
         edits.validate(packageName=PACKAGE, editId=edit_id).execute()
         edits.commit(packageName=PACKAGE, editId=edit_id).execute()
