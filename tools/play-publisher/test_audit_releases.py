@@ -33,6 +33,9 @@ class AuditReleaseTests(unittest.TestCase):
         self.assertEqual(expected["releases"][0]["versionCodes"], [42])
         self.assertEqual(expected["releases"][0]["lifecycle"], "RELEASE_LIFECYCLE_STATE_IN_REVIEW")
 
+    def test_no_content_is_empty_track(self):
+        self.assertEqual(module.summarize_response(204, None)["result"], "NO_RELEASES")
+
     def test_empty_track(self):
         self.assertEqual(module.summarize_response(200, {})["releaseCount"], 0)
 
