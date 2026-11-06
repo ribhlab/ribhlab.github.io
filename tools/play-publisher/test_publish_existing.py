@@ -1,6 +1,7 @@
 """Safety tests for existing-bundle release workflow."""
 import importlib.util
 import sys
+import types
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -53,8 +54,11 @@ class ExistingBundleTests(unittest.TestCase):
         edits.bundles.return_value.list.return_value.execute.return_value = {"bundles": []}
         service = MagicMock()
         service.edits.return_value = edits
+        fake_pkg = types.ModuleType("googleapiclient")
+        fake_discovery = types.ModuleType("googleapiclient.discovery")
+        fake_discovery.build = lambda *args, **kwargs: service
         with patch.object(module, "get_credentials", return_value=object()), \
-             patch("googleapiclient.discovery.build", return_value=service):
+             patch.dict(sys.modules, {"googleapiclient": fake_pkg, "googleapiclient.discovery": fake_discovery}):
             with self.assertRaisesRegex(ValueError, "not visible"):
                 module.perform(a)
         edits.tracks.return_value.update.assert_not_called()
