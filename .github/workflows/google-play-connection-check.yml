@@ -1,0 +1,42 @@
+name: Google Play Publisher — check connection only
+
+on:
+  workflow_dispatch:
+    inputs:
+      package_name:
+        description: 'Optional: existing Play Console package to verify app permissions; leave blank to test JSON token only'
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  connection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: play-testing
+    steps:
+      - name: Checkout verified publisher code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline unit tests
+        run: python -m unittest discover tools/play-publisher -p 'test_*.py' -v
+      - name: Install official Google API clients
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Check service account without publishing
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PLAY_PACKAGE: ${{ inputs.package_name }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" ]]; then
+            echo 'Missing GOOGLE_PLAY_SERVICE_ACCOUNT_JSON repository secret'
+            exit 1
+          fi
+          python tools/play-publisher/check_connection.py --package "$PLAY_PACKAGE"
