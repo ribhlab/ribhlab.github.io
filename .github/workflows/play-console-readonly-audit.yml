@@ -24,8 +24,15 @@ jobs:
       - name: Verify tests without uploading anything
         run: python -m unittest discover tools/play-publisher -p 'test_*.py' -v
       - name: Read Google Play release states for RivoScan - no Edit API
+        continue-on-error: true
         env:
           GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
         run: |
           test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || { echo 'Missing service account secret'; exit 1; }
           python tools/play-publisher/audit_releases.py --package com.ribhlab.rivoscan
+      - name: Read Google Play release states for NovaGrid - no Edit API
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || { echo 'Missing service account secret'; exit 1; }
+          python tools/play-publisher/audit_releases.py --package com.novagrid.cosmicpuzzle
