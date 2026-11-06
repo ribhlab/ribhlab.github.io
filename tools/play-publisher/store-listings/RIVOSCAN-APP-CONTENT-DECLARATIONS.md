@@ -15,7 +15,7 @@ Only shared developer identity/contact is reused from NovaGrid. Do **not** copy 
 | Data Safety | **Not submitted — must audit final signed AAB and SDKs** | AdMob, Google ML Kit, Tesseract language pack fetch, user-triggered OpenAI API, WebRTC STUN. Cannot declare “no data collected” from source alone |
 | App access | **Core scanner does not require an account**, optional AI requires user's own API key and separate consent | Confirm whether reviewer must receive access instructions for any gated premium/AI tools |
 | Target audience | **Ages 18 and over** — proposed sole age group; **not yet submitted in Play Console** | Professional document scanner with optional cloud AI and AdMob. Product is currently intended/marketed to adults, not children. Re-evaluate if the actual release or marketing is designed to target teenagers or children. |
-| Content rating | **Prepare productivity/document utility answers, not NovaGrid game answers** | IARC responses must match actual features and access to user content |
+| Content rating | **Prepared in [`RIVOSCAN-IARC-CONTENT-RATING-ANSWERS.md`](./RIVOSCAN-IARC-CONTENT-RATING-ANSWERS.md); not submitted in Play Console** | Core utility content: no bundled mature themes; **YES native user-to-user file exchange** via WebRTC; optional AI outputs must be considered |
 | News | **No**, based on current project | Document tool, not news publisher |
 | Government | **No**, based on current project | Not a government service |
 | Financial features | **No**, based on current project | Document processing is not a financial service; confirm whether future features introduce financial functionality |
