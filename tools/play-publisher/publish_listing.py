@@ -20,7 +20,7 @@ PACKAGE = "com.ribhlab.rivoscan"
 SUPPORT_EMAIL = "rachid022note4@gmail.com"
 APP_WEBSITE = "https://ribhlab.github.io/rivoscan/"
 PRIVACY_POLICY_URL = "https://ribhlab.github.io/rivoscan/privacy/"
-ALLOWED_LOCALES = {"en-US", "fr-FR", "ar"}
+ALLOWED_LOCALES = {"en-US", "fr-FR", "ar", "es-ES", "de-DE", "pt-BR", "it-IT"}
 
 
 def load(path: Path) -> dict:
@@ -29,7 +29,7 @@ def load(path: Path) -> dict:
         raise ValueError("Listing package mismatch")
     locales = doc.get("locales")
     if not isinstance(locales, dict) or set(locales) != ALLOWED_LOCALES:
-        raise ValueError("Expected exactly en-US, fr-FR and ar listings")
+        raise ValueError("Expected seven supported RivoScan app-language listings")
     for lang, value in locales.items():
         if not isinstance(value, dict):
             raise ValueError(f"Invalid listing body for {lang}")

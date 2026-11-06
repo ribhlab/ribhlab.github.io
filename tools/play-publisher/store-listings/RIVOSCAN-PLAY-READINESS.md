@@ -4,7 +4,7 @@ Source reviewed: `univcours/ribhlab`, `feat/rivoscan-android-beta`.
 
 ## Prepared automatically
 - Package identifier: `com.ribhlab.rivoscan`.
-- Localized store listing: English (US), French (France), Arabic.
+- Localized store listing: English (US), French (France), Arabic already committed; Spanish (Spain), German (Germany), Portuguese (Brazil), and Italian (Italy) prepared for the next Play API edit.
 - Genuine 512 × 512 RivoScan icon copied from source. The publisher converts its indexed PNG to 32-bit RGBA when uploading, only if no icon is already uploaded.
 - Listing deployment workflow: disabled by default and does not access Google until the initial AAB upload is saved and the release request is enabled.
 - Existing app bundle versionCode must be read from Play Console: older project files mention 86 / 0.44.10 but the uploaded bundle may differ.
@@ -25,5 +25,5 @@ Source reviewed: `univcours/ribhlab`, `feat/rivoscan-android-beta`.
 2. Verify app exists and that `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` has access to it.
 3. Finish privacy/Data Safety and first-time setup declarations in Play Console.
 4. Confirm genuine screenshots and feature graphic.
-5. Store listing text (EN/FR/AR), genuine icon, developer email and website were committed via the official Play Publishing API on Nov 6, 2026. The one-time request was subsequently disabled. Privacy policy **URL** in the Play Console App content questionnaire remains a separate, unconfirmed manual declaration.
+5. Store listing text (EN/FR/AR), genuine icon, developer email and website were committed via the official Play Publishing API on Nov 6, 2026. Four additional market localizations are prepared for a separate update. The one-time request was subsequently disabled. Privacy policy **URL** in the Play Console App content questionnaire remains a separate, unconfirmed manual declaration.
 6. Only after approval, handle internal testing, closed testing, and public release separately.
