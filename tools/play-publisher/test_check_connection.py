@@ -23,6 +23,16 @@ class CheckConnectionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             check.validate_package("../secret")
 
+    def test_package_check_requires_explicit_confirmation(self):
+        with patch.object(check, "run_check") as action:
+            self.assertEqual(check.main(["--package", "com.ribhlab.rivoscan"]), 1)
+            action.assert_not_called()
+
+    def test_package_check_with_confirmation(self):
+        with patch.object(check, "run_check") as action:
+            self.assertEqual(check.main(["--package", "com.ribhlab.rivoscan", "--confirm-temp-edit"]), 0)
+            action.assert_called_once_with("com.ribhlab.rivoscan")
+
     def test_invalid_package_fails_before_network(self):
         with patch.object(check, "run_check") as action:
             self.assertEqual(check.main(["--package", "bad!value"]), 1)
