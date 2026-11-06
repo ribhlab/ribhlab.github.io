@@ -1,0 +1,31 @@
+name: Google Play Console - read-only release audit
+
+on:
+  push:
+    branches: [audit/play-console-releases-20261106]
+    paths:
+      - 'tools/play-publisher/**'
+      - '.github/workflows/play-console-readonly-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official auth client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Verify tests without uploading anything
+        run: python -m unittest discover tools/play-publisher -p 'test_*.py' -v
+      - name: Read Google Play release states for RivoScan - no Edit API
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || { echo 'Missing service account secret'; exit 1; }
+          python tools/play-publisher/audit_releases.py --package com.ribhlab.rivoscan
