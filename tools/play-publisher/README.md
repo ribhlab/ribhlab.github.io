@@ -29,6 +29,20 @@ choose **Run workflow**, branch **main**.
 
 **Before API usage:** Every Android app must already exist in the Play Console and its first APK/AAB must be uploaded manually via the Console. The API cannot create the new app or accept the required legal/developer declarations.
 
+## RivoScan: use a bundle already uploaded manually in Google Play Console
+
+You do **not** need to upload the same AAB a second time to GitHub Releases. The workflow
+[RivoScan - publish AAB already uploaded in Play Console](https://github.com/ribhlab/ribhlab.github.io/actions/workflows/rivoscan-publish-existing.yml)
+uses the exact `versionCode` of the existing bundle, verifies it against `edits.bundles.list`, and assigns it to a track.
+
+1. In Play Console, create `com.ribhlab.rivoscan`, upload the **first signed AAB**, complete the upload and **save** it so the bundle is available to subsequent API edits. Do not leave unsaved Console changes: a new API edit may invalidate them.
+2. Copy the **versionCode** from the bundle details (not the display version name, e.g., `0.44.5`).
+3. Choose `internal` + `draft` by default; set `confirm=COMMIT` to authorize the action. For completed production, also set `production_confirmation=PUBLISH` and configure required reviewers under the `play-production` GitHub Environment.
+4. After the job, verify the result in Play Console. The API **does not** complete initial legal declarations, content-rating forms, privacy-policy acknowledgements, or the final first-publication step for an unpublished app; those must be done in Console, with production access approved where required.
+
+**Safety:** The workflow does not reupload the AAB, refuses unknown versionCodes, refuses existing drafts or staged releases that could be overwritten, and leaves all live releases untouched when preparing a draft. It still creates a new Play edit; save any Console changes beforehand. Never share signing credentials or Google JSON keys.
+
+
 ## 2. Upload signed AAB and run the publisher
 
 1. Build a production-signed Android App Bundle with an incremented versionCode.
