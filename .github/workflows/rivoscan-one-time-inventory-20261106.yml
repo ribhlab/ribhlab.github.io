@@ -60,3 +60,5 @@ jobs:
           finally:
               edits.delete(packageName=package,editId=eid).execute()
           PY
+
+# Recheck actual RivoScan feature graphic count after successful upload.
