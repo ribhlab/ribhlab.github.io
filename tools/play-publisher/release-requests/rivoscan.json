@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "package": "com.ribhlab.rivoscan",
+  "versionCode": 0,
+  "track": "internal",
+  "status": "draft",
+  "notes": "Initial RivoScan Android release.",
+  "commitConfirmation": "",
+  "productionConfirmation": ""
+}
