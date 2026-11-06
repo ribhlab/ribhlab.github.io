@@ -52,9 +52,14 @@ def run_check(package: str) -> None:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--package", default="", help="Optional existing appId (e.g. com.ribhlab.rivoscan)")
+    parser.add_argument("--confirm-temp-edit", action="store_true",
+                        help="Acknowledge temporary edit may invalidate another uncommitted edit")
     args = parser.parse_args(argv)
     try:
-        run_check(validate_package(args.package.strip()))
+        package = validate_package(args.package.strip())
+        if package and not args.confirm_temp_edit:
+            raise ValueError("App check requires --confirm-temp-edit; creating an edit may invalidate an existing uncommitted edit")
+        run_check(package)
         return 0
     except Exception as exc:
         # Avoid including API error text, which could contain sensitive metadata.
