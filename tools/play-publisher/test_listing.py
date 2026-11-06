@@ -20,7 +20,7 @@ class ListingTests(unittest.TestCase):
 
     def test_three_locales_and_char_limits(self):
         data = mod.load(self.path)
-        self.assertEqual(set(data["locales"]), {"en-US", "fr-FR", "ar"})
+        self.assertEqual(set(data["locales"]), {"en-US", "fr-FR", "ar", "es-ES", "de-DE", "pt-BR", "it-IT"})
         self.assertEqual(data["appId"], mod.PACKAGE)
 
     def test_real_icon_dimensions(self):
