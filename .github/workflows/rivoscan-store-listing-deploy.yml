@@ -1,0 +1,71 @@
+name: RivoScan - apply Play Store listing after first AAB upload
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/play-publisher/store-listings/rivoscan-deploy-request.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.request.outputs.enabled }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate RivoScan listing and source icon, no Play API calls
+        run: python -m unittest discover tools/play-publisher -p 'test_*.py' -v
+      - name: Inspect locked listing request
+        id: request
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r=json.loads(Path('tools/play-publisher/store-listings/rivoscan-deploy-request.json').read_text(encoding='utf-8'))
+          if set(r) != {'enabled','appId','confirmation'}:
+              raise SystemExit('Invalid request fields')
+          if r['appId'] != 'com.ribhlab.rivoscan':
+              raise SystemExit('Wrong appId')
+          if type(r['enabled']) is not bool:
+              raise SystemExit('Invalid enabled')
+          if r['enabled'] and r['confirmation'] != 'APPLY_LISTING':
+              raise SystemExit('Explicit APPLY_LISTING confirmation required')
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              out.write('enabled=' + ('true' if r['enabled'] else 'false') + '\n')
+          print('LISTING_REQUEST_ENABLED:', r['enabled'])
+          PY
+
+  apply-listing:
+    needs: validate
+    if: needs.validate.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official Google Play API and PNG conversion tools
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install 'Pillow>=11,<13'
+      - name: Update three localized listings and source icon ONLY
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || { echo 'Missing Google Play secret'; exit 1; }
+          python tools/play-publisher/publish_listing.py --apply --confirm APPLY_LISTING
