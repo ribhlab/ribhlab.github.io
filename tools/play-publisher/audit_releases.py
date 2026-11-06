@@ -10,7 +10,6 @@ import json
 import re
 import sys
 from urllib.parse import quote
-from google.auth.transport.requests import AuthorizedSession
 
 from publish import get_credentials
 
@@ -27,6 +26,8 @@ def validate_package(package: str) -> str:
 
 def summarize_response(status: int, payload: dict | None) -> dict:
     """Only include safe fields from the API response; never log a credential or server error body."""
+    if status == 204:
+        return {"result": "NO_RELEASES", "httpStatus": 204, "releaseCount": 0, "releases": []}
     if status != 200:
         name = {401: "AUTHENTICATION_FAILED", 403: "ACCESS_DENIED", 404: "NOT_FOUND_OR_NOT_ACCESSIBLE",
                 400: "INVALID_REQUEST"}.get(status, "HTTP_ERROR")
@@ -45,6 +46,7 @@ def summarize_response(status: int, payload: dict | None) -> dict:
 
 
 def audit(package: str, tracks: tuple[str, ...] = TRACKS) -> dict:
+    from google.auth.transport.requests import AuthorizedSession
     credentials = get_credentials()
     session = AuthorizedSession(credentials)
     result = {"package": package, "tracks": {}}
