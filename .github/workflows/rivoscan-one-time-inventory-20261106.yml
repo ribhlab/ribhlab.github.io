@@ -1,0 +1,62 @@
+name: RivoScan - one-time Play API inventory
+on:
+  push:
+    branches: [audit/rivoscan-play-state-20261106]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Read RivoScan Play listing, image assets, bundle inventory, tracks without writing
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          python - <<'PY'
+          import json
+          from googleapiclient.discovery import build
+          from googleapiclient.errors import HttpError
+          import sys
+          sys.path.insert(0,'tools/play-publisher')
+          from publish import get_credentials
+          package='com.ribhlab.rivoscan'
+          svc=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False)
+          edits=svc.edits()
+          state={'package':package}
+          try:
+              edit=edits.insert(packageName=package,body={}).execute()
+          except Exception as exc:
+              state['editCreate']={'error':type(exc).__name__,'http':getattr(getattr(exc,'resp',None),'status',None)}
+              print('RIVOSCAN_INVENTORY='+json.dumps(state,sort_keys=True))
+              raise SystemExit(1)
+          eid=edit['id']
+          def check(name,operation):
+              try:
+                  return operation()
+              except Exception as exc:
+                  state[name+'Error']={'type':type(exc).__name__,'http':getattr(getattr(exc,'resp',None),'status',None)}
+                  return {}
+          try:
+              details=check('details',lambda: edits.details().get(packageName=package,editId=eid).execute())
+              state['details']={k:details.get(k) for k in ('defaultLanguage','contactEmail','contactWebsite') if k in details}
+              li=check('listings',lambda: edits.listings().list(packageName=package,editId=eid).execute())
+              state['listings']=[{'language':l.get('language'),'title':l.get('title'),'shortLength':len(l.get('shortDescription','')),'fullLength':len(l.get('fullDescription',''))} for l in li.get('listings',[])]
+              bundles=check('bundles',lambda: edits.bundles().list(packageName=package,editId=eid).execute())
+              state['bundles']=[{'versionCode':x.get('versionCode'),'sha1':bool(x.get('sha1'))} for x in bundles.get('bundles',[])]
+              tracks=check('tracks',lambda: edits.tracks().list(packageName=package,editId=eid).execute())
+              state['tracks']=[{'track':t.get('track'),'releases':[{'name':r.get('name'),'status':r.get('status'),'versionCodes':r.get('versionCodes')} for r in t.get('releases',[])]} for t in tracks.get('tracks',[])]
+              images={}
+              for kind in ('icon','featureGraphic','phoneScreenshots','sevenInchScreenshots','tenInchScreenshots','tvBanner'):
+                  imageResp=check('image_'+kind,lambda k=kind: edits.images().list(packageName=package,editId=eid,language='en-US',imageType=k).execute())
+                  images[kind]=len(imageResp.get('images',[]))
+              state['imagesEnUS']=images
+              print('RIVOSCAN_INVENTORY='+json.dumps(state,sort_keys=True,ensure_ascii=False))
+          finally:
+              edits.delete(packageName=package,editId=eid).execute()
+          PY
