@@ -1,5 +1,5 @@
 {
-  "enabled": false,
+  "enabled": true,
   "appId": "com.ribhlab.rivoscan",
-  "confirmation": ""
+  "confirmation": "UPLOAD_REAL_SCREENSHOTS"
 }
