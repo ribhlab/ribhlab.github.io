@@ -23,6 +23,10 @@ class ListingTests(unittest.TestCase):
         self.assertEqual(set(data["locales"]), {"en-US", "fr-FR", "ar"})
         self.assertEqual(data["appId"], mod.PACKAGE)
 
+    def test_real_icon_dimensions(self):
+        icon = ROOT / "store-listings/assets/rivoscan-icon.png"
+        self.assertEqual(mod.verify_icon(icon), icon)
+
     def test_too_long_title_rejected(self):
         data = mod.load(self.path)
         data["locales"]["en-US"]["title"] = "x" * 31
