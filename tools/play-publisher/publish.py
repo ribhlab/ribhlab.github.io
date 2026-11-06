@@ -69,6 +69,45 @@ def get_credentials():
     )
 
 
+def get_target_track(edits, package: str, edit_id: str, requested: str) -> tuple[str, list[dict]]:
+    """Resolve the internal/qa alias against actual Play tracks."""
+    result = edits.tracks().list(packageName=package, editId=edit_id).execute()
+    known = {
+        item["track"]: item.get("releases", [])
+        for item in result.get("tracks", [])
+        if item.get("track")
+    }
+    if requested == "internal":
+        # Google's current public docs call the internal track "qa".
+        # Some existing API integrations use the legacy "internal" name.
+        track = next((name for name in ("qa", "internal") if name in known), "qa")
+    else:
+        track = requested
+    return track, known.get(track, [])
+
+
+def build_releases(args: argparse.Namespace, code: str, existing: list[dict]) -> list[dict]:
+    """Keep existing serving releases intact when preparing a new draft."""
+    release = {"status": args.status, "versionCodes": [str(code)]}
+    if args.name:
+        release["name"] = args.name
+    if args.notes:
+        release["releaseNotes"] = [{"language": args.language, "text": args.notes}]
+
+    if args.status == "draft":
+        if any(item.get("status") == "draft" for item in existing):
+            raise ValueError("An existing draft already occupies this track; resolve it in Play Console first")
+        return [*existing, release]
+
+    # A completed release replaces the serving version. Never silently override
+    # a staged, halted, or drafted release, or a multi-APK compatibility setup.
+    if any(item.get("status") != "completed" for item in existing):
+        raise ValueError("Track contains a draft, staged, or halted release; review in Play Console first")
+    if any(len(item.get("versionCodes", [])) > 1 for item in existing):
+        raise ValueError("Existing multi-APK release requires manual review in Play Console")
+    return [release]
+
+
 def upload(args: argparse.Namespace, aab: Path) -> dict:
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -77,6 +116,16 @@ def upload(args: argparse.Namespace, aab: Path) -> dict:
     edits = client.edits()
     edit = edits.insert(packageName=args.package, body={}).execute()
     edit_id = edit["id"]
+    target_track, existing = get_target_track(edits, args.package, edit_id, args.track)
+    # Apply potentially destructive track changes only after checking existing releases.
+    # Version code is known only after upload; this edit is not committed until all succeed.
+    if args.status == "draft" and any(item.get("status") == "draft" for item in existing):
+        raise ValueError("Track already has a draft release; resolve it in Play Console")
+    if args.status == "completed":
+        if any(item.get("status") != "completed" for item in existing):
+            raise ValueError("Track has staged, halted, or draft releases; resolve them before publishing")
+        if any(len(item.get("versionCodes", [])) > 1 for item in existing):
+            raise ValueError("Existing multi-APK configuration requires manual review")
 
     media = MediaFileUpload(str(aab), mimetype="application/octet-stream", resumable=True)
     bundle = edits.bundles().upload(
@@ -84,20 +133,15 @@ def upload(args: argparse.Namespace, aab: Path) -> dict:
     ).execute()
     code = str(bundle["versionCode"])
 
-    release = {"status": args.status, "versionCodes": [code]}
-    if args.name:
-        release["name"] = args.name
-    if args.notes:
-        release["releaseNotes"] = [{"language": args.language, "text": args.notes}]
-
+    releases = build_releases(args, code, existing)
     edits.tracks().update(
         packageName=args.package,
         editId=edit_id,
-        track=args.track,
-        body={"track": args.track, "releases": [release]},
+        track=target_track,
+        body={"track": target_track, "releases": releases},
     ).execute()
     edits.commit(packageName=args.package, editId=edit_id).execute()
-    return {"package": args.package, "track": args.track, "status": args.status, "versionCode": code}
+    return {"package": args.package, "track": target_track, "status": args.status, "versionCode": code}
 
 
 def main(argv: list[str] | None = None) -> int:
