@@ -14,7 +14,7 @@ Only shared developer identity/contact is reused from NovaGrid. Do **not** copy 
 | Ads | **Yes / Contains ads (preliminary based on source)** | `src/monetization.js` includes Google AdMob SDK and ad displays, but with test IDs. Recheck final signed AAB and turn off test IDs before public monetization |
 | Data Safety | **Not submitted — must audit final signed AAB and SDKs** | AdMob, Google ML Kit, Tesseract language pack fetch, user-triggered OpenAI API, WebRTC STUN. Cannot declare “no data collected” from source alone |
 | App access | **Core scanner does not require an account**, optional AI requires user's own API key and separate consent | Confirm whether reviewer must receive access instructions for any gated premium/AI tools |
-| Target audience | **Not auto-selected** | A scanner is not automatically a child-directed app; age targeting is a product/policy decision and must match actual release |
+| Target audience | **Ages 18 and over** — proposed sole age group; **not yet submitted in Play Console** | Professional document scanner with optional cloud AI and AdMob. Product is currently intended/marketed to adults, not children. Re-evaluate if the actual release or marketing is designed to target teenagers or children. |
 | Content rating | **Prepare productivity/document utility answers, not NovaGrid game answers** | IARC responses must match actual features and access to user content |
 | News | **No**, based on current project | Document tool, not news publisher |
 | Government | **No**, based on current project | Not a government service |
@@ -24,6 +24,17 @@ Only shared developer identity/contact is reused from NovaGrid. Do **not** copy 
 | Screenshots | **Not available as verified store-ready captures** | Need genuine on-device captures of current release |
 | AAB | **First signed bundle must be uploaded/saved in Play Console** | Latest GitHub AAB artifact was named UNSIGNED; not release-ready |
 | Public release | **Not authorized by this checklist** | Google review, account-specific testing and developer declaration requirements remain |
+
+## Target audience — selected recommendation (6 November 2026)
+
+**Play Console → Policy → App content → Target audience and content → Start → Target age:**
+select **18 and over** *only*. Do **not** select 5 and under / 6–8 / 9–12 / 13–15 / 16–17, because the current RivoScan release is designed and presented as a professional document utility rather than a children’s app. This is a product audience selection, not the IARC content rating.
+
+**Restrict minor access:** Google's option is separate from choosing the 18+ audience; do not enable an additional account-age restriction automatically. Decide separately if the product must block all minors. Google can review whether stated audience matches actual UI, store assets, marketing and app behavior. If teenage/student usage is explicitly targeted in the future, update the declared groups and privacy/ad compliance rather than retaining an inaccurate 18+ declaration.
+
+**Submission state:** prepared in this file only. The Google Play Developer API currently used for store listings does not submit this App content form. A Play Console user must select the group and press **Save**. Do not mark the declaration as submitted until Play Console confirms it.
+
+Sources: https://support.google.com/googleplay/android-developer/answer/9867159 and https://support.google.com/googleplay/android-developer/answer/18265346.
 
 ## What can be done via Google Play Developer API
 
