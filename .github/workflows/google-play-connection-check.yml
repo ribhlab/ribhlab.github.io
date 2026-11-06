@@ -8,6 +8,11 @@ on:
         required: false
         type: string
         default: ''
+      confirm_temporary_edit:
+        description: 'Only when package is set: confirm temporary edit could invalidate an existing uncommitted Play edit'
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: read
@@ -33,10 +38,19 @@ jobs:
         env:
           GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
           PLAY_PACKAGE: ${{ inputs.package_name }}
+          CONFIRM_TEMP_EDIT: ${{ inputs.confirm_temporary_edit }}
         run: |
           set -euo pipefail
           if [[ -z "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" ]]; then
             echo 'Missing GOOGLE_PLAY_SERVICE_ACCOUNT_JSON repository secret'
             exit 1
           fi
-          python tools/play-publisher/check_connection.py --package "$PLAY_PACKAGE"
+          if [[ -n "$PLAY_PACKAGE" ]]; then
+            if [[ "$CONFIRM_TEMP_EDIT" != 'true' ]]; then
+              echo 'Select confirm_temporary_edit before checking app permissions; a temporary edit can invalidate an existing edit.'
+              exit 1
+            fi
+            python tools/play-publisher/check_connection.py --package "$PLAY_PACKAGE" --confirm-temp-edit
+          else
+            python tools/play-publisher/check_connection.py
+          fi
