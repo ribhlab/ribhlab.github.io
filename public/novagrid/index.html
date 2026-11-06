@@ -7,13 +7,13 @@
 <meta name="robots" content="index,follow">
 <meta name="description" content="NovaGrid is a cosmic block puzzle game for Android. Explore Classic, Daily Challenge, Blockfall and 14,000 stages across seven galaxy sectors.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="NovaGrid — A universe of puzzles">
+<meta property="og:title" content="NovaGrid: Cosmic Block Puzzle">
 <meta property="og:description" content="Four puzzle modes, seven cosmic sectors and 14,000 stages. Your next challenge starts here.">
 <meta property="og:image" content="https://ribhlab.github.io/novagrid/logo.webp">
 <meta property="og:url" content="https://ribhlab.github.io/novagrid/">
 <link rel="canonical" href="https://ribhlab.github.io/novagrid/">
 <link rel="icon" type="image/webp" href="logo.webp">
-<title>NovaGrid — Cosmic Puzzle Game for Android</title>
+<title>NovaGrid: Cosmic Block Puzzle</title>
 <style>
 :root{color-scheme:dark;--bg:#070c20;--ink:#f0f5ff;--muted:#a5b4d6;--cyan:#51d9ff;--purple:#ac73ff;--pink:#ff60d4;--edge:rgba(153,177,255,.19)}
 *{box-sizing:border-box}
@@ -45,7 +45,7 @@ h1 .gradient{background:linear-gradient(100deg,#5cddff 4%,#847fff 55%,#ff68d6 99
 .btn.primary{background:linear-gradient(110deg,#0caedc,#7156f6 62%,#bc50ce);box-shadow:0 12px 34px #445dff48;border:1px solid #89c8ff66}
 .btn.secondary{border:1px solid #8097d466;background:#151d3a}
 .status{display:flex;gap:10px;margin-top:24px;color:#a3b8da;font-size:13px;align-items:center}
-.status span{height:7px;width:7px;background:#f3bc5e;border-radius:50%;box-shadow:0 0 12px #f3bc5e}
+.status>span:first-child{flex:0 0 7px;height:7px;background:#52e6a5;border-radius:50%;box-shadow:0 0 12px #52e6a5}
 .hero-art{position:relative;max-width:475px;width:100%;margin:auto}
 .orb{position:absolute;inset:7% -9%;filter:blur(48px);background:conic-gradient(from 40deg,#b943c465,#0055df6b,#24a9f35d,#b943c465);border-radius:50%}
 .device{position:relative;border:1px solid #6d8df388;background:linear-gradient(130deg,#151f46f3,#0b1431 65%,#22163f);box-shadow:0 20px 75px #050819,0 0 45px #3e70f438;border-radius:34px;padding:20px 20px 25px;transform:rotate(3deg)}
@@ -73,14 +73,14 @@ h2{font-size:clamp(31px,4.2vw,49px);line-height:1.18;letter-spacing:-.04em;margi
 .sectors{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
 .sector{padding:17px 18px;border:1px solid var(--edge);border-radius:15px;background:#121a39;display:flex;align-items:center;gap:12px;color:#cfdbf2;font-weight:650;font-size:14px}
 .sector i{font-style:normal;color:#91d8ff;font-size:22px;width:28px;text-align:center}
-.video-section{margin:72px 0 48px;border:1px solid #8b71e659;background:linear-gradient(110deg,#102548,#281944);padding:42px 48px;border-radius:26px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-.video-section h2{font-size:32px}.video-section p{color:var(--muted);margin-bottom:0}
+.download-section{margin:72px 0 48px;border:1px solid #8b71e659;background:linear-gradient(110deg,#102548,#281944);padding:42px 48px;border-radius:26px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.download-section h2{font-size:32px}.download-section p{color:var(--muted);margin-bottom:0}
 footer{border-top:1px solid var(--edge);padding:32px 0 40px;color:#99abd0;font-size:13px}
 .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .footlinks{display:flex;gap:22px;flex-wrap:wrap}.footlinks a:hover{color:var(--cyan)}
-[dir=rtl] .eyebrow{letter-spacing:0}[dir=rtl] .tile,[dir=rtl] .video-section{text-align:right}[dir=rtl] .board,[dir=rtl] .device{direction:ltr}
+[dir=rtl] .eyebrow{letter-spacing:0}[dir=rtl] .tile,[dir=rtl] .download-section{text-align:right}[dir=rtl] .board,[dir=rtl] .device{direction:ltr}
 @media(max-width:1040px){.hero{gap:30px}.modes{grid-template-columns:repeat(2,1fr)}.sectors{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:740px){.container{width:min(100% - 32px,560px)}.nav{height:72px}.brand{font-size:21px}.brand img{width:43px;height:43px}.navlinks{display:none}.hero{grid-template-columns:1fr;padding:58px 0 70px;gap:47px;text-align:center}.hero .lead{font-size:16px}.hero .buttons,.hero .status{justify-content:center}.hero-art{max-width:400px}.device{transform:rotate(1deg)}h1{font-size:clamp(44px,13vw,67px)}.section{padding:57px 0}.stats{gap:8px}.stat{padding:21px 7px}.stat b{font-size:28px}.stat span{font-size:12px}.sectors{grid-template-columns:repeat(2,1fr)}.video-section{padding:27px 24px;flex-direction:column;align-items:flex-start;margin-top:48px}.video-section h2{font-size:29px}}
+@media(max-width:740px){.container{width:min(100% - 32px,560px)}.nav{height:72px}.brand{font-size:21px}.brand img{width:43px;height:43px}.navlinks{display:none}.hero{grid-template-columns:1fr;padding:58px 0 70px;gap:47px;text-align:center}.hero .lead{font-size:16px}.hero .buttons,.hero .status{justify-content:center}.hero-art{max-width:400px}.device{transform:rotate(1deg)}h1{font-size:clamp(44px,13vw,67px)}.section{padding:57px 0}.stats{gap:8px}.stat{padding:21px 7px}.stat b{font-size:28px}.stat span{font-size:12px}.sectors{grid-template-columns:repeat(2,1fr)}.download-section{padding:27px 24px;flex-direction:column;align-items:flex-start;margin-top:48px}.download-section h2{font-size:29px}}
 @media(max-width:440px){.modes{grid-template-columns:1fr}.tile{min-height:0;padding:24px}.sectors{grid-template-columns:1fr 1fr}.sector{font-size:12px;padding:12px 9px}.symbol{margin-bottom:12px}.board{gap:3px;padding:7px}.device{padding:14px}.btn{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.tile{transition:none}}
 </style>
@@ -90,7 +90,7 @@ footer{border-top:1px solid var(--edge);padding:32px 0 40px;color:#99abd0;font-s
 <div class="nav-wrap">
 <div class="container nav">
 <a class="brand" href="/novagrid/" aria-label="NovaGrid home"><img src="logo.webp" alt="NovaGrid N icon" width="48" height="48"><span>NovaGrid</span></a>
-<nav class="navlinks" aria-label="Site navigation"><a href="#modes" data-t="navModes">Game modes</a><a href="#galaxies" data-t="navWorlds">Galaxies</a><a href="#video" data-t="navVideo">Video</a><a href="/novagrid/privacy/" data-t="privacy">Privacy</a></nav>
+<nav class="navlinks" aria-label="Site navigation"><a href="#modes" data-t="navModes">Game modes</a><a href="#galaxies" data-t="navWorlds">Galaxies</a><a href="#download" data-t="navDownload">Download</a><a href="/novagrid/privacy/" data-t="privacy">Privacy</a></nav>
 <div class="langs" role="group" aria-label="Language">
 <button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="fr" aria-pressed="false">FR</button><button type="button" data-language="ar" aria-pressed="false">AR</button>
 </div>
@@ -101,8 +101,11 @@ footer{border-top:1px solid var(--edge);padding:32px 0 40px;color:#99abd0;font-s
 <div class="eyebrow" data-t="eyebrow">✦ A NEW COSMIC CHALLENGE</div>
 <h1><span data-t="heroFirst">Think beyond</span><br><span class="gradient" data-t="heroSecond">the grid.</span></h1>
 <p class="lead" data-t="lead">A universe of clever block puzzles awaits. Clear lines, master falling shapes and unlock new worlds in NovaGrid, a cosmic puzzle game for Android.</p>
-<div class="buttons"><a class="btn primary" href="#modes"><span>✦</span><span data-t="explore">Explore the game</span></a><a class="btn secondary" href="https://www.youtube.com/watch?v=xv_gvle_rZw" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span><span data-t="watch">Watch video</span></a></div>
-<div class="status"><span aria-hidden="true"></span><span data-t="testing">Google Play launch in preparation · Internal testing active</span></div>
+<div class="buttons">
+<a class="btn primary" href="https://play.google.com/store/apps/details?id=com.novagrid.cosmicpuzzle"><span aria-hidden="true">↓</span><span data-t="getApp">Get it on Google Play</span></a>
+<a class="btn secondary" href="#modes"><span aria-hidden="true">✦</span><span data-t="explore">Explore the game</span></a>
+</div>
+<div class="status"><span aria-hidden="true"></span><span data-t="availability">Available on Google Play</span></div>
 </div>
 <div class="hero-art" aria-label="Stylized illustration of NovaGrid gameplay"><div class="orb" aria-hidden="true"></div>
 <div class="device"><div class="device-top"><span>NOVAGRID / COSMIC PUZZLE</span><b>✦ 2,540</b></div>
@@ -129,10 +132,14 @@ footer{border-top:1px solid var(--edge);padding:32px 0 40px;color:#99abd0;font-s
 <div class="sectors">
 <div class="sector"><i>✦</i><span>Cosmic Explorer</span></div><div class="sector"><i>☄</i><span>Meteor Storm</span></div><div class="sector"><i>⬇</i><span>Gravity Forge</span></div><div class="sector"><i>◈</i><span>Prism Temple</span></div><div class="sector"><i>⚡</i><span>Chain Reactor</span></div><div class="sector"><i>◉</i><span>Void Trials</span></div><div class="sector"><i>▥</i><span>Blockfall Arena</span></div>
 </div></section>
-<div class="container" id="video">
-<div class="video-section"><div><span class="kicker" data-t="videoKicker">TAKE A LOOK</span><h2 data-t="videoTitle">See NovaGrid in motion.</h2><p data-t="videoDesc">Get a glimpse of the cosmic puzzle universe.</p></div><a class="btn primary" href="https://www.youtube.com/watch?v=xv_gvle_rZw" target="_blank" rel="noopener noreferrer"><span>▶</span><span data-t="watchVideo">Watch on YouTube</span></a></div></div>
+<section class="container" id="download">
+<div class="download-section">
+<div><span class="kicker" data-t="downloadKicker">ANDROID</span><h2 data-t="downloadTitle">Download NovaGrid for Android</h2><p data-t="downloadDesc">Open Google Play to install the game.</p></div>
+<a class="btn primary" href="https://play.google.com/store/apps/details?id=com.novagrid.cosmicpuzzle"><span aria-hidden="true">↓</span><span data-t="getApp">Get it on Google Play</span></a>
+</div>
+</section>
 </main>
-<footer><div class="container foot"><span>© 2026 NovaGrid · <span data-t="footLine">Designed for Android · Currently in testing</span></span>
+<footer><div class="container foot"><span>© 2026 NovaGrid · <span data-t="footLine">Designed for Android</span></span>
 <div class="footlinks"><a href="/novagrid/privacy/" data-t="privacy">Privacy Policy</a><a href="mailto:rachid022note4@gmail.com" data-t="support">Contact support</a></div></div></footer>
 <script>
 (function(){
@@ -140,8 +147,8 @@ footer{border-top:1px solid var(--edge);padding:32px 0 40px;color:#99abd0;font-s
  const cyan=new Set([10,11,19,28,37,38,39,46,47,48,49,57,66,67]),purple=new Set([6,7,15,16,24,25,33,34,42,43,51,52,60,61]),violet=new Set([3,12,21,30,31,32,40]);
  for(let i=0;i<81;i++){const n=document.createElement("span");n.className="cell"+(cyan.has(i)?" c":purple.has(i)?" p":violet.has(i)?" v":"");grid.appendChild(n)}
  const dict={
- fr:{navModes:"Modes de jeu",navWorlds:"Galaxies",navVideo:"Vidéo",privacy:"Confidentialité",eyebrow:"✦ UN NOUVEAU DÉFI COSMIQUE",heroFirst:"Voyez au-delà",heroSecond:"de la grille.",lead:"Un univers de puzzles vous attend. Effacez les lignes, maîtrisez les blocs qui tombent et débloquez de nouveaux mondes dans NovaGrid, un jeu de réflexion pour Android.",explore:"Découvrir le jeu",watch:"Voir la vidéo",testing:"Sortie Google Play en préparation · Test interne actif",illustration:"Grille illustrative · Le jeu réel peut différer",statModes:"Modes de jeu",statSectors:"Secteurs galactiques",statLevels:"Niveaux à relever",modesKicker:"CHOISISSEZ VOTRE DÉFI",modesHeading:"Quatre façons de jouer.",modesDesc:"De la stratégie tranquille aux blocs qui tombent, trouvez votre rythme.",classic:"Placez les formes sur une grille de 9×9. Complétez lignes, colonnes et carrés.",dailyName:"Défi quotidien",daily:"Relevez chaque jour un nouveau défi de réflexion.",blockfall:"Déplacez et faites pivoter les blocs au toucher. Complétez des lignes.",stagesName:"Niveaux galactiques",stages:"Gagnez des étoiles et débloquez des défis avec les points du jeu.",galaxyKicker:"SEPT SECTEURS",galaxyHeading:"Une galaxie de puzzles.",galaxyDesc:"Explorez 140 mondes dans sept secteurs aux mécaniques variées.",videoKicker:"APERÇU",videoTitle:"Découvrez NovaGrid en action.",videoDesc:"Un aperçu de l'univers cosmique du jeu.",watchVideo:"Voir sur YouTube",footLine:"Conçu pour Android · En cours de test",support:"Contacter le support"},
- ar:{navModes:"أنماط اللعب",navWorlds:"المجرات",navVideo:"الفيديو",privacy:"الخصوصية",eyebrow:"✦ تحدٍ كوني جديد",heroFirst:"فكّر خارج",heroSecond:"حدود الشبكة.",lead:"عالم من ألغاز المكعبات في انتظارك. امسح الصفوف، تحكّم في القطع المتساقطة وافتح عوالم جديدة في NovaGrid، لعبة ألغاز لأندرويد.",explore:"اكتشف اللعبة",watch:"شاهد الفيديو",testing:"النشر على Google Play قيد الإعداد · الاختبار الداخلي مفعّل",illustration:"شبكة توضيحية · قد تختلف طريقة اللعب الفعلية",statModes:"أنماط لعب",statSectors:"قطاعات كونية",statLevels:"مرحلة للتحدي",modesKicker:"اختر تحدّيك",modesHeading:"أربع طرق للعب.",modesDesc:"من التفكير الهادئ إلى المكعبات المتساقطة، اختر النمط اللي كيعجبك.",classic:"ضع الأشكال داخل شبكة 9×9، وأكمل الصفوف والأعمدة والمربعات.",dailyName:"التحدي اليومي",daily:"جرّب لغزاً متجدداً كل يوم واختبر مهاراتك في التخطيط.",blockfall:"حرّك القطع المتساقطة ودوّرها بالسحب واللمس لمسح الصفوف.",stagesName:"مراحل المجرة",stages:"اربح النجوم وافتح تحديات جديدة باستعمال نقاط اللعب.",galaxyKicker:"سبعة قطاعات",galaxyHeading:"مجرة كاملة من الألغاز.",galaxyDesc:"استكشف 140 عالماً داخل سبعة قطاعات لكل منها تحديات مختلفة.",videoKicker:"شاهد اللعبة",videoTitle:"اكتشف NovaGrid بالفيديو.",videoDesc:"نظرة على عالم الألغاز الكونية.",watchVideo:"شاهد على يوتيوب",footLine:"مصممة لأندرويد · مرحلة الاختبار",support:"تواصل مع الدعم"}};
+ fr:{navModes:"Modes de jeu",navWorlds:"Galaxies",navDownload:"Télécharger",privacy:"Confidentialité",eyebrow:"✦ UN NOUVEAU DÉFI COSMIQUE",heroFirst:"Voyez au-delà",heroSecond:"de la grille.",lead:"Un univers de puzzles vous attend. Effacez les lignes, maîtrisez les blocs qui tombent et débloquez de nouveaux mondes dans NovaGrid, un jeu de réflexion pour Android.",explore:"Découvrir le jeu",getApp:"Télécharger sur Google Play",availability:"Disponible sur Google Play",illustration:"Grille illustrative · Le jeu réel peut différer",statModes:"Modes de jeu",statSectors:"Secteurs galactiques",statLevels:"Niveaux à relever",modesKicker:"CHOISISSEZ VOTRE DÉFI",modesHeading:"Quatre façons de jouer.",modesDesc:"De la stratégie tranquille aux blocs qui tombent, trouvez votre rythme.",classic:"Placez les formes sur une grille de 9×9. Complétez lignes, colonnes et carrés.",dailyName:"Défi quotidien",daily:"Relevez chaque jour un nouveau défi de réflexion.",blockfall:"Déplacez et faites pivoter les blocs au toucher. Complétez des lignes.",stagesName:"Niveaux galactiques",stages:"Gagnez des étoiles et débloquez des défis avec les points du jeu.",galaxyKicker:"SEPT SECTEURS",galaxyHeading:"Une galaxie de puzzles.",galaxyDesc:"Explorez 140 mondes dans sept secteurs aux mécaniques variées.",downloadKicker:"ANDROID",downloadTitle:"NovaGrid pour Android",downloadDesc:"Ouvrez Google Play pour installer le jeu.",footLine:"Conçu pour Android",support:"Contacter le support"},
+ ar:{navModes:"أنماط اللعب",navWorlds:"المجرات",navDownload:"التحميل",privacy:"الخصوصية",eyebrow:"✦ تحدٍ كوني جديد",heroFirst:"فكّر خارج",heroSecond:"حدود الشبكة.",lead:"عالم من ألغاز المكعبات في انتظارك. امسح الصفوف، تحكّم في القطع المتساقطة وافتح عوالم جديدة في NovaGrid، لعبة ألغاز لأندرويد.",explore:"اكتشف اللعبة",getApp:"حمّلها من Google Play",availability:"متوفرة على Google Play",illustration:"شبكة توضيحية · قد تختلف طريقة اللعب الفعلية",statModes:"أنماط لعب",statSectors:"قطاعات كونية",statLevels:"مرحلة للتحدي",modesKicker:"اختر تحدّيك",modesHeading:"أربع طرق للعب.",modesDesc:"من التفكير الهادئ إلى المكعبات المتساقطة، اختر النمط اللي كيعجبك.",classic:"ضع الأشكال داخل شبكة 9×9، وأكمل الصفوف والأعمدة والمربعات.",dailyName:"التحدي اليومي",daily:"جرّب لغزاً متجدداً كل يوم واختبر مهاراتك في التخطيط.",blockfall:"حرّك القطع المتساقطة ودوّرها بالسحب واللمس لمسح الصفوف.",stagesName:"مراحل المجرة",stages:"اربح النجوم وافتح تحديات جديدة باستعمال نقاط اللعب.",galaxyKicker:"سبعة قطاعات",galaxyHeading:"مجرة كاملة من الألغاز.",galaxyDesc:"استكشف 140 عالماً داخل سبعة قطاعات لكل منها تحديات مختلفة.",downloadKicker:"أندرويد",downloadTitle:"حمّل NovaGrid لأندرويد",downloadDesc:"افتح Google Play لتثبيت اللعبة.",footLine:"مصممة لأندرويد",support:"تواصل مع الدعم"}};
  const english=Object.fromEntries([...document.querySelectorAll("[data-t]")].map(el=>[el.dataset.t,el.textContent]));
  function apply(lang){const d=lang==="en"?english:dict[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.querySelectorAll("[data-t]").forEach(el=>{if(d[el.dataset.t])el.textContent=d[el.dataset.t]});document.querySelectorAll("[data-language]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.language===lang)));try{localStorage.setItem("novagrid-site-language",lang)}catch{}}
  document.querySelectorAll("[data-language]").forEach(b=>b.addEventListener("click",()=>apply(b.dataset.language)));
