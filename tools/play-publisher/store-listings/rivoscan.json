@@ -1,0 +1,26 @@
+{
+  "appId": "com.ribhlab.rivoscan",
+  "locales": {
+    "en-US": {
+      "title": "RivoScan: PDF Scanner & Editor",
+      "shortDescription": "Scan documents, edit, merge, sign and convert PDFs directly on your phone.",
+      "fullDescription": "RivoScan brings document scanning and practical PDF tools together in one Android app.\n\nSCAN DOCUMENTS\nCapture pages using your phone camera, review and adjust scans, then export them as a PDF. Scanner options and automatic edge detection depend on device compatibility.\n\nEDIT AND ORGANIZE PDFs\nMerge documents, extract or remove pages, rotate and reorder pages, add page numbers, and apply text annotations or watermarks.\n\nCONVERT AND RECOGNIZE TEXT\nExport PDF pages as JPG or PNG, extract selectable PDF text, and use OCR to recognize text in supported languages. OCR features may need a one-time language model download.\n\nSIGN AND SHARE\nDraw a visual signature on documents and save or share your finished files using your device's supported options.\n\nPlease note: handwritten signatures are visual and not certificate-backed digital signatures. Compressing scanned PDFs can remove searchable text or some interactive features. Some features are in beta and may vary by Android device."
+    },
+    "fr-FR": {
+      "title": "RivoScan : Scanner PDF",
+      "shortDescription": "Scannez, fusionnez, annotez, signez et convertissez vos PDF sur mobile.",
+      "fullDescription": "RivoScan réunit la numérisation de documents et des outils pratiques pour les PDF sur Android.\n\nNUMÉRISER\nCapturez vos documents avec l'appareil photo, vérifiez et ajustez les pages, puis exportez-les en PDF. La détection automatique des bords dépend de la compatibilité de votre appareil.\n\nORGANISER ET MODIFIER\nFusionnez des PDF, extrayez ou supprimez des pages, faites-les pivoter, réorganisez-les et ajoutez des numéros de page, annotations ou filigranes.\n\nCONVERTIR ET EXTRAIRE LE TEXTE\nExportez des pages PDF en JPG ou PNG, extrayez le texte sélectionnable et utilisez l'OCR dans les langues prises en charge. Un téléchargement initial de modèles linguistiques peut être nécessaire.\n\nSIGNER ET PARTAGER\nDessinez une signature visuelle sur vos documents et enregistrez ou partagez vos fichiers avec les options de votre appareil.\n\nÀ noter : les signatures dessinées ne sont pas des signatures électroniques certifiées. La compression d'un PDF numérisé peut supprimer le texte sélectionnable ou certaines fonctions interactives. Certaines fonctionnalités sont en version bêta et varient selon l'appareil."
+    },
+    "ar": {
+      "title": "ريفو سكان: ماسح PDF",
+      "shortDescription": "امسح المستندات وعدّل ملفات PDF وادمجها ووقّعها وحوّلها من هاتفك.",
+      "fullDescription": "يجمع RivoScan بين مسح المستندات وأدوات تحرير ملفات PDF على أجهزة Android.\n\nمسح المستندات\nالتقط صفحات المستندات بكاميرا الهاتف، وراجع الصور واضبطها، ثم صدّرها إلى ملف PDF. تعتمد بعض ميزات تحديد الحواف تلقائياً على توافق جهازك.\n\nتنظيم ملفات PDF وتعديلها\nادمج المستندات، واستخرج الصفحات أو احذفها، وقم بتدويرها وإعادة ترتيبها، وأضف أرقام الصفحات والتعليقات النصية والعلامات المائية.\n\nالتحويل والتعرّف على النصوص\nحوّل صفحات PDF إلى صور JPG أو PNG، واستخرج النصوص القابلة للتحديد، واستعمل التعرّف الضوئي على الحروف OCR للغات المدعومة. قد يتطلب OCR تنزيل ملفات اللغة عند أول استخدام.\n\nالتوقيع والمشاركة\nارسم توقيعاً مرئياً على المستند واحفظ الملفات أو شاركها باستخدام الخيارات المتاحة في جهازك.\n\nملاحظة: التوقيع المرسوم ليس توقيعاً إلكترونياً موثقاً بشهادة. قد تؤدي بعض عمليات ضغط المستندات الممسوحة إلى إزالة النص القابل للبحث أو خصائص تفاعلية. بعض الميزات تجريبية وقد تختلف حسب جهاز Android."
+    }
+  },
+  "images": {
+    "appIcon": null,
+    "featureGraphic": null,
+    "phoneScreenshots": []
+  },
+  "releaseStatus": "prepared_not_submitted"
+}
