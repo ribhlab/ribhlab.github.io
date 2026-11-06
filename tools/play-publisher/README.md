@@ -54,6 +54,28 @@ uses the exact `versionCode` of the existing bundle, verifies it against `edits.
 
 **Important:** This publishing repository is PUBLIC. Assets attached to GitHub Releases here are downloadable by the public. For private AAB binaries, put this workflow in a **private** GitHub repository instead of attaching private assets to public releases.
 
+### Assistant-triggered release without user running GitHub Actions
+
+The optional workflow `rivoscan-request-deploy.yml` listens for changes to
+`tools/play-publisher/release-requests/rivoscan.json` on `main`. This allows the
+developer/assistant with GitHub write access to trigger a release using a reviewed
+commit after the first Play Console upload. The file starts with `"enabled": false`;
+**merging this feature cannot publish the app.**
+
+After the developer explicitly approves the target version and rollout, set
+`enabled=true`, the exact `versionCode`, the desired `track`, `status`,
+and `commitConfirmation="COMMIT"`. For completed production, add
+`productionConfirmation="PUBLISH"`. The workflow only acts on
+`com.ribhlab.rivoscan`; input is validated before the job reads the Play credentials,
+and the deployment still checks Play's bundle inventory and track state.
+
+**Security:** The repo is public, but the GitHub secret remains private. Only grant
+trusted accounts write access. The `play-production` environment should have
+required reviewers configured before any Production request; do not enable
+automatic production delivery without that gate. This automation cannot bypass
+Google's first-publication decisions or required declarations.
+
+
 ## 3. Limitations and safety
 
 - Does not build or sign bundles; Android release build configuration is per app.
