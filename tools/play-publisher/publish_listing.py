@@ -16,6 +16,10 @@ from pathlib import Path
 from publish import get_credentials
 
 PACKAGE = "com.ribhlab.rivoscan"
+# Developer contact shared with NovaGrid. App-specific website and privacy policy.
+SUPPORT_EMAIL = "rachid022note4@gmail.com"
+APP_WEBSITE = "https://ribhlab.github.io/rivoscan/"
+PRIVACY_POLICY_URL = "https://ribhlab.github.io/rivoscan/privacy/"
 ALLOWED_LOCALES = {"en-US", "fr-FR", "ar"}
 
 
@@ -58,6 +62,13 @@ def apply_listings(doc: dict) -> dict:
     edit_id = edit["id"]
     committed = False
     try:
+        # Use the shared RibhLab developer support contact already published
+        # on NovaGrid, but never duplicate NovaGrid-specific data practices.
+        edits.details().patch(
+            packageName=PACKAGE, editId=edit_id,
+            body={"defaultLanguage": "en-US", "contactEmail": SUPPORT_EMAIL,
+                  "contactWebsite": APP_WEBSITE},
+        ).execute()
         existing = edits.listings().list(packageName=PACKAGE, editId=edit_id).execute()
         existing_langs = {l.get("language") for l in existing.get("listings", [])}
         # Preserve optional video and any other fields if present; do not touch other locales.
@@ -93,7 +104,9 @@ def apply_listings(doc: dict) -> dict:
         committed = True
         return {"result": "LISTINGS_COMMITTED", "appId": PACKAGE,
                 "locales": sorted(doc["locales"].keys()),
-                "icon": "checked_existing_or_uploaded_from_source"}
+                "icon": "checked_existing_or_uploaded_from_source",
+                "developerContact": SUPPORT_EMAIL, "appWebsite": APP_WEBSITE,
+                "privacyPolicyUrl": PRIVACY_POLICY_URL + " (must be entered in Console App content)"}
     finally:
         if not committed:
             try:

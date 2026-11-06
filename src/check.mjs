@@ -23,7 +23,7 @@ for(const p of pages){const h=fs.readFileSync(p,'utf8');const pathName='/'+path.
  if(!pathName.includes('/admin/') && !['/index.html','/404.html'].includes(pathName)){
   if(!h.includes('name="description"'))errors.push(`${pathName}: missing meta description`);
   if(!h.includes('id="main"'))errors.push(`${pathName}: missing main landmark`);
-  const expected=pathName.startsWith('/novagrid/')?'en':pathName.startsWith('/ar/')?'ar':pathName.startsWith('/en/')?'en':'fr';
+  const expected=(pathName.startsWith('/novagrid/')||pathName.startsWith('/rivoscan/'))?'en':pathName.startsWith('/ar/')?'ar':pathName.startsWith('/en/')?'en':'fr';
   if(!h.includes(`lang="${expected}"`)) errors.push(`${pathName}: incorrect page language`);
  }
  for(const m of h.matchAll(/(?:href|src)="(\/[^"?#]*)/g)){
