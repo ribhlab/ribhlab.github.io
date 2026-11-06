@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "appId": "com.ribhlab.rivoscan",
-  "confirmation": "APPLY_LISTING"
+  "confirmation": ""
 }
