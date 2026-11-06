@@ -29,6 +29,20 @@ choose **Run workflow**, branch **main**.
 
 **Before API usage:** Every Android app must already exist in the Play Console and its first APK/AAB must be uploaded manually via the Console. The API cannot create the new app or accept the required legal/developer declarations.
 
+## RivoScan: use a bundle already uploaded manually in Google Play Console
+
+You do **not** need to upload the same AAB a second time to GitHub Releases. The workflow
+[RivoScan - publish AAB already uploaded in Play Console](https://github.com/ribhlab/ribhlab.github.io/actions/workflows/rivoscan-publish-existing.yml)
+uses the exact `versionCode` of the existing bundle, verifies it against `edits.bundles.list`, and assigns it to a track.
+
+1. In Play Console, create `com.ribhlab.rivoscan`, upload the **first signed AAB**, complete the upload and **save** it so the bundle is available to subsequent API edits. Do not leave unsaved Console changes: a new API edit may invalidate them.
+2. Copy the **versionCode** from the bundle details (not the display version name, e.g., `0.44.5`).
+3. Choose `internal` + `draft` by default; set `confirm=COMMIT` to authorize the action. For completed production, also set `production_confirmation=PUBLISH` and configure required reviewers under the `play-production` GitHub Environment.
+4. After the job, verify the result in Play Console. The API **does not** complete initial legal declarations, content-rating forms, privacy-policy acknowledgements, or the final first-publication step for an unpublished app; those must be done in Console, with production access approved where required.
+
+**Safety:** The workflow does not reupload the AAB, refuses unknown versionCodes, refuses existing drafts or staged releases that could be overwritten, and leaves all live releases untouched when preparing a draft. It still creates a new Play edit; save any Console changes beforehand. Never share signing credentials or Google JSON keys.
+
+
 ## 2. Upload signed AAB and run the publisher
 
 1. Build a production-signed Android App Bundle with an incremented versionCode.
@@ -39,6 +53,28 @@ choose **Run workflow**, branch **main**.
 6. For production + completed, set production_confirmation to PUBLISH and have an authorized reviewer approve the protected environment. Check the Actions run and then verify the status in Play Console. An API commit does not guarantee store approval or immediate availability.
 
 **Important:** This publishing repository is PUBLIC. Assets attached to GitHub Releases here are downloadable by the public. For private AAB binaries, put this workflow in a **private** GitHub repository instead of attaching private assets to public releases.
+
+### Assistant-triggered release without user running GitHub Actions
+
+The optional workflow `rivoscan-request-deploy.yml` listens for changes to
+`tools/play-publisher/release-requests/rivoscan.json` on `main`. This allows the
+developer/assistant with GitHub write access to trigger a release using a reviewed
+commit after the first Play Console upload. The file starts with `"enabled": false`;
+**merging this feature cannot publish the app.**
+
+After the developer explicitly approves the target version and rollout, set
+`enabled=true`, the exact `versionCode`, the desired `track`, `status`,
+and `commitConfirmation="COMMIT"`. For completed production, add
+`productionConfirmation="PUBLISH"`. The workflow only acts on
+`com.ribhlab.rivoscan`; input is validated before the job reads the Play credentials,
+and the deployment still checks Play's bundle inventory and track state.
+
+**Security:** The repo is public, but the GitHub secret remains private. Only grant
+trusted accounts write access. The `play-production` environment should have
+required reviewers configured before any Production request; do not enable
+automatic production delivery without that gate. This automation cannot bypass
+Google's first-publication decisions or required declarations.
+
 
 ## 3. Limitations and safety
 
