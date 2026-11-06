@@ -12,7 +12,7 @@ Once the repository secret `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` has been created, 
 choose **Run workflow**, branch **main**.
 
 - Leave **package_name** empty to verify the service-account JSON and obtain an OAuth token. Success prints `TOKEN_OK` plus `APP_NOT_CHECKED`. This does **not** prove that Play Console permissions are correct.
-- If an existing app is already set up in Play Console, enter its exact package name (for example `com.ribhlab.rivoscan`). Success prints `TOKEN_OK`, `APP_API_OK` and `CLEANUP_OK`. The script creates and deletes a temporary *uncommitted* Play API edit; it does not upload, commit or publish anything.
+- If an existing app already has a first bundle uploaded manually in Play Console, enter its package name (for example `com.ribhlab.rivoscan`) **and explicitly check `confirm_temporary_edit`**. Success prints `TOKEN_OK`, `APP_API_OK` and `CLEANUP_OK`. The script creates and deletes a temporary *uncommitted* Play API edit; it does not upload, commit or publish anything. **However, Google warns that creating a new edit can invalidate another existing uncommitted edit for the app**. Run this only when you have no ongoing Play Console edits you want to preserve.
 - A `403` usually means that the service account has insufficient rights for that specific app. A `404` can mean that the package is not yet present or accessible.
 - Google Play's service account permissions can take time to propagate; confirm invitation and app scope before retrying.
 - Secrets are masked in Actions and are never displayed by the tool. Do not share the downloaded JSON key.
