@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import struct
 import sys
 from pathlib import Path
 from publish import get_credentials
@@ -36,8 +37,20 @@ def load(path: Path) -> dict:
     return doc
 
 
+def verify_icon(path: Path) -> Path:
+    """Only use the real source app icon; do not generate fake screenshots."""
+    raw = path.read_bytes()
+    if not 100 <= len(raw) <= 1024 * 1024 or raw[:8] != b"\x89PNG\r\n\x1a\n":
+        raise ValueError("Icon must be a non-empty PNG below 1 MiB")
+    width, height = struct.unpack(">II", raw[16:24])
+    if (width, height) != (512, 512):
+        raise ValueError("Google Play app icon must be 512 x 512")
+    return path
+
+
 def apply_listings(doc: dict) -> dict:
     from googleapiclient.discovery import build
+    from googleapiclient.http import MediaFileUpload
     service = build("androidpublisher", "v3", credentials=get_credentials(), cache_discovery=False)
     edits = service.edits()
     edit = edits.insert(packageName=PACKAGE, body={}).execute()
@@ -59,11 +72,22 @@ def apply_listings(doc: dict) -> dict:
                     packageName=PACKAGE, editId=edit_id, language=language,
                     body=payload,
                 ).execute()
+        icon = verify_icon(Path(__file__).parent / "store-listings/assets/rivoscan-icon.png")
+        current_icons = edits.images().list(
+            packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
+        ).execute().get("images", [])
+        if not current_icons:
+            edits.images().upload(
+                packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
+                media_body=MediaFileUpload(str(icon), mimetype="image/png"),
+            ).execute()
+        # No screenshots are uploaded without genuine, checked UI captures.
         edits.validate(packageName=PACKAGE, editId=edit_id).execute()
         edits.commit(packageName=PACKAGE, editId=edit_id).execute()
         committed = True
         return {"result": "LISTINGS_COMMITTED", "appId": PACKAGE,
-                "locales": sorted(doc["locales"].keys())}
+                "locales": sorted(doc["locales"].keys()),
+                "icon": "checked_existing_or_uploaded_from_source"}
     finally:
         if not committed:
             try:
