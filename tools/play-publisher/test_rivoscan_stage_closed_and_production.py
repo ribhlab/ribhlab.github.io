@@ -124,15 +124,28 @@ class RivoStageTests(unittest.TestCase):
         self.assertEqual(edits.tracks.return_value.update.call_args.kwargs[
             "body"]["releases"][0]["status"], "draft")
 
-    def test_closed_failure_blocks_production(self):
+    def test_closed_failure_attempts_nonpublic_production_draft(self):
+        def fake_stage(_edits, code, track, status):
+            return {"track": track, "status": status, "result": "BLOCKED" if track == "alpha" else "TRACK_EDIT_COMMITTED"}
         with patch.object(module, "get_credentials", return_value=None), \
              patch.dict(sys.modules, {"googleapiclient": MagicMock(),
                                      "googleapiclient.discovery": MagicMock()}), \
-             patch.object(module, "stage_track",
-                          return_value={"track": "alpha", "result": "BLOCKED"}):
-            result = module.deploy(99)
-        self.assertEqual(result["tracks"][1]["result"], "BLOCKED_UNTIL_CLOSED_TEST")
+             patch.object(module, "stage_track", side_effect=fake_stage) as fake:
+            result = module.deploy(74)
+        self.assertEqual(fake.call_count, 3)
+        self.assertEqual([x["status"] for x in result["tracks"]], ["completed", "draft", "draft"])
+        self.assertEqual(result["tracks"][-1]["track"], "production")
         self.assertFalse(result["productionPublicationAttempted"])
+
+    def test_api_error_message_is_redacted(self):
+        class TestError(Exception):
+            content = b'{"error":{"message":"App setup missing for user@example.com https://example.org","status":"FAILED_PRECONDITION"}}'
+            resp = type("Response", (), {"status":400})()
+        safe = module.safe_api_error(TestError("sensitive"))
+        self.assertEqual(safe["httpStatus"], 400)
+        self.assertNotIn("user@example.com", safe["googleReason"])
+        self.assertNotIn("https://", safe["googleReason"])
+        self.assertEqual(safe["googleStatus"], "FAILED_PRECONDITION")
 
     def test_production_draft_stays_non_public(self):
         edits = MagicMock()
