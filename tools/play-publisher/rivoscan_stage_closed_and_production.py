@@ -79,13 +79,15 @@ def stage_track(edits, code: int, requested: str, status: str) -> dict:
         actual, existing = get_target_track(edits, PACKAGE, eid, requested)
         if actual != requested:
             return {"result": "BLOCKED_UNEXPECTED_TRACK", "track": requested}
-        existing_codes = {
-            str(v)
-            for release in existing
-            for v in release.get("versionCodes", [])
-        }
-        if str(code) in existing_codes:
-            return {"result": "ALREADY_ON_TRACK", "track": requested, "versionCode": code}
+        matches = [item for item in existing
+                   if str(code) in {str(v) for v in item.get("versionCodes", [])}]
+        if matches:
+            correct_status = status
+            if len(matches) == 1 and matches[0].get("status") == correct_status:
+                return {"result": "ALREADY_ON_TRACK", "track": requested, "versionCode": code,
+                        "status": correct_status}
+            return {"result": "BLOCKED_EXISTING_RELEASE_STATUS", "track": requested,
+                    "versionCode": code}
         # The publisher's existing safety checks reject conflicting drafts,
         # staged and halted releases. Do not bypass them or overwrite a rollout.
         releases = build_releases(request, str(code), existing)
@@ -113,6 +115,11 @@ def deploy(code: int) -> dict:
     results = []
     # Ensure closed test is attempted first. Never make production publicly available.
     for track, status in ((CLOSED, "completed"), (PRODUCTION, "draft")):
+        if track == PRODUCTION and results[0]["result"] not in (
+                "TRACK_EDIT_COMMITTED", "ALREADY_ON_TRACK"):
+            results.append({"result": "BLOCKED_UNTIL_CLOSED_TEST",
+                            "track": PRODUCTION})
+            continue
         try:
             results.append(stage_track(edits, code, track, status))
         except Exception as exc:
@@ -121,7 +128,7 @@ def deploy(code: int) -> dict:
             results.append({"result": "BLOCKED", "track": track,
                             "httpStatus": http, "reason": type(exc).__name__})
     return {"package": PACKAGE, "versionCode": code, "tracks": results,
-            "productionIsLive": False}
+            "productionPublicationAttempted": False}
 
 
 def main(argv=None) -> int:
