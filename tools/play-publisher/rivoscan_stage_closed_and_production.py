@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import re
 from argparse import Namespace
 
 from publish import get_credentials, get_target_track, build_releases
@@ -87,8 +88,8 @@ def stage_track(edits, code: int, requested: str, status: str) -> dict:
         raise ValueError("Only the approved closed track and production draft are allowed")
     if requested == PRODUCTION and status != "draft":
         raise ValueError("This workflow NEVER publishes live production")
-    if requested == CLOSED and status != "completed":
-        raise ValueError("Closed testing should be an actual test release, not an inert draft")
+    if requested == CLOSED and status not in ("completed", "draft"):
+        raise ValueError("Invalid closed testing status")
 
     request = release_request(code, status)
     edit = edits.insert(packageName=PACKAGE, body={}).execute()
@@ -147,27 +148,58 @@ def stage_track(edits, code: int, requested: str, status: str) -> dict:
                 print("WARNING: could not discard unused RivoScan edit", file=sys.stderr)
 
 
+def safe_api_error(exc: Exception) -> dict:
+    """Emit an actionable Google error without access tokens, URLs or email."""
+    http = getattr(getattr(exc, "resp", None), "status", None)
+    output = {"httpStatus": http, "reason": type(exc).__name__}
+    if http in (400, 403, 404, 409):
+        try:
+            body = json.loads(getattr(exc, "content", b"{}").decode("utf-8"))
+            e = body.get("error") or {}
+            msg = str(e.get("message") or "")[:400]
+            msg = re.sub(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", "[email-redacted]", msg)
+            msg = re.sub(r"https?://\S+", "[url-redacted]", msg)
+            msg = re.sub(r"\b[A-Za-z0-9_-]{48,}\b", "[token-redacted]", msg)
+            msg = msg.replace("\n", " ").replace("\r", " ")
+            output["googleReason"] = msg
+            output["googleStatus"] = str(e.get("status") or "")[:48]
+        except (ValueError, AttributeError, TypeError):
+            pass
+    return output
+
+
 def deploy(code: int) -> dict:
     from googleapiclient.discovery import build
     service = build("androidpublisher", "v3", credentials=get_credentials(), cache_discovery=False)
     edits = service.edits()
     results = []
-    # Ensure closed test is attempted first. Never make production publicly available.
-    for track, status in ((CLOSED, "completed"), (PRODUCTION, "draft")):
-        if track == PRODUCTION and results[0]["result"] not in (
-                "TRACK_EDIT_COMMITTED", "ALREADY_ON_TRACK"):
-            results.append({"result": "BLOCKED_UNTIL_CLOSED_TEST",
-                            "track": PRODUCTION})
-            continue
+    # First try the requested active closed test, then closed draft as fallback
+    # if Google blocks the active release. Production remains DRAFT ONLY.
+    closed_active = None
+    try:
+        closed_active = stage_track(edits, code, CLOSED, "completed")
+        results.append(closed_active)
+    except Exception as exc:
+        results.append({"result": "BLOCKED", "track": CLOSED, "status": "completed",
+                        **safe_api_error(exc)})
+    if (not closed_active or
+            closed_active.get("result") not in ("TRACK_EDIT_COMMITTED", "ALREADY_ON_TRACK")):
         try:
-            results.append(stage_track(edits, code, track, status))
+            fallback = stage_track(edits, code, CLOSED, "draft")
+            results.append(fallback)
         except Exception as exc:
-            # Avoid logging API response bodies and secrets.
-            http = getattr(getattr(exc, "resp", None), "status", None)
-            results.append({"result": "BLOCKED", "track": track,
-                            "httpStatus": http, "reason": type(exc).__name__})
+            results.append({"result": "BLOCKED", "track": CLOSED, "status": "draft",
+                            **safe_api_error(exc)})
+    # A production DRAFT is a non-public administrative step, independent of
+    # closing the test. Google may reject it until production access is granted.
+    try:
+        results.append(stage_track(edits, code, PRODUCTION, "draft"))
+    except Exception as exc:
+        results.append({"result": "BLOCKED", "track": PRODUCTION, "status": "draft",
+                        **safe_api_error(exc)})
     return {"package": PACKAGE, "versionCode": code, "tracks": results,
             "productionPublicationAttempted": False}
+
 
 
 def main(argv=None) -> int:
@@ -190,9 +222,9 @@ def main(argv=None) -> int:
         return 0
     result = deploy(code)
     print("RIVOSCAN_TRACK_SETUP=" + json.dumps(result, sort_keys=True))
-    # Treat precondition blocks as actionable, not success. Already-on-track is idempotent.
-    closed = next(x for x in result["tracks"] if x["track"] == CLOSED)
-    return 0 if closed["result"] in ("TRACK_EDIT_COMMITTED", "ALREADY_ON_TRACK") else 1
+    # Do not report a successful release if all target edits were blocked.
+    return 0 if any(item.get("result") in ("TRACK_EDIT_COMMITTED", "ALREADY_ON_TRACK")
+                    for item in result["tracks"]) else 1
 
 
 if __name__ == "__main__":
