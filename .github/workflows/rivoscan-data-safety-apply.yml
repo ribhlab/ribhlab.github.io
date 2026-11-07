@@ -1,11 +1,5 @@
 name: RivoScan - submit audited Play Data Safety for v74
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/rivoscan-data-safety-apply.yml'
-      - 'tools/play-publisher/rivoscan_data_safety.py'
-      - 'tools/play-publisher/store-listings/rivoscan-data-safety-candidate-2026-11-07.csv'
   workflow_dispatch:
 
 permissions:
