@@ -1,0 +1,89 @@
+name: RivoScan - monitor saved Play release and apply owner green listing
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-play-watch-and-sync.yml'
+      - 'tools/play-publisher/rivoscan_play_watch.py'
+      - 'tools/play-publisher/store-listings/rivoscan-owner-assets-sync.json'
+
+permissions:
+  contents: write
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    outputs:
+      ready: ${{ steps.inspect.outputs.ready }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline safety checks
+        run: python -m unittest discover tools/play-publisher -p 'test_*.py' -q
+      - name: Install official Google API client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Read-only check, never create Play edit during upload
+        id: inspect
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Google Play API secret missing'; exit 1; }
+          python tools/play-publisher/rivoscan_play_watch.py --github-output "$GITHUB_OUTPUT"
+
+  apply:
+    needs: inspect
+    if: needs.inspect.outputs.ready == 'true' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test owner assets and offline API safeguards
+        run: python -m unittest discover tools/play-publisher -p 'test_*.py' -q
+      - name: Install publishing dependencies
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install 'Pillow>=11,<13'
+      - name: Update seven-language Play description, green logo and feature only
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Play API secret missing'; exit 1; }
+          python tools/play-publisher/publish_listing.py --apply --confirm APPLY_LISTING
+      - name: Persist successful sync so future scheduled checks never overwrite assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          file=Path('tools/play-publisher/store-listings/rivoscan-owner-assets-sync.json')
+          r=json.loads(file.read_text(encoding='utf-8'))
+          if r.get('appId') != 'com.ribhlab.rivoscan' or r.get('enabled') is not True:
+              raise SystemExit('Invalid or disabled owner asset sync request')
+          r['applied']=True
+          file.write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/play-publisher/store-listings/rivoscan-owner-assets-sync.json
+          git commit -m 'Mark RivoScan owner green Play listing assets applied'
+          git pull --rebase origin main
+          git push origin HEAD:main
