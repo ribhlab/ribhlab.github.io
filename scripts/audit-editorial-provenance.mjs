@@ -43,7 +43,7 @@ if (audit.temporaryIllustrations) warnings.push(audit.temporaryIllustrations+' r
 const articlesDir = path.join(root, 'content/articles');
 const articleFiles = fs.readdirSync(articlesDir).filter(f => f.endsWith('.json'));
 const seenParagraphs = new Map();
-const normalize = s => String(s || '').toLowerCase().replace(/\\s+/g, ' ').trim();
+const normalize = s => String(s || '').toLowerCase().split(/\s+/).join(' ').trim();
 for (const file of articleFiles) {
   const article = read('content/articles/' + file);
   if (!article.slug || !known.has(article.slug)) warnings.push('Unlisted article file: ' + file);
