@@ -50,7 +50,7 @@ for (const file of articleFiles) {
   if (!Array.isArray(article.sources) || !article.sources.length)
     warnings.push('No references: ' + file);
   for (const src of article.sources || []) {
-    if (!/^https:\\/\\//.test(src.url || '')) errors.push('Invalid source URL: ' + file);
+    if (!String(src.url || '').startsWith('https://')) errors.push('Invalid source URL: ' + file);
   }
   for (const locale of ['ar', 'en', 'fr']) {
     const tr = article.translations?.[locale];
