@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replace RivoScan's Play feature graphic with the artwork supplied by the owner.
+"""Replace RivoScan's Play feature graphic with the current ORIGINAL GREEN owner artwork.
 
 Only one image in en-US is touched, atomically through a Google Play Edit.
 No release, App Content declaration or other asset is modified.
@@ -14,8 +14,8 @@ import sys
 from pathlib import Path
 
 PACKAGE = "com.ribhlab.rivoscan"
-SOURCE = Path(__file__).resolve().parent / "store-listings/assets/rivoscan-user-feature-1024x500.jpg"
-EXPECTED_SHA256 = "e52f3849d0dff618b8a19ecb42b595d316e4f05c8520e6dd7cead425d5cd9bbd"
+SOURCE = Path(__file__).resolve().parent / "store-listings/assets/rivoscan-owner-feature-1024x500.jpg"
+EXPECTED_SHA256 = "53c4af468ee27d6fba11dabc6b2ca9cee46b0ea331bfe410283b32786491e51c"
 OUTPUT = Path(__file__).resolve().parent / "output/RivoScan_Feature_Graphic_1024x500.jpg"
 
 
