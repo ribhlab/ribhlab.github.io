@@ -27,6 +27,15 @@ class ListingTests(unittest.TestCase):
         icon = ROOT / "store-listings/assets/rivoscan-icon.png"
         self.assertEqual(mod.verify_icon(icon), icon)
 
+    def test_owner_green_icon_and_feature_match_uploaded_package(self):
+        icon = ROOT / "store-listings/assets/rivoscan-icon.png"
+        graphic = ROOT / "store-listings/assets/rivoscan-owner-feature-1024x500.jpg"
+        self.assertEqual(mod.verify_icon(icon), icon)
+        self.assertEqual(mod.verify_feature(graphic), graphic)
+        listing = mod.load(self.path)
+        self.assertEqual(listing["locales"]["en-US"]["title"], "RivoScan")
+        self.assertIn("Smart document scanning", listing["locales"]["en-US"]["shortDescription"])
+
     def test_too_long_title_rejected(self):
         data = mod.load(self.path)
         data["locales"]["en-US"]["title"] = "x" * 31
