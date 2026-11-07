@@ -67,7 +67,7 @@ class RivoStageTests(unittest.TestCase):
         self.assertEqual(details["body"]["releases"][0]["status"], "completed")
         edits.commit.return_value.execute.assert_called_once()
 
-    def test_existing_closed_draft_is_not_falsely_marked_complete(self):
+    def test_existing_same_version_closed_draft_activates_as_requested(self):
         edits = MagicMock()
         edits.insert.return_value.execute.return_value = {"id": "edit1"}
         edits.bundles.return_value.list.return_value.execute.return_value = {
@@ -75,8 +75,43 @@ class RivoStageTests(unittest.TestCase):
         with patch.object(module, "get_target_track", return_value=(
             "alpha", [{"versionCodes": ["99"], "status": "draft"}])):
             result = module.stage_track(edits, 99, module.CLOSED, "completed")
-        self.assertEqual(result["result"], "BLOCKED_EXISTING_RELEASE_STATUS")
+        self.assertEqual(result["result"], "TRACK_EDIT_COMMITTED")
+        self.assertEqual(edits.tracks.return_value.update.call_args.kwargs[
+            "body"]["releases"][0]["status"], "completed")
+
+    def test_closed_unrelated_draft_is_not_overwritten(self):
+        edits = MagicMock()
+        edits.insert.return_value.execute.return_value = {"id": "edit1"}
+        edits.bundles.return_value.list.return_value.execute.return_value = {
+            "bundles": [{"versionCode": 99}]}
+        with patch.object(module, "get_target_track", return_value=(
+            "alpha", [{"versionCodes": ["98"], "status": "draft"}])):
+            with self.assertRaisesRegex(ValueError, "existing draft"):
+                module.stage_track(edits, 99, module.CLOSED, "completed")
         edits.commit.assert_not_called()
+
+    def test_same_version_completed_closed_track_is_idempotent(self):
+        edits = MagicMock()
+        edits.insert.return_value.execute.return_value = {"id": "edit1"}
+        edits.bundles.return_value.list.return_value.execute.return_value = {
+            "bundles": [{"versionCode": 99}]}
+        with patch.object(module, "get_target_track", return_value=(
+            "alpha", [{"versionCodes": ["99"], "status": "completed"}])):
+            result = module.stage_track(edits, 99, module.CLOSED, "completed")
+        self.assertEqual(result["result"], "ALREADY_ON_TRACK")
+        edits.commit.assert_not_called()
+
+    def test_empty_production_placeholder_can_be_filled_as_draft(self):
+        edits = MagicMock()
+        edits.insert.return_value.execute.return_value = {"id": "edit1"}
+        edits.bundles.return_value.list.return_value.execute.return_value = {
+            "bundles": [{"versionCode": 99}]}
+        with patch.object(module, "get_target_track", return_value=(
+            "production", [{"versionCodes": [], "status": "draft"}])):
+            result = module.stage_track(edits, 99, module.PRODUCTION, "draft")
+        self.assertEqual(result["result"], "TRACK_EDIT_COMMITTED")
+        self.assertEqual(edits.tracks.return_value.update.call_args.kwargs[
+            "body"]["releases"][0]["status"], "draft")
 
     def test_closed_failure_blocks_production(self):
         with patch.object(module, "get_credentials", return_value=None), \
