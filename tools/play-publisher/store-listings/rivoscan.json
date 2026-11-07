@@ -38,9 +38,15 @@
     }
   },
   "images": {
-    "appIcon": null,
-    "featureGraphic": null,
-    "phoneScreenshots": []
+    "appIcon": "store-listings/assets/rivoscan-icon.png",
+    "featureGraphic": "store-listings/assets/rivoscan-user-feature-1024x500.jpg",
+    "phoneScreenshots": [
+      "01-rivoscan-home.png",
+      "02-rivoscan-tools.png",
+      "03-rivoscan-more-tools.png",
+      "04-rivoscan-documents.png"
+    ],
+    "screenshotSourceArchive": "store-listings/assets/rivoscan-real-screenshots.zip"
   },
-  "releaseStatus": "prepared_not_submitted"
+  "releaseStatus": "seven_localized_listings_and_images_committed_no_bundle"
 }
