@@ -82,15 +82,31 @@ def stage_track(edits, code: int, requested: str, status: str) -> dict:
         matches = [item for item in existing
                    if str(code) in {str(v) for v in item.get("versionCodes", [])}]
         if matches:
-            correct_status = status
-            if len(matches) == 1 and matches[0].get("status") == correct_status:
+            if len(matches) == 1 and matches[0].get("status") == status:
                 return {"result": "ALREADY_ON_TRACK", "track": requested, "versionCode": code,
-                        "status": correct_status}
-            return {"result": "BLOCKED_EXISTING_RELEASE_STATUS", "track": requested,
-                    "versionCode": code}
-        # The publisher's existing safety checks reject conflicting drafts,
-        # staged and halted releases. Do not bypass them or overwrite a rollout.
-        releases = build_releases(request, str(code), existing)
+                        "status": status}
+            # The user asked to activate the CLOSED test; promoting a matching
+            # saved draft is safe only when there is no competing staged/paused
+            # release or multi-artifact release on the same track.
+            if (requested == CLOSED and len(matches) == 1
+                    and matches[0].get("status") == "draft"
+                    and len(matches[0].get("versionCodes", [])) == 1
+                    and all(r.get("status") == "completed"
+                            for r in existing if r is not matches[0])):
+                releases = build_releases(
+                    request, str(code), [r for r in existing if r is not matches[0]])
+            else:
+                return {"result": "BLOCKED_EXISTING_RELEASE_STATUS", "track": requested,
+                        "versionCode": code}
+        elif (requested == PRODUCTION and len(existing) == 1
+              and existing[0].get("status") == "draft"
+              and not existing[0].get("versionCodes")):
+            # Replace ONLY an empty placeholder production draft; never alter a
+            # draft containing another version or a staged rollout.
+            releases = build_releases(request, str(code), [])
+        else:
+            # Reject conflicting drafts, staged and halted releases.
+            releases = build_releases(request, str(code), existing)
         edits.tracks().update(
             packageName=PACKAGE, editId=eid, track=actual,
             body={"track": actual, "releases": releases},
