@@ -1,0 +1,37 @@
+name: Editorial integrity audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'content/articles/**'
+      - 'content/sections.json'
+      - 'content/licensed-photos.json'
+      - 'content/recipes/photo-audit.json'
+      - 'scripts/audit-editorial-provenance.mjs'
+      - 'package.json'
+      - '.github/workflows/editorial-integrity.yml'
+  schedule:
+    - cron: '15 7 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  editorial-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit article and photo metadata
+        run: npm run audit:provenance > editorial-audit.json
+      - name: Upload editorial audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-audit
+          path: editorial-audit.json
+          if-no-files-found: warn
