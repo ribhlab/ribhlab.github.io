@@ -11,26 +11,37 @@ spec = importlib.util.spec_from_file_location("rivo_stage", ROOT / "rivoscan_sta
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
-def example(version=99, track="qa"):
-    return {"package": module.PACKAGE,
-            "tracks": {track: {"result": "OK", "releases": [
-                {"versionCodes": [version], "lifecycle": "RELEASE_LIFECYCLE_STATE_DRAFT"}
-            ]}}}
+def example(version=74, track="internal"):
+    return ({"bundles": [{"versionCode": version}]}, [{
+        "track": track, "releases": [{"versionCodes": [str(version)],
+                                      "status": "completed"}]
+    }])
 
 class RivoStageTests(unittest.TestCase):
-    def test_saved_release_needed_before_any_edits(self):
-        self.assertIsNone(module.available_version({"package": module.PACKAGE, "tracks": {}}))
-        self.assertIsNone(module.available_version(example(98)))
-        self.assertEqual(module.available_version(example(99)), 99)
-        self.assertIsNone(module.available_version({"package": "wrong", "tracks": {}}))
+    def test_select_only_saved_internal_bundle(self):
+        inventory, tracks = example(74)
+        self.assertEqual(module.select_internal_bundle(inventory, tracks), 74)
+        self.assertIsNone(module.select_internal_bundle({"bundles": []}, tracks))
+        self.assertIsNone(module.select_internal_bundle(inventory, []))
 
-    def test_unverified_or_wrong_version_is_not_used(self):
-        report = example(99)
-        report["tracks"]["beta"] = {"result": "OK", "releases": [
-            {"versionCodes": ["105", None, "unknown"]}]}
-        self.assertEqual(module.available_version(report), 105)
-        self.assertRaises(ValueError, module.release_request, 98, "completed")
-        self.assertRaises(ValueError, module.release_request, 99, "inProgress")
+    def test_custom_or_open_track_does_not_qualify_for_promotion(self):
+        inventory, tracks = example(74, "beta")
+        self.assertIsNone(module.select_internal_bundle(inventory, tracks))
+        inventory, tracks = example(74, "production")
+        self.assertIsNone(module.select_internal_bundle(inventory, tracks))
+
+    def test_new_unsaved_bundle_is_not_selected_over_saved_internal(self):
+        inventory, tracks = example(74)
+        inventory["bundles"].append({"versionCode": 99})
+        self.assertEqual(module.select_internal_bundle(inventory, tracks), 74)
+        self.assertRaises(ValueError, module.release_request, 73, "completed")
+        self.assertRaises(ValueError, module.release_request, 74, "inProgress")
+
+    def test_real_internal_74_release_notes_and_name(self):
+        a = module.release_request(74, "completed")
+        self.assertEqual(a.name, "RivoScan Android 74")
+        self.assertEqual(a.track, "alpha")
+        self.assertEqual(a.status, "completed")
 
     def test_production_must_stay_draft(self):
         edits = MagicMock()
