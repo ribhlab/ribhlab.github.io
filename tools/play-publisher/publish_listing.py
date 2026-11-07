@@ -3,10 +3,11 @@
 
 --check (default) never connects to Google. --apply commits descriptions using
 edits.listings, and must only run after the application's first Play Console
-upload is saved. No images, AABs, policy declarations or testing tracks are modified.
+upload is saved. Only the owner icon and feature graphic are updated with listing text; real screenshots, AABs, declarations and release tracks are untouched.
 """
 from __future__ import annotations
 import argparse
+import hashlib
 import json
 import re
 import struct
@@ -21,6 +22,8 @@ SUPPORT_EMAIL = "rachid022note4@gmail.com"
 APP_WEBSITE = "https://ribhlab.github.io/rivoscan/"
 PRIVACY_POLICY_URL = "https://ribhlab.github.io/rivoscan/privacy/"
 ALLOWED_LOCALES = {"en-US", "fr-FR", "ar", "es-ES", "de-DE", "pt-BR", "it-IT"}
+OWNER_ICON_SHA256 = "67cd03f1d7e91e50ed398cc03c0a77482721e23053831df13984dbe3dffd9ce3"
+OWNER_FEATURE_SHA256 = "53c4af468ee27d6fba11dabc6b2ca9cee46b0ea331bfe410283b32786491e51c"
 
 
 def load(path: Path) -> dict:
@@ -50,6 +53,18 @@ def verify_icon(path: Path) -> Path:
     width, height = struct.unpack(">II", raw[16:24])
     if (width, height) != (512, 512):
         raise ValueError("Google Play app icon must be 512 x 512")
+    if hashlib.sha256(raw).hexdigest() != OWNER_ICON_SHA256:
+        raise ValueError("RivoScan official owner green icon hash mismatch")
+    return path
+
+
+def verify_feature(path: Path) -> Path:
+    """The exact 1024x500 owner feature image was validated as RGB JPEG."""
+    raw = path.read_bytes()
+    if not (1000 < len(raw) < 15_000_000 and raw.startswith(b"\\xff\\xd8") and raw.endswith(b"\\xff\\xd9")):
+        raise ValueError("Owner feature graphic must be a valid JPEG")
+    if hashlib.sha256(raw).hexdigest() != OWNER_FEATURE_SHA256:
+        raise ValueError("RivoScan owner feature graphic hash mismatch")
     return path
 
 
@@ -84,27 +99,39 @@ def apply_listings(doc: dict) -> dict:
                     packageName=PACKAGE, editId=edit_id, language=language,
                     body=payload,
                 ).execute()
+        # Owner specifically supplied the green original icon and matching feature.
+        # Replace only these two artwork slots inside a single Play edit.
         icon = verify_icon(Path(__file__).parent / "store-listings/assets/rivoscan-icon.png")
-        current_icons = edits.images().list(
-            packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
-        ).execute().get("images", [])
-        if not current_icons:
+        feature = verify_feature(Path(__file__).parent / "store-listings/assets/rivoscan-owner-feature-1024x500.jpg")
+        with tempfile.TemporaryDirectory() as directory:
             from PIL import Image
-            with tempfile.TemporaryDirectory() as directory:
-                rgba_icon = Path(directory) / "rivoscan-play-icon-32bit.png"
-                with Image.open(icon) as image:
-                    image.convert("RGBA").save(rgba_icon)
-                edits.images().upload(
-                    packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
-                    media_body=MediaFileUpload(str(rgba_icon), mimetype="image/png"),
-                ).execute()
+            rgba_icon = Path(directory) / "rivoscan-owner-green-icon.png"
+            with Image.open(icon) as image:
+                image.convert("RGBA").save(rgba_icon)
+            edits.images().deleteall(
+                packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon"
+            ).execute()
+            edits.images().upload(
+                packageName=PACKAGE, editId=edit_id, language="en-US", imageType="icon",
+                media_body=MediaFileUpload(str(rgba_icon), mimetype="image/png"),
+            ).execute()
+        edits.images().deleteall(
+            packageName=PACKAGE, editId=edit_id, language="en-US", imageType="featureGraphic"
+        ).execute()
+        edits.images().upload(
+            packageName=PACKAGE, editId=edit_id, language="en-US", imageType="featureGraphic",
+            media_body=MediaFileUpload(str(feature), mimetype="image/jpeg"),
+        ).execute()
+        # Real 1080x1920 emulator screenshots are preserved, not replaced by mockups.
         # No screenshots are uploaded without genuine, checked UI captures.
         edits.validate(packageName=PACKAGE, editId=edit_id).execute()
         edits.commit(packageName=PACKAGE, editId=edit_id).execute()
         committed = True
         return {"result": "LISTINGS_COMMITTED", "appId": PACKAGE,
                 "locales": sorted(doc["locales"].keys()),
-                "icon": "checked_existing_or_uploaded_from_source",
+                "icon": "owner_original_green_replaced",
+                "featureGraphic": "owner_supplied_1024x500_replaced",
+                "phoneScreenshots": "existing_genuine_emulator_captures_preserved",
                 "developerContact": SUPPORT_EMAIL, "appWebsite": APP_WEBSITE,
                 "privacyPolicyUrl": PRIVACY_POLICY_URL + " (must be entered in Console App content)"}
     finally:
