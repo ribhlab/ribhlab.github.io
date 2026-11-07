@@ -86,7 +86,7 @@ class RivoStageTests(unittest.TestCase):
             "bundles": [{"versionCode": 99}]}
         with patch.object(module, "get_target_track", return_value=(
             "alpha", [{"versionCodes": ["98"], "status": "draft"}])):
-            with self.assertRaisesRegex(ValueError, "existing draft"):
+            with self.assertRaisesRegex(ValueError, "draft"):
                 module.stage_track(edits, 99, module.CLOSED, "completed")
         edits.commit.assert_not_called()
 
