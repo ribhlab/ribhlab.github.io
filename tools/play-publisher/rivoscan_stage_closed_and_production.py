@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Prepare RivoScan closed testing + non-public production draft from a SAVED AAB.
+"""Promote an EXISTING saved Internal Testing AAB to closed + production draft.
 
 Never uploads a bundle, changes tester lists, completes production, or guesses a
-versionCode. Default is offline inspection. --apply needs an explicit confirmation.
+versionCode. Default does not change tracks. --apply needs explicit confirmation.
 """
 from __future__ import annotations
 import argparse
@@ -10,11 +10,10 @@ import json
 import sys
 from argparse import Namespace
 
-from audit_releases import audit
 from publish import get_credentials, get_target_track, build_releases
 
 PACKAGE = "com.ribhlab.rivoscan"
-MIN_VERSION = 99
+MIN_VERSION = 74
 CLOSED = "alpha"  # Play's default closed testing track; beta is OPEN testing.
 PRODUCTION = "production"
 CONFIRM = "SETUP_CLOSED_AND_PRODUCTION_DRAFT"
@@ -24,30 +23,54 @@ NOTES = (
 )
 
 
-def available_version(report: dict) -> int | None:
-    """Only trust an observed version already attached to a saved Play release."""
-    if report.get("package") != PACKAGE:
-        return None
-    codes = []
-    for track, details in report.get("tracks", {}).items():
-        if track not in ("qa", "internal", "alpha", "beta", PRODUCTION):
+def select_internal_bundle(inventory: dict, tracks: list[dict]) -> int | None:
+    """Promote only a SAVED AAB already assigned to Internal Testing.
+
+    Other uploaded bundles might be experiments or unfinished drafts; do not
+    take the largest versionCode unless it belongs to the internal release.
+    """
+    codes = {int(b["versionCode"]) for b in inventory.get("bundles", [])
+             if isinstance(b, dict) and str(b.get("versionCode", "")).isdigit()}
+    candidates = []
+    for track in tracks:
+        if track.get("track") not in ("qa", "internal"):
             continue
-        if details.get("result") != "OK":
-            continue
-        for release in details.get("releases", []):
-            for value in release.get("versionCodes", []):
-                try:
-                    code = int(value)
-                except (ValueError, TypeError):
-                    continue
-                if code >= MIN_VERSION:
-                    codes.append(code)
-    return max(codes) if codes else None
+        for release in track.get("releases", []):
+            if release.get("status") not in ("completed", "draft"):
+                continue
+            for raw in release.get("versionCodes", []):
+                if str(raw).isdigit() and int(raw) in codes and int(raw) >= MIN_VERSION:
+                    candidates.append(int(raw))
+    return max(candidates) if candidates else None
+
+
+def saved_internal_version() -> int | None:
+    """Read the actual internal release and AAB inventory; no commit or upload."""
+    from googleapiclient.discovery import build
+    edits = build("androidpublisher", "v3", credentials=get_credentials(),
+                  cache_discovery=False).edits()
+    edit = edits.insert(packageName=PACKAGE, body={}).execute()
+    eid = edit["id"]
+    try:
+        bundles = edits.bundles().list(packageName=PACKAGE, editId=eid).execute()
+        tracks = edits.tracks().list(packageName=PACKAGE, editId=eid).execute()
+        code = select_internal_bundle(bundles, tracks.get("tracks", []))
+        print("RIVOSCAN_INTERNAL_SOURCE=" + json.dumps({
+            "package": PACKAGE, "versionCode": code,
+            "eligibleForClosed": code is not None,
+        }, sort_keys=True))
+        return code
+    finally:
+        try:
+            edits.delete(packageName=PACKAGE, editId=eid).execute()
+        except Exception:
+            print("WARNING: uncommitted internal inventory edit cleanup failed",
+                  file=sys.stderr)
 
 
 def release_request(code: int, status: str) -> Namespace:
     if code < MIN_VERSION:
-        raise ValueError("Refusing older RivoScan builds; current baseline is versionCode 99")
+        raise ValueError("Refusing older RivoScan builds; earliest confirmed Internal Testing versionCode is 74")
     if status not in ("completed", "draft"):
         raise ValueError("Unexpected status")
     return Namespace(
@@ -155,10 +178,9 @@ def main(argv=None) -> int:
     if args.apply and args.confirm != CONFIRM:
         print("BLOCKED: explicit release setup confirmation required", file=sys.stderr)
         return 2
-    report = audit(PACKAGE)
-    code = available_version(report)
+    code = saved_internal_version()
     if code is None:
-        print(json.dumps({"result": "WAITING_FOR_SAVED_RIVOSCAN_RELEASE", "package": PACKAGE,
+        print(json.dumps({"result": "WAITING_FOR_SAVED_INTERNAL_AAB", "package": PACKAGE,
                           "minVersionCode": MIN_VERSION, "tracksAttempted": False}))
         return 0
     if not args.apply:
