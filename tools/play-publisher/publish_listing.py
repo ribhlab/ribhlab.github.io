@@ -61,7 +61,7 @@ def verify_icon(path: Path) -> Path:
 def verify_feature(path: Path) -> Path:
     """The exact 1024x500 owner feature image was validated as RGB JPEG."""
     raw = path.read_bytes()
-    if not (1000 < len(raw) < 15_000_000 and raw.startswith(b"\\xff\\xd8") and raw.endswith(b"\\xff\\xd9")):
+    if not (1000 < len(raw) < 15_000_000 and raw.startswith(b"\xff\xd8") and raw.endswith(b"\xff\xd9")):
         raise ValueError("Owner feature graphic must be a valid JPEG")
     if hashlib.sha256(raw).hexdigest() != OWNER_FEATURE_SHA256:
         raise ValueError("RivoScan owner feature graphic hash mismatch")
