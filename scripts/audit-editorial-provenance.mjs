@@ -37,6 +37,41 @@ for (const item of duplicates(urls)) errors.push('Duplicate source URL: '+item.v
 if (audit.totalRecipes !== audit.photoBackedRecipes + audit.temporaryIllustrations)
   errors.push('Recipe photo totals do not reconcile');
 if (audit.temporaryIllustrations) warnings.push(audit.temporaryIllustrations+' recipe cards still use temporary illustrations');
+
+// Editorial text integrity: detects exact reused paragraphs, missing references,
+// and incomplete translations. This is not a web plagiarism detector.
+const articlesDir = path.join(root, 'content/articles');
+const articleFiles = fs.readdirSync(articlesDir).filter(f => f.endsWith('.json'));
+const seenParagraphs = new Map();
+const normalize = s => String(s || '').toLowerCase().replace(/\\s+/g, ' ').trim();
+for (const file of articleFiles) {
+  const article = read('content/articles/' + file);
+  if (!article.slug || !known.has(article.slug)) warnings.push('Unlisted article file: ' + file);
+  if (!Array.isArray(article.sources) || !article.sources.length)
+    warnings.push('No references: ' + file);
+  for (const src of article.sources || []) {
+    if (!/^https:\\/\\//.test(src.url || '')) errors.push('Invalid source URL: ' + file);
+  }
+  for (const locale of ['ar', 'en', 'fr']) {
+    const tr = article.translations?.[locale];
+    if (!tr?.title || !tr?.lead || !Array.isArray(tr.sections) || !tr.sections.length) {
+      errors.push('Incomplete ' + locale + ' translation: ' + file);
+      continue;
+    }
+    const paragraphs = tr.sections.flatMap(sec => sec.paragraphs || []);
+    const words = normalize([tr.lead, ...paragraphs].join(' ')).split(' ').filter(Boolean).length;
+    if (words < 120) warnings.push('Short article (' + locale + ', ' + words + ' words): ' + file);
+    for (const para of paragraphs) {
+      const key = locale + ':' + normalize(para);
+      if (key.length < 100) continue;
+      const prev = seenParagraphs.get(key);
+      if (prev && prev !== article.slug)
+        warnings.push('Repeated paragraph (' + locale + '): ' + prev + ' / ' + article.slug);
+      else seenParagraphs.set(key, article.slug);
+    }
+  }
+}
+
 const result = {
   checkedAt: new Date().toISOString(),
   scope: 'Source metadata; not a plagiarism scan, image visual inspection, or live website test',
