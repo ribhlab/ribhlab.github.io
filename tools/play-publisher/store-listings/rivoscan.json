@@ -2,8 +2,8 @@
   "appId": "com.ribhlab.rivoscan",
   "locales": {
     "en-US": {
-      "title": "RivoScan: PDF Scanner & Editor",
-      "shortDescription": "Scan documents, edit, merge, sign and convert PDFs directly on your phone.",
+      "title": "RivoScan",
+      "shortDescription": "Smart document scanning with edge detection, OCR, PDF export, and sharing.",
       "fullDescription": "RivoScan brings document scanning and practical PDF tools together in one Android app.\n\nSCAN DOCUMENTS\nCapture pages using your phone camera, review and adjust scans, then export them as a PDF. Scanner options and automatic edge detection depend on device compatibility.\n\nEDIT AND ORGANIZE PDFs\nMerge documents, extract or remove pages, rotate and reorder pages, add page numbers, and apply text annotations or watermarks.\n\nCONVERT AND RECOGNIZE TEXT\nExport PDF pages as JPG or PNG, extract selectable PDF text, and use OCR to recognize text in supported languages. OCR features may need a one-time language model download.\n\nSIGN AND SHARE\nDraw a visual signature on documents and save or share your finished files using your device's supported options.\n\nPlease note: handwritten signatures are visual and not certificate-backed digital signatures. Compressing scanned PDFs can remove searchable text or some interactive features. Some features are in beta and may vary by Android device."
     },
     "fr-FR": {
@@ -39,14 +39,22 @@
   },
   "images": {
     "appIcon": "store-listings/assets/rivoscan-icon.png",
-    "featureGraphic": "store-listings/assets/rivoscan-user-feature-1024x500.jpg",
+    "featureGraphic": "store-listings/assets/rivoscan-owner-feature-1024x500.jpg",
     "phoneScreenshots": [
       "01-rivoscan-home.png",
       "02-rivoscan-tools.png",
       "03-rivoscan-more-tools.png",
       "04-rivoscan-documents.png"
     ],
-    "screenshotSourceArchive": "store-listings/assets/rivoscan-real-screenshots.zip"
+    "screenshotSourceArchive": "store-listings/assets/rivoscan-real-screenshots.zip",
+    "marketingPreviewImages": [
+      "/rivoscan/marketing/01_hero_smart_scanning.jpg",
+      "/rivoscan/marketing/02_scan_in_seconds.jpg",
+      "/rivoscan/marketing/03_organize_your_documents.jpg",
+      "/rivoscan/marketing/04_turn_scans_into_text.jpg",
+      "/rivoscan/marketing/05_built_for_everyday_use.jpg"
+    ],
+    "marketingPreviewLabel": "Promotional artwork; not verified Android screenshots. Preserve four captured emulator screenshots in Play."
   },
-  "releaseStatus": "seven_localized_listings_and_images_committed_no_bundle"
+  "releaseStatus": "owner_green_assets_prepared_waiting_for_visible_signed_AAB"
 }
