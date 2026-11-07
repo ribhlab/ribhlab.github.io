@@ -5,6 +5,13 @@
 **Exact matching source revision:** [85fefd1d72c54bff2e624ac3b529c2fd1f796622](https://github.com/univcours/ribhlab/commit/85fefd1d72c54bff2e624ac3b529c2fd1f796622).  
 **Source-to-binary caveat:** the versionCode and branch match, but the actual uploaded AAB binary has not been extracted or independently compared. Runtime configuration/SDK merge behavior may differ.
 
+## Google Play API submission record
+
+- **2026-11-07 18:29:08 UTC**: Google Play Android Publisher `applications.dataSafety` accepted the complete RivoScan CSV write, returning HTTP **204**.
+- [GitHub Actions run 42401496716](https://github.com/ribhlab/ribhlab.github.io/actions/runs/42401496716) concluded **success**.
+- This records acceptance of the declaration payload only. It is **not** Google's final approval of content declarations, age rating, application testing, store review or production release.
+- The submit workflow was converted to **manual-only** after success so it will not overwrite newer declarations when RivoScan code evolves.
+
 ## Findings verified at version 74
 
 - `apps/rivoscan/src/monetization.js`: includes `@capacitor-community/admob` and UMP consent flow; ad IDs are **Google demo units** in this old build, but SDK may transmit ad/diagnostic/device data nevertheless. Version 74 also provides **optional rewarded ads to access advanced tools**. This is obsolete compared with newer source versions.
