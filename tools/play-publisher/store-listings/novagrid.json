@@ -1,0 +1,21 @@
+{
+  "appId": "com.novagrid.cosmicpuzzle",
+  "locales": {
+    "en-US": {
+      "title": "NovaGrid: Cosmic Block Puzzle",
+      "shortDescription": "Colorful crystal block puzzles, falling pieces, combos and daily challenges.",
+      "fullDescription": "Enter a vibrant universe of glowing blocks in NovaGrid: Cosmic Block Puzzle. Place shimmering crystals, clear lines, and enjoy satisfying puzzle moments across two ways to play.\n\nCLASSIC BLOCK PUZZLE\nFind space on the 9×9 board, place colorful crystal shapes, and clear complete rows, columns, and 3×3 sectors. Plan ahead to keep the board open and build rewarding combos.\n\nBLOCKFALL\nGuide falling blocks through a 10×18 grid. Move, rotate, and drop pieces to complete lines. Think fast, improve your timing, and try to beat your best score.\n\nEXPLORE MORE\n• Daily challenges add a fresh objective.\n• Galaxy stages give you goals to work toward.\n• Bright candy-glass colors, animated neon glow, and cosmic effects bring each move to life.\n• Save your progress, revisit your best scores, and adjust music and sound settings.\n• Earn blast charges by clearing lines, then use them to open space when the board gets crowded.\n\nWhether you enjoy planning every move or reacting to falling pieces, NovaGrid combines relaxing strategy with colorful arcade energy.\n\nPlay, clear, and light up the galaxy.",
+      "releaseNotes": "New in this update:\n• Animated candy-glass crystals and brighter multicolor neon effects.\n• Replay controls in Classic and Blockfall.\n• Improved rescue blasts when no moves are available.\n• Gameplay stability, layout and touch refinements."
+    },
+    "fr-FR": {
+      "title": "NovaGrid: Cosmic Block Puzzle",
+      "shortDescription": "Jeu de blocs cosmiques : cristaux colorés, combos et défis quotidiens.",
+      "fullDescription": "Découvrez NovaGrid, un puzzle cosmique aux cristaux lumineux !\n\nDans le mode Classique, placez des formes sur une grille 9 × 9 et effacez des lignes, des colonnes et des secteurs 3 × 3. Dans Blockfall, déplacez et faites pivoter les pièces qui tombent pour compléter des lignes.\n\nProfitez de défis quotidiens, d’étapes galactiques, d’effets néon animés, de combos et de charges explosives gagnées en effaçant des lignes. Suivez vos meilleurs scores et ajustez les sons et la musique.\n\nPlacez, effacez et faites briller la galaxie !"
+    },
+    "ar": {
+      "title": "NovaGrid: Cosmic Block Puzzle",
+      "shortDescription": "لعبة ألغاز مكعبات كونية بألوان زاهية وتحديات يومية ومؤثرات نيون.",
+      "fullDescription": "اكتشف NovaGrid، لعبة ألغاز المكعبات الكونية ذات البلورات الملونة والتوهج المتحرك.\n\nفي وضع Classic، ضع القطع داخل شبكة 9×9 وأكمل الصفوف والأعمدة والمربعات 3×3 لإزالتها. وفي وضع Blockfall، حرّك القطع المتساقطة ودوّرها وأسقطها لإكمال الأسطر وتسجيل النقاط.\n\nاستمتع بالتحديات اليومية ومراحل المجرة، وراقب أفضل نتائجك، واستفد من التفجيرات التي تكسبها عند إكمال الأسطر لإنقاذ الجولة عندما تضيق المساحة.\n\nخطّط لحركاتك، واصنع مجموعات متتالية، وأضئ المجرة!"
+    }
+  }
+}
