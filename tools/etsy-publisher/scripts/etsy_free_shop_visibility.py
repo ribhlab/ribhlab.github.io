@@ -150,7 +150,7 @@ def main():
         if len(legacy)!=1 or int(legacy[0].get("shop_section_id") or 0)!=61234865:
             raise ConnectionErrorSafe("Unexpected WordPress section identity; no deletion")
         legacy_id=61234865
-        if int(legacy[0].get("active_listing_count") or -1)!=0:
+        if int(legacy[0].get("active_listing_count") if legacy[0].get("active_listing_count") is not None else -1)!=0:
             raise ConnectionErrorSafe("Legacy WordPress section is not empty; no deletion")
         for state in ("active","draft","inactive","expired","sold_out"):
             offset=0
