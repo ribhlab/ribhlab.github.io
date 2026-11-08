@@ -26,7 +26,7 @@ class NovaGridProductionSafety(unittest.TestCase):
     def test_package_hash_from_user_report(self):
         self.assertEqual(m.PACKAGE, "com.novagrid.cosmicpuzzle")
         self.assertEqual(len(m.EXPECTED_SIGNED_AAB_SHA256), 64)
-        self.assertEqual(len(m.RELEASE_NOTES), 236)
+        self.assertEqual(len(m.RELEASE_NOTES), 239)
 
     def test_absent_signed_aab_must_not_replace_old(self):
         self.assertEqual(m.choose_release([{"versionCode": 3, "sha256": "0" * 64}],
