@@ -572,6 +572,9 @@ if(domain){
   return '  <url><loc>'+esc(domain+route)+'</loc>'+(validLastmod?'<lastmod>'+esc(lastmod)+'</lastmod>':'')+'</url>';
  });
  entries.push('  <url><loc>'+esc(domain+'/en/etsy-shop.html')+'</loc></url>');
+ for(const slug of ['offline-profit-dashboard','self-hosted-team-finance-dashboard','finance-dashboard-two-in-one-bundle','choose-finance-dashboard']){
+  entries.push('  <url><loc>'+esc(domain+'/en/finance/'+slug+'.html')+'</loc><lastmod>2026-11-08</lastmod></url>');
+ }
  const xml=[
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
