@@ -1,0 +1,54 @@
+name: NovaGrid - publish original logo and new Play store listing
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/novagrid-play-listing.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-play-com.novagrid.cosmicpuzzle
+  cancel-in-progress: false
+
+jobs:
+  store-listing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image checker
+        run: python -m pip install 'Pillow>=11,<13'
+      - name: Validate exact owner icon, banner, screenshots and three languages
+        run: |
+          python -m unittest discover tools/play-publisher -p 'test_novagrid_listing.py' -v
+          python tools/play-publisher/novagrid_listing.py
+      - name: Install Google Play API client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Apply complete NovaGrid listing
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || {
+            echo 'Missing service account credentials; no Play edit was committed'; exit 1;
+          }
+          python tools/play-publisher/novagrid_listing.py --apply --confirm APPLY_OWNER_NOVAGRID_LISTING
+      - name: Clarify signed AAB and production requirements
+        if: always()
+        run: |
+          {
+            echo '### NovaGrid Play listing'
+            echo '- Uses owner-provided icon, feature graphic and 7 authentic game captures.'
+            echo '- English/French/Arabic descriptions and verified support website/email.'
+            echo '- No AAB uploaded; uploaded /mnt/data/NovaGrid.aab is unsigned.'
+            echo '- Public production requires the ORIGINAL Play upload signing key, eligible versionCode and Google approval.'
+            echo '- App may have other Play Console policy or review prerequisites.'
+          } >> "$GITHUB_STEP_SUMMARY"
