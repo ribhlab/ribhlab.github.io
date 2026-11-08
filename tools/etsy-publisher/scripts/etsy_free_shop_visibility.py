@@ -10,9 +10,10 @@ import os,sys,json,urllib.error,urllib.parse,urllib.request
 from check_connection import verify,ConnectionErrorSafe
 BASE="https://api.etsy.com/v3"
 OLD_TITLE="Premium WordPress Themes & Digital Templates"
-NEW_TITLE="Finance Dashboards, WordPress Themes & Digital Tools"
+PREVIOUS_TITLE="Finance Dashboards, WordPress Themes & Digital Tools"
+NEW_TITLE="Finance Dashboards & Small Business Reporting Tools"
 OLD_ANNOUNCEMENT="Welcome to RibhLabDigital!"
-NEW_ANNOUNCEMENT=(
+PREVIOUS_ANNOUNCEMENT=(
 "Welcome to RibhLabDigital! Explore original digital downloads for small businesses "
 "and creators: ProfitLens Offline HTML financial dashboard, ProfitLens Team self-hosted "
 "Python/SQLite app, the 2-in-1 Finance Bundle, and RibhLab Viva WordPress Magazine "
@@ -20,8 +21,16 @@ NEW_ANNOUNCEMENT=(
 "requirements on each listing before purchasing. Digital products only; no physical "
 "delivery or hosted subscription is included. Questions? Send us an Etsy message."
 )
+NEW_ANNOUNCEMENT=(
+"Welcome to RibhLabDigital! Explore ProfitLens 3.6 digital finance software "
+"for small businesses: an offline HTML profit and expense dashboard, a self-hosted "
+"Python/SQLite team reporting app with roles, and a 2-in-1 bundle containing both "
+"editions. Review the screenshots, buyer files, setup requirements and compatibility "
+"on each product page. These are digital downloads, not Excel workbooks or hosted "
+"subscriptions. Questions? Send us an Etsy message."
+)
 EXPECTED={4610490076:("Finance Dashboards",None),4610734598:("Finance Dashboards",None),
-          4610758074:("Finance Bundles",None),4607532475:("WordPress Themes",61234865)}
+          4610758074:("Finance Bundles",None)}
 
 def call(path,headers,method="GET",form=None,allow403=False):
     h=headers.copy()
@@ -74,21 +83,19 @@ def main():
     by_id={int(x["listing_id"]):x for x in items}
     if not all(i in by_id and str(by_id[i].get("shop_id"))==str(shop)
                and by_id[i].get("state")=="active" for i in EXPECTED):
-        raise ConnectionErrorSafe("The four expected active RibhLab products are not present.")
+        raise ConnectionErrorSafe("The three verified finance products are not all active; no shop edits.")
     sections=call(f"/application/shops/{shop}/sections",headers).get("results",[])
     known={row.get("title"):int(row["shop_section_id"]) for row in sections}
-    if known.get("WordPress Themes")!=61234865:
-        raise ConnectionErrorSafe("Unexpected WordPress section state")
     print("SHOP_ACTIVE_PRODUCTS_VERIFIED:",len(EXPECTED))
     print("SHOP_CURRENT_TITLE:",details.get("title"))
     print("SHOP_CURRENT_SECTIONS:",json.dumps(known))
-    if details.get("title") not in (OLD_TITLE,NEW_TITLE):
+    if details.get("title") not in (OLD_TITLE,PREVIOUS_TITLE,NEW_TITLE):
         raise ConnectionErrorSafe("Shop title baseline changed; no overwrite")
     announcement=details.get("announcement") or ""
     is_old=(announcement.lstrip().startswith("Welcome to RibhLabDigital!")
             and "WordPress themes" in announcement
             and "SPECIAL LAUNCH OFFER" in announcement)
-    if announcement!=NEW_ANNOUNCEMENT and not is_old:
+    if announcement not in (PREVIOUS_ANNOUNCEMENT,NEW_ANNOUNCEMENT) and not is_old:
         raise ConnectionErrorSafe("Shop announcement differs from the verified live baseline; no overwrite")
     if details.get("title")!=NEW_TITLE or details.get("announcement")!=NEW_ANNOUNCEMENT:
         updated=call("/application/shops/"+shop,headers,"PUT",
@@ -104,7 +111,7 @@ def main():
         print("SHOP_ANNOUNCEMENT_UPDATED_AND_VERIFIED")
     else:
         print("SHOP_TITLE_AND_ANNOUNCEMENT_ALREADY_CURRENT")
-    # Organize visible shop navigation; the existing WordPress section is left unchanged.
+    # Organize only verified active finance products; leave other shop assets untouched.
     for name in ("Finance Dashboards","Finance Bundles"):
         if name not in known:
             record=call(f"/application/shops/{shop}/sections",headers,"POST",{"title":name})
@@ -116,7 +123,6 @@ def main():
         else:
             print("SHOP_SECTION_EXISTS:",name,known[name])
     for lid,(label,old_id) in EXPECTED.items():
-        if lid==4607532475: continue
         current=by_id[lid]
         sid=known[label]
         current_section=current.get("shop_section_id")
@@ -135,7 +141,7 @@ def main():
     latest={int(x["listing_id"]):x for x in final}
     if not all(int(latest[lid].get("shop_section_id") or 0)==known[label] for lid,(label,_) in EXPECTED.items()):
         raise ConnectionErrorSafe("Shop section audit incomplete")
-    print("ALL_4_PRODUCTS_ORGANIZED_IN_PUBLIC_SHOP")
+    print("ALL_3_ACTIVE_FINANCE_PRODUCTS_ORGANIZED_IN_PUBLIC_SHOP")
     print("NO_ADS_NO_PAID_RENEWALS_NO_DISCOUNTS_NO_PRICE_CHANGES")
 
 if __name__=="__main__":
