@@ -197,7 +197,7 @@ def main():
           "digital download and setup instructions. Need help with the delivered "
           "files? Send us a message through Etsy."),
     }
-    for field in ("digital_sale_message","sale_message"):
+    for field in ("digital_sale_message",):
         current=str(latest_shop.get(field) or "")
         if "wordpress" not in current.lower() and "ribhLab viva" not in current.lower():
             print("NO_OLD_WORDPRESS_TEXT_IN_MESSAGE:",field)
@@ -209,6 +209,8 @@ def main():
         if str(latest_shop.get(field) or "")!=revised[field]:
             raise ConnectionErrorSafe("Etsy did not confirm shop message update for "+field)
         print("OLD_WORDPRESS_MESSAGE_REPLACED:",field)
+    print("GENERAL_SALE_MESSAGE_MENTIONS_OLD_BRAND:",any(x in str(latest_shop.get("sale_message") or "").lower() for x in ("wordpress","ribhlab viva")))
+    print("GENERAL_SALE_MESSAGE_LEFT_UNCHANGED: requires storefront UI review if old brand remains")
 
 
     print("NO_ADS_NO_PAID_RENEWALS_NO_DISCOUNTS_NO_PRICE_CHANGES")
