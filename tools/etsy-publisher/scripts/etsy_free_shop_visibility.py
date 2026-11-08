@@ -142,6 +142,47 @@ def main():
     if not all(int(latest[lid].get("shop_section_id") or 0)==known[label] for lid,(label,_) in EXPECTED.items()):
         raise ConnectionErrorSafe("Shop section audit incomplete")
     print("ALL_3_ACTIVE_FINANCE_PRODUCTS_ORGANIZED_IN_PUBLIC_SHOP")
+    # User no longer sells WordPress themes. Remove only the verified, fully empty
+    # legacy SECTION, never a listing or a category containing any listings.
+    final_sections=call(f"/application/shops/{shop}/sections",headers).get("results",[])
+    legacy=[s for s in final_sections if s.get("title")=="WordPress Themes"]
+    if legacy:
+        if len(legacy)!=1 or int(legacy[0].get("shop_section_id") or 0)!=61234865:
+            raise ConnectionErrorSafe("Unexpected WordPress section identity; no deletion")
+        legacy_id=61234865
+        if int(legacy[0].get("active_listing_count") or -1)!=0:
+            raise ConnectionErrorSafe("Legacy WordPress section is not empty; no deletion")
+        for state in ("active","draft","inactive","expired","sold_out"):
+            offset=0
+            while offset<500:
+                q=urllib.parse.urlencode({"state":state,"limit":100,"offset":offset})
+                rows=call(f"/application/shops/{shop}/listings?{q}",headers).get("results",[])
+                if any(int(x.get("shop_section_id") or 0)==legacy_id for x in rows):
+                    raise ConnectionErrorSafe("A listing uses the legacy WordPress section; no deletion")
+                if len(rows)<100:
+                    break
+                offset+=100
+        req=urllib.request.Request(
+            f"{BASE}/application/shops/{shop}/sections/{legacy_id}",
+            headers=headers,method="DELETE")
+        try:
+            with urllib.request.urlopen(req,timeout=35) as result:
+                status=result.status
+        except urllib.error.HTTPError as exc:
+            raise ConnectionErrorSafe(f"Could not remove empty legacy section (HTTP {exc.code})") from None
+        if status!=204:
+            raise ConnectionErrorSafe("Etsy did not confirm empty section deletion")
+        after_sections=call(f"/application/shops/{shop}/sections",headers).get("results",[])
+        if any(int(x.get("shop_section_id") or 0)==legacy_id for x in after_sections):
+            raise ConnectionErrorSafe("Legacy WordPress section still present after DELETE")
+        print("REMOVED_EMPTY_WORDPRESS_SECTION:",legacy_id)
+    else:
+        print("NO_LEGACY_WORDPRESS_SECTION_PRESENT")
+    # Report only existence of optional buyer guidance. Never log messages
+    # that could contain shop-specific private details.
+    latest_shop=call("/application/shops/"+shop,headers)
+    print("DIGITAL_SALE_MESSAGE_PRESENT:",bool(latest_shop.get("digital_sale_message")))
+
     print("NO_ADS_NO_PAID_RENEWALS_NO_DISCOUNTS_NO_PRICE_CHANGES")
 
 if __name__=="__main__":
