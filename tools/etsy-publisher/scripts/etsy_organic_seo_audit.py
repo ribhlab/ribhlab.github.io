@@ -112,3 +112,5 @@ if __name__=="__main__":
         print("AUDIT_FAILED:",e,file=sys.stderr);sys.exit(1)
     except Exception as e:
         print("AUDIT_FAILED: Unexpected "+type(e).__name__,file=sys.stderr);sys.exit(1)
+
+# Seller-requested visibility diagnosis, 2026-11-08: fresh read-only status snapshot.
