@@ -1,0 +1,57 @@
+name: NovaGrid - publish signed existing AAB to production
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/novagrid-production-signed-update.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-play-com.novagrid.cosmicpuzzle
+  cancel-in-progress: false
+
+jobs:
+  production-update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: play-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact owner-signed AAB hash, rollback protection and release notes
+        run: |
+          python -m unittest discover tools/play-publisher -p 'test_novagrid_promote_verified_signed.py' -v
+          python tools/play-publisher/novagrid_promote_verified_signed.py
+      - name: Install official Play Publisher API client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Publish only the signed owner-verified bundle already saved in Play
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" ]]; then
+            echo 'Missing Google Play publisher credentials. No production edit attempted.' >&2
+            exit 2
+          fi
+          python tools/play-publisher/novagrid_promote_verified_signed.py \
+            --apply --confirm PUBLISH_EXACT_SIGNED_NOVAGRID_UPDATE
+      - name: Explain what was actually published
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '### NovaGrid signed production update'
+            echo '- Package: com.novagrid.cosmicpuzzle.'
+            echo '- Signed AAB SHA256 must match the owner report exactly.'
+            echo '- If the signed AAB is absent from saved Google Play inventory, NO release is modified.'
+            echo '- Existing production release is replaced only by a strictly newer signed version.'
+            echo '- Check job log for NOVAGRID_PRODUCTION_RESULT; workflow green is not sufficient.'
+            echo '- Google Play review and managed publishing can delay public rollout.'
+            echo '- Store icon, feature graphic, screenshots and multilingual listings were already updated separately.'
+          } >> "$GITHUB_STEP_SUMMARY"
