@@ -182,6 +182,34 @@ def main():
     # that could contain shop-specific private details.
     latest_shop=call("/application/shops/"+shop,headers)
     print("DIGITAL_SALE_MESSAGE_PRESENT:",bool(latest_shop.get("digital_sale_message")))
+    # Clean outdated WordPress marketing text only if actually present.
+    # Preserve all other, potentially seller-customized customer messages.
+    revised={
+      "digital_sale_message": (
+          "Thanks for choosing RibhLabDigital! Your order is a digital download, "
+          "not a physical shipment. Download the purchased ZIP from the Purchases "
+          "section of your Etsy account in a web browser. Extract the ZIP and "
+          "follow the included README and setup guide. Each software edition "
+          "has specific requirements listed in its Etsy description. If you "
+          "have trouble accessing or opening the files, message us on Etsy."),
+      "sale_message": (
+          "Thank you for shopping at RibhLabDigital! Please check the listing's "
+          "digital download and setup instructions. Need help with the delivered "
+          "files? Send us a message through Etsy."),
+    }
+    for field in ("digital_sale_message","sale_message"):
+        current=str(latest_shop.get(field) or "")
+        if "wordpress" not in current.lower() and "ribhLab viva" not in current.lower():
+            print("NO_OLD_WORDPRESS_TEXT_IN_MESSAGE:",field)
+            continue
+        answer=call("/application/shops/"+shop,headers,"PUT",{field:revised[field]},allow403=True)
+        if "_insufficient_shop_scopes" in answer:
+            raise ConnectionErrorSafe("Shop message rewrite was not authorized; no other message changes")
+        latest_shop=call("/application/shops/"+shop,headers)
+        if str(latest_shop.get(field) or "")!=revised[field]:
+            raise ConnectionErrorSafe("Etsy did not confirm shop message update for "+field)
+        print("OLD_WORDPRESS_MESSAGE_REPLACED:",field)
+
 
     print("NO_ADS_NO_PAID_RENEWALS_NO_DISCOUNTS_NO_PRICE_CHANGES")
 
