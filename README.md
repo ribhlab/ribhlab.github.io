@@ -2,6 +2,18 @@
 
 موقع نشر وتعليم بثلاث لغات يعمل فعلياً عبر **GitHub Pages** على https://ribhlab.github.io/ar/ (والنسختان /en/ و/fr/). الاستضافة على هذا العنوان مجانية حالياً، ولا يلزم دومين مدفوع للنشر. البريد الرسمي غير مضبوط بعد، وتوجد قناة تصحيحات عمومية عبر GitHub Issues. التوسع والتحقق من الجودة يجريان قبل أي طلب AdSense.
 
+## RibhLabDigital — finance software on Etsy
+
+Original business-finance software from the RibhLab team, with authentic product screenshots and practical setup guidance (not a hosted subscription or an Excel spreadsheet):
+
+- [ProfitLens Offline v3.6](https://www.etsy.com/listing/4610490076) — offline HTML financial dashboard, CSV import, JSON backups.
+- [ProfitLens Team v3.6](https://www.etsy.com/listing/4610734598) — self-hosted Python/SQLite finance reporting with access roles.
+- [ProfitLens 3.6 Bundle](https://www.etsy.com/listing/4610758074) — both independent software editions, no automatic synchronization.
+- [Compare Offline vs Team before buying](https://ribhlab.github.io/en/finance/choose-finance-dashboard.html) — original product-education guide.
+- [All current verified products](https://ribhlab.github.io/en/etsy-shop.html) — links to Etsy for current availability, prices and included files.
+
+The source repository is public. **Never commit buyer ZIPs, private license material, Etsy tokens or other paid downloads here.**
+
 ## ما الذي يضمّه المشروع؟
 
 - **282 صفحة محتوى مولّدة بتاريخ 27/10/2026** موزعة على ثلاث لغات، وتشمل المقالات والأقسام والأدوات وصفحات الوظائف والهجرة والسياسات؛ العدد يتغير مع نشر مقالات جديدة.
