@@ -1,160 +1,36 @@
-# RibhLab — ربح لاب | العربية · English · Français
+# RivoMx — Kotlin Android AR Measurement
 
-موقع نشر وتعليم بثلاث لغات يعمل فعلياً عبر **GitHub Pages** على https://ribhlab.github.io/ar/ (والنسختان /en/ و/fr/). الاستضافة على هذا العنوان مجانية حالياً، ولا يلزم دومين مدفوع للنشر. البريد الرسمي غير مضبوط بعد، وتوجد قناة تصحيحات عمومية عبر GitHub Issues. التوسع والتحقق من الجودة يجريان قبل أي طلب AdSense.
+Experimental v0.1.0 — designed for Samsung Galaxy S22 Ultra, which supports ARCore Depth API.
 
-## RibhLabDigital — finance software on Etsy
+## Implemented
+- Live camera via ARCore + OpenGL ES 2.0 (ARCore owns the camera)
+- ARCore Depth API automatic mode when supported; plane/feature fallback
+- Distance: tap two points on tracked surfaces
+- Length + width: tap two endpoints for length, then two for width
+- Estimated rectangular area (assumes a rectangle)
+- Units mm / cm / m / inches
+- Tracking status and source of each 3D hit
+- Local history and PDF export via Android document picker
+- JUnit arithmetic tests
+- No analytics, network permissions or uploads
 
-Original business-finance software from the RibhLab team, with authentic product screenshots and practical setup guidance (not a hosted subscription or an Excel spreadsheet):
+## Open in Android Studio
+1. Select branch named rivomx-android in ribhlab/ribhlab.github.io.
+2. Download ZIP for that branch and extract, or clone only that branch.
+3. Android Studio → Open → select the root containing settings.gradle.kts.
+4. Install JDK 17 and Android SDK 36. Allow Gradle sync.
+5. Run on Samsung Galaxy S22 Ultra and grant camera permission.
+6. Install or update Google Play Services for AR if requested.
+7. Move phone slowly around textured, well-lit surfaces and tap endpoints.
 
-- [ProfitLens Offline v3.6](https://www.etsy.com/listing/4610490076) — offline HTML financial dashboard, CSV import, JSON backups.
-- [ProfitLens Team v3.6](https://www.etsy.com/listing/4610734598) — self-hosted Python/SQLite finance reporting with access roles.
-- [ProfitLens 3.6 Bundle](https://www.etsy.com/listing/4610758074) — both independent software editions, no automatic synchronization.
-- [Compare Offline vs Team before buying](https://ribhlab.github.io/en/finance/choose-finance-dashboard.html) — original product-education guide.
-- [All current verified products](https://ribhlab.github.io/en/etsy-shop.html) — links to Etsy for current availability, prices and included files.
+## Gradle
+AGP 8.13.2, Kotlin 2.3.21, Compose, Gradle 8.13, ARCore 1.56.0.
+Run ./gradlew testDebugUnitTest and ./gradlew assembleDebug.
 
-The source repository is public. **Never commit buyer ZIPs, private license material, Etsy tokens or other paid downloads here.**
+## Limitations / known unfinished work
+This is a source-code foundation, not a hardware-tested release. Android builds and live S22 Ultra measurements require device testing. ARCore's estimate is not unlimited precision. Results depend on surface, lighting, motion and tracking. The area formula assumes the measured sides form a rectangle. It cannot reliably measure any object from a single static photo. Auto object edge detection, OpenCV, ML Kit, calibration workflows, annotated photos and per-measurement PDFs are planned, not implemented yet.
 
-## ما الذي يضمّه المشروع؟
+## Privacy
+History stored locally; PDF saved only to the destination selected in Android picker.
 
-- **282 صفحة محتوى مولّدة بتاريخ 27/10/2026** موزعة على ثلاث لغات، وتشمل المقالات والأقسام والأدوات وصفحات الوظائف والهجرة والسياسات؛ العدد يتغير مع نشر مقالات جديدة.
-- **43 مقالة أصلية × 3 لغات** (129 نسخة مترجمة) في محاور الربح، التداول، الذكاء الاصطناعي ونمط الحياة، مع صور مرخصة منفصلة ومصادر وروابط رسمية عند الحاجة.
-- لوحة إدارة عربية خاصة في `/admin/` لإضافة الأقسام والمقالات باللغات الثلاث، لا تُعرض أدواتها إلا بعد التحقق من صلاحية **Administrator** عبر GitHub. يتم حفظ الملفات المرتبطة بالمقال في التزام Git واحد.
-- بحث سريع حسب اللغة، تصميم RTL بالعربية وLTR بالإنجليزية/الفرنسية، قائمة للهاتف وروابط لتغيير لغة المقال.
-- أدوات تعمل محلياً: حاسبة ميزانية مخاطرة التداول، حاسبة تسعير العمل الحر، ومولّد برومبت.
-- SEO: HTML جاهز للزحف، عناوين وأوصاف مختلفة، بيانات Article structured data و`robots.txt` و`sitemap.xml` وروابط canonical/hreflang على الدومين المستعمل حالياً **ribhlab.github.io**.
-- صفحات: سياسة الخصوصية، شروط الاستخدام، من نحن، التواصل، إخلاء المسؤولية، السياسة التحريرية.
-- **AdSense غير مفعّل افتراضياً.** التحقق عبر رقم الناشر وملف ads.txt جاهز شرط إضافة الرقم الحقيقي؛ انظر `docs/ADSENSE_READINESS.md`. لا توجد إعلانات فعلية ولا أدوات قياس الزوار من دون تهيئة حقيقية.
-
-
-### صفحات جديدة ومصادر رسمية
-
-- فرص عمل ومباريات المؤسسات العمومية: https://ribhlab.github.io/ar/opportunities/competitions/ (فقط الفرص التي اجتازت التحقق المصدرّي؛ أرشيف المنصة لا يعني أن جميع الإعلانات مفتوحة).
-- فرص الشركات والهجرة وروابط السفارات: https://ribhlab.github.io/ar/opportunities/ . لا تمثل روابط حجز التأشيرات تأكيد توفر مواعيد.
-- بيانات الزوار حسب الدولة: https://ribhlab.github.io/ar/audience/ — تظهر حالة «غير متصل» إلى حين ربط إحصائيات حقيقية.
-- إرشادات إضافة رقم ناشر AdSense بعد إعداد المحتوى: `docs/ADSENSE_READINESS.md`.
-
-## مكتبة الطبخ منفصلة عن العناية — إصدار 28/10/2026
-
-**العناية:** `/ar/care/` و`/en/care/` و`/fr/care/` تجمع مقالات البشرة والجسم فقط.
-**الطبخ:** `/ar/recipes/` و`/en/recipes/` و`/fr/recipes/` مستقلة عن العناية، وتضم **100 وصفة وجبة** و**20 وصفة متوازنة**؛ توجد أيضاً صفحات منفصلة `recipes/meals/` و`recipes/healthy/`.
-
-- يتم إنشاء صفحة مستقلة لكل وصفة في اللغات الثلاث: العنوان، تصنيف المطبخ، عدد الحصص، المدة، المقادير بوحداتها، خمس خطوات تشمل تفصيلاً خاصاً بالطبق، تنبيهات درجة الحرارة ومسببات الحساسية وروابط السلامة الغذائية.
-- البيانات: `content/recipes/meals-01.json` إلى `meals-04.json`، `content/recipes/healthy-01.json`، وقاموس المكونات `content/recipes/ingredients.json`.
-- المولّد: `src/recipe-pages.mjs`، والتصميم: `public/assets/recipe-pages.css`، والبحث والتصفية `public/assets/recipe-filter.js`.
-- **سياسة عدم تكرار الصور الصارمة:** لكل وصفة صورة حصرية؛ حالياً 25 صورة فوتوغرافية موثقة مُخصصة 1:1، و95 رسماً متجهاً محلياً فريداً، ولا يجوز استعارة صورة من وصفة أو مقال آخر. حتى الصور الأصلية للوصفات لا تُقدَّم على أنها أطباق صُنعت واختُبرت فعلياً. توفّر الصورة الخاصة بالوصفة بديلاً محلياً إذا تعطّل مصدر الصورة الخارجية.
-- 120 وصفة هي **وصفات منزلية تحريرية**، وليست 120 مقالة بحثية طويلة أو أبحاثاً مخبرية. لم نتأكد من إعدادها تجريبياً واحدة واحدة، ولذلك لا تُذكر سعرات حرارية أو فوائد علاجية غير محسوبة. وصف «متوازنة» تعليمي يعتمد على التنوع الغذائي لا على ملاءمة طبية فردية.
-- توصي المراجع الرسمية FoodSafety.gov بالتحقق من درجات الحرارة الداخلية اللازمة، وتؤكد WHO أهمية التنوع والخضر والحبوب والبقول في النمط الغذائي الصحي.
-- يفشل `npm run check` إذا نقص العدد، أو المحتوى متعدد اللغات، أو مقادير المكونات، أو الصفحات أو الرسوم أو روابط الفصل بين العناية والطبخ.
-
-
-### سياسة الهوية البصرية ومنع إعادة استخدام الصور — إلزامية
-
-- ممنوع نشر الصورة نفسها أو إعادة استخدام `photoId` نفسه لمقالين مختلفين، أو وصفتين، أو فرصتين، أو بين الأخبار الرياضية والتقنية والمحتوى التحريري وأخبار الأسواق. تغيير القص أو القياس أو معامل `q` أو اسم ملف الصورة **لا يجعلها صورة فريدة**.
-- استخدام الغلاف الخاص بمحتوى واحد داخل بطاقته وصفحته وباللغات الثلاث لا يعني توزيعه على محتوى مختلف؛ هو نفس المحتوى.
-- يجب التحقق من مصدر الصورة وحقوق الاستعمال ومطابقتها للموضوع قبل إسنادها. عند غياب صورة فوتوغرافية حصرية موثقة، يُستعمل رسم توضيحي أصلي مختلف لكل سجل، مع وصفه بأنه رسم لا صورة؛ لا يُستعمل أبداً مخزون صور مشتركة.
-- يرفض `src/check.mjs` البناء عند وجود صور مكررة عبر محتويات مختلفة في `content/licensed-photos.json`، `content/recipes/photo-library.json`، `content/opportunity-photography.json`، `content/sports-technology-editorials.json`، `content/market-digests.json`، `content/market-feed-photos.json`. ويمنع `src/publish-reviewed.mjs` و`/admin/` إسناد صورة سبق تخصيصها.
-- ينشئ مولّد الفرص رسماً فريداً لكل عرض شغل أو هجرة أو موعد تأشيرة مع معرّف خاص، ولا يعيد استعمال صورة عرض آخر. الصور المستعملة للتصنيفات تخص تصنيفها فقط.
-- في حال تضارب الترخيص أو تعذر العثور على صورة فريدة، يحفظ المحرر المحتوى للمراجعة أو يقدم رسماً توضيحياً أصلياً مع التصريح بذلك، ولا ينسخ صورة مستخدمة من قبل.
-
-## 1. تشغيل الموقع محلياً
-
-يلزم **Node.js 20 أو أحدث**؛ لا توجد مكتبات npm ضرورية.
-
-```bash
-npm run build
-npm run check
-npm run dev
-```
-
-افتح `http://localhost:4173/ar/`، أو `/en/`، أو `/fr/`. أوقف الخادم بـ `Ctrl+C`.
-
-يمكن أيضاً استضافة محتوى مجلد `dist/` على أي استضافة ثابتة. لا ترفع المشروع كاملاً كموقع جاهز؛ ارفع `dist` فقط بعد البناء.
-
-## 2. إعدادات الموقع الحالي
-
-هذا الموقع منشور بالفعل على GitHub Pages؛ لا تحتاج لاستضافة Netlify أو شراء دومين. ملف `site.config.json` الحالي يتضمن الدومين الصحيح. عند الحاجة إلى معلومات ناشر حقيقية ومعلنة، عدّل الإعدادات التالية فقط بعد التأكد من ملكيتها:
-
-مثال عام (ليس البيانات الفعلية):
-
-```json
-{
-  "brand": "RibhLab",
-  "domain": "https://YOUR-REAL-DOMAIN.COM",
-  "contactEmail": "YOUR-REAL-EMAIL@YOUR-DOMAIN.COM",
-  "publisherName": "RibhLab Editorial Team",
-  "adsensePublisherId": "",
-  "social": {"youtube":"", "linkedin":""}
-}
-```
-
-لا تخترع بريداً أو اسم شركة أو رقم ناشر AdSense. للدومين الحالي تستعمل عملية النشر إعداد GitHub Pages مباشرة. تغيير الفرع `main` يطلق البناء والاختبارات والنشر، و`dist/` يُنشأ تلقائياً داخل GitHub Actions.
-
-## 3. لوحة تحكم المسؤول — إضافة أقسام ومقالات يدوياً
-
-صفحة الدخول: **https://ribhlab.github.io/admin/**. لا يوجد رابط لها في قائمة الموقع العامة، وتظهر شاشة تسجيل الدخول وحدها حتى تتحقق GitHub API من أن الحساب يملك **صلاحية Admin** على المستودع `ribhlab/ribhlab.github.io`.
-
-### طريقة الدخول الآمنة
-1. سجّل الدخول إلى GitHub بحساب يملك صلاحية Administrator لهذا المستودع، وافتح صفحة [إعداد رمز وصول دقيق](https://github.com/settings/personal-access-tokens/new) في GitHub.
-2. اختر مالك المستودع الصحيح وفعّل الوصول إلى **هذا المستودع فقط** (Selected repositories)، وامنح إذن **Contents: Read and write**. لا حاجة إلى صلاحيات إضافية عامة.
-3. انسخ الرمز إلى نموذج `/admin/` داخل متصفحك فقط. لا ترسله في الدردشة ولا ترفعه إلى ملف أو GitHub Issue. بمجرد نجاح المصادقة، تظهر لوحة التحكم.
-4. الرمز محفوظ في **ذاكرة التبويب فقط**، وليس في localStorage أو كوكيز الموقع. تسجيل الخروج أو إعادة تحميل الصفحة يتطلب إعادة الدخول.
-
-### إضافة قسم جديد
-- من تبويب «الأقسام»، اختر «قسم جديد»، ثم حدّد معرفاً لاتينياً فريداً وواحداً من المجالات الرئيسية الأربعة: الربح الرقمي والتداول والذكاء الاصطناعي ونمط الحياة.
-- أدخل عنواناً ووصفاً أصلياً بالعربية الفصحى والإنجليزية والفرنسية، وعدد المقالات المستهدف.
-- تضبط اللوحة معاً `content/sections.json` و`content/editorial-plan.json`، من دون حذف الأقسام الأصلية أو مقالاتها.
-
-### إضافة مقال جديد
-- اختر القسم واكتب معرف URL، ثم العنوان والوصف والمقدمة والمحاور **باللغات الثلاث**. صيغة التحرير: يبدأ كل عنوان محور بـ `##`، وتفصل بين الفقرات أسطر فارغة.
-- أضف مصدرين مستقلين على الأقل، ورابط Unsplash ورقم الصورة واسم المصوّر ووصف الصورة باللغات الثلاث، ثم راجع الحقوق والدقة.
-- «حفظ مسودة» يحفظ المحتوى في `content/manual-drafts/` من دون عرضه على صفحات الموقع. **تنبيه:** المستودع عمومي، ولهذا يمكن لأي شخص الاطلاع على كود المسودات عبر GitHub؛ لا تحفظ فيه معلومات سرية.
-- «نشر المقال» يرفض المحتوى الناقص: 4 محاور على الأقل و480 كلمة مفيدة لكل لغة وفق القواعد الحالية، ومراجع وصورة غير مكررة. ويطبق فاصل النشر التحريري 25 دقيقة على المقالات الجديدة.
-- يتم تحديث ملف المقال وتصنيفه وخطة القسم والصورة والمصادر وحالة النشر في **التزام Git واحد**؛ أي تعارض مع تحديث أحدث يلغي العملية بدلاً من الكتابة فوق عمل آخر.
-- GitHub Actions مسؤول عن إنشاء الصفحات العامة. راجع [نتائج البناء](https://github.com/ribhlab/ribhlab.github.io/actions) قبل إعلان المقال منشوراً.
-
-**حدّ تقني صريح:** الموقع يعمل على GitHub Pages الثابت. يمكن لأي شخص معرفة وجود صفحة الدخول وتحميل ملفات الواجهة العمومية، لكن لا تظهر له بيانات التحرير أو أدواتها دون التحقق من صلاحية Admin، ولا يمكنه الكتابة إلى المستودع دون أذونات GitHub الفعلية. إذا أردت حجب **حتى صفحة الدخول** عن الزوار أو اعتماد بريد إلكتروني/كلمة مرور، فيلزم خادم مصادقة أو خدمة وصول خاصة (مثل Cloudflare Access)، وهو غير مُعدّ في هذا الإصدار.
-
-### إدارة المقالات خارج لوحة التحكم
-تظل المقالات مخزنة في `content/articles/*.json`، والأقسام في `content/sections.json`، والصور في `content/licensed-photos.json`. لا تحرر ملف المقال وحده وتتوقع نشره؛ يجب ربطه بقسم وبصورة ومراجع، وهو ما تنفذه اللوحة تلقائياً عند النشر.
-
-## 4. AdSense: التجهيز ≠ الموافقة
-
-تم تصميم التنقل والصفحات والمحتوى الأصلي والمراجعة لتسهيل استيفاء متطلبات شائعة، **لكن لا توجد أي طريقة تضمن القبول**؛ Google وحدها تقرر، وهي تتحقق من جودة الموقع الحقيقية وملاءمة المحتوى والالتزام بالسياسات. قبل تقديم الطلب:
-
-- الموقع منشور عبر HTTPS على `ribhlab.github.io`. حدّد بريداً حقيقياً للاتصال إن رغبت في عرضه للزوار، وحافظ على قناة تصحيحات عمومية وتعريف صادق بالناشر.
-- راجع جميع المقالات وأضف محتوى أصلياً من خبرتك، أمثلة أو اختبارات حقيقية، روابط مرجعية موثوقة، وتحديثات منتظمة حيث يلزم. المحتوى الحالي نقطة بداية، وليس ضماناً للجودة المطلوبة.
-- أصلح أي صفحات ناقصة أو مكررة، وأبقِ روابط التنقل والفهرسة فعّالة؛ أرسل sitemap إلى Search Console.
-- لا تعرض وعوداً بتحقيق أرباح مضمونة أو نتائج تداول مضللة، ولا تشجّع النقر على الإعلانات.
-- أضف الإفصاحات المناسبة لأي روابط تسويق بالعمولة وشروط المنتجات قبل إطلاقها.
-- **لربط الموقع قبل طلب المراجعة** أدخل معرف الناشر الصحيح في `site.config.json` تحت المفتاح `adsensePublisherId` (حالياً `ca-pub-7945572016731367`)، وهو مصدر الحقيقة لنشر GitHub Pages، ثم انشر لتحصل على علامة التحقق و`ads.txt`. بعدها أرسل الموقع للمراجعة من لوحة AdSense. لا تنتظر القبول لإضافة علامة ملكية الموقع.
-- **لا تفعّل تحميل سكربت الإعلانات قبل إعداد الموافقات المطلوبة.** لخدمة إعلانات مخصّصة للمستخدمين في EEA/UK/سويسرا، تتطلب Google منصة إدارة موافقة معتمدة من Google ومتكاملة مع IAB TCF. استخدم Google Privacy & messaging أو مزوداً معتمداً. هذا المشروع لا يحتوي CMP معتمدة؛ ولا يُعد أي إشعار كوكيز عادي بديلاً عنها.
-- **بعد موافقة Google** وإعداد الموافقات المطلوبة، فعّل `RIBHLAB_ENABLE_ADSENSE=true` صراحة ضمن GitHub Actions Variables وأعد النشر. سياسة الخصوصية تتضمن إفصاح إعلانات Google تلقائياً عند تفعيلها.
-
-الوثائق الرسمية:
-
-- Google AdSense eligibility: https://support.google.com/adsense/answer/9724
-- Page readiness: https://support.google.com/adsense/answer/7299563
-- Certified consent platforms: https://support.google.com/adsense/answer/13554116
-- Sveltia CMS GitHub: https://sveltiacms.app/en/docs/backends/github
-
-## 5. حدود النسخة الحالية
-
-- الموقع منشور بالفعل على الدومين المجاني GitHub Pages. ربط حساب Google AdSense، التحقق من أهلية الدومين وتقديم المراجعة يحتاج حساب الناشر الحقيقي وإجراءه من لوحة Google.
-- الإدارة تحتاج إعداد GitHub مرة واحدة. المستخدم النهائي يرى موقعاً ثابتاً سريعاً؛ التحديثات ليست تلقائية من مصادر الأخبار، بل تتم بالنشر والتحرير والتحقق.
-- لا يوجد نموذج اتصال خاص؛ يمكن التواصل عبر GitHub Issues، أو إضافة بريد عمومي حقيقي حين يتوفر. لا تنشر أي بيانات تعريف شخصية من دون موافقة.
-- أدوات التداول تعليمية ولا تقدم حساب حجم عقد فعلي أو إشارات تداول.
-- صفحة `privacy` تصف الإعداد الفعلي، وتتغير إفصاحات Umami وGoogle AdSense تلقائياً عند تنشيطهما. يجب مراجعة القواعد المحلية واشتراطات الموافقة قبل تفعيل إعلانات الجمهور الأوروبي.
-
----
-
-**EN**: Live at https://ribhlab.github.io/. Push changes to GitHub to test and deploy automatically. Ads are OFF until the authentic publisher ID, Google review and compliant consent workflow are completed.
-
-**FR** : Site publié sur https://ribhlab.github.io/. Les modifications GitHub déclenchent les tests et le déploiement. AdSense reste désactivé sans véritable identifiant, examen Google et recueil du consentement applicable.
-
-## Sharing and Google Search
-
-Every article has share links for WhatsApp, Facebook, X, LinkedIn, Telegram, Pinterest, Reddit and email. Native device sharing and copy-link also support Instagram/TikTok/Snapchat manually (they do not offer universal web prefilled sharing links). Metadata includes Open Graph image, Twitter/X card, canonical, hreflang and Article JSON-LD. Sitemap and robots.txt are produced from `SITE_URL` during builds. After deployment, submit `https://ribhlab.github.io/sitemap.xml` to Google Search Console and verify ownership. Indexation is determined by search engines, not guaranteed.
-
-### RibhLab Kitchen photo verification (30 October 2026)
-
-Recipe cards and recipe pages use uncropped full-dish framing (`object-fit: contain`), with a language-specific YouTube cooking search on each of the 120 recipes. The photo library uses per-recipe unique IDs and documented sources/licenses; only dish-matched curated photos are published, with unique per-recipe SVG illustrations retained where no safely verified photo is available. Publishing is guarded by automated tests in `src/check.mjs`.
+Copyright (c) RibhLab — all rights reserved until a licence is explicitly chosen.
