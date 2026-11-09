@@ -1,0 +1,92 @@
+.budgetflow-page {
+  --bf-navy: #152e4e;
+  --bf-teal: #09655c;
+  --bf-muted: #4a6277;
+  --bf-border: #d4e2eb;
+  padding-block: clamp(1.5rem, 4vw, 4rem);
+}
+
+.budgetflow-hero,
+.budgetflow-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+.budgetflow-hero {
+  align-items: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  border-radius: 1.4rem;
+  background: #edf6fa;
+  border: 1px solid var(--bf-border);
+}
+
+.budgetflow-page h1,
+.budgetflow-page h2 {
+  color: var(--bf-navy);
+  line-height: 1.2;
+  margin-block: 0 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.budgetflow-page h1 { font-size: clamp(2rem, 4.8vw, 4rem); }
+.budgetflow-page h2 { font-size: clamp(1.3rem, 2.4vw, 1.9rem); }
+.budgetflow-page p,
+.budgetflow-page li { color: var(--bf-muted); line-height: 1.65; }
+.budgetflow-page .budgetflow-brand { color: var(--bf-teal); font-weight: 800; }
+.budgetflow-lead { font-size: 1.12rem; }
+.budgetflow-format { font-size: 0.93rem; }
+.budgetflow-page figure { margin: 0; min-width: 0; }
+.budgetflow-page figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.85rem;
+  border: 1px solid var(--bf-border);
+  background: #fff;
+}
+.budgetflow-page figcaption { margin-block-start: 0.65rem; color: var(--bf-muted); font-size: 0.89rem; }
+
+.budgetflow-buy {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  max-width: 100%;
+  padding: 0.8rem 1.05rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: var(--bf-teal);
+  font-weight: 800;
+  text-decoration: none;
+}
+.budgetflow-buy:hover { background: #06483f; color: #fff; }
+.budgetflow-buy:focus-visible,
+.budgetflow-page figure a:focus-visible { outline: 3px solid #274b90; outline-offset: 4px; }
+.budgetflow-buy bdi { padding-inline-start: 0.65rem; border-inline-start: 1px solid #ffffff70; }
+
+.budgetflow-panel {
+  margin-block-start: 1.25rem;
+  padding: clamp(1rem, 2.5vw, 1.8rem);
+  border: 1px solid var(--bf-border);
+  border-radius: 1rem;
+  background: #fff;
+}
+.budgetflow-example {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+.budgetflow-example > div { padding: 0.75rem; border-radius: 0.65rem; background: #edf6fa; }
+.budgetflow-example dt { color: var(--bf-muted); font-size: 0.92rem; }
+.budgetflow-example dd { margin: 0.2rem 0 0; color: var(--bf-navy); font-weight: 800; }
+.budgetflow-example > div:last-child { background: #dff3ee; }
+.budgetflow-panel li + li { margin-block-start: 0.5rem; }
+.budgetflow-checkout { margin-block-start: 1.5rem; }
+
+@media (max-width: 760px) {
+  .budgetflow-hero,
+  .budgetflow-details { grid-template-columns: minmax(0, 1fr); }
+  .budgetflow-example { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
