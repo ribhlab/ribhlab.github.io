@@ -1,0 +1,5 @@
+transaction_id,date,category,amount,currency,description
+DEMO-001,2026-10-02,sale,2500.00,USD,Fictional customer invoice
+DEMO-002,2026-10-04,expense,-600.00,USD,Fictional operating cost
+DEMO-003,2026-10-06,sale,1800.00,USD,Fictional customer invoice
+DEMO-004,2026-10-08,refund,-150.00,USD,Fictional customer refund
