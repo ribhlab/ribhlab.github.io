@@ -59,6 +59,18 @@ footer{padding:28px 18px;text-align:center;color:#5d7169}
 </ol>
 <p><a href="/en/finance/choose-finance-dashboard.html">Detailed edition comparison</a> · <a href="/en/finance/csv-import-readiness.html">Free CSV readiness checklist</a> · <a href="/en/finance/self-hosted-team-finance-dashboard.html">Team hosting and maintenance guide</a></p>
 </section>
+<section data-guide="month-end-control" aria-labelledby="month-end-control" style="margin:26px 0;padding:24px;background:#fff;border:1px solid #d6e5dd;border-radius:18px">
+<h2 id="month-end-control" style="margin:0 0 10px">Free month-end reporting control: verify the numbers before importing</h2>
+<p>A dashboard can highlight trends, but it cannot fix inconsistent source reports. Before importing CSV files into any finance tool, run this small reconciliation using a fictional example:</p>
+<ol>
+<li><strong>Sales completeness:</strong> compare the invoice register with the general ledger revenue total for the same period, currency and tax basis. Investigate cancellations and credit notes rather than forcing a match.</li>
+<li><strong>Receivables:</strong> start with opening customer balances, add invoices and subtract payments and credits. In a fictional example, 12,000 + 8,000 − 5,000 − 1,000 = 14,000 closing receivables. Compare that with the customer subledger and control account.</li>
+<li><strong>Cash:</strong> compare recorded receipts and payments with the bank statement, separating outstanding items and fees. Do not treat a bank balance as accounting profit.</li>
+<li><strong>Import hygiene:</strong> use consistent date formats, unique document IDs, explicit signs for credits and no real client data in trial imports. Keep the original exports and a dated backup.</li>
+</ol>
+<p><strong>Decision rule:</strong> if the control totals do not reconcile, investigate upstream before using the dashboard for management decisions. This checklist is free educational material from the software seller, not accounting advice or a claim that ProfitLens performs automatic ledger reconciliation.</p>
+<p><a href="/en/finance/csv-import-readiness.html">Open the free CSV preparation checklist</a> · <a href="/en/finance/choose-finance-dashboard.html">Compare the two editions</a></p>
+</section>
 <section class="grid">
 <article data-etsy-listing="4610758074">
 <a href="https://www.etsy.com/listing/4610758074" target="_blank" rel="noopener noreferrer"><img src="https://i.etsystatic.com/68888370/r/il/618117/8852620729/il_570xN.8852620729_czz7.jpg" alt="Finance Dashboard Bundle | Offline HTML + Self-Hosted Team App for Small Business" loading="lazy" width="570" height="380"></a>
