@@ -238,6 +238,26 @@ for(const lang of ['ar','en','fr']){
  if(fs.existsSync(path.join(dist,lang,'sections','body-care','index.html')))errors.push('Retired health section was generated: '+lang);
 }
 if(fs.existsSync(path.join(dist,'sitemap.xml'))&&/\/(?:ar|en|fr)\/care\//.test(fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8')))errors.push('Retired care links found in sitemap');
+// The retired dermatology articles must never be reintroduced by the editorial publishing bot.
+const retiredHealthSlugs=[
+ 'daily-sunscreen-spf30-body-care-guide',
+ 'dry-skin-moisturizing-body-routine',
+ 'gentle-face-cleanser-choosing-washing-routine',
+ 'chapped-lips-balm-spf-irritants-14-day-care-plan',
+ 'minimal-skin-routine-cleanser-moisturizer-spf',
+ 'sensitive-skin-versus-contact-reaction',
+ 'tinted-sunscreen-iron-oxides-guide',
+ 'glycerin-ceramides-moisturizer-label-guide',
+ 'handwashing-dry-hands-moisturizer-hygiene-routine'
+];
+const sitemapText=fs.existsSync(path.join(dist,'sitemap.xml'))?fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8'):'';
+for(const slug of retiredHealthSlugs){
+ if(fs.existsSync(path.join(root,'content','articles',slug+'.json')))errors.push('Retired medical article reappeared: '+slug);
+ if(sitemapText.includes('/'+slug+'/'))errors.push('Retired medical article returned to sitemap: '+slug);
+ for(const l of ['ar','en','fr']){
+  if(fs.existsSync(path.join(dist,l,'lifestyle',slug,'index.html')))errors.push('Retired medical page generated: '+l+'/'+slug);
+ }
+}
 const assignedSlugs=new Set(),knownSlugs=new Set(fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')).map(f=>f.slice(0,-5)));
 for(const s of taxonomy.sections){
  const plan=publishingPlan.sections.find(x=>x.id===s.id);
