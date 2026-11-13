@@ -41,6 +41,8 @@ for(const lang of ['ar','en','fr']){
 // Check that the bare domain homepage can verify ownership (not just /ar/).
 const bareHome=fs.readFileSync(path.join(dist,'index.html'),'utf8');
 if(!bareHome.includes('href="/ar/"')&&!bareHome.includes('url=/ar/'))errors.push('Bare homepage: Arabic entry missing');
+if(bareHome.includes('http-equiv="refresh"'))errors.push('Bare homepage must serve useful content instead of instant redirect');
+if(!bareHome.includes('class="magazine-masthead"')||!bareHome.includes('id="latest"'))errors.push('Bare homepage lacks substantial editorial content');
 const gscToken=(process.env.GOOGLE_SITE_VERIFICATION||'').trim();
 if(gscToken&&!bareHome.includes('name="google-site-verification" content="'+gscToken+'"'))errors.push('Search Console: bare homepage lacks verification meta');
 const pubId=(process.env.ADSENSE_PUBLISHER_ID||JSON.parse(fs.readFileSync(path.join(root,'site.config.json'),'utf8')).adsensePublisherId||'').trim();
