@@ -36,7 +36,7 @@ class StoreOnlyTests(unittest.TestCase):
             m.inspect_archive(b"not user approved asset data")
 
     def test_default_cannot_write_to_google(self):
-        with patch.object(m, "download_from_private_drive") as drive, \
+        with patch.object(m, "download_verified_images") as drive, \
              patch.object(m, "apply_images") as publisher, \
              redirect_stdout(io.StringIO()):
             self.assertEqual(m.main([]), 0)
@@ -44,7 +44,7 @@ class StoreOnlyTests(unittest.TestCase):
             publisher.assert_not_called()
 
     def test_confirmation_required_before_any_external_access(self):
-        with patch.object(m, "download_from_private_drive") as drive, \
+        with patch.object(m, "download_verified_images") as drive, \
              patch.object(m, "apply_images") as publisher, \
              redirect_stderr(io.StringIO()):
             self.assertEqual(m.main(["--apply"]), 2)
@@ -52,7 +52,7 @@ class StoreOnlyTests(unittest.TestCase):
             publisher.assert_not_called()
 
     def test_disallows_tampered_archive_without_google_edit(self):
-        with patch.object(m, "download_from_private_drive", return_value=b"tampered zip"), \
+        with patch.object(m, "download_verified_images", side_effect=ValueError("Tampered image SHA256")), \
              patch.object(m, "apply_images") as publisher, \
              redirect_stderr(io.StringIO()):
             self.assertEqual(m.main(["--apply", "--confirm", m.CONFIRM]), 1)

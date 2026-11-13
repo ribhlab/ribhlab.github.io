@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Replace only RivoScan en-US Google Play store graphics using verified owner images.
 
-Source: owner's RivoScan Premium Blue v0.45.9 2026-11-13 ZIP, transferred
-temporarily through a private Google Drive file shared only to Play's service
-account. Requires exact ZIP and per-image SHA256 validation.
+Source: owner's RivoScan Premium Blue v0.45.9 2026-11-13 ZIP. The exact
+user-supplied PNG files are temporarily transported from Picsart media URLs;
+all ten image SHA256 hashes and dimensions are checked before Play writes.
 Does NOT upload AABs, change release tracks, listing text, Data Safety or ads.
 """
 from __future__ import annotations
@@ -70,24 +70,49 @@ def inspect_archive(raw: bytes) -> dict[str, bytes]:
         return images
 
 
-def download_from_private_drive() -> bytes:
-    from google.oauth2 import service_account
-    from googleapiclient.discovery import build
-    credential_json = json.loads(os.environ["GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"])
-    email = credential_json.get("client_email", "")
-    if not email.endswith(".gserviceaccount.com"):
-        raise ValueError("Google Play service account identity is missing")
-    # Service account email is not a credential; used only to share a temporary
-    # Drive file as 'reader', not 'anyone with link'.
-    print("RIVOSCAN_PRIVATE_ASSET_READER_EMAIL=" + email, flush=True)
-    creds = service_account.Credentials.from_service_account_info(
-        credential_json,
-        scopes=["https://www.googleapis.com/auth/drive.readonly"])
-    service = build("drive", "v3", credentials=creds, cache_discovery=False)
-    meta = service.files().get(fileId=DRIVE_FILE_ID, fields="id,size,mimeType").execute()
-    if meta.get("mimeType") != "application/zip" or int(meta.get("size", "0")) != 3114337:
-        raise ValueError("Unexpected Drive archive size/type")
-    return service.files().get_media(fileId=DRIVE_FILE_ID).execute()
+
+# Owner's exact user-uploaded images, temporarily rehosted for CI transport.
+# Every byte is validated against the independent uploaded ZIP SHA256 manifest.
+HOSTED_ASSET_URLS = {
+    "App_Icon_512x512.png": "https://gcdn.picsart.com/picsart-mcp/a159786b-7a9d-4946-822e-3a737f0282e9.png",
+    "Feature_Graphic_1024x500.png": "https://gcdn.picsart.com/picsart-mcp/94fbe702-2936-4343-b58d-a519d40f66eb.png",
+    "Phone_01_Home_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/51e93937-b1bd-41e4-ae19-c148ccea8d3c.png",
+    "Phone_02_Documents_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/9d774df9-b4e8-4e1b-861d-e42c12a9f6ea.png",
+    "Phone_03_Tools_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/5926009c-15fd-4605-b39b-780985338c54.png",
+    "Phone_04_Book_Scan_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/7e62a958-1ab1-4215-b34c-78e521095976.png",
+    "Phone_05_Settings_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/7bbc4e75-05d6-4b5c-b9fe-5c2a24cf2d84.png",
+    "Phone_06_Photo_Translation_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/ee481ae6-f290-4e37-8649-b4a19b1e809e.png",
+    "Phone_07_Formula_OCR_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/836662e8-4b20-4f39-9b6d-24162b853d59.png",
+    "Phone_08_ID_Photo_1080x1920.png": "https://gcdn.picsart.com/picsart-mcp/a56ea853-dc52-41a2-b87e-5589c777641b.png"
+}
+
+def download_verified_images() -> dict[str, bytes]:
+    from PIL import Image
+    from urllib.parse import urlparse
+    from urllib.request import urlopen, Request
+
+    if set(HOSTED_ASSET_URLS) != set(ASSET_SHA256):
+        raise ValueError("Hosted URL mapping does not exactly match ten user images")
+    images = {}
+    for name, url in HOSTED_ASSET_URLS.items():
+        parsed = urlparse(url)
+        if parsed.scheme != "https" or parsed.hostname != "gcdn.picsart.com" or parsed.query:
+            raise ValueError("Untrusted image asset host")
+        req = Request(url, headers={"User-Agent": "RivoScanPlayVerifiedAssets/1.0"})
+        with urlopen(req, timeout=35) as response:
+            raw = response.read(2 * 1024 * 1024 + 1)
+        if len(raw) > 2 * 1024 * 1024:
+            raise ValueError("Hosted image too large")
+        if hashlib.sha256(raw).hexdigest() != ASSET_SHA256[name]:
+            raise ValueError("Hosted image does not match user's original SHA-256: " + name)
+        with Image.open(io.BytesIO(raw)) as im:
+            expected_size = (512, 512) if name.startswith("App_") else (
+                (1024, 500) if name.startswith("Feature_") else (1080, 1920))
+            if im.format != "PNG" or im.size != expected_size:
+                raise ValueError("Unexpected hosted image format/dimensions")
+            im.verify()
+        images[name] = raw
+    return images
 
 
 def apply_images(images: dict[str, bytes]) -> dict:
@@ -153,7 +178,7 @@ def main(argv=None) -> int:
         print("RIVOSCAN_BLUE_IMAGES_BLOCKED: explicit owner approval required", file=sys.stderr)
         return 2
     try:
-        images = inspect_archive(download_from_private_drive())
+        images = download_verified_images()
         result = apply_images(images)
         print("RIVOSCAN_BLUE_STORE_IMAGES_RESULT=" + json.dumps(result, sort_keys=True))
         return 0
