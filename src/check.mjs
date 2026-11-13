@@ -223,7 +223,7 @@ for(const pagePath of pages){
 // Editorial taxonomy: every real article has exactly one section and each section has forty slots.
 const taxonomy=JSON.parse(fs.readFileSync(path.join(root,'content','sections.json'),'utf8'));
 const publishingPlan=JSON.parse(fs.readFileSync(path.join(root,'content','editorial-plan.json'),'utf8'));
-if(taxonomy.sections.length<9||publishingPlan.sections.length!==taxonomy.sections.length)errors.push('Editorial taxonomy: preserve the ten original sections and keep plans in sync');
+if(taxonomy.sections.length<9||publishingPlan.sections.length!==taxonomy.sections.length)errors.push('Editorial taxonomy: preserve the nine remaining original sections and keep plans in sync');
 const originalSectionIds=new Set(['freelance','online-business','ai-automation','mobile-apps','games-security','trading-risk','crypto-web3','gold-macro','world-recipes']);
 for(const id of originalSectionIds)if(!taxonomy.sections.some(s=>s.id===id))errors.push('Protected original editorial section missing: '+id);
 // AdSense YMYL retirement: medical/skin advice must not resurface via taxonomy, generated routes or sitemap.
@@ -532,7 +532,7 @@ for(const lang of ['ar','en','fr']){
 const protectedInventory=JSON.parse(fs.readFileSync(path.join(root,'content','preserved-article-baseline.json'),'utf8'));
 if(protectedInventory.legacyArticleCount!==33||protectedInventory.legacyMarketDigestCount!==6)errors.push('Preservation baseline inventory must contain 35 articles and six digests');
 const legacySlugs=Object.values(protectedInventory.sections).flat();
-if(legacySlugs.length!==33||new Set(legacySlugs).size!==35)errors.push('Legacy article baseline is corrupt');
+if(legacySlugs.length!==33||new Set(legacySlugs).size!==33)errors.push('Legacy article baseline is corrupt');
 if(knownSlugs.size<legacySlugs.length+4)errors.push('New articles replaced old articles instead of being appended');
 for(const [sectionId,slugs] of Object.entries(protectedInventory.sections)){
  const live=taxonomy.sections.find(s=>s.id===sectionId);
