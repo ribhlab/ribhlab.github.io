@@ -20,3 +20,9 @@ Uses AGP 8.7.3, Gradle 8.9, Android 35, Java 17, minSdk 26.
 - User-initiated, eight-second microphone capture while testing focus; temporary in-memory buffer only.
 - Replays microphone capture amplified 1x–12x. May amplify ambient sounds, and does not establish that the motor is actually moving.
 - Requests RECORD_AUDIO only when capture is started. Audio is not saved or uploaded.
+
+## v1.2 — rapid zoom + focus together
+- Automatic zoom in/out loop and near/far focus sweep or autofocus concurrently using Camera2, both limited by camera-supported ranges.
+- On Android 11+ uses CONTROL_ZOOM_RATIO when available; earlier devices use SCALER_CROP_REGION digital crop.
+- Speed slider maximum: 70 ms zoom step, 180 ms focus step. These are request intervals, not guaranteed physical movement rates. 30-second auto-stop and immediate manual stop.
+- Digital zoom doesn't drive the lens motor. Real optical zoom may or may not be possible on a given device.

@@ -6,6 +6,8 @@ import android.os.*;
 import android.content.*;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.Rect;
+import android.util.Range;
 import android.graphics.SurfaceTexture;
 import android.hardware.camera2.*;
 import android.media.*;
@@ -23,7 +25,8 @@ public class MainActivity extends Activity {
     private Spinner cameraSpinner;
     private Button startButton, stopButton, autoButton, manualButton;
     private Button micButton, playButton;
-    private CheckBox clickSound;
+    private CheckBox clickSound, fastZoom;
+    private TextView zoomText;
     private TextView gainLabel;
     private int playbackGain = 6;
     private ToneGenerator commandTone;
@@ -45,9 +48,15 @@ public class MainActivity extends Activity {
     private float maxDistance;
     private int afMode = CaptureRequest.CONTROL_AF_MODE_AUTO;
     private int stepCount = 0;
-    private int gapMs = 1500;
+    private int gapMs = 550;
+    private int zoomIntervalMs = 100;
     private long finishAt = 0;
-    private Runnable nextStep;
+    private Runnable nextStep, zoomStep;
+    private float zoomMin = 1f, zoomMax = 1f, zoomPosition = 1f;
+    private boolean zoomSupported=false, useZoomRatio=false;
+    private Rect zoomSensorRect;
+    private float zoomProgress = 0f;
+    private int zoomDirection = 1;
     private int cameraGeneration = 0;
 
     private int dp(int v) { return (int)(getResources().getDisplayMetrics().density*v+.5f); }
@@ -78,8 +87,15 @@ public class MainActivity extends Activity {
         autoButton=button("Autofocus");manualButton=button("Manual sweep");
         modes.addView(autoButton,new LinearLayout.LayoutParams(0,dp(54),1));
         modes.addView(manualButton,new LinearLayout.LayoutParams(0,dp(54),1));
-        root.addView(text("سرعة إعادة المحاولة",14));
-        speedBar=new SeekBar(this);speedBar.setMax(2);speedBar.setProgress(1);root.addView(speedBar);
+        fastZoom = new CheckBox(this);
+        fastZoom.setText("Zoom In / Out متواصل مع التركيز (أقصى زوم مدعوم)");
+        fastZoom.setTextColor(Color.rgb(231,242,239));
+        fastZoom.setChecked(true);
+        root.addView(fastZoom);
+        zoomText = text("Zoom: فحص إمكانيات الكاميرا...",14);
+        root.addView(zoomText);
+        root.addView(text("سرعة تحريك التركيز والزوم — أقصى سرعة على اليمين",14));
+        speedBar=new SeekBar(this);speedBar.setMax(2);speedBar.setProgress(2);root.addView(speedBar);
         LinearLayout actions=new LinearLayout(this);root.addView(actions);
         startButton=button("▶ ابدأ تجربة 30 ثانية");stopButton=button("■ توقيف");
         actions.addView(startButton,new LinearLayout.LayoutParams(0,dp(60),2));
@@ -118,7 +134,10 @@ public class MainActivity extends Activity {
         startButton.setOnClickListener(v -> begin());
         stopButton.setOnClickListener(v -> halt("تم إيقاف التجربة"));
         speedBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            public void onProgressChanged(SeekBar v,int p,boolean user){gapMs=p==0?2600:p==1?1500:850;}
+            public void onProgressChanged(SeekBar v,int p,boolean user){
+                gapMs=p==0?1200:p==1?550:180;
+                zoomIntervalMs=p==0?260:p==1?140:70;
+            }
             public void onStartTrackingTouch(SeekBar v){}
             public void onStopTrackingTouch(SeekBar v){}
         });
@@ -175,6 +194,29 @@ public class MainActivity extends Activity {
             Float dist=c.get(CameraCharacteristics.LENS_INFO_MINIMUM_FOCUS_DISTANCE);
             maxDistance=dist==null?0:dist;
             manualSupported=false;autoSupported=false;
+            zoomMin=1f;zoomMax=1f;zoomPosition=1f;
+            zoomSensorRect=c.get(CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE);
+            useZoomRatio=false;
+            if(Build.VERSION.SDK_INT>=30){
+                Range<Float> range=c.get(CameraCharacteristics.CONTROL_ZOOM_RATIO_RANGE);
+                if(range!=null && range.getUpper()!=null && range.getUpper()>1.01f){
+                    zoomMin=1f;zoomMax=range.getUpper();
+                    useZoomRatio=true;
+                }
+            }
+            if(!useZoomRatio){
+                Float max=c.get(CameraCharacteristics.SCALER_AVAILABLE_MAX_DIGITAL_ZOOM);
+                if(max!=null && max>1.01f && zoomSensorRect!=null){
+                    zoomMax=max;
+                }
+            }
+            zoomSupported=zoomMax>1.01f;
+            ui.post(()->{
+                fastZoom.setEnabled(zoomSupported);
+                zoomText.setText(zoomSupported?"Zoom مدعوم: 1× → "+String.format(java.util.Locale.US,"%.1f",zoomMax)+"×"+
+                    (useZoomRatio?" (Device zoom)":" (Digital crop)") :
+                    "Zoom متحرك ما مدعومش فهاد الكاميرا");
+            });
             int[] capabilities=c.get(CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES);
             if(capabilities!=null)for(int x:capabilities)
                 if(x==CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES_MANUAL_SENSOR)manualSupported=true;
@@ -269,9 +311,13 @@ public class MainActivity extends Activity {
     }
     private void begin(){
         if(running || selectedId==null)return;
+        if(session==null || request==null){report("خاص الكاميرا تكون واجدة قبل التجربة");return;}
         if(manualMode&&!manualSupported || !manualMode&&!autoSupported){report("الوضع ما مدعومش");return;}
         running=true;stepCount=0;finishAt=SystemClock.elapsedRealtime()+30000;
+        final boolean doZoom = fastZoom.isChecked() && zoomSupported;
+        zoomProgress=0f;zoomDirection=1;
         refreshMode();
+        if(doZoom)bg.post(() -> startZoom());
         nextStep=new Runnable(){
             public void run(){
                 if(!running)return;
@@ -285,7 +331,9 @@ public class MainActivity extends Activity {
                     if(clickSound!=null && clickSound.isChecked() && commandTone!=null)
                         commandTone.startTone(ToneGenerator.TONE_PROP_BEEP,70);
                 });
-                report("التجربة خدامة • خطوة "+n+" • "+(manualMode?"أمر تحريك العدسة":"طلب تركيز تلقائي"));
+                report("تركيز "+n+" + "+(doZoom?"Zoom In/Out ":"")+
+                    "• "+(manualMode?"تحريك عدسة":"Autofocus")+
+                    " • "+(Math.max(0,(finishAt-SystemClock.elapsedRealtime())/1000))+" ثانية باقية");
                 bg.postDelayed(this,gapMs);
             }
         };
@@ -295,7 +343,8 @@ public class MainActivity extends Activity {
         running=false;refreshMode();
         bg.post(() -> {
             if(nextStep!=null){bg.removeCallbacks(nextStep);nextStep=null;}
-            if(session!=null){if(manualMode)applyAuto();else applyAuto();}
+            stopZoom();
+            if(session!=null)applyAuto();
         });
         report(message);
     }
@@ -417,8 +466,54 @@ public class MainActivity extends Activity {
             }
         },"LensAudioPlayback").start();
     }
+    private void startZoom(){
+        if(!running||!zoomSupported||session==null||request==null)return;
+        if(zoomStep!=null)bg.removeCallbacks(zoomStep);
+        zoomStep = new Runnable(){
+            @Override public void run(){
+                if(!running || !foreground || session==null || request==null)return;
+                if(SystemClock.elapsedRealtime()>=finishAt)return;
+                // Move rapidly through the full advertised zoom range, reverse at either endpoint.
+                zoomProgress += zoomDirection*0.17f;
+                if(zoomProgress>=1f){zoomProgress=1f;zoomDirection=-1;}
+                else if(zoomProgress<=0f){zoomProgress=0f;zoomDirection=1;}
+                float z=zoomMin+(zoomMax-zoomMin)*zoomProgress;
+                setZoom(z);
+                bg.postDelayed(this,zoomIntervalMs);
+            }
+        };
+        bg.post(zoomStep);
+    }
+    private void setZoom(float ratio){
+        if(!zoomSupported||session==null||request==null)return;
+        ratio=Math.max(zoomMin,Math.min(zoomMax,ratio));
+        try{
+            if(useZoomRatio && Build.VERSION.SDK_INT>=30){
+                request.set(CaptureRequest.CONTROL_ZOOM_RATIO,ratio);
+            }else if(zoomSensorRect!=null){
+                int width=Math.max(2,Math.round(zoomSensorRect.width()/ratio));
+                int height=Math.max(2,Math.round(zoomSensorRect.height()/ratio));
+                int left=zoomSensorRect.left+(zoomSensorRect.width()-width)/2;
+                int top=zoomSensorRect.top+(zoomSensorRect.height()-height)/2;
+                request.set(CaptureRequest.SCALER_CROP_REGION,new Rect(left,top,left+width,top+height));
+            }
+            session.setRepeatingRequest(request.build(),null,bg);
+            zoomPosition=ratio;
+            if(zoomText!=null) {
+                final float z=ratio;
+                ui.post(() -> zoomText.setText("Zoom: "+String.format(java.util.Locale.US,"%.1f×",z)+
+                    " | 1×–"+String.format(java.util.Locale.US,"%.1f×",zoomMax)+
+                    (useZoomRatio?" • Device":" • Digital")));
+            }
+        }catch(Exception e){report("الكاميرا رفضات أمر zoom: "+e.getMessage());}
+    }
+    private void stopZoom(){
+        if(zoomStep!=null){bg.removeCallbacks(zoomStep);zoomStep=null;}
+        if(zoomSupported&&session!=null&&request!=null)setZoom(1f);
+    }
     private void closeCamera(){
         cameraGeneration++;
+        stopZoom();
         if(nextStep!=null){bg.removeCallbacks(nextStep);nextStep=null;}
         running=false;
         try{if(session!=null)session.close();}catch(Exception ignored){}
