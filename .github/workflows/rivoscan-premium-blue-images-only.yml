@@ -1,10 +1,6 @@
 name: RivoScan - replace Play Store premium blue images ONLY
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/rivoscan-premium-blue-images-only.yml'
   workflow_dispatch:
 
 permissions:
@@ -49,9 +45,9 @@ jobs:
           {
             echo '### RivoScan Google Play blue store graphics'
             echo '- Updates **only** en-US app icon, feature graphic, and 8 phone screenshots.'
-            echo '- Images are identical to owner RivoScan 0.45.9 ZIP (all ten individual PNG SHA256 enforced).
-            echo '- Images transported using temporary verified CDN URLs; no Google Drive API needed.''
+            echo '- Images are identical to the owner RivoScan 0.45.9 ZIP (all ten PNG SHA256 hashes checked).'
+            echo '- Images were transferred with temporary verified media URLs; no Drive API access was needed.'
             echo '- It does not upload/modify any AAB or release track, text, consent, data safety, or advertising.'
-            echo '- A job **failure** means no Play image edit was committed.'
+            echo '- Check RIVOSCAN_BLUE_STORE_IMAGES_RESULT to confirm the Play API commit; post-upload reporting errors do not undo a committed edit.'
             echo '- A successful API commit can remain subject to Google Play review.'
           } >> "$GITHUB_STEP_SUMMARY"
