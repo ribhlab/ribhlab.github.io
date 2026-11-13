@@ -225,32 +225,6 @@
       "targetArticles": 40
     },
     {
-      "id": "body-care",
-      "parent": "lifestyle",
-      "title": {
-        "ar": "العناية بالبشرة والجسم",
-        "en": "Body & skin care",
-        "fr": "Soins du corps et de la peau"
-      },
-      "description": {
-        "ar": "روتين العناية الواقعي بالجلد والشمس والترطيب والنظافة الشخصية، بمصادر طبية موثوقة بعيداً عن وعود العلاج.",
-        "en": "Everyday sun protection, moisturizing and personal care with cautious dermatologist-informed advice.",
-        "fr": "Protection solaire, hydratation et soins quotidiens fondés sur des recommandations dermatologiques."
-      },
-      "publishedSlugs": [
-        "daily-sunscreen-spf30-body-care-guide",
-        "dry-skin-moisturizing-body-routine",
-        "gentle-face-cleanser-choosing-washing-routine",
-        "chapped-lips-balm-spf-irritants-14-day-care-plan",
-        "minimal-skin-routine-cleanser-moisturizer-spf",
-        "sensitive-skin-versus-contact-reaction",
-        "tinted-sunscreen-iron-oxides-guide",
-        "glycerin-ceramides-moisturizer-label-guide",
-        "handwashing-dry-hands-moisturizer-hygiene-routine"
-      ],
-      "targetArticles": 40
-    },
-    {
       "id": "world-recipes",
       "parent": "lifestyle",
       "title": {

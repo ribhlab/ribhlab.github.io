@@ -33,10 +33,9 @@ The source repository is public. **Never commit buyer ZIPs, private license mate
 - بيانات الزوار حسب الدولة: https://ribhlab.github.io/ar/audience/ — تظهر حالة «غير متصل» إلى حين ربط إحصائيات حقيقية.
 - إرشادات إضافة رقم ناشر AdSense بعد إعداد المحتوى: `docs/ADSENSE_READINESS.md`.
 
-## مكتبة الطبخ منفصلة عن العناية — إصدار 28/10/2026
+## مكتبة الطبخ والوصفات العالمية
 
-**العناية:** `/ar/care/` و`/en/care/` و`/fr/care/` تجمع مقالات البشرة والجسم فقط.
-**الطبخ:** `/ar/recipes/` و`/en/recipes/` و`/fr/recipes/` مستقلة عن العناية، وتضم **100 وصفة وجبة** و**20 وصفة متوازنة**؛ توجد أيضاً صفحات منفصلة `recipes/meals/` و`recipes/healthy/`.
+**الطبخ:** `/ar/recipes/` و`/en/recipes/` و`/fr/recipes/` مستقلة، وتضم **100 وصفة وجبة** و**20 وصفة متوازنة**؛ توجد أيضاً صفحات منفصلة `recipes/meals/` و`recipes/healthy/`.
 
 - يتم إنشاء صفحة مستقلة لكل وصفة في اللغات الثلاث: العنوان، تصنيف المطبخ، عدد الحصص، المدة، المقادير بوحداتها، خمس خطوات تشمل تفصيلاً خاصاً بالطبق، تنبيهات درجة الحرارة ومسببات الحساسية وروابط السلامة الغذائية.
 - البيانات: `content/recipes/meals-01.json` إلى `meals-04.json`، `content/recipes/healthy-01.json`، وقاموس المكونات `content/recipes/ingredients.json`.
@@ -44,7 +43,7 @@ The source repository is public. **Never commit buyer ZIPs, private license mate
 - **سياسة عدم تكرار الصور الصارمة:** لكل وصفة صورة حصرية؛ حالياً 25 صورة فوتوغرافية موثقة مُخصصة 1:1، و95 رسماً متجهاً محلياً فريداً، ولا يجوز استعارة صورة من وصفة أو مقال آخر. حتى الصور الأصلية للوصفات لا تُقدَّم على أنها أطباق صُنعت واختُبرت فعلياً. توفّر الصورة الخاصة بالوصفة بديلاً محلياً إذا تعطّل مصدر الصورة الخارجية.
 - 120 وصفة هي **وصفات منزلية تحريرية**، وليست 120 مقالة بحثية طويلة أو أبحاثاً مخبرية. لم نتأكد من إعدادها تجريبياً واحدة واحدة، ولذلك لا تُذكر سعرات حرارية أو فوائد علاجية غير محسوبة. وصف «متوازنة» تعليمي يعتمد على التنوع الغذائي لا على ملاءمة طبية فردية.
 - توصي المراجع الرسمية FoodSafety.gov بالتحقق من درجات الحرارة الداخلية اللازمة، وتؤكد WHO أهمية التنوع والخضر والحبوب والبقول في النمط الغذائي الصحي.
-- يفشل `npm run check` إذا نقص العدد، أو المحتوى متعدد اللغات، أو مقادير المكونات، أو الصفحات أو الرسوم أو روابط الفصل بين العناية والطبخ.
+- يفشل `npm run check` إذا نقص العدد، أو المحتوى متعدد اللغات، أو مقادير المكونات، أو الصفحات أو الرسوم أو روابط وصفحات الطبخ.
 
 
 ### سياسة الهوية البصرية ومنع إعادة استخدام الصور — إلزامية
@@ -158,3 +157,7 @@ Every article has share links for WhatsApp, Facebook, X, LinkedIn, Telegram, Pin
 ### RibhLab Kitchen photo verification (30 October 2026)
 
 Recipe cards and recipe pages use uncropped full-dish framing (`object-fit: contain`), with a language-specific YouTube cooking search on each of the 120 recipes. The photo library uses per-recipe unique IDs and documented sources/licenses; only dish-matched curated photos are published, with unique per-recipe SVG illustrations retained where no safely verified photo is available. Publishing is guarded by automated tests in `src/check.mjs`.
+
+## إيقاف قسم العناية بالبشرة والجسم — 13/11/2026
+
+توقف نشر القسم `body-care` بكامله و9 مقالاته بثلاث لغات بناءً على طلب مالك الموقع بعد مراجعة مخاطر المعلومات الصحية ضمن مواضيع YMYL. تمت إزالة روابط `/ar/care/`, `/en/care/`, `/fr/care/` من قوائم الموقع ومولّد الصفحات وخريطة الموقع. تبقى وصفات الطبخ مستقلة؛ ولا يضمن ذلك قبول AdSense، الذي يتطلب مراجعة جميع معايير المحتوى والتنقل والحقوق.

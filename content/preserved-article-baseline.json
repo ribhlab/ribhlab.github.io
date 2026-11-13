@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "snapshotDate": "2026-10-27",
-  "purpose": "Protect all previously published RibhLab article and Market Pulse records from accidental deletion during redesigns. New articles append; existing content can be improved without renaming or silently removing an original slug.",
-  "legacyArticleCount": 35,
+  "purpose": "Preserve the remaining previously published RibhLab articles and market digests. The 9 body-care articles were intentionally retired on 2026-11-13 by owner request after an AdSense YMYL/content-risk review. They must not be republished without verified medical editorial oversight.",
+  "legacyArticleCount": 33,
   "legacyMarketDigestCount": 6,
   "sections": {
     "freelance": [
@@ -51,10 +51,6 @@
       "market-pulse-fed-gold-bitcoin-scenarios-oct-2026",
       "energy-inflation-us-euro-area-october-2026",
       "how-to-read-fomc-decision-2026"
-    ],
-    "body-care": [
-      "daily-sunscreen-spf30-body-care-guide",
-      "dry-skin-moisturizing-body-routine"
     ],
     "world-recipes": [
       "classic-roman-spaghetti-carbonara-recipe",

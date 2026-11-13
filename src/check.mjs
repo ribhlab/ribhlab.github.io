@@ -223,9 +223,16 @@ for(const pagePath of pages){
 // Editorial taxonomy: every real article has exactly one section and each section has forty slots.
 const taxonomy=JSON.parse(fs.readFileSync(path.join(root,'content','sections.json'),'utf8'));
 const publishingPlan=JSON.parse(fs.readFileSync(path.join(root,'content','editorial-plan.json'),'utf8'));
-if(taxonomy.sections.length<10||publishingPlan.sections.length!==taxonomy.sections.length)errors.push('Editorial taxonomy: preserve the ten original sections and keep plans in sync');
-const originalSectionIds=new Set(['freelance','online-business','ai-automation','mobile-apps','games-security','trading-risk','crypto-web3','gold-macro','body-care','world-recipes']);
+if(taxonomy.sections.length<9||publishingPlan.sections.length!==taxonomy.sections.length)errors.push('Editorial taxonomy: preserve the ten original sections and keep plans in sync');
+const originalSectionIds=new Set(['freelance','online-business','ai-automation','mobile-apps','games-security','trading-risk','crypto-web3','gold-macro','world-recipes']);
 for(const id of originalSectionIds)if(!taxonomy.sections.some(s=>s.id===id))errors.push('Protected original editorial section missing: '+id);
+// AdSense YMYL retirement: medical/skin advice must not resurface via taxonomy, generated routes or sitemap.
+if(taxonomy.sections.some(s=>s.id==='body-care')||publishingPlan.sections.some(s=>s.id==='body-care'))errors.push('Retired health section returned to taxonomy');
+for(const lang of ['ar','en','fr']){
+ if(fs.existsSync(path.join(dist,lang,'care','index.html')))errors.push('Retired care landing was generated: '+lang);
+ if(fs.existsSync(path.join(dist,lang,'sections','body-care','index.html')))errors.push('Retired health section was generated: '+lang);
+}
+if(fs.existsSync(path.join(dist,'sitemap.xml'))&&/\/(?:ar|en|fr)\/care\//.test(fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8')))errors.push('Retired care links found in sitemap');
 const assignedSlugs=new Set(),knownSlugs=new Set(fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')).map(f=>f.slice(0,-5)));
 for(const s of taxonomy.sections){
  const plan=publishingPlan.sections.find(x=>x.id===s.id);
@@ -516,16 +523,16 @@ for(const lang of ['ar','en','fr']){
  const cards=[...home.matchAll(/class="card-cover-image editorial-photo"[^>]*\bsrc="([^"]+)"/g)].map(m=>m[1]);
  if(!cover||cards.length<9)errors.push('Homepage editorial photography incomplete '+lang);
  if(new Set([cover,...cards]).size!==cards.length+1)errors.push('Same article photograph repeated in journal homepage '+lang);
- if(!home.includes('/'+lang+'/markets/')||!home.includes('/'+lang+'/care/')||!home.includes('/'+lang+'/recipes/')||!home.includes('/'+lang+'/tools/'))errors.push('Journal rail must separately link care, cooking, markets and tools '+lang);
+ if(!home.includes('/'+lang+'/markets/')||!home.includes('/'+lang+'/recipes/')||!home.includes('/'+lang+'/tools/'))errors.push('Journal rail must link cooking, markets and tools '+lang);
 }
 
 
 // Immutable content-preservation gate: no redesign or new publication may
 // silently unpublish legacy RibhLab articles or Market Pulse editorial stories.
 const protectedInventory=JSON.parse(fs.readFileSync(path.join(root,'content','preserved-article-baseline.json'),'utf8'));
-if(protectedInventory.legacyArticleCount!==35||protectedInventory.legacyMarketDigestCount!==6)errors.push('Preservation baseline inventory must contain 35 articles and six digests');
+if(protectedInventory.legacyArticleCount!==33||protectedInventory.legacyMarketDigestCount!==6)errors.push('Preservation baseline inventory must contain 35 articles and six digests');
 const legacySlugs=Object.values(protectedInventory.sections).flat();
-if(legacySlugs.length!==35||new Set(legacySlugs).size!==35)errors.push('Legacy article baseline is corrupt');
+if(legacySlugs.length!==33||new Set(legacySlugs).size!==35)errors.push('Legacy article baseline is corrupt');
 if(knownSlugs.size<legacySlugs.length+4)errors.push('New articles replaced old articles instead of being appended');
 for(const [sectionId,slugs] of Object.entries(protectedInventory.sections)){
  const live=taxonomy.sections.find(s=>s.id===sectionId);
@@ -551,7 +558,6 @@ for(const id of protectedInventory.marketDigestIds){
 }
 const newlyPublished=[
  'homemade-pizza-margherita-authentic-style-recipe',
- 'gentle-face-cleanser-choosing-washing-routine',
  'ai-assistant-vs-ai-agent-workflows-practical-guide',
  'why-gold-moves-with-us-dollar-real-yields-explained'
 ];
@@ -775,8 +781,8 @@ for(const food of foodItems){
  }
 }
 for(const l of ['ar','en','fr']){
- for(const p of ['care','recipes','recipes/meals','recipes/healthy']){
-  if(!fs.existsSync(path.join(dist,l,...p.split('/'),'index.html')))errors.push('Missing split care/cooking route '+l+'/'+p);
+ for(const p of ['recipes','recipes/meals','recipes/healthy']){
+  if(!fs.existsSync(path.join(dist,l,...p.split('/'),'index.html')))errors.push('Missing cooking route '+l+'/'+p);
  }
  const landing=fs.readFileSync(path.join(dist,l,'recipes','index.html'),'utf8');
  if((landing.match(/class="recipe-card"/g)||[]).length!==120)errors.push('Kitchen landing must show 120 individually linked recipes '+l);
@@ -791,7 +797,7 @@ for(const l of ['ar','en','fr']){
  const healthyPhotoHtml=fs.readFileSync(path.join(dist,l,'recipes','healthy','index.html'),'utf8');
  if((healthyPhotoHtml.match(/<img[^>]+src="(?:https:\/\/|\/assets\/recipe-images\/)/g)||[]).length!==20)errors.push('Twenty healthy recipes each require an exclusive image '+l);
  const index=fs.readFileSync(path.join(dist,l,'index.html'),'utf8');
- if(!index.includes('/'+l+'/care/')||!index.includes('/'+l+'/recipes/'))errors.push('Homepage must link care and cooking separately '+l);
+ if(!index.includes('/'+l+'/recipes/'))errors.push('Homepage must link cooking '+l);
 }
 
 

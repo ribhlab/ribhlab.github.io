@@ -2,7 +2,7 @@
   "campaign": "30-original-articles-all-sections-2026-10",
   "createdAt": "2026-10-28",
   "repository": "ribhlab/ribhlab.github.io",
-  "target": 30,
+  "target": 27,
   "languages": [
     "ar",
     "en",
@@ -504,69 +504,6 @@
       "queuePath": "content/reviewed-queue/nfp-payrolls-revisions-market-guide.json",
       "editorialReviewDate": "2026-10-29",
       "verification": "content/articles trilingual article verified; GitHub Actions quality 40935519405 and Pages deploy 40935519352 success; live public-sitemap-check 40935631328 confirmed HTTP 200, six substantive sections, official sources and licensed photo for AR/EN/FR.",
-      "publishedVerifiedAt": "2026-10-29"
-    },
-    {
-      "sectionId": "body-care",
-      "slug": "minimal-skin-routine-cleanser-moisturizer-spf",
-      "title": {
-        "ar": "روتين عناية بالبشرة من ثلاث خطوات مع مراعاة الحساسية",
-        "en": "A minimal three-step skincare routine",
-        "fr": "Une routine cutanée simple en trois gestes"
-      },
-      "editorialBrief": "Gentle cleanser moisturizer sunscreen, patch testing and consult doctor if irritation",
-      "proposedResourceIds": [
-        "aadFaceWashing",
-        "aadSunscreen"
-      ],
-      "status": "published",
-      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/minimal-skin-routine-cleanser-moisturizer-spf/",
-      "editorialReviewDate": "2026-10-28",
-      "queuePath": "content/reviewed-queue/minimal-skin-routine-cleanser-moisturizer-spf.json",
-      "publishedVerifiedAt": "2026-10-29",
-      "verification": "content/articles file present with trilingual translations; GitHub Actions build and Pages deploy 40809355100 / 40809355095 success; live public-sitemap-check 40809396943 verified all three locales, >=4 sections, sources and licensed photo."
-    },
-    {
-      "sectionId": "body-care",
-      "slug": "tinted-sunscreen-iron-oxides-guide",
-      "title": {
-        "ar": "متى يفيد واقي الشمس الملون وما حدوده؟",
-        "en": "When tinted sunscreen may help—and its limits",
-        "fr": "Quand un écran solaire teinté peut être utile"
-      },
-      "editorialBrief": "Visible light, broad-spectrum SPF, skin type, proper application and limitations",
-      "proposedResourceIds": [
-        "aadSunscreen",
-        "aadDrySkin"
-      ],
-      "status": "published",
-      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/tinted-sunscreen-iron-oxides-guide/",
-      "queuePath": "content/reviewed-queue/tinted-sunscreen-iron-oxides-guide.json",
-      "editorialReviewDate": "2026-10-28",
-      "publisherReleasedAt": "2026-10-30T02:41:52.551Z",
-      "publisherReleaseCommit": "dead7150cbe3c3dd54d1ffd9c64cef49aee31e24",
-      "articleSlug": "tinted-sunscreen-iron-oxides-guide",
-      "publishedVerifiedAt": "2026-10-30",
-      "verification": "Complete AR/EN/FR article present in content/articles; GitHub Actions source validation 41016971367 and Pages deployment 41016971416 succeeded; public HTTPS sitemap check 41017051355 verified each of three locale pages HTTP 200, required editorial sections, sources and licensed image."
-    },
-    {
-      "sectionId": "body-care",
-      "slug": "sensitive-skin-versus-contact-reaction",
-      "title": {
-        "ar": "الفرق بين البشرة الحساسة والتهاب الجلد التماسي",
-        "en": "Sensitive skin versus contact reactions",
-        "fr": "Peau sensible et réaction de contact : les distinguer"
-      },
-      "editorialBrief": "Irritant vs allergic signals, stop new products, avoid self-diagnosis and urgent symptoms",
-      "proposedResourceIds": [
-        "aadDrySkin",
-        "aadFaceWashing"
-      ],
-      "status": "published",
-      "articleUrl": "https://ribhlab.github.io/ar/lifestyle/sensitive-skin-versus-contact-reaction/",
-      "queuePath": "content/reviewed-queue/sensitive-skin-versus-contact-reaction.json",
-      "editorialReviewDate": "2026-10-29",
-      "verification": "Published by vetted publisher at 2026-10-29T19:01:31Z in content/articles; build 40945005462 and Pages deployment 40945005343 success; public HTTPS run 40945177284 explicitly asserted 6 sections, sources and unique licensed photo in AR/EN/FR.",
       "publishedVerifiedAt": "2026-10-29"
     },
     {
