@@ -1,0 +1,56 @@
+name: RivoScan - replace Play Store premium blue images ONLY
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-premium-blue-images-only.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+
+jobs:
+  store-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install requirements
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install 'Pillow>=11,<13'
+      - name: Verify store-image-only safety and allowed image hashes
+        run: |
+          python -m unittest discover tools/play-publisher -p 'test_rivoscan_premium_blue_images_only.py' -v
+          python tools/play-publisher/rivoscan_premium_blue_images_only.py
+      - name: Replace owner-approved RivoScan Play Store graphics only
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || {
+            echo 'Play publisher service account secret unavailable'; exit 1;
+          }
+          python tools/play-publisher/rivoscan_premium_blue_images_only.py \
+            --apply --confirm UPLOAD_RIVOSCAN_OWNER_PREMIUM_BLUE_STORE_IMAGES_ONLY
+      - name: Record strictly limited scope
+        if: always()
+        run: |
+          {
+            echo '### RivoScan Google Play blue store graphics'
+            echo '- Updates **only** en-US app icon, feature graphic, and 8 phone screenshots.'
+            echo '- Images come from verified owner RivoScan 0.45.9 ZIP; image and ZIP SHA256 enforced.'
+            echo '- It does not upload/modify any AAB or release track, text, consent, data safety, or advertising.'
+            echo '- A job **failure** means no Play image edit was committed.'
+            echo '- A successful API commit can remain subject to Google Play review.'
+          } >> "$GITHUB_STEP_SUMMARY"
