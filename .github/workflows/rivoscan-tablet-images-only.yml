@@ -1,0 +1,54 @@
+name: RivoScan - add 7 and 10 inch tablet screenshots ONLY
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-tablet-images-only.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+
+jobs:
+  tablet-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official Google Play and image dependencies
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install 'Pillow>=11,<13'
+      - name: Check uploader syntax and locked scope without Play API
+        shell: bash
+        run: |
+          python -m py_compile tools/play-publisher/rivoscan_tablet_images_only.py
+          python tools/play-publisher/rivoscan_tablet_images_only.py
+      - name: Add 8 seven-inch and 8 ten-inch verified owner images ONLY
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || {
+            echo 'Google Play service account secret unavailable'; exit 1;
+          }
+          python tools/play-publisher/rivoscan_tablet_images_only.py \
+            --apply --confirm UPLOAD_RIVOSCAN_TABLET_IMAGES_ONLY
+      - name: Summarize the successful tablet-only operation
+        if: success()
+        shell: bash
+        run: |
+          echo '### RivoScan tablet screenshots uploaded' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Uploaded 8 seven-inch and 8 ten-inch screenshots (en-US).' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No changes to phone images, icon, feature graphic, AAB, release tracks or listing text.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'The Play Store may still review listing changes before they appear publicly.' >> "$GITHUB_STEP_SUMMARY"
