@@ -288,6 +288,46 @@ jobs:
                   for language in ('ar','en','fr'):
                       assert base+'/'+language+'/' in urls, f'Missing {language} homepage'
                       assert b'<meta name="robots" content="index,follow' in bodies['/'+language+'/'], 'Missing indexing meta'
+                  # Search Console preflight: a Googlebot-style fetch must receive the same
+                  # public XML and robots policy that human visitors receive.
+                  for test_path in ('/sitemap.xml','/robots.txt','/ar/'):
+                      request=urllib.request.Request(base+test_path,headers={
+                          'User-Agent':'Googlebot/2.1 (+http://www.google.com/bot.html)',
+                          'Accept':'application/xml,text/html;q=0.9,*/*;q=0.8'})
+                      with urllib.request.urlopen(request,timeout=15) as response:
+                          payload=response.read()
+                          assert response.status==200 and payload, f'Googlebot could not fetch {test_path}'
+                      if test_path=='/sitemap.xml':
+                          assert ET.fromstring(payload).tag==doc.tag, 'Googlebot received invalid sitemap XML'
+                      if test_path=='/robots.txt':
+                          assert 'Sitemap: '+base+'/sitemap.xml' in payload.decode('utf-8-sig'), 'Googlebot cannot discover sitemap in robots'
+                      print(f'GOOGLEBOT FETCH PASSED {test_path}: HTTP 200',flush=True)
+                  # Previously published body-care pages should be absent and must not
+                  # remain in the sitemap after explicit owner-requested retirement.
+                  retired_slugs=(
+                      'daily-sunscreen-spf30-body-care-guide',
+                      'dry-skin-moisturizing-body-routine',
+                      'gentle-face-cleanser-choosing-washing-routine',
+                      'chapped-lips-balm-spf-irritants-14-day-care-plan',
+                      'minimal-skin-routine-cleanser-moisturizer-spf',
+                      'sensitive-skin-versus-contact-reaction',
+                      'tinted-sunscreen-iron-oxides-guide',
+                      'glycerin-ceramides-moisturizer-label-guide',
+                      'handwashing-dry-hands-moisturizer-hygiene-routine'
+                  )
+                  assert not any('/care/' in u or '/sections/body-care/' in u or any('/'+slug+'/' in u for slug in retired_slugs) for u in urls), 'Retired health pages remain in sitemap'
+                  for language in ('ar','en','fr'):
+                      for retired_path in (
+                          f'/{language}/care/',
+                          f'/{language}/sections/body-care/',
+                          f'/{language}/lifestyle/sensitive-skin-versus-contact-reaction/'
+                      ):
+                          try:
+                              with urllib.request.urlopen(urllib.request.Request(base+retired_path,headers={'User-Agent':'Googlebot/2.1 (+http://www.google.com/bot.html)'}),timeout=15) as response:
+                                  raise AssertionError(f'Retired health page still publicly accessible: {retired_path}, HTTP {response.status}')
+                          except urllib.error.HTTPError as err:
+                              assert err.code==404, f'Retired health URL did not return HTTP 404: {retired_path}, status {err.code}'
+                  print('RETIRED HEALTH URLs PASSED: 404 on all three locales; absent from public sitemap',flush=True)
                   # Sprint articles are only marked published after their real trilingual
                   # pages, editorial sections, sources and licensed photos are visible.
                   for slug in ('gig-description-client-questions-scope','ethereum-smart-contracts-wallet-permissions'):
