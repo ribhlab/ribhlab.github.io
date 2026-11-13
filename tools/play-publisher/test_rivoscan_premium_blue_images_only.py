@@ -52,7 +52,7 @@ class StoreOnlyTests(unittest.TestCase):
             publisher.assert_not_called()
 
     def test_disallows_tampered_archive_without_google_edit(self):
-        with patch.object(m, "download_verified_images", return_value=b"tampered zip"), \
+        with patch.object(m, "download_verified_images", side_effect=ValueError("Tampered image SHA256")), \
              patch.object(m, "apply_images") as publisher, \
              redirect_stderr(io.StringIO()):
             self.assertEqual(m.main(["--apply", "--confirm", m.CONFIRM]), 1)
