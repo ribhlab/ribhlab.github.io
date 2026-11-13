@@ -49,7 +49,8 @@ jobs:
           {
             echo '### RivoScan Google Play blue store graphics'
             echo '- Updates **only** en-US app icon, feature graphic, and 8 phone screenshots.'
-            echo '- Images come from verified owner RivoScan 0.45.9 ZIP; image and ZIP SHA256 enforced.'
+            echo '- Images are identical to owner RivoScan 0.45.9 ZIP (all ten individual PNG SHA256 enforced).
+            echo '- Images transported using temporary verified CDN URLs; no Google Drive API needed.''
             echo '- It does not upload/modify any AAB or release track, text, consent, data safety, or advertising.'
             echo '- A job **failure** means no Play image edit was committed.'
             echo '- A successful API commit can remain subject to Google Play review.'
