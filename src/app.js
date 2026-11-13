@@ -225,9 +225,6 @@
   }catch(e){speedStatus.textContent=e.name==='AbortError'?speedMessages.stopped:speedMessages.failed; if(e.name!=='AbortError')console.warn('Speed test unavailable',e);}
   finally{if(speedController===controller)speedController=null;speedStart.disabled=false;speedStop.disabled=true;}
  });
-})();
-
-
 // Standalone text and developer utilities run entirely on the visitor's device.
 const wordInput=byId('words-input');
 if(wordInput){
@@ -283,3 +280,4 @@ if(positionOutput){
 // Document Studio Pro uses its own isolated module on the dedicated tool page.
 
 document.querySelectorAll('.pulse-filter').forEach(btn=>btn.addEventListener('click',()=>{const wanted=btn.dataset.pulseFilter;document.querySelectorAll('.pulse-filter').forEach(b=>{b.classList.toggle('current',b===btn);b.setAttribute('aria-pressed',String(b===btn));});document.querySelectorAll('[data-pulse-topic]').forEach(card=>{card.hidden=wanted!=='all'&&card.dataset.pulseTopic!==wanted;});}));
+})();

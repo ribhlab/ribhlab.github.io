@@ -187,6 +187,9 @@ for(const lang of ['ar','en','fr'])for(const slug of ['sports','technology','tec
  if(!fs.existsSync(fp))errors.push('News section missing '+lang+'/'+slug);
 }
 
+// Functional interaction smoke contract: all UI helpers must share the same script scope.
+const siteClientScript=fs.readFileSync(path.join(root,'src','app.js'),'utf8');
+if(!siteClientScript.trimEnd().endsWith('})();')||siteClientScript.lastIndexOf('})();')<siteClientScript.indexOf("const wordInput=byId('words-input')"))errors.push('Site JavaScript helpers are scoped outside the main UI initialization');
 // Editorial and SEO regression checks: validate every translated article before publishing.
 const articleDir=path.join(root,'content','articles');
 for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
