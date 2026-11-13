@@ -14,3 +14,9 @@ Cannot alter electrical strength of a lens motor or repair a physically jammed a
 ## APK
 Actions -> RibhLab Focus Rescue APK -> latest successful run -> Artifacts -> RibhLab-Focus-Rescue-APK, unzip to get app-debug.apk.
 Uses AGP 8.7.3, Gradle 8.9, Android 35, Java 17, minSdk 26.
+
+## Sound diagnostics (v1.1)
+- Synthetic beep per focus command (distinct from the actual lens sound). Disable it using the checkbox.
+- User-initiated, eight-second microphone capture while testing focus; temporary in-memory buffer only.
+- Replays microphone capture amplified 1x–12x. May amplify ambient sounds, and does not establish that the motor is actually moving.
+- Requests RECORD_AUDIO only when capture is started. Audio is not saved or uploaded.

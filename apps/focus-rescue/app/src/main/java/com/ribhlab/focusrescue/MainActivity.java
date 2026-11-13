@@ -8,6 +8,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.SurfaceTexture;
 import android.hardware.camera2.*;
+import android.media.*;
+import java.io.ByteArrayOutputStream;
 import android.view.*;
 import android.widget.*;
 import java.util.*;
@@ -20,6 +22,17 @@ public class MainActivity extends Activity {
     private TextView status, modeText;
     private Spinner cameraSpinner;
     private Button startButton, stopButton, autoButton, manualButton;
+    private Button micButton, playButton;
+    private CheckBox clickSound;
+    private TextView gainLabel;
+    private int playbackGain = 6;
+    private ToneGenerator commandTone;
+    private volatile boolean recording = false, playing = false;
+    private volatile AudioRecord microphone;
+    private volatile AudioTrack player;
+    private volatile byte[] recordedClip;
+    private static final int AUDIO_RATE = 16000;
+    private static final long RECORD_MS = 8000L;
     private SeekBar speedBar;
     private final ArrayList<String> ids = new ArrayList<>();
     private CameraDevice camera;
@@ -71,6 +84,34 @@ public class MainActivity extends Activity {
         startButton=button("▶ ابدأ تجربة 30 ثانية");stopButton=button("■ توقيف");
         actions.addView(startButton,new LinearLayout.LayoutParams(0,dp(60),2));
         actions.addView(stopButton,new LinearLayout.LayoutParams(0,dp(60),1));
+
+        root.addView(text("🔊 الاستماع لحركة الكاميرا",19));
+        clickSound=new CheckBox(this);
+        clickSound.setText("صوت إلكتروني قصير مع كل أمر تحريك (ماشي صوت الموتور الحقيقي)");
+        clickSound.setTextColor(Color.rgb(231,242,239));
+        clickSound.setChecked(true);
+        root.addView(clickSound);
+        commandTone=new ToneGenerator(AudioManager.STREAM_MUSIC,75);
+        micButton=button("🎙 سجّل صوت العدسة بالميكروفون (8 ثوان)");
+        playButton=button("▶ سمع التسجيل المكبّر");
+        root.addView(micButton,new LinearLayout.LayoutParams(-1,dp(58)));
+        root.addView(playButton,new LinearLayout.LayoutParams(-1,dp(58)));
+        playButton.setEnabled(false);
+        gainLabel=text("تكبير صوت الميكروفون: ×6",14);
+        root.addView(gainLabel);
+        SeekBar gainBar=new SeekBar(this);
+        gainBar.setMax(11);gainBar.setProgress(5);root.addView(gainBar);
+        gainBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+            public void onProgressChanged(SeekBar bar,int progress,boolean fromUser){
+                playbackGain=progress+1;
+                gainLabel.setText("تكبير صوت الميكروفون: ×"+playbackGain);
+            }
+            public void onStartTrackingTouch(SeekBar bar){}
+            public void onStopTrackingTouch(SeekBar bar){}
+        });
+        micButton.setOnClickListener(v -> recordLensAudio());
+        playButton.setOnClickListener(v -> playRecordedAudio());
+        root.addView(text("الميكروفون كيسجّل الصوت الحقيقي اللي حد الهاتف، ومن بعد كيشغّلو مكبّر. الضجيج حتى هو غادي يتكبّر. التسجيل مؤقت فالذاكرة وما كيتحفظش فملف.",12));
         root.addView(text("وقف التجربة إلا سمعت صوت غير عادي أو حسّيتي بسخونية. التطبيق كيستعمل Camera2 وما كيزيدش قوة موتور العدسة.",12));
         autoButton.setOnClickListener(v -> {if(!running&&autoSupported){manualMode=false;refreshMode();bg.post(() -> applyAuto());}});
         manualButton.setOnClickListener(v -> {if(!running&&manualSupported){manualMode=true;refreshMode();bg.post(() -> applyManual(0f));}});
@@ -103,8 +144,14 @@ public class MainActivity extends Activity {
     }
     @Override public void onRequestPermissionsResult(int req,String[] perms,int[] grants){
         super.onRequestPermissionsResult(req,perms,grants);
-        if(req==123 && grants.length>0 && grants[0]==PackageManager.PERMISSION_GRANTED)discover();
-        else report("صلاحية الكاميرا ضرورية باش تخدم التجربة");
+
+        if(req==123){
+            if(grants.length>0 && grants[0]==PackageManager.PERMISSION_GRANTED)discover();
+            else report("صلاحية الكاميرا ضرورية باش تخدم التجربة");
+        } else if(req==124){
+            if(grants.length>0 && grants[0]==PackageManager.PERMISSION_GRANTED)recordLensAudio();
+            else report("خاص صلاحية الميكروفون باش تسمع تسجيل الصوت الحقيقي");
+        }
     }
     private void discover(){
         try{
@@ -230,9 +277,15 @@ public class MainActivity extends Activity {
                 if(!running)return;
                 if(SystemClock.elapsedRealtime()>=finishAt){ui.post(() -> halt("سالَت التجربة بعد 30 ثانية"));return;}
                 int n=++stepCount;
+
                 if(manualMode)applyManual((n%2==0)?0f:maxDistance);
                 else triggerAf();
-                report("التجربة خدامة • خطوة "+n+" • "+(manualMode?"تحريك العدسة":"طلب تركيز تلقائي"));
+                // Confirmation tone is synthetic and never mixed into a genuine microphone recording.
+                if(!recording)ui.post(() -> {
+                    if(clickSound!=null && clickSound.isChecked() && commandTone!=null)
+                        commandTone.startTone(ToneGenerator.TONE_PROP_BEEP,70);
+                });
+                report("التجربة خدامة • خطوة "+n+" • "+(manualMode?"أمر تحريك العدسة":"طلب تركيز تلقائي"));
                 bg.postDelayed(this,gapMs);
             }
         };
@@ -246,6 +299,124 @@ public class MainActivity extends Activity {
         });
         report(message);
     }
+
+    private void recordLensAudio(){
+        if(recording){report("التسجيل خدام دابا");return;}
+        if(!foreground || selectedId==null || session==null){
+            report("شغّل الكاميرا حتى تبان المعاينة قبل تسجيل الصوت");
+            return;
+        }
+        if(!(manualMode?manualSupported:autoSupported)){
+            report("الكاميرا المختارة ما كتدعمش الوضع الحالي");
+            return;
+        }
+        if(checkSelfPermission(Manifest.permission.RECORD_AUDIO)!=PackageManager.PERMISSION_GRANTED){
+            requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO},124);
+            return;
+        }
+        stopPlayback();
+        if(running)halt("إيقاف التجربة السابقة");
+        recording=true;
+        recordedClip=null;
+        micButton.setEnabled(false);playButton.setEnabled(false);
+        report("جاري تسجيل صوت الميكروفون 8 ثوان مع تحريك التركيز...");
+        new Thread(() -> {
+            AudioRecord ar=null;
+            ByteArrayOutputStream out=new ByteArrayOutputStream();
+            try{
+                int min=AudioRecord.getMinBufferSize(AUDIO_RATE,AudioFormat.CHANNEL_IN_MONO,AudioFormat.ENCODING_PCM_16BIT);
+                if(min<=0)throw new IllegalStateException("هذا الميكروفون ما كيدعمش تسجيل 16 kHz");
+                ar=new AudioRecord(MediaRecorder.AudioSource.MIC,AUDIO_RATE,AudioFormat.CHANNEL_IN_MONO,
+                        AudioFormat.ENCODING_PCM_16BIT,Math.max(min,4096));
+                if(ar.getState()!=AudioRecord.STATE_INITIALIZED)
+                    throw new IllegalStateException("تعذر فتح الميكروفون");
+                microphone=ar;
+                ar.startRecording();
+                if(ar.getRecordingState()!=AudioRecord.RECORDSTATE_RECORDING)
+                    throw new IllegalStateException("الميكروفون ما بداش التسجيل");
+                ui.post(() -> {
+                    // Start the autofocus test after opening the microphone.
+                    if(recording && foreground)begin();
+                });
+                short[] samples=new short[1024];
+                long until=SystemClock.elapsedRealtime()+RECORD_MS;
+                while(recording && foreground && SystemClock.elapsedRealtime()<until){
+                    int n=ar.read(samples,0,samples.length);
+                    if(n<0)throw new IllegalStateException("AudioRecord: "+n);
+                    for(int i=0;i<n;i++){
+                        int v=samples[i];
+                        out.write(v&255);out.write((v>>8)&255);
+                    }
+                }
+            }catch(Exception ex){
+                report("تعذر تسجيل الصوت: "+ex.getMessage());
+            }finally{
+                recording=false;
+                try{if(ar!=null && ar.getRecordingState()==AudioRecord.RECORDSTATE_RECORDING)ar.stop();}
+                catch(Exception ignored){}
+                try{if(ar!=null)ar.release();}catch(Exception ignored){}
+                microphone=null;
+                byte[] sound=out.toByteArray();
+                boolean captured=sound.length>3000 && foreground;
+                if(captured)recordedClip=sound;
+                ui.post(() -> {
+                    halt(captured?"تسجّل الصوت الحقيقي. كيتشغّل مكبّر دابا.":"توقف التسجيل أو ما تقطّعش صوت كافي");
+                    micButton.setEnabled(true);
+                    playButton.setEnabled(captured);
+                    if(captured)playRecordedAudio();
+                });
+            }
+        },"LensAudioCapture").start();
+    }
+    private void stopPlayback(){
+        playing=false;
+        AudioTrack current=player;
+        player=null;
+        if(current!=null){
+            try{current.pause();current.flush();}catch(Exception ignored){}
+            try{current.release();}catch(Exception ignored){}
+        }
+    }
+    private void playRecordedAudio(){
+        final byte[] input=recordedClip;
+        if(input==null || input.length<3000){report("سجّل الصوت أولا");return;}
+        stopPlayback();
+        final int gain=playbackGain;
+        playing=true;
+        report("كتسمع الآن صوت الميكروفون ×"+gain+" (ماشي صوت مركّب)");
+        new Thread(() -> {
+            AudioTrack track=null;
+            try{
+                byte[] amplified=new byte[input.length];
+                for(int i=0;i+1<input.length;i+=2){
+                    int v=(short)((input[i]&255)|(input[i+1]<<8));
+                    int a=Math.max(-32768,Math.min(32767,v*gain));
+                    amplified[i]=(byte)(a&255);
+                    amplified[i+1]=(byte)((a>>8)&255);
+                }
+                int min=AudioTrack.getMinBufferSize(AUDIO_RATE,AudioFormat.CHANNEL_OUT_MONO,AudioFormat.ENCODING_PCM_16BIT);
+                if(min<=0)throw new IllegalStateException("لا يمكن تشغيل الصوت");
+                track=new AudioTrack(AudioManager.STREAM_MUSIC,AUDIO_RATE,AudioFormat.CHANNEL_OUT_MONO,
+                    AudioFormat.ENCODING_PCM_16BIT,Math.max(min,amplified.length),AudioTrack.MODE_STATIC);
+                if(track.getState()!=AudioTrack.STATE_INITIALIZED)throw new IllegalStateException("تعذر فتح مكبر الصوت");
+                player=track;
+                int n=track.write(amplified,0,amplified.length);
+                if(n!=amplified.length)throw new IllegalStateException("الصوت ناقص");
+                if(playing){
+                    track.play();
+                    long until=SystemClock.elapsedRealtime()+(long)input.length*1000/(AUDIO_RATE*2)+200;
+                    while(playing && foreground && SystemClock.elapsedRealtime()<until)
+                        SystemClock.sleep(60);
+                }
+            }catch(Exception ex){report("فشل تشغيل التسجيل: "+ex.getMessage());}
+            finally{
+                AudioTrack current=track;
+                if(player==current)player=null;
+                try{if(current!=null){current.stop();current.release();}}catch(Exception ignored){}
+                playing=false;
+            }
+        },"LensAudioPlayback").start();
+    }
     private void closeCamera(){
         cameraGeneration++;
         if(nextStep!=null){bg.removeCallbacks(nextStep);nextStep=null;}
@@ -258,6 +429,17 @@ public class MainActivity extends Activity {
         refreshMode();
     }
     @Override protected void onResume(){super.onResume();foreground=true;if(preview!=null&&preview.isAvailable())openSelected();}
-    @Override protected void onPause(){foreground=false;running=false;bg.post(() -> closeCamera());super.onPause();}
-    @Override protected void onDestroy(){cameraThread.quitSafely();super.onDestroy();}
+
+    @Override protected void onPause(){
+        foreground=false;running=false;recording=false;
+        AudioRecord current=microphone;
+        if(current!=null)try{current.stop();}catch(Exception ignored){}
+        stopPlayback();
+        bg.post(() -> closeCamera());
+        super.onPause();
+    }
+    @Override protected void onDestroy(){
+        if(commandTone!=null){commandTone.release();commandTone=null;}
+        cameraThread.quitSafely();super.onDestroy();
+    }
 }
