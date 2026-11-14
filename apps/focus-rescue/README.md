@@ -26,3 +26,9 @@ Uses AGP 8.7.3, Gradle 8.9, Android 35, Java 17, minSdk 26.
 - On Android 11+ uses CONTROL_ZOOM_RATIO when available; earlier devices use SCALER_CROP_REGION digital crop.
 - Speed slider maximum: 70 ms zoom step, 180 ms focus step. These are request intervals, not guaranteed physical movement rates. 30-second auto-stop and immediate manual stop.
 - Digital zoom doesn't drive the lens motor. Real optical zoom may or may not be possible on a given device.
+
+## v1.3 — Samsung Galaxy S22 Ultra focus diagnostic
+- A guided three-attempt autofocus test reports Camera2 AF states (FOCUSED_LOCKED vs NOT_FOCUSED_LOCKED) with timeout, instead of blindly issuing repeated START triggers.
+- Shows live LENS_STATE and LENS_FOCUS_DISTANCE when exposed by the OEM, as well as reported focal length and logical physical-camera IDs. Some physical cameras cannot be opened separately; Camera2 IDs are not equivalent to 0.6x/1x/3x/10x.
+- Smart diagnostic disables fast zoom for clearer diagnosis; historical zoom + focus mode remains optional (off by default).
+- Use Samsung Camera at 0.6x/1x/3x/10x and Samsung Members diagnostics for independent validation. No Camera2 result can prove physical lens repair.

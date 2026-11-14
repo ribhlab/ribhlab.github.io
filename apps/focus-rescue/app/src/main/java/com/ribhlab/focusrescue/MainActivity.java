@@ -21,10 +21,10 @@ public class MainActivity extends Activity {
     private HandlerThread cameraThread;
     private Handler bg, ui = new Handler(Looper.getMainLooper());
     private TextureView preview;
-    private TextView status, modeText;
+    private TextView status, modeText, afLiveText, cameraInfoText, diagnosisText;
     private Spinner cameraSpinner;
     private Button startButton, stopButton, autoButton, manualButton;
-    private Button micButton, playButton;
+    private Button micButton, playButton, diagnosisButton;
     private CheckBox clickSound, fastZoom;
     private TextView zoomText;
     private TextView gainLabel;
@@ -57,7 +57,59 @@ public class MainActivity extends Activity {
     private Rect zoomSensorRect;
     private float zoomProgress = 0f;
     private int zoomDirection = 1;
+
     private int cameraGeneration = 0;
+    // Smart diagnostic: bounded asynchronous AF checks using real camera results.
+    private boolean diagnosing = false, diagnosticWaiting = false;
+    private int diagnosticAttempt=0, diagnosticFocused=0, diagnosticFailed=0, diagnosticTimeouts=0;
+    private long diagnosticTriggerAt=0, lastAfUi=0;
+    private Runnable diagnosticTimeout;
+    private String cameraDetails = "";
+    private final CameraCaptureSession.CaptureCallback resultsCallback = new CameraCaptureSession.CaptureCallback(){
+        @Override public void onCaptureCompleted(CameraCaptureSession s,CaptureRequest req,TotalCaptureResult result){
+            if(s!=session || !foreground)return;
+            Integer state=result.get(CaptureResult.CONTROL_AF_STATE);
+            Integer lens=result.get(CaptureResult.LENS_STATE);
+            Float diopters=result.get(CaptureResult.LENS_FOCUS_DISTANCE);
+            long now=SystemClock.elapsedRealtime();
+            if(now-lastAfUi>400){
+                lastAfUi=now;
+                String value="AF: "+afName(state)+"  |  العدسة: "+(lens==null?"غير متاح":lens==CaptureResult.LENS_STATE_MOVING?"كتتحرك":"ثابتة");
+                if(diopters!=null)value+="  |  Focus: "+String.format(java.util.Locale.US,"%.2f D",diopters);
+                final String line=value;
+                ui.post(() -> {if(afLiveText!=null)afLiveText.setText(line);});
+            }
+            if(diagnosing && diagnosticWaiting && state!=null &&
+                now-diagnosticTriggerAt>180 &&
+                (state==CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED ||
+                 state==CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED)){
+                diagnosticWaiting=false;
+                if(diagnosticTimeout!=null)bg.removeCallbacks(diagnosticTimeout);
+                if(state==CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED)diagnosticFocused++;
+                else diagnosticFailed++;
+                int step=diagnosticAttempt;
+                int count=diagnosticFocused;
+                int fail=diagnosticFailed;
+                ui.post(() -> diagnosisText.setText("اختبار "+step+"/3: "+
+                    (count>0?"نجح "+count+" | ":"")+"فشل "+fail+
+                    " | بدون نتيجة "+diagnosticTimeouts));
+                bg.postDelayed(() -> startDiagnosticAttempt(),650);
+            }
+        }
+    };
+    private String afName(Integer s){
+        if(s==null)return "ماكايناش بيانات";
+        switch(s){
+            case CaptureResult.CONTROL_AF_STATE_INACTIVE:return "غير نشط";
+            case CaptureResult.CONTROL_AF_STATE_PASSIVE_SCAN:return "بحث تلقائي";
+            case CaptureResult.CONTROL_AF_STATE_PASSIVE_FOCUSED:return "ركز تلقائياً";
+            case CaptureResult.CONTROL_AF_STATE_ACTIVE_SCAN:return "كيبحث على التركيز";
+            case CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED:return "Focus OK";
+            case CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED:return "Focus FAILED";
+            case CaptureResult.CONTROL_AF_STATE_PASSIVE_UNFOCUSED:return "غير مركز";
+            default:return "رمز "+s;
+        }
+    }
 
     private int dp(int v) { return (int)(getResources().getDisplayMetrics().density*v+.5f); }
     private TextView text(String s, int size) {
@@ -77,12 +129,20 @@ public class MainActivity extends Activity {
         ScrollView scroll=new ScrollView(this);screen.addView(scroll,new LinearLayout.LayoutParams(-1,-1));
         LinearLayout root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);
         root.setPadding(dp(12),dp(10),dp(12),dp(20));scroll.addView(root);
-        TextView title=text("RibhLab  •  Focus Rescue",24); title.setTextColor(Color.rgb(99,228,185));root.addView(title);
+        TextView title=text("RibhLab • Focus Rescue v1.3",24); title.setTextColor(Color.rgb(99,228,185));root.addView(title);
         root.addView(text("تجربة تحريك تركيز العدسة - ما كتصلحش العطب الميكانيكي المضمون",13));
         cameraSpinner=new Spinner(this);root.addView(cameraSpinner,new LinearLayout.LayoutParams(-1,dp(54)));
         preview=new TextureView(this); root.addView(preview,new LinearLayout.LayoutParams(-1,dp(265)));
         status=text("جاري فحص الكاميرات...",14);root.addView(status);
+
         modeText=text("التركيز: غير محدد",13);root.addView(modeText);
+        cameraInfoText=text("Camera2: انتظار البيانات",13);root.addView(cameraInfoText);
+        afLiveText=text("AF: انتظار نتائج المستشعر",14);root.addView(afLiveText);
+        diagnosisButton=button("🔎 Smart Focus Diagnosis — اختبار 3 مرات");
+        root.addView(diagnosisButton,new LinearLayout.LayoutParams(-1,dp(58)));
+        diagnosisText=text("شخّص الكاميرا بلا Zoom وبلا تكرار سريع للأوامر. النتائج من Camera2 ولا تثبت جودة الصورة.",13);
+        root.addView(diagnosisText);
+        diagnosisButton.setOnClickListener(v -> startDiagnostic());
         LinearLayout modes=new LinearLayout(this); modes.setOrientation(LinearLayout.HORIZONTAL);root.addView(modes);
         autoButton=button("Autofocus");manualButton=button("Manual sweep");
         modes.addView(autoButton,new LinearLayout.LayoutParams(0,dp(54),1));
@@ -90,11 +150,11 @@ public class MainActivity extends Activity {
         fastZoom = new CheckBox(this);
         fastZoom.setText("Zoom In / Out متواصل مع التركيز (أقصى زوم مدعوم)");
         fastZoom.setTextColor(Color.rgb(231,242,239));
-        fastZoom.setChecked(true);
+        fastZoom.setChecked(false);
         root.addView(fastZoom);
         zoomText = text("Zoom: فحص إمكانيات الكاميرا...",14);
         root.addView(zoomText);
-        root.addView(text("سرعة تحريك التركيز والزوم — أقصى سرعة على اليمين",14));
+        root.addView(text("سرعة الوضع اليدوي والزوم (اختبار Smart Diagnosis مستقل وآمن)",14));
         speedBar=new SeekBar(this);speedBar.setMax(2);speedBar.setProgress(2);root.addView(speedBar);
         LinearLayout actions=new LinearLayout(this);root.addView(actions);
         startButton=button("▶ ابدأ تجربة 30 ثانية");stopButton=button("■ توقيف");
@@ -180,7 +240,19 @@ public class MainActivity extends Activity {
                 Integer facing=c.get(CameraCharacteristics.LENS_FACING);
                 String side=facing!=null&&facing==CameraCharacteristics.LENS_FACING_FRONT?"أمامية":
                     facing!=null&&facing==CameraCharacteristics.LENS_FACING_BACK?"خلفية":"أخرى";
-                ids.add(id); titles.add("Camera "+id+"  •  "+side);
+
+                ids.add(id);
+                float[] focal=c.get(CameraCharacteristics.LENS_INFO_AVAILABLE_FOCAL_LENGTHS);
+                String focalInfo="";
+                if(focal!=null&&focal.length>0){
+                    StringBuilder fl=new StringBuilder();
+                    for(int fi=0;fi<Math.min(focal.length,4);fi++){
+                        if(fi>0)fl.append("/");
+                        fl.append(String.format(java.util.Locale.US,"%.1f",focal[fi]));
+                    }
+                    focalInfo=" • "+fl+"mm";
+                }
+                titles.add("Camera2 ID "+id+" • "+side+focalInfo);
             }
             if(ids.isEmpty()){report("ما لقيتش كاميرا متاحة");return;}
             ArrayAdapter<String> ad=new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,titles);
@@ -193,7 +265,25 @@ public class MainActivity extends Activity {
             CameraCharacteristics c=manager.getCameraCharacteristics(selectedId);
             Float dist=c.get(CameraCharacteristics.LENS_INFO_MINIMUM_FOCUS_DISTANCE);
             maxDistance=dist==null?0:dist;
+
             manualSupported=false;autoSupported=false;
+            float[] focals=c.get(CameraCharacteristics.LENS_INFO_AVAILABLE_FOCAL_LENGTHS);
+            StringBuilder spec=new StringBuilder("Camera2 ID "+selectedId);
+            if(focals!=null&&focals.length>0){
+                spec.append(" • بُعد بؤري: ");
+                for(int i=0;i<Math.min(focals.length,4);i++){
+                    if(i>0)spec.append("/");
+                    spec.append(String.format(java.util.Locale.US,"%.1f",focals[i]));
+                }
+                spec.append(" mm");
+            }
+            if(Build.VERSION.SDK_INT>=28){
+                Set<String> physical=c.getPhysicalCameraIds();
+                if(!physical.isEmpty())spec.append(" • عدسات مرتبطة: ").append(physical.toString());
+            }
+            spec.append(" • ممكن بعض عدسات S22 Ultra ما تظهرش منفصلة فـ Camera2");
+            cameraDetails=spec.toString();
+            ui.post(()-> cameraInfoText.setText(cameraDetails));
             zoomMin=1f;zoomMax=1f;zoomPosition=1f;
             zoomSensorRect=c.get(CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE);
             useZoomRatio=false;
@@ -234,10 +324,12 @@ public class MainActivity extends Activity {
     }
     private void refreshMode(){
         ui.post(() -> {
-            autoButton.setEnabled(autoSupported&&!running);
-            manualButton.setEnabled(manualSupported&&!running);
-            startButton.setEnabled(!running&&(manualMode?manualSupported:autoSupported));
-            stopButton.setEnabled(running);
+
+            autoButton.setEnabled(autoSupported&&!running&&!diagnosing);
+            manualButton.setEnabled(manualSupported&&!running&&!diagnosing);
+            diagnosisButton.setEnabled(autoSupported&&!running&&!diagnosing&&!recording&&session!=null);
+            startButton.setEnabled(!running&&!diagnosing&&(manualMode?manualSupported:autoSupported));
+            stopButton.setEnabled(running||diagnosing);
             modeText.setText("الوضع: "+(manualMode?"Manual focus":"Autofocus")
                 +"  |  يدوي: "+(manualSupported?"نعم":"لا")+"  |  تلقائي: "+(autoSupported?"نعم":"لا"));
         });
@@ -274,7 +366,9 @@ public class MainActivity extends Activity {
                     if(generation!=cameraGeneration||d!=camera){s.close();return;}
                     session=s;
                     if(manualMode)applyManual(0f);else applyAuto();
-                    report("الكاميرا واجدة. اختار الوضع واضغط ابدأ.");
+
+                    refreshMode();
+                    report("الكاميرا واجدة. جرّب Smart Diagnosis وشوف AF State.");
                 }
                 public void onConfigureFailed(CameraCaptureSession s){report("فشل إعداد المعاينة");}
             },bg);
@@ -286,7 +380,7 @@ public class MainActivity extends Activity {
             request.set(CaptureRequest.CONTROL_MODE,CaptureRequest.CONTROL_MODE_AUTO);
             request.set(CaptureRequest.CONTROL_AF_MODE,afMode);
             request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_IDLE);
-            session.setRepeatingRequest(request.build(),null,bg);
+            session.setRepeatingRequest(request.build(),resultsCallback,bg);
         } catch(Exception e){report("فشل Autofocus: "+e.getMessage());}
     }
     private void applyManual(float diopters){
@@ -296,7 +390,7 @@ public class MainActivity extends Activity {
             request.set(CaptureRequest.CONTROL_AF_MODE,CaptureRequest.CONTROL_AF_MODE_OFF);
             request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_IDLE);
             request.set(CaptureRequest.LENS_FOCUS_DISTANCE,Math.max(0f,Math.min(maxDistance,diopters)));
-            session.setRepeatingRequest(request.build(),null,bg);
+            session.setRepeatingRequest(request.build(),resultsCallback,bg);
         }catch(Exception e){report("فشل التحريك اليدوي: "+e.getMessage());}
     }
     private void triggerAf(){
@@ -306,11 +400,85 @@ public class MainActivity extends Activity {
             request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_START);
             session.capture(request.build(),null,bg);
             request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_IDLE);
-            session.setRepeatingRequest(request.build(),null,bg);
+            session.setRepeatingRequest(request.build(),resultsCallback,bg);
         }catch(Exception e){report("تعذر طلب Autofocus: "+e.getMessage());}
     }
+
+    private void startDiagnostic(){
+        if(!foreground || !autoSupported || session==null || request==null || diagnosing || running || recording){
+            report("خاص كاميرا واجدة ووضع Autofocus مدعوم باش نبداو التشخيص");
+            return;
+        }
+        diagnosing=true; diagnosticWaiting=false;
+        diagnosticAttempt=0;diagnosticFocused=0;diagnosticFailed=0;diagnosticTimeouts=0;
+        if(fastZoom!=null)fastZoom.setChecked(false);
+        manualMode=false;
+        refreshMode();
+        diagnosisText.setText("التشخيص: 3 محاولات بمهلة لكل محاولة. وجه الهاتف لهدف ثابت ومضاء.");
+        bg.post(() -> {
+            stopZoom();
+            startDiagnosticAttempt();
+        });
+    }
+    private void startDiagnosticAttempt(){
+        if(!diagnosing || !foreground || session==null || request==null)return;
+        if(diagnosticAttempt>=3){
+            finishDiagnostic(false);
+            return;
+        }
+        diagnosticAttempt++;
+        diagnosticWaiting=false;
+        try{
+            request.set(CaptureRequest.CONTROL_AF_MODE,afMode);
+            request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_CANCEL);
+            session.capture(request.build(),null,bg);
+            request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_IDLE);
+            session.setRepeatingRequest(request.build(),resultsCallback,bg);
+            // Allow the lens to settle after CANCEL before starting one AF pass.
+            bg.postDelayed(() -> {
+                if(!diagnosing||!foreground||session==null||request==null)return;
+                try{
+                    diagnosticWaiting=true;
+                    diagnosticTriggerAt=SystemClock.elapsedRealtime();
+                    request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_START);
+                    session.capture(request.build(),resultsCallback,bg);
+                    request.set(CaptureRequest.CONTROL_AF_TRIGGER,CaptureRequest.CONTROL_AF_TRIGGER_IDLE);
+                    session.setRepeatingRequest(request.build(),resultsCallback,bg);
+                    final int active=diagnosticAttempt;
+                    diagnosticTimeout=() -> {
+                        if(!diagnosing||!diagnosticWaiting||active!=diagnosticAttempt)return;
+                        diagnosticWaiting=false;
+                        diagnosticTimeouts++;
+                        bg.postDelayed(() -> startDiagnosticAttempt(),500);
+                    };
+                    bg.postDelayed(diagnosticTimeout,2600);
+                    report("Smart Diagnosis • محاولة "+active+"/3 ...");
+                }catch(Exception ex){diagnosticTimeouts++;diagnosticWaiting=false;
+                    report("AF request error: "+ex.getMessage());
+                    bg.postDelayed(() -> startDiagnosticAttempt(),500);
+                }
+            },350);
+        }catch(Exception ex){
+            diagnosticTimeouts++;
+            report("Reset AF error: "+ex.getMessage());
+            bg.postDelayed(() -> startDiagnosticAttempt(),500);
+        }
+    }
+    private void finishDiagnostic(boolean stopped){
+        if(!diagnosing)return;
+        diagnosing=false;diagnosticWaiting=false;
+        if(diagnosticTimeout!=null){bg.removeCallbacks(diagnosticTimeout);diagnosticTimeout=null;}
+        if(session!=null)applyAuto();
+        int total=diagnosticAttempt;
+        String summary=stopped?"تم توقيف التشخيص بعد "+total+" محاولة.":
+            "النتيجة Camera2: نجاح "+diagnosticFocused+"/3 • فشل "+diagnosticFailed+
+            "/3 • بدون نتيجة "+diagnosticTimeouts+
+            ". إذا الصورة باقي Flou رغم نجاح AF، خاص فحص الزجاج/العدسة. هاد المؤشر ما كيضمنش وضوح الصورة.";
+        ui.post(() -> {diagnosisText.setText(summary);refreshMode();});
+        report(summary);
+    }
     private void begin(){
-        if(running || selectedId==null)return;
+        if(running || diagnosing || selectedId==null)return;
         if(session==null || request==null){report("خاص الكاميرا تكون واجدة قبل التجربة");return;}
         if(manualMode&&!manualSupported || !manualMode&&!autoSupported){report("الوضع ما مدعومش");return;}
         running=true;stepCount=0;finishAt=SystemClock.elapsedRealtime()+30000;
@@ -339,7 +507,9 @@ public class MainActivity extends Activity {
         };
         bg.post(nextStep);
     }
+
     private void halt(String message){
+        if(diagnosing)bg.post(()-> finishDiagnostic(true));
         running=false;refreshMode();
         bg.post(() -> {
             if(nextStep!=null){bg.removeCallbacks(nextStep);nextStep=null;}
@@ -497,7 +667,7 @@ public class MainActivity extends Activity {
                 int top=zoomSensorRect.top+(zoomSensorRect.height()-height)/2;
                 request.set(CaptureRequest.SCALER_CROP_REGION,new Rect(left,top,left+width,top+height));
             }
-            session.setRepeatingRequest(request.build(),null,bg);
+            session.setRepeatingRequest(request.build(),resultsCallback,bg);
             zoomPosition=ratio;
             if(zoomText!=null) {
                 final float z=ratio;
@@ -511,7 +681,9 @@ public class MainActivity extends Activity {
         if(zoomStep!=null){bg.removeCallbacks(zoomStep);zoomStep=null;}
         if(zoomSupported&&session!=null&&request!=null)setZoom(1f);
     }
+
     private void closeCamera(){
+        if(diagnosing)finishDiagnostic(true);
         cameraGeneration++;
         stopZoom();
         if(nextStep!=null){bg.removeCallbacks(nextStep);nextStep=null;}
@@ -526,7 +698,9 @@ public class MainActivity extends Activity {
     @Override protected void onResume(){super.onResume();foreground=true;if(preview!=null&&preview.isAvailable())openSelected();}
 
     @Override protected void onPause(){
-        foreground=false;running=false;recording=false;
+
+        foreground=false;running=false;recording=false;diagnosing=false;diagnosticWaiting=false;
+        if(diagnosticTimeout!=null)bg.removeCallbacks(diagnosticTimeout);
         AudioRecord current=microphone;
         if(current!=null)try{current.stop();}catch(Exception ignored){}
         stopPlayback();
