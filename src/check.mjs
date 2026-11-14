@@ -20,6 +20,7 @@ for(const p of pages){const h=fs.readFileSync(p,'utf8');const pathName='/'+path.
  if(/^\/(?:admin\/)?google[a-z0-9]+\.html$/i.test(pathName)) continue; // Google ownership token is not an editorial page
  if(!h.includes('lang=') && !pathName.includes('/admin/') && pathName!=='/index.html')errors.push(`${pathName}: missing language`);
  if(!h.includes('<title>'))errors.push(`${pathName}: missing title`);
+ if(/^\/(?:ar|en|fr)\/(?:recipes|opportunities)\//.test(pathName)&&(h.match(/<main(?:\\s|>)/g)||[]).length!==1)errors.push(`${pathName}: expected exactly one main landmark`);
  if(!pathName.includes('/admin/') && !['/index.html','/404.html'].includes(pathName)){
   if(!h.includes('name="description"'))errors.push(`${pathName}: missing meta description`);
   if(!h.includes('id="main"'))errors.push(`${pathName}: missing main landmark`);
@@ -783,6 +784,15 @@ for(const [slug,regex] of Object.entries(editorialDishPhotoChecks)){
 if(new Set(Object.values(recipeAssignments)).size!==Object.keys(recipeAssignments).length||recipePhotoKeys.length!==Object.keys(recipeAssignments).length)errors.push('Each recipe photograph must be assigned once and only once');
 for(const [slug,key] of Object.entries(recipeAssignments))if(!foodPhotoLibrary.photos?.[key])errors.push('Recipe photograph assignment missing its image '+slug);
 const foodItems=['meals-01.json','meals-02.json','meals-03.json','meals-04.json','healthy-01.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.join(recipePath,file),'utf8')).recipes);
+// Search quality gate: recipes that reuse generic cooking-method instructions
+// remain browseable, but are not submitted for indexing as original tutorials.
+const recipeUniqueDirections=food=>['ar','en','fr'].every(lang=>{
+ const steps=food.instructions?.[lang];
+ if(!Array.isArray(steps)||steps.length!==3||steps.some(x=>typeof x!=='string'||x.trim().length<75))return false;
+ const norm=x=>x.normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
+ const values=steps.map(norm);
+ return new Set(values).size===3&&!foodItems.some(other=>other.slug!==food.slug&&(other.instructions?.[lang]||[]).some(x=>values.includes(norm(x))));
+});
 const meals=foodItems.filter(r=>r.kind==='meal'),balancedMeals=foodItems.filter(r=>r.kind==='healthy');
 if(meals.length!==100||balancedMeals.length!==20)errors.push('Recipes require 100 varied meals and 20 balanced dishes, not placeholder titles');
 if(new Set(foodItems.map(r=>r.slug)).size!==120)errors.push('Repeated recipe slugs');
@@ -796,6 +806,9 @@ for(const food of foodItems){
   const file=path.join(dist,l,'recipes',food.slug,'index.html');
   if(!fs.existsSync(file)){errors.push('Missing recipe page '+l+'/'+food.slug);continue;}
   const html=fs.readFileSync(file,'utf8');
+  const ready=recipeUniqueDirections(food),isNoindex=html.includes('name="robots" content="noindex,follow"');
+  if(isNoindex===ready)errors.push('Recipe search indexing must require independent trilingual directions: '+l+'/'+food.slug);
+  if(!ready&&sitemapText.includes('/'+l+'/recipes/'+food.slug+'/'))errors.push('Templated recipe unexpectedly submitted to sitemap: '+l+'/'+food.slug);
   if(!html.includes('class="recipe-ingredient-list"')||!html.includes('class="recipe-step-list"')||!html.includes('https://www.foodsafety.gov/'))errors.push('Recipe missing quantities, method, or food-safety source '+l+'/'+food.slug);
   if(!html.includes('"@type":"Recipe"'))errors.push('Missing Recipe schema '+l+'/'+food.slug);
   if(!html.includes('class="recipe-video-suggestion"')||!html.includes('https://www.youtube.com/results?search_query='))errors.push('Recipe missing language-matched YouTube video search '+l+'/'+food.slug);
@@ -909,7 +922,7 @@ for(const lang of ['ar','en','fr']){
  if(!html.includes('recipe-hub-explainer')||!html.includes('recipe-card'))errors.push('SEO: recipe hub must contain useful human-readable topic description and individual dishes '+lang);
  const sample=foodItems[0],samplePage=fs.readFileSync(path.join(dist,lang,'recipes',sample.slug,'index.html'),'utf8');
  if(!samplePage.includes('recipe-related-grid')||(samplePage.match(new RegExp('href="/'+lang+'/recipes/[^" ]+/"','g'))||[]).length<4)errors.push('SEO: recipe page missing contextual internal links '+lang);
- if(!samplePage.includes('"@type":"BreadcrumbList"'))errors.push('SEO: no breadcrumb schema on recipe page '+lang);
+ if(!samplePage.includes('name="robots" content="noindex,follow"')&&!samplePage.includes('"@type":"BreadcrumbList"'))errors.push('SEO: indexable recipe must carry breadcrumb schema '+lang);
  const section=taxonomy.sections.find(x=>x.publishedSlugs.length>0);
  if(section){
   const sectionHtml=fs.readFileSync(path.join(dist,lang,'sections',section.id,'index.html'),'utf8');
