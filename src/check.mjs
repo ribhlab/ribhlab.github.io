@@ -42,6 +42,17 @@ for(const lang of ['ar','en','fr']){
 }
 // Check that the bare domain homepage can verify ownership (not just /ar/).
 const bareHome=fs.readFileSync(path.join(dist,'index.html'),'utf8');
+
+// Priority editorial cards on ad-enabled homepages must not promote articles
+// which the site itself has excluded from indexing for missing evidence.
+const sourceArticles=fs.readdirSync(path.join(root,'content','articles')).filter(p=>p.endsWith('.json')).map(p=>JSON.parse(fs.readFileSync(path.join(root,'content','articles',p),'utf8')));
+const heldSlugs=new Set(sourceArticles.filter(a=>!articleIndexReady(a)).map(a=>a.slug));
+for(const lang of ['ar','en','fr']){
+ const homeHtml=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
+ const linkedStories=[...homeHtml.matchAll(new RegExp('class="card-link" href="/'+lang+'/(?:earning|ai|trading|lifestyle)/([^/"]+)/"','g'))].map(x=>x[1]);
+ for(const slug of linkedStories)if(heldSlugs.has(slug))errors.push('AdSense homepage promotes editorially held content: '+lang+'/'+slug);
+}
+
 if(!bareHome.includes('href="/ar/"')&&!bareHome.includes('url=/ar/'))errors.push('Bare homepage: Arabic entry missing');
 if(bareHome.includes('http-equiv="refresh"'))errors.push('Bare homepage must serve useful content instead of instant redirect');
 if(!bareHome.includes('class="magazine-masthead"')||!bareHome.includes('id="latest"'))errors.push('Bare homepage lacks substantial editorial content');
@@ -224,6 +235,8 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   const html=fs.readFileSync(htmlPath,'utf8');
   const noindex=html.includes('name="robots" content="noindex,follow"');
   if(noindex===editorialReady)errors.push(filename+': editorial quality / noindex mismatch in '+lang);
+  if(!editorialReady&&!html.includes('class="article-review-status"'))errors.push(filename+': missing visible editorial review notice '+lang);
+  if(editorialReady&&html.includes('class="article-review-status"'))errors.push(filename+': reviewed article wrongly shown as draft '+lang);
   if(!editorialReady){
    if(sitemapForEditorial.includes('/'+lang+'/'+article.category+'/'+article.slug+'/'))errors.push(filename+': unreviewed article leaked into sitemap '+lang);
    if(html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))errors.push(filename+': AdSense loaded on thin/unsourced article '+lang);
