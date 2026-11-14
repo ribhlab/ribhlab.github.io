@@ -20,7 +20,7 @@ for(const p of pages){const h=fs.readFileSync(p,'utf8');const pathName='/'+path.
  if(/^\/(?:admin\/)?google[a-z0-9]+\.html$/i.test(pathName)) continue; // Google ownership token is not an editorial page
  if(!h.includes('lang=') && !pathName.includes('/admin/') && pathName!=='/index.html')errors.push(`${pathName}: missing language`);
  if(!h.includes('<title>'))errors.push(`${pathName}: missing title`);
- if(/^\/(?:ar|en|fr)\/(?:recipes|opportunities)\//.test(pathName)&&(h.match(/<main(?:\\s|>)/g)||[]).length!==1)errors.push(`${pathName}: expected exactly one main landmark`);
+ if(/^\/(?:ar|en|fr)\/(?:recipes|opportunities)\//.test(pathName)&&(h.match(/<main(?:\s|>)/g)||[]).length!==1)errors.push(`${pathName}: expected exactly one main landmark`);
  if(!pathName.includes('/admin/') && !['/index.html','/404.html'].includes(pathName)){
   if(!h.includes('name="description"'))errors.push(`${pathName}: missing meta description`);
   if(!h.includes('id="main"'))errors.push(`${pathName}: missing main landmark`);
