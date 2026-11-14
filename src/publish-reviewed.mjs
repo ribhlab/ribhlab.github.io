@@ -40,6 +40,15 @@ const candidate=bundles.find(b=>b.sectionId!==state.lastSectionId)||bundles[0];
 const {article,photo,resourceIds,sectionId,review}=candidate;
 if(!article?.slug||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.slug))fail('Invalid article slug');
 if(!allowedCategories.has(article.category))fail('Invalid article category');
+// Prevent retired medical/skin-care material from silently returning in another
+// taxonomy through the automated publishing queue.
+const retiredHealthTopic=/(?:\b(?:skincare|skin care|sunscreen|dermatitis|eczema|acne treatment|psoriasis|retinol skincare|moisturizer)\b|العناية بالبشرة|واقي الشمس|علاج حب الشباب|الأكزيما|الصدفية|ترطيب البشرة|soins de la peau|cr[eè]me solaire|dermatite|traitement de l'acn[eé])/iu;
+const submittedTopic=[article.slug,sectionId,...locales.flatMap(lang=>[
+ article.translations?.[lang]?.title,
+ article.translations?.[lang]?.excerpt
+])].join(' ');
+if(retiredHealthTopic.test(submittedTopic))fail('Retired medical/skin-care topic cannot be republished');
+
 const reviewMs=Date.parse((review?.checkedAt||'')+'T00:00:00Z');
 if(!review||review.ready!==true||!Number.isFinite(reviewMs)||reviewMs>now.getTime()||now.getTime()-reviewMs>7*24*60*60*1000||review.sourcesIndependentlyChecked!==true||review.translationsReviewed!==true||review.photoProvenanceChecked!==true)fail('Review signoff incomplete or older than seven days for '+article.slug);
 if(!Array.isArray(article.sources)||article.sources.length<2||article.sources.some(s=>!s.label||!/^https:\/\/[^/]+\/.+/.test(s.url)))fail('At least two specific HTTPS primary references required for '+article.slug);
