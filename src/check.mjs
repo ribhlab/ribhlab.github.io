@@ -74,6 +74,10 @@ if(scriptRequired){
   const privacy=fs.readFileSync(path.join(dist,lang,'privacy','index.html'),'utf8');
   if(!html.includes(loader)||!html.includes('crossorigin="anonymous"'))errors.push('AdSense: exact publisher loader missing '+lang);
   if(!privacy.includes(({ar:'ملفات تعريف الارتباط',en:'cookies or similar identifiers',fr:'cookies ou identifiants similaires'})[lang]))errors.push('AdSense: missing Google request and advertising privacy disclosure '+lang);
+  for(const section of ['about','contact','editorial','privacy','terms','disclaimer','tools','games','recipes','archive']){
+   const file=path.join(dist,lang,section,'index.html');
+   if(fs.existsSync(file)&&fs.readFileSync(file,'utf8').includes(loader))errors.push('AdSense: ad loader must not target low-content or legal inventory '+lang+'/'+section);
+  }
  }
 }else{
  for(const html of [bareHome,...['ar','en','fr'].map(lang=>fs.readFileSync(path.join(dist,lang,'index.html'),'utf8'))]){
@@ -808,6 +812,7 @@ for(const food of foodItems){
   const html=fs.readFileSync(file,'utf8');
   const ready=recipeUniqueDirections(food),isNoindex=html.includes('name="robots" content="noindex,follow"');
   if(isNoindex===ready)errors.push('Recipe search indexing must require independent trilingual directions: '+l+'/'+food.slug);
+  if(html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))errors.push('AdSense: template recipe must not load ads '+l+'/'+food.slug);
   if(!ready&&sitemapText.includes('/'+l+'/recipes/'+food.slug+'/'))errors.push('Templated recipe unexpectedly submitted to sitemap: '+l+'/'+food.slug);
   if(!html.includes('class="recipe-ingredient-list"')||!html.includes('class="recipe-step-list"')||!html.includes('https://www.foodsafety.gov/'))errors.push('Recipe missing quantities, method, or food-safety source '+l+'/'+food.slug);
   if(!html.includes('"@type":"Recipe"'))errors.push('Missing Recipe schema '+l+'/'+food.slug);
