@@ -4,6 +4,7 @@ import {renderAudiencePage} from './audience-pages.mjs';
 import {renderSportsTechnologyPages} from './sports-tech-pages.mjs';
 import {renderRecipePages} from './recipe-pages.mjs';
 import {renderGamePages} from './games-pages.mjs';
+import {articleIndexReady} from './editorial-quality.mjs';
 import {budgetFlowLinkLabel, budgetFlowPath, renderBudgetFlowPage} from './budgetflow-pages.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -65,6 +66,7 @@ const photoUrl=a=>'https://images.unsplash.com/'+photoFor(a).photoId+'?auto=form
 const photoAlt=(l,a)=>{const p=photoFor(a);return l==='ar'?p.altAr:l==='fr'?p.altFr:p.alt;};
 
 const latestArticles=[...articles].sort((a,b)=>b.updated.localeCompare(a.updated)||b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug));
+console.log('EDITORIAL QUALITY: '+articles.filter(articleIndexReady).length+'/'+articles.length+' article records cleared for indexing; others remain browseable and noindex until independently edited.');
 const marketFeed=JSON.parse(fs.readFileSync(path.join(root,'content/feeds/latest.json'),'utf8'));
 const marketDigests=JSON.parse(fs.readFileSync(path.join(root,'content/market-digests.json'),'utf8')).items;
 const marketHeadlinePhotos=JSON.parse(fs.readFileSync(path.join(root,'content/market-feed-photos.json'),'utf8')).topics;
@@ -262,7 +264,7 @@ function makeArticle(l,a){const t=i18n[l],tr=a.translations[l];let toc=tr.sectio
  const toolSlug={earning:'freelance-pricing',trading:'risk-calculator',ai:'prompt-builder'}[a.category];
  const toolLink=toolSlug?'<div class="article-tool-link"><a href="/'+l+'/tools/'+toolSlug+'/">'+esc(toolCall)+' ↗</a></div>':'';
  const content=`<div class="reading-progress-track" data-reading-progress aria-hidden="true"><span></span></div><section class="article-hero"><div class="shell article-hero-inner"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/${l}/">${esc(t.navHome)}</a><span>/</span><a href="${catUrl(l,a.category)}">${esc(t[a.category])}</a><span>/</span><a href="${sectionRoute(l,articleSection.get(a.slug))}">${esc(sectionById.get(articleSection.get(a.slug)).title[l])}</a><span>/</span><span>${esc(tr.title)}</span></nav><div class="article-hero-heading"><span class="article-category-tag">${esc(t[a.category])}</span><h1>${esc(tr.title)}</h1><p>${esc(tr.excerpt)}</p><div class="article-byline"><span class="editor-avatar">R.</span><div><strong><a href="/${l}/editorial/">${esc(t.team)}</a></strong><span>${esc(t.updated)}: <time datetime="${esc(a.updated)}">${idDate(a.updated)}</time></span></div></div></div></div></section><div class="shell article-layout"><article class="article-content"><p class="lead">${esc(tr.lead)}</p><figure class="article-illustration licensed-editorial-photo"><div class="article-photo-frame"><img class="editorial-photo" src="${esc(photoUrl(a))}" width="1200" height="675" alt="${esc(photoAlt(l,a))}" loading="eager" fetchpriority="high" decoding="async"></div><figcaption>${esc(({ar:"صورة فوتوغرافية توضيحية للمقال",en:"Real editorial photograph",fr:"Photographie éditoriale"})[l])} — <a href="${esc(photoFor(a).source)}" target="_blank" rel="noopener noreferrer">${esc(photoFor(a).photographer)} / Unsplash</a>. ${esc(({ar:"صورة توضيحية وليست بيانات سوق فعلية أو إعلاناً عن المنتج.",en:"Illustrative photograph, not live market data or a product endorsement.",fr:"Photo illustrative, ni donnée boursière en temps réel ni recommandation commerciale."})[l])}</figcaption></figure>${a.category==='trading'?`<aside class="disclaimer-inline"><strong>${esc(t.important)}</strong><p>${esc(t.tradingNote)}</p></aside>`:''}${sections}${faqSection}${partnerSection}${sourcesSection}${toolLink}${sharingBar(l)}<div class="article-end-note"><strong>${esc(t.important)}</strong><p>${esc(t.noReturn)}</p><a href="/${l}/disclaimer/">${esc(t.disclaimer)} ↗</a></div></article><aside class="article-sidebar"><div class="toc-card"><span class="toc-label">${esc(t.index)}</span>${toc}</div><div class="sidebar-help"><span>✦</span><p>${esc(t.noReturn)}</p></div></aside></div><section class="section shell related-section"><div class="section-head"><h2>${esc(t.related)}</h2></div><div class="article-grid">${similar.map(x=>articleCard(l,x)).join('')}</div></section>`;
- const route=urlFor(l,a);page(l,{title:`${tr.title} | RibhLab`,desc:tr.excerpt,route,altroutes:Object.fromEntries(locales.map(n=>[n,urlFor(n,a)])),content,type:'article',article:a,active:a.category});
+ const route=urlFor(l,a);page(l,{title:`${tr.title} | RibhLab`,desc:tr.excerpt,route,altroutes:Object.fromEntries(locales.map(n=>[n,urlFor(n,a)])),content,type:'article',article:a,active:a.category,noindex:!articleIndexReady(a)});
 }
 
 
