@@ -28,6 +28,43 @@ const sectionIdentity={
  immigration:{icon:'🧭',number:'06',summary:{ar:'برامج الهجرة والشروط والجهات الرسمية',en:'Immigration pathways and eligibility rules',fr:'Programmes de mobilité et conditions officielles'}},
  'visa-appointments':{icon:'🛂',number:'07',summary:{ar:'السفارات ومراكز الحجز والتنبيهات الموثقة',en:'Embassies, booking services and verified alerts',fr:'Ambassades, centres de visas et alertes vérifiées'}}
 };
+const sectionSeoDescription={
+ "morocco": {
+  "ar": "تصفح فرص العمل بالمغرب من الإعلانات الرسمية وروابط المشغلين، مع شروط الترشح والمواعيد والمصادر الأصلية وتوضيح ما لم يتم التحقق منه.",
+  "en": "Explore job opportunities in Morocco using official recruitment notices and employer links, with application requirements, deadlines and verified sources.",
+  "fr": "Consultez les offres d'emploi au Maroc issues des annonces officielles, avec conditions de candidature, dates limites et références des employeurs."
+ },
+ "international": {
+  "ar": "اكتشف فرص العمل بالخارج من منصات تشغيل رسمية، مع التمييز بين عروض الوظائف وشروط التأشيرة وتصاريح العمل وبيانات الطلب على المهن.",
+  "en": "Compare international job opportunities from official portals, including occupation demand, employer listings and the separate rules for work permits and visas.",
+  "fr": "Explorez les emplois à l'étranger via les portails officiels, les métiers recherchés et les règles distinctes des visas et permis de travail."
+ },
+ "competitions": {
+  "ar": "تابع مباريات التوظيف العمومي بالمغرب حسب آخر أجل، مع قراءة الشروط والدبلومات المطلوبة وروابط القرارات والإعلانات الحكومية الأصلية.",
+  "en": "Browse Moroccan public recruitment competitions by deadline, with eligibility criteria, required qualifications and links to original government notices.",
+  "fr": "Suivez les concours de recrutement public au Maroc par date limite, avec critères d'admission et liens vers les avis et décisions officiels."
+ },
+ "companies": {
+  "ar": "اكتشف إعلانات التوظيف بالشركات وروابط مواقع المشغلين الرسمية، مع تلخيص المناصب ومتطلبات الترشيح والتواريخ المتاحة والتحقق من المصادر.",
+  "en": "Find recruitment notices from companies and official employer career portals, with positions, application requirements, deadlines and source verification.",
+  "fr": "Retrouvez les recrutements des entreprises et leurs portails carrières officiels, les postes proposés et les conditions de candidature vérifiées."
+ },
+ "dv-lottery": {
+  "ar": "تعرف على برنامج قرعة التنوع الأمريكية عبر المصادر الحكومية فقط، مع طريقة التحقق من المواعيد والنتائج والتنبيه من المواقع والوسطاء المضللين.",
+  "en": "Learn how to verify US Diversity Visa lottery announcements, entry periods and results through official government resources, with warnings about scams.",
+  "fr": "Informez-vous sur la loterie Diversity Visa américaine, ses dates et résultats via les sources gouvernementales, avec des conseils contre les arnaques."
+ },
+ "immigration": {
+  "ar": "قارن مسارات الهجرة القانونية ومتطلبات الأهلية واللغة والشهادات والوثائق والتكاليف من الجهات الرسمية، دون وعود بالحصول على التأشيرة.",
+  "en": "Compare legal immigration pathways using official eligibility, language, qualification, document and cost requirements, without promising visa approval.",
+  "fr": "Comparez les parcours d'immigration légale : admissibilité, langues, diplômes, documents et coûts selon les administrations officielles."
+ },
+ "visa-appointments": {
+  "ar": "اطلع على روابط السفارات ومراكز طلبات التأشيرة الرسمية وإجراءات الحجز والتنبيهات الموثقة، مع توضيح أن توفر المواعيد لا يُتحقق منه مباشرة.",
+  "en": "Find official embassy and visa appointment providers, booking procedures and verified warnings; live appointment slot availability is not confirmed.",
+  "fr": "Consultez les ambassades et centres officiels de rendez-vous visa, les démarches et les alertes vérifiées, sans garantie de créneaux disponibles."
+ }
+};
 const langCopy={
  ar:{hub:'الوظائف والهجرة والفيزا',intro:'مباريات رسمية وفرص عمل داخل وخارج المغرب، ومسارات الهجرة وقرعة أمريكا وروابط مواعيد التأشيرات.',morocco:'وظائف في المغرب',international:'وظائف خارج المغرب',competitions:'مباريات التوظيف',companies:'التوظيف في الشركات', 'dv-lottery':'قرعة أمريكا',immigration:'فرص الهجرة','visa-appointments':'مواعيد التأشيرات',notice:'معلومة موثقة، وليست وعداً بالتوظيف أو الحصول على التأشيرة.',updated:'آخر مراجعة تحريرية',deadline:'آخر أجل للإيداع',posts:'مناصب',expired:'انتهى آخر أجل',check:'راجع الإعلان الرسمي',open:'تصفح المصدر الرسمي',eligible:'تحقق من أهلية الترشح والتأشيرة',filter:'ابحث في الفرص المعروضة',find:'ابحث بعنوان الوظيفة أو المؤسسة',clear:'مسح البحث',none:'لا توجد نتائج مطابقة',visaInfo:'حالة المواعيد: غير مؤكدة مباشرة',visaWarn:'الرابط الرسمي للحجز لا يعني وجود موعد متاح. المواعيد قد تتغير حسب القنصلية ونوع التأشيرة والحساب الشخصي، ولا نستخدم البوتات أو وسطاء البيع.',dvNotice:'تنبيه رسمي بشأن قرعة أمريكا',dvUnknown:'موعد التسجيل القادم غير مؤكد رسمياً',dvSource:'بوابة التسجيل والاستعلام الرسمية',more:'الأقسام الأخرى',from:'المصدر',kind:'نوع المصدر',platform:'بوابة فرص متجددة',specific:'إعلان توظيف محدد',vDate:'تمت مراجعة هذه المصادر بتاريخ 27 أكتوبر 2026، لا تُحدّث حالة المواعيد تلقائياً. لا تُدخل بياناتك الشخصية إلا في الموقع الرسمي.'},
  en:{hub:'Jobs, immigration & visas',intro:'Official jobs in Morocco and abroad, public competitions, company careers, US DV, immigration and visa appointment portals.',morocco:'Jobs in Morocco',international:'Jobs abroad',competitions:'Public recruitment exams',companies:'Company careers','dv-lottery':'US Diversity Visa',immigration:'Immigration pathways','visa-appointments':'Visa appointments',notice:'Verified information, not a job or visa guarantee.',updated:'Editorial review',deadline:'Application deadline',posts:'positions',expired:'Deadline passed',check:'Check official notice',open:'Open official source',eligible:'Check eligibility and work permits',filter:'Search listed opportunities',find:'Job title or institution',clear:'Clear',none:'No matching items',visaInfo:'Live appointment availability: not verified',visaWarn:'A booking link does not prove slots are available. Rules differ by consulate, visa class and applicant account. No slot-buying bots or paid intermediaries.',dvNotice:'Official Diversity Visa update',dvUnknown:'Registration dates not officially confirmed',dvSource:'Official registration/status website',more:'Other sections',from:'Source',kind:'Source type',platform:'Continuously updated official portal',specific:'Specific recruitment announcement',vDate:'Sources reviewed 27 October 2026. Appointment status is not checked in real time. Submit personal data only on official websites.'},
@@ -102,13 +139,13 @@ export function renderOpportunityPages(lang,page,esc){
    const rows=db.visa.map(v=>'<article class="opp-card" data-opp-item>'+uniqueOpportunityVisual(v.id,'visa-appointments',esc)+'<div class="opp-topline"><span class="opp-type">'+esc(v.service)+'</span><span class="opp-muted">'+esc(c.visaInfo)+'</span></div><h3>'+esc(v.country[lang])+'</h3><p>'+esc(v.note[lang])+'</p><a class="opp-action" href="'+base+'visa-appointments/'+encodeURIComponent(v.id)+'/">'+esc(({ar:'اقرأ إجراءات المركز والتنبيهات',en:'Read appointment process and warnings',fr:'Lire les démarches et avertissements'})[lang])+' →</a></article>').join('');
    const today=new Date().toISOString().slice(0,10);
    const verifiedAlerts=(db.visaAlerts||[]).filter(n=>n.sourceUrl&&n.verifiedAt&&(!n.expiresAt||n.expiresAt>=today)).map(n=>'<div class="opp-advisory" role="status"><strong>'+esc(({ar:'بلاغ رسمي بشأن المواعيد',en:'Official appointment notice',fr:'Avis officiel sur les rendez-vous'})[lang])+' — '+esc(n.country)+'</strong><p>'+esc(n.title)+'</p><p>'+esc(n.notice)+'</p><small>'+esc(n.verifiedAt)+'</small><p><a class="opp-action" href="'+esc(safeHref(n.sourceUrl))+'" rel="noopener noreferrer external" target="_blank">'+esc(c.open)+' ↗</a></p></div>').join('');
-   body='<section class="section shell">'+advisory+'<div class="opp-advisory" role="alert"><strong>'+esc(c.visaInfo)+'</strong><p>'+esc(c.visaWarn)+'</p><p>'+esc(c.vDate)+'</p></div>'+verifiedAlerts+headings+'<div class="opp-grid" data-opportunity-list>'+rows+'</div></section>';
+   body='<section class="section shell">'+advisory+'<div class="opp-advisory" role="alert"><strong>'+esc(c.visaInfo)+'</strong><p>'+esc(c.visaWarn)+'</p><p>'+esc(c.vDate)+'</p></div>'+verifiedAlerts+headings+'<h2 class="opp-list-heading">'+esc(({ar:'الفرص والإعلانات المتاحة ومصادرها',en:'Available listings and official sources',fr:'Annonces disponibles et sources officielles'})[lang])+'</h2>'+'<div class="opp-grid" data-opportunity-list>'+rows+'</div></section>';
   }else{
    const list=db.items.filter(i=>i.section===category).sort(deadlineOrder);
-   body='<section class="section shell">'+advisory+'<p class="opp-guideline">'+esc(c.eligible)+'</p>'+headings+'<div class="opp-grid" data-opportunity-list>'+list.map(i=>makeCard(i,c,esc)).join('')+'</div></section>'+(category==='competitions'?officialPortalLinks:'');
+   body='<section class="section shell">'+advisory+'<p class="opp-guideline">'+esc(c.eligible)+'</p>'+headings+'<h2 class="opp-list-heading">'+esc(({ar:'الفرص والإعلانات المتاحة ومصادرها',en:'Available listings and official sources',fr:'Annonces disponibles et sources officielles'})[lang])+'</h2>'+'<div class="opp-grid" data-opportunity-list>'+list.map(i=>makeCard(i,c,esc)).join('')+'</div></section>'+(category==='competitions'?officialPortalLinks:'');
   }
   body+=(category==='immigration'||category==='international'?demandPreview:'')+'<section class="section shell"><h2>'+esc(c.more)+'</h2>'+navGrid(lang,c,esc,category)+'</section>'+script;
-  page(lang,{title:title+' | RibhLab',desc:sectionIdentity[category].summary[lang],route:base+category+'/',content:'<div class="opportunity-page opp-theme-'+category+'">'+intro+body+'</div>',active:'opportunities'});
+  page(lang,{title:title+' | RibhLab',desc:sectionSeoDescription[category][lang],route:base+category+'/',content:'<div class="opportunity-page opp-theme-'+category+'">'+intro+body+'</div>',active:'opportunities'});
  }
 
 
