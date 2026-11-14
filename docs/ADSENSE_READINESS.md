@@ -5,12 +5,12 @@
 ## Current factual status
 
 - Public website: https://ribhlab.github.io/ (Arabic: /ar/, English: /en/, French: /fr/).
-- Search Console property `https://ribhlab.github.io/` was confirmed as owner by the site operator with an HTML verification file. This is not proof that articles are indexed.
-- The site currently holds **43 original article records**, each authored in Arabic, English and French (129 localized article views), with 282 generated indexed-route pages at the latest verified deploy.
+- Google Search Console property `https://ribhlab.github.io/` was directly confirmed as **siteOwner** by the authorized `rachid022note4@gmail.com` OpenSEO connection on 14 November 2026. At the time of the Google URL Inspection check, six tested pages were **URL is unknown to Google** and Search Analytics recorded **zero impressions and clicks** over the available Oct 27–Nov 11 time window. Submission of the sitemap does not prove it has been processed.
+- As of 14 November 2026, the source contains **95 trilingual editorial article records**. An automated evidence-and-substance gate currently clears **61 records** for indexing, while **34 remain accessible but `noindex` and do not load the AdSense script** until their missing references, depth or translations are genuinely improved. This is a site-owned editorial gate, not a fixed Google article-length requirement.
 - Public institutional employment section: https://ribhlab.github.io/ar/opportunities/competitions/. Selected and individually checked advertisements only; the government directory includes historical entries.
 - Site policy pages: About, Editorial, Contact, Privacy, Terms and Disclaimer in all three languages.
-- An editorial correction route is available at https://github.com/ribhlab/ribhlab.github.io/issues/new; no personal contact email is configured and none is invented.
-- **AdSense publisher ID is configured:** `ca-pub-7945572016731367` (confirmed by owner via AdSense code on 29 October 2026). The owner has added `ribhlab.github.io` in AdSense. Last reported status was **Examen requis** (review required), not **Prêt** (approved). This status is not yet reverified.
+- An editorial correction route is available at https://github.com/ribhlab/ribhlab.github.io/issues/new; this is a **public GitHub Issues channel**, not confidential email. No private contact address has been approved for public publication. A private editorial/privacy contact remains an uncompleted owner-facing trust improvement.
+- **AdSense publisher ID is configured:** `ca-pub-7945572016731367` (owner supplied). An 11/12 November AdSense rejection email was generic and did not provide a specific policy-code reason. The actual **AdSense > Sites > Needs attention > Details** state remains unverified directly; do not infer that any one risk listed here was the rejection reason.
 - The site appears in the owner's AdSense Sites list. **Approval is not established**; the owner must complete the site connection/review process, and Google makes the decision. A separate payment-account verification banner is visible.
 
 ## What is preconfigured
@@ -18,10 +18,10 @@
 - A valid `ca-pub-XXXXXXXXXXXXXXXX` publisher ID, when supplied, generates the owner-verification meta tag on the root homepage and all generated pages.
 - It also generates `/ads.txt` at the site root:
   `google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0`
-- The owner supplied the official AdSense loader script. It loads in `<head>` of the root and all generated language pages with `enableAdsense=true` and `adsenseVerificationScript=true`; this only enables the site's AdSense configuration and cannot force ad delivery or account approval. **Loading this code sends requests to Google**, and after site approval it may serve Auto Ads if enabled in the Google dashboard. Keep Auto Ads disabled until compliant consent choices are configured.
-- Quality gates verify `ads.txt`, the HTML owner meta, source-matched AdSense loader, multilingual privacy disclosures, and absence of manually inserted ad units before approval.
+- The owner-supplied AdSense verification script is now limited to substantial language homepages and editorial articles that pass source-and-content checks. It is **not** added to legal pages, tools, games, archives, recipe indexes, templated recipes or `noindex` articles. Publisher meta/`ads.txt` still establish ownership. **Loading the script sends requests to Google**, and after approval it may serve Auto Ads if enabled inside AdSense. Keep Auto Ads disabled until compliant consent choices are configured.
+- Quality gates verify `ads.txt`, ownership metadata, script placement, multilingual privacy disclosures, absence of manual ad units, **zero AdSense loader on ineligible pages**, unique content metadata, and the actual public sitemap fetched with a Googlebot-style user-agent. Failure or warning of a check never itself establishes eligibility for AdSense.
 - The privacy policy discloses Google-server requests as soon as the verification loader is enabled, and addresses cookies/identifiers when advertising begins.
-- `robots.txt`, `sitemap.xml`, canonical and hreflang routes are generated and tested on every publish.
+- `robots.txt`, `sitemap.xml`, canonical and hreflang routes are generated and tested on every publish. A first-party Search Console screenshot on 14 November reported **Impossible de lire le sitemap** even though independent HTTPS tests returned `200` and valid XML. The exact Google-side reason remains unresolved. Subsequent monitoring must compare Google processing, not simply 'Sitemap envoyé'.
 
 ## Steps for the publisher (no passwords in GitHub or chat)
 
@@ -35,6 +35,14 @@
 6. In AdSense > **Sites** > `ribhlab.github.io`, follow **Connectez votre site aux services AdSense**, confirm the script or ads.txt method, and use the available **Demander un examen / Request review** action. Do not claim success until Google marks the site **Prêt / Ready**. The user must complete buttons in their Google account.
 7. Before displaying personalized ads to people in the EEA, UK or Switzerland, implement a Google-certified CMP using IAB TCF as required. Review local privacy rules and Google policies. Do not switch on ad delivery just to pass ownership checks.
 8. **Important:** the verification loader already executes, so ensure **Auto Ads remain disabled inside AdSense** until required consent management (e.g., EEA/UK/Swiss Google-certified CMP) is in place; `enableAdsense=true` enables website-side ad readiness but does not grant approval or control Google-side Auto Ads configuration. No manual ad slots are inserted until reviewed and appropriately configured. After approval and consent, verify what Google is actually showing, adjust account settings and monitor Policy Centre and ads.txt.
+
+## Revised AdSense quality intervention — 14 November 2026
+
+- Removed the entire skin-care section and nine affected source articles, with a publishing guard against reintroduction.
+- Retired **120 generated recipe details × three languages (360 pages)** from the indexable sitemap until their three locale-specific cooking methods are independently rewritten. Recipes remain browseable and useful as a reference, but the same templated actions cannot be described as 120 original independently edited tutorials.
+- Retired **34 / 95 editorial records** from indexing and ad loading until they have at least two credible attributed HTTPS references, four meaningful localized sections and sufficient genuinely explanatory material in all three languages. The internal 300-word threshold is an editorial triage tool, **not a Google policy requirement**. Do not fabricate citations, add filler, or pretend translations were reviewed to clear it.
+- Repaired nested `<main>` landmark elements in recipe and opportunity templates, corrected public contact/privacy/editorial statements and linked article author bylines to real published editorial standards.
+- The remaining risks requiring verified real-world action are the precise AdSense Sites/Policy Centre rejection details, the Google-side sitemap processing state, private editorial contact and a Google-certified CMP/appropriate consent before regional ad delivery. External image rights and originality also need ongoing source review; unique licensing metadata alone does not establish original creation.
 
 ## Important editorial safeguards
 
