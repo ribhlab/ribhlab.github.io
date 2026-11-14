@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {articleIndexReady,articleEditorialIssues} from './editorial-quality.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -197,12 +198,17 @@ const siteClientScript=fs.readFileSync(path.join(root,'src','app.js'),'utf8');
 if(!siteClientScript.trimEnd().endsWith('})();')||siteClientScript.lastIndexOf('})();')<siteClientScript.indexOf("const wordInput=byId('words-input')"))errors.push('Site JavaScript helpers are scoped outside the main UI initialization');
 // Editorial and SEO regression checks: validate every translated article before publishing.
 const articleDir=path.join(root,'content','articles');
+const sitemapForEditorial=fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8');
+let indexReadyEditorialCount=0;
 for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json'))){
  let article;
  try{article=JSON.parse(fs.readFileSync(path.join(articleDir,filename),'utf8'));}catch(e){errors.push('Invalid article JSON: '+filename);continue;}
  if(filename!==article.slug+'.json')errors.push(filename+': file/slug mismatch');
  if(!/^\d{4}-\d{2}-\d{2}$/.test(article.date||'')||!/^\d{4}-\d{2}-\d{2}$/.test(article.updated||''))errors.push(filename+': publication/update dates missing');
  if(article.updated<article.date)errors.push(filename+': update date predates publication');
+ const editorialReady=articleIndexReady(article);
+ if(editorialReady)indexReadyEditorialCount++;
+ else console.log('EDITORIAL_HOLD '+article.slug+': '+articleEditorialIssues(article).join('; '));
  const refs=(article.sources||[]);
  if(!Array.isArray(refs))errors.push(filename+': sources must be an array');
  else for(const ref of refs){
@@ -216,6 +222,12 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   const htmlPath=path.join(dist,lang,article.category,article.slug,'index.html');
   if(!fs.existsSync(htmlPath)){errors.push(filename+': missing generated '+lang+' page');continue;}
   const html=fs.readFileSync(htmlPath,'utf8');
+  const noindex=html.includes('name="robots" content="noindex,follow"');
+  if(noindex===editorialReady)errors.push(filename+': editorial quality / noindex mismatch in '+lang);
+  if(!editorialReady){
+   if(sitemapForEditorial.includes('/'+lang+'/'+article.category+'/'+article.slug+'/'))errors.push(filename+': unreviewed article leaked into sitemap '+lang);
+   if(html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))errors.push(filename+': AdSense loaded on thin/unsourced article '+lang);
+  }
   if(configuredUrl&&!html.includes('<link rel="canonical"'))errors.push(filename+': missing canonical in '+lang);
   if(!html.includes('application/ld+json'))errors.push(filename+': missing structured data in '+lang);
   if(!html.includes('name="description"'))errors.push(filename+': missing SEO description in '+lang);
@@ -223,6 +235,7 @@ for(const filename of fs.readdirSync(articleDir).filter(f=>f.endsWith('.json')))
   if(article.partner?.url&&(!html.includes('class="partner-box"')||!html.includes('rel="sponsored nofollow')))errors.push(filename+': missing disclosed partner link in '+lang);
  }
 }
+console.log('EDITORIAL QA '+indexReadyEditorialCount+' articles cleared; '+(fs.readdirSync(articleDir).filter(x=>x.endsWith('.json')).length-indexReadyEditorialCount)+' visible articles held from indexing and ads.');
 for(const pagePath of pages){
  const content=fs.readFileSync(pagePath,'utf8');
  for(const imageTag of content.match(/<img\b[^>]*>/g)||[]){
