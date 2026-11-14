@@ -226,7 +226,21 @@ function youtubeRecipeSearch(r,l){
  // An editor can later replace this search page with a verified, rights-compliant video link.
  return (typeof provided==='string'&&/^https:\/\/(www\.)?youtube\.com\/(watch\?|shorts\/)/.test(provided))?provided:'https://www.youtube.com/results?search_query='+encodeURIComponent(query);
 }
+// Index only recipes with genuinely dish-specific, independently edited
+// directions in all published languages. The shared ACTIONS templates remain
+// available as a temporary reading aid but are not Search-indexable content.
+const normalizeDirection=text=>String(text||'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
+function isRecipeEditoriallyReady(recipe,allRecipes){
+ return LANGS.every(lang=>{
+  const steps=recipe.instructions?.[lang];
+  if(!Array.isArray(steps)||steps.length!==3||steps.some(step=>typeof step!=='string'||step.trim().length<75))return false;
+  const normalized=steps.map(normalizeDirection);
+  if(new Set(normalized).size!==3)return false;
+  return !allRecipes.some(other=>other.slug!==recipe.slug&&(other.instructions?.[lang]||[]).some(step=>normalized.includes(normalizeDirection(step))));
+ });
+}
 function recipePage(r,l,lex,page,esc,photos,allRecipes){
+ const editoriallyReady=isRecipeEditoriallyReady(r,allRecipes);
  const photo=photoFor(r,photos),featuredImage=recipeImage(r,l,photos,esc,'eager');
  const photoNote=photo?({ar:'صورة فوتوغرافية توضيحية لهذا الطبق، وقد تختلف عن التحضير المنزلي.',en:'Illustrative food photograph for this dish; the home result may differ.',fr:'Photographie illustrative du plat, pouvant différer de la réalisation maison.'})[l]:({ar:'رسم توضيحي أصلي وفريد لهذه الوصفة، إلى حين توفير صورة فوتوغرافية فريدة موثقة.',en:'Unique original illustration until a verified exclusive photograph is available.',fr:'Illustration originale unique dans l’attente d’une photographie vérifiée et exclusive.'})[l];
  const t=TEXT[l],label=r.title[l],arr=r.ingredients.map(i=>ingredientText(i,lex,l)),steps=[...ACTIONS[r.method][l],r.tip[l],safety(r,l)];
@@ -244,7 +258,7 @@ function recipePage(r,l,lex,page,esc,photos,allRecipes){
  const relatedBlock='<section class="recipe-related"><h2>'+esc(relatedLabel)+'</h2><div class="recipe-related-grid">'+related.map(other=>'<a href="/'+l+'/recipes/'+other.slug+'/">'+esc(other.title[l])+' ↗</a>').join('')+'</div></section>';
  const content='<div class="recipe-page"><section class="recipe-detail-hero shell"><nav class="recipe-breadcrumb"><a href="/'+l+'/">'+esc(t.home)+'</a> / <a href="/'+l+'/recipes/">'+esc(t.recipes)+'</a> / '+esc(label)+'</nav><div class="recipe-detail-layout"><div><span class="recipe-kicker">RIBHLAB / KITCHEN</span><h1>'+esc(label)+'</h1><p>'+esc(r.tip[l])+'</p>'+info+'<a class="recipe-back" href="/'+l+'/recipes/'+(r.kind==='healthy'?'healthy/':'meals/')+'">'+esc(t.browse)+' ↗</a></div><div class="recipe-photo-figure">'+featuredImage+'<p class="recipe-photo-credit">'+esc(photoNote)+(photo?' <a href="'+esc(photo.source)+'" target="_blank" rel="noopener noreferrer external">'+esc(photo.photographer)+' / '+esc(photo.provider||'Unsplash')+' ↗</a>'+(photo.licenseUrl?' · <a href="'+esc(photo.licenseUrl)+'" target="_blank" rel="noopener noreferrer external">'+esc(photo.license)+' ↗</a>':''):'')+'</p></div></div></section><div class="shell recipe-detail-content"><div class="recipe-cols"><section class="recipe-panel"><h2>'+esc(t.ingredients)+'</h2><p>'+esc(t.measure)+'</p><ul class="recipe-ingredient-list">'+list+'</ul></section><section class="recipe-panel"><h2>'+esc(t.method)+'</h2><ol class="recipe-step-list">'+howTo+'</ol></section></div><section class="recipe-alert"><h2>'+esc(t.safety)+'</h2><p>'+esc(safety(r,l))+'</p><p><strong>'+esc(SAFE[l].allergen)+':</strong> '+esc(allergens(r,l))+'</p><p>'+esc(t.legal)+'</p>'+references+'</section>'+videoBlock+relatedBlock+'<p><a class="recipe-back" href="/'+l+'/recipes/">← '+esc(t.head)+'</a></p></div></div>'+linked+'<script defer src="/assets/recipe-filter.js"></script>';
  const seoTitle=({ar:'طريقة تحضير ',en:'How to make ',fr:'Recette de '})[l]+label+' | RibhLab';
- page(l,{title:seoTitle,desc:r.tip[l]+' '+t.measure,route:'/'+l+'/recipes/'+r.slug+'/',content,active:'recipes'});
+ page(l,{title:seoTitle,desc:r.tip[l]+' '+t.measure,route:'/'+l+'/recipes/'+r.slug+'/',content,active:'recipes',noindex:!editoriallyReady});
 }
 export function renderRecipePages(l,page,esc,root,dist){
  const {ingredients,recipes,photos}=load(root),t=TEXT[l];
