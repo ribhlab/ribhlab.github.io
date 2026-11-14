@@ -825,6 +825,7 @@ for(const food of foodItems){
   const html=fs.readFileSync(file,'utf8');
   const ready=recipeUniqueDirections(food),isNoindex=html.includes('name="robots" content="noindex,follow"');
   if(isNoindex===ready)errors.push('Recipe search indexing must require independent trilingual directions: '+l+'/'+food.slug);
+  if(!ready&&!html.includes('class="recipe-method-transparency"'))errors.push('Recipe lacks transparent generic-method disclosure '+l+'/'+food.slug);
   if(html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))errors.push('AdSense: template recipe must not load ads '+l+'/'+food.slug);
   if(!ready&&sitemapText.includes('/'+l+'/recipes/'+food.slug+'/'))errors.push('Templated recipe unexpectedly submitted to sitemap: '+l+'/'+food.slug);
   if(!html.includes('class="recipe-ingredient-list"')||!html.includes('class="recipe-step-list"')||!html.includes('https://www.foodsafety.gov/'))errors.push('Recipe missing quantities, method, or food-safety source '+l+'/'+food.slug);
