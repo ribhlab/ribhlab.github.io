@@ -1,0 +1,155 @@
+{
+  "app": "RivoScan",
+  "package": "com.ribhlab.rivoscan",
+  "store_url": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan",
+  "default_language": "en",
+  "intended_use": "Meta multilingual ad draft, for manual review before publication",
+  "language_selection": "Meta preferred user language, NOT guaranteed by country",
+  "requires_meta_page": "Dedicated RibhLab/RivoScan Facebook page identity",
+  "needs_native_review": true,
+  "meta_languages_limit_note": "Ad Manager may allow one default + up to 48 additional languages, depending on eligibility; verify actual available locale IDs before API submission.",
+  "legal_blocker": "Worldwide/EU targeting rejected by Meta until truthful DSA beneficiary and payer details provided.",
+  "translation_count": 35,
+  "translations": {
+    "en": {
+      "headline": "Scan documents to PDF",
+      "text": "Scan documents with your Android phone, create PDFs, organize pages and recognize text with OCR where supported."
+    },
+    "ar": {
+      "headline": "حوّل مستنداتك إلى PDF",
+      "text": "امسح المستندات بهاتف Android، أنشئ ملفات PDF ورتّب الصفحات واستخرج النصوص بتقنية OCR حسب دعم الجهاز."
+    },
+    "fr": {
+      "headline": "Numérisez vos documents en PDF",
+      "text": "Scannez vos documents avec Android, créez des PDF, organisez les pages et reconnaissez du texte avec l'OCR selon votre appareil."
+    },
+    "es": {
+      "headline": "Escanea documentos en PDF",
+      "text": "Escanea documentos con Android, crea archivos PDF, organiza páginas y reconoce texto con OCR en dispositivos compatibles."
+    },
+    "pt": {
+      "headline": "Digitalize documentos em PDF",
+      "text": "Digitalize documentos no Android, crie PDFs, organize páginas e reconheça texto com OCR em dispositivos compatíveis."
+    },
+    "de": {
+      "headline": "Dokumente als PDF scannen",
+      "text": "Scanne Dokumente mit Android, erstelle PDFs, sortiere Seiten und erkenne Text per OCR auf unterstützten Geräten."
+    },
+    "it": {
+      "headline": "Scansiona documenti in PDF",
+      "text": "Scansiona documenti con Android, crea PDF, organizza le pagine e riconosci il testo con OCR sui dispositivi supportati."
+    },
+    "nl": {
+      "headline": "Scan documenten naar pdf",
+      "text": "Scan documenten op Android, maak pdf's, orden pagina's en herken tekst met OCR op ondersteunde apparaten."
+    },
+    "pl": {
+      "headline": "Skanuj dokumenty do PDF",
+      "text": "Skanuj dokumenty na Androidzie, twórz pliki PDF, porządkuj strony i rozpoznawaj tekst dzięki OCR na obsługiwanych urządzeniach."
+    },
+    "tr": {
+      "headline": "Belgeleri PDF olarak tarayın",
+      "text": "Android telefonunuzla belgeleri tarayın, PDF oluşturun, sayfaları düzenleyin ve desteklenen cihazlarda OCR ile metin tanıyın."
+    },
+    "hi": {
+      "headline": "दस्तावेज़ स्कैन करके PDF बनाएँ",
+      "text": "Android फ़ोन से दस्तावेज़ स्कैन करें, PDF बनाएँ, पेज व्यवस्थित करें और समर्थित डिवाइस पर OCR से टेक्स्ट पहचानें।"
+    },
+    "ur": {
+      "headline": "دستاویزات اسکین کر کے PDF بنائیں",
+      "text": "Android فون سے دستاویزات اسکین کریں، PDF بنائیں، صفحات ترتیب دیں اور معاون ڈیوائسز پر OCR سے متن شناخت کریں۔"
+    },
+    "id": {
+      "headline": "Pindai dokumen menjadi PDF",
+      "text": "Pindai dokumen lewat Android, buat PDF, atur halaman, dan kenali teks dengan OCR pada perangkat yang mendukung."
+    },
+    "ms": {
+      "headline": "Imbas dokumen menjadi PDF",
+      "text": "Imbas dokumen menggunakan Android, cipta PDF, susun halaman dan cam teks dengan OCR pada peranti yang disokong."
+    },
+    "vi": {
+      "headline": "Quét tài liệu thành PDF",
+      "text": "Quét tài liệu trên Android, tạo PDF, sắp xếp trang và nhận dạng văn bản bằng OCR trên thiết bị được hỗ trợ."
+    },
+    "tl": {
+      "headline": "I-scan ang mga dokumento bilang PDF",
+      "text": "Mag-scan ng dokumento sa Android, gumawa ng PDF, ayusin ang mga pahina at kumilala ng teksto gamit ang OCR sa suportadong device."
+    },
+    "ja": {
+      "headline": "書類をスキャンしてPDFに",
+      "text": "Androidで書類をスキャンし、PDFを作成。ページを整理し、対応端末ではOCRで文字を認識できます。"
+    },
+    "ko": {
+      "headline": "문서를 스캔해 PDF로 저장",
+      "text": "Android에서 문서를 스캔하고 PDF를 만들고 페이지를 정리하세요. 지원 기기에서는 OCR로 텍스트를 인식할 수 있습니다."
+    },
+    "zh-Hans": {
+      "headline": "扫描文档并生成 PDF",
+      "text": "使用 Android 手机扫描文档、创建 PDF、整理页面，并在支持的设备上通过 OCR 识别文字。"
+    },
+    "zh-Hant": {
+      "headline": "掃描文件並製作 PDF",
+      "text": "使用 Android 手機掃描文件、建立 PDF、整理頁面，並在支援的裝置上透過 OCR 辨識文字。"
+    },
+    "ru": {
+      "headline": "Сканируйте документы в PDF",
+      "text": "Сканируйте документы на Android, создавайте PDF, упорядочивайте страницы и распознавайте текст через OCR на поддерживаемых устройствах."
+    },
+    "uk": {
+      "headline": "Скануйте документи в PDF",
+      "text": "Скануйте документи на Android, створюйте PDF, упорядковуйте сторінки та розпізнавайте текст через OCR на сумісних пристроях."
+    },
+    "el": {
+      "headline": "Σαρώστε έγγραφα σε PDF",
+      "text": "Σαρώστε έγγραφα στο Android, δημιουργήστε PDF, οργανώστε σελίδες και αναγνωρίστε κείμενο με OCR σε συμβατές συσκευές."
+    },
+    "ro": {
+      "headline": "Scanează documente în PDF",
+      "text": "Scanează documente pe Android, creează PDF-uri, organizează paginile și recunoaște text cu OCR pe dispozitive compatibile."
+    },
+    "th": {
+      "headline": "สแกนเอกสารเป็น PDF",
+      "text": "สแกนเอกสารบน Android สร้าง PDF จัดเรียงหน้า และรู้จำข้อความด้วย OCR บนอุปกรณ์ที่รองรับ"
+    },
+    "sv": {
+      "headline": "Skanna dokument till PDF",
+      "text": "Skanna dokument på Android, skapa PDF-filer, ordna sidor och känn igen text med OCR på enheter som stöds."
+    },
+    "da": {
+      "headline": "Scan dokumenter til PDF",
+      "text": "Scan dokumenter på Android, opret PDF-filer, organiser sider og genkend tekst med OCR på understøttede enheder."
+    },
+    "no": {
+      "headline": "Skann dokumenter til PDF",
+      "text": "Skann dokumenter på Android, lag PDF-filer, organiser sider og gjenkjenn tekst med OCR på støttede enheter."
+    },
+    "fi": {
+      "headline": "Skannaa asiakirjat PDF-muotoon",
+      "text": "Skannaa asiakirjoja Androidilla, luo PDF-tiedostoja, järjestä sivuja ja tunnista tekstiä OCR:llä tuetuilla laitteilla."
+    },
+    "cs": {
+      "headline": "Skenujte dokumenty do PDF",
+      "text": "Skenujte dokumenty na Androidu, vytvářejte PDF, uspořádejte stránky a rozpoznávejte text pomocí OCR na podporovaných zařízeních."
+    },
+    "hu": {
+      "headline": "Szkennelj dokumentumokat PDF-be",
+      "text": "Szkennelj dokumentumokat Androidon, készíts PDF-et, rendezd az oldalakat, és ismerj fel szöveget OCR-rel a támogatott eszközökön."
+    },
+    "he": {
+      "headline": "סרקו מסמכים לקובצי PDF",
+      "text": "סרקו מסמכים ב-Android, צרו קובצי PDF, סדרו עמודים וזהו טקסט באמצעות OCR במכשירים נתמכים."
+    },
+    "sw": {
+      "headline": "Changanua hati kuwa PDF",
+      "text": "Changanua hati kwenye Android, unda PDF, panga kurasa na utambue maandishi kwa OCR kwenye vifaa vinavyotumika."
+    },
+    "bn": {
+      "headline": "ডকুমেন্ট স্ক্যান করে PDF তৈরি করুন",
+      "text": "Android ফোনে ডকুমেন্ট স্ক্যান করুন, PDF তৈরি করুন, পৃষ্ঠা সাজান এবং সমর্থিত ডিভাইসে OCR দিয়ে লেখা শনাক্ত করুন।"
+    },
+    "fa": {
+      "headline": "اسناد را اسکن و PDF کنید",
+      "text": "با گوشی اندروید اسناد را اسکن کنید، PDF بسازید، صفحه‌ها را مرتب کنید و در دستگاه‌های سازگار با OCR متن را شناسایی کنید."
+    }
+  }
+}
