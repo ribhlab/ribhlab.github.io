@@ -1,6 +1,6 @@
 {
-  "enabled": false,
+  "enabled": true,
   "package": "com.ribhlab.rivoscan",
   "sourceVersion": "0.45.38",
-  "confirmation": ""
+  "confirmation": "PUBLISH_VERIFIED_RIVOSCAN_04538_SCREENSHOTS"
 }
