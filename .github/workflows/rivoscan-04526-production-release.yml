@@ -1,0 +1,38 @@
+name: RivoScan 0.45.26 - publish signed icon-only update to Production
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04526-production-release.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    environment: play-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Play publisher dependencies
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Promote code130 only if Production is serving signed v129 and v130 is verified in testing
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || exit 1
+          python tools/play-publisher/rivoscan_04526_production_upgrade.py \
+            --confirm PUBLISH_SIGNED_RIVOSCAN_130_PRODUCTION
+      - name: Record official Google Play production publication
+        if: success()
+        run: |
+          echo 'RivoScan 0.45.26 versionCode 130 committed to Production with original Play upload key.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'AI store graphics retained, video absent, no new binary upload.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Production visibility may still require Google approval.' >> "$GITHUB_STEP_SUMMARY"
