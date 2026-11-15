@@ -2,7 +2,7 @@
   "slug": "adsense-ready-original-site-2026-checklist",
   "category": "earning",
   "date": "2026-10-28",
-  "updated": "2026-10-28",
+  "updated": "2026-11-15",
   "featured": false,
   "sources": [
     {
@@ -51,6 +51,20 @@
             "تحقق من ملكية النطاق، وصحة ملفي robots.txt وsitemap.xml، وإمكانية فتح الصفحات عبر HTTPS دون أخطاء. يمكن طلب فهرسة الصفحات المهمة في Search Console، لكن ذلك لا يضمن فهرستها فوراً.",
             "استعمل رمز AdSense الأصلي المرتبط بحسابك، ولا تُفعّل وحدات إعلانية مخالفة للسياسات. يبقى قرار القبول من اختصاص Google بعد مراجعة الموقع والحساب، وقد يتطلب معلومات إضافية أو تعديلات."
           ]
+        },
+        {
+          "heading": "تدقيق حالة الفهرسة قبل تفسير رفض AdSense",
+          "paragraphs": [
+            "لا تساوِ بين رسالة «تم إرسال Sitemap» وبين قراءة Google لكل عنوان داخله. افحص من Search Console تاريخ آخر قراءة وحالة الملف وعدد الصفحات المكتشفة، ثم اختبر نموذجاً من المقالات بأداة فحص عنوان URL. إذا كانت النتيجة «الرابط غير معروف لدى Google»، فهذا نقص اكتشاف يحتاج متابعة، وليس دليلاً تلقائياً على مخالفة سياسات الإعلانات.",
+            "تحقق خارج حساب Google من فتح الصفحة الرئيسية وملف robots.txt وملف sitemap.xml باستخدام HTTPS ورمز الاستجابة 200، وقارن قائمة XML بالروابط الأساسية ووسوم canonical وhreflang. احتفظ بجدول يبين العنوان، واللغة، والتاريخ، وحالة الفهرسة، وأي اختلاف فعلي؛ لا تحذف الصفحات الصحيحة لمجرد أن Google لم تفهرسها بعد."
+          ]
+        },
+        {
+          "heading": "عزل المحتوى غير المكتمل من دون تزوير الأصالة",
+          "paragraphs": [
+            "إذا كانت المقالات قصيرة أو تستعمل نفس الخطوات العامة، لا يكفي تغيير الكلمات أو إضافة مترادفات لإظهارها فريدة. يجب توثيق مصدر المعلومة، وتقديم مثال قابل للتنفيذ، وبيان الحدود والأخطاء المحتملة لكل موضوع. يمكن إبقاء صفحة قديمة متاحة للقراء مع وسم noindex مؤقتاً، ومنع الإعلانات فيها، إلى أن تكتمل المراجعة الفعلية؛ لكن هذا قرار تحريري وليس شرطاً عددياً تفرضه Google.",
+            "في المواقع متعددة اللغات، راجع معنى النص ومصادره بشكل مستقل في كل لغة. لا تنسب إلى فريق التحرير اختباراً لم يحدث، ولا تسمِّ صورة مرخّصة من طرف ثالث تصويراً أصلياً للموقع. أعطِ الأولوية للمقالات التي تحل مشكلة واضحة، وراجع أيضاً الروابط التي تحتاج تحديثاً والصفحات التجارية وإفصاح العمولة."
+          ]
         }
       ]
     },
@@ -86,6 +100,20 @@
             "Verify domain ownership, HTTPS accessibility, robots and sitemap validity. Important articles should be discoverable through internal links; indexing requests do not guarantee search placement.",
             "Use your own AdSense publisher details for verification and follow the account's actual site-review status. Only Google can approve the site, and additional corrections may be required."
           ]
+        },
+        {
+          "heading": "Separate Google discovery problems from AdSense review",
+          "paragraphs": [
+            "A Search Console confirmation that a sitemap was submitted does not establish that Google has processed the XML or discovered its URLs. Check the last read date, processing status and discovered page count, then inspect a sample of important canonical URLs. An inspection result stating that a page is unknown to Google is a discovery signal, not by itself an advertising-policy violation.",
+            "Independently request the homepage, robots.txt and sitemap.xml over HTTPS, verify successful responses and parse the sitemap as XML. Compare its entries against your canonical and language-alternate tags. Record the page, language, check date, observed indexing response and any reproducible discrepancy. Keep genuinely useful pages rather than deleting them merely because indexing is delayed."
+          ]
+        },
+        {
+          "heading": "Replace weak material with documented editorial value",
+          "paragraphs": [
+            "Rephrasing a generic tutorial does not make it independently useful. A substantial revision should cite its actual sources, include an applicable example or worked decision, explain when the instructions fail and avoid pretending that the publisher performed tests that never happened. A legacy draft can remain accessible with a temporary noindex directive and no advertising while it is being reviewed; that is an editorial risk control, not a mandated Google word-count threshold.",
+            "For a multilingual site, verify each translation against the underlying evidence and preserve technical meaning across languages. Licensed third-party photographs should be credited accurately, not represented as photographs taken by the publisher. Audit referral disclosures, expired opportunities, misleading performance claims and the path readers can use to report corrections."
+          ]
         }
       ]
     },
@@ -120,6 +148,20 @@
           "paragraphs": [
             "Confirmez HTTPS, propriété du domaine, robots.txt, sitemap.xml et absence de liens cassés. Les pages importantes doivent être accessibles par la navigation interne.",
             "Insérez uniquement l’identifiant AdSense qui vous appartient et consultez les indications de votre compte. L'approbation dépend exclusivement de Google et n'est jamais garantie."
+          ]
+        },
+        {
+          "heading": "Distinguer la découverte par Google du contrôle AdSense",
+          "paragraphs": [
+            "Le message confirmant l’envoi du sitemap ne prouve pas que Google l’a analysé ni qu’il connaît ses adresses. Consultez la dernière lecture, le statut de traitement et le nombre de pages découvertes, puis inspectez quelques URL canoniques représentatives. Une URL inconnue de Google indique un problème de découverte à examiner, mais ne constitue pas en soi une preuve d’infraction publicitaire.",
+            "Testez séparément l’accueil, robots.txt et sitemap.xml en HTTPS, vérifiez les réponses et parsez le contenu XML. Rapprochez ensuite les adresses du sitemap des balises canonical et hreflang. Conservez un registre indiquant l’adresse, la langue, la date du test, la réponse d’indexation et l’écart vérifiable, sans supprimer un dossier pertinent simplement parce que l’indexation tarde."
+          ]
+        },
+        {
+          "heading": "Remplacer les textes faibles par une réelle valeur éditoriale",
+          "paragraphs": [
+            "Reformuler un tutoriel générique ne suffit pas à lui donner une valeur originale. Une révision sérieuse identifie les sources consultées, présente un exemple applicable, explique les limites et évite de revendiquer des essais jamais réalisés. Une ancienne page peut rester accessible avec noindex et sans publicité pendant sa vérification ; il s’agit d’une règle éditoriale interne, pas d’un seuil de mots imposé par Google.",
+            "Pour un média trilingue, contrôlez chaque traduction à partir des preuves originales et conservez le sens des notions techniques. Une photo tierce utilisée sous licence doit être créditée, sans être présentée comme une photographie réalisée par l’éditeur. Vérifiez également les liens affiliés, les offres expirées, les chiffres de performance et les moyens de demander une correction."
           ]
         }
       ]
