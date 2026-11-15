@@ -40,3 +40,5 @@ jobs:
       - name: Final safety notice
         if: always()
         run: echo "MoneyControl remains DRAFT. Do not activate before Google Sheets copy URL is public Viewer."
+
+# Retry following CDN-safe cover PNG validation; buyer PDF hash remains strict.
