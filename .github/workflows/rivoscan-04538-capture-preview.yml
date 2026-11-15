@@ -51,26 +51,31 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python - <<'PY'
-          import hashlib, json, pathlib, struct
-          root=pathlib.Path("/tmp/rivoscan-04538")
-          paths=[]
-          for folder,dim in (("phone/phone",(1080,1920)),("tablet/7-inch",(1080,1920)),("tablet/10-inch",(1536,2560))):
-              files=sorted((root/folder).glob("*.png"))
-              if len(files)!=8:raise SystemExit(f"{folder}: expected 8, got {len(files)}")
-              for f in files:
-                  data=f.read_bytes()
-                  if data[:8]!=bytes.fromhex("89504e470d0a1a0a") or struct.unpack(">II",data[16:24])!=dim or not 10000<len(data)<8000000:
-                      raise SystemExit(f"Invalid real UI capture: {f}")
-                  paths.append(f)
-          if len(set(hashlib.sha256(f.read_bytes()).digest() for f in paths))!=24:
-              raise SystemExit("Duplicate UI captures")
-          for audit in (root/"phone/audit.json",root/"tablet/audit.json"):
-              a=json.loads(audit.read_text())
-              if "0.45.38" not in a["source"] or a["errors"]:raise SystemExit(f"Capture audit failed: {audit}")
-          print("RIVOSCAN_04538_CAPTURE_VERIFIED="+json.dumps({"version":"0.45.38","phone":8,"tablet7":8,"tablet10":8,"source":"actual release WebView UI; not native camera/OCR captures"}))
-          PY
+          node --input-type=module - <<'JS'
+          import {readFileSync,readdirSync,statSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const root='/tmp/rivoscan-04538';
+          const folders=[['phone/phone',1080,1920],['tablet/7-inch',1080,1920],['tablet/10-inch',1536,2560]];
+          const hashes=[];
+          for(const [folder,w,h] of folders){
+            const dir=root+'/'+folder;
+            const files=readdirSync(dir).filter(x=>x.endsWith('.png')).sort();
+            if(files.length!==8)throw Error(folder+': expected 8, got '+files.length);
+            for(const name of files){
+              const b=readFileSync(dir+'/'+name);
+              if(b.subarray(0,8).toString('hex')!=='89504e470d0a1a0a'||b.readUInt32BE(16)!==w||b.readUInt32BE(20)!==h||b.length<=10000||b.length>=8000000)throw Error('Invalid capture '+name);
+              hashes.push(createHash('sha256').update(b).digest('hex'));
+            }
+          }
+          if(new Set(hashes).size!==24)throw Error('Duplicate UI captures');
+          for(const f of ['phone/audit.json','tablet/audit.json']){
+            const a=JSON.parse(readFileSync(root+'/'+f,'utf8'));
+            if(!a.source.includes('0.45.38')||a.errors.length)throw Error('Capture audit failed '+f);
+          }
+          console.log('RIVOSCAN_04538_CAPTURE_VERIFIED='+JSON.stringify({version:'0.45.38',phone:8,tablet7:8,tablet10:8,source:'actual WebView UI'}));
+          JS
       - name: Save all original screenshots for visual review
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: RivoScan-04538-Actual-WebView-Screenshots-24
