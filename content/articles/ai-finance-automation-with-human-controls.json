@@ -2,9 +2,18 @@
   "slug": "ai-finance-automation-with-human-controls",
   "category": "ai",
   "date": "2026-10-25",
-  "updated": "2026-10-25",
+  "updated": "2026-11-15",
   "featured": false,
-  "sources": [],
+  "sources": [
+    {
+      "label": "NIST — AI Risk Management Framework 1.0 (Govern, Map, Measure, Manage)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/AI/NIST.AI.100-1.pdf"
+    },
+    {
+      "label": "Microsoft Learn — Azure AI security best practices and sensitive data controls",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/ai-security-best-practices"
+    }
+  ],
   "translations": {
     "ar": {
       "title": "الذكاء الاصطناعي في المالية: الأتمتة تحت الرقابة",
@@ -42,6 +51,27 @@
             "عند نشر أخبار مالية، اطلب أيضاً مصدر الخبر وتاريخ صدوره وميز بين التفسير والحقائق."
           ],
           "bullets": []
+        },
+        {
+          "heading": "حالة تطبيقية: مطابقة تجريبية بين البنك والمحاسبة",
+          "paragraphs": [
+            "في مثال تعليمي ببيانات افتراضية، يتضمن كشف البنك أربع عمليات: تحويل وارد بـ 12,500 درهم، ومصاريف بنكية بـ 45 درهماً، وتحويلاً صادراً بـ 3,200 درهم، وتحصيلاً آخر بـ 800 درهم. في سجل المحاسبة تظهر ثلاث عمليات فقط؛ المصاريف البنكية غير مسجلة. المجموع الحسابي لحركة البنك هو زيادة صافية بـ 10,055 درهماً. هذا لا يعني أن الفرق المحاسبي يساوي الرقم نفسه؛ لا بد من مقارنة الرصيد الافتتاحي والعمليات المعروضة وحالة القيد البنكي لكل عملية.",
+            "الأفضل أن تتولى خوارزمية واضحة مطابقة المبلغ والعملة والمرجع والتاريخ ضمن مهلة محددة، ثم يشرح الذكاء الاصطناعي الاستثناءات فقط. على سبيل المثال، سطر 45 درهماً يصبح «مصاريف بنك لم نجد لها مقابلاً» لا «قيد محاسبي مؤكّد يجب تسجيله». يراجع المحاسب المستند الأصلي ويحدد حساب المصاريف والتاريخ قبل اقتراح القيد. لا ينبغي السماح للنموذج بإقفال الفرق آلياً أو تعديل دفتر الأستاذ دون موافقة."
+          ]
+        },
+        {
+          "heading": "مصفوفة تحكم قبل الاعتماد",
+          "paragraphs": [
+            "ابدأ بكتابة أربع وظائف في سجل المخاطر على طريقة إطار NIST: الحوكمة لتحديد المسؤوليات، ورسم الخريطة لفهم نوع البيانات وحالات الفشل، والقياس لفحص الأخطاء، والإدارة لوضع قرار التصحيح أو إيقاف التجربة. صنف المخاطر مثل كشف معلومات الزبائن، وربط عملية مالية بعملية أخرى خطأً، وإهمال المبالغ الصغيرة، وتوليد تبرير غير موجود في المستندات. عيّن لكل خطر صاحب قرار ودليلاً قابلاً للفحص.",
+            "يجب أن يبقى الوصول للبيانات محكوماً بمبدأ الصلاحية الضرورية، مع فصل الشخص الذي يعد الاقتراح عن الشخص الذي يعتمد التسوية. في تجربة داخلية، يمكن إخفاء أسماء الأطراف واستبدال أرقام الحسابات بمعرفات اصطناعية قبل تشغيل نموذج لغوي. لا تفترض أن إخفاء الاسم فقط يجعل بيانات المعاملة مجهولة تماماً؛ يمكن أن تكشف التواريخ والمبالغ النادرة هوية الشخص عندما تُجمع مع معلومات أخرى."
+          ]
+        },
+        {
+          "heading": "مؤشرات النجاح وسجل التدقيق",
+          "paragraphs": [
+            "حدد بيانات اختبار مع جواب مرجعي قبل إطلاق التشغيل. يمكن أن يتضمن الملف ثلاثين عملية افتراضية، منها عشر حالات بلا تطابق، وحالات تغير فيها التاريخ، وأخرى بمبلغ متكرر. احسب نسبة المطابقات الصحيحة وعدد المطابقات الخاطئة مع إظهار طريقة حساب كل رقم. لا تكتف بنسبة دقة إجمالية، لأن مطابقة خاطئة لعملية كبيرة قد تكون أخطر من عشر حالات بقيت معلقة للمراجعة البشرية.",
+            "سجل نسخة القواعد ونسخة النموذج، وقت تشغيل الدفعة، مصدر البيانات المسموح به، والعمليات التي رفضها المراجع أو صححها. عند تغيير حدود التسامح في التاريخ أو المبلغ أعد نفس مجموعة الاختبار، ثم قارِن النتيجة مع الإصدار السابق. لا تنسب لنظامك وفورات أو دقة معينة قبل قياسها فعلاً. الهدف هو تقليص وقت البحث عن الاستثناءات مع بقاء المسؤولية والقرار المحاسبي عند الأشخاص المخولين."
+          ]
         }
       ]
     },
@@ -81,6 +111,27 @@
             "For market coverage, attach primary sources and dates and distinguish facts from analysis."
           ],
           "bullets": []
+        },
+        {
+          "heading": "Worked exercise: reconcile synthetic bank and ledger entries",
+          "paragraphs": [
+            "In a deliberately fictional training set, a bank statement contains four movements: a MAD 12,500 incoming transfer, a MAD 45 bank fee, a MAD 3,200 outgoing transfer and another MAD 800 receipt. The accounting export has only three corresponding entries: the fee is absent. Net bank movement in these four examples equals a MAD 10,055 increase, but the accounting difference must be computed from matched opening balances and the complete transaction set; it is not safe to treat the net movement itself as a reconciliation adjustment.",
+            "Use deterministic rules to compare amount, currency, reference, value date and acceptable timing differences. Let an AI assistant explain unmatched items, but not silently change the ledger. In this exercise, the fee becomes a review item labelled 'bank fee missing from accounting', not a booked expense. A reviewer first checks the bank evidence, ledger cut-off and account coding before approving an entry. This distinction matters more than a polished AI-generated reconciliation narrative."
+          ]
+        },
+        {
+          "heading": "A control matrix before production adoption",
+          "paragraphs": [
+            "NIST's AI Risk Management Framework suggests organizing controls through Govern, Map, Measure and Manage. Translate these functions into actual responsibilities: identify the process owner and approvers; map which input records may be exposed; measure false matches and unsupported explanations; and decide who can stop processing or correct a defect. List failure modes such as customer data leakage, an incorrect transaction pairing, lost small-value items and invented supporting documentation.",
+            "Apply least-privilege access rather than granting the model unrestricted financial system access. For an initial test, replace names and bank account numbers with synthetic identifiers and use transactions that do not describe actual customers. Removing a name alone is not sufficient anonymization: unusual amounts, dates or merchant names can make a record identifiable when combined with other information. Review the provider's data handling rules and internal authorization before any production data transfer."
+          ]
+        },
+        {
+          "heading": "Quality metrics and an auditable approval trail",
+          "paragraphs": [
+            "Before deployment, create a ground-truth test sheet with, for example, thirty synthetic entries. Deliberately include ten unmatched records, repeated amounts and posting-date differences. Compute correct matches, incorrect matches and unresolved exceptions separately. A headline accuracy percentage can conceal a materially wrong high-value match, so examine the impact and traceability of each error as well as the overall count. No illustrative test numbers should be misrepresented as observed system performance.",
+            "Record the rule-set version, model version, approved input source, processing time, reviewer and final disposition of every exception. After changing matching tolerance or document extraction rules, rerun the same fixed cases and compare results. Require a separate sign-off for any accounting adjustment, and keep supporting documents accessible for later review. The purpose is to help trained staff triage discrepancies, not to replace authorization and judgment with automatic postings."
+          ]
         }
       ]
     },
@@ -120,6 +171,27 @@
             "Un article économique doit également citer ses sources et distinguer faits, analyses et hypothèses."
           ],
           "bullets": []
+        },
+        {
+          "heading": "Exercice chiffré : rapprocher des opérations bancaires fictives",
+          "paragraphs": [
+            "Dans un jeu de données pédagogique inventé, un relevé bancaire contient quatre mouvements : un virement reçu de 12 500 MAD, des frais de 45 MAD, un virement émis de 3 200 MAD et un encaissement de 800 MAD. L'export comptable ne reprend que trois opérations, sans les frais. Le mouvement bancaire net de cet exemple atteint plus 10 055 MAD, mais l'écart de rapprochement doit être calculé avec les soldes d'ouverture et l'ensemble des opérations ; il serait incorrect d'enregistrer ce montant directement en comptabilité.",
+            "La recherche des correspondances doit reposer sur des règles explicites de montant, devise, référence, date et tolérance. L'IA peut commenter les exceptions, mais ne doit pas passer d'écriture silencieusement. Ici, les 45 MAD deviennent une anomalie à examiner, pas une charge comptabilisée automatiquement. Une personne habilitée contrôle le justificatif bancaire, la date de valeur et l'imputation avant toute proposition de saisie."
+          ]
+        },
+        {
+          "heading": "Une matrice de contrôle avant mise en production",
+          "paragraphs": [
+            "Le cadre NIST de gestion des risques de l'intelligence artificielle distingue Govern, Map, Measure et Manage. En pratique, la gouvernance désigne les responsables, la cartographie identifie les données et les risques, la mesure examine les erreurs et la gestion précise qui arrête le processus ou valide une correction. Faites figurer les risques de fuite de données clients, de rapprochement erroné, d'oubli d'une petite opération et d'invention de justificatifs, avec un contrôle vérifiable pour chacun.",
+            "L'accès doit rester limité au strict besoin, avec séparation entre préparation et validation. Au départ, utilisez des identifiants artificiels plutôt que des noms ou comptes bancaires réels. Retirer seulement les noms n'anonymise pas nécessairement une transaction : montants atypiques, dates précises ou libellés peuvent permettre une réidentification. Vérifiez les conditions du fournisseur et les autorisations de l'entreprise avant d'envoyer des données de production."
+          ]
+        },
+        {
+          "heading": "Indicateurs de qualité et piste d'audit",
+          "paragraphs": [
+            "Préparez un échantillon de référence avec, par exemple, trente écritures fictives, dont dix sans contrepartie, plusieurs montants répétés et quelques décalages de dates. Calculez séparément les vrais rapprochements, les fausses correspondances et les suspens. Une précision globale élevée peut cacher un rapprochement erroné sur un montant important ; examinez donc aussi la gravité de l'erreur et la possibilité de la retracer jusqu'à la pièce d'origine.",
+            "Conservez la version des règles, celle du modèle, l'origine autorisée des données, l'heure du traitement, le nom du réviseur et la décision prise pour chaque anomalie. Lorsqu'une tolérance de date ou de montant change, refaites le même test pour comparer les versions. Aucun gain de productivité ni taux de fiabilité ne doit être présenté comme réel sans mesure. La décision comptable et les corrections de grand livre restent soumises à une validation humaine distincte."
+          ]
         }
       ]
     }
