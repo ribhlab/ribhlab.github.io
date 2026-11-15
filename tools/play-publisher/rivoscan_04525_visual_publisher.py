@@ -4,7 +4,7 @@ No fabricated OCR/camera result. Google Play media upload is one transactional e
 The preview MP4 is for GitHub Release; Google Play requires a separate YouTube URL.
 """
 from __future__ import annotations
-import argparse, hashlib, json, subprocess
+import argparse, hashlib, json, subprocess, shutil
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
@@ -141,7 +141,7 @@ def prepare(src,out):
   raise RuntimeError("RivoScan icon SHA changed; refusing to publish a wrong icon")
  icon=Image.open(icon_path).convert("RGBA")
  assert icon.size==(512,512)
- icon.save(out/"RivoScan_Icon_512x512.png")
+ shutil.copyfile(icon_path,out/"RivoScan_Icon_512x512.png")
  make_screenshots(src,out,icon)
  feature_graphic(out,icon)
  promo_video(out,load_source(src/"phone"/"phone","phone"))
