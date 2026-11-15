@@ -34,3 +34,5 @@ jobs:
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: python tools/etsy-publisher/scripts/update_moneycontrol_premium_images.py
+
+# Read-only gallery audit after uploading all 8 images (no additional upload).
