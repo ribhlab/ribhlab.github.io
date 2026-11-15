@@ -129,8 +129,12 @@ function seoDescription(raw,lang){
  }
  if(content.length>155){
   const clipped=content.slice(0,156);
+  const boundary=Math.max(clipped.lastIndexOf('،'),clipped.lastIndexOf(';'),clipped.lastIndexOf('؛'),clipped.lastIndexOf('.'));
   const idx=clipped.lastIndexOf(' ');
-  content=(idx>=115?clipped.slice(0,idx):clipped.slice(0,155)).replace(/[\s,:;—–-]+$/u,'');
+  content=(boundary>=95?clipped.slice(0,boundary):(idx>=105?clipped.slice(0,idx):clipped.slice(0,154)))
+   .replace(/(?:\s+(?:دون|مع|من|على|في|إلى|أو|و|sans|without|and|avec|et|de|des|pour|to|with|or|the|a|an))+$/giu,'')
+   .replace(/[\s,:;،؛—–-]+$/u,'').trim();
+  if(content&&!/[.!؟]$/u.test(content))content+='.';
  }
  return content;
 }
