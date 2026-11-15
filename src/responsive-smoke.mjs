@@ -14,6 +14,8 @@ const dist=path.join(root,'dist');
 const siteUrl=process.env.SITE_URL||'https://ribhlab.github.io';
 const basePath=new URL(siteUrl).pathname.replace(/\/$/,'');
 const fullRoute=(lang,route)=>basePath+'/'+lang+route;
+const urlAliases=new Map(JSON.parse(fs.readFileSync(path.join(dist,'assets','short-url-map.json'),'utf8')).map(x=>[x.oldRoute,x.newRoute]));
+const canonicalPath=(lang,route)=>basePath+(urlAliases.get('/'+lang+route)||'/'+lang+route);
 if(!fs.existsSync(dist))throw Error('Run npm run build first');
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 const executable=[process.env.CHROME_BIN,'google-chrome','google-chrome-stable','chromium','chromium-browser'].filter(Boolean)
@@ -90,11 +92,11 @@ try{
   const label=test.lang+test.route+' @ '+test.width+'px';
   try{
    await cdp('Emulation.setDeviceMetricsOverride',{width:test.width,height:900,deviceScaleFactor:1,mobile:test.width<=768});
-   const nav=await cdp('Page.navigate',{url:'http://127.0.0.1:'+sitePort+fullRoute(test.lang,test.route)});
+   const nav=await cdp('Page.navigate',{url:'http://127.0.0.1:'+sitePort+canonicalPath(test.lang,test.route)});
    if(nav.errorText)throw Error(nav.errorText);
    let ready=false;
    for(let count=0;count<50;count++){
-    if(await evalJS('document.readyState!=="loading" && window.location.pathname==='+JSON.stringify(fullRoute(test.lang,test.route))+' && !!document.querySelector("#main") && !!document.querySelector("link[href*=responsive]")')){ready=true;break;}
+    if(await evalJS('document.readyState!=="loading" && window.location.pathname==='+JSON.stringify(canonicalPath(test.lang,test.route))+' && !!document.querySelector("#main") && !!document.querySelector("link[href*=responsive]")')){ready=true;break;}
     await pause(80);
    }
    if(!ready)throw Error('responsive HTML failed to load');
