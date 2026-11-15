@@ -1,0 +1,77 @@
+name: RivoScan 0.45.38 - real installed APK screenshot audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04538-native-apk-screenshots.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capture-native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Download exact original-key signed 0.45.38 APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivoscan-native
+          curl --fail --location --retry 3 --retry-delay 4 \
+            -o /tmp/rivoscan-native/RivoScan-0.45.38-Signed.apk \
+            https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.38-original-key/RivoScan-0.45.38-Signed.apk
+          test "$(stat -c%s /tmp/rivoscan-native/RivoScan-0.45.38-Signed.apk)" -gt 60000000
+          keytool -printcert -jarfile /tmp/rivoscan-native/RivoScan-0.45.38-Signed.apk > /tmp/rivoscan-native/signature.txt
+          grep -F 'E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E' /tmp/rivoscan-native/signature.txt
+      - name: Install app and capture native Android screenshots
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          disable-animations: true
+          script: |
+            set -euo pipefail
+            adb shell wm size 1080x1920
+            adb shell wm density 420
+            adb install -r /tmp/rivoscan-native/RivoScan-0.45.38-Signed.apk
+            adb shell pm list packages | grep -F 'com.ribhlab.rivoscan'
+            mkdir -p /tmp/rivoscan-native/screens
+            adb shell am force-stop com.ribhlab.rivoscan || true
+            adb shell monkey -p com.ribhlab.rivoscan -c android.intent.category.LAUNCHER 1
+            sleep 15
+            adb shell input keyevent 4 || true
+            sleep 2
+            adb shell screencap -p /sdcard/rivoscan-home.png
+            adb pull /sdcard/rivoscan-home.png /tmp/rivoscan-native/screens/01_Home.png
+            adb shell input tap 280 1820
+            sleep 4
+            adb shell screencap -p /sdcard/rivoscan-docs.png
+            adb pull /sdcard/rivoscan-docs.png /tmp/rivoscan-native/screens/02_Documents.png
+            adb shell input tap 735 1820
+            sleep 4
+            adb shell screencap -p /sdcard/rivoscan-tools.png
+            adb pull /sdcard/rivoscan-tools.png /tmp/rivoscan-native/screens/03_Tools.png
+            adb shell input tap 955 1820
+            sleep 4
+            adb shell screencap -p /sdcard/rivoscan-settings.png
+            adb pull /sdcard/rivoscan-settings.png /tmp/rivoscan-native/screens/08_Settings.png
+            adb shell uiautomator dump /sdcard/window.xml || true
+            adb pull /sdcard/window.xml /tmp/rivoscan-native/window.xml || true
+      - name: Save original Android emulator screenshots for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-04538-Native-APK-Screenshots
+          path: |
+            /tmp/rivoscan-native/screens/
+            /tmp/rivoscan-native/window.xml
+          retention-days: 30
+          if-no-files-found: warn
