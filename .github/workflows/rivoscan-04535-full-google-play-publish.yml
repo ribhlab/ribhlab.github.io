@@ -33,9 +33,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+      - name: Install system Python with SSL and isolated Play publishing environment
+        run: |
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y python3 python3-venv python3-pip ca-certificates
+          /usr/bin/python3 -m venv /tmp/rivoscan-pub-venv
+          echo /tmp/rivoscan-pub-venv/bin >> "$GITHUB_PATH"
+          /tmp/rivoscan-pub-venv/bin/python -c 'import ssl;print("Python SSL ready:",ssl.OPENSSL_VERSION)'
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
