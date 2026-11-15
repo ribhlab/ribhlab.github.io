@@ -51,7 +51,7 @@ for(const p of pages){const h=fs.readFileSync(p,'utf8');const pathName='/'+path.
 }
 for(const lang of ['ar','en','fr']){
  const index=JSON.parse(fs.readFileSync(path.join(dist,'assets',`search-${lang}.json`),'utf8'));
- if(index.length!==fs.readdirSync(path.join(root,'content/articles')).filter(x=>x.endsWith('.json')).length) errors.push(`Search index ${lang}: inconsistent article count ${index.length}`);
+ if(index.length!==fs.readdirSync(path.join(root,'content/articles')).filter(x=>x.endsWith('.json')).map(x=>JSON.parse(fs.readFileSync(path.join(root,'content/articles',x),'utf8'))).filter(articleIndexReady).length) errors.push(`Search index ${lang}: inconsistent article count ${index.length}`);
  for(const a of index) if(!fs.existsSync(path.join(dist,stripBase(a.url).replace(/^\//,''),'index.html'))) errors.push(`Search entry broken: ${a.url}`);
 }
 // Check that the bare domain homepage can verify ownership (not just /ar/).
@@ -648,11 +648,12 @@ for(const lang of ['ar','en','fr']){
  if(!html.includes('class="archive-category-nav"')||!html.includes('class="article-grid archive-article-grid"'))errors.push('Archive missing its navigable article list: '+lang);
  for(const a of knownSlugs){
   const article=JSON.parse(fs.readFileSync(path.join(articleDir,a+'.json'),'utf8'));
+  if(!articleIndexReady(article))continue; // archived only after source and originality-quality review
   const expected=canonicalFromLegacy.get('/'+lang+'/'+article.category+'/'+a+'/')||'/'+lang+'/'+article.category+'/'+a+'/';
   if(!html.includes(expected))errors.push('Old/new article not linked in permanent '+lang+' archive: '+a);
  }
  const imgUrls=[...html.matchAll(/class="card-cover-image editorial-photo"[^>]*\bsrc="([^"]+)"/g)].map(m=>m[1]);
- if(imgUrls.length!==knownSlugs.size||new Set(imgUrls).size!==knownSlugs.size)errors.push('Archive images duplicated or stories missing: '+lang);
+ if(imgUrls.length!==indexReadyEditorialCount||new Set(imgUrls).size!==indexReadyEditorialCount)errors.push('Reviewed archive images duplicated or stories missing: '+lang);
  const home=fs.readFileSync(path.join(dist,lang,'index.html'),'utf8');
  if(!home.includes('/'+lang+'/archive/'))errors.push('Archive not linked from homepage: '+lang);
 }
