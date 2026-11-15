@@ -2,7 +2,7 @@
   "slug": "ai-prompts-at-work",
   "category": "ai",
   "date": "2026-10-25",
-  "updated": "2026-10-25",
+  "updated": "2026-11-15",
   "featured": true,
   "translations": {
     "ar": {
@@ -45,6 +45,20 @@
             "احتفظ بسجل التعديلات لتعرف ما الذي حسّن النتائج حقاً."
           ],
           "bullets": []
+        },
+        {
+          "heading": "مثال عملي: تحليل مبيعات بدون تخمين",
+          "paragraphs": [
+            "افترض أن عندك جدولا تجريبيا فيه ثلاثة أعمدة فقط: تاريخ الفاتورة، قيمة المبيعات، والمدينة. لا تبدأ بأمر «حلل الملف»؛ اكتب هدفا قابلا للقياس: احسب مجموع المبيعات لكل مدينة ولكل شهر، وأظهر عدد الصفوف المستبعدة بسبب نقص التاريخ، ولا تملأ القيم الفارغة. اطلب جدول نتائج موحدا مع توضيح العملة وأن مجموع المجاميع الفرعية يجب أن يطابق المجموع العام. هذه حالة تعليمية، وليست نتيجة مستخرجة من بيانات عميل حقيقي.",
+            "في مرحلة التحقق، أعد حساب المجموع باستعمال Excel أو Python خارج النموذج. أنشئ ثلاث حالات اختبار: سطر بتاريخ صحيح وقيمة موجبة، سطر بقيمة ناقصة، وسطر مكرر. حدد مسبقا هل التكرار مسموح أم لا، واطلب من النموذج أن يضع الاستثناءات في تقرير منفصل. بهذا تصبح جودة الأمر قابلة للاختبار، بدل الحكم عليها من أسلوب الصياغة فقط."
+          ]
+        },
+        {
+          "heading": "حماية الوثائق وتسجيل التغييرات",
+          "paragraphs": [
+            "قبل نسخ أي بيانات إلى خدمة ذكاء اصطناعي، حدد إن كانت تحتوي على أسماء زبناء أو حسابات بنكية أو أرقام تعريف أو أسرار مهنية. جرّب أولاً بملف اصطناعي يحاكي بنية البيانات دون إظهار هويات حقيقية. إذا كانت المهمة تتطلب معلومات حساسة، راجع قواعد المؤسسة وعقد الخدمة وإعدادات الاحتفاظ بالبيانات، ولا تفترض أن محادثة عامة هي مكان مناسب لمستند مالي سري.",
+            "احفظ لكل تجربة رقم نسخة الأمر، وتاريخها، وعينة المدخلات المسموح بها، والنتيجة المنتظرة، والمراجعة البشرية للنتيجة. عند تعديل جملة واحدة، أعد نفس الحالات الثلاث وقارن عدد الأخطاء والاستثناءات. لا تكتب «نجح الاختبار» قبل تنفيذ المقارنة فعلاً؛ التوثيق أهم من إضافة عشرات التعليمات التي لا تخدم القرار."
+          ]
         }
       ],
       "faq": []
@@ -89,6 +103,20 @@
             "Iterate by changing one unclear requirement at a time."
           ],
           "bullets": []
+        },
+        {
+          "heading": "Worked example: summarize sales without inventing records",
+          "paragraphs": [
+            "Imagine a synthetic spreadsheet with exactly three columns: invoice date, sales amount and city. Instead of asking the model to analyze the file vaguely, require monthly and city totals, a count of rows rejected for missing dates, and a separate exception report. Explicitly prohibit filling blank values. Specify the currency, output columns and the control that the sum of city subtotals must reconcile to the grand total. This is a teaching scenario, not a claimed result from a real customer's records.",
+            "Recalculate the totals independently in Excel or Python. Prepare three small test cases: a valid row with a positive amount, a row missing a required value, and a duplicated invoice. Define whether duplicates should be rejected before evaluating the assistant. Check both the numerical answer and the handling of exceptions; polished wording is not an accuracy test."
+          ]
+        },
+        {
+          "heading": "Protect confidential inputs and version the prompt",
+          "paragraphs": [
+            "Before entering work data into any AI tool, identify customer names, account numbers, personal identifiers and confidential commercial terms. Begin with representative synthetic records that preserve the table structure but not the identities. If real sensitive information is essential, confirm the organization's permission, contractual protections and data-retention settings; do not assume a general chat session is an approved financial-document repository.",
+            "Keep a versioned record of the instruction, allowed inputs, expected output, evaluation examples and reviewer decisions. When changing one instruction, rerun the same fixed cases and compare the observed errors and omissions. Do not claim that a revised prompt performed better without a repeatable test. This creates an auditable workflow instead of relying on an unverified first impression."
+          ]
         }
       ],
       "faq": []
@@ -133,9 +161,33 @@
             "Améliorez progressivement les consignes à partir des erreurs observées."
           ],
           "bullets": []
+        },
+        {
+          "heading": "Exemple appliqué : analyser des ventes sans inventer de lignes",
+          "paragraphs": [
+            "Imaginez un fichier fictif comprenant uniquement la date de facture, le montant et la ville. Remplacez « analyse ce tableau » par une demande précise : totaliser les ventes par mois et par ville, compter les lignes dont la date manque et présenter les anomalies à part. Interdisez le remplissage de cases vides. Précisez la devise, les colonnes du résultat et le contrôle selon lequel les sous-totaux doivent correspondre au total général. Cet exemple est pédagogique et ne représente pas un résultat obtenu chez un client.",
+            "Recalculez ensuite les montants indépendamment dans Excel ou Python. Constituez trois cas : une ligne valide, une valeur obligatoire absente et une facture dupliquée. Définissez à l’avance le traitement attendu du doublon. Évaluez à la fois les calculs et la gestion des exceptions ; une réponse élégante ne constitue pas une preuve de justesse."
+          ]
+        },
+        {
+          "heading": "Protéger les documents et suivre les versions",
+          "paragraphs": [
+            "Avant d'utiliser un outil d’IA, repérez les noms de clients, coordonnées bancaires, identifiants et informations commerciales confidentielles. Commencez avec des données synthétiques qui reproduisent la structure du tableau sans exposer de personnes. Lorsque des informations réelles sont nécessaires, vérifiez les autorisations de l’entreprise, les garanties contractuelles et les règles de conservation ; une conversation publique ne remplace pas un espace documentaire approuvé.",
+            "Conservez la version du prompt, les exemples autorisés, le format attendu et le résultat des vérifications humaines. Après une modification, exécutez à nouveau les mêmes tests et comparez erreurs et omissions. N'affirmez pas avoir amélioré les performances sans comparaison réalisée. Le suivi des versions rend la méthode reproductible et plus utile à une équipe."
+          ]
         }
       ],
       "faq": []
     }
-  }
+  },
+  "sources": [
+    {
+      "label": "OpenAI developer documentation — prompt engineering and evaluation",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering"
+    },
+    {
+      "label": "Microsoft Learn — prompt engineering techniques and fact-checking",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/prompt-engineering"
+    }
+  ]
 }
