@@ -60,7 +60,7 @@ jobs:
               if len(files)!=8:raise SystemExit(f"{folder}: expected 8, got {len(files)}")
               for f in files:
                   data=f.read_bytes()
-                  if data[:8]!=b"\\x89PNG\\r\\n\\x1a\\n" or struct.unpack(">II",data[16:24])!=dim or not 10000<len(data)<8000000:
+                  if data[:8]!=bytes.fromhex("89504e470d0a1a0a") or struct.unpack(">II",data[16:24])!=dim or not 10000<len(data)<8000000:
                       raise SystemExit(f"Invalid real UI capture: {f}")
                   paths.append(f)
           if len(set(hashlib.sha256(f.read_bytes()).digest() for f in paths))!=24:
