@@ -2,9 +2,22 @@
   "slug": "online-income-real-business-models",
   "category": "earning",
   "date": "2026-10-25",
-  "updated": "2026-10-25",
+  "updated": "2026-11-15",
   "featured": false,
-  "sources": [],
+  "sources": [
+    {
+      "label": "US Federal Trade Commission — affiliate marketing disclosures and endorsements",
+      "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
+    },
+    {
+      "label": "Google AdSense Help — unique content and clear navigation before approval",
+      "url": "https://support.google.com/adsense/answer/7299563?hl=en"
+    },
+    {
+      "label": "Google Publisher Policies — replicated content and deceptive claims",
+      "url": "https://support.google.com/adsense/answer/10502938?hl=en"
+    }
+  ],
   "translations": {
     "ar": {
       "title": "الربح من الإنترنت: خدمات ومنتجات وأفلييت بواقعية",
@@ -42,6 +55,20 @@
             "خطط لبناء ثقة المحتوى والتوزيع الطبيعي بدل شراء زيارات غير حقيقية أو وعود الربح السريع."
           ],
           "bullets": []
+        },
+        {
+          "heading": "مثال مالي قابل لإعادة الحساب: تسعير خدمة رقمية",
+          "paragraphs": [
+            "هذا مثال حسابي افتراضي بالدرهم المغربي، وليس عرضاً تجارياً حقيقياً: تحتاج خدمة Excel إلى ثلاث ساعات عمل، وقدّرت قيمة الساعة بـ180 درهماً، والمصاريف المباشرة بـ100 درهم، والمنصة تخصم عمولة 20% من سعر البيع. إذا أردت تغطية 540 درهماً مقابل وقتك و100 درهم مقابل المصاريف بعد عمولة المنصة، فالسعر الأدنى النظري هو (540 + 100) ÷ (1 - 0.20) = 800 درهم. لا يشمل المثال الضرائب أو التسويق أو تعديلات العميل أو تغير أسعار الصرف.",
+            "اختبر حساسية السعر بدل نسخ رقم ثابت: إذا ارتفع الوقت إلى أربع ساعات دون تعديل السعر، يصبح العائد مقابل الساعة أقل. وإذا تغيرت عمولة المنصة، أعد الحساب قبل نشر العرض. اكتب للعميل ما يدخل في الخدمة، وعدد المراجعات، والمدة المتوقعة، ومتطلبات البيانات، والتكلفة الإضافية للمهمات غير المتفق عليها. هذا أكثر فائدة من صورة تحكي عن ربح شهري لا يمكن التحقق منه."
+          ]
+        },
+        {
+          "heading": "من الزيارة إلى هامش الربح: مقاييس واقعية",
+          "paragraphs": [
+            "لنفترض على سبيل التوضيح فقط أن صفحة منتج رقمي زارها 1000 شخص، وضغط 40 منهم على الرابط، وأكمل شخصان عملية شراء بقيمة 200 درهم للطلب. هذه الأرقام افتراضات تعليمية لا تمثل أداء RibhLab ولا نتائج تجارة حقيقية. معدل النقر هو 4% من الزيارات، والتحويل إلى شراء هو 5% من النقرات، والمبيعات الاسمية 400 درهم. لكن الهامش الفعلي يحتاج طرح رسوم الدفع والمنتج والعمولات والمبالغ المسترجعة وتكلفة الحصول على الزوار.",
+            "إذا استعملت روابط إحالة، ضع الإفصاح بوضوح قرب التوصية نفسها، وبيّن أن الموقع قد يتلقى عمولة. لا تصف منتجاً بأنه جُرّب شخصياً ما لم يحدث الاختبار فعلاً، ولا تخلط بين محتوى مستقل وإعلان مدفوع. راجع قواعد المنصة وسوق الجمهور قبل الإطلاق، لأن الإفصاح والقوانين المحلية قد تختلف حسب البلد."
+          ]
         }
       ]
     },
@@ -81,6 +108,20 @@
             "Consistent usefulness and trust are more durable than artificial traffic or exaggerated earnings claims."
           ],
           "bullets": []
+        },
+        {
+          "heading": "Reproducible financial example: quote a digital service",
+          "paragraphs": [
+            "Consider this hypothetical Moroccan-dirham calculation, not an actual client engagement. An Excel task requires three hours, the target hourly value is MAD 180, direct expenses are MAD 100 and the platform retains 20% of the sale price. To recover MAD 540 for labor plus MAD 100 in expenses after platform commission, the theoretical minimum price is (540 + 100) / (1 - 0.20) = MAD 800. This figure does not include taxes, advertising, revisions, currency conversion or the risk of nonpayment.",
+            "Run a simple sensitivity test instead of copying one rate: if the task grows to four hours at the same fee, the amount recovered per hour falls. If platform commission changes, recalculate the quote. State which tasks are included, how many revisions are covered, what files the customer must provide, and the fee for additional work. A transparent scope and cost model is more credible than unverifiable monthly income screenshots."
+          ]
+        },
+        {
+          "heading": "Follow the entire funnel rather than headline revenue",
+          "paragraphs": [
+            "For illustration only, imagine 1,000 visits to a digital product page, 40 referral clicks and two purchases at MAD 200 each. These are made-up teaching inputs, not RibhLab traffic or real sales. The click-through rate is 4% of page visits, the purchase conversion is 5% of clicks, and nominal sales equal MAD 400. The actual margin remains unknown until payment fees, product costs, refunds, commissions and acquisition expenses are included.",
+            "Whenever a link can generate compensation, explain the commercial relationship clearly and near the recommendation, rather than hiding it in a remote legal page. Do not imply personal product testing that did not take place. Separate your own assessment from an advertiser's materials, review audience-country requirements, and avoid presenting hypothetical rates as an earnings forecast."
+          ]
         }
       ]
     },
@@ -120,6 +161,20 @@
             "Le trafic artificiel et les promesses excessives abîment la confiance et le projet à long terme."
           ],
           "bullets": []
+        },
+        {
+          "heading": "Exemple financier vérifiable : tarifer une prestation numérique",
+          "paragraphs": [
+            "Prenons un calcul hypothétique en dirhams, et non une mission réellement vendue. Un travail sur Excel demande trois heures, l’objectif est de 180 MAD par heure, les frais directs sont de 100 MAD et la plateforme prélève 20 % du prix. Pour couvrir 540 MAD de temps et 100 MAD de frais après commission, le prix minimum théorique est (540 + 100) / (1 - 0,20) = 800 MAD. Cet exemple ne comprend ni impôts, ni publicité, ni retouches, ni fluctuations de devises.",
+            "Testez plusieurs scénarios plutôt que recopier un tarif : quatre heures de travail pour le même prix diminuent la rémunération horaire. Si la commission change, recalculez. Expliquez au client le périmètre, le nombre de corrections incluses, les documents à fournir et le tarif des demandes supplémentaires. Un devis transparent vaut mieux qu'une capture de gains mensuels invérifiables."
+          ]
+        },
+        {
+          "heading": "Mesurer la conversion et le coût réel",
+          "paragraphs": [
+            "Supposons, uniquement pour l’exercice, 1 000 visites d’une page de produit, 40 clics sur un lien et deux achats de 200 MAD. Ces valeurs sont fictives et ne représentent ni les statistiques ni les ventes de RibhLab. Le taux de clic est de 4 % des visites, la conversion en achats de 5 % des clics et le chiffre d’affaires nominal de 400 MAD. La marge réelle exige de retirer les frais de paiement, les coûts de production, les commissions, les remboursements et l’acquisition des visiteurs.",
+            "Si un lien rémunère l’éditeur, expliquez clairement cette relation près de la recommandation. Ne prétendez jamais avoir personnellement testé un produit sans essai réel. Séparez les observations indépendantes des documents publicitaires et vérifiez les règles locales de l’audience visée. Un taux de conversion hypothétique ne constitue pas une prévision de revenus."
+          ]
         }
       ]
     }
