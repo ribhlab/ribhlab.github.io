@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/rivoscan-04526-upload-original-key-aab-to-testing.yml'
+      - 'tools/play-publisher/rivoscan_04526_aab_update.py'
   workflow_dispatch:
 permissions:
   contents: read
