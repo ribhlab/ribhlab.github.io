@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/rivoscan-04526-publish-real-ai-media-no-video.yml'
+      - 'tools/play-publisher/rivoscan_04526_ai_media.py'
   workflow_dispatch:
 permissions:
   contents: read
