@@ -1,0 +1,57 @@
+name: RivoScan 0.45.26 - publish original-key AAB to existing test track
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04526-signed-beta-publish.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Download v130 AAB released by original-key signing workflow
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivoscan-play
+          curl -fL --retry 3 --retry-delay 2 --connect-timeout 25 \
+            'https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.26-original-key/RivoScan-0.45.26-GooglePlay.aab' \
+            -o /tmp/rivoscan-play/RivoScan-0.45.26-GooglePlay.aab
+          test "$(stat -c%s /tmp/rivoscan-play/RivoScan-0.45.26-GooglePlay.aab)" -gt 15000000
+      - name: Verify exact Google Play original upload certificate, never new key
+        run: |
+          set -euo pipefail
+          AAB=/tmp/rivoscan-play/RivoScan-0.45.26-GooglePlay.aab
+          jarsigner -verify "$AAB" > /tmp/rivo-signed-verification.txt 2>&1
+          grep -q 'jar verified' /tmp/rivo-signed-verification.txt
+          keytool -printcert -jarfile "$AAB" | grep -F 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+      - name: Install official Android Publisher client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Publish v130 ONLY to the existing v129 testing track
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || exit 1
+          python tools/play-publisher/rivoscan_04526_beta_signed.py \
+            --aab /tmp/rivoscan-play/RivoScan-0.45.26-GooglePlay.aab \
+            --confirm PUBLISH_RIVOSCAN_130_TO_EXISTING_TESTERS
+      - name: Report Play commit, no production promotion
+        if: success()
+        run: |
+          echo 'RivoScan 0.45.26, code130: original upload key verified and Google Play edit finished.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No Production release, Play screenshots, icon, release metadata outside v130 notes, or video modified.' >> "$GITHUB_STEP_SUMMARY"
