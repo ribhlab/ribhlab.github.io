@@ -1,0 +1,37 @@
+name: Etsy MoneyControl Pro - guarded live activation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/etsy-moneycontrol-pro-activate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: moneycontrol-etsy-single-live-activation
+  cancel-in-progress: false
+
+jobs:
+  activate-when-buyer-accessible:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out publisher code only
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTTP client
+        run: python -m pip install --disable-pip-version-check 'requests>=2.32,<3'
+      - name: Verify and activate only when buyers can Make a Copy
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python tools/etsy-publisher/scripts/activate_moneycontrol_pro.py
