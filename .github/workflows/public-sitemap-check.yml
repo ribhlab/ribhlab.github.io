@@ -284,6 +284,9 @@ jobs:
                   assert len(urls)>=30, f'Only {len(urls)} site URLs'
                   assert len(set(urls))==len(urls), 'Sitemap has duplicate URLs'
                   assert all(u.startswith(base+'/') for u in urls), 'Wrong domain in sitemap'
+                  assert all(len(u)<=80 for u in urls), 'Overlong canonical URL remains in public sitemap'
+                  assert all(len(u.split(base,1)[-1])<=54 for u in urls), 'Canonical path exceeds short URL limit'
+                  print(f'SHORT SITEMAP PASSED: {len(urls)} entries; longest URL {max(map(len,urls))} characters',flush=True)
                   assert all(u not in (base+'/',) for u in urls), 'Redirect-only bare homepage in sitemap'
                   for language in ('ar','en','fr'):
                       assert base+'/'+language+'/' in urls, f'Missing {language} homepage'
