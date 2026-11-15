@@ -107,6 +107,33 @@ function sectionIntro(lang,c,title,subtitle,other,esc){
 function navGrid(lang,c,esc,omit=''){
  return '<div class="opp-cats">'+categories.filter(x=>x!==omit).map(x=>'<a class="opp-cat opp-cat--'+x+'" href="/'+lang+'/opportunities/'+x+'/">'+photoMarkup(x,lang,esc)+'<span class="opp-cat-icon" aria-hidden="true">'+sectionIdentity[x].icon+'</span><span class="opp-cat-copy"><strong>'+esc(c[x])+'</strong><small>'+esc(sectionIdentity[x].summary[lang])+'</small></span><span class="opp-cat-arrow" aria-hidden="true">↗</span></a>').join('')+'</div>';
 }
+// Preserve the complete factual H1 but keep the search-result title and
+// description concise, in the visitor's own language. This is a snippet
+// presentation improvement, not a rewrite of source recruitment evidence.
+function seoTitle(raw){
+ const label=' | RibhLab',limit=60-label.length;
+ let title=String(raw||'').trim().replace(/\s*\|\s*RibhLab$/,'');
+ if(title.length>limit){
+  const slice=title.slice(0,limit+1);
+  const space=slice.lastIndexOf(' ');
+  title=(space>=Math.floor(limit*.56)?slice.slice(0,space):title.slice(0,limit))
+   .replace(/[\s,:;—–-]+$/u,'').trim();
+ }
+ return title+label;
+}
+function seoDescription(raw,lang){
+ let content=String(raw||'').replace(/\s+/gu,' ').trim();
+ if(content.length<70){
+  const note=({ar:' مع روابط الجهات الرسمية ومعلومات الترشح التي يجب التحقق من تاريخها.',en:' Read the original official sources and verify current application requirements.',fr:' Consultez les sources officielles et vérifiez les conditions de candidature.'})[lang];
+  content+=note;
+ }
+ if(content.length>155){
+  const clipped=content.slice(0,156);
+  const idx=clipped.lastIndexOf(' ');
+  content=(idx>=115?clipped.slice(0,idx):clipped.slice(0,155)).replace(/[\s,:;—–-]+$/u,'');
+ }
+ return content;
+}
 export function renderOpportunityPages(lang,page,esc){
  const c={...langCopy[lang],locale:lang,readGuide:({ar:'اقرأ الدليل الكامل والفرص والشروط',en:'Read full guide, options and requirements',fr:'Lire le guide, les possibilités et les conditions'})[lang]},base='/'+lang+'/opportunities/';
  const portalIntro=({ar:'جميع إعلانات بوابة التشغيل العمومي — صفِّ النتائج حسب آخر أجل للإيداع، لأن أرشيف البوابة يتضمن أيضاً الاستدعاءات والنتائج القديمة.',en:'Browse the complete official recruitment directory. Filter by application deadline: the government portal also includes historic results and convocation notices.',fr:'Consultez l’ensemble des annonces officielles en filtrant la date limite : le portail contient également des résultats et convocations anciens.'})[lang];
@@ -196,8 +223,8 @@ export function renderOpportunityPages(lang,page,esc){
    const title=manuscript?.title||item.title;
    const body='<div class="opportunity-page opp-guide-page"><section class="page-hero compact-hero opp-hero"><div class="shell"><a class="opp-home-btn" href="'+esc(back)+'">← '+esc(c[item.section])+'</a><div class="opp-guide-header">'+uniqueOpportunityVisual(item.id,item.section,esc)+'<h1>'+esc(title)+'</h1><p>'+esc(introductory)+'</p><p class="opp-guide-meta">'+esc(c.updated)+' : <time datetime="'+esc(articleDate)+'">'+esc(articleDate)+'</time></p></div></div></section><div class="section shell opp-guide-layout"><div class="opp-advisory" role="note"><p>'+esc(editorialNote)+'</p></div><article class="opp-guide-article">'+officialUpdateBlock+conflictBlock+headcountWarning+facts+articleSections+marketSection+missing+sources+'</article></div></div>';
    const url=base+item.section+'/'+encodeURIComponent(item.id)+'/';
-   page(lang,{title:title+' | RibhLab',desc:introductory,route:url,content:body,active:'opportunities',noindex:!isDetailed&&!demandText});
-   if(item.id==='uk-visa')page(lang,{title:title+' | RibhLab',desc:introductory,route:base+'immigration/uk/',content:body,active:'opportunities',noindex:true});
+   page(lang,{title:seoTitle(title),desc:seoDescription(introductory,lang),route:url,content:body,active:'opportunities',noindex:!isDetailed&&!demandText});
+   if(item.id==='uk-visa')page(lang,{title:seoTitle(title),desc:seoDescription(introductory,lang),route:base+'immigration/uk/',content:body,active:'opportunities',noindex:true});
   }
   // Every appointment card has an on-site country-specific verified source record.
   // Appointment slots cannot be inferred or invented from a public booking URL.
