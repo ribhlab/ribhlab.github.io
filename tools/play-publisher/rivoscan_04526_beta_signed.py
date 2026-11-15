@@ -21,12 +21,19 @@ def upload(aab:Path,confirm:str):
   known=edits.tracks().list(packageName=APP,editId=eid).execute().get("tracks",[])
   def has_version(track,code):
    return any(str(code) in [str(x) for x in rel.get("versionCodes",[])] for rel in track.get("releases",[]))
+  audit=[{"track":t.get("track"),"releases":[{"codes":[str(v) for v in r.get("versionCodes",[])],
+     "status":r.get("status")} for r in t.get("releases",[])]} for t in known]
+  print("RIVOSCAN_TRACK_AUDIT="+json.dumps(audit,sort_keys=True),flush=True)
   chosen=next((t for tag in ("beta","alpha","qa","internal") for t in known
       if t.get("track")==tag and has_version(t,129)),None)
   if chosen is None:
-   # Never create a new public/production rollout on guesswork.
-   raise RuntimeError("No existing RivoScan v129 testing track. Existing Play tracks: "+
-                      ",".join(t.get("track","?") for t in known))
+   # A beta tester can still be on an older saved code. Upgrade that exact
+   # existing testing track (and never Production), provided it is serving.
+   chosen=next((t for tag in ("beta","alpha","qa","internal") for t in known
+      if t.get("track")==tag and t.get("releases",[])
+      and all(r.get("status")=="completed" for r in t.get("releases",[]))),None)
+  if chosen is None:
+   raise RuntimeError("No SAFE existing testing track with a completed release. Do not modify Production")
   track=chosen["track"]
   releases=chosen.get("releases",[])
   if has_version(chosen,130):
