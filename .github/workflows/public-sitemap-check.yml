@@ -23,9 +23,10 @@ jobs:
           import urllib.error
           import xml.etree.ElementTree as ET
           import re
+          import json
 
           base='https://ribhlab.github.io'
-          wanted=['/','/ads.txt','/robots.txt','/sitemap.xml','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/','/ar/sports/','/en/sports/f1-mexico-gp-preview-2026/','/fr/technology/oppo-find-x10-camera-2026/','/ar/technology/','/ar/technology/apps/','/ar/technology/apps/productivity/','/ar/opportunities/immigration/german-opportunity/','/en/opportunities/immigration/german-opportunity/','/fr/opportunities/immigration/german-opportunity/']
+          wanted=['/','/ads.txt','/robots.txt','/sitemap.xml','/assets/short-url-map.json','/ar/','/en/','/fr/','/ar/opportunities/','/ar/opportunities/competitions/','/ar/opportunities/visa-appointments/','/ar/audience/','/ar/sports/','/en/sports/f1-mexico-gp-preview-2026/','/fr/technology/oppo-find-x10-camera-2026/','/ar/technology/','/ar/technology/apps/','/ar/technology/apps/productivity/','/ar/opportunities/immigration/german-opportunity/','/en/opportunities/immigration/german-opportunity/','/fr/opportunities/immigration/german-opportunity/']
           # Verify the two latest completed editorial articles over public HTTPS,
           # not just the GitHub Pages deployment status.
           for lang in ('ar','en','fr'):
@@ -281,6 +282,16 @@ jobs:
                   ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
                   assert doc.tag=='{'+ns['s']+'}urlset', f'Unexpected XML root: {doc.tag}'
                   urls=[n.text for n in doc.findall('./s:url/s:loc',ns)]
+                  aliases={entry['oldRoute']:entry['newRoute'] for entry in json.loads(bodies['/assets/short-url-map.json'])}
+                  def article_url(language,category,slug):
+                      path='/'+language+'/'+category+'/'+slug+'/'
+                      return base+aliases.get(path,path)
+                  def check_publication_status(url,html):
+                      if url in urls:
+                          assert 'name="robots" content="index,follow' in html, 'Sitemap contains noindex page: '+url
+                      else:
+                          assert 'name="robots" content="noindex,follow"' in html, 'Missing noindex on quality-held page: '+url
+                          assert 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' not in html, 'AdSense loader present on held page: '+url
                   assert len(urls)>=30, f'Only {len(urls)} site URLs'
                   assert len(set(urls))==len(urls), 'Sitemap has duplicate URLs'
                   assert all(u.startswith(base+'/') for u in urls), 'Wrong domain in sitemap'
@@ -335,13 +346,12 @@ jobs:
                   # pages, editorial sections, sources and licensed photos are visible.
                   for slug in ('gig-description-client-questions-scope','ethereum-smart-contracts-wallet-permissions'):
                       for language in ('ar','en','fr'):
-                          matches=[u for u in urls if u.endswith('/'+slug+'/') and '/'+language+'/' in u]
-                          assert len(matches)==1, f'{language}: published sprint URL missing or duplicated for {slug}'
-                          url=matches[0]
+                          url=article_url(language,'earning' if slug=='gig-description-client-questions-scope' else 'trading',slug)
                           req=urllib.request.Request(url,headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
                           with urllib.request.urlopen(req,timeout=15) as resp:
                               page=resp.read().decode('utf-8')
                               assert resp.status==200, f'{language}: sprint page not live for {slug}'
+                          check_publication_status(url,page)
                           assert page.count('class="article-block"')>=4, f'{language}: sprint sections missing for {slug}'
                           assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources or photo missing for {slug}'
                           print(f'SPRINT LIVE {language}: {slug} complete and sourced',flush=True)
@@ -366,12 +376,12 @@ jobs:
                       ('godot-first-small-game-five-sessions','ai',6),
                   ):
                       for language in ('ar','en','fr'):
-                          matches=[u for u in urls if u.endswith('/'+category+'/'+slug+'/') and '/'+language+'/' in u]
-                          assert len(matches)==1, f'{language}: missing sprint page in public sitemap for {slug}'
-                          req=urllib.request.Request(matches[0],headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
+                          url=article_url(language,category,slug)
+                          req=urllib.request.Request(url,headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
                           with urllib.request.urlopen(req,timeout=15) as resp:
                               article_html=resp.read().decode('utf-8')
                               assert resp.status==200, f'{language}: sprint article not live for {slug}'
+                          check_publication_status(url,article_html)
                           assert article_html.count('class="article-block"')>=min_sections, f'{language}: {slug} has too few sections'
                           assert 'article-sources' in article_html and 'licensed-editorial-photo' in article_html, f'{language}: missing source/photo for {slug}'
                           print(f'CAMPAIGN LIVE {language}: {slug}, {min_sections}+ sections, sources and licensed photo',flush=True)
@@ -384,12 +394,12 @@ jobs:
                       ('pad-thai-noodles-peanut-allergy-plan','lifestyle',6),
                   ):
                       for language in ('ar','en','fr'):
-                          matches=[u for u in urls if u.endswith('/'+category+'/'+slug+'/') and '/'+language+'/' in u]
-                          assert len(matches)==1, f'{language}: missing newly released campaign URL for {slug}'
-                          req=urllib.request.Request(matches[0],headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
+                          url=article_url(language,category,slug)
+                          req=urllib.request.Request(url,headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
                           with urllib.request.urlopen(req,timeout=15) as resp:
                               page=resp.read().decode('utf-8')
                               assert resp.status==200, f'{language}: newly released article not live for {slug}'
+                          check_publication_status(url,page)
                           assert page.count('class="article-block"')>=min_sections, f'{language}: incomplete newly released article {slug}'
                           assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources/photo missing for {slug}'
                           print(f'RECENT CAMPAIGN LIVE {language}: {slug} with {min_sections}+ sections, sources and licensed photo',flush=True)
@@ -423,12 +433,12 @@ jobs:
                       ('chicken-tikka-masala-temperature-guide','lifestyle',6),
                   ):
                       for language in ('ar','en','fr'):
-                          matches=[u for u in urls if u.endswith('/'+category+'/'+slug+'/') and '/'+language+'/' in u]
-                          assert len(matches)==1, f'{language}: missing published campaign URL for {slug}'
-                          req=urllib.request.Request(matches[0],headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
+                          url=article_url(language,category,slug)
+                          req=urllib.request.Request(url,headers={'User-Agent':'RibhLab-Page-Health-Check/1.0'})
                           with urllib.request.urlopen(req,timeout=15) as resp:
                               page=resp.read().decode('utf-8')
                               assert resp.status==200, f'{language}: published campaign page not live for {slug}'
+                          check_publication_status(url,page)
                           assert page.count('class="article-block"')>=min_sections, f'{language}: incomplete editorial sections for {slug}'
                           assert 'article-sources' in page and 'licensed-editorial-photo' in page, f'{language}: sources/photo missing for {slug}'
                           print(f'NEW SPRINT LIVE {language}: {slug} complete and sourced',flush=True)
