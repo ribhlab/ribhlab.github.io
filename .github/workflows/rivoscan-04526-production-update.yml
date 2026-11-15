@@ -1,0 +1,52 @@
+name: RivoScan 0.45.26 - publish reviewed signed AAB to Production
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04526-production-update.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    environment: play-production
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate existing signed v130 and Production guard without Google writes
+        run: |
+          python tools/play-publisher/publish_existing.py \
+            --package com.ribhlab.rivoscan \
+            --version-code 130 \
+            --track production --status completed \
+            --name "RivoScan 0.45.26 – New Blue Icon" \
+            --notes "Updated blue R app icon without wordmark. Improved UI consistency, with scanning, OCR and PDF tools preserved." \
+            --confirm-production PUBLISH --dry-run
+      - name: Install Google Play official API client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Publish existing original-key AAB v130 to Production, retaining store images
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+          python tools/play-publisher/publish_existing.py \
+            --package com.ribhlab.rivoscan \
+            --version-code 130 \
+            --track production --status completed \
+            --name "RivoScan 0.45.26 – New Blue Icon" \
+            --notes "Updated blue R app icon without wordmark. Improved UI consistency, with scanning, OCR and PDF tools preserved." \
+            --confirm-commit COMMIT --confirm-production PUBLISH
+      - name: Report Play API result
+        if: success()
+        run: |
+          echo 'RivoScan 0.45.26 versionCode 130: signed AAB assigned to Production with official Google Play API.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Original 24 screenshots, new Store icon, feature graphic and removed-video setting retained.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Google review and rollout processing may still be pending.' >> "$GITHUB_STEP_SUMMARY"
