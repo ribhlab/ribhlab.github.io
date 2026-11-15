@@ -22,17 +22,14 @@ jobs:
           ref: ea135957e63008ccd296a0b9b3dc36d27cb03e5b
           path: source
           persist-credentials: false
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Install graphics and video tools
         run: |
           apt-get update -qq
-          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ffmpeg >/dev/null
-          python -m pip install 'Pillow>=11,<13'
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ffmpeg python3-pil >/dev/null
+          /usr/bin/python3 -c 'from PIL import Image; print("Pillow", Image.__version__)'
       - name: Build the exact approved RivoScan 0.45.25 source
         working-directory: source
         run: |
@@ -54,7 +51,7 @@ jobs:
           node scripts/tablet-screenshots.mjs
       - name: Render Play visuals, original icon, feature and 18 second video
         run: |
-          python publisher/tools/play-publisher/rivoscan_04525_visual_publisher.py \
+          /usr/bin/python3 publisher/tools/play-publisher/rivoscan_04525_visual_publisher.py \
             --prepare --source source --output /tmp/rivoscan-media
       - name: Preserve images, promotional video and manifest
         uses: actions/upload-artifact@v4
