@@ -35,3 +35,5 @@ jobs:
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: python tools/etsy-publisher/scripts/activate_moneycontrol_pro.py
+
+# Verified 2026-11-15: Google Sheets buyer template has anyone/reader access; rerun guarded activation.
