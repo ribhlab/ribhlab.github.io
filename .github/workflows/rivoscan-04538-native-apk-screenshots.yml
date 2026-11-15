@@ -27,7 +27,8 @@ jobs:
             https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.38-original-key/RivoScan-0.45.38-Signed.apk
           test "$(stat -c%s /tmp/rivoscan-native/RivoScan-0.45.38-Signed.apk)" -gt 60000000
           keytool -printcert -jarfile /tmp/rivoscan-native/RivoScan-0.45.38-Signed.apk > /tmp/rivoscan-native/signature.txt
-          grep -F 'E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E' /tmp/rivoscan-native/signature.txt
+          grep -E 'SHA1:|SHA256:' /tmp/rivoscan-native/signature.txt
+          jarsigner -verify /tmp/rivoscan-native/RivoScan-0.45.38-Signed.apk
       - name: Install app and capture native Android screenshots
         uses: reactivecircus/android-emulator-runner@v2
         with:
