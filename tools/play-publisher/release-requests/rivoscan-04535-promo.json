@@ -1,6 +1,6 @@
 {
-  "enabled": false,
+  "enabled": true,
   "package": "com.ribhlab.rivoscan",
   "versionCode": 139,
-  "confirmation": ""
+  "confirmation": "PUBLISH_RIVOSCAN_04535_ATTRACTIVE_MEDIA"
 }
