@@ -40,7 +40,7 @@ def font(size,bold=False):
     for fp in options:
         if Path(fp).is_file():
             return ImageFont.truetype(fp,size)
-    return ImageFont.load_default()
+    raise RuntimeError("Promotional images require actual TrueType fonts, not tiny fallback fonts")
 
 
 def rgb(hexstr):
@@ -117,6 +117,11 @@ def render_poster(source,icon,out,idx,target_size,kind):
              font=font(int(w*.020),True),fill=WHITE)
     top=int(h*.135)
     max_headline=int(w*.061)
+    while max_headline>int(w*.038):
+        bounds=draw.textbbox((0,0),headline,font=font(max_headline,True))
+        if bounds[2]-bounds[0]<=w-2*margin:
+            break
+        max_headline-=2
     draw.text((margin,top),headline,font=font(max_headline,True),
               fill=WHITE,stroke_width=0)
     draw.text((margin,top+int(h*.061)),subline,
@@ -174,8 +179,7 @@ def feature_graphic(out,phone_screens,icon):
     draw.text((55,342),"SCAN  •  EDIT  •  ORGANIZE",font=font(21,True),fill=(219,241,254,255))
     # Reduced but genuine screenshots preserve the source view, no fake UI.
     for name,x,y in [("01_Home",622,28),("02_Documents",792,55)]:
-        with Image.open(phone_screens/name) as src:
-            screenshot=src.convert("RGB")
+        screenshot=phone_screens[name].convert("RGB")
         sw,sh=216,384
         draw.rounded_rectangle((x-8,y-6,x+sw+8,y+sh+6),radius=26,
                                fill=(0,21,45,255),outline=(75,230,255,210),width=3)
