@@ -50,16 +50,14 @@ def rgb(hexstr):
 def background(w,h,highlight,seed=0):
     # Navy gradients, cyan light ribbons and luminous circles: consistent with
     # the RivoScan app's electric blue identity and current Play icon.
-    image=Image.new("RGB",(w,h))
-    pixels=image.load()
+    strip=Image.new("RGB",(1,h))
+    sp=strip.load()
     accent=rgb(highlight)
     for y in range(h):
         t=y/max(1,h-1)
         row=tuple(int(DARK[i]*(1-t)+(8,57,118)[i]*t) for i in range(3))
-        for x in range(w):
-            k=x/max(1,w-1)
-            lighten=.15*math.sin(math.pi*k)**2+.14*k
-            pixels[x,y]=tuple(min(255,int(row[i]*(1-lighten)+accent[i]*lighten)) for i in range(3))
+        sp[0,y]=tuple(min(255,int(row[i]*.87+accent[i]*.13)) for i in range(3))
+    image=strip.resize((w,h),Image.Resampling.NEAREST)
     draw=ImageDraw.Draw(image,"RGBA")
     cx=int(w*(.83 if seed%2 else .23))
     cy=int(h*.48)
