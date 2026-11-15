@@ -126,7 +126,7 @@ def render_poster(source,icon,out,idx,target_size,kind):
                            radius=5,fill=(*rgb(accent),255))
     # Large app screenshot occupies 72% of the whole image; keep screenshot
     # unmodified so buyers can recognize the real application interface.
-    max_h=int(h*.715)
+    max_h=int(h*.68)
     max_w=int(w*.84)
     ratio=source.width/source.height
     body_h=max_h
@@ -173,10 +173,10 @@ def feature_graphic(out,phone_screens,icon):
     draw.rounded_rectangle((54,316,455,321),radius=2,fill=rgb("#29a9ec"))
     draw.text((55,342),"SCAN  •  EDIT  •  ORGANIZE",font=font(21,True),fill=(219,241,254,255))
     # Reduced but genuine screenshots preserve the source view, no fake UI.
-    for name,x,y in [("01_Home",632,9),("02_Documents",790,39)]:
+    for name,x,y in [("01_Home",622,28),("02_Documents",792,55)]:
         with Image.open(phone_screens/name) as src:
             screenshot=src.convert("RGB")
-        sw,sh=181,414
+        sw,sh=216,384
         draw.rounded_rectangle((x-8,y-6,x+sw+8,y+sh+6),radius=26,
                                fill=(0,21,45,255),outline=(75,230,255,210),width=3)
         paste_cover(bg,screenshot,(x,y,sw,sh),17)
