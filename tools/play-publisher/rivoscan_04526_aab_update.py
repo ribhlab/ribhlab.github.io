@@ -38,9 +38,21 @@ def existing_track(tracks):
    versions=[str(x) for x in release.get("versionCodes",[])]
    if str(PREVIOUS) in versions or str(VERSION) in versions:
     choices.append((TRACK_PRIORITY.index(name),obj,release))
- if not choices:raise RuntimeError("No eligible testing track serving version 129 or 130; refusing to infer production rollout")
+ if not choices:
+  # Existing beta testers may still be on a previous testing-only build while
+  # version 129 is present on Production. Keep the current serving TEST track.
+  choices=[(TRACK_PRIORITY.index(t.get("track")),t,release)
+     for t in tracks if t.get("track") in TRACK_PRIORITY
+     for release in t.get("releases",[])
+     if release.get("status")=="completed"
+     and len(release.get("versionCodes",[]))==1]
+ if not choices:
+  raise RuntimeError("No eligible existing COMPLETED testing track; never guess or replace Production")
  choices.sort(key=lambda x:x[0])
  _,t,release=choices[0]
+ print("RIVOSCAN_TRACK_AUDIT="+json.dumps({
+   "track":t.get("track"),"status":release.get("status"),
+   "versionCodes":release.get("versionCodes",[])},sort_keys=True),flush=True)
  if release.get("status") not in ("draft","completed"):
   raise RuntimeError("Testing track is staged/paused; requires manual review")
  if len(release.get("versionCodes",[]))!=1:
