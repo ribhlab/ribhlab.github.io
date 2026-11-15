@@ -38,6 +38,7 @@ def run():
     print("INITIAL_IMAGE_COUNT:",len(images))
     if len(images)>=8:
         print("ALREADY_EIGHT_IMAGES: no further uploads made")
+        print("IMAGE_ORDER:",[(int(x.get("rank") or 0),int(x.get("listing_image_id") or 0)) for x in sorted(images,key=lambda t:int(t.get("rank") or 999))])
         print("LISTING_URL: https://www.etsy.com/listing/"+str(LISTING_ID))
         return
     check(len(images)==4,"Expected four original listing images. Refuse unsafe partial retry; inspect before uploading.")
