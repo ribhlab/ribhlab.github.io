@@ -1,6 +1,6 @@
 {
-  "enabled": false,
+  "enabled": true,
   "package": "com.ribhlab.rivoscan",
   "versionCode": 139,
-  "confirmation": ""
+  "confirmation": "PUBLISH_SIGNED_RIVOSCAN_139_AND_REFRESH_STORE"
 }
