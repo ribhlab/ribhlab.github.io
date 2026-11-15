@@ -1,0 +1,131 @@
+name: RivoScan 0.45.25 - complete Play media and promo video
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04525-complete-marketing-publish.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: publisher
+      - uses: actions/checkout@v4
+        with:
+          repository: univcours/ribhlab
+          ref: ea135957e63008ccd296a0b9b3dc36d27cb03e5b
+          path: source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install graphics and video tools
+        run: |
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y -qq ffmpeg >/dev/null
+          python -m pip install 'Pillow>=11,<13'
+      - name: Build the exact approved RivoScan 0.45.25 source
+        working-directory: source
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+      - name: Capture genuine WebView screenshots for all 3 device types
+        working-directory: source
+        env:
+          RIVO_PHONE_OUTPUT: ${{ github.workspace }}/source/phone
+          RIVO_TABLET_OUTPUT: ${{ github.workspace }}/source/tablet
+        run: |
+          npm run preview -- --host 127.0.0.1 > /tmp/rivoscan-preview.log 2>&1 &
+          for n in $(seq 1 50); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/phone-play-screenshots.mjs
+          node scripts/tablet-screenshots.mjs
+      - name: Render Play visuals, original icon, feature and 18 second video
+        run: |
+          python publisher/tools/play-publisher/rivoscan_04525_visual_publisher.py \
+            --prepare --source source --output /tmp/rivoscan-media
+      - name: Preserve images, promotional video and manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-04525-Store-Images-Feature-Promo-Video
+          path: /tmp/rivoscan-media/
+          if-no-files-found: error
+          retention-days: 30
+  publish_media:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment: play-testing
+    concurrency:
+      group: google-play-com.ribhlab.rivoscan
+      cancel-in-progress: false
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04525-Store-Images-Feature-Promo-Video
+          path: /tmp/rivoscan-media/
+      - name: Install Android Publisher and Pillow
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install 'Pillow>=11,<13'
+      - name: Publish 8+8+8 screenshots, feature graphic, and 0.45.25 blue icon
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || { echo 'Missing Google Play credential secret'; exit 1; }
+          python tools/play-publisher/rivoscan_04525_visual_publisher.py \
+            --apply --confirm UPLOAD_RIVOSCAN_04525_MEDIA \
+            --output /tmp/rivoscan-media
+      - name: Summarize published Play asset slots
+        if: success()
+        run: |
+          echo 'Committed five en-US image types: icon, feature, 8 phone, 8 seven-inch, 8 ten-inch.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Existing AAB, production release status, metadata and legal declarations were preserved.' >> "$GITHUB_STEP_SUMMARY"
+  publish_video:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04525-Store-Images-Feature-Promo-Video
+          path: /tmp/rivoscan-media/
+      - name: Publicly publish video and feature on GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG=rivoscan-0.45.25-marketing
+          if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target main \
+              --title 'RivoScan 0.45.25 — Video and Store Media' \
+              --notes 'Media generated from the actual RivoScan 0.45.25 UI. The 18-second MP4 is a promotional video, not a recording of live scanning. To add it to the Google Play preview video field, publish it to YouTube first.'
+          fi
+          gh release upload "$TAG" \
+            /tmp/rivoscan-media/RivoScan_0.45.25_App_Preview_16x9.mp4 \
+            /tmp/rivoscan-media/RivoScan_Feature_Graphic_1024x500.jpg \
+            --clobber --repo "$GITHUB_REPOSITORY"
+          echo 'Public video and feature image attached to GitHub Release.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Google Play video field needs a separate YouTube URL; no URL has been invented.' >> "$GITHUB_STEP_SUMMARY"
