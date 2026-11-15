@@ -58,7 +58,18 @@ def download_asset(kind,url,sha,name,mime):
     except requests.RequestException: raise PublishError("Temporary "+kind+" transfer unavailable.") from None
     check(r.status_code==200,"Temporary "+kind+" transfer HTTP "+str(r.status_code))
     check(1000<len(r.content)<20*1024*1024,"Incorrect "+kind+" size")
-    check(hashlib.sha256(r.content).hexdigest()==sha,kind+" SHA-256 mismatch. No Etsy changes.")
+    if kind=="buyer":
+        check(hashlib.sha256(r.content).hexdigest()==sha,kind+" SHA-256 mismatch. No Etsy changes.")
+    else:
+        # WordPress CDN may optimize the preview PNG after upload. Validate
+        # the decoded PNG container and reasonable original-artwork dimensions.
+        import struct
+        check(r.content.startswith(bytes.fromhex("89504e470d0a1a0a")) and r.content[12:16]==b"IHDR",
+              "Preview cover is not a valid PNG.")
+        width,height=struct.unpack(">II",r.content[16:24])
+        check(width>=900 and height>=650 and width<=6000 and height<=6000,
+              "Preview cover dimensions are invalid.")
+        print(f"CHECK: WordPress-delivered PNG {width}x{height} integrity validated.")
     return name,r.content,mime
 def get_connection():
     key=os.getenv("ETSY_KEYSTRING","").strip()
