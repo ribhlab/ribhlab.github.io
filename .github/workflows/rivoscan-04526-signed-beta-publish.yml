@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/rivoscan-04526-signed-beta-publish.yml'
+      - 'tools/play-publisher/rivoscan_04526_beta_signed.py'
   workflow_dispatch:
 permissions:
   contents: read
