@@ -107,11 +107,11 @@ def make_feature(ai,icon,path):
  b.convert("RGB").save(path,quality=93,optimize=True,subsampling=0)
  assert Image.open(path).size==(1024,500)
 def prepare(source,out):
- if not (source/"public/rivoscan-play-icon.png").is_file():
+ if not (source/"public/rivoscan-store-icon.png").is_file():
   raise RuntimeError("App prebuild did not generate the approved new Play icon")
  app_version=json.loads((source/"package.json").read_text())["version"]
  if app_version!="0.45.26":raise RuntimeError("Do not use another RivoScan app version: "+app_version)
- icon=Image.open(source/"public/rivoscan-play-icon.png").convert("RGB")
+ icon=Image.open(source/"public/rivoscan-store-icon.png").convert("RGB")
  assert icon.size==(512,512)
  out.mkdir(parents=True,exist_ok=True)
  icon.save(out/"RivoScan_Play_Icon_512.png",optimize=True)
