@@ -1,0 +1,49 @@
+name: RivoScan 0.45.25 - link published YouTube preview to Google Play
+on:
+  workflow_dispatch:
+    inputs:
+      youtube_url:
+        description: 'Actual published YouTube URL (public or unlisted, with ads disabled)'
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  link_only:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install existing Play publisher dependencies
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Validate user-published YouTube video URL (no Play writes)
+        env:
+          YOUTUBE_URL: ${{ inputs.youtube_url }}
+        run: |
+          python tools/play-publisher/rivoscan_preview_youtube_link.py \
+            --youtube-url "$YOUTUBE_URL"
+      - name: Update RivoScan en-US video field ONLY
+        env:
+          YOUTUBE_URL: ${{ inputs.youtube_url }}
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || {
+            echo 'Missing Google Play service-account secret'
+            exit 1
+          }
+          python tools/play-publisher/rivoscan_preview_youtube_link.py \
+            --youtube-url "$YOUTUBE_URL" --apply \
+            --confirm RIVOSCAN_04525_VIDEO_ONLY
+      - name: Verify limited scope
+        if: success()
+        run: |
+          echo 'RivoScan Play video URL committed via Google Play Edits API.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Original APK/AAB, icon, 24 screenshots, feature graphic, listing title/text and track statuses unchanged.' >> "$GITHUB_STEP_SUMMARY"
