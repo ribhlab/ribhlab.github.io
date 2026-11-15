@@ -10,6 +10,20 @@ const stripBase=u=>basePath&&u.startsWith(basePath+'/')?u.slice(basePath.length)
 if(!fs.existsSync(dist))throw Error('Run npm run build first');
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(path.join(dir,x.name)):[path.join(dir,x.name)]);}
 const pages=walk(dist).filter(p=>p.endsWith('.html'));
+const shortMappings=JSON.parse(fs.readFileSync(path.join(dist,'assets','short-url-map.json'),'utf8'));
+const canonicalFromLegacy=new Map(shortMappings.map(item=>[item.oldRoute,item.newRoute]));
+for(const {oldRoute,newRoute} of shortMappings){
+ const original=path.join(dist,oldRoute.slice(1),'index.html');
+ const current=path.join(dist,newRoute.slice(1),'index.html');
+ if(!fs.existsSync(original)||!fs.existsSync(current))throw Error('Broken short-URL migration route '+oldRoute+' -> '+newRoute);
+ const originalHtml=fs.readFileSync(original,'utf8'),currentHtml=fs.readFileSync(current,'utf8');
+ if(!originalHtml.includes('http-equiv="refresh" content="0; url='))throw Error('Old deep link does not redirect: '+oldRoute);
+ if(!currentHtml.includes('rel="canonical"'))throw Error('Canonical link missing from short URL: '+newRoute);
+ if(originalHtml.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))throw Error('Redirect must never load AdSense: '+oldRoute);
+ if(newRoute.length>54)throw Error('Short URL exceeds 54 characters of pathname: '+newRoute);
+}
+console.log('SHORT URL QA: '+shortMappings.length+' legacy routes retain instant redirects, short canonicals, and no redirect ads.');
+
 const editorSource=fs.readFileSync(path.join(root,'admin','config.yml'),'utf8');
 
 if(!editorSource.includes('repo: ribhlab/ribhlab.github.io')) throw Error('Admin CMS must target live RibhLab GitHub repository');
@@ -634,7 +648,8 @@ for(const lang of ['ar','en','fr']){
  if(!html.includes('class="archive-category-nav"')||!html.includes('class="article-grid archive-article-grid"'))errors.push('Archive missing its navigable article list: '+lang);
  for(const a of knownSlugs){
   const article=JSON.parse(fs.readFileSync(path.join(articleDir,a+'.json'),'utf8'));
-  if(!html.includes('/'+lang+'/'+article.category+'/'+a+'/'))errors.push('Old/new article not linked in permanent '+lang+' archive: '+a);
+  const expected=canonicalFromLegacy.get('/'+lang+'/'+article.category+'/'+a+'/')||'/'+lang+'/'+article.category+'/'+a+'/';
+  if(!html.includes(expected))errors.push('Old/new article not linked in permanent '+lang+' archive: '+a);
  }
  const imgUrls=[...html.matchAll(/class="card-cover-image editorial-photo"[^>]*\bsrc="([^"]+)"/g)].map(m=>m[1]);
  if(imgUrls.length!==knownSlugs.size||new Set(imgUrls).size!==knownSlugs.size)errors.push('Archive images duplicated or stories missing: '+lang);
