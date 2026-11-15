@@ -50,7 +50,8 @@ def load_source(src,device_label):
  return files
 def make_screenshots(source_root,out,icon):
  for store_folder,label,size,image_type in DEVICE_SPECS:
-  originals=load_source(source_root/label,label)
+  original_root=source_root/("phone" if label=="phone" else "tablet")/label
+  originals=load_source(original_root,label)
   w,h=size;folder=out/store_folder;folder.mkdir(parents=True,exist_ok=True)
   for idx,path in enumerate(originals):
    source=Image.open(path).convert("RGB")
@@ -141,11 +142,9 @@ def prepare(src,out):
  icon=Image.open(icon_path).convert("RGBA")
  assert icon.size==(512,512)
  icon.save(out/"RivoScan_Icon_512x512.png")
- src_phone=src/"phone",src/"tablet"
- make_screenshots(src_phone[0],out,icon)
- make_screenshots(src_phone[1],out,icon)
+ make_screenshots(src,out,icon)
  feature_graphic(out,icon)
- promo_video(out,load_source(src_phone[0]/"phone","phone"))
+ promo_video(out,load_source(src/"phone"/"phone","phone"))
  manifest={"app":APP,"versionCode":129,"sourceCommit":"ea135957e63008ccd296a0b9b3dc36d27cb03e5b",
   "iconSHA256":APPROVED_ICON_SHA,
   "deviceImageCounts":{type:len(list((out/folder).glob("*.png"))) for folder,_,_,type in DEVICE_SPECS},
