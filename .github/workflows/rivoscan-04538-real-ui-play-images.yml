@@ -1,0 +1,124 @@
+name: RivoScan 0.45.38 - publish screenshots captured from latest app UI
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04538-real-ui-play-images.yml'
+      - 'tools/play-publisher/rivoscan_04538_promo_upload.py'
+      - 'tools/play-publisher/release-requests/rivoscan-04538-screenshots.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  capture-and-publish:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    environment: play-testing
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout exact signed RivoScan 0.45.38 release source
+        uses: actions/checkout@v4
+        with:
+          repository: univcours/ribhlab
+          ref: d27becbf4dcbcf36344308119d5f1fff529debbf
+          path: rivoscan-app
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Python SSL, Play publisher and image tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          apt-get update -qq
+          DEBIAN_FRONTEND=noninteractive apt-get install -y python3 python3-venv python3-pip ca-certificates fonts-dejavu-core fonts-liberation
+          /usr/bin/python3 -m venv /tmp/rivoscan-04538-pub-venv
+          echo /tmp/rivoscan-04538-pub-venv/bin >> "$GITHUB_PATH"
+          /tmp/rivoscan-04538-pub-venv/bin/python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13'
+      - name: Validate exact owner request
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/play-publisher/rivoscan_04538_promo_upload.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("tools/play-publisher/release-requests/rivoscan-04538-screenshots.json").read_text())
+          if set(r)!={"enabled","package","sourceVersion","confirmation"}:raise SystemExit("Invalid request keys")
+          if r["package"]!="com.ribhlab.rivoscan" or r["sourceVersion"]!="0.45.38" or type(r["enabled"]) is not bool:raise SystemExit("Wrong app or version")
+          if r["enabled"] and r["confirmation"]!="PUBLISH_VERIFIED_RIVOSCAN_04538_SCREENSHOTS":raise SystemExit("Missing explicit approval")
+          print("RIVOSCAN_04538_OWNER_UPLOAD_ENABLED="+str(r["enabled"]),flush=True)
+          PY
+      - name: Build latest genuine application UI
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd rivoscan-app
+          node -e 'if(require("./package.json").version!=="0.45.38")process.exit(1)'
+          npm install --no-audit --no-fund
+          npm run build
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+      - name: Capture real UI from latest source on phone and tablet viewports
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivoscan-04538
+          cd rivoscan-app
+          npm run preview -- --host 127.0.0.1 > /tmp/rivoscan-04538-preview.log 2>&1 &
+          for n in $(seq 1 50); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4173/ >/dev/null
+          RIVO_PHONE_OUTPUT=/tmp/rivoscan-04538/phone node scripts/phone-play-screenshots.mjs
+          RIVO_TABLET_OUTPUT=/tmp/rivoscan-04538/tablet node scripts/tablet-screenshots.mjs
+      - name: Design premium Play images around unmodified real UI screenshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp rivoscan-app/public/rivoscan-icon.png /tmp/rivoscan-04538/app-icon-512.png
+          python - <<'PY'
+          import sys,json
+          from pathlib import Path
+          sys.path.insert(0,"tools/play-publisher")
+          import rivoscan_04535_promo_assets as generator
+          generator.APP_VERSION="0.45.38"
+          sys.argv=["generator","--source","/tmp/rivoscan-04538","--out","/tmp/rivoscan-04538-promo"]
+          generator.main()
+          mpath=Path("/tmp/rivoscan-04538-promo/manifest.json")
+          m=json.loads(mpath.read_text())
+          m["sourceCommit"]="d27becbf4dcbcf36344308119d5f1fff529debbf"
+          m["assetPolicy"]="Unmodified real 0.45.38 WebView UI screenshots inside promotional framing; no fabricated camera, OCR or ad results"
+          mpath.write_text(json.dumps(m,indent=2,ensure_ascii=False)+"\n")
+          PY
+          python tools/play-publisher/rivoscan_04538_promo_upload.py \
+            --media-dir /tmp/rivoscan-04538-promo --source-dir /tmp/rivoscan-04538
+      - name: Save verified 0.45.38 real UI and final Play media
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-04538-Real-UI-and-Premium-Play-Screenshots
+          path: |
+            /tmp/rivoscan-04538/
+            /tmp/rivoscan-04538-promo/
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Upload only screenshots and feature graphic to Google Play after approval
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          ENABLED="$(python -c 'import json;print(str(json.load(open("tools/play-publisher/release-requests/rivoscan-04538-screenshots.json"))["enabled"]).lower())')"
+          if [ "$ENABLED" != "true" ]; then
+            echo "RIVOSCAN_04538_PREVIEW_ONLY_NO_PLAY_WRITE"
+            exit 0
+          fi
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo "Play API secret missing"; exit 1; }
+          python tools/play-publisher/rivoscan_04538_promo_upload.py \
+            --apply --confirm PUBLISH_VERIFIED_RIVOSCAN_04538_SCREENSHOTS \
+            --media-dir /tmp/rivoscan-04538-promo --source-dir /tmp/rivoscan-04538
