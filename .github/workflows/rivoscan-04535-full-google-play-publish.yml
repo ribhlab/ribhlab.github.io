@@ -1,0 +1,111 @@
+name: RivoScan 0.45.35 - publish signed app and refresh full Play listing
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/play-publisher/rivoscan_04535_publish.py'
+      - 'tools/play-publisher/rivoscan_04535_media.py'
+      - 'tools/play-publisher/store-listings/rivoscan.json'
+      - 'tools/play-publisher/release-requests/rivoscan-04535-request.json'
+      - '.github/workflows/rivoscan-04535-full-google-play-publish.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    timeout-minutes: 45
+    environment: play-production
+    steps:
+      - name: Checkout RibhLab Play publisher
+        uses: actions/checkout@v4
+      - name: Checkout exact signed RivoScan 0.45.35 source
+        uses: actions/checkout@v4
+        with:
+          repository: univcours/ribhlab
+          ref: 8673f090cf47ee114727268e3941e2c1c992d0bf
+          path: rivoscan-app
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Validate owner request and publisher syntax
+        run: |
+          python -m py_compile tools/play-publisher/rivoscan_04535_publish.py tools/play-publisher/rivoscan_04535_media.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          req=json.loads(Path("tools/play-publisher/release-requests/rivoscan-04535-request.json").read_text())
+          if set(req) != {"enabled","package","versionCode","confirmation"}:
+              raise SystemExit("Unexpected publisher request fields")
+          if req["package"] != "com.ribhlab.rivoscan" or req["versionCode"] != 139:
+              raise SystemExit("Wrong app/package version")
+          if type(req["enabled"]) is not bool:
+              raise SystemExit("enabled must be boolean")
+          if req["enabled"] and req["confirmation"] != "PUBLISH_SIGNED_RIVOSCAN_139_AND_REFRESH_STORE":
+              raise SystemExit("Owner approval missing")
+          print("RIVOSCAN_04535_OWNER_REQUEST_ENABLED="+str(req["enabled"]))
+          PY
+      - name: Install current app sources and official Play client
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install 'Pillow>=11,<13'
+          cd rivoscan-app
+          npm install --no-audit --no-fund
+          npm run build
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+      - name: Capture all 24 genuine v0.45.35 UI screenshots
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivoscan-publish-media
+          cd rivoscan-app
+          npm run preview -- --host 127.0.0.1 > /tmp/rivoscan-publisher-preview.log 2>&1 &
+          for n in $(seq 1 50); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 1
+          done
+          curl --fail --silent http://127.0.0.1:4173/ >/dev/null
+          RIVO_PHONE_OUTPUT=/tmp/rivoscan-publish-media/phone node scripts/phone-play-screenshots.mjs
+          RIVO_TABLET_OUTPUT=/tmp/rivoscan-publish-media/tablet node scripts/tablet-screenshots.mjs
+      - name: Prepare Play icon, feature and dry-run all localized listings
+        run: |
+          python tools/play-publisher/rivoscan_04535_media.py \
+            --app-dir rivoscan-app --output /tmp/rivoscan-publish-media
+          python tools/play-publisher/rivoscan_04535_publish.py \
+            --media-dir /tmp/rivoscan-publish-media
+      - name: Save verified media bundle for audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-04535-Play-Assets-Verified
+          path: |
+            /tmp/rivoscan-publish-media/
+            /tmp/rivoscan-publisher-preview.log
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Publish signed AAB and store assets only when owner request is enabled
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          ENABLED="$(python -c 'import json;print(str(json.load(open("tools/play-publisher/release-requests/rivoscan-04535-request.json"))["enabled"]).lower())')"
+          if [ "$ENABLED" != "true" ]; then
+            echo "RIVOSCAN_04535_PREVIEW_VALIDATED_NO_GOOGLE_PLAY_CHANGES"
+            exit 0
+          fi
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || { echo "::error::Play API secret missing"; exit 1; }
+          python tools/play-publisher/rivoscan_04535_publish.py \
+            --apply --confirm PUBLISH_SIGNED_RIVOSCAN_139_AND_REFRESH_STORE \
+            --media-dir /tmp/rivoscan-publish-media
