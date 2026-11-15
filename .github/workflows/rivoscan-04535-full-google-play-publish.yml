@@ -70,6 +70,7 @@ jobs:
           npm run build
           npm install --no-save --no-audit --no-fund playwright@1.56.1
       - name: Capture all 24 genuine v0.45.35 UI screenshots
+        shell: bash
         run: |
           set -euo pipefail
           mkdir -p /tmp/rivoscan-publish-media
