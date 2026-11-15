@@ -1,0 +1,84 @@
+name: RivoScan - publish AI images, full-size icon and remove video
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04526-ai-media-replace.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install imaging library
+        run: python -m pip install "Pillow>=11,<13"
+      - name: Fetch approved AI-generated artwork and render 26 correct Play assets
+        run: |
+          python tools/play-publisher/rivoscan_04526_ai_refresh.py --prepare --output /tmp/rivoscan-ai-media
+      - name: Verify dimensions and file inventory
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          p=Path("/tmp/rivoscan-ai-media")
+          expected={"RivoScan_Icon_512.png":(512,512),
+                    "RivoScan_Feature_1024x500.jpg":(1024,500)}
+          for name,dimensions in expected.items():
+              with Image.open(p/name) as img:
+                  assert img.size==dimensions, (name,img.size)
+          for name,n in [("phoneScreenshots",8),("sevenInchScreenshots",8),("tenInchScreenshots",8)]:
+              screenshots=list((p/name).glob("*.jpg"))
+              assert len(screenshots)==n,(name,len(screenshots))
+              for photo in screenshots:
+                  with Image.open(photo) as img:
+                      assert min(img.size)>=320 and max(img.size)<=3840
+          print("PLAY_MEDIA_VALIDATED 26 assets plus full manifest")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-AI-Play-Store-Icon-Feature-24-Photos
+          path: /tmp/rivoscan-ai-media/
+          retention-days: 30
+          if-no-files-found: error
+  publish:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    environment: play-testing
+    concurrency:
+      group: google-play-com.ribhlab.rivoscan
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-AI-Play-Store-Icon-Feature-24-Photos
+          path: /tmp/rivoscan-ai-media
+      - name: Install Google Play API client
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install "Pillow>=11,<13"
+      - name: COMMIT Play marketing images and remove video URL in a single edit
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || exit 1
+          python tools/play-publisher/rivoscan_04526_ai_refresh.py \
+            --apply --output /tmp/rivoscan-ai-media \
+            --confirm REPLACE_RIVOSCAN_AI_MEDIA_AND_REMOVE_VIDEO
+      - name: Summarize authoritative Play API commit
+        if: success()
+        run: |
+          echo "Google Play COMMITTED: full-size RivoScan icon, 24 AI promotional images, 1024x500 feature." >> "$GITHUB_STEP_SUMMARY"
+          echo "Previous Play preview video URL removed where present." >> "$GITHUB_STEP_SUMMARY"
+          echo "No AAB, release track, release status or app descriptions were modified." >> "$GITHUB_STEP_SUMMARY"
