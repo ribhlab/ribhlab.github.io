@@ -7,8 +7,8 @@
   "campaign_id": "120250664805130442",
   "objective": "OUTCOME_APP_PROMOTION",
   "status": "PAUSED",
-  "total_budget_mad": 100,
-  "campaign_budget_usd": 8,
+  "total_budget_mad": null,
+  "campaign_budget_usd": 15,
   "reference_usd_to_mad": 9.9874,
   "notes": "Approximately 80 MAD advertising spend before possible taxes and FX fees; not an absolute guarantee of total charged.",
   "google_play": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan",
@@ -19,7 +19,7 @@
     "English",
     "Arabic"
   ],
-  "adset_status": "NOT_CREATED",
+  "adset_status": "BLOCKED_META_APP_NOT_VISIBLE",
   "ad_status": "NOT_CREATED",
   "image_url": "https://ribhlab.github.io/rivoscan/facebook-04540/RivoScan_04540_01_01_Home_1080x1350.jpg",
   "headline": "RivoScan: PDF Scanner",
@@ -31,5 +31,22 @@
     "Create app-install ad set with promoted_object.application_id and object_store_url, subject to Meta minimum budgets.",
     "Create the ad paused, verify targeting, budget and app link, then enable only when ready."
   ],
-  "older_campaigns": "Remain paused; do not overlap test."
+  "older_campaigns": "Remain paused; do not overlap test.",
+  "current_user_approved_budget_usd": 15,
+  "user_budget_note": "User expressly approved increasing 100 MAD trial to USD 15 lifetime, prior 100 MAD amount superseded.",
+  "meta_app_id": "1455011322728474",
+  "campaign_status": "PAUSED",
+  "campaign_name": "RivoScan | App Installs | Morocco Android | $15 lifetime | PAUSED",
+  "error_code": "100",
+  "error_subcode": "3858107",
+  "error_message_fr": "Application non visible; Meta Developer app requires Live mode and authorization for advertising account.",
+  "required_next_steps": [
+    "Complete Meta for Developers > RivoScan > Settings > Basic privacy URL https://ribhlab.github.io/rivoscan/privacy/",
+    "Enter valid Data Deletion Instructions URL https://ribhlab.github.io/rivoscan/privacy/data-deletion/ and upload official icon; choose appropriate category.",
+    "In the Meta app dashboard, finish Publish requirements and put app in Live mode.",
+    "In Meta app Settings > Advanced > Advertising Accounts, authorize ad account ID 1568807824939376, if this control appears.",
+    "Review Android platform configuration package com.ribhlab.rivoscan and Google Play app URL.",
+    "Retry creation of App Installs ad set (APP_INSTALLS) only after app is visible; create ad PAUSED with English then Arabic and correct original screenshot.",
+    "Before enabling ads, verify install attribution integration (Meta SDK or approved MMP) and campaign status."
+  ]
 }
