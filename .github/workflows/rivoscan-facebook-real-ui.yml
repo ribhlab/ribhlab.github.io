@@ -58,6 +58,7 @@ jobs:
           git add public/rivoscan/facebook-04540/ public/rivoscan/icon.png
           if ! git diff --cached --quiet; then
             git commit -m "Publish source-faithful RivoScan 0.45.40 Facebook graphics"
+            git pull --rebase origin main
             git push origin HEAD:main
           else
             echo "Graphics already current"
