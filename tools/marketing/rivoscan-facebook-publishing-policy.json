@@ -28,6 +28,20 @@
   ],
   "published_page_posts": [
     "1409928902211743_122102959287548805",
-    "1409928902211743_122102959467548805"
-  ]
+    "1409928902211743_122102959467548805",
+    "1409928902211743_122102969511548805",
+    "1409928902211743_122102969733548805",
+    "1409928902211743_122102969877548805",
+    "1409928902211743_122102970549548805"
+  ],
+  "google_play_developer": "Mor Inc",
+  "google_play_title_en": "RivoScan: PDF Scanner & Editor",
+  "google_play_title_fr": "RivoScan : Scanner PDF",
+  "official_icon_source": "univcours/ribhlab branch rivoscan-0.45.40-original-key /assets/branding/rivoscan-logo-original.png",
+  "official_icon_url": "https://ribhlab.github.io/rivoscan/icon.png",
+  "official_cover_url": "https://ribhlab.github.io/rivoscan/facebook-04540/RivoScan_Facebook_Cover_1640x624.jpg",
+  "page_profile_edit_status": "Page settings/profile picture/cover not editable via connected Windsor facebook_organic actions; image photo posts are not profile or cover changes",
+  "profile_bio_en": "RivoScan: PDF Scanner & Editor by Mor Inc. Scan documents to PDF, organize and read files, use QR/barcode and OCR tools on Android. Some features require device support or model downloads.",
+  "profile_bio_ar": "RivoScan من Mor Inc: امسح الوثائق إلى PDF، نظّم ملفاتك واقرأها، واستعمل أدوات QR والباركود وOCR على Android. تتطلب بعض المزايا دعماً من الجهاز أو تنزيل موارد إضافية.",
+  "publishing_rules_source": "Observed Google Play listing screenshot and latest verified 0.45.40 app capture artifact from GitHub"
 }
