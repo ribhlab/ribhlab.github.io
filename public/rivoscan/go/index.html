@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RivoScan — Scan, Organize, Read & OCR on Android</title>
+<meta name="description" content="RivoScan for Android: scan paper to PDF, organize documents, read files, extract text with OCR, merge pages, sign visually and share.">
+<meta name="theme-color" content="#063879">
+<link rel="canonical" href="https://ribhlab.github.io/rivoscan/go/">
+<meta property="og:type" content="website"><meta property="og:title" content="RivoScan — Scan • Organize • Read • OCR">
+<meta property="og:description" content="Your documents and useful PDF tools in one Android app.">
+<meta property="og:image" content="https://ribhlab.github.io/rivoscan/feature.jpg">
+<meta property="og:url" content="https://ribhlab.github.io/rivoscan/go/">
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#0b234b;background:#f1f8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}button{font:inherit;cursor:pointer}
+header{background:linear-gradient(120deg,#041b4d,#065cbd 72%,#08abdf);color:white;overflow:hidden}
+nav{max-width:1100px;margin:auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:900;letter-spacing:-.03em}.brand img{width:54px;height:54px;border-radius:14px}
+.langs{display:flex;gap:6px;flex-wrap:wrap}.langs button{border:1px solid #ffffff65;background:#ffffff1d;color:white;border-radius:9px;padding:8px 12px;font-weight:700}
+.langs button[aria-pressed=true]{background:white;color:#0755a6}
+.hero{max-width:1100px;margin:auto;padding:58px 24px 78px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.eyebrow{display:inline-block;background:#2cf0ff28;border:1px solid #70e4ff88;color:#c9f7ff;border-radius:30px;font-weight:800;letter-spacing:.09em;font-size:12px;padding:8px 13px}
+h1{font-size:clamp(36px,5vw,66px);line-height:1.1;margin:23px 0 16px;letter-spacing:-.045em}header p{font-size:20px;max-width:650px;line-height:1.65;color:#d9ebff}
+.cta{display:inline-block;padding:16px 25px;border-radius:15px;background:#1fe7ff;color:#003369;font-weight:900;text-decoration:none;box-shadow:0 10px 30px #00183870;margin-top:18px}
+.cta:hover{background:#caffff}.secondary{display:inline-block;margin-left:15px;color:#f8fcff;text-underline-offset:4px}
+.hero-card{border:1px solid #ffffff4d;border-radius:35px;padding:24px;background:#ffffff18;box-shadow:0 28px 70px #0005;transform:rotate(1.5deg)}
+.hero-card img{width:100%;display:block;border-radius:22px;max-height:520px;object-fit:cover}
+.hero-card small{display:block;margin-top:13px;color:#cfe7ff;text-align:center}
+main{max-width:1100px;margin:auto;padding:55px 24px 85px}
+.section-label{font-weight:900;color:#0379b8;text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+h2{font-size:clamp(28px,3vw,40px);line-height:1.15;margin:10px 0 25px;letter-spacing:-.025em}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:white;border:1px solid #d8e7f6;border-radius:22px;padding:26px;box-shadow:0 12px 34px #0b33610b}
+.card .emoji{font-size:31px}.card h3{font-size:20px;margin:13px 0 7px}.card p{color:#4c607b;margin:0;line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:13px;margin:22px 0}
+.gallery figure{margin:0}.gallery img{display:block;width:100%;border-radius:14px;box-shadow:0 10px 25px #1942781f}
+.gallery figcaption{text-align:center;color:#567092;font-size:12px;margin-top:8px}
+.note{font-size:13px;color:#637991;max-width:860px;line-height:1.6}
+.bottom{margin-top:55px;border-radius:28px;padding:35px;background:linear-gradient(120deg,#052862,#0773cb);color:white;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.bottom h2{margin:0}.bottom .cta{margin:0;white-space:nowrap}
+footer{border-top:1px solid #d3e3f4;padding:24px;color:#526a84;text-align:center;font-size:14px}
+footer a{color:#075db2;text-underline-offset:3px}
+[dir=rtl] .secondary{margin-left:0;margin-right:15px}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:32px;gap:28px}.hero-card{max-width:450px;margin:auto}.features{grid-template-columns:1fr 1fr}.gallery{overflow-x:auto;grid-template-columns:repeat(5,minmax(165px,1fr));padding-bottom:10px}.bottom{flex-direction:column;align-items:start}}
+@media(max-width:550px){nav{flex-direction:column;align-items:flex-start}.features{grid-template-columns:1fr}.hero{padding-bottom:45px}h1{font-size:39px}.bottom{padding:26px}.secondary{display:block;margin:14px 0 0}}
+</style>
+</head>
+<body>
+<header>
+<nav><div class="brand"><img src="/rivoscan/icon.png" alt="RivoScan app icon">RivoScan <span style="font-size:12px;font-weight:500;opacity:.8">by RibhLab</span></div>
+<div class="langs" role="group" aria-label="Language"><button id="en" aria-pressed="true" onclick="setLang('en')">EN</button><button id="fr" aria-pressed="false" onclick="setLang('fr')">FR</button><button id="ar" aria-pressed="false" onclick="setLang('ar')">العربية</button></div>
+</nav>
+<div class="hero">
+<div><div class="eyebrow" data-i="eyebrow">ANDROID DOCUMENT TOOLKIT</div>
+<h1 data-i="headline">Scan. Organize.<br>Read. Extract.</h1>
+<p data-i="sub">Capture paper documents, turn them into PDFs, organize pages, read files and extract text with OCR. Everything in one practical Android app.</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan" rel="noopener" data-i="get">Explore on Google Play</a>
+<a class="secondary" href="#features" data-i="discover">Discover the features</a></div>
+<div class="hero-card"><img src="/rivoscan/marketing/01_hero_smart_scanning.jpg" alt="Promotional illustration of RivoScan document scanning"><small data-i="illustration">Promotional illustration — not an unedited app screenshot</small></div></div>
+</header>
+<main>
+<section id="features"><div class="section-label" data-i="features">WHY RIVOSCAN</div><h2 data-i="benefits">Everything for your documents</h2>
+<div class="features">
+<div class="card"><span class="emoji">📷</span><h3 data-i="f1">Scan to PDF</h3><p data-i="d1">Capture documents with the camera, adjust the result and export a PDF. Scan options vary by device.</p></div>
+<div class="card"><span class="emoji">🗂️</span><h3 data-i="f2">Organize and merge</h3><p data-i="d2">Merge files, extract, rotate and reorder pages, and keep documents manageable.</p></div>
+<div class="card"><span class="emoji">📖</span><h3 data-i="f3">Read and annotate</h3><p data-i="d3">Open PDFs, review pages, add text annotations, page numbers or watermarks.</p></div>
+<div class="card"><span class="emoji">🔡</span><h3 data-i="f4">Extract text with OCR</h3><p data-i="d4">Recognize text in supported languages; a first-time model download may be needed.</p></div>
+<div class="card"><span class="emoji">✍️</span><h3 data-i="f5">Sign and share</h3><p data-i="d5">Draw a visual signature, save files and share with your phone's supported apps. Not a certified digital signature.</p></div>
+<div class="card"><span class="emoji">🖼️</span><h3 data-i="f6">Convert pages to images</h3><p data-i="d6">Export PDF pages as JPG or PNG. Additional tools may vary by device or release.</p></div>
+</div></section>
+<section style="margin-top:64px"><div class="section-label" data-i="showcase">EXPLORE THE WORKFLOW</div><h2 data-i="workflow">From paper to an organized PDF</h2>
+<div class="gallery">
+<figure><img src="/rivoscan/marketing/01_hero_smart_scanning.jpg" loading="lazy" alt="Document capture promotional artwork"><figcaption data-i="c1">Capture</figcaption></figure>
+<figure><img src="/rivoscan/marketing/02_scan_in_seconds.jpg" loading="lazy" alt="Scanning promotional artwork"><figcaption data-i="c2">Scan</figcaption></figure>
+<figure><img src="/rivoscan/marketing/03_organize_your_documents.jpg" loading="lazy" alt="Document organization promotional artwork"><figcaption data-i="c3">Organize</figcaption></figure>
+<figure><img src="/rivoscan/marketing/04_turn_scans_into_text.jpg" loading="lazy" alt="Text extraction promotional artwork"><figcaption data-i="c4">Recognize text</figcaption></figure>
+<figure><img src="/rivoscan/marketing/05_built_for_everyday_use.jpg" loading="lazy" alt="Everyday document tools promotional artwork"><figcaption data-i="c5">Everyday use</figcaption></figure>
+</div><p class="note" data-i="disclaimer">These graphics are promotional illustrations, not unedited screenshots of the current Android build. Feature availability varies by release and device.</p></section>
+<div class="bottom"><div><h2 data-i="bottom">Take your document tools with you.</h2><p data-i="bottomsub" style="color:#d5f0ff">Discover RivoScan on Android.</p></div><a class="cta" href="https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan" rel="noopener" data-i="get2">Get RivoScan</a></div>
+</main>
+<footer>RivoScan by RibhLab · <a href="/rivoscan/privacy/" data-i="privacy">Privacy policy</a> · <a href="/rivoscan/" data-i="site">App home</a> · <a href="mailto:rachid022note4@gmail.com">Support</a></footer>
+<script>
+const copy={
+en:{eyebrow:'ANDROID DOCUMENT TOOLKIT',headline:'Scan. Organize.<br>Read. Extract.',sub:'Capture paper documents, turn them into PDFs, organize pages, read files and extract text with OCR. Everything in one practical Android app.',get:'Explore on Google Play',discover:'Discover the features',illustration:'Promotional illustration — not an unedited app screenshot',features:'WHY RIVOSCAN',benefits:'Everything for your documents',f1:'Scan to PDF',d1:'Capture documents with the camera, adjust the result and export a PDF. Scan options vary by device.',f2:'Organize and merge',d2:'Merge files, extract, rotate and reorder pages, and keep documents manageable.',f3:'Read and annotate',d3:'Open PDFs, review pages, add text annotations, page numbers or watermarks.',f4:'Extract text with OCR',d4:'Recognize text in supported languages; a first-time model download may be needed.',f5:'Sign and share',d5:"Draw a visual signature, save files and share with your phone's supported apps. Not a certified digital signature.",f6:'Convert pages to images',d6:'Export PDF pages as JPG or PNG. Additional tools may vary by device or release.',showcase:'EXPLORE THE WORKFLOW',workflow:'From paper to an organized PDF',c1:'Capture',c2:'Scan',c3:'Organize',c4:'Recognize text',c5:'Everyday use',disclaimer:'These graphics are promotional illustrations, not unedited screenshots of the current Android build. Feature availability varies by release and device.',bottom:'Take your document tools with you.',bottomsub:'Discover RivoScan on Android.',get2:'Get RivoScan',privacy:'Privacy policy',site:'App home'},
+fr:{eyebrow:'OUTILS DE DOCUMENTS SUR ANDROID',headline:'Scannez. Organisez.<br>Lisez. Extrayez.',sub:'Numérisez vos documents, créez des PDF, organisez et consultez vos fichiers, puis extrayez le texte avec OCR depuis votre téléphone Android.',get:'Voir sur Google Play',discover:'Découvrir les fonctions',illustration:"Visuel publicitaire — pas une capture d'écran brute",features:'POURQUOI RIVOSCAN',benefits:'Tous vos outils documentaires',f1:'Scanner en PDF',d1:"Photographiez un document, ajustez le résultat et exportez un PDF. Certaines options dépendent de l'appareil.",f2:'Organiser et fusionner',d2:'Fusionnez des fichiers, extrayez, pivotez et réorganisez les pages.',f3:'Lire et annoter',d3:'Consultez vos PDF et ajoutez des annotations, des numéros de page ou des filigranes.',f4:'Extraire du texte avec OCR',d4:'Reconnaissez le texte dans les langues prises en charge. Un téléchargement initial peut être nécessaire.',f5:'Signer et partager',d5:'Dessinez une signature visuelle puis partagez le document. Ce n’est pas une signature numérique certifiée.',f6:'Convertir en images',d6:'Exportez des pages PDF en JPG ou PNG. Certaines fonctions varient selon l’appareil ou la version.',showcase:'DÉCOUVRIR LE PARCOURS',workflow:'Du papier au PDF organisé',c1:'Capturer',c2:'Numériser',c3:'Organiser',c4:'Reconnaître',c5:'Au quotidien',disclaimer:"Ces visuels sont des illustrations publicitaires, pas des captures d'écran brutes. Les fonctions dépendent de l'appareil et de la version.",bottom:'Vos outils PDF, toujours avec vous.',bottomsub:'Découvrez RivoScan sur Android.',get2:'Découvrir RivoScan',privacy:'Confidentialité',site:'Accueil'},
+ar:{eyebrow:'أدوات المستندات على أندرويد',headline:'صوّر. نظّم.<br>اقرأ. استخرج.',sub:'صوّر الأوراق وحوّلها إلى ملفات PDF، نظّم الصفحات، اقرأ المستندات واستخرج النصوص بتقنية OCR من هاتف أندرويد.',get:'اكتشفه على Google Play',discover:'تعرّف على المزايا',illustration:'صورة تسويقية توضيحية، وليست لقطة خام من التطبيق',features:'لماذا ريفوسكان؟',benefits:'كل ما تحتاجه للمستندات',f1:'المسح إلى PDF',d1:'صوّر الوثائق بالكاميرا، راجع النتيجة واحفظها في PDF. بعض خيارات المسح مرتبطة بنوع الجهاز.',f2:'تنظيم الملفات ودمجها',d2:'ادمج ملفاتك واستخرج الصفحات ودوّرها وأعد ترتيبها.',f3:'قراءة الملفات وإضافة الملاحظات',d3:'افتح ملفات PDF وأضف تعليقات نصية أو أرقام صفحات أو علامات مائية.',f4:'استخراج النصوص',d4:'استعمل OCR للغات المدعومة. قد يلزم تنزيل نموذج لغوي أول مرة.',f5:'توقيع مرئي ومشاركة',d5:'ارسم توقيعاً مرئياً واحفظ الملف أو شاركه. ليس توقيعاً رقمياً معتمداً.',f6:'التحويل إلى الصور',d6:'حوّل صفحات PDF إلى صور JPG أو PNG. تتغير بعض المزايا حسب الجهاز والإصدار.',showcase:'تعرّف على طريقة الاستخدام',workflow:'من الوثيقة إلى PDF منظم',c1:'التصوير',c2:'المسح',c3:'التنظيم',c4:'استخراج النص',c5:'استخدام يومي',disclaimer:'الصور رسومات إشهارية توضيحية وليست لقطات خام مباشرة من نسخة أندرويد. تتغير الميزات حسب الإصدار والجهاز.',bottom:'أدوات مستنداتك في جيبك.',bottomsub:'اكتشف RivoScan على أندرويد.',get2:'اكتشف RivoScan',privacy:'سياسة الخصوصية',site:'الصفحة الرئيسية'}
+};
+function setLang(lang){if(!copy[lang])return;document.documentElement.lang=lang;document.body.dir=lang==='ar'?'rtl':'ltr';for(const k in copy[lang]){const el=document.querySelector('[data-i="'+k+'"]');if(el)el.innerHTML=copy[lang][k];}document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',String(b.id===lang)));try{history.replaceState(null,'',location.pathname+'#'+lang)}catch(e){}}
+const l=location.hash.slice(1);setLang(copy[l]?l:(/^ar\b/i.test(navigator.language)?'ar':/^fr\b/i.test(navigator.language)?'fr':'en'));
+</script>
+</body>
+</html>
