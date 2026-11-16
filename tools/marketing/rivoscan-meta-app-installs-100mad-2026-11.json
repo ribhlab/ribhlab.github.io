@@ -10,7 +10,7 @@
   "total_budget_mad": null,
   "campaign_budget_usd": 15,
   "reference_usd_to_mad": 9.9874,
-  "notes": "Approximately 80 MAD advertising spend before possible taxes and FX fees; not an absolute guarantee of total charged.",
+  "notes": "User approved 15 USD lifetime. Ad set created and paused, but no ad is created or active. Expenses for this campaign have not been triggered by these actions.",
   "google_play": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan",
   "google_play_fr": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan&hl=fr",
   "suggested_market": "Morocco",
@@ -19,17 +19,17 @@
     "English",
     "Arabic"
   ],
-  "adset_status": "BLOCKED_ANDROID_STORE_URL_NOT_ASSOCIATED",
-  "ad_status": "NOT_CREATED",
+  "adset_status": "PAUSED",
+  "ad_status": "NOT_CREATED_SECURITY_AUTHENTICATION_REQUIRED",
   "image_url": "https://ribhlab.github.io/rivoscan/facebook-04540/RivoScan_04540_01_01_Home_1080x1350.jpg",
   "headline": "RivoScan: PDF Scanner",
   "primary_text_en": "Scan documents to PDF, organize your files and explore helpful PDF, QR and OCR tools on Android.",
   "primary_text_ar": "امسح الوثائق إلى PDF، ونظّم ملفاتك واستكشف أدوات PDF وQR وOCR على أندرويد.",
   "requirements": [
-    "Find RivoScan Meta Developer App ID and verify store association and app attribution.",
-    "Add valid payment method on Rachid Gopro Meta Ads account; previous create_ad error code 100/subcode 1359188.",
-    "Create app-install ad set with promoted_object.application_id and object_store_url, subject to Meta minimum budgets.",
-    "Create the ad paused, verify targeting, budget and app link, then enable only when ready."
+    "Authenticate Facebook account (Rachid Gopro) in adsmanager.facebook.com under ad account 1568807824939376 to resolve Meta code 31/3858385.",
+    "Confirm exact names of the beneficiary and payor for worldwide targeting including EU; Meta requires DSA fields and additional verified identities in some countries.",
+    "Once security lock is cleared, create paused app install ad with actual app screenshot, English-first/Arabic-second text, Google Play destination and INSTALL_MOBILE_APP CTA.",
+    "Before enabling campaign/ad set/ad, check spend cap 15 USD lifetime, advertiser declarations, eligibility/Meta SDK or MMP install event tracking, end date, final ad preview."
   ],
   "older_campaigns": "Remain paused; do not overlap test.",
   "current_user_approved_budget_usd": 15,
@@ -37,15 +37,35 @@
   "meta_app_id": "1455011322728474",
   "campaign_status": "PAUSED",
   "campaign_name": "RivoScan | App Installs | Morocco Android | $15 lifetime | PAUSED",
-  "error_code": "100",
-  "error_subcode": "1885093",
-  "error_message_fr": "URL de la boutique d’applications/objets non concordantes: L’application ne correspond pas à l’URL du magasin d’objets fournie",
   "required_next_steps": [
-    "Meta Developers > RivoScan > Paramètres de l’app > Général > + Ajouter une plateforme > Android > Google Play.",
-    "Provide actual Android package com.ribhlab.rivoscan and store URL https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan; verify exact main Activity class from built Android artifact before entering if required.",
-    "Save settings; ensure the full Android listing appears after refresh, and that Meta shows the app as Published / Live.",
-    "After association retry creating paused ad set for campaign 120250664805130442 and create paused install creative.",
-    "Review install event measurement in Events Manager before activating spend."
+    "Authenticate Facebook account (Rachid Gopro) in adsmanager.facebook.com under ad account 1568807824939376 to resolve Meta code 31/3858385.",
+    "Confirm exact names of the beneficiary and payor for worldwide targeting including EU; Meta requires DSA fields and additional verified identities in some countries.",
+    "Once security lock is cleared, create paused app install ad with actual app screenshot, English-first/Arabic-second text, Google Play destination and INSTALL_MOBILE_APP CTA.",
+    "Before enabling campaign/ad set/ad, check spend cap 15 USD lifetime, advertiser declarations, eligibility/Meta SDK or MMP install event tracking, end date, final ad preview."
   ],
-  "meta_app_publish_result": "Previous app visibility error 3858107 no longer occurs; Meta now returns 1885093 mismatch with store URL. Developer app was published by owner; direct public mode verification unavailable."
+  "meta_app_publish_result": "Previous app visibility error 3858107 no longer occurs; Meta now returns 1885093 mismatch with store URL. Developer app was published by owner; direct public mode verification unavailable.",
+  "updated_at": "2026-11-16",
+  "adset_id": "120250665286960442",
+  "ad_creation_error": {
+    "code": 31,
+    "subcode": 3858385,
+    "title": "Please authenticate your account",
+    "action": "Owner must authenticate Rachid Gopro Facebook login in Meta Ads Manager before API can create or edit ads. Do not automatically retry."
+  },
+  "country_targeting": {
+    "currently_saved": "Morocco",
+    "requested": "Worldwide",
+    "attempted": "worldwide country group (no spend)",
+    "result": "FAILED_MISSING_EU_DSA_BENEFICIARY_AND_PAYOR",
+    "error_code": 100,
+    "error_subcode": 3858081,
+    "reason": "Global targeting includes EU; Meta demands real disclosed beneficiary and payer. Do not invent declared identities.",
+    "planned": "After owner confirms legally accurate beneficiary and payer and any regulated identity requirements, update paused ad set. Keep Android only."
+  },
+  "preview": {
+    "kind": "Illustrative Facebook Feed mockup; not a Meta delivered preview",
+    "asset": "/mnt/data/RivoScan_Meta_App_Installs_Feed_Preview_EN_AR.png",
+    "source": "Actual RivoScan 0.45.40 screenshot, English-first Arabic-second caption",
+    "link": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan"
+  }
 }
