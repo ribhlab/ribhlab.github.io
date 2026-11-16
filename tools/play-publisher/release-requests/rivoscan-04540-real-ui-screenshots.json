@@ -1,8 +1,8 @@
 {
-  "enabled": false,
+  "enabled": true,
   "package": "com.ribhlab.rivoscan",
   "sourceVersion": "0.45.40",
   "productionVersionCode": 144,
   "captureRunId": 43876459718,
-  "confirmation": ""
+  "confirmation": "REPLACE_RIVOSCAN_04540_SCREENSHOTS_WITH_ACTUAL_APP_UI"
 }
