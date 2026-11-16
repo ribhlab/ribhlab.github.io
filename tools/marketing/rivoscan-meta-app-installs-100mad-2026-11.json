@@ -1,0 +1,35 @@
+{
+  "app": "RivoScan",
+  "developer": "Mor Inc",
+  "date": "2026-11-16",
+  "account_id": "1568807824939376",
+  "page_id": "1409928902211743",
+  "campaign_id": "120250664805130442",
+  "objective": "OUTCOME_APP_PROMOTION",
+  "status": "PAUSED",
+  "total_budget_mad": 100,
+  "campaign_budget_usd": 8,
+  "reference_usd_to_mad": 9.9874,
+  "notes": "Approximately 80 MAD advertising spend before possible taxes and FX fees; not an absolute guarantee of total charged.",
+  "google_play": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan",
+  "google_play_fr": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan&hl=fr",
+  "suggested_market": "Morocco",
+  "device": "Android",
+  "languages": [
+    "English",
+    "Arabic"
+  ],
+  "adset_status": "NOT_CREATED",
+  "ad_status": "NOT_CREATED",
+  "image_url": "https://ribhlab.github.io/rivoscan/facebook-04540/RivoScan_04540_01_01_Home_1080x1350.jpg",
+  "headline": "RivoScan: PDF Scanner",
+  "primary_text_en": "Scan documents to PDF, organize your files and explore helpful PDF, QR and OCR tools on Android.",
+  "primary_text_ar": "امسح الوثائق إلى PDF، ونظّم ملفاتك واستكشف أدوات PDF وQR وOCR على أندرويد.",
+  "requirements": [
+    "Find RivoScan Meta Developer App ID and verify store association and app attribution.",
+    "Add valid payment method on Rachid Gopro Meta Ads account; previous create_ad error code 100/subcode 1359188.",
+    "Create app-install ad set with promoted_object.application_id and object_store_url, subject to Meta minimum budgets.",
+    "Create the ad paused, verify targeting, budget and app link, then enable only when ready."
+  ],
+  "older_campaigns": "Remain paused; do not overlap test."
+}
