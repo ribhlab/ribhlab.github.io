@@ -19,7 +19,7 @@
     "English",
     "Arabic"
   ],
-  "adset_status": "BLOCKED_META_APP_NOT_VISIBLE",
+  "adset_status": "BLOCKED_ANDROID_STORE_URL_NOT_ASSOCIATED",
   "ad_status": "NOT_CREATED",
   "image_url": "https://ribhlab.github.io/rivoscan/facebook-04540/RivoScan_04540_01_01_Home_1080x1350.jpg",
   "headline": "RivoScan: PDF Scanner",
@@ -38,15 +38,14 @@
   "campaign_status": "PAUSED",
   "campaign_name": "RivoScan | App Installs | Morocco Android | $15 lifetime | PAUSED",
   "error_code": "100",
-  "error_subcode": "3858107",
-  "error_message_fr": "Application non visible; Meta Developer app requires Live mode and authorization for advertising account.",
+  "error_subcode": "1885093",
+  "error_message_fr": "URL de la boutique d’applications/objets non concordantes: L’application ne correspond pas à l’URL du magasin d’objets fournie",
   "required_next_steps": [
-    "Complete Meta for Developers > RivoScan > Settings > Basic privacy URL https://ribhlab.github.io/rivoscan/privacy/",
-    "Enter valid Data Deletion Instructions URL https://ribhlab.github.io/rivoscan/privacy/data-deletion/ and upload official icon; choose appropriate category.",
-    "In the Meta app dashboard, finish Publish requirements and put app in Live mode.",
-    "In Meta app Settings > Advanced > Advertising Accounts, authorize ad account ID 1568807824939376, if this control appears.",
-    "Review Android platform configuration package com.ribhlab.rivoscan and Google Play app URL.",
-    "Retry creation of App Installs ad set (APP_INSTALLS) only after app is visible; create ad PAUSED with English then Arabic and correct original screenshot.",
-    "Before enabling ads, verify install attribution integration (Meta SDK or approved MMP) and campaign status."
-  ]
+    "Meta Developers > RivoScan > Paramètres de l’app > Général > + Ajouter une plateforme > Android > Google Play.",
+    "Provide actual Android package com.ribhlab.rivoscan and store URL https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan; verify exact main Activity class from built Android artifact before entering if required.",
+    "Save settings; ensure the full Android listing appears after refresh, and that Meta shows the app as Published / Live.",
+    "After association retry creating paused ad set for campaign 120250664805130442 and create paused install creative.",
+    "Review install event measurement in Events Manager before activating spend."
+  ],
+  "meta_app_publish_result": "Previous app visibility error 3858107 no longer occurs; Meta now returns 1885093 mismatch with store URL. Developer app was published by owner; direct public mode verification unavailable."
 }
