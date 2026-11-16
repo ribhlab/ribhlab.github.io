@@ -1,0 +1,17 @@
+{
+  "source_version": "0.45.40",
+  "raw_source_run_id": 43876459718,
+  "artifact_id": 14231200039,
+  "source": "RivoScan-04540-Actual-UI-Raw-Screenshots",
+  "screens": {
+    "01_Home.png": "7e4ac5fb1bcbe80125c7f26be44b6498fd6911c1c4bd102bdec4a2c141a53f34",
+    "02_Documents.png": "4db7b56503b9b89cef3b4946c98f62154e4c67ef9212920af43d35857ad3a281",
+    "03_Tools.png": "59f34a639d0bff5b447187b53525a0112a2675ecac200c9fd34e41d5a741bf9c",
+    "04_Book_Scan.png": "c406de15821e66c103f150662f26f0a4a16b0d24cd125e2c203cd85a4a658c13",
+    "05_Formula_OCR.png": "9361b520305fd052e798b3c7b113d83f8fe7f81d5c69ef58cbaeff4d6c25b741",
+    "06_Photo_Translation.png": "6a82eb04fd218bd55a753c2ddac7e39225e0550e16cfc245bbd89ade8f840390",
+    "07_ID_Photo.png": "fe35aaa99f3f4de119ef10f90d645c0c0dd2551fc9adcd7ad750a3b8cc664276",
+    "08_Settings.png": "d358dc4204c7810cc0110690472834ebd7fa275634a67922bd90f3b9a3b794c6"
+  },
+  "method": "All screenshots preserved without cropping, distortions or generated content. Photo layout and branding added around them."
+}
