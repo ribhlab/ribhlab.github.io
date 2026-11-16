@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/rivoscan-play-readonly-audit.yml'
+      - 'tools/play-publisher/rivoscan_play_readonly_audit.py'
   workflow_dispatch:
 permissions:
   contents: read
