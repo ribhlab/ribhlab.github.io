@@ -1,0 +1,64 @@
+name: RivoScan 0.45.40 - build Facebook assets from captured app UI
+on:
+  push:
+    branches: [main]
+    paths:
+      - tools/marketing/rivoscan_fb_assets_04540.py
+      - .github/workflows/rivoscan-facebook-real-ui.yml
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+concurrency:
+  group: rivoscan-facebook-assets
+  cancel-in-progress: false
+jobs:
+  render:
+    if: github.repository == 'ribhlab/ribhlab.github.io'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download verified RivoScan 0.45.40 capture from 16 Nov 2026
+        uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04540-Actual-UI-Raw-Screenshots
+          run-id: 43876459718
+          github-token: ${{ github.token }}
+          path: /tmp/rivo-screens
+      - name: Install image processing dependencies
+        run: python -m pip install --disable-pip-version-check 'Pillow>=10,<13'
+      - name: Render uncropped, real-app screenshot cards and cover
+        run: python tools/marketing/rivoscan_fb_assets_04540.py
+      - name: Verify provenance and all eleven graphic files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import json
+          p=Path('public/rivoscan/facebook-04540')
+          images=list(p.glob('*.jpg'))+list(p.glob('*.png'))
+          assert len(images)==10, (len(images),[x.name for x in images])
+          assert len(list(p.glob('RivoScan_04540_*_1080x1350.jpg')))==8
+          assert Image.open(p/'RivoScan_Facebook_Cover_1640x624.jpg').size==(1640,624)
+          assert Image.open(p/'RivoScan_Profile_1080.png').size==(1080,1080)
+          x=json.loads((p/'asset-source.json').read_text())
+          assert x['source_version']=='0.45.40' and len(x['screens'])==8
+          print('VERIFIED_REAL_RIVOSCAN_FACEBOOK_IMAGES',len(images))
+          PY
+      - name: Commit graphics into public GitHub Pages assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'rivoscan-images[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/rivoscan/facebook-04540/
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish source-faithful RivoScan 0.45.40 Facebook graphics"
+            git push origin HEAD:main
+          else
+            echo "Graphics already current"
+          fi
