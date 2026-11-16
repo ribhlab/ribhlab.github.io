@@ -1,0 +1,75 @@
+name: RivoScan 0.45.40 - capture actual UI on phone and tablets
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04540-actual-ui-capture.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  webview-ui:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: univcours/ribhlab
+          ref: rivoscan-0.45.40-original-key
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify source and build RivoScan 0.45.40
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e 'if(require("./package.json").version!=="0.45.40")process.exit(1)'
+          npm install --no-audit --no-fund
+          npm run build
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+      - name: Capture actual app UI through browser WebView at 3 device sizes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivo-04540
+          npm run preview -- --host 127.0.0.1 >/tmp/rivo-04540/preview.log 2>&1 &
+          for n in $(seq 1 50); do curl -fsS http://127.0.0.1:4173/ >/dev/null && break || sleep 1; done
+          curl -fsS http://127.0.0.1:4173/ >/dev/null
+          RIVO_PHONE_OUTPUT=/tmp/rivo-04540/phone node scripts/phone-play-screenshots.mjs
+          RIVO_TABLET_OUTPUT=/tmp/rivo-04540/tablet node scripts/tablet-screenshots.mjs
+      - name: Verify all real screenshots and reject browser errors, duplicates, and overlays
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module - <<'JS'
+          import {readFileSync,readdirSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const root='/tmp/rivo-04540';
+          const dims=[['phone/phone',1080,1920],['tablet/7-inch',1080,1920],['tablet/10-inch',1536,2560]];
+          const hashes=[];
+          for(const [dir,w,h] of dims){
+            const names=readdirSync(root+'/'+dir).filter(x=>x.endsWith('.png')).sort();
+            if(names.length!==8)throw Error(dir+' needs eight real screenshots, got '+names.length);
+            for(const name of names){
+              const b=readFileSync(root+'/'+dir+'/'+name);
+              if(b.subarray(0,8).toString('hex')!=='89504e470d0a1a0a'||b.readUInt32BE(16)!==w||b.readUInt32BE(20)!==h||b.length<15000||b.length>8000000)throw Error('Invalid screenshot '+dir+'/'+name);
+              hashes.push(createHash('sha256').update(b).digest('hex'));
+            }
+          }
+          if(new Set(hashes).size!==24)throw Error('Duplicate screenshot(s)');
+          for(const a of ['phone/audit.json','tablet/audit.json']){
+            const d=JSON.parse(readFileSync(root+'/'+a,'utf8'));
+            if(!d.source.includes('0.45.40')||d.errors.length||d.records.some(x=>x.horizontalOverflow>4))throw Error('UI audit failed '+a);
+          }
+          console.log('RIVOSCAN_04540_REAL_UI_CAPTURE_VERIFIED='+JSON.stringify({version:'0.45.40',phone:8,tablet7:8,tablet10:8,source:'Actual 0.45.40 app WebView rendered, no mockup or promotional framing'}));
+          JS
+      - name: Upload original 0.45.40 UI screenshots for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-04540-Actual-UI-Raw-Screenshots
+          path: /tmp/rivo-04540/
+          retention-days: 30
+          if-no-files-found: warn
