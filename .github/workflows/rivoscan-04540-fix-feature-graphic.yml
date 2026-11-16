@@ -1,0 +1,34 @@
+name: RivoScan 0.45.40 - fix cropped Google Play feature graphic
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04540-fix-feature-graphic.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  feature-graphic:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verified Play publishing dependencies
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m pip install 'Pillow>=11,<13'
+      - name: Validate feature graphic publisher syntax
+        run: python -m py_compile tools/play-publisher/rivoscan_04540_fixed_feature_graphic.py
+      - name: Replace only RivoScan en-US feature graphic with crop-safe 1024x500 image
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo "Google Play service account secret missing"; exit 1; }
+          python tools/play-publisher/rivoscan_04540_fixed_feature_graphic.py
