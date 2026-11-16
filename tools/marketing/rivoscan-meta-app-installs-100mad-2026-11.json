@@ -19,8 +19,8 @@
     "English",
     "Arabic"
   ],
-  "adset_status": "PAUSED",
-  "ad_status": "NOT_CREATED_SECURITY_AUTHENTICATION_REQUIRED",
+  "adset_status": "ACTIVE_BUT_CAMPAIGN_PAUSED",
+  "ad_status": "ACTIVE_BUT_CAMPAIGN_PAUSED",
   "image_url": "https://ribhlab.github.io/rivoscan/facebook-04540/RivoScan_04540_01_01_Home_1080x1350.jpg",
   "headline": "RivoScan: PDF Scanner",
   "primary_text_en": "Scan documents to PDF, organize your files and explore helpful PDF, QR and OCR tools on Android.",
@@ -36,7 +36,7 @@
   "user_budget_note": "User expressly approved increasing 100 MAD trial to USD 15 lifetime, prior 100 MAD amount superseded.",
   "meta_app_id": "1455011322728474",
   "campaign_status": "PAUSED",
-  "campaign_name": "RivoScan | App Installs | Morocco Android | $15 lifetime | PAUSED",
+  "campaign_name": "RivoScan | Worldwide Android | App Installs | $15 lifetime | PAUSED",
   "required_next_steps": [
     "Authenticate Facebook account (Rachid Gopro) in adsmanager.facebook.com under ad account 1568807824939376 to resolve Meta code 31/3858385.",
     "Confirm exact names of the beneficiary and payor for worldwide targeting including EU; Meta requires DSA fields and additional verified identities in some countries.",
@@ -45,7 +45,7 @@
   ],
   "meta_app_publish_result": "Previous app visibility error 3858107 no longer occurs; Meta now returns 1885093 mismatch with store URL. Developer app was published by owner; direct public mode verification unavailable.",
   "updated_at": "2026-11-16",
-  "adset_id": "120250665286960442",
+  "adset_id": "120250665677390442",
   "ad_creation_error": {
     "code": 31,
     "subcode": 3858385,
@@ -67,5 +67,40 @@
     "asset": "/mnt/data/RivoScan_Meta_App_Installs_Feed_Preview_EN_AR.png",
     "source": "Actual RivoScan 0.45.40 screenshot, English-first Arabic-second caption",
     "link": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan"
-  }
+  },
+  "adset_name": "RivoScan | Worldwide Android | App Installs | Main",
+  "ad_id": "120250665677380442",
+  "targeting_current": "worldwide, Android, age 18-65; Advantage+ audience",
+  "old_campaigns_pending_deletion": [
+    {
+      "id": "120250632688520442",
+      "name": "RivoScan | Android MA | $20 test | DRAFT",
+      "status": "PAUSED"
+    },
+    {
+      "id": "120250632677820442",
+      "name": "RivoScan | Android | Maroc | Traffic Test | DRAFT 2026-11",
+      "status": "PAUSED"
+    }
+  ],
+  "duplicate_adsets_pending_deletion": [
+    {
+      "id": "120250665478420442",
+      "name": "Nouvel ensemble de publicités de Promotion de l’application",
+      "status": "PAUSED",
+      "associated_ad_id": "120250665478430442",
+      "ad_status": "ACTIVE_BUT_ADSET_PAUSED"
+    },
+    {
+      "id": "120250665286960442",
+      "name": "RivoScan | Morocco Android | App Installs | 18-45 | PAUSED",
+      "status": "PAUSED",
+      "associated_ad_id": null
+    }
+  ],
+  "last_verified_spend_usd": 0,
+  "last_verified_impressions": 0,
+  "external_cleanup_status": "Windsor.ai has pause but NO delete/archive actions. Old campaigns and duplicate ad sets are paused; delete must occur in Meta Ads Manager or an authorized app exposing deletion.",
+  "ad_account_auth_lock": "Meta code 31/3858385 prevents some ad edits despite account ACTIVE; adset pause and campaign rename succeed. Do not bypass.",
+  "critical_note": "No campaign activated. NEVER use Chef Ahmed page 1293206400544880. Only target page RivoScan 1409928902211743."
 }
