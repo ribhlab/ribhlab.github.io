@@ -1,0 +1,46 @@
+name: RivoScan 0.45.40 - original-key AAB to Google Play Production
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04540-production.yml'
+      - 'tools/play-publisher/rivoscan_04540_production.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  publish-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: play-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install the existing RibhLab Google Play API publisher
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Verify official RivoScan 0.45.40 AAB, SHA256, original upload certificate
+        run: |
+          python -m py_compile tools/play-publisher/rivoscan_04540_production.py
+          python tools/play-publisher/rivoscan_04540_production.py
+      - name: Upload and publish signed versionCode 144 to existing test and Production tracks
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: \${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          if [[ -z "\${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" ]]; then
+            echo "::error::Google Play publisher secret missing in play-production environment."
+            exit 1
+          fi
+          python tools/play-publisher/rivoscan_04540_production.py \
+            --apply --confirm PUBLISH_SIGNED_RIVOSCAN_144_PRODUCTION
+      # No Play listing, icon, Feature Graphic, screenshots or Data Safety operations.
+      # Play Console approval/review may still apply after a successful API commit.
