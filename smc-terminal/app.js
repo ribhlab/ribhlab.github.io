@@ -37,7 +37,7 @@ const c=themeColors();
 return {autoSize:true,width:700,height,layout:{background:{type:'solid',color:c.bg},textColor:c.text,fontFamily:'IBM Plex Mono, monospace',fontSize:10,attributionLogo:true},
 grid:{vertLines:{color:c.grid,style:1},horzLines:{color:c.grid,style:1}},
 crosshair:{mode:LW.CrosshairMode.Normal,vertLine:{color:'#7592ae',style:2,labelBackgroundColor:'#243a54'},horzLine:{color:'#7592ae',style:2,labelBackgroundColor:'#243a54'}},
-rightPriceScale:{borderColor:c.grid,scaleMargins:{top:.08,bottom:primary?.18:.06}},
+rightPriceScale:{borderColor:c.grid,scaleMargins:{top:.08,bottom:primary ? .18 : .06}},
 timeScale:{borderColor:c.grid,timeVisible:true,secondsVisible:false,barSpacing:7,minBarSpacing:2,rightOffset:8},
 handleScroll:true,handleScale:true,localization:{locale:'en-US'}};
 }
@@ -139,15 +139,15 @@ let connected=false;
 try{
 const url='wss://data-stream.binance.vision/ws/'+state.symbol.toLowerCase()+'@kline_'+state.tf;
 const socket=new WebSocket(url);state.ws=socket;
-socket.onopen=()=>{if(request!==state.request)return;connected=true;connection('LIVE','WebSocket — streaming market candles');};
+socket.onopen=()=>{if(request!==state.request)return;connected=true;clearInterval(state.refreshTimer);state.refreshTimer=null;connection('LIVE','WebSocket — streaming market candles');};
 socket.onmessage=e=>{
 if(request!==state.request)return;
 try{const packet=JSON.parse(e.data),k=packet.k;if(!k)return;
 const incoming={time:Math.floor(k.t/1000),open:+k.o,high:+k.h,low:+k.l,close:+k.c,volume:+k.v};
 if(!Number.isFinite(incoming.close))return;
 const last=state.data.at(-1);
-if(incoming.time===last?.time){state.data[state.data.length-1]=incoming;candles.update(incoming);vol.update({time:incoming.time,value:incoming.volume,color:incoming.close>=incoming.open?'rgba(55,210,160,.19)':'rgba(240,94,125,.19)'});}
-else if(incoming.time>last?.time){state.data.push(incoming);if(state.data.length>650)state.data.shift();candles.update(incoming);vol.update({time:incoming.time,value:incoming.volume,color:incoming.close>=incoming.open?'rgba(55,210,160,.19)':'rgba(240,94,125,.19)'});refreshEMAs();analyze();}
+if(incoming.time===last?.time){state.data[state.data.length-1]=incoming;candles.update(incoming);if($('toggleVolume').checked)vol.update({time:incoming.time,value:incoming.volume,color:incoming.close>=incoming.open?'rgba(55,210,160,.19)':'rgba(240,94,125,.19)'});}
+else if(incoming.time>last?.time){state.data.push(incoming);if(state.data.length>650)state.data.shift();candles.update(incoming);if($('toggleVolume').checked)vol.update({time:incoming.time,value:incoming.volume,color:incoming.close>=incoming.open?'rgba(55,210,160,.19)':'rgba(240,94,125,.19)'});refreshEMAs();analyze();}
 updatePrice(incoming.close);setOhlc(incoming);
 if(k.x){refreshEMAs();analyze();fetchTicker(state.symbol,request);}
 }catch{}
@@ -155,13 +155,13 @@ if(k.x){refreshEMAs();analyze();fetchTicker(state.symbol,request);}
 socket.onerror=()=>{if(request===state.request&&!connected)connection('REST MODE','Live stream unavailable; polling every 60s');};
 socket.onclose=()=>{if(request!==state.request)return;state.ws=null;connection('REST MODE','Live stream disconnected; polling every 60s');startPolling(request);state.reconnectTimer=setTimeout(()=>{if(request===state.request)connectStream(request);},45000);};
 }catch{startPolling(request);}
-state.heartbeat=setInterval(()=>{if(state.ws&&state.ws.readyState===1)return;startPolling(request);},20000);
+clearInterval(state.heartbeat);state.heartbeat=setInterval(()=>{if(state.ws&&state.ws.readyState===1)return;startPolling(request);},20000);
 }
 function startPolling(request){
 if(state.refreshTimer)return;
 state.refreshTimer=setInterval(async()=>{
 if(request!==state.request)return;
-try{const rows=await fetchCandles(state.symbol,state.tf,3);if(request!==state.request)return;
+try{const rows=await fetchCandles(state.symbol,state.tf,100);if(request!==state.request)return;
 for(const c of rows){const last=state.data.at(-1);if(c.time===last?.time)state.data[state.data.length-1]=c;else if(c.time>last?.time)state.data.push(c);}
 if(state.data.length>650)state.data=state.data.slice(-650);
 setCandleData();updatePrice(state.data.at(-1).close);setOhlc(state.data.at(-1));analyze();fetchTicker(state.symbol,request);
