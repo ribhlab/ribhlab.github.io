@@ -1,0 +1,66 @@
+name: RivoScan 0.45.40 - replace Play screenshots with actual app UI
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/play-publisher/release-requests/rivoscan-04540-real-ui-screenshots.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  replace-real-screenshots:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact owner approval and source run
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('tools/play-publisher/release-requests/rivoscan-04540-real-ui-screenshots.json').read_text())
+          if set(r)!={'enabled','package','sourceVersion','productionVersionCode','captureRunId','confirmation'}:
+              raise SystemExit('Unexpected request fields')
+          if r['package']!='com.ribhlab.rivoscan' or r['sourceVersion']!='0.45.40' or r['productionVersionCode']!=144 or r['captureRunId']!=43876459718:
+              raise SystemExit('Wrong app/version/capture source')
+          if r['enabled'] is not True or r['confirmation']!='REPLACE_RIVOSCAN_04540_SCREENSHOTS_WITH_ACTUAL_APP_UI':
+              raise SystemExit('Owner approval missing; no upload')
+          print('RIVOSCAN_04540_REAL_UI_OWNER_APPROVED=True',flush=True)
+          PY
+      - name: Download audited raw app UI screenshot artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04540-Actual-UI-Raw-Screenshots
+          repository: ribhlab/ribhlab.github.io
+          run-id: 43876459718
+          github-token: ${{ github.token }}
+          path: /tmp/rivo-04540
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Google Play publisher dependencies
+        shell: bash
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13'
+          python -m py_compile tools/play-publisher/rivoscan_04540_real_screenshots_only.py
+      - name: Validate original screenshot content, sizes, audit and unique hashes
+        shell: bash
+        run: |
+          python tools/play-publisher/rivoscan_04540_real_screenshots_only.py --source /tmp/rivo-04540
+      - name: Replace only 24 existing en-US Play screenshots with original 0.45.40 UI
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Google Play credentials unavailable'; exit 1; }
+          python tools/play-publisher/rivoscan_04540_real_screenshots_only.py \
+            --source /tmp/rivo-04540 \
+            --apply --confirm REPLACE_RIVOSCAN_04540_SCREENSHOTS_WITH_ACTUAL_APP_UI
