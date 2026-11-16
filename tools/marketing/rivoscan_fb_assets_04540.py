@@ -3,13 +3,25 @@ Screens are proportionally scaled, never redrawn or cropped.
 """
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+from io import BytesIO
+from urllib.request import urlopen
 import os, hashlib, json
 source=Path(os.environ.get('RIVO_CAPTURE_DIR','/tmp/rivo-screens'))/'phone/phone'
 output=Path('public/rivoscan/facebook-04540')
 output.mkdir(parents=True,exist_ok=True)
+# Exact source logo artwork from RivoScan app's release branch, not an AI redraw.
+official_logo_url='https://raw.githubusercontent.com/univcours/ribhlab/rivoscan-0.45.40-original-key/assets/branding/rivoscan-logo-original.png'
+with urlopen(official_logo_url,timeout=35) as resp:
+ official_logo_bytes=resp.read(3000000)
+official_logo_sha=hashlib.sha256(official_logo_bytes).hexdigest()
+if official_logo_sha!='06e9925f914dc19c25e43a2d80e3befa0533c308d6b0ccd6bcfb09a082888b24':
+ raise RuntimeError('Official RivoScan icon source changed: refuse to replace')
+raw_logo=Image.open(BytesIO(official_logo_bytes)).convert('RGB')
+if raw_logo.size!=(1254,1254):raise RuntimeError('Official logo expected 1254x1254')
+# Crop only the large square app icon; exclude wordmark below the icon.
+icon=raw_logo.crop((222,138,1002,918)).resize((512,512),Image.Resampling.LANCZOS).convert('RGBA')
 iconpath=Path('public/rivoscan/icon.png')
-if not iconpath.exists(): raise RuntimeError('Missing official RivoScan icon')
-icon=Image.open(iconpath).convert('RGBA')
+icon.save(iconpath,optimize=True)
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'; BOLD='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 def font(size,bold=False): return ImageFont.truetype(BOLD if bold else FONT,size)
 def background(w,h,a=(5,28,80),b=(0,113,187)):
@@ -66,6 +78,6 @@ for n,(name,(title,desc,small)) in enumerate(zip(files,labels),1):
  d.text((65,1286),small,font=font(17,True),fill='#11507c')
  d.text((958,1287),f'{n}/8',font=font(13),fill='#5288ae')
  im.save(output/f'RivoScan_04540_{n:02d}_{name.replace(".png", "")}_1080x1350.jpg',quality=92,subsampling=0,optimize=True)
-meta={'source_version':'0.45.40','raw_source_run_id':43876459718,'artifact_id':14231200039,'source':'RivoScan-04540-Actual-UI-Raw-Screenshots','screens':hashes,'method':'All screenshots preserved without cropping, distortions or generated content. Photo layout and branding added around them.'}
+meta={'brand_source':'univcours/ribhlab/assets/branding/rivoscan-logo-original.png','brand_sha256':official_logo_sha,'google_play_developer':'Mor Inc','source_version':'0.45.40','raw_source_run_id':43876459718,'artifact_id':14231200039,'source':'RivoScan-04540-Actual-UI-Raw-Screenshots','screens':hashes,'method':'All screenshots preserved without cropping, distortions or generated content. Photo layout and branding added around them.'}
 (output/'asset-source.json').write_text(json.dumps(meta,indent=2)+'\n',encoding='utf-8')
 print('RIVOSCAN_LATEST_FB_ASSETS_READY',len(list(output.iterdir())))
