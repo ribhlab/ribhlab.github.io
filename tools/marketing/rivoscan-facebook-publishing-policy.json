@@ -1,0 +1,33 @@
+{
+  "app": "RivoScan",
+  "page_id": "1409928902211743",
+  "page_name": "RivoScan",
+  "default_post_language": "en",
+  "secondary_post_language": "ar",
+  "language_order": [
+    "en",
+    "ar"
+  ],
+  "link_google_play": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan",
+  "link_google_play_french": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan&hl=fr",
+  "landing_page": "https://ribhlab.github.io/rivoscan/go/",
+  "screenshots_source": {
+    "version": "0.45.40",
+    "source_capture_run": 43876459718,
+    "repo_gallery": "public/rivoscan/facebook-04540/",
+    "rule": "Use uncropped verified original screenshots; never present stylized mockups as actual captures"
+  },
+  "rules": [
+    "Use English as first language for Facebook RivoScan captions",
+    "Follow with Modern Standard Arabic as secondary language",
+    "Include exact Google Play URL (French hl=fr optional under additional link)",
+    "Avoid invented ratings, download numbers or unsupported product capabilities",
+    "Avoid posting duplicate images and captions",
+    "Publish to Page ID 1409928902211743 only; never publish to Chef Ahmed ID 1293206400544880",
+    "Paid ads stay paused until a valid payment method and correct ad creative are confirmed"
+  ],
+  "published_page_posts": [
+    "1409928902211743_122102959287548805",
+    "1409928902211743_122102959467548805"
+  ]
+}
