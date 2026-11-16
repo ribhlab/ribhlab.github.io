@@ -1,0 +1,24 @@
+{
+  "version": "0.45.40",
+  "source": "Verified WebView screenshots from GitHub Actions run 43876459718",
+  "image_sha256": {
+    "05_Formula_OCR.jpg": "0f5b62c4ef14490a36f473cbb5da4b3355731d17bea362600cd0903f399700ae",
+    "05_Formula_OCR.png": "9a62b5c296d59e5f029894f4659daff6abae420af3d73a0901bc54fd88f82363",
+    "08_Settings.jpg": "2d07cb51ce438c577577317788c8b1c2768cadb6e37bb3dfc87d9a882aa37bfb",
+    "07_ID_Photo.jpg": "f23a39b762d748e2feb1c60770830f1921ecb9d1494d255cf87cd804eca9964f",
+    "Facebook_Cover_1640x624.jpg": "da0802e62ad4028fd7034043fb8cc793782093ddfc5a2a197791f8d5f34283ce",
+    "08_Settings.png": "632cb2bfbbfad60669467c6c25f39f850afebfecb05b725db50e336cae3b42cb",
+    "06_Photo_Translation.jpg": "96a36e68c6da257917a4cf10db8d5efcb574d6890a59c8c573e7837340974e93",
+    "04_Book_Scan.jpg": "e9a33d2d34a2e91ee604d26d60d6083923f2aa30807312813c8b9469a432e04b",
+    "03_Tools.png": "4880d48e1a2099a04bddb4ee9ce31f524ea82ca5c09d33d8daf2bbd8c09e010a",
+    "01_Home.png": "69bb5469867534243843a6477a31e861712979c7eed8019ad4cfb152d7dab1c6",
+    "04_Book_Scan.png": "5b5e2bc73a0e72c2024c96c41326b7b8bc775de9d2c4cba225bdf78349f2a9f8",
+    "07_ID_Photo.png": "fc625dd3528bc0e7bd5abe461f018ea10cbe36008bc477e3ddf5eaf49bbfbfeb",
+    "03_Tools.jpg": "ae864c66d7938af1d71ff2f9dba1d84d52866254fa798658d292e45229cc8b46",
+    "01_Scan_to_PDF.jpg": "0a8cfa2a18ca5cc5cc170e8906ae831f42ccdf1297d55fded00c6cf8c4a922b6",
+    "06_Photo_Translation.png": "49dacbeddd404ea3e0d8b5be07d8109c99543d246bd7c4e53bb09c26dabdad68",
+    "02_Documents.png": "1fcd8efdf162f467757cf806e213bc4fa9f825ec96dfb80123a2ce0714fb7269",
+    "Facebook_Profile_1080x1080.png": "a3553335a9afbf232d9c9836ac221f6727237a29660e687edc4f39cb54f74029",
+    "02_Organize.jpg": "f356e01403772a07a02cd3915e55b09b18d6a2b056ac1de0cac9b75b715e78ff"
+  }
+}
