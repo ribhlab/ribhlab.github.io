@@ -147,7 +147,7 @@
     const fvgs=gaps(data,atrNow),obs=blocks(data,s.events),liquidity=equalLiquidity(pivots,atrNow*.16);
     const low=Math.min(...data.slice(-110).map(c=>c.low));
     const high=Math.max(...data.slice(-110).map(c=>c.high));
-    const position=high===low?.5:(last.close-low)/(high-low);
+    const position=high===low ? 0.5 : (last.close-low)/(high-low);
     const direction=s.direction,latestEvent=s.events.at(-1)||null;
     const m20=ema20.at(-1)?.value,m50=ema50.at(-1)?.value;
     const rv=rsis.at(-1)?.value;
