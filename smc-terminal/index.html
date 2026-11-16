@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="description" content="RibhLab SMC Terminal — free real-time crypto charts with Smart Money Concepts, BOS/CHoCH, FVG, order blocks, liquidity, and technical indicators.">
+  <title>RibhLab SMC Terminal — Smart Money Charts</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e1729'/%3E%3Cpath d='M18 64 40 45 58 56 83 27' stroke='%2345e0a1' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/lightweight-charts@5/dist/lightweight-charts.standalone.production.js"></script>
+  <script defer src="./analysis.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a href="./" class="brand" aria-label="RibhLab SMC Terminal home">
+        <span class="brand-symbol"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M3 19L9 12L14 16L23 5" stroke="#45E0A1" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 5h5v5" stroke="#45E0A1" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-title">RIBHLAB<span> / SMC</span><small>TRADING TERMINAL</small></span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a class="selected" href="#terminal">Terminal</a>
+        <a href="#analysisPanel">Smart Money</a>
+        <button id="guideBtn" class="nav-link" type="button">How it works</button>
+      </nav>
+      <div class="header-actions">
+        <span class="session-tag"><span id="liveDot" class="status-dot"></span><span id="connectionState">CONNECTING</span></span>
+        <button class="icon-button" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☾</button>
+        <button class="header-button" id="refreshBtn">↻ <span>Refresh</span></button>
+      </div>
+    </header>
+
+    <main class="workspace" id="terminal">
+      <aside class="sidebar left-sidebar">
+        <div class="sidebar-title"><span>MARKET WATCH</span><span id="marketCount" class="tiny-count">—</span></div>
+        <div class="search-box"><span>⌕</span><input id="symbolSearch" placeholder="Search crypto pairs..." aria-label="Search symbols"></div>
+        <div class="market-controls"><span>SPOT MARKETS</span><span class="market-source">BINANCE DATA</span></div>
+        <div id="marketList" class="market-list"></div>
+        <div class="sidebar-bottom"><div class="sidebar-tip">✦ <b>Zero API keys</b><br><span>Public exchange market data. No trading account needed.</span></div><div class="side-foot">FREE TO USE <span>v1.0</span></div></div>
+      </aside>
+
+      <section class="center-pane">
+        <div class="instrument-header">
+          <div class="instrument-main">
+            <div class="asset-icon" id="assetIcon">₿</div>
+            <div class="asset-titles"><h1 id="pairTitle">BTC / USDT</h1><span id="pairSubtitle">Bitcoin · Binance Spot</span></div>
+            <span class="spot-pill">SPOT</span>
+          </div>
+          <div class="instrument-price"><strong id="lastPrice">—</strong><span id="priceChange" class="change-label">—</span></div>
+          <div class="instrument-stats"><div><small>24H HIGH</small><b id="high24">—</b></div><div><small>24H LOW</small><b id="low24">—</b></div><div><small>24H VOLUME</small><b id="volume24">—</b></div></div>
+        </div>
+
+        <div class="chart-toolbar">
+          <div id="timeframes" class="timeframes" role="group" aria-label="Chart timeframes">
+            <button data-tf="5m">5m</button><button data-tf="15m">15m</button><button data-tf="1h" class="active">1H</button><button data-tf="4h">4H</button><button data-tf="1d">1D</button>
+          </div>
+          <span class="toolbar-divider"></span>
+          <div class="toolbar-menu">
+            <button id="indicatorsBtn" class="toolbar-button">◈ Indicators <span class="chevron">⌄</span></button>
+            <div class="dropdown" id="indicatorMenu">
+              <label><input type="checkbox" id="toggleEMA" checked> EMA 20 / 50 / 200</label>
+              <label><input type="checkbox" id="toggleVolume" checked> Volume</label>
+              <label><input type="checkbox" id="toggleRSI" checked> RSI (14)</label>
+              <label><input type="checkbox" id="toggleZones" checked> SMC Zones</label>
+              <label><input type="checkbox" id="toggleMarkers" checked> Structure markers</label>
+            </div>
+          </div>
+          <button id="autoSmcBtn" class="toolbar-button active-tool">✧ Auto SMC <span id="smcSwitchDot" class="small-green-dot"></span></button>
+          <div class="toolbar-spacer"></div>
+          <button id="csvBtn" class="toolbar-icon" title="Export OHLCV CSV" aria-label="Export CSV">⇩</button>
+          <button id="fitBtn" class="toolbar-icon" title="Fit chart" aria-label="Fit chart">⤢</button>
+        </div>
+
+        <div class="chart-space">
+          <div class="draw-tools" role="toolbar" aria-label="Drawing tools">
+            <button class="draw-button active" data-draw="cursor" title="Cursor">⌖</button>
+            <button class="draw-button" data-draw="horizontal" title="Horizontal price level">━</button>
+            <button class="draw-button" data-draw="trend" title="Trend line">╱</button>
+            <button class="draw-button" data-draw="fib" title="Fibonacci retracement">⅔</button>
+            <div class="vertical-separator"></div>
+            <button id="clearDrawingsBtn" class="draw-button" title="Clear drawings">⌫</button>
+          </div>
+          <div class="chart-inner">
+            <div class="ohlc-strip" id="ohlcStrip"><span>O <b id="oVal">—</b></span><span>H <b id="hVal">—</b></span><span>L <b id="lVal">—</b></span><span>C <b id="cVal">—</b></span><span class="strip-r" id="stripRSI">RSI 14 —</span></div>
+            <div class="legend-strip"><span><i class="legend-dot ema20"></i>EMA 20</span><span><i class="legend-dot ema50"></i>EMA 50</span><span><i class="legend-dot ema200"></i>EMA 200</span><span><i class="legend-dot bullish"></i>Bullish FVG</span><span><i class="legend-dot bearish"></i>Bearish FVG</span></div>
+            <div class="chart-holder"><div id="chartHost" class="chart-host"></div><canvas id="zoneOverlay" class="zone-overlay" aria-hidden="true"></canvas><div id="chartState" class="chart-state"><div class="spinner"></div><strong>Loading market data</strong><span>Connecting to public exchange feed...</span></div><div id="drawHint" class="draw-hint hidden"></div></div>
+            <div id="rsiPanel" class="rsi-panel"><span class="rsi-label">RSI <b id="rsiValue">—</b></span><div id="rsiHost"></div></div>
+            <div class="chart-footer"><span><span id="feedStatusDot" class="status-dot"></span> <span id="feedText">Loading candles...</span></span><span id="updatedAt">—</span><span>UTC</span></div>
+          </div>
+        </div>
+        <section class="bottom-panel">
+          <div class="bottom-title"><div class="tabs"><button class="tab active" data-tab="events">Structure Events <span id="eventsCount">0</span></button><button class="tab" data-tab="levels">Key Levels</button></div><span class="muted-small">Calculated on confirmed candles</span></div>
+          <div id="bottomTable" class="table-scroller"></div>
+        </section>
+      </section>
+
+      <aside class="sidebar right-sidebar" id="analysisPanel">
+        <div class="right-head"><div><div class="eyebrow">AUTOMATED ANALYSIS</div><h2>Smart Money <span>Concepts</span></h2></div><span class="engine-icon">✧</span></div>
+        <div class="analysis-status"><span class="status-dot" id="analysisDot"></span><span id="analysisLabel">Waiting for candles</span><button id="reAnalyzeBtn" title="Recalculate">↻</button></div>
+        <div class="bias-card">
+          <div class="bias-top"><span>MARKET STRUCTURE BIAS</span><span id="biasTimeframe">1H</span></div>
+          <div class="bias-display"><span id="biasIcon" class="bias-icon">◆</span><strong id="biasText">ANALYZING</strong></div>
+          <div class="bias-meter"><span id="biasMeterFill"></span></div>
+          <div class="bias-bottom"><span id="biasReason">Based on confirmed swing breaks</span><b id="biasScore">—</b></div>
+        </div>
+        <div class="analysis-section">
+          <h3>STRUCTURE & ORDER FLOW <span id="smcAsOf">—</span></h3>
+          <div class="metric-grid">
+            <div class="metric"><span>LAST STRUCTURE</span><b id="structureValue">—</b><small id="structureAge">—</small></div>
+            <div class="metric"><span>HTF DIRECTION</span><b id="htfValue">—</b><small id="htfInterval">—</small></div>
+            <div class="metric"><span>BULLISH FVG</span><b id="bullFvgCount" class="text-green">—</b><small>Unmitigated gaps</small></div>
+            <div class="metric"><span>BEARISH FVG</span><b id="bearFvgCount" class="text-red">—</b><small>Unmitigated gaps</small></div>
+            <div class="metric"><span>ORDER BLOCKS</span><b id="obCount">—</b><small>Recent candidates</small></div>
+            <div class="metric"><span>LIQUIDITY SWEEPS</span><b id="sweepCount">—</b><small>Last 100 candles</small></div>
+          </div>
+        </div>
+        <div class="analysis-section">
+          <h3>PREMIUM / DISCOUNT</h3>
+          <div class="pd-bar"><span>PREMIUM</span><span>EQUILIBRIUM</span><span>DISCOUNT</span></div>
+          <div class="pd-track"><div id="pdPin" class="pd-pin"></div><div class="pd-middle"></div></div>
+          <div class="pd-values"><span id="rangeLow">—</span><b id="pdZone">—</b><span id="rangeHigh">—</span></div>
+        </div>
+        <div class="analysis-section">
+          <h3>NEAREST ACTIVE ZONES <span class="key-note">PRICE REACTION AREAS</span></h3>
+          <div id="zonesList" class="zones-list"><div class="empty-small">Loading zones...</div></div>
+        </div>
+        <div class="analysis-section">
+          <h3>TECHNICAL CONTEXT</h3>
+          <div class="tech-rows"><div><span>RSI (14)</span><b id="techRsi">—</b></div><div><span>EMA 20 / EMA 50</span><b id="techEma">—</b></div><div><span>ATR (14)</span><b id="techAtr">—</b></div><div><span>Last liquidity sweep</span><b id="techSweep">—</b></div></div>
+        </div>
+        <div class="analysis-note"><span>ⓘ</span><p><strong>Educational analysis only.</strong> SMC zones and structure labels are heuristic, may disagree with other indicators, and do not predict future prices. No trading or wallet access.</p></div>
+      </aside>
+    </main>
+    <footer class="footer"><span>© 2026 RibhLab · SMC Terminal <span class="footer-sep">•</span> Free chart research workspace</span><span>Charts by <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">TradingView Lightweight Charts™</a> · Data: Binance public market feed · Not financial advice</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="guideModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="guideTitle"><div class="modal-card"><button id="closeGuideBtn" class="modal-close" aria-label="Close guide">×</button><div class="eyebrow">TERMINAL GUIDE</div><h2 id="guideTitle">Read the chart. Don't chase the chart.</h2><p>Choose a crypto pair and timeframe. The SMC engine works on <b>confirmed swing pivots</b>, labeling structure breaks (BOS), changes of character (CHoCH), three-candle Fair Value Gaps, order block candidates and liquidity sweeps.</p><p><b>Draw:</b> pick Horizontal, Trend or Fib from the chart toolbar, then click one or two chart points. Click the cursor tool to stop drawing. Use the indicators menu for EMA, volume, RSI and overlays.</p><p><b>Prices:</b> historical candles come from public Binance Spot data; updates are delivered via public WebSocket where available. A blocked feed is reported as an error—there are no simulated live prices.</p><p><b>Important:</b> patterns are historical heuristics and are not verified institutional order flow, investment advice, or a guarantee of profit.</p><button id="guideDoneBtn" class="primary-cta">Got it →</button></div></div>
+</body>
+</html>
