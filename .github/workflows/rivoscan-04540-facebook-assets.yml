@@ -1,0 +1,57 @@
+name: RivoScan 0.45.40 - publish authentic Facebook creative assets
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04540-facebook-assets.yml'
+      - 'tools/marketing/rivoscan45_facebook_assets.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: rivoscan-04540-fb-assets
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download verified genuine RivoScan 0.45.40 WebView images
+        uses: actions/download-artifact@v4
+        with:
+          repository: ribhlab/ribhlab.github.io
+          run-id: 43876459718
+          name: RivoScan-04540-Actual-UI-Raw-Screenshots
+          github-token: ${{ github.token }}
+          path: /tmp/rivo-04540
+      - name: Get exact 0.45.40 source application icon
+        shell: bash
+        run: |
+          curl -fL --retry 3 --retry-delay 2 \
+            -o /tmp/rivo-04540/rivoscan-icon.png \
+            'https://raw.githubusercontent.com/univcours/ribhlab/rivoscan-0.45.40-original-key/public/rivoscan-icon.png'
+          test "$(stat -c%s /tmp/rivo-04540/rivoscan-icon.png)" -gt 1000
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow and generate 0.45.40 media
+        run: |
+          python -m pip install --disable-pip-version-check 'Pillow>=11,<13'
+          python tools/marketing/rivoscan45_facebook_assets.py
+      - name: Commit verified images to official RivoScan website
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "rivoscan-facebook-assets[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/rivoscan/social/04540
+          if git diff --cached --quiet; then
+            echo 'No asset changes'
+          else
+            git commit -m "Publish original RivoScan 0.45.40 screenshots and Facebook visuals"
+            git push
+          fi
