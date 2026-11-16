@@ -1,0 +1,31 @@
+name: RibhLab SMC Terminal - Engine Tests
+on:
+  push:
+    paths:
+      - 'smc-terminal/**'
+      - '.github/workflows/smc-terminal-ci.yml'
+  pull_request:
+    paths:
+      - 'smc-terminal/**'
+      - '.github/workflows/smc-terminal-ci.yml'
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - name: Check engine and app syntax
+        run: |
+          node --check smc-terminal/analysis.js
+          node --check smc-terminal/app.js
+      - name: Run numerical and structure tests
+        run: node --test smc-terminal/tests/engine.test.cjs
