@@ -1,0 +1,37 @@
+{
+  "application": "RivoScan",
+  "package_id": "com.ribhlab.rivoscan",
+  "facebook_page_id": "1409928902211743",
+  "default_post_language": "en",
+  "default_locale": "en-US",
+  "primary_content_language": "English",
+  "localization_policy": {
+    "organic_facebook_posts": "English only by default. Include another language only when explicitly requested.",
+    "facebook_ads": "Localize the ad text per target audience language when localization is configured; use English as fallback.",
+    "landing_page": "English default, with French and Arabic selectable."
+  },
+  "source_policy": {
+    "use_current_verified_app_release_assets": true,
+    "current_verified_asset_source_version": "0.45.40",
+    "source": "public/rivoscan/social/04540/",
+    "screenshots": "Display the original full app screen, never crop or stretch and never claim WebView screenshots prove camera/OCR runtime results.",
+    "app_icons": "Use the source icon for the same release"
+  },
+  "call_to_action": {
+    "label": "Get it on Google Play",
+    "url": "https://play.google.com/store/apps/details?id=com.ribhlab.rivoscan"
+  },
+  "page_profile": {
+    "name": "RivoScan",
+    "recommended_category": "App Page",
+    "intro": "RivoScan by RibhLab — Scan documents, organize and edit PDFs, read files, and use OCR and other Android document tools.",
+    "website": "https://ribhlab.github.io/rivoscan/go/",
+    "profile_image": "https://ribhlab.github.io/rivoscan/social/04540/Facebook_Profile_1080x1080.png",
+    "cover_image": "https://ribhlab.github.io/rivoscan/social/04540/Facebook_Cover_1640x624.jpg"
+  },
+  "safeguards": {
+    "never_publish_to_page": "1293206400544880",
+    "do_not_enable_paid_campaigns_without_explicit_confirmation": true,
+    "post_organic_only_to_rivoscan": true
+  }
+}
