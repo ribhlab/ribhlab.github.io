@@ -1,0 +1,26 @@
+name: TradingFiew 1.0.3 v4 — Google Play Production readiness probe (no publish)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-v4-production-readiness.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Validate v4 Production completion in temporary Google Play edit ONLY
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 tools/play-publisher/tradingfiew_v4_production_readiness.py
