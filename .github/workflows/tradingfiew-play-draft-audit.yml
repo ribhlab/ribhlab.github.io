@@ -1,0 +1,28 @@
+name: TradingFiew Play Console draft audit (no publish)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-play-draft-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official Google Play API client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Audit existing TradingFiew draft without publishing
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" || { echo "PLAY_SERVICE_ACCOUNT_MISSING"; exit 2; }
+          PYTHONPATH=tools/play-publisher python tools/play-publisher/tradingfiew_play_audit.py
