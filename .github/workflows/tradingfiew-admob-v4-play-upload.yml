@@ -1,0 +1,63 @@
+name: TradingFiew 1.0.3 signed AdMob AAB to Google Play inventory (no rollout)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-admob-v4-play-upload.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-play-com-ribhlab-tradingfiew-upload
+  cancel-in-progress: false
+
+jobs:
+  upload-aab:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exact owner-confirmed original-key signed v4 bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/tradingfiew-v4
+          BASE=https://github.com/univcours/ribhlab/releases/download/tradingfiew-android-v1.0.3-admob-rivo-key
+          for NAME in TradingFiew-Android-1.0.3-RivoScanKey-SIGNED.aab TradingFiew-Android-1.0.3-RivoScanKey-SIGNED.apk SHA256SUMS.txt; do
+            curl --fail --location --retry 3 --silent --show-error "$BASE/$NAME" -o "/tmp/tradingfiew-v4/$NAME"
+          done
+      - name: Verify original certificate and actual AdMob App ID
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/tradingfiew-v4
+          AAB=TradingFiew-Android-1.0.3-RivoScanKey-SIGNED.aab
+          APK=TradingFiew-Android-1.0.3-RivoScanKey-SIGNED.apk
+          sha256sum --check SHA256SUMS.txt
+          jarsigner -verify "$AAB" | grep -F "jar verified"
+          keytool -printcert -jarfile "$AAB" | grep -Fi 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+          AAPT="$(find "$ANDROID_HOME/build-tools" -maxdepth 2 -name aapt -type f | sort -V | tail -1)"
+          test -x "$AAPT"
+          "$AAPT" dump badging "$APK" | grep -F "name='com.ribhlab.tradingfiew' versionCode='4' versionName='1.0.3'"
+          "$AAPT" dump xmltree "$APK" AndroidManifest.xml | grep -F 'ca-app-pub-7945572016731367~1161939707'
+          echo 'Original signer, versionCode 4, AdMob App ID and SHA256 verified' >> "$GITHUB_STEP_SUMMARY"
+      - name: Install Google Play Developer API client
+        run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Upload signed AAB to Play WITHOUT testing or Production distribution
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo "Missing Google Play credentials"; exit 2; }
+          python3 tools/play-publisher/tradingfiew_upload_admob_v4.py \
+             --aab /tmp/tradingfiew-v4/TradingFiew-Android-1.0.3-RivoScanKey-SIGNED.aab
+      - name: Independently verify bundle inventory and all track status via Play API
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: PYTHONPATH=tools/play-publisher python3 tools/play-publisher/tradingfiew_play_audit.py
