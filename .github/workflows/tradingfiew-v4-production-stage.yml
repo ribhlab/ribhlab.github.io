@@ -1,0 +1,35 @@
+name: TradingFiew 1.0.3 — stage AdMob v4 as Production draft only
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-v4-production-stage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com-ribhlab-tradingfiew-v4-production-draft
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Stage previously uploaded AdMob v4 in Production Draft, never distribute
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -eu
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 tools/play-publisher/tradingfiew_v4_stage_production.py
+      - name: Verify true store status with Google Play Developer API
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          PYTHONPATH=tools/play-publisher python3 tools/play-publisher/tradingfiew_play_audit.py
