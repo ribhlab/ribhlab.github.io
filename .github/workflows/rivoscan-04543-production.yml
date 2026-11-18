@@ -1,0 +1,49 @@
+name: RivoScan 0.45.43 - verified original-key AAB to Google Play Production
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04543-production.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  publish-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 32
+    environment: play-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install verified RibhLab Google Play publisher dependencies
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Verify official RivoScan 0.45.43 AAB SHA256 and original upload certificate
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/play-publisher/rivoscan_04543_production.py
+          python tools/play-publisher/rivoscan_04543_production.py
+      - name: Stage signed versionCode 147 in existing test track and promote to Production
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" ]]; then
+            echo "::error::Missing Google Play service-account credential in play-production environment."
+            exit 1
+          fi
+          python tools/play-publisher/rivoscan_04543_production.py \
+            --apply --confirm PUBLISH_SIGNED_RIVOSCAN_147_PRODUCTION
+      - name: Summarize Google Play API submission
+        if: success()
+        run: |
+          echo 'RivoScan 0.45.43 versionCode 147 submitted to Google Play production using the original key.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Existing store listing, icon, feature graphic and screenshots unchanged. Google review may still be required.' >> "$GITHUB_STEP_SUMMARY"
