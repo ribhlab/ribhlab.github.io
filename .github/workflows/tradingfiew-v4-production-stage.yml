@@ -1,3 +1,4 @@
+# Retry after correcting Google Play release name maximum length (50 characters)
 name: TradingFiew 1.0.3 — stage AdMob v4 as Production draft only
 on:
   push:
