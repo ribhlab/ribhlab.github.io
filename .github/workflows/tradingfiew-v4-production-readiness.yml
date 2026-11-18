@@ -1,3 +1,4 @@
+# Probe with proper replacement of previous completed Production release, never commit
 name: TradingFiew 1.0.3 v4 — Google Play Production readiness probe (no publish)
 on:
   push:
