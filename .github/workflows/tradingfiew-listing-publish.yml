@@ -1,0 +1,38 @@
+name: TradingFiew — publish factual Play store descriptions EN FR AR
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-listing-publish.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-tradingfiew-listing
+  cancel-in-progress: false
+jobs:
+  descriptions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official Android Publisher API
+        run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Validate descriptions for Play policy and length
+        run: python3 tools/play-publisher/tradingfiew_listing.py
+      - name: Apply EN, FR and AR metadata to existing TradingFiew app
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo "Missing configured Play API credentials"; exit 2; }
+          python3 tools/play-publisher/tradingfiew_listing.py --apply
+      - name: Verify new listing inside Google Play
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          PYTHONPATH=tools/play-publisher python3 tools/play-publisher/tradingfiew_play_audit.py
