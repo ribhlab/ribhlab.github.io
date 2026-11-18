@@ -1,0 +1,31 @@
+{
+  "appId": "com.ribhlab.tradingfiew",
+  "category": "FINANCE",
+  "defaultLanguage": "en-US",
+  "release": {
+    "versionCode": 3,
+    "versionName": "1.0.2",
+    "track": "internal",
+    "initialStatus": "draft"
+  },
+  "website": "https://tradingfiew.github.io/",
+  "privacyPolicy": "https://tradingfiew.github.io/privacy.html",
+  "supportEmailSource": "Preserve existing Play Console contactEmail; do not overwrite it",
+  "locales": {
+    "en-US": {
+      "title": "TradingFiew: Market Charts",
+      "shortDescription": "Market charts, educational SMC analysis, drawing tools and price alerts",
+      "fullDescription": "Explore financial markets with interactive charts and educational technical-analysis tools in TradingFiew.\n\nINTERACTIVE CHARTS\n• Candlestick charts across 5-minute, 15-minute, hourly, 4-hour and daily timeframes.\n• View supported cryptocurrency pairs, metals, forex and major market index references.\n• Draw horizontal price levels, trend lines and Fibonacci retracements using touch controls.\n• Explore EMA, RSI, ATR, volume and multi-timeframe context.\n\nSMART MONEY ANALYSIS\n• Study market structure, swing highs and lows, BOS/CHoCH, liquidity sweeps, order blocks and fair value gaps.\n• Review support and resistance and educational SMC scenarios.\n\nALERTS & CALENDAR\n• Create and edit local price alerts, with optional device notifications while the app is running and permissions allow.\n• View upcoming United States economic announcements and released figures from a third-party calendar.\n• Save chart preferences and drawings locally on your device.\n\nDATA SOURCES & IMPORTANT LIMITS\nBinance Spot provides cryptocurrency prices; other instrument prices are indicative third-party references and may be delayed. Some chart data or features require internet access. Alerts are checked only while the app or site can run; they are not guaranteed after it is closed. TradingFiew is independent of market-data providers and does not execute trades, manage accounts or provide personalized financial advice. Technical signals are estimates, not predictions or investment recommendations."
+    },
+    "fr-FR": {
+      "title": "TradingFiew : Graphiques",
+      "shortDescription": "Graphiques de marché, analyse SMC, outils de tracé et alertes de prix",
+      "fullDescription": "TradingFiew vous aide à explorer les marchés grâce à des graphiques interactifs et des outils d'analyse technique à vocation pédagogique.\n\nGRAPHIQUES\n• Chandeliers en 5 min, 15 min, 1 h, 4 h et 1 jour.\n• Cryptomonnaies, métaux, devises et références d'indices de marché sélectionnées.\n• Lignes horizontales, tendances et retracements de Fibonacci ajustables au toucher.\n• EMA, RSI, ATR, volumes et contexte multitemporel.\n\nANALYSE SMART MONEY\n• Structure du marché, BOS/CHoCH, liquidité, order blocks et fair value gaps.\n• Niveaux de support et de résistance, scénarios SMC pédagogiques.\n\nALERTES ET CALENDRIER\n• Alertes de prix locales et notifications facultatives tant que l'application fonctionne et que les autorisations le permettent.\n• Calendrier des annonces économiques américaines et résultats publiés par un fournisseur tiers.\n• Préférences et tracés enregistrés localement sur l'appareil.\n\nLIMITES IMPORTANTES\nLes cours crypto Spot proviennent de Binance ; les autres marchés utilisent des références indicatives de fournisseurs tiers, parfois différées. Une connexion Internet est nécessaire pour certaines fonctionnalités. La surveillance des alertes n'est pas garantie après la fermeture de l'application. TradingFiew ne passe aucun ordre et ne fournit pas de conseils financiers personnalisés. Les signaux techniques ne garantissent aucun résultat."
+    },
+    "ar": {
+      "title": "TradingFiew: رسوم الأسواق",
+      "shortDescription": "رسوم بيانية للأسواق، تحليل SMC، أدوات رسم وتنبيهات أسعار",
+      "fullDescription": "يساعدك TradingFiew على متابعة الأسواق المالية عبر رسوم بيانية تفاعلية وأدوات للتحليل الفني لأغراض تعليمية.\n\nالرسوم البيانية\n• شموع سعرية بأطر 5 و15 دقيقة وساعة و4 ساعات ويوم.\n• أسواق عملات رقمية ومعادن وعملات أجنبية ومؤشرات مرجعية مختارة.\n• أدوات رسم المستويات الأفقية وخطوط الاتجاه وتصحيحات فيبوناتشي باللمس.\n• مؤشرات EMA وRSI وATR والحجم والتحليل عبر عدة أطر زمنية.\n\nتحليل SMART MONEY\n• متابعة بنية السوق وBOS/CHoCH والسيولة ومناطق الطلب والعرض والفجوات السعرية.\n• عرض مستويات دعم ومقاومة وسيناريوهات تحليلية تعليمية.\n\nالتنبيهات والأخبار\n• إنشاء تنبيهات أسعار محلية وإشعارات اختيارية أثناء تشغيل التطبيق مع الأذونات اللازمة.\n• تقويم للإعلانات الاقتصادية الأمريكية ونتائجها من مزود خارجي.\n• حفظ التفضيلات والرسومات محلياً على الجهاز.\n\nحدود البيانات والمخاطر\nتعتمد أسعار العملات الرقمية الفورية على Binance، أما بقية الأسواق فأسعارها مؤشرات مرجعية من مزودين خارجيين وقد تتأخر. بعض الخدمات تتطلب اتصالاً بالإنترنت. التنبيهات غير مضمونة بعد إغلاق التطبيق. TradingFiew لا ينفذ صفقات ولا يقدم توصيات استثمارية شخصية؛ نتائج التحليل ليست ضماناً لاتجاه الأسعار."
+    }
+  }
+}
