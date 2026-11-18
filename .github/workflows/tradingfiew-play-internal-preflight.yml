@@ -1,0 +1,27 @@
+name: TradingFiew — preview Internal completed release without publishing
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-play-internal-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Validate Internal release promotion but DELETE UNCOMMITTED edit
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 tools/play-publisher/tradingfiew_release_preflight.py
