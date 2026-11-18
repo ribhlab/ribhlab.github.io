@@ -1,0 +1,28 @@
+name: TradingFiew — check Production eligibility without publishing
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-production-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production-preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Android Publisher client
+        run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Simulate public Production completed release, validate and delete edit
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -eu
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 tools/play-publisher/tradingfiew_production_preflight.py
