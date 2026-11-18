@@ -29,6 +29,7 @@ jobs:
       - name: Install Play screenshot and graphics dependencies
         run: |
           python3 -m pip install pillow cairosvg playwright
+          python3 -m pip install -r tools/play-publisher/requirements.txt
           python3 -m playwright install --with-deps chromium
       - name: Capture REAL UI screenshots and generate original branded media
         run: |
