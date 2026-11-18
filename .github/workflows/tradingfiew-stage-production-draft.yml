@@ -1,0 +1,32 @@
+name: TradingFiew — stage signed v3 in Production as draft, not public
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-stage-production-draft.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stage-production-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Attach already uploaded signed v3 to production draft without public rollout
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -eu
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 tools/play-publisher/tradingfiew_stage_production_draft.py
+      - name: Audit Google Play Production and Internal tracks after staging
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          PYTHONPATH=tools/play-publisher python3 tools/play-publisher/tradingfiew_play_audit.py
