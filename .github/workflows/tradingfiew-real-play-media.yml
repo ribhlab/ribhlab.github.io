@@ -1,0 +1,59 @@
+name: TradingFiew — real phone screenshots, original icon, Play store art
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-real-play-media.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: play-tradingfiew-real-assets
+  cancel-in-progress: false
+jobs:
+  real-store-media:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: tradingfiew/tradingfiew.github.io
+          ref: main
+          path: tradingfiew-app
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Play screenshot and graphics dependencies
+        run: |
+          python3 -m pip install pillow cairosvg playwright
+          python3 -m playwright install --with-deps chromium
+      - name: Capture REAL UI screenshots and generate original branded media
+        run: |
+          python3 tools/play-publisher/tradingfiew_media.py \
+             --source tradingfiew-app --out /tmp/tradingfiew-store
+          python3 tools/play-publisher/tradingfiew_upload_media.py --media-dir /tmp/tradingfiew-store
+      - name: Preserve images and genuine screenshot provenance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TradingFiew-Play-Original-Logo-Real-Phone-Screenshots
+          if-no-files-found: warn
+          retention-days: 14
+          path: /tmp/tradingfiew-store/
+      - name: Upload verified media to existing Google Play draft
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo "Missing Google Play credential"; exit 2; }
+          python3 -m pip install -r tools/play-publisher/requirements.txt
+          python3 tools/play-publisher/tradingfiew_upload_media.py \
+            --media-dir /tmp/tradingfiew-store --apply
+      - name: Confirm icon, feature image and screenshots in Google Play API
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          PYTHONPATH=tools/play-publisher python3 tools/play-publisher/tradingfiew_play_audit.py
