@@ -1,0 +1,57 @@
+name: TradingFiew — try first signed AAB upload to Internal Testing draft
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-first-play-upload.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: play-tradingfiew-first-upload
+  cancel-in-progress: false
+jobs:
+  first-upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Obtain exact RivoScan-original-key signed TradingFiew bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/tradingfiew-aab
+          BASE=https://github.com/univcours/ribhlab/releases/download/tradingfiew-android-v1.0.2-rivo-key
+          for NAME in TradingFiew-Android-1.0.2-RivoScanKey-SIGNED.aab TradingFiew-Android-1.0.2-RivoScanKey-SIGNED.apk SHA256SUMS.txt; do
+            curl --fail --location --retry 3 --silent --show-error "$BASE/$NAME" -o "/tmp/tradingfiew-aab/$NAME"
+          done
+          cd /tmp/tradingfiew-aab
+          sha256sum --check SHA256SUMS.txt
+          jarsigner -verify TradingFiew-Android-1.0.2-RivoScanKey-SIGNED.aab | grep -F 'jar verified'
+          keytool -printcert -jarfile TradingFiew-Android-1.0.2-RivoScanKey-SIGNED.aab \
+            | grep -Fi 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+          AAPT="$(find "$ANDROID_HOME/build-tools" -maxdepth 2 -name aapt -type f | sort -V | tail -1)"
+          "$AAPT" dump badging TradingFiew-Android-1.0.2-RivoScanKey-SIGNED.apk \
+            | grep -F "name='com.ribhlab.tradingfiew' versionCode='3' versionName='1.0.2'"
+          echo 'Signed AAB identity, original certificate, SHA256 checksum all verified' >> "$GITHUB_STEP_SUMMARY"
+      - name: Install official Google Play Publisher API client
+        run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Confirm no accidental Production overwrite and attempt first Internal draft upload
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo "Missing Play credential secret"; exit 2; }
+          python3 tools/play-publisher/tradingfiew_first_upload.py \
+            --aab /tmp/tradingfiew-aab/TradingFiew-Android-1.0.2-RivoScanKey-SIGNED.aab --apply
+      - name: Verify upload in Google Play (not only GitHub Actions)
+        if: success()
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          PYTHONPATH=tools/play-publisher python3 tools/play-publisher/tradingfiew_play_audit.py
