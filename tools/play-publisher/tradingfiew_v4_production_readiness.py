@@ -29,14 +29,13 @@ def main():
         v4=[x for x in existing if "4" in [str(v) for v in x.get("versionCodes",[])]]
         if len(v4)!=1 or v4[0].get("status")!="draft":
             raise RuntimeError("Version 4 not in exactly one Production draft")
-        updated=[]
-        for release in existing:
-            if release is v4[0]:
-                release=dict(release)
-                release["status"]="completed"
-            updated.append(release)
+        # A production track permits only one completed release; release v4
+        # replaces v3 in a potential rollout rather than coexisting with it.
+        # This simulation is ALWAYS deleted and does not distribute any version.
+        proposed=dict(v4[0])
+        proposed["status"]="completed"
         edits.tracks().update(**args,track="production",
-                               body={"track":"production","releases":updated}).execute()
+                               body={"track":"production","releases":[proposed]}).execute()
         edits.validate(**args).execute()
         result["playValidation"]="GOOGLE_PLAY_ACCEPTS_RELEASE_EDIT_ONLY"
     except HttpError as e:
