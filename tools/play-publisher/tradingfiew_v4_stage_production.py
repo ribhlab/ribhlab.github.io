@@ -41,7 +41,7 @@ def main():
             raise RuntimeError("Production already has an unrelated version")
         if any(r.get("status") not in ("completed","draft") for r in releases):
             raise RuntimeError("Production track has staged/halted/in-progress changes")
-        draft={"name":"TradingFiew 1.0.3 — AdMob Interstitial only (review draft)",
+        draft={"name":"TradingFiew 1.0.3 — AdMob Interstitial",
                "versionCodes":[CODE],"status":"draft",
                "releaseNotes":[{"language":"en-US",
                   "text":"Adds optional AdMob interstitials at intentional navigation pauses, UMP privacy controls and Android stability fixes. No banner ads."}]}
