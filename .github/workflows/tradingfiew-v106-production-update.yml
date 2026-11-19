@@ -29,9 +29,11 @@ jobs:
           python-version: '3.12'
       - name: Require exact ORIGINAL-KEY signed Android emulator QA success
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          curl -fsSL --retry 3 'https://api.github.com/repos/univcours/ribhlab/actions/runs/44627733655' > /tmp/tradingfiew-106-qa.json
+          curl -fsSL --retry 3 -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' 'https://api.github.com/repos/univcours/ribhlab/actions/runs/44627733655' > /tmp/tradingfiew-106-qa.json
           python3 - <<'PY'
           import json
           run=json.load(open('/tmp/tradingfiew-106-qa.json'))
