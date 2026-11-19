@@ -1,0 +1,49 @@
+{
+  "description": "Free organic Google Play discoverability: add accurate store listing locales without paid ads, no media, no version changes",
+  "apps": {
+    "com.novagrid.cosmicpuzzle": {
+      "es-ES": {
+        "title": "NovaGrid: Puzzle de Bloques",
+        "shortDescription": "Puzzle de bloques con cristales, combos, dos modos y retos diarios",
+        "fullDescription": "Descubre NovaGrid, un juego de puzzle de bloques con cristales luminosos, combos y efectos cósmicos.\n\nMODO CLÁSICO\nColoca piezas de colores en un tablero de 9×9. Completa filas, columnas y sectores de 3×3 para liberar espacio. Planifica tus movimientos y encadena combos.\n\nMODO BLOCKFALL\nMueve, gira y deja caer bloques en una cuadrícula de 10×18. Completa líneas y supera tu mejor puntuación.\n\nMÁS POR DESCUBRIR\n• Desafíos diarios y etapas galácticas.\n• Efectos de neón animados y cristales de colores.\n• Progreso guardado, récords y ajustes de sonido.\n• Cargas explosivas que se obtienen al completar líneas para abrir espacio cuando el tablero está lleno.\n\nElige entre estrategia relajada y acción de piezas que caen. Juega, combina bloques e ilumina la galaxia."
+      },
+      "de-DE": {
+        "title": "NovaGrid: Block Puzzle",
+        "shortDescription": "Blockpuzzle mit Kristallen, Kombos, zwei Spielmodi und Tagesaufgaben",
+        "fullDescription": "Entdecke NovaGrid: ein farbenfrohes Blockpuzzle mit leuchtenden Kristallen und kosmischen Effekten.\n\nKLASSISCHER MODUS\nPlatziere Formen auf einem 9×9-Spielfeld und fülle Reihen, Spalten oder 3×3-Bereiche, um Platz zu schaffen. Plane Züge voraus und bilde Kombos.\n\nBLOCKFALL\nBewege und drehe fallende Teile auf einem 10×18-Feld. Vervollständige Linien und verbessere deinen Highscore.\n\nWEITERE FUNKTIONEN\n• Tägliche Herausforderungen und Galaxie-Level.\n• Animierter Neonglanz und bunte Kristalle.\n• Gespeicherter Fortschritt, Bestwerte und Audioeinstellungen.\n• Sprengladungen durch abgeschlossene Linien, um bei Platzmangel Felder freizuräumen.\n\nSpiele strategisch oder reagiere auf fallende Blöcke. Räume Linien ab und bring die Galaxie zum Leuchten."
+      },
+      "pt-BR": {
+        "title": "NovaGrid: Puzzle de Blocos",
+        "shortDescription": "Quebra-cabeça de blocos com cristais, combos e desafios diários",
+        "fullDescription": "Conheça NovaGrid, um quebra-cabeça de blocos com cristais brilhantes, combos e efeitos cósmicos.\n\nMODO CLÁSSICO\nColoque peças coloridas no tabuleiro 9×9 e complete linhas, colunas ou áreas 3×3 para abrir espaço. Planeje seus movimentos e forme combos.\n\nMODO BLOCKFALL\nMova, gire e solte blocos que caem em uma grade 10×18. Complete linhas e tente superar sua pontuação.\n\nMAIS RECURSOS\n• Desafios diários e fases da galáxia.\n• Efeitos neon animados e cristais coloridos.\n• Progresso salvo, recordes e ajustes de som.\n• Cargas explosivas conquistadas ao eliminar linhas para abrir espaço no tabuleiro.\n\nCombine estratégia tranquila com a ação dos blocos que caem. Jogue, limpe linhas e ilumine a galáxia."
+      },
+      "it-IT": {
+        "title": "NovaGrid: Puzzle a Blocchi",
+        "shortDescription": "Puzzle a blocchi con cristalli, combo, due modalità e sfide giornaliere",
+        "fullDescription": "Scopri NovaGrid, un puzzle a blocchi con cristalli luminosi, combo ed effetti cosmici.\n\nMODALITÀ CLASSICA\nPosiziona forme colorate su una griglia 9×9. Completa righe, colonne e aree 3×3 per liberare spazio. Pianifica le mosse e crea combo.\n\nBLOCKFALL\nSposta, ruota e lascia cadere i blocchi in una griglia 10×18. Completa le linee e migliora il tuo record.\n\nALTRE FUNZIONI\n• Sfide giornaliere e livelli galattici.\n• Cristalli colorati ed effetti neon animati.\n• Progressi salvati, punteggi migliori e opzioni audio.\n• Cariche esplosive guadagnate eliminando linee per liberare spazio nei momenti difficili.\n\nScegli tra strategia e blocchi che cadono. Gioca, elimina linee e illumina la galassia."
+      }
+    },
+    "com.ribhlab.tradingfiew": {
+      "es-ES": {
+        "title": "TradingFiew: Gráficos",
+        "shortDescription": "Gráficos de mercados, análisis SMC, indicadores y alertas de precios",
+        "fullDescription": "Explora los mercados con gráficos interactivos y herramientas de análisis técnico educativo en TradingFiew.\n\nGRÁFICOS Y HERRAMIENTAS\n• Velas de 5 y 15 minutos, 1 y 4 horas y 1 día.\n• Pares de criptomonedas, metales, divisas y referencias de índices seleccionadas.\n• Líneas de tendencia, niveles horizontales y retrocesos de Fibonacci.\n• Indicadores EMA, RSI, ATR, volumen y análisis de varios marcos temporales.\n\nSMART MONEY CONCEPTS\nEstudia la estructura del mercado, BOS/CHoCH, barridos de liquidez, bloques de órdenes, fair value gaps y niveles de soporte o resistencia.\n\nALERTAS Y CALENDARIO\nCrea alertas locales de precios y consulta acontecimientos del calendario económico estadounidense. Guarda dibujos y preferencias en el dispositivo.\n\nLÍMITES IMPORTANTES\nLos precios de criptomonedas provienen de Binance Spot. Otros precios son referencias indicativas de terceros y pueden sufrir retrasos. Algunas funciones necesitan internet. Las alertas solo se comprueban mientras la aplicación o el sitio pueden ejecutarse; no se garantizan tras cerrarlos. TradingFiew no ejecuta operaciones ni ofrece asesoramiento financiero personalizado. Las señales no predicen resultados."
+      },
+      "de-DE": {
+        "title": "TradingFiew: Marktcharts",
+        "shortDescription": "Marktcharts, SMC-Analyse, Zeichenwerkzeuge und Kursalarme",
+        "fullDescription": "Entdecke Finanzmärkte mit interaktiven Charts und Lernwerkzeugen für technische Analyse in TradingFiew.\n\nCHARTS UND INDIKATOREN\n• Kerzencharts für 5 und 15 Minuten, 1 und 4 Stunden sowie Tagesansichten.\n• Ausgewählte Kryptowährungen, Metalle, Devisen und Marktindex-Referenzen.\n• Horizontale Kursmarken, Trendlinien und Fibonacci-Retracements.\n• EMA, RSI, ATR, Volumen und mehrere Zeitrahmen.\n\nSMART MONEY CONCEPTS\nLerne Marktstruktur, BOS/CHoCH, Liquiditätszonen, Orderblöcke, Fair Value Gaps sowie Unterstützungs- und Widerstandsbereiche kennen.\n\nALARME UND KALENDER\nErstelle lokale Kursalarme, prüfe US-Wirtschaftstermine und speichere Zeichnungen und Einstellungen auf deinem Gerät.\n\nWICHTIGE HINWEISE\nKryptokurse stammen von Binance Spot; andere Kurse sind indikative Daten von Drittanbietern und können verzögert sein. Manche Funktionen brauchen Internet. Alarme werden nur geprüft, solange App oder Website aktiv sein können; nach dem Schließen besteht keine Garantie. TradingFiew führt keine Trades aus und erteilt keine persönliche Anlageberatung. Technische Signale sind keine Vorhersagen."
+      },
+      "pt-BR": {
+        "title": "TradingFiew: Gráficos",
+        "shortDescription": "Gráficos de mercado, análise SMC, indicadores e alertas de preço",
+        "fullDescription": "Explore os mercados com gráficos interativos e ferramentas educativas de análise técnica no TradingFiew.\n\nGRÁFICOS E INDICADORES\n• Candles de 5 e 15 minutos, 1 e 4 horas e diário.\n• Criptomoedas, metais, câmbio e referências selecionadas de índices.\n• Linhas de tendência, níveis horizontais e retrações de Fibonacci.\n• EMA, RSI, ATR, volume e análise em vários períodos.\n\nSMART MONEY CONCEPTS\nEstude estrutura de mercado, BOS/CHoCH, liquidez, blocos de ordens, fair value gaps, suportes e resistências.\n\nALERTAS E CALENDÁRIO\nCrie alertas locais de preços, consulte o calendário econômico dos Estados Unidos e salve desenhos e preferências no aparelho.\n\nLIMITAÇÕES IMPORTANTES\nCotações de criptomoedas vêm da Binance Spot. Outros preços são referências indicativas de terceiros e podem ter atraso. Alguns recursos precisam de internet. Alertas só são verificados enquanto o app ou site estiver em execução; não há garantia após fechar. TradingFiew não executa negociações nem oferece aconselhamento financeiro personalizado. Sinais técnicos não garantem resultados."
+      },
+      "it-IT": {
+        "title": "TradingFiew: Grafici",
+        "shortDescription": "Grafici di mercato, analisi SMC, indicatori e avvisi sui prezzi",
+        "fullDescription": "Esplora i mercati finanziari con grafici interattivi e strumenti didattici di analisi tecnica in TradingFiew.\n\nGRAFICI E INDICATORI\n• Candele a 5 e 15 minuti, 1 e 4 ore e intervallo giornaliero.\n• Criptovalute, metalli, valute e riferimenti selezionati di indici di mercato.\n• Linee di tendenza, livelli orizzontali e ritracciamenti di Fibonacci.\n• Indicatori EMA, RSI, ATR, volumi e confronto tra più intervalli.\n\nSMART MONEY CONCEPTS\nStudia la struttura del mercato, BOS/CHoCH, liquidità, order block, fair value gap, supporti e resistenze.\n\nAVVISI E CALENDARIO\nCrea avvisi di prezzo locali, consulta il calendario economico degli Stati Uniti e salva disegni e preferenze sul dispositivo.\n\nLIMITAZIONI IMPORTANTI\nLe quotazioni crypto provengono da Binance Spot. Gli altri prezzi sono riferimenti indicativi di terze parti e possono essere in ritardo. Alcune funzioni richiedono internet. Gli avvisi sono controllati solo quando app o sito possono restare attivi; non sono garantiti dopo la chiusura. TradingFiew non esegue operazioni e non fornisce consulenza finanziaria personalizzata. I segnali tecnici non garantiscono risultati."
+      }
+    }
+  }
+}
