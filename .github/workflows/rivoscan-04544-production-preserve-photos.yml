@@ -1,0 +1,48 @@
+name: RivoScan 0.45.44 - publish AAB to Production preserving all photos
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04544-production-preserve-photos.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Android Publisher Python API
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m py_compile tools/play-publisher/rivoscan_04544_prod_only_preserve_images.py
+      - name: Download exactly original-key signed RivoScan 0.45.44
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivoscan-04544
+          curl -fL --retry 3 --retry-delay 3 \
+            -o /tmp/rivoscan-04544/RivoScan-0.45.44-GooglePlay.aab \
+            https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.44-original-key/RivoScan-0.45.44-GooglePlay.aab
+          echo "73bcb1e1b6c9ae173ac394a29c4a0e5132f9f8f211c089e4d22c484b8fadd82a  /tmp/rivoscan-04544/RivoScan-0.45.44-GooglePlay.aab" | sha256sum -c -
+          test "$(stat -c %s /tmp/rivoscan-04544/RivoScan-0.45.44-GooglePlay.aab)" = "47732492"
+      - name: Publish ONLY v0.45.44 signed AAB to Production, preserve all Play Store images
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Google Play publisher secret missing'; exit 1; }
+          python tools/play-publisher/rivoscan_04544_prod_only_preserve_images.py \
+            --aab /tmp/rivoscan-04544/RivoScan-0.45.44-GooglePlay.aab \
+            --confirm PUBLISH_RIVOSCAN_04544_PRODUCTION_PRESERVE_ALL_IMAGES
