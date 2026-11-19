@@ -1,5 +1,9 @@
 name: TradingFiew 1.0.4 — standard Google Play production update
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-v104-production-update.yml'
   workflow_dispatch:
 
 permissions:
