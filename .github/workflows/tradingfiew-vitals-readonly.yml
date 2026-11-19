@@ -1,0 +1,80 @@
+name: TradingFiew Google Play - read-only Android vitals and error issues
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tradingfiew-vitals-readonly.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-vitals:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install authenticated Google HTTP client
+        run: python -m pip install 'google-auth>=2.30,<3' 'requests>=2.31,<3'
+      - name: Query official Play Developer Reporting API without changes
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from collections import Counter
+          from google.oauth2 import service_account
+          from google.auth.transport.requests import AuthorizedSession
+          secret = os.environ.get('GOOGLE_PLAY_SERVICE_ACCOUNT_JSON', '').strip()
+          if not secret:
+              raise SystemExit('NO_PLAY_CREDENTIALS')
+          info = json.loads(secret)
+          creds = service_account.Credentials.from_service_account_info(
+              info,
+              scopes=['https://www.googleapis.com/auth/playdeveloperreporting'])
+          session = AuthorizedSession(creds)
+          base = 'https://playdeveloperreporting.googleapis.com/v1beta1/apps/com.ribhlab.tradingfiew/'
+          checks = {
+              'crashRateMetricSet': 'crashRateMetricSet',
+              'anrRateMetricSet': 'anrRateMetricSet',
+              'errorIssues': 'errorIssues:search?pageSize=20'
+          }
+          for name, suffix in checks.items():
+              try:
+                  resp = session.get(base + suffix, timeout=25)
+                  result = {'probe': name, 'httpStatus': resp.status_code}
+                  if resp.status_code == 200:
+                      data = resp.json()
+                      if name == 'errorIssues':
+                          items = data.get('errorIssues', [])
+                          result.update({
+                              'returnedIssues': len(items),
+                              'errorTypes': dict(Counter(str(x.get('errorIssueType') or 'UNKNOWN')
+                                                         for x in items)),
+                              'hasMore': bool(data.get('nextPageToken')),
+                              'caution': 'No reports does not prove zero crashes'
+                          })
+                      else:
+                          result.update({
+                              'namePresent': bool(data.get('name')),
+                              'freshnessInfoPresent': bool(data.get('freshnessInfo')),
+                              'notCrashRateData': 'Metadata only; no metric calculation'
+                          })
+                  else:
+                      result['note'] = 'Reporting API permission, enablement, or app access may be missing'
+                  print('TRADINGFIEW_VITALS=' + json.dumps(result, sort_keys=True), flush=True)
+              except Exception as exc:
+                  print('TRADINGFIEW_VITALS=' + json.dumps({
+                      'probe': name, 'errorType': type(exc).__name__,
+                      'note': 'No data verified'}, sort_keys=True), flush=True)
+          PY
+      - name: Clarify safety scope
+        run: |
+          echo 'Read-only: no Google Play edits, uploads, reviews, publishing or monetary actions.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'A successful workflow is not proof of no app crashes: read the per-probe result.' >> "$GITHUB_STEP_SUMMARY"
