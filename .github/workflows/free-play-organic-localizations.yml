@@ -1,0 +1,55 @@
+name: Free Google Play organic reach - 8 new localized store listings
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/free-play-organic-localizations.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-play-free-organic-2026-11-19
+  cancel-in-progress: false
+
+jobs:
+  localized-listings:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check all 8 Play translations and no-overwrite safety
+        run: |
+          python -m unittest tools/play-publisher/test_organic_localizations.py -v
+          python tools/play-publisher/organic_localizations.py
+      - name: Install official Google Play Developer API client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Apply ONLY missing translations to live store listings (no ads or release changes)
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" ]]; then
+            echo "PLAY_ACCOUNT_NOT_CONNECTED"
+            exit 1
+          fi
+          python tools/play-publisher/organic_localizations.py --apply
+      - name: Record limits of audit
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "### Free organic growth — Play Store listing locales"
+            echo "- Only adds missing es-ES, de-DE, pt-BR, it-IT metadata to NovaGrid and TradingFiew."
+            echo "- Leaves all existing languages, screenshots, icons, AABs, release tracks and pricing unchanged."
+            echo "- Does NOT purchase ads, run paid campaigns or invent in-app promotions."
+            echo "- Google may still require review before metadata updates are visible."
+            echo "- Temporary Play API edits are removed if no change is necessary or validation fails."
+          } >> "$GITHUB_STEP_SUMMARY"
