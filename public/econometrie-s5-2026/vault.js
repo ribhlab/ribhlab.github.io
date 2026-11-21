@@ -46,8 +46,16 @@ async function readKey(){
 async function activate(raw,remember=true){
  const bytes=parseAccess(raw);
  const key=await crypto.subtle.importKey("raw",bytes,{name:"AES-GCM"},false,["encrypt","decrypt"]);
- const first=(window.courseCatalog?.files||[]).find(x=>x.encrypted_path);
- if(!first)throw Error("Aucun fichier chiffré référencé par cette bibliothèque.");
+ let first=(window.courseCatalog?.files||[]).find(x=>x.encrypted_path);
+ if(!first){
+  const response=await fetch("/econometrie-s5-2026/catalog.json?refresh="+Date.now(),{cache:"no-store"});
+  if(response.ok){
+   const updated=await response.json();
+   if(window.courseReplaceCatalog)window.courseReplaceCatalog(updated);
+   first=(window.courseCatalog?.files||[]).find(x=>x.encrypted_path);
+  }
+ }
+ if(!first)throw Error("Les fichiers en ligne ne sont pas encore publiés. Réessayez après la synchronisation.");
  await fetchEncrypted(first,key,true);
  vaultKey=key;
  if(remember)saveKey(key);
