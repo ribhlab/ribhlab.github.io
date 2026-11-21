@@ -57,10 +57,8 @@ dialog::backdrop{background:#000b;backdrop-filter:blur(6px)}.modal{display:flex;
 <h1>Apprenez, matière <span>par matière.</span></h1>
 <p>Cours, TD, exercices et documents partagés du <strong>1er octobre au 21 novembre 2026</strong>. Choisissez une matière puis cliquez sur un fichier pour le consulter <strong>sans quitter la page</strong>.</p>
 <div class="rowactions"><a href="#matieres" class="btn btn-primary">📚 Parcourir les matières</a><button id="openAdminHero" class="btn adminHero" type="button">＋ Ajouter des documents (Admin)</button></div>
-<details class="archiveAccess" id="archiveAccess"><summary>🔒 Comment ouvrir les documents privés ?</summary>
-<small>Les cours restent dans un dépôt GitHub privé. Pour les afficher sur cette page, récupérez une fois le ZIP ou choisissez son dossier extrait. Aucun fichier n'est envoyé au site.</small>
-<div class="rowactions"><button id="importZipMain" class="btn btn-primary" type="button">📂 Charger un ZIP</button><button id="importFolderMain" class="btn" type="button">📁 Choisir un dossier</button><a class="btn" href="https://github.com/univcours/rdp/archive/refs/heads/wa-econometrie-s5-2026.zip" target="_blank" rel="noopener noreferrer">⬇ Télécharger le ZIP privé</a></div>
-<div style="display:flex;align-items:center;gap:9px;margin-top:13px;font-size:12px;color:var(--muted)"><label><input type="checkbox" id="rememberZip"> Conserver l'archive localement dans ce navigateur</label><button id="forgetZip" class="action-quiet" type="button" hidden>Effacer la copie locale</button></div></details>
+<input type="checkbox" id="rememberZip" hidden>
+<button id="forgetZip" type="button" hidden></button>
 <div id="archiveStatus" class="status" role="status" aria-live="polite"></div>
 </section>
 <div class="stats"><div class="stat"><strong id="countPdfs">27</strong><span>Documents PDF</span></div><div class="stat"><strong id="countMedia">7</strong><span>Images & vidéos originales</span></div><div class="stat"><strong id="countPreview">5</strong><span>Aperçus non originaux</span></div></div>
@@ -254,8 +252,7 @@ async function loadFolder(files){
 }
 $("zipInput").addEventListener("change",e=>{const f=e.target.files?.[0];if(f)loadZip(f);e.target.value="";});
 $("dirInput").addEventListener("change",e=>{if(e.target.files?.length)loadFolder(e.target.files);e.target.value="";});
-$("importZipMain").onclick=()=>$("zipInput").click();
-$("importFolderMain").onclick=()=>$("dirInput").click();
+
 $("search").addEventListener("input",drawFiles);
 $("allSubjects").onclick=()=>{activeSubject=null;drawSubjects();drawFiles();};
 $("modalClose").onclick=()=>$("viewerDialog").close();
