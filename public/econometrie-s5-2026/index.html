@@ -55,7 +55,7 @@ dialog::backdrop{background:#000b;backdrop-filter:blur(6px)}.modal{display:flex;
 <main id="main" class="wrap">
 <section class="hero"><span class="pill">LICENCE ÉCONOMÉTRIE · SEMESTRE 5</span><div class="eyebrow" style="margin-top:22px">Bibliothèque de ressources · 2026</div>
 <h1>Apprenez, matière <span>par matière.</span></h1>
-<p>Cours, TD, exercices et documents partagés du <strong>1er octobre au 21 novembre 2026</strong>. Choisissez une matière puis cliquez sur un fichier pour le consulter <strong>sans quitter la page</strong>.</p>
+<p>Cours, TD, exercices et documents partagés du <strong>1er octobre au 21 novembre 2026</strong>. Choisissez une matière puis cliquez sur un fichier : il s’affiche directement <strong>dans cette page, sans ZIP ni téléchargement manuel</strong> avec votre accès privé.</p>
 <div class="rowactions"><a href="#matieres" class="btn btn-primary">📚 Parcourir les matières</a><button id="openAdminHero" class="btn adminHero" type="button">＋ Ajouter des documents (Admin)</button></div>
 <input type="checkbox" id="rememberZip" hidden>
 <button id="forgetZip" type="button" hidden></button>
@@ -156,8 +156,11 @@ function resetViewer(){
 async function openViewer(item){
  currentItem=item;resetViewer();$("modalTitle").textContent=item.title;$("modalInfo").textContent=item.name+" · "+niceBytes(item.bytes);
  $("githubFileLink").href=githubUrl(item);const dlg=$("viewerDialog");if(!dlg.open)dlg.showModal();
- if(!zipSource&&!folderFiles){viewerMessage();return;}
- if(loading){showModalError("Chargement de l'archive…");return;}
+ if(!zipSource&&!folderFiles){
+  if(window.courseVaultWait)await window.courseVaultWait();
+  if(!window.courseVaultReady?.()){window.courseVaultPrompt?.(item);return;}
+ }
+ if(loading){showModalError("Chargement de la bibliothèque…");return;}
  showModalError("Préparation de l’aperçu…");
  try{
   const blob=await fileBlob(item);
@@ -215,6 +218,8 @@ async function zipBlob(entry){
 }
 async function fileBlob(item){
  if(window.courseLocalAdminFiles.has(item.path))return window.courseLocalAdminFiles.get(item.path);
+ const encryptedItem=window.courseCatalog.files.find(x=>x.path===item.path)||item;
+ if(window.courseVaultReady?.()&&encryptedItem.encrypted_path)return window.courseVaultFile(encryptedItem);
  if(folderFiles){const match=zipLookupPath(item.path,folderFiles);return match||null;}
  if(zipSource){const entry=zipLookupPath(item.path,zipIndex);return entry?await zipBlob(entry):null;}
  return null;
@@ -280,5 +285,6 @@ $("countMedia").textContent=catalog.files.filter(x=>x.kind==="Media").length;
 $("countPreview").textContent=catalog.files.filter(x=>x.kind==="PreviewsOnly").length;
 drawSubjects();drawFiles();refreshPublicCatalog();restoreBrowserZip();
 </script>
+<script src="/econometrie-s5-2026/vault.js" defer></script>
 <script src="/econometrie-s5-2026/admin.js" defer></script>
 </body></html>
