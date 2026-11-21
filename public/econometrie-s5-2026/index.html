@@ -224,7 +224,7 @@ async function loadZip(file,restored=false){
  zipSource=buf;zipIndex=records;folderFiles=null;
  showStatus("✓ Archive prête : "+count+"/"+catalog.files.length+" fichiers trouvés. Cliquez sur un document pour le consulter dans cette page.");
  if($("rememberZip").checked&&!restored)await saveBrowserZip(file);
- if(currentItem&&$("viewerDialog").open)await openViewer(currentItem);
+ if(currentItem&&$("viewerDialog").open){loading=false;await openViewer(currentItem);}
  }catch(e){showStatus("Erreur : "+e.message,true);if($("viewerDialog").open)showModalError("Impossible d'ouvrir cette archive : "+e.message);}
  finally{loading=false;}
 }
