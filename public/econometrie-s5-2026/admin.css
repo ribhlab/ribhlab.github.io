@@ -1,0 +1,45 @@
+/* Admin workspace — private GitHub upload workflow */
+.admin-nav{color:var(--accent)!important;border:1px solid #4f8389;padding:8px 13px;border-radius:10px;background:#17333e;font-weight:800;cursor:pointer;font-size:13px;white-space:nowrap}
+.admin-nav:hover{background:#26505b}
+.admin-modal{width:min(960px,calc(100vw - 24px));height:min(91vh,920px);border:1px solid #467183;border-radius:16px;background:#0c1927;color:var(--ink);padding:0;box-shadow:0 24px 85px #000b;overflow:hidden}
+.admin-modal::backdrop{background:#010813d1;backdrop-filter:blur(6px)}
+.admin-shell{height:100%;min-height:0;display:flex;flex-direction:column}
+.admin-head{display:flex;align-items:center;gap:14px;padding:17px 20px;background:#13283c;border-bottom:1px solid #355064}
+.admin-head strong{font-size:18px;display:block}.admin-head p{margin:1px 0;color:#a9c1cc;font-size:12px}
+.admin-head .close-admin{margin-left:auto;background:#253d50;border:1px solid #456377;border-radius:9px;padding:9px 13px;color:#edf8fc;font-size:19px}
+.admin-content{flex:1;overflow-y:auto;padding:21px}
+.admin-section{background:#132435;border:1px solid #32495d;border-radius:13px;padding:19px;margin-bottom:16px}
+.admin-section h3{font-size:18px;margin:0 0 6px;letter-spacing:-.01em}
+.admin-section p{margin:0 0 14px;color:#aabfcd;font-size:13px}
+.admin-field{display:flex;flex-direction:column;gap:6px;min-width:0;font-size:12px;font-weight:700;color:#dcebf1}
+.admin-field input,.admin-field select,.admin-field textarea{padding:11px 12px;min-width:0;width:100%;border:1px solid #4b6477;background:#091827;color:#e8f8fb;border-radius:9px;font-size:14px;outline:none}
+.admin-field select option{background:#081727}.admin-field input:focus,.admin-field select:focus,.admin-field textarea:focus{border-color:#5ce2d2}
+.admin-login{max-width:490px;margin:14px auto 40px}
+.admin-login .admin-field{margin:16px 0}
+.admin-form-row{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}
+.admin-button{border:0;border-radius:9px;background:var(--accent);color:#07303b;padding:12px 17px;font-weight:850;cursor:pointer}
+.admin-button.secondary{border:1px solid #526a7b;background:#233c50;color:#e4eff6}
+.admin-button:disabled{opacity:.5;cursor:not-allowed}
+.admin-button:hover:not(:disabled){filter:brightness(1.1)}
+.admin-note{font-size:12px;color:#acc7d3;line-height:1.6;margin-top:11px}
+.admin-security{background:#242a27;border:1px solid #797146;color:#efdbb2;padding:12px 14px;border-radius:10px;font-size:12px;line-height:1.6;margin:10px 0 14px}
+.admin-secret{display:grid;grid-template-columns:1fr auto;align-items:end;gap:10px}
+.admin-upload-target{display:block;background:#112c33;border:1px dashed #64b9b3;border-radius:12px;text-align:center;padding:20px;cursor:pointer}
+.admin-upload-target.drag{background:#174744;border-color:#a5fff0}
+.admin-upload-target strong{display:block;font-size:15px}.admin-upload-target small{display:block;color:var(--muted);margin-top:5px}
+.admin-list{display:grid;gap:10px;margin:15px 0}
+.admin-file-card{display:grid;grid-template-columns:1.25fr 1fr auto;align-items:end;gap:11px;border:1px solid #324f5f;border-radius:10px;padding:12px;background:#0d1d2d}
+.admin-file-card .origin{font-size:11px;color:#8fa9b8;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.admin-file-card button.remove{background:#3e2931;border:1px solid #7c4d56;color:#ffc6c6;padding:11px;border-radius:9px;cursor:pointer}
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.admin-subject-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.admin-progress{background:#071524;border:1px solid #2e5261;border-radius:12px;padding:13px 15px;line-height:1.6;margin:12px 0;font-size:12px;white-space:pre-wrap}
+.admin-progress.success{border-color:#477e6d;color:#b9f8df}.admin-progress.error{border-color:#a15954;color:#ffc7c0}
+.admin-progress:empty{display:none}
+.admin-link{color:#88e7e0;text-decoration:underline;text-underline-offset:2px}
+.admin-options{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.admin-upload-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin:12px 0}
+.admin-counter{font-size:12px;color:#acbccb}
+.admin-warning{font-size:12px;color:#f1c58e}
+.admin-only{display:none}
+@media(max-width:650px){.admin-grid,.admin-subject-row,.admin-file-card,.admin-secret{grid-template-columns:1fr}.admin-content{padding:13px}.admin-file-card button.remove{justify-self:start}.admin-upload-actions{justify-content:stretch}.admin-upload-actions button{flex:1}.admin-head{padding:13px}.admin-modal{height:94vh}}
