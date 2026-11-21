@@ -194,7 +194,7 @@ async function fileHash(file){
 function buildPublic(manifest){
  return {version:2,updatedAt:new Date().toISOString(),
  subjects:(manifest.subject_order||[]).map(id=>({id,...manifest.subjects[id]})).filter(x=>x.name),
- files:Object.entries(manifest.categories||{}).flatMap(([kind,items])=>items.map(x=>({name:x.name,title:x.title||x.name,path:x.path,subject:x.subject,bytes:x.bytes,kind,sha256:x.sha256}))),
+ files:Object.entries(manifest.categories||{}).flatMap(([kind,items])=>items.map(x=>({name:x.name,title:x.title||x.name,path:x.path,subject:x.subject,bytes:x.bytes,kind,sha256:x.sha256,encrypted_path:x.encrypted_path||null}))),
  unavailable:{documents:manifest.unavailable_documents?.length||0,media:manifest.unavailable_media?.length||0}};
 }
 async function publishFiles(){
@@ -202,6 +202,8 @@ async function publishFiles(){
  if(!state.unlocked){status("Session Admin fermée.",true);return;}
  if(!state.verified){status("Connectez les deux dépôts GitHub avant de publier.",true);return;}
  if(!state.queue.length){status("Sélectionnez au moins un fichier.",true);return;}
+ await window.courseVaultWait?.();
+ if(!window.courseVaultReady?.()){status("Ouvrez d'abord la bibliothèque avec votre lien d'accès privé pour chiffrer les nouveaux fichiers.",true);return;}
  state.busy=true;$("adminPublish").disabled=true;
  const succeeded=[],failures=[];let publicUpdated=false,manifestUpdated=false;
  try{
@@ -227,11 +229,20 @@ async function publishFiles(){
      filename=checkName(title,ext).replace(new RegExp("\\."+ext+"$")," ("+(n++)+")."+ext);
      path="files/"+kind+"/"+q.subject+"/"+filename;
     }
-    status("Envoi "+(i+1)+"/"+state.queue.length+" : "+filename);
+    status("Chiffrement et envoi "+(i+1)+"/"+state.queue.length+" : "+filename);
+    const vaultPath="public/econometrie-s5-2026/vault/"+hash+".rbl";
+    const encryptedPath="/econometrie-s5-2026/vault/"+hash+".rbl";
+    let vaultExists=false;
+    try{await githubRequest(SITE_REPO,vaultPath,SITE_BRANCH,state.siteToken);vaultExists=true;}
+    catch(e){if(!e.message.includes("HTTP 404"))throw e;}
+    if(!vaultExists){
+      const encrypted=await window.courseVaultEncrypt(q.file);
+      await githubRequest(SITE_REPO,vaultPath,SITE_BRANCH,state.siteToken,"PUT",{message:"Encrypted S5 attachment: "+hash.slice(0,12),branch:SITE_BRANCH,content:encrypted});
+    }
     const data=await fileBase64(q.file);
     await githubRequest(PRIVATE_REPO,path,PRIVATE_BRANCH,state.privateToken,"PUT",{message:"Archive S5: add "+filename,branch:PRIVATE_BRANCH,content:data});
     manifest.categories[kind] ||= [];
-    manifest.categories[kind].push({original_name:q.file.name,name:filename,title,subject:q.subject,path,bytes:q.file.size,sha256:hash,source:"admin",uploaded_at:new Date().toISOString()});
+    manifest.categories[kind].push({original_name:q.file.name,name:filename,title,subject:q.subject,path,bytes:q.file.size,sha256:hash,encrypted_path:encryptedPath,source:"admin",uploaded_at:new Date().toISOString()});
     paths.add(path);allFiles.push({path,sha256:hash});
     succeeded.push({path,file:q.file,title});
    }catch(err){failures.push(q.file.name+" : "+err.message);}
@@ -304,7 +315,7 @@ function render(){
      </form>
    </div>
    <div class="admin-upload-actions"><button id="adminPublish" class="admin-button" type="button">⬆ Publier dans GitHub</button></div>
-   <p class="admin-warning">Les documents ajoutés restent privés dans GitHub ; le site public affiche uniquement la liste des titres. Les utilisateurs devront télécharger l'archive ZIP actualisée pour visualiser les nouveaux fichiers.</p>
+   <p class="admin-warning">Les documents ajoutés restent privés dans GitHub ; le site public affiche uniquement la liste des titres. Les nouveaux fichiers sont chiffrés : les détenteurs du lien privé les verront sans ZIP.</p>
   </section>
   <div id="adminResult" role="status" aria-live="polite" class="admin-progress"></div>
  </div></div>`;
