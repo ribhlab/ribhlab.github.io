@@ -150,6 +150,7 @@ async function openViewer(item){
  $("githubFileLink").href=githubUrl(item);const dlg=$("viewerDialog");if(!dlg.open)dlg.showModal();
  if(!zipSource&&!folderFiles){viewerMessage();return;}
  if(loading){showModalError("Chargement de l'archive…");return;}
+ showModalError("Préparation de l’aperçu…");
  try{
   const blob=await fileBlob(item);
   if(!blob)throw Error("Fichier absent de l'archive choisie. Vérifiez que vous avez téléchargé la dernière version.");
@@ -244,7 +245,7 @@ $("importFolderMain").onclick=()=>$("dirInput").click();
 $("search").addEventListener("input",drawFiles);
 $("allSubjects").onclick=()=>{activeSubject=null;drawSubjects();drawFiles();};
 $("modalClose").onclick=()=>$("viewerDialog").close();
-$("viewerDialog").addEventListener("close",()=>{resetViewer();currentItem=null;});
+$("viewerDialog").addEventListener("close",()=>{if(!$("viewerDialog").open){resetViewer();currentItem=null;}});
 $("forgetZip").onclick=async()=>{try{const db=await openDb();await new Promise((resolve,reject)=>{const tx=db.transaction("archives","readwrite");tx.objectStore("archives").delete("s5");tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});db.close();$("forgetZip").hidden=true;$("rememberZip").checked=false;showStatus("Copie enregistrée effacée du navigateur.");}catch(e){showStatus("Impossible d'effacer la copie locale : "+e.message,true);}};
 window.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("viewerDialog").open)$("viewerDialog").close();});
 $("countPdfs").textContent=catalog.files.filter(x=>x.kind==="PDF").length;
