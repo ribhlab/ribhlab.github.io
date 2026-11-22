@@ -1,0 +1,65 @@
+name: Mazamir Daoud - verify Google Play publishing access only
+on:
+  push:
+    branches:
+      - publish/mazamirdaoud5-play-20261122
+    paths:
+      - .github/workflows/mazamirdaoud5-play-access-preflight.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official Google Play API library
+        run: python -m pip install --quiet google-api-python-client google-auth
+      - name: Check Play authorization and Mazamir app existence without uploading
+        env:
+          PLAY_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os,json,base64
+          from google.oauth2.service_account import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+          from googleapiclient.errors import HttpError
+          val=os.environ.get('PLAY_SERVICE_ACCOUNT','').strip()
+          if not val:
+              print('MAZAMIR_PREFLIGHT: NO_CREDENTIAL_SECRET')
+              raise SystemExit(1)
+          try:
+              credential=json.loads(val if val.startswith('{') else base64.b64decode(val).decode('utf-8'))
+              auth=Credentials.from_service_account_info(credential,scopes=['https://www.googleapis.com/auth/androidpublisher'])
+              auth.refresh(Request())
+              print('MAZAMIR_PREFLIGHT: PLAY_TOKEN_OK')
+              api=build('androidpublisher','v3',credentials=auth,cache_discovery=False)
+              pkg='com.ribhlab.mazamirdaoud'
+              edit=None
+              try:
+                  edit=api.edits().insert(packageName=pkg,body={}).execute()['id']
+                  tracks=api.edits().tracks().list(packageName=pkg,editId=edit).execute().get('tracks',[])
+                  print('MAZAMIR_PREFLIGHT: APP_FOUND_ACCESS_OK')
+                  print('MAZAMIR_PREFLIGHT: TRACKS='+','.join(t['track'] for t in tracks))
+              finally:
+                  if edit:
+                      api.edits().delete(packageName=pkg,editId=edit).execute()
+                      print('MAZAMIR_PREFLIGHT: TEMP_EDIT_DELETED')
+          except HttpError as e:
+              print('MAZAMIR_PREFLIGHT: PLAY_HTTP_'+str(e.resp.status))
+              raise SystemExit(1)
+          except Exception as e:
+              print('MAZAMIR_PREFLIGHT: ERROR_'+type(e).__name__)
+              raise SystemExit(1)
+          PY
+      - name: Confirm no publication performed
+        if: always()
+        run: echo 'Read-only credential and package existence test. No AAB was uploaded or published.' >> "$GITHUB_STEP_SUMMARY"
