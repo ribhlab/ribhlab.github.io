@@ -1,4 +1,5 @@
-name: RivoSticker Google Play preflight (read-only)
+name: RivoSticker Google Play media preflight (read-only)
+# Post-publication image verification after native screenshots and official icon upload.
 on:
   push:
     branches: [main]
