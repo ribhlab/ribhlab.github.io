@@ -1,0 +1,176 @@
+name: RivoScan 0.45.95 - correct Banner ID production and actual Android screenshots
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04595-production-native.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    outputs:
+      apk_url: ${{ steps.assets.outputs.apk_url }}
+      apk_sha: ${{ steps.assets.outputs.apk_sha }}
+      aab_url: ${{ steps.assets.outputs.aab_url }}
+      aab_sha: ${{ steps.assets.outputs.aab_sha }}
+      aab_size: ${{ steps.assets.outputs.aab_size }}
+    steps:
+      - name: Resolve signed release from exact authorized source commit
+        id: assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE: aca01755407489b8f79e55fd9a4e2b53859f57e3
+        run: |
+          set -euo pipefail
+          repo=univcours/ribhlab
+          tag=rivoscan-0.45.95-banner-id
+          for i in $(seq 1 40); do
+            if gh api "repos/$repo/releases/tags/$tag" > /tmp/release.json 2>/dev/null && jq -e '[.assets[] | select(.name=="RivoScan-0.45.95-UNIVERSAL-SIGNED.apk" or .name=="RivoScan-0.45.95-ALL-SUPPORTED-ANDROID-PLAY.aab") | select(.state=="uploaded" and (.digest|startswith("sha256:")))]|length==2' /tmp/release.json >/dev/null; then break; fi
+            sleep 25
+          done
+          test "$(gh api "repos/$repo/git/ref/tags/$tag" --jq .object.sha)" = "$SOURCE"
+          python - <<'PY'
+          import json,os,re
+          data=json.load(open('/tmp/release.json'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              for kind,name in [('apk','RivoScan-0.45.95-UNIVERSAL-SIGNED.apk'),('aab','RivoScan-0.45.95-ALL-SUPPORTED-ANDROID-PLAY.aab')]:
+                  a=next(a for a in data['assets'] if a['name']==name and a['state']=='uploaded')
+                  sha=a['digest'].removeprefix('sha256:')
+                  assert re.fullmatch('[a-f0-9]{64}',sha)
+                  assert a['size']>1000000
+                  f.write(f"{kind}_url={a['browser_download_url']}\n{kind}_sha={sha}\n{kind}_size={a['size']}\n")
+          PY
+  production:
+    needs: resolve
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify exact signed AAB and compiled corrected banner ID
+        env:
+          URL: ${{ needs.resolve.outputs.aab_url }}
+          SHA: ${{ needs.resolve.outputs.aab_sha }}
+        run: |
+          set -euo pipefail
+          f=/tmp/RivoScan-0.45.95-ALL-SUPPORTED-ANDROID-PLAY.aab
+          curl -fL --retry 3 -o "$f" "$URL"
+          echo "$SHA  $f" | sha256sum -c -
+          jarsigner -verify "$f" | grep -F 'jar verified'
+          keytool -printcert -jarfile "$f" | grep -Fi 'E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+          python - <<'PY'
+          from zipfile import ZipFile
+          with ZipFile('/tmp/RivoScan-0.45.95-ALL-SUPPORTED-ANDROID-PLAY.aab') as z:
+              data=b''.join(z.read(n) for n in z.namelist() if n.startswith('base/assets/public/') and n.endswith('.js'))
+              assert b'ca-app-pub-7945572016731367/4841809190' in data
+              assert b'ca-app-pub-7945572016731367/4841809191' not in data
+          print('PASS: exact owner-confirmed 9190 in signed AAB; incorrect 9191 absent')
+          PY
+          python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Publish code 210 using verified original Google Play publisher
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          RIVO_EXPECTED_SHA256: ${{ needs.resolve.outputs.aab_sha }}
+          RIVO_EXPECTED_SIZE: ${{ needs.resolve.outputs.aab_size }}
+        run: python tools/play-publisher/rivoscan_04595_prod_only_preserve_images.py --aab /tmp/RivoScan-0.45.95-ALL-SUPPORTED-ANDROID-PLAY.aab --confirm PUBLISH_RIVOSCAN_04595_PRODUCTION_PRESERVE_ALL_IMAGES
+  capture:
+    needs: resolve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - device: phone
+            size: 720x1440
+            density: 293
+          - device: tablet7
+            size: 720x1280
+            density: 160
+          - device: tablet10
+            size: 1200x1920
+            density: 160
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Verify signed APK and install capture dependencies
+        env:
+          URL: ${{ needs.resolve.outputs.apk_url }}
+          SHA: ${{ needs.resolve.outputs.apk_sha }}
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 -o /tmp/rivo.apk "$URL"
+          echo "$SHA  /tmp/rivo.apk" | sha256sum -c -
+          APKSIGNER="$(find "$ANDROID_HOME/build-tools" -maxdepth 2 -type f -name apksigner | sort -V | tail -1)"
+          "$APKSIGNER" verify --print-certs /tmp/rivo.apk | grep -Fi 'e9b3e2779575ba08a91372fc3885eba01dd3e73e'
+          python -m pip install 'Pillow>=11,<13'
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Capture distinct authentic screens from installed signed APK
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-boot-timeout: 900
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -cores 4 -memory 3072
+          script: |
+            adb install -r /tmp/rivo.apk
+            adb shell pm grant com.ribhlab.rivoscan android.permission.CAMERA || true
+            python tools/play-publisher/capture_rivoscan_04595_native.py --out "/tmp/rivo-native/${{ matrix.device }}" --device "${{ matrix.device }}" --size "${{ matrix.size }}" --density "${{ matrix.density }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: RivoScan-04595-native-${{ matrix.device }}
+          path: /tmp/rivo-native/${{ matrix.device }}/
+          if-no-files-found: warn
+  screenshots:
+    needs: [production, capture]
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04595-native-phone
+          path: /tmp/rivo-native/phone
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04595-native-tablet7
+          path: /tmp/rivo-native/tablet7
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04595-native-tablet10
+          path: /tmp/rivo-native/tablet10
+      - name: Replace old screenshots only after validation of all three native device sets
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13'
+          python tools/play-publisher/rivoscan_04595_native_screenshots.py --source /tmp/rivo-native --confirm REPLACE_RIVOSCAN_04595_NATIVE_SCREENSHOTS
