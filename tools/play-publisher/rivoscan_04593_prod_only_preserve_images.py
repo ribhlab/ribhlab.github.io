@@ -92,7 +92,8 @@ def main():
                  "imagesChanged": False, "appBundleUploaded": False}), flush=True)
             return
 
-        if any(int(c) > int(EXPECTED_CODE) for c in codes):
+        all_codes=[int(c) for t in tracks for release in t.get('releases',[]) for c in release.get('versionCodes',[])]
+        if any(c > int(EXPECTED_CODE) for c in all_codes):
             raise RuntimeError("A newer production version exists; cannot downgrade")
         if not codes:
             raise RuntimeError("Production track is empty; require additional verification")
