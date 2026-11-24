@@ -25,7 +25,7 @@ jobs:
       - name: Install Play SDK and genuine Android screenshot dependencies
         run: |
           set -euo pipefail
-          python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13'
+          python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13' 'CairoSVG>=2.8,<3'
           python -m py_compile tools/play-publisher/rivosticker_real_media.py
       - name: Fetch exact original-key-signed RivoSticker APK (not a debug build)
         shell: bash
