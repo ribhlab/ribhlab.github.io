@@ -1,0 +1,48 @@
+name: RivoScan 0.45.93 - publish AAB to Production preserving all photos
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04593-production-preserve-photos.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Android Publisher Python API
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m py_compile tools/play-publisher/rivoscan_04593_prod_only_preserve_images.py
+      - name: Download exactly original-key signed RivoScan 0.45.93
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivoscan-04593
+          curl -fL --retry 3 --retry-delay 3 \
+            -o /tmp/rivoscan-04593/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab \
+            https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.93-centered-header/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab
+          echo "db2189871d37817fbc5fa3b14962c35a43631dbcb95d179cdb11390e523415be  /tmp/rivoscan-04593/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab" | sha256sum -c -
+          test "$(stat -c %s /tmp/rivoscan-04593/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab)" = "83122968"
+      - name: Publish ONLY v0.45.93 signed AAB to Production, preserve all Play Store images
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Google Play publisher secret missing'; exit 1; }
+          python tools/play-publisher/rivoscan_04593_prod_only_preserve_images.py \
+            --aab /tmp/rivoscan-04593/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab \
+            --confirm PUBLISH_RIVOSCAN_04593_PRODUCTION_PRESERVE_ALL_IMAGES
