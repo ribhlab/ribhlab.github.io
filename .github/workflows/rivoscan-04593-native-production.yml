@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/rivoscan-04593-native-production.yml'
+      - 'tools/play-publisher/capture_rivoscan_04593_native.py'
+      - 'tools/play-publisher/rivoscan_04593_publish_native.py'
+      - 'tools/play-publisher/rivoscan_04593_native_screenshots.py'
   workflow_dispatch:
 permissions:
   contents: read
