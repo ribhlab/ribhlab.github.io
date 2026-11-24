@@ -1,0 +1,108 @@
+name: RivoScan 0.45.93 - native screenshots and Google Play production
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04593-native-production.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - device: phone
+            size: 720x1440
+            density: 293
+          - device: tablet7
+            size: 720x1280
+            density: 160
+          - device: tablet10
+            size: 1200x1920
+            density: 160
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Verify signed universal APK, install capture dependencies
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 -o /tmp/rivo.apk https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.93-centered-header/RivoScan-0.45.93-UNIVERSAL-SIGNED.apk
+          echo '3753ad8048f381b51b4b68f2c3232ebec1c009416a3884ac23b490fd868752ac  /tmp/rivo.apk' | sha256sum -c -
+          python -m pip install 'Pillow>=11,<13'
+          python -m py_compile tools/play-publisher/capture_rivoscan_04593_native.py
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Capture eight distinct actual Android app views
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-boot-timeout: 900
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          script: |
+            adb install -r /tmp/rivo.apk
+            adb shell pm grant com.ribhlab.rivoscan android.permission.CAMERA || true
+            python tools/play-publisher/capture_rivoscan_04593_native.py --out "/tmp/rivo-native/${{ matrix.device }}" --device "${{ matrix.device }}" --size "${{ matrix.size }}" --density "${{ matrix.density }}"
+      - name: Save original native screenshots and accessibility evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-04593-native-${{ matrix.device }}
+          path: /tmp/rivo-native/${{ matrix.device }}/
+          if-no-files-found: warn
+          retention-days: 30
+  production:
+    needs: capture
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04593-native-phone
+          path: /tmp/rivo-native/phone
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04593-native-tablet7
+          path: /tmp/rivo-native/tablet7
+      - uses: actions/download-artifact@v4
+        with:
+          name: RivoScan-04593-native-tablet10
+          path: /tmp/rivo-native/tablet10
+      - name: Download exact verified signed Play AAB
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rivo
+          curl -fL --retry 3 -o /tmp/rivo/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.93-centered-header/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab
+          echo 'db2189871d37817fbc5fa3b14962c35a43631dbcb95d179cdb11390e523415be  /tmp/rivo/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab' | sha256sum -c -
+          python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13'
+          python -m py_compile tools/play-publisher/rivoscan_04593*.py
+      - name: Publish signed release and replace only verified native screenshots atomically
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Google Play publishing credential unavailable'; exit 1; }
+          python tools/play-publisher/rivoscan_04593_publish_native.py --aab /tmp/rivo/RivoScan-0.45.93-ALL-SUPPORTED-ANDROID-PLAY.aab --screens /tmp/rivo-native --confirm PUBLISH_RIVOSCAN_04593_WITH_NATIVE_SCREENSHOTS
