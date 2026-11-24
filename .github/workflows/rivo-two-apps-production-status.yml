@@ -1,0 +1,52 @@
+name: Production status read-only audit for RivoSticker and RivoCaption
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivo-two-apps-production-status.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment: play-testing
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      PYTHONPATH: tools/play-publisher
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Inspect production and internal tracks without publishing or changing metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from googleapiclient.discovery import build
+          from googleapiclient.errors import HttpError
+          from publish import get_credentials
+          api=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False)
+          edits=api.edits()
+          for p in ('com.ribhlab.rivosticker','com.rivocaption.editor'):
+              eid=edits.insert(packageName=p,body={}).execute()['id']
+              args={'packageName':p,'editId':eid}
+              try:
+                  tracks=[{'track':t.get('track'),'releases':[{'status':r.get('status'),'name':r.get('name'),'versionCodes':r.get('versionCodes')} for r in t.get('releases',[])]} for t in edits.tracks().list(**args).execute().get('tracks',[])]
+                  codes=sorted(int(b['versionCode']) for b in edits.bundles().list(**args).execute().get('bundles',[]))
+                  langs=sorted(x['language'] for x in edits.listings().list(**args).execute().get('listings',[]))
+                  media={}
+                  for kind in ('icon','featureGraphic','phoneScreenshots'):
+                      try:media[kind]=len(edits.images().list(**args,language='en-US',imageType=kind).execute().get('images',[]))
+                      except HttpError as e:media[kind]='HTTP '+str(e.resp.status)
+                  availability={}
+                  for track in ('production','internal'):
+                      try:
+                          a=edits.countryavailability().get(**args,track=track).execute()
+                          availability[track]={'countryCount':len(a.get('countries',[])),'restOfWorld':a.get('restOfWorld',False),'syncWithProduction':a.get('syncWithProduction',False)}
+                      except HttpError as e:availability[track]={'httpStatus':e.resp.status}
+                  print('RIVO_PLAY_PRODUCTION_AUDIT='+json.dumps({'app':p,'bundles':codes,'tracks':tracks,'locales':langs,'media':media,'availability':availability},ensure_ascii=False))
+              finally:
+                  edits.delete(**args).execute()
+          PY
