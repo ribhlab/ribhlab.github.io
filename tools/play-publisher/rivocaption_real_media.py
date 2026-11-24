@@ -156,6 +156,11 @@ def capture(apk: Path, out: Path):
     open_video_in_picker(out)
     time.sleep(7)
     nodes = dump_ui(out, "after-import")
+    if any(n.get("text", "") == "Got it" for n in nodes):
+        if not tap(nodes, "Got it"):
+            raise RuntimeError("Immersive Android onboarding dialog could not be dismissed")
+        time.sleep(3)
+        nodes = dump_ui(out, "after-fullscreen-consent")
     if not any(n.get("text", "") in ("Captions", "Styles", "Export") for n in nodes):
         raise RuntimeError("RivoCaption video editor not visible after selecting sample video")
     screenshot(out, "phone-02-ai.png")
