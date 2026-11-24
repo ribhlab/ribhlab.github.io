@@ -60,7 +60,6 @@ jobs:
           emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -partition-size 2048 -no-metrics
           disable-animations: true
           script: |
-            set -euo pipefail
             test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Google Play publishing secret not available'; exit 1; }
             python tools/play-publisher/rivosticker_real_media.py --apk /tmp/rivosticker-v103.apk --output /tmp/rivosticker-real --publish
       - name: Preserve exact unmodified original Android screenshots for audit
