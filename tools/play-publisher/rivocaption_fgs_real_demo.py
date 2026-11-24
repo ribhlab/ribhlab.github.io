@@ -11,7 +11,7 @@ def log(tag, **kwargs):
     print(tag+"="+json.dumps(kwargs,ensure_ascii=False),flush=True)
 
 def screenrecord():
-    cmd=["adb","shell","screenrecord","--time-limit","62","--bit-rate","1500000","--size","540x960",
+    cmd=["adb","shell","screenrecord","--time-limit","125","--bit-rate","1200000","--size","540x960",
          "/sdcard/Movies/RivoCaption-FGS-DataSync-Demo.mp4"]
     return subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 
@@ -26,13 +26,30 @@ def main():
     OUT.mkdir(parents=True,exist_ok=True)
     adb("shell","wm","size","1080x1920")
     adb("shell","wm","density","440")
+    # Create sample media before app launch, to avoid CPU stress on Android Launcher
+    # while recording the foreground-service demonstration.
+    setup_sample_video(OUT)
     adb("install","-r",str(APK),timeout=180)
     adb("shell","svc","wifi","enable")
     adb("shell","svc","data","enable")
     adb("shell","am","force-stop","com.rivocaption.editor")
     adb("shell","am","start","-W","-n","com.rivocaption.editor/.MainActivity")
-    time.sleep(12)
-    setup_sample_video(OUT)
+    # Keep only authentic screenshots. An emulator may show a transient Pixel
+    # Launcher ANR; dismiss it and restart the real, original-signed application.
+    ready=False
+    for attempt in range(6):
+        time.sleep(9 if attempt == 0 else 6)
+        nodes=dump_ui(OUT,"startup-"+str(attempt))
+        names={n.get("text","") for n in nodes}
+        if "Your creative studio" in names:
+            ready=True
+            break
+        if "Pixel Launcher isn't responding" in names or "RivoCaption isn't responding" in names:
+            tap(nodes,"Wait")
+            time.sleep(5)
+        adb("shell","am","start","-W","-n","com.rivocaption.editor/.MainActivity")
+    if not ready:
+        raise RuntimeError("Real RivoCaption home UI did not stabilize after ANR recovery")
     rec=screenrecord()
     time.sleep(2)
     try:
@@ -64,7 +81,11 @@ def main():
         if not notifications:
             raise RuntimeError("No RivoCaption notification verified, so do not pretend foreground service demo was captured")
     finally:
-        rec.wait(timeout=85)
+        try:
+            rec.wait(timeout=135)
+        except subprocess.TimeoutExpired:
+            adb("shell","pkill","-2","screenrecord")
+            rec.wait(timeout=15)
         adb("pull","/sdcard/Movies/RivoCaption-FGS-DataSync-Demo.mp4",str(OUT/"RivoCaption-FGS-DataSync-Demo.mp4"),timeout=90)
         f=OUT/"RivoCaption-FGS-DataSync-Demo.mp4"
         log("FGS_REAL_VIDEO_CAPTURED",size=f.stat().st_size,valid=f.stat().st_size>150000)
