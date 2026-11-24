@@ -1,0 +1,52 @@
+name: RivoCaption 0.3.4 - upload original-signed AAB to Google Play production draft
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivocaption-play-upload.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-rivocaption-first-aab
+  cancel-in-progress: false
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 45
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install official Play publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+      - name: Obtain exact original RivoScan-certificate-signed AAB
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://github.com/univcours/ribhlab/releases/download/rivocaption-v0.3.4-original-rivoscan'
+          curl -fLsS --retry 5 --connect-timeout 35 "$BASE/RivoCaption-0.3.4-RivoScan-SIGNED.aab" -o /tmp/rivocaption-0.3.4.aab
+          curl -fLsS --retry 5 --connect-timeout 35 "$BASE/SHA256SUMS.txt" -o /tmp/SHA256SUMS.txt
+          sed -n '/SIGNED.aab/p' /tmp/SHA256SUMS.txt | sed 's@RivoCaption-0.3.4-RivoScan-SIGNED.aab@/tmp/rivocaption-0.3.4.aab@' | sha256sum -c -
+          jarsigner -verify /tmp/rivocaption-0.3.4.aab > /tmp/rivocaption-jarverify.txt 2>&1
+          grep -Fq 'jar verified' /tmp/rivocaption-jarverify.txt
+          keytool -printcert -jarfile /tmp/rivocaption-0.3.4.aab | grep -F 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+          echo 'Signed RivoCaption AAB checksum and original upload key verified.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload first Play bundle safely as production DRAFT only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/play-publisher/publish.py --aab /tmp/rivocaption-0.3.4.aab --package com.rivocaption.editor --track production --status draft --name '0.3.4 (8)' --notes 'Initial RivoCaption: local-first video captions, offline transcription and caption editing, with optional user-approved cloud features.' --language en-US
+          echo 'RivoCaption release uploaded to Google Play in production DRAFT; Play Console onboarding and review remain required.' >> "$GITHUB_STEP_SUMMARY"
