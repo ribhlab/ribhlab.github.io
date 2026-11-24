@@ -12,6 +12,8 @@ import json
 import sys
 from pathlib import Path
 from googleapiclient.discovery import build
+from google_auth_httplib2 import AuthorizedHttp
+import httplib2
 from googleapiclient.http import MediaFileUpload
 from publish import get_credentials
 
@@ -63,7 +65,7 @@ def main():
         raise ValueError("Explicit approval required")
     check_file(args.aab)
 
-    edits = build("androidpublisher", "v3", credentials=get_credentials(), cache_discovery=False).edits()
+    edits = build("androidpublisher", "v3", http=AuthorizedHttp(get_credentials(), http=httplib2.Http(timeout=300)), cache_discovery=False).edits()
     eid = edits.insert(packageName=PACKAGE, body={}).execute()["id"]
     committed = False
     try:
@@ -104,10 +106,12 @@ def main():
             raise RuntimeError("Existing Play bundle has different hash; abort")
         bundle_present = existing is not None
         if not bundle_present:
-            media = MediaFileUpload(str(args.aab), mimetype="application/octet-stream", resumable=True)
-            response = edits.bundles().upload(
-                packageName=PACKAGE, editId=eid, media_body=media
-            ).execute()
+            media = MediaFileUpload(str(args.aab), mimetype="application/octet-stream", resumable=True, chunksize=8*1024*1024)
+            request = edits.bundles().upload(packageName=PACKAGE, editId=eid, media_body=media)
+            response = None
+            while response is None:
+                progress, response = request.next_chunk(num_retries=5)
+                if progress:print(f'RIVOSCAN_UPLOAD_PROGRESS={progress.progress():.0%}',flush=True)
             if str(response.get("versionCode")) != EXPECTED_CODE:
                 raise RuntimeError("Uploaded AAB has unexpected version code")
             print("RIVOSCAN_04593_BUNDLE_UPLOADED=208", flush=True)
