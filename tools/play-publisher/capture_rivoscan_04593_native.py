@@ -49,10 +49,13 @@ def main():
         t=tree(); vals=labels(t); current=' '.join(vals).casefold()
         print('START_STATE '+str(vals[:45]),flush=True)
         if any(x in current for x in ("isn't responding","is not responding","close app")):
-            wait=next((n for n in t.iter('node') if n.get('text','').strip().casefold()=='wait'),None)
+            action='close app' if 'pixel launcher' in current else 'wait'
+            wait=next((n for n in t.iter('node') if n.get('text','').strip().casefold()==action),None)
             if wait is None:raise RuntimeError('Android ANR dialog without Wait')
             x1,y1,x2,y2=map(int,re.findall(r'\d+',wait.get('bounds','')))
-            adb('shell','input','tap',str((x1+x2)//2),str((y1+y2)//2));time.sleep(12);continue
+            adb('shell','input','tap',str((x1+x2)//2),str((y1+y2)//2));time.sleep(5)
+            if action=='close app':launch()
+            continue
         if not any(n.get('package')==P for n in t.iter('node')):
             launch();continue
         if "what's new in rivoscan" in current or 'got it' in current:
@@ -85,19 +88,24 @@ def main():
         if not 15000<f.stat().st_size<8000000:raise RuntimeError('Invalid screenshot bytes')
         (a.out/(name+'.xml')).write_bytes(ET.tostring(t,encoding='utf-8'))
         records.append({'name':f.name,'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'size':[w,h],'source':'installed signed Android APK 0.45.93 code 208'})
+        (a.out/'audit.json').write_text(json.dumps({'version':'0.45.93','versionCode':208,'device':a.device,'package':P,'records':sorted(records,key=lambda r:r['name'])},indent=2))
         print('Captured '+name,flush=True)
     shot('01_Home',('My files','Scan your first document'))
     tap('Documents');shot('02_Documents',('My Documents','All files','Import files'))
+    tap('Me');shot('08_Settings',('General','App language'))
     tap('Tools');shot('03_Tools',('Read Math Formulas','Scan Book Pages'))
     for name,label,marker in [('04_Book_Scan','Scan Book Pages','Book Scan'),('05_Formula_OCR','Read Math Formulas','Formula OCR'),('06_Photo_Translation','Translate a Photo','Photo Translation'),('07_ID_Photo','ID Photos for Print','ID Photo Maker')]:
         try:
             tap(label);shot(name,(marker,),modal=True)
         except Exception as err:
             print('OPTIONAL VIEW SKIPPED '+name+': '+str(err),flush=True)
+            (a.out/(name+'.png')).unlink(missing_ok=True)
         finally:
-            if find(tree(),'Close') is not None:tap('Close',optional=True)
-            if find(tree(),'Read Math Formulas') is None:
-                tap('Tools')
-    tap('Me');shot('08_Settings',('General','App language'))
-    (a.out/'audit.json').write_text(json.dumps({'version':'0.45.93','versionCode':208,'device':a.device,'package':P,'records':records},indent=2))
+            try:
+                if find(tree(),'Close') is not None:tap('Close',optional=True)
+                if find(tree(),'Read Math Formulas') is None:tap('Tools')
+            except Exception as err:
+                print('Optional navigation ended: '+str(err),flush=True)
+                break
+    (a.out/'audit.json').write_text(json.dumps({'version':'0.45.93','versionCode':208,'device':a.device,'package':P,'records':sorted(records,key=lambda r:r['name'])},indent=2))
 if __name__=='__main__':main()
