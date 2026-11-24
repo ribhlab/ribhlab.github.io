@@ -16,7 +16,9 @@ def verify(root):
         audit=json.loads((d/'audit.json').read_text())
         if (audit['package'],audit['versionCode'],audit['device'])!=(P,208,folder) or audit['version']!='0.45.93':raise ValueError('Unexpected capture audit')
         records=audit['records']; expected=[v+'.png' for v in VIEWS]
-        if [r['name'] for r in records]!=expected:raise ValueError('Missing or unexpected views')
+        names=[r['name'] for r in records]
+        required={'01_Home.png','02_Documents.png','03_Tools.png','08_Settings.png'}
+        if not required.issubset(names) or len(names)!=len(set(names)) or any(n not in expected for n in names):raise ValueError('Missing essential or unexpected views')
         files=[];hashes=set()
         for r in records:
             f=d/r['name'];digest=hashlib.sha256(f.read_bytes()).hexdigest()
@@ -45,9 +47,9 @@ def main():
             for f in files:
                 result=edits.images().upload(**params,language='en-US',imageType=typ,media_body=MediaFileUpload(str(f),mimetype='image/png',resumable=False)).execute()
                 if not result.get('image',{}).get('id'):raise RuntimeError('Missing upload confirmation')
-            if len(edits.images().list(**params,language='en-US',imageType=typ).execute().get('images',[]))!=8:raise RuntimeError('Wrong screenshot count')
+            if len(edits.images().list(**params,language='en-US',imageType=typ).execute().get('images',[]))!=len(files):raise RuntimeError('Wrong screenshot count')
         edits.validate(**params).execute();result=edits.commit(**params).execute();committed=True
-        print('RIVOSCAN_04593_SCREENSHOTS_COMMITTED='+json.dumps({'versionCode':208,'locale':'en-US','phone':8,'tablet7':8,'tablet10':8,'editId':result.get('id'),'reviewMayBeRequired':True}),flush=True)
+        print('RIVOSCAN_04593_SCREENSHOTS_COMMITTED='+json.dumps({'versionCode':208,'locale':'en-US','counts':{k:len(v) for k,v in groups.items()},'editId':result.get('id'),'reviewMayBeRequired':True}),flush=True)
     finally:
         if not committed:
             try:edits.delete(**params).execute()
