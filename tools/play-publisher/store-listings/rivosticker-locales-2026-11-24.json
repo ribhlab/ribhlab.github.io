@@ -1,0 +1,41 @@
+{
+  "appId": "com.ribhlab.rivosticker",
+  "sourceVersionCode": 4,
+  "locales": {
+    "ar": {
+      "title": "RivoSticker - صانع الملصقات",
+      "shortDescription": "اصنع ملصقات من صورك، امسح الخلفية وأضف النصوص وشارك إبداعاتك.",
+      "fullDescription": "حوّل صورك إلى ملصقات بتطبيق RivoSticker.\n\nاختر صورة من جهازك أو التقط صورة بالكاميرا، ثم عدّلها في استوديو الملصقات. يمكنك قص الصورة وتدويرها وتحريكها، إزالة الخلفيات البسيطة، استعمال الممحاة اليدوية، إضافة نصوص بألوان وأشكال متنوعة، وتطبيق تأثير كرتوني.\n\nأهم المزايا:\n• إنشاء ملصقات من صورك.\n• القص والتدوير وتغيير حجم الصورة.\n• إزالة الخلفيات البسيطة وتنقيح الحواف يدوياً.\n• إضافة عناوين ونصوص قابلة للتحريك.\n• حفظ التصاميم ومشاركتها.\n• تنظيم الملصقات والمجموعات.\n\nتعمل أدوات التحرير الأساسية على جهازك. تكون إزالة الخلفية أفضل عندما تكون الخلفية واضحة أو موحّدة اللون. قد تتطلب المشاركة تثبيت تطبيقات أخرى، وقد تحتاج الإعلانات الاختيارية إلى اتصال بالإنترنت."
+    },
+    "fr-FR": {
+      "title": "RivoSticker : Autocollants",
+      "shortDescription": "Créez des stickers photo, effacez le fond, ajoutez du texte et partagez.",
+      "fullDescription": "Transformez vos photos en autocollants avec RivoSticker.\n\nChoisissez une image ou prenez une photo, puis personnalisez-la dans le studio de stickers. Recadrez, faites pivoter et déplacez vos images, supprimez les arrière-plans simples, retouchez les contours à la gomme, ajoutez du texte coloré et appliquez un effet cartoon.\n\nFonctionnalités :\n• Créer des stickers à partir de vos photos.\n• Recadrage, rotation et ajustement de taille.\n• Suppression des fonds simples et gomme manuelle.\n• Texte repositionnable avec plusieurs styles.\n• Enregistrement et partage de vos créations.\n• Organisation des stickers et des packs.\n\nLes principales fonctions d'édition s'exécutent sur votre appareil. La suppression du fond est plus efficace sur un arrière-plan uni. Le partage peut nécessiter d'autres applications et les publicités facultatives peuvent nécessiter Internet."
+    },
+    "es-ES": {
+      "title": "RivoSticker: Crear Stickers",
+      "shortDescription": "Crea stickers con fotos, borra el fondo, añade texto y compártelos.",
+      "fullDescription": "Convierte tus fotos en stickers con RivoSticker.\n\nSelecciona una imagen o toma una foto y edítala en el estudio de stickers. Recorta, gira y mueve imágenes, elimina fondos simples, ajusta los bordes con el borrador, añade textos de colores y aplica un efecto de dibujo animado.\n\nFunciones principales:\n• Crea stickers a partir de tus fotos.\n• Recorta, gira y cambia el tamaño.\n• Quita fondos sencillos y retoca manualmente.\n• Añade textos movibles con distintos estilos.\n• Guarda y comparte tus creaciones.\n• Organiza stickers y paquetes.\n\nLa edición básica funciona en tu dispositivo. La eliminación de fondos ofrece mejores resultados con un fondo uniforme. Para compartir puede hacer falta otra aplicación y los anuncios opcionales pueden requerir Internet."
+    },
+    "pt-BR": {
+      "title": "RivoSticker: Criar Figurinhas",
+      "shortDescription": "Crie figurinhas com fotos, apague fundos, adicione textos e compartilhe.",
+      "fullDescription": "Transforme suas fotos em figurinhas com o RivoSticker.\n\nEscolha uma imagem ou tire uma foto e personalize no estúdio de figurinhas. Recorte, gire e mova fotos, remova fundos simples, ajuste as bordas com a borracha, adicione textos coloridos e aplique um efeito de desenho animado.\n\nRecursos:\n• Figurinhas personalizadas a partir de fotos.\n• Recorte, rotação e redimensionamento.\n• Remoção de fundos simples e borracha manual.\n• Textos móveis em vários estilos.\n• Salvar e compartilhar suas criações.\n• Organizar figurinhas e pacotes.\n\nA edição principal funciona no dispositivo. A remoção de fundos tem melhores resultados com fundos uniformes. Compartilhar pode exigir outros aplicativos, e anúncios opcionais podem precisar de internet."
+    },
+    "hi-IN": {
+      "title": "RivoSticker: फोटो स्टिकर",
+      "shortDescription": "फ़ोटो से स्टिकर बनाएँ, बैकग्राउंड हटाएँ, टेक्स्ट जोड़ें और शेयर करें।",
+      "fullDescription": "RivoSticker के साथ अपनी फ़ोटो को मज़ेदार स्टिकर में बदलें।\n\nगैलरी से फ़ोटो चुनें या कैमरे से नई तस्वीर लें और स्टिकर स्टूडियो में संपादित करें। क्रॉप करें, घुमाएँ, आकार और जगह बदलें, साधारण बैकग्राउंड हटाएँ, इरेज़र से किनारों को सुधारें, रंगीन टेक्स्ट जोड़ें और कार्टून प्रभाव लगाएँ।\n\nमुख्य सुविधाएँ:\n• अपनी तस्वीरों से स्टिकर बनाना।\n• क्रॉप, रोटेट और आकार बदलना।\n• साधारण बैकग्राउंड हटाना और मैन्युअल इरेज़र।\n• कई शैलियों में हिलाया जा सकने वाला टेक्स्ट।\n• स्टिकर सेव करना और शेयर करना।\n• स्टिकर पैक व्यवस्थित करना।\n\nमुख्य एडिटिंग आपके डिवाइस पर होती है। एकसमान बैकग्राउंड वाली तस्वीरों पर हटाने का परिणाम बेहतर होता है। शेयरिंग के लिए अन्य ऐप की ज़रूरत हो सकती है और वैकल्पिक विज्ञापन इंटरनेट का उपयोग कर सकते हैं।"
+    },
+    "tr-TR": {
+      "title": "RivoSticker: Çıkartma Yap",
+      "shortDescription": "Fotoğraflardan çıkartma oluştur, arka planı sil, metin ekle ve paylaş.",
+      "fullDescription": "RivoSticker ile fotoğraflarını çıkartmaya dönüştür.\n\nGaleriden fotoğraf seç veya kamerayla yeni bir fotoğraf çek, ardından çıkartma stüdyosunda düzenle. Kırp, döndür, taşı ve boyutlandır; basit arka planları kaldır, silgiyle kenarları düzelt, renkli yazılar ekle ve çizgi film efekti uygula.\n\nÖzellikler:\n• Fotoğraflardan kişisel çıkartmalar oluşturma.\n• Kırpma, döndürme ve boyut ayarı.\n• Basit arka planları kaldırma ve manuel silgi.\n• Farklı stillerde taşınabilir metinler.\n• Kaydetme ve paylaşma.\n• Çıkartma ve paketleri düzenleme.\n\nTemel düzenleme cihazında gerçekleşir. Düz arka planlarda sonuç daha iyidir. Paylaşım başka uygulamalar gerektirebilir, isteğe bağlı reklamlar internet bağlantısını kullanabilir."
+    },
+    "id": {
+      "title": "RivoSticker: Buat Stiker",
+      "shortDescription": "Buat stiker dari foto, hapus latar, tambahkan teks, lalu bagikan.",
+      "fullDescription": "Ubah foto menjadi stiker dengan RivoSticker.\n\nPilih foto dari galeri atau ambil gambar lewat kamera, lalu edit di studio stiker. Potong, putar, geser, ubah ukuran, hapus latar belakang sederhana, rapikan tepi dengan penghapus, tambahkan teks warna-warni, dan coba efek kartun.\n\nFitur utama:\n• Membuat stiker dari foto.\n• Memotong, memutar, dan mengubah ukuran.\n• Menghapus latar sederhana dan merapikan tepi.\n• Teks yang dapat dipindahkan dengan banyak gaya.\n• Menyimpan dan membagikan hasil.\n• Mengatur stiker dan paket.\n\nFitur pengeditan utama bekerja pada perangkat. Penghapusan latar lebih baik untuk warna latar yang seragam. Berbagi mungkin memerlukan aplikasi lain, dan iklan opsional mungkin memerlukan koneksi internet."
+    }
+  }
+}
