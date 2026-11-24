@@ -1,0 +1,41 @@
+{
+  "appId": "com.rivocaption.editor",
+  "sourceVersionCode": 8,
+  "locales": {
+    "ar": {
+      "title": "RivoCaption: كابشن الفيديو",
+      "shortDescription": "أضف كابشن تلقائي للفيديو، عدل النصوص، ترجمها وصدّر فيديو MP4.",
+      "fullDescription": "RivoCaption استوديو لتحرير الفيديو وإضافة الكابشن والترجمة النصية على أندرويد.\n\nأضف فيديو من هاتفك وأنشئ ترجمات بتوقيت مضبوط باستعمال نماذج التعرف على الكلام محلياً بعد تنزيل النموذج المناسب. تتوفر الإنجليزية والفرنسية والعربية ولغات أخرى. دقة النتائج كتختلف حسب جودة الصوت واللهجات؛ نموذج العربية عام وماشي متخصص فالدارجة المغربية. اختار اللغة يدوياً وراجع النص قبل النشر.\n\nعدل النصوص والتوقيت، اختار ستايلات الكابشن، واستورد أو صدّر ملفات SRT وWebVTT وTXT. تقدر تترجم نصوص الكابشن محلياً بنماذج تنزّل عند الحاجة، وتصدّر الفيديو بصيغة MP4.\n\nالتحرير محلي أولاً. الخدمة السحابية اختيارية وبموافقة صريحة إذا تفعّلات، وهي غير مهيأة في هاد الإصدار. قد يظهر التطبيق إعلانات Google AdMob حسب الموافقة وإعدادات جهازك."
+    },
+    "fr-FR": {
+      "title": "RivoCaption : Sous-titres",
+      "shortDescription": "Créez des sous-titres vidéo, modifiez le texte et exportez en MP4.",
+      "fullDescription": "RivoCaption est un studio Android de sous-titrage et de montage vidéo, conçu pour fonctionner localement en priorité.\n\nImportez une vidéo et générez des sous-titres synchronisés avec des modèles de reconnaissance vocale téléchargeables. Plusieurs langues sont proposées, notamment le français, l'anglais et l'arabe. La précision dépend du son, de l'accent et de la langue ; les modèles arabes ne sont pas optimisés pour chaque dialecte. Vérifiez toujours les transcriptions.\n\nCorrigez les sous-titres et leurs horaires, personnalisez les styles, importez des fichiers SRT, exportez des sous-titres en SRT, WebVTT ou TXT et créez une vidéo MP4 sous-titrée. La traduction du texte utilise des modèles sur l'appareil ; elle ne traduit pas directement la voix.\n\nL'édition est locale par défaut. La transcription cloud, désactivée dans cette version, nécessiterait un consentement explicite. Des annonces Google AdMob peuvent être affichées selon vos choix de confidentialité."
+    },
+    "es-ES": {
+      "title": "RivoCaption: Subtítulos",
+      "shortDescription": "Crea subtítulos de vídeo, edita el texto y exporta clips MP4.",
+      "fullDescription": "RivoCaption es un estudio de edición de vídeo y subtítulos para Android que prioriza el procesamiento local.\n\nImporta un vídeo y genera subtítulos sincronizados mediante modelos de reconocimiento de voz sin conexión que se descargan cuando los necesitas. Hay opciones para español, inglés, francés, árabe y otros idiomas. La precisión varía según el audio, el acento y el idioma; revisa el texto antes de compartirlo.\n\nEdita frases y tiempos, personaliza estilos, importa subtítulos SRT y exporta SRT, WebVTT, TXT o un vídeo MP4 con subtítulos integrados. La traducción de subtítulos se realiza con modelos en el dispositivo; no traduce directamente el audio.\n\nLas funciones principales se ejecutan en el teléfono. La opción en la nube no está configurada en esta versión y requeriría tu consentimiento. Puede mostrar anuncios de Google AdMob según tus opciones de privacidad."
+    },
+    "pt-BR": {
+      "title": "RivoCaption: Legendas",
+      "shortDescription": "Crie legendas para vídeos, edite o texto e exporte em MP4.",
+      "fullDescription": "RivoCaption é um estúdio Android para criar legendas e editar vídeos com processamento local em primeiro lugar.\n\nImporte um vídeo e gere legendas sincronizadas usando modelos de reconhecimento de fala para download. Há opções para português, inglês, espanhol, francês, árabe e outros idiomas. A precisão depende do áudio, sotaque e idioma; confira as legendas antes de publicar.\n\nEdite as falas e os tempos, personalize estilos, importe SRT e exporte arquivos SRT, WebVTT, TXT ou vídeos MP4 com legendas. A tradução de textos é feita no aparelho após baixar modelos; ela não traduz diretamente o áudio.\n\nAs principais funções operam no aparelho. A transcrição opcional pela nuvem não está configurada nesta versão e exigiria seu consentimento. O aplicativo pode exibir anúncios do Google AdMob de acordo com as suas escolhas de privacidade."
+    },
+    "hi-IN": {
+      "title": "RivoCaption: वीडियो कैप्शन",
+      "shortDescription": "वीडियो में कैप्शन बनाएँ, टेक्स्ट सुधारें और MP4 एक्सपोर्ट करें।",
+      "fullDescription": "RivoCaption Android पर वीडियो में कैप्शन और सबटाइटल जोड़ने वाला एडिटर है। मुख्य एडिटिंग आपके डिवाइस पर होती है।\n\nवीडियो चुनें और डाउनलोड करने योग्य ऑफ़लाइन स्पीच मॉडल से समय के अनुसार कैप्शन बनाएँ। हिंदी, अंग्रेज़ी, फ़्रेंच, अरबी और अन्य भाषाओं के विकल्प उपलब्ध हैं। आवाज़, उच्चारण और भाषा के अनुसार ट्रांसक्रिप्शन की गुणवत्ता बदल सकती है; शेयर करने से पहले टेक्स्ट जाँचें।\n\nकैप्शन का टेक्स्ट और समय बदलें, अलग स्टाइल चुनें, SRT आयात करें और SRT, WebVTT, TXT या कैप्शन वाले MP4 में एक्सपोर्ट करें। डिवाइस पर अनुवाद सबटाइटल के टेक्स्ट का होता है, ऑडियो का नहीं।\n\nइस संस्करण में क्लाउड ट्रांसक्रिप्शन कॉन्फ़िगर नहीं है; भविष्य में इसे इस्तेमाल करने के लिए आपकी अनुमति ज़रूरी होगी। Google AdMob विज्ञापन आपकी सहमति के अनुसार दिखाई दे सकते हैं।"
+    },
+    "tr-TR": {
+      "title": "RivoCaption: Altyazı",
+      "shortDescription": "Video altyazıları oluşturun, metni düzenleyin ve MP4 dışa aktarın.",
+      "fullDescription": "RivoCaption, Android için yerel işlemeye öncelik veren bir video altyazı ve düzenleme stüdyosudur.\n\nBir video seçin ve gerektiğinde indirilen çevrimdışı konuşma tanıma modelleriyle zamanlı altyazılar oluşturun. Türkçe, İngilizce, Fransızca, Arapça ve başka diller için seçenekler bulunur. Doğruluk ses kalitesine, aksana ve dile göre değişebilir; sonuçları kontrol edin.\n\nAltyazı metnini ve zamanlamasını düzenleyin, stilleri değiştirin, SRT içe aktarın ve SRT, WebVTT, TXT veya altyazılı MP4 dosyası dışa aktarın. Cihaz içi çeviri, konuşma sesini değil altyazı metnini çevirir.\n\nTemel düzenleme cihazınızda yapılır. Bulut transkripsiyonu bu sürümde yapılandırılmamıştır ve etkinleştirilirse açık onay gerektirir. Gizlilik tercihlerine bağlı olarak Google AdMob reklamları gösterilebilir."
+    },
+    "id": {
+      "title": "RivoCaption: Teks Video",
+      "shortDescription": "Buat teks otomatis untuk video, edit subtitle, dan ekspor MP4.",
+      "fullDescription": "RivoCaption adalah studio Android untuk membuat subtitle dan mengedit video dengan pemrosesan lokal sebagai pilihan utama.\n\nImpor video lalu buat subtitle dengan waktu yang sesuai memakai model pengenalan suara offline yang dapat diunduh saat diperlukan. Pilihan bahasa mencakup Indonesia, Inggris, Prancis, Arab, dan bahasa lain yang tersedia. Akurasi bergantung pada kualitas audio, logat, dan bahasa. Periksa kembali hasil sebelum membagikannya.\n\nUbah teks dan waktu subtitle, pilih gaya, impor SRT, serta ekspor SRT, WebVTT, TXT atau video MP4 dengan subtitle. Penerjemahan di perangkat bekerja pada teks subtitle, bukan langsung pada suara.\n\nFitur utama diproses di perangkat. Transkripsi cloud belum dikonfigurasi dalam versi ini dan akan memerlukan izin pengguna. Iklan Google AdMob dapat ditampilkan sesuai pilihan privasi."
+    }
+  }
+}
