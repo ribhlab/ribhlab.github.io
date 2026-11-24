@@ -2,7 +2,7 @@
 """Record actual user-initiated WorkManager foreground DATA_SYNC model download in the signed RivoCaption APK."""
 import os, subprocess, time, json, sys
 from pathlib import Path
-from rivocaption_real_media import adb, dump_ui, tap, setup_sample_video, open_video_in_picker
+from rivocaption_real_media import adb, dump_ui, tap, capture
 
 OUT=Path("/tmp/rivocaption-fgs-demo")
 APK=Path("/tmp/rivocaption-034.apk")
@@ -11,7 +11,7 @@ def log(tag, **kwargs):
     print(tag+"="+json.dumps(kwargs,ensure_ascii=False),flush=True)
 
 def screenrecord():
-    cmd=["adb","shell","screenrecord","--time-limit","125","--bit-rate","1200000","--size","540x960",
+    cmd=["adb","shell","screenrecord","--time-limit","90","--bit-rate","1200000","--size","540x960",
          "/sdcard/Movies/RivoCaption-FGS-DataSync-Demo.mp4"]
     return subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 
@@ -24,42 +24,35 @@ def notification_evidence(stage):
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
-    adb("shell","wm","size","1080x1920")
-    adb("shell","wm","density","440")
-    # Create sample media before app launch, to avoid CPU stress on Android Launcher
-    # while recording the foreground-service demonstration.
-    setup_sample_video(OUT)
-    adb("install","-r",str(APK),timeout=180)
+    # Exactly reuse the previously successful, 5-screenshot, native Android path.
+    # It disables Wi-Fi while launching; the Google emulator's Pixel Launcher can
+    # ANR if networking is initialized during the first app rendering.
+    # This verifies that the correct signed application truly works before recording.
+    capture(APK,OUT)
+    nodes=dump_ui(OUT,"fgs-editor-loaded")
+    if tap(nodes,"Got it"):
+        nodes=dump_ui(OUT,"fgs-editor-after-onboarding")
+    if not tap(nodes,"AI"):
+        raise RuntimeError("Genuine RivoCaption AI speech tab not found")
+    # Network is only needed for user-initiated offline-model transfer.
+    # Enable after Android app UI is stable, not during launcher boot.
     adb("shell","svc","wifi","enable")
-    adb("shell","svc","data","enable")
-    adb("shell","am","force-stop","com.rivocaption.editor")
-    adb("shell","am","start","-W","-n","com.rivocaption.editor/.MainActivity")
-    # Keep only authentic screenshots. An emulator may show a transient Pixel
-    # Launcher ANR; dismiss it and restart the real, original-signed application.
-    ready=False
-    for attempt in range(6):
-        time.sleep(9 if attempt == 0 else 6)
-        nodes=dump_ui(OUT,"startup-"+str(attempt))
-        names={n.get("text","") for n in nodes}
-        if "Your creative studio" in names:
-            ready=True
-            break
-        if "Pixel Launcher isn't responding" in names or "RivoCaption isn't responding" in names:
-            tap(nodes,"Wait")
-            time.sleep(5)
-        adb("shell","am","start","-W","-n","com.rivocaption.editor/.MainActivity")
-    if not ready:
-        raise RuntimeError("Real RivoCaption home UI did not stabilize after ANR recovery")
+    time.sleep(3)
     rec=screenrecord()
     time.sleep(2)
     try:
-        open_video_in_picker(OUT)
-        time.sleep(6)
-        nodes=dump_ui(OUT,"fgs-after-import")
-        if tap(nodes,"Got it"): nodes=dump_ui(OUT,"fgs-after-immersive")
-        if not tap(nodes,"Download speech model"):
-            nodes=dump_ui(OUT,"fgs-looking-for-download")
-            raise RuntimeError("Actual signed app does not display Download speech model")
+        found=False
+        for attempt in range(7):
+            nodes=dump_ui(OUT,"fgs-ai-download-attempt-"+str(attempt))
+            if tap(nodes,"Got it"):
+                continue
+            if tap(nodes,"Download speech model"):
+                found=True
+                break
+            adb("shell","input","swipe","500","1660","500","870","520")
+            time.sleep(1)
+        if not found:
+            raise RuntimeError("Real signed RivoCaption model download control not reachable")
         nodes=dump_ui(OUT,"fgs-download-consent")
         if not tap(nodes,"Start background download"):
             raise RuntimeError("User-initiated download consent button not visible")
@@ -82,7 +75,7 @@ def main():
             raise RuntimeError("No RivoCaption notification verified, so do not pretend foreground service demo was captured")
     finally:
         try:
-            rec.wait(timeout=135)
+            rec.wait(timeout=105)
         except subprocess.TimeoutExpired:
             adb("shell","pkill","-2","screenrecord")
             rec.wait(timeout=15)
