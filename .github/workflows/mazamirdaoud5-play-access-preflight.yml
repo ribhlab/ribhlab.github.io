@@ -63,3 +63,4 @@ jobs:
       - name: Confirm no publication performed
         if: always()
         run: echo 'Read-only credential and package existence test. No AAB was uploaded or published.' >> "$GITHUB_STEP_SUMMARY"
+# Recheck Mazamir Play package existence before uploading v1.0.1 — 2026-11-24
