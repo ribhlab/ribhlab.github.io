@@ -17,10 +17,16 @@ def screenrecord():
 
 def notification_evidence(stage):
     lines=adb("shell","dumpsys","notification","--noredact")
-    parts=[line.strip()[:350] for line in lines.splitlines() if "RivoCaption" in line or "rivocaption_model_downloads" in line or "androidx.work.impl.foreground" in line]
-    log("FGS_NOTIFICATION_EVIDENCE",stage=stage,related=parts[:20])
-    (OUT/("notification-"+stage+".txt")).write_text("\n".join(parts),encoding="utf-8")
-    return bool(parts)
+    # Active notification records only. A channel declaration by itself does
+    # NOT prove that a foreground service or visible notification is running.
+    records=[line.strip()[:650] for line in lines.splitlines()
+             if "com.rivocaption.editor" in line
+             and ("NotificationRecord(" in line or "NotificationRecord{" in line)]
+    related=[line.strip()[:350] for line in lines.splitlines()
+             if "RivoCaption" in line or "rivocaption_model_downloads" in line or "com.rivocaption.editor" in line]
+    log("FGS_NOTIFICATION_EVIDENCE",stage=stage,activeRecords=records[:10],related=related[:25])
+    (OUT/("notification-"+stage+".txt")).write_text("\n".join(records+related),encoding="utf-8")
+    return bool(records)
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
@@ -34,6 +40,10 @@ def main():
         nodes=dump_ui(OUT,"fgs-editor-after-onboarding")
     if not tap(nodes,"AI"):
         raise RuntimeError("Genuine RivoCaption AI speech tab not found")
+    # The emulator test user grants notification permission just as they
+    # could via Android's permission prompt, so the reviewer sees progress.
+    adb("shell","pm","grant","com.rivocaption.editor","android.permission.POST_NOTIFICATIONS")
+    log("ANDROID_TEST_USER_NOTIFICATION_PERMISSION",status="granted")
     # Network is only needed for user-initiated offline-model transfer.
     # Enable after Android app UI is stable, not during launcher boot.
     adb("shell","svc","wifi","enable")
@@ -41,6 +51,20 @@ def main():
     rec=screenrecord()
     time.sleep(2)
     try:
+        # Select the actual 128-MB higher accuracy model so the foreground
+        # transfer lasts long enough to show a visible ongoing notification.
+        selected=False
+        for attempt in range(5):
+            nodes=dump_ui(OUT,"speech-model-selector-"+str(attempt))
+            if tap(nodes,"English (fast)"):
+                options=dump_ui(OUT,"speech-model-choices")
+                if tap(options,"English (higher accuracy)"):
+                    selected=True
+                break
+            adb("shell","input","swipe","500","1580","500","850","450")
+            time.sleep(1)
+        if not selected:
+            raise RuntimeError("Could not select real higher-accuracy offline speech model")
         found=False
         for attempt in range(7):
             nodes=dump_ui(OUT,"fgs-ai-download-attempt-"+str(attempt))
@@ -57,11 +81,18 @@ def main():
         if not tap(nodes,"Start background download"):
             raise RuntimeError("User-initiated download consent button not visible")
         log("FGS_USER_INITIATED_DOWNLOAD",status="confirmed")
-        time.sleep(8)
-        notifications=notification_evidence("running")
+        notifications=False
+        for attempt in range(9):
+            time.sleep(2)
+            if notification_evidence("running-"+str(attempt)):
+                notifications=True
+                break
         adb("shell","input","swipe","400","0","400","1450","450")
         time.sleep(3)
-        dump_ui(OUT,"fgs-notification-shade")
+        visible=dump_ui(OUT,"fgs-notification-shade")
+        readable=[str(n.get(k,"")) for n in visible for k in ("text","content-desc")]
+        visible_notice=any("RivoCaption" in x or "Model download" in x or "English" in x for x in readable)
+        log("FGS_VISIBLE_NOTIFICATION_SHADE",found=visible_notice,matching=[x for x in readable if "RivoCaption" in x or "download" in x.lower()][:14])
         time.sleep(12)
         notification_evidence("later")
         adb("shell","input","keyevent","4")
@@ -71,8 +102,8 @@ def main():
         adb("shell","input","swipe","400","0","400","1450","450")
         time.sleep(3)
         dump_ui(OUT,"fgs-user-sees-background-progress")
-        if not notifications:
-            raise RuntimeError("No RivoCaption notification verified, so do not pretend foreground service demo was captured")
+        if not notifications or not visible_notice:
+            raise RuntimeError("Active RivoCaption notification was NOT demonstrated in real Android UI; refuse to publish misleading FGS demo")
     finally:
         try:
             rec.wait(timeout=105)
