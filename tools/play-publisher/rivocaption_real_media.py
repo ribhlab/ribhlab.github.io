@@ -111,7 +111,7 @@ def open_video_in_picker(out: Path):
         descriptions = {n.get("content-desc", "").strip() for n in nodes}
         if "RIVO · CREATOR STUDIO" in text or "CAPTION STYLE" in text:
             return True
-        if tap(nodes, "RivoCaptionDemo", partial=True):
+        if tap(nodes, "RivoCaptionDemo.mp4"):
             time.sleep(4)
             return True
         if tap(nodes, "Movies"):
