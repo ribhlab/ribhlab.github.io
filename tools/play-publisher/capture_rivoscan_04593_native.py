@@ -8,9 +8,11 @@ P='com.ribhlab.rivoscan'
 def adb(*args):
     return subprocess.check_output(['adb',*args],timeout=60)
 def tree():
-    for _ in range(4):
+    for _ in range(6):
         try:
-            adb('shell','uiautomator','dump','/sdcard/rivo04593.xml')
+            adb('shell','rm','-f','/sdcard/rivo04593.xml')
+            output=adb('shell','uiautomator','dump','/sdcard/rivo04593.xml')
+            if b'ERROR' in output:raise RuntimeError(output.decode(errors='replace'))
             return ET.fromstring(adb('exec-out','cat','/sdcard/rivo04593.xml'))
         except Exception:
             time.sleep(2)
@@ -19,7 +21,8 @@ def labels(t):
     return [v for n in t.iter('node') for v in (n.get('text',''),n.get('content-desc','')) if v]
 def find(t,label):
     nodes=[n for n in t.iter('node') if n.get('package')==P and any(v.strip().casefold()==label.casefold() for v in (n.get('text',''),n.get('content-desc','')))]
-    nodes.sort(key=lambda n:n.get('clickable')!='true')
+    nodes=[n for n in nodes if len(re.findall(r'\d+',n.get('bounds','')))==4 and (lambda b:b[2]>b[0] and b[3]>b[1])(list(map(int,re.findall(r'\d+',n.get('bounds','')))))]
+    nodes.sort(key=lambda n:(n.get('clickable')!='true',-int(re.findall(r'\d+',n.get('bounds',''))[1])))
     return nodes[0] if nodes else None
 def tap(label,optional=False):
     for _ in range(3):
@@ -42,11 +45,19 @@ def main():
     version=adb('shell','dumpsys','package',P).decode(errors='replace')
     if 'versionName=0.45.93' not in version or not re.search(r'versionCode=208\b',version):raise RuntimeError('Unexpected installed version')
     launch()
-    if find(tree(),'Got it') is not None:tap('Got it')
-    if find(tree(),'Close') is not None:tap('Close',optional=True)
+    for _ in range(6):
+        t=tree(); current=' '.join(labels(t)).casefold()
+        if "what's new in rivoscan" not in current:break
+        if not tap('Got it',optional=True):
+            if not tap('Close',optional=True):adb('shell','input','keyevent','4')
+        time.sleep(2)
+    else:raise RuntimeError('Release dialog still visible: '+str(labels(tree())))
     records=[]; previous=[]
     def shot(name,markers=(),modal=False):
-        t=tree(); vals=labels(t); joined=' '.join(vals).casefold()
+        for _ in range(5):
+            t=tree(); vals=labels(t); joined=' '.join(vals).casefold()
+            if all(m.casefold() in joined for m in markers) and (not modal or find(t,'Close') is not None):break
+            time.sleep(2)
         if not any(n.get('package')==P for n in t.iter('node')):raise RuntimeError('RivoScan not in foreground')
         if any(x in joined for x in ("isn't responding","is not responding","close app","what's new in rivoscan")):raise RuntimeError('System/start dialog')
         if not all(m.casefold() in joined for m in markers):raise RuntimeError(name+' missing expected UI markers: '+str(vals[:80]))
@@ -64,11 +75,11 @@ def main():
         records.append({'name':f.name,'sha256':hashlib.sha256(f.read_bytes()).hexdigest(),'size':[w,h],'source':'installed signed Android APK 0.45.93 code 208'})
         print('Captured '+name,flush=True)
     shot('01_Home',('My files','Scan your first document'))
-    tap('Documents');shot('02_Documents',('Documents/RivoScan',))
+    tap('Documents');shot('02_Documents',('My Documents','All files','Import files'))
     tap('Tools');shot('03_Tools',('Read Math Formulas','Scan Book Pages'))
     for name,label in [('04_Book_Scan','Scan Book Pages'),('05_Formula_OCR','Read Math Formulas'),('06_Photo_Translation','Translate a Photo'),('07_ID_Photo','ID Photos for Print')]:
         tap(label);shot(name,modal=True);tap('Close')
         if find(tree(),'Read Math Formulas') is None:tap('Tools')
-    tap('Me');shot('08_Settings',('No account needed',))
+    tap('Me');shot('08_Settings',('General','App language'))
     (a.out/'audit.json').write_text(json.dumps({'version':'0.45.93','versionCode':208,'device':a.device,'package':P,'records':records},indent=2))
 if __name__=='__main__':main()
