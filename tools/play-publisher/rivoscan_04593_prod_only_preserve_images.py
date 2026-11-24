@@ -23,7 +23,7 @@ IMAGE_TYPES = ("icon", "featureGraphic", "phoneScreenshots", "sevenInchScreensho
 CONFIRM = "PUBLISH_RIVOSCAN_04593_PRODUCTION_PRESERVE_ALL_IMAGES"
 
 RELEASE = {
-    "name": "RivoScan 0.45.93 — Refined interface and scanner controls",
+    "name": "RivoScan 0.45.93 — UI & scanner improvements",
     "status": "completed",
     "versionCodes": [EXPECTED_CODE],
     "releaseNotes": [
