@@ -67,7 +67,6 @@ jobs:
           emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -partition-size 2048 -no-metrics
           disable-animations: true
           script: |
-            set -euo pipefail
             python tools/play-publisher/rivocaption_real_media.py --apk /tmp/rivocaption-034.apk --output /tmp/rivocaption-real --publish
       - name: Preserve genuine Android screenshots and GUI hierarchy for audit
         if: always()
