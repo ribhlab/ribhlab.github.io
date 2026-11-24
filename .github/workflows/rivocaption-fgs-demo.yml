@@ -34,6 +34,11 @@ jobs:
           sed -n '/SIGNED.apk/p' /tmp/rivocaption-sums | sed 's@RivoCaption-0.3.4-RivoScan-SIGNED.apk@/tmp/rivocaption-034.apk@' | sha256sum -c -
           python -m py_compile tools/play-publisher/rivocaption_fgs_real_demo.py
           sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Install dependencies for actual Android UI inspection
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13'
       - name: Enable KVM acceleration
         run: |
           set -euo pipefail
