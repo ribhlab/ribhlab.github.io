@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/rivoscan-04593-production-preserve-photos.yml'
+      - 'tools/play-publisher/rivoscan_04593_prod_only_preserve_images.py'
   workflow_dispatch:
 permissions:
   contents: read
