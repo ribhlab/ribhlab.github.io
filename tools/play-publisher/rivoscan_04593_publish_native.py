@@ -39,10 +39,10 @@ def main():
             for f in files:
                 x=edits.images().upload(**params,language='en-US',imageType=typ,media_body=MediaFileUpload(str(f),mimetype='image/png',resumable=False)).execute()
                 if not x.get('image',{}).get('id'):raise RuntimeError('Screenshot not confirmed')
-            if len(image_ids(typ))!=8:raise RuntimeError('Wrong screenshot count')
+            if len(image_ids(typ))!=len(files):raise RuntimeError('Wrong screenshot count')
         if any(image_ids(typ)!=ids for typ,ids in preserved.items()):raise RuntimeError('Icon or feature graphic changed')
         edits.validate(**params).execute();r=edits.commit(**params).execute();committed=True
-        print('RIVOSCAN_04593_PRODUCTION_AND_SCREENSHOTS_COMMITTED='+json.dumps({'package':P,'versionCode':208,'versionName':'0.45.93','track':'production','phone':8,'tablet7':8,'tablet10':8,'editId':r.get('id'),'reviewMayBeRequired':True}),flush=True)
+        print('RIVOSCAN_04593_PRODUCTION_AND_SCREENSHOTS_COMMITTED='+json.dumps({'package':P,'versionCode':208,'versionName':'0.45.93','track':'production','counts':{k:len(v) for k,v in groups.items()},'editId':r.get('id'),'reviewMayBeRequired':True}),flush=True)
     finally:
         if not committed:
             try:edits.delete(**params).execute()
