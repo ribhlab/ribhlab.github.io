@@ -65,7 +65,10 @@ def main():
         raise ValueError("Explicit approval required")
     check_file(args.aab)
 
-    edits = build("androidpublisher", "v3", http=AuthorizedHttp(get_credentials(), http=httplib2.Http(timeout=300)), cache_discovery=False).edits()
+    transport = httplib2.Http(timeout=300)
+    # Google resumable uploads return HTTP 308 Resume Incomplete, not an HTTP redirect.
+    transport.redirect_codes = transport.redirect_codes - {308}
+    edits = build("androidpublisher", "v3", http=AuthorizedHttp(get_credentials(), http=transport), cache_discovery=False).edits()
     eid = edits.insert(packageName=PACKAGE, body={}).execute()["id"]
     committed = False
     try:
