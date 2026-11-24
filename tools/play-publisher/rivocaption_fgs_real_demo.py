@@ -73,7 +73,17 @@ def main():
             if tap(nodes,"Download speech model"):
                 found=True
                 break
-            adb("shell","input","swipe","500","1660","500","870","520")
+            # The speech model selector is at y≈1440 and the model caption
+            # at y≈1650. The button is just below the viewport; a 790px
+            # swipe overshoots straight to the Translation panel. Scroll in
+            # small, reversible increments to show the actual Download button.
+            labels={n.get("text","") for n in nodes}
+            if "ON-DEVICE TRANSLATION" in labels and not any(x.startswith("Model: ") for x in labels):
+                adb("shell","input","swipe","500","1000","500","1340","480")
+                log("FGS_MODEL_SCROLL",direction="backward",attempt=attempt)
+            else:
+                adb("shell","input","swipe","500","1570","500","1270","480")
+                log("FGS_MODEL_SCROLL",direction="forward",attempt=attempt)
             time.sleep(1)
         if not found:
             raise RuntimeError("Real signed RivoCaption model download control not reachable")
