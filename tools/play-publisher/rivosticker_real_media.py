@@ -115,26 +115,53 @@ def capture(apk: Path, output: Path):
 
 
 def icon_from_apk(apk: Path, output: Path):
+    """Use actual packaged icon raster; fall back only to the official app-source vector."""
     with zipfile.ZipFile(apk) as z:
         names = z.namelist()
-        candidates = [n for n in names if n.endswith("/ic_launcher.png")]
-        candidates.sort(key=lambda n: (
-            0 if "mipmap-nodpi" in n else 1 if "mipmap-xxxhdpi" in n else 2,
-            len(n)))
-        if not candidates:
-            candidates = [n for n in names if n.endswith("/rivosticker_foreground.png")]
-        if not candidates:
-            raise ValueError("Official RivoSticker launcher icon is absent from release APK")
-        raw = z.read(candidates[0])
-    with Image.open(io.BytesIO(raw)) as img:
-        rgba = img.convert("RGBA")
-        if rgba.width < 100 or rgba.height < 100:
-            raise ValueError("Packaged RivoSticker launcher artwork resolution too low")
-        rgba.thumbnail((512, 512), Image.Resampling.LANCZOS)
-        canvas = Image.new("RGBA", (512, 512), "#162d5f")
-        canvas.alpha_composite(rgba, ((512 - rgba.width) // 2, (512 - rgba.height) // 2))
+        candidates = [n for n in names
+                      if n.lower().endswith((".png", ".webp", ".jpg"))
+                      and ("launcher" in n.lower() or "rivosticker_foreground" in n.lower())]
+        candidates.sort(key=lambda n: (0 if "launcher" in n else 1, 0 if "nodpi" in n else 1, len(n)))
+        for name in candidates:
+            try:
+                with Image.open(io.BytesIO(z.read(name))) as im:
+                    if im.width < 100 or im.height < 100:
+                        continue
+                    rgba = im.convert("RGBA")
+                    rgba.thumbnail((512, 512), Image.Resampling.LANCZOS)
+                    canvas = Image.new("RGBA", (512, 512), "#541baf")
+                    canvas.alpha_composite(rgba, ((512-rgba.width)//2, (512-rgba.height)//2))
+                    canvas.convert("RGB").save(output / "icon.png", "PNG")
+                    print("OFFICIAL_APK_ICON=" + name, flush=True)
+                    return
+            except (OSError, ValueError):
+                continue
+
+    # Android Resource Shrinker may compile/rename PNG resources. This icon
+    # comes directly from the SAME official RivoSticker source tree, not from a mock.
+    from html import escape
+    import cairosvg
+    android = "{http://schemas.android.com/apk/res/android}"
+    source = Path(__file__).with_name("rivosticker_official_vector_icon.xml")
+    root = ET.parse(source).getroot()
+    shapes = []
+    for node in root.findall("path"):
+        attrs = node.attrib
+        path_data = attrs.get(android + "pathData", "")
+        color = attrs.get(android + "fillColor", "#ffffff")
+        alpha = attrs.get(android + "fillAlpha", "1")
+        if path_data:
+            shapes.append(f'<path d="{escape(path_data)}" fill="{escape(color)}" opacity="{alpha}"/>')
+    if len(shapes) < 5:
+        raise ValueError("Official app vector artwork did not contain expected contours")
+    svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">' + "".join(shapes) + "</svg>"
+    rendered = cairosvg.svg2png(bytestring=svg.encode("utf-8"), output_width=512, output_height=512)
+    with Image.open(io.BytesIO(rendered)) as vector:
+        art = vector.convert("RGBA")
+        canvas = Image.new("RGBA", (512, 512), "#6E16E8")
+        canvas.alpha_composite(art)
         canvas.convert("RGB").save(output / "icon.png", "PNG")
-    print("OFFICIAL_APK_ICON=" + candidates[0], flush=True)
+    print("OFFICIAL_APP_SOURCE_VECTOR_ICON=" + source.name, flush=True)
 
 
 def feature_from_icon(output: Path):
