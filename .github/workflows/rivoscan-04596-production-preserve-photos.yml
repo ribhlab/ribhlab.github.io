@@ -1,0 +1,90 @@
+name: RivoScan 0.45.96 - contained banner production only, preserve all images
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivoscan-04596-production-preserve-photos.yml'
+      - 'tools/play-publisher/rivoscan_04596_prod_only_preserve_images.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  verify-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      digest: ${{ steps.asset.outputs.digest }}
+      size: ${{ steps.asset.outputs.size }}
+    steps:
+      - name: Require successful original-key signed build and exact release source
+        id: asset
+        shell: bash
+        env:
+          SOURCE_RUN: '45695466392'
+          SOURCE_SHA: '81219c8f7a2e335d37e5f82519162ed8a353a2f9'
+        run: |
+          set -euo pipefail
+          api=https://api.github.com/repos/univcours/ribhlab
+          for i in $(seq 1 100); do
+            run=$(curl -fsSL --retry 3 "$api/actions/runs/$SOURCE_RUN")
+            test "$(jq -r .head_sha <<<"$run")" = "$SOURCE_SHA"
+            status=$(jq -r .status <<<"$run")
+            if [ "$status" = completed ]; then
+              test "$(jq -r .conclusion <<<"$run")" = success || { echo 'Signed build failed; Play publication blocked'; exit 1; }
+              break
+            fi
+            sleep 25
+          done
+          test "$status" = completed
+          tag=rivoscan-0.45.96-contained-banner
+          ref=$(curl -fsSL --retry 3 "$api/git/ref/tags/$tag")
+          test "$(jq -r .object.type <<<"$ref")" = commit
+          test "$(jq -r .object.sha <<<"$ref")" = "$SOURCE_SHA"
+          release=$(curl -fsSL --retry 3 "$api/releases/tags/$tag")
+          file=RivoScan-0.45.96-ALL-SUPPORTED-ANDROID-PLAY.aab
+          asset=$(jq -ce --arg name "$file" '[.assets[]|select(.name==$name)]|if length==1 then .[0] else error("missing exact AAB") end' <<<"$release")
+          digest=$(jq -r '.digest|sub("^sha256:";"")' <<<"$asset")
+          size=$(jq -r .size <<<"$asset")
+          [[ "$digest" =~ ^[0-9a-f]{64}$ ]]
+          [[ "$size" =~ ^[1-9][0-9]+$ ]]
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+          echo "size=$size" >> "$GITHUB_OUTPUT"
+  production:
+    needs: verify-build
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Download exact signed AAB and independently verify original certificate
+        env:
+          RIVO_VERIFIED_SHA256: ${{ needs.verify-build.outputs.digest }}
+          RIVO_VERIFIED_SIZE: ${{ needs.verify-build.outputs.size }}
+        run: |
+          set -euo pipefail
+          file=/tmp/RivoScan-0.45.96-ALL-SUPPORTED-ANDROID-PLAY.aab
+          curl -fL --retry 3 -o "$file" https://github.com/univcours/ribhlab/releases/download/rivoscan-0.45.96-contained-banner/RivoScan-0.45.96-ALL-SUPPORTED-ANDROID-PLAY.aab
+          echo "$RIVO_VERIFIED_SHA256  $file" | sha256sum -c -
+          test "$(stat -c %s "$file")" = "$RIVO_VERIFIED_SIZE"
+          jarsigner -verify "$file" | grep -F 'jar verified'
+          keytool -printcert -jarfile "$file" | grep -Fi 'E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+      - name: Publish signed version 211 only, no listing or screenshot writes
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          RIVO_VERIFIED_SHA256: ${{ needs.verify-build.outputs.digest }}
+          RIVO_VERIFIED_SIZE: ${{ needs.verify-build.outputs.size }}
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m py_compile tools/play-publisher/rivoscan_04596_prod_only_preserve_images.py
+          python tools/play-publisher/rivoscan_04596_prod_only_preserve_images.py --aab /tmp/RivoScan-0.45.96-ALL-SUPPORTED-ANDROID-PLAY.aab --confirm PUBLISH_RIVOSCAN_04596_PRODUCTION_PRESERVE_ALL_IMAGES
