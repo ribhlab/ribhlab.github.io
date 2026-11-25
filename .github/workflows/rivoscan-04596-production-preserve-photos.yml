@@ -23,12 +23,12 @@ jobs:
         id: asset
         shell: bash
         env:
-          SOURCE_RUN: '45695466392'
-          SOURCE_SHA: '81219c8f7a2e335d37e5f82519162ed8a353a2f9'
+          SOURCE_RUN: '45695831450'
+          SOURCE_SHA: 'e693bac818cdd3721c8474510eee78a1d01881df'
         run: |
           set -euo pipefail
           api=https://api.github.com/repos/univcours/ribhlab
-          for i in $(seq 1 100); do
+          for i in $(seq 1 50); do
             run=$(curl -fsSL --retry 3 "$api/actions/runs/$SOURCE_RUN")
             test "$(jq -r .head_sha <<<"$run")" = "$SOURCE_SHA"
             status=$(jq -r .status <<<"$run")
@@ -36,7 +36,7 @@ jobs:
               test "$(jq -r .conclusion <<<"$run")" = success || { echo 'Signed build failed; Play publication blocked'; exit 1; }
               break
             fi
-            sleep 25
+            sleep 45
           done
           test "$status" = completed
           tag=rivoscan-0.45.96-contained-banner
