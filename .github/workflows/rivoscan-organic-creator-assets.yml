@@ -1,0 +1,43 @@
+name: RivoScan organic creator assets - actual app screenshots
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivoscan-organic-creator-assets.yml','scripts/growth-rivoscan-video.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: rivoscan-organic-assets
+  cancel-in-progress: false
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve actual audited Android screenshots from successful 0.45.95 publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 45481179896 --repo "$GITHUB_REPOSITORY" --name RivoScan-04595-native-phone --dir /tmp/rivo-native
+          test -s /tmp/rivo-native/audit.json
+          python -m pip install pillow
+          python scripts/growth-rivoscan-video.py /tmp/rivo-native /tmp/rivo-video
+          mkdir -p /tmp/rivo-out
+          ffmpeg -hide_banner -loglevel error -y -framerate 1/3 -i /tmp/rivo-video/%02d.png -vf 'fps=30,format=yuv420p' -c:v libx264 -crf 21 -preset fast -movflags +faststart /tmp/rivo-out/RivoScan-organic-short-18s.mp4
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=width,height -of json /tmp/rivo-out/RivoScan-organic-short-18s.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RivoScan-organic-video
+          path: /tmp/rivo-out/
+      - name: Make public creator media available without paid hosting
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag=rivoscan-organic-media-2026-11
+          if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --prerelease --title 'RivoScan organic creator media' --notes '18-second vertical slideshow of genuine Android v0.45.95 screenshots. No music, no simulated scan results, no paid ads.'
+          fi
+          gh release upload "$tag" /tmp/rivo-out/RivoScan-organic-short-18s.mp4 --repo "$GITHUB_REPOSITORY" --clobber
