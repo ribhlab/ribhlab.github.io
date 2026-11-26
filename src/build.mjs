@@ -596,6 +596,7 @@ if(domain){
  for(const slug of ['offline-profit-dashboard','self-hosted-team-finance-dashboard','finance-dashboard-two-in-one-bundle','choose-finance-dashboard','csv-import-readiness']){
   entries.push('  <url><loc>'+esc(domain+'/en/finance/'+slug+'.html')+'</loc><lastmod>2026-11-08</lastmod></url>');
  }
+ for(const route of ["/rivoscan/","/rivoscan/share/","/rivoscan/tools/","/rivoscan/tools/merge-pdf/","/rivoscan/tools/split-pdf/","/rivoscan/tools/images-to-pdf/","/rivoscan/tools/compress-pdf/","/rivoscan/tools/qr-code/","/rivoscan/en/","/rivoscan/fr/","/rivoscan/ar/","/rivoscan/es/","/rivoscan/de/","/rivoscan/pt/","/rivoscan/it/"])entries.push('  <url><loc>'+esc(domain+route)+'</loc></url>');
  const xml=[
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

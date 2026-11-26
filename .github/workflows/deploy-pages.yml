@@ -30,6 +30,16 @@ jobs:
           node-version: '22'
       - name: Refresh news headlines from attributed RSS sources
         run: node src/update-news.mjs
+      - name: Vendor pinned PDF and QR libraries locally
+        run: |
+          set -euo pipefail
+          mkdir -p public/rivoscan/tools/vendor
+          npm install --prefix /tmp/rivo-web-vendor --no-audit --no-fund pdf-lib@1.17.1 qrcode@1.5.4 esbuild@0.25.12
+          cp /tmp/rivo-web-vendor/node_modules/pdf-lib/dist/pdf-lib.min.js public/rivoscan/tools/vendor/
+          /tmp/rivo-web-vendor/node_modules/.bin/esbuild /tmp/rivo-web-vendor/node_modules/qrcode/lib/browser.js --bundle --minify --global-name=QRCode --outfile=public/rivoscan/tools/vendor/qrcode.min.js
+          find /tmp/rivo-web-vendor/node_modules/pdf-lib -maxdepth 1 -iname 'license*' -exec cp {} public/rivoscan/tools/vendor/PDF-LIB-LICENSE.txt \;
+          find /tmp/rivo-web-vendor/node_modules/qrcode -maxdepth 1 -iname 'license*' -exec cp {} public/rivoscan/tools/vendor/QRCODE-LICENSE.txt \;
+          node --check public/rivoscan/tools/tool.js
       - name: Build pages (Arabic, English, French)
         # Original repo keeps /ribhlab-site; an imported OWNER/OWNER.github.io site
         # uses its own root, including ribhlab/ribhlab.github.io if created.
