@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import io
 import json
+import os
 import re
 import subprocess
 import sys
@@ -19,7 +20,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageStat
 
-PACKAGE = "com.rivocaption.editor"
+PACKAGE = os.environ.get("RIVOCAPTION_PACKAGE", "com.rivocaption.editor")
 CODE = 17
 ROOT = Path("/tmp/rivocaption-real")
 ANDROID = "{http://schemas.android.com/apk/res/android}"
