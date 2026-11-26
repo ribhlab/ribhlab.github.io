@@ -22,6 +22,8 @@ jobs:
         run: |
           gh run download 45481179896 --repo "$GITHUB_REPOSITORY" --name RivoScan-04595-native-phone --dir /tmp/rivo-native
           test -s /tmp/rivo-native/audit.json
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
           python -m pip install pillow
           python scripts/growth-rivoscan-video.py /tmp/rivo-native /tmp/rivo-video
           mkdir -p /tmp/rivo-out
