@@ -43,3 +43,5 @@ jobs:
           finally:
               if eid: edits.delete(packageName=package,editId=eid).execute()
           PY
+
+# Recheck after app registration, before preparing alpha03 production.
