@@ -1,0 +1,120 @@
+name: RivoCaption 0.4.3 verified Google Play production publisher
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.rivocaption.editor
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 35
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      VERSION_CODE: '17'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install existing Google Play publisher API dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m py_compile tools/play-publisher/publish.py
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+      - name: Download original-upload-key-signed RivoCaption 0.4.3 AAB
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p candidate
+          gh release download rivocaption-v0.4.3-original-rivoscan-aab \
+            --repo univcours/ribhlab --dir candidate
+          test -s candidate/RivoCaption-0.4.3-RivoScan-SIGNED.aab
+          (cd candidate && sha256sum -c SHA256SUMS.txt)
+          unzip -t candidate/RivoCaption-0.4.3-RivoScan-SIGNED.aab | tail -n 2
+      - name: Verify original RivoScan upload certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          jarsigner -verify candidate/RivoCaption-0.4.3-RivoScan-SIGNED.aab > "$RUNNER_TEMP/verify-signed.txt" 2>&1
+          grep -Fq 'jar verified' "$RUNNER_TEMP/verify-signed.txt"
+          keytool -printcert -jarfile candidate/RivoCaption-0.4.3-RivoScan-SIGNED.aab \
+            | grep -F 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+          echo "RIVOCAPTION_UPLOAD_CERTIFICATE_VERIFIED=TRUE" >> "$GITHUB_STEP_SUMMARY"
+      - name: Check Google Play target status and version history without committing
+        id: preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os,sys,json
+          sys.path.insert(0,"tools/play-publisher")
+          from googleapiclient.discovery import build
+          from publish import get_credentials
+          api=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False)
+          edits=api.edits()
+          eid=edits.insert(packageName="com.rivocaption.editor",body={}).execute()["id"]
+          try:
+              common={"packageName":"com.rivocaption.editor","editId":eid}
+              tracks=edits.tracks().list(**common).execute().get("tracks",[])
+              production=next((x for x in tracks if x.get("track")=="production"),{"releases":[]})
+              releases=production.get("releases",[])
+              versions=[str(v) for r in releases for v in r.get("versionCodes",[])]
+              print("PREVIOUS_PRODUCTION_RELEASES",json.dumps([
+                  {"status":r.get("status"),"versionCodes":r.get("versionCodes")} for r in releases]))
+              if any(r.get("status") not in ("completed",) for r in releases):
+                  raise RuntimeError("Cannot replace draft/staged/halted production release")
+              existing_bundles={str(x["versionCode"]) for x in
+                                edits.bundles().list(**common).execute().get("bundles",[])}
+              if "17" in versions:
+                  print("RIVOCAPTION_VERSION_17_ALREADY_ON_PRODUCTION=True")
+                  with open(os.environ["GITHUB_OUTPUT"],"a") as f:f.write("skip_publish=true\n")
+              elif "17" in existing_bundles:
+                  raise RuntimeError("AAB v17 uploaded but not in production; requires careful resume")
+              else:
+                  print("RIVOCAPTION_VERSION_17_UPLOAD_READY=True")
+                  with open(os.environ["GITHUB_OUTPUT"],"a") as f:f.write("skip_publish=false\n")
+          finally:
+              edits.delete(packageName="com.rivocaption.editor",editId=eid).execute()
+          PY
+      - name: Publish through existing RibhLab Play Publisher
+        if: steps.preflight.outputs.skip_publish != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/play-publisher/publish.py \
+            --aab candidate/RivoCaption-0.4.3-RivoScan-SIGNED.aab \
+            --package com.rivocaption.editor \
+            --track production --status completed \
+            --name 'RivoCaption 0.4.3 (17)' \
+            --notes 'Fresh purple-and-gold RivoCaption icon and Studio background, improved subtitle editing and safer project saving. Existing voice transcription and video features retained.' \
+            --language en-US --confirm-production PUBLISH
+      - name: Verify Google Play production edit and report status
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os,json,sys
+          sys.path.insert(0,"tools/play-publisher")
+          from googleapiclient.discovery import build
+          from publish import get_credentials
+          edits=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False).edits()
+          eid=edits.insert(packageName="com.rivocaption.editor",body={}).execute()["id"]
+          try:
+              data=edits.tracks().get(packageName="com.rivocaption.editor",editId=eid,track="production").execute()
+              releases=data.get("releases",[])
+              print("PLAY_CURRENT_PRODUCTION_RELEASES="+json.dumps(releases,ensure_ascii=False))
+              assert any("17" in [str(x) for x in v.get("versionCodes",[])] for v in releases), "Version 17 absent from production"
+              print("RIVOCAPTION_043_PLAY_PRODUCTION_API_UPDATED=TRUE")
+          finally:
+              edits.delete(packageName="com.rivocaption.editor",editId=eid).execute()
+          PY
+          echo "RivoCaption 0.4.3 (versionCode17) committed to Google Play production through the verified GitHub publisher; Play review may still be pending." >> "$GITHUB_STEP_SUMMARY"
