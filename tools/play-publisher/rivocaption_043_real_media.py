@@ -143,7 +143,7 @@ def capture(apk: Path, out: Path):
     adb("shell", "svc", "wifi", "disable")
     adb("shell", "svc", "data", "disable")
     adb("shell", "am", "force-stop", PACKAGE)
-    adb("shell", "am", "start", "-W", "-n", PACKAGE + "/.MainActivity")
+    adb("shell", "am", "start", "-W", "-n", PACKAGE + "/com.rivocaption.editor.MainActivity")
     time.sleep(13)
     if not adb("shell", "pidof", PACKAGE).strip():
         raise RuntimeError("RivoCaption release could not launch on Android emulator")
