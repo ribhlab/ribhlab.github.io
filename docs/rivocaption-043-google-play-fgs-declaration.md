@@ -69,5 +69,6 @@ Sources:
 - Build verified 35 Android unit tests; app code 17, version 0.4.3.
 - Signing verified original RivoScan upload-key certificate; signed AAB published on GitHub.
 - Play API confirmed access and source track production code 8 before attempt.
-- Publishing HTTP 403 foreground-service declaration missing, so **not published**.
-- Five genuine updated store screenshots have not been captured and uploaded yet.
+- Publishing HTTP 403 foreground-service declaration missing, so **0.4.3 AAB not published**; old Production track remains code 8. Brand images are a separate successful edit.
+- **Store branding was updated successfully:** the approved 0.4.3 512x512 icon and 1024x500 feature graphic were committed through Google Play API in **8 listing locales, 16 assets total**, workflow https://github.com/ribhlab/ribhlab.github.io/actions/runs/45903400516 (success). The five older phone screenshots remain unchanged.
+- Five genuine updated store screenshots have not been captured and uploaded yet. A fresh Android 29 emulator capture workflow was created at https://github.com/univcours/RivoCaption/actions/runs/45903620729 after correcting the Android 35 runner's low-disk-space failure.
