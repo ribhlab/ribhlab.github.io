@@ -1,0 +1,73 @@
+name: RivoSticker 1.0.4 - send existing Play changes for review
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivosticker-104-send-for-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivosticker
+  cancel-in-progress: false
+jobs:
+  send-review:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install existing Play Publisher dependencies
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Submit EXISTING RivoSticker 1.0.4 for Google Play review, no new bundle or metadata
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || {
+            echo '::error::Service account unavailable'; exit 1;
+          }
+          PYTHONPATH=tools/play-publisher python - <<'PY'
+          import json, sys
+          from googleapiclient.discovery import build
+          from publish import get_credentials
+
+          PKG="com.ribhlab.rivosticker"
+          api=build("androidpublisher", "v3", credentials=get_credentials(), cache_discovery=False).edits()
+          edit=api.insert(packageName=PKG, body={}).execute()
+          kw={"packageName":PKG,"editId":edit["id"]}
+          committed=False
+          try:
+              tracks=api.tracks().list(**kw).execute().get("tracks",[])
+              prod=next((x for x in tracks if x.get("track") == "production"),None)
+              if prod is None:
+                  raise RuntimeError("Production track not found: cannot send review safely")
+              releases=prod.get("releases",[])
+              if len(releases)!=1 or releases[0].get("status")!="completed" or list(map(str,releases[0].get("versionCodes",[])))!=["5"]:
+                  raise RuntimeError("Unexpected Production state; abort without modifying or replacing any release: "+json.dumps(releases)[:450])
+              for t in tracks:
+                  for release in t.get("releases",[]):
+                      if any(int(code)>5 for code in release.get("versionCodes",[])):
+                          raise RuntimeError("Newer release exists; refusing to submit old review")
+              print("PRE_SUBMIT_VERIFIED="+json.dumps({"package":PKG,"productionCodes":["5"],"productionStatus":"completed","bundleUpload":False,"artworkModification":False}),flush=True)
+              # No-op update of the existing exact production release makes a real API edit;
+              # all existing artwork, listing, countries and other tracks remain untouched.
+              fields=("name","versionCodes","releaseNotes","status","userFraction","countryTargeting","inAppUpdatePriority")
+              unchanged_release={key:value for key,value in releases[0].items() if key in fields}
+              api.tracks().update(**kw,track="production",body={"track":"production","releases":[unchanged_release]}).execute()
+              api.validate(**kw).execute()
+              # Explicitly send for review; NEVER cancel a review already in progress.
+              result=api.commit(**kw,changesNotSentForReview=False,changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
+              committed=True
+              print("RIVOSTICKER_REVIEW_SUBMISSION_API_COMMITTED="+json.dumps({"package":PKG,"versionCode":5,"versionName":"1.0.4","googleEditId":result.get("id"),"changesNotSentForReview":False,"noNewBundle":True,"noArtworkChanges":True,"noListingChanges":True,"otherTracksUnchanged":True,"existingReviewPreserved":True},sort_keys=True),flush=True)
+              with open("/tmp/rivosticker-review.txt","w") as f:
+                  f.write("Play API edit committed with changesNotSentForReview=false, ERROR_IF_IN_REVIEW; verify review state in Play Console Publishing overview.\n")
+          finally:
+              if not committed:
+                  try: api.delete(**kw).execute()
+                  except Exception: pass
+          PY
