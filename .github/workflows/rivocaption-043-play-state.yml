@@ -1,0 +1,57 @@
+name: RivoCaption 0.4.3 Play listing and track inspection
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivocaption-043-play-state.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Play API dependencies
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Inspect RivoCaption tracks and store images (NO commit)
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import sys, json
+          sys.path.insert(0,"tools/play-publisher")
+          from publish import get_credentials
+          from googleapiclient.discovery import build
+          package="com.rivocaption.editor"
+          edits=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False).edits()
+          eid=None
+          try:
+              eid=edits.insert(packageName=package,body={}).execute()["id"]
+              common={"packageName":package,"editId":eid}
+              tracks=edits.tracks().list(**common).execute().get("tracks",[])
+              for track in tracks:
+                  releases=track.get("releases",[])
+                  print("PLAY_TRACK="+json.dumps({"track":track.get("track"),"releases":[
+                      {"status":r.get("status"),"versions":r.get("versionCodes",[])} for r in releases]},sort_keys=True),flush=True)
+              bundles=edits.bundles().list(**common).execute().get("bundles",[])
+              print("PLAY_BUNDLE_CODES="+json.dumps(sorted(set(int(b["versionCode"]) for b in bundles))),flush=True)
+              listings=edits.listings().list(**common).execute().get("listings",[])
+              print("PLAY_LISTING_LOCALES="+json.dumps(sorted(x.get("language") for x in listings)),flush=True)
+              for kind in ("icon","featureGraphic","phoneScreenshots"):
+                  try:
+                      images=edits.images().list(**common,language="en-US",imageType=kind).execute().get("images",[])
+                      print("PLAY_EXISTING_IMAGES="+kind+":"+str(len(images)),flush=True)
+                  except Exception as e:
+                      print("PLAY_EXISTING_IMAGES="+kind+":UNAVAILABLE:"+type(e).__name__,flush=True)
+          finally:
+              if eid:
+                  edits.delete(packageName=package,editId=eid).execute()
+                  print("PLAY_INSPECTION_EDIT_CLEANED=TRUE",flush=True)
+          PY
