@@ -1,5 +1,8 @@
 name: RivoCaption 0.4.3 verified Google Play production publisher
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivocaption-043-publish-signed-aab.yml']
   workflow_dispatch:
 permissions:
   contents: read
