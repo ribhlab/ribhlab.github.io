@@ -1,0 +1,71 @@
+name: RivoSticker 1.0.4 - verified original RivoScan-key Production update
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivosticker-104-production-update.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivosticker
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 35
+    env:
+      SIGNED_AAB: RivoSticker-1.0.4-RivoScan-SIGNED.aab
+      AAB_SHA256: 6132b690c622e8224bf3bede4399a2c230da3f8275adff07dd593e29513fc0de
+      AAB_SIZE: '54458577'
+      RIVOSTICKER_SIGNED_SHA256: 6132b690c622e8224bf3bede4399a2c230da3f8275adff07dd593e29513fc0de
+      RIVOSTICKER_SIGNED_SIZE: '54458577'
+      EXPECTED_SIGNER_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Verify app-specific publisher code
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/play-publisher/rivosticker_104_production_update.py
+          grep -F 'PACKAGE = "com.ribhlab.rivosticker"' tools/play-publisher/rivosticker_104_production_update.py
+          grep -F 'CODE = "5"' tools/play-publisher/rivosticker_104_production_update.py
+      - name: Retrieve and verify original RivoScan-key signed 1.0.4 AAB
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p signed-release
+          curl --fail --location --retry 3 --retry-delay 3 --connect-timeout 20 \
+            --output "signed-release/$SIGNED_AAB" \
+            "https://github.com/univcours/ribhlab/releases/download/rivosticker-v1.0.4/$SIGNED_AAB"
+          test "$(stat -c %s "signed-release/$SIGNED_AAB")" = "$AAB_SIZE" || {
+            echo '::error::Signed RivoSticker AAB size mismatch'; exit 1;
+          }
+          printf '%s  %s\n' "$AAB_SHA256" "signed-release/$SIGNED_AAB" | sha256sum --check --status || {
+            echo '::error::Signed RivoSticker AAB SHA256 mismatch'; exit 1;
+          }
+          jarsigner -verify "signed-release/$SIGNED_AAB" > "$RUNNER_TEMP/rivosticker-jarsigner.txt" 2>&1
+          grep -F 'jar verified' "$RUNNER_TEMP/rivosticker-jarsigner.txt"
+          keytool -printcert -jarfile "signed-release/$SIGNED_AAB" | grep -F "SHA1: $EXPECTED_SIGNER_SHA1" || {
+            echo '::error::AAB is NOT signed with the original RivoScan Google Play upload key'; exit 1;
+          }
+          echo 'Verified RivoSticker 1.0.4 AAB: exact SHA-256, size and original RivoScan signing certificate.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Install existing successful Google Play Publisher dependencies
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Upload ONLY RivoSticker 1.0.4 and commit Production update; preserve store assets
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || {
+            echo '::error::Google Play Publisher service-account secret missing'; exit 1;
+          }
+          PYTHONPATH=tools/play-publisher python tools/play-publisher/rivosticker_104_production_update.py \
+            --aab "signed-release/$SIGNED_AAB" \
+            --confirm PUBLISH_RIVOSTICKER_104_PRODUCTION_ORIGINAL_RIVOSCAN_KEY
