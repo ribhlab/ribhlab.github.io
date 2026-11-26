@@ -33,8 +33,8 @@ class ListingTests(unittest.TestCase):
         self.assertEqual(mod.verify_icon(icon), icon)
         self.assertEqual(mod.verify_feature(graphic), graphic)
         listing = mod.load(self.path)
-        self.assertEqual(listing["locales"]["en-US"]["title"], "RivoScan")
-        self.assertIn("Smart document scanning", listing["locales"]["en-US"]["shortDescription"])
+        self.assertEqual(listing["locales"]["en-US"]["title"], "RivoScan: PDF Scanner & Editor")
+        self.assertEqual(listing["locales"]["en-US"]["shortDescription"], "Scan documents, edit PDFs, read QR codes and organize files in one place")
 
     def test_too_long_title_rejected(self):
         data = mod.load(self.path)

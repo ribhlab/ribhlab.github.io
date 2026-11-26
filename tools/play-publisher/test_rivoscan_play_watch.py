@@ -1,5 +1,6 @@
 """Offline tests for safe read-only release detection and owner image gating."""
 import importlib.util
+import hashlib
 import json
 import sys
 import unittest
@@ -30,8 +31,8 @@ class WatchTests(unittest.TestCase):
   self.assertEqual(mod.visible_versions(data),[])
  def test_metadata_uses_correct_owner_assets(self):
   listing=json.loads((ROOT/"store-listings/rivoscan.json").read_text(encoding="utf-8"))
-  self.assertEqual(listing["locales"]["en-US"]["title"],"RivoScan")
-  self.assertIn("rivoscan-owner-feature-1024x500.jpg",listing["images"]["featureGraphic"])
+  self.assertEqual(listing["locales"]["en-US"]["title"],"RivoScan: PDF Scanner & Editor")
+  self.assertEqual(hashlib.sha256((ROOT/"store-listings/assets/rivoscan-owner-feature-1024x500.jpg").read_bytes()).hexdigest(),mod.EXPECTED_FEATURE)
   self.assertEqual(mod.validate_request(self.request())["iconSha256"],mod.EXPECTED_LOGO)
 
 if __name__=="__main__":unittest.main()
