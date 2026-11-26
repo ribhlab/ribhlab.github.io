@@ -1,0 +1,65 @@
+name: RivoNFC Google Play media preflight (read-only)
+# Package-specific read-only preflight before uploading signed RivoNFC 0.6.1.
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivonfc-061-play-preflight.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-rivonfc-readonly
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Read Play app listing, current bundles, tracks and images without publishing
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PYTHONPATH: tools/play-publisher
+        run: |
+          python - <<'PY'
+          import json,os
+          from googleapiclient.discovery import build
+          from googleapiclient.errors import HttpError
+          from publish import get_credentials
+          p='com.ribhlab.rivonfc'
+          if not os.environ.get('GOOGLE_PLAY_SERVICE_ACCOUNT_JSON'):
+              raise SystemExit('Play Publisher secret unavailable')
+          api=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False)
+          edits=api.edits()
+          eid=edits.insert(packageName=p,body={}).execute()['id']
+          args={'packageName':p,'editId':eid}
+          try:
+              releases=[{'track':x.get('track'),'releases':x.get('releases')} for x in edits.tracks().list(**args).execute().get('tracks',[])]
+              bundles=[{'versionCode':x.get('versionCode')} for x in edits.bundles().list(**args).execute().get('bundles',[])]
+              locales=[x.get('language') for x in edits.listings().list(**args).execute().get('listings',[])]
+              media={}
+              for kind in ('icon','featureGraphic','phoneScreenshots'):
+                  try:media[kind]=len(edits.images().list(**args,language='en-US',imageType=kind).execute().get('images',[]))
+                  except HttpError as e:media[kind]='HTTP '+str(e.resp.status)
+              availability={}
+              for track in ('production','internal'):
+                  try:
+                      x=edits.countryavailability().get(**args,track=track).execute()
+                      availability[track]={'countries':sorted(y.get('countryCode') for y in x.get('countries',[]) if y.get('countryCode')),
+                                           'restOfWorld':x.get('restOfWorld',False),
+                                           'syncWithProduction':x.get('syncWithProduction',False)}
+                  except HttpError as exc:
+                      availability[track]={'status':exc.resp.status}
+              try:
+                  edits.validate(**args).execute()
+                  validation={'result':'API_EDIT_VALID'}
+              except HttpError as exc:
+                  validation={'status':exc.resp.status,'reason':exc.reason[:300]}
+              print('RIVONFC_PLAY_READONLY='+json.dumps({'package':p,'tracks':releases,'bundles':bundles,'locales':locales,'mediaCount':media,'countryAvailability':availability,'editValidation':validation},sort_keys=True))
+          finally:
+              edits.delete(**args).execute()
+          PY
