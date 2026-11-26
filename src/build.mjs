@@ -566,6 +566,11 @@ fs.rmSync(dist,{recursive:true,force:true});fs.mkdirSync(path.join(dist,'assets'
 for(const f of ['style.css','editorial-theme.css','vivid-theme.css','responsive.css','app.js','market-comments.js','document-studio.js','document-studio-core.mjs','games.js','games.css','crossword-ui.mjs','crossword-core.mjs','favicon.svg','og-cover.svg','og-cover.png'])fs.copyFileSync(path.join(root,'src',f),path.join(dist,'assets',f));
 fs.cpSync(path.join(root,'admin'),path.join(dist,'admin'),{recursive:true});
 fs.cpSync(path.join(root,'public'),dist,{recursive:true,force:true});
+// Static growth pages use the same accessibility landmark as generated articles.
+for(const route of ['ar','en','fr','es','de','pt','it','share','tools','tools/merge-pdf','tools/split-pdf','tools/images-to-pdf','tools/compress-pdf','tools/qr-code']){
+ const file=path.join(dist,'rivoscan',route,'index.html');
+ if(fs.existsSync(file))fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('<main>','<main id="main">'));
+}
 // Generate a distinct original artwork for each published article on every build.
 for(const l of locales){renderOpportunityPages(l,page,esc);renderAudiencePage(l,page,esc,audienceShareUrl);renderSportsTechnologyPages(l,page,esc);renderRecipePages(l,page,esc,root,dist);renderGamePages(l,page,esc);home(l);archivePage(l);marketPulse(l);for(const d of marketDigests)marketDigestPage(l,d);sectionDirectoryPage(l);for(const section of editorialSections)sectionPage(l,section);for(const cat of ['earning','trading','ai','lifestyle'])catPage(l,cat);for(const a of articles)makeArticle(l,a);for(const key of ['about','editorial','contact','privacy','terms','disclaimer'])staticPage(l,key);toolPage(l);
  renderBudgetFlowPage(l,page,esc,domain);
