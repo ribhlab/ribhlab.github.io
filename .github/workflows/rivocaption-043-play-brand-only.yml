@@ -1,0 +1,54 @@
+name: RivoCaption 0.4.3 approved icon and feature art Play listing
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivocaption-043-play-brand-only.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.rivocaption.editor
+  cancel-in-progress: false
+jobs:
+  update-brand:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official Play publisher and brand image tools
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt "Pillow>=11,<13"
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+      - name: Download EXACT approved brand icon (not a mock phone screenshot)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p brand
+          gh release download rivocaption-v0.4.3-original-rivoscan-aab \
+            --repo univcours/ribhlab --dir brand \
+            --pattern 'RivoCaption-PlayStore-512.png'
+          echo '952c49aaf96c9494f45403029ebc976a7cf938335531189789d78a87ab03f32a  brand/RivoCaption-PlayStore-512.png' | sha256sum --check
+          cp brand/RivoCaption-PlayStore-512.png brand/icon.png
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0,"tools/play-publisher")
+          from rivocaption_043_real_media import official_feature
+          official_feature(Path("brand"))
+          PY
+          python tools/play-publisher/rivocaption_043_brand_only.py --dir brand
+      - name: Update only approved icon and feature graphic in all saved Play locales
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/play-publisher/rivocaption_043_brand_only.py \
+            --dir brand --commit-approved
+          echo 'RivoCaption v0.4.3 approved launcher icon and feature art committed to Play listing (phone screenshots unchanged).' >> "$GITHUB_STEP_SUMMARY"
