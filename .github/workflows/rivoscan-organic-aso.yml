@@ -1,0 +1,26 @@
+name: RivoScan organic ASO - audit and add missing languages
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivoscan-organic-aso.yml','tools/play-publisher/rivoscan_organic_aso.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivoscan
+  cancel-in-progress: false
+jobs:
+  localized-listings:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Verify seven languages and add only missing listings
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: python tools/play-publisher/rivoscan_organic_aso.py
