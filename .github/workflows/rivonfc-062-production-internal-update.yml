@@ -1,0 +1,69 @@
+name: RivoNFC 0.6.2 — publish NFC icon and signed code 9 to Production then Internal
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivonfc-062-production-internal-update.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 35
+    env:
+      AAB_NAME: RivoNFC-0.6.2-RivoScan-SIGNED.aab
+      RIVONFC_062_SIGNED_SHA256: 23f98bca7f9809c305ef25b83e2c4abc5396fc005c69a13d21ed9816e419ab74
+      RIVONFC_062_SIGNED_BYTES: '12236683'
+      EXPECTED_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+      RIVONFC_062_APPROVAL: PUBLISH_RIVONFC_062_ORIGINAL_KEY_PROD_THEN_INTERNAL
+      PYTHONPATH: tools/play-publisher
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Verify publisher code and make exact official 512px NFC store icon
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/play-publisher/rivonfc_062_release.py
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends librsvg2-bin
+          rsvg-convert -w 512 -h 512 -o tools/play-publisher/rivonfc-062-store-icon.png tools/play-publisher/rivonfc-062-store-icon.svg
+          python - <<'PY'
+          from PIL import Image
+          p='tools/play-publisher/rivonfc-062-store-icon.png'
+          with Image.open(p) as im:
+              assert im.format=='PNG' and im.size==(512,512)
+          print('RivoNFC genuine redesigned NFC chip icon ready for Play listing')
+          PY
+      - name: Fetch and verify exact signed RivoScan-key v0.6.2 app bundle
+        run: |
+          set -euo pipefail
+          mkdir -p signed
+          curl --fail --location --retry 4 --retry-delay 3 --connect-timeout 20 \
+            --output "signed/$AAB_NAME" \
+            "https://github.com/univcours/ribhlab/releases/download/rivonfc-v0.6.2-rivoscan-signed/$AAB_NAME"
+          test "$(stat -c %s "signed/$AAB_NAME")" = "$RIVONFC_062_SIGNED_BYTES"
+          echo "$RIVONFC_062_SIGNED_SHA256  signed/$AAB_NAME" | sha256sum -c
+          jarsigner -verify "signed/$AAB_NAME" | grep -F 'jar verified'
+          keytool -printcert -jarfile "signed/$AAB_NAME" | grep -F "SHA1: $EXPECTED_SHA1"
+      - name: Install existing successful Google Play Publisher
+        run: python -m pip install -r tools/play-publisher/requirements.txt Pillow
+      - name: Publish code 9 to Production and replace ONLY the old RivoNFC store icon
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Missing official Play Publisher secret'; exit 1; }
+          python tools/play-publisher/rivonfc_062_release.py --phase production --aab "signed/$AAB_NAME"
+      - name: Promote the same verified code 9 to Internal Testing after Production commit
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          python tools/play-publisher/rivonfc_062_release.py --phase internal
