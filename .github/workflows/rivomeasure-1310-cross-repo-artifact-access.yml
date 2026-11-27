@@ -26,4 +26,14 @@ jobs:
             echo 'RIVOMEASURE_CROSS_REPO_ACTIONS_ARTIFACT_READ=DENIED'
             sed -n '1,3p' "$RUNNER_TEMP/probe_err.txt" | sed -E 's#https?://[^ ]+#(URL)#g'
           fi
+          if gh run download 46066995016 --repo univcours/ribhlab \
+              --name RivoTalk-alpha08-APK-AAB-SIGNED-ISOLATED-QA \
+              --dir "$RUNNER_TEMP/cross-repo-probe" \
+              > "$RUNNER_TEMP/download_stdout.txt" 2> "$RUNNER_TEMP/download_stderr.txt"; then
+            test -s "$RUNNER_TEMP/cross-repo-probe/SHA256SUMS.txt"
+            echo 'RIVOMEASURE_CROSS_REPO_ARTIFACT_BINARY_DOWNLOAD=AVAILABLE'
+          else
+            echo 'RIVOMEASURE_CROSS_REPO_ARTIFACT_BINARY_DOWNLOAD=DENIED'
+            sed -n '1,3p' "$RUNNER_TEMP/download_stderr.txt" | sed -E 's#https?://[^ ]+#(URL)#g'
+          fi
           echo 'Source run was only used as a public permission test. No other app was modified.'
