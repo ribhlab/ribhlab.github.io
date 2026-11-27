@@ -1,0 +1,49 @@
+name: RivoNFC AdMob app-ads.txt and Google Play developer website audit
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivonfc-app-ads-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Verify exact publisher ID and live website from outside
+        run: |
+          set -euo pipefail
+          EXPECT='google.com, pub-7945572016731367, DIRECT, f08c47fec0942fa0'
+          grep -Fx "$EXPECT" public/app-ads.txt
+          grep -Fx "$EXPECT" app-ads.txt
+          curl --fail --location --retry 3 --silent --show-error https://ribhlab.github.io/app-ads.txt -o /tmp/live-app-ads.txt
+          grep -Fx "$EXPECT" /tmp/live-app-ads.txt
+          curl --fail --location --retry 3 --silent --show-error https://ribhlab.github.io/rivonfc/ -o /tmp/rivonfc.html
+          grep -F 'play.google.com/store/apps/details?id=com.ribhlab.rivonfc' /tmp/rivonfc.html | head -1
+          echo 'RIVONFC_LIVE_APP_ADS_ROOT_VERIFIED=200; publisher=pub-7945572016731367; format=DIRECT' 
+      - name: Verify Google Play Console developer website for exact RivoNFC package
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PYTHONPATH: tools/play-publisher
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python - <<'PY'
+          from googleapiclient.discovery import build
+          from publish import get_credentials
+          package='com.ribhlab.rivonfc'
+          edits=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False).edits()
+          eid=edits.insert(packageName=package,body={}).execute()['id']
+          kw={'packageName':package,'editId':eid}
+          try:
+              d=edits.details().get(**kw).execute()
+              w=d.get('contactWebsite','')
+              print('RIVONFC_PLAY_CONTACT_WEBSITE='+w)
+              print('RIVONFC_PLAY_CONTACT_EMAIL='+d.get('contactEmail',''))
+              assert w.startswith('https://ribhlab.github.io/') or w=='https://ribhlab.github.io'
+          finally:edits.delete(**kw).execute()
+          PY
