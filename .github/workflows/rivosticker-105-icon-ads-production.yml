@@ -1,0 +1,86 @@
+name: RivoSticker 1.0.5 - signed Production and safe Play Store icon
+on:
+  workflow_dispatch:
+    inputs:
+      aab_sha256:
+        description: Signed AAB SHA256 from original-key signing run
+        required: true
+        type: string
+      aab_size:
+        description: Exact signed AAB size in bytes
+        required: true
+        type: string
+      icon_sha256:
+        description: SHA256 of new 512px Play Store icon
+        required: true
+        type: string
+      icon_size:
+        description: Exact Play Store icon size in bytes
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivosticker
+  cancel-in-progress: false
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 40
+    env:
+      AAB_SHA256: ${{ inputs.aab_sha256 }}
+      AAB_SIZE: ${{ inputs.aab_size }}
+      ICON_SHA256: ${{ inputs.icon_sha256 }}
+      ICON_SIZE: ${{ inputs.icon_size }}
+      EXPECTED_SIGNER_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+      AAB: RivoSticker-1.0.5-RivoScan-SIGNED.aab
+      ICON: RivoSticker-1.0.5-Play-Icon-512.png
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Verify publication script and inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/play-publisher/rivosticker_105_icon_ads_production.py
+          grep -F 'PACKAGE="com.ribhlab.rivosticker"' tools/play-publisher/rivosticker_105_icon_ads_production.py
+          grep -F 'CODE="6"' tools/play-publisher/rivosticker_105_icon_ads_production.py
+          [[ "$AAB_SHA256" =~ ^[a-f0-9]{64}$ ]]
+          [[ "$ICON_SHA256" =~ ^[a-f0-9]{64}$ ]]
+          [[ "$AAB_SIZE" =~ ^[0-9]+$ ]] && [[ "$ICON_SIZE" =~ ^[0-9]+$ ]]
+      - name: Download and verify signed AAB and original 512px Play icon
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p signed
+          URL=https://github.com/univcours/ribhlab/releases/download/rivosticker-v1.0.5
+          curl --fail --location --retry 3 --connect-timeout 25 --output "signed/$AAB" "$URL/$AAB"
+          curl --fail --location --retry 3 --connect-timeout 25 --output "signed/$ICON" "$URL/$ICON"
+          test "$(stat -c %s "signed/$AAB")" = "$AAB_SIZE"
+          test "$(stat -c %s "signed/$ICON")" = "$ICON_SIZE"
+          printf '%s  %s\n' "$AAB_SHA256" "signed/$AAB" | sha256sum --check --status
+          printf '%s  %s\n' "$ICON_SHA256" "signed/$ICON" | sha256sum --check --status
+          jarsigner -verify "signed/$AAB" > "$RUNNER_TEMP/jarsigner.txt" 2>&1
+          grep -F 'jar verified' "$RUNNER_TEMP/jarsigner.txt"
+          keytool -printcert -jarfile "signed/$AAB" | grep -F "SHA1: $EXPECTED_SIGNER_SHA1"
+          file "signed/$ICON"
+          echo "RivoSticker original RivoScan signature and exact icon/AAB hashes verified." >> "$GITHUB_STEP_SUMMARY"
+      - name: Install Google Play Publisher dependencies
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Publish ONLY RivoSticker 1.0.5 + icon and send changes for review
+        shell: bash
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "\${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo "::error::Missing authorized Google Play service account"; exit 1; }
+          PYTHONPATH=tools/play-publisher python tools/play-publisher/rivosticker_105_icon_ads_production.py \
+            --aab "signed/$AAB" \
+            --icon "signed/$ICON" \
+            --aab-sha256 "$AAB_SHA256" --aab-size "$AAB_SIZE" \
+            --icon-sha256 "$ICON_SHA256" --icon-size "$ICON_SIZE" \
+            --confirm PUBLISH_RIVOSTICKER_105_PRODUCTION_AND_NEW_STORE_ICON
