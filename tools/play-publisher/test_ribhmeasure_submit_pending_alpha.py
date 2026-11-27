@@ -82,6 +82,15 @@ class RivoMeasureSubmissionTests(unittest.TestCase):
         edits.bundles.assert_not_called()
         edits.delete.assert_not_called()
 
+    def test_postcommit_production_403_still_confirms_alpha_in_review(self):
+        with patch.object(module, "status", side_effect=RuntimeError("Production GET HTTP 403")), \
+             patch.object(module, "fetch_track", return_value=alpha(
+                 "RELEASE_LIFECYCLE_STATE_IN_REVIEW")) as fetch:
+            result = module.verify_postcommit_alpha(object())
+        self.assertEqual(result, "ALREADY_IN_REVIEW")
+        fetch.assert_called_once()
+        self.assertEqual(fetch.call_args.args[1], "alpha")
+
     def test_rejected_commit_cleans_up_edit(self):
         edits = MagicMock()
         edits.insert.return_value.execute.return_value = {"id": "blocked-edit"}
