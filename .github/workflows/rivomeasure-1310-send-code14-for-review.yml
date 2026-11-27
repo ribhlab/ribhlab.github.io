@@ -1,0 +1,44 @@
+name: RivoMeasure code14 - safely send already-saved Production changes for Google review
+on:
+  push:
+    branches: [deploy/rivomeasure-1310-code14-20261127]
+    paths: [.github/workflows/rivomeasure-1310-send-code14-for-review.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.ribhmeasure-production14
+  cancel-in-progress: false
+jobs:
+  submit-existing-code14-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: play-production
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      RIVOMEASURE_1310_SUBMIT_CONFIRM: SEND_EXACT_RIVOMEASURE_1310_CODE14_PRODUCTION_CHANGES_FOR_REVIEW_NO_CANCELLATION
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Verify original Play publisher, exact code14 script, and API access
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -m pip install -r tools/play-publisher/requirements.txt
+          python3 -m py_compile tools/play-publisher/rivomeasure_1310_send_for_review.py
+          grep -Fq 'changesInReviewBehavior="ERROR_IF_IN_REVIEW"' tools/play-publisher/rivomeasure_1310_send_for_review.py
+          grep -Fq 'changesNotSentForReview=False' tools/play-publisher/rivomeasure_1310_send_for_review.py
+      - name: Send only the already-saved, verified code14 Production edit for review
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -u tools/play-publisher/rivomeasure_1310_send_for_review.py
+      - name: Independently verify real Google Play lifecycle after submission
+        if: always()
+        shell: bash
+        run: |
+          if [[ -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" ]]; then
+            python3 tools/play-publisher/audit_releases.py --package com.ribhlab.ribhmeasure
+          fi
