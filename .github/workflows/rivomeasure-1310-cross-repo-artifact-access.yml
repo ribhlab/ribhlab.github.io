@@ -1,0 +1,29 @@
+name: RivoMeasure code14 - safe cross-repo signed artifact access test
+on:
+  push:
+    branches: [deploy/rivomeasure-1310-code14-20261127]
+    paths: [.github/workflows/rivomeasure-1310-cross-repo-artifact-access.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Probe only public source artifact metadata (no binary, Play edit, or key)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh api repos/univcours/ribhlab/actions/runs/46066995016/artifacts \
+              --jq '[.artifacts[].name] | length' > "$RUNNER_TEMP/artifact_count.txt" 2>"$RUNNER_TEMP/probe_err.txt"; then
+            count="$(cat "$RUNNER_TEMP/artifact_count.txt")"
+            echo "RIVOMEASURE_CROSS_REPO_ACTIONS_ARTIFACT_READ=AVAILABLE count=$count"
+          else
+            echo 'RIVOMEASURE_CROSS_REPO_ACTIONS_ARTIFACT_READ=DENIED'
+            sed -n '1,3p' "$RUNNER_TEMP/probe_err.txt" | sed -E 's#https?://[^ ]+#(URL)#g'
+          fi
+          echo 'Source run was only used as a public permission test. No other app was modified.'
