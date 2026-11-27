@@ -140,7 +140,8 @@ def upload(args: argparse.Namespace, aab: Path) -> dict:
         track=target_track,
         body={"track": target_track, "releases": releases},
     ).execute()
-    edits.commit(packageName=args.package, editId=edit_id).execute()
+    edits.commit(packageName=args.package, editId=edit_id,
+                 changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
     return {"package": args.package, "track": target_track, "status": args.status, "versionCode": code}
 
 
