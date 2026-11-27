@@ -11,6 +11,7 @@
 </defs>
 <rect width="512" height="512" rx="116" fill="url(#bg)"/>
 <circle cx="256" cy="255" r="255" fill="url(#halo)"/>
+<g transform="translate(64 64) scale(0.75)">
 <g stroke="url(#signal)" stroke-linecap="round" fill="none">
  <path d="M109 189Q256 48 403 189" stroke-width="42" opacity=".52" filter="url(#glow)"/>
  <path d="M157 243Q256 149 355 243" stroke-width="38" opacity=".5" filter="url(#glow)"/>
@@ -30,5 +31,6 @@
  <path d="M227 355H287M227 371H287M247 338V386M267 338V386" fill="none" stroke="#93620c" stroke-width="2.2" opacity=".82"/>
  <path d="M227 350Q257 336 287 350" fill="none" stroke="#fff6c9" stroke-width="2" opacity=".75"/>
 </g>
-<path d="M40 438Q156 510 256 495" fill="none" stroke="#3fffc2" stroke-width="4" opacity=".33"/>
+</g>
+<path d="M68 422Q160 465 256 454" fill="none" stroke="#3fffc2" stroke-width="4" opacity=".33"/>
 </svg>
