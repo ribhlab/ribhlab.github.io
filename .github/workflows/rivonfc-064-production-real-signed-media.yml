@@ -12,6 +12,11 @@ on:
         type: boolean
         default: false
         required: true
+      ad_id_declared:
+        description: 'I updated RivoNFC Play Console Advertising ID declaration to YES for the Google Mobile Ads SDK'
+        type: boolean
+        default: false
+        required: true
 permissions:
   contents: read
   actions: read
@@ -20,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   production-only-after-real-console-forms:
-    if: ${{ inputs.ads_declared == true && inputs.data_safety_declared == true }}
+    if: ${{ inputs.ads_declared == true && inputs.data_safety_declared == true && inputs.ad_id_declared == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 22
     environment: play-production
@@ -30,6 +35,7 @@ jobs:
       GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
       RIVONFC_064_ADS_CONSOLE_VERIFIED: 'true'
       RIVONFC_064_DATA_SAFETY_CONSOLE_VERIFIED: 'true'
+      RIVONFC_064_AD_ID_CONSOLE_VERIFIED: 'true'
       RIVONFC_064_COMPLIANCE_APPROVAL: RIVONFC_064_PLAY_ADS_DATASAFETY_VERIFIED
       SCREEN_QA_RUN: '46076130056'
       SCREEN_QA_COMMIT: 95643983a485b2cac389c4af810bc74eadaa23ec
