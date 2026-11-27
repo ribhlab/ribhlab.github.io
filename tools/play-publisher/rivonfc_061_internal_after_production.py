@@ -45,7 +45,25 @@ def run():
             print("RIVONFC_INTERNAL_ALREADY_LIVE="+json.dumps({"package":PACKAGE,"track":TRACK,"versionCode":VERSION}),flush=True)
             return
         if existing:
-            raise RuntimeError("Internal Testing has existing release(s), refusing overwrite")
+            # Play Console creates a placeholder draft release when a new internal
+            # release screen is first opened. Reuse ONLY a truly empty draft.
+            if len(existing)!=1:
+                raise RuntimeError("Multiple Internal Testing releases exist; do not overwrite")
+            draft=existing[0]
+            if (draft.get("status")!="draft"
+                or draft.get("versionCodes")
+                or draft.get("userFraction") is not None
+                or draft.get("inAppUpdatePriority") is not None
+                or draft.get("countryTargeting") is not None
+                or draft.get("releaseNotes")
+                or (draft.get("name") and not str(draft["name"]).startswith("RivoNFC"))):
+                raise RuntimeError("Internal Testing draft contains user changes; refusing overwrite")
+            print("RIVONFC_EMPTY_INTERNAL_DRAFT_REUSE_ALLOWED",flush=True)
+        if len(prod.get("releases") or [])!=1 or (
+            prod["releases"][0].get("status")!="completed"
+            or set(map(str,prod["releases"][0].get("versionCodes",[])))!={VERSION}
+        ):
+            raise RuntimeError("Production is not the already-submitted versionCode 8; do not change Internal Testing")
         all_codes={str(c) for t in tracks for rel in (t.get("releases") or []) for c in rel.get("versionCodes",[])}
         if any(c!=VERSION for c in all_codes):
             raise RuntimeError("Other Play track already contains unexpected version codes "+str(sorted(all_codes)))
