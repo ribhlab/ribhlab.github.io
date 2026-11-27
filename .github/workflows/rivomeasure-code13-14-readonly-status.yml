@@ -1,0 +1,74 @@
+name: RivoMeasure 1.3.9/1.3.10 - isolated Google Play read-only review status
+on:
+  push:
+    branches: [audit/rivomeasure-code13-to14-20261127]
+    paths: [.github/workflows/rivomeasure-code13-14-readonly-status.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure-play-readonly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Restore original publisher Google API client
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Verify production and closed alpha versions through Google Play GET only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,time
+          from urllib.parse import quote
+          from google.auth.transport.requests import AuthorizedSession
+          import sys
+          sys.path.insert(0,'tools/play-publisher')
+          from publish import get_credentials
+          session=AuthorizedSession(get_credentials())
+          package='com.ribhlab.ribhmeasure'
+          base='https://androidpublisher.googleapis.com/androidpublisher/v3/applications/'+quote(package,safe='')+'/tracks/'
+          state={}
+          for track in ('production','alpha','qa','beta'):
+              path=base+track+'/releases'
+              best=None
+              for attempt in range(3):
+                  try:
+                      response=session.get(path,timeout=25)
+                      best={'httpStatus':response.status_code}
+                      if response.status_code==200:
+                          data=response.json()
+                          best['releases']=[{
+                              'name':r.get('releaseName'),
+                              'lifecycle':r.get('releaseLifecycleState'),
+                              'versionCodes':[a.get('versionCode') for a in r.get('activeArtifacts',[])]
+                          } for r in data.get('releases',[])]
+                          break
+                      if response.status_code not in (403,429,500,503):
+                          break
+                  except Exception as e:
+                      best={'error':type(e).__name__}
+                  if attempt<2:time.sleep(4)
+              state[track]=best
+          print('RIVOMEASURE_PLAY_READONLY_STATE='+json.dumps({'package':package,'tracks':state},sort_keys=True),flush=True)
+          prod=state['production']
+          alpha=state['alpha']
+          if prod.get('httpStatus')==200:
+              published=[r for r in prod.get('releases',[]) if r['lifecycle']=='RELEASE_LIFECYCLE_STATE_PUBLISHED']
+              print('RIVOMEASURE_LIVE_PRODUCTION_CODES='+json.dumps([r['versionCodes'] for r in published]),flush=True)
+          else:
+              print('RIVOMEASURE_PRODUCTION_NOT_VERIFIABLE_READONLY_HTTP='+str(prod.get('httpStatus')),flush=True)
+          if alpha.get('httpStatus')==200:
+              print('RIVOMEASURE_ALPHA_LIFECYCLES='+json.dumps([r['lifecycle'] for r in alpha.get('releases',[])]),flush=True)
+          else:
+              print('RIVOMEASURE_ALPHA_NOT_VERIFIABLE_READONLY_HTTP='+str(alpha.get('httpStatus')),flush=True)
+          if prod.get('httpStatus')!=200 and alpha.get('httpStatus')!=200:
+              raise SystemExit('Cannot verify either RivoMeasure track; no Play edits attempted')
+          PY
