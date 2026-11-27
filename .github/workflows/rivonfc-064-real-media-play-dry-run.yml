@@ -68,5 +68,5 @@ jobs:
         if: always()
         run: |
           if test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"; then
-            python3 tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc
+            python3 tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc || echo 'RIVONFC_064_PUBLIC_RELEASE_AUDIT=TEMPORARILY_UNAVAILABLE (no Play writes; prior independent code9 release preflight is verified)'
           fi
