@@ -62,7 +62,7 @@ def check_inputs():
                 raise RuntimeError("Wrong Android screenshot shape: "+name)
             if max(ImageStat.Stat(img.convert("RGB").resize((96,160))).stddev)<=8:
                 raise RuntimeError("Blank or artificial screenshot: "+name)
-        xml=(MEDIA_DIR/f.replace(".png",".xml")).read_text(encoding="utf-8")
+        xml=(MEDIA_DIR/(name[:-4]+".xml")).read_text(encoding="utf-8")
         if "hierarchy" not in xml or not any(w in xml.lower() for w in ("rivotalk","ready to connect","create group")):
             # A settings page may not contain app title; both come from the same
             # verified app capture, so the home has explicit identity.
