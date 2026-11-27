@@ -45,11 +45,25 @@ jobs:
             --name RivoNFC-064-Code11-OriginalSigned-Genuine-StoreMedia \
             --dir rivonfc-code11-store
           (cd rivonfc-code11-store && sha256sum -c SHA256SUMS.txt)
-      - name: Validate exact code11 Production/listing/media changes then discard Play edit
+      - name: Validate code11 Production edits without commit, distinguish blocked Console AD_ID from software failure
+        shell: bash
         run: |
           set -euo pipefail
-          python3 -u tools/play-publisher/rivonfc_064_production_real_media.py
-          echo 'RivoNFC code11 store images and localized ads text passed Google Play edit validation; all changes were discarded WITHOUT COMMIT. Existing Production code9 remains published.' >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          python3 -u tools/play-publisher/rivonfc_064_production_real_media.py 2>&1 | tee "$RUNNER_TEMP/rivonfc-dry-run.txt"
+          status="${PIPESTATUS[0]}"
+          set -e
+          if test "$status" -eq 0; then
+            echo 'RIVONFC_064_PLAY_CODE11_REAL_MEDIA_DRY_RUN=VALIDATED_NO_COMMIT' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if test "$status" -eq 2 && grep -Fq 'your declaration on Play Console says your app doesn' "$RUNNER_TEMP/rivonfc-dry-run.txt" && grep -Fq 'advertising ID' "$RUNNER_TEMP/rivonfc-dry-run.txt"; then
+            echo 'RIVONFC_064_PLAY_CODE11_REAL_MEDIA_DRY_RUN=EXTERNAL_POLICY_BLOCKER_ADVERTISING_ID_DECLARATION_NO' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Play Console must declare RivoNFC uses Advertising ID = Yes; release was NOT committed and Production code9 remains published.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo 'RIVONFC_064_DRY_RUN_UNEXPECTED_ERROR' >&2
+          exit "$status"
       - name: Independent status audit (read-only)
         if: always()
         run: |
