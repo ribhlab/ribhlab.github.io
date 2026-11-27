@@ -24,4 +24,4 @@ jobs:
           test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
           python tools/play-publisher/audit_releases.py --package com.ribhlab.ribhmeasure
 
-# Refresh scoped read-only Play preflight for RivoMeasure; no release changes.
+# Verify RivoMeasure Alpha after safe submission; never open or commit a Play edit.
