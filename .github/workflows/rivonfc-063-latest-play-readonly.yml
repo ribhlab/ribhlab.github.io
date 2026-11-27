@@ -30,6 +30,11 @@ jobs:
           from audit_releases import audit
           result = audit("com.ribhlab.rivonfc", ("production", "internal", "qa", "alpha", "beta"))
           print("RIVONFC_063_LIVE_TRACKS=" + json.dumps(result, sort_keys=True, ensure_ascii=False), flush=True)
-          if result["tracks"]["production"].get("result") != "OK":
-              raise SystemExit("Production could not be verified")
+          for name in ("production", "internal"):
+              track = result["tracks"][name]
+              if track.get("result") != "OK":
+                  raise SystemExit(f"{name} could not be verified")
+              versions = [code for rel in track.get("releases", []) for code in rel.get("versionCodes", [])]
+              print(f"RIVONFC_TRACK_{name.upper()}_CODES=" + json.dumps(versions), flush=True)
+          print("RIVONFC_AUDIT_READ_ONLY=true", flush=True)
           PY
