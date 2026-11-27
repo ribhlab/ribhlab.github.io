@@ -1,0 +1,35 @@
+name: RivoNFC 0.6.1 Internal Testing after Production submission
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivonfc-061-internal-release.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc
+  cancel-in-progress: false
+jobs:
+  internal:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install Google Play Publisher and verify exact target
+        run: |
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m py_compile tools/play-publisher/rivonfc_061_internal_after_production.py
+          grep -F 'PACKAGE = "com.ribhlab.rivonfc"' tools/play-publisher/rivonfc_061_internal_after_production.py
+          grep -F 'VERSION = "8"' tools/play-publisher/rivonfc_061_internal_after_production.py
+      - name: Use already uploaded original-key AAB code 8 for Internal Testing
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          RIVONFC_INTERNAL_APPROVAL: PUBLISH_RIVONFC_061_INTERNAL_ONLY_AFTER_PRODUCTION_REVIEW
+          PYTHONPATH: tools/play-publisher
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Missing scoped Google Play Publisher service account secret'; exit 1; }
+          python tools/play-publisher/rivonfc_061_internal_after_production.py
