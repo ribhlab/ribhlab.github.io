@@ -1,0 +1,61 @@
+name: RivoTalk AdMob verification - Play contact website only
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rivotalk-contact-website-fix.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivotalk
+  cancel-in-progress: false
+jobs:
+  fix-website:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify live public RivoTalk site and AdMob publisher file
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --silent --location --retry 3 --max-time 30 'https://ribhlab.github.io/rivotalk/' -o /tmp/rivotalk-site.html
+          grep -F 'com.ribhlab.rivotalk' /tmp/rivotalk-site.html >/dev/null
+          curl --fail --show-error --silent --location --retry 3 --max-time 30 'https://ribhlab.github.io/app-ads.txt' -o /tmp/rivotalk-app-ads.txt
+          grep -Fx 'google.com, pub-7945572016731367, DIRECT, f08c47fec0942fa0' /tmp/rivotalk-app-ads.txt
+          echo 'PASS: RivoTalk official website and root app-ads.txt are publicly reachable.'
+      - name: Install Google Play publisher client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Change ONLY RivoTalk Play app contact website
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'BLOCKED: Google Play service credential missing'; exit 1; }
+          python tools/play-publisher/sync_app_websites.py --package com.ribhlab.rivotalk --apply --confirm SET_WEBSITE_ONLY
+      - name: Independently verify saved website in Google Play API
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PYTHONPATH: tools/play-publisher
+        run: |
+          python - <<'PY'
+          from googleapiclient.discovery import build
+          from publish import get_credentials
+          package = 'com.ribhlab.rivotalk'
+          edits = build('androidpublisher', 'v3', credentials=get_credentials(), cache_discovery=False).edits()
+          edit_id = edits.insert(packageName=package, body={}).execute()['id']
+          kw = {'packageName': package, 'editId': edit_id}
+          try:
+              d = edits.details().get(**kw).execute()
+              website = d.get('contactWebsite', '')
+              print('RIVOTALK_PLAY_WEBSITE=' + website)
+              assert website == 'https://ribhlab.github.io/rivotalk/', 'Play did not retain RivoTalk contact website'
+          finally:
+              edits.delete(**kw).execute()
+          print('PASS: Google Play returned the exact RivoTalk website.')
+          PY
