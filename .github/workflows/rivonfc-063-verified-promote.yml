@@ -19,7 +19,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   promote:
-    if: ${{ inputs.ads_declared == true && inputs.data_safety_declared == true }}
+    # RivoNFC 0.6.4 code 11 superseded this old candidate.
+    # Never allow 0.6.3 code 10 to replace the newer responsive/banner fixes.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 18
     environment: play-testing
