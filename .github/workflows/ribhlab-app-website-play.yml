@@ -1,0 +1,64 @@
+name: RibhLab Play Publisher - website URL only
+on:
+  workflow_dispatch:
+    inputs:
+      package_name:
+        description: Existing app package to update
+        required: true
+        type: choice
+        options:
+          - com.ribhlab.tradingfiew
+          - com.rivocaption.editor
+          - com.ribhlab.rivotalk
+          - com.ribhlab.rivoscan
+          - com.novagrid.cosmicpuzzle
+          - com.ribhlab.ribhmeasure
+          - com.ribhlab.rivosticker
+          - com.ribhlab.rivonfc
+      review_clear:
+        description: Confirm no active review or unsaved Play edit for this app
+        required: true
+        type: boolean
+        default: false
+      confirmation:
+        description: Type SET_WEBSITE_ONLY
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: google-play-${{ inputs.package_name }}
+  cancel-in-progress: false
+jobs:
+  play-website:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Safety checks (no Play calls)
+        shell: bash
+        env:
+          APP: ${{ inputs.package_name }}
+          REVIEW_CLEAR: ${{ inputs.review_clear }}
+          CONFIRM: ${{ inputs.confirmation }}
+        run: |
+          set -euo pipefail
+          if [[ "$REVIEW_CLEAR" != "true" || "$CONFIRM" != "SET_WEBSITE_ONLY" ]]; then
+            echo 'STOP: To protect active Play review and unsaved edits, confirmations are required'
+            exit 1
+          fi
+          python tools/play-publisher/sync_app_websites.py --package "$APP"
+      - name: Install Google Play official API client
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Change only Play contact website
+        shell: bash
+        env:
+          APP: ${{ inputs.package_name }}
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python tools/play-publisher/sync_app_websites.py --package "$APP" --apply --confirm SET_WEBSITE_ONLY
