@@ -121,7 +121,11 @@ def media_ids(edits,kw,typ):
         **kw,language="en-US",imageType=typ).execute().get("images",[])]
 
 def submit():
-    verify_compliance_gate()
+    # A dry-run validates the exact planned code11 Play edit and then discards it.
+    # It never submits the release or represents legal policy declarations as saved.
+    dry_run = os.environ.get("RIVONFC_064_DRY_RUN") == "true"
+    if not dry_run:
+        verify_compliance_gate()
     verify_urls()
     pngs=verify_real_signed_screens()
     creds=get_credentials()
@@ -159,7 +163,8 @@ def submit():
             "oldInternal":before["internal"]["releases"],
             "signedVersionRealScreens":pngs,
             "oldScreens":len(media_before["phoneScreenshots"]),
-            "containsAdsAndDataSafetyUserVerified":True,
+            "containsAdsAndDataSafetyUserVerified":not dry_run,
+            "dryRunOnly":dry_run,
             "otherAppsTouched":False,
         })
         original=before["production"]["releases"][0]
@@ -196,6 +201,15 @@ def submit():
             len(media_ids(edits,kw,"phoneScreenshots"))!=4):
             raise RuntimeError("Real screenshot or unchanged Play artwork requirement failed")
         edits.validate(**kw).execute()
+        if dry_run:
+            emit("RIVONFC_064_DRY_RUN_VALIDATED", {
+                "package": PKG, "versionCode": 11,
+                "plannedPhoneScreenshots": len(pngs),
+                "releaseChangesNotCommitted": True,
+                "existingPlayTracksRemainUnchanged": True,
+                "playPolicyDeclarationsStillNeedConsoleVerification": True,
+            })
+            return
         edits.commit(**kw,changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
         committed=True
     finally:
