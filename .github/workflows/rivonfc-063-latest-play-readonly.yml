@@ -1,0 +1,28 @@
+name: RivoNFC 0.6.3 - isolated read-only Play release audit
+on:
+  push:
+    branches: ['audit/rivonfc-063-readonly-20261127']
+    paths: ['.github/workflows/rivonfc-063-latest-play-readonly.yml']
+permissions:
+  contents: read
+concurrency:
+  group: rivonfc-063-readonly-audit-20261127
+  cancel-in-progress: false
+jobs:
+  audit-rivonfc-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment: play-testing
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install official Google Play API clients
+        run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Audit RivoNFC only without creating an edit
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc
