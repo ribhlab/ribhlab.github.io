@@ -1,5 +1,10 @@
 name: Google Play Publisher unit tests
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/play-publisher/**'
+      - '.github/workflows/google-play-publisher-tests.yml'
   pull_request:
     paths:
       - 'tools/play-publisher/**'
