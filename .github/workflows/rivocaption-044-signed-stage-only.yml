@@ -1,0 +1,52 @@
+name: RivoCaption v0.4.4 code18 - stage exact signed bundle without changing tracks
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.rivocaption.editor
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      RIVOCAPTION_044_STAGE_CONFIRM: RIVOCAPTION_044_LIBRARY_ONLY_WITHOUT_ANY_TRACK_CHANGES
+      ORIGINAL_KEY_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Validate original Google Play publisher credentials and stage-only code
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -m pip install -r tools/play-publisher/requirements.txt
+          python3 -m py_compile tools/play-publisher/rivocaption_044_stage_signed.py
+      - name: Download original-signed current RivoCaption 0.4.4 code18 only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rivocaption-signed
+          gh release download rivocaption-v0.4.4-code18-original-key-signed \
+            --repo univcours/ribhlab --dir rivocaption-signed \
+            --pattern 'RivoCaption-0.4.4-RivoScan-SIGNED.aab' \
+            --pattern 'RivoCaption-PlayStore-512.png' \
+            --pattern 'SHA256SUMS.txt'
+          (cd rivocaption-signed && sha256sum -c SHA256SUMS.txt)
+          echo '952c49aaf96c9494f45403029ebc976a7cf938335531189789d78a87ab03f32a  rivocaption-signed/RivoCaption-PlayStore-512.png' | sha256sum --check
+          AAB=rivocaption-signed/RivoCaption-0.4.4-RivoScan-SIGNED.aab
+          jarsigner -verify "$AAB" > "$RUNNER_TEMP/rivocaption044-sig.txt" 2>&1
+          grep -F 'jar verified' "$RUNNER_TEMP/rivocaption044-sig.txt"
+          keytool -printcert -jarfile "$AAB" | grep -F "SHA1: $ORIGINAL_KEY_SHA1"
+      - name: Stage code18 in Play bundle library, preserving Production and draft code17
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -u tools/play-publisher/rivocaption_044_stage_signed.py
+          echo 'RivoCaption code18 signed AAB staged only, no Production/draft track changes; FGS declarations and genuine screenshots are a separate mandatory gate.' >> "$GITHUB_STEP_SUMMARY"
