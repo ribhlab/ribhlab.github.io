@@ -66,6 +66,33 @@ def status(session) -> str:
     return safe_release_states(fetch_track(session, "production"), fetch_track(session, "alpha"))
 
 
+def verify_postcommit_alpha(session) -> str:
+    """After commit, Production GET may briefly return HTTP 403.
+
+    Confirm Alpha independently in this case; NEVER submit a second edit
+    on the basis of this temporary read-only API failure.
+    """
+    try:
+        return status(session)
+    except RuntimeError:
+        a = fetch_track(session, "alpha")
+        releases = a.get("releases", [])
+        if len(releases) != 1:
+            raise
+        release = releases[0]
+        versions = [item.get("versionCode") for item in release.get("activeArtifacts", [])]
+        if release.get("releaseName") != "RivoMeasure 1.3.9 – Closed Alpha" or versions != [VERSION]:
+            raise
+        state = release.get("releaseLifecycleState")
+        if state == "RELEASE_LIFECYCLE_STATE_IN_REVIEW":
+            return "ALREADY_IN_REVIEW"
+        if state == PUBLISHED:
+            return "ALREADY_PUBLISHED"
+        if state == NOT_SENT:
+            return "PENDING_ALPHA_13"
+        raise
+
+
 def submit_pending_alpha(credentials, session) -> dict:
     from googleapiclient.discovery import build
 
@@ -105,7 +132,7 @@ def submit_pending_alpha(credentials, session) -> dict:
     for attempt in range(6):
         if attempt:
             time.sleep(6)
-        observed = status(session)
+        observed = verify_postcommit_alpha(session)
         if observed != "PENDING_ALPHA_13":
             break
     return {"result": "REVIEW_SUBMITTED" if observed != "PENDING_ALPHA_13" else
