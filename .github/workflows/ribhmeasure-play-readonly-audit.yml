@@ -23,5 +23,30 @@ jobs:
         run: |
           test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
           python tools/play-publisher/audit_releases.py --package com.ribhlab.ribhmeasure
+      - name: Diagnose failed read-only Alpha access without leaking details
+        if: failure()
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PYTHONPATH: tools/play-publisher
+        run: |
+          python - <<'PY'
+          from google.auth.transport.requests import AuthorizedSession
+          from publish import get_credentials
+          url = "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/com.ribhlab.ribhmeasure/tracks/alpha/releases"
+          response = AuthorizedSession(get_credentials()).get(url, timeout=20)
+          print("RIVOMEASURE_ALPHA_HTTP", response.status_code)
+          data = response.json()
+          if response.status_code == 200:
+              print("ALPHA_STATES", [r.get("releaseLifecycleState") for r in data.get("releases",[])])
+          else:
+              err = data.get("error", {})
+              known = {"PERMISSION_DENIED","RESOURCE_EXHAUSTED","UNAUTHENTICATED","FAILED_PRECONDITION",
+                       "rateLimitExceeded","userRateLimitExceeded","quotaExceeded","insufficientPermissions",
+                       "accessNotConfigured"}
+              status = err.get("status", "")
+              reasons = [v.get("reason","") for v in err.get("errors", []) if isinstance(v,dict)]
+              print("SAFE_ERROR", status if status in known else "OTHER",
+                    [v if v in known else "OTHER" for v in reasons])
+          PY
 
 # Verify RivoMeasure Alpha after safe submission; never open or commit a Play edit.
