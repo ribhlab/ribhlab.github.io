@@ -1,0 +1,41 @@
+name: RivoTalk alpha08 - independent read-only Production verification
+on:
+  push:
+    branches: [deploy/rivotalk-08-stage-only-20261127]
+    paths: [.github/workflows/rivotalk-alpha08-production-readonly-verification.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install original Google Play publisher API requirements
+        run: python3 -m pip install -r tools/play-publisher/requirements.txt
+      - name: Query real Play track read-only endpoint (no edit / media / upload)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/play-publisher/audit_releases.py --package com.ribhlab.rivotalk > play-state.json.log
+          cat play-state.json.log
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          lines=Path('play-state.json.log').read_text().splitlines()
+          start=lines.index('PLAY_RELEASE_AUDIT_JSON_START')
+          data=json.loads(lines[start+1])
+          prod=data['tracks']['production']
+          assert prod['result']=='OK',prod
+          releases=[r for r in prod['releases'] if 8 in [int(x) for x in r['versionCodes']]]
+          assert len(releases)==1,'Latest code8 not confirmed in live Production'
+          lifecycle=releases[0]['lifecycle']
+          print('RIVOTALK_CODE8_PRODUCTION_READONLY_VERIFIED='+lifecycle,flush=True)
+          if lifecycle!='RELEASE_LIFECYCLE_STATE_PUBLISHED':
+              print('Google review/public rollout may still be pending; do not claim worldwide availability')
+          PY
