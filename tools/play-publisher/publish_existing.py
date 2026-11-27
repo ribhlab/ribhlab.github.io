@@ -85,7 +85,8 @@ def perform(a: argparse.Namespace) -> dict:
             track=target,
             body={"track": target, "releases": releases},
         ).execute()
-        edits.commit(packageName=a.package, editId=eid).execute()
+        edits.commit(packageName=a.package, editId=eid,
+                     changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
         committed = True
         return {"result": "EDIT_COMMITTED", "package": a.package, "versionCode": a.version_code,
                 "track": target, "status": a.status,
