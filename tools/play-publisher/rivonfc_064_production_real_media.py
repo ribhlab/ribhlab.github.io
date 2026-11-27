@@ -60,7 +60,8 @@ def verify_compliance_gate():
     # These independent booleans must come from user's Play Console inspection;
     # automated SDK checks cannot authenticate the live submitted declarations.
     if (os.getenv("RIVONFC_064_ADS_CONSOLE_VERIFIED")!="true" or
-        os.getenv("RIVONFC_064_DATA_SAFETY_CONSOLE_VERIFIED")!="true"):
+        os.getenv("RIVONFC_064_DATA_SAFETY_CONSOLE_VERIFIED")!="true" or
+        os.getenv("RIVONFC_064_AD_ID_CONSOLE_VERIFIED")!="true"):
         raise RuntimeError("Google Play policy answers not independently confirmed in Console")
 
 def verify_urls():
@@ -163,7 +164,7 @@ def submit():
             "oldInternal":before["internal"]["releases"],
             "signedVersionRealScreens":pngs,
             "oldScreens":len(media_before["phoneScreenshots"]),
-            "containsAdsAndDataSafetyUserVerified":not dry_run,
+            "adsDataSafetyAndAdvertisingIdVerifiedInConsole":not dry_run,
             "dryRunOnly":dry_run,
             "otherAppsTouched":False,
         })
@@ -207,7 +208,7 @@ def submit():
                 "plannedPhoneScreenshots": len(pngs),
                 "releaseChangesNotCommitted": True,
                 "existingPlayTracksRemainUnchanged": True,
-                "playPolicyDeclarationsStillNeedConsoleVerification": True,
+                "adsDataSafetyAndAdvertisingIdNeedConsoleVerification": True,
             })
             return
         edits.commit(**kw,changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
