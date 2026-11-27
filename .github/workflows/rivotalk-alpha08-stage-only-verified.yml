@@ -1,0 +1,67 @@
+name: RivoTalk alpha08 - stage verified signed AAB only (no rollout)
+on:
+  push:
+    branches: [deploy/rivotalk-08-stage-only-20261127]
+    paths:
+      - tools/play-publisher/rivotalk_08_stage_signed.py
+      - .github/workflows/rivotalk-alpha08-stage-only-verified.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivotalk
+  cancel-in-progress: false
+jobs:
+  stage-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      RIVOTALK_ALPHA08_STAGE_CONFIRM: RIVOTALK_ALPHA08_LIBRARY_ONLY_WITHOUT_ANY_TRACK_CHANGES
+      EXPECTED_TAG_SHA: 73ba801e900882a8e7c9bd9514d7ac6835de190e
+      ORIGINAL_UPLOAD_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Require configured original Google Play publisher credentials
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python -m pip install -r tools/play-publisher/requirements.txt
+          python -m py_compile tools/play-publisher/rivotalk_08_stage_signed.py
+      - name: Download only RivoTalk exact verified original signed Alpha08 artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          RELEASE=rivotalk-alpha08-verified-46066995016
+          origin="$(gh api "repos/univcours/ribhlab/releases/tags/$RELEASE" --jq '.target_commitish')"
+          if [[ "$origin" != "$EXPECTED_TAG_SHA" ]]; then
+            echo '::error::Signed candidate release provenance changed'; exit 1
+          fi
+          mkdir -p rivotalk-signed
+          gh release download "$RELEASE" --repo univcours/ribhlab --dir rivotalk-signed             --pattern 'RivoTalk-0.1.0-alpha08-RivoScan-SIGNED.aab'             --pattern 'RivoTalk-0.1.0-alpha08-RivoScan-SIGNED.apk'             --pattern 'SHA256SUMS.txt'
+          (cd rivotalk-signed && sha256sum -c SHA256SUMS.txt)
+      - name: Independently verify APK/AAB version and original upload certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | sort -r | head -1)"
+          "$SDKMANAGER" --install 'build-tools;36.0.0'
+          APK=rivotalk-signed/RivoTalk-0.1.0-alpha08-RivoScan-SIGNED.apk
+          AAB=rivotalk-signed/RivoTalk-0.1.0-alpha08-RivoScan-SIGNED.aab
+          "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging "$APK" |             grep -F "package: name='com.ribhlab.rivotalk' versionCode='8' versionName='0.1.0-alpha08'"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "$APK" > "$RUNNER_TEMP/rivotalk-apk-cert.txt"
+          grep -Fi "$(echo "$ORIGINAL_UPLOAD_SHA1" | tr -d ':' | tr '[:upper:]' '[:lower:]')" "$RUNNER_TEMP/rivotalk-apk-cert.txt"
+          jarsigner -verify "$AAB" > "$RUNNER_TEMP/rivotalk-aab-verify.txt" 2>&1
+          grep -F 'jar verified' "$RUNNER_TEMP/rivotalk-aab-verify.txt"
+          keytool -printcert -jarfile "$AAB" | grep -F "SHA1: $ORIGINAL_UPLOAD_SHA1"
+      - name: Use the existing publisher service account to stage code8 without track changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -u tools/play-publisher/rivotalk_08_stage_signed.py
+          echo 'RivoTalk 0.1.0-alpha08 code8 is only staged in bundle library. NO production / internal / review or image changes.' >> "$GITHUB_STEP_SUMMARY"
