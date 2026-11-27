@@ -1,0 +1,96 @@
+name: RivoMeasure 1.3.10 - stage certified code14 AAB in Play library only
+on:
+  push:
+    branches: [deploy/rivomeasure-1310-code14-20261127]
+    paths:
+      - .github/workflows/rivomeasure-1310-stage-original-key-signed.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: google-play-com.ribhlab.ribhmeasure-stage14
+  cancel-in-progress: false
+jobs:
+  stage-original-code14:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      SOURCE_RUN: '46072003621'
+      SOURCE_SHA: 818fc795f9fdb44291818a2b48567ebf3dcd420a
+      SIGNER_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+      RIVOMEASURE_1310_STAGE_CONFIRM: STAGE_ONLY_RIVOMEASURE_CODE14_ORIGINAL_KEY_KEEP_ALL_TRACKS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Verify original publisher prerequisites and signed-source run provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -m pip install -r tools/play-publisher/requirements.txt
+          python3 -m py_compile tools/play-publisher/rivomeasure_1310_stage_signed.py
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          repo="univcours/ribhlab"
+          run=os.environ["SOURCE_RUN"]
+          steps_required={
+            "Verify latest distinct package, code14, per-app live AdMob IDs and safe frequency",
+            "Install Android SDK API36 and build Android unit, lint, debug and unsigned release",
+            "Restore original upload key temporarily; verify exact registered signer",
+            "Build original-key signed RivoMeasure code14 APK + AAB",
+            "Fallback - retain verified signed code14 APK and AAB when GitHub Releases is denied",
+          }
+          for attempt in range(45):
+              raw=subprocess.check_output(["gh","api",f"repos/{repo}/actions/runs/{run}/jobs"],text=True)
+              jobs=json.loads(raw)["jobs"]
+              if len(jobs)==1:
+                  job=jobs[0]
+                  steps={s["name"]:s.get("conclusion") for s in job.get("steps") or []}
+                  if (all(steps.get(s)=="success" for s in steps_required)):
+                      run_info=json.loads(subprocess.check_output(
+                          ["gh","api",f"repos/{repo}/actions/runs/{run}"],text=True))
+                      assert run_info["head_sha"]==os.environ["SOURCE_SHA"],"Source hash changed"
+                      other_fail=[s for s,c in steps.items() if c=="failure" and
+                          s!="Preserve verified signed latest code14 release as immutable prerelease"]
+                      assert not other_fail,"Unexpected failed build/QA/sign steps: "+str(other_fail)
+                      print("RIVOMEASURE_1310_SOURCE_SIGNER_TEST_AND_ARTIFACT_VERIFIED=TRUE",flush=True)
+                      break
+                  if job.get("status")=="completed":
+                      raise SystemExit("Original code14 builder finished but signed QA/artifact steps failed")
+              if attempt==44:
+                  raise SystemExit("Timed out waiting for original-key signed code14 CI evidence")
+              time.sleep(8)
+          PY
+      - name: Download exact SHA-backed signed APK/AAB from accessible original source CI
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p signed-1310
+          gh run download "$SOURCE_RUN" --repo univcours/ribhlab \
+            --name RivoMeasure-1310-code14-original-key-signed-candidate \
+            --dir signed-1310
+          (cd signed-1310 && sha256sum -c SHA256SUMS.txt)
+          APK=signed-1310/RivoMeasure-v1.3.10-code14-original-SIGNED.apk
+          AAB=signed-1310/RivoMeasure-v1.3.10-code14-original-SIGNED.aab
+          test -s "$APK" && test -s "$AAB"
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -type f | sort -r | head -1)"
+          "$SDKMANAGER" --install 'build-tools;36.0.0'
+          "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging "$APK" | \
+            grep -F "package: name='com.ribhlab.ribhmeasure' versionCode='14' versionName='1.3.10'"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "$APK" > "$RUNNER_TEMP/rivomeasure-code14-apk.txt"
+          grep -Fi "$(echo "$SIGNER_SHA1" | tr -d ':' | tr '[:upper:]' '[:lower:]')" "$RUNNER_TEMP/rivomeasure-code14-apk.txt"
+          jarsigner -verify "$AAB" > "$RUNNER_TEMP/rivomeasure-code14-aab.txt" 2>&1
+          grep -F 'jar verified' "$RUNNER_TEMP/rivomeasure-code14-aab.txt"
+          keytool -printcert -jarfile "$AAB" | grep -F "SHA1: $SIGNER_SHA1"
+      - name: Stage only latest certified RivoMeasure code14 in original Play bundle library
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -u tools/play-publisher/rivomeasure_1310_stage_signed.py
+          echo 'RivoMeasure 1.3.10 code14 is staged in the Google Play bundle library ONLY. Current Published code13 Production and Alpha release, store graphics and legal declarations remain unchanged.' >> "$GITHUB_STEP_SUMMARY"
