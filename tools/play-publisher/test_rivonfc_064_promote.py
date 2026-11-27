@@ -1,12 +1,23 @@
 #!/usr/bin/env python3
 """Offline regressions for RivoNFC exact code11 release and Google Play guard."""
-import sys
+import ast
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import MagicMock
 
-sys.path.insert(0,str(Path(__file__).resolve().parent))
-import rivonfc_064_promote as app
+# The main publisher's global CI deliberately runs without installed Google API
+# dependencies or Play credentials. Extract only pure guard functions via AST.
+# Never import the side-effect-capable publishing module in offline CI.
+PUBLISHER_SOURCE=Path(__file__).with_name("rivonfc_064_promote.py").read_text()
+TREE=ast.parse(PUBLISHER_SOURCE)
+NAMES={"latest_bundle_guard","verify_exact_tracks"}
+functions=[node for node in TREE.body if
+           isinstance(node,ast.FunctionDef) and node.name in NAMES]
+assert {f.name for f in functions}==NAMES
+scope={}
+exec(compile(ast.Module(body=functions,type_ignores=[]),"<nfc-pure-guards>","exec"),scope)
+app=SimpleNamespace(**{name:scope[name] for name in NAMES})
 
 class Code11Guards(unittest.TestCase):
     def test_staged_latest_code11_is_accepted(self):
@@ -41,16 +52,18 @@ class Code11Guards(unittest.TestCase):
             app.verify_exact_tracks(mock_editor("9","10"),{}, "9","9")
 
     def test_publication_never_cancels_existing_review(self):
-        source=Path(app.__file__).read_text()
+        source=PUBLISHER_SOURCE
         self.assertIn('changesInReviewBehavior="ERROR_IF_IN_REVIEW"',source)
         self.assertNotIn('changesInReviewBehavior="CANCEL_IN_REVIEW"',source)
         self.assertIn('RIVONFC_064_COMPLIANCE_APPROVAL',source)
         self.assertIn('RIVONFC_064_PLAY_ADS_DATASAFETY_VERIFIED',source)
 
     def test_safety_overrides_never_change_other_application(self):
-        self.assertEqual(app.PKG,"com.ribhlab.rivonfc")
-        self.assertEqual(app.OLD,"9")
-        self.assertEqual(app.NEW,"11")
+        values={n.targets[0].id:ast.literal_eval(n.value)
+                for n in TREE.body if isinstance(n,ast.Assign) and
+                len(n.targets)==1 and isinstance(n.targets[0],ast.Name) and
+                n.targets[0].id in {"PKG","OLD","NEW"}}
+        self.assertEqual(values,{"PKG":"com.ribhlab.rivonfc","OLD":"9","NEW":"11"})
 
 if __name__=="__main__":
     unittest.main(verbosity=2)
