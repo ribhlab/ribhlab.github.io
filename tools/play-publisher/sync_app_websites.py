@@ -61,7 +61,7 @@ def apply_contact_website(package: str) -> dict:
             if before.get(field) != after.get(field):
                 raise RuntimeError("Unexpected mutation of Play appDetails field: " + field)
         edits.validate(**args).execute()
-        result = edits.commit(**args).execute()
+        result = edits.commit(**args, changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
         committed = True
         return {"result": "APP_WEBSITE_COMMITTED", "package": package,
                 "oldWebsite": old, "website": website,
