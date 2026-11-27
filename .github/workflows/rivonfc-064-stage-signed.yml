@@ -1,0 +1,72 @@
+name: RivoNFC 0.6.4 - guarded stage-only Google Play bundle upload
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivonfc-064-stage-signed.yml']
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc
+  cancel-in-progress: false
+jobs:
+  stage-code11:
+    runs-on: ubuntu-latest
+    timeout-minutes: 34
+    environment: play-testing
+    env:
+      PYTHONPATH: tools/play-publisher
+      RIVONFC_064_STAGE_APPROVAL: STAGE_ONLY_RIVONFC_064_SIGNED_AAB_NO_TRACK_UPDATES
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Wait for exactly signed original-key RivoNFC 0.6.4 release and verify certificate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          URL=https://api.github.com/repos/univcours/ribhlab/releases/tags/rivonfc-v0.6.4-rivoscan-signed
+          ASSET=RivoNFC-0.6.4-RivoScan-SIGNED.aab
+          umask 077
+          mkdir -p signed
+          ready=false
+          for attempt in $(seq 1 90); do
+            code="$(curl -sSL --retry 2 --connect-timeout 15 -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' -o "$RUNNER_TEMP/rivonfc-release.json" -w '%{http_code}' "$URL")"
+            if [ "$code" = 200 ] && jq -e --arg name "$ASSET" '.prerelease==true and (.assets | any(.name==$name and .size>1000000 and (.digest | startswith("sha256:"))))' "$RUNNER_TEMP/rivonfc-release.json" >/dev/null; then
+              ready=true
+              break
+            fi
+            echo "RivoNFC 0.6.4 signed release not complete; attempt $attempt"
+            sleep 10
+          done
+          test "$ready" = true || { echo '::error::Original-key signed release not found'; exit 1; }
+          digest="$(jq -r --arg name "$ASSET" '.assets[] | select(.name==$name) | .digest | sub("^sha256:";"")' "$RUNNER_TEMP/rivonfc-release.json")"
+          bytes="$(jq -r --arg name "$ASSET" '.assets[] | select(.name==$name) | .size' "$RUNNER_TEMP/rivonfc-release.json")"
+          url="$(jq -r --arg name "$ASSET" '.assets[] | select(.name==$name) | .browser_download_url' "$RUNNER_TEMP/rivonfc-release.json")"
+          [[ "$digest" =~ ^[0-9a-f]{64}$ ]]
+          [[ "$bytes" =~ ^[0-9]+$ ]] && test "$bytes" -gt 1000000
+          [[ "$url" == "https://github.com/univcours/ribhlab/releases/download/rivonfc-v0.6.4-rivoscan-signed/"* ]]
+          curl -fSL --retry 4 --connect-timeout 20 --output "signed/$ASSET" "$url"
+          test "$(stat -c %s "signed/$ASSET")" = "$bytes"
+          echo "$digest  signed/$ASSET" | sha256sum -c
+          jarsigner -verify "signed/$ASSET" | grep -F 'jar verified'
+          keytool -printcert -jarfile "signed/$ASSET" | grep -F 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+          echo "RIVONFC_064_SIGNED_SHA256=$digest" >> "$GITHUB_ENV"
+          echo "RIVONFC_064_SIGNED_BYTES=$bytes" >> "$GITHUB_ENV"
+      - name: Install guarded official Google Play publisher
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/play-publisher/rivonfc_064_stage_signed.py
+          python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Upload ONLY verified code 11 to Play bundle library (never Production)
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python tools/play-publisher/rivonfc_064_stage_signed.py
+      - name: Report stage-only evidence
+        run: |
+          echo 'RivoNFC 0.6.4 versionCode 11 verified and staged in Google Play bundle library only; Production/Internal tracks were intentionally preserved. App Ads and Data safety declarations require independent verification before promotion.' >> "$GITHUB_STEP_SUMMARY"
