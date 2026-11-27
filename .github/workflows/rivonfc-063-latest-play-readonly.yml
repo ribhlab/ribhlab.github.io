@@ -1,4 +1,4 @@
-name: RivoNFC 0.6.3 - isolated read-only Play release audit
+name: RivoNFC 0.6.4 - confirm tracks after code-11 library upload
 on:
   push:
     branches: ['audit/rivonfc-063-readonly-20261127']
@@ -37,4 +37,5 @@ jobs:
               versions = [code for rel in track.get("releases", []) for code in rel.get("versionCodes", [])]
               print(f"RIVONFC_TRACK_{name.upper()}_CODES=" + json.dumps(versions), flush=True)
           print("RIVONFC_AUDIT_READ_ONLY=true", flush=True)
+          print("RIVONFC_AFTER_CODE11_STAGE_TRACK_AUDIT=true", flush=True)
           PY
