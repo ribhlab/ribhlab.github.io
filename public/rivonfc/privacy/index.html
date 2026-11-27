@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#09292e">
+<meta name="description" content="RivoNFC Android privacy policy: local NFC reads and writes, secure notes, history, QR sharing, and app-specific virtual NFC card.">
+<link rel="canonical" href="https://ribhlab.github.io/rivonfc/privacy/">
+<title>RivoNFC — Privacy Policy | RibhLab</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;color:#102e35;background:linear-gradient(145deg,#e5f9f7,#f9fcff 55%,#e7f0f9);font:16px/1.75 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:840px;margin:auto;padding:32px 24px 76px}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:4px 0 22px;border-bottom:1px solid #b9d9df}
+.brand{font-size:24px;font-weight:850;color:#075d56}
+a{color:#09685f;text-underline-offset:3px}
+h1{font-size:clamp(29px,5vw,42px);line-height:1.2;margin:32px 0 4px}
+h2{font-size:20px;color:#095f57;margin:32px 0 8px}
+p,li{color:#29454d}li{margin:8px 0}
+.date{font-size:14px;color:#53696e}
+.note{padding:15px 19px;background:#e0f5ee;border-inline-start:4px solid #00a58b;border-radius:7px}
+.lang{margin-top:36px;border-top:1px solid #c5e1e4;padding-top:24px}
+[lang="ar"]{direction:rtl;text-align:right}
+footer{border-top:1px solid #c5e1e4;margin-top:42px;padding-top:15px;color:#527077;font-size:14px}
+</style>
+</head>
+<body><main id="main">
+<header><div><div class="brand">RivoNFC</div><div>Android NFC utility · RibhLab</div></div><nav><a href="/rivonfc/">App information</a> · <a href="/apps/">Other RibhLab apps</a></nav></header>
+<h1>Privacy Policy</h1>
+<p class="date">Effective: 27 November 2026 · Package: <code>com.ribhlab.rivonfc</code></p>
+<p>This policy describes how RivoNFC, an Android NFC utility from RibhLab, handles information in its offline app features. It applies to the RivoNFC mobile application, not to third-party sites that you open from a tag.</p>
+<h2>1. NFC reading and writing</h2>
+<p>When you scan a compatible NFC tag, the app may process the tag's UID, supported technologies, available NDEF records, memory properties and other supported tag metadata. NFC content can contain personal or sensitive information placed there by you or someone else. Scanning and writing are local interactions with your Android device and a nearby tag. RivoNFC does not operate a server for receiving scans or tag contents.</p>
+<p>Writing data to an NFC tag stores information physically on that tag, where compatible readers may later read it. Do not write secrets to unprotected tags. Erase and permanent-lock actions require explicit in-app confirmation; permanent changes may not be reversible.</p>
+<h2>2. Data you create and save</h2>
+<p>Templates, optional scan history (including tag UIDs and available tag descriptions), tag-based reminders and user settings may be stored locally on your device. The app does not require a RivoNFC account. Users can turn off optional history and manage app data with Android's storage controls. Clearing RivoNFC's app data or uninstalling it removes app-managed private local data, but does not delete exported files or data already written to physical NFC tags.</p>
+<h2>3. Optional password-based encryption</h2>
+<p>RivoNFC includes an optional tool to encrypt user-entered private text with AES-256-GCM and a password-based key derivation function. Encrypted records may be saved to tags for later decryption by compatible tools when the correct password is supplied. The optional encryption does <strong>not</strong> automatically encrypt scan history, templates, ordinary written tags, exported backups or QR codes. Protect your password; RivoNFC cannot recover it for you.</p>
+<h2>4. QR, backup and sharing</h2>
+<p>QR codes, NDEF file exports, backups and share actions are user-initiated. The app may hand the content you choose to another app or to a storage destination you select. Other apps and recipients control their own processing of any data you share. Exported files and QR codes may contain readable tag contents, Wi-Fi credentials or contact details if you include them. Review them before sharing.</p>
+<h2>5. Virtual NFC card (HCE)</h2>
+<p>On compatible Android devices, an optional app-specific Host Card Emulation mode can make short user-approved text available to a nearby compatible NFC reader while that feature is explicitly active. It is not a payment card, access credential, travel pass or general card-cloning feature. Avoid enabling it with private content around unknown readers.</p>
+<h2>6. Network access, analytics and advertising</h2>
+<p>The RivoNFC 0.6.1 app is built without an Android Internet permission and its core NFC features operate offline. This release does not include a developer-operated cloud account, advertising service, or analytics collection. RibhLab does not receive NFC tag data through an app-operated server. Android, Google Play and other apps may separately process service information under their own policies when you install, update or share data.</p>
+<h2>7. Security and local retention</h2>
+<p>Local app-managed information usually remains until it is deleted, app data is cleared, or the app is uninstalled. Information stored on tags, exported elsewhere, or shared to other applications may remain even after uninstalling RivoNFC. No device, storage or NFC communication method is guaranteed to be completely secure. NFC features are intended for use with tags and devices that you own or are authorized to operate.</p>
+<h2>8. Children, changes and contact</h2>
+<p>RivoNFC is a general-purpose NFC utility, not a service specifically designed for children. Target audience and content declarations are managed through Google Play. We may update this policy to reflect functionality, platform requirements, or legal changes; the effective date will be revised. For privacy questions or requests concerning information held by the developer, email <a href="mailto:rachid022note4@gmail.com">rachid022note4@gmail.com</a>. Local app data can be managed directly using Android Settings → Apps → RivoNFC → Storage.</p>
+<section class="lang" lang="fr"><h2>Résumé en français</h2><p>RivoNFC permet de lire, créer, écrire et sauvegarder des données NFC localement. L'historique, les modèles et les rappels facultatifs restent sur l'appareil. Le chiffrement des notes est facultatif et ne protège pas automatiquement les sauvegardes ni les QR codes. La version 0.6.1 fonctionne sans autorisation Internet et sans collecte publicitaire par l'application. Les données écrites sur des tags, exportées ou partagées ne sont pas supprimées par la désinstallation. Contact : <a href="mailto:rachid022note4@gmail.com">rachid022note4@gmail.com</a>.</p></section>
+<section class="lang" lang="ar"><h2>ملخص سياسة الخصوصية بالعربية</h2><p>يعالج RivoNFC بيانات علامات NFC محلياً على جهازك. يُخزن سجل المسح والقوالب والتذكيرات الاختيارية محلياً، ويمكن مسح بيانات التطبيق من إعدادات أندرويد. تشفير الملاحظات اختياري ولا يشمل تلقائياً الملفات المصدرة أو رموز QR أو العلامات العادية. لا يحتاج الإصدار 0.6.1 إلى إذن الاتصال بالإنترنت ولا يتضمن إعلانات أو تحليلات يجمعها المطور. تبقى البيانات المكتوبة على العلامات أو المشاركة مع تطبيقات أخرى خارج سيطرة التطبيق. للاستفسارات: <a href="mailto:rachid022note4@gmail.com">rachid022note4@gmail.com</a>.</p></section>
+<footer>© 2026 RibhLab · <a href="/rivonfc/">RivoNFC</a> · <a href="/">RibhLab</a></footer>
+</main></body></html>
