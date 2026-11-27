@@ -3,7 +3,7 @@ on:
   push:
     branches: [qa/rivonfc-065-real-signed-screens-20261127]
     paths:
-      - '.github/workflows/rivonfc-065-original-signed-real-store-screens.yml'
+      - '.github/workflows/rivonfc-065-original-signed-real-screens.yml'
       - 'tools/play-publisher/rivonfc_065_capture_real_screens.py'
   workflow_dispatch:
 permissions:
