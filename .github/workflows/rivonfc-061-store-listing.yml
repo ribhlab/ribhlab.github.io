@@ -1,0 +1,45 @@
+name: RivoNFC 0.6.1 initial Google Play listing and genuine app screenshots
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivonfc-061-store-listing.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc
+  cancel-in-progress: false
+jobs:
+  listing:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install publisher and image tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends librsvg2-bin fonts-dejavu-core
+          python -m pip install -r tools/play-publisher/requirements.txt Pillow
+      - name: Download exact screenshots from original RivoScan signed release
+        run: |
+          set -euo pipefail
+          FOLDER=tools/play-publisher/rivonfc-061-input
+          mkdir -p "$FOLDER"
+          BASE=https://github.com/univcours/ribhlab/releases/download/rivonfc-v0.6.1-rivoscan-signed
+          for ITEM in scan write tools history; do
+            FILE="RivoNFC-0.6.1-real-${ITEM}.png"
+            curl --fail --location --retry 4 --retry-delay 3 --connect-timeout 20 --output "$FOLDER/$FILE" "$BASE/$FILE"
+          done
+          rsvg-convert -w 512 -h 512 -o "$FOLDER/icon-512.png" tools/play-publisher/rivonfc-061-store-icon.svg
+      - name: Upload RivoNFC listing and original-app media only
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PYTHONPATH: tools/play-publisher
+          RIVONFC_APPROVAL: PUBLISH_RIVONFC_061_INITIAL_STORE_LISTING
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || { echo 'Google Play service-account secret unavailable'; exit 1; }
+          python tools/play-publisher/rivonfc_061_first_listing.py
