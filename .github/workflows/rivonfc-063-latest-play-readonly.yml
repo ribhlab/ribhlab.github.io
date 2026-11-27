@@ -25,4 +25,11 @@ jobs:
         run: |
           set -euo pipefail
           test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
-          python tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc
+          PYTHONPATH=tools/play-publisher python - <<'PY'
+          import json
+          from audit_releases import audit
+          result = audit("com.ribhlab.rivonfc", ("production", "internal", "qa", "alpha", "beta"))
+          print("RIVONFC_063_LIVE_TRACKS=" + json.dumps(result, sort_keys=True, ensure_ascii=False), flush=True)
+          if result["tracks"]["production"].get("result") != "OK":
+              raise SystemExit("Production could not be verified")
+          PY
