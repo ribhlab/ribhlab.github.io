@@ -1,0 +1,26 @@
+name: RivoSticker 1.0.5 - read-only Google Play lifecycle check
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rivosticker-v105-lifecycle-check.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install verified publisher dependencies
+        run: pip install -r tools/play-publisher/requirements.txt
+      - name: Read-only release lifecycle for ONLY RivoSticker
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}" || exit 2
+          PYTHONPATH=tools/play-publisher python tools/play-publisher/audit_releases.py --package com.ribhlab.rivosticker
