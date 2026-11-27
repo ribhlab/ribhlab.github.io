@@ -1,0 +1,72 @@
+name: RivoNFC code11 - validate 4 real store screenshots in uncommitted Play edit
+on:
+  push:
+    branches: [fix/rivonfc-064-safe-production-20261127]
+    paths:
+      - '.github/workflows/rivonfc-064-real-media-play-dry-run.yml'
+      - 'tools/play-publisher/rivonfc_064_production_real_media.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: rivonfc-064-uncommitted-real-media-test
+  cancel-in-progress: false
+jobs:
+  validate-without-publishing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    environment: play-testing
+    env:
+      PYTHONPATH: tools/play-publisher
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      GH_TOKEN: ${{ github.token }}
+      RIVONFC_064_DRY_RUN: 'true'
+      SCREEN_QA_RUN: '46076130056'
+      SCREEN_QA_SHA: 95643983a485b2cac389c4af810bc74eadaa23ec
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install publisher and offline code11 regression tests
+        run: |
+          set -euo pipefail
+          python3 -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13' requests
+          python3 -m unittest discover tools/play-publisher -p 'test_rivonfc_064_promote.py' -v
+          python3 -m py_compile tools/play-publisher/rivonfc_064_production_real_media.py
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+      - name: Restore certified code11 screenshot captures using exact successful QA provenance
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SCREEN_QA_RUN" --jq .conclusion)" = success
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SCREEN_QA_RUN" --jq .head_sha)" = "$SCREEN_QA_SHA"
+          mkdir -p rivonfc-code11-store
+          gh run download "$SCREEN_QA_RUN" --repo "$GITHUB_REPOSITORY" \
+            --name RivoNFC-064-Code11-OriginalSigned-Genuine-StoreMedia \
+            --dir rivonfc-code11-store
+          (cd rivonfc-code11-store && sha256sum -c SHA256SUMS.txt)
+      - name: Validate code11 Production edits without commit, distinguish blocked Console AD_ID from software failure
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          python3 -u tools/play-publisher/rivonfc_064_production_real_media.py 2>&1 | tee "$RUNNER_TEMP/rivonfc-dry-run.txt"
+          status="${PIPESTATUS[0]}"
+          set -e
+          if test "$status" -eq 0; then
+            echo 'RIVONFC_064_PLAY_CODE11_REAL_MEDIA_DRY_RUN=VALIDATED_NO_COMMIT' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if test "$status" -eq 2 && grep -Fq 'your declaration on Play Console says your app doesn' "$RUNNER_TEMP/rivonfc-dry-run.txt" && grep -Fq 'advertising ID' "$RUNNER_TEMP/rivonfc-dry-run.txt"; then
+            echo 'RIVONFC_064_PLAY_CODE11_REAL_MEDIA_DRY_RUN=EXTERNAL_POLICY_BLOCKER_ADVERTISING_ID_DECLARATION_NO' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Play Console must declare RivoNFC uses Advertising ID = Yes; release was NOT committed and Production code9 remains published.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo 'RIVONFC_064_DRY_RUN_UNEXPECTED_ERROR' >&2
+          exit "$status"
+      - name: Independent status audit (read-only)
+        if: always()
+        run: |
+          if test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"; then
+            python3 tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc || echo 'RIVONFC_064_PUBLIC_RELEASE_AUDIT=TEMPORARILY_UNAVAILABLE (no Play writes; prior independent code9 release preflight is verified)'
+          fi

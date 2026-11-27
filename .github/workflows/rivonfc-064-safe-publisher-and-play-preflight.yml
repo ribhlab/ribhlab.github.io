@@ -1,0 +1,43 @@
+name: RivoNFC code11 - corrected publisher regression + independent Play preflight
+on:
+  push:
+    branches: [fix/rivonfc-064-safe-production-20261127]
+    paths:
+      - 'tools/play-publisher/rivonfc_064_promote.py'
+      - 'tools/play-publisher/test_rivonfc_064_promote.py'
+      - 'tools/play-publisher/rivonfc_064_preflight.py'
+      - '.github/workflows/rivonfc-064-safe-publisher-and-play-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rivonfc-064-read-only-preflight
+  cancel-in-progress: false
+jobs:
+  verify-code11-publisher-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    environment: play-testing
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install original Play publisher libraries for isolated tests
+        run: |
+          set -euo pipefail
+          python3 -m pip install -r tools/play-publisher/requirements.txt requests
+      - name: Verify exact code11, fail-closed review guards and non-cancelling commits
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover tools/play-publisher -p 'test_rivonfc_064_promote.py' -v
+          python3 -m compileall -q tools/play-publisher/rivonfc_064_promote.py tools/play-publisher/rivonfc_064_preflight.py
+      - name: Audit live RivoNFC tracks, Play listing images and public policy URLs without publishing
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -u tools/play-publisher/rivonfc_064_preflight.py
+      - name: No rollout performed
+        run: |
+          echo 'RivoNFC code11 corrected publishing guard verified and live Play preflight completed without touching any Play track or changing the 0.6.2 code9 release.' >> "$GITHUB_STEP_SUMMARY"

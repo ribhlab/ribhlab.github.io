@@ -10,6 +10,9 @@ import json
 import os
 import sys
 
+# The bundle library already contains RivoNFC code 11. Never reject the exact
+# target or silently allow a future build to be overwritten by an older code.
+
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from publish import get_credentials
@@ -24,6 +27,14 @@ NOTES=[
  {"language":"ar","text":"واجهة المسح تتكيف مع الشاشة دون تمرير عمودي. حاوية بانر ثابتة أسفل التطبيق وإعلانات بينية متباعدة بعد الموافقة، دون مقاطعة NFC."},
 ]
 def log(k,v):print(k+"="+json.dumps(v,ensure_ascii=False,sort_keys=True),flush=True)
+
+def latest_bundle_guard(bundle_codes):
+    codes = [int(code) for code in bundle_codes]
+    if 11 not in codes:
+        raise RuntimeError("Original-key signed code 11 is missing from Play bundle library")
+    if any(code > 11 for code in codes):
+        raise RuntimeError("Newer Play bundle exists; refuse obsolete code 11 promotion")
+    return True
 def verify_exact_tracks(edits,kw,prod_expected,internal_expected):
     rows=edits.tracks().list(**kw).execute().get("tracks",[])
     tracks={t.get("track"):t for t in rows}
@@ -48,6 +59,12 @@ def media(edits,kw):
     return {p:[img["id"] for img in edits.images().list(**kw,language="en-US",imageType=p).execute().get("images",[])]
             for p in ("icon","featureGraphic","phoneScreenshots")}
 def run(phase):
+    # Never publish a new NFC binary with screenshots from the old code9 UI.
+    # Production must use rivonfc_064_production_real_media.py atomically.
+    if phase=="production":
+        raise RuntimeError("Legacy Production promotion disabled: use verified code11 real-media publisher")
+    if os.environ.get("RIVONFC_064_AD_ID_CONSOLE_VERIFIED")!="true":
+        raise RuntimeError("Play Console Advertising ID must declare YES for Mobile Ads SDK")
     if os.environ.get("RIVONFC_064_COMPLIANCE_APPROVAL")!=CONFIRM:
         raise RuntimeError("No verified Google Play ad declaration / Data safety compliance approval")
     api=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False)
@@ -57,8 +74,7 @@ def run(phase):
     committed=False
     try:
         bundle_codes=[str(x.get("versionCode")) for x in edits.bundles().list(**kw).execute().get("bundles",[])]
-        if NEW not in bundle_codes:raise RuntimeError("Signed code 11 missing from bundle library")
-        if any(int(code)>10 for code in bundle_codes):raise RuntimeError("A newer bundle exists; verify latest source")
+        latest_bundle_guard(bundle_codes)
         expected_production=OLD if phase=="production" else NEW
         tracks=verify_exact_tracks(edits,kw,expected_production,OLD)
         countries=edits.countryavailability().get(**kw,track="production").execute()
@@ -77,7 +93,9 @@ def run(phase):
         after=media(edits,kw)
         if after!=before:raise RuntimeError("Play artwork changed unexpectedly")
         edits.validate(**kw).execute()
-        edits.commit(**kw).execute()
+        # Never let an edit silently cancel a Production review already in progress.
+        # Google Play's default is to cancel it; this guard refuses the operation.
+        edits.commit(**kw,changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
         committed=True
         log("RIVONFC_064_PROMOTED",{"phase":phase,"package":PKG,"versionCode":11,
             "status":"completed","otherTrackUnchanged":True,"screenshotsPreserved":True,
