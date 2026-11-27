@@ -1,0 +1,72 @@
+name: RivoTalk alpha04 original-key bundle internal promotion
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/workflows/rivotalk-alpha04-internal.yml']
+permissions:
+  contents: read
+jobs:
+  promote:
+    if: github.head_ref == 'publish/rivotalk-testing-20261126'
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Verify existing code 4 and replace internal testing code 2
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PYTHONPATH: tools/play-publisher
+        run: |
+          python - <<'PY'
+          from publish import get_credentials
+          from googleapiclient.discovery import build
+          from googleapiclient.errors import HttpError
+          pkg="com.ribhlab.rivotalk"
+          api=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False)
+          ed=api.edits()
+          eid=None
+          committed=False
+          try:
+              eid=ed.insert(packageName=pkg,body={}).execute()["id"]
+              args={"packageName":pkg,"editId":eid}
+              bundles=ed.bundles().list(**args).execute().get("bundles",[])
+              codes={int(x["versionCode"]) for x in bundles}
+              print("PLAY_BUNDLE_CODES",sorted(codes))
+              if 4 not in codes:
+                  raise RuntimeError("Original-key signed alpha04 not yet uploaded into Play app bundle library")
+              tracks=ed.tracks().list(**args).execute().get("tracks",[])
+              existing=next((t for t in tracks if t.get("track")=="internal"),None)
+              print("BEFORE_INTERNAL", [(x.get("status"),x.get("versionCodes")) for x in existing.get("releases",[])] if existing else [])
+              if existing and len(existing.get("releases",[]))==1 and existing["releases"][0].get("status")=="completed" and [str(v) for v in existing["releases"][0].get("versionCodes",[])]==["4"]:
+                  print("ALREADY_PROMOTED_ALPHA04")
+              else:
+                  body={"track":"internal","releases":[
+                      {"name":"RivoTalk 0.1.0-alpha04 internal testing","status":"completed","versionCodes":["4"],
+                       "releaseNotes":[{"language":"en-US","text":"Bluetooth group PTT, local chat, host controls, optional ads and foreground-service/privacy corrections."}]}
+                  ]}
+                  ed.tracks().update(**args,track="internal",body=body).execute()
+                  ed.commit(packageName=pkg,editId=eid).execute()
+                  committed=True
+                  print("INTERNAL_ALPHA04_COMMITTED")
+          except HttpError as e:
+              print("PLAY_HTTP_ERROR",e.resp.status,str(e.reason)[:750])
+              raise
+          finally:
+              if eid and not committed:
+                  try: ed.delete(packageName=pkg,editId=eid).execute()
+                  except HttpError: pass
+          # Independent read of persisted release state after commit or no-op.
+          rid=ed.insert(packageName=pkg,body={}).execute()["id"]
+          try:
+              alltracks=ed.tracks().list(packageName=pkg,editId=rid).execute().get("tracks",[])
+              for track in alltracks:
+                  if track.get("track") in ("internal","production","alpha","beta"):
+                      print("VERIFY_TRACK",track.get("track"),[(x.get("status"),x.get("versionCodes")) for x in track.get("releases",[])])
+          finally:
+              ed.delete(packageName=pkg,editId=rid).execute()
+          PY

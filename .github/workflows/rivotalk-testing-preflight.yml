@@ -1,0 +1,47 @@
+name: RivoTalk testing publisher preflight
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/workflows/rivotalk-testing-preflight.yml']
+permissions:
+  contents: read
+jobs:
+  preflight:
+    if: github.head_ref == 'publish/rivotalk-testing-20261126'
+    runs-on: ubuntu-latest
+    environment: play-testing
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Check registration and available testing tracks only
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PYTHONPATH: tools/play-publisher
+        run: |
+          python - <<'PY'
+          from publish import get_credentials
+          from googleapiclient.discovery import build
+          from googleapiclient.errors import HttpError
+          package='com.ribhlab.rivotalk'
+          edits=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False).edits()
+          eid=None
+          try:
+              eid=edits.insert(packageName=package,body={}).execute()['id']
+              args=dict(packageName=package,editId=eid)
+              tracks=edits.tracks().list(**args).execute().get('tracks',[])
+              for t in tracks:
+                  print('TRACK',t['track'], 'RELEASES',[(r.get('status'),r.get('versionCodes')) for r in t.get('releases',[])])
+              print('RIVOTALK_APP_FOUND')
+              print('BUNDLE_CODES', [b['versionCode'] for b in edits.bundles().list(**args).execute().get('bundles',[])])
+          except HttpError as e:
+              print('PLAY_HTTP',e.resp.status,str(e.reason)[:500])
+              raise SystemExit(1)
+          finally:
+              if eid: edits.delete(packageName=package,editId=eid).execute()
+          PY
+
+# Recheck after app registration, before preparing alpha03 production.
