@@ -24,7 +24,7 @@ jobs:
           python -m py_compile tools/play-publisher/rivonfc_061_internal_after_production.py
           grep -F 'PACKAGE = "com.ribhlab.rivonfc"' tools/play-publisher/rivonfc_061_internal_after_production.py
           grep -F 'VERSION = "8"' tools/play-publisher/rivonfc_061_internal_after_production.py
-      - name: Use already uploaded original-key AAB code 8 for Internal Testing
+      - name: Reuse existing empty Internal Testing draft using signed code 8 from Production
         env:
           GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
           RIVONFC_INTERNAL_APPROVAL: PUBLISH_RIVONFC_061_INTERNAL_ONLY_AFTER_PRODUCTION_REVIEW
