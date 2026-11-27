@@ -1,4 +1,4 @@
-name: RivoNFC 0.6.4 — activate after Play ads and Data safety declarations
+name: RivoNFC 0.6.4 - Internal Testing only after genuine Production release is reviewed
 on:
   workflow_dispatch:
     inputs:
@@ -12,19 +12,25 @@ on:
         type: boolean
         default: false
         required: true
+      ad_id_declared:
+        description: "Google Play Console Advertising ID use confirmed YES for RivoNFC Mobile Ads SDK"
+        type: boolean
+        default: false
+        required: true
 permissions:
   contents: read
 concurrency:
   group: google-play-com.ribhlab.rivonfc
   cancel-in-progress: false
 jobs:
-  promote:
-    if: ${{ inputs.ads_declared == true && inputs.data_safety_declared == true }}
+  promote-internal-only:
+    if: ${{ inputs.ads_declared == true && inputs.data_safety_declared == true && inputs.ad_id_declared == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 18
     environment: play-testing
     env:
       RIVONFC_064_COMPLIANCE_APPROVAL: RIVONFC_064_PLAY_ADS_DATASAFETY_VERIFIED
+      RIVONFC_064_AD_ID_CONSOLE_VERIFIED: 'true'
       PYTHONPATH: tools/play-publisher
     steps:
       - uses: actions/checkout@v4
@@ -38,13 +44,9 @@ jobs:
           test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
           python -m py_compile tools/play-publisher/rivonfc_064_promote.py
           python -m pip install -r tools/play-publisher/requirements.txt
-      - name: Promote already signed code 11 to Production first
-        env:
-          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
-        run: python tools/play-publisher/rivonfc_064_promote.py --phase production
-      - name: After Production commit, promote identical code 11 to Internal Testing
+      - name: Only after actual code11 Production is reviewed, promote same code11 to Internal Testing
         env:
           GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
         run: python tools/play-publisher/rivonfc_064_promote.py --phase internal
-      - name: Verify promotion receipts
-        run: echo 'RivoNFC code 11 Production and Internal Testing edits committed; Google review/public availability may still be pending.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Verify promotion receipt
+        run: echo 'RivoNFC code11 Internal Testing edit submitted after a genuine signed-code11 Production release. This workflow never changes Production, images or app declarations.' >> "$GITHUB_STEP_SUMMARY"
