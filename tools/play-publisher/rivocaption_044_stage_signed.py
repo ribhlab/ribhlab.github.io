@@ -47,7 +47,7 @@ def tracks_snapshot(tracks: list[dict]) -> dict:
 
 def run() -> None:
     if os.environ.get("RIVOCAPTION_044_STAGE_CONFIRM") != APPROVAL:
-        raise RuntimeError("Exact RivoCaption stage-only authorization missing")
+        raise RuntimeError("Exact RivoCaption code18 stage-only authorization missing")
     if not AAB.is_file() or AAB.stat().st_size < 1_000_000:
         raise RuntimeError("Signed original RivoCaption v0.4.4 AAB not present")
     digest = hashlib.file_digest(AAB.open("rb"), "sha256").hexdigest()
@@ -80,7 +80,7 @@ def run() -> None:
             for b in edits.bundles().list(**kw).execute().get("bundles", [])
         }
         if any(int(v) > 18 for v in bundles):
-            raise RuntimeError("Newer RivoCaption bundle exists; version 8 is no longer latest")
+            raise RuntimeError("Newer RivoCaption bundle exists; version 18 is no longer latest")
         english = edits.listings().get(**kw, language="en-US").execute()
         if "rivocaption" not in english.get("title", "").casefold():
             raise RuntimeError("Wrong app listing returned; refusing commit")
