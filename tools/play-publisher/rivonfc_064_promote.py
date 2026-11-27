@@ -10,6 +10,9 @@ import json
 import os
 import sys
 
+# The bundle library already contains RivoNFC code 11. Never reject the exact
+# target or silently allow a future build to be overwritten by an older code.
+
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from publish import get_credentials
@@ -24,6 +27,14 @@ NOTES=[
  {"language":"ar","text":"واجهة المسح تتكيف مع الشاشة دون تمرير عمودي. حاوية بانر ثابتة أسفل التطبيق وإعلانات بينية متباعدة بعد الموافقة، دون مقاطعة NFC."},
 ]
 def log(k,v):print(k+"="+json.dumps(v,ensure_ascii=False,sort_keys=True),flush=True)
+
+def latest_bundle_guard(bundle_codes):
+    codes = [int(code) for code in bundle_codes]
+    if 11 not in codes:
+        raise RuntimeError("Original-key signed code 11 is missing from Play bundle library")
+    if any(code > 11 for code in codes):
+        raise RuntimeError("Newer Play bundle exists; refuse obsolete code 11 promotion")
+    return True
 def verify_exact_tracks(edits,kw,prod_expected,internal_expected):
     rows=edits.tracks().list(**kw).execute().get("tracks",[])
     tracks={t.get("track"):t for t in rows}
@@ -57,8 +68,7 @@ def run(phase):
     committed=False
     try:
         bundle_codes=[str(x.get("versionCode")) for x in edits.bundles().list(**kw).execute().get("bundles",[])]
-        if NEW not in bundle_codes:raise RuntimeError("Signed code 11 missing from bundle library")
-        if any(int(code)>10 for code in bundle_codes):raise RuntimeError("A newer bundle exists; verify latest source")
+        latest_bundle_guard(bundle_codes)
         expected_production=OLD if phase=="production" else NEW
         tracks=verify_exact_tracks(edits,kw,expected_production,OLD)
         countries=edits.countryavailability().get(**kw,track="production").execute()
@@ -77,7 +87,9 @@ def run(phase):
         after=media(edits,kw)
         if after!=before:raise RuntimeError("Play artwork changed unexpectedly")
         edits.validate(**kw).execute()
-        edits.commit(**kw).execute()
+        # Never let an edit silently cancel a Production review already in progress.
+        # Google Play's default is to cancel it; this guard refuses the operation.
+        edits.commit(**kw,changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
         committed=True
         log("RIVONFC_064_PROMOTED",{"phase":phase,"package":PKG,"versionCode":11,
             "status":"completed","otherTrackUnchanged":True,"screenshotsPreserved":True,
