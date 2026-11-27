@@ -114,35 +114,45 @@ def upload(args: argparse.Namespace, aab: Path) -> dict:
 
     client = build("androidpublisher", "v3", credentials=get_credentials(), cache_discovery=False)
     edits = client.edits()
-    edit = edits.insert(packageName=args.package, body={}).execute()
-    edit_id = edit["id"]
-    target_track, existing = get_target_track(edits, args.package, edit_id, args.track)
-    # Apply potentially destructive track changes only after checking existing releases.
-    # Version code is known only after upload; this edit is not committed until all succeed.
-    if args.status == "draft" and any(item.get("status") == "draft" for item in existing):
-        raise ValueError("Track already has a draft release; resolve it in Play Console")
-    if args.status == "completed":
-        if any(item.get("status") != "completed" for item in existing):
-            raise ValueError("Track has staged, halted, or draft releases; resolve them before publishing")
-        if any(len(item.get("versionCodes", [])) > 1 for item in existing):
-            raise ValueError("Existing multi-APK configuration requires manual review")
+    edit_id = edits.insert(packageName=args.package, body={}).execute()["id"]
+    committed = False
+    try:
+        target_track, existing = get_target_track(edits, args.package, edit_id, args.track)
+        # Check for conflicts before we upload the signed AAB.
+        if args.status == "draft" and any(r.get("status") == "draft" for r in existing):
+            raise ValueError("Track already has a draft release; resolve it in Play Console")
+        if args.status == "completed":
+            if any(r.get("status") != "completed" for r in existing):
+                raise ValueError("Track contains staged, halted or draft releases; resolve them in Play Console")
+            if any(len(r.get("versionCodes", [])) > 1 for r in existing):
+                raise ValueError("Existing multi-APK configuration requires manual review")
 
-    media = MediaFileUpload(str(aab), mimetype="application/octet-stream", resumable=True)
-    bundle = edits.bundles().upload(
-        packageName=args.package, editId=edit_id, media_body=media
-    ).execute()
-    code = str(bundle["versionCode"])
-
-    releases = build_releases(args, code, existing)
-    edits.tracks().update(
-        packageName=args.package,
-        editId=edit_id,
-        track=target_track,
-        body={"track": target_track, "releases": releases},
-    ).execute()
-    edits.commit(packageName=args.package, editId=edit_id,
-                 changesInReviewBehavior="ERROR_IF_IN_REVIEW").execute()
-    return {"package": args.package, "track": target_track, "status": args.status, "versionCode": code}
+        media = MediaFileUpload(str(aab), mimetype="application/octet-stream", resumable=True)
+        bundle = edits.bundles().upload(
+            packageName=args.package, editId=edit_id, media_body=media,
+        ).execute()
+        code = str(bundle["versionCode"])
+        releases = build_releases(args, code, existing)
+        edits.tracks().update(
+            packageName=args.package, editId=edit_id,
+            track=target_track, body={"track": target_track, "releases": releases},
+        ).execute()
+        # Google's default cancels any ongoing review. NEVER use that default:
+        # the current review must finish before this edit can be committed.
+        edits.commit(
+            packageName=args.package, editId=edit_id,
+            changesInReviewBehavior="ERROR_IF_IN_REVIEW",
+        ).execute()
+        committed = True
+        return {"package": args.package, "track": target_track,
+                "status": args.status, "versionCode": code}
+    finally:
+        if not committed:
+            try:
+                edits.delete(packageName=args.package, editId=edit_id).execute()
+            except Exception:
+                print("CLEANUP_WARNING: an uncommitted Play edit could not be deleted",
+                      file=sys.stderr)
 
 
 def main(argv: list[str] | None = None) -> int:
