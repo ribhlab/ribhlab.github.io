@@ -25,7 +25,7 @@ OFFICIAL_WEBSITES = {
     "com.ribhlab.rivonfc": "https://ribhlab.github.io/rivonfc/",
 }
 CONFIRMATION = "SET_WEBSITE_ONLY"
-PACKAGE_PATTERN = re.compile(r"^[a-zA-Z][a-zA-Z0-9_]*(?:\\.[a-zA-Z][a-zA-Z0-9_]*)+$")
+PACKAGE_PATTERN = re.compile(r"^[A-Za-z][A-Za-z0-9_]*(?:[.][A-Za-z][A-Za-z0-9_]*)+$")
 
 
 def verified_website(package: str) -> str:
