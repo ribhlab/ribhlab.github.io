@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import sys
+import time
 from urllib.parse import quote
 
 from google.auth.transport.requests import AuthorizedSession
@@ -25,7 +26,14 @@ def emit(name, value):
 
 def get_releases(session, track):
     url=API+"/applications/"+quote(PACKAGE,safe="")+"/tracks/"+quote(track,safe="")+"/releases"
-    response=session.get(url,timeout=25)
+    response=None
+    for attempt in range(5):
+        response=session.get(url,timeout=25)
+        # Play's public release endpoint can briefly return intermittent 403
+        # during independent read calls. Retry GET only, never create an edit.
+        if response.status_code not in (403,429,500,503) or attempt==4:
+            break
+        time.sleep(3+attempt*2)
     if response.status_code!=200:
         return {"httpStatus":response.status_code,"releases":None}
     return {"httpStatus":200,"releases":[{
