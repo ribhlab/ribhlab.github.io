@@ -59,6 +59,12 @@ def media(edits,kw):
     return {p:[img["id"] for img in edits.images().list(**kw,language="en-US",imageType=p).execute().get("images",[])]
             for p in ("icon","featureGraphic","phoneScreenshots")}
 def run(phase):
+    # Never publish a new NFC binary with screenshots from the old code9 UI.
+    # Production must use rivonfc_064_production_real_media.py atomically.
+    if phase=="production":
+        raise RuntimeError("Legacy Production promotion disabled: use verified code11 real-media publisher")
+    if os.environ.get("RIVONFC_064_AD_ID_CONSOLE_VERIFIED")!="true":
+        raise RuntimeError("Play Console Advertising ID must declare YES for Mobile Ads SDK")
     if os.environ.get("RIVONFC_064_COMPLIANCE_APPROVAL")!=CONFIRM:
         raise RuntimeError("No verified Google Play ad declaration / Data safety compliance approval")
     api=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False)
