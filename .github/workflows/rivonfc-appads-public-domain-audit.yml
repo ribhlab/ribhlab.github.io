@@ -1,0 +1,68 @@
+name: RivoNFC only - app-ads.txt public root and Google Play developer domain audit
+on:
+  push:
+    branches: [audit/rivonfc-appads-domain-20261127]
+    paths: [.github/workflows/rivonfc-appads-public-domain-audit.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Verify domain crawler access, AdMob publisher row, and public Play website (no credentials)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import re, requests, html, urllib.parse
+          from html.parser import HTMLParser
+          from collections import Counter
+          class PageAnchors(HTMLParser):
+              def __init__(self):
+                  super().__init__();self.links=[];self.inlink=False;self.current=None
+              def handle_starttag(self,tag,attrs):
+                  if tag=='a':
+                      a=dict(attrs); self.inlink=True; self.current=[a.get('href',''),'']
+              def handle_data(self,data):
+                  if self.inlink and self.current:self.current[1]+=data.strip()+' '
+              def handle_endtag(self,tag):
+                  if tag=='a' and self.inlink:
+                      if self.current:self.links.append(self.current)
+                      self.inlink=False;self.current=None
+          S=requests.Session();S.headers.update({'User-Agent':'Mozilla/5.0 (compatible; Google-adstxt/1.0; +https://www.google.com/)','Accept':'text/plain,text/html,*/*'})
+          roots=['https://ribhlab.github.io/app-ads.txt','https://ribhlab.github.io/robots.txt','https://ribhlab.github.io/rivonfc/']
+          expected='google.com, pub-7945572016731367, DIRECT, f08c47fec0942fa0'
+          for url in roots:
+              try:
+                  r=S.get(url,timeout=22,allow_redirects=True)
+                  print('RIVONFC_PUBLIC_URL',{'requested':url,'http':r.status_code,'final':r.url,
+                      'contentType':r.headers.get('content-type'), 'bytes':len(r.content),
+                      'publisherRowMatch': expected in r.text if url.endswith('app-ads.txt') else None,
+                      'rows':[x for x in r.text.splitlines() if x.strip() and not x.startswith('#')][:4] if url.endswith('app-ads.txt') else None},flush=True)
+              except Exception as exc: print('RIVONFC_PUBLIC_URL_ERROR',url,type(exc).__name__,flush=True)
+          play='https://play.google.com/store/apps/details?id=com.ribhlab.rivonfc&hl=en_US&gl=US'
+          S.headers.update({'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/127.0.0.0 Safari/537.36','Accept':'text/html,application/xhtml+xml'})
+          try:
+              r=S.get(play,timeout=30,allow_redirects=True)
+              page=html.unescape(r.text)
+              anchors=PageAnchors()
+              anchors.feed(page)
+              applicable=[(href[:240],label.strip()[:90]) for href,label in anchors.links if
+                  any(x in (href+' '+label).lower() for x in ('website','ribhlab','github.io','app support','developer'))]
+              sites=sorted(set(re.findall(r'https?://[A-Za-z0-9._-]+(?:\\.[A-Za-z0-9._-]+)*(?:/[^\\\"\'\\s<>]*)?',page)))
+              print('RIVONFC_GOOGLE_PLAY_PUBLIC',{'http':r.status_code,'url':r.url,'bytes':len(r.content),
+                  'containsExactPackage':'com.ribhlab.rivonfc' in page,
+                  'containsRivoNfc':'RivoNFC' in page,
+                  'containsDeveloperDomain':'ribhlab.github.io' in page,
+                  'websiteRelatedAnchors':applicable[:28],
+                  'ribhlabDomainReferences':[x[:210] for x in sites if 'ribhlab' in x.lower()][:22]},flush=True)
+              for needle in ['App support','Website','ribhlab.github.io','RivoNFC']:
+                  idx=page.lower().find(needle.lower())
+                  if idx>=0:
+                      raw=re.sub(r'\\s+',' ',page[max(0,idx-220):idx+400])
+                      print('RIVONFC_PLAY_HTML_MATCH',needle,raw[:600],flush=True)
+          except Exception as exc:
+              print('RIVONFC_GOOGLE_PLAY_ERROR',type(exc).__name__,str(exc)[:150],flush=True)
+          PY
