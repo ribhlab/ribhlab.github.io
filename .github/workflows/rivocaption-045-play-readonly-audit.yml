@@ -1,0 +1,55 @@
+name: RivoCaption code19 - Google Play tracks read-only audit
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rivocaption-play-audit-readonly
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install only original RibhLab publisher dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+      - name: Audit RivoCaption package across all available tracks without committing a Play edit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import sys,json
+          sys.path.insert(0,"tools/play-publisher")
+          from googleapiclient.discovery import build
+          from publish import get_credentials
+          pkg="com.rivocaption.editor"
+          api=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False)
+          edits=api.edits()
+          eid=edits.insert(packageName=pkg,body={}).execute()["id"]
+          try:
+              tracks=edits.tracks().list(packageName=pkg,editId=eid).execute().get("tracks",[])
+              out=[{"track":t.get("track"),"releases":[
+                  {"status":r.get("status"),"name":r.get("name"),
+                   "versionCodes":r.get("versionCodes",[]),
+                   "userFraction":r.get("userFraction")}
+                  for r in t.get("releases",[])]} for t in tracks]
+              print("RIVOCAPTION_PLAY_API_TRACKS="+json.dumps(out,sort_keys=True,ensure_ascii=False))
+              prod=next((t for t in out if t.get("track")=="production"),None)
+              if prod:
+                  print("RIVOCAPTION_PRODUCTION_VERSION_CODES="+json.dumps(
+                      [v for r in prod["releases"] for v in r["versionCodes"]]))
+                  if any(r.get("status") not in ("completed",) for r in prod["releases"]):
+                      print("RIVOCAPTION_PRODUCTION_DRAFT_OR_STAGED_REQUIRES_REVIEW=TRUE")
+              else:print("RIVOCAPTION_NO_PRODUCTION_TRACK_RETURNED")
+          finally:
+              edits.delete(packageName=pkg,editId=eid).execute()
+          PY
