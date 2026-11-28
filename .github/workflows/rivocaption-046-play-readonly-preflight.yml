@@ -1,0 +1,56 @@
+name: RivoCaption Play state — read-only FGS follow-up
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.rivocaption.editor
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 12
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read Play registered bundles and every active release without publishing
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+          python -m pip install -q -r tools/play-publisher/requirements.txt
+          python - <<'PY'
+          import json,sys
+          from googleapiclient.discovery import build
+          sys.path.insert(0, 'tools/play-publisher')
+          from publish import get_credentials
+          pkg='com.rivocaption.editor'
+          api=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False)
+          edits=api.edits()
+          e=edits.insert(packageName=pkg,body={}).execute()['id']
+          try:
+              params=dict(packageName=pkg,editId=e)
+              tracks=edits.tracks().list(**params).execute().get('tracks',[])
+              entries=[
+                  dict(track=t.get('track'),status=r.get('status'),codes=[str(v) for v in r.get('versionCodes',[])])
+                  for t in tracks for r in t.get('releases',[])
+              ]
+              bundles=[str(b.get('versionCode')) for b in edits.bundles().list(**params).execute().get('bundles',[])]
+              print('RIVOCAPTION_PLAY_TRACKS='+json.dumps(entries))
+              print('RIVOCAPTION_PLAY_BUNDLES='+json.dumps(bundles))
+              if any(int(code)>20 for t in entries for code in t['codes']) or any(int(code)>20 for code in bundles):
+                  print('WARNING_LATEST_CODE_GREATER_THAN_20=TRUE')
+              with open(__import__('os').environ['GITHUB_STEP_SUMMARY'],'a') as f:
+                  f.write('### RivoCaption read-only Google Play API preflight\n')
+                  f.write('- Active track entries: '+json.dumps(entries)+'\n')
+                  f.write('- Registered codes: '+', '.join(bundles)+'\n')
+                  f.write('- No version was uploaded, published, or changed.\n')
+                  f.write('- Note: Android Publisher API does NOT expose the Foreground Service declaration form state; a successful read is not evidence the declaration is complete.\n')
+          finally:
+              edits.delete(packageName=pkg,editId=e).execute()
+          PY
