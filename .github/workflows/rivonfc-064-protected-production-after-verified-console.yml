@@ -1,0 +1,67 @@
+name: RivoNFC 0.6.4 code11 - verified app declarations and safe Play Production rollout
+on:
+  push:
+    branches: [deploy/rivonfc-064-declarations-verified-20261128]
+    paths: [.github/workflows/rivonfc-064-protected-production-after-verified-console.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc
+  cancel-in-progress: false
+jobs:
+  promote-only-rivonfc-code11:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment: play-production
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      PYTHONPATH: tools/play-publisher
+      RIVONFC_064_COMPLIANCE_APPROVAL: RIVONFC_064_PLAY_ADS_DATASAFETY_VERIFIED
+      RIVONFC_064_ADS_CONSOLE_VERIFIED: 'true'
+      RIVONFC_064_DATA_SAFETY_CONSOLE_VERIFIED: 'true'
+      RIVONFC_064_AD_ID_CONSOLE_VERIFIED: 'true'
+      EXACT_CODE11_SOURCE_RUN: '46076130056'
+      EXACT_CODE11_SOURCE_SHA: 95643983a485b2cac389c4af810bc74eadaa23ec
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install original Google Play publisher and verify source guards
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13' requests
+          python3 -m unittest discover tools/play-publisher -p 'test_rivonfc_064_promote.py' -v
+          python3 -m py_compile tools/play-publisher/rivonfc_064_production_real_media.py
+          grep -Fq 'changesInReviewBehavior="ERROR_IF_IN_REVIEW"' tools/play-publisher/rivonfc_064_production_real_media.py
+          echo 'CONSOLE_VERIFICATION_SOURCE=Authenticated Remote Desktop ram, RivoNFC only (28 November 2026): Advertising ID YES saved and sent for review; Ads Contains ads YES; Data safety preview: collected/shared approximate location, diagnostics, app interactions, device IDs. RivoNFC code11 has AdMob SDK 25.5 and UMP 4.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'IN_REVIEW_POLICY_DECLARATION=Do not cancel review. Play commit must abort on in-review conflict.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Require true successful 4-screen capture directly from signed 0.6.4 code11
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$EXACT_CODE11_SOURCE_RUN" --jq .conclusion)" = success
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$EXACT_CODE11_SOURCE_RUN" --jq .head_sha)" = "$EXACT_CODE11_SOURCE_SHA"
+          mkdir -p rivonfc-code11-store
+          gh run download "$EXACT_CODE11_SOURCE_RUN" --repo "$GITHUB_REPOSITORY" \
+            --name RivoNFC-064-Code11-OriginalSigned-Genuine-StoreMedia \
+            --dir rivonfc-code11-store
+          (cd rivonfc-code11-store && sha256sum -c SHA256SUMS.txt)
+          test -s rivonfc-code11-store/01-scan.png
+          test -s rivonfc-code11-store/02-write.png
+          test -s rivonfc-code11-store/03-tools.png
+          test -s rivonfc-code11-store/04-history.png
+      - name: Submit exactly code11 and its actual signed-version graphics, never interrupt policy review
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -u tools/play-publisher/rivonfc_064_production_real_media.py
+      - name: Read-only audit of Play lifecycle (does not alter app content)
+        if: always()
+        shell: bash
+        run: |
+          python3 tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc || echo 'Read-only release-status endpoint temporarily unavailable. Do not claim code11 published.'
