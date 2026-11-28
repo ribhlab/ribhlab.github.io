@@ -1,0 +1,98 @@
+name: RivoNFC 0.6.5 code12 - original-signed production, icon and genuine matching screens
+on:
+  push:
+    branches: [deploy/rivonfc-065-safeicon-code12-20261128]
+    paths: [.github/workflows/rivonfc-065-original-signed-production-icon-fixed.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc-production-065
+  cancel-in-progress: false
+jobs:
+  submit-only-safe-icon-code12:
+    runs-on: ubuntu-latest
+    timeout-minutes: 42
+    environment: play-production
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONPATH: tools/play-publisher
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      SIGNED_TAG: rivonfc-v0.6.5-code12-original-rivoscan-signed
+      SIGNING_RUN: '46129714494'
+      SIGNER_SHA: 24db99aaed51030b998372651f3b3472330987a3
+      REAL_SCREEN_RUN: '46129872727'
+      REAL_SCREEN_SHA: 57df95b8d9c1392370a77c964be3d73e7bea3d12
+      EXPECTED_SIGNER_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+      RIVONFC_065_PRODUCTION_CONFIRM: RIVONFC_065_ORIGINAL_SIGNED_CODE12_ICON_SAFE_MATCHING_SCREENSHOTS_KEEP_REVIEWS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Wait for certified code12 original signing and four real emulator screenshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13' requests
+          python3 -m py_compile tools/play-publisher/rivonfc_065_production_icon_fixed.py
+          grep -Fq 'changesInReviewBehavior="ERROR_IF_IN_REVIEW"' tools/play-publisher/rivonfc_065_production_icon_fixed.py
+          for pair in "$SIGNING_RUN:$SIGNER_SHA:univcours/ribhlab" "$REAL_SCREEN_RUN:$REAL_SCREEN_SHA:ribhlab/ribhlab.github.io"; do
+            RUN_ID="${pair%%:*}"
+            tmp="${pair#*:}"
+            RUN_SHA="${tmp%%:*}"
+            REPO="${tmp#*:}"
+            state=""
+            for i in $(seq 1 90); do
+              state="$(gh api "repos/$REPO/actions/runs/$RUN_ID" --jq .status)"
+              sha="$(gh api "repos/$REPO/actions/runs/$RUN_ID" --jq .head_sha)"
+              test "$sha" = "$RUN_SHA"
+              if test "$state" = completed; then
+                test "$(gh api "repos/$REPO/actions/runs/$RUN_ID" --jq .conclusion)" = success ||
+                  { echo "Certified RivoNFC precursor $RUN_ID failed"; exit 1; }
+                break
+              fi
+              sleep 9
+            done
+            test "$state" = completed
+          done
+          echo 'RIVONFC_065_SIGNED_BINARY_AND_SAME_VERSION_SCREENSHOTS=VERIFIED' >> "$GITHUB_STEP_SUMMARY"
+      - name: Download exactly certified original-key code12 Play artifacts, verify signature and hash
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p signed rivonfc-code12-store
+          gh release download "$SIGNED_TAG" --repo univcours/ribhlab \
+            --dir signed --pattern 'RivoNFC-0.6.5-RivoScan-SIGNED.aab' \
+            --pattern 'RivoNFC-0.6.5-RivoScan-SIGNED.apk' \
+            --pattern 'RivoNFC-store-icon-065.png' --pattern 'SHA256SUMS.txt'
+          (cd signed && sha256sum -c SHA256SUMS.txt)
+          gh run download "$REAL_SCREEN_RUN" --repo "$GITHUB_REPOSITORY" \
+            --name RivoNFC-065-Code12-OriginalSigned-Genuine-StoreMedia \
+            --dir rivonfc-code12-store
+          (cd rivonfc-code12-store && sha256sum -c SHA256SUMS.txt)
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -type f | sort -r | head -1)"
+          "$SDKMANAGER" --install 'build-tools;36.0.0'
+          APK=signed/RivoNFC-0.6.5-RivoScan-SIGNED.apk
+          AAB=signed/RivoNFC-0.6.5-RivoScan-SIGNED.aab
+          "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging "$APK" | \
+            grep -F "package: name='com.ribhlab.rivonfc' versionCode='12' versionName='0.6.5'"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "$APK" > "$RUNNER_TEMP/rivonfc-code12-cert.txt"
+          grep -Fi "$(echo "$EXPECTED_SIGNER_SHA1" | tr -d ':' | tr '[:upper:]' '[:lower:]')" "$RUNNER_TEMP/rivonfc-code12-cert.txt"
+          jarsigner -verify "$AAB" 2>&1 | grep -F 'jar verified'
+          keytool -printcert -jarfile "$AAB" | grep -F "SHA1: $EXPECTED_SIGNER_SHA1"
+      - name: Commit only RivoNFC code12 plus improved store icon and same-code real screens without interrupting reviews
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -u tools/play-publisher/rivonfc_065_production_icon_fixed.py
+          echo 'RivoNFC code12 Production and 512x512 uncut icon, four genuine same-code12 screenshots submitted. Google final public lifecycle must be verified separately.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Independently inspect exact Google Play Production lifecycle
+        if: always()
+        shell: bash
+        run: |
+          python3 tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc ||
+            echo 'Google Play release lifecycle read endpoint temporarily unavailable; no public release claimed.'
