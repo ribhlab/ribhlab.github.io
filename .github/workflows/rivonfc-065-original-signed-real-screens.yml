@@ -82,6 +82,7 @@ jobs:
         run: |
           set -euo pipefail
           (cd rivonfc-code12-store && sha256sum -c SHA256SUMS.txt)
+          python3 -m pip install --quiet 'Pillow>=11,<13'
           python3 - <<'PY'
           import json
           from pathlib import Path
