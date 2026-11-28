@@ -91,20 +91,24 @@ def main():
     ui.adb("shell","pm","grant",PACKAGE,"android.permission.POST_NOTIFICATIONS")
     ui.adb("shell","svc","wifi","enable")
     time.sleep(3)
+    abis=ui.adb("shell","getprop","ro.product.cpu.abilist").strip()
+    log("EMULATOR_SUPPORTED_ABIS",abis=abis)
+    if "arm64-v8a" not in abis.split(","):
+        raise RuntimeError("Emulator does not support the ARM64 Whisper native speech decoder")
     nodes=get_nodes("before-voice-model")
     labels=[n.get("text","") for n in nodes]
-    if not any("Generate offline captions" in s for s in labels):
-        if not tap_label("Download speech model",8):
+    if not any("Start transcription" in s for s in labels):
+        if not tap_label("Download model & transcribe",4):
             raise RuntimeError("No genuine offline speech model download action")
         nodes=get_nodes("download-confirmation")
-        if not ui.tap(nodes,"Start background download"):
+        if not ui.tap(nodes,"Download in background"):
             raise RuntimeError("Download consent not found")
         log("REAL_MODEL_DOWNLOAD_STARTED",status=True)
         ready=False
         for k in range(100):
             time.sleep(3)
             labels=visible_text()
-            if any("Generate offline captions" in s for s in labels):
+            if any("Start transcription" in s for s in labels):
                 ready=True
                 break
             if k%10==0:
@@ -113,7 +117,7 @@ def main():
             raise RuntimeError("Whisper speech model not installed; cannot demonstrate processing")
     # Return to UI with real selected video; record before pressing the real button.
     nodes=get_nodes("media-transcription-ready")
-    if not any("Generate offline captions" in str(n.get("text","")) for n in nodes):
+    if not any("Start transcription" in str(n.get("text","")) for n in nodes):
         raise RuntimeError("Cannot see user-initiated offline transcription button")
     output=OUT/VIDEO
     remote="/sdcard/Movies/"+VIDEO
@@ -122,7 +126,7 @@ def main():
     time.sleep(2)
     observed=False
     try:
-        if not ui.tap(nodes,"Generate offline captions"):
+        if not ui.tap(nodes,"Start transcription"):
             raise RuntimeError("Real user transcription control not clickable")
         log("REAL_USER_STARTED_OFFLINE_MEDIA_PROCESSING",status=True)
         for k in range(16):
