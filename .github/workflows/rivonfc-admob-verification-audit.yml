@@ -1,0 +1,56 @@
+name: RivoNFC AdMob verification - read Play website and app-ads
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 12
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Read only - actual Play developer website and app-ads
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+          python -m pip install -q -r tools/play-publisher/requirements.txt
+          python - <<'PY'
+          import json,sys,urllib.request
+          from googleapiclient.discovery import build
+          sys.path.insert(0,'tools/play-publisher')
+          from publish import get_credentials
+          pkg='com.ribhlab.rivonfc'
+          edits=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False).edits()
+          eid=edits.insert(packageName=pkg,body={}).execute()['id']
+          try:
+              kw={'packageName':pkg,'editId':eid}
+              details=edits.details().get(**kw).execute()
+              website=details.get('contactWebsite','')
+              tracks=edits.tracks().list(**kw).execute().get('tracks',[])
+              codes=[{'track':t.get('track'),'status':r.get('status'),'codes':[str(v) for v in r.get('versionCodes',[])]}
+                    for t in tracks for r in t.get('releases',[])]
+              print('RIVONFC_PLAY_DEVELOPER_WEBSITE='+json.dumps(website))
+              print('RIVONFC_PLAY_RELEASES='+json.dumps(codes))
+              print('RIVONFC_WEBSITE_MATCH='+str(website=='https://ribhlab.github.io/rivonfc/').upper())
+          finally:
+              edits.delete(packageName=pkg,editId=eid).execute()
+          for url in ('https://ribhlab.github.io/rivonfc/','https://ribhlab.github.io/app-ads.txt'):
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'})
+              with urllib.request.urlopen(req,timeout=18) as resp:
+                  body=resp.read(65536).decode('utf-8','replace')
+                  print('RIVONFC_URL='+url+' HTTP='+str(resp.status)+' FINAL='+resp.geturl()+' TYPE='+str(resp.headers.get('Content-Type')))
+                  if url.endswith('app-ads.txt'):
+                      expected='google.com, pub-7945572016731367, DIRECT, f08c47fec0942fa0'
+                      print('RIVONFC_APP_ADS_TXT_EXPECTED_LINE='+str(expected in body).upper())
+                      print('RIVONFC_APP_ADS_TXT_BYTES='+str(len(body.encode())))
+          print('RIVONFC_ADMOB_VERIFICATION_DIAGNOSTIC_COMPLETE=TRUE')
+          PY
