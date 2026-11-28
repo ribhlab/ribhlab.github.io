@@ -32,3 +32,13 @@
 - Do **not** change the correct shared root file, app ID, production app, Google Play package, or unrelated apps merely to suppress the warning.
 - If the same message persists after AdMob refreshes the crawler, raise an AdMob support request with the exact error, Play developer website, website HTTP200, root app-ads.txt, package ID and these diagnostics. Only Google can clear an incorrectly held verification/serving restriction.
 - App readiness review happens after app-ads verification. Neither ad-served status nor estimated approval is guaranteed.
+
+## 2026-11-28 — FIXED missing Play Console developer-profile website
+
+- Inspected the actual, authenticated Google Play Console under **Manage account → Account details → Play developer profile → Developer page**. Its **Developer website** field was **empty** even though the per-app contact website and public Google Play store metadata linked correctly to `https://ribhlab.github.io/rivonfc/`.
+- Filled the **shared developer profile website** with the already-owned canonical root `https://ribhlab.github.io/`, which serves the correctly formatted `/app-ads.txt`. No app's store metadata, release, AdMob unit, code, or other app was modified.
+- An initial attempt to fill the field through remote keyboard input produced an invalid punctuation-only value and was rejected by Play (**Website URL is invalid**, nothing saved). Re-entered the URL with Unicode input, then clicked **Save changes**. Google Play explicitly confirmed **Your changes have been saved**.
+- **Persistence independently verified**: refreshed Play Console and checked Developer website again; it still displays `https://ribhlab.github.io/` and Save changes is disabled (no pending edits).
+- **AdMob recheck completed** after the fix: navigated to **RivoNFC → App settings → Verify app** and pressed **Check for updates**. The mismatch error was still present immediately; therefore app verification and removal of the serving limit are **not yet confirmed**. Official AdMob help permits up to **24 hours** for crawler/Play developer-website change detection. Review again after propagation; if still blocked, escalate with screenshots and these findings.
+- **Apps to confirm (1)** in AdMob was checked: the only listed app was `com.ribhlab.rivosticker`, **not RivoNFC**. No action on RivoSticker was taken.
+- This is an evidence-based correction of a genuine missing Play Developer page field; it is plausible, but not yet proven, that this was the only cause of the AdMob mismatch.
