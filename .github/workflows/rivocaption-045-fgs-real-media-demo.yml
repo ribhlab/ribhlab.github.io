@@ -1,0 +1,84 @@
+name: RivoCaption 0.4.5 REAL Android mediaProcessing foreground demo
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: rivocaption-real-fgs-media-processing-045
+  cancel-in-progress: false
+jobs:
+  record:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Get verified code19 RivoCaption AAB and official Android bundletool
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rc-bundle
+          gh release download rivocaption-v0.4.5-original-key-aab --repo univcours/ribhlab --dir /tmp/rc-bundle
+          (cd /tmp/rc-bundle && sha256sum --check SHA256SUMS.txt)
+          grep -Fx 'PACKAGE=com.rivocaption.editor' /tmp/rc-bundle/SOURCE-IDENTITY.txt
+          grep -Fx 'VERSION_CODE=19' /tmp/rc-bundle/SOURCE-IDENTITY.txt
+          grep -Fx 'SOURCE_COMMIT=d3686b8cf764c76824ad0ca7528b052a4379887f' /tmp/rc-bundle/SOURCE-IDENTITY.txt
+          jarsigner -verify /tmp/rc-bundle/RivoCaption-0.4.5-ORIGINAL-KEY-SIGNED.aab > /tmp/rc-aab-verify.log 2>&1
+          grep -q 'jar verified' /tmp/rc-aab-verify.log
+          keytool -printcert -jarfile /tmp/rc-bundle/RivoCaption-0.4.5-ORIGINAL-KEY-SIGNED.aab | grep -F 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+          gh release download 1.18.3 --repo google/bundletool --pattern 'bundletool-all-*.jar' --dir /tmp/rc-bundle
+      - name: Generate Android 15 emulator-only installable APK from actual code19 AAB
+        shell: bash
+        run: |
+          set -euo pipefail
+          keytool -genkeypair -noprompt -keystore /tmp/rc-emulator-test.jks -storepass demotest123 -keypass demotest123 -alias androidtest -keyalg RSA -keysize 2048 -validity 30 -dname "CN=RivoCaption Emulator QA,OU=Testing,O=RibhLab,C=MA"
+          java -jar /tmp/rc-bundle/bundletool-all-1.18.3.jar build-apks \
+            --bundle=/tmp/rc-bundle/RivoCaption-0.4.5-ORIGINAL-KEY-SIGNED.aab \
+            --output=/tmp/rc-real-code19.apks --mode=universal \
+            --ks=/tmp/rc-emulator-test.jks --ks-pass=pass:demotest123 \
+            --ks-key-alias=androidtest --key-pass=pass:demotest123
+          unzip -p /tmp/rc-real-code19.apks universal.apk > /tmp/rivocaption-045.apk
+          test $(stat -c%s /tmp/rivocaption-045.apk) -gt 30000000
+          "$ANDROID_HOME/build-tools/$(ls "$ANDROID_HOME/build-tools" | sort -V | tail -1)/aapt" dump badging /tmp/rivocaption-045.apk | head -n 2
+          "$ANDROID_HOME/build-tools/$(ls "$ANDROID_HOME/build-tools" | sort -V | tail -1)/aapt" dump badging /tmp/rivocaption-045.apk | grep -E "^package: name='com.rivocaption.editor' versionCode='19'"
+          echo 'Actual original AAB repackaged solely for Android emulator demonstration; Play AAB remains unchanged.'
+      - name: Install test dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -r tools/play-publisher/requirements.txt 'Pillow>=11,<13'
+          python -m py_compile tools/play-publisher/rivocaption_media_processing_real_demo_045.py
+          sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg
+          test -c /dev/kvm
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          sudo rm -rf /usr/share/dotnet /usr/local/share/powershell /usr/share/swift /opt/hostedtoolcache/CodeQL
+      - name: Record real user initiated offline caption mediaProcessing in genuine RivoCaption
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_4
+          ram-size: 3072M
+          disk-size: 4096M
+          emulator-boot-timeout: 900
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -partition-size 4096 -no-metrics
+          disable-animations: true
+          script: |
+            PYTHONPATH=tools/play-publisher python tools/play-publisher/rivocaption_media_processing_real_demo_045.py
+      - name: Publish genuine Android foreground processing proof for Play review
+        if: success()
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: rivocaption-fgs-media-processing-real-v045
+          name: RivoCaption 0.4.5 genuine user-initiated MediaProcessing FGS recording
+          prerelease: true
+          body: 'Unmodified real Android 15 screen recording of RivoCaption 0.4.5 (code19) initiating offline speech recognition for video captions and exposing foreground service notification. Original-key AAB content; demo-only generated APK signed using a temporary emulator-only key. No production bundle change. NOT a simulation.'
+          files: /tmp/rivocaption-media-processing/RivoCaption-FGS-MediaProcessing-Demo.mp4
