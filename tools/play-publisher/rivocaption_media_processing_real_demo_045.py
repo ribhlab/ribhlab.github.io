@@ -88,6 +88,23 @@ def main():
         time.sleep(2)
     if not tap_label("AI",4):
         raise RuntimeError("Real AI tab missing")
+    # The default "Accurate" model is approximately 466 MB. Select the REAL
+    # Fast/Balanced 142-MB model so the recorded foreground demo is repeatable.
+    if not tap_label("Settings",3):
+        raise RuntimeError("Real RivoCaption settings could not be opened")
+    changed=False
+    for k in range(6):
+        nodes=get_nodes("whisper-quality-fast-"+str(k))
+        if ui.tap(nodes,"Fast"):
+            changed=True
+            break
+        ui.adb("shell","input","swipe","520","1510","520","1120","420")
+        time.sleep(1)
+    if not changed:
+        raise RuntimeError("Real Whisper Fast/Balanced model chip not reachable")
+    if not ui.tap(get_nodes("after-fast-choice"),"Done"):
+        raise RuntimeError("RivoCaption settings Done button missing")
+    log("REAL_WHISPER_FAST_BALANCED_SELECTED",status=True)
     ui.adb("shell","pm","grant",PACKAGE,"android.permission.POST_NOTIFICATIONS")
     ui.adb("shell","svc","wifi","enable")
     time.sleep(3)
