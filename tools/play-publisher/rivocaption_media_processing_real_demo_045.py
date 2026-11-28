@@ -73,6 +73,14 @@ def main():
     ui.adb("shell","wm","size","1080x1920")
     ui.adb("shell","wm","density","440")
     ui.adb("install","-r",str(APK),timeout=240)
+    ui.adb("shell","svc","wifi","disable")
+    ui.adb("shell","svc","data","disable")
+    ui.adb("shell","am","force-stop",PACKAGE)
+    ui.adb("shell","am","start","-W","-n",PACKAGE+"/.MainActivity")
+    time.sleep(14)
+    nodes=get_nodes("real-code19-home")
+    if not any("studio" in str(n.get("text","")).lower() for n in nodes):
+        raise RuntimeError("Real code19 RivoCaption home not visible")
     # The AAB is unchanged. Install a genuine upstream model as a disposable
     # Android emulator test fixture, when downloaded by the runner. This is
     # equivalent to the user finishing the existing in-app model download.
@@ -94,14 +102,11 @@ def main():
         ui.adb("shell","chmod","600",dest+"/ggml-base.bin")
         log("GENUINE_UPSTREAM_WHISPER_MODEL_PRELOADED_ON_EMULATOR",
             size=model_fixture.stat().st_size,ownerUid=uid)
-    ui.adb("shell","svc","wifi","disable")
-    ui.adb("shell","svc","data","disable")
-    ui.adb("shell","am","force-stop",PACKAGE)
-    ui.adb("shell","am","start","-W","-n",PACKAGE+"/.MainActivity")
-    time.sleep(14)
-    nodes=get_nodes("real-code19-home")
-    if not any("studio" in str(n.get("text","")).lower() for n in nodes):
-        raise RuntimeError("Real code19 RivoCaption home not visible")
+    if model_fixture.is_file() and 90_000_000 < model_fixture.stat().st_size < 220_000_000:
+        # Reopen the app after fixture injection so Compose rechecks the genuine model file.
+        ui.adb("shell","am","force-stop",PACKAGE)
+        ui.adb("shell","am","start","-W","-n",PACKAGE+"/.MainActivity")
+        time.sleep(6)
     voiced_sample(OUT)
     ui.open_video_in_picker(OUT)
     time.sleep(3)
