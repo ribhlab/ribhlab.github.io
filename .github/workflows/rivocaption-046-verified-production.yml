@@ -1,0 +1,120 @@
+name: RivoCaption 0.4.6 code20 — verified Google Play Production publisher
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.rivocaption.editor
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 40
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Prepare existing native RibhLab publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+          python -m pip install -q -r tools/play-publisher/requirements.txt
+          python -m py_compile tools/play-publisher/publish.py
+      - name: Download and verify exact signed code20 candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p candidate-046
+          gh release download rivocaption-v0.4.6-code20-original-key-signed \
+            --repo univcours/ribhlab --dir candidate-046
+          test -s candidate-046/RivoCaption-0.4.6-ORIGINAL-KEY-SIGNED.aab
+          (cd candidate-046 && sha256sum --check SHA256SUMS.txt)
+          grep -Fx 'PACKAGE=com.rivocaption.editor' candidate-046/SOURCE-IDENTITY-046.txt
+          grep -Fx 'VERSION_NAME=0.4.6' candidate-046/SOURCE-IDENTITY-046.txt
+          grep -Fx 'VERSION_CODE=20' candidate-046/SOURCE-IDENTITY-046.txt
+          grep -Fx 'SOURCE_BUILD_COMMIT=ef42b4ab6787cb45a6bfd0fb8553a4b1f6592442' candidate-046/SOURCE-IDENTITY-046.txt
+          grep -Fx 'AAB_SHA256=96e41ece2e9fdb1a872858431e21f162218aac6a2e57b0ca07908b9205c7dd5a' candidate-046/SOURCE-IDENTITY-046.txt
+          jarsigner -verify candidate-046/RivoCaption-0.4.6-ORIGINAL-KEY-SIGNED.aab > "$RUNNER_TEMP/code20verify.txt" 2>&1
+          grep -F 'jar verified' "$RUNNER_TEMP/code20verify.txt"
+          keytool -printcert -jarfile candidate-046/RivoCaption-0.4.6-ORIGINAL-KEY-SIGNED.aab | \
+            grep -F 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+      - name: Preflight existing production and registered version codes
+        shell: bash
+        id: preflight
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,sys
+          from googleapiclient.discovery import build
+          sys.path.insert(0,'tools/play-publisher')
+          from publish import get_credentials
+          pkg='com.rivocaption.editor'
+          edits=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False).edits()
+          eid=edits.insert(packageName=pkg,body={}).execute()['id']
+          try:
+              params=dict(packageName=pkg,editId=eid)
+              tracks=edits.tracks().list(**params).execute().get('tracks',[])
+              current=[dict(track=t.get('track'),status=r.get('status'),codes=[str(v) for v in r.get('versionCodes',[])])
+                       for t in tracks for r in t.get('releases',[])]
+              bundles=[str(b.get('versionCode')) for b in edits.bundles().list(**params).execute().get('bundles',[])]
+              print('RIVOCAPTION_CODE20_PREFLIGHT_TRACKS='+json.dumps(current))
+              print('RIVOCAPTION_CODE20_PREFLIGHT_BUNDLES='+json.dumps(bundles))
+              prod=[r for r in current if r['track']=='production']
+              if any(r['status']!='completed' or len(r['codes'])!=1 for r in prod):
+                  raise RuntimeError('Existing production draft, staged or multi-version release; refuse to replace')
+              if any(int(v)>20 for r in current for v in r['codes']) or any(int(v)>20 for v in bundles):
+                  raise RuntimeError('Play already has a newer code than 20; refuse stale publish')
+              if any('20' in r['codes'] and r['track']!='production' for r in current):
+                  raise RuntimeError('Code20 already in a non-production track; avoid duplicate')
+              if any('20' in r['codes'] for r in prod):
+                  print('RIVOCAPTION_CODE20_ALREADY_PRODUCTION=TRUE')
+                  skip='true'
+              else:
+                  if '20' in bundles:
+                      raise RuntimeError('Code20 already registered in Play library; do not reupload the same versionCode')
+                  skip='false'
+              with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('skip_publish='+skip+'\n')
+          finally:
+              edits.delete(packageName=pkg,editId=eid).execute()
+          PY
+      - name: Publish original-key verified code20 through existing native publisher
+        if: steps.preflight.outputs.skip_publish != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/play-publisher/publish.py \
+            --aab candidate-046/RivoCaption-0.4.6-ORIGINAL-KEY-SIGNED.aab \
+            --package com.rivocaption.editor \
+            --track production --status completed \
+            --name 'RivoCaption 0.4.6 (20)' \
+            --notes 'Fixed independent bottom AdMob banner dock; automatic full-screen ad after the first successful captioned MP4 export, with restrained repeat frequency and privacy safeguards.' \
+            --language en-US --confirm-production PUBLISH
+      - name: Verify final committed Play Production state
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,sys
+          from googleapiclient.discovery import build
+          sys.path.insert(0,'tools/play-publisher')
+          from publish import get_credentials
+          pkg='com.rivocaption.editor'
+          edits=build('androidpublisher','v3',credentials=get_credentials(),cache_discovery=False).edits()
+          eid=edits.insert(packageName=pkg,body={}).execute()['id']
+          try:
+              r=edits.tracks().get(packageName=pkg,editId=eid,track='production').execute()
+              releases=r.get('releases',[])
+              print('RIVOCAPTION_CODE20_PLAY_PRODUCTION_API='+json.dumps(releases))
+              assert any(x.get('status')=='completed' and '20' in [str(v) for v in x.get('versionCodes',[])] for x in releases), 'Code20 absent from completed production track'
+              print('RIVOCAPTION_CODE20_LISTED_ON_PRODUCTION=TRUE')
+          finally:
+              edits.delete(packageName=pkg,editId=eid).execute()
+          PY
+          echo 'Production API lists code20 completed. Google Play storefront rollout / user availability remain separate.' >> "$GITHUB_STEP_SUMMARY"
