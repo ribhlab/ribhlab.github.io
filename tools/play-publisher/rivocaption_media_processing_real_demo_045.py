@@ -21,11 +21,11 @@ def voiced_sample(out):
               "into subtitles with offline artificial intelligence. "
               "The process is started by the user and remains visible. ")
     subprocess.run(["espeak-ng","-v","en-us","-s","145","-w",str(speech),
-                    sentence*5],check=True,timeout=60)
+                    sentence*2],check=True,timeout=60)
     sample=out/"RivoCaptionDemo.mp4"
     subprocess.run(["ffmpeg","-hide_banner","-loglevel","error","-y",
         "-f","lavfi","-i","testsrc2=size=720x1280:rate=24",
-        "-i",str(speech),"-t","50","-shortest",
+        "-i",str(speech),"-t","12","-shortest",
         "-c:v","libx264","-preset","ultrafast","-pix_fmt","yuv420p",
         "-c:a","aac","-b:a","128k","-movflags","+faststart",str(sample)],
         check=True,timeout=150)
@@ -62,8 +62,9 @@ def evidence(stage):
     related=[x.strip()[:400] for x in n.splitlines() if PACKAGE in x
              and ("NotificationRecord" in x or "NotificationRecord{" in x)]
     (OUT/("fgs-"+stage+".txt")).write_text(a[:20000]+"\n--- NOTIFICATIONS ---\n"+n[:20000],"utf-8")
-    log("REAL_MEDIA_PROCESSING_FOREGROUND",stage=stage,whisperService=svc,notification=bool(related),records=related[:3])
-    return svc or bool(related)
+    media_records=[item for item in related if "id=49031" in item or "rivocaption_whisper_asr" in item]
+    log("REAL_MEDIA_PROCESSING_FOREGROUND",stage=stage,whisperService=svc,mediaProcessingNotification=bool(media_records),records=media_records[:3],otherAppNotifications=related[:3])
+    return svc or bool(media_records)
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
@@ -182,6 +183,9 @@ def main():
         time.sleep(3)
         if not observed:
             raise RuntimeError("Real code19 mediaProcessing foreground service not observed; refuse to publish fake proof")
+        final_labels=visible_text()
+        if any("Whisper transcription failed" in x or "process stopped unexpectedly" in x for x in final_labels):
+            raise RuntimeError("Whisper native decoding failed on emulator. Refuse misleading policy proof video.")
     finally:
         ui.adb("shell","pkill","-2","screenrecord")
         try: rec.wait(timeout=20)
