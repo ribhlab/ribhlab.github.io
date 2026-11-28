@@ -1,0 +1,105 @@
+name: RivoNFC 0.6.5 code12 - genuine Android signed-version screenshots and fixed-icon evidence
+on:
+  push:
+    branches: [deploy/rivonfc-065-safeicon-code12-20261128]
+    paths: [.github/workflows/rivonfc-065-original-signed-real-screens.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: rivonfc-065-real-signed-icon-screens
+  cancel-in-progress: false
+jobs:
+  capture-real-signed-code12:
+    runs-on: ubuntu-latest
+    timeout-minutes: 43
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_SIGN_RUN: '46129714494'
+      SOURCE_SIGN_SHA: 24db99aaed51030b998372651f3b3472330987a3
+      SIGNED_RELEASE_TAG: rivonfc-v0.6.5-code12-original-rivoscan-signed
+      ORIGINAL_SIGNER_SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Require original signer to finish and verify immutable signed release identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 75); do
+            state="$(gh api "repos/univcours/ribhlab/actions/runs/$SOURCE_SIGN_RUN" --jq .status)"
+            result="$(gh api "repos/univcours/ribhlab/actions/runs/$SOURCE_SIGN_RUN" --jq .conclusion)"
+            sha="$(gh api "repos/univcours/ribhlab/actions/runs/$SOURCE_SIGN_RUN" --jq .head_sha)"
+            test "$sha" = "$SOURCE_SIGN_SHA"
+            if test "$state" = completed; then
+              test "$result" = success || { echo 'Original signing build failed; refuse screenshot QA'; exit 1; }
+              break
+            fi
+            sleep 9
+          done
+          test "$state" = completed
+          gh release view "$SIGNED_RELEASE_TAG" --repo univcours/ribhlab >/dev/null
+      - name: Download only exact certified original-key code12 APK, AAB, new store artwork
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p signed
+          gh release download "$SIGNED_RELEASE_TAG" --repo univcours/ribhlab \
+            --dir signed --pattern 'RivoNFC-0.6.5-RivoScan-SIGNED.apk' \
+            --pattern 'RivoNFC-0.6.5-RivoScan-SIGNED.aab' \
+            --pattern 'RivoNFC-store-icon-065.png' --pattern 'SHA256SUMS.txt'
+          (cd signed && sha256sum -c SHA256SUMS.txt)
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -type f | sort -r | head -1)"
+          "$SDKMANAGER" --install 'platforms;android-36' 'build-tools;36.0.0'
+          APK=signed/RivoNFC-0.6.5-RivoScan-SIGNED.apk
+          AAB=signed/RivoNFC-0.6.5-RivoScan-SIGNED.aab
+          "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging "$APK" | \
+            grep -F "package: name='com.ribhlab.rivonfc' versionCode='12' versionName='0.6.5'"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "$APK" > "$RUNNER_TEMP/nfc12cert.txt"
+          grep -Fi "$(echo "$ORIGINAL_SIGNER_SHA1" | tr -d ':' | tr '[:upper:]' '[:lower:]')" "$RUNNER_TEMP/nfc12cert.txt"
+          jarsigner -verify "$AAB" 2>&1 | grep -F 'jar verified'
+          keytool -printcert -jarfile "$AAB" | grep -F "SHA1: $ORIGINAL_SIGNER_SHA1"
+          python3 -m py_compile tools/play-publisher/rivonfc_065_capture_real_screens.py
+      - name: Enable Android 35 emulator acceleration
+        shell: bash
+        run: |
+          if test -c /dev/kvm; then sudo chmod 666 /dev/kvm; fi
+      - name: Capture real RivoNFC 0.6.5 from original signed APK only
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_2
+          disable-animations: true
+          emulator-boot-timeout: 700
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-snapshot -no-boot-anim
+          script: python3 tools/play-publisher/rivonfc_065_capture_real_screens.py
+      - name: Check genuine signed screenshot and icon assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd rivonfc-code12-store && sha256sum -c SHA256SUMS.txt)
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path("rivonfc-code12-store/CAPTURE-MANIFEST.json").read_text())
+          assert m["package"]=="com.ribhlab.rivonfc"
+          assert m["versionCode"]==12 and m["versionName"]=="0.6.5"
+          assert len(m["screens"])==4
+          assert m["noLiveAdRequests"] and not m["simulatedNfcReads"]
+          assert m["capture"]=="signed-release-APK-Android35-adb-no-synthetic-content"
+          from PIL import Image
+          with Image.open("signed/RivoNFC-store-icon-065.png") as im:
+              assert im.size==(512,512)
+          print("RIVONFC_065_TRUE_SIGNED_MATCHING_4_SCREENS_AND_SAFE_ICON=PASS",flush=True)
+          PY
+      - name: Preserve real code12 screen set for guarded Google Play publisher
+        uses: actions/upload-artifact@v4
+        with:
+          name: RivoNFC-065-Code12-OriginalSigned-Genuine-StoreMedia
+          path: rivonfc-code12-store/
+          if-no-files-found: error
+          retention-days: 7
