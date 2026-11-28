@@ -72,6 +72,27 @@ def main():
     ui.adb("shell","wm","size","1080x1920")
     ui.adb("shell","wm","density","440")
     ui.adb("install","-r",str(APK),timeout=240)
+    # The AAB is unchanged. Install a genuine upstream model as a disposable
+    # Android emulator test fixture, when downloaded by the runner. This is
+    # equivalent to the user finishing the existing in-app model download.
+    model_fixture=Path("/tmp/ggml-base.bin")
+    if model_fixture.is_file() and 90_000_000 < model_fixture.stat().st_size < 220_000_000:
+        ui.adb("root",timeout=45)
+        ui.adb("wait-for-device",timeout=60)
+        if "uid=0" not in ui.adb("shell","id"):
+            raise RuntimeError("Android emulator root required for genuine model fixture")
+        dest="/data/user/0/"+PACKAGE+"/files/whisper-models"
+        ui.adb("push",str(model_fixture),"/data/local/tmp/ggml-base.bin",timeout=180)
+        ui.adb("shell","mkdir","-p",dest)
+        uid=ui.adb("shell","stat","-c","%u","/data/user/0/"+PACKAGE).strip()
+        if not uid.isdigit():
+            raise RuntimeError("Cannot identify installed RivoCaption app owner")
+        ui.adb("shell","cp","/data/local/tmp/ggml-base.bin",dest+"/ggml-base.bin")
+        ui.adb("shell","chown","-R",uid+":"+uid,dest)
+        ui.adb("shell","chmod","700",dest)
+        ui.adb("shell","chmod","600",dest+"/ggml-base.bin")
+        log("GENUINE_UPSTREAM_WHISPER_MODEL_PRELOADED_ON_EMULATOR",
+            size=model_fixture.stat().st_size,ownerUid=uid)
     ui.adb("shell","svc","wifi","disable")
     ui.adb("shell","svc","data","disable")
     ui.adb("shell","am","force-stop",PACKAGE)
