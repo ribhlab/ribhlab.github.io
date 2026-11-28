@@ -1,0 +1,105 @@
+name: RivoCaption 0.4.5 register signed bundle in Play library only
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.rivocaption.editor
+  cancel-in-progress: false
+jobs:
+  register-only:
+    runs-on: ubuntu-24.04
+    environment: play-testing
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '17'}
+      - name: Install existing publisher API dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON"
+          python -m pip install -r tools/play-publisher/requirements.txt
+      - name: Fetch original-key signed and source-verified RivoCaption code19 bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p candidate
+          gh release download rivocaption-v0.4.5-original-key-aab --repo univcours/ribhlab --dir candidate
+          (cd candidate && sha256sum --check SHA256SUMS.txt)
+          grep -Fx 'SOURCE_COMMIT=d3686b8cf764c76824ad0ca7528b052a4379887f' candidate/SOURCE-IDENTITY.txt
+          grep -Fx 'PACKAGE=com.rivocaption.editor' candidate/SOURCE-IDENTITY.txt
+          grep -Fx 'VERSION_NAME=0.4.5' candidate/SOURCE-IDENTITY.txt
+          grep -Fx 'VERSION_CODE=19' candidate/SOURCE-IDENTITY.txt
+          jarsigner -verify candidate/RivoCaption-0.4.5-ORIGINAL-KEY-SIGNED.aab > /tmp/rv-signature.txt 2>&1
+          grep -Fq 'jar verified' /tmp/rv-signature.txt
+          keytool -printcert -jarfile candidate/RivoCaption-0.4.5-ORIGINAL-KEY-SIGNED.aab | grep -Fq 'SHA1: E9:B3:E2:77:95:75:BA:08:A9:13:72:FC:38:85:EB:A0:1D:D3:E7:3E'
+      - name: Register bundle in Google Play library WITHOUT changing any track
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,sys
+          from googleapiclient.discovery import build
+          from googleapiclient.http import MediaFileUpload
+          sys.path.insert(0,"tools/play-publisher")
+          from publish import get_credentials
+          pkg="com.rivocaption.editor"
+          api=build("androidpublisher","v3",credentials=get_credentials(),cache_discovery=False)
+          edits=api.edits()
+          edit_id=edits.insert(packageName=pkg,body={}).execute()["id"]
+          committed=False
+          try:
+              kw={"packageName":pkg,"editId":edit_id}
+              tracks=edits.tracks().list(**kw).execute().get("tracks",[])
+              before={t.get("track"):[{"status":r.get("status"),"codes":[str(v) for v in r.get("versionCodes",[])]} for r in t.get("releases",[])] for t in tracks}
+              print("BEFORE_TRACKS="+json.dumps(before,sort_keys=True))
+              existing=edits.bundles().list(**kw).execute().get("bundles",[])
+              versions=[str(b.get("versionCode")) for b in existing]
+              print("BEFORE_REGISTERED_BUNDLE_VERSION_CODES="+json.dumps(versions))
+              if "19" in versions:
+                  print("RIVOCAPTION_CODE19_ALREADY_IN_LIBRARY=TRUE")
+              else:
+                  result=edits.bundles().upload(
+                      packageName=pkg,editId=edit_id,
+                      media_body=MediaFileUpload(
+                          "candidate/RivoCaption-0.4.5-ORIGINAL-KEY-SIGNED.aab",
+                          mimetype="application/octet-stream",resumable=True
+                      )
+                  ).execute()
+                  if str(result.get("versionCode"))!="19":
+                      raise RuntimeError("Wrong bundle returned; refusing commit: "+str(result.get("versionCode")))
+                  print("RIVOCAPTION_CODE19_UPLOADED_TO_EDIT=TRUE")
+                  after=edits.tracks().list(**kw).execute().get("tracks",[])
+                  now={t.get("track"):[{"status":r.get("status"),"codes":[str(v) for v in r.get("versionCodes",[])]} for r in t.get("releases",[])] for t in after}
+                  if now!=before:
+                      raise RuntimeError("Unexpected track change; refusing commit")
+                  # Only a new app bundle is committed. Never update any release/track.
+                  edits.commit(**kw).execute()
+                  committed=True
+                  print("RIVOCAPTION_LIBRARY_ONLY_EDIT_COMMITTED=TRUE")
+          finally:
+              if not committed:
+                  edits.delete(packageName=pkg,editId=edit_id).execute()
+          # Read-only verification through a new edit, leaving production untouched.
+          fresh=edits.insert(packageName=pkg,body={}).execute()["id"]
+          try:
+              kw={"packageName":pkg,"editId":fresh}
+              bundles=[str(x.get("versionCode")) for x in edits.bundles().list(**kw).execute().get("bundles",[])]
+              tracks=edits.tracks().list(**kw).execute().get("tracks",[])
+              current={t.get("track"):[{"status":r.get("status"),"codes":[str(v) for v in r.get("versionCodes",[])]} for r in t.get("releases",[])] for t in tracks}
+              print("AFTER_REGISTERED_BUNDLES="+json.dumps(bundles))
+              print("AFTER_TRACKS="+json.dumps(current,sort_keys=True))
+              if "19" not in bundles:
+                  raise RuntimeError("Code19 not present in Play bundle library")
+              print("RIVOCAPTION_CODE19_REGISTERED_IN_GOOGLE_PLAY_LIBRARY=TRUE")
+              print("NO_PRODUCTION_PUBLISHING_REQUESTED=TRUE")
+          finally:
+              edits.delete(packageName=pkg,editId=fresh).execute()
+          PY
