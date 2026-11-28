@@ -1,0 +1,43 @@
+name: RivoNFC 0.6.5 code12 - safely submit icon fix to Google Play review
+on:
+  push:
+    branches: [deploy/rivonfc-065-safeicon-code12-20261128]
+    paths: [.github/workflows/rivonfc-065-submit-icon-update-for-review.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: google-play-com.ribhlab.rivonfc-code12-review
+  cancel-in-progress: false
+jobs:
+  request-icon-code12-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: play-production
+    env:
+      GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+      RIVONFC_065_REVIEW_CONFIRM: SEND_ONLY_ALREADY_COMMITTED_RIVONFC_CODE12_ICON_SAFE_FOR_GOOGLE_REVIEW
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Verify production code12 commit receipt and no cancel-in-review behavior
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${GOOGLE_PLAY_SERVICE_ACCOUNT_JSON:-}"
+          python3 -m pip install -r tools/play-publisher/requirements.txt
+          python3 -m py_compile tools/play-publisher/rivonfc_065_send_for_review.py
+          grep -Fq 'changesInReviewBehavior="ERROR_IF_IN_REVIEW"' tools/play-publisher/rivonfc_065_send_for_review.py
+          grep -Fq 'changesNotSentForReview=False' tools/play-publisher/rivonfc_065_send_for_review.py
+      - name: Send only already saved RivoNFC code12 and fixed icon for review
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -u tools/play-publisher/rivonfc_065_send_for_review.py
+      - name: Independently inspect public Google Play RivoNFC release lifecycle
+        if: always()
+        shell: bash
+        run: |
+          python3 tools/play-publisher/audit_releases.py --package com.ribhlab.rivonfc ||
+            echo 'Independent public status temporarily unavailable; require receipt of exact code12 lifecycle.'
